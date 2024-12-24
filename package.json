@@ -8,15 +8,18 @@
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "dev": "turbo dev --parallel",
-    "test": "turbo test --parallel",
+    "test": "vitest",
     "format": "biome format --write .",
     "lint": "turbo lint && manypkg check",
     "typecheck": "turbo typecheck"
   },
-  "dependencies": {
+  "packageManager": "bun@1.1.42",
+  "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.2",
     "turbo": "2.3.3",
-    "typescript": "^5.7.2"
-  },
-  "packageManager": "bun@1.1.42"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
 }

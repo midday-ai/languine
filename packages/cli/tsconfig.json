@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "test/md.test.ts"],
   "compilerOptions": {
     "target": "esnext",
     "module": "NodeNext",
