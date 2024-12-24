@@ -1,3 +1,4 @@
+export type Provider = "openai" | "ollama";
 export interface Config {
   version: string;
   locale: {
@@ -9,7 +10,8 @@ export interface Config {
       include: string[];
     };
   };
-  openai: {
+  llm: {
+    provider: Provider;
     model: string;
   };
   instructions?: string;

@@ -1,13 +1,28 @@
 import { execSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
-import { createOpenAI } from "@ai-sdk/openai";
+import { type OpenAIProvider, createOpenAI } from "@ai-sdk/openai";
 import { intro, outro, spinner } from "@clack/prompts";
 import { generateText } from "ai";
 import chalk from "chalk";
 import dedent from "dedent";
+import { type OllamaProvider, createOllama } from "ollama-ai-provider";
 import { prompt as defaultPrompt } from "../prompt.js";
+import type { Config, Provider } from "../types.js";
 import { extractChangedKeys, getApiKey, getConfig } from "../utils.js";
+
+const providersMap: Record<Provider, OpenAIProvider | OllamaProvider> = {
+  openai: createOpenAI({
+    apiKey: await getApiKey("OpenAI", "OPENAI_API_KEY"),
+  }),
+  ollama: createOllama(),
+};
+
+function getModel(config: Config) {
+  const provider = providersMap[config.llm.provider];
+
+  return provider(config.llm.model);
+}
 
 export async function translate(targetLocale?: string, force?: boolean) {
   intro("Starting translation process...");
@@ -27,10 +42,7 @@ export async function translate(targetLocale?: string, force?: boolean) {
     process.exit(1);
   }
 
-  // Initialize OpenAI
-  const openai = createOpenAI({
-    apiKey: await getApiKey("OpenAI", "OPENAI_API_KEY"),
-  });
+  const model = getModel(config);
 
   const s = spinner();
   s.start("Checking for changes and translating to target locales...");
@@ -111,12 +123,12 @@ export async function translate(targetLocale?: string, force?: boolean) {
             Source content ${force ? "" : "(new keys only)"}:
             ${JSON.stringify(contentToTranslate, null, 2)}
 
-            Return only the translated content with identical structure.
+            Return only the translated content with identical structure in ${format.toUpperCase()} format, nothing else.
           `;
 
-          // Get translation from OpenAI
+          // Get translation from model
           const { text } = await generateText({
-            model: openai(config.openai.model),
+            model,
             prompt,
           });
 
