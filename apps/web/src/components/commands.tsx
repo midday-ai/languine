@@ -178,12 +178,36 @@ export function Commands() {
           step >= 5 ? "opacity-100" : "opacity-0",
         )}
       >
-        ◇ Which OpenAI model should be used for translations?
+        ◇ Which provider would you like to use??
       </span>
       <span
         className={cn(
           "transition-opacity duration-100",
           step >= 5 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ● OpenAI
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 5 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ Ollama
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 6 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        ◇ Which model should be used for translations?
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 6 ? "opacity-100" : "opacity-0",
         )}
       >
         │ ● GPT-4 (Default)
@@ -191,7 +215,7 @@ export function Commands() {
       <span
         className={cn(
           "transition-opacity duration-100",
-          step >= 5 ? "opacity-100" : "opacity-0",
+          step >= 6 ? "opacity-100" : "opacity-0",
         )}
       >
         │ ○ GPT-4 Turbo
@@ -199,7 +223,7 @@ export function Commands() {
       <span
         className={cn(
           "transition-opacity duration-100",
-          step >= 5 ? "opacity-100" : "opacity-0",
+          step >= 6 ? "opacity-100" : "opacity-0",
         )}
       >
         │ ○ GPT-4o
@@ -207,7 +231,7 @@ export function Commands() {
       <span
         className={cn(
           "transition-opacity duration-100",
-          step >= 5 ? "opacity-100" : "opacity-0",
+          step >= 6 ? "opacity-100" : "opacity-0",
         )}
       >
         │ ○ GPT-4o mini
@@ -215,7 +239,7 @@ export function Commands() {
       <span
         className={cn(
           "transition-opacity duration-100",
-          step >= 5 ? "opacity-100" : "opacity-0",
+          step >= 6 ? "opacity-100" : "opacity-0",
         )}
       >
         │ ○ GPT-3.5 Turbo
@@ -231,7 +255,7 @@ export function Commands() {
       <span
         className={cn(
           "transition-opacity duration-100 -ml-[1.5px]",
-          step >= 6 ? "opacity-100" : "opacity-0",
+          step >= 7 ? "opacity-100" : "opacity-0",
         )}
       >
         └ Configuration file and language files created successfully!
