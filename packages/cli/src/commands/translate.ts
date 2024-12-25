@@ -10,15 +10,19 @@ import type { PromptOptions, UpdateResult } from "../types.js";
 import type { Config, Provider } from "../types.js";
 import { getApiKey, getConfig } from "../utils.js";
 
-const providersMap: Record<Provider, OpenAIProvider | OllamaProvider> = {
-  openai: createOpenAI({
-    apiKey: await getApiKey("OpenAI", "OPENAI_API_KEY"),
-  }),
-  ollama: createOllama(),
+const providersMap: Record<
+  Provider,
+  () => Promise<OpenAIProvider | OllamaProvider>
+> = {
+  openai: async () =>
+    createOpenAI({
+      apiKey: await getApiKey("OpenAI", "OPENAI_API_KEY"),
+    }),
+  ollama: async () => createOllama(),
 };
 
-function getModel(config: Config) {
-  const provider = providersMap[config.llm.provider];
+async function getModel(config: Config) {
+  const provider = await providersMap[config.llm.provider]();
 
   return provider(config.llm.model);
 }
@@ -43,7 +47,7 @@ export async function translate(targetLocale?: string, force = false) {
 
   const git = simpleGit();
 
-  const model = getModel(config);
+  const model = await getModel(config);
 
   const s = spinner();
   s.start("Checking for changes and translating to target locales...");
