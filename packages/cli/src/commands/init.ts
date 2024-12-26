@@ -41,7 +41,7 @@ function getDefaultPattern(format: string) {
       return "locales/[locale].json";
     case "md":
       return "docs/[locale]/*.md";
-    case ".po":
+    case "po":
       return "locales/[locale].po";
     case "xml":
       return "locales/[locale].xml";
