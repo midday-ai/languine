@@ -11,8 +11,8 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
-    "build": "tsup src/index.ts --format esm --dts --clean",
-    "dev": "tsup src/index.ts --format esm --watch --clean",
+    "build": "tsup --clean",
+    "dev": "tsup --watch --clean",
     "start": "node dist/index.js"
   },
   "files": ["dist", "README.md"],

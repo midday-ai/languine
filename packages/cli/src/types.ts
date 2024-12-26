@@ -9,8 +9,8 @@ export interface Config {
     targets: string[];
   };
   files: {
-    [key: string]: {
-      include: string[];
+    [format: string]: {
+      include: Include[];
     };
   };
   llm: {
@@ -26,6 +26,13 @@ export interface Config {
     }) => Promise<string>;
   };
 }
+
+type Include =
+  | string
+  | {
+      from: string;
+      to: string | ((locale: string) => string);
+    };
 
 export interface PromptOptions {
   format: string;
