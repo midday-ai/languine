@@ -5,3 +5,6 @@ msgstr "Welcome to our application!"
 
 msgid "error_message"
 msgstr "An error occurred: {error_code}"
+
+msgid "example_message"
+msgstr "This is an example message with a {variable}"
