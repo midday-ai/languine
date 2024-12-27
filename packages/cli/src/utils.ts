@@ -1,4 +1,4 @@
-import { execSync } from "node:child_process";
+import { exec, execSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -6,6 +6,7 @@ import { confirm, outro, text } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
 import type { Jiti } from "jiti";
+import preferredPM from "preferred-pm";
 import type { Config } from "./types.js";
 
 export async function getApiKey(name: string, key: string) {
@@ -103,6 +104,42 @@ export async function getConfig(): Promise<Config> {
       },
     });
 
-    return await jiti.import(target).then((mod) => (mod as any).default);
+    return await jiti
+      .import(target)
+      .then((mod) => (mod as unknown as { default: Config }).default);
+  }
+}
+
+export async function execAsync(command: string) {
+  return await new Promise<void>((resolve, reject) => {
+    exec(command, (error) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve();
+      }
+    });
+  });
+}
+
+export async function findPreferredPM() {
+  let currentDir = process.cwd();
+
+  while (true) {
+    const pm = await preferredPM(currentDir);
+    if (pm) return pm;
+
+    const parentDir = path.dirname(currentDir);
+
+    if (parentDir === currentDir) return null;
+
+    // Look for package.json to determine if we're at project root
+    try {
+      await import(path.join(currentDir, "package.json"));
+      // If we find package.json, this is as far as we should go
+      return null;
+    } catch {
+      currentDir = parentDir;
+    }
   }
 }

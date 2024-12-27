@@ -1,10 +1,9 @@
-import { exec } from "node:child_process";
 import fs from "node:fs/promises";
 import { confirm, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
-import preferredPM from "preferred-pm";
 import type { PresetOptions } from "../types.js";
+import { execAsync, findPreferredPM } from "../utils.js";
 
 async function createI18nFile(
   sourceLanguage: string,
@@ -48,26 +47,9 @@ async function installDependencies() {
 
   s.start("Installing dependencies...");
   try {
-    const pm = await preferredPM(process.cwd());
-    await new Promise<void>((resolve, reject) => {
-      exec(`${pm?.name} install i18n-js`, (error) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
-
-    await new Promise<void>((resolve, reject) => {
-      exec("npx expo install expo-localization", (error) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
+    const pm = await findPreferredPM();
+    await execAsync(`${pm?.name} install i18n-js`);
+    await execAsync("npx expo install expo-localization");
 
     s.stop("Dependencies installed successfully");
   } catch {

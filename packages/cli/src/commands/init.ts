@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { intro, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
+import { installDependencies } from "../install.js";
 import { providers } from "../providers.js";
 import type { PresetOptions, Provider } from "../types.js";
 import { configPath } from "../utils.js";
@@ -57,6 +58,7 @@ function getDefaultPattern(format: string) {
       return "docs/[locale]/*.md";
     case "po":
       return "locales/[locale].po";
+    case "android":
     case "xml":
       return "locales/[locale].xml";
     default:
@@ -185,6 +187,9 @@ export default defineConfig({
     model: "${model}",
   },
 })`;
+
+  // Install dependencies
+  await installDependencies();
 
   try {
     const targetLangs = [
