@@ -2,6 +2,7 @@ import { execSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { intro, outro, select, text } from "@clack/prompts";
+import which from "which";
 import { providers } from "../providers.js";
 import type { Provider } from "../types.js";
 import { configPath } from "../utils.js";
@@ -61,11 +62,8 @@ export async function init() {
 
   if (provider === "ollama") {
     try {
-      const ollamaBinary = execSync("which ollama").toString().trim();
-      if (!ollamaBinary) {
-        outro("Ollama binary not found. Please install Ollama");
-        process.exit(1);
-      }
+      // it'll throw if not found
+      await which("ollama");
     } catch (error) {
       outro("Ollama binary not found. Please install Ollama");
       process.exit(1);
