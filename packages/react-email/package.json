@@ -1,0 +1,22 @@
+{
+  "name": "@languine/react-email",
+  "version": "1.0.0",
+  "files": ["dist", "README.md"],
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup --clean src/index.tsx"
+  },
+  "peerDependencies": {
+    "i18n-js": "^4.5.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
