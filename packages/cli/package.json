@@ -1,6 +1,6 @@
 {
   "name": "languine",
-  "version": "0.6.9",
+  "version": "7.0.0",
   "type": "module",
   "bin": "dist/index.js",
   "main": "dist/config.js",

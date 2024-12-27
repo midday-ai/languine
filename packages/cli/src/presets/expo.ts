@@ -37,7 +37,7 @@ async function installDependencies() {
 
   const shouldInstall = await confirm({
     message:
-      "Would you like to install required dependencies (i18n-js, expo-localization)?",
+      "Would you like to install required dependencies (i18n-js, expo-localization, languine)?",
   });
 
   if (!shouldInstall) {
@@ -48,7 +48,7 @@ async function installDependencies() {
   s.start("Installing dependencies...");
   try {
     const pm = await findPreferredPM();
-    await execAsync(`${pm?.name} install i18n-js`);
+    await execAsync(`${pm?.name} install i18n-js languine`);
     await execAsync("npx expo install expo-localization");
 
     s.stop("Dependencies installed successfully");

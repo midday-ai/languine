@@ -94,13 +94,13 @@ export function generateConfig({
   files: {
     ${formatKey}: {
       include: [${filesPatterns.map((p) => `"${p}"`).join(", ")}],
-    }
+    },
   },
   llm: {
     provider: "${provider}",
     model: "${model}",
-  }
-}`;
+  },
+};`;
 
   if (configType === "mjs") {
     return `export default ${configBody}`;
