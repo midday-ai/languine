@@ -2,8 +2,9 @@ import { execSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { intro, outro, select, text } from "@clack/prompts";
+import chalk from "chalk";
 import { providers } from "../providers.js";
-import type { Provider } from "../types.js";
+import type { PresetOptions, Provider } from "../types.js";
 import { configPath } from "../utils.js";
 
 async function createDirectoryOrFile(filePath: string, isDirectory = false) {
@@ -24,6 +25,17 @@ async function createDirectoryOrFile(filePath: string, isDirectory = false) {
     throw new Error(
       `Failed to create ${isDirectory ? "directory" : "file"}: ${filePath}`,
     );
+  }
+}
+
+async function getPresetConfig(preset: string, options: PresetOptions) {
+  switch (preset) {
+    case "expo": {
+      const { expo } = await import("../presets/expo.js");
+      return expo(options);
+    }
+    default:
+      return null;
   }
 }
 
@@ -52,7 +64,7 @@ function getDefaultPattern(format: string) {
   }
 }
 
-export async function init() {
+export async function init(preset?: string) {
   try {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
   } catch (error) {
@@ -67,7 +79,7 @@ export async function init() {
   const sourceLanguage = (await select({
     message: "What is your source language?",
     options: [
-      { value: "en", label: "English" },
+      { value: "en", label: "English", hint: "recommended" },
       { value: "es", label: "Spanish" },
       { value: "fr", label: "French" },
       { value: "de", label: "German" },
@@ -83,28 +95,52 @@ export async function init() {
     },
   })) as string;
 
-  const fileFormat = (await select({
-    message: "What format should language files use?",
-    options: [
-      { value: "ts", label: "TypeScript (.ts)" },
-      { value: "json", label: "JSON (.json)" },
-      { value: "md", label: "Markdown (.md)" },
-      { value: "xcode-strings", label: "Xcode Strings (.strings)" },
-      { value: "xcode-stringsdict", label: "Xcode Stringsdict (.stringsdict)" },
-      { value: "xcode-xcstrings", label: "Xcode XCStrings (.xcstrings)" },
-      { value: "yaml", label: "YAML (.yml)" },
-      { value: "po", label: "Gettext (.po)" },
-      { value: "android", label: "Android (.xml)" },
-    ],
-  })) as string;
+  let fileFormat: string;
+  let filesPatterns: string[];
 
-  const defaultPattern = getDefaultPattern(fileFormat);
-  const filesPattern = (await text({
-    message: "Where should language files be stored?",
-    placeholder: defaultPattern,
-    defaultValue: defaultPattern,
-    validate: () => undefined,
-  })) as string;
+  if (!preset) {
+    fileFormat = (await select({
+      message: "What format should language files use?",
+      options: [
+        { value: "ts", label: "TypeScript (.ts)" },
+        { value: "json", label: "JSON (.json)" },
+        { value: "md", label: "Markdown (.md)" },
+        { value: "xcode-strings", label: "Xcode Strings (.strings)" },
+        {
+          value: "xcode-stringsdict",
+          label: "Xcode Stringsdict (.stringsdict)",
+        },
+        { value: "xcode-xcstrings", label: "Xcode XCStrings (.xcstrings)" },
+        { value: "yaml", label: "YAML (.yml)" },
+        { value: "po", label: "Gettext (.po)" },
+        { value: "android", label: "Android (.xml)" },
+      ],
+    })) as string;
+
+    const defaultPattern = getDefaultPattern(fileFormat);
+    const patternsInput = (await text({
+      message:
+        "Where should language files be stored? (separate multiple patterns with comma)",
+      placeholder: defaultPattern,
+      defaultValue: defaultPattern,
+      validate: () => undefined,
+    })) as string;
+    filesPatterns = patternsInput.split(",").map((p) => p.trim());
+  } else {
+    const presetConfig = await getPresetConfig(preset, {
+      sourceLanguage,
+      targetLanguages: targetLanguages.split(",").map((l) => l.trim()),
+    });
+
+    if (!presetConfig) {
+      throw new Error(`Invalid preset: ${preset}`);
+    }
+
+    fileFormat = presetConfig.fileFormat;
+    filesPatterns = Array.isArray(presetConfig.filesPattern)
+      ? presetConfig.filesPattern
+      : [presetConfig.filesPattern];
+  }
 
   const provider = (await select<Provider>({
     message: "Which provider would you like to use?",
@@ -140,7 +176,7 @@ export async function init() {
   },
   files: {
     ${fileFormat.includes("-") ? `"${fileFormat}"` : fileFormat}: {
-      include: ["${filesPattern}"],
+      include: ${JSON.stringify(filesPatterns)},
     },
   },
   llm: {
@@ -154,20 +190,23 @@ export async function init() {
       sourceLanguage,
       ...targetLanguages.split(",").map((l) => l.trim()),
     ];
-    const isDirectory = filesPattern.includes("*");
 
-    for (const lang of targetLangs) {
-      const filePath = path.join(
-        process.cwd(),
-        filesPattern.replace("[locale]", lang),
-      );
+    for (const pattern of filesPatterns) {
+      const isDirectory = pattern.includes("*");
 
-      if (isDirectory) {
-        // For patterns with wildcards, create the directory structure
-        await createDirectoryOrFile(path.dirname(filePath), true);
-      } else {
-        // For direct file patterns, create the file
-        await createDirectoryOrFile(filePath);
+      for (const lang of targetLangs) {
+        const filePath = path.join(
+          process.cwd(),
+          pattern.replace("[locale]", lang),
+        );
+
+        if (isDirectory) {
+          // For patterns with wildcards, create the directory structure
+          await createDirectoryOrFile(path.dirname(filePath), true);
+        } else {
+          // For direct file patterns, create the file
+          await createDirectoryOrFile(filePath);
+        }
       }
     }
 
@@ -177,7 +216,9 @@ export async function init() {
       "Configuration file and language files/directories created successfully!",
     );
   } catch (error) {
-    outro("Failed to create config and language files");
+    outro(
+      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
+    );
     process.exit(1);
   }
 }

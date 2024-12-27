@@ -69,3 +69,8 @@ export interface Translator {
   onNew: (options: PromptOptions) => Awaitable<PromptResult>;
   onUpdate: (options: UpdateOptions) => Awaitable<UpdateResult>;
 }
+
+export interface PresetOptions {
+  sourceLanguage: string;
+  targetLanguages: string[];
+}
