@@ -41,8 +41,8 @@
             <item quantity="other">%d canciones en cola</item>
         </plurals>
         <plurals name="notification_likes">
-            <item quantity="one">A %d persona le gustó tu publicación</item>
-            <item quantity="other">A %d personas les gustó tu publicación</item>
+            <item quantity="one">%d persona le gustó tu publicación</item>
+            <item quantity="other">%d personas les gustó tu publicación</item>
         </plurals>
         <plurals name="game_achievements">
             <item quantity="one">%d logro desbloqueado</item>

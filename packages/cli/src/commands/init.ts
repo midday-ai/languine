@@ -67,6 +67,8 @@ function getDefaultPattern(format: string) {
 }
 
 export async function init(preset?: string) {
+  let configType = "ts";
+
   try {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
   } catch (error) {
@@ -78,17 +80,19 @@ export async function init(preset?: string) {
 
   intro("Let's set up your i18n configuration");
 
-  const configType = (await select({
-    message: "What type of config file would you like to use?",
-    options: [
-      { value: "ts", label: "TypeScript", hint: "recommended" },
-      { value: "mjs", label: "JavaScript" },
-    ],
-  })) as "ts" | "mjs";
+  if (!preset) {
+    configType = (await select({
+      message: "What type of config file would you like to use?",
+      options: [
+        { value: "ts", label: "TypeScript", hint: "recommended" },
+        { value: "mjs", label: "JavaScript" },
+      ],
+    })) as "ts" | "mjs";
 
-  // Install dependencies only if we're using TypeScript for types in config
-  if (configType === "ts") {
-    await installDependencies();
+    // Install dependencies only if we're using TypeScript for types in config
+    if (configType === "ts") {
+      await installDependencies();
+    }
   }
 
   const sourceLanguage = (await select({
@@ -155,6 +159,8 @@ export async function init(preset?: string) {
     filesPatterns = Array.isArray(presetConfig.filesPattern)
       ? presetConfig.filesPattern
       : [presetConfig.filesPattern];
+
+    configType = presetConfig.configType;
   }
 
   const provider = (await select<Provider>({

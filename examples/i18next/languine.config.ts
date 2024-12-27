@@ -8,7 +8,7 @@ export default defineConfig({
   },
   files: {
     json: {
-      include: ["locales"],
+      include: ["locales/[locale].json"],
     },
   },
   llm: {

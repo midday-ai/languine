@@ -107,6 +107,7 @@ export async function expo(options: PresetOptions) {
 
   return {
     fileFormat: "json",
+    configType: "ts",
     filesPattern: ["locales/native/[locale].json", "locales/[locale].json"],
   };
 }

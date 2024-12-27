@@ -81,7 +81,7 @@ export function generateConfig({
   filesPatterns: string[];
   provider: string;
   model: string;
-  configType: "ts" | "mjs";
+  configType: string;
 }) {
   const formatKey = fileFormat.includes("-") ? `"${fileFormat}"` : fileFormat;
 
@@ -111,7 +111,7 @@ export function generateConfig({
 export default defineConfig(${configBody})`;
 }
 
-export async function configFile(configType?: "ts" | "mjs") {
+export async function configFile(configType?: string) {
   const files = await fs.readdir(process.cwd());
   const configFile = files.find(
     (file: string) =>
