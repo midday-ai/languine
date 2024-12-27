@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { type OpenAIProvider, createOpenAI } from "@ai-sdk/openai";
 import { intro, outro, spinner } from "@clack/prompts";
+import type { LanguageModel } from "ai";
 import chalk from "chalk";
 import { type OllamaProvider, createOllama } from "ollama-ai-provider";
 import { simpleGit } from "simple-git";
@@ -13,7 +14,6 @@ import type {
   UpdateResult,
 } from "../types.js";
 import { getApiKey, getConfig } from "../utils.js";
-import type { LanguageModel } from "ai";
 
 const providersMap: Record<
   Provider,
@@ -59,8 +59,8 @@ export async function translate(targetLocale?: string, force = false) {
   const translationTasks = locales.flatMap((locale) =>
     Object.entries(config.files).flatMap(([format, { include }]) =>
       include.map(async (pattern) => {
-        let sourcePath;
-        let targetPath;
+        let sourcePath: string;
+        let targetPath: string;
 
         if (typeof pattern === "string") {
           sourcePath = pattern.replace("[locale]", config.locale.source);
@@ -84,7 +84,12 @@ export async function translate(targetLocale?: string, force = false) {
             model,
           );
         } catch (error) {
-          return { locale, sourcePath, success: false, error } as RunResult;
+          return {
+            locale,
+            sourcePath,
+            success: false,
+            error,
+          } as RunResult;
         }
       }),
     ),
@@ -235,4 +240,3 @@ async function run(
     summary,
   };
 }
-``;
