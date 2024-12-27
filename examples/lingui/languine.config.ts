@@ -1,10 +1,11 @@
 import { Biome, Distribution } from "@biomejs/js-api";
+import { defineConfig } from "languine";
 
 const biome = await Biome.create({
   distribution: Distribution.NODE,
 });
 
-export default {
+export default defineConfig({
   version: "1.0.0",
   locale: {
     source: "en",
@@ -21,7 +22,7 @@ export default {
   },
   hooks: {
     // Optional: Format the content with Biome
-    afterTranslate: ({ content, filePath }) => {
+    afterTranslate: async ({ content, filePath }) => {
       const formatted = biome.formatContent(content.toString(), {
         filePath,
       });
@@ -29,4 +30,4 @@ export default {
       return formatted.content;
     },
   },
-};
+});

@@ -167,8 +167,9 @@ export async function init(preset?: string) {
     message: "Which model should be used for translations?",
     options: models,
   })) as string;
+  const configContent = `import { defineConfig } from "languine";
 
-  const configContent = `export default {
+export default defineConfig({
   version: "${require("../../package.json").version}",
   locale: {
     source: "${sourceLanguage}",
@@ -183,7 +184,7 @@ export async function init(preset?: string) {
     provider: "${provider}",
     model: "${model}",
   },
-}`;
+})`;
 
   try {
     const targetLangs = [

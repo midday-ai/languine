@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from "languine";
+
+export default defineConfig({
   version: "0.5.6",
   locale: {
     source: "en",
@@ -14,4 +16,4 @@ export default {
     model: "mistral:latest",
     temperature: 0,
   },
-};
+});

@@ -5,8 +5,8 @@ import { pathToFileURL } from "node:url";
 import { confirm, outro, text } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
-import type { Config } from "./types.js";
 import type { Jiti } from "jiti";
+import type { Config } from "./types.js";
 
 export async function getApiKey(name: string, key: string) {
   if (key in process.env) {
@@ -61,7 +61,7 @@ export async function getApiKey(name: string, key: string) {
   })();
 }
 
-export const configPath = path.join(process.cwd(), "languine.config.mjs");
+export const configPath = path.join(process.cwd(), "languine.config.ts");
 const name = "languine.config";
 
 let jiti: Jiti | undefined;
@@ -81,7 +81,7 @@ export async function getConfig(): Promise<Config> {
   if (!target) {
     outro(
       chalk.red(
-        "Could not find languine.config.mjs. Run 'languine init' first.",
+        "Could not find languine.config.ts. Run 'languine init' first.",
       ),
     );
 
