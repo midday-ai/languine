@@ -29,6 +29,8 @@ async function createDirectoryOrFile(filePath: string, isDirectory = false) {
 
 function getDefaultPattern(format: string) {
   switch (format) {
+    case "ts":
+      return "locales/[locale].ts";
     case "xcode-strings":
       return "Example/[locale].lproj/Localizable.strings";
     case "xcode-stringsdict":
