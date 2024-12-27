@@ -1,7 +1,5 @@
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  version: "0.6.7",
+export default {
+  version: "0.6.8",
   locale: {
     source: "en",
     targets: ["es"],
@@ -15,4 +13,4 @@ export default defineConfig({
     provider: "openai",
     model: "gpt-4-turbo",
   },
-});
+};

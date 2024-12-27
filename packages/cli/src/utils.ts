@@ -9,6 +9,8 @@ import type { Jiti } from "jiti";
 import preferredPM from "preferred-pm";
 import type { Config } from "./types.js";
 
+const CONFIG_NAME = "languine.config";
+
 export async function getApiKey(name: string, key: string) {
   if (key in process.env) {
     return process.env[key];
@@ -62,27 +64,84 @@ export async function getApiKey(name: string, key: string) {
   })();
 }
 
-export const configPath = path.join(process.cwd(), "languine.config.ts");
-const name = "languine.config";
+export function generateConfig({
+  version,
+  sourceLanguage,
+  targetLanguages,
+  fileFormat,
+  filesPatterns,
+  provider,
+  model,
+  configType,
+}: {
+  version: string;
+  sourceLanguage: string;
+  targetLanguages: string[];
+  fileFormat: string;
+  filesPatterns: string[];
+  provider: string;
+  model: string;
+  configType: "ts" | "mjs";
+}) {
+  const formatKey = fileFormat.includes("-") ? `"${fileFormat}"` : fileFormat;
+
+  const configBody = `{
+  version: "${version}",
+  locale: {
+    source: "${sourceLanguage}",
+    targets: [${targetLanguages.map((l) => `"${l}"`).join(", ")}],
+  },
+  files: {
+    ${formatKey}: {
+      include: [${filesPatterns.map((p) => `"${p}"`).join(", ")}],
+    }
+  },
+  llm: {
+    provider: "${provider}",
+    model: "${model}",
+  }
+}`;
+
+  if (configType === "mjs") {
+    return `export default ${configBody}`;
+  }
+
+  return `import { defineConfig } from "languine";
+
+export default defineConfig(${configBody})`;
+}
+
+export async function configFile(configType?: "ts" | "mjs") {
+  const files = await fs.readdir(process.cwd());
+  const configFile = files.find(
+    (file: string) =>
+      file.startsWith(`${CONFIG_NAME}.`) &&
+      (file.endsWith(".ts") || file.endsWith(".mjs")),
+  );
+
+  // If configType is specified, use that
+  // Otherwise try to detect from existing file, falling back to ts
+  const format = configType || (configFile?.endsWith(".mjs") ? "mjs" : "ts");
+  const filePath = path.join(
+    process.cwd(),
+    configFile || `${CONFIG_NAME}.${format}`,
+  );
+
+  return {
+    path: filePath,
+    format,
+  };
+}
 
 let jiti: Jiti | undefined;
 
 export async function getConfig(): Promise<Config> {
-  let config: Config;
-  let target: string | undefined;
-  const files = await fs.readdir(process.cwd());
+  const { path: filePath, format } = await configFile();
 
-  for (const file of files) {
-    if (file.startsWith(`${name}.`)) {
-      target = path.resolve(file);
-      break;
-    }
-  }
-
-  if (!target) {
+  if (!filePath) {
     outro(
       chalk.red(
-        "Could not find languine.config.ts. Run 'languine init' first.",
+        `Could not find ${CONFIG_NAME}.${format}. Run 'languine init' first.`,
       ),
     );
 
@@ -90,7 +149,7 @@ export async function getConfig(): Promise<Config> {
   }
 
   try {
-    const configModule = await import(pathToFileURL(target).href);
+    const configModule = await import(pathToFileURL(filePath).href);
     return configModule.default;
   } catch (error) {
     const { createJiti } = await import("jiti");
@@ -105,7 +164,7 @@ export async function getConfig(): Promise<Config> {
     });
 
     return await jiti
-      .import(target)
+      .import(filePath)
       .then((mod) => (mod as unknown as { default: Config }).default);
   }
 }

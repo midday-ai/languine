@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import "./envs.js";
-import { select } from "@clack/prompts";
+import { isCancel, select } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
 import { clean } from "./commands/clean.js";
@@ -46,6 +46,10 @@ const command =
     ],
   }));
 
+if (isCancel(command)) {
+  process.exit(0);
+}
+
 const targetLocale = process.argv[3];
 const preset = process.argv.includes("--preset")
   ? process.argv[process.argv.indexOf("--preset") + 1]
@@ -53,15 +57,15 @@ const preset = process.argv.includes("--preset")
 const force = process.argv.includes("--force") || process.argv.includes("-f");
 
 if (command === "init") {
-  init(preset);
+  await init(preset);
 } else if (command === "translate") {
-  translate(targetLocale, force);
+  await translate(targetLocale, force);
 } else if (command === "instructions") {
-  instructions();
+  await instructions();
 } else if (command === "diff") {
-  diff();
+  await diff();
 } else if (command === "clean") {
-  clean();
+  await clean();
 } else if (command === "available") {
   console.log(dedent`
     ${chalk.cyan("init")}          Initialize a new Languine configuration
