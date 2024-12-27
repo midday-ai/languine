@@ -6,7 +6,12 @@ import chalk from "chalk";
 import { type OllamaProvider, createOllama } from "ollama-ai-provider";
 import { simpleGit } from "simple-git";
 import { getTranslator } from "../translators/index.js";
-import type { Config, PromptOptions, Provider, UpdateResult } from "../types.js";
+import type {
+  Config,
+  PromptOptions,
+  Provider,
+  UpdateResult,
+} from "../types.js";
 import { getApiKey, getConfig } from "../utils.js";
 import type { LanguageModel } from "ai";
 
@@ -44,11 +49,6 @@ export async function translate(targetLocale?: string, force = false) {
     );
     process.exit(1);
   }
-
-  // Initialize OpenAI
-  const openai = createOpenAI({
-    apiKey: await getApiKey("OpenAI", "OPENAI_API_KEY"),
-  });
 
   const model = await getModel(config);
 

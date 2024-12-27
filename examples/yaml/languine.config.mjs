@@ -13,4 +13,4 @@ export default {
     provider: "openai",
     model: "gpt-4-turbo",
   },
-}
+};

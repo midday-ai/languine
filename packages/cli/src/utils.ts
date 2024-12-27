@@ -1,11 +1,12 @@
 import { execSync } from "node:child_process";
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { confirm, outro, text } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
 import type { Config } from "./types.js";
+import type { Jiti } from "jiti";
 
 export async function getApiKey(name: string, key: string) {
   if (key in process.env) {
@@ -61,25 +62,47 @@ export async function getApiKey(name: string, key: string) {
 }
 
 export const configPath = path.join(process.cwd(), "languine.config.mjs");
+const name = "languine.config";
 
-export async function getConfig() {
+let jiti: Jiti | undefined;
+
+export async function getConfig(): Promise<Config> {
   let config: Config;
-  try {
-    const configModule = await import(pathToFileURL(configPath).href);
-    config = configModule.default;
-  } catch (error) {
-    console.error(error);
+  let target: string | undefined;
+  const files = await fs.readdir(process.cwd());
+
+  for (const file of files) {
+    if (file.startsWith(`${name}.`)) {
+      target = path.resolve(file);
+      break;
+    }
+  }
+
+  if (!target) {
     outro(
       chalk.red(
         "Could not find languine.config.mjs. Run 'languine init' first.",
       ),
     );
+
     process.exit(1);
   }
 
-  return config;
-}
+  try {
+    const configModule = await import(pathToFileURL(target).href);
+    return configModule.default;
+  } catch (error) {
+    const { createJiti } = await import("jiti");
+    const { transform } = await import("sucrase");
 
-export function updateConfig(config: Config) {
-  fs.writeFileSync(configPath, `export default ${JSON.stringify(config)}`);
+    jiti ??= createJiti(import.meta.url, {
+      transform(opts) {
+        return transform(opts.source, {
+          transforms: ["typescript", "imports"],
+        });
+      },
+    });
+
+    return await jiti.import(target).then((mod) => (mod as any).default);
+  }
 }

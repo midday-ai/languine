@@ -27,7 +27,7 @@ export interface Config {
   };
 }
 
-type Include =
+export type Include =
   | string
   | {
       from: string;
