@@ -2,8 +2,36 @@ import { exec } from "node:child_process";
 import fs from "node:fs/promises";
 import { confirm, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
+import dedent from "dedent";
 import preferredPM from "preferred-pm";
 import type { PresetOptions } from "../types.js";
+
+async function createI18nFile(
+  sourceLanguage: string,
+  targetLanguages: string[],
+) {
+  const i18nContent = dedent`
+    // For more information on Expo Localization and usage: https://docs.expo.dev/guides/localization
+    import { getLocales } from 'expo-localization';
+    import { I18n } from 'i18n-js';
+    
+    const translations = {
+      ${sourceLanguage}: require('./${sourceLanguage}.json'),
+      ${targetLanguages.map((lang) => `${lang}: require('./${lang}.json')`).join(",\n      ")}
+    }
+    
+    const i18n = new I18n(translations);
+    
+    i18n.locale = getLocales().at(0)?.languageCode ?? '${sourceLanguage}';
+    
+    i18n.enableFallback = true;
+    
+    export default i18n;
+  `;
+
+  await fs.mkdir("locales", { recursive: true });
+  await fs.writeFile("locales/i18n.ts", i18nContent);
+}
 
 async function installDependencies() {
   const s = spinner();
@@ -93,6 +121,7 @@ export async function expo(options: PresetOptions) {
   await fs.writeFile(appJsonPath, JSON.stringify(appJson, null, 2));
 
   await installDependencies();
+  await createI18nFile(sourceLanguage, targetLanguages);
 
   return {
     fileFormat: "json",
