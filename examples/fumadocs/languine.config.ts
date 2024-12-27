@@ -20,7 +20,9 @@ export default defineConfig({
       }),
     },
   },
-  openai: {
+  llm: {
+    provider: "openai",
     model: "gpt-4-turbo",
+    temperature: 0,
   },
 });

@@ -2,7 +2,7 @@
   "name": "@languine/core",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["packages/*", "apps/*", "examples/fumadocs"],
+  "workspaces": ["packages/*", "apps/*", "examples/*"],
   "license": "MIT",
   "scripts": {
     "build": "turbo build",
