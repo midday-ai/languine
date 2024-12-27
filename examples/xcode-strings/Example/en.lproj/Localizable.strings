@@ -1,0 +1,20 @@
+"welcome_message" = "Welcome to Weather App!";
+"temperature_format" = "%1$.1f°%2$@";
+"wind_speed" = "Wind: %1$.1f %2$@";
+"forecast_daily" = "Daily forecast for %@";
+"notification_body" = "Storm alert for %1$@ region\nWind speeds up to %2$d mph expected";
+
+"battery_empty" = "Battery depleted";
+"battery_low" = "Battery at %d%% - please charge soon";
+"battery_full" = "Battery fully charged";
+
+"photo_count_zero" = "No photos";
+"photo_count_one" = "%d photo";
+"photo_count_other" = "%d photos";
+
+"time_remaining_now" = "Download complete!";
+"time_remaining_minutes" = "%d minutes remaining";
+"time_remaining_hours" = "About %d hours remaining";
+
+"share_message" = "Check out this photo I took with %1$@!\nLocation: %2$@\nTime: %3$@";
+"rich_notification" = "New message from %@:\n<b>%@</b>\n<a href=\"%@\">View details</a>";

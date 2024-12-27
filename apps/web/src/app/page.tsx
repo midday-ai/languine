@@ -64,8 +64,15 @@ export default function Page() {
             <p>
               The smart detection system identifies new, modified, or removed
               translation keys in your codebase, handling multiple file formats
-              (.json, .ts, .md) with precise parsing and file-specific updates.
+              (.json, .ts, .md, .yaml, .po, .xml, .plist, .xcstrings,
+              .stringsdict) with precise parsing and file-specific updates.
             </p>
+
+            <p>
+              Languine comes with ready-to-use presets for React Native, Expo,
+              and more to get started in seconds.
+            </p>
+
             <p>
               Built with TypeScript and designed for developers, Languine
               integrates natively with version control systems and your

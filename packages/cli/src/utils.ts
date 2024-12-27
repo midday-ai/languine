@@ -1,11 +1,15 @@
-import { execSync } from "node:child_process";
-import fs from "node:fs";
+import { exec, execSync } from "node:child_process";
+import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { confirm, outro, text } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
+import type { Jiti } from "jiti";
+import preferredPM from "preferred-pm";
 import type { Config } from "./types.js";
+
+const CONFIG_NAME = "languine.config";
 
 export async function getApiKey(name: string, key: string) {
   if (key in process.env) {
@@ -60,26 +64,141 @@ export async function getApiKey(name: string, key: string) {
   })();
 }
 
-export const configPath = path.join(process.cwd(), "languine.config.mjs");
+export function generateConfig({
+  version,
+  sourceLanguage,
+  targetLanguages,
+  fileFormat,
+  filesPatterns,
+  provider,
+  model,
+  configType,
+}: {
+  version: string;
+  sourceLanguage: string;
+  targetLanguages: string[];
+  fileFormat: string;
+  filesPatterns: string[];
+  provider: string;
+  model: string;
+  configType: string;
+}) {
+  const formatKey = fileFormat.includes("-") ? `"${fileFormat}"` : fileFormat;
 
-export async function getConfig() {
-  let config: Config;
-  try {
-    const configModule = await import(pathToFileURL(configPath).href);
-    config = configModule.default;
-  } catch (error) {
-    console.error(error);
+  const configBody = `{
+  version: "${version}",
+  locale: {
+    source: "${sourceLanguage}",
+    targets: [${targetLanguages.map((l) => `"${l}"`).join(", ")}],
+  },
+  files: {
+    ${formatKey}: {
+      include: [${filesPatterns.map((p) => `"${p}"`).join(", ")}],
+    },
+  },
+  llm: {
+    provider: "${provider}",
+    model: "${model}",
+  },
+}`;
+
+  if (configType === "mjs") {
+    return `export default ${configBody};`;
+  }
+
+  return `import { defineConfig } from "languine";
+
+export default defineConfig(${configBody});`;
+}
+
+export async function configFile(configType?: string) {
+  const files = await fs.readdir(process.cwd());
+  const configFile = files.find(
+    (file: string) =>
+      file.startsWith(`${CONFIG_NAME}.`) &&
+      (file.endsWith(".ts") || file.endsWith(".mjs")),
+  );
+
+  // If configType is specified, use that
+  // Otherwise try to detect from existing file, falling back to ts
+  const format = configType || (configFile?.endsWith(".mjs") ? "mjs" : "ts");
+  const filePath = path.join(
+    process.cwd(),
+    configFile || `${CONFIG_NAME}.${format}`,
+  );
+
+  return {
+    path: filePath,
+    format,
+  };
+}
+
+let jiti: Jiti | undefined;
+
+export async function getConfig(): Promise<Config> {
+  const { path: filePath, format } = await configFile();
+
+  if (!filePath) {
     outro(
       chalk.red(
-        "Could not find languine.config.mjs. Run 'languine init' first.",
+        `Could not find ${CONFIG_NAME}.${format}. Run 'languine init' first.`,
       ),
     );
+
     process.exit(1);
   }
 
-  return config;
+  try {
+    const configModule = await import(pathToFileURL(filePath).href);
+    return configModule.default;
+  } catch (error) {
+    const { createJiti } = await import("jiti");
+    const { transform } = await import("sucrase");
+
+    jiti ??= createJiti(import.meta.url, {
+      transform(opts) {
+        return transform(opts.source, {
+          transforms: ["typescript", "imports"],
+        });
+      },
+    });
+
+    return await jiti
+      .import(filePath)
+      .then((mod) => (mod as unknown as { default: Config }).default);
+  }
 }
 
-export function updateConfig(config: Config) {
-  fs.writeFileSync(configPath, `export default ${JSON.stringify(config)}`);
+export async function execAsync(command: string) {
+  return await new Promise<void>((resolve, reject) => {
+    exec(command, (error) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve();
+      }
+    });
+  });
+}
+
+export async function findPreferredPM() {
+  let currentDir = process.cwd();
+
+  while (true) {
+    const pm = await preferredPM(currentDir);
+    if (pm) return pm;
+
+    const parentDir = path.dirname(currentDir);
+
+    if (parentDir === currentDir) return null;
+
+    // Look for package.json to determine if we're at project root
+    try {
+      await import(path.join(currentDir, "package.json"));
+      // If we find package.json, this is as far as we should go
+      return null;
+    } catch {
+      currentDir = parentDir;
+    }
+  }
 }

@@ -1,0 +1,10 @@
+# This is a PO file containing English strings that serve as the source for translations.
+# Each entry consists of a msgid (string identifier) and msgstr (translated string).
+msgid "welcome_message" 
+msgstr "Welcome to our application!"
+
+msgid "error_message"
+msgstr "An error occurred: {error_code}"
+
+msgid "example_message"
+msgstr "This is an example message with a {variable}"

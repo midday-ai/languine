@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { intro, outro, text } from "@clack/prompts";
 import chalk from "chalk";
-import { configPath, getConfig } from "../utils.js";
+import { configFile, getConfig } from "../utils.js";
 
 export async function instructions() {
   intro("Let's customize your translation prompt");
@@ -22,6 +22,7 @@ export async function instructions() {
     config.instructions = customInstructions as string;
 
     // Write updated config
+    const { path: configPath } = await configFile();
     await fs.writeFile(configPath, JSON.stringify(config, null, 2), "utf-8");
 
     outro(chalk.green("Translation prompt updated successfully!"));

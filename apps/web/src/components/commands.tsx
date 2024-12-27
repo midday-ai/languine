@@ -177,6 +177,55 @@ export function Commands() {
           step >= 4 ? "opacity-100" : "opacity-0",
         )}
       >
+        │ ○ Xcode Strings (.strings)
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ Xcode Stringsdict (.stringsdict)
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ Xcode XCStrings (.xcstrings)
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ YAML (.yml)
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ Gettext (.po)
+      </span>
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
+        │ ○ Android (.xml)
+      </span>
+
+      <span
+        className={cn(
+          "transition-opacity duration-100",
+          step >= 4 ? "opacity-100" : "opacity-0",
+        )}
+      >
         │
       </span>
 

@@ -1,0 +1,48 @@
+# General messages
+welcome: Welcome to our application!
+goodbye: Thanks for using our app. See you next time!
+
+# Navigation
+nav:
+  home: Home
+  about: About
+  contact: Contact Us
+  settings: Settings
+
+# User messages
+user:
+  greeting: "Hello, {name}!"
+  profile:
+    title: Your Profile
+    edit: Edit Profile
+    save: Save Changes
+    cancel: Cancel
+
+# Error messages
+errors:
+  not_found: Page not found
+  server_error: An error occurred on the server
+  validation:
+    required: This field is required
+    email: Please enter a valid email address
+    password: Password must be at least 8 characters
+
+# Form labels
+form:
+  email: Email Address
+  password: Password
+  submit: Submit
+  reset: Reset Form
+
+# Success messages
+success:
+  saved: Changes saved successfully
+  uploaded: File uploaded successfully
+  deleted: Item deleted successfully
+
+# Time-related
+time:
+  today: Today
+  yesterday: Yesterday
+  tomorrow: Tomorrow
+  days_ago: "{count} days ago"

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <resources>
+        <string name="nav_home">Inicio</string>
+        <string name="nav_search">Buscar</string>
+        <string name="nav_favorites">Favoritos</string>
+        <string name="nav_settings">Configuración</string>
+        <string name="profile_title">Mi Perfil</string>
+        <string name="profile_edit">Editar Perfil</string>
+        <string name="profile_save">Guardar Cambios</string>
+        <string name="profile_logout">Cerrar Sesión</string>
+        <string name="media_play">Reproducir</string>
+        <string name="media_pause">Pausa</string>
+        <string name="media_next">Siguiente Canción</string>
+        <string name="media_previous">Canción Anterior</string>
+        <string name="cart_title">Carrito de Compras</string>
+        <string name="cart_total">Total: $%1$.2f</string>
+        <string name="cart_checkout">Proceder al Pago</string>
+        <string name="weather_current">Temperatura Actual: %1$d°</string>
+        <string name="weather_humidity">Humedad: %1$d%%</string>
+        <string name="weather_wind">Velocidad del Viento: %1$d mph</string>
+        <string name="notification_new_message">%1$s te ha enviado un mensaje</string>
+        <string name="notification_friend_request">Nueva solicitud de amistad de %1$s</string>
+        <string name="error_network">No se puede conectar a la red</string>
+        <string name="error_timeout">Tiempo de solicitud agotado</string>
+        <string name="error_invalid_input">Entrada inválida proporcionada</string>
+        <string name="calendar_event_title">Evento: %1$s</string>
+        <string name="calendar_event_time">Hora: %1$s - %2$s</string>
+        <string name="calendar_event_location">Ubicación: %1$s</string>
+        <string name="game_score">Puntuación: %1$d</string>
+        <string name="game_high_score">Puntuación Más Alta: %1$d</string>
+        <string name="game_lives_left">Vidas: %1$d</string>
+        <string name="welcome_message">¡Bienvenido a nuestra aplicación!</string>
+        <string-array name="payment_methods">
+            <item>Tarjeta de Crédito</item>
+            <item>PayPal</item>
+            <item>Transferencia Bancaria</item>
+        </string-array>
+        <plurals name="media_queue">
+            <item quantity="one">%d canción en cola</item>
+            <item quantity="other">%d canciones en cola</item>
+        </plurals>
+        <plurals name="notification_likes">
+            <item quantity="one">%d persona le gustó tu publicación</item>
+            <item quantity="other">%d personas les gustó tu publicación</item>
+        </plurals>
+        <plurals name="game_achievements">
+            <item quantity="one">%d logro desbloqueado</item>
+            <item quantity="other">%d logros desbloqueados</item>
+        </plurals>
+    </resources>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- User Profile -->
+    <string name="profile_title">My Profile</string>
+    <string name="profile_edit">Edit Profile</string>
+    <string name="profile_save">Save Changes</string>
+    <string name="profile_logout">Sign Out</string>
+
+    <!-- Media Player -->
+    <plurals name="media_queue">
+        <item quantity="one">%d song in queue</item>
+        <item quantity="other">%d songs in queue</item>
+    </plurals>
+    <string name="media_play">Play</string>
+    <string name="media_pause">Pause</string>
+    <string name="media_next">Next Track</string>
+    <string name="media_previous">Previous Track</string>
+
+    <!-- Shopping Cart -->
+    <string name="cart_title">Shopping Cart</string>
+    <string name="cart_total">Total: $%1$.2f</string>
+    <string name="cart_checkout">Proceed to Checkout</string>
+    <string-array name="payment_methods">
+        <item>Credit Card</item>
+        <item>PayPal</item>
+        <item>Bank Transfer</item>
+    </string-array>
+
+    <!-- Weather -->
+    <string name="weather_current">Current Temperature: %1$d°</string>
+    <string name="weather_humidity">Humidity: %1$d%%</string>
+    <string name="weather_wind">Wind Speed: %1$d mph</string>
+
+    <!-- Notifications -->
+    <string name="notification_new_message">%1$s sent you a message</string>
+    <string name="notification_friend_request">New friend request from %1$s</string>
+    <plurals name="notification_likes">
+        <item quantity="one">%d person liked your post</item>
+        <item quantity="other">%d people liked your post</item>
+    </plurals>
+
+    <!-- Error Messages -->
+    <string name="error_network">Unable to connect to network</string>
+    <string name="error_timeout">Request timed out</string>
+    <string name="error_invalid_input">Invalid input provided</string>
+
+    <!-- Calendar -->
+    <string name="calendar_event_title">Event: %1$s</string>
+    <string name="calendar_event_time">Time: %1$s - %2$s</string>
+    <string name="calendar_event_location">Location: %1$s</string>
+
+    <!-- Game -->
+    <string name="game_score">Score: %1$d</string>
+    <string name="game_high_score">High Score: %1$d</string>
+    <string name="game_lives_left">Lives: %1$d</string>
+    <plurals name="game_achievements">
+        <item quantity="one">%d achievement unlocked</item>
+        <item quantity="other">%d achievements unlocked</item>
+    </plurals>
+
+    <string name="welcome_message">Welcome to our application!</string>
+</resources>

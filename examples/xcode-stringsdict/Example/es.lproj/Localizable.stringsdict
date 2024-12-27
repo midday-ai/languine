@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>product_count</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@items@</string>
+      <key>items</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>zero</key>
+        <string>No hay artículos disponibles</string>
+        <key>one</key>
+        <string>Un artículo disponible</string>
+        <key>two</key>
+        <string>Dos artículos disponibles</string>
+        <key>few</key>
+        <string>%lld artículos disponibles</string>
+        <key>many</key>
+        <string>%lld artículos disponibles</string>
+        <key>other</key>
+        <string>%lld artículos disponibles</string>
+      </dict>
+    </dict>
+    <key>countdown_days</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@days@</string>
+      <key>days</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>zero</key>
+        <string>¡El evento comienza hoy!</string>
+        <key>one</key>
+        <string>El evento comienza mañana!</string>
+        <key>two</key>
+        <string>El evento comienza en dos días</string>
+        <key>few</key>
+        <string>El evento comienza en %lld días</string>
+        <key>many</key>
+        <string>El evento comienza en %lld días</string>
+        <key>other</key>
+        <string>El evento comienza en %lld días</string>
+      </dict>
+    </dict>
+    <key>hello</key>
+    <string>¡Hola!</string>
+    <key>user_welcome</key>
+    <string>¡Bienvenido de nuevo, %@!</string>
+    <key>score_format</key>
+    <string>El jugador %1$@ ha ganado %2$lld puntos con $%3$.2f restantes</string>
+    <key>current_date</key>
+    <string>Fecha actual: %@</string>
+    <key>formatted_message</key>
+    <string>Aquí tienes un mensaje &lt;b&gt;formateado&lt;/b&gt; con:
+• Formato HTML
+• Símbolos especiales: ©®™
+• Un &lt;a href="https://example.com"&gt;hipervínculo&lt;/a&gt;</string>
+    <key>alert_count</key>
+    <dict>
+      <key>NSStringLocalizedFormatKey</key>
+      <string>%#@notifications@</string>
+      <key>notifications</key>
+      <dict>
+        <key>NSStringFormatSpecTypeKey</key>
+        <string>NSStringPluralRuleType</string>
+        <key>NSStringFormatValueTypeKey</key>
+        <string>lld</string>
+        <key>zero</key>
+        <string>No hay nuevas notificaciones</string>
+        <key>one</key>
+        <string>Una nueva notificación</string>
+        <key>other</key>
+        <string>%lld nuevas notificaciones</string>
+      </dict>
+    </dict>
+    <key>remaining_time</key>
+    <string>Tiempo restante: %1$@ (%2$lld segundos)</string>
+    <key>version_info</key>
+    <string>Versión %1$@ (Construcción %2$@)</string>
+    <key>test</key>
+    <string>Prueba</string>
+  </dict>
+</plist>

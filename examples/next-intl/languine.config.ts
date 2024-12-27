@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from "languine";
+
+export default defineConfig({
   version: "1.0.0",
   locale: {
     source: "en",
@@ -9,7 +11,8 @@ export default {
       include: ["messages/[locale].json"],
     },
   },
-  openai: {
+  llm: {
+    provider: "openai",
     model: "gpt-4-turbo",
   },
-};
+});

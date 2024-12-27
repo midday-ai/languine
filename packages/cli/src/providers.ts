@@ -11,6 +11,7 @@ type ModelInfo = {
 type ProviderConfig = {
   value: Provider;
   label: string;
+  hint?: string;
   getModels: () => Promise<ModelInfo[]>;
 };
 
@@ -19,9 +20,13 @@ export const providers: Record<Provider, ProviderConfig> = {
     value: "openai",
     label: "OpenAI",
     getModels: async () => [
-      { value: "gpt-4-turbo", label: "GPT-4 Turbo (Default)" },
+      {
+        value: "gpt-4-turbo",
+        label: "GPT-4 Turbo (Default)",
+        hint: "recommended",
+      },
       { value: "gpt-4", label: "GPT-4" },
-      { value: "gpt-4o", label: "GPT-4o" },
+      { value: "gpt-4o", label: "GPT-4o", hint: "recommended" },
       { value: "gpt-4o-mini", label: "GPT-4o mini" },
       { value: "gpt-3.5-turbo", label: "GPT-3.5 Turbo" },
     ],

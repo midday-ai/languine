@@ -38,6 +38,7 @@ export function Install() {
         <h2 className="text-lg font-medium">CLI</h2>
         <pre className="text-xs font-mono mt-4">
           <code>{`init          Initialize a new Languine configuration
+init          --preset <preset>  Initialize a new Languine configuration with a preset
 translate     Translate to all target locales
 translate     <locale>    Translate to a specific locale
 translate     --force     Force translate all keys

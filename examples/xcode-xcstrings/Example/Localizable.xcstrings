@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "sourceLanguage": "en",
+  "strings": {
+    "welcome_message": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willkommen bei der App"
+          }
+        }
+      }
+    },
+    "user_greeting": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hallo %@"
+          }
+        }
+      }
+    },
+    "items_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Einträge"
+          }
+        }
+      }
+    },
+    "notification_time": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In %lld Minute"
+          }
+        }
+      }
+    },
+    "item_details": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Details anzeigen"
+          }
+        }
+      }
+    },
+    "modified_date": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt geändert: %lld"
+          }
+        }
+      }
+    },
+    "item_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beschreibung: %lld"
+          }
+        }
+      }
+    }
+  }
+}

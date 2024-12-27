@@ -1,0 +1,16 @@
+"welcome_message" = "¡Bienvenido a Weather App!";
+"temperature_format" = "%1$.1f°%2$@";
+"wind_speed" = "Viento: %1$.1f %2$@";
+"forecast_daily" = "Pronóstico diario para %@";
+"notification_body" = "Alerta de tormenta para la región de %1$@\nSe esperan velocidades de viento de hasta %2$d mph";
+"battery_empty" = "Batería agotada";
+"battery_low" = "Batería al %d%% - por favor carga pronto";
+"battery_full" = "Batería completamente cargada";
+"photo_count_zero" = "No hay fotos";
+"photo_count_one" = "%d foto";
+"photo_count_other" = "%d fotos";
+"time_remaining_now" = "¡Descarga completa!";
+"time_remaining_minutes" = "%d minutos restantes";
+"time_remaining_hours" = "Aproximadamente %d horas restantes";
+"share_message" = "Mira esta foto que tomé con %1$@!\nUbicación: %2$@\nHora: %3$@";
+"rich_notification" = "Nuevo mensaje de %@:\n<b>%@</b>\n<a href=\"%@\">Ver detalles</a>";

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import "./envs.js";
-import { select } from "@clack/prompts";
+import { isCancel, select } from "@clack/prompts";
 import chalk from "chalk";
 import dedent from "dedent";
 import { clean } from "./commands/clean.js";
@@ -46,22 +46,30 @@ const command =
     ],
   }));
 
+if (isCancel(command)) {
+  process.exit(0);
+}
+
 const targetLocale = process.argv[3];
+const preset = process.argv.includes("--preset")
+  ? process.argv[process.argv.indexOf("--preset") + 1]
+  : undefined;
 const force = process.argv.includes("--force") || process.argv.includes("-f");
 
 if (command === "init") {
-  init();
+  await init(preset);
 } else if (command === "translate") {
-  translate(targetLocale, force);
+  await translate(targetLocale, force);
 } else if (command === "instructions") {
-  instructions();
+  await instructions();
 } else if (command === "diff") {
-  diff();
+  await diff();
 } else if (command === "clean") {
-  clean();
+  await clean();
 } else if (command === "available") {
   console.log(dedent`
     ${chalk.cyan("init")}          Initialize a new Languine configuration
+    ${chalk.cyan("init")} ${chalk.gray("--preset expo")}    Initialize with Expo preset
     ${chalk.cyan("translate")}     Translate to all target locales
     ${chalk.cyan("translate")} ${chalk.gray("<locale>")}    Translate to a specific locale
     ${chalk.cyan("translate")} ${chalk.gray("--force")}     Force translate all keys
