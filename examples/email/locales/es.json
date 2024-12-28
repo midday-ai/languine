@@ -1,0 +1,12 @@
+{
+  "previewText": "Únete a %{invitedByUsername} en %{company}",
+  "company": "%{company}",
+  "logoAlt": "Logo de Vercel",
+  "joinTeamHeading": "Únete al equipo %{teamName} en %{company}",
+  "greeting": "Hola %{username},",
+  "invitationText": "%{invitedByUsername} (%{email}) te ha invitado a unirte al equipo %{teamName} en %{company}.",
+  "invitedToAlt": "Invitado a",
+  "joinTeamButton": "Únete al equipo",
+  "copyUrlText": "O copia y pega esta URL en tu navegador:",
+  "footerText": "Esta invitación fue destinada para %{username} (%{ip} desde %{location}). Si no esperabas esta invitación, puedes ignorar este correo electrónico. Si te preocupa la seguridad de tu cuenta, por favor responde a este correo electrónico para ponerte en contacto con nosotros."
+}

@@ -14,6 +14,5 @@ export default defineConfig({
   llm: {
     provider: "ollama",
     model: "mistral:latest",
-    temperature: 0,
   },
 });

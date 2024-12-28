@@ -1,0 +1,12 @@
+{
+  "previewText": "Gå med %{invitedByUsername} på %{company}",
+  "company": "%{company}",
+  "logoAlt": "Vercel-logotyp",
+  "joinTeamHeading": "Gå med i %{teamName} på %{company}",
+  "greeting": "Hej %{username},",
+  "invitationText": "%{invitedByUsername} (%{email}) har bjudit in dig att gå med i %{teamName}-teamet på %{company}.",
+  "invitedToAlt": "Inbjuden till",
+  "joinTeamButton": "Gå med i teamet",
+  "copyUrlText": "Eller kopiera och klistra in denna URL i din webbläsare:",
+  "footerText": "Denna inbjudan var avsedd för %{username} (%{ip} från %{location}). Om du inte förväntade dig denna inbjudan kan du ignorera detta e-postmeddelande. Om du är orolig för säkerheten på ditt konto, vänligen svara på detta e-postmeddelande för att komma i kontakt med oss."
+}

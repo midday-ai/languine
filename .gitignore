@@ -41,3 +41,5 @@ yarn-error.log*
 .turbo
 
 dist
+
+.react-email

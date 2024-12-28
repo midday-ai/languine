@@ -8,10 +8,10 @@
     "export": "email export"
   },
   "dependencies": {
-    "@languine/react-email": "workspace:*",
+    "languine": "link:languine",
     "@react-email/components": "0.0.31",
-    "react-dom": "19.0.0",
-    "react": "19.0.0"
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@types/react": "19.0.1",
