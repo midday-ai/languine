@@ -8,7 +8,6 @@
     "export": "email export"
   },
   "dependencies": {
-    "languine": "link:languine",
     "@react-email/components": "0.0.31",
     "react": "19.0.0",
     "react-dom": "19.0.0"
