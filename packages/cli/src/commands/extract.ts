@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { confirm, intro, outro, text } from "@clack/prompts";
+import chalk from "chalk";
 import { glob } from "glob";
 import { parseJS } from "../parsers/js.js";
 import { getConfig, updateConfig } from "../utils.js";
@@ -38,7 +39,7 @@ export async function extract(update = false) {
     return [];
   }
 
-  const extractedKeys = new Set<string>();
+  const foundKeys = new Set<string>();
 
   for (const pattern of config.extract) {
     const files = glob.sync(pattern);
@@ -48,43 +49,46 @@ export async function extract(update = false) {
       const keys = parseJS(code);
 
       for (const key of keys) {
-        extractedKeys.add(key);
+        foundKeys.add(key);
       }
     }
   }
 
-  const keys = Array.from(extractedKeys);
+  const keys = Array.from(foundKeys);
 
-  if (update) {
-    // Get source locale file path from config
-    const sourceLocale = config.locale.source;
-    const sourceFile = config.files.json.include[0].replace(
-      "[locale]",
-      sourceLocale,
-    );
+  // Get source locale file path from config
+  const sourceLocale = config.locale.source;
+  const sourceFile = config.files.json.include[0].replace(
+    "[locale]",
+    sourceLocale,
+  );
 
-    // Read existing translations if any
-    let translations: Record<string, string> = {};
-    if (fs.existsSync(sourceFile)) {
-      const content = fs.readFileSync(sourceFile, "utf8");
-      const ext = sourceFile.split(".").pop()?.toLowerCase();
+  // Read existing translations if any
+  let translations: Record<string, string> = {};
+  if (fs.existsSync(sourceFile)) {
+    const content = fs.readFileSync(sourceFile, "utf8");
+    const ext = sourceFile.split(".").pop()?.toLowerCase();
 
-      if (ext === "json") {
-        translations = JSON.parse(content);
-      } else if (ext === "ts" || ext === "js") {
-        // For TS/JS files, evaluate the content
-        const mod = eval(content);
-        translations = mod.default || mod;
-      } else if (ext === "md" || ext === "mdx") {
-        // For MD/MDX files, parse frontmatter
-        const match = content.match(/^---\n([\s\S]*?)\n---/);
-        if (match) {
-          translations = JSON.parse(match[1]);
-        }
+    if (ext === "json") {
+      translations = JSON.parse(content);
+    } else if (ext === "ts" || ext === "js") {
+      // For TS/JS files, evaluate the content
+      // @ts-ignore
+      const mod = eval(content);
+      translations = mod.default || mod;
+    } else if (ext === "md" || ext === "mdx") {
+      // For MD/MDX files, parse frontmatter
+      const match = content.match(/^---\n([\s\S]*?)\n---/);
+      if (match) {
+        translations = JSON.parse(match[1]);
       }
     }
+  }
 
-    // Add new keys with empty translations
+  // Add new keys with empty translations
+  const newKeys = keys.filter((key) => !translations[key]);
+
+  if (update) {
     for (const key of keys) {
       if (!translations[key]) {
         translations[key] = "";
@@ -106,7 +110,15 @@ export async function extract(update = false) {
     }
 
     fs.writeFileSync(sourceFile, output);
-    outro("Updated source locale file with new keys");
+  }
+  if (newKeys.length > 0) {
+    outro(
+      chalk.green(
+        `Found ${newKeys.length} new translation keys from source files${update ? ` and saved them to ${sourceFile}` : ""}`,
+      ),
+    );
+  } else {
+    outro(chalk.yellow("No new translation keys found"));
   }
 
   return keys;
