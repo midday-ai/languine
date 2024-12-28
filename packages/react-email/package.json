@@ -1,6 +1,6 @@
 {
   "name": "@languine/react-email",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "files": ["dist", "README.md"],
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -12,14 +12,12 @@
     "typecheck": "tsc --noEmit",
     "build": "tsup --clean src/index.tsx"
   },
-  "peerDependencies": {
-    "i18n-js": "^4.5.1"
-  },
   "devDependencies": {
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "i18n-js": "^4.5.1",
     "react-string-replace": "^1.1.1"
   }
 }
