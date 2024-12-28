@@ -1,15 +1,12 @@
 {
-    "previewText": "Join %{invitedByUsername} on %{company}",
-    "company": "%{company}",
-    "logoAlt": "Vercel Logo",
-    "joinTeamHeading": "Join %{teamName} on %{company}",
-    "greeting": "Hi %{username},",
-    "invitationText":
-      "%{invitedByUsername} (%{email}) has invited you to join the %{teamName} team on %{company}.",
-    "invitedToAlt": "Invited to",
-    "joinTeamButton": "Join the team",
-    "copyUrlText": "Or copy and paste this URL into your browser:",
-    "footerText":
-      "This invitation was intended for %{username} (%{ip} from %{location}). If you were not expecting this invitation, you can ignore this email. If you are concerned about your account's safety, please reply to this email to get in touch with us."
-  }
-  
+  "previewText": "Join %{invitedByUsername} on %{company}",
+  "company": "%{company}",
+  "logoAlt": "Vercel Logo",
+  "joinTeamHeading": "Join %{teamName} on %{company}",
+  "greeting": "Hi %{username},",
+  "invitationText": "%{invitedByUsername} (%{email}) has invited you to join the %{teamName} team on %{company}.",
+  "invitedToAlt": "Invited to",
+  "joinTeamButton": "Join the team",
+  "copyUrlText": "Or copy and paste this URL into your browser:",
+  "footerText": "This invitation was intended for %{username} (%{ip} from %{location}). If you were not expecting this invitation, you can ignore this email. If you are concerned about your account's safety, please reply to this email to get in touch with us."
+}

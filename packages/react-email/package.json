@@ -1,6 +1,6 @@
 {
   "name": "@languine/react-email",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "files": ["dist", "README.md"],
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",

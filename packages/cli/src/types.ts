@@ -2,26 +2,47 @@ import type { LanguageModelV1 } from "ai";
 
 export type Provider = "openai" | "ollama";
 
+/**
+ * Configuration interface for Languine
+ */
 export interface Config {
+  /** Version of the Languine configuration */
   version: string;
+  /** Locale configuration */
   locale: {
+    /** Source language code (e.g. 'en') */
     source: string;
+    /** Target language codes to translate to */
     targets: string[];
   };
+  /** File configuration by format type */
   files: {
+    /** Configuration for each file format */
     [format: string]: {
+      /** Glob patterns or path mappings to include */
       include: Include[];
     };
   };
+  /** Glob patterns to extract translation keys from source files  */
+  extract?: string[];
+  /** Language model configuration */
   llm: {
+    /** LLM provider ('openai' or 'ollama') */
     provider: Provider;
+    /** Model name to use */
     model: string;
+    /** Temperature for model responses (0-1) */
     temperature?: number;
   };
+  /** Custom translation instructions */
   instructions?: string;
+  /** Hook functions */
   hooks?: {
+    /** Hook called after translation is complete */
     afterTranslate?: (args: {
+      /** Translated content */
       content: string;
+      /** Path to the translated file */
       filePath: string;
     }) => Promise<string>;
   };

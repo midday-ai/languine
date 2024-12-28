@@ -15,4 +15,5 @@ export default defineConfig({
     provider: "openai",
     model: "gpt-4-turbo",
   },
+  extract: ["./emails/**/*.tsx"],
 });

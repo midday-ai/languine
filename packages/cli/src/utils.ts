@@ -73,6 +73,7 @@ export function generateConfig({
   provider,
   model,
   configType,
+  extractPatterns,
 }: {
   version: string;
   sourceLanguage: string;
@@ -82,6 +83,7 @@ export function generateConfig({
   provider: string;
   model: string;
   configType: string;
+  extractPatterns?: string[];
 }) {
   const formatKey = fileFormat.includes("-") ? `"${fileFormat}"` : fileFormat;
 
@@ -100,6 +102,7 @@ export function generateConfig({
     provider: "${provider}",
     model: "${model}",
   },
+  ${extractPatterns ? `extract: [${extractPatterns.map((p) => `"${p}"`).join(", ")}]` : ""}
 }`;
 
   if (configType === "mjs") {
@@ -167,6 +170,24 @@ export async function getConfig(): Promise<Config> {
       .import(filePath)
       .then((mod) => (mod as unknown as { default: Config }).default);
   }
+}
+
+export async function updateConfig(config: Config): Promise<void> {
+  const { path: filePath, format } = await configFile();
+  const configContent = generateConfig({
+    version: config.version,
+    sourceLanguage: config.locale.source,
+    targetLanguages: config.locale.targets,
+    fileFormat: Object.keys(config.files)[0],
+    filesPatterns: config.files[Object.keys(config.files)[0]]
+      .include as string[],
+    provider: config.llm.provider,
+    model: config.llm.model,
+    configType: format,
+    extractPatterns: config.extract as string[],
+  });
+
+  await fs.writeFile(filePath, configContent);
 }
 
 export async function execAsync(command: string) {
