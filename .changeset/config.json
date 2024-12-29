@@ -6,6 +6,7 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
+  "ignore": [],
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "bumpStrategy": "bump"
 }

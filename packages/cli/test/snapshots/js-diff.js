@@ -1,10 +1,11 @@
 
 export default {
     "title": "Updated",
-    description: 'Translated\nTranslated',
+    description: 'Before you begin, make sure you have the following:\nA GitHub account',
+
     nested: {
         content: `Updated
 Updated`
     },
-    dynamic: `Translated ${Date.now()}`
+    dynamic: `the current time is not ${Date.now()}`
 }
