@@ -63,7 +63,7 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/cli
         run: |
-          bunx changeset version --snapshot canary --base canary
+          bunx changeset version
           git commit -am "chore: update versions"
           bunx changeset publish --tag canary
         env:
@@ -97,7 +97,7 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/react-email
         run: |
-          bunx changeset version --snapshot canary --base canary
+          bunx changeset version
           git commit -am "chore: update versions"
           bunx changeset publish --tag canary
         env:
