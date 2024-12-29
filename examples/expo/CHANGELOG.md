@@ -1,5 +1,12 @@
 # my-app
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`b21abd6`](https://github.com/midday-ai/languine/commit/b21abd6481288240ee63125f81fb122c4da4c2fc)]:
+  - languine@1.0.0
+
 ## 1.0.1
 
 ### Patch Changes
