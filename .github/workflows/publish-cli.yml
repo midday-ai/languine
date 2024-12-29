@@ -2,8 +2,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'packages/cli/**'
+    # paths:
+    #   - 'packages/cli/**'
 
 jobs:
   publish:
@@ -24,12 +24,19 @@ jobs:
         run: bun run build
       - name: Get version
         id: get_version
-        run: echo "version=$(node -p "require('./packages/cli/package.json').version")" >> $GITHUB_OUTPUT
+        run: |
+          CURRENT_VERSION=$(node -p "require('./packages/cli/package.json').version")
+          echo "version=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
+          echo "new_version=$(npx semver ${CURRENT_VERSION} -i patch)" >> $GITHUB_OUTPUT
+      - name: Update version
+        run: |
+          cd packages/cli
+          npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ steps.get_version.outputs.version }}
-          name: Release v${{ steps.get_version.outputs.version }}
+          tag_name: v${{ steps.get_version.outputs.new_version }}
+          name: Release v${{ steps.get_version.outputs.new_version }}
           generate_release_notes: true
       - name: Setup NPM Auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
