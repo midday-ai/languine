@@ -3,9 +3,6 @@ import path from "node:path";
 
 const translations: Record<string, Record<string, string>> = {};
 
-/**
- * Recursively searches up directory tree for package.json
- */
 const findPackageRoot = (dir: string): string => {
   if (fs.existsSync(path.join(dir, "package.json"))) {
     return dir;
@@ -19,9 +16,6 @@ const findPackageRoot = (dir: string): string => {
   return findPackageRoot(parentDir);
 };
 
-/**
- * Recursively loads all JSON translation files from locales directory
- */
 const loadTranslations = (dir: string, baseDir: string) => {
   const files = fs.readdirSync(dir);
 
@@ -53,7 +47,6 @@ const loadTranslations = (dir: string, baseDir: string) => {
   }
 };
 
-// Load translations from locales directory in package root
 const packageRoot = findPackageRoot(__dirname);
 const localesDir = path.join(packageRoot, "locales");
 

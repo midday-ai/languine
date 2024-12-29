@@ -1,0 +1,105 @@
+name: 🚀 Release Canary
+
+on:
+  pull_request:
+    branches:
+      - "canary"
+
+jobs:
+  test:
+    name: 🧪 Run tests
+    runs-on: ubuntu-latest
+    outputs:
+      react-email: ${{ steps.filter.outputs.react-email }}
+      cli: ${{ steps.filter.outputs.cli }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: 📦 Install dependencies
+        run: bun install
+      - name: 🔍 Run type checking
+        run: bun run typecheck
+      # - name: 🔬 Run linting
+      #   run: bun run lint
+      - name: 🧪 Run unit tests
+        run: bun run test
+      - name: 🔍 Filter changes
+        id: filter
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            react-email:
+              - 'packages/react-email/src/**'
+            cli:
+              - 'packages/cli/src/**'
+
+  publish-cli:
+    name: 🚀 Publish CLI
+    if: needs.test.outputs.cli == 'true'
+    needs: [test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: 📦 Install dependencies
+        run: bun install
+      - name: 🏗️ Build
+        working-directory: packages/cli
+        run: bun run build
+      - name: 🔧 Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: 📝 Create and publish versions
+        working-directory: packages/cli
+        run: |
+          bunx changeset version --snapshot canary --base canary
+          git commit -am "chore: update versions"
+          bunx changeset publish --tag canary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
+  publish-react-email:
+    name: 🚀 Publish React Email
+    if: needs.test.outputs.react-email == 'true'
+    needs: [test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: 📦 Install dependencies
+        run: bun install
+      - name: 🏗️ Build
+        working-directory: packages/react-email
+        run: bun run build
+      - name: 🔧 Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: 📝 Create and publish versions
+        working-directory: packages/react-email
+        run: |
+          bunx changeset version --snapshot canary --base canary
+          git commit -am "chore: update versions"
+          bunx changeset publish --tag canary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
