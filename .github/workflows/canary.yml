@@ -1,9 +1,9 @@
 name: 🚀 Release Canary
 
 on:
-  push:
+  pull_request:
     branches:
-      - "**"
+      - "canary"
 
 jobs:
   test:
@@ -63,7 +63,7 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/cli
         run: |
-          bunx changeset version --snapshot canary
+          bunx changeset version --snapshot canary --base canary
           git commit -am "chore: update versions"
           bunx changeset publish --tag canary
         env:
@@ -97,7 +97,7 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/react-email
         run: |
-          bunx changeset version --snapshot canary
+          bunx changeset version --snapshot canary --base canary
           git commit -am "chore: update versions"
           bunx changeset publish --tag canary
         env:
