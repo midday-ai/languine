@@ -1,7 +1,7 @@
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
 
 jobs:
   test:
@@ -54,37 +54,16 @@ jobs:
       - name: Build
         working-directory: packages/cli
         run: bun run build
-      - name: Get version
-        id: get_version
-        working-directory: packages/cli
-        run: |
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          echo "version=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
-          echo "new_version=$(npx semver ${CURRENT_VERSION} -i patch)" >> $GITHUB_OUTPUT
-      - name: Update version
-        working-directory: packages/cli
-        run: npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
-      - name: Commit package.json changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git pull origin main
-          git add packages/cli/package.json
-          git commit -m "chore: bump languine to v${{ steps.get_version.outputs.new_version }}"
-          git push
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
+      - name: Create and publish versions
+        uses: changesets/action@v1
         with:
-          tag_name: v${{ steps.get_version.outputs.new_version }}
-          name: Release (languine) v${{ steps.get_version.outputs.new_version }}
-          generate_release_notes: true
-      - name: Setup NPM Auth
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-      - name: Publish to NPM
-        working-directory: packages/cli
-        run: npm publish --access public
+          version: npx changeset version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: npx changeset publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           
   publish-react-email:
     name: Publish React Email
@@ -106,34 +85,13 @@ jobs:
       - name: Build
         working-directory: packages/react-email
         run: bun run build
-      - name: Get version
-        id: get_version
-        working-directory: packages/react-email
-        run: |
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          echo "version=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
-          echo "new_version=$(npx semver ${CURRENT_VERSION} -i patch)" >> $GITHUB_OUTPUT
-      - name: Update version
-        working-directory: packages/react-email
-        run: npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
-      - name: Commit package.json changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git pull origin main
-          git add packages/react-email/package.json
-          git commit -m "chore: bump @languine/react-email to v${{ steps.get_version.outputs.new_version }}"
-          git push
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
+      - name: Create and publish versions
+        uses: changesets/action@v1
         with:
-          tag_name: v${{ steps.get_version.outputs.new_version }}
-          name: Release (@languine/react-email) v${{ steps.get_version.outputs.new_version }}
-          generate_release_notes: true
-      - name: Setup NPM Auth
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-      - name: Publish to NPM
-        working-directory: packages/react-email
-        run: npm publish --access public
+          version: npx changeset version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: npx changeset publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
