@@ -37,17 +37,18 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: Build
+        working-directory: packages/cli
         run: bun run build
       - name: Get version
         id: get_version
+        working-directory: packages/cli
         run: |
-          CURRENT_VERSION=$(node -p "require('./packages/cli/package.json').version")
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
           echo "version=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
           echo "new_version=$(npx semver ${CURRENT_VERSION} -i patch)" >> $GITHUB_OUTPUT
       - name: Update version
-        run: |
-          cd packages/cli
-          npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
+        working-directory: packages/cli
+        run: npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
@@ -57,7 +58,7 @@ jobs:
       - name: Setup NPM Auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Publish to NPM
-        run: cd packages/cli && npm publish --access public
+        working-directory: packages/cli
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
