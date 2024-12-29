@@ -55,8 +55,8 @@ jobs:
         working-directory: packages/cli
         run: bun run build
       - name: Create and publish versions
-        uses: changesets/action@v1
         working-directory: packages/cli
+        uses: changesets/action@v1
         with:
           version: npx changeset version
           commit: "chore: update versions"
@@ -87,8 +87,8 @@ jobs:
         working-directory: packages/react-email
         run: bun run build
       - name: Create and publish versions
-        uses: changesets/action@v1
         working-directory: packages/react-email
+        uses: changesets/action@v1
         with:
           version: npx changeset version
           commit: "chore: update versions"
