@@ -10,8 +10,8 @@ jobs:
     name: 🧪 Run tests
     runs-on: ubuntu-latest
     outputs:
-      react-email: ${{ steps.filter.outputs.react-email }}
-      cli: ${{ steps.filter.outputs.cli }}
+      react-email-changed: ${{ env.react-email-changed }}
+      cli-changed: ${{ env.cli-changed }}
 
     steps:
       - uses: actions/checkout@v4
@@ -26,11 +26,26 @@ jobs:
       #   run: bun run lint
       - name: 🧪 Run unit tests
         run: bun run test
+      - name: Check package changes
+        id: check-changes
+        run: |
+          npx changeset status --since=HEAD > status.txt
+          if grep -q 'packages/react-email' status.txt; then
+            echo "react-email-changed=true" >> $GITHUB_ENV
+          else
+            echo "react-email-changed=false" >> $GITHUB_ENV
+          fi
+          if grep -q 'packages/cli' status.txt; then
+            echo "cli-changed=true" >> $GITHUB_ENV
+          else
+            echo "cli-changed=false" >> $GITHUB_ENV
+          fi
     
   publish-cli:
     name: 🚀 Publish CLI
     needs: [test]
     runs-on: ubuntu-latest
+    if: needs.test.outputs.cli-changed == 'true'
     permissions:
       contents: write
       pull-requests: write
@@ -61,6 +76,7 @@ jobs:
     name: 🚀 Publish React Email
     needs: [test]
     runs-on: ubuntu-latest
+    if: needs.test.outputs.react-email-changed == 'true'
     permissions:
       contents: write
       pull-requests: write
