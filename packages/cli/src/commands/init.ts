@@ -25,7 +25,7 @@ async function createDirectoryOrFile(filePath: string, isDirectory = false) {
     }
   } catch (error) {
     throw new Error(
-      `Failed to create ${isDirectory ? "directory" : "file"}: ${filePath}`
+      `Failed to create ${isDirectory ? "directory" : "file"}: ${filePath}`,
     );
   }
 }
@@ -96,7 +96,7 @@ export async function init(preset?: string) {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
   } catch (error) {
     outro(
-      "Languine requires Git to track changes in translation keys and files. Please initialize a Git repository first."
+      "Languine requires Git to track changes in translation keys and files. Please initialize a Git repository first.",
     );
     process.exit(1);
   }
@@ -230,7 +230,7 @@ export async function init(preset?: string) {
       for (const lang of targetLangs) {
         const filePath = path.join(
           process.cwd(),
-          pattern.replace("[locale]", lang)
+          pattern.replace("[locale]", lang),
         );
 
         if (isDirectory) {
@@ -247,11 +247,11 @@ export async function init(preset?: string) {
     const { path: configPath } = await configFile(configType);
     await fs.writeFile(configPath, configContent, "utf-8");
     outro(
-      "Configuration file and language files/directories created successfully!"
+      "Configuration file and language files/directories created successfully!",
     );
   } catch (error) {
     outro(
-      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`
+      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
     );
     process.exit(1);
   }
