@@ -12,5 +12,4 @@ export default {
   "cows#one": "A cow",
   "cows#other": "{count} cows",
   "languine.hello": "Hello Languine",
-  "languine.hello.world": "Bonjour le monde !!!!!!",
 } as const;
