@@ -1,14 +1,9 @@
 name: 🚀 Release Canary
 
-# on:
-#   pull_request:
-#     branches-ignore:
-#       - main
-
 on:
   push:
     branches:
-      - "!main"
+      - "**"
 
 jobs:
   test:
