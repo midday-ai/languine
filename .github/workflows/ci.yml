@@ -2,12 +2,28 @@ on:
   push:
     # branches:
     #   - main
-    # paths:
-    #   - 'packages/cli/**'
 
 jobs:
-  publish:
-    name: Publish
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: bun install
+      - name: 🔍 Run type checking
+        run: bun run typecheck
+      # - name: 🚨 Run linting
+      #   run: bun run lint
+      - name: 🧪 Run unit tests
+        run: bun run test
+
+  publish-cli:
+    name: Publish CLI
+    if: contains(github.event.head_commit.modified, 'packages/cli/')
     needs: [test]
     runs-on: ubuntu-latest
     permissions:
@@ -44,3 +60,4 @@ jobs:
         run: cd packages/cli && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
