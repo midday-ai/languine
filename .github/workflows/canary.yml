@@ -56,16 +56,13 @@ jobs:
       - name: 🏗️ Build
         working-directory: packages/cli
         run: bun run build
-      - name: 🔧 Configure Git
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-      - name: 📝 Create and publish versions
-        working-directory: packages/cli
-        run: |
-          bunx changeset version
-          git commit -am "chore: update versions"
-          bunx changeset publish --tag canary
+      - name: 🚀 Create and publish versions
+        uses: changesets/action@master
+        with:
+          version: bun run changeset version --snapshot canary
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: bun run changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -90,16 +87,13 @@ jobs:
       - name: 🏗️ Build
         working-directory: packages/react-email
         run: bun run build
-      - name: 🔧 Configure Git
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-      - name: 📝 Create and publish versions
-        working-directory: packages/react-email
-        run: |
-          bunx changeset version
-          git commit -am "chore: update versions"
-          bunx changeset publish --tag canary
+      - name: 🚀 Create and publish versions
+        uses: changesets/action@master
+        with:
+          version: bun run changeset version --snapshot canary
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: bun run changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,7 @@
 {
   "name": "@languine/action",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "dependencies": {
     "octokit": "^4.0.2",
