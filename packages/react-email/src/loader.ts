@@ -47,7 +47,6 @@ const loadTranslations = (dir: string, baseDir: string) => {
   }
 };
 
-// Load translations from locales directory in package root
 const packageRoot = findPackageRoot(__dirname);
 const localesDir = path.join(packageRoot, "locales");
 
