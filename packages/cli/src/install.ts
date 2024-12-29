@@ -1,6 +1,21 @@
 import { spinner } from "@clack/prompts";
 import { execAsync, findPreferredPM } from "./utils.js";
 
+function installCommand(name?: string) {
+  switch (name) {
+    case "yarn":
+      return "yarn add languine --dev";
+    case "npm":
+      return "npm install languine --save-dev";
+    case "pnpm":
+      return "pnpm add languine -D";
+    case "bun":
+      return "bun add languine -D";
+    default:
+      return `${name} install languine -D`;
+  }
+}
+
 export async function installDependencies() {
   const s = spinner();
 
@@ -9,7 +24,7 @@ export async function installDependencies() {
 
     const pm = await findPreferredPM();
 
-    await execAsync(`${pm?.name} install languine -D`);
+    await execAsync(installCommand(pm?.name));
 
     s.stop("Languine installed successfully");
   } catch (error) {
