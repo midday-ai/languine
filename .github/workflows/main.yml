@@ -1,3 +1,5 @@
+name: 🚀 Release Production
+
 on:
   push:
     branches:
