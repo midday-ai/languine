@@ -1,6 +1,6 @@
 {
   "name": "@languine/react-email",
-  "version": "0.2.2",
+  "version": "0.0.0-canary-20241229124757",
   "files": [
     "dist",
     "README.md"
