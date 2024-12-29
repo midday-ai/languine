@@ -1,7 +1,7 @@
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - main
 
 jobs:
   test:
@@ -23,7 +23,7 @@ jobs:
 
   publish-cli:
     name: Publish CLI
-    # if: contains(github.event.head_commit.modified, 'packages/cli/')
+    if: contains(github.event.head_commit.modified, 'packages/cli/')
     needs: [test]
     runs-on: ubuntu-latest
     permissions:
@@ -53,12 +53,54 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ steps.get_version.outputs.new_version }}
-          name: Release v${{ steps.get_version.outputs.new_version }}
+          name: Release (languine) v${{ steps.get_version.outputs.new_version }}
           generate_release_notes: true
       - name: Setup NPM Auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Publish to NPM
         working-directory: packages/cli
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-react-email:
+    name: Publish React Email
+    if: contains(github.event.head_commit.modified, 'packages/react-email/')
+    needs: [test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: bun install
+      - name: Build
+        working-directory: packages/react-email
+        run: bun run build
+      - name: Get version
+        id: get_version
+        working-directory: packages/react-email
+        run: |
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          echo "version=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
+          echo "new_version=$(npx semver ${CURRENT_VERSION} -i patch)" >> $GITHUB_OUTPUT
+      - name: Update version
+        working-directory: packages/react-email
+        run: npm version ${{ steps.get_version.outputs.new_version }} --no-git-tag-version
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.get_version.outputs.new_version }}
+          name: Release (@languine/react-email) v${{ steps.get_version.outputs.new_version }}
+          generate_release_notes: true
+      - name: Setup NPM Auth
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Publish to NPM
+        working-directory: packages/react-email
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
