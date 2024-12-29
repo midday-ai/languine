@@ -1,7 +1,7 @@
 on:
-  push:
-    # branches:
-    #   - main
+  pull_request:
+    branches-ignore:
+      - main
 
 jobs:
   test:
@@ -61,9 +61,9 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/cli
         run: |
-          bunx changeset version
+          bunx changeset version --snapshot canary
           git commit -am "chore: update versions"
-          bunx changeset publish
+          bunx changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -95,9 +95,9 @@ jobs:
       - name: 📝 Create and publish versions
         working-directory: packages/react-email
         run: |
-          bunx changeset version
+          bunx changeset version --snapshot canary
           git commit -am "chore: update versions"
-          bunx changeset publish
+          bunx changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
