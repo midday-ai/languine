@@ -18,3 +18,5 @@
 
 "share_message" = "Check out this photo I took with %1$@!\nLocation: %2$@\nTime: %3$@";
 "rich_notification" = "New message from %@:\n<b>%@</b>\n<a href=\"%@\">View details</a>";
+
+"hello" = "Hello";

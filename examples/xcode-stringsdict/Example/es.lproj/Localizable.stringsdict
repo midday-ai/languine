@@ -51,7 +51,7 @@
       </dict>
     </dict>
     <key>hello</key>
-    <string>¡Hola!</string>
+    <string>Hola</string>
     <key>user_welcome</key>
     <string>¡Bienvenido de nuevo, %@!</string>
     <key>score_format</key>

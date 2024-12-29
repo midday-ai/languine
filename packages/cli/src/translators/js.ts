@@ -2,6 +2,7 @@ import { generateObject } from "ai";
 import dedent from "dedent";
 import { diffLines } from "diff";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -79,6 +80,7 @@ export const javascript: Translator = {
   // translate changes
   // apply translated changes to previous translation (assuming line breaks are identical)
   async onUpdate(options) {
+    debug("Running JavaScript translator onUpdate");
     const diff = diffLines(options.previousContent, options.content);
     const strings = getStrings(options.content);
     const previousTranslation = getStrings(options.previousTranslation);
@@ -101,6 +103,8 @@ export const javascript: Translator = {
       }
     }
 
+    debug(`Found ${toTranslate.length} strings to translate in changes`);
+
     let translated: string[] = [];
 
     if (toTranslate.length > 0) {
@@ -114,19 +118,25 @@ export const javascript: Translator = {
       });
 
       translated = object.items;
+      debug(`Received ${translated.length} translations`);
     }
 
     const output = replaceStrings(
-      options.previousTranslation,
-      previousTranslation,
-      strings.map((s, i) => {
+      options.content,
+      strings,
+      strings.map((s) => {
         const j = toTranslate.indexOf(s);
 
         if (j !== -1) {
           return translated[j];
         }
 
-        return previousTranslation[i].content;
+        const prevIndex = previousTranslation.findIndex(
+          (pt) => pt.content === s.content,
+        );
+        return prevIndex !== -1
+          ? previousTranslation[prevIndex].content
+          : s.content;
       }),
     );
 
@@ -136,6 +146,8 @@ export const javascript: Translator = {
     };
   },
   async onNew(options) {
+    debug("Running JavaScript translator onNew");
+
     const strings = getStrings(options.content);
 
     const { object } = await generateObject({
@@ -151,6 +163,8 @@ export const javascript: Translator = {
       }),
     });
 
+    debug(`Received ${object.items.length} translations`);
+
     return {
       content: replaceStrings(options.content, strings, object.items),
     };
@@ -158,6 +172,8 @@ export const javascript: Translator = {
 };
 
 function getPrompt(strings: StringMatch[], options: PromptOptions) {
+  debug(`Creating prompt for ${strings.length} strings`);
+
   const text = dedent`
     ${baseRequirements}
     - Preserve all object/property keys, syntax characters, and punctuation marks exactly

@@ -7,6 +7,7 @@
     "escaped": "Escape curly braces with single quotes (e.g. '{name'})",
     "rich": "Please refer to <guidelines>the guidelines</guidelines>.",
     "number": "Available from {price, number, currency}",
-    "date": "Ordered on {orderDate, date, medium}"
+    "date": "Ordered on {orderDate, date, medium}",
+    "hello": "Hello"
   }
 }

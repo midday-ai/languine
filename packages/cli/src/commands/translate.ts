@@ -129,11 +129,13 @@ export async function translate(targetLocale?: string, force = false) {
     }
   }
 
-  outro(
-    failures.length === 0
-      ? chalk.green("All translations completed successfully!")
-      : chalk.yellow(`Translation completed with ${failures.length} error(s)`),
-  );
+  if (changes.length > 0 && failures.length === 0) {
+    outro(chalk.green("All translations completed successfully!"));
+  }
+
+  if (failures.length > 0) {
+    outro(chalk.red(`Translation completed with ${failures.length} error(s)`));
+  }
 }
 
 const git = simpleGit();
@@ -171,7 +173,7 @@ async function run(
   let previousContent = "";
 
   if (!force) {
-    previousContent = await git.show(sourcePath).catch(() => "");
+    previousContent = await git.show(`HEAD:./${sourcePath}`);
 
     if (previousContent === sourceContent)
       return {

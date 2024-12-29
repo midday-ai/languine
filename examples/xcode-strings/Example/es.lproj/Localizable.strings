@@ -14,3 +14,4 @@
 "time_remaining_hours" = "Aproximadamente %d horas restantes";
 "share_message" = "Mira esta foto que tomé con %1$@!\nUbicación: %2$@\nHora: %3$@";
 "rich_notification" = "Nuevo mensaje de %@:\n<b>%@</b>\n<a href=\"%@\">Ver detalles</a>";
+"hello" = "Hola";

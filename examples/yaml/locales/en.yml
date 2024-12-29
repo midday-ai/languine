@@ -46,3 +46,6 @@ time:
   yesterday: Yesterday
   tomorrow: Tomorrow
   days_ago: "{count} days ago"
+
+# Hello
+hello: Hello

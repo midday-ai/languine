@@ -1,6 +1,7 @@
 import { generateObject } from "ai";
 import dedent from "dedent";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -19,6 +20,7 @@ const ESCAPE_REPLACEMENTS: Record<string, string> = {
 };
 
 function parseXcodeStrings(content: string) {
+  debug("Parsing Xcode strings file");
   const result: Record<string, string> = {};
 
   for (const line of content.split("\n")) {
@@ -35,20 +37,25 @@ function parseXcodeStrings(content: string) {
     }
   }
 
+  debug(`Successfully parsed ${Object.keys(result).length} strings`);
   return result;
 }
 
 function stringifyXcodeStrings(strings: Record<string, string>) {
-  return Object.entries(strings)
+  debug("Stringifying Xcode strings");
+  const result = Object.entries(strings)
     .map(
       ([key, value]) =>
         `"${key}" = "${value.replace(/[\\"\n]/g, (match) => ESCAPE_REPLACEMENTS[match])}";`,
     )
     .join("\n");
+  debug("Successfully stringified strings");
+  return result;
 }
 
 export const xcodeStrings: Translator = {
   async onUpdate(options) {
+    debug("Running Xcode strings translator onUpdate");
     const sourceStrings = parseXcodeStrings(options.content);
     const previousStrings = parseXcodeStrings(options.previousContent);
 
@@ -58,7 +65,10 @@ export const xcodeStrings: Translator = {
         previousStrings[key] !== sourceStrings[key],
     );
 
+    debug(`Found ${addedKeys.length} new or modified keys`);
+
     if (addedKeys.length === 0) {
+      debug("No new keys to translate");
       return {
         summary: "No new keys to translate",
         content: options.previousTranslation,
@@ -69,6 +79,7 @@ export const xcodeStrings: Translator = {
       addedKeys.map((key) => [key, sourceStrings[key]]),
     );
 
+    debug("Generating translations for new keys");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -78,6 +89,8 @@ export const xcodeStrings: Translator = {
       }),
     });
 
+    debug("Successfully generated translations");
+
     const translated = addedKeys.reduce<Record<string, string>>(
       (acc, key, index) => {
         acc[key] = object.items[index];
@@ -86,6 +99,7 @@ export const xcodeStrings: Translator = {
       {},
     );
 
+    debug("Successfully updated translations");
     return {
       summary: `Translated ${addedKeys.length} new keys`,
       content: stringifyXcodeStrings({
@@ -96,9 +110,11 @@ export const xcodeStrings: Translator = {
   },
 
   async onNew(options) {
+    debug("Running Xcode strings translator onNew");
     const sourceStrings = parseXcodeStrings(options.content);
     const sourceKeys = Object.keys(sourceStrings);
 
+    debug("Generating translations for new file");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceStrings, null, 2), options),
@@ -107,6 +123,8 @@ export const xcodeStrings: Translator = {
         items: z.array(z.string().describe("Translated string value")),
       }),
     });
+
+    debug("Successfully generated translations");
 
     const translatedStrings = sourceKeys.reduce<Record<string, string>>(
       (acc, key, index) => {
@@ -123,6 +141,7 @@ export const xcodeStrings: Translator = {
 };
 
 function getPrompt(base: string, options: PromptOptions) {
+  debug("Creating prompt for Xcode strings translation");
   const text = dedent`
     ${baseRequirements}
     - Preserve all key names exactly as they appear

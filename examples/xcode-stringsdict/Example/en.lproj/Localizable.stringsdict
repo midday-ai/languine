@@ -87,5 +87,7 @@
     <string>Version %1$@ (Build %2$@)</string>
     <key>test</key>
     <string>Test</string>
+    <key>hello</key>
+    <string>Hello</string>
 </dict>
 </plist>

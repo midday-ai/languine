@@ -2,6 +2,7 @@ import { generateObject } from "ai";
 import dedent from "dedent";
 import plist, { type PlistValue } from "plist";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -14,12 +15,14 @@ const EMPTY_STRINGSDICT = [
 ].join("\n");
 
 function parseStringsdictFile(fileContent: string) {
+  debug("Parsing stringsdict file");
   try {
     const parsedData = plist.parse(fileContent || EMPTY_STRINGSDICT);
 
     if (typeof parsedData !== "object" || parsedData === null) {
       throw new Error("Invalid .stringsdict format");
     }
+    debug("Successfully parsed stringsdict file");
     return parsedData as Record<string, PlistValue>;
   } catch (error: unknown) {
     throw new Error(`Invalid .stringsdict format: ${(error as Error).message}`);
@@ -27,11 +30,15 @@ function parseStringsdictFile(fileContent: string) {
 }
 
 function buildStringsdictContent(translationData: Record<string, PlistValue>) {
-  return plist.build(translationData);
+  debug("Building stringsdict content");
+  const content = plist.build(translationData);
+  debug("Successfully built stringsdict content");
+  return content;
 }
 
 export const xcodeStringsdict: Translator = {
   async onUpdate(options) {
+    debug("Running stringsdict translator onUpdate");
     const currentTranslations = parseStringsdictFile(options.content);
     const oldTranslations = parseStringsdictFile(options.previousContent);
 
@@ -43,7 +50,10 @@ export const xcodeStringsdict: Translator = {
       );
     });
 
+    debug(`Found ${modifiedKeys.length} modified keys`);
+
     if (modifiedKeys.length === 0) {
+      debug("No new keys to translate");
       return {
         summary: "No new keys to translate",
         content: options.previousTranslation,
@@ -54,6 +64,7 @@ export const xcodeStringsdict: Translator = {
       modifiedKeys.map((key) => [key, currentTranslations[key]]),
     );
 
+    debug("Generating translations for modified keys");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -63,6 +74,7 @@ export const xcodeStringsdict: Translator = {
         items: z.record(z.string(), z.unknown()).describe("Translated strings"),
       }),
     });
+    debug("Successfully generated translations");
 
     const existingTranslations = parseStringsdictFile(
       options.previousTranslation,
@@ -78,8 +90,10 @@ export const xcodeStringsdict: Translator = {
   },
 
   async onNew(options) {
+    debug("Running stringsdict translator onNew");
     const sourceTranslations = parseStringsdictFile(options.content);
 
+    debug("Generating translations for new file");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceTranslations, null, 2), options),
@@ -89,6 +103,7 @@ export const xcodeStringsdict: Translator = {
         items: z.record(z.string(), z.unknown()).describe("Translated strings"),
       }),
     });
+    debug("Successfully generated translations");
 
     return {
       content: buildStringsdictContent(
@@ -99,6 +114,7 @@ export const xcodeStringsdict: Translator = {
 };
 
 function getPrompt(translationInput: string, options: PromptOptions) {
+  debug("Creating prompt for stringsdict translation");
   const promptRequirements = dedent`
     ${baseRequirements}
     - Preserve all key names exactly as they appear

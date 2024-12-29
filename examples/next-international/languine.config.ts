@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   llm: {
-    provider: "ollama",
-    model: "mistral:latest",
+    provider: "openai",
+    model: "gpt-4-turbo",
   },
 });

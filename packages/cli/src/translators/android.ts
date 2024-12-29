@@ -2,6 +2,7 @@ import { generateObject } from "ai";
 import dedent from "dedent";
 import { Builder, parseStringPromise } from "xml2js";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -35,8 +36,10 @@ async function parseXmlFile(content: string): Promise<AndroidResources> {
       includeWhiteChars: true,
       trim: true,
     })) as AndroidResources;
+    debug("Successfully parsed Android XML file");
     return parsed;
   } catch {
+    debug("Failed to parse Android XML file, returning empty resources");
     return { resources: {} };
   }
 }
@@ -52,9 +55,11 @@ function stringifyXmlFile(data: AndroidResources): string {
       cdata: true,
     });
     const xmlOutput = builder.buildObject(data);
+    debug("Successfully built Android XML output");
     return xmlOutput;
   } catch (error) {
     console.error("Failed to build Android XML:", error);
+    debug("Failed to build Android XML output");
     return "";
   }
 }
@@ -69,6 +74,8 @@ function processAndroidResources(
   ) => {
     const items = resources.resources[resourceType];
     if (!items) return;
+
+    debug(`Processing ${items.length} ${resourceType} resources`);
 
     for (const item of items) {
       if (resourceType === "string") {
@@ -103,12 +110,14 @@ function processAndroidResources(
     processResource(type as keyof AndroidResources["resources"]);
   }
 
+  debug(`Processed ${Object.keys(result).length} total resources`);
   return result;
 }
 
 function createAndroidResources(
   data: Record<string, unknown>,
 ): AndroidResources {
+  debug("Creating Android resources from data");
   const xmlObj: AndroidResources = { resources: {} };
 
   for (const [key, value] of Object.entries(data)) {
@@ -140,11 +149,13 @@ function createAndroidResources(
     }
   }
 
+  debug("Successfully created Android resources");
   return xmlObj;
 }
 
 export const android: Translator = {
   async onUpdate(options) {
+    debug("Running Android translator onUpdate");
     const sourceData = await parseXmlFile(options.content);
     const previousData = await parseXmlFile(options.previousContent);
     const previousTranslationData = await parseXmlFile(
@@ -157,12 +168,14 @@ export const android: Translator = {
     );
 
     if (sourceStrings === previousStrings) {
+      debug("No changes detected in source strings");
       return {
         summary: "No new strings to translate",
         content: options.previousTranslation,
       };
     }
 
+    debug("Generating translations for updated strings");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -179,6 +192,7 @@ export const android: Translator = {
       ...object.items,
     };
 
+    debug("Successfully merged translations with previous data");
     return {
       summary: "Translated Android resources",
       content: stringifyXmlFile(createAndroidResources(mergedTranslation)),
@@ -186,9 +200,11 @@ export const android: Translator = {
   },
 
   async onNew(options) {
+    debug("Running Android translator onNew");
     const sourceData = await parseXmlFile(options.content);
     const sourceStrings = JSON.stringify(processAndroidResources(sourceData));
 
+    debug("Generating translations for new strings");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(sourceStrings, options),
@@ -199,6 +215,7 @@ export const android: Translator = {
       }),
     });
 
+    debug("Successfully generated translations");
     return {
       content: stringifyXmlFile(createAndroidResources(object.items)),
     };
@@ -206,6 +223,7 @@ export const android: Translator = {
 };
 
 function getPrompt(base: string, options: PromptOptions) {
+  debug("Creating prompt for Android translation");
   const text = dedent`
     ${baseRequirements}
     - Preserve Android resource XML structure exactly

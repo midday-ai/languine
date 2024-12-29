@@ -9,6 +9,7 @@
         <string name="profile_edit">Editar Perfil</string>
         <string name="profile_save">Guardar Cambios</string>
         <string name="profile_logout">Cerrar Sesión</string>
+        <string name="hello">Hola</string>
         <string name="media_play">Reproducir</string>
         <string name="media_pause">Pausa</string>
         <string name="media_next">Siguiente Canción</string>

@@ -11,6 +11,7 @@
     <string name="profile_edit">Edit Profile</string>
     <string name="profile_save">Save Changes</string>
     <string name="profile_logout">Sign Out</string>
+    <string name="hello">Hello</string>
 
     <!-- Media Player -->
     <plurals name="media_queue">

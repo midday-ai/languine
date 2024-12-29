@@ -8,3 +8,6 @@ msgstr "An error occurred: {error_code}"
 
 msgid "example_message"
 msgstr "This is an example message with a {variable}"
+
+msgid "hello"
+msgstr "Hello"

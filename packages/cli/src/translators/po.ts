@@ -1,6 +1,7 @@
 import { generateObject } from "ai";
 import dedent from "dedent";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -11,6 +12,7 @@ interface PoEntry {
 }
 
 function parsePoFile(content: string) {
+  debug("Parsing PO file");
   const entries: PoEntry[] = [];
   const lines = content.split("\n");
   let currentComments: string[] = [];
@@ -64,21 +66,26 @@ function parsePoFile(content: string) {
     });
   }
 
+  debug(`Successfully parsed ${entries.length} PO entries`);
   return entries;
 }
 
 function stringifyPoFile(entries: PoEntry[]) {
-  return entries
+  debug("Stringifying PO entries");
+  const output = entries
     .map(({ key, value, comments }) => {
       const commentLines =
         comments.length > 0 ? `${comments.join("\n")}\n` : "";
       return `${commentLines}msgid "${key}"\nmsgstr "${value}"`;
     })
     .join("\n\n");
+  debug("Successfully stringified PO entries");
+  return output;
 }
 
 export const po: Translator = {
   async onUpdate(options) {
+    debug("Running PO translator onUpdate");
     const sourceEntries = parsePoFile(options.content);
     const previousEntries = parsePoFile(options.previousContent);
     const previousTranslationEntries = parsePoFile(options.previousTranslation);
@@ -98,7 +105,10 @@ export const po: Translator = {
       })
       .map((entry) => entry.key);
 
+    debug(`Found ${addedKeys.length} new or modified keys`);
+
     if (addedKeys.length === 0) {
+      debug("No new keys to translate");
       return {
         summary: "No new keys to translate",
         content: options.previousTranslation,
@@ -109,6 +119,7 @@ export const po: Translator = {
       addedKeys.map((key) => [key, sourceMap.get(key)!.value]),
     );
 
+    debug("Generating translations for new keys");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -117,6 +128,8 @@ export const po: Translator = {
         items: z.array(z.string().describe("Translated string value")),
       }),
     });
+
+    debug("Successfully generated translations");
 
     // Update translations while preserving order and comments
     const updatedEntries = sourceEntries.map(({ key, comments }) => {
@@ -129,6 +142,7 @@ export const po: Translator = {
       return { key, value, comments };
     });
 
+    debug("Successfully updated PO entries");
     return {
       summary: `Translated ${addedKeys.length} new keys`,
       content: stringifyPoFile(updatedEntries),
@@ -136,11 +150,13 @@ export const po: Translator = {
   },
 
   async onNew(options) {
+    debug("Running PO translator onNew");
     const sourceEntries = parsePoFile(options.content);
     const sourceStrings = Object.fromEntries(
       sourceEntries.map((entry) => [entry.key, entry.value]),
     );
 
+    debug("Generating translations for new file");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceStrings, null, 2), options),
@@ -150,6 +166,7 @@ export const po: Translator = {
       }),
     });
 
+    debug("Successfully generated translations");
     const translatedEntries = sourceEntries.map((entry, index) => ({
       ...entry,
       value: object.items[index],
@@ -162,6 +179,7 @@ export const po: Translator = {
 };
 
 function getPrompt(base: string, options: PromptOptions) {
+  debug("Creating prompt for PO translation");
   const text = dedent`
     ${baseRequirements}
     - Preserve all msgid values exactly as they appear

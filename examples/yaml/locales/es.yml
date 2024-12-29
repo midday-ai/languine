@@ -33,3 +33,4 @@ time:
   yesterday: Ayer
   tomorrow: Mañana
   days_ago: Hace {count} días
+hello: Hola

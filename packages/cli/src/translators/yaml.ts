@@ -2,6 +2,7 @@ import { generateObject } from "ai";
 import dedent from "dedent";
 import YAML from "yaml";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -11,6 +12,7 @@ interface YamlEntry {
 }
 
 function parseYamlFile(content: string) {
+  debug("Parsing YAML file");
   const doc = YAML.parse(content);
   const entries: YamlEntry[] = [];
 
@@ -31,10 +33,12 @@ function parseYamlFile(content: string) {
   }
 
   traverse(doc);
+  debug(`Successfully parsed ${entries.length} YAML entries`);
   return entries;
 }
 
 function stringifyYamlFile(entries: YamlEntry[]) {
+  debug("Stringifying YAML entries");
   const doc = new YAML.Document();
   const obj: Record<string, unknown> = {};
 
@@ -55,11 +59,13 @@ function stringifyYamlFile(entries: YamlEntry[]) {
   }
 
   doc.contents = doc.createNode(obj);
+  debug("Successfully stringified YAML entries");
   return doc.toString();
 }
 
 export const yaml: Translator = {
   async onUpdate(options) {
+    debug("Running YAML translator onUpdate");
     const sourceEntries = parseYamlFile(options.content);
     const previousEntries = parseYamlFile(options.previousContent);
     const previousTranslationEntries = parseYamlFile(
@@ -81,7 +87,10 @@ export const yaml: Translator = {
       })
       .map((entry) => entry.key);
 
+    debug(`Found ${addedKeys.length} new or modified keys`);
+
     if (addedKeys.length === 0) {
+      debug("No new keys to translate");
       return {
         summary: "No new keys to translate",
         content: options.previousTranslation,
@@ -92,6 +101,7 @@ export const yaml: Translator = {
       addedKeys.map((key) => [key, sourceMap.get(key)!.value]),
     );
 
+    debug("Generating translations for new keys");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -100,6 +110,7 @@ export const yaml: Translator = {
         items: z.array(z.string().describe("Translated string value")),
       }),
     });
+    debug("Successfully generated translations");
 
     // Update translations while preserving order
     const updatedEntries = sourceEntries.map(({ key }) => {
@@ -112,6 +123,7 @@ export const yaml: Translator = {
       return { key, value };
     });
 
+    debug("Successfully updated YAML entries");
     return {
       summary: `Translated ${addedKeys.length} new keys`,
       content: stringifyYamlFile(updatedEntries),
@@ -119,11 +131,13 @@ export const yaml: Translator = {
   },
 
   async onNew(options) {
+    debug("Running YAML translator onNew");
     const sourceEntries = parseYamlFile(options.content);
     const sourceStrings = Object.fromEntries(
       sourceEntries.map((entry) => [entry.key, entry.value]),
     );
 
+    debug("Generating translations for new file");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceStrings, null, 2), options),
@@ -132,12 +146,14 @@ export const yaml: Translator = {
         items: z.array(z.string().describe("Translated string value")),
       }),
     });
+    debug("Successfully generated translations");
 
     const translatedEntries = sourceEntries.map((entry, index) => ({
       ...entry,
       value: object.items[index],
     }));
 
+    debug("Successfully created new YAML file");
     return {
       content: stringifyYamlFile(translatedEntries),
     };

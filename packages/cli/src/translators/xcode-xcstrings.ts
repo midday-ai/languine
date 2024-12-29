@@ -1,6 +1,7 @@
 import { generateObject } from "ai";
 import dedent from "dedent";
 import { z } from "zod";
+import { debug } from "../debug.js";
 import { baseRequirements, createBasePrompt } from "../prompt.js";
 import type { PromptOptions, Translator } from "../types.js";
 
@@ -28,6 +29,7 @@ interface XCStringsData {
 }
 
 function parseXcodeXCStrings(content: string, locale: string) {
+  debug("Parsing XCStrings file");
   const data = JSON.parse(content) as XCStringsData;
   const resultData: Record<string, string | Record<string, string>> = {};
 
@@ -59,6 +61,7 @@ function parseXcodeXCStrings(content: string, locale: string) {
     }
   }
 
+  debug(`Successfully parsed ${Object.keys(resultData).length} strings`);
   return resultData;
 }
 
@@ -67,6 +70,7 @@ function stringifyXcodeXCStrings(
   locale: string,
   originalContent: string,
 ) {
+  debug("Stringifying XCStrings");
   const originalData = JSON.parse(originalContent) as XCStringsData;
   const langDataToMerge: XCStringsData = {
     version: originalData.version,
@@ -121,11 +125,13 @@ function stringifyXcodeXCStrings(
     },
   };
 
+  debug("Successfully stringified XCStrings");
   return JSON.stringify(result, null, 2);
 }
 
 export const xcodeXCStrings: Translator = {
   async onUpdate(options) {
+    debug("Running XCStrings translator onUpdate");
     const sourceStrings = parseXcodeXCStrings(
       options.content,
       options.config.locale.source,
@@ -143,7 +149,10 @@ export const xcodeXCStrings: Translator = {
       );
     });
 
+    debug(`Found ${addedKeys.length} new or modified keys`);
+
     if (addedKeys.length === 0) {
+      debug("No new keys to translate");
       return {
         summary: "No new keys to translate",
         content: options.previousTranslation,
@@ -154,6 +163,7 @@ export const xcodeXCStrings: Translator = {
       addedKeys.map((key) => [key, sourceStrings[key]]),
     );
 
+    debug("Generating translations for new keys");
     const { object } = await generateObject({
       model: options.model,
       temperature: options.config.llm?.temperature ?? 0,
@@ -167,6 +177,7 @@ export const xcodeXCStrings: Translator = {
         ),
       }),
     });
+    debug("Successfully generated translations");
 
     const translated = addedKeys.reduce<
       Record<string, string | Record<string, string>>
@@ -191,6 +202,7 @@ export const xcodeXCStrings: Translator = {
     };
   },
   async onNew(options: PromptOptions) {
+    debug("Running XCStrings translator onNew");
     const sourceStrings = parseXcodeXCStrings(
       options.content,
       options.config.locale.source,
@@ -198,6 +210,7 @@ export const xcodeXCStrings: Translator = {
 
     const sourceKeys = Object.keys(sourceStrings);
 
+    debug("Generating translations for new file");
     const { object } = await generateObject({
       model: options.model,
       prompt: getPrompt(JSON.stringify(sourceStrings, null, 2), options),
@@ -211,6 +224,7 @@ export const xcodeXCStrings: Translator = {
         ),
       }),
     });
+    debug("Successfully generated translations");
 
     const translatedStrings = sourceKeys.reduce<
       Record<string, string | Record<string, string>>
