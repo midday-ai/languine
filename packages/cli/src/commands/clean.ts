@@ -18,7 +18,10 @@ export async function clean() {
     // Process each file format and pattern
     for (const [format, { include }] of Object.entries(config.files)) {
       for (const pattern of include) {
-        const sourcePath = pattern.replace("[locale]", source);
+        const sourcePath =
+          typeof pattern === "string"
+            ? pattern.replace("[locale]", source)
+            : pattern.from.replace("[locale]", source);
 
         // Read source file to get reference keys
         const sourceContent = await fs.readFile(
@@ -37,7 +40,10 @@ export async function clean() {
 
         // Clean each target locale file
         for (const locale of targets) {
-          const targetPath = pattern.replace("[locale]", locale);
+          const targetPath =
+            typeof pattern === "string"
+              ? pattern.replace("[locale]", locale)
+              : pattern.from.replace("[locale]", locale);
 
           try {
             const targetContent = await fs.readFile(

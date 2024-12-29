@@ -13,7 +13,10 @@ export async function diff() {
     const sourceLocale = config.locale.source;
     const [fileFormat] = Object.keys(config.files);
     const sourcePattern = config.files[fileFormat].include[0];
-    const sourcePath = sourcePattern.replace("[locale]", sourceLocale);
+    const sourcePath =
+      typeof sourcePattern === "string"
+        ? sourcePattern.replace("[locale]", sourceLocale)
+        : sourcePattern.from.replace("[locale]", sourceLocale);
 
     // Get git diff for source file
     const diff = execSync(`git diff HEAD -- ${sourcePath}`, {
