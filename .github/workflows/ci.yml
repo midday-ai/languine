@@ -23,7 +23,7 @@ jobs:
 
   publish-cli:
     name: Publish CLI
-    if: contains(github.event.head_commit.modified, 'packages/cli/')
+    # if: contains(github.event.head_commit.modified, 'packages/cli/')
     needs: [test]
     runs-on: ubuntu-latest
     permissions:
