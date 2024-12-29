@@ -20,7 +20,7 @@ jobs:
         run: bun install
       - name: 🔍 Run type checking
         run: bun run typecheck
-      # - name: 🚨 Run linting
+      # - name: 🔬 Run linting
       #   run: bun run lint
       - name: 🧪 Run unit tests
         run: bun run test
@@ -56,6 +56,7 @@ jobs:
         run: bun run build
       - name: Create and publish versions
         uses: changesets/action@v1
+        working-directory: packages/cli
         with:
           version: npx changeset version
           commit: "chore: update versions"
@@ -87,6 +88,7 @@ jobs:
         run: bun run build
       - name: Create and publish versions
         uses: changesets/action@v1
+        working-directory: packages/react-email
         with:
           version: npx changeset version
           commit: "chore: update versions"
