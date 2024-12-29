@@ -11,25 +11,27 @@ import { init } from "./commands/init.js";
 import { instructions } from "./commands/instructions.js";
 import { translate } from "./commands/translate.js";
 
-console.log(
-  `
+if (!process.argv[2]) {
+  console.log(
+    `
     ██╗      █████╗ ███╗   ██╗ ██████╗ ██╗   ██╗██╗███╗   ██╗███████╗
     ██║     ██╔══██╗████╗  ██║██╔════╝ ██║   ██║██║████╗  ██║██╔════╝
     ██║     ███████║██╔██╗ ██║██║  ███╗██║   ██║██║██║██╗ ██║█████╗  
     ██║     ██╔══██║██║╚██╗██║██║   ██║██║   ██║██║██║╚██╗██║██╔══╝  
     ███████╗██║  ██║██║ ╚████║╚██████╔╝╚██████╔╝██║██║ ╚████║███████╗
     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
-  `,
-);
+    `,
+  );
 
-console.log(
-  chalk.gray(dedent`
-    Translate your application with Languine CLI powered by AI.
-    Website: ${chalk.bold("https://languine.ai")}
-  `),
-);
+  console.log(
+    chalk.gray(dedent`
+      Translate your application with Languine CLI powered by AI.
+      Website: ${chalk.bold("https://languine.ai")}
+    `),
+  );
 
-console.log();
+  console.log();
+}
 
 // Parse command line arguments
 const command =

@@ -7,6 +7,6 @@
   "invitationText": "%{invitedByUsername} (%{email}) convidou você para se juntar ao time %{teamName} na %{company}.",
   "invitedToAlt": "Convidado para",
   "joinTeamButton": "Entrar no time",
-  "copyUrlText": "Ou copie e cole este URL no seu navegador:",
+  "copyUrlText": "Ou copie e cole esta URL no seu navegador:",
   "footerText": "Este convite foi destinado para %{username} (%{ip} de %{location}). Se você não estava esperando este convite, pode ignorar este e-mail. Se estiver preocupado com a segurança da sua conta, por favor responda a este e-mail para entrar em contato conosco."
 }

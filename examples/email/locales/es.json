@@ -8,5 +8,5 @@
   "invitedToAlt": "Invitado a",
   "joinTeamButton": "Únete al equipo",
   "copyUrlText": "O copia y pega esta URL en tu navegador:",
-  "footerText": "Esta invitación fue destinada para %{username} (%{ip} desde %{location}). Si no esperabas esta invitación, puedes ignorar este correo electrónico. Si te preocupa la seguridad de tu cuenta, por favor responde a este correo electrónico para ponerte en contacto con nosotros."
+  "footerText": "Esta invitación fue destinada para %{username} (%{ip} desde %{location}). Si no esperabas esta invitación, puedes ignorar este correo. Si te preocupa la seguridad de tu cuenta, por favor responde a este correo para ponerte en contacto con nosotros."
 }

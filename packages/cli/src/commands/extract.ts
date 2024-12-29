@@ -56,12 +56,17 @@ export async function extract(update = false) {
 
   const keys = Array.from(foundKeys);
 
+  if (config.files.json.include.length === 0) {
+    outro(chalk.red("No translation files found in config"));
+    return [];
+  }
+
   // Get source locale file path from config
   const sourceLocale = config.locale.source;
-  const sourceFile = config.files.json.include[0].replace(
-    "[locale]",
-    sourceLocale,
-  );
+  const sourceFile =
+    typeof config.files.json.include[0] === "string"
+      ? config.files.json.include[0].replace("[locale]", sourceLocale)
+      : config.files.json.include[0].from.replace("[locale]", sourceLocale);
 
   // Read existing translations if any
   let translations: Record<string, string> = {};
@@ -72,9 +77,9 @@ export async function extract(update = false) {
     if (ext === "json") {
       translations = JSON.parse(content);
     } else if (ext === "ts" || ext === "js") {
-      // For TS/JS files, evaluate the content
-      // @ts-ignore
-      const mod = eval(content);
+      // For TS/JS files, use jiti to safely load the module
+      const jiti = require("jiti")(process.cwd());
+      const mod = jiti(sourceFile);
       translations = mod.default || mod;
     } else if (ext === "md" || ext === "mdx") {
       // For MD/MDX files, parse frontmatter
