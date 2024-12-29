@@ -1,5 +1,11 @@
 # languine
 
+## 1.0.2
+
+### Patch Changes
+
+- [`bedc557`](https://github.com/midday-ai/languine/commit/bedc5572715809cb4f3e7be575f72967996c06e9) Thanks [@pontusab](https://github.com/pontusab)! - ollama binary detection
+
 ## 1.0.1
 
 ### Patch Changes
