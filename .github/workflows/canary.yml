@@ -1,7 +1,12 @@
+# on:
+#   pull_request:
+#     branches-ignore:
+#       - main
+
 on:
-  pull_request:
-    branches-ignore:
-      - main
+  push:
+    branches:
+      - "!main"
 
 jobs:
   test:
