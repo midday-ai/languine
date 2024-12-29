@@ -40,6 +40,8 @@ export function WelcomeEmail({ locale, name }) {
 
 ### Translation files (en.json)
 
+Add your translation files in the `locales` folder.
+
 ```json
 {
     "preview": "Welcome to our app!",
