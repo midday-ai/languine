@@ -41,9 +41,7 @@ jobs:
     if: needs.test.outputs.cli == 'true'
     needs: [test]
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
         with:
@@ -75,9 +73,7 @@ jobs:
     if: needs.test.outputs.react-email == 'true'
     needs: [test]
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
         with:
