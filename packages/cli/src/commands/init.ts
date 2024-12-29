@@ -7,6 +7,7 @@ import { installDependencies } from "../install.js";
 import { providers } from "../providers.js";
 import type { PresetOptions, Provider } from "../types.js";
 import { configFile, generateConfig } from "../utils.js";
+import os from "node:os";
 
 async function createDirectoryOrFile(filePath: string, isDirectory = false) {
   try {
@@ -24,7 +25,7 @@ async function createDirectoryOrFile(filePath: string, isDirectory = false) {
     }
   } catch (error) {
     throw new Error(
-      `Failed to create ${isDirectory ? "directory" : "file"}: ${filePath}`,
+      `Failed to create ${isDirectory ? "directory" : "file"}: ${filePath}`
     );
   }
 }
@@ -37,6 +38,28 @@ async function getPresetConfig(preset: string, options: PresetOptions) {
     }
     default:
       return null;
+  }
+}
+
+function findExecutable(command: string) {
+  try {
+    const platform = os.platform();
+    let commandToRun;
+
+    if (platform === "win32") {
+      commandToRun = `where ${command}`;
+    } else {
+      commandToRun = `which ${command}`;
+    }
+
+    const result = execSync(commandToRun).toString().trim();
+
+    if (!result) {
+      throw new Error(`${command} binary not found`);
+    }
+    return result;
+  } catch (error) {
+    return null;
   }
 }
 
@@ -73,7 +96,7 @@ export async function init(preset?: string) {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
   } catch (error) {
     outro(
-      "Languine requires Git to track changes in translation keys and files. Please initialize a Git repository first.",
+      "Languine requires Git to track changes in translation keys and files. Please initialize a Git repository first."
     );
     process.exit(1);
   }
@@ -170,13 +193,9 @@ export async function init(preset?: string) {
   })) as Provider;
 
   if (provider === "ollama") {
-    try {
-      const ollamaBinary = execSync("which ollama").toString().trim();
-      if (!ollamaBinary) {
-        outro("Ollama binary not found. Please install Ollama");
-        process.exit(1);
-      }
-    } catch (error) {
+    const ollamaBinary = findExecutable("ollama");
+
+    if (!ollamaBinary) {
       outro("Ollama binary not found. Please install Ollama");
       process.exit(1);
     }
@@ -211,7 +230,7 @@ export async function init(preset?: string) {
       for (const lang of targetLangs) {
         const filePath = path.join(
           process.cwd(),
-          pattern.replace("[locale]", lang),
+          pattern.replace("[locale]", lang)
         );
 
         if (isDirectory) {
@@ -228,11 +247,11 @@ export async function init(preset?: string) {
     const { path: configPath } = await configFile(configType);
     await fs.writeFile(configPath, configContent, "utf-8");
     outro(
-      "Configuration file and language files/directories created successfully!",
+      "Configuration file and language files/directories created successfully!"
     );
   } catch (error) {
     outro(
-      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
+      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`
     );
     process.exit(1);
   }
