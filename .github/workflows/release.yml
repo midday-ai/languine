@@ -20,8 +20,8 @@ jobs:
         run: bun install
       - name: 🔍 Run type checking
         run: bun run typecheck
-      # - name: 🔬 Run linting
-      #   run: bun run lint
+      - name: 🔬 Run linting
+        run: bun run lint
       - name: 🧪 Run unit tests
         run: bun run test
     
