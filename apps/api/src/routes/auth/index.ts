@@ -1,19 +1,11 @@
+import { Hono } from "@/libs/app";
 import { githubAuth } from "@hono/oauth-providers/github";
 import { googleAuth } from "@hono/oauth-providers/google";
-import { Hono } from "hono";
 import { describeRoute } from "hono-openapi";
 import { resolver } from "hono-openapi/zod";
 import { authResponseSchema } from "./schema";
 
-type Bindings = {
-  GITHUB_CLIENT_ID: string;
-  GITHUB_CLIENT_SECRET: string;
-  GOOGLE_CLIENT_ID: string;
-  GOOGLE_CLIENT_SECRET: string;
-  AUTH_REDIRECT_URI: string;
-};
-
-const app = new Hono<{ Bindings: Bindings }>();
+const app = new Hono();
 
 app.use("/github", (c, next) => {
   githubAuth({

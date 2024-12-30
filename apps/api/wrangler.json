@@ -3,13 +3,37 @@
   "main": "src/index.ts",
   "compatibility_date": "2024-12-29",
   "workers_dev": false,
+  "compatibility_flags": ["nodejs_compat"],
   "env": {
     "production": {
       "name": "languine-api",
       "route": {
         "pattern": "api.languine.ai/*",
         "zone_name": "languine.ai"
-      }
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "languine-production",
+          "database_id": "fdc58ce8-dbd6-44f8-a771-449d3e2233b6",
+          "migrations_dir": "drizzle"
+        }
+      ]
+    },
+    "staging": {
+      "name": "languine-api-staging",
+      "route": {
+        "pattern": "api-staging.languine.ai/*",
+        "zone_name": "languine.ai"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "languine-staging",
+          "database_id": "",
+          "migrations_dir": "drizzle"
+        }
+      ]
     }
   }
 }
