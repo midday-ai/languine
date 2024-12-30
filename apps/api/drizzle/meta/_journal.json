@@ -8,6 +8,13 @@
       "when": 1735562724625,
       "tag": "0000_slim_skin",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1735563592170,
+      "tag": "0001_warm_pepper_potts",
+      "breakpoints": true
     }
   ]
 }

@@ -22,6 +22,14 @@ jobs:
         run: bun turbo lint --filter=@languine/api
       - name: 🧪 Run unit tests
         run: bun turbo test --filter=@languine/api
+      - name: 🗃️ Apply database migrations
+        uses: cloudflare/wrangler-action@v3
+        with:
+          packageManager: bun
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: "apps/api"
+          wranglerVersion: "latest"
+          command: d1 migrations apply languine-production --env production
       - name: 🚀 Deploy Project Artifacts to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
