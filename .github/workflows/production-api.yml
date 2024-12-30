@@ -17,6 +17,7 @@ jobs:
       - name: 📦 Install dependencies
         run: bun install
       - name: 🔦 Run type checking
+        run: bun turbo typecheck --filter=@languine/api
         run: bun run typecheck
       - name: 🔬 Run linting
         run: bun run lint
