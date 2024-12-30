@@ -13,9 +13,9 @@
     "studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@hono/oauth-providers": "^0.6.2",
     "@hono/zod-validator": "^0.4.2",
     "@scalar/hono-api-reference": "^0.5.165",
+    "better-auth": "^1.1.7",
     "drizzle-orm": "^0.38.3",
     "hono": "^4.6.15",
     "hono-openapi": "^0.3.1",
