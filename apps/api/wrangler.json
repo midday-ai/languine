@@ -4,11 +4,11 @@
   "compatibility_date": "2024-12-29",
   "workers_dev": false,
   "env": {
-    "p": {
-      "name": "languine-api-staging",
+    "production": {
+      "name": "languine-api",
       "route": {
-        "pattern": "staging.example.org/*",
-        "zone_name": "example.org"
+        "pattern": "api.languine.ai/*",
+        "zone_name": "languine.ai"
       }
     }
   }

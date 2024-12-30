@@ -18,15 +18,10 @@ jobs:
         run: bun install
       - name: 🔦 Run type checking
         run: bun turbo typecheck --filter=@languine/api
-        run: bun run typecheck
       - name: 🔬 Run linting
-        run: bun run lint
+        run: bun turbo lint --filter=@languine/api
       - name: 🧪 Run unit tests
-        run: bun run test
-        working-directory: ./apps/api
-      - name: 🧪 Run unit tests
-        run: bun test
-        working-directory: ./apps/api
+        run: bun turbo test --filter=@languine/api
       - name: 🚀 Deploy Project Artifacts to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
