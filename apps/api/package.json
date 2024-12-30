@@ -3,7 +3,10 @@
   "scripts": {
     "dev": "wrangler dev --port 3002",
     "deploy": "wrangler deploy --minify",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "biome check .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "@hono/oauth-providers": "^0.6.2",

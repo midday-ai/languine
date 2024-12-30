@@ -4,7 +4,7 @@
     "enabled": true
   },
   "linter": {
-    "ignore": ["node_modules", ".next", "*.json", "test", "dist"],
+    "ignore": ["node_modules", ".next", "*.json", "test", "dist", ".wrangler"],
     "enabled": true,
     "rules": {
       "recommended": true,
@@ -22,6 +22,6 @@
   },
   "formatter": {
     "indentStyle": "space",
-    "ignore": ["*.json", ".next", "dist", "test"]
+    "ignore": ["*.json", ".next", "dist", "test", ".wrangler"]
   }
 }
