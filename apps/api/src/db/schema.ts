@@ -31,6 +31,17 @@ export const teamMembers = sqliteTable("team_members", {
   updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
 });
 
+export const teamInvites = sqliteTable("team_invites", {
+  id: text("id").primaryKey(),
+  teamId: text("team_id")
+    .notNull()
+    .references(() => teams.id, { onDelete: "cascade" }),
+  email: text("email").notNull(),
+  role: text("role", { enum: ["owner", "member"] }).notNull(),
+  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});
+
 export const projects = sqliteTable("projects", {
   id: text("id").primaryKey(),
   teamId: text("team_id")
