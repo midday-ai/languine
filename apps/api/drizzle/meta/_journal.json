@@ -15,6 +15,13 @@
       "when": 1735563592170,
       "tag": "0001_warm_pepper_potts",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1735563924272,
+      "tag": "0002_hesitant_amazoness",
+      "breakpoints": true
     }
   ]
 }

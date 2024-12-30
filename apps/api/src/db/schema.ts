@@ -22,7 +22,7 @@ export const teamMembers = sqliteTable("team_members", {
   id: text("id").primaryKey(),
   teamId: text("team_id")
     .notNull()
-    .references(() => teams.id),
+    .references(() => teams.id, { onDelete: "cascade" }),
   userId: text("user_id")
     .notNull()
     .references(() => users.id),
@@ -35,7 +35,7 @@ export const projects = sqliteTable("projects", {
   id: text("id").primaryKey(),
   teamId: text("team_id")
     .notNull()
-    .references(() => teams.id),
+    .references(() => teams.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
   description: text("description"),
   createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
