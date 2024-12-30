@@ -2,9 +2,11 @@
   "name": "@languine/api",
   "scripts": {
     "dev": "wrangler dev --port 3002",
-    "deploy": "wrangler deploy --minify"
+    "deploy": "wrangler deploy --minify",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@hono/oauth-providers": "^0.6.2",
     "@hono/zod-validator": "^0.4.2",
     "@scalar/hono-api-reference": "^0.5.165",
     "hono": "^4.6.15",

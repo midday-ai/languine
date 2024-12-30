@@ -1,13 +1,11 @@
 import { apiReference } from "@scalar/hono-api-reference";
 import { Hono } from "hono";
 import { openAPISpecs } from "hono-openapi";
-import fineTuneRouter from "./routes/fine-tune";
-import telemetryRouter from "./routes/telemetry";
+import router from "./routes";
 
 const app = new Hono();
 
-app.route("/telemetry", telemetryRouter);
-app.route("/fine-tune", fineTuneRouter);
+app.route("/", router);
 
 app.get(
   "/openapi",

@@ -1,9 +1,11 @@
-name: 🚀 Release Production
+name: 📦 Release Packages
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'apps/**'
 
 jobs:
   test:
@@ -41,7 +43,7 @@ jobs:
         run: bun install
       - name: 🏗️ Build packages
         run: bun turbo build --filter=languine --filter=@languine/react-email
-      - name: 🚀 Create and publish versions
+      - name: 🔖 Create and publish versions
         uses: changesets/action@master
         with:
           version: bun run changeset version
