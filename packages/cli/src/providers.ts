@@ -38,6 +38,15 @@ export const providers: Record<Provider, ProviderConfig> = {
       try {
         const { models } = await ollama.list();
 
+        if (models.length === 0) {
+          outro(
+            chalk.red(
+              "No Ollama models found. Please install at least one model."
+            ),
+          );
+          process.exit(1);
+        }
+
         return models.map((model) => ({
           value: model.name,
           label: model.name,
