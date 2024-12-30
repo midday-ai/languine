@@ -52,3 +52,11 @@ export const projects = sqliteTable("projects", {
   createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
 });
+
+export const apiTokens = sqliteTable("api_tokens", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull(),
+  token: text("token").notNull().unique(),
+  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});
