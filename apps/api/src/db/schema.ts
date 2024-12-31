@@ -1,64 +1,13 @@
-import { sql } from "drizzle-orm";
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 export const users = sqliteTable("users", {
   id: text("id").primaryKey(),
-  email: text("email").notNull().unique(),
   name: text("name").notNull(),
-  avatar: text("avatar"),
-  provider: text("provider", { enum: ["github", "google"] }).notNull(),
+  email: text("email").notNull().unique(),
   emailVerified: integer("email_verified", { mode: "boolean" }).notNull(),
   image: text("image"),
-  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-});
-
-export const members = sqliteTable("members", {
-  id: text("id").primaryKey(),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id, { onDelete: "cascade" }),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id),
-  role: text("role", { enum: ["owner", "member"] }).notNull(),
-  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-});
-
-export const invitations = sqliteTable("invitations", {
-  id: text("id").primaryKey(),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id, { onDelete: "cascade" }),
-  email: text("email").notNull(),
-  role: text("role", { enum: ["owner", "member"] }).notNull(),
-  status: text("status").notNull(),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-  inviterId: text("inviter_id")
-    .notNull()
-    .references(() => users.id),
-  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-});
-
-export const projects = sqliteTable("projects", {
-  id: text("id").primaryKey(),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id, { onDelete: "cascade" }),
-  name: text("name").notNull(),
-  description: text("description"),
-  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-});
-
-export const apiTokens = sqliteTable("api_tokens", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  token: text("token").notNull().unique(),
-  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
 });
 
 export const sessions = sqliteTable("sessions", {
@@ -72,6 +21,7 @@ export const sessions = sqliteTable("sessions", {
   userId: text("user_id")
     .notNull()
     .references(() => users.id),
+  activeOrganizationId: text("active_organization_id"),
 });
 
 export const accounts = sqliteTable("accounts", {
@@ -112,4 +62,30 @@ export const organizations = sqliteTable("organizations", {
   logo: text("logo"),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
   metadata: text("metadata"),
+});
+
+export const members = sqliteTable("members", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id")
+    .notNull()
+    .references(() => organizations.id),
+  userId: text("user_id")
+    .notNull()
+    .references(() => users.id),
+  role: text("role").notNull(),
+  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+});
+
+export const invitations = sqliteTable("invitations", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id")
+    .notNull()
+    .references(() => organizations.id),
+  email: text("email").notNull(),
+  role: text("role"),
+  status: text("status").notNull(),
+  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+  inviterId: text("inviter_id")
+    .notNull()
+    .references(() => users.id),
 });

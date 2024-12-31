@@ -2,8 +2,23 @@
   "name": "languine-api",
   "main": "src/index.ts",
   "compatibility_date": "2024-12-29",
-  "workers_dev": false,
+  "workers_dev": true,
   "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB", 
+      "database_name": "languine-development",
+      "database_id": "development",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "development",
+      "preview_id": "development"
+    }
+  ],
   "env": {
     "production": {
       "name": "languine-api",
@@ -14,9 +29,15 @@
       "d1_databases": [
         {
           "binding": "DB",
-          "database_name": "languine-production",
-          "database_id": "fdc58ce8-dbd6-44f8-a771-449d3e2233b6",
+          "database_name": "languine-production", 
+          "database_id": "5f6dc91e-405e-423a-af2f-eca985fb86ec",
           "migrations_dir": "drizzle"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "KV",
+          "id": ""
         }
       ]
     },
@@ -32,6 +53,12 @@
           "database_name": "languine-staging",
           "database_id": "",
           "migrations_dir": "drizzle"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "KV",
+          "id": ""
         }
       ]
     }

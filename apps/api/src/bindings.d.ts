@@ -1,13 +1,17 @@
+import type { auth } from "@/auth";
 import type { Env } from "hono";
 
 type Environment = Env & {
   Bindings: {
     DB: D1Database;
+    KV: KVNamespace;
     ENV_TYPE: "dev" | "prod" | "stage";
-    GITHUB_CLIENT_ID: string;
-    GITHUB_CLIENT_SECRET: string;
-    GOOGLE_CLIENT_ID: string;
-    GOOGLE_CLIENT_SECRET: string;
-    AUTH_REDIRECT_URI: string;
+    RESEND_API_KEY: string;
+    BETTER_AUTH_SECRET: string;
+    BETTER_AUTH_TRUSTED_ORIGINS: string;
+  };
+  Variables: {
+    user: typeof auth.$Infer.Session.user | null;
+    session: typeof auth.$Infer.Session.session | null;
   };
 };

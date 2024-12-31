@@ -19,11 +19,14 @@
     "drizzle-orm": "^0.38.3",
     "hono": "^4.6.15",
     "hono-openapi": "^0.3.1",
+    "kysely": "^0.27.5",
+    "kysely-d1": "^0.3.0",
+    "resend": "^4.0.1",
     "zod": "^3.24.1",
     "zod-openapi": "^4.2.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241224.0",
+    "@cloudflare/workers-types": "^4.20241230.0",
     "drizzle-kit": "^0.30.1",
     "wrangler": "^3.99.0"
   }

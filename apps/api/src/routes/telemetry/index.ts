@@ -1,4 +1,4 @@
-import { Hono } from "@/libs/app";
+import { Hono } from "@/lib/app";
 import { describeRoute } from "hono-openapi";
 import { resolver, validator as zValidator } from "hono-openapi/zod";
 import { querySchema } from "./schema";

@@ -19,13 +19,11 @@ CREATE TABLE `invitations` (
 	`id` text PRIMARY KEY NOT NULL,
 	`organization_id` text NOT NULL,
 	`email` text NOT NULL,
-	`role` text NOT NULL,
+	`role` text,
 	`status` text NOT NULL,
 	`expires_at` integer NOT NULL,
 	`inviter_id` text NOT NULL,
-	`created_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	`updated_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	FOREIGN KEY (`organization_id`) REFERENCES `organizations`(`id`) ON UPDATE no action ON DELETE cascade,
+	FOREIGN KEY (`organization_id`) REFERENCES `organizations`(`id`) ON UPDATE no action ON DELETE no action,
 	FOREIGN KEY (`inviter_id`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
@@ -34,9 +32,8 @@ CREATE TABLE `members` (
 	`organization_id` text NOT NULL,
 	`user_id` text NOT NULL,
 	`role` text NOT NULL,
-	`created_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	`updated_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	FOREIGN KEY (`organization_id`) REFERENCES `organizations`(`id`) ON UPDATE no action ON DELETE cascade,
+	`created_at` integer NOT NULL,
+	FOREIGN KEY (`organization_id`) REFERENCES `organizations`(`id`) ON UPDATE no action ON DELETE no action,
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
@@ -59,10 +56,22 @@ CREATE TABLE `sessions` (
 	`ip_address` text,
 	`user_agent` text,
 	`user_id` text NOT NULL,
+	`active_organization_id` text,
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE UNIQUE INDEX `sessions_token_unique` ON `sessions` (`token`);--> statement-breakpoint
+CREATE TABLE `users` (
+	`id` text PRIMARY KEY NOT NULL,
+	`name` text NOT NULL,
+	`email` text NOT NULL,
+	`email_verified` integer NOT NULL,
+	`image` text,
+	`created_at` integer NOT NULL,
+	`updated_at` integer NOT NULL
+);
+--> statement-breakpoint
+CREATE UNIQUE INDEX `users_email_unique` ON `users` (`email`);--> statement-breakpoint
 CREATE TABLE `verifications` (
 	`id` text PRIMARY KEY NOT NULL,
 	`identifier` text NOT NULL,
@@ -71,24 +80,3 @@ CREATE TABLE `verifications` (
 	`created_at` integer,
 	`updated_at` integer
 );
---> statement-breakpoint
-DROP TABLE `team_invites`;--> statement-breakpoint
-DROP TABLE `team_members`;--> statement-breakpoint
-DROP TABLE `teams`;--> statement-breakpoint
-PRAGMA foreign_keys=OFF;--> statement-breakpoint
-CREATE TABLE `__new_projects` (
-	`id` text PRIMARY KEY NOT NULL,
-	`organization_id` text NOT NULL,
-	`name` text NOT NULL,
-	`description` text,
-	`created_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	`updated_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	FOREIGN KEY (`organization_id`) REFERENCES `organizations`(`id`) ON UPDATE no action ON DELETE cascade
-);
---> statement-breakpoint
-INSERT INTO `__new_projects`("id", "organization_id", "name", "description", "created_at", "updated_at") SELECT "id", "organization_id", "name", "description", "created_at", "updated_at" FROM `projects`;--> statement-breakpoint
-DROP TABLE `projects`;--> statement-breakpoint
-ALTER TABLE `__new_projects` RENAME TO `projects`;--> statement-breakpoint
-PRAGMA foreign_keys=ON;--> statement-breakpoint
-ALTER TABLE `users` ADD `email_verified` integer NOT NULL;--> statement-breakpoint
-ALTER TABLE `users` ADD `image` text;

@@ -1,8 +1,10 @@
-import { auth } from "@/auth";
-import { Hono } from "@/libs/app";
+// import { Hono } from "@/lib/app";
+// import { auth } from "@/lib/auth";
 
-const app = new Hono();
+// const app = new Hono();
 
-app.on(["POST", "GET"], "/**", (c) => auth.handler(c.req.raw));
+// app.on(["POST", "GET"], "/api/auth/**", (c) => {
+//   return auth.handler(c.req.raw);
+// });
 
-export default app;
+// export default app;

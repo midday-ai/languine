@@ -5,43 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1735562724625,
-      "tag": "0000_slim_skin",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1735563592170,
-      "tag": "0001_warm_pepper_potts",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1735563924272,
-      "tag": "0002_hesitant_amazoness",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "6",
-      "when": 1735564086656,
-      "tag": "0003_tearful_randall_flagg",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "6",
-      "when": 1735564498941,
-      "tag": "0004_windy_mystique",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "6",
-      "when": 1735566706181,
-      "tag": "0005_ancient_forgotten_one",
+      "when": 1735643219273,
+      "tag": "0000_swift_jocasta",
       "breakpoints": true
     }
   ]
