@@ -6,6 +6,8 @@ import { I18nProvider } from "fumadocs-ui/i18n";
 import { baseOptions } from "../layout.config";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { source } from "@/lib/source";
+import { i18n } from "@/lib/i18n";
+import { notFound } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,12 +17,11 @@ export default async function Layout({
   params,
   children,
 }: { params: Promise<{ lang: string }>; children: ReactNode }) {
+  const lang = (await params).lang as "en" | "cn";
+  if (!i18n.languages.includes(lang)) notFound();
+
   return (
-    <html
-      lang={(await params).lang}
-      className={inter.className}
-      suppressHydrationWarning
-    >
+    <html lang={lang} className={inter.className} suppressHydrationWarning>
       <body
         style={{
           display: "flex",
@@ -29,7 +30,7 @@ export default async function Layout({
         }}
       >
         <I18nProvider
-          locale={(await params).lang}
+          locale={lang}
           locales={[
             { locale: "en", name: "English" },
             { locale: "cn", name: "Chinese" },
@@ -38,14 +39,11 @@ export default async function Layout({
             {
               en: (await import("@/content/ui.json")).default,
               cn: (await import("@/content/ui.cn.json")).default,
-            }[(await params).lang]
+            }[lang]
           }
         >
           <RootProvider>
-            <DocsLayout
-              tree={source.pageTree[(await params).lang]}
-              {...baseOptions}
-            >
+            <DocsLayout tree={source.pageTree[lang]} {...baseOptions(lang)}>
               {children}
             </DocsLayout>
           </RootProvider>

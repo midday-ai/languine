@@ -29,6 +29,10 @@ export default defineConfig({
           from: "content/ui.json",
           to: "content/ui.[locale].json",
         },
+        {
+          from: "content/app.json",
+          to: "content/app.[locale].json",
+        },
       ],
     },
     md: {

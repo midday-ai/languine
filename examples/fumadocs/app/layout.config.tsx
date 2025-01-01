@@ -1,15 +1,15 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
-/**
- * Shared layout configurations
- *
- * you can configure layouts individually from:
- * Home Layout: app/(home)/layout.tsx
- * Docs Layout: app/docs/layout.tsx
- */
-export const baseOptions: BaseLayoutProps = {
-  nav: {
-    title: "My App",
-  },
-  i18n: true,
+const translations = {
+  en: (await import("@/content/app.json")).default,
+  cn: (await import("@/content/app.cn.json")).default,
+} as const;
+
+export const baseOptions = (locale: "en" | "cn") => {
+  return {
+    nav: {
+      title: translations[locale].title,
+    },
+    i18n: true,
+  } satisfies BaseLayoutProps;
 };
