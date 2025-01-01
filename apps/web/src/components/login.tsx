@@ -1,9 +1,7 @@
 "use client";
 
 import { authClient } from "@/lib/auth";
-import Link from "next/link";
 import { useState } from "react";
-import { Logo } from "./logo";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { InputOTPGroup } from "./ui/input-otp";
@@ -24,12 +22,6 @@ export default function Login() {
 
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="mb-4">
-        <Link href="/">
-          <Logo />
-        </Link>
-      </div>
-
       {!showOTP ? (
         <form
           className="flex flex-col gap-4"

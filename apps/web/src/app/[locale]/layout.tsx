@@ -1,13 +1,8 @@
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "../globals.css";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -19,22 +14,25 @@ export const metadata: Metadata = {
   description: "Translate your application with Languine CLI powered by AI.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const { locale } = await params;
+
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang={locale} className="dark">
+      <body className={`${geistMono.variable} antialiased`}>
         <OpenPanelComponent
           clientId={process.env.NEXT_PUBLIC_OPEN_PANEL_CLIENT_ID!}
           clientSecret={process.env.OPEN_PANEL_CLIENT_SECRET!}
           trackScreenViews={true}
           disabled={process.env.NODE_ENV !== "production"}
         />
+
         {children}
       </body>
     </html>
