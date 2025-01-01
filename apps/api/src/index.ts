@@ -2,24 +2,14 @@ import { Hono } from "@/lib/app";
 import { setupAuth } from "@/lib/auth";
 import { apiReference } from "@scalar/hono-api-reference";
 import { openAPISpecs } from "hono-openapi";
-import { contextStorage } from "hono/context-storage";
 import { cors } from "hono/cors";
 import { sessionMiddleware } from "./middleware";
 import router from "./routes";
 
 const app = new Hono();
 
-app.use(contextStorage());
-
-app.route("/", router);
-app.use("*", sessionMiddleware);
-
-app.on(["POST", "GET"], "/api/auth/**", (c) => {
-  return setupAuth(c).handler(c.req.raw);
-});
-
 app.use(
-  "/api/auth/**",
+  "*",
   cors({
     origin: ["http://localhost:3000", "https://languine.ai"],
     allowHeaders: ["Content-Type", "Authorization"],
@@ -29,6 +19,14 @@ app.use(
     credentials: true,
   }),
 );
+
+app.use("*", sessionMiddleware);
+
+app.on(["POST", "GET"], "/api/auth/**", (c) => {
+  return setupAuth(c).handler(c.req.raw);
+});
+
+app.route("/", router);
 
 app.get(
   "/openapi",

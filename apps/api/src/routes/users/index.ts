@@ -29,24 +29,19 @@ app.get(
     },
   }),
   async (c) => {
-    const token = c.req.header("Authorization")?.replace("Bearer ", "");
+    const session = c.get("session");
+    const user = c.get("user");
 
-    if (!token) {
-      return c.json({ error: "No token provided" }, 401);
-    }
+    if (!user) return c.body(null, 401);
 
-    try {
-      // TODO: Implement user profile retrieval from token
-      return c.json({
-        data: {
-          email: "",
-          name: "",
-          provider: "github",
-        },
-      });
-    } catch (error) {
-      return c.json({ error: "Failed to get user profile" }, 401);
-    }
+    return c.json({
+      data: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        activeOrganizationId: session.activeOrganizationId,
+      },
+    });
   },
 );
 

@@ -2,8 +2,8 @@ import { db } from "@/db";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { bearer, emailOTP, organization } from "better-auth/plugins";
-// import { resend } from "./resend";
 import type { Context } from "hono";
+import { resend } from "./resend";
 
 export const setupAuth = (c: Context) => {
   return betterAuth({
@@ -14,11 +14,13 @@ export const setupAuth = (c: Context) => {
     secret: c.env.BETTER_AUTH_SECRET,
     trustedOrigins: c.env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
     secondaryStorage: {
-      get: (key) => c.env.KV.getItemRaw(`_auth:${key}`),
-      set: (key, value, ttl) => {
-        return c.env.KV.set(`_auth:${key}`, value, { ttl });
+      get: async (key) => {
+        return c.env.KV.get(`auth:${key}`);
       },
-      delete: (key) => c.env.KV.del(`_auth:${key}`),
+      set: (key, value, ttl) => {
+        return c.env.KV.put(`auth:${key}`, value, { ttl });
+      },
+      delete: (key) => c.env.KV.delete(`auth:${key}`),
     },
     plugins: [
       bearer(),

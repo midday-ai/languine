@@ -1,5 +1,9 @@
 import Login from "@/components/login";
 
 export default function Page() {
-  return <Login />;
+  return (
+    <div className="min-h-screen flex items-center justify-center max-w-md mx-auto">
+      <Login />
+    </div>
+  );
 }
