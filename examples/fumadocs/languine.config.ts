@@ -3,6 +3,7 @@ import { defineConfig } from "languine";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { defaultTranslations } from "fumadocs-ui/i18n";
+import { i18n } from "./lib/i18n";
 
 // translate Fumadocs' UI content
 await writeFile(
@@ -18,8 +19,8 @@ export default defineConfig({
   },
   version: "1.0.0",
   locale: {
-    source: "en",
-    targets: ["cn"],
+    source: i18n.defaultLanguage,
+    targets: i18n.languages.filter((v) => v !== i18n.defaultLanguage),
   },
   files: {
     json: {
