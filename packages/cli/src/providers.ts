@@ -41,7 +41,7 @@ export const providers: Record<Provider, ProviderConfig> = {
         if (models.length === 0) {
           outro(
             chalk.red(
-              "No Ollama models found. Please install at least one model."
+              "No Ollama models found. Please install at least one model.",
             ),
           );
           process.exit(1);

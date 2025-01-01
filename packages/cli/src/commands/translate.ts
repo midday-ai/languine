@@ -173,15 +173,19 @@ async function run(
   let previousContent = "";
 
   if (!force) {
-    previousContent = await git.show(`HEAD:./${sourcePath}`);
+    try {
+      previousContent = await git.show(`HEAD:./${sourcePath}`);
 
-    if (previousContent === sourceContent)
-      return {
-        locale: targetLocale,
-        sourcePath,
-        success: true,
-        noChanges: true,
-      };
+      if (previousContent === sourceContent)
+        return {
+          locale: targetLocale,
+          sourcePath,
+          success: true,
+          noChanges: true,
+        };
+    } catch {
+      // ignore
+    }
   }
 
   let previousTranslation = undefined;
