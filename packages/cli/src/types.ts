@@ -21,6 +21,11 @@ export interface Config {
     [format: string]: {
       /** Glob patterns or path mappings to include */
       include: Include[];
+
+      /**
+       * Filter by file path, keep the file if `true` is returned
+       */
+      filter?: (file: string) => boolean;
     };
   };
   /** Glob patterns to extract translation keys from source files  */
@@ -53,6 +58,10 @@ export type Include =
   | {
       from: string;
       to: string | ((locale: string) => string);
+    }
+  | {
+      glob: string;
+      to: (file: string, locale: string) => string;
     };
 
 export interface PromptOptions {

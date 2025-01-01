@@ -1,9 +1,10 @@
 import fs from "node:fs";
 import { confirm, intro, outro, text } from "@clack/prompts";
 import chalk from "chalk";
-import { glob } from "glob";
+import FastGlob from "fast-glob";
 import { parseJS } from "../parsers/js.js";
 import { getConfig, updateConfig } from "../utils.js";
+import { resolveTasks } from "../resolve-tasks.js";
 
 export async function extract(update = false) {
   intro("Extracting translation keys...");
@@ -42,7 +43,7 @@ export async function extract(update = false) {
   const foundKeys = new Set<string>();
 
   for (const pattern of config.extract) {
-    const files = glob.sync(pattern);
+    const files = await FastGlob(pattern);
 
     for (const file of files) {
       const code = fs.readFileSync(file, "utf8");
@@ -61,12 +62,12 @@ export async function extract(update = false) {
     return [];
   }
 
+  const tasks = await resolveTasks(config);
+  const task = tasks.find((task) => task.format === "json");
+  if (!task) throw new Error("Cannot resolve target source file");
+
   // Get source locale file path from config
-  const sourceLocale = config.locale.source;
-  const sourceFile =
-    typeof config.files.json.include[0] === "string"
-      ? config.files.json.include[0].replace("[locale]", sourceLocale)
-      : config.files.json.include[0].from.replace("[locale]", sourceLocale);
+  const sourceFile = task.sourcePath;
 
   // Read existing translations if any
   let translations: Record<string, string> = {};

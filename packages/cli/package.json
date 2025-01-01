@@ -24,13 +24,12 @@
     "@ai-sdk/openai": "^1.0.11",
     "@babel/parser": "^7.26.3",
     "@clack/prompts": "^0.9.0",
-    "@types/which": "^3.0.4",
     "ai": "^4.0.22",
     "chalk": "^5.4.1",
     "dedent": "^1.5.3",
     "diff": "^7.0.0",
     "dotenv": "^16.4.7",
-    "glob": "^11.0.0",
+    "fast-glob": "^3.3.2",
     "jiti": "^2.4.2",
     "ollama": "^0.5.11",
     "ollama-ai-provider": "^1.1.0",
@@ -44,6 +43,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/which": "^3.0.4",
     "@types/plist": "^3.0.5",
     "@types/xml2js": "^0.4.14",
     "@types/diff": "^6.0.0",

@@ -1,4 +1,3 @@
-import FastGlob from "fast-glob";
 import { defineConfig } from "languine";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -36,19 +35,18 @@ export default defineConfig({
       ],
     },
     md: {
-      include: (await FastGlob("content/docs/**/*.mdx"))
-        .filter((file) => {
-          // ignore translated content
-          return path.basename(file).split(".").length === 2;
-        })
-        .map((file) => ({
-          from: file,
-          to(locale) {
+      include: [
+        {
+          glob: "content/docs/**/*.mdx",
+          to: (file, locale) => {
             const { dir, name, ext } = path.parse(file);
 
             return path.join(dir, `${name}.${locale}${ext}`);
           },
-        })),
+        },
+      ],
+      // ignore translated content
+      filter: (file) => path.basename(file).split(".").length === 2,
     },
   },
 });

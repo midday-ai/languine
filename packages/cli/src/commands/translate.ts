@@ -14,6 +14,7 @@ import type {
   UpdateResult,
 } from "../types.js";
 import { getApiKey, getConfig } from "../utils.js";
+import { resolveTasks } from "../resolve-tasks.js";
 
 const providersMap: Record<
   Provider,
@@ -56,47 +57,31 @@ export async function translate(targetLocale?: string, force = false) {
   s.start("Checking for changes and translating to target locales...");
 
   // Create translation tasks for all locales and file patterns
-  const translationTasks = locales.flatMap((locale) =>
-    Object.entries(config.files).flatMap(([format, { include }]) =>
-      include.map(async (pattern) => {
-        let sourcePath: string;
-        let targetPath: string;
-
-        if (typeof pattern === "string") {
-          sourcePath = pattern.replace("[locale]", config.locale.source);
-          targetPath = pattern.replace("[locale]", locale);
-        } else {
-          sourcePath = pattern.from;
-          targetPath =
-            typeof pattern.to === "string"
-              ? pattern.to.replace("[locale]", locale)
-              : pattern.to(locale);
-        }
-
-        try {
-          return run(
-            sourcePath,
-            targetPath,
-            config,
-            format,
-            locale,
-            force,
-            model,
-          );
-        } catch (error) {
-          return {
-            locale,
-            sourcePath,
-            success: false,
-            error,
-          } as RunResult;
-        }
-      }),
-    ),
-  );
+  const translationTasks = await resolveTasks(config, targetLocale);
 
   // Execute all translation tasks in parallel
-  const results = await Promise.all(translationTasks);
+  const results: RunResult[] = await Promise.all(
+    translationTasks.map((task) => {
+      try {
+        return run(
+          task.sourcePath,
+          task.targetPath,
+          config,
+          task.format,
+          task.locale,
+          force,
+          model,
+        );
+      } catch (error) {
+        return {
+          locale: task.locale,
+          sourcePath: task.sourcePath,
+          success: false,
+          error,
+        };
+      }
+    }),
+  );
 
   // Process results
   const failures = results.filter((r) => !r.success);
