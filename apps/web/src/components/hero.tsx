@@ -18,12 +18,15 @@ export function Hero() {
 
         <div className="flex items-center gap-8">
           <Link href="/login" className="text-sm text-secondary underline">
-            <OutlinedButton>Start automating</OutlinedButton>
+            <OutlinedButton>{t("getStarted.button")}</OutlinedButton>
           </Link>
 
-          <Link href="/docs" className="text-sm text-secondary underline">
+          <Link
+            href="https://git.new/languine"
+            className="text-sm text-secondary underline"
+          >
             <OutlinedButton variant="secondary">
-              Read documentation
+              {t("getStarted.button")}
             </OutlinedButton>
           </Link>
         </div>

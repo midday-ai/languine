@@ -9,21 +9,27 @@ export function Features() {
   const features = [
     {
       title: t("features.fullyOpenSource"),
+      description: t("features.fullyOpenSourceDescription"),
     },
     {
       title: t("features.noVendorLockIn"),
+      description: t("features.noVendorLockInDescription"),
     },
     {
       title: t("features.presetsForExpo"),
+      description: t("features.presetsForExpoDescription"),
     },
     {
       title: t("features.presetForReactNative"),
+      description: t("features.presetForReactNativeDescription"),
     },
     {
       title: t("features.presetForReactEmail"),
+      description: t("features.presetForReactEmailDescription"),
     },
     {
       title: t("features.readyForI18nLibraries"),
+      description: t("features.readyForI18nLibrariesDescription"),
     },
   ];
 
@@ -41,7 +47,9 @@ export function Features() {
               <CardHeader>
                 <div className="space-y-4">
                   <h3 className="text-xl font-medium">{feature.title}</h3>
-                  <p className="text-secondary text-sm">Info</p>
+                  <p className="text-secondary text-sm">
+                    {feature.description}
+                  </p>
                 </div>
               </CardHeader>
             </Card>

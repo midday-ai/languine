@@ -24,8 +24,8 @@ export default function Login() {
   return (
     <div className="text-center">
       Reach out to{" "}
-      <a href="mailto:hello@languine.ai" className="underline">
-        hello@languine.ai
+      <a href="https://x.com/languine_ai" className="underline">
+        @languine_ai
       </a>{" "}
       to request early access to the platform.
       <CopyInstall />

@@ -22,11 +22,15 @@ export function ChangeLanguage() {
     <DropdownMenu>
       <DropdownMenuTrigger
         type="button"
-        className="flex items-center gap-2 text-secondary"
+        className="flex items-center gap-2 text-secondary outline-none"
       >
         {currentLocale}
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" sideOffset={10}>
+      <DropdownMenuContent
+        align="start"
+        sideOffset={10}
+        className="max-h-[300px] overflow-y-auto"
+      >
         {locales.map((locale) => (
           // @ts-ignore
           <DropdownMenuItem key={locale} onClick={() => changeLocale(locale)}>
