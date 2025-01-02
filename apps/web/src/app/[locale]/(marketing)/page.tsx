@@ -2,6 +2,7 @@ import { Companies } from "@/components/companies";
 import { DottedSeparator } from "@/components/dotted-separator";
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
+import { Info } from "@/components/info";
 import { getI18n } from "@/locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 
@@ -29,6 +30,7 @@ export default async function Page({
         <Companies />
         <DottedSeparator />
         <Features />
+        <Info />
       </div>
     </div>
   );

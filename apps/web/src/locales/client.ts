@@ -10,10 +10,10 @@ export const {
   useCurrentLocale,
 } = createI18nClient({
   en: () => import("./en"),
-  fr: () => import("./fr"),
-  es: () => import("./es"),
-  de: () => import("./de"),
-  no: () => import("./no"),
-  sv: () => import("./sv"),
-  fi: () => import("./fi"),
+  // fr: () => import("./fr"),
+  // es: () => import("./es"),
+  // de: () => import("./de"),
+  // no: () => import("./no"),
+  // sv: () => import("./sv"),
+  // fi: () => import("./fi"),
 });

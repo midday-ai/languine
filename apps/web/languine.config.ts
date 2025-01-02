@@ -4,7 +4,7 @@ export default defineConfig({
   version: "1.0.2",
   locale: {
     source: "en",
-    targets: ["es", "fr", "de", "no", "sv", "fi"],
+    targets: ["sv"],
   },
   files: {
     ts: {
@@ -15,5 +15,4 @@ export default defineConfig({
     provider: "openai",
     model: "gpt-4-turbo",
   },
-  
 });

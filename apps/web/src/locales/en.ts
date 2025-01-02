@@ -19,4 +19,5 @@ export default {
   "features.presetForReactNative": "Preset for React Native",
   "features.presetForReactEmail": "Preset for React Email",
   "features.readyForI18nLibraries": "Ready for i18n libraries",
+  "info.title": "Handles every aspect of localizing your app including",
 } as const;

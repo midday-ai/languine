@@ -12,7 +12,7 @@ export function Header() {
   const t = useI18n();
 
   const links = [
-    { href: "/pricing", label: t("header.pricing") },
+    // { href: "/pricing", label: t("header.pricing") },
     { href: "/docs", label: t("header.docs") },
     { href: "/login", label: t("header.signIn"), className: "text-primary" },
   ];
