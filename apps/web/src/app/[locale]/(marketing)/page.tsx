@@ -3,6 +3,7 @@ import { DottedSeparator } from "@/components/dotted-separator";
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
 import { getI18n } from "@/locales/server";
+import { setStaticParamsLocale } from "next-international/server";
 
 export async function generateMetadata() {
   const t = await getI18n();
@@ -13,7 +14,13 @@ export async function generateMetadata() {
   };
 }
 
-export default function Page() {
+export default async function Page({
+  params,
+}: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+
+  setStaticParamsLocale(locale);
+
   return (
     <div>
       <Hero />

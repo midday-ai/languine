@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { Suspense } from "react";
+import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
 import { Logo } from "./logo";
 
@@ -28,6 +29,9 @@ export function Header() {
             <GithubStars />
           </Suspense>
         </Link>
+
+        <ChangeLanguage />
+
         {links.map((link) => (
           <Link
             href={link.href}
