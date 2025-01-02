@@ -13,15 +13,15 @@ export const setupAuth = (c: Context) => {
     }),
     secret: c.env.BETTER_AUTH_SECRET,
     trustedOrigins: c.env.BETTER_AUTH_TRUSTED_ORIGINS.split(","),
-    secondaryStorage: {
-      get: async (key) => {
-        return c.env.KV.get(`auth:${key}`);
-      },
-      set: (key, value, ttl) => {
-        return c.env.KV.put(`auth:${key}`, value, { ttl });
-      },
-      delete: (key) => c.env.KV.delete(`auth:${key}`),
-    },
+    // secondaryStorage: {
+    //   get: async (key) => {
+    //     return c.env.KV.get(`auth:${key}`);
+    //   },
+    //   set: (key, value, ttl) => {
+    //     return c.env.KV.put(`auth:${key}`, value, { ttl });
+    //   },
+    //   delete: (key) => c.env.KV.delete(`auth:${key}`),
+    // },
     plugins: [
       bearer(),
       organization(),

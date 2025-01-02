@@ -4,7 +4,6 @@ import type { Env } from "hono";
 type Environment = Env & {
   Bindings: {
     DB: D1Database;
-    KV: KVNamespace;
     ENV_TYPE: "dev" | "prod" | "stage";
     RESEND_API_KEY: string;
     BETTER_AUTH_SECRET: string;
