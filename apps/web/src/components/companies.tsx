@@ -9,7 +9,7 @@ export function Companies() {
     <div>
       <h3>{t("companies.title")}</h3>
 
-      <div className="grid grid-cols-4 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
         <a
           href="https://midday.ai?utm_source=languine"
           target="_blank"
@@ -141,7 +141,9 @@ export function Companies() {
           rel="noreferrer"
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
-            <span className="text-md font-sans font-medium">Fumadocs</span>
+            <span className="text-md font-sans font-medium">
+              {t("companies.addYourCompany")}
+            </span>
           </div>
         </a>
         <a

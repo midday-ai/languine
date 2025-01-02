@@ -72,7 +72,7 @@ body {
 }
 
 
-.bg-noise::before {
+.bg-noise:before {
   content: '';
   position: absolute;
   top: 0;
@@ -82,10 +82,14 @@ body {
   background: url('/noise.png') repeat;
   opacity: 0.1;
   pointer-events: none;
-  z-index: -1;
 }
 
 .bg-dotted {
   background-image: radial-gradient(circle at 1.5px 1.5px, #232323 1px, transparent 0);
   background-size: 4px 4px;
+}
+
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }

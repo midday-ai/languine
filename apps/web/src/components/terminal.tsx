@@ -1,14 +1,33 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function Terminal() {
   const [step, setStep] = useState(0);
+  const [cursorVisible, setCursorVisible] = useState(true);
+  const terminalRef = useRef<HTMLDivElement>(null);
 
+  // Blinking cursor effect
+  useEffect(() => {
+    const cursorTimer = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, 530);
+
+    return () => clearInterval(cursorTimer);
+  }, []);
+
+  // Step through terminal output
   useEffect(() => {
     const timer = setInterval(() => {
-      setStep((prev) => (prev < 7 ? prev + 1 : prev));
+      setStep((prev) => {
+        if (prev < 7) {
+          // Scroll to bottom when new content appears
+
+          return prev + 1;
+        }
+        return prev;
+      });
     }, 1000);
 
     return () => {
@@ -16,9 +35,19 @@ export function Terminal() {
     };
   }, []);
 
+  useEffect(() => {
+    if (step > 3) {
+      setTimeout(() => {
+        if (terminalRef.current) {
+          terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+        }
+      }, 100);
+    }
+  }, [step]);
+
   return (
-    <div className="max-w-3xl w-full border border-border p-4 bg-[#121212]">
-      <div>
+    <div className="max-w-3xl w-full border border-border p-4 bg-[#121212] relative font-mono">
+      <div className="bg-noise select-none">
         <div className="flex gap-2 pb-4 bg-[#121212]">
           <div className="w-3.5 h-3.5 rounded-full bg-primary" />
           <div className="w-3.5 h-3.5 rounded-full bg-[#878787]" />
@@ -26,8 +55,11 @@ export function Terminal() {
         </div>
       </div>
 
-      <div className="overflow-auto max-h-[520px]">
-        <div className="text-sm font-mono flex flex-col tracking-wide leading-relaxed space-y-0.5">
+      <div
+        ref={terminalRef}
+        className="overflow-auto max-h-[520px] text-[#F5F5F3] scroll-smooth"
+      >
+        <div className="text-sm flex flex-col tracking-wide leading-relaxed space-y-0.5">
           <span
             className={cn(
               "transition-opacity duration-100",
@@ -40,9 +72,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 0 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ What would you like to do?
+            <span>
+              ◇ What would you like to do?
+              {step === 0 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-2 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -73,9 +115,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 1 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ What is your source language?
+            <span>
+              ◇ What is your source language?
+              {step === 1 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -98,9 +150,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 2 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ What languages do you want to translate to?
+            <span>
+              ◇ What languages do you want to translate to?
+              {step === 2 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -123,9 +185,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 3 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ Where should language files be stored?
+            <span>
+              ◇ Where should language files be stored?
+              {step === 3 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -148,9 +220,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 4 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ What format should language files use?
+            <span>
+              ◇ What format should language files use?
+              {step === 4 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -238,9 +320,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 5 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ Which provider would you like to use?
+            <span>
+              ◇ Which provider would you like to use?
+              {step === 5 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -262,9 +354,19 @@ export function Terminal() {
             className={cn(
               "transition-opacity duration-100",
               step >= 6 ? "opacity-100" : "opacity-0",
+              "flex",
             )}
           >
-            ◇ Which model should be used for translations?
+            <span>
+              ◇ Which model should be used for translations?
+              {step === 6 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
           <span
             className={cn(
@@ -316,11 +418,20 @@ export function Terminal() {
           </span>
           <span
             className={cn(
-              "transition-opacity duration-100 -ml-[1.5px]",
+              "transition-opacity duration-100 -ml-[1.5px] flex",
               step >= 7 ? "opacity-100" : "opacity-0",
             )}
           >
-            └ Configuration file and language files created successfully!
+            <span>
+              └ Configuration file and language files created successfully!
+              {step === 7 && (
+                <span
+                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
           </span>
         </div>
       </div>

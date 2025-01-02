@@ -32,7 +32,7 @@ export function GithubStars() {
   return (
     <div
       className={cn(
-        "flex items-center gap-2 transition-opacity duration-300",
+        "flex items-center gap-2 transition-opacity duration-300 text-secondary text-sm",
         isLoaded ? "opacity-100" : "opacity-0",
       )}
     >

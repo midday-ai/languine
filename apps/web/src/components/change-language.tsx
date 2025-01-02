@@ -20,7 +20,10 @@ export function ChangeLanguage() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger type="button" className="flex items-center gap-2">
+      <DropdownMenuTrigger
+        type="button"
+        className="flex items-center gap-2 text-secondary"
+      >
         {currentLocale}
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" sideOffset={10}>
