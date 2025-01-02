@@ -4,27 +4,22 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 export function Terminal() {
-  const [step, setStep] = useState(-1);
+  const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const initialDelay = setTimeout(() => {
-      setStep(0);
-    }, 2000);
-
     const timer = setInterval(() => {
       setStep((prev) => (prev < 7 ? prev + 1 : prev));
-    }, 1500);
+    }, 1000);
 
     return () => {
-      clearTimeout(initialDelay);
       clearInterval(timer);
     };
   }, []);
 
   return (
-    <div className="max-w-3xl w-full border border-border p-4">
+    <div className="max-w-3xl w-full border border-border p-4 bg-[#121212]">
       <div>
-        <div className="flex gap-2 pb-4 bg-background">
+        <div className="flex gap-2 pb-4 bg-[#121212]">
           <div className="w-3.5 h-3.5 rounded-full bg-primary" />
           <div className="w-3.5 h-3.5 rounded-full bg-[#878787]" />
           <div className="w-3.5 h-3.5 rounded-full bg-[#2C2C2C]" />

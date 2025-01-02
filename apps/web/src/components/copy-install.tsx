@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 function NPMIcon() {
@@ -77,13 +78,17 @@ export function CopyInstall() {
         onClick={copyCommand}
         className="flex items-center space-x-2"
       >
-        <span className="text-secondary">git: (main)</span>
+        <span className="text-secondary select-none">git: (main)</span>
         <span className="text-primary">$ npx languine@latest</span>
       </button>
 
       <div className="flex items-center space-x-2 ml-auto">
-        <NPMIcon />
-        <GitHubIcon />
+        <Link href="https://npmjs.com/package/languine">
+          <NPMIcon />
+        </Link>
+        <Link href="https://git.new/midday-ai/languine">
+          <GitHubIcon />
+        </Link>
       </div>
     </div>
   );

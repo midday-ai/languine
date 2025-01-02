@@ -2,7 +2,9 @@
 
 import { Terminal } from "@/components/terminal";
 import { useI18n } from "@/locales/client";
+import Link from "next/link";
 import { CopyInstall } from "./copy-install";
+import OutlinedButton from "./ui/outlined-button";
 
 export function Hero() {
   const t = useI18n();
@@ -13,6 +15,18 @@ export function Hero() {
         <h1 className="text-3xl">{t("hero.title")}</h1>
         <p className="text-secondary text-sm">{t("hero.description")}</p>
         <CopyInstall />
+
+        <div className="flex items-center gap-8">
+          <Link href="/login" className="text-sm text-secondary underline">
+            <OutlinedButton>Start automating</OutlinedButton>
+          </Link>
+
+          <Link href="/docs" className="text-sm text-secondary underline">
+            <OutlinedButton variant="secondary">
+              Read documentation
+            </OutlinedButton>
+          </Link>
+        </div>
       </div>
 
       <Terminal />
