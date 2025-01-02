@@ -2,8 +2,8 @@ name: 🌟 Production Deployment - API
 
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - main
     paths:
       - apps/api/**
 jobs:
