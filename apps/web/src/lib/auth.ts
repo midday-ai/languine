@@ -1,3 +1,4 @@
+import { organizationClient } from "better-auth/client/plugins";
 import { nextCookies } from "better-auth/next-js";
 import { createAuthClient } from "better-auth/react";
 
@@ -10,5 +11,11 @@ export const auth = createAuthClient({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     },
   },
-  plugins: [nextCookies()],
+  session: {
+    cookieCache: {
+      enabled: true,
+      maxAge: 5 * 60,
+    },
+  },
+  plugins: [nextCookies(), organizationClient()],
 });

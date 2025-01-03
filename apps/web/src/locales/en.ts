@@ -2,6 +2,7 @@ export default {
   "header.pricing": "Pricing",
   "header.docs": "Docs",
   "header.signIn": "Sign in",
+  "header.goToApp": "Go to app",
   "hero.title": "Automated localization for your applications",
   "hero.description":
     "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
