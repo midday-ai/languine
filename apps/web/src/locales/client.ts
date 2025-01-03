@@ -20,4 +20,5 @@ export const {
   ar: () => import("./ar"),
   ja: () => import("./ja"),
   ko: () => import("./ko"),
+  zh: () => import("./zh"),
 });
