@@ -19,15 +19,6 @@ export const setupAuth = (c: Context) => {
         clientSecret: c.env.GITHUB_CLIENT_SECRET,
       },
     },
-    // secondaryStorage: {
-    //   get: async (key) => {
-    //     return c.env.KV.get(`auth:${key}`);
-    //   },
-    //   set: (key, value, ttl) => {
-    //     return c.env.KV.put(`auth:${key}`, value, { ttl });
-    //   },
-    //   delete: (key) => c.env.KV.delete(`auth:${key}`),
-    // },
     advanced: {
       crossSubDomainCookies: {
         enabled: true,
