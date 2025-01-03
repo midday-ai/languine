@@ -1,54 +1,75 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function StackedCode() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(4);
   const totalLayers = 5;
 
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev < totalLayers - 1 ? prev + 1 : 0));
-    }, 2000);
+    }, 2000); // Reduced from 3000ms to 2000ms for faster animation
 
     return () => clearInterval(timer);
   }, []);
 
+  const translations = [
+    "Hello → es: 'Hola', fr: 'Bonjour', de: 'Hallo', it: 'Ciao', ja: 'こんにちは'",
+    "Thank you → es: 'Gracias', fr: 'Merci', de: 'Danke', it: 'Grazie', ja: 'ありがとう'",
+    "Welcome → es: 'Bienvenido', fr: 'Bienvenue', de: 'Willkommen', it: 'Benvenuto', ja: 'ようこそ'",
+    "Goodbye → es: 'Adiós', fr: 'Au revoir', de: 'Auf Wiedersehen', it: 'Arrivederci', ja: 'さようなら'",
+    "Please → es: 'Por favor', fr: 'S'il vous plaît', de: 'Bitte', it: 'Per favore', ja: 'お願いします'",
+  ];
+
   return (
-    <div className="relative w-full max-w-3xl">
+    <div className="relative">
       {[...Array(totalLayers)].map((_, i) => {
-        const isActive = i === activeIndex;
-        const zIndex = isActive ? totalLayers : totalLayers - i;
-        const scale = 1 - i * 0.02;
-        const y = i * 4;
-        const rotate = i * 2;
-        const opacity = 1 - i * 0.15;
+        const position = (i - activeIndex + totalLayers) % totalLayers;
+        const isActive = position === 0;
 
         return (
           <motion.div
-            key={`card-${i}`}
-            className="absolute w-full origin-center"
+            key={translations[i]}
+            className="absolute w-full"
+            initial={{ opacity: 0, y: 20 }}
             animate={{
-              y,
-              scale,
-              rotate,
-              zIndex,
-              opacity,
+              opacity: 1 - position * 0.15,
+              y: position * -20,
+              scale: 1 - position * 0.02,
+              zIndex: totalLayers - position,
+              rotateX: position * -2,
             }}
-            initial={false}
             transition={{
-              duration: 0.4,
-              ease: [0.4, 0, 0.2, 1],
+              duration: isActive ? 1 : 0.8, // Reduced from 1.6/1.2 to 1/0.8
+              ease: isActive ? [0.34, 1.56, 0.64, 1] : [0.43, 0.13, 0.23, 0.96],
+              opacity: { duration: 0.5 }, // Reduced from 0.8 to 0.5
             }}
-            style={{
-              transformOrigin: "center center",
-            }}
+            whileHover={
+              isActive
+                ? {
+                    scale: 1.03,
+                    y: position * -20 - 5,
+                    transition: {
+                      duration: 0.3, // Reduced from 0.5 to 0.3
+                      ease: "easeOut",
+                    },
+                  }
+                : undefined
+            }
           >
-            <div className="bg-zinc-900 rounded-md h-12 shadow-lg border border-zinc-800">
-              <div className="text-gray-400 font-mono text-sm p-2.5 whitespace-nowrap overflow-hidden">
-                Word → es: &apos;Ayuda&apos;, fr: &apos;Aide&apos;, de:
-                &apos;Hilfe&apos;, it: &apos;Aiuto&apos;, ja: &apos;ヘルプ&apos;
+            <div
+              className={cn(
+                "bg-background border",
+                isActive
+                  ? "border-primary shadow-lg ring-1 ring-primary/20"
+                  : "border-border",
+              )}
+            >
+              <div className="text-secondary font-mono text-xs text-center whitespace-nowrap overflow-hidden p-6">
+                {translations[i]}
               </div>
             </div>
           </motion.div>
