@@ -1,15 +1,14 @@
-import { emailOTPClient } from "better-auth/client/plugins";
 import { nextCookies } from "better-auth/next-js";
 import { createAuthClient } from "better-auth/react";
 
 export const auth = createAuthClient({
-  baseURL: "http://localhost:3002",
+  baseURL: process.env.NEXT_PUBLIC_API_ENDPOINT,
   basePath: "/auth",
-  // fetchOptions: {
-  //   auth: {
-  //     type: "Bearer",
-  //     token: () => localStorage.getItem("bearer_token") || "",
-  //   },
-  // },
-  plugins: [emailOTPClient(), nextCookies()],
+  socialProviders: {
+    github: {
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    },
+  },
+  plugins: [nextCookies()],
 });
