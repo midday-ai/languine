@@ -21,8 +21,14 @@ export default async function Page() {
       </div>
 
       <div className="hidden lg:flex items-center justify-center border-r border-border">
-        <div className="w-full max-w-sm">
-          <StackedCode />
+        <div className="w-full">
+          <h2 className="text-2xl text-center">Automate your localization.</h2>
+
+          <div className="mt-24 w-full relative">
+            <div className="w-[80%] mx-auto">
+              <StackedCode />
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center p-4 lg:p-8 bg-noise">

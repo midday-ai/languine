@@ -1,3 +1,5 @@
+import { TranslationsChart } from "@/components/charts/translations";
+
 export default function Page() {
-  return;
+  return <div>{/* <TranslationsChart /> */}</div>;
 }
