@@ -1,4 +1,6 @@
-import Header from "@/components/dashboard/header";
+import { Header } from "@/components/dashboard/header";
+import { Sidebar } from "@/components/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { getSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 
@@ -14,10 +16,16 @@ export default async function Layout({
   }
 
   return (
-    <div>
-      <Header />
+    <SidebarProvider>
+      <div className="flex min-h-screen w-full">
+        <Sidebar />
 
-      {children}
-    </div>
+        <SidebarInset className="flex-1">
+          <Header />
+
+          {children}
+        </SidebarInset>
+      </div>
+    </SidebarProvider>
   );
 }

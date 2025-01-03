@@ -1,25 +1,17 @@
 "use client";
 
-import { auth } from "@/lib/auth";
-import { useRouter } from "next/navigation";
+import { SignOut } from "../sign-out";
+import SelectOrganization from "./select-organization";
 
-export default function Header() {
-  const router = useRouter();
-
-  const handleSignOut = async () => {
-    console.log("signing out");
-    await auth.signOut({
-      fetchOptions: {
-        onSuccess: () => {
-          router.push("/");
-        },
-      },
-    });
-  };
-
+export function Header() {
   return (
-    <button type="button" onClick={handleSignOut}>
-      Sign out
-    </button>
+    <div className="h-[70px] border-b w-full flex items-center px-4">
+      <div className="flex-1 flex justify-center">
+        <SelectOrganization />
+      </div>
+      <div className="flex justify-end">
+        <SignOut />
+      </div>
+    </div>
   );
 }
