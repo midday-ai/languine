@@ -33,7 +33,7 @@ export const setupAuth = (c: Context) => {
             const org = await database
               .insert(organizations)
               .values({
-                name: `${user.name}'s Organization`,
+                name: user.name,
                 slug: `${slugify(user.name, { lower: true })}-${createId().slice(0, 8)}`,
               })
               .returning()
