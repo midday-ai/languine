@@ -1,81 +1,34 @@
-"use client";
+import { getI18n } from "@/locales/server";
+import Link from "next/link";
+import GithubSignIn from "./github-sign-in";
+import GoogleSignIn from "./google-sign-in";
 
-import { auth } from "@/lib/auth";
-import { useState } from "react";
-import { CopyInstall } from "./copy-install";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { InputOTPGroup } from "./ui/input-otp";
-import { InputOTP } from "./ui/input-otp";
-import { InputOTPSlot } from "./ui/input-otp";
-
-export default function Login() {
-  const handleLogin = async () => {
-    await auth.emailOtp.sendVerificationOtp({
-      email,
-      type: "sign-in",
-    });
-  };
-
-  const [email, setEmail] = useState("");
-  const [showOTP, setShowOTP] = useState(false);
-  const [otp, setOtp] = useState("");
+export default async function Login() {
+  const t = await getI18n();
 
   return (
-    <div className="text-center">
-      Reach out to{" "}
-      <a href="https://x.com/languine_ai" className="underline">
-        @languine_ai
-      </a>{" "}
-      to request early access to the platform.
-      <CopyInstall />
-    </div>
-  );
+    <div className="flex flex-col gap-4">
+      <h2 className="text-2xl font-normal">{t("login.title")}</h2>
+      <p className="text-secondary">{t("login.description")}</p>
+      <div className="flex flex-row gap-6 w-full mt-4">
+        <GithubSignIn />
+        <GoogleSignIn />
+      </div>
 
-  return (
-    <div className="flex flex-col gap-4 w-full">
-      {!showOTP ? (
-        <form
-          className="flex flex-col gap-4"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            await handleLogin();
-            setShowOTP(true);
-          }}
-        >
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Button type="submit">Send code</Button>
-        </form>
-      ) : (
-        <form
-          className="flex flex-col gap-4"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            await authClient.signIn.emailOtp({
-              email,
-              otp,
-            });
-          }}
-        >
-          <InputOTP maxLength={6} value={otp} onChange={setOtp}>
-            <InputOTPGroup>
-              <InputOTPSlot className="size-16" index={0} />
-              <InputOTPSlot className="size-16" index={1} />
-              <InputOTPSlot className="size-16" index={2} />
-              <InputOTPSlot className="size-16" index={3} />
-              <InputOTPSlot className="size-16" index={4} />
-              <InputOTPSlot className="size-16" index={5} />
-            </InputOTPGroup>
-          </InputOTP>
-          <Button type="submit">Sign in</Button>
-        </form>
-      )}
+      <div className="absolute bottom-12 max-w-xl">
+        <div className="bg-dotted mb-6 h-9 w-full" />
+        <p className="text-secondary text-sm">
+          {t("login.terms.text")}{" "}
+          <Link href="/terms" className="text-primary underline">
+            {t("login.terms.termsOfService")}
+          </Link>{" "}
+          {t("login.terms.and")}{" "}
+          <Link href="/policy" className="text-primary underline">
+            {t("login.terms.privacyPolicy")}
+          </Link>
+          .
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,14 +1,31 @@
+import type { auth } from "@/lib/auth";
+import { betterFetch } from "@better-fetch/fetch";
 import { createI18nMiddleware } from "next-international/middleware";
-import type { NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import languineConfig from "../languine.config";
+
+type Session = typeof auth.$Infer.Session;
 
 const I18nMiddleware = createI18nMiddleware({
   locales: [...languineConfig.locale.targets, languineConfig.locale.source],
   defaultLocale: languineConfig.locale.source,
-  // urlMappingStrategy: "rewrite",
 });
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
+  // const { data: session } = await betterFetch<Session>(
+  //   "http://localhost:3002/api/auth/get-session",
+  //   {
+  //     baseURL: request.nextUrl.origin,
+  //     headers: {
+  //       cookie: request.headers.get("cookie") || "",
+  //     },
+  //   },
+  // );
+
+  // if (!session) {
+  //   return NextResponse.redirect(new URL("/login", request.url));
+  // }
+
   return I18nMiddleware(request);
 }
 
