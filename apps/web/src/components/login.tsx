@@ -1,18 +1,9 @@
-"use client";
-
-import { auth } from "@/lib/auth";
-import { Button } from "./ui/button";
+import GithubSignIn from "./github-sign-in";
 
 export default function Login() {
-  const handleGithubLogin = async () => {
-    await auth.signIn.social({
-      provider: "github",
-    });
-  };
-
   return (
     <div className="flex flex-col gap-4 w-full">
-      <Button onClick={handleGithubLogin}>Sign in with GitHub</Button>
+      <GithubSignIn />
     </div>
   );
 }

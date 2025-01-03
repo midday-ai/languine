@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "ec8a9eb0-e788-470b-b1b1-d01e34b475e1",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "d8a663ec-e85e-4145-aca2-016009801a68",
+  "prevId": "ec8a9eb0-e788-470b-b1b1-d01e34b475e1",
   "tables": {
     "accounts": {
       "name": "accounts",
@@ -339,7 +339,7 @@
           "name": "slug",
           "type": "text",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         },
         "logo": {
