@@ -6,7 +6,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const chartData = [
   { month: "Oct", value: 7000 },
@@ -25,14 +32,15 @@ const chartData = [
 
 export function TranslationsChart() {
   return (
-    <Card className="w-full">
-      {/* <CardHeader>
-        <CardTitle className="text-gray-400 text-sm font-normal">
-          € 24,345.50
-          <span className="ml-2 text-xs">April 28, 2024</span>
+    <Card className="w-full border-none">
+      <CardHeader>
+        <CardTitle className="text-primary text-lg font-normal">
+          36541
+          <span className="text-secondary text-lg ml-2">keys in total</span>
         </CardTitle>
-      </CardHeader> */}
-      <CardContent>
+      </CardHeader>
+
+      <CardContent className="mt-4">
         <ChartContainer
           config={{
             value: {
@@ -43,13 +51,23 @@ export function TranslationsChart() {
           className="h-[300px] w-full"
         >
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} barGap={30}>
+            <BarChart data={chartData}>
               <XAxis
                 dataKey="month"
                 stroke="#888888"
                 fontSize={12}
                 tickLine={false}
                 axisLine={false}
+                stroke="#888888"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+                tickMargin={15}
+                tick={{
+                  fill: "#606060",
+                  fontSize: 12,
+                  fontFamily: "var(--font-sans)",
+                }}
               />
               <YAxis
                 stroke="#888888"
@@ -57,12 +75,24 @@ export function TranslationsChart() {
                 tickLine={false}
                 axisLine={false}
                 tickFormatter={(value) => `${value}`}
+                stroke="#888888"
+                fontSize={12}
+                tickMargin={10}
+                tickLine={false}
+                axisLine={false}
+                tick={{
+                  fill: "#606060",
+                  fontSize: 12,
+                  fontFamily: "var(--font-sans)",
+                }}
               />
-              <Bar
-                dataKey="value"
-                fill="var(--color-value)"
-                radius={[4, 4, 0, 0]}
+              <CartesianGrid
+                strokeDasharray="3 3"
+                vertical={false}
+                className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
               />
+
+              <Bar dataKey="value" fill="var(--color-value)" barSize={36} />
               <ChartTooltip content={<ChartTooltipContent />} />
             </BarChart>
           </ResponsiveContainer>
