@@ -24,7 +24,7 @@ interface OutlinedButtonProps extends VariantProps<typeof buttonVariants> {
   className?: string;
 }
 
-const OutlinedButton = ({
+export const OutlinedButton = ({
   children,
   onClick,
   className,
@@ -48,5 +48,3 @@ const OutlinedButton = ({
     </div>
   );
 };
-
-export default OutlinedButton;

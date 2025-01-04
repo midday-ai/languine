@@ -2,6 +2,7 @@ export default {
   "header.pricing": "Pricing",
   "header.docs": "Docs",
   "header.signIn": "Sign in",
+  "header.goToApp": "Go to app",
   "hero.title": "Automated localization for your applications",
   "hero.description":
     "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
@@ -52,4 +53,14 @@ export default {
   "info.developer.versionControl": "Version control",
   "info.developer.workflow": "Developer workflow",
   "info.developer.documentation": "Comprehensive documentation",
+  "login.title": "Sign in",
+  "login.github": "Sign in with GitHub",
+  "login.google": "Sign in with Google",
+  "login.footer": "Automate your localization.",
+  "login.description":
+    "Sign in to start automating your localization in seconds.",
+  "login.terms.text": "By signing in, you agree to our",
+  "login.terms.termsOfService": "Terms of Service",
+  "login.terms.and": "and",
+  "login.terms.privacyPolicy": "Privacy Policy",
 } as const;
