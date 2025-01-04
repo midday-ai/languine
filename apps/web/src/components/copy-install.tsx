@@ -90,7 +90,7 @@ export function CopyInstall() {
         <Link href="https://npmjs.com/package/languine">
           <NPMIcon />
         </Link>
-        <Link href="https://git.new/languine">
+        <Link href="https://github.com/midday-ai/languine">
           <GitHubIcon />
         </Link>
       </div>
