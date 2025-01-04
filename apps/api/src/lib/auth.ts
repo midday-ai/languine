@@ -22,6 +22,10 @@ export const setupAuth = (c: Context) => {
         clientId: c.env.GITHUB_CLIENT_ID,
         clientSecret: c.env.GITHUB_CLIENT_SECRET,
       },
+      google: {
+        clientId: c.env.GOOGLE_CLIENT_ID,
+        clientSecret: c.env.GOOGLE_CLIENT_SECRET,
+      },
     },
     databaseHooks: {
       user: {

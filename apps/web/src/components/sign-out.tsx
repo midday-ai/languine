@@ -29,8 +29,8 @@ export function SignOut() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Avatar className="h-8 w-8">
+      <DropdownMenuTrigger className="px-1">
+        <Avatar className="size-6">
           {session?.user?.image ? (
             <AvatarImage
               src={session.user.image}

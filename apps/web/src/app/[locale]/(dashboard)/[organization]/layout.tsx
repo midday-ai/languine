@@ -23,7 +23,7 @@ export default async function Layout({
         <SidebarInset className="flex-1">
           <Header />
 
-          {children}
+          <div className="pt-4">{children}</div>
         </SidebarInset>
       </div>
     </SidebarProvider>
