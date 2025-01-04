@@ -3,6 +3,7 @@ import { DottedSeparator } from "@/components/dotted-separator";
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
 import { Info } from "@/components/info";
+// import { Pipeline } from "@/components/pipeline";
 import { getI18n } from "@/locales/server";
 
 export async function generateMetadata() {
@@ -24,6 +25,7 @@ export default function Page() {
         <DottedSeparator />
         <Features />
         <Info />
+        {/* <Pipeline /> */}
       </div>
     </div>
   );

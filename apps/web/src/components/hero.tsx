@@ -4,7 +4,7 @@ import { Terminal } from "@/components/terminal";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { CopyInstall } from "./copy-install";
-import OutlinedButton from "./ui/outlined-button";
+import { OutlinedButton } from "./ui/outlined-button";
 
 export function Hero() {
   const t = useI18n();

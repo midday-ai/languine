@@ -3,14 +3,14 @@
 import { OutlinedButton } from "@/components/ui/outlined-button";
 import { auth } from "@/lib/auth";
 import { useI18n } from "@/locales/client";
-import { FaGithub } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 
-export default function GithubSignIn() {
+export default function GoogleSignIn() {
   const t = useI18n();
 
-  const handleGithubLogin = async () => {
+  const handleGoogleLogin = async () => {
     await auth.signIn.social({
-      provider: "github",
+      provider: "google",
       callbackURL: `${window.location.origin}/login`,
     });
   };
@@ -18,11 +18,11 @@ export default function GithubSignIn() {
   return (
     <OutlinedButton
       variant="secondary"
-      onClick={handleGithubLogin}
+      onClick={handleGoogleLogin}
       className="flex items-center gap-2"
     >
-      <FaGithub className="h-4 w-4" />
-      {t("login.github")}
+      <FaGoogle className="h-4 w-4" />
+      {t("login.google")}
     </OutlinedButton>
   );
 }

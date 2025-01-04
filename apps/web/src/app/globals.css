@@ -118,9 +118,8 @@ body {
 
 .bg-dotted {
   background-image: radial-gradient(circle at 1.5px 1.5px, #232323 1px, transparent 0);
-  background-size: 4px 4px;
+  background-size: 3px 3px;
 }
-
 
 .scroll-smooth {
   scroll-behavior: smooth;
