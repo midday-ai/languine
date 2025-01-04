@@ -63,4 +63,8 @@ export default {
   "login.terms.termsOfService": "Terms of Service",
   "login.terms.and": "and",
   "login.terms.privacyPolicy": "Privacy Policy",
+  "userMenu.account": "Account",
+  "userMenu.signOut": "Sign out",
+  "userMenu.createTeam": "Create team",
+  "userMenu.homepage": "Homepage",
 } as const;

@@ -6,14 +6,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-} from "recharts";
+import type { ChartConfig } from "@/components/ui/chart";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+
+const chartConfig = {
+  value: {
+    color: "hsl(var(--chart-1))",
+  },
+} satisfies ChartConfig;
 
 const chartData = [
   { month: "Oct", value: 7000 },
@@ -41,61 +41,42 @@ export function TranslationsChart() {
       </CardHeader>
 
       <CardContent className="mt-4">
-        <ChartContainer
-          config={{
-            value: {
-              label: "Value",
-              color: "hsl(var(--chart-1))",
-            },
-          }}
-          className="h-[300px] w-full"
-        >
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData}>
-              <XAxis
-                dataKey="month"
-                stroke="#888888"
-                fontSize={12}
-                tickLine={false}
-                axisLine={false}
-                stroke="#888888"
-                fontSize={12}
-                tickLine={false}
-                axisLine={false}
-                tickMargin={15}
-                tick={{
-                  fill: "#606060",
-                  fontSize: 12,
-                  fontFamily: "var(--font-sans)",
-                }}
-              />
-              <YAxis
-                stroke="#888888"
-                fontSize={12}
-                tickLine={false}
-                axisLine={false}
-                tickFormatter={(value) => `${value}`}
-                stroke="#888888"
-                fontSize={12}
-                tickMargin={10}
-                tickLine={false}
-                axisLine={false}
-                tick={{
-                  fill: "#606060",
-                  fontSize: 12,
-                  fontFamily: "var(--font-sans)",
-                }}
-              />
-              <CartesianGrid
-                strokeDasharray="3 3"
-                vertical={false}
-                className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
-              />
+        <ChartContainer config={chartConfig} className="h-[300px] w-full">
+          <BarChart accessibilityLayer data={chartData}>
+            <XAxis
+              dataKey="month"
+              fontSize={12}
+              tickLine={false}
+              axisLine={false}
+              tickMargin={15}
+              tick={{
+                fill: "#878787",
+                fontSize: 12,
+                fontFamily: "var(--font-mono)",
+              }}
+            />
+            <YAxis
+              stroke="#888888"
+              tickFormatter={(value) => `${value}`}
+              fontSize={12}
+              tickMargin={10}
+              tickLine={false}
+              axisLine={false}
+              tick={{
+                fill: "#878787",
+                fontSize: 12,
+                fontFamily: "var(--font-mono)",
+              }}
+            />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
+            />
 
-              <Bar dataKey="value" fill="var(--color-value)" barSize={36} />
-              <ChartTooltip content={<ChartTooltipContent />} />
-            </BarChart>
-          </ResponsiveContainer>
+            <Bar dataKey="value" fill="var(--color-value)" barSize={36} />
+            <ChartTooltip content={<ChartTooltipContent />} />
+          </BarChart>
         </ChartContainer>
       </CardContent>
     </Card>

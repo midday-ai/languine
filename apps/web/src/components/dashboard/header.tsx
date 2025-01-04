@@ -1,13 +1,13 @@
 "use client";
 
+import SelectOrganization from "@/components/dashboard/select-organization";
+import { UserMenu } from "@/components/user-menu";
 import Link from "next/link";
-import { MdOutlineBook, MdOutlineSettings } from "react-icons/md";
-import { SignOut } from "../sign-out";
-import SelectOrganization from "./select-organization";
+import { MdOutlineBook } from "react-icons/md";
 
 export function Header() {
   return (
-    <div className="h-[70px] border-b w-full flex items-center px-4">
+    <div className="h-[70px] border-b w-full flex items-center px-4 sticky top-0 bg-background z-10">
       <div className="flex-1 flex justify-center">
         <SelectOrganization />
       </div>
@@ -22,7 +22,7 @@ export function Header() {
           </Link>
         </div>
 
-        <SignOut />
+        <UserMenu />
       </div>
     </div>
   );

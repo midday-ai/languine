@@ -56,37 +56,42 @@ export function Sidebar() {
   ];
 
   return (
-    <SidebarBase collapsible="none" className="border-r border-border">
-      <SidebarHeader className="flex justify-center items-center h-[70px] border-b">
-        <Link href={`/${params.organization}`}>
-          <Logo />
-        </Link>
-      </SidebarHeader>
+    <div className="sticky top-0 h-screen">
+      <SidebarBase collapsible="none" className="border-r border-border">
+        <SidebarHeader className="flex justify-center items-center h-[70px] border-b">
+          <Link href={`/${params.organization}`}>
+            <Logo />
+          </Link>
+        </SidebarHeader>
 
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent className="p-0">
-            <SidebarMenu className="divide-y divide-border">
-              {navigation.map((item) => (
-                <SidebarMenuItem key={item.path}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={item.isActive}
-                    className={cn("[&>svg]:size-5 size-[70px]", {
-                      "opacity-50": !item.isActive,
-                    })}
-                  >
-                    <Link href={`/${params.organization}${item.path}`} prefetch>
-                      <item.icon />
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-      <SidebarRail />
-    </SidebarBase>
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarGroupContent className="p-0">
+              <SidebarMenu className="divide-y divide-border">
+                {navigation.map((item) => (
+                  <SidebarMenuItem key={item.path}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={item.isActive}
+                      className={cn("[&>svg]:size-5 size-[70px]", {
+                        "opacity-50": !item.isActive,
+                      })}
+                    >
+                      <Link
+                        href={`/${params.organization}${item.path}`}
+                        prefetch
+                      >
+                        <item.icon />
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
+        <SidebarRail />
+      </SidebarBase>
+    </div>
   );
 }

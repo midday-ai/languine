@@ -1,4 +1,5 @@
 import { TranslationsChart } from "@/components/charts/translations";
+import { Feed } from "@/components/feed";
 
 export default function Page() {
   return (
@@ -6,6 +7,8 @@ export default function Page() {
       <TranslationsChart />
 
       <div className="h-10 w-full bg-dotted" />
+
+      <Feed />
     </div>
   );
 }

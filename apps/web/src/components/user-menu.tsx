@@ -5,16 +5,17 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { auth } from "@/lib/auth";
+import { useI18n } from "@/locales/client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export function SignOut() {
+export function UserMenu() {
   const { data: session } = auth.useSession();
-
-  console.log(session);
-
+  const t = useI18n();
   const router = useRouter();
 
   const handleSignOut = async () => {
@@ -41,8 +42,25 @@ export function SignOut() {
           )}
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={handleSignOut}>Sign out</DropdownMenuItem>
+      <DropdownMenuContent align="end" className="text-secondary">
+        <div className="flex flex-col gap-1 p-2">
+          <span className="text-sm text-primary">{session?.user?.name}</span>
+          <span className="text-xs">{session?.user?.email}</span>
+        </div>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Link href="/account">{t("userMenu.account")}</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/tuning">{t("userMenu.createTeam")}</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Link href="/">{t("userMenu.homepage")}</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={handleSignOut}>
+          {t("userMenu.signOut")}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
