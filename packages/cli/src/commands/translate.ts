@@ -6,6 +6,7 @@ import type { LanguageModel } from "ai";
 import chalk from "chalk";
 import { type OllamaProvider, createOllama } from "ollama-ai-provider";
 import { simpleGit } from "simple-git";
+import { resolveTasks } from "../resolve-tasks.js";
 import { getTranslator } from "../translators/index.js";
 import type {
   Config,
@@ -14,7 +15,6 @@ import type {
   UpdateResult,
 } from "../types.js";
 import { getApiKey, getConfig } from "../utils.js";
-import { resolveTasks } from "../resolve-tasks.js";
 
 const providersMap: Record<
   Provider,
@@ -39,7 +39,6 @@ export async function translate(targetLocale?: string, force = false) {
   const config = await getConfig();
 
   const { targets } = config.locale;
-  const locales = targetLocale ? [targetLocale] : targets;
 
   // Validate target locale if specified
   if (targetLocale && !targets.includes(targetLocale)) {
