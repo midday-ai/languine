@@ -4,6 +4,7 @@ import SelectOrganization from "@/components/dashboard/select-organization";
 import { UserMenu } from "@/components/user-menu";
 import Link from "next/link";
 import { MdOutlineBook } from "react-icons/md";
+import { ChangeLanguage } from "../change-language";
 
 export function Header() {
   return (
@@ -13,7 +14,9 @@ export function Header() {
       </div>
 
       <div className="flex justify-end items-center">
-        <div className="flex pr-4">
+        <div className="flex pr-4 space-x-8 items-center">
+          <ChangeLanguage />
+
           <Link
             href="/docs"
             className="[&>svg]:size-5 size-[70px] flex items-center justify-center border-l border-r border-border"

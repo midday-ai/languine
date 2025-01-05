@@ -6,7 +6,7 @@ export default function Page() {
     <div>
       <TranslationsChart />
 
-      <div className="h-10 w-full bg-dotted" />
+      <div className="h-10 mt-10 w-full bg-dotted" />
 
       <Feed />
     </div>

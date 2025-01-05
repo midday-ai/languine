@@ -1,6 +1,7 @@
 import { Header } from "@/components/dashboard/header";
 import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { getSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 
@@ -23,8 +24,10 @@ export default async function Layout({
         <SidebarInset className="flex-1">
           <Header />
 
-          <div className="pt-4">{children}</div>
+          <main className="pt-4">{children}</main>
         </SidebarInset>
+
+        <Toaster />
       </div>
     </SidebarProvider>
   );
