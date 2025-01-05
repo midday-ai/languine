@@ -57,7 +57,10 @@ export function Sidebar() {
 
   return (
     <div className="sticky top-0 h-screen">
-      <SidebarBase collapsible="none" className="border-r border-border">
+      <SidebarBase
+        collapsible="none"
+        className="border-r border-border bg-noise overflow-hidden"
+      >
         <SidebarHeader className="flex justify-center items-center h-[70px] border-b">
           <Link href={`/${params.organization}`}>
             <Logo />

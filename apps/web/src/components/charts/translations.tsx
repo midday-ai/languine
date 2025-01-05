@@ -32,7 +32,7 @@ const chartData = [
 
 export function TranslationsChart() {
   return (
-    <Card className="w-full border-none">
+    <Card className="w-full border-none bg-noise">
       <CardHeader>
         <CardTitle className="text-primary text-lg font-normal">
           36541

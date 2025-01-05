@@ -20,10 +20,10 @@ export default async function Layout({
   setStaticParamsLocale(locale);
 
   return (
-    <div className="p-6 bg-noise">
+    <div className="p-6">
       <Header />
 
-      <div className="container mx-auto">{children}</div>
+      <main className="container mx-auto">{children}</main>
       <Footer />
     </div>
   );

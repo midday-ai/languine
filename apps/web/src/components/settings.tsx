@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 export function SettingsTitle({ title }: { title: string }) {
   return <h2 className="text-lg p-8 pt-6 font-normal font-mono">{title}</h2>;
@@ -51,7 +52,15 @@ export function SettingsCard({
               <p className="text-sm text-secondary">{description}</p>
             </div>
             {type === "switch" && (
-              <Switch checked={checked} onCheckedChange={onCheckedChange} />
+              <Switch
+                checked={checked}
+                onCheckedChange={() => {
+                  onCheckedChange?.(!!checked);
+                  toast("Settings saved", {
+                    description: "Your changes have been saved successfully",
+                  });
+                }}
+              />
             )}
 
             {type === "select" && options && (

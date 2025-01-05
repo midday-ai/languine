@@ -27,7 +27,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-noise">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       <div className="absolute top-6 left-6 mt-[1px] z-10">
         <Link href="/">
           <Logo />

@@ -21,13 +21,15 @@ export default async function Layout({
       <div className="flex min-h-screen w-full">
         <Sidebar />
 
-        <SidebarInset className="flex-1">
+        <SidebarInset className="flex-1 bg-noise">
           <Header />
 
-          <main className="pt-4">{children}</main>
-        </SidebarInset>
+          <main className="pt-4">
+            {children}
 
-        <Toaster />
+            <Toaster position="bottom-left" />
+          </main>
+        </SidebarInset>
       </div>
     </SidebarProvider>
   );

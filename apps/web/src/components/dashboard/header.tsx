@@ -8,7 +8,7 @@ import { ChangeLanguage } from "../change-language";
 
 export function Header() {
   return (
-    <div className="h-[70px] border-b w-full flex items-center px-4 sticky top-0 bg-background z-10">
+    <div className="h-[70px] border-b w-full flex items-center px-4 sticky top-0 bg-background z-10 bg-noise">
       <div className="flex-1 flex justify-center">
         <SelectOrganization />
       </div>
