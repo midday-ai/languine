@@ -57,7 +57,7 @@ export default function StackedCode() {
                 : undefined
             }
           >
-            <div className="bg-[#121212] border border-border">
+            <div className="bg-[#121212] bg-noise border border-border">
               <div className="text-secondary font-mono text-xs text-center whitespace-nowrap overflow-hidden p-6">
                 {translations[i]}
               </div>

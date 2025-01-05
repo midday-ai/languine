@@ -1,3 +1,5 @@
+import TeamManagement from "@/components/team-management";
+
 export default function Page() {
-  return <div>Team</div>;
+  return <TeamManagement />;
 }

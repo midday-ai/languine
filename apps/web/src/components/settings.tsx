@@ -1,3 +1,4 @@
+import { CopyInput } from "@/components/copy-input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
@@ -32,7 +33,7 @@ export function SettingsCard({
 }: {
   title: string;
   description: string;
-  type?: "input" | "textarea" | "switch" | "select";
+  type?: "input" | "textarea" | "switch" | "select" | "copy-input";
   value?: string;
   onChange?: (value: string) => void;
   checked?: boolean;
@@ -42,7 +43,7 @@ export function SettingsCard({
 }) {
   return (
     <div className="px-8 mb-4">
-      <Card className="w-full">
+      <Card className="w-full bg-noise">
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>
@@ -96,6 +97,9 @@ export function SettingsCard({
               rows={4}
               placeholder={placeholder}
             />
+          )}
+          {type === "copy-input" && value && (
+            <CopyInput value={value} placeholder={placeholder} />
           )}
         </CardContent>
       </Card>
