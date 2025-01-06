@@ -1,108 +1,116 @@
-import { CopyInput } from "@/components/copy-input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+"use client";
 
-export function SettingsTitle({ title }: { title: string }) {
-  return <h2 className="text-lg p-8 pt-6 font-normal font-mono">{title}</h2>;
-}
+import { useQueryState } from "nuqs";
+import { Account } from "./account";
+import { DangerZone } from "./danger-zone";
+import { SettingsCard, SettingsSeparator } from "./settings-card";
+import TeamManagement from "./team-management";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
-export function SettingsSeparator() {
-  return <div className="w-full h-12 bg-dotted my-12" />;
-}
+const tabs = [
+  {
+    id: "project",
+    title: "Project",
+  },
+  {
+    id: "account",
+    title: "Account",
+  },
+  {
+    id: "team",
+    title: "Team",
+  },
+];
 
-export function SettingsCard({
-  title,
-  description,
-  type = "input",
-  value,
-  onChange,
-  checked,
-  onCheckedChange,
-  options,
-  placeholder,
-}: {
-  title: string;
-  description: string;
-  type?: "input" | "textarea" | "switch" | "select" | "copy-input";
-  value?: string;
-  onChange?: (value: string) => void;
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-  options?: { label: string; value: string }[];
-  placeholder?: string;
-}) {
+const ProjectSettings = () => (
+  <div>
+    <SettingsCard
+      title="Project Name"
+      description="The name of your project as it will appear across the platform."
+      type="input"
+      placeholder="Enter project name"
+    />
+
+    <SettingsCard
+      title="Project ID"
+      description="The unique identifier for your project."
+      type="copy-input"
+      placeholder="Enter project ID"
+      value="1234567890"
+    />
+
+    <SettingsSeparator />
+
+    <DangerZone
+      title="Delete Project"
+      description="This action will delete the project and all associated data."
+      buttonText="Delete Project"
+      onDelete={() => {}}
+    />
+  </div>
+);
+
+const TeamSettings = () => (
+  <div>
+    <SettingsCard
+      title="Team Name"
+      description="The name of your team."
+      type="input"
+      placeholder="Enter team name"
+    />
+
+    <SettingsCard
+      title="Billing"
+      description="Manage your team's billing and subscription settings."
+      type="select"
+      options={[
+        { label: "Free", value: "free" },
+        { label: "Pro", value: "pro" },
+      ]}
+      value="free"
+    />
+
+    <SettingsCard
+      title="API Key"
+      description="Your API key for accessing the team programmatically. Use this for CI/CD integrations."
+      type="copy-input"
+      placeholder="Enter API key"
+      value="api_1234567890"
+    />
+
+    <SettingsSeparator />
+
+    <TeamManagement />
+  </div>
+);
+
+export function Settings() {
+  const [tab, setTab] = useQueryState("tab", {
+    defaultValue: "project",
+  });
+
   return (
-    <div className="px-8 mb-4">
-      <Card className="w-full bg-noise">
-        <CardHeader>
-          <div className="flex items-center justify-between">
-            <div>
-              <CardTitle className="text-sm font-normal mb-2">
-                {title}
-              </CardTitle>
-              <p className="text-sm text-secondary">{description}</p>
-            </div>
-            {type === "switch" && (
-              <Switch
-                checked={checked}
-                onCheckedChange={() => {
-                  onCheckedChange?.(!!checked);
-                  toast("Settings saved", {
-                    description: "Your changes have been saved successfully",
-                  });
-                }}
-              />
-            )}
-
-            {type === "select" && options && (
-              <div className="min-w-[240px]">
-                <Select value={value} onValueChange={onChange}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {options.map((option) => (
-                      <SelectItem key={option.value} value={option.value}>
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            )}
-          </div>
-        </CardHeader>
-        <CardContent>
-          {type === "input" && (
-            <Input
-              value={value}
-              onChange={(e) => onChange?.(e.target.value)}
-              placeholder={placeholder}
-            />
-          )}
-          {type === "textarea" && (
-            <Textarea
-              value={value}
-              onChange={(e) => onChange?.(e.target.value)}
-              rows={4}
-              placeholder={placeholder}
-            />
-          )}
-          {type === "copy-input" && value && (
-            <CopyInput value={value} placeholder={placeholder} />
-          )}
-        </CardContent>
-      </Card>
-    </div>
+    <Tabs value={tab} onValueChange={setTab} className="w-full px-8">
+      <TabsList className="w-full justify-start rounded-none h-auto p-0 bg-transparent space-x-6 mb-4 mt-5">
+        {tabs.map((tab) => (
+          <TabsTrigger
+            key={tab.id}
+            value={tab.id}
+            className="rounded-none border-b-2 border-transparent text-secondary data-[state=active]:border-white data-[state=active]:bg-transparent px-0 py-2"
+          >
+            {tab.title}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+      <TabsContent value="project">
+        <ProjectSettings />
+      </TabsContent>
+      <TabsContent value="account">
+        <Account />
+      </TabsContent>
+      <TabsContent value="team">
+        <TeamSettings />
+      </TabsContent>
+    </Tabs>
   );
 }

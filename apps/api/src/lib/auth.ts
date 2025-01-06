@@ -1,11 +1,13 @@
 import { db } from "@/db";
-import { members, organizations, sessions } from "@/db/schema";
+import { members, organizations, projects, sessions } from "@/db/schema";
+import WelcomeEmail from "@/emails/templates/welcome";
 import { createId } from "@paralleldrive/cuid2";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
 import { eq } from "drizzle-orm";
 import type { Context } from "hono";
+import { Resend } from "resend";
 import slugify from "slugify";
 
 export const setupAuth = (c: Context) => {
@@ -50,11 +52,30 @@ export const setupAuth = (c: Context) => {
               role: "owner",
             });
 
+            // Create default project for new organization
+            await database.insert(projects).values({
+              name: "Default",
+              organizationId: org.id,
+              slug: "default",
+            });
+
             // Set active organization for new user's session
             await database
               .update(sessions)
               .set({ activeOrganizationId: org.id })
               .where(eq(sessions.userId, user.id));
+
+            // Send welcome email to new user
+            try {
+              await new Resend(c.env.RESEND_API_KEY).emails.send({
+                from: "Languine <hello@emails.languine.ai>",
+                to: user.email,
+                subject: "Welcome to Languine",
+                react: WelcomeEmail({ name: user.name }),
+              });
+            } catch (error) {
+              console.error("Error sending welcome email", error);
+            }
           },
         },
       },

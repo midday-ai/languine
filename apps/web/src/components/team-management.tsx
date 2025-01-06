@@ -25,7 +25,7 @@ const members = [
 
 export default function TeamManagement() {
   return (
-    <div className="w-full space-y-4 p-8">
+    <div className="w-full space-y-4 max-w-screen-xl">
       <Tabs defaultValue="members" className="w-full">
         <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent space-x-6">
           <TabsTrigger

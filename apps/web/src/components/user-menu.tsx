@@ -11,10 +11,11 @@ import {
 import { auth } from "@/lib/auth";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 export function UserMenu() {
   const { data: session } = auth.useSession();
+  const params = useParams();
   const t = useI18n();
   const router = useRouter();
 
@@ -49,7 +50,14 @@ export function UserMenu() {
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link href="/account">{t("userMenu.account")}</Link>
+          <Link href={`/${params.team}/${params.project}/settings?tab=account`}>
+            {t("userMenu.account")}
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href={`/${params.team}/${params.project}/settings?tab=team`}>
+            {t("userMenu.team")}
+          </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Link href="/tuning">{t("userMenu.createTeam")}</Link>

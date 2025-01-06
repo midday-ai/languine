@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "ec8a9eb0-e788-470b-b1b1-d01e34b475e1",
+  "id": "bf4d6e59-42f1-4179-acaa-90ef17b87b48",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "accounts": {
@@ -127,7 +127,7 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
+          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
@@ -339,7 +339,7 @@
           "name": "slug",
           "type": "text",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         },
         "logo": {
@@ -347,6 +347,21 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false,
+          "autoincrement": false
+        },
+        "plan": {
+          "name": "plan",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'free'"
+        },
+        "api_key": {
+          "name": "api_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
           "autoincrement": false
         },
         "created_at": {
@@ -372,10 +387,24 @@
           ],
           "isUnique": true
         },
+        "organizations_api_key_unique": {
+          "name": "organizations_api_key_unique",
+          "columns": [
+            "api_key"
+          ],
+          "isUnique": true
+        },
         "slug_idx": {
           "name": "slug_idx",
           "columns": [
             "slug"
+          ],
+          "isUnique": false
+        },
+        "org_api_key_idx": {
+          "name": "org_api_key_idx",
+          "columns": [
+            "api_key"
           ],
           "isUnique": false
         }
@@ -449,13 +478,6 @@
           "autoincrement": false,
           "default": true
         },
-        "api_key": {
-          "name": "api_key",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
         "created_at": {
           "name": "created_at",
           "type": "integer",
@@ -472,24 +494,10 @@
         }
       },
       "indexes": {
-        "project_settings_api_key_unique": {
-          "name": "project_settings_api_key_unique",
-          "columns": [
-            "api_key"
-          ],
-          "isUnique": true
-        },
         "project_idx": {
           "name": "project_idx",
           "columns": [
             "project_id"
-          ],
-          "isUnique": false
-        },
-        "api_key_idx": {
-          "name": "api_key_idx",
-          "columns": [
-            "api_key"
           ],
           "isUnique": false
         }
@@ -555,7 +563,7 @@
           "name": "updated_at",
           "type": "integer",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         }
       },
@@ -741,6 +749,13 @@
           "notNull": false,
           "autoincrement": false
         },
+        "api_key": {
+          "name": "api_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
         "created_at": {
           "name": "created_at",
           "type": "integer",
@@ -761,6 +776,13 @@
           "name": "users_email_unique",
           "columns": [
             "email"
+          ],
+          "isUnique": true
+        },
+        "users_api_key_unique": {
+          "name": "users_api_key_unique",
+          "columns": [
+            "api_key"
           ],
           "isUnique": true
         },

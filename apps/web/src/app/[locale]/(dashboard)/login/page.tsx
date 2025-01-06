@@ -20,10 +20,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const org = await getOrganization();
+  const project = "default";
   const t = await getI18n();
 
   if (org.data) {
-    redirect(`/${org.data.slug}`);
+    redirect(`/${org.data.slug}/${project}`);
   }
 
   return (

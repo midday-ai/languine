@@ -1,6 +1,8 @@
-import { FeedCard } from "./feed-card";
+import { getI18n } from "@/locales/server";
+import { ActivityCard } from "./activity-card";
 
-export async function Feed() {
+export async function Activity() {
+  const t = await getI18n();
   const translations = [
     {
       source: "Hello",
@@ -79,11 +81,11 @@ export async function Feed() {
 
   return (
     <div className="p-8">
-      <h2 className="text-lg font-normal">Feed</h2>
+      <h2 className="text-lg font-normal">{t("activity.title")}</h2>
 
       <div className="flex flex-col gap-4 mt-6">
         {translations.map((translation, i) => (
-          <FeedCard
+          <ActivityCard
             key={i.toString()}
             source={translation.source}
             content={translation.content}

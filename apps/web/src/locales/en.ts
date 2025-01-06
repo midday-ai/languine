@@ -63,8 +63,10 @@ export default {
   "login.terms.termsOfService": "Terms of Service",
   "login.terms.and": "and",
   "login.terms.privacyPolicy": "Privacy Policy",
-  "userMenu.account": "Account",
+  "userMenu.account": "Account Settings",
   "userMenu.signOut": "Sign out",
   "userMenu.createTeam": "Create team",
   "userMenu.homepage": "Homepage",
+  "activity.title": "Activity",
+  "userMenu.team": "Team Settings",
 } as const;

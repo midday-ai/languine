@@ -1,12 +1,11 @@
 "use client";
 
-import { SettingsCard, SettingsTitle } from "./settings";
+import { DangerZone } from "./danger-zone";
+import { SettingsCard, SettingsSeparator } from "./settings-card";
 
 export function Account() {
   return (
     <div>
-      <SettingsTitle title="Account Settings" />
-
       <SettingsCard
         title="Full Name"
         description="Your full name as it will appear across the platform."
@@ -22,17 +21,18 @@ export function Account() {
       />
 
       <SettingsCard
-        title="Email Notifications"
-        description="Choose which email notifications you'd like to receive."
-        type="switch"
-        checked={true}
+        title="API Key"
+        description="Your personal API key for accessing the Languine API."
+        type="copy-input"
+        value="api_1234567890"
       />
 
-      <SettingsCard
-        title="Marketing Emails"
-        description="Receive updates about new features and promotions."
-        type="switch"
-        checked={false}
+      <SettingsSeparator />
+
+      <DangerZone
+        title="Delete Account"
+        description="Permanently delete your account and all associated data. This action cannot be undone."
+        buttonText="Delete Account"
       />
     </div>
   );

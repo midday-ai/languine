@@ -1,16 +1,18 @@
-"use client";
-
-import SelectOrganization from "@/components/dashboard/select-organization";
+import { ChangeLanguage } from "@/components/change-language";
+import { TeamSelectorServer } from "@/components/team-selector.server";
 import { UserMenu } from "@/components/user-menu";
 import Link from "next/link";
+import { Suspense } from "react";
 import { MdOutlineBook } from "react-icons/md";
-import { ChangeLanguage } from "../change-language";
+import { Skeleton } from "../ui/skeleton";
 
 export function Header() {
   return (
     <div className="h-[70px] border-b w-full flex items-center px-4 sticky top-0 bg-background z-10 bg-noise">
       <div className="flex-1 flex justify-center">
-        <SelectOrganization />
+        <Suspense fallback={<Skeleton className="h-5 w-[260px]" />}>
+          <TeamSelectorServer />
+        </Suspense>
       </div>
 
       <div className="flex justify-end items-center">

@@ -4,11 +4,11 @@ import {
   SettingsCard,
   SettingsSeparator,
   SettingsTitle,
-} from "@/components/settings";
+} from "@/components/settings-card";
 
 export function Tuning() {
   return (
-    <div>
+    <div className="px-8">
       <SettingsTitle title="General" />
 
       <SettingsCard

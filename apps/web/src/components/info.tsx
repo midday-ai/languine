@@ -9,7 +9,7 @@ export function Info() {
     <>
       <div className="flex flex-col space-y-12">
         <div>
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-medium mb-4">
             {t("info.smartTranslation.title")}
           </h2>
           <ul className="text-secondary mt-4">
@@ -37,7 +37,7 @@ export function Info() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-medium mb-4">
             {t("info.implementation.title")}
           </h2>
           <ul className="text-secondary mt-4">
@@ -61,7 +61,7 @@ export function Info() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-medium mb-4">
             {t("info.developer.title")}
           </h2>
           <ul className="text-secondary mt-4">

@@ -5,6 +5,7 @@ import {
   real,
   sqliteTable,
   text,
+  uniqueIndex,
 } from "drizzle-orm/sqlite-core";
 
 export const users = sqliteTable(
@@ -17,6 +18,10 @@ export const users = sqliteTable(
     email: text("email").notNull().unique(),
     emailVerified: integer("email_verified", { mode: "boolean" }).notNull(),
     image: text("image"),
+    apiKey: text("api_key")
+      .notNull()
+      .unique()
+      .$defaultFn(() => `user_${createId()}`),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
@@ -63,7 +68,7 @@ export const accounts = sqliteTable(
     providerId: text("provider_id").notNull(),
     userId: text("user_id")
       .notNull()
-      .references(() => users.id),
+      .references(() => users.id, { onDelete: "cascade" }),
     accessToken: text("access_token"),
     refreshToken: text("refresh_token"),
     idToken: text("id_token"),
@@ -109,6 +114,32 @@ export const verifications = sqliteTable(
   }),
 );
 
+export const projects = sqliteTable(
+  "projects",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    name: text("name").notNull(),
+    slug: text("slug").notNull(),
+    description: text("description"),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }),
+  },
+  (table) => ({
+    orgIdx: index("org_idx").on(table.organizationId),
+    slugOrgIdx: uniqueIndex("slug_org_idx").on(
+      table.slug,
+      table.organizationId,
+    ),
+  }),
+);
+
 export const organizations = sqliteTable(
   "organizations",
   {
@@ -118,6 +149,13 @@ export const organizations = sqliteTable(
     name: text("name").notNull(),
     slug: text("slug").unique(),
     logo: text("logo"),
+    plan: text("plan", { enum: ["free", "pro"] })
+      .notNull()
+      .default("free"),
+    apiKey: text("api_key")
+      .notNull()
+      .unique()
+      .$defaultFn(() => `org_${createId()}`),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
@@ -125,6 +163,7 @@ export const organizations = sqliteTable(
   },
   (table) => ({
     slugIdx: index("slug_idx").on(table.slug),
+    apiKeyIdx: index("org_api_key_idx").on(table.apiKey),
   }),
 );
 
@@ -173,27 +212,6 @@ export const invitations = sqliteTable(
   }),
 );
 
-export const projects = sqliteTable(
-  "projects",
-  {
-    id: text()
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    name: text("name").notNull(),
-    description: text("description"),
-    organizationId: text("organization_id")
-      .notNull()
-      .references(() => organizations.id, { onDelete: "cascade" }),
-    createdAt: integer("created_at", { mode: "timestamp" })
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-  },
-  (table) => ({
-    orgIdx: index("org_idx").on(table.organizationId),
-  }),
-);
-
 export const projectSettings = sqliteTable(
   "project_settings",
   {
@@ -209,7 +227,6 @@ export const projectSettings = sqliteTable(
     instructions: text("instructions"),
     memory: integer("memory", { mode: "boolean" }).notNull().default(true),
     grammar: integer("grammar", { mode: "boolean" }).notNull().default(true),
-    apiKey: text("api_key").notNull().unique(),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
@@ -217,6 +234,5 @@ export const projectSettings = sqliteTable(
   },
   (table) => ({
     projectIdx: index("project_idx").on(table.projectId),
-    apiKeyIdx: index("api_key_idx").on(table.apiKey),
   }),
 );

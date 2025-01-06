@@ -5,6 +5,7 @@ import { openAPISpecs } from "hono-openapi";
 import { cors } from "hono/cors";
 import { sessionMiddleware } from "./middleware";
 import router from "./routes";
+import type routes from "./routes";
 
 const app = new Hono();
 
@@ -12,7 +13,7 @@ app.use(
   "*",
   cors({
     origin: ["http://localhost:3000", "https://languine.ai"],
-    allowHeaders: ["Content-Type", "Authorization"],
+    allowHeaders: ["Content-Type", "Authorization", "credentials"],
     allowMethods: ["POST", "GET", "OPTIONS"],
     exposeHeaders: ["Content-Length"],
     maxAge: 600,
@@ -20,11 +21,11 @@ app.use(
   }),
 );
 
-app.use("*", sessionMiddleware);
-
 app.on(["POST", "GET"], "/api/auth/**", (c) => {
   return setupAuth(c).handler(c.req.raw);
 });
+
+app.use("*", sessionMiddleware);
 
 app.route("/", router);
 
@@ -58,5 +59,7 @@ app.get(
     spec: { url: "/openapi" },
   }),
 );
+
+export type AppType = typeof routes;
 
 export default app;

@@ -18,8 +18,6 @@ import {
   MdGraphicEq,
   MdOutlineSettings,
   MdOutlineStackedBarChart,
-  MdPeopleOutline,
-  MdTranslate,
 } from "react-icons/md";
 import { Logo } from "./logo-square";
 
@@ -31,22 +29,12 @@ export function Sidebar() {
     {
       icon: MdOutlineStackedBarChart,
       path: "/",
-      isActive: pathname === `/${params.organization}`,
+      isActive: pathname.endsWith(`/${params.team}/${params.project}`),
     },
     {
       icon: MdGraphicEq,
       path: "/tuning",
       isActive: pathname.endsWith("/tuning"),
-    },
-    {
-      icon: MdTranslate,
-      path: "/glossary",
-      isActive: pathname.endsWith("/glossary"),
-    },
-    {
-      icon: MdPeopleOutline,
-      path: "/team",
-      isActive: pathname.endsWith("/team"),
     },
     {
       icon: MdOutlineSettings,
@@ -62,7 +50,7 @@ export function Sidebar() {
         className="border-r border-border bg-noise overflow-hidden"
       >
         <SidebarHeader className="flex justify-center items-center h-[70px] border-b">
-          <Link href={`/${params.organization}`}>
+          <Link href={`/${params.team}/${params.project}`}>
             <Logo />
           </Link>
         </SidebarHeader>
@@ -71,17 +59,19 @@ export function Sidebar() {
           <SidebarGroup>
             <SidebarGroupContent className="p-0">
               <SidebarMenu className="divide-y divide-border">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <SidebarMenuItem key={item.path}>
                     <SidebarMenuButton
                       asChild
                       isActive={item.isActive}
                       className={cn("[&>svg]:size-5 size-[70px]", {
                         "opacity-50": !item.isActive,
+                        "border-b border-border":
+                          index === navigation.length - 1,
                       })}
                     >
                       <Link
-                        href={`/${params.organization}${item.path}`}
+                        href={`/${params.team}/${params.project}${item.path}`}
                         prefetch
                       >
                         <item.icon />

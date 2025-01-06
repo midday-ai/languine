@@ -1,7 +1,8 @@
 {
   "name": "@languine/api",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "wrangler dev --port 3002",
+    "dev": "DEV_MODE=true wrangler dev --port 3002",
     "email:dev": "email dev --port 3003 --dir src/emails/templates",
     "deploy": "wrangler deploy --minify",
     "typecheck": "tsc --noEmit",
@@ -11,11 +12,10 @@
     "generate": "drizzle-kit generate",
     "drizzle:up": "drizzle-kit up",
     "amend": "drizzle-kit drop && drizzle-kit generate",
-    "studio": "drizzle-kit studio"
+    "studio": "DEV_MODE=true drizzle-kit studio"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.4.2",
-    "@languine/react-email": "^1.0.1",
     "@paralleldrive/cuid2": "^2.2.2",
     "@react-email/components": "0.0.31",
     "@react-email/font": "^0.0.9",
@@ -35,11 +35,12 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",
+    "@libsql/client": "^0.14.0",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
     "add": "2.0.6",
     "bun": "1.1.42",
     "drizzle-kit": "^0.30.1",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1",
     "react-email": "3.0.4",
     "wrangler": "^3.99.0"
   }

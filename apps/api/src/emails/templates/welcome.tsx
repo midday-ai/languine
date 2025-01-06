@@ -1,4 +1,3 @@
-import { setupI18n } from "@languine/react-email";
 import {
   Body,
   Container,
@@ -15,9 +14,11 @@ import { Footer } from "../components/footer";
 import { Logo } from "../components/logo";
 import { OutlineButton } from "../components/outline-button";
 
-export default function LanguineEmail({ locale }: { locale: string }) {
-  const i18n = setupI18n(locale);
-
+export default function WelcomeEmail({
+  name = "Viktor",
+}: {
+  name: string;
+}) {
   return (
     <Html>
       <Head>
@@ -32,35 +33,36 @@ export default function LanguineEmail({ locale }: { locale: string }) {
           fontStyle="normal"
         />
       </Head>
-      <Preview>{i18n.t("email.welcome.preview")}</Preview>
+      <Preview>Welcome to Languine! Let's get started.</Preview>
       <Tailwind>
         <Body className="bg-white font-mono">
           <Container className="mx-auto py-5 pb-12 max-w-[580px]">
             <Logo />
 
             <Text className="text-sm leading-7 mb-6 font-mono">
-              {i18n.t("email.welcome.greeting", { name: "Viktor" })}
+              Hi {name}, welcome to Languine!
             </Text>
 
             <Text className="text-sm leading-7 pb-2 font-mono">
-              {i18n.t("email.welcome.intro")}
+              We're excited to help you automate your localization workflow.
+              Here's what you can do with Languine:
             </Text>
 
             <Text className="text-sm font-mono">
               <span className="text-lg">◇ </span>
-              {i18n.t("email.welcome.feature1")}
+              Automatically detect and extract text that needs translation
             </Text>
             <Text className="text-sm font-mono">
               <span className="text-lg">◇ </span>
-              {i18n.t("email.welcome.feature2")}
+              Translate your content into multiple languages with AI
             </Text>
             <Text className="text-sm font-mono">
               <span className="text-lg">◇ </span>
-              {i18n.t("email.welcome.feature3")}
+              Keep translations in sync with your codebase
             </Text>
             <Text className="text-sm font-mono">
               <span className="text-lg">◇ </span>
-              {i18n.t("email.welcome.feature4")}
+              Collaborate with your team in real-time
             </Text>
 
             <Section className="mb-20 mt-8">
@@ -69,29 +71,26 @@ export default function LanguineEmail({ locale }: { locale: string }) {
                 variant="default"
                 href="https://languine.ai"
               >
-                {i18n.t("email.welcome.cta.automate")}
+                Start Automating
               </OutlineButton>
 
               <OutlineButton
                 variant="secondary"
                 href="https://languine.ai/docs"
               >
-                {i18n.t("email.welcome.cta.docs")}
+                Read the Docs
               </OutlineButton>
             </Section>
 
             <Section className="mt-8">
               <Text className="text-sm leading-7 mb-6 font-mono text-[#707070]">
-                {i18n.t("email.welcome.support", {
-                  email: (
-                    <Link
-                      href="mailto:support@languine.ai"
-                      className="underline text-black font-mono"
-                    >
-                      support@languine.ai
-                    </Link>
-                  ),
-                })}
+                If you have any questions, feel free to reach out to us at{" "}
+                <Link
+                  href="mailto:support@languine.ai"
+                  className="underline text-black font-mono"
+                >
+                  support@languine.ai
+                </Link>
               </Text>
             </Section>
 

@@ -1,5 +1,5 @@
+import { Activity } from "@/components/activity";
 import { TranslationsChart } from "@/components/charts/translations";
-import { Feed } from "@/components/feed";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
 
       <div className="h-10 mt-10 w-full bg-dotted" />
 
-      <Feed />
+      <Activity />
     </div>
   );
 }
