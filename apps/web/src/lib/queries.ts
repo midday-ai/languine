@@ -3,9 +3,18 @@ import { api } from "./api";
 import { auth } from "./auth";
 
 export const getOrganization = async () => {
+  const headersList = await headers();
+  const cookie = headersList.get("cookie");
+
+  const requestHeaders: HeadersInit = {};
+  if (cookie) {
+    requestHeaders.cookie = cookie;
+  }
+
   return auth.organization.getFullOrganization({
     fetchOptions: {
-      headers: await headers(),
+      headers: requestHeaders,
+      credentials: "include",
     },
   });
 };
