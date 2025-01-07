@@ -15,18 +15,14 @@ export function Pipeline() {
       </h2>
       <p className="text-secondary">{t("pipeline.description")}</p>
 
-      <div className="flex flex-col items-center justify-center min-h-screenp-4 mt-10">
+      <div className="flex flex-col items-center justify-center min-h-screen p-4 mt-10">
         <pre
+          className="overflow-auto p-4 text-sm leading-5 bg-gray-50 border rounded-md max-w-full"
           style={{
             fontFamily: "monospace",
             whiteSpace: "pre",
-            display: "block",
-            padding: "1em",
-            overflow: "auto",
             textAlign: "left",
             margin: "0 auto",
-            fontSize: "14px",
-            lineHeight: "1.2",
           }}
         >
           {`
