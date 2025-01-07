@@ -115,7 +115,7 @@ export const setupAuth = (c: Context) => {
         secure: true,
         sameSite: "none",
         domain: "languine.ai",
-        path: "/",
+        // path: "/",
       },
     },
     plugins: [organization()],
