@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { createClient } from "./api";
+import { api } from "./api";
 import { auth } from "./auth";
 
 export const getOrganization = async () => {
@@ -13,8 +13,7 @@ export const getOrganization = async () => {
 export type GetTeamsResponse = Awaited<ReturnType<typeof getTeams>>;
 
 export const getTeams = async () => {
-  const client = await createClient();
-  const response = await client.teams.$get();
+  const response = await api.teams.$get();
 
   if (!response.ok) {
     return [];
@@ -24,7 +23,7 @@ export const getTeams = async () => {
 
   const teamsAndProjects = await Promise.all(
     teams?.data.map(async (team) => {
-      const projects = await client.teams[":teamId"].projects.$get({
+      const projects = await api.teams[":teamId"].projects.$get({
         param: {
           teamId: team.id,
         },
