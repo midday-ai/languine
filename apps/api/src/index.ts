@@ -4,8 +4,13 @@ import { apiReference } from "@scalar/hono-api-reference";
 import { openAPISpecs } from "hono-openapi";
 import { cors } from "hono/cors";
 import { sessionMiddleware } from "./middleware";
-import router from "./routes";
-import type routes from "./routes";
+import feedbackRouter from "./routes/feedback";
+import fineTuneRouter from "./routes/fine-tune";
+import projectsRouter from "./routes/projects";
+import teamsRouter from "./routes/teams";
+import telemetryRouter from "./routes/telemetry";
+import translateRouter from "./routes/translate";
+import usersRouter from "./routes/users";
 
 const app = new Hono();
 
@@ -27,7 +32,14 @@ app.on(["POST", "GET"], "/api/auth/**", (c) => {
 
 app.use("*", sessionMiddleware);
 
-app.route("/", router);
+const appRoutes = app
+  .route("/telemetry", telemetryRouter)
+  .route("/fine-tune", fineTuneRouter)
+  .route("/feedback", feedbackRouter)
+  .route("/translate", translateRouter)
+  .route("/users", usersRouter)
+  .route("/projects", projectsRouter)
+  .route("/teams", teamsRouter);
 
 app.get(
   "/openapi",
@@ -60,6 +72,6 @@ app.get(
   }),
 );
 
-export type AppType = typeof routes;
+export type AppType = typeof appRoutes;
 
 export default app;

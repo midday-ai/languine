@@ -49,24 +49,31 @@ export function UserMenu() {
           <span className="text-xs">{session?.user?.email}</span>
         </div>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Link href={`/${params.team}/${params.project}/settings?tab=account`}>
+        <Link href={`/${params.team}/${params.project}/settings?tab=account`}>
+          <DropdownMenuItem className="text-sm">
             {t("userMenu.account")}
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href={`/${params.team}/${params.project}/settings?tab=team`}>
+          </DropdownMenuItem>
+        </Link>
+        <Link
+          href={`/${params.team}/${params.project}/settings?tab=team`}
+          className="cursor-pointer"
+        >
+          <DropdownMenuItem className="text-sm">
             {t("userMenu.team")}
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href="/tuning">{t("userMenu.createTeam")}</Link>
-        </DropdownMenuItem>
+          </DropdownMenuItem>
+        </Link>
+        <Link href="/tuning" className="cursor-pointer text-xs">
+          <DropdownMenuItem className="text-sm">
+            {t("userMenu.createTeam")}
+          </DropdownMenuItem>
+        </Link>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Link href="/">{t("userMenu.homepage")}</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleSignOut}>
+        <Link href="/">
+          <DropdownMenuItem className="text-sm">
+            {t("userMenu.homepage")}
+          </DropdownMenuItem>
+        </Link>
+        <DropdownMenuItem onClick={handleSignOut} className="text-sm">
           {t("userMenu.signOut")}
         </DropdownMenuItem>
       </DropdownMenuContent>
