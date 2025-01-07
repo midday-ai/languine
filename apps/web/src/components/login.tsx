@@ -11,8 +11,12 @@ export default async function Login() {
       <h2 className="text-2xl font-normal">{t("login.title")}</h2>
       <p className="text-secondary">{t("login.description")}</p>
       <div className="flex flex-col sm:flex-row gap-4 w-full mt-4">
-        <GithubSignIn />
-        <GoogleSignIn />
+        <div className="w-full sm:w-auto">
+          <GithubSignIn className="w-full" />
+        </div>
+        <div className="w-full sm:w-auto">
+          <GoogleSignIn className="w-full" />
+        </div>
       </div>
 
       <div className="absolute bottom-12 max-w-xl px-4">
