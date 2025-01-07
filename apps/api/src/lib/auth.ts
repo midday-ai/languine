@@ -110,18 +110,10 @@ export const setupAuth = (c: Context) => {
         enabled: true,
         maxAge: 5 * 60,
       },
-      // cookieOptions: {
-      //   httpOnly: true,
-      //   secure: true,
-      //   sameSite: "lax",
-      //   domain: ".languine.ai",
-      //   path: "*",
-      //   partitioned: false,
-      // },
     },
     advanced: {
       crossSubDomainCookies: {
-        enabled: true,
+        enabled: !c.env.BETTER_AUTH_BASE_URL?.includes("localhost"),
         domain: ".languine.ai",
       },
     },
