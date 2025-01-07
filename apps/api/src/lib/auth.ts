@@ -95,6 +95,8 @@ export const setupAuth = (c: Context) => {
               .limit(1)
               .get();
 
+            console.log(org);
+
             return {
               data: {
                 ...session,
