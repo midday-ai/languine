@@ -114,7 +114,7 @@ export const setupAuth = (c: Context) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
-        domain: ".languine.ai",
+        domain: "languine.ai",
         path: "/",
       },
     },
