@@ -15,5 +15,5 @@ export default defineConfig({
     provider: "openai",
     model: "gpt-4-turbo",
   },
-  extract: ["./src/**/*.{ts,tsx}"]
+  extract: ["./src/**/*.{ts,tsx}"],
 });

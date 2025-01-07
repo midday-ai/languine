@@ -17,5 +17,10 @@ export const auth = createAuthClient({
       maxAge: 5 * 60,
     },
   },
+  advanced: {
+    crossSubDomainCookies: {
+      enabled: true,
+    },
+  },
   plugins: [nextCookies(), organizationClient()],
 });
