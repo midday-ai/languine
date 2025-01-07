@@ -113,7 +113,7 @@ export const setupAuth = (c: Context) => {
       cookieOptions: {
         httpOnly: true,
         secure: true,
-        sameSite: "none",
+        sameSite: "lax",
         domain: ".languine.ai",
         path: "/",
       },
