@@ -119,6 +119,12 @@ export const setupAuth = (c: Context) => {
         partitioned: false,
       },
     },
+    advanced: {
+      crossSubDomainCookies: {
+        enabled: true,
+        domain: ".languine.ai",
+      },
+    },
     plugins: [organization()],
   });
 };
