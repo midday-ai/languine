@@ -22,13 +22,15 @@ interface OutlinedButtonProps extends VariantProps<typeof buttonVariants> {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 }
 
-const OutlinedButton = ({
+export const OutlinedButton = ({
   children,
   onClick,
   className,
   variant,
+  disabled,
 }: OutlinedButtonProps) => {
   return (
     <div className="relative inline-block">
@@ -42,11 +44,10 @@ const OutlinedButton = ({
       <Button
         onClick={onClick}
         className={cn(buttonVariants({ variant }), className)}
+        disabled={disabled}
       >
         {children}
       </Button>
     </div>
   );
 };
-
-export default OutlinedButton;

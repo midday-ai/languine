@@ -1,12 +1,13 @@
 "use client";
 
+import { Logo } from "@/components/logo";
+import { SignIn } from "@/components/sign-in";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { Suspense } from "react";
 import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
-import { Logo } from "./logo";
 
 export function Header() {
   const t = useI18n();
@@ -14,7 +15,10 @@ export function Header() {
   const links = [
     // { href: "/pricing", label: t("header.pricing") },
     { href: "https://git.new/languine", label: t("header.docs") },
-    { href: "/login", label: t("header.signIn"), className: "text-primary" },
+    {
+      component: <SignIn />,
+      className: "text-primary",
+    },
   ];
 
   return (
@@ -32,18 +36,30 @@ export function Header() {
 
         <ChangeLanguage />
 
-        {links.map((link) => (
-          <Link
-            href={link.href}
-            className={cn(
-              "text-secondary hover:text-primary transition-colors hidden md:block",
-              link.className,
-            )}
-            key={link.href}
-          >
-            {link.label}
-          </Link>
-        ))}
+        {links.map((link, i) =>
+          link.component ? (
+            <div
+              key={i.toString()}
+              className={cn(
+                "text-secondary hover:text-primary transition-colors hidden md:block",
+                link.className,
+              )}
+            >
+              {link.component}
+            </div>
+          ) : (
+            <Link
+              href={link.href!}
+              className={cn(
+                "text-secondary hover:text-primary transition-colors hidden md:block",
+                link.className,
+              )}
+              key={link.href}
+            >
+              {link.label}
+            </Link>
+          ),
+        )}
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark bg-noise bg-background">
       <body className={`${geistMono.variable} antialiased`}>
         <OpenPanelComponent
           clientId={process.env.NEXT_PUBLIC_OPEN_PANEL_CLIENT_ID!}

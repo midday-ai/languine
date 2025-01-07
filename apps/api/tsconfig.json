@@ -5,6 +5,8 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "lib": [
       "ESNext"
     ],
@@ -12,8 +14,6 @@
       "@cloudflare/workers-types/2023-07-01",
       "bun-types"
     ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

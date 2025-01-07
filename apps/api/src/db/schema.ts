@@ -1,133 +1,238 @@
-import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { createId } from "@paralleldrive/cuid2";
+import {
+  index,
+  integer,
+  real,
+  sqliteTable,
+  text,
+  uniqueIndex,
+} from "drizzle-orm/sqlite-core";
 
-export const users = sqliteTable("users", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull().unique(),
-  emailVerified: integer("email_verified", { mode: "boolean" }).notNull(),
-  image: text("image"),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-});
-
-export const sessions = sqliteTable("sessions", {
-  id: text("id").primaryKey(),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-  token: text("token").notNull().unique(),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-  ipAddress: text("ip_address"),
-  userAgent: text("user_agent"),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id),
-  activeOrganizationId: text("active_organization_id"),
-});
-
-export const accounts = sqliteTable("accounts", {
-  id: text("id").primaryKey(),
-  accountId: text("account_id").notNull(),
-  providerId: text("provider_id").notNull(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id),
-  accessToken: text("access_token"),
-  refreshToken: text("refresh_token"),
-  idToken: text("id_token"),
-  accessTokenExpiresAt: integer("access_token_expires_at", {
-    mode: "timestamp",
+export const users = sqliteTable(
+  "users",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    name: text("name").notNull(),
+    email: text("email").notNull().unique(),
+    emailVerified: integer("email_verified", { mode: "boolean" }).notNull(),
+    image: text("image"),
+    apiKey: text("api_key")
+      .notNull()
+      .unique()
+      .$defaultFn(() => `user_${createId()}`),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => ({
+    emailIdx: index("email_idx").on(table.email),
   }),
-  refreshTokenExpiresAt: integer("refresh_token_expires_at", {
-    mode: "timestamp",
+);
+
+export const sessions = sqliteTable(
+  "sessions",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    token: text("token").notNull().unique(),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+    ipAddress: text("ip_address"),
+    userAgent: text("user_agent"),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    activeOrganizationId: text("active_organization_id"),
+  },
+  (table) => ({
+    userIdIdx: index("user_id_idx").on(table.userId),
+    tokenIdx: index("token_idx").on(table.token),
+    expiresAtIdx: index("expires_at_idx").on(table.expiresAt),
   }),
-  scope: text("scope"),
-  password: text("password"),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-});
+);
 
-export const verifications = sqliteTable("verifications", {
-  id: text("id").primaryKey(),
-  identifier: text("identifier").notNull(),
-  value: text("value").notNull(),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-  createdAt: integer("created_at", { mode: "timestamp" }),
-  updatedAt: integer("updated_at", { mode: "timestamp" }),
-});
+export const accounts = sqliteTable(
+  "accounts",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    accountId: text("account_id").notNull(),
+    providerId: text("provider_id").notNull(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    accessToken: text("access_token"),
+    refreshToken: text("refresh_token"),
+    idToken: text("id_token"),
+    accessTokenExpiresAt: integer("access_token_expires_at", {
+      mode: "timestamp",
+    }),
+    refreshTokenExpiresAt: integer("refresh_token_expires_at", {
+      mode: "timestamp",
+    }),
+    scope: text("scope"),
+    password: text("password"),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => ({
+    userIdIdx: index("accounts_user_id_idx").on(table.userId),
+    providerCompoundIdx: index("provider_compound_idx").on(
+      table.providerId,
+      table.accountId,
+    ),
+  }),
+);
 
-export const organizations = sqliteTable("organizations", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  slug: text("slug").unique(),
-  logo: text("logo"),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  metadata: text("metadata"),
-});
+export const verifications = sqliteTable(
+  "verifications",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    identifier: text("identifier").notNull(),
+    value: text("value").notNull(),
+    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(
+      () => new Date(),
+    ),
+    updatedAt: integer("updated_at", { mode: "timestamp" }),
+  },
+  (table) => ({
+    identifierIdx: index("identifier_idx").on(table.identifier),
+    expiresAtIdx: index("verifications_expires_at_idx").on(table.expiresAt),
+  }),
+);
 
-export const members = sqliteTable("members", {
-  id: text("id").primaryKey(),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id),
-  role: text("role").notNull(),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-});
+export const projects = sqliteTable(
+  "projects",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    name: text("name").notNull(),
+    slug: text("slug").notNull(),
+    description: text("description"),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }),
+  },
+  (table) => ({
+    orgIdx: index("org_idx").on(table.organizationId),
+    slugOrgIdx: uniqueIndex("slug_org_idx").on(
+      table.slug,
+      table.organizationId,
+    ),
+  }),
+);
 
-export const invitations = sqliteTable("invitations", {
-  id: text("id").primaryKey(),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id),
-  email: text("email").notNull(),
-  role: text("role"),
-  status: text("status").notNull(),
-  expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-  inviterId: text("inviter_id")
-    .notNull()
-    .references(() => users.id),
-});
+export const organizations = sqliteTable(
+  "organizations",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    name: text("name").notNull(),
+    slug: text("slug").unique(),
+    logo: text("logo"),
+    plan: text("plan", { enum: ["free", "pro"] })
+      .notNull()
+      .default("free"),
+    apiKey: text("api_key")
+      .notNull()
+      .unique()
+      .$defaultFn(() => `org_${createId()}`),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    metadata: text("metadata"),
+  },
+  (table) => ({
+    slugIdx: index("slug_idx").on(table.slug),
+    apiKeyIdx: index("org_api_key_idx").on(table.apiKey),
+  }),
+);
 
-export const tokens = sqliteTable("tokens", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  token: text("token").notNull().unique(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id),
-  projectId: text("project_id")
-    .notNull()
-    .references(() => projects.id),
-  expiresAt: integer("expires_at", { mode: "timestamp" }),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  lastUsedAt: integer("last_used_at", { mode: "timestamp" }),
-});
+export const members = sqliteTable(
+  "members",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    role: text("role").notNull(),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+  },
+  (table) => ({
+    orgUserIdx: index("org_user_idx").on(table.organizationId, table.userId),
+  }),
+);
 
-export const projects = sqliteTable("projects", {
-  id: text("id").primaryKey(),
-  name: text("name").notNull(),
-  description: text("description"),
-  organizationId: text("organization_id")
-    .notNull()
-    .references(() => organizations.id),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-});
+export const invitations = sqliteTable(
+  "invitations",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    email: text("email").notNull(),
+    role: text("role"),
+    status: text("status").notNull(),
+    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    inviterId: text("inviter_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+  },
+  (table) => ({
+    orgEmailIdx: index("org_email_idx").on(table.organizationId, table.email),
+    expiresAtIdx: index("invitations_expires_at_idx").on(table.expiresAt),
+  }),
+);
 
-export const projectSettings = sqliteTable("project_settings", {
-  id: text("id").primaryKey(),
-  projectId: text("project_id")
-    .notNull()
-    .references(() => projects.id),
-  cache: integer("cache", { mode: "boolean" }).notNull().default(true),
-  context: integer("context", { mode: "boolean" }).notNull().default(true),
-  temperature: real("temperature").notNull().default(0),
-  instructions: text("instructions"),
-  memory: integer("memory", { mode: "boolean" }).notNull().default(true),
-  grammar: integer("grammar", { mode: "boolean" }).notNull().default(true),
-  apiKey: text("api_key").notNull().unique(),
-  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
-  updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
-});
+export const projectSettings = sqliteTable(
+  "project_settings",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    projectId: text("project_id")
+      .notNull()
+      .references(() => projects.id, { onDelete: "cascade" }),
+    cache: integer("cache", { mode: "boolean" }).notNull().default(true),
+    context: integer("context", { mode: "boolean" }).notNull().default(true),
+    temperature: real("temperature").notNull().default(0),
+    instructions: text("instructions"),
+    memory: integer("memory", { mode: "boolean" }).notNull().default(true),
+    grammar: integer("grammar", { mode: "boolean" }).notNull().default(true),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => ({
+    projectIdx: index("project_idx").on(table.projectId),
+  }),
+);

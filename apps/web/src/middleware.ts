@@ -5,10 +5,9 @@ import languineConfig from "../languine.config";
 const I18nMiddleware = createI18nMiddleware({
   locales: [...languineConfig.locale.targets, languineConfig.locale.source],
   defaultLocale: languineConfig.locale.source,
-  // urlMappingStrategy: "rewrite",
 });
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   return I18nMiddleware(request);
 }
 

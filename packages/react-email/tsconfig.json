@@ -1,9 +1,9 @@
 {
     "include": ["src/**/*.ts", "src/**/*.tsx"],
     "compilerOptions": {
-      "target": "esnext",
-      "module": "NodeNext", 
-      "moduleResolution": "nodenext",
+      "target": "es2020",
+      "module": "es2020",
+      "moduleResolution": "node",
       "allowJs": true,
       "strict": true,
       "skipLibCheck": true,
@@ -15,7 +15,6 @@
       "declarationMap": true,
       "sourceMap": true,
       "noEmit": false,
-      "customConditions": ["source"],
       "jsx": "react-jsx"
     }
   }

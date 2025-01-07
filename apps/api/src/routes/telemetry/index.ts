@@ -4,9 +4,7 @@ import { resolver, validator as zValidator } from "hono-openapi/zod";
 import { querySchema } from "./schema";
 import { responseSchema } from "./schema";
 
-const app = new Hono();
-
-app.get(
+const app = new Hono().get(
   "/",
   describeRoute({
     description: "Say hello to the user",

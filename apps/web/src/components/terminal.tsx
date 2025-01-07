@@ -8,7 +8,6 @@ export function Terminal() {
   const [cursorVisible, setCursorVisible] = useState(true);
   const terminalRef = useRef<HTMLDivElement>(null);
 
-  // Blinking cursor effect
   useEffect(() => {
     const cursorTimer = setInterval(() => {
       setCursorVisible((prev) => !prev);
@@ -17,13 +16,10 @@ export function Terminal() {
     return () => clearInterval(cursorTimer);
   }, []);
 
-  // Step through terminal output
   useEffect(() => {
     const timer = setInterval(() => {
       setStep((prev) => {
         if (prev < 7) {
-          // Scroll to bottom when new content appears
-
           return prev + 1;
         }
         return prev;
@@ -48,7 +44,7 @@ export function Terminal() {
   return (
     <div className="hidden md:block max-w-3xl w-full border border-border p-4 bg-[#121212] relative font-mono bg-noise overflow-hidden">
       <div className="select-none">
-        <div className="flex gap-2 pb-4 bg-[#121212]">
+        <div className="flex gap-2 pb-4 bg-[#121212] bg-noise">
           <div className="w-3.5 h-3.5 rounded-full bg-primary" />
           <div className="w-3.5 h-3.5 rounded-full bg-[#878787]" />
           <div className="w-3.5 h-3.5 rounded-full bg-[#2C2C2C]" />

@@ -4,7 +4,7 @@ import { Terminal } from "@/components/terminal";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { CopyInstall } from "./copy-install";
-import OutlinedButton from "./ui/outlined-button";
+import { OutlinedButton } from "./ui/outlined-button";
 
 export function Hero() {
   const t = useI18n();
@@ -18,7 +18,9 @@ export function Hero() {
 
         <div className="flex items-center gap-8">
           <Link href="/login" className="text-sm text-secondary underline">
-            <OutlinedButton>{t("getStarted.button")}</OutlinedButton>
+            <OutlinedButton>
+              {t("getStarted.button.startAutomating")}
+            </OutlinedButton>
           </Link>
 
           <Link
