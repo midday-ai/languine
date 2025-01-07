@@ -111,11 +111,9 @@ export const setupAuth = (c: Context) => {
         maxAge: 5 * 60,
       },
     },
-    advanced: {
-      defaultCookieAttributes: {
-        sameSite: "none",
-        secure: true,
-      },
+    crossSubDomainCookies: {
+      enabled: true,
+      domain: "api.languine.ai",
     },
     plugins: [organization()],
   });
