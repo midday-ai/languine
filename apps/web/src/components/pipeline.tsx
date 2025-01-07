@@ -15,7 +15,20 @@ export function Pipeline() {
       </h2>
       <p className="text-secondary">{t("pipeline.description")}</p>
 
-      <div className="flex flex-col items-center justify-center min-h-screenp-4 mt-10">
+      <div
+        ref={(container) => {
+          console.log(container);
+          // keep the pre centered if the div is overflowed
+          if (container) {
+            // check it's actually overflowed horizontally
+            if (container.scrollWidth > container.clientWidth) {
+              container.scrollLeft =
+                (container.scrollWidth - container.clientWidth) / 2;
+            }
+          }
+        }}
+        className="flex flex-col items-center justify-center min-h-screenp-4 mt-10 max-w-full overflow-auto"
+      >
         <pre
           style={{
             fontFamily: "monospace",
@@ -31,31 +44,31 @@ export function Pipeline() {
         >
           {`
                                   ┌───────────────┐
-                                  │   Git Push    │ 
-                                  └───────────────┘          
-                                          │                                            
-                                          ▼                                            
-             ┌─────────────────────────────────────────────────────────┐               
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│               
-             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│               
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│               
-             └─────────────────────────────────────────────────────────┘   
-                                          │                                            
-                                          ▼                                            
-                                          │                                            
-            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─              
-           │                              │                              │             
-           ▼                              ▼                              ▼             
- ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗   
- ║                   ║          ║                   ║          ║                   ║   
- ║      English      ║          ║      Spanish      ║          ║      Japanese     ║   
- ║    Translation    ║          ║    Translation    ║          ║     Translation   ║   
- ║                   ║          ║                   ║          ║                   ║   
- ║                   ║          ║                   ║          ║                   ║   
- ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝   
-           │                              │                              │             
-           └──────────────────────────────┼──────────────────────────────┘             
-                                          ▼                                             
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      English      ║          ║      Spanish      ║          ║      Japanese     ║
+ ║    Translation    ║          ║    Translation    ║          ║     Translation   ║
+ ║                   ║          ║                   ║          ║                   ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
                                   ┌───────────────┐
                                   │     Merge     │
                                   │ Pull Request  │
