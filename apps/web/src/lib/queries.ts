@@ -1,15 +1,9 @@
-import { headers } from "next/headers";
 import { api } from "./api";
 import { auth } from "./auth";
+import { getCookieHeaders } from "./cookies";
 
 export const getOrganization = async () => {
-  const headersList = await headers();
-  const cookie = headersList.get("cookie");
-
-  const requestHeaders: HeadersInit = {};
-  if (cookie) {
-    requestHeaders.cookie = cookie;
-  }
+  const requestHeaders = await getCookieHeaders();
 
   return auth.organization.getFullOrganization({
     fetchOptions: {
