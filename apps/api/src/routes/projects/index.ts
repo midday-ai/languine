@@ -7,9 +7,7 @@ import {
   updateProjectSchema,
 } from "./schema";
 
-const app = new Hono();
-
-app
+const app = new Hono()
   .post(
     "/",
     describeRoute({

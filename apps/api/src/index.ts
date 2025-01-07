@@ -1,8 +1,8 @@
 import { Hono } from "@/lib/app";
-import { setupAuth } from "@/lib/auth";
 import { apiReference } from "@scalar/hono-api-reference";
 import { openAPISpecs } from "hono-openapi";
 import { cors } from "hono/cors";
+import { setupAuth } from "./lib/auth";
 import { sessionMiddleware } from "./middleware";
 import feedbackRouter from "./routes/feedback";
 import fineTuneRouter from "./routes/fine-tune";

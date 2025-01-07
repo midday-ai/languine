@@ -14,23 +14,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import type { GetTeamsResponse } from "@/lib/queries";
 import { Check, Plus, Settings } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import * as React from "react";
 
-interface Team {
-  id: string;
-  name: string;
-  projects: Project[];
-}
-
-interface Project {
-  id: string;
-  name: string;
-  slug: string;
-}
-
-export function TeamSelector({ teams }: { teams: Team[] }) {
+export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
   const params = useParams();
   const router = useRouter();
 
@@ -38,7 +27,7 @@ export function TeamSelector({ teams }: { teams: Team[] }) {
   const projectSlug = params.project;
 
   const currentTeam = teams
-    ? teams.find((team) => team.id === teamId) || teams.at(0)
+    ? teams.find((team) => team?.id === teamId) || teams.at(0)
     : null;
 
   const currentProject = currentTeam?.projects.find(
@@ -70,14 +59,14 @@ export function TeamSelector({ teams }: { teams: Team[] }) {
             <div className="flex-1 overflow-y-auto">
               {teams.map((team) => (
                 <div
-                  key={team.id}
+                  key={team?.id}
                   className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted cursor-default"
                   onClick={() => {
-                    router.push(`/${team.id}/${projectSlug}`);
+                    router.push(`/${team?.id}/${projectSlug}`);
                     setOpen(false);
                   }}
                 >
-                  <span>{team.name}</span>
+                  <span>{team?.name}</span>
                   <div className="flex items-center gap-2">
                     <Settings
                       className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100 absolute z-10 cursor-pointer"
@@ -89,7 +78,7 @@ export function TeamSelector({ teams }: { teams: Team[] }) {
                         );
                       }}
                     />
-                    {currentTeam?.id === team.id && (
+                    {currentTeam?.id === team?.id && (
                       <Check className="h-4 w-4 group-hover:opacity-0 transition-opacity duration-100" />
                     )}
                   </div>

@@ -3,9 +3,7 @@ import { describeRoute } from "hono-openapi";
 import { resolver, validator as zValidator } from "hono-openapi/zod";
 import { fineTuneBodySchema, fineTuneResponseSchema } from "./schema";
 
-const app = new Hono();
-
-app
+const app = new Hono()
   .post(
     "/",
     describeRoute({

@@ -18,7 +18,7 @@ export function GithubStars() {
         const response = await fetch(
           "https://api.github.com/repos/midday-ai/languine",
         );
-        const data = await response.json();
+        const data = (await response.json()) as { stargazers_count: number };
         setStars(data.stargazers_count);
         setIsLoaded(true);
       } catch (error) {

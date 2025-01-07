@@ -6,123 +6,122 @@ import { describeRoute } from "hono-openapi";
 import { resolver, validator as zValidator } from "hono-openapi/zod";
 import { createTeamSchema, inviteSchema, teamResponseSchema } from "./schema";
 
-const app = new Hono();
-
-app.get(
-  "/",
-  describeRoute({
-    description: "Get teams for current user",
-    responses: {
-      200: {
-        description: "Successfully retrieved teams",
-        content: {
-          "application/json": {
-            schema: resolver(teamResponseSchema),
-          },
-        },
-      },
-      401: {
-        description: "Unauthorized - Invalid or missing token",
-        content: {
-          "application/json": {
-            schema: resolver(teamResponseSchema),
-          },
-        },
-      },
-    },
-  }),
-  async (c) => {
-    const user = c.get("user");
-
-    try {
-      const database = db(c.env.DB);
-
-      const teams = await database
-        .select({
-          id: organizations.id,
-          name: organizations.name,
-          slug: organizations.slug,
-          logo: organizations.logo,
-          role: members.role,
-          apiKey: organizations.apiKey,
-          plan: organizations.plan,
-        })
-        .from(members)
-        .innerJoin(organizations, eq(organizations.id, members.organizationId))
-        .innerJoin(users, eq(users.id, members.userId))
-        .where(eq(users.id, user?.id))
-        .all();
-
-      return c.json({
-        data: teams.map((team) => ({
-          id: team.id,
-          name: team.name,
-          slug: team.slug,
-          logo: team.logo,
-          role: team.role,
-          apiKey: team.apiKey,
-          plan: team.plan,
-        })),
-      });
-    } catch (error) {
-      return c.json({ error: "Failed to retrieve teams" }, 500);
-    }
-  },
-);
-
-app.post(
-  "/",
-  describeRoute({
-    description: "Create a new team",
-    responses: {
-      200: {
-        description: "Successfully created team",
-        content: {
-          "application/json": {
-            schema: resolver(teamResponseSchema),
-          },
-        },
-      },
-      401: {
-        description: "Unauthorized - Invalid or missing token",
-        content: {
-          "application/json": {
-            schema: resolver(teamResponseSchema),
-          },
-        },
-      },
-    },
-  }),
-  zValidator("json", createTeamSchema),
-  async (c) => {
-    const token = c.req.header("Authorization")?.replace("Bearer ", "");
-
-    if (!token) {
-      return c.json({ error: "No token provided" }, 401);
-    }
-
-    try {
-      const body = await c.req.valid("json");
-      // TODO: Implement team creation logic
-      return c.json({
-        data: {
-          id: "team_123",
-          name: body.name,
-          members: [
-            {
-              email: "creator@example.com",
-              role: "owner",
+const app = new Hono()
+  .get(
+    "/",
+    describeRoute({
+      description: "Get teams for current user",
+      responses: {
+        200: {
+          description: "Successfully retrieved teams",
+          content: {
+            "application/json": {
+              schema: resolver(teamResponseSchema),
             },
-          ],
+          },
         },
-      });
-    } catch (error) {
-      return c.json({ error: "Failed to create team" }, 500);
-    }
-  },
-);
+        401: {
+          description: "Unauthorized - Invalid or missing token",
+          content: {
+            "application/json": {
+              schema: resolver(teamResponseSchema),
+            },
+          },
+        },
+      },
+    }),
+    async (c) => {
+      const user = c.get("user");
 
-app
+      try {
+        const database = db(c.env.DB);
+
+        const teams = await database
+          .select({
+            id: organizations.id,
+            name: organizations.name,
+            slug: organizations.slug,
+            logo: organizations.logo,
+            role: members.role,
+            apiKey: organizations.apiKey,
+            plan: organizations.plan,
+          })
+          .from(members)
+          .innerJoin(
+            organizations,
+            eq(organizations.id, members.organizationId),
+          )
+          .innerJoin(users, eq(users.id, members.userId))
+          .where(eq(users.id, user?.id))
+          .all();
+
+        return c.json({
+          data: teams.map((team) => ({
+            id: team.id,
+            name: team.name,
+            slug: team.slug,
+            logo: team.logo,
+            role: team.role,
+            apiKey: team.apiKey,
+            plan: team.plan,
+          })),
+        });
+      } catch (error) {
+        return c.json({ error: "Failed to retrieve teams" }, 500);
+      }
+    },
+  )
+  .post(
+    "/",
+    describeRoute({
+      description: "Create a new team",
+      responses: {
+        200: {
+          description: "Successfully created team",
+          content: {
+            "application/json": {
+              schema: resolver(teamResponseSchema),
+            },
+          },
+        },
+        401: {
+          description: "Unauthorized - Invalid or missing token",
+          content: {
+            "application/json": {
+              schema: resolver(teamResponseSchema),
+            },
+          },
+        },
+      },
+    }),
+    zValidator("json", createTeamSchema),
+    async (c) => {
+      const token = c.req.header("Authorization")?.replace("Bearer ", "");
+
+      if (!token) {
+        return c.json({ error: "No token provided" }, 401);
+      }
+
+      try {
+        const body = await c.req.valid("json");
+        // TODO: Implement team creation logic
+        return c.json({
+          data: {
+            id: "team_123",
+            name: body.name,
+            members: [
+              {
+                email: "creator@example.com",
+                role: "owner",
+              },
+            ],
+          },
+        });
+      } catch (error) {
+        return c.json({ error: "Failed to create team" }, 500);
+      }
+    },
+  )
   .get(
     "/:teamId",
     describeRoute({

@@ -1,6 +1,7 @@
 {
   "name": "@languine/api",
   "main": "src/index.ts",
+  "types": "src/index.ts",
   "scripts": {
     "dev": "DEV_MODE=true wrangler dev --port 3002",
     "email:dev": "email dev --port 3003 --dir src/emails/templates",
@@ -22,7 +23,7 @@
     "@scalar/hono-api-reference": "^0.5.165",
     "better-auth": "^1.1.10",
     "drizzle-orm": "^0.38.3",
-    "hono": "^4.6.16",
+    "hono": "4.6.15",
     "hono-openapi": "^0.3.1",
     "kysely": "^0.27.5",
     "kysely-d1": "^0.3.0",

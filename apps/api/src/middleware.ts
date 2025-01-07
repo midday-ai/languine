@@ -1,8 +1,8 @@
 import { db } from "@/db";
 import { users } from "@/db/schema";
-import { setupAuth } from "@/lib/auth";
 import { eq } from "drizzle-orm";
 import { createMiddleware } from "hono/factory";
+import { setupAuth } from "./lib/auth";
 
 export const sessionMiddleware = createMiddleware(async (c, next) => {
   const auth = setupAuth(c);
