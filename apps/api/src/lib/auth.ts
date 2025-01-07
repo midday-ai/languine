@@ -111,6 +111,9 @@ export const setupAuth = (c: Context) => {
         maxAge: 5 * 60,
       },
     },
+    crossSubDomainCookies: {
+      enabled: true,
+    },
     advanced: {
       crossSubDomainCookies: {
         enabled: true,
