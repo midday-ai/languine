@@ -17,7 +17,7 @@ export function Pipeline() {
 
       <div className="flex flex-col items-center justify-center min-h-screen p-4 mt-10">
         <pre
-          className="overflow-auto p-4 text-sm leading-5 bg-gray-50 border rounded-md max-w-full"
+          className="overflow-auto p-4 text-sm leading-5 max-w-full"
           style={{
             fontFamily: "monospace",
             whiteSpace: "pre",
