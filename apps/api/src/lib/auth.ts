@@ -98,7 +98,7 @@ export const setupAuth = (c: Context) => {
             return {
               data: {
                 ...session,
-                activeOrganizationId: "test",
+                activeOrganizationId: org?.organizations?.id,
               },
             };
           },

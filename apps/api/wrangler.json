@@ -4,6 +4,9 @@
   "compatibility_date": "2024-12-29",
   "workers_dev": true,
   "compatibility_flags": ["nodejs_compat"],
+  "placement": {
+    "mode": "smart"
+  },
   "d1_databases": [
     {
       "binding": "DB", 
