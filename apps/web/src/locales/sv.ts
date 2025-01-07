@@ -1,66 +1,282 @@
 export default {
-  "header.pricing": "Pricing",
-  "header.docs": "Docs",
-  "header.signIn": "Sign in",
-  "header.goToApp": "Go to app",
-  "hero.title": "Automated localization for your applications",
-  "hero.description":
-    "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
-  "getStarted.heading": "Get started",
-  "getStarted.title": "Automated localization for your applications",
-  "getStarted.description":
-    "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
-  "getStarted.button": "Start automating",
-  "companies.title": "Used by",
-  "companies.addYourCompany": "+ Add your company",
-  "features.title": "Features",
-  "features.fullyOpenSource": "Fully open source",
-  "features.fullyOpenSourceDescription":
-    "Our code is publicly available on GitHub, enabling transparency and community contributions.",
-  "features.noVendorLockIn": "No vendor lock in",
-  "features.noVendorLockInDescription":
-    "We don't lock you into a specific service, use your own LLMs.",
-  "features.presetsForExpo": "Presets for Expo",
-  "features.presetsForExpoDescription":
-    "We provide presets for Expo, so you can get started quickly.",
-  "features.presetForReactNative": "Preset for React Native",
-  "features.presetForReactNativeDescription":
-    "We provide a preset for React Native, so you can get started quickly.",
-  "features.presetForReactEmail": "React Email Library",
-  "features.presetForReactEmailDescription":
-    "We have created a i18n library for React Email.",
-  "features.readyForI18nLibraries": "Ready for i18n libraries",
-  "features.readyForI18nLibrariesDescription":
-    "We support all libraries including the most popular ones (next-intl, react-i18next, react-intl, etc).",
-  "info.title": "Handles every aspect of localizing your app including",
-  "getStarted.button.startAutomating": "Start automating",
-  "getStarted.button.readDocumentation": "Read documentation",
-  "info.smartTranslation.title": "Smart Translation",
-  "info.smartTranslation.intelligentTranslation":
-    "Intelligent translation with context awareness",
-  "info.smartTranslation.brandVoice": "Brand voice and tone consistency",
-  "info.smartTranslation.terminology": "Terminology management",
-  "info.smartTranslation.linguisticFeatures": "Advanced linguistic features",
-  "info.smartTranslation.realtimeUpdates": "Real-time translation updates",
-  "info.implementation.title": "Implementation",
-  "info.implementation.quickSetup": "Quick setup and integration",
-  "info.implementation.fileFormat": "File format handling",
-  "info.implementation.contentStructure": "Content structure organization",
-  "info.implementation.assetOrganization": "Asset organization",
-  "info.developer.title": "Developer Experience",
-  "info.developer.cli": "Command-line interface",
-  "info.developer.cicd": "CI/CD integration",
-  "info.developer.versionControl": "Version control",
-  "info.developer.workflow": "Developer workflow",
-  "info.developer.documentation": "Comprehensive documentation",
-  "login.title": "Logga in",
-  "login.github": "Logga in med GitHub",
-  "login.google": "Logga in med Google",
-  "login.footer": "Automate your localization.",
-  "login.description":
-    "Sign in to start automating your localization in seconds.",
-  "login.terms.text": "Genom att logga in godkänner du våra",
-  "login.terms.termsOfService": "Användarvillkor",
-  "login.terms.and": "och",
-  "login.terms.privacyPolicy": "Integritetspolicy",
+  header: {
+    pricing: "Priser",
+    docs: "Dokumentation",
+    signIn: "Logga in",
+    goToApp: "Gå till appen",
+  },
+  hero: {
+    title: "Automatiserad lokalisering för dina applikationer",
+    description:
+      "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline utformad för att automatisera översättningar för utvecklare.",
+  },
+  getStarted: {
+    heading: "Kom igång",
+    title: "Automatiserad lokalisering för dina applikationer",
+    description:
+      "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline utformad för att automatisera översättningar för utvecklare.",
+    button: {
+      startAutomating: "Börja automatisera",
+      readDocumentation: "Läs dokumentationen",
+    },
+  },
+  companies: {
+    title: "Används av",
+    addYourCompany: "+ Lägg till ditt företag",
+  },
+  activity: {
+    title: "Aktivitet",
+  },
+  features: {
+    title: "Funktioner",
+    fullyOpenSource: "Helt öppen källkod",
+    fullyOpenSourceDescription:
+      "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från communityn.",
+    noVendorLockIn: "Ingen leverantörsinlåsning",
+    noVendorLockInDescription:
+      "Vi låser inte in dig i en specifik tjänst, använd dina egna LLMs.",
+    presetsForExpo: "Förinställningar för Expo",
+    presetsForExpoDescription:
+      "Vi tillhandahåller förinställningar för Expo, så att du snabbt kan komma igång.",
+    presetForReactNative: "Förinställning för React Native",
+    presetForReactNativeDescription:
+      "Vi tillhandahåller en förinställning för React Native, så att du snabbt kan komma igång.",
+    presetForReactEmail: "React Email-bibliotek",
+    presetForReactEmailDescription:
+      "Vi har skapat ett i18n-bibliotek för React Email.",
+    readyForI18nLibraries: "Redo för i18n-bibliotek",
+    readyForI18nLibrariesDescription:
+      "Vi stödjer alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc).",
+  },
+  info: {
+    title: "Hanterar alla aspekter av lokalisering av din app inklusive",
+    smartTranslation: {
+      title: "Smart översättning",
+      intelligentTranslation: "Intelligent översättning med kontextmedvetenhet",
+      brandVoice: "Varumärkesröst och tonkonsistens",
+      terminology: "Terminologihantering",
+      linguisticFeatures: "Avancerade språkfunktioner",
+      realtimeUpdates: "Översättningsuppdateringar i realtid",
+    },
+    implementation: {
+      title: "Implementering",
+      quickSetup: "Snabb installation och integration",
+      fileFormat: "Filformatshantering",
+      contentStructure: "Innehållsstrukturorganisation",
+      assetOrganization: "Tillgångsorganisation",
+    },
+    developer: {
+      title: "Utvecklarupplevelse",
+      cli: "Kommandoradsgränssnitt",
+      cicd: "CI/CD-integration",
+      versionControl: "Versionskontroll",
+      workflow: "Utvecklararbetsflöde",
+      documentation: "Omfattande dokumentation",
+    },
+  },
+  login: {
+    title: "Logga in",
+    github: "Logga in med GitHub",
+    google: "Logga in med Google",
+    footer: "Automatisera din lokalisering.",
+    description:
+      "Logga in för att börja automatisera din lokalisering på några sekunder.",
+    terms: {
+      text: "Genom att logga in godkänner du våra",
+      termsOfService: "Användarvillkor",
+      and: "och",
+      privacyPolicy: "Integritetspolicy",
+    },
+  },
+  translations: {
+    total_keys: "{total} nycklar totalt",
+  },
+  userMenu: {
+    account: "Kontoinställningar",
+    signOut: "Logga ut",
+    createTeam: "Skapa team",
+    homepage: "Hemsida",
+    team: "Teaminställningar",
+  },
+  teamSelector: {
+    addProject: "Lägg till projekt",
+    createProjectTitle: "Skapa ett nytt projekt",
+    projectNamePlaceholder: "Projektnamn",
+    createProjectButton: "Skapa projekt",
+    pro: "Pro",
+    project: "Projekt",
+    teams: "Team",
+    createTeam: "Skapa team",
+    createTeamTitle: "Skapa ett nytt team",
+    teamNamePlaceholder: "Teamnamn",
+    createTeamButton: "Skapa team",
+  },
+  coming_soon: {
+    title: "Languine är i tidig åtkomst",
+    description: "Vi är för närvarande i tidig åtkomst. Kontakta",
+    cta: "på X för att få tidig åtkomst.",
+  },
+  account: {
+    fullName: {
+      title: "Fullständigt namn",
+      description:
+        "Ditt fullständiga namn som det kommer att visas på plattformen.",
+      placeholder: "Ange ditt fullständiga namn",
+    },
+    email: {
+      title: "E-postadress",
+      description: "E-postadressen som är kopplad till ditt konto.",
+      placeholder: "Ange din e-postadress",
+    },
+    apiKey: {
+      title: "API-nyckel",
+      description: "Din personliga API-nyckel för åtkomst till Languine API.",
+    },
+    deleteAccount: {
+      title: "Radera konto",
+      description:
+        "Radera permanent ditt konto och all tillhörande data. Denna åtgärd kan inte ångras.",
+      button: "Radera konto",
+    },
+  },
+  copyInstall: {
+    copied: "Kopierat till urklipp",
+  },
+  dangerZone: {
+    dialog: {
+      title: "Är du helt säker?",
+      description:
+        "Denna åtgärd kan inte ångras. Skriv DELETE för att bekräfta.",
+      placeholder: "Skriv DELETE för att bekräfta",
+      confirm: "Bekräfta radering",
+    },
+  },
+  pipeline: {
+    title: "Arbetsflöde (CI/CD Pipeline)",
+    pro: "[pro]",
+    description:
+      "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline och översätter automatiskt din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, upprätthåller ditt översättningsminne och genererar korrekta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen.",
+  },
+  settings: {
+    saved: "Inställningar sparade",
+    savedDescription: "Dina ändringar har sparats",
+    tabs: {
+      project: "Projekt",
+      account: "Konto",
+      team: "Team",
+    },
+    project: {
+      name: {
+        title: "Projektnamn",
+        description: "Namnet på ditt projekt",
+        placeholder: "Ange projektnamn",
+      },
+      id: {
+        title: "Projekt-ID",
+        description: "Din unika projektidentifierare",
+        placeholder: "Projekt-ID",
+      },
+      delete: {
+        title: "Radera projekt",
+        description: "Radera permanent detta projekt och all dess data",
+        button: "Radera projekt",
+      },
+    },
+    team: {
+      name: {
+        title: "Teamnamn",
+        description: "Namnet på ditt team",
+        placeholder: "Ange teamnamn",
+      },
+      billing: {
+        title: "Fakturaplan",
+        description: "Hantera ditt teams fakturaplan",
+        free: "Gratis",
+        pro: "Pro",
+      },
+      apiKey: {
+        title: "Team API-nyckel",
+        description: "API-nyckel för teamåtkomst",
+        placeholder: "Team API-nyckel",
+      },
+      members: {
+        title: "Medlemmar",
+        pendingInvitations: "Väntande inbjudningar",
+        filterPlaceholder: "Filtrera medlemmar...",
+        allRoles: "Alla roller",
+        date: "Datum",
+        selectAll: "{count} valda",
+        noPendingInvitations: "Inga väntande inbjudningar",
+        inviteMembers: "Bjud in teammedlemmar att samarbeta",
+        roles: {
+          owner: "Ägare",
+          admin: "Admin",
+          member: "Medlem",
+        },
+        dateSort: {
+          newest: "Nyast",
+          oldest: "Äldst",
+        },
+      },
+    },
+  },
+  tuning: {
+    general: "Allmänt",
+    translationMemory: {
+      title: "Översättningsminne",
+      description:
+        "Använd översättningsminne för att förbättra konsekvens och effektivitet",
+    },
+    qualityChecks: {
+      title: "Kvalitetskontroller",
+      description:
+        "Aktivera automatiserade kvalitetskontroller för översättningar",
+    },
+    contextDetection: {
+      title: "Kontextdetektering",
+      description: "Upptäck och bevara kontext automatiskt i översättningar",
+    },
+    styleGuide: "Stilguide",
+    lengthControl: {
+      title: "Längdkontroll",
+      description: "Kontrollera längden på översatt text",
+      options: {
+        flexible: "Flexibel",
+        strict: "Strikt",
+        exact: "Exakt",
+        loose: "Lös",
+      },
+    },
+    inclusiveLanguage: {
+      title: "Inkluderande språk",
+      description: "Säkerställ att översättningar använder inkluderande språk",
+    },
+    formality: {
+      title: "Formalitet",
+      description: "Kontrollera formalitetsnivån i översättningar",
+    },
+    brandName: {
+      title: "Varumärkesnamn",
+      description: "Ställ in ditt varumärkesnamn för konsekvent användning",
+      placeholder: "Ange ditt varumärkesnamn",
+    },
+    brandVoice: {
+      title: "Varumärkesröst",
+      description: "Definiera din varumärkesröst och ton",
+      placeholder: "Beskriv din varumärkesröst...",
+    },
+    localization: "Lokalisering",
+    idioms: {
+      title: "Idiom",
+      description: "Hantera idiomatiska uttryck på lämpligt sätt",
+    },
+    terminology: {
+      title: "Terminologi",
+      description: "Hantera specialiserad terminologi och ordlistor",
+    },
+    culturalAdaptation: {
+      title: "Kulturell anpassning",
+      description: "Anpassa innehåll för kulturell lämplighet",
+    },
+  },
 } as const;
