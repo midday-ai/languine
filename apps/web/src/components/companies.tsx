@@ -142,7 +142,7 @@ export function Companies() {
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
             <span className="text-md font-sans font-medium">
-              {t("companies.addYourCompany")}
+              Fumadocs
             </span>
           </div>
         </a>
