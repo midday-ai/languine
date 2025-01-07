@@ -21,10 +21,11 @@ export function GetStarted() {
             <p className="text-secondary text-sm">
               {t("getStarted.description")}
             </p>
-
             <div className="text-center sm:text-left">
               <Link href="/login">
-                <OutlinedButton>{t("getStarted.button")}</OutlinedButton>
+                <OutlinedButton>
+                  {t("getStarted.button.startAutomating")}
+                </OutlinedButton>
               </Link>
             </div>
           </div>

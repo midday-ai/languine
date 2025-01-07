@@ -44,12 +44,10 @@ export function Footer() {
           </Link>
         </Column>
       </Row>
-
       <Section className="mt-8 flex gap-3">
         <Text className="text-xs leading-6 mb-4 text-left font-mono text-[#B8B8B8]">
-          Nam imperdiet congue volutpat. Nulla quis facilisis lacus. Vivamus
-          convallis sit amet lectus eget tincidunt. Vestibulum vehicula rutrum
-          nisl, sed faucibus neque.
+          © 2024 Languine. All rights reserved. This email was sent to you
+          because you signed up for Languine.
         </Text>
       </Section>
     </Section>

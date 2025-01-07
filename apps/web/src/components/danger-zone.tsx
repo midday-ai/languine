@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { useI18n } from "@/locales/client";
 import { useState } from "react";
 
 interface DangerZoneProps {
@@ -26,6 +27,7 @@ export function DangerZone({
   description,
   buttonText,
 }: DangerZoneProps) {
+  const t = useI18n();
   const [deleteText, setDeleteText] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -56,22 +58,22 @@ export function DangerZone({
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Are you absolutely sure?</DialogTitle>
+                <DialogTitle>{t("dangerZone.dialog.title")}</DialogTitle>
                 <DialogDescription>
-                  This action cannot be undone. Please type DELETE to confirm.
+                  {t("dangerZone.dialog.description")}
                 </DialogDescription>
               </DialogHeader>
               <Input
                 value={deleteText}
                 onChange={(e) => setDeleteText(e.target.value)}
-                placeholder="Type DELETE to confirm"
+                placeholder={t("dangerZone.dialog.placeholder")}
               />
               <Button
                 variant="destructive"
                 onClick={handleDelete}
                 disabled={deleteText !== "DELETE"}
               >
-                Confirm Delete
+                {t("dangerZone.dialog.confirm")}
               </Button>
             </DialogContent>
           </Dialog>

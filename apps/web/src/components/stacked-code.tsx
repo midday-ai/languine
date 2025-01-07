@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function StackedCode() {
+export function StackedCode() {
   const [activeIndex, setActiveIndex] = useState(4);
   const totalLayers = 5;
 
@@ -24,7 +24,7 @@ export default function StackedCode() {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative -mt-32">
       {[...Array(totalLayers)].map((_, i) => {
         const position = (i - activeIndex + totalLayers) % totalLayers;
         const isActive = position === 0;
@@ -33,12 +33,12 @@ export default function StackedCode() {
           <motion.div
             key={translations[i]}
             className="absolute w-full bg-background"
-            initial={{ y: 20 }}
+            initial={{ y: 0 }}
             animate={{
-              y: position * -10,
+              y: position * 5,
               scale: 1 - position * 0.02,
-              zIndex: totalLayers - position,
-              rotateX: position * -2,
+              zIndex: position === 0 ? totalLayers : totalLayers - position,
+              rotateX: position * 2,
             }}
             transition={{
               duration: isActive ? 1 : 0.8,
@@ -48,7 +48,7 @@ export default function StackedCode() {
               isActive
                 ? {
                     scale: 1.03,
-                    y: position * -10 - 5,
+                    y: position * 5 - 3,
                     transition: {
                       duration: 0.3,
                       ease: "easeOut",

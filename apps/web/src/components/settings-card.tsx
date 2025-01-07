@@ -1,3 +1,5 @@
+"use client";
+
 import { CopyInput } from "@/components/copy-input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { useI18n } from "@/locales/client";
 import { toast } from "sonner";
 
 export function SettingsTitle({ title }: { title: string }) {
@@ -43,6 +46,8 @@ export function SettingsCard({
   options?: { label: string; value: string }[];
   placeholder?: string;
 }) {
+  const t = useI18n();
+
   return (
     <div className="mb-8 max-w-screen-xl">
       <Card className="w-full bg-noise">
@@ -59,8 +64,8 @@ export function SettingsCard({
                 checked={checked}
                 onCheckedChange={() => {
                   onCheckedChange?.(!!checked);
-                  toast("Settings saved", {
-                    description: "Your changes have been saved successfully",
+                  toast(t("settings.saved"), {
+                    description: t("settings.savedDescription"),
                   });
                 }}
               />

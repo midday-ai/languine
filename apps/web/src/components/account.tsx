@@ -1,28 +1,31 @@
 "use client";
 
+import { useI18n } from "@/locales/client";
 import { DangerZone } from "./danger-zone";
 import { SettingsCard, SettingsSeparator } from "./settings-card";
 
 export function Account() {
+  const t = useI18n();
+
   return (
     <div>
       <SettingsCard
-        title="Full Name"
-        description="Your full name as it will appear across the platform."
+        title={t("account.fullName.title")}
+        description={t("account.fullName.description")}
         type="input"
-        placeholder="Enter your full name"
+        placeholder={t("account.fullName.placeholder")}
       />
 
       <SettingsCard
-        title="Email Address"
-        description="The email address associated with your account."
+        title={t("account.email.title")}
+        description={t("account.email.description")}
         type="input"
-        placeholder="Enter your email address"
+        placeholder={t("account.email.placeholder")}
       />
 
       <SettingsCard
-        title="API Key"
-        description="Your personal API key for accessing the Languine API."
+        title={t("account.apiKey.title")}
+        description={t("account.apiKey.description")}
         type="copy-input"
         value="api_1234567890"
       />
@@ -30,9 +33,9 @@ export function Account() {
       <SettingsSeparator />
 
       <DangerZone
-        title="Delete Account"
-        description="Permanently delete your account and all associated data. This action cannot be undone."
-        buttonText="Delete Account"
+        title={t("account.deleteAccount.title")}
+        description={t("account.deleteAccount.description")}
+        buttonText={t("account.deleteAccount.button")}
       />
     </div>
   );

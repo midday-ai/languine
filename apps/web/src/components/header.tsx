@@ -39,7 +39,7 @@ export function Header() {
         {links.map((link, i) =>
           link.component ? (
             <div
-              key={i}
+              key={i.toString()}
               className={cn(
                 "text-secondary hover:text-primary transition-colors hidden md:block",
                 link.className,

@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/locales/client";
 import { useQueryState } from "nuqs";
 import { Account } from "./account";
 import { DangerZone } from "./danger-zone";
@@ -7,87 +8,96 @@ import { SettingsCard, SettingsSeparator } from "./settings-card";
 import TeamManagement from "./team-management";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
-const tabs = [
-  {
-    id: "project",
-    title: "Project",
-  },
-  {
-    id: "account",
-    title: "Account",
-  },
-  {
-    id: "team",
-    title: "Team",
-  },
-];
+function ProjectSettings() {
+  const t = useI18n();
 
-const ProjectSettings = () => (
-  <div>
-    <SettingsCard
-      title="Project Name"
-      description="The name of your project as it will appear across the platform."
-      type="input"
-      placeholder="Enter project name"
-    />
+  return (
+    <div>
+      <SettingsCard
+        title={t("settings.project.name.title")}
+        description={t("settings.project.name.description")}
+        type="input"
+        placeholder={t("settings.project.name.placeholder")}
+      />
 
-    <SettingsCard
-      title="Project ID"
-      description="The unique identifier for your project."
-      type="copy-input"
-      placeholder="Enter project ID"
-      value="1234567890"
-    />
+      <SettingsCard
+        title={t("settings.project.id.title")}
+        description={t("settings.project.id.description")}
+        type="copy-input"
+        placeholder={t("settings.project.id.placeholder")}
+        value="1234567890"
+      />
 
-    <SettingsSeparator />
+      <SettingsSeparator />
 
-    <DangerZone
-      title="Delete Project"
-      description="This action will delete the project and all associated data."
-      buttonText="Delete Project"
-      onDelete={() => {}}
-    />
-  </div>
-);
+      <DangerZone
+        title={t("settings.project.delete.title")}
+        description={t("settings.project.delete.description")}
+        buttonText={t("settings.project.delete.button")}
+        onDelete={() => {}}
+      />
+    </div>
+  );
+}
 
-const TeamSettings = () => (
-  <div>
-    <SettingsCard
-      title="Team Name"
-      description="The name of your team."
-      type="input"
-      placeholder="Enter team name"
-    />
+function TeamSettings() {
+  const t = useI18n();
 
-    <SettingsCard
-      title="Billing"
-      description="Manage your team's billing and subscription settings."
-      type="select"
-      options={[
-        { label: "Free", value: "free" },
-        { label: "Pro", value: "pro" },
-      ]}
-      value="free"
-    />
+  return (
+    <div>
+      <SettingsCard
+        title={t("settings.team.name.title")}
+        description={t("settings.team.name.description")}
+        type="input"
+        placeholder={t("settings.team.name.placeholder")}
+      />
 
-    <SettingsCard
-      title="API Key"
-      description="Your API key for accessing the team programmatically. Use this for CI/CD integrations."
-      type="copy-input"
-      placeholder="Enter API key"
-      value="api_1234567890"
-    />
+      <SettingsCard
+        title={t("settings.team.billing.title")}
+        description={t("settings.team.billing.description")}
+        type="select"
+        options={[
+          { label: t("settings.team.billing.free"), value: "free" },
+          { label: t("settings.team.billing.pro"), value: "pro" },
+        ]}
+        value="free"
+      />
 
-    <SettingsSeparator />
+      <SettingsCard
+        title={t("settings.team.apiKey.title")}
+        description={t("settings.team.apiKey.description")}
+        type="copy-input"
+        placeholder={t("settings.team.apiKey.placeholder")}
+        value="api_1234567890"
+      />
 
-    <TeamManagement />
-  </div>
-);
+      <SettingsSeparator />
+
+      <TeamManagement />
+    </div>
+  );
+}
 
 export function Settings() {
+  const t = useI18n();
   const [tab, setTab] = useQueryState("tab", {
     defaultValue: "project",
   });
+
+  const tabs = [
+    {
+      id: "project",
+      title: t("settings.tabs.project"),
+    },
+    {
+      id: "account",
+      title: t("settings.tabs.account"),
+    },
+    {
+      id: "team",
+      title: t("settings.tabs.team"),
+    },
+  ];
 
   return (
     <Tabs value={tab} onValueChange={setTab} className="w-full px-8">

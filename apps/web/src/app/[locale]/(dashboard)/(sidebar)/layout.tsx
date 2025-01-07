@@ -1,3 +1,4 @@
+import { ComingSoon } from "@/components/coming-soon";
 import { Header } from "@/components/dashboard/header";
 import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -29,6 +30,7 @@ export default async function Layout({
             <main className="pt-4">
               {children}
 
+              {process.env.NODE_ENV !== "development" && <ComingSoon />}
               <Toaster position="bottom-left" />
             </main>
           </SidebarInset>

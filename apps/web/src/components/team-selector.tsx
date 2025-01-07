@@ -15,11 +15,13 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import type { GetTeamsResponse } from "@/lib/queries";
+import { useI18n } from "@/locales/client";
 import { Check, Plus, Settings } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import * as React from "react";
 
 export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
+  const t = useI18n();
   const params = useParams();
   const router = useRouter();
 
@@ -45,17 +47,19 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
           <div className="flex items-center gap-2">
             <span>{currentTeam?.name}</span>
             <div className="text-[11px] text-primary rounded-full border border-border px-2.5 py-0.5 capitalize">
-              Pro
+              {t("teamSelector.pro")}
             </div>
           </div>
           <span className="text-border text-xl">/</span>
-          <span>{currentProject?.name || "Project"}</span>
+          <span>{currentProject?.name || t("teamSelector.project")}</span>
         </div>
       </PopoverTrigger>
       <PopoverContent className="w-[480px] h-[240px] p-0" sideOffset={10}>
         <div className="flex divide-x divide-border h-[240px]">
           <div className="flex-1 flex flex-col">
-            <div className="p-4 text-xs font-medium text-secondary">Teams</div>
+            <div className="p-4 text-xs font-medium text-secondary">
+              {t("teamSelector.teams")}
+            </div>
             <div className="flex-1 overflow-y-auto">
               {teams.map((team) => (
                 <div
@@ -92,17 +96,17 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
                   className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
                 >
                   <Plus className="h-4 w-4" />
-                  Add team
+                  {t("teamSelector.createTeam")}
                 </button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Create a new team</DialogTitle>
+                  <DialogTitle>{t("teamSelector.createTeamTitle")}</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4 py-4">
                   <div className="space-y-2">
                     <Input
-                      placeholder="Team name"
+                      placeholder={t("teamSelector.teamNamePlaceholder")}
                       value={teamName}
                       onChange={(e) => setTeamName(e.target.value)}
                     />
@@ -115,7 +119,7 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
                       setOpen(false);
                     }}
                   >
-                    Create team
+                    {t("teamSelector.createTeamButton")}
                   </Button>
                 </div>
               </DialogContent>
@@ -124,7 +128,7 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
 
           <div className="flex-1 flex flex-col">
             <div className="p-4 text-xs font-medium text-secondary">
-              Project
+              {t("teamSelector.project")}
             </div>
             <div className="flex-1 overflow-y-auto">
               {currentTeam?.projects.map((project) => (
@@ -163,17 +167,19 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
                   className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
                 >
                   <Plus className="h-4 w-4" />
-                  Add project
+                  {t("teamSelector.addProject")}
                 </button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Create a new project</DialogTitle>
+                  <DialogTitle>
+                    {t("teamSelector.createProjectTitle")}
+                  </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4 py-4">
                   <div className="space-y-2">
                     <Input
-                      placeholder="Project name"
+                      placeholder={t("teamSelector.projectNamePlaceholder")}
                       value={projectName}
                       onChange={(e) => setProjectName(e.target.value)}
                     />
@@ -186,7 +192,7 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
                       setOpen(false);
                     }}
                   >
-                    Create project
+                    {t("teamSelector.createProjectButton")}
                   </Button>
                 </div>
               </DialogContent>

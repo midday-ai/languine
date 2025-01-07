@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "@/locales/client";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -65,6 +66,7 @@ function GitHubIcon() {
 }
 
 export function CopyInstall() {
+  const t = useI18n();
   const [copied, setCopied] = useState(false);
 
   const copyCommand = () => {
@@ -103,7 +105,7 @@ export function CopyInstall() {
             exit={{ opacity: 0, y: -40 }}
             className="absolute left-1/2 -translate-x-1/2 top-0 text-xs text-primary"
           >
-            Copied to clipboard
+            {t("copyInstall.copied")}
           </motion.div>
         )}
       </AnimatePresence>

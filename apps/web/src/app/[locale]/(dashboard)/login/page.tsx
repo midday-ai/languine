@@ -2,7 +2,7 @@ import { ChangeLanguage } from "@/components/change-language";
 import Login from "@/components/login";
 import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
-import StackedCode from "@/components/stacked-code";
+import { StackedCode } from "@/components/stacked-code";
 import { getOrganization } from "@/lib/queries";
 import { getI18n } from "@/locales/server";
 import type { Metadata } from "next";

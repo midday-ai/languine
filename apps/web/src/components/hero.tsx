@@ -18,7 +18,9 @@ export function Hero() {
 
         <div className="flex items-center gap-8">
           <Link href="/login" className="text-sm text-secondary underline">
-            <OutlinedButton>{t("getStarted.button")}</OutlinedButton>
+            <OutlinedButton>
+              {t("getStarted.button.startAutomating")}
+            </OutlinedButton>
           </Link>
 
           <Link

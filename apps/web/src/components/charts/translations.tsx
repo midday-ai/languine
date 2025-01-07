@@ -7,6 +7,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import type { ChartConfig } from "@/components/ui/chart";
+import { useI18n } from "@/locales/client";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const chartConfig = {
@@ -31,12 +32,15 @@ const chartData = [
 ];
 
 export function TranslationsChart() {
+  const t = useI18n();
+
   return (
     <Card className="w-full border-none bg-noise">
       <CardHeader>
         <CardTitle className="text-primary text-lg font-normal">
-          36541
-          <span className="text-secondary text-lg ml-2">keys in total</span>
+          <span className="text-secondary text-lg ml-2">
+            {t("translations.total_keys", { total: 36.541 })}
+          </span>
         </CardTitle>
       </CardHeader>
 
