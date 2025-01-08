@@ -1,9 +1,9 @@
+import "../globals.css";
+
+import { I18nProviderClient } from "@/locales/client";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
-
-import "../globals.css";
-import { I18nProviderClient } from "@/locales/client";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",

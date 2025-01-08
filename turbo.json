@@ -9,6 +9,17 @@
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env"],
       "dependsOn": ["^build"],
+      "env": [
+        "TURSO_DATABASE_URL",
+        "TURSO_AUTH_TOKEN",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_BASE_URL", 
+        "GITHUB_CLIENT_ID",
+        "GITHUB_CLIENT_SECRET",
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "RESEND_API_KEY"
+      ],
       "outputs": [
         ".next/**",
         "!.next/cache/**",

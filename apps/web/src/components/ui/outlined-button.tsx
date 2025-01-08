@@ -33,7 +33,7 @@ export const OutlinedButton = ({
   disabled,
 }: OutlinedButtonProps) => {
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block w-full">
       <div
         className={cn(
           "absolute left-[5px] top-[5px] h-full w-full border",

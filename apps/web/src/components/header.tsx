@@ -41,7 +41,7 @@ export function Header() {
             <div
               key={i.toString()}
               className={cn(
-                "text-secondary hover:text-primary transition-colors hidden md:block",
+                "text-secondary hover:text-primary transition-colors",
                 link.className,
               )}
             >

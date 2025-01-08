@@ -8,19 +8,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { auth } from "@/lib/auth";
+import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 
 export function UserMenu() {
-  const { data: session } = auth.useSession();
+  const { data: session } = authClient.useSession();
   const params = useParams();
   const t = useI18n();
   const router = useRouter();
 
   const handleSignOut = async () => {
-    await auth.signOut({
+    await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
           router.push("/");
