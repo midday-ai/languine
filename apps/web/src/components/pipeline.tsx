@@ -15,7 +15,7 @@ export function Pipeline() {
       </h2>
       <p className="text-secondary">{t("pipeline.description")}</p>
 
-      <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[600px]">
+      <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
           style={{
