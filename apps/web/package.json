@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "email:dev": "email dev --port 3002 --dir src/emails/templates",
+    "dev:email": "email dev --port 3002 --dir src/emails/templates",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"

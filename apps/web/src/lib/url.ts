@@ -1,5 +1,5 @@
 export function getAppUrl() {
-  if (!process.env.VERCEL_URL) {
+  if (process.env.NODE_ENV !== "production") {
     return "http://localhost:3000";
   }
 
