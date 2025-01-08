@@ -1,13 +1,21 @@
 "use client";
 
 import { useI18n } from "@/locales/client";
+import { useEffect } from "react";
 import { CopyInstall } from "./copy-install";
 
 export function ComingSoon() {
   const t = useI18n();
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
       <div className="flex flex-col items-center gap-6 max-w-lg text-center p-8">
         <h2 className="text-2xl font-medium">{t("coming_soon.title")}</h2>
         <p className="text-muted-foreground">
