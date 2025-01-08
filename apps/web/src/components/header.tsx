@@ -22,44 +22,46 @@ export function Header() {
   ];
 
   return (
-    <div className="flex items-center justify-between">
-      <Link href="/" className="block">
-        <Logo />
-      </Link>
-
-      <div className="flex items-center gap-6 text-sm">
-        <Link href="https://git.new/languine">
-          <Suspense fallback={<GithubStars />}>
-            <GithubStars />
-          </Suspense>
+    <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg">
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-4">
+        <Link href="/" className="block">
+          <Logo />
         </Link>
 
-        <ChangeLanguage />
+        <div className="flex items-center gap-6 text-sm">
+          <Link href="https://git.new/languine">
+            <Suspense fallback={<GithubStars />}>
+              <GithubStars />
+            </Suspense>
+          </Link>
 
-        {links.map((link, i) =>
-          link.component ? (
-            <div
-              key={i.toString()}
-              className={cn(
-                "text-secondary hover:text-primary transition-colors",
-                link.className,
-              )}
-            >
-              {link.component}
-            </div>
-          ) : (
-            <Link
-              href={link.href!}
-              className={cn(
-                "text-secondary hover:text-primary transition-colors hidden md:block",
-                link.className,
-              )}
-              key={link.href}
-            >
-              {link.label}
-            </Link>
-          ),
-        )}
+          <ChangeLanguage />
+
+          {links.map((link, i) =>
+            link.component ? (
+              <div
+                key={i.toString()}
+                className={cn(
+                  "text-secondary hover:text-primary transition-colors",
+                  link.className,
+                )}
+              >
+                {link.component}
+              </div>
+            ) : (
+              <Link
+                href={link.href!}
+                className={cn(
+                  "text-secondary hover:text-primary transition-colors hidden md:block",
+                  link.className,
+                )}
+                key={link.href}
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
+        </div>
       </div>
     </div>
   );
