@@ -2,6 +2,8 @@ import { db } from "@/db";
 import { createDefaultOrganization } from "@/db/queries/insert";
 import { getDefaultOrganization } from "@/db/queries/select";
 import * as schema from "@/db/schema";
+import WelcomeEmail from "@/emails/templates/welcome";
+import { resend } from "@/lib/resend";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
@@ -30,17 +32,17 @@ export const auth = betterAuth({
         after: async (user) => {
           const org = await createDefaultOrganization(user);
 
-          // // Send welcome email to new user
-          // try {
-          //   await new Resend(c.env.RESEND_API_KEY).emails.send({
-          //     from: "Languine <hello@emails.languine.ai>",
-          //     to: user.email,
-          //     subject: "Welcome to Languine",
-          //     react: WelcomeEmail({ name: user.name }),
-          //   });
-          // } catch (error) {
-          //   console.error("Error sending welcome email", error);
-          // }
+          // Send welcome email to new user
+          try {
+            await resend.emails.send({
+              from: "Languine <hello@emails.languine.ai>",
+              to: user.email,
+              subject: "Welcome to Languine",
+              react: WelcomeEmail({ name: user.name }),
+            });
+          } catch (error) {
+            console.error("Error sending welcome email", error);
+          }
         },
       },
     },
