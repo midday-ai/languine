@@ -271,4 +271,30 @@ export default {
       description: "适应文化适当性的内容",
     },
   },
+  pricing: {
+    title: "简单定价",
+    free: {
+      title: "免费版（100个键）",
+      price: "免费",
+      keys_limit: "最多100个键",
+      features: {
+        unlimited_projects: "无限项目",
+        fine_tuning: "微调选项",
+        overrides: "翻译覆盖",
+        analytics: "分析功能",
+        context_memory: "上下文记忆",
+        community_support: "社区支持",
+      },
+    },
+    pro: {
+      title: "专业版",
+      includes_free: "包含免费版的所有功能，以及：",
+      features: {
+        github_action: "GitHub Action集成",
+        latest_features: "抢先体验最新功能",
+        priority_support: "优先支持",
+      },
+    },
+    cta: "开始自动化",
+  },
 } as const;

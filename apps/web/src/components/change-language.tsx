@@ -22,9 +22,9 @@ export function ChangeLanguage() {
     <DropdownMenu>
       <DropdownMenuTrigger
         type="button"
-        className="flex items-center gap-2 text-secondary outline-none"
+        className="flex items-center gap-2 text-secondary outline-none uppercase text-xs font-medium"
       >
-        {currentLocale}
+        [{currentLocale}]
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="start"
@@ -32,8 +32,12 @@ export function ChangeLanguage() {
         className="max-h-[300px] overflow-y-auto"
       >
         {locales.map((locale) => (
-          // @ts-ignore
-          <DropdownMenuItem key={locale} onClick={() => changeLocale(locale)}>
+          <DropdownMenuItem
+            key={locale}
+            // @ts-ignore
+            onClick={() => changeLocale(locale)}
+            className="uppercase text-xs"
+          >
             {locale}
           </DropdownMenuItem>
         ))}

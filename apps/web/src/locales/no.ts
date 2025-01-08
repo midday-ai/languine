@@ -278,4 +278,30 @@ export default {
       description: "Tilpass innhold for kulturell egnethet",
     },
   },
+  pricing: {
+    title: "Enkel prising",
+    free: {
+      title: "Gratis (100 nøkler)",
+      price: "Gratis",
+      keys_limit: "Opptil 100 nøkler",
+      features: {
+        unlimited_projects: "Ubegrensede prosjekter",
+        fine_tuning: "Finjusteringsalternativer",
+        overrides: "Oversettelsesoverskrivinger",
+        analytics: "Analyser",
+        context_memory: "Kontekstminne",
+        community_support: "Fellesskapsstøtte",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Alt i Gratis, pluss:",
+      features: {
+        github_action: "GitHub Action-integrasjon",
+        latest_features: "Tidlig tilgang til nye funksjoner",
+        priority_support: "Prioritert støtte",
+      },
+    },
+    cta: "Start automatisering",
+  },
 } as const;

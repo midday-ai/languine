@@ -273,4 +273,30 @@ export default {
       description: "تكييف المحتوى للملاءمة الثقافية",
     },
   },
+  pricing: {
+    title: "تسعير بسيط",
+    free: {
+      title: "مجاني (100 مفتاح)",
+      price: "مجاني",
+      keys_limit: "حتى 100 مفتاح",
+      features: {
+        unlimited_projects: "مشاريع غير محدودة",
+        fine_tuning: "خيارات الضبط الدقيق",
+        overrides: "تجاوزات الترجمة",
+        analytics: "التحليلات",
+        context_memory: "ذاكرة السياق",
+        community_support: "دعم المجتمع",
+      },
+    },
+    pro: {
+      title: "احترافي",
+      includes_free: "كل ما في النسخة المجانية، بالإضافة إلى:",
+      features: {
+        github_action: "تكامل GitHub Action",
+        latest_features: "وصول مبكر لأحدث الميزات",
+        priority_support: "دعم ذو أولوية",
+      },
+    },
+    cta: "ابدأ الأتمتة",
+  },
 } as const;

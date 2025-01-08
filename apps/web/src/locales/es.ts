@@ -280,4 +280,30 @@ export default {
       description: "Adaptar contenido para la adecuación cultural",
     },
   },
+  pricing: {
+    title: "Precios simples",
+    free: {
+      title: "Gratis (100 claves)",
+      price: "Gratis",
+      keys_limit: "Hasta 100 claves",
+      features: {
+        unlimited_projects: "Proyectos ilimitados",
+        fine_tuning: "Opciones de ajuste fino",
+        overrides: "Anulaciones de traducción",
+        analytics: "Análisis",
+        context_memory: "Memoria de contexto",
+        community_support: "Soporte comunitario",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Todo lo incluido en Gratis, más:",
+      features: {
+        github_action: "Integración con GitHub Action",
+        latest_features: "Acceso anticipado a nuevas funciones",
+        priority_support: "Soporte prioritario",
+      },
+    },
+    cta: "Comenzar a automatizar",
+  },
 } as const;

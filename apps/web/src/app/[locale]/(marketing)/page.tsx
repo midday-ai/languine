@@ -20,7 +20,7 @@ export default function Page() {
     <div>
       <Hero />
 
-      <div className="space-y-16">
+      <div className="space-y-16 max-w-screen-lg mx-auto">
         <Companies />
         <DottedSeparator />
         <Features />

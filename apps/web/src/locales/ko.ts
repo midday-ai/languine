@@ -275,4 +275,30 @@ export default {
       description: "문화적 적절성을 위한 콘텐츠 조정",
     },
   },
+  pricing: {
+    title: "심플한 가격",
+    free: {
+      title: "무료 (100개 키)",
+      price: "무료",
+      keys_limit: "최대 100개 키",
+      features: {
+        unlimited_projects: "무제한 프로젝트",
+        fine_tuning: "미세 조정 옵션",
+        overrides: "번역 재정의",
+        analytics: "분석",
+        context_memory: "문맥 메모리",
+        community_support: "커뮤니티 지원",
+      },
+    },
+    pro: {
+      title: "프로",
+      includes_free: "무료 버전의 모든 기능에 추가로:",
+      features: {
+        github_action: "GitHub Action 통합",
+        latest_features: "최신 기능 조기 액세스",
+        priority_support: "우선 지원",
+      },
+    },
+    cta: "자동화 시작하기",
+  },
 } as const;

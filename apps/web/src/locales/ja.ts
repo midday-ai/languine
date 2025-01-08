@@ -276,4 +276,30 @@ export default {
       description: "文化的に適切なコンテンツに適応",
     },
   },
+  pricing: {
+    title: "シンプルな料金プラン",
+    free: {
+      title: "無料プラン（100キー）",
+      price: "無料",
+      keys_limit: "最大100キーまで",
+      features: {
+        unlimited_projects: "無制限のプロジェクト",
+        fine_tuning: "微調整オプション",
+        overrides: "翻訳の上書き",
+        analytics: "分析機能",
+        context_memory: "コンテキストメモリ",
+        community_support: "コミュニティサポート",
+      },
+    },
+    pro: {
+      title: "プロプラン",
+      includes_free: "無料プランのすべての機能に加えて：",
+      features: {
+        github_action: "GitHub Action連携",
+        latest_features: "新機能への早期アクセス",
+        priority_support: "優先サポート",
+      },
+    },
+    cta: "自動化を始める",
+  },
 } as const;

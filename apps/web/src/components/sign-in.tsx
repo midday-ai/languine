@@ -9,7 +9,7 @@ export function SignIn() {
   const { data: session } = authClient.useSession();
 
   return (
-    <Link href="/login" className="text-primary">
+    <Link href="/login">
       {session ? t("header.goToApp") : t("header.signIn")}
     </Link>
   );

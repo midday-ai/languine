@@ -279,4 +279,30 @@ export default {
       description: "Sovita sisältö kulttuurisesti sopivaksi",
     },
   },
+  pricing: {
+    title: "Yksinkertainen hinnoittelu",
+    free: {
+      title: "Ilmainen (100 avainta)",
+      price: "Ilmainen",
+      keys_limit: "Jopa 100 avainta",
+      features: {
+        unlimited_projects: "Rajattomat projektit",
+        fine_tuning: "Hienosäätöasetukset",
+        overrides: "Käännösten ohitukset",
+        analytics: "Analytiikka",
+        context_memory: "Kontekstimuisti",
+        community_support: "Yhteisötuki",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Kaikki ilmaisessa versiossa, plus:",
+      features: {
+        github_action: "GitHub Action -integraatio",
+        latest_features: "Varhainen pääsy uusiin ominaisuuksiin",
+        priority_support: "Prioriteettituki",
+      },
+    },
+    cta: "Aloita automatisointi",
+  },
 } as const;

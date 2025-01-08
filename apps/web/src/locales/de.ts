@@ -284,4 +284,30 @@ export default {
       description: "Passen Sie Inhalte für kulturelle Angemessenheit an",
     },
   },
+  pricing: {
+    title: "Einfache Preisgestaltung",
+    free: {
+      title: "Kostenlos (100 Schlüssel)",
+      price: "Kostenlos",
+      keys_limit: "Bis zu 100 Schlüssel",
+      features: {
+        unlimited_projects: "Unbegrenzte Projekte",
+        fine_tuning: "Feinabstimmungsoptionen",
+        overrides: "Übersetzungsüberschreibungen",
+        analytics: "Analysen",
+        context_memory: "Kontextspeicher",
+        community_support: "Community-Support",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Alles aus der kostenlosen Version, plus:",
+      features: {
+        github_action: "GitHub Action Integration",
+        latest_features: "Frühzeitiger Zugang zu neuen Funktionen",
+        priority_support: "Prioritäts-Support",
+      },
+    },
+    cta: "Automatisierung starten",
+  },
 } as const;

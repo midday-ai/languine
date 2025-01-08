@@ -276,4 +276,30 @@ export default {
       description: "Adapt content for cultural appropriateness",
     },
   },
+  pricing: {
+    title: "Simple pricing",
+    free: {
+      title: "Free (100 keys)",
+      price: "Free",
+      keys_limit: "Up to 100 keys",
+      features: {
+        unlimited_projects: "Unlimited projects",
+        fine_tuning: "Fine-tuning options",
+        overrides: "Translation overrides",
+        analytics: "Analytics",
+        context_memory: "Context memory",
+        community_support: "Community support",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Everything in Free, plus:",
+      features: {
+        github_action: "GitHub Action integration",
+        latest_features: "Early access to latest features",
+        priority_support: "Priority support",
+      },
+    },
+    cta: "Start automating",
+  },
 } as const;

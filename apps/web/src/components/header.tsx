@@ -5,19 +5,24 @@ import { SignIn } from "@/components/sign-in";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Suspense } from "react";
 import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
 
 export function Header() {
   const t = useI18n();
-
+  const pathname = usePathname();
+  console.log(pathname);
   const links = [
     { href: "/pricing", label: t("header.pricing") },
     { href: "https://git.new/languine", label: t("header.docs") },
     {
       component: <SignIn />,
-      className: "text-primary",
+      className:
+        pathname.split("/").length === 2
+          ? "text-primary"
+          : "text-secondary hover:text-primary",
     },
   ];
 
@@ -54,6 +59,7 @@ export function Header() {
                 className={cn(
                   "text-secondary hover:text-primary transition-colors hidden md:block",
                   link.className,
+                  pathname?.endsWith(link.href) && "text-primary",
                 )}
                 key={link.href}
               >

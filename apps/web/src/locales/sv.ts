@@ -279,4 +279,30 @@ export default {
       description: "Anpassa innehåll för kulturell lämplighet",
     },
   },
+  pricing: {
+    title: "Enkel prissättning",
+    free: {
+      title: "Gratis (100 nycklar)",
+      price: "Gratis",
+      keys_limit: "Upp till 100 nycklar",
+      features: {
+        unlimited_projects: "Obegränsade projekt",
+        fine_tuning: "Finjusteringsalternativ",
+        overrides: "Översättningsåsidosättningar",
+        analytics: "Analys",
+        context_memory: "Kontextminne",
+        community_support: "Community-support",
+      },
+    },
+    pro: {
+      title: "Pro",
+      includes_free: "Allt i Gratis, plus:",
+      features: {
+        github_action: "GitHub Action-integration",
+        latest_features: "Tidig tillgång till nya funktioner",
+        priority_support: "Prioriterad support",
+      },
+    },
+    cta: "Börja automatisera",
+  },
 } as const;
