@@ -1,8 +1,16 @@
-import { getTeams } from "@/lib/queries";
+import { Skeleton } from "@/components/ui/skeleton";
+import { HydrateClient, trpc } from "@/trpc/server";
+import { Suspense } from "react";
 import { TeamSelector } from "./team-selector";
 
 export async function TeamSelectorServer() {
-  const teams = await getTeams();
+  trpc.organization.getAll.prefetch();
 
-  return <TeamSelector teams={teams} />;
+  return (
+    <HydrateClient>
+      <Suspense fallback={<Skeleton className="h-5 w-[260px]" />}>
+        <TeamSelector />
+      </Suspense>
+    </HydrateClient>
+  );
 }

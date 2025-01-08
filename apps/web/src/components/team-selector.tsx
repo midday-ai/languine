@@ -14,26 +14,28 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { GetTeamsResponse } from "@/lib/queries";
 import { useI18n } from "@/locales/client";
+import { trpc } from "@/trpc/client";
 import { Check, Plus, Settings } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import * as React from "react";
 
-export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
+export function TeamSelector() {
   const t = useI18n();
   const params = useParams();
   const router = useRouter();
 
+  const [organizations] = trpc.organization.getAll.useSuspenseQuery();
+
   const teamId = params.team;
   const projectSlug = params.project;
 
-  const currentTeam = teams
-    ? teams.find((team) => team?.id === teamId) || teams.at(0)
+  const currentTeam = organizations
+    ? organizations.find((org) => org?.id === teamId) || organizations.at(0)
     : null;
 
-  const currentProject = currentTeam?.projects.find(
-    (project) => project.slug === projectSlug,
+  const currentProject = currentTeam?.projects?.find(
+    (project: { slug: string }) => project.slug === projectSlug,
   );
 
   const [open, setOpen] = React.useState(false);
@@ -61,16 +63,16 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
               {t("teamSelector.teams")}
             </div>
             <div className="flex-1 overflow-y-auto">
-              {teams.map((team) => (
+              {organizations.map((org) => (
                 <div
-                  key={team?.id}
+                  key={org?.id}
                   className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted cursor-default"
                   onClick={() => {
-                    router.push(`/${team?.id}/${projectSlug}`);
+                    router.push(`/${org?.id}/${projectSlug}`);
                     setOpen(false);
                   }}
                 >
-                  <span>{team?.name}</span>
+                  <span>{org?.name}</span>
                   <div className="flex items-center gap-2">
                     <Settings
                       className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100 absolute z-10 cursor-pointer"
@@ -82,7 +84,7 @@ export function TeamSelector({ teams }: { teams: GetTeamsResponse }) {
                         );
                       }}
                     />
-                    {currentTeam?.id === team?.id && (
+                    {currentTeam?.id === org?.id && (
                       <Check className="h-4 w-4 group-hover:opacity-0 transition-opacity duration-100" />
                     )}
                   </div>
