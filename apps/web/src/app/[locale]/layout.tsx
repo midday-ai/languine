@@ -1,7 +1,6 @@
 import "../globals.css";
 
 import { I18nProviderClient } from "@/locales/client";
-import { TRPCProvider } from "@/trpc/client";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
@@ -35,9 +34,7 @@ export default async function RootLayout({
           disabled={process.env.NODE_ENV !== "production"}
         />
 
-        <I18nProviderClient locale={locale}>
-          <TRPCProvider>{children}</TRPCProvider>
-        </I18nProviderClient>
+        <I18nProviderClient locale={locale}>{children}</I18nProviderClient>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
 import { getSession } from "@/lib/session";
+import { TRPCProvider } from "@/trpc/client";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
@@ -19,23 +20,25 @@ export default async function Layout({
   }
 
   return (
-    <NuqsAdapter>
-      <SidebarProvider>
-        <div className="flex min-h-screen w-full">
-          <Sidebar />
+    <TRPCProvider>
+      <NuqsAdapter>
+        <SidebarProvider>
+          <div className="flex min-h-screen w-full">
+            <Sidebar />
 
-          <SidebarInset className="flex-1 bg-noise pb-8">
-            <Header />
+            <SidebarInset className="flex-1 bg-noise pb-8">
+              <Header />
 
-            <main className="pt-4">
-              {children}
+              <main className="pt-4">
+                {children}
 
-              {process.env.NODE_ENV !== "development" && <ComingSoon />}
-              <Toaster position="bottom-left" />
-            </main>
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
-    </NuqsAdapter>
+                {process.env.NODE_ENV !== "development" && <ComingSoon />}
+                <Toaster position="bottom-left" />
+              </main>
+            </SidebarInset>
+          </div>
+        </SidebarProvider>
+      </NuqsAdapter>
+    </TRPCProvider>
   );
 }

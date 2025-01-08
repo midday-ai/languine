@@ -31,9 +31,9 @@ export default function GoogleSignIn() {
     <OutlinedButton
       variant="secondary"
       onClick={handleGoogleLogin}
-      className="flex items-center gap-2"
+      className="w-full text-center sm:w-auto flex items-center gap-2"
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 w-full justify-center sm:w-auto sm:justify-start">
         {isLoading ? <Spinner size="sm" /> : <FaGoogle className="h-4 w-4" />}
         {t("login.google")}
       </div>
