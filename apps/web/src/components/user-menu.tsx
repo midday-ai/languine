@@ -39,7 +39,9 @@ export function UserMenu() {
               alt={session.user.name ?? ""}
             />
           ) : (
-            <AvatarFallback>{session?.user?.name?.charAt(0)}</AvatarFallback>
+            <AvatarFallback className="text-[10px]">
+              {session?.user?.name?.charAt(0)}
+            </AvatarFallback>
           )}
         </Avatar>
       </DropdownMenuTrigger>
