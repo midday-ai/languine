@@ -3,11 +3,9 @@ import Login from "@/components/login";
 import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
-import { getOrganization } from "@/lib/queries";
 import { getI18n } from "@/locales/server";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getI18n();
@@ -19,13 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const org = await getOrganization();
-  const project = "default";
   const t = await getI18n();
-
-  if (org.data) {
-    redirect(`/${org.data.slug}/${project}`);
-  }
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">

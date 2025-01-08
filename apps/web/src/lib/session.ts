@@ -1,12 +1,13 @@
+import { authClient } from "@/lib/auth/client";
 import { headers } from "next/headers";
-import { auth } from "./auth";
+import { cache } from "react";
 
-export const getSession = async () => {
-  const session = await auth.getSession({
+export const getSession = cache(async () => {
+  const session = await authClient.getSession({
     fetchOptions: {
       headers: await headers(),
     },
   });
 
   return session;
-};
+});

@@ -2,7 +2,7 @@
 
 import { OutlinedButton } from "@/components/ui/outlined-button";
 import { Spinner } from "@/components/ui/spinner";
-import { auth } from "@/lib/auth";
+import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
@@ -16,7 +16,7 @@ export default function GoogleSignIn() {
 
     setIsLoading(true);
     try {
-      await auth.signIn.social({
+      await authClient.signIn.social({
         provider: "google",
         callbackURL: `${window.location.origin}/login`,
       });
