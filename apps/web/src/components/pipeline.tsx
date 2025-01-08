@@ -15,28 +15,13 @@ export function Pipeline() {
       </h2>
       <p className="text-secondary">{t("pipeline.description")}</p>
 
-      <div
-        ref={(container) => {
-          console.log(container);
-          // keep the pre centered if the div is overflowed
-          if (container) {
-            // check it's actually overflowed horizontally
-            if (container.scrollWidth > container.clientWidth) {
-              container.scrollLeft =
-                (container.scrollWidth - container.clientWidth) / 2;
-            }
-          }
-        }}
-        className="flex flex-col items-center justify-center min-h-screenp-4 mt-10 max-w-full overflow-auto"
-      >
-      <div className="flex flex-col items-center justify-center min-h-screen p-4 mt-10">
+      <div className="flex flex-col items-center justify-center p-4 mt-10 h-[470px] sm:h-[660px] md:h-[780px]">
         <pre
-          className="overflow-auto p-4 text-sm leading-5 max-w-full"
+          className="p-4 text-sm leading-5 scale-[0.6]  sm:scale-75 sm:-mt-[12.5vh] md:scale-100 md:mt-0 transform-gpu"
           style={{
             fontFamily: "monospace",
             whiteSpace: "pre",
             textAlign: "left",
-            margin: "0 auto",
           }}
         >
           {`
