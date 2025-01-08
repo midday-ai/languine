@@ -23,7 +23,7 @@ export function Header() {
 
   return (
     <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg">
-      <div className="flex items-center justify-between max-w-7xl mx-auto py-4">
+      <div className="flex items-center justify-between container mx-auto py-4">
         <Link href="/" className="block">
           <Logo />
         </Link>

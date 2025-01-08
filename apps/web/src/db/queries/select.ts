@@ -12,19 +12,24 @@ export const getDefaultOrganization = async (userId: string) => {
     .get();
 };
 
-export const getAllOrganizationsWithProjects = async () => {
-  const orgs = await db.select().from(organizations).all();
+export const getAllOrganizationsWithProjects = async (userId: string) => {
+  const orgs = await db
+    .select()
+    .from(organizations)
+    .leftJoin(members, eq(members.organizationId, organizations.id))
+    .where(eq(members.userId, userId))
+    .all();
 
   const orgsWithProjects = await Promise.all(
     orgs.map(async (org) => {
       const orgProjects = await db
         .select()
         .from(projects)
-        .where(eq(projects.organizationId, org.id))
+        .where(eq(projects.organizationId, org.organizations.id))
         .all();
 
       return {
-        ...org,
+        ...org.organizations,
         projects: orgProjects,
       };
     }),

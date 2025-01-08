@@ -49,7 +49,7 @@ export function TeamSelector() {
           <div className="flex items-center gap-2">
             <span>{currentTeam?.name}</span>
             <div className="text-[11px] text-primary rounded-full border border-border px-2.5 py-0.5 capitalize">
-              {t("teamSelector.pro")}
+              {currentTeam?.plan}
             </div>
           </div>
           <span className="text-border text-xl">/</span>

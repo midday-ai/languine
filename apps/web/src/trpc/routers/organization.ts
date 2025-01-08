@@ -28,8 +28,8 @@ export const organizationRouter = createTRPCRouter({
       return org;
     }),
 
-  getAll: protectedProcedure.input(z.void()).query(async () => {
-    return getAllOrganizationsWithProjects();
+  getAll: protectedProcedure.input(z.void()).query(async ({ ctx }) => {
+    return getAllOrganizationsWithProjects(ctx.user.id);
   }),
 
   create: protectedProcedure
