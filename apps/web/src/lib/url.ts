@@ -3,5 +3,5 @@ export function getAppUrl() {
     return "http://localhost:3000";
   }
 
-  return process.env.VERCEL_URL;
+  return process.env.BETTER_AUTH_BASE_URL;
 }
