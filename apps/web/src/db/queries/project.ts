@@ -32,10 +32,7 @@ export const updateProject = async ({
 }) => {
   return db
     .update(projects)
-    .set({
-      name,
-      slug: slugify(name, { lower: true }),
-    })
+    .set({ name })
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
     )

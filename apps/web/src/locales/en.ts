@@ -147,6 +147,7 @@ export default {
         "This action cannot be undone. Please type DELETE to confirm.",
       placeholder: "Type DELETE to confirm",
       confirm: "Confirm Delete",
+      cancel: "Cancel",
     },
   },
   pipeline: {
@@ -304,5 +305,21 @@ export default {
       },
     },
     cta: "Start automating",
+  },
+  createTeam: {
+    teamName: "Team Name",
+    teamNamePlaceholder: "Enter team name",
+    createTeamButton: "Create team",
+    cancel: "Cancel",
+    createTeamDescription:
+      "Create a new team to manage your projects and collaborators.",
+  },
+  createProject: {
+    createProjectTitle: "Create a new project",
+    projectNamePlaceholder: "Enter project name",
+    createProjectButton: "Create project",
+    cancel: "Cancel",
+    createProjectDescription:
+      "Create a new project to start automating your localization.",
   },
 } as const;

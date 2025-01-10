@@ -33,11 +33,13 @@ export const organizationRouter = createTRPCRouter({
     .input(
       z.object({
         name: z.string().min(1),
-        userId: z.string(),
       }),
     )
-    .mutation(async ({ input }) => {
-      const org = await createOrganization(input);
+    .mutation(async ({ input, ctx }) => {
+      const org = await createOrganization({
+        name: input.name,
+        userId: ctx.user.id,
+      });
 
       if (!org) {
         throw new TRPCError({

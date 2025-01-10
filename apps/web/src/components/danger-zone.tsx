@@ -57,24 +57,32 @@ export function DangerZone({
               <Button variant="destructive">{buttonText}</Button>
             </DialogTrigger>
             <DialogContent>
-              <DialogHeader>
-                <DialogTitle>{t("dangerZone.dialog.title")}</DialogTitle>
+              <DialogHeader className="mb-4">
+                <DialogTitle className="mb-2">
+                  {t("dangerZone.dialog.title")}
+                </DialogTitle>
                 <DialogDescription>
                   {t("dangerZone.dialog.description")}
                 </DialogDescription>
               </DialogHeader>
+
               <Input
                 value={deleteText}
                 onChange={(e) => setDeleteText(e.target.value)}
                 placeholder={t("dangerZone.dialog.placeholder")}
               />
-              <Button
-                variant="destructive"
-                onClick={handleDelete}
-                disabled={deleteText !== "DELETE"}
-              >
-                {t("dangerZone.dialog.confirm")}
-              </Button>
+              <div className="flex gap-2 justify-end">
+                <Button variant="outline" onClick={() => setOpen(false)}>
+                  {t("dangerZone.dialog.cancel")}
+                </Button>
+                <Button
+                  variant="destructive"
+                  onClick={handleDelete}
+                  disabled={deleteText !== "DELETE"}
+                >
+                  {t("dangerZone.dialog.confirm")}
+                </Button>
+              </div>
             </DialogContent>
           </Dialog>
         </CardContent>

@@ -1,19 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useCreateProjectModal } from "@/hooks/use-create-project-modal";
+import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { Check, Plus, Settings } from "lucide-react";
@@ -24,6 +17,9 @@ export function TeamSelector() {
   const t = useI18n();
   const params = useParams();
   const router = useRouter();
+
+  const { setOpen: setCreateProjectModalOpen } = useCreateProjectModal();
+  const { setOpen: setCreateTeamModalOpen } = useCreateTeamModal();
 
   const [organizations] = trpc.organization.getAll.useSuspenseQuery();
 
@@ -40,8 +36,6 @@ export function TeamSelector() {
   );
 
   const [open, setOpen] = React.useState(false);
-  const [teamName, setTeamName] = React.useState("");
-  const [projectName, setProjectName] = React.useState("");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -63,82 +57,56 @@ export function TeamSelector() {
             <div className="p-4 text-xs font-medium text-secondary">
               {t("teamSelector.teams")}
             </div>
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-y-auto scrollbar-hide">
               {organizations.map((org) => (
                 <div
                   key={org?.id}
-                  className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted cursor-default"
+                  className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted cursor-default relative"
                   onClick={() => {
-                    router.push(`/${org?.id}/${projectSlug}`);
+                    router.push(`/${org?.id}/default`);
                     setOpen(false);
                   }}
                 >
                   <span>{org?.name}</span>
                   <div className="flex items-center gap-2">
                     <Settings
-                      className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100 absolute z-10 cursor-pointer"
+                      className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100 cursor-pointer"
                       onClick={(e) => {
                         e.stopPropagation();
                         setOpen(false);
                         router.push(
-                          `/${currentTeam?.id}/${projectSlug}/settings?tab=team`,
+                          `/${org?.id}/${projectSlug}/settings?tab=team`,
                         );
                       }}
                     />
                     {currentTeam?.id === org?.id && (
-                      <Check className="h-4 w-4 group-hover:opacity-0 transition-opacity duration-100" />
+                      <Check className="h-4 w-4 group-hover:hidden" />
                     )}
                   </div>
                 </div>
               ))}
             </div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <button
-                  type="button"
-                  className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
-                >
-                  <Plus className="h-4 w-4" />
-                  {t("teamSelector.createTeam")}
-                </button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{t("teamSelector.createTeamTitle")}</DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4 py-4">
-                  <div className="space-y-2">
-                    <Input
-                      placeholder={t("teamSelector.teamNamePlaceholder")}
-                      value={teamName}
-                      onChange={(e) => setTeamName(e.target.value)}
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    onClick={() => {
-                      // Handle team creation
-                      setTeamName("");
-                      setOpen(false);
-                    }}
-                  >
-                    {t("teamSelector.createTeamButton")}
-                  </Button>
-                </div>
-              </DialogContent>
-            </Dialog>
+
+            <button
+              onClick={() => setCreateTeamModalOpen(true)}
+              type="button"
+              className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
+            >
+              <Plus className="h-4 w-4" />
+              {t("teamSelector.createTeam")}
+            </button>
           </div>
 
           <div className="flex-1 flex flex-col">
             <div className="p-4 text-xs font-medium text-secondary">
               {t("teamSelector.project")}
             </div>
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-y-auto scrollbar-hide">
               {currentTeam?.projects.map((project) => (
                 <button
                   type="button"
                   key={project.id}
-                  className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted"
+                  className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted relative"
                   onClick={() => {
                     router.push(`/${currentTeam?.id}/${project.slug}`);
                     setOpen(false);
@@ -147,7 +115,7 @@ export function TeamSelector() {
                   <span>{project.name}</span>
                   <div className="flex items-center gap-2">
                     <Settings
-                      className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100 absolute z-10"
+                      className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-foreground transition-opacity duration-100"
                       onClick={(e) => {
                         e.stopPropagation();
                         setOpen(false);
@@ -157,49 +125,21 @@ export function TeamSelector() {
                       }}
                     />
                     {projectSlug === project.slug && (
-                      <Check className="h-4 w-4 group-hover:opacity-0 transition-opacity duration-100" />
+                      <Check className="h-4 w-4 group-hover:hidden" />
                     )}
                   </div>
                 </button>
               ))}
             </div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <button
-                  type="button"
-                  className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
-                >
-                  <Plus className="h-4 w-4" />
-                  {t("teamSelector.addProject")}
-                </button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>
-                    {t("teamSelector.createProjectTitle")}
-                  </DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4 py-4">
-                  <div className="space-y-2">
-                    <Input
-                      placeholder={t("teamSelector.projectNamePlaceholder")}
-                      value={projectName}
-                      onChange={(e) => setProjectName(e.target.value)}
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    onClick={() => {
-                      // Handle project creation
-                      setProjectName("");
-                      setOpen(false);
-                    }}
-                  >
-                    {t("teamSelector.createProjectButton")}
-                  </Button>
-                </div>
-              </DialogContent>
-            </Dialog>
+
+            <button
+              onClick={() => setCreateProjectModalOpen(true)}
+              type="button"
+              className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
+            >
+              <Plus className="h-4 w-4" />
+              {t("teamSelector.addProject")}
+            </button>
           </div>
         </div>
       </PopoverContent>
