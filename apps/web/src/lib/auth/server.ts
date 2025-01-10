@@ -1,12 +1,16 @@
 import { db } from "@/db";
-import { createDefaultOrganization } from "@/db/queries/insert";
-import { getDefaultOrganization } from "@/db/queries/select";
+import {
+  createDefaultOrganization,
+  getDefaultOrganization,
+} from "@/db/queries/organization";
 import * as schema from "@/db/schema";
+import InviteEmail from "@/emails/templates/invite";
 import WelcomeEmail from "@/emails/templates/welcome";
 import { resend } from "@/lib/resend";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
+import { getAppUrl } from "../url";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -30,7 +34,7 @@ export const auth = betterAuth({
     user: {
       create: {
         after: async (user) => {
-          const org = await createDefaultOrganization(user);
+          await createDefaultOrganization(user);
 
           // Send welcome email to new user
           try {
@@ -67,5 +71,27 @@ export const auth = betterAuth({
       maxAge: 5 * 60,
     },
   },
-  plugins: [organization()],
+  plugins: [
+    organization({
+      async sendInvitationEmail(data) {
+        const inviteLink = `${getAppUrl()}/invite/${data.id}`;
+
+        try {
+          await resend.emails.send({
+            from: "Languine <hello@emails.languine.ai>",
+            to: data.email,
+            subject: `You've been invited to join ${data.organization.name} on Languine`,
+            react: InviteEmail({
+              invitedByUsername: data.inviter.user.name,
+              invitedByEmail: data.inviter.user.email,
+              teamName: data.organization.name,
+              inviteLink,
+            }),
+          });
+        } catch (error) {
+          console.error("Error sending welcome email", error);
+        }
+      },
+    }),
+  ],
 });

@@ -1,22 +1,24 @@
-import { db } from "@/db";
-import { getAllOrganizationsWithProjects } from "@/db/queries/select";
-import { members, organizations, projects } from "@/db/schema";
-import { createId } from "@paralleldrive/cuid2";
+import {
+  createOrganization,
+  deleteOrganization,
+  deleteOrganizationInvite,
+  getAllOrganizationsWithProjects,
+  getOrganization,
+  getOrganizationInvites,
+  getOrganizationMembers,
+  updateOrganization,
+} from "@/db/queries/organization";
 import { TRPCError } from "@trpc/server";
-import { eq } from "drizzle-orm";
-import slugify from "slugify";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { isOrganizationMember } from "../middleware/organization";
 
 export const organizationRouter = createTRPCRouter({
   getById: protectedProcedure
-    .input(z.object({ id: z.string() }))
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
     .query(async ({ input }) => {
-      const org = await db
-        .select()
-        .from(organizations)
-        .where(eq(organizations.id, input.id))
-        .get();
+      const org = await getOrganization(input.organizationId);
 
       if (!org) {
         throw new TRPCError({
@@ -32,22 +34,31 @@ export const organizationRouter = createTRPCRouter({
     return getAllOrganizationsWithProjects(ctx.user.id);
   }),
 
+  getMembers: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
+    .query(async ({ input }) => {
+      return getOrganizationMembers(input.organizationId);
+    }),
+
+  getInvites: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
+    .query(async ({ input }) => {
+      return getOrganizationInvites(input.organizationId);
+    }),
+
   create: protectedProcedure
     .input(
       z.object({
         name: z.string().min(1),
-        userId: z.string(),
       }),
     )
-    .mutation(async ({ input }) => {
-      const org = await db
-        .insert(organizations)
-        .values({
-          name: input.name,
-          slug: `${slugify(input.name, { lower: true })}-${createId().slice(0, 8)}`,
-        })
-        .returning()
-        .get();
+    .mutation(async ({ input, ctx }) => {
+      const org = await createOrganization({
+        name: input.name,
+        userId: ctx.user.id,
+      });
 
       if (!org) {
         throw new TRPCError({
@@ -56,39 +67,24 @@ export const organizationRouter = createTRPCRouter({
         });
       }
 
-      await db.insert(members).values({
-        userId: input.userId,
-        organizationId: org.id,
-        role: "owner",
-      });
-
-      await db.insert(projects).values({
-        name: "Default",
-        organizationId: org.id,
-        slug: "default",
-      });
-
       return org;
     }),
 
   update: protectedProcedure
     .input(
       z.object({
-        id: z.string(),
+        organizationId: z.string(),
         name: z.string().min(1),
         logo: z.string().optional(),
       }),
     )
+    .use(isOrganizationMember)
     .mutation(async ({ input }) => {
-      const org = await db
-        .update(organizations)
-        .set({
-          name: input.name,
-          logo: input.logo,
-        })
-        .where(eq(organizations.id, input.id))
-        .returning()
-        .get();
+      const org = await updateOrganization({
+        id: input.organizationId,
+        name: input.name,
+        logo: input.logo,
+      });
 
       if (!org) {
         throw new TRPCError({
@@ -101,13 +97,10 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   delete: protectedProcedure
-    .input(z.object({ id: z.string() }))
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
     .mutation(async ({ input }) => {
-      const org = await db
-        .delete(organizations)
-        .where(eq(organizations.id, input.id))
-        .returning()
-        .get();
+      const org = await deleteOrganization(input.organizationId);
 
       if (!org) {
         throw new TRPCError({
@@ -117,5 +110,26 @@ export const organizationRouter = createTRPCRouter({
       }
 
       return org;
+    }),
+
+  deleteInvite: protectedProcedure
+    .input(
+      z.object({
+        organizationId: z.string(),
+        inviteId: z.string(),
+      }),
+    )
+    .use(isOrganizationMember)
+    .mutation(async ({ input }) => {
+      const invite = await deleteOrganizationInvite(input.inviteId);
+
+      if (!invite) {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to delete organization invite",
+        });
+      }
+
+      return invite;
     }),
 });

@@ -1,5 +1,6 @@
 import { ComingSoon } from "@/components/coming-soon";
 import { Header } from "@/components/dashboard/header";
+import { GlobalModals } from "@/components/modals";
 import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
@@ -33,11 +34,12 @@ export default async function Layout({
                 {children}
 
                 {process.env.NODE_ENV !== "development" && <ComingSoon />}
-                <Toaster position="bottom-left" />
+                <Toaster />
               </main>
             </SidebarInset>
           </div>
         </SidebarProvider>
+        <GlobalModals />
       </NuqsAdapter>
     </TRPCProvider>
   );

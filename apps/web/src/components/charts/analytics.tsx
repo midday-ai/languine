@@ -31,7 +31,7 @@ const chartData = [
   { month: "Oct", value: 5000 },
 ];
 
-export function TranslationsChart() {
+export function AnalyticsChart() {
   const t = useI18n();
 
   return (

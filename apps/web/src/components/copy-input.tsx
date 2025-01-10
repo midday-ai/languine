@@ -20,18 +20,17 @@ export function CopyInput({ value, className, ...props }: CopyInputProps) {
   };
 
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex items-center cursor-pointer" onClick={onCopy}>
       <Input
         value={value}
-        readOnly
-        className={cn("pr-12", className)}
+        className={cn("pr-12 cursor-pointer", className)}
         {...props}
+        readOnly
       />
       <Button
-        onClick={onCopy}
         variant="ghost"
         size="icon"
-        className="absolute right-0 h-full px-3 transition-opacity hover:bg-transparent"
+        className="absolute right-0 h-full px-3 transition-opacity hover:bg-transparent pointer-events-none"
       >
         {copied ? (
           <Check className="h-4 w-4 text-green-500" />

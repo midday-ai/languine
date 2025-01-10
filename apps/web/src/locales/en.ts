@@ -98,7 +98,7 @@ export default {
     team: "Team Settings",
   },
   teamSelector: {
-    addProject: "Add project",
+    addProject: "Create project",
     createProjectTitle: "Create a new project",
     projectNamePlaceholder: "Project name",
     createProjectButton: "Create project",
@@ -147,6 +147,7 @@ export default {
         "This action cannot be undone. Please type DELETE to confirm.",
       placeholder: "Type DELETE to confirm",
       confirm: "Confirm Delete",
+      cancel: "Cancel",
     },
   },
   pipeline: {
@@ -158,11 +159,15 @@ export default {
   settings: {
     saved: "Settings saved",
     savedDescription: "Your changes have been saved successfully",
+    error: "Something went wrong",
+    errorDescription: "Please try again or contact support",
+    addTeam: "Create team",
     tabs: {
       project: "Project",
       account: "Account",
       team: "Team",
     },
+    addProject: "Create project",
     project: {
       name: {
         title: "Project Name",
@@ -180,6 +185,7 @@ export default {
         button: "Delete Project",
       },
     },
+    save: "Save",
     team: {
       name: {
         title: "Team Name",
@@ -198,6 +204,7 @@ export default {
         placeholder: "Team API Key",
       },
       members: {
+        invite: "Invite member",
         title: "Members",
         pendingInvitations: "Pending Invitations",
         filterPlaceholder: "Filter members...",
@@ -205,10 +212,16 @@ export default {
         date: "Date",
         selectAll: "{count} selected",
         noPendingInvitations: "No pending invitations",
-        inviteMembers: "Invite team members to collaborate",
+        noResults: "No members found",
+        tryDifferentSearch: "Try a different search",
+        inviteMembers: "Invite members to collaborate",
+        deleteInvite: "Delete Invite",
+        deleteInviteDescription: "Delete the invitation",
+        invitedBy: "Invited by {name}",
+        deleteInviteSuccess: "Invitation deleted",
+        deleteInviteError: "Failed to delete invitation",
         roles: {
           owner: "Owner",
-          admin: "Admin",
           member: "Member",
         },
         dateSort: {
@@ -301,5 +314,40 @@ export default {
       },
     },
     cta: "Start automating",
+  },
+  createTeam: {
+    teamName: "Team Name",
+    teamNamePlaceholder: "Enter team name",
+    createTeamButton: "Create team",
+    cancel: "Cancel",
+    createTeamDescription:
+      "Create a new team to manage your projects and collaborators.",
+  },
+  createProject: {
+    createProjectTitle: "Create a new project",
+    projectNamePlaceholder: "Enter project name",
+    createProjectButton: "Create project",
+    cancel: "Cancel",
+    createProjectDescription:
+      "Create a new project to start automating your localization.",
+  },
+  invite: {
+    inviteMember: "Invite member",
+    inviteDescription: "Invite a member to your team",
+    emailLabel: "Email",
+    emailPlaceholder: "Enter email",
+    cancel: "Cancel",
+    sendInvite: "Send invite",
+    success: {
+      title: "Invitation sent",
+      description: "Successfully sent invitation to {email}",
+    },
+    error: {
+      title: "Error",
+      description: "Failed to send invitation. Please try again.",
+    },
+    validation: {
+      invalidEmail: "Please enter a valid email",
+    },
   },
 } as const;

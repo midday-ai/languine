@@ -1,33 +1,48 @@
 "use client";
 
+import { DangerZone } from "@/components/danger-zone";
+import { SettingsCard, SettingsSeparator } from "@/components/settings-card";
 import { useI18n } from "@/locales/client";
-import { DangerZone } from "./danger-zone";
-import { SettingsCard, SettingsSeparator } from "./settings-card";
+import { trpc } from "@/trpc/client";
 
-export function Account() {
+export function AccountSettings() {
   const t = useI18n();
+  const [data] = trpc.user.me.useSuspenseQuery();
+  const updateUser = trpc.user.update.useMutation();
 
   return (
     <div>
       <SettingsCard
         title={t("account.fullName.title")}
         description={t("account.fullName.description")}
-        type="input"
         placeholder={t("account.fullName.placeholder")}
+        value={data?.name ?? ""}
+        onSave={async (value) => {
+          await updateUser.mutateAsync({
+            name: value,
+          });
+        }}
       />
 
       <SettingsCard
         title={t("account.email.title")}
         description={t("account.email.description")}
         type="input"
+        validate="email"
         placeholder={t("account.email.placeholder")}
+        value={data?.email ?? ""}
+        onSave={async (value) => {
+          await updateUser.mutateAsync({
+            email: value,
+          });
+        }}
       />
 
       <SettingsCard
         title={t("account.apiKey.title")}
         description={t("account.apiKey.description")}
         type="copy-input"
-        value="api_1234567890"
+        value={data?.apiKey ?? ""}
       />
 
       <SettingsSeparator />

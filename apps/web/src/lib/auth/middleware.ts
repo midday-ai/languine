@@ -4,7 +4,7 @@ import { cache } from "react";
 
 type SessionData = {
   user: User;
-  session: Session;
+  session: Session & { activeOrganizationId: string };
 };
 
 export const getSessionFromRequest = cache(
@@ -18,6 +18,7 @@ export const getSessionFromRequest = cache(
       },
     ).then(async (res) => {
       if (!res.ok) return null;
+
       return res.json();
     });
   },

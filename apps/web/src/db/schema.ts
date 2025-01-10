@@ -27,9 +27,7 @@ export const users = sqliteTable(
       .$defaultFn(() => new Date()),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
   },
-  (table) => ({
-    emailIdx: index("email_idx").on(table.email),
-  }),
+  (table) => [index("email_idx").on(table.email)],
 );
 
 export const sessions = sqliteTable(
@@ -51,11 +49,11 @@ export const sessions = sqliteTable(
       .references(() => users.id, { onDelete: "cascade" }),
     activeOrganizationId: text("active_organization_id"),
   },
-  (table) => ({
-    userIdIdx: index("user_id_idx").on(table.userId),
-    tokenIdx: index("token_idx").on(table.token),
-    expiresAtIdx: index("expires_at_idx").on(table.expiresAt),
-  }),
+  (table) => [
+    index("user_id_idx").on(table.userId),
+    index("token_idx").on(table.token),
+    index("expires_at_idx").on(table.expiresAt),
+  ],
 );
 
 export const accounts = sqliteTable(
@@ -85,13 +83,10 @@ export const accounts = sqliteTable(
       .$defaultFn(() => new Date()),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
   },
-  (table) => ({
-    userIdIdx: index("accounts_user_id_idx").on(table.userId),
-    providerCompoundIdx: index("provider_compound_idx").on(
-      table.providerId,
-      table.accountId,
-    ),
-  }),
+  (table) => [
+    index("accounts_user_id_idx").on(table.userId),
+    index("provider_compound_idx").on(table.providerId, table.accountId),
+  ],
 );
 
 export const verifications = sqliteTable(
@@ -108,10 +103,10 @@ export const verifications = sqliteTable(
     ),
     updatedAt: integer("updated_at", { mode: "timestamp" }),
   },
-  (table) => ({
-    identifierIdx: index("identifier_idx").on(table.identifier),
-    expiresAtIdx: index("verifications_expires_at_idx").on(table.expiresAt),
-  }),
+  (table) => [
+    index("identifier_idx").on(table.identifier),
+    index("verifications_expires_at_idx").on(table.expiresAt),
+  ],
 );
 
 export const projects = sqliteTable(
@@ -131,13 +126,10 @@ export const projects = sqliteTable(
       .$defaultFn(() => new Date()),
     updatedAt: integer("updated_at", { mode: "timestamp" }),
   },
-  (table) => ({
-    orgIdx: index("org_idx").on(table.organizationId),
-    slugOrgIdx: uniqueIndex("slug_org_idx").on(
-      table.slug,
-      table.organizationId,
-    ),
-  }),
+  (table) => [
+    index("org_idx").on(table.organizationId),
+    uniqueIndex("slug_org_idx").on(table.slug, table.organizationId),
+  ],
 );
 
 export const organizations = sqliteTable(
@@ -161,10 +153,10 @@ export const organizations = sqliteTable(
       .$defaultFn(() => new Date()),
     metadata: text("metadata"),
   },
-  (table) => ({
-    slugIdx: index("slug_idx").on(table.slug),
-    apiKeyIdx: index("org_api_key_idx").on(table.apiKey),
-  }),
+  (table) => [
+    index("slug_idx").on(table.slug),
+    index("org_api_key_idx").on(table.apiKey),
+  ],
 );
 
 export const members = sqliteTable(
@@ -184,9 +176,7 @@ export const members = sqliteTable(
       .notNull()
       .$defaultFn(() => new Date()),
   },
-  (table) => ({
-    orgUserIdx: index("org_user_idx").on(table.organizationId, table.userId),
-  }),
+  (table) => [index("org_user_idx").on(table.organizationId, table.userId)],
 );
 
 export const invitations = sqliteTable(
@@ -206,10 +196,10 @@ export const invitations = sqliteTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
   },
-  (table) => ({
-    orgEmailIdx: index("org_email_idx").on(table.organizationId, table.email),
-    expiresAtIdx: index("invitations_expires_at_idx").on(table.expiresAt),
-  }),
+  (table) => [
+    index("org_email_idx").on(table.organizationId, table.email),
+    index("invitations_expires_at_idx").on(table.expiresAt),
+  ],
 );
 
 export const projectSettings = sqliteTable(
@@ -230,9 +220,6 @@ export const projectSettings = sqliteTable(
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
   },
-  (table) => ({
-    projectIdx: index("project_idx").on(table.projectId),
-  }),
+  (table) => [index("project_idx").on(table.projectId)],
 );

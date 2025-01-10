@@ -1,9 +1,9 @@
 import "../globals.css";
 
-import { I18nProviderClient } from "@/locales/client";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
+import { Providers } from "./providers";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,14 +27,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="dark bg-noise bg-background">
       <body className={`${geistMono.variable} antialiased`}>
+        <Providers locale={locale}>{children}</Providers>
+
         <OpenPanelComponent
           clientId={process.env.NEXT_PUBLIC_OPEN_PANEL_CLIENT_ID!}
           clientSecret={process.env.OPEN_PANEL_CLIENT_SECRET!}
           trackScreenViews={true}
           disabled={process.env.NODE_ENV !== "production"}
         />
-
-        <I18nProviderClient locale={locale}>{children}</I18nProviderClient>
       </body>
     </html>
   );

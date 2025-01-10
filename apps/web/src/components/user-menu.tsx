@@ -23,7 +23,7 @@ export function UserMenu() {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
-          router.push("/");
+          router.push("/login");
         },
       },
     });
@@ -51,13 +51,15 @@ export function UserMenu() {
           <span className="text-xs">{session?.user?.email}</span>
         </div>
         <DropdownMenuSeparator />
-        <Link href={`/${params.team}/${params.project}/settings?tab=account`}>
+        <Link
+          href={`/${params.organization}/${params.project}/settings?tab=account`}
+        >
           <DropdownMenuItem className="text-sm">
             {t("userMenu.account")}
           </DropdownMenuItem>
         </Link>
         <Link
-          href={`/${params.team}/${params.project}/settings?tab=team`}
+          href={`/${params.organization}/${params.project}/settings?tab=team`}
           className="cursor-pointer"
         >
           <DropdownMenuItem className="text-sm">

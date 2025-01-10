@@ -1,7 +1,7 @@
 import { createI18nMiddleware } from "next-international/middleware";
 import { type NextRequest, NextResponse } from "next/server";
 import languineConfig from "../languine.config";
-import { getDefaultOrganization } from "./db/queries/select";
+import { getProjectByOrganizationId } from "./db/queries/project";
 import { getSessionFromRequest } from "./lib/auth/middleware";
 
 const I18nMiddleware = createI18nMiddleware({
@@ -14,17 +14,22 @@ export async function middleware(request: NextRequest) {
 
   // Only proceed with organization check for login path
   if (request.nextUrl.pathname.includes("/login")) {
-    const session = await getSessionFromRequest();
+    const data = await getSessionFromRequest();
 
-    if (!session?.user.id) {
+    if (!data?.user.id) {
       return i18nResponse;
     }
 
-    const data = await getDefaultOrganization(session?.user.id);
+    if (data.session?.activeOrganizationId) {
+      const project = await getProjectByOrganizationId({
+        organizationId: data.session.activeOrganizationId,
+      });
 
-    if (data?.organizations) {
       return NextResponse.redirect(
-        new URL(`/${data.organizations.slug}/default`, request.url),
+        new URL(
+          `/${data.session.activeOrganizationId}/${project?.slug || "default"}`,
+          request.url,
+        ),
       );
     }
   }
