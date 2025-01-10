@@ -64,11 +64,11 @@ export function SettingsCard({
     try {
       setIsSaving(true);
       await onSave?.(inputValue);
-      toast(t("settings.saved"), {
+      toast.success(t("settings.saved"), {
         description: t("settings.savedDescription"),
       });
     } catch (error) {
-      toast(t("settings.error"), {
+      toast.error(t("settings.error"), {
         description: t("settings.errorDescription"),
       });
     } finally {
@@ -114,7 +114,7 @@ export function SettingsCard({
                 checked={checked}
                 onCheckedChange={() => {
                   onCheckedChange?.(!!checked);
-                  toast(t("settings.saved"), {
+                  toast.success(t("settings.saved"), {
                     description: t("settings.savedDescription"),
                   });
                 }}

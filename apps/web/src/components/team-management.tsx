@@ -9,7 +9,14 @@ import { trpc } from "@/trpc/client";
 import { MoreHorizontal, Search } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 import { Skeleton } from "./ui/skeleton";
 
 function Members({ searchQuery }: { searchQuery: string }) {
@@ -74,7 +81,12 @@ function Members({ searchQuery }: { searchQuery: string }) {
               <div className="text-xs text-secondary">{member.user.email}</div>
             </div>
           </div>
-          <div className="text-sm text-secondary">{member.role}</div>
+          <div className="text-sm text-secondary">
+            {t(
+              // @ts-ignore
+              `settings.team.members.roles.${member.role?.toLowerCase() ?? "member"}`,
+            )}
+          </div>
           <Button variant="ghost" size="icon">
             <MoreHorizontal className="h-4 w-4" />
           </Button>
@@ -87,11 +99,23 @@ function Members({ searchQuery }: { searchQuery: string }) {
 function Invites({ searchQuery }: { searchQuery: string }) {
   const t = useI18n();
   const params = useParams();
+  const utils = trpc.useUtils();
 
   const { data: invites, isLoading: invitesLoading } =
     trpc.organization.getInvites.useQuery({
       organizationId: params.organization as string,
     });
+
+  const deleteInviteMutation = trpc.organization.deleteInvite.useMutation({
+    onSuccess: () => {
+      utils.organization.getInvites.invalidate();
+
+      toast.success(t("settings.team.members.deleteInviteSuccess"));
+    },
+    onError: () => {
+      toast.error(t("settings.team.members.deleteInviteError"));
+    },
+  });
 
   const filteredInvites = invites?.filter((invite) => {
     const searchLower = searchQuery.toLowerCase();
@@ -140,14 +164,38 @@ function Invites({ searchQuery }: { searchQuery: string }) {
             <div>
               <div className="text-sm">{invite.email}</div>
               <div className="text-xs text-secondary">
-                Invited by {invite.inviter.name}
+                {t("settings.team.members.invitedBy", {
+                  name: invite.inviter.name,
+                })}
               </div>
             </div>
           </div>
-          <div className="text-sm text-secondary">{invite.role}</div>
-          <Button variant="ghost" size="icon">
-            <MoreHorizontal className="h-4 w-4" />
-          </Button>
+          <div className="text-sm text-secondary">
+            {t(
+              // @ts-ignore
+              `settings.team.members.roles.${invite.role?.toLowerCase() ?? "member"}`,
+            )}
+          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <MoreHorizontal className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem
+                className="text-destructive"
+                onClick={() => {
+                  deleteInviteMutation.mutate({
+                    organizationId: params.organization as string,
+                    inviteId: invite.id,
+                  });
+                }}
+              >
+                {t("settings.team.members.deleteInvite")}
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       ))}
     </div>

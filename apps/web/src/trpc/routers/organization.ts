@@ -1,6 +1,7 @@
 import {
   createOrganization,
   deleteOrganization,
+  deleteOrganizationInvite,
   getAllOrganizationsWithProjects,
   getOrganization,
   getOrganizationInvites,
@@ -109,5 +110,26 @@ export const organizationRouter = createTRPCRouter({
       }
 
       return org;
+    }),
+
+  deleteInvite: protectedProcedure
+    .input(
+      z.object({
+        organizationId: z.string(),
+        inviteId: z.string(),
+      }),
+    )
+    .use(isOrganizationMember)
+    .mutation(async ({ input }) => {
+      const invite = await deleteOrganizationInvite(input.inviteId);
+
+      if (!invite) {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to delete organization invite",
+        });
+      }
+
+      return invite;
     }),
 });

@@ -90,7 +90,7 @@ export const deleteOrganization = async (id: string) => {
 };
 
 export const getDefaultOrganization = async (userId: string) => {
-  return await db
+  return db
     .select()
     .from(members)
     .where(eq(members.userId, userId))
@@ -126,19 +126,11 @@ export const getAllOrganizationsWithProjects = async (userId: string) => {
 };
 
 export const getOrganization = async (id: string) => {
-  return await db
-    .select()
-    .from(organizations)
-    .where(eq(organizations.id, id))
-    .get();
+  return db.select().from(organizations).where(eq(organizations.id, id)).get();
 };
 
 export const getProjectById = async (projectId: string) => {
-  return await db
-    .select()
-    .from(projects)
-    .where(eq(projects.id, projectId))
-    .get();
+  return db.select().from(projects).where(eq(projects.id, projectId)).get();
 };
 
 export const updateOrganization = async ({
@@ -150,7 +142,7 @@ export const updateOrganization = async ({
   name: string;
   logo?: string;
 }) => {
-  return await db
+  return db
     .update(organizations)
     .set({
       name,
@@ -162,7 +154,7 @@ export const updateOrganization = async ({
 };
 
 export const getOrganizationMembers = async (organizationId: string) => {
-  return await db
+  return db
     .select({
       id: members.id,
       role: members.role,
@@ -180,7 +172,7 @@ export const getOrganizationMembers = async (organizationId: string) => {
 };
 
 export const getOrganizationInvites = async (organizationId: string) => {
-  return await db
+  return db
     .select({
       id: invitations.id,
       email: invitations.email,
@@ -198,4 +190,13 @@ export const getOrganizationInvites = async (organizationId: string) => {
     .innerJoin(users, eq(invitations.inviterId, users.id))
     .where(eq(invitations.organizationId, organizationId))
     .all();
+};
+
+export const deleteOrganizationInvite = async (inviteId: string) => {
+  console.log("deleteOrganizationInvite", inviteId);
+  return db
+    .delete(invitations)
+    .where(eq(invitations.id, inviteId))
+    .returning()
+    .get();
 };

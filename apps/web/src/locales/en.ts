@@ -215,9 +215,13 @@ export default {
         noResults: "No members found",
         tryDifferentSearch: "Try a different search",
         inviteMembers: "Invite members to collaborate",
+        deleteInvite: "Delete Invite",
+        deleteInviteDescription: "Delete the invitation",
+        invitedBy: "Invited by {name}",
+        deleteInviteSuccess: "Invitation deleted",
+        deleteInviteError: "Failed to delete invitation",
         roles: {
           owner: "Owner",
-          admin: "Admin",
           member: "Member",
         },
         dateSort: {
@@ -334,5 +338,16 @@ export default {
     emailPlaceholder: "Enter email",
     cancel: "Cancel",
     sendInvite: "Send invite",
+    success: {
+      title: "Invitation sent",
+      description: "Successfully sent invitation to {email}",
+    },
+    error: {
+      title: "Error",
+      description: "Failed to send invitation. Please try again.",
+    },
+    validation: {
+      invalidEmail: "Please enter a valid email",
+    },
   },
 } as const;

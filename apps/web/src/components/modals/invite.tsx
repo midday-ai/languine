@@ -16,26 +16,26 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Spinner } from "@/components/ui/spinner";
 import { useInviteModal } from "@/hooks/use-invite-modal";
 import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 export function InviteModal() {
   const t = useI18n();
   const { open, setOpen } = useInviteModal();
-  const params = useParams();
   const utils = trpc.useUtils();
 
   const form = useForm<{ email: string }>({
     resolver: zodResolver(
       z.object({
-        email: z.string().email("Please enter a valid email"),
+        email: z.string().email(t("invite.validation.invalidEmail")),
       }),
     ),
     defaultValues: {
@@ -55,10 +55,18 @@ export function InviteModal() {
         email: values.email,
         role: "member",
       });
+
+      utils.organization.getInvites.invalidate();
       form.reset();
       setOpen(false);
+      toast.success(t("invite.success.title"), {
+        description: t("invite.success.description", { email: values.email }),
+      });
     } catch (error) {
       console.error("Failed to invite member:", error);
+      toast.error(t("invite.error.title"), {
+        description: t("invite.error.description"),
+      });
     }
   }
 
@@ -102,8 +110,16 @@ export function InviteModal() {
               >
                 {t("invite.cancel")}
               </Button>
-              <Button type="submit" size="sm">
-                {t("invite.sendInvite")}
+              <Button
+                type="submit"
+                size="sm"
+                disabled={form.formState.isSubmitting}
+              >
+                {form.formState.isSubmitting ? (
+                  <Spinner className="mr-2 h-4 w-4" />
+                ) : (
+                  t("invite.sendInvite")
+                )}
               </Button>
             </div>
           </form>
