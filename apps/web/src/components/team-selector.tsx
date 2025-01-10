@@ -27,11 +27,12 @@ export function TeamSelector() {
 
   const [organizations] = trpc.organization.getAll.useSuspenseQuery();
 
-  const teamId = params.team;
+  const organizationId = params.organization;
   const projectSlug = params.project;
 
   const currentTeam = organizations
-    ? organizations.find((org) => org?.id === teamId) || organizations.at(0)
+    ? organizations.find((org) => org?.id === organizationId) ||
+      organizations.at(0)
     : null;
 
   const currentProject = currentTeam?.projects?.find(
@@ -53,7 +54,7 @@ export function TeamSelector() {
             </div>
           </div>
           <span className="text-border text-xl">/</span>
-          <span>{currentProject?.name || t("teamSelector.project")}</span>
+          <span>{currentProject?.name}</span>
         </div>
       </PopoverTrigger>
       <PopoverContent className="w-[480px] h-[240px] p-0" sideOffset={10}>

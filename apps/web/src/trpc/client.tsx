@@ -1,5 +1,5 @@
 "use client";
-// ^-- to make sure we can mount the Provider from a server component
+
 import type { QueryClient } from "@tanstack/react-query";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -35,6 +35,7 @@ function getUrl() {
     if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
     return "http://localhost:3000";
   })();
+
   return `${base}/api/trpc`;
 }
 
@@ -43,11 +44,8 @@ export function TRPCProvider(
     children: React.ReactNode;
   }>,
 ) {
-  // NOTE: Avoid useState when initializing the query client if you don't
-  //       have a suspense boundary between this and the code that may
-  //       suspend because React will throw away the client on the initial
-  //       render if it suspends and there is no boundary
   const queryClient = getQueryClient();
+
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
@@ -63,13 +61,10 @@ export function TRPCProvider(
             url: getUrl(),
           }),
         }),
-        // httpBatchLink({
-        //   transformer: superjson,
-        //   url: getUrl(),
-        // }),
       ],
     }),
   );
+
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>

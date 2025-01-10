@@ -1,10 +1,11 @@
-import { db } from "@/db";
-import { getAllOrganizationsWithProjects } from "@/db/queries/select";
-import { members, organizations, projects } from "@/db/schema";
-import { createId } from "@paralleldrive/cuid2";
+import {
+  createOrganization,
+  deleteOrganization,
+  getAllOrganizationsWithProjects,
+  getOrganization,
+  updateOrganization,
+} from "@/db/queries/organization";
 import { TRPCError } from "@trpc/server";
-import { eq } from "drizzle-orm";
-import slugify from "slugify";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 
@@ -12,11 +13,7 @@ export const organizationRouter = createTRPCRouter({
   getById: protectedProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ input }) => {
-      const org = await db
-        .select()
-        .from(organizations)
-        .where(eq(organizations.id, input.id))
-        .get();
+      const org = await getOrganization(input.id);
 
       if (!org) {
         throw new TRPCError({
@@ -40,14 +37,7 @@ export const organizationRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ input }) => {
-      const org = await db
-        .insert(organizations)
-        .values({
-          name: input.name,
-          slug: `${slugify(input.name, { lower: true })}-${createId().slice(0, 8)}`,
-        })
-        .returning()
-        .get();
+      const org = await createOrganization(input);
 
       if (!org) {
         throw new TRPCError({
@@ -55,18 +45,6 @@ export const organizationRouter = createTRPCRouter({
           message: "Failed to create organization",
         });
       }
-
-      await db.insert(members).values({
-        userId: input.userId,
-        organizationId: org.id,
-        role: "owner",
-      });
-
-      await db.insert(projects).values({
-        name: "Default",
-        organizationId: org.id,
-        slug: "default",
-      });
 
       return org;
     }),
@@ -80,15 +58,7 @@ export const organizationRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ input }) => {
-      const org = await db
-        .update(organizations)
-        .set({
-          name: input.name,
-          logo: input.logo,
-        })
-        .where(eq(organizations.id, input.id))
-        .returning()
-        .get();
+      const org = await updateOrganization(input);
 
       if (!org) {
         throw new TRPCError({
@@ -103,11 +73,7 @@ export const organizationRouter = createTRPCRouter({
   delete: protectedProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ input }) => {
-      const org = await db
-        .delete(organizations)
-        .where(eq(organizations.id, input.id))
-        .returning()
-        .get();
+      const org = await deleteOrganization(input.id);
 
       if (!org) {
         throw new TRPCError({

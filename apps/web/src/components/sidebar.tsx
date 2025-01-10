@@ -29,7 +29,7 @@ export function Sidebar() {
     {
       icon: MdOutlineStackedBarChart,
       path: "/",
-      isActive: pathname.endsWith(`/${params.team}/${params.project}`),
+      isActive: pathname.endsWith(`/${params.organization}/${params.project}`),
     },
     {
       icon: MdGraphicEq,
@@ -50,7 +50,7 @@ export function Sidebar() {
         className="border-r border-border bg-noise overflow-hidden"
       >
         <SidebarHeader className="flex justify-center items-center h-[70px] border-b">
-          <Link href={`/${params.team}/${params.project}`}>
+          <Link href={`/${params.organization}/${params.project}`}>
             <Logo />
           </Link>
         </SidebarHeader>
@@ -71,7 +71,7 @@ export function Sidebar() {
                       })}
                     >
                       <Link
-                        href={`/${params.team}/${params.project}${item.path}`}
+                        href={`/${params.organization}/${params.project}${item.path}`}
                         prefetch
                       >
                         <item.icon />

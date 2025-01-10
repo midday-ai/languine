@@ -4,29 +4,31 @@ import { cache } from "react";
 import superjson from "superjson";
 
 export const createTRPCContext = cache(async () => {
-  return {};
+  const session = await getSession();
+
+  return {
+    user: session.data?.user,
+  };
 });
 
-const t = initTRPC.context<typeof createTRPCContext>().create({
+export const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,
 });
 
 export const createCallerFactory = t.createCallerFactory;
 
-// Base router and procedure helpers
 export const createTRPCRouter = t.router;
-export const baseProcedure = t.procedure;
 
 export const protectedProcedure = t.procedure.use(async (opts) => {
-  const session = await getSession();
+  const { user } = opts.ctx;
 
-  if (!session.data?.user) {
+  if (!user) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
 
   return opts.next({
     ctx: {
-      user: session.data.user,
+      user,
     },
   });
 });

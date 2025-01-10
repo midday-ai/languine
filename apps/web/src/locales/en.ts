@@ -158,6 +158,8 @@ export default {
   settings: {
     saved: "Settings saved",
     savedDescription: "Your changes have been saved successfully",
+    error: "Something went wrong",
+    errorDescription: "Please try again or contact support",
     tabs: {
       project: "Project",
       account: "Account",
@@ -180,6 +182,7 @@ export default {
         button: "Delete Project",
       },
     },
+    save: "Save",
     team: {
       name: {
         title: "Team Name",

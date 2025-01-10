@@ -33,7 +33,7 @@ export default async function Layout({
                 {children}
 
                 {process.env.NODE_ENV !== "development" && <ComingSoon />}
-                <Toaster position="bottom-left" />
+                <Toaster />
               </main>
             </SidebarInset>
           </div>

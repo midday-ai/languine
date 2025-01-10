@@ -1,6 +1,8 @@
 import { db } from "@/db";
-import { createDefaultOrganization } from "@/db/queries/insert";
-import { getDefaultOrganization } from "@/db/queries/select";
+import {
+  createDefaultOrganization,
+  getDefaultOrganization,
+} from "@/db/queries/organization";
 import * as schema from "@/db/schema";
 import WelcomeEmail from "@/emails/templates/welcome";
 import { resend } from "@/lib/resend";
@@ -30,7 +32,7 @@ export const auth = betterAuth({
     user: {
       create: {
         after: async (user) => {
-          const org = await createDefaultOrganization(user);
+          await createDefaultOrganization(user);
 
           // Send welcome email to new user
           try {
