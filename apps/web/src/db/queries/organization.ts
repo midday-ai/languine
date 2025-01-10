@@ -1,5 +1,12 @@
 import { db } from "@/db";
-import { members, organizations, projects, sessions } from "@/db/schema";
+import {
+  invitations,
+  members,
+  organizations,
+  projects,
+  sessions,
+  users,
+} from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
 import { eq } from "drizzle-orm";
 import slugify from "slugify";
@@ -152,4 +159,43 @@ export const updateOrganization = async ({
     .where(eq(organizations.id, id))
     .returning()
     .get();
+};
+
+export const getOrganizationMembers = async (organizationId: string) => {
+  return await db
+    .select({
+      id: members.id,
+      role: members.role,
+      user: {
+        id: users.id,
+        name: users.name,
+        email: users.email,
+        image: users.image,
+      },
+    })
+    .from(members)
+    .innerJoin(users, eq(members.userId, users.id))
+    .where(eq(members.organizationId, organizationId))
+    .all();
+};
+
+export const getOrganizationInvites = async (organizationId: string) => {
+  return await db
+    .select({
+      id: invitations.id,
+      email: invitations.email,
+      role: invitations.role,
+      status: invitations.status,
+      expiresAt: invitations.expiresAt,
+      inviter: {
+        id: users.id,
+        name: users.name,
+        email: users.email,
+        image: users.image,
+      },
+    })
+    .from(invitations)
+    .innerJoin(users, eq(invitations.inviterId, users.id))
+    .where(eq(invitations.organizationId, organizationId))
+    .all();
 };

@@ -3,17 +3,21 @@ import {
   deleteOrganization,
   getAllOrganizationsWithProjects,
   getOrganization,
+  getOrganizationInvites,
+  getOrganizationMembers,
   updateOrganization,
 } from "@/db/queries/organization";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { isOrganizationMember } from "../middleware/organization";
 
 export const organizationRouter = createTRPCRouter({
   getById: protectedProcedure
-    .input(z.object({ id: z.string() }))
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
     .query(async ({ input }) => {
-      const org = await getOrganization(input.id);
+      const org = await getOrganization(input.organizationId);
 
       if (!org) {
         throw new TRPCError({
@@ -28,6 +32,20 @@ export const organizationRouter = createTRPCRouter({
   getAll: protectedProcedure.input(z.void()).query(async ({ ctx }) => {
     return getAllOrganizationsWithProjects(ctx.user.id);
   }),
+
+  getMembers: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
+    .query(async ({ input }) => {
+      return getOrganizationMembers(input.organizationId);
+    }),
+
+  getInvites: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
+    .query(async ({ input }) => {
+      return getOrganizationInvites(input.organizationId);
+    }),
 
   create: protectedProcedure
     .input(
@@ -54,13 +72,18 @@ export const organizationRouter = createTRPCRouter({
   update: protectedProcedure
     .input(
       z.object({
-        id: z.string(),
+        organizationId: z.string(),
         name: z.string().min(1),
         logo: z.string().optional(),
       }),
     )
+    .use(isOrganizationMember)
     .mutation(async ({ input }) => {
-      const org = await updateOrganization(input);
+      const org = await updateOrganization({
+        id: input.organizationId,
+        name: input.name,
+        logo: input.logo,
+      });
 
       if (!org) {
         throw new TRPCError({
@@ -73,9 +96,10 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   delete: protectedProcedure
-    .input(z.object({ id: z.string() }))
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
     .mutation(async ({ input }) => {
-      const org = await deleteOrganization(input.id);
+      const org = await deleteOrganization(input.organizationId);
 
       if (!org) {
         throw new TRPCError({

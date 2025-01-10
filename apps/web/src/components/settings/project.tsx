@@ -17,10 +17,16 @@ export function ProjectSettings() {
     organizationId: organization as string,
   });
 
-  const utils = trpc.useUtils();
   const updateMutation = trpc.project.update.useMutation({
     onSuccess: () => {
-      utils.organization.getAll.invalidate();
+      trpcUtils.organization.getAll.invalidate();
+    },
+  });
+
+  const deleteMutation = trpc.project.delete.useMutation({
+    onSuccess: () => {
+      trpcUtils.organization.getAll.invalidate();
+      router.replace(`/${organization}/default`);
     },
   });
 
@@ -50,14 +56,22 @@ export function ProjectSettings() {
         value={data?.id}
       />
 
-      <SettingsSeparator />
-
-      <DangerZone
-        title={t("settings.project.delete.title")}
-        description={t("settings.project.delete.description")}
-        buttonText={t("settings.project.delete.button")}
-        onDelete={() => {}}
-      />
+      {project !== "default" && (
+        <>
+          <SettingsSeparator />
+          <DangerZone
+            title={t("settings.project.delete.title")}
+            description={t("settings.project.delete.description")}
+            buttonText={t("settings.project.delete.button")}
+            onDelete={() => {
+              deleteMutation.mutate({
+                slug: project as string,
+                organizationId: organization as string,
+              });
+            }}
+          />
+        </>
+      )}
     </div>
   );
 }

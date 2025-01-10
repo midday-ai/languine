@@ -1,31 +1,163 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useInviteModal } from "@/hooks/use-invite-modal";
 import { useI18n } from "@/locales/client";
-import { ChevronDown, MoreHorizontal, Search } from "lucide-react";
+import { trpc } from "@/trpc/client";
+import { MoreHorizontal, Search } from "lucide-react";
+import { useParams } from "next/navigation";
+import { useState } from "react";
+import { Button } from "./ui/button";
+import { Skeleton } from "./ui/skeleton";
 
-const members = [
-  {
-    id: 1,
-    name: "Pontus Abrahamsson",
-    email: "pontus@lostisland.co",
-    role: "Owner",
-    avatar: "/placeholder.svg",
-  },
-];
-
-export default function TeamManagement() {
+function Members({ searchQuery }: { searchQuery: string }) {
   const t = useI18n();
+  const params = useParams();
+
+  const { data: members, isLoading: membersLoading } =
+    trpc.organization.getMembers.useQuery({
+      organizationId: params.organization as string,
+    });
+
+  const filteredMembers = members?.filter((member) => {
+    const searchLower = searchQuery.toLowerCase();
+    return (
+      member.user.name?.toLowerCase().includes(searchLower) ||
+      member.user.email?.toLowerCase().includes(searchLower)
+    );
+  });
+
+  if (membersLoading) {
+    return (
+      <div className="border border-border">
+        <div className="p-4 flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Skeleton className="h-10 w-10 rounded-full" />
+            <div className="space-y-2">
+              <Skeleton className="h-4 w-[150px]" />
+              <Skeleton className="h-3 w-[200px]" />
+            </div>
+          </div>
+          <Skeleton className="h-4 w-[60px]" />
+          <Skeleton className="h-8 w-8" />
+        </div>
+      </div>
+    );
+  }
+
+  if (!filteredMembers?.length) {
+    return (
+      <div className="border border-border p-8 text-center min-h-[500px] flex flex-col items-center justify-center">
+        <h3 className="text-md mb-2 text-sm">
+          {t("settings.team.members.noResults")}
+        </h3>
+        <p className="text-secondary text-xs">
+          {t("settings.team.members.tryDifferentSearch")}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="border border-border">
+      {filteredMembers?.map((member) => (
+        <div key={member.id} className="p-4 flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Avatar>
+              <AvatarImage src={member.user.image || undefined} />
+              <AvatarFallback>{member.user.name}</AvatarFallback>
+            </Avatar>
+            <div>
+              <div className="text-sm">{member.user.name}</div>
+              <div className="text-xs text-secondary">{member.user.email}</div>
+            </div>
+          </div>
+          <div className="text-sm text-secondary">{member.role}</div>
+          <Button variant="ghost" size="icon">
+            <MoreHorizontal className="h-4 w-4" />
+          </Button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Invites({ searchQuery }: { searchQuery: string }) {
+  const t = useI18n();
+  const params = useParams();
+
+  const { data: invites, isLoading: invitesLoading } =
+    trpc.organization.getInvites.useQuery({
+      organizationId: params.organization as string,
+    });
+
+  const filteredInvites = invites?.filter((invite) => {
+    const searchLower = searchQuery.toLowerCase();
+    return invite.email.toLowerCase().includes(searchLower);
+  });
+
+  if (invitesLoading) {
+    return (
+      <div className="border border-border">
+        <div className="p-4 flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Skeleton className="h-10 w-10 rounded-full" />
+            <div className="space-y-2">
+              <Skeleton className="h-4 w-[150px]" />
+              <Skeleton className="h-3 w-[200px]" />
+            </div>
+          </div>
+          <Skeleton className="h-4 w-[60px]" />
+          <Skeleton className="h-8 w-8" />
+        </div>
+      </div>
+    );
+  }
+
+  if (!filteredInvites?.length) {
+    return (
+      <div className="border border-border p-8 text-center min-h-[500px] flex flex-col items-center justify-center">
+        <h3 className="text-md mb-2 text-sm">
+          {t("settings.team.members.noPendingInvitations")}
+        </h3>
+        <p className="text-secondary text-xs">
+          {t("settings.team.members.inviteMembers")}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="border border-border">
+      {filteredInvites?.map((invite) => (
+        <div key={invite.id} className="p-4 flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Avatar>
+              <AvatarFallback>{invite.email[0]}</AvatarFallback>
+            </Avatar>
+            <div>
+              <div className="text-sm">{invite.email}</div>
+              <div className="text-xs text-secondary">
+                Invited by {invite.inviter.name}
+              </div>
+            </div>
+          </div>
+          <div className="text-sm text-secondary">{invite.role}</div>
+          <Button variant="ghost" size="icon">
+            <MoreHorizontal className="h-4 w-4" />
+          </Button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function TeamManagement() {
+  const t = useI18n();
+  const [searchQuery, setSearchQuery] = useState("");
+  const { setOpen } = useInviteModal();
 
   return (
     <div className="w-full space-y-4 max-w-screen-xl">
@@ -45,103 +177,27 @@ export default function TeamManagement() {
           </TabsTrigger>
         </TabsList>
 
-        <div className="flex gap-4 mt-4">
+        <div className="flex mt-4 justify-between gap-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
             <Input
               placeholder={t("settings.team.members.filterPlaceholder")}
               className="pl-9 bg-transparent border-border"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className="bg-transparent border-border"
-              >
-                {t("settings.team.members.allRoles")}
-                <ChevronDown className="ml-2 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                {t("settings.team.members.roles.owner")}
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {t("settings.team.members.roles.admin")}
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {t("settings.team.members.roles.member")}
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className="bg-transparent border-border"
-              >
-                {t("settings.team.members.date")}
-                <ChevronDown className="ml-2 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                {t("settings.team.members.dateSort.newest")}
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {t("settings.team.members.dateSort.oldest")}
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button onClick={() => setOpen(true)} size="sm">
+            {t("settings.team.members.invite")}
+          </Button>
         </div>
 
         <TabsContent value="members" className="mt-4">
-          <div className="border border-border">
-            <div className="p-4 border-b border-border">
-              <div className="flex items-center gap-4">
-                <Checkbox className="border-border" />
-                <span className="text-sm text-secondary">
-                  {t("settings.team.members.selectAll", { count: 1 })}
-                </span>
-                <div className="ml-auto">
-                  <Button variant="ghost" size="icon">
-                    <MoreHorizontal className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-            {members.map((member) => (
-              <div key={member.id} className="p-4 flex items-center gap-4">
-                <Checkbox className="border-border" />
-                <div className="flex items-center gap-3 flex-1">
-                  <Avatar>
-                    <AvatarImage src={member.avatar} />
-                    <AvatarFallback>{member.name[0]}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="text-sm">{member.name}</div>
-                    <div className="text-xs text-secondary">{member.email}</div>
-                  </div>
-                </div>
-                <div className="text-sm text-secondary">{member.role}</div>
-                <Button variant="ghost" size="icon">
-                  <MoreHorizontal className="h-4 w-4" />
-                </Button>
-              </div>
-            ))}
-          </div>
+          <Members searchQuery={searchQuery} />
         </TabsContent>
 
         <TabsContent value="pending" className="mt-4">
-          <div className="border border-border p-8 text-center min-h-[500px] flex flex-col items-center justify-center">
-            <h3 className="text-md mb-2 text-sm">
-              {t("settings.team.members.noPendingInvitations")}
-            </h3>
-            <p className="text-secondary text-xs">
-              {t("settings.team.members.inviteMembers")}
-            </p>
-          </div>
+          <Invites searchQuery={searchQuery} />
         </TabsContent>
       </Tabs>
     </div>

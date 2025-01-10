@@ -16,7 +16,7 @@ export default async function Page({
   trpc.user.me.prefetch();
 
   trpc.organization.getById.prefetch({
-    id: organization,
+    organizationId: organization,
   });
 
   return (

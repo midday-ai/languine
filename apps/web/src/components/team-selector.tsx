@@ -37,6 +37,13 @@ export function TeamSelector() {
 
   const [open, setOpen] = React.useState(false);
 
+  const handleSetActiveTeam = async (organizationId: string) => {
+    if (!organizationId) return;
+
+    router.push(`/${organizationId}/default`);
+    setOpen(false);
+  };
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger>
@@ -63,8 +70,7 @@ export function TeamSelector() {
                   key={org?.id}
                   className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted cursor-default relative"
                   onClick={() => {
-                    router.push(`/${org?.id}/default`);
-                    setOpen(false);
+                    handleSetActiveTeam(org.id);
                   }}
                 >
                   <span>{org?.name}</span>

@@ -98,7 +98,7 @@ export default {
     team: "Team Settings",
   },
   teamSelector: {
-    addProject: "Add project",
+    addProject: "Create project",
     createProjectTitle: "Create a new project",
     projectNamePlaceholder: "Project name",
     createProjectButton: "Create project",
@@ -161,11 +161,13 @@ export default {
     savedDescription: "Your changes have been saved successfully",
     error: "Something went wrong",
     errorDescription: "Please try again or contact support",
+    addTeam: "Create team",
     tabs: {
       project: "Project",
       account: "Account",
       team: "Team",
     },
+    addProject: "Create project",
     project: {
       name: {
         title: "Project Name",
@@ -202,6 +204,7 @@ export default {
         placeholder: "Team API Key",
       },
       members: {
+        invite: "Invite member",
         title: "Members",
         pendingInvitations: "Pending Invitations",
         filterPlaceholder: "Filter members...",
@@ -209,7 +212,9 @@ export default {
         date: "Date",
         selectAll: "{count} selected",
         noPendingInvitations: "No pending invitations",
-        inviteMembers: "Invite team members to collaborate",
+        noResults: "No members found",
+        tryDifferentSearch: "Try a different search",
+        inviteMembers: "Invite members to collaborate",
         roles: {
           owner: "Owner",
           admin: "Admin",
@@ -321,5 +326,13 @@ export default {
     cancel: "Cancel",
     createProjectDescription:
       "Create a new project to start automating your localization.",
+  },
+  invite: {
+    inviteMember: "Invite member",
+    inviteDescription: "Invite a member to your team",
+    emailLabel: "Email",
+    emailPlaceholder: "Enter email",
+    cancel: "Cancel",
+    sendInvite: "Send invite",
   },
 } as const;
