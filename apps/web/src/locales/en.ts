@@ -157,11 +157,24 @@ export default {
       "Our translation engine seamlessly integrates into your existing CI/CD pipeline, automatically translating your codebase on every push. When code changes are pushed, we analyze the modified content, maintain your translation memory, and generate accurate translations while preserving your brand voice and terminology. The translations are then submitted as pull requests, allowing for review before being merged into your main branch and deployed. This automated workflow ensures your localized content stays in sync with development.",
   },
   settings: {
+    permissionDenied: "Permission denied",
+    permissionDeniedDescription:
+      "You need to be an owner of the team to make this action",
     saved: "Settings saved",
     savedDescription: "Your changes have been saved successfully",
     error: "Something went wrong",
     errorDescription: "Please try again or contact support",
     addTeam: "Create team",
+    apiKey: {
+      updated: "API key updated",
+      updatedDescription:
+        "Your API key has been updated successfully and copied to your clipboard.",
+      title: "Update API Key",
+      description:
+        "Are you sure you want to generate a new API key? The old key will stop working immediately.",
+      cancel: "Cancel",
+      continue: "Continue",
+    },
     tabs: {
       project: "Project",
       account: "Account",
@@ -204,9 +217,16 @@ export default {
         placeholder: "Team API Key",
       },
       members: {
+        leaveTeamConfirm: "Leave team",
+        leaveTeamDescription: "Are you sure you want to leave this team?",
+        cancel: "Cancel",
+        leaveTeam: "Leave team",
         invite: "Invite member",
         title: "Members",
         pendingInvitations: "Pending Invitations",
+        removeMember: "Remove member",
+        removeMemberConfirm: "Remove member",
+        removeMemberDescription: "Are you sure you want to remove this member?",
         filterPlaceholder: "Filter members...",
         allRoles: "All Roles",
         date: "Date",
@@ -220,6 +240,10 @@ export default {
         invitedBy: "Invited by {name}",
         deleteInviteSuccess: "Invitation deleted",
         deleteInviteError: "Failed to delete invitation",
+        removeMemberSuccess: "Member removed",
+        removeMemberError: "Failed to remove member",
+        removeMemberSuccessDescription: "Member has been removed successfully",
+        removeMemberErrorDescription: "Failed to remove member",
         roles: {
           owner: "Owner",
           member: "Member",

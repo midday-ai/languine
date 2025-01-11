@@ -2,16 +2,22 @@ import {
   createOrganization,
   deleteOrganization,
   deleteOrganizationInvite,
+  deleteOrganizationMember,
   getAllOrganizationsWithProjects,
   getOrganization,
   getOrganizationInvites,
   getOrganizationMembers,
+  leaveOrganization,
   updateOrganization,
+  updateOrganizationApiKey,
 } from "@/db/queries/organization";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { isOrganizationMember } from "../middleware/organization";
+import {
+  isOrganizationMember,
+  isOrganizationOwner,
+} from "../permissions/organization";
 
 export const organizationRouter = createTRPCRouter({
   getById: protectedProcedure
@@ -78,7 +84,7 @@ export const organizationRouter = createTRPCRouter({
         logo: z.string().optional(),
       }),
     )
-    .use(isOrganizationMember)
+    .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const org = await updateOrganization({
         id: input.organizationId,
@@ -98,7 +104,7 @@ export const organizationRouter = createTRPCRouter({
 
   delete: protectedProcedure
     .input(z.object({ organizationId: z.string() }))
-    .use(isOrganizationMember)
+    .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const org = await deleteOrganization(input.organizationId);
 
@@ -119,7 +125,7 @@ export const organizationRouter = createTRPCRouter({
         inviteId: z.string(),
       }),
     )
-    .use(isOrganizationMember)
+    .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const invite = await deleteOrganizationInvite(input.inviteId);
 
@@ -131,5 +137,40 @@ export const organizationRouter = createTRPCRouter({
       }
 
       return invite;
+    }),
+
+  deleteMember: protectedProcedure
+    .input(
+      z.object({
+        organizationId: z.string(),
+        memberId: z.string(),
+      }),
+    )
+    .use(isOrganizationOwner)
+    .mutation(async ({ input }) => {
+      const member = await deleteOrganizationMember(input.memberId);
+
+      if (!member) {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to remove organization member",
+        });
+      }
+
+      return member;
+    }),
+
+  leave: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationMember)
+    .mutation(async ({ input, ctx }) => {
+      return leaveOrganization(input.organizationId, ctx.user.id);
+    }),
+
+  updateApiKey: protectedProcedure
+    .input(z.object({ organizationId: z.string() }))
+    .use(isOrganizationOwner)
+    .mutation(async ({ input }) => {
+      return updateOrganizationApiKey(input.organizationId);
     }),
 });

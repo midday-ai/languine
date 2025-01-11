@@ -12,8 +12,6 @@ export default function GoogleSignIn() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogleLogin = async () => {
-    console.log("Google login", window.location.origin);
-
     setIsLoading(true);
     try {
       await authClient.signIn.social({

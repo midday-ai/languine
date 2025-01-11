@@ -74,7 +74,7 @@ export const auth = betterAuth({
   plugins: [
     organization({
       async sendInvitationEmail(data) {
-        const inviteLink = `${getAppUrl()}/invite/${data.id}`;
+        const inviteLink = `${getAppUrl()}/api/invite/${data.id}`;
 
         try {
           await resend.emails.send({

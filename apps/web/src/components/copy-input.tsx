@@ -3,14 +3,20 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, RotateCw } from "lucide-react";
 import * as React from "react";
 
 interface CopyInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value: string;
+  onUpdate?: () => void;
 }
 
-export function CopyInput({ value, className, ...props }: CopyInputProps) {
+export function CopyInput({
+  value,
+  className,
+  onUpdate,
+  ...props
+}: CopyInputProps) {
   const [copied, setCopied] = React.useState(false);
 
   const onCopy = async () => {
@@ -20,24 +26,39 @@ export function CopyInput({ value, className, ...props }: CopyInputProps) {
   };
 
   return (
-    <div className="relative flex items-center cursor-pointer" onClick={onCopy}>
+    <div className="relative flex items-center">
       <Input
         value={value}
-        className={cn("pr-12 cursor-pointer", className)}
+        className={cn("pr-24 cursor-pointer", className)}
+        onClick={onCopy}
         {...props}
         readOnly
       />
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute right-0 h-full px-3 transition-opacity hover:bg-transparent pointer-events-none"
-      >
-        {copied ? (
-          <Check className="h-4 w-4 text-green-500" />
-        ) : (
-          <Copy className="h-4 w-4 text-muted-foreground" />
+      <div className="absolute right-4 flex">
+        {onUpdate && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onUpdate}
+            className="h-full px-3 transition-opacity hover:bg-transparent w-8"
+          >
+            <RotateCw className="h-4 w-4 text-muted-foreground" />
+          </Button>
         )}
-      </Button>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onCopy}
+          className="h-full px-3 transition-opacity hover:bg-transparent w-8"
+        >
+          {copied ? (
+            <Check className="h-4 w-4 text-green-500" />
+          ) : (
+            <Copy className="h-4 w-4 text-muted-foreground" />
+          )}
+        </Button>
+      </div>
     </div>
   );
 }

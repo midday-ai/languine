@@ -66,7 +66,6 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@tanstack/react-query-devtools": "^5.63.0",
     "@types/node": "^22",
     "@types/react": "^19",
     "react-email": "3.0.5",

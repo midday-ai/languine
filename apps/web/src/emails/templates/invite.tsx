@@ -47,7 +47,8 @@ export default function InviteEmail({
 
             <Text className="text-sm leading-7 mb-6 font-mono">
               Hi there! {invitedByUsername} ({invitedByEmail}) has invited you
-              to join {teamName} on Languine.
+              to join <span className="font-medium">{teamName}</span> on
+              Languine.
             </Text>
 
             <Section className="mb-20 mt-8">

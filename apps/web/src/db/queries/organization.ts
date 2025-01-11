@@ -8,7 +8,7 @@ import {
   users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import slugify from "slugify";
 
 export async function createDefaultOrganization(user: {
@@ -193,10 +193,60 @@ export const getOrganizationInvites = async (organizationId: string) => {
 };
 
 export const deleteOrganizationInvite = async (inviteId: string) => {
-  console.log("deleteOrganizationInvite", inviteId);
   return db
     .delete(invitations)
     .where(eq(invitations.id, inviteId))
+    .returning()
+    .get();
+};
+
+export const deleteOrganizationMember = async (memberId: string) => {
+  return db.delete(members).where(eq(members.id, memberId)).returning().get();
+};
+
+export const getOrganizationInvite = async (invitationId: string) => {
+  return db
+    .select({
+      invitation: invitations,
+      organization: {
+        name: organizations.name,
+      },
+    })
+    .from(invitations)
+    .innerJoin(organizations, eq(invitations.organizationId, organizations.id))
+    .where(eq(invitations.id, invitationId))
+    .get();
+};
+
+export const deleteInvitation = async (invitationId: string) => {
+  return db
+    .delete(invitations)
+    .where(eq(invitations.id, invitationId))
+    .returning()
+    .get();
+};
+
+export const leaveOrganization = async (
+  organizationId: string,
+  userId: string,
+) => {
+  return db
+    .delete(members)
+    .where(
+      and(
+        eq(members.organizationId, organizationId),
+        eq(members.userId, userId),
+      ),
+    )
+    .returning()
+    .get();
+};
+
+export const updateOrganizationApiKey = async (organizationId: string) => {
+  return db
+    .update(organizations)
+    .set({ apiKey: `org_${createId()}` })
+    .where(eq(organizations.id, organizationId))
     .returning()
     .get();
 };
