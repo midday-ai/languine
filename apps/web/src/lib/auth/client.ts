@@ -1,5 +1,4 @@
 import { organizationClient } from "better-auth/client/plugins";
-import { nextCookies } from "better-auth/next-js";
 import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({
@@ -10,5 +9,5 @@ export const authClient = createAuthClient({
       maxAge: 5 * 60,
     },
   },
-  plugins: [nextCookies(), organizationClient()],
+  plugins: [organizationClient()],
 });

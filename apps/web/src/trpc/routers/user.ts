@@ -1,4 +1,9 @@
-import { getUserById, updateUser } from "@/db/queries/user";
+import {
+  deleteUser,
+  getUserById,
+  updateUser,
+  updateUserApiKey,
+} from "@/db/queries/user";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 
@@ -16,4 +21,12 @@ export const userRouter = createTRPCRouter({
     .mutation(async ({ input, ctx }) => {
       return updateUser({ id: ctx.user.id, ...input });
     }),
+
+  delete: protectedProcedure.mutation(async ({ ctx }) => {
+    return deleteUser({ id: ctx.user.id });
+  }),
+
+  updateApiKey: protectedProcedure.mutation(async ({ ctx }) => {
+    return updateUserApiKey(ctx.user.id);
+  }),
 });

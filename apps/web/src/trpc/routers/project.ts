@@ -7,7 +7,8 @@ import {
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { isProjectMember } from "../middleware/project";
+import { isOrganizationOwner } from "../permissions/organization";
+import { isProjectMember } from "../permissions/project";
 
 export const projectRouter = createTRPCRouter({
   getBySlug: protectedProcedure
@@ -59,7 +60,7 @@ export const projectRouter = createTRPCRouter({
         name: z.string().min(1),
       }),
     )
-    .use(isProjectMember)
+    .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const project = await updateProject(input);
 
@@ -80,7 +81,7 @@ export const projectRouter = createTRPCRouter({
         organizationId: z.string(),
       }),
     )
-    .use(isProjectMember)
+    .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const project = await deleteProject(input);
 

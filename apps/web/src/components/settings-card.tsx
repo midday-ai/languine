@@ -16,6 +16,7 @@ import { Spinner } from "@/components/ui/spinner";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { useI18n } from "@/locales/client";
+import { TRPCClientError } from "@trpc/client";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -42,6 +43,7 @@ export function SettingsCard({
   placeholder,
   isLoading,
   validate,
+  onUpdate,
 }: {
   title: string;
   description: string;
@@ -55,6 +57,7 @@ export function SettingsCard({
   placeholder?: string;
   isLoading?: boolean;
   validate?: "email" | "url" | "number" | "password" | "text";
+  onUpdate?: () => void;
 }) {
   const t = useI18n();
   const [isSaving, setIsSaving] = useState(false);
@@ -64,13 +67,26 @@ export function SettingsCard({
     try {
       setIsSaving(true);
       await onSave?.(inputValue);
+
       toast.success(t("settings.saved"), {
         description: t("settings.savedDescription"),
       });
     } catch (error) {
-      toast.error(t("settings.error"), {
-        description: t("settings.errorDescription"),
-      });
+      if (error instanceof TRPCClientError) {
+        if (error.data?.code === "FORBIDDEN") {
+          toast.error(t("settings.permissionDenied"), {
+            description: t("settings.permissionDeniedDescription"),
+          });
+        } else {
+          toast.error(t("settings.error"), {
+            description: t("settings.errorDescription"),
+          });
+        }
+      } else {
+        toast.error(t("settings.error"), {
+          description: t("settings.errorDescription"),
+        });
+      }
     } finally {
       setIsSaving(false);
     }
@@ -174,7 +190,11 @@ export function SettingsCard({
             />
           )}
           {type === "copy-input" && value && (
-            <CopyInput value={value} placeholder={placeholder} />
+            <CopyInput
+              value={value}
+              placeholder={placeholder}
+              onUpdate={onUpdate}
+            />
           )}
         </CardContent>
       </Card>

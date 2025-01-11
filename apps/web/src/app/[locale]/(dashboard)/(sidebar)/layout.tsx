@@ -39,6 +39,7 @@ export default async function Layout({
             </SidebarInset>
           </div>
         </SidebarProvider>
+
         <GlobalModals />
       </NuqsAdapter>
     </TRPCProvider>

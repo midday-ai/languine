@@ -2,7 +2,6 @@
 
 import type { QueryClient } from "@tanstack/react-query";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import {
   httpBatchLink,
   httpLink,
@@ -69,7 +68,6 @@ export function TRPCProvider(
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
         {props.children}
-        <ReactQueryDevtools />
       </QueryClientProvider>
     </trpc.Provider>
   );

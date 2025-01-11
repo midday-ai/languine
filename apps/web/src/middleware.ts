@@ -15,9 +15,14 @@ export async function middleware(request: NextRequest) {
   // Only proceed with organization check for login path
   if (request.nextUrl.pathname.includes("/login")) {
     const data = await getSessionFromRequest();
+    const invitationId = request.cookies.get("invitationId")?.value;
 
     if (!data?.user.id) {
       return i18nResponse;
+    }
+
+    if (invitationId) {
+      return NextResponse.redirect(new URL("/api/invite/accept", request.url));
     }
 
     if (data.session?.activeOrganizationId) {
