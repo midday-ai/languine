@@ -6,11 +6,12 @@ import {
 import * as schema from "@/db/schema";
 import InviteEmail from "@/emails/templates/invite";
 import WelcomeEmail from "@/emails/templates/welcome";
+import { kv } from "@/lib/kv";
 import { resend } from "@/lib/resend";
+import { getAppUrl } from "@/lib/url";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
-import { getAppUrl } from "../url";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -28,6 +29,32 @@ export const auth = betterAuth({
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    },
+  },
+  secondaryStorage: {
+    get: async (key: string) => {
+      try {
+        const value = await kv.get(key);
+        return value?.toString() ?? null;
+      } catch (error) {
+        console.error("Failed to get from Redis:", error);
+        return null;
+      }
+    },
+    set: async (key: string, value: string, ttl?: number) => {
+      try {
+        const options = ttl ? { ex: ttl } : undefined;
+        await kv.set(key, value, options);
+      } catch (error) {
+        console.error("Failed to set in Redis:", error);
+      }
+    },
+    delete: async (key: string) => {
+      try {
+        await kv.del(key);
+      } catch (error) {
+        console.error("Failed to delete from Redis:", error);
+      }
     },
   },
   databaseHooks: {
