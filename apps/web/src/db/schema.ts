@@ -223,3 +223,33 @@ export const projectSettings = sqliteTable(
   },
   (table) => [index("project_idx").on(table.projectId)],
 );
+
+export const translations = sqliteTable(
+  "translations",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    projectId: text("project_id")
+      .notNull()
+      .references(() => projects.id, { onDelete: "cascade" }),
+    sourceLanguage: text("source_language").notNull(),
+    targetLanguage: text("target_language").notNull(),
+    sourceText: text("source_text").notNull(),
+    translatedText: text("translated_text").notNull(),
+    context: text("context"),
+    branch: text("branch"),
+    commit: text("commit"),
+    commitMessage: text("commit_message"),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+  },
+  (table) => [
+    index("project_translations_idx").on(table.projectId),
+    index("translations_created_at_idx").on(table.createdAt),
+  ],
+);

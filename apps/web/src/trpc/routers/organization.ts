@@ -1,3 +1,4 @@
+import { db } from "@/db";
 import {
   createOrganization,
   deleteOrganization,
@@ -11,9 +12,13 @@ import {
   updateOrganization,
   updateOrganizationApiKey,
 } from "@/db/queries/organization";
+import { members } from "@/db/schema";
 import { TRPCError } from "@trpc/server";
+import { and, ne } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import {
   isOrganizationMember,
   isOrganizationOwner,
@@ -60,6 +65,7 @@ export const organizationRouter = createTRPCRouter({
         name: z.string().min(1),
       }),
     )
+    .use(rateLimitMiddleware)
     .mutation(async ({ input, ctx }) => {
       const org = await createOrganization({
         name: input.name,
@@ -84,6 +90,7 @@ export const organizationRouter = createTRPCRouter({
         logo: z.string().optional(),
       }),
     )
+    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const org = await updateOrganization({
@@ -104,8 +111,19 @@ export const organizationRouter = createTRPCRouter({
 
   delete: protectedProcedure
     .input(z.object({ organizationId: z.string() }))
+    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
+      const members = await getOrganizationMembers(input.organizationId);
+
+      if (members.length === 1) {
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message:
+            "Cannot delete organization when you are the only member, instead delete your account",
+        });
+      }
+
       const org = await deleteOrganization(input.organizationId);
 
       if (!org) {
@@ -125,6 +143,7 @@ export const organizationRouter = createTRPCRouter({
         inviteId: z.string(),
       }),
     )
+    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const invite = await deleteOrganizationInvite(input.inviteId);
@@ -146,29 +165,71 @@ export const organizationRouter = createTRPCRouter({
         memberId: z.string(),
       }),
     )
+    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
-      const member = await deleteOrganizationMember(input.memberId);
+      const otherOwners = await db
+        .select()
+        .from(members)
+        .where(
+          and(
+            eq(members.organizationId, input.organizationId),
+            eq(members.role, "owner"),
+            ne(members.id, input.memberId),
+          ),
+        )
+        .all();
 
-      if (!member) {
+      if (otherOwners.length === 0) {
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message:
+            "Organization must have at least one owner. Transfer ownership to another member before removing this owner.",
+        });
+      }
+
+      const deletedMember = await deleteOrganizationMember(input.memberId);
+
+      if (!deletedMember) {
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
           message: "Failed to remove organization member",
         });
       }
 
-      return member;
+      return deletedMember;
     }),
 
   leave: protectedProcedure
     .input(z.object({ organizationId: z.string() }))
+    .use(rateLimitMiddleware)
     .use(isOrganizationMember)
     .mutation(async ({ input, ctx }) => {
+      const otherOwners = await db
+        .select()
+        .from(members)
+        .where(
+          and(
+            eq(members.organizationId, input.organizationId),
+            eq(members.role, "owner"),
+            ne(members.userId, ctx.user.id),
+          ),
+        )
+        .all();
+
+      if (otherOwners.length === 0) {
+        throw new TRPCError({
+          code: "FORBIDDEN",
+          message: "Cannot leave as the last owner of the organization",
+        });
+      }
+
       return leaveOrganization(input.organizationId, ctx.user.id);
     }),
 
   updateApiKey: protectedProcedure
     .input(z.object({ organizationId: z.string() }))
+    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationApiKey(input.organizationId);

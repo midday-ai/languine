@@ -35,7 +35,8 @@ export const auth = betterAuth({
     get: async (key: string) => {
       try {
         const value = await kv.get(key);
-        return value?.toString() ?? null;
+        if (value === null) return null;
+        return typeof value === "string" ? value : JSON.stringify(value);
       } catch (error) {
         console.error("Failed to get from Redis:", error);
         return null;
@@ -43,6 +44,7 @@ export const auth = betterAuth({
     },
     set: async (key: string, value: string, ttl?: number) => {
       try {
+        JSON.parse(value);
         const options = ttl ? { ex: ttl } : undefined;
         await kv.set(key, value, options);
       } catch (error) {

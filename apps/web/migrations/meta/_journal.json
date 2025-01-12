@@ -15,6 +15,34 @@
       "when": 1736414139537,
       "tag": "0001_small_sandman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1736632799488,
+      "tag": "0002_equal_rockslide",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1736673327607,
+      "tag": "0003_small_red_skull",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1736673541061,
+      "tag": "0004_tense_demogoblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1736675685408,
+      "tag": "0005_absent_the_leader",
+      "breakpoints": true
     }
   ]
 }

@@ -7,6 +7,7 @@ import { useInviteModal } from "@/hooks/use-invite-modal";
 import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { TRPCClientError } from "@trpc/client";
 import { MoreHorizontal, Search } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { useQueryState } from "nuqs";
@@ -52,10 +53,26 @@ function Members({ searchQuery }: { searchQuery: string }) {
         description: t("settings.team.members.removeMemberSuccessDescription"),
       });
     },
-    onError: () => {
-      toast.error(t("settings.permissionDenied"), {
-        description: t("settings.permissionDeniedDescription"),
-      });
+    onError: (error) => {
+      if (error instanceof TRPCClientError) {
+        if (error.data?.code === "FORBIDDEN") {
+          toast.error(t("settings.permissionDenied"), {
+            description: t("settings.permissionDeniedDescription"),
+          });
+        } else if (error.data?.code === "BAD_REQUEST") {
+          toast.error(t("settings.badRequest"), {
+            description: t("settings.badRequestDescription"),
+          });
+        } else {
+          toast.error(t("settings.error"), {
+            description: t("settings.errorDescription"),
+          });
+        }
+      } else {
+        toast.error(t("settings.error"), {
+          description: t("settings.errorDescription"),
+        });
+      }
     },
   });
 
@@ -113,16 +130,6 @@ function Members({ searchQuery }: { searchQuery: string }) {
     <div className="border border-border">
       {filteredMembers?.map((member) => {
         const isCurrentUser = member.user.id === session.data?.user.id;
-        const isOwner = member.role === "owner";
-        const isOtherOwner = isOwner && !isCurrentUser;
-        const isLastOwner =
-          isOwner &&
-          filteredMembers.filter((m) => m.role === "owner").length === 1;
-
-        // Determine if we should show dropdown based on available actions
-        const canLeaveTeam = !isLastOwner;
-        const canDeleteMember = isOtherOwner;
-        const showDropdown = (isCurrentUser && canLeaveTeam) || canDeleteMember;
 
         return (
           <div key={member.id} className="p-4 flex items-center gap-4">
@@ -147,91 +154,87 @@ function Members({ searchQuery }: { searchQuery: string }) {
               )}
             </div>
 
-            {showDropdown && (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <MoreHorizontal className="h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {isCurrentUser && canLeaveTeam && (
-                    <AlertDialog>
-                      <AlertDialogTrigger asChild>
-                        <DropdownMenuItem
-                          className="text-destructive"
-                          onSelect={(e) => e.preventDefault()}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <MoreHorizontal className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {isCurrentUser ? (
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <DropdownMenuItem
+                        className="text-destructive"
+                        onSelect={(e) => e.preventDefault()}
+                      >
+                        {t("settings.team.members.leaveTeam")}
+                      </DropdownMenuItem>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>
+                          {t("settings.team.members.leaveTeamConfirm")}
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          {t("settings.team.members.leaveTeamDescription")}
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>
+                          {t("settings.team.members.cancel")}
+                        </AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={() => {
+                            leaveMutation.mutate({
+                              organizationId: params.organization as string,
+                            });
+                          }}
                         >
                           {t("settings.team.members.leaveTeam")}
-                        </DropdownMenuItem>
-                      </AlertDialogTrigger>
-                      <AlertDialogContent>
-                        <AlertDialogHeader>
-                          <AlertDialogTitle>
-                            {t("settings.team.members.leaveTeamConfirm")}
-                          </AlertDialogTitle>
-                          <AlertDialogDescription>
-                            {t("settings.team.members.leaveTeamDescription")}
-                          </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                          <AlertDialogCancel>
-                            {t("settings.team.members.cancel")}
-                          </AlertDialogCancel>
-                          <AlertDialogAction
-                            onClick={() => {
-                              leaveMutation.mutate({
-                                organizationId: params.organization as string,
-                              });
-                            }}
-                          >
-                            {t("settings.team.members.leaveTeam")}
-                          </AlertDialogAction>
-                        </AlertDialogFooter>
-                      </AlertDialogContent>
-                    </AlertDialog>
-                  )}
-
-                  {canDeleteMember && (
-                    <AlertDialog>
-                      <AlertDialogTrigger asChild>
-                        <DropdownMenuItem
-                          className="text-destructive"
-                          onSelect={(e) => e.preventDefault()}
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                ) : (
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <DropdownMenuItem
+                        className="text-destructive"
+                        onSelect={(e) => e.preventDefault()}
+                      >
+                        {t("settings.team.members.removeMember")}
+                      </DropdownMenuItem>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>
+                          {t("settings.team.members.removeMemberConfirm")}
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          {t("settings.team.members.removeMemberDescription")}
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>
+                          {t("settings.team.members.cancel")}
+                        </AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={() => {
+                            deleteMemberMutation.mutate({
+                              organizationId: params.organization as string,
+                              memberId: member.id,
+                            });
+                          }}
                         >
                           {t("settings.team.members.removeMember")}
-                        </DropdownMenuItem>
-                      </AlertDialogTrigger>
-                      <AlertDialogContent>
-                        <AlertDialogHeader>
-                          <AlertDialogTitle>
-                            {t("settings.team.members.removeMemberConfirm")}
-                          </AlertDialogTitle>
-                          <AlertDialogDescription>
-                            {t("settings.team.members.removeMemberDescription")}
-                          </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                          <AlertDialogCancel>
-                            {t("settings.team.members.cancel")}
-                          </AlertDialogCancel>
-                          <AlertDialogAction
-                            onClick={() => {
-                              deleteMemberMutation.mutate({
-                                organizationId: params.organization as string,
-                                memberId: member.id,
-                              });
-                            }}
-                          >
-                            {t("settings.team.members.removeMember")}
-                          </AlertDialogAction>
-                        </AlertDialogFooter>
-                      </AlertDialogContent>
-                    </AlertDialog>
-                  )}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            )}
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         );
       })}

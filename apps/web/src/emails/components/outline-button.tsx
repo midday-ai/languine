@@ -18,12 +18,12 @@ export function OutlineButton({
   return (
     <div className={`relative inline-block ${className}`}>
       <div
-        className="absolute left-[5px] top-[5px] h-full w-full"
+        className="absolute left-[3px] top-[3px] h-full w-full"
         style={{ border: "1px solid #000000" }}
       />
       <Button
         href={href}
-        className="font-mono font-medium px-4 py-4 relative z-10"
+        className="font-mono font-medium text-sm px-3 py-2 relative z-10"
         style={{
           backgroundColor,
           color: textColor,

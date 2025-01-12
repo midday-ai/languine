@@ -128,7 +128,8 @@ export default {
     },
     apiKey: {
       title: "API Key",
-      description: "Your personal API key for accessing the Languine API.",
+      description:
+        "Your personal API key for accessing the Languine API and from the CLI.",
     },
     deleteAccount: {
       title: "Delete Account",
@@ -157,9 +158,15 @@ export default {
       "Our translation engine seamlessly integrates into your existing CI/CD pipeline, automatically translating your codebase on every push. When code changes are pushed, we analyze the modified content, maintain your translation memory, and generate accurate translations while preserving your brand voice and terminology. The translations are then submitted as pull requests, allowing for review before being merged into your main branch and deployed. This automated workflow ensures your localized content stays in sync with development.",
   },
   settings: {
+    badRequest: "Invalid request",
+    badRequestDescription:
+      "Organization must have at least one owner. Transfer ownership to another member before removing this owner.",
     permissionDenied: "Permission denied",
     permissionDeniedDescription:
       "You need to be an owner of the team to make this action",
+    deleteTeamTitle: "Delete team",
+    deleteTeamDescription:
+      "Cannot delete organization when you are the only member, instead delete your account",
     saved: "Settings saved",
     savedDescription: "Your changes have been saved successfully",
     error: "Something went wrong",
@@ -213,7 +220,8 @@ export default {
       },
       apiKey: {
         title: "Team API Key",
-        description: "API key for team access",
+        description:
+          "API key for team access, use this from your CI/CD pipeline together with the Project ID",
         placeholder: "Team API Key",
       },
       members: {
