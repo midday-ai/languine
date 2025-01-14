@@ -57,10 +57,16 @@ export function TeamSettings() {
     onSuccess: () => {
       router.replace("/");
     },
-    onError: () => {
-      toast.error(t("settings.permissionDenied"), {
-        description: t("settings.permissionDeniedDescription"),
-      });
+    onError: (error) => {
+      if (error.data?.code === "BAD_REQUEST") {
+        toast.error(t("settings.deleteTeamTitle"), {
+          description: t("settings.deleteTeamDescription"),
+        });
+      } else {
+        toast.error(t("settings.error"), {
+          description: t("settings.errorDescription"),
+        });
+      }
     },
   });
 

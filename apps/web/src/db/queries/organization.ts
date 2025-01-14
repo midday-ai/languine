@@ -129,10 +129,6 @@ export const getOrganization = async (id: string) => {
   return db.select().from(organizations).where(eq(organizations.id, id)).get();
 };
 
-export const getProjectById = async (projectId: string) => {
-  return db.select().from(projects).where(eq(projects.id, projectId)).get();
-};
-
 export const updateOrganization = async ({
   id,
   name,

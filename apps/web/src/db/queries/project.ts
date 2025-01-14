@@ -1,4 +1,3 @@
-import { createId } from "@paralleldrive/cuid2";
 import { and, eq } from "drizzle-orm";
 import slugify from "slugify";
 import { db } from "..";
@@ -71,6 +70,14 @@ export const getProjectBySlug = async ({
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
     )
     .get();
+};
+
+export const getProjectById = async ({
+  id,
+}: {
+  id: string;
+}) => {
+  return db.select().from(projects).where(eq(projects.id, id)).get();
 };
 
 export const getProjectByOrganizationId = async ({

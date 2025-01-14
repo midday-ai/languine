@@ -6,11 +6,13 @@ import {
 import * as schema from "@/db/schema";
 import InviteEmail from "@/emails/templates/invite";
 import WelcomeEmail from "@/emails/templates/welcome";
+import { kv } from "@/lib/kv";
 import { resend } from "@/lib/resend";
+import { getAppUrl } from "@/lib/url";
+import { waitUntil } from "@vercel/functions";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
-import { getAppUrl } from "../url";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -30,6 +32,34 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     },
   },
+  secondaryStorage: {
+    get: async (key: string) => {
+      try {
+        const value = await kv.get(key);
+        if (value === null) return null;
+        return typeof value === "string" ? value : JSON.stringify(value);
+      } catch (error) {
+        console.error("Failed to get from Redis:", error);
+        return null;
+      }
+    },
+    set: async (key: string, value: string, ttl?: number) => {
+      try {
+        JSON.parse(value);
+        const options = ttl ? { ex: ttl } : undefined;
+        await kv.set(key, value, options);
+      } catch (error) {
+        console.error("Failed to set in Redis:", error);
+      }
+    },
+    delete: async (key: string) => {
+      try {
+        await kv.del(key);
+      } catch (error) {
+        console.error("Failed to delete from Redis:", error);
+      }
+    },
+  },
   databaseHooks: {
     user: {
       create: {
@@ -38,12 +68,14 @@ export const auth = betterAuth({
 
           // Send welcome email to new user
           try {
-            await resend.emails.send({
-              from: "Languine <hello@emails.languine.ai>",
-              to: user.email,
-              subject: "Welcome to Languine",
-              react: WelcomeEmail({ name: user.name }),
-            });
+            waitUntil(
+              resend.emails.send({
+                from: "Languine <hello@emails.languine.ai>",
+                to: user.email,
+                subject: "Welcome to Languine",
+                react: WelcomeEmail({ name: user.name }),
+              }),
+            );
           } catch (error) {
             console.error("Error sending welcome email", error);
           }
@@ -77,17 +109,19 @@ export const auth = betterAuth({
         const inviteLink = `${getAppUrl()}/api/invite/${data.id}`;
 
         try {
-          await resend.emails.send({
-            from: "Languine <hello@emails.languine.ai>",
-            to: data.email,
-            subject: `You've been invited to join ${data.organization.name} on Languine`,
-            react: InviteEmail({
-              invitedByUsername: data.inviter.user.name,
-              invitedByEmail: data.inviter.user.email,
-              teamName: data.organization.name,
-              inviteLink,
+          waitUntil(
+            resend.emails.send({
+              from: "Languine <hello@emails.languine.ai>",
+              to: data.email,
+              subject: `You've been invited to join ${data.organization.name} on Languine`,
+              react: InviteEmail({
+                invitedByUsername: data.inviter.user.name,
+                invitedByEmail: data.inviter.user.email,
+                teamName: data.organization.name,
+                inviteLink,
+              }),
             }),
-          });
+          );
         } catch (error) {
           console.error("Error sending welcome email", error);
         }

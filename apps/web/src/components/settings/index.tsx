@@ -48,17 +48,18 @@ export function Settings() {
             </TabsTrigger>
           ))}
         </TabsList>
-        {tab === "project" && (
-          <Button size="sm" onClick={() => setOpenProject(true)}>
-            {t("settings.addProject")}
-          </Button>
-        )}
-        {tab === "team" && (
-          <Button size="sm" onClick={() => setOpenTeam(true)}>
-            {t("settings.addTeam")}
-          </Button>
-        )}
       </div>
+      {tab === "project" && (
+        <Button size="sm" onClick={() => setOpenProject(true)}>
+          {t("settings.addProject")}
+        </Button>
+      )}
+      {tab === "team" && (
+        <Button size="sm" onClick={() => setOpenTeam(true)}>
+          {t("settings.addTeam")}
+        </Button>
+      )}
+
       <TabsContent value="project">
         <ProjectSettings />
       </TabsContent>

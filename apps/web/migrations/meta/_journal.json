@@ -15,6 +15,111 @@
       "when": 1736414139537,
       "tag": "0001_small_sandman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1736632799488,
+      "tag": "0002_equal_rockslide",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1736673327607,
+      "tag": "0003_small_red_skull",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1736673541061,
+      "tag": "0004_tense_demogoblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1736675685408,
+      "tag": "0005_absent_the_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1736680808481,
+      "tag": "0006_rare_yellow_claw",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1736681157971,
+      "tag": "0007_free_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1736686618757,
+      "tag": "0008_daily_clint_barton",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1736686827228,
+      "tag": "0009_pale_ezekiel_stane",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1736686939523,
+      "tag": "0010_stormy_speed",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1736686963055,
+      "tag": "0011_dark_loa",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1736686991695,
+      "tag": "0012_yellow_sasquatch",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "6",
+      "when": 1736687034943,
+      "tag": "0013_organic_shocker",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "6",
+      "when": 1736687184614,
+      "tag": "0014_equal_fallen_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "6",
+      "when": 1736787297453,
+      "tag": "0015_new_tenebrous",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "6",
+      "when": 1736851711514,
+      "tag": "0016_fantastic_susan_delgado",
+      "breakpoints": true
     }
   ]
 }

@@ -13,11 +13,3 @@ export async function acceptInvitation(invitationId: string) {
 
   return data;
 }
-
-export async function rejectInvitation(invitationId: string) {
-  const { data } = await authClient.organization.rejectInvitation({
-    invitationId,
-  });
-
-  return data;
-}

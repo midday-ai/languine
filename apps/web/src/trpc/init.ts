@@ -1,15 +1,18 @@
-import { getSession } from "@/lib/session";
+import { authClient } from "@/lib/auth/client";
 import { TRPCError, initTRPC } from "@trpc/server";
-import { cache } from "react";
 import superjson from "superjson";
 
-export const createTRPCContext = cache(async () => {
-  const session = await getSession();
+export const createTRPCContext = async (opts: { headers: Headers }) => {
+  const session = await authClient.getSession({
+    fetchOptions: {
+      headers: opts.headers,
+    },
+  });
 
   return {
-    user: session.data?.user,
+    user: session?.data?.user,
   };
-});
+};
 
 export const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,

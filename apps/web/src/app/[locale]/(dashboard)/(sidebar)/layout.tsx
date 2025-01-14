@@ -9,6 +9,8 @@ import { TRPCProvider } from "@/trpc/client";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
+const admins = ["pontus@lostisland.co", "viktor@midday.ai"];
+
 export default async function Layout({
   children,
 }: {
@@ -33,13 +35,12 @@ export default async function Layout({
               <main className="pt-4">
                 {children}
 
-                {process.env.NODE_ENV !== "development" && <ComingSoon />}
+                {!admins.includes(session.data.user.email) && <ComingSoon />}
                 <Toaster />
               </main>
             </SidebarInset>
           </div>
         </SidebarProvider>
-
         <GlobalModals />
       </NuqsAdapter>
     </TRPCProvider>
