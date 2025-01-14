@@ -1,95 +1,97 @@
-import { getI18n } from "@/locales/server";
-import { ActivityCard } from "./activity-card";
+"use client";
 
-export async function Activity() {
-  const t = await getI18n();
-  const translations = [
-    {
-      source: "Hello",
-      content:
-        "es: 'Hola', fr: 'Bonjour', de: 'Hallo', it: 'Ciao', ja: 'こんにちは'",
-    },
-    {
-      source: "Thank you",
-      content:
-        "es: 'Gracias', fr: 'Merci', de: 'Danke', it: 'Grazie', ja: 'ありがとう'",
-    },
-    {
-      source: "Welcome",
-      content:
-        "es: 'Bienvenido', fr: 'Bienvenue', de: 'Willkommen', it: 'Benvenuto', ja: 'ようこそ'",
-    },
-    {
-      source: "Goodbye",
-      content:
-        "es: 'Adiós', fr: 'Au revoir', de: 'Auf Wiedersehen', it: 'Arrivederci', ja: 'さようなら'",
-    },
-    {
-      source: "Please",
-      content:
-        "es: 'Por favor', fr: 'S'il vous plaît', de: 'Bitte', it: 'Per favore', ja: 'お願いします'",
-    },
-    {
-      source: "Good morning",
-      content:
-        "es: 'Buenos días', fr: 'Bonjour', de: 'Guten Morgen', it: 'Buongiorno', ja: 'おはようございます'",
-    },
-    {
-      source: "Good night",
-      content:
-        "es: 'Buenas noches', fr: 'Bonne nuit', de: 'Gute Nacht', it: 'Buonanotte', ja: 'おやすみなさい'",
-    },
-    {
-      source: "How are you?",
-      content:
-        "es: '¿Cómo estás?', fr: 'Comment allez-vous?', de: 'Wie geht es dir?', it: 'Come stai?', ja: 'お元気ですか？'",
-    },
-    {
-      source: "Nice to meet you",
-      content:
-        "es: 'Encantado/a', fr: 'Enchanté(e)', de: 'Freut mich', it: 'Piacere', ja: 'はじめまして'",
-    },
-    {
-      source: "Excuse me",
-      content:
-        "es: 'Perdón', fr: 'Excusez-moi', de: 'Entschuldigung', it: 'Scusi', ja: 'すみません'",
-    },
-    {
-      source: "Yes",
-      content: "es: 'Sí', fr: 'Oui', de: 'Ja', it: 'Sì', ja: 'はい'",
-    },
-    {
-      source: "No",
-      content: "es: 'No', fr: 'Non', de: 'Nein', it: 'No', ja: 'いいえ'",
-    },
-    {
-      source: "Maybe",
-      content:
-        "es: 'Quizás', fr: 'Peut-être', de: 'Vielleicht', it: 'Forse', ja: 'たぶん'",
-    },
-    {
-      source: "See you later",
-      content:
-        "es: 'Hasta luego', fr: 'À plus tard', de: 'Bis später', it: 'A dopo', ja: 'また後で'",
-    },
-    {
-      source: "Have a nice day",
-      content:
-        "es: 'Que tengas un buen día', fr: 'Bonne journée', de: 'Schönen Tag', it: 'Buona giornata', ja: '良い一日を'",
-    },
-  ];
+import { ActivityCard, ActivityCardSkeleton } from "@/components/activity-card";
+import { useI18n } from "@/locales/client";
+import { trpc } from "@/trpc/client";
+import { useParams } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { Loader } from "./ui/loader";
+
+export function Activity() {
+  const { organization, project } = useParams();
+  const t = useI18n();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const [{ pages }, allTranslationsQuery] =
+    trpc.translate.getTranslationsBySlug.useSuspenseInfiniteQuery(
+      {
+        slug: project as string,
+        organizationId: organization as string,
+      },
+      {
+        getNextPageParam: (lastPage) => {
+          const lastTranslation = lastPage[lastPage.length - 1];
+          if (!lastTranslation || lastPage.length < 10) return undefined;
+          return lastTranslation.id;
+        },
+      },
+    );
+
+  const { isFetching, isFetchingNextPage, fetchNextPage, hasNextPage } =
+    allTranslationsQuery;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
+          fetchNextPage();
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+
+  if (!pages) return <ActivitySkeleton />;
 
   return (
     <div className="p-8">
       <h2 className="text-lg font-normal">{t("activity.title")}</h2>
 
       <div className="flex flex-col gap-4 mt-6">
-        {translations.map((translation, i) => (
-          <ActivityCard
-            key={i.toString()}
-            source={translation.source}
-            content={translation.content}
-          />
+        {pages.map((page) =>
+          page.map((item) => (
+            <ActivityCard
+              key={item.id}
+              source={item.sourceText}
+              content={item.translatedText}
+              createdAt={item.createdAt}
+              commit={item.commit}
+              targetLanguage={item.targetLanguage}
+            />
+          )),
+        )}
+
+        <div
+          ref={containerRef}
+          className="h-8 flex items-center justify-center w-full"
+        >
+          {isFetching && (
+            <div className="flex items-center gap-2 pt-8">
+              <Loader />
+              <span className="text-xs text-secondary">Loading...</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ActivitySkeleton() {
+  const t = useI18n();
+
+  return (
+    <div className="p-8">
+      <h2 className="text-lg font-normal">{t("activity.title")}</h2>
+      <div className="flex flex-col gap-4 mt-6">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <ActivityCardSkeleton key={i.toString()} />
         ))}
       </div>
     </div>

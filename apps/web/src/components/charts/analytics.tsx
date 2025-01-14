@@ -7,7 +7,10 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import type { ChartConfig } from "@/components/ui/chart";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useI18n } from "@/locales/client";
+import { trpc } from "@/trpc/client";
+import { useParams } from "next/navigation";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const chartConfig = {
@@ -16,37 +19,37 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-const chartData = [
-  { month: "Oct", value: 7000 },
-  { month: "Nov", value: 7000 },
-  { month: "Dec", value: 10000 },
-  { month: "Jan", value: 7000 },
-  { month: "Feb", value: 3000 },
-  { month: "Mar", value: 10000 },
-  { month: "Apr", value: 8000 },
-  { month: "May", value: 2000 },
-  { month: "Jun", value: 5000 },
-  { month: "Jul", value: 5000 },
-  { month: "Aug", value: 5000 },
-  { month: "Oct", value: 5000 },
-];
-
 export function AnalyticsChart() {
   const t = useI18n();
+  const { organization, project } = useParams();
+
+  const [{ monthlyStats, totalKeys }] =
+    trpc.analytics.getProjectStats.useSuspenseQuery({
+      projectSlug: project as string,
+      organizationId: organization as string,
+    });
+
+  const translatedData = monthlyStats.map((stat) => ({
+    ...stat,
+    // @ts-ignore
+    month: t(`months.${stat.month.split("-").at(1)}`),
+  }));
 
   return (
     <Card className="w-full border-none bg-noise">
       <CardHeader>
         <CardTitle className="text-primary text-lg font-normal">
           <span className="text-secondary text-lg ml-2">
-            {t("translations.total_keys", { total: 36.541 })}
+            {t("translations.total_keys", { total: totalKeys })}
           </span>
         </CardTitle>
       </CardHeader>
 
       <CardContent className="mt-4">
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
-          <BarChart accessibilityLayer data={chartData}>
+          <BarChart accessibilityLayer data={translatedData}>
+            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+
             <XAxis
               dataKey="month"
               fontSize={12}
@@ -78,10 +81,28 @@ export function AnalyticsChart() {
               className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
             />
 
-            <Bar dataKey="value" fill="var(--color-value)" barSize={36} />
-            <ChartTooltip content={<ChartTooltipContent />} />
+            <Bar
+              dataKey="count"
+              fill="var(--color-value)"
+              barSize={36}
+              isAnimationActive={false}
+            />
           </BarChart>
         </ChartContainer>
+      </CardContent>
+    </Card>
+  );
+}
+
+export function AnalyticsChartSkeleton() {
+  return (
+    <Card className="w-full border-none bg-noise">
+      <CardHeader>
+        <Skeleton className="h-[22px] mt-1.5 w-48" />
+      </CardHeader>
+
+      <CardContent className="mt-4">
+        <div className="h-[300px] w-full" />
       </CardContent>
     </Card>
   );

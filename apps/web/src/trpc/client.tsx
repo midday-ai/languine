@@ -53,11 +53,21 @@ export function TRPCProvider(
           // @ts-ignore - it needs the tarnsformer but it doesn't work with handling form data 🤷‍♂️
           true: httpLink({
             url: getUrl(),
+            headers: () => {
+              const headers = new Headers();
+              headers.set("x-trpc-source", "client");
+              return headers;
+            },
             // transformer: superjson,
           }),
           false: httpBatchLink({
             transformer: superjson,
             url: getUrl(),
+            headers: () => {
+              const headers = new Headers();
+              headers.set("x-trpc-source", "client");
+              return headers;
+            },
           }),
         }),
       ],

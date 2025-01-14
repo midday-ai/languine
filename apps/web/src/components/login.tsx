@@ -11,7 +11,7 @@ export default async function Login() {
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-normal">{t("login.title")}</h2>
         <p className="text-secondary">{t("login.description")}</p>
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
+        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mt-4">
           <div className="w-full sm:w-auto">
             <GithubSignIn />
           </div>

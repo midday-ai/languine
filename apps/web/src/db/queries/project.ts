@@ -72,6 +72,14 @@ export const getProjectBySlug = async ({
     .get();
 };
 
+export const getProjectById = async ({
+  id,
+}: {
+  id: string;
+}) => {
+  return db.select().from(projects).where(eq(projects.id, id)).get();
+};
+
 export const getProjectByOrganizationId = async ({
   organizationId,
 }: {

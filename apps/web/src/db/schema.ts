@@ -27,7 +27,10 @@ export const users = sqliteTable(
       .$defaultFn(() => new Date()),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
   },
-  (table) => [index("email_idx").on(table.email)],
+  (table) => [
+    index("email_idx").on(table.email),
+    index("api_key_idx").on(table.apiKey),
+  ],
 );
 
 export const sessions = sqliteTable(
@@ -106,29 +109,6 @@ export const verifications = sqliteTable(
   (table) => [
     index("identifier_idx").on(table.identifier),
     index("verifications_expires_at_idx").on(table.expiresAt),
-  ],
-);
-
-export const projects = sqliteTable(
-  "projects",
-  {
-    id: text()
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    name: text("name").notNull(),
-    slug: text("slug").notNull(),
-    description: text("description"),
-    organizationId: text("organization_id")
-      .notNull()
-      .references(() => organizations.id, { onDelete: "cascade" }),
-    createdAt: integer("created_at", { mode: "timestamp" })
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }),
-  },
-  (table) => [
-    index("org_idx").on(table.organizationId),
-    uniqueIndex("slug_org_idx").on(table.slug, table.organizationId),
   ],
 );
 
@@ -221,7 +201,35 @@ export const projectSettings = sqliteTable(
       .notNull()
       .$defaultFn(() => new Date()),
   },
-  (table) => [index("project_idx").on(table.projectId)],
+  (table) => [
+    index("project_idx").on(table.projectId),
+    index("created_at_idx").on(table.createdAt),
+  ],
+);
+
+export const projects = sqliteTable(
+  "projects",
+  {
+    id: text()
+      .primaryKey()
+      .$defaultFn(() => createId()),
+    name: text("name").notNull(),
+    slug: text("slug").notNull(),
+    description: text("description"),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    createdAt: integer("created_at", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+    updatedAt: integer("updated_at", { mode: "timestamp" }),
+  },
+  (table) => [
+    index("org_idx").on(table.organizationId),
+    uniqueIndex("slug_org_idx").on(table.slug, table.organizationId),
+    index("project_slug_idx").on(table.slug),
+    index("project_org_id_idx").on(table.organizationId),
+  ],
 );
 
 export const translations = sqliteTable(
@@ -233,8 +241,14 @@ export const translations = sqliteTable(
     projectId: text("project_id")
       .notNull()
       .references(() => projects.id, { onDelete: "cascade" }),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
+    userId: text("user_id").references(() => users.id, { onDelete: "cascade" }),
+    sourceFormat: text("source_format").notNull(),
     sourceLanguage: text("source_language").notNull(),
     targetLanguage: text("target_language").notNull(),
+    translationKey: text("translation_key").notNull(),
     sourceText: text("source_text").notNull(),
     translatedText: text("translated_text").notNull(),
     context: text("context"),
@@ -251,5 +265,14 @@ export const translations = sqliteTable(
   (table) => [
     index("project_translations_idx").on(table.projectId),
     index("translations_created_at_idx").on(table.createdAt),
+    uniqueIndex("unique_translation_idx").on(
+      table.projectId,
+      table.translationKey,
+      table.targetLanguage,
+    ),
+    index("org_translations_idx").on(table.organizationId),
+    index("source_language_idx").on(table.sourceLanguage),
+    index("target_language_idx").on(table.targetLanguage),
+    index("translations_project_id_idx").on(table.projectId),
   ],
 );

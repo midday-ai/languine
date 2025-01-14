@@ -9,6 +9,7 @@ import WelcomeEmail from "@/emails/templates/welcome";
 import { kv } from "@/lib/kv";
 import { resend } from "@/lib/resend";
 import { getAppUrl } from "@/lib/url";
+import { waitUntil } from "@vercel/functions";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
@@ -67,12 +68,14 @@ export const auth = betterAuth({
 
           // Send welcome email to new user
           try {
-            await resend.emails.send({
-              from: "Languine <hello@emails.languine.ai>",
-              to: user.email,
-              subject: "Welcome to Languine",
-              react: WelcomeEmail({ name: user.name }),
-            });
+            waitUntil(
+              resend.emails.send({
+                from: "Languine <hello@emails.languine.ai>",
+                to: user.email,
+                subject: "Welcome to Languine",
+                react: WelcomeEmail({ name: user.name }),
+              }),
+            );
           } catch (error) {
             console.error("Error sending welcome email", error);
           }
@@ -106,17 +109,19 @@ export const auth = betterAuth({
         const inviteLink = `${getAppUrl()}/api/invite/${data.id}`;
 
         try {
-          await resend.emails.send({
-            from: "Languine <hello@emails.languine.ai>",
-            to: data.email,
-            subject: `You've been invited to join ${data.organization.name} on Languine`,
-            react: InviteEmail({
-              invitedByUsername: data.inviter.user.name,
-              invitedByEmail: data.inviter.user.email,
-              teamName: data.organization.name,
-              inviteLink,
+          waitUntil(
+            resend.emails.send({
+              from: "Languine <hello@emails.languine.ai>",
+              to: data.email,
+              subject: `You've been invited to join ${data.organization.name} on Languine`,
+              react: InviteEmail({
+                invitedByUsername: data.inviter.user.name,
+                invitedByEmail: data.inviter.user.email,
+                teamName: data.organization.name,
+                inviteLink,
+              }),
             }),
-          });
+          );
         } catch (error) {
           console.error("Error sending welcome email", error);
         }

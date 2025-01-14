@@ -12,6 +12,7 @@ export const userRouter = createTRPCRouter({
   me: protectedProcedure.query(async ({ ctx }) => {
     return getUserById({ id: ctx.user.id });
   }),
+
   update: protectedProcedure
     .use(rateLimitMiddleware)
     .input(
