@@ -3,6 +3,7 @@ import {
   AnalyticsChart,
   AnalyticsChartSkeleton,
 } from "@/components/charts/analytics";
+import { OnboardingSteps } from "@/components/onboarding-steps";
 import { HydrateClient, trpc } from "@/trpc/server";
 import { Suspense } from "react";
 
@@ -22,6 +23,16 @@ export default async function Page({
     slug: project,
     organizationId: organization,
   });
+
+  const translations = await trpc.translate.getTranslationsBySlug({
+    slug: project,
+    organizationId: organization,
+  });
+
+  // If there are no translations, show the onboarding
+  if (!translations.length) {
+    return <OnboardingSteps />;
+  }
 
   return (
     <HydrateClient>

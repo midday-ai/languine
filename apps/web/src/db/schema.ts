@@ -191,12 +191,18 @@ export const projectSettings = sqliteTable(
     projectId: text("project_id")
       .notNull()
       .references(() => projects.id, { onDelete: "cascade" }),
+    organizationId: text("organization_id")
+      .notNull()
+      .references(() => organizations.id, { onDelete: "cascade" }),
     cache: integer("cache", { mode: "boolean" }).notNull().default(true),
     context: integer("context", { mode: "boolean" }).notNull().default(true),
     temperature: real("temperature").notNull().default(0),
     instructions: text("instructions"),
     memory: integer("memory", { mode: "boolean" }).notNull().default(true),
     grammar: integer("grammar", { mode: "boolean" }).notNull().default(true),
+    provider: text("provider").notNull().default("openai"),
+    model: text("model").notNull().default("gpt-4-turbo"),
+    providerApiKey: text("provider_api_key"),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),

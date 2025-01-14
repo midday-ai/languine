@@ -13,7 +13,7 @@ import { GithubStars } from "./github-stars";
 export function Header() {
   const t = useI18n();
   const pathname = usePathname();
-  console.log(pathname);
+
   const links = [
     { href: "/pricing", label: t("header.pricing") },
     { href: "https://git.new/languine", label: t("header.docs") },

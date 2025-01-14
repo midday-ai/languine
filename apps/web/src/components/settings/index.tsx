@@ -1,19 +1,16 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useCreateProjectModal } from "@/hooks/use-create-project-modal";
-import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
 import { useI18n } from "@/locales/client";
 import { useQueryState } from "nuqs";
 import { AccountSettings } from "./account";
+import { BillingSettings } from "./billing";
 import { ProjectSettings } from "./project";
+import { ProviderSettings } from "./provider";
 import { TeamSettings } from "./team";
 
 export function Settings() {
   const t = useI18n();
-  const { setOpen: setOpenProject } = useCreateProjectModal();
-  const { setOpen: setOpenTeam } = useCreateTeamModal();
 
   const [tab, setTab] = useQueryState("tab", {
     defaultValue: "project",
@@ -32,6 +29,14 @@ export function Settings() {
       id: "account",
       title: t("settings.tabs.account"),
     },
+    {
+      id: "provider",
+      title: t("settings.tabs.provider"),
+    },
+    {
+      id: "billing",
+      title: t("settings.tabs.billing"),
+    },
   ];
 
   return (
@@ -49,16 +54,6 @@ export function Settings() {
           ))}
         </TabsList>
       </div>
-      {tab === "project" && (
-        <Button size="sm" onClick={() => setOpenProject(true)}>
-          {t("settings.addProject")}
-        </Button>
-      )}
-      {tab === "team" && (
-        <Button size="sm" onClick={() => setOpenTeam(true)}>
-          {t("settings.addTeam")}
-        </Button>
-      )}
 
       <TabsContent value="project">
         <ProjectSettings />
@@ -70,6 +65,14 @@ export function Settings() {
 
       <TabsContent value="account">
         <AccountSettings />
+      </TabsContent>
+
+      <TabsContent value="provider">
+        <ProviderSettings />
+      </TabsContent>
+
+      <TabsContent value="billing">
+        <BillingSettings />
       </TabsContent>
     </Tabs>
   );

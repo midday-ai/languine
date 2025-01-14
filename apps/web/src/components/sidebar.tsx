@@ -58,7 +58,7 @@ export function Sidebar() {
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupContent className="p-0">
-              <SidebarMenu className="divide-y divide-border">
+              <SidebarMenu className="divide-y divide-border h-full flex flex-col">
                 {navigation.map((item, index) => (
                   <SidebarMenuItem key={item.path}>
                     <SidebarMenuButton

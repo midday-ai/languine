@@ -26,6 +26,8 @@ export default {
   },
   activity: {
     title: "Activity",
+    loading: "Loading",
+    loadMore: "Show more",
   },
   features: {
     title: "Features",
@@ -186,6 +188,8 @@ export default {
       project: "Project",
       account: "Account",
       team: "Team",
+      provider: "Provider",
+      billing: "Billing",
     },
     addProject: "Create project",
     project: {

@@ -3,7 +3,9 @@ import {
   deleteProject,
   getProjectBySlug,
   updateProject,
+  updateProjectSettings,
 } from "@/db/queries/project";
+import { decrypt } from "@/lib/crypto";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
@@ -22,6 +24,12 @@ export const projectRouter = createTRPCRouter({
     .use(isProjectMember)
     .query(async ({ input }) => {
       const project = await getProjectBySlug(input);
+
+      if (project?.settings?.providerApiKey) {
+        project.settings.providerApiKey = await decrypt(
+          project.settings.providerApiKey,
+        );
+      }
 
       if (!project) {
         throw new TRPCError({
@@ -71,6 +79,33 @@ export const projectRouter = createTRPCRouter({
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
           message: "Failed to update project",
+        });
+      }
+
+      return project;
+    }),
+
+  updateSettings: protectedProcedure
+    .input(
+      z.object({
+        slug: z.string(),
+        organizationId: z.string(),
+        settings: z.object({
+          provider: z.string().optional(),
+          model: z.string().optional(),
+          providerApiKey: z.string().optional(),
+        }),
+      }),
+    )
+    .use(rateLimitMiddleware)
+    .use(isOrganizationOwner)
+    .mutation(async ({ input }) => {
+      const project = await updateProjectSettings(input);
+
+      if (!project) {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to update project settings",
         });
       }
 

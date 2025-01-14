@@ -53,7 +53,7 @@ export function SettingsCard({
   onSave?: (value: string) => void;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
-  options?: { label: string; value: string }[];
+  options?: { label: string; value: string; icon?: () => JSX.Element }[];
   placeholder?: string;
   isLoading?: boolean;
   validate?: "email" | "url" | "number" | "password" | "text";
@@ -138,15 +138,31 @@ export function SettingsCard({
             )}
 
             {type === "select" && options && (
-              <div className="min-w-[240px]">
+              <div className="min-w-[240px] ml-6">
                 <Select value={value} onValueChange={onChange}>
-                  <SelectTrigger>
-                    <SelectValue />
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder={placeholder}>
+                      <div className="flex items-center w-full gap-2">
+                        {options.find((opt) => opt.value === value)?.icon && (
+                          <span>
+                            {options
+                              .find((opt) => opt.value === value)
+                              ?.icon?.()}
+                          </span>
+                        )}
+                        <span>
+                          {options.find((opt) => opt.value === value)?.label}
+                        </span>
+                      </div>
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     {options.map((option) => (
                       <SelectItem key={option.value} value={option.value}>
-                        {option.label}
+                        <div className="flex items-center w-full gap-2">
+                          {option.icon && <span>{option.icon()}</span>}
+                          <span>{option.label}</span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
