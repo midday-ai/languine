@@ -14,7 +14,7 @@ export function OnboardingSteps() {
   const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
 
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-100px)] -ml-[70px]">
+    <div className="flex items-center justify-center min-h-[calc(100vh-200px)] -ml-[70px]">
       <div className="max-w-xl w-full space-y-6">
         <div className="flex flex-col relative">
           <div>
@@ -35,7 +35,7 @@ export function OnboardingSteps() {
                   {t("onboarding.steps.1.description")}
                 </p>
                 <CopyInput
-                  value={`npx languine@latest --project=${project}`}
+                  value={`npx languine@latest --p=${project}`}
                   onCopy={() => setStep(2)}
                   className="border-dashed text-xs"
                 />

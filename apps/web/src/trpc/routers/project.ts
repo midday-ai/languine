@@ -94,6 +94,53 @@ export const projectRouter = createTRPCRouter({
           provider: z.string().optional(),
           model: z.string().optional(),
           providerApiKey: z.string().optional(),
+          translationMemory: z.boolean().optional(),
+          qualityChecks: z.boolean().optional(),
+          contextDetection: z.boolean().optional(),
+          lengthControl: z
+            .enum(["flexible", "strict", "exact", "loose"])
+            .optional(),
+          inclusiveLanguage: z.boolean().optional(),
+          formality: z.enum(["casual", "formal", "neutral"]).optional(),
+          toneOfVoice: z
+            .enum([
+              "casual",
+              "formal",
+              "friendly",
+              "professional",
+              "playful",
+              "serious",
+              "confident",
+              "humble",
+              "direct",
+              "diplomatic",
+            ])
+            .optional(),
+          brandName: z.string().optional(),
+          brandVoice: z.string().optional(),
+          emotiveIntent: z
+            .enum([
+              "neutral",
+              "positive",
+              "empathetic",
+              "professional",
+              "friendly",
+              "enthusiastic",
+            ])
+            .optional(),
+          idioms: z.boolean().optional(),
+          terminology: z.string().optional(),
+          domainExpertise: z
+            .enum([
+              "general",
+              "technical",
+              "medical",
+              "legal",
+              "financial",
+              "marketing",
+              "academic",
+            ])
+            .optional(),
         }),
       }),
     )

@@ -191,6 +191,28 @@ export default {
       provider: "Provider",
       billing: "Billing",
     },
+    provider: {
+      updateSuccess: "Settings updated successfully",
+      updateError: "Failed to update settings",
+      translationProvider: {
+        title: "Translation Provider",
+        description:
+          "Choose your preferred AI service for generating translations. Each provider offers different capabilities and pricing.",
+        placeholder: "Select a provider",
+      },
+      languageModel: {
+        title: "Language Model",
+        description:
+          "Select the AI model that best balances quality and speed for your translation needs. More powerful models may be slower but produce better results.",
+        placeholder: "Select a model",
+      },
+      apiKey: {
+        title: "Provider API Key",
+        description:
+          "Enter your API key to authenticate with your chosen provider. Keep this key secure - we encrypt it before storing.",
+        placeholder: "Enter your API key",
+      },
+    },
     addProject: "Create project",
     project: {
       name: {
@@ -410,7 +432,7 @@ export default {
       },
       "2": {
         title: "Push Translations",
-        description: "Push translations to Languine",
+        description: "Waiting for the translations to be pushed",
       },
       "3": {
         title: "Documentation",

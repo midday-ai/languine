@@ -22,14 +22,14 @@ export function ProviderSettings() {
 
   const updateMutation = trpc.project.updateSettings.useMutation({
     onSuccess: () => {
-      toast.success("Settings updated successfully");
+      toast.success(t("settings.provider.updateSuccess"));
       trpcUtils.project.getBySlug.invalidate({
         slug: project as string,
         organizationId: organization as string,
       });
     },
     onError: (error) => {
-      toast.error(error.message || "Failed to update settings");
+      toast.error(t("settings.provider.updateError"));
     },
   });
 
@@ -52,10 +52,10 @@ export function ProviderSettings() {
   return (
     <div className="space-y-6">
       <SettingsCard
-        title="Translation Provider"
-        description="Choose your preferred AI service for generating translations. Each provider offers different capabilities and pricing."
+        title={t("settings.provider.translationProvider.title")}
+        description={t("settings.provider.translationProvider.description")}
         type="select"
-        placeholder="Select a provider"
+        placeholder={t("settings.provider.translationProvider.placeholder")}
         value={projectData.settings?.provider}
         options={providers}
         onChange={async (value) => {
@@ -71,10 +71,10 @@ export function ProviderSettings() {
       />
 
       <SettingsCard
-        title="Language Model"
-        description="Select the AI model that best balances quality and speed for your translation needs. More powerful models may be slower but produce better results."
+        title={t("settings.provider.languageModel.title")}
+        description={t("settings.provider.languageModel.description")}
         type="select"
-        placeholder="Select a model"
+        placeholder={t("settings.provider.languageModel.placeholder")}
         value={projectData.settings?.model}
         options={
           models[projectData.settings?.provider as keyof typeof models] || []
@@ -91,11 +91,11 @@ export function ProviderSettings() {
       />
 
       <SettingsCard
-        title="Provider API Key"
-        description="Enter your API key to authenticate with your chosen provider. Keep this key secure - we encrypt it before storing."
+        title={t("settings.provider.apiKey.title")}
+        description={t("settings.provider.apiKey.description")}
         type="input"
         validate="password"
-        placeholder="Enter your API key"
+        placeholder={t("settings.provider.apiKey.placeholder")}
         value={
           (projectData.settings?.providerApiKey && OFUSCATED_API_KEY) || ""
         }

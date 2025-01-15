@@ -2,7 +2,6 @@ import { createId } from "@paralleldrive/cuid2";
 import {
   index,
   integer,
-  real,
   sqliteTable,
   text,
   uniqueIndex,
@@ -194,12 +193,75 @@ export const projectSettings = sqliteTable(
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
-    cache: integer("cache", { mode: "boolean" }).notNull().default(true),
-    context: integer("context", { mode: "boolean" }).notNull().default(true),
-    temperature: real("temperature").notNull().default(0),
-    instructions: text("instructions"),
-    memory: integer("memory", { mode: "boolean" }).notNull().default(true),
-    grammar: integer("grammar", { mode: "boolean" }).notNull().default(true),
+
+    // Tuning start
+    translationMemory: integer("translation_memory", { mode: "boolean" })
+      .notNull()
+      .default(true),
+    qualityChecks: integer("quality_checks", { mode: "boolean" })
+      .notNull()
+      .default(true),
+    contextDetection: integer("context_detection", { mode: "boolean" })
+      .notNull()
+      .default(true),
+    lengthControl: text("length_control", {
+      enum: ["flexible", "strict", "exact", "loose"],
+    })
+      .notNull()
+      .default("flexible"),
+    inclusiveLanguage: integer("inclusive_language", { mode: "boolean" })
+      .notNull()
+      .default(true),
+    formality: text("formality", { enum: ["casual", "formal", "neutral"] })
+      .notNull()
+      .default("casual"),
+    toneOfVoice: text("tone_of_voice", {
+      enum: [
+        "casual",
+        "formal",
+        "friendly",
+        "professional",
+        "playful",
+        "serious",
+        "confident",
+        "humble",
+        "direct",
+        "diplomatic",
+      ],
+    })
+      .notNull()
+      .default("casual"),
+    brandName: text("brand_name"),
+    brandVoice: text("brand_voice"),
+    emotiveIntent: text("emotive_intent", {
+      enum: [
+        "neutral",
+        "positive",
+        "empathetic",
+        "professional",
+        "friendly",
+        "enthusiastic",
+      ],
+    })
+      .notNull()
+      .default("neutral"),
+    idioms: integer("idioms", { mode: "boolean" }).notNull().default(true),
+    terminology: text("terminology"),
+    domainExpertise: text("domain_expertise", {
+      enum: [
+        "general",
+        "technical",
+        "medical",
+        "legal",
+        "financial",
+        "marketing",
+        "academic",
+      ],
+    })
+      .notNull()
+      .default("general"),
+    // Tuning end
+
     provider: text("provider").notNull().default("openai"),
     model: text("model").notNull().default("gpt-4-turbo"),
     providerApiKey: text("provider_api_key"),
