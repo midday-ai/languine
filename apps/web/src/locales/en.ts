@@ -221,6 +221,7 @@ export default {
         description: "Manage your team's billing plan",
         free: "Free",
         pro: "Pro",
+        unlimited: "Unlimited",
       },
       apiKey: {
         title: "Team API Key",
@@ -399,5 +400,29 @@ export default {
     "10": "Oct",
     "11": "Nov",
     "12": "Dec",
+  },
+  onboarding: {
+    steps: {
+      "1": {
+        title: "Setup Languine CLI",
+        description:
+          "Install and configure the Languine CLI to manage translations",
+      },
+      "2": {
+        title: "Push Translations",
+        description: "Push translations to Languine",
+      },
+      "3": {
+        title: "Documentation",
+        description:
+          "Check out our documentation for detailed guides and best practices",
+        link: "documentation",
+      },
+    },
+    info: {
+      description: "Need help? Check out our",
+      link: "documentation",
+      description_2: "for detailed guides and best practices.",
+    },
   },
 } as const;

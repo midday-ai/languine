@@ -29,14 +29,14 @@ export function Settings() {
       id: "account",
       title: t("settings.tabs.account"),
     },
-    {
-      id: "provider",
-      title: t("settings.tabs.provider"),
-    },
-    {
-      id: "billing",
-      title: t("settings.tabs.billing"),
-    },
+    // {
+    //   id: "provider",
+    //   title: t("settings.tabs.provider"),
+    // },
+    // {
+    //   id: "billing",
+    //   title: t("settings.tabs.billing"),
+    // },
   ];
 
   return (

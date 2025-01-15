@@ -44,7 +44,7 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="sticky top-0 h-screen">
+    <div className="sticky top-0 h-screen z-10">
       <SidebarBase
         collapsible="none"
         className="border-r border-border bg-noise overflow-hidden"

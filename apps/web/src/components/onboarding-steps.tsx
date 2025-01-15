@@ -1,31 +1,17 @@
 "use client";
 
 import { CopyInput } from "@/components/copy-input";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
-import { trpc } from "@/trpc/client";
+import { useI18n } from "@/locales/client";
 import { useParams } from "next/navigation";
-import { useQueryState } from "nuqs";
-import { useEffect } from "react";
-import { ProviderSettingsModal } from "./modals/provider-settings";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { parseAsInteger, useQueryState } from "nuqs";
 
 export function OnboardingSteps() {
-  const { organization, project } = useParams();
-
-  const { data } = trpc.project.getBySlug.useQuery({
-    slug: project as string,
-    organizationId: organization as string,
-  });
-
-  const [step, setStep] = useQueryState("step", {
-    defaultValue: "1",
-  });
-
-  useEffect(() => {
-    if (data?.settings?.providerApiKey && step === "1") {
-      setStep("2");
-    }
-  }, [data?.settings]);
+  const { project } = useParams();
+  const t = useI18n();
+  const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
 
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-100px)] -ml-[70px]">
@@ -34,49 +20,24 @@ export function OnboardingSteps() {
           <div>
             <Card
               className={cn(
-                "overflow-hidden z-10 bg-transparent transition-opacity duration-300 border-dashed",
-                Number(step) < 1 ? "opacity-50" : "opacity-100 border-primary",
+                "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed cursor-pointer",
+                step < 1 ? "opacity-50" : "opacity-100 border-primary",
               )}
+              onClick={() => setStep(1)}
             >
               <CardHeader className="py-4">
-                <CardTitle className="text-sm">1. Connect Provider</CardTitle>
+                <CardTitle className="text-sm">
+                  1. {t("onboarding.steps.1.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-xs text-secondary">
-                  Connect your AI provider to start generating translations
-                </p>
-                <ProviderSettingsModal
-                  isConnected={!!data?.settings?.providerApiKey}
-                />
-              </CardContent>
-            </Card>
-
-            <div
-              className={cn(
-                "w-[1px] h-8 border-l border-dashed mx-auto z-0",
-                Number(step) >= 2 ? "border-primary" : "border-border",
-              )}
-            />
-          </div>
-
-          <div>
-            <Card
-              className={cn(
-                "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed",
-                Number(step) < 2 ? "opacity-50" : "opacity-100 border-primary",
-              )}
-            >
-              <CardHeader className="py-4">
-                <CardTitle className="text-sm">2. Setup Languine CLI</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-xs text-secondary">
-                  Install and configure the Languine CLI to manage translations
+                  {t("onboarding.steps.1.description")}
                 </p>
                 <CopyInput
-                  value="npx languine@latest"
-                  onCopy={() => setStep("3")}
-                  className="border-dashed"
+                  value={`npx languine@latest --project=${project}`}
+                  onCopy={() => setStep(2)}
+                  className="border-dashed text-xs"
                 />
               </CardContent>
             </Card>
@@ -84,24 +45,31 @@ export function OnboardingSteps() {
             <div
               className={cn(
                 "w-[1px] h-8 border-l border-dashed mx-auto z-0",
-                Number(step) >= 3 ? "border-primary" : "border-border",
+                step >= 2 ? "border-primary" : "border-border",
               )}
             />
           </div>
 
           <Card
             className={cn(
-              "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed",
-              Number(step) < 3 ? "opacity-50" : "opacity-100 border-primary",
+              "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed cursor-pointer",
+              step < 2 ? "opacity-50" : "opacity-100 border-primary",
             )}
+            onClick={() => setStep(2)}
           >
             <CardHeader className="py-4">
-              <CardTitle className="text-sm">3. Push Translations</CardTitle>
+              <CardTitle className="text-sm">
+                2. {t("onboarding.steps.2.title")}
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-xs text-secondary">
-                Push your first translations using the Languine CLI
-              </p>
+              <div className=" flex items-center gap-1.5">
+                {step === 2 && <Loader />}
+
+                <p className="text-xs text-secondar">
+                  {t("onboarding.steps.2.description")}
+                </p>
+              </div>
               <CopyInput
                 value="npx languine@latest push"
                 className="border-dashed"
@@ -110,17 +78,17 @@ export function OnboardingSteps() {
           </Card>
 
           <p className="text-xs text-secondary text-center mt-6 leading-6">
-            Need help? Check out our{" "}
+            {t("onboarding.info.description")}
             <a
               href="https://languine.ai/docs"
               className="underline hover:opacity-70"
               target="_blank"
               rel="noopener noreferrer"
             >
-              documentation
+              {t("onboarding.info.link")}
               <br />
             </a>{" "}
-            for detailed guides and best practices.
+            {t("onboarding.info.description_2")}
           </p>
         </div>
       </div>
