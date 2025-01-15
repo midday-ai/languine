@@ -10,7 +10,7 @@ export const createTranslation = async ({
   translations: translationItems,
 }: {
   projectId: string;
-  userId: string;
+  userId?: string;
   organizationId: string;
   sourceFormat: string;
   translations: {

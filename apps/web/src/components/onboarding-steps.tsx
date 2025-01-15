@@ -77,8 +77,8 @@ export function OnboardingSteps() {
             </CardContent>
           </Card>
 
-          <p className="text-xs text-secondary text-center mt-6 leading-6">
-            {t("onboarding.info.description")}
+          <p className="text-xs text-secondary text-center mt-10 leading-6">
+            {t("onboarding.info.description")}{" "}
             <a
               href="https://languine.ai/docs"
               className="underline hover:opacity-70"
@@ -86,7 +86,6 @@ export function OnboardingSteps() {
               rel="noopener noreferrer"
             >
               {t("onboarding.info.link")}
-              <br />
             </a>{" "}
             {t("onboarding.info.description_2")}
           </p>

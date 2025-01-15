@@ -9,12 +9,10 @@ import { waitUntil } from "@vercel/functions";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 import { rateLimitMiddleware } from "../middlewares/ratelimits";
-import { isProjectMember } from "../permissions/project";
+import { isOrganizationMember } from "../permissions/organization";
 
 export const translateRouter = createTRPCRouter({
   pushTranslations: protectedProcedure
-    .use(rateLimitMiddleware)
-    // .use(isProjectMember)
     .input(
       z.object({
         projectId: z.string(),
@@ -33,6 +31,8 @@ export const translateRouter = createTRPCRouter({
         ),
       }),
     )
+    .use(rateLimitMiddleware)
+    .use(isOrganizationMember)
     .mutation(async ({ input, ctx }) => {
       const project = await getProjectById({ id: input.projectId });
 
@@ -65,7 +65,7 @@ export const translateRouter = createTRPCRouter({
         createTranslation({
           projectId: input.projectId,
           organizationId: project.organizationId,
-          userId: ctx.user.id,
+          userId: ctx.type === "user" ? ctx.authenticatedId : undefined,
           sourceFormat: input.sourceFormat,
           translations: input.content.map((t, index) => ({
             ...t,
@@ -84,7 +84,6 @@ export const translateRouter = createTRPCRouter({
     }),
 
   getTranslationsBySlug: protectedProcedure
-    // .use(isProjectMember)
     .input(
       z.object({
         organizationId: z.string(),
@@ -93,6 +92,7 @@ export const translateRouter = createTRPCRouter({
         limit: z.number().optional(),
       }),
     )
+    .use(isOrganizationMember)
     .query(async ({ input }) => {
       const data = await getTranslationsBySlug(input);
 

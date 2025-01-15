@@ -1,6 +1,7 @@
 import { getAnalytics } from "@/db/queries/analytics";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { isOrganizationMember } from "../permissions/organization";
 
 export const analyticsRouter = createTRPCRouter({
   getProjectStats: protectedProcedure
@@ -12,7 +13,7 @@ export const analyticsRouter = createTRPCRouter({
         organizationId: z.string(),
       }),
     )
-    // .use(isProjectMember)
+    .use(isOrganizationMember)
     .query(async ({ input }) => {
       const analytics = await getAnalytics({
         projectSlug: input.projectSlug,

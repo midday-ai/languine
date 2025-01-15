@@ -42,7 +42,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   getAll: protectedProcedure.input(z.void()).query(async ({ ctx }) => {
-    return getAllOrganizationsWithProjects(ctx.user.id);
+    return getAllOrganizationsWithProjects(ctx.authenticatedId);
   }),
 
   getMembers: protectedProcedure
@@ -69,7 +69,7 @@ export const organizationRouter = createTRPCRouter({
     .mutation(async ({ input, ctx }) => {
       const org = await createOrganization({
         name: input.name,
-        userId: ctx.user.id,
+        userId: ctx.authenticatedId,
       });
 
       if (!org) {
@@ -212,7 +212,7 @@ export const organizationRouter = createTRPCRouter({
           and(
             eq(members.organizationId, input.organizationId),
             eq(members.role, "owner"),
-            ne(members.userId, ctx.user.id),
+            ne(members.userId, ctx.authenticatedId),
           ),
         )
         .all();
@@ -224,7 +224,7 @@ export const organizationRouter = createTRPCRouter({
         });
       }
 
-      return leaveOrganization(input.organizationId, ctx.user.id);
+      return leaveOrganization(input.organizationId, ctx.authenticatedId);
     }),
 
   updateApiKey: protectedProcedure

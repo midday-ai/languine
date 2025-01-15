@@ -10,8 +10,10 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 import { rateLimitMiddleware } from "../middlewares/ratelimits";
-import { isOrganizationOwner } from "../permissions/organization";
-import { isProjectMember } from "../permissions/project";
+import {
+  isOrganizationMember,
+  isOrganizationOwner,
+} from "../permissions/organization";
 
 export const projectRouter = createTRPCRouter({
   getBySlug: protectedProcedure
@@ -21,7 +23,7 @@ export const projectRouter = createTRPCRouter({
         organizationId: z.string(),
       }),
     )
-    .use(isProjectMember)
+    .use(isOrganizationMember)
     .query(async ({ input }) => {
       const project = await getProjectBySlug(input);
 

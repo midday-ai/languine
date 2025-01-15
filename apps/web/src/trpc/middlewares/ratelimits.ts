@@ -9,14 +9,14 @@ const ratelimit = new Ratelimit({
 });
 
 export const rateLimitMiddleware = t.middleware(async ({ ctx, next, path }) => {
-  if (!ctx.user?.id) {
+  if (!ctx.authenticatedId) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
       message: "You must be logged in",
     });
   }
 
-  const identifier = `${ctx.user.id}:${path}`;
+  const identifier = `${ctx.authenticatedId}:${path}`;
 
   const { success } = await ratelimit.limit(identifier);
 
