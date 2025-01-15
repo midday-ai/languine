@@ -26,6 +26,8 @@ export default {
   },
   activity: {
     title: "Activity",
+    loading: "Loading",
+    loadMore: "Show more",
   },
   features: {
     title: "Features",
@@ -186,6 +188,30 @@ export default {
       project: "Project",
       account: "Account",
       team: "Team",
+      provider: "Provider",
+      billing: "Billing",
+    },
+    provider: {
+      updateSuccess: "Settings updated successfully",
+      updateError: "Failed to update settings",
+      translationProvider: {
+        title: "Translation Provider",
+        description:
+          "Choose your preferred AI service for generating translations. Each provider offers different capabilities and pricing.",
+        placeholder: "Select a provider",
+      },
+      languageModel: {
+        title: "Language Model",
+        description:
+          "Select the AI model that best balances quality and speed for your translation needs. More powerful models may be slower but produce better results.",
+        placeholder: "Select a model",
+      },
+      apiKey: {
+        title: "Provider API Key",
+        description:
+          "Enter your API key to authenticate with your chosen provider. Keep this key secure - we encrypt it before storing.",
+        placeholder: "Enter your API key",
+      },
     },
     addProject: "Create project",
     project: {
@@ -217,6 +243,7 @@ export default {
         description: "Manage your team's billing plan",
         free: "Free",
         pro: "Pro",
+        unlimited: "Unlimited",
       },
       apiKey: {
         title: "Team API Key",
@@ -395,5 +422,29 @@ export default {
     "10": "Oct",
     "11": "Nov",
     "12": "Dec",
+  },
+  onboarding: {
+    steps: {
+      "1": {
+        title: "Setup Languine CLI",
+        description:
+          "Install and configure the Languine CLI to manage translations",
+      },
+      "2": {
+        title: "Push Translations",
+        description: "Waiting for the translations to be pushed",
+      },
+      "3": {
+        title: "Documentation",
+        description:
+          "Check out our documentation for detailed guides and best practices",
+        link: "documentation",
+      },
+    },
+    info: {
+      description: "Need help? Check out our",
+      link: "documentation",
+      description_2: "for detailed guides and best practices.",
+    },
   },
 } as const;

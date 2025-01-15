@@ -10,7 +10,7 @@ import { rateLimitMiddleware } from "../middlewares/ratelimits";
 
 export const userRouter = createTRPCRouter({
   me: protectedProcedure.query(async ({ ctx }) => {
-    return getUserById({ id: ctx.user.id });
+    return getUserById({ id: ctx.authenticatedId });
   }),
 
   update: protectedProcedure
@@ -22,18 +22,18 @@ export const userRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ input, ctx }) => {
-      return updateUser({ id: ctx.user.id, ...input });
+      return updateUser({ id: ctx.authenticatedId, ...input });
     }),
 
   delete: protectedProcedure
     .use(rateLimitMiddleware)
     .mutation(async ({ ctx }) => {
-      return deleteUser({ id: ctx.user.id });
+      return deleteUser({ id: ctx.authenticatedId });
     }),
 
   updateApiKey: protectedProcedure
     .use(rateLimitMiddleware)
     .mutation(async ({ ctx }) => {
-      return updateUserApiKey(ctx.user.id);
+      return updateUserApiKey(ctx.authenticatedId);
     }),
 });

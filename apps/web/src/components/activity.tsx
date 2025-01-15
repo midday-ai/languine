@@ -5,6 +5,7 @@ import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { useParams } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { Button } from "./ui/button";
 import { Loader } from "./ui/loader";
 
 export function Activity() {
@@ -33,7 +34,12 @@ export function Activity() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
+        if (
+          entries[0].isIntersecting &&
+          hasNextPage &&
+          !isFetchingNextPage &&
+          pages.length > 1
+        ) {
           fetchNextPage();
         }
       },
@@ -45,7 +51,7 @@ export function Activity() {
     }
 
     return () => observer.disconnect();
-  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage, pages.length]);
 
   if (!pages) return <ActivitySkeleton />;
 
@@ -74,8 +80,20 @@ export function Activity() {
           {isFetching && (
             <div className="flex items-center gap-2 pt-8">
               <Loader />
-              <span className="text-xs text-secondary">Loading...</span>
+              <span className="text-xs text-secondary">
+                {t("activity.loading")}...
+              </span>
             </div>
+          )}
+
+          {hasNextPage && pages.length === 1 && !isFetching && (
+            <Button
+              variant="outline"
+              className="w-full mt-8"
+              onClick={() => fetchNextPage()}
+            >
+              {t("activity.loadMore")}
+            </Button>
           )}
         </div>
       </div>

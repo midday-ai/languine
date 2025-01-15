@@ -1,7 +1,8 @@
+import { encrypt } from "@/lib/crypto";
 import { and, eq } from "drizzle-orm";
 import slugify from "slugify";
 import { db } from "..";
-import { projects } from "../schema";
+import { projectSettings, projects } from "../schema";
 
 export const createProject = async ({
   name,
@@ -63,13 +64,25 @@ export const getProjectBySlug = async ({
   slug: string;
   organizationId: string;
 }) => {
-  return db
-    .select()
+  const project = db
+    .select({
+      id: projects.id,
+      name: projects.name,
+      slug: projects.slug,
+      description: projects.description,
+      organizationId: projects.organizationId,
+      createdAt: projects.createdAt,
+      updatedAt: projects.updatedAt,
+      settings: projectSettings,
+    })
     .from(projects)
+    .leftJoin(projectSettings, eq(projects.id, projectSettings.projectId))
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
     )
     .get();
+
+  return project;
 };
 
 export const getProjectById = async ({
@@ -89,5 +102,64 @@ export const getProjectByOrganizationId = async ({
     .select()
     .from(projects)
     .where(eq(projects.organizationId, organizationId))
+    .get();
+};
+
+export const updateProjectSettings = async ({
+  slug,
+  organizationId,
+  settings,
+}: {
+  slug: string;
+  organizationId: string;
+  settings: {
+    provider?: string;
+    model?: string;
+    providerApiKey?: string;
+  };
+}) => {
+  const project = await db
+    .select({
+      id: projects.id,
+    })
+    .from(projects)
+    .where(
+      and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
+    )
+    .get();
+
+  if (!project) return null;
+
+  const projectId = project.id;
+  const whereClause = and(
+    eq(projectSettings.projectId, projectId),
+    eq(projectSettings.organizationId, organizationId),
+  );
+
+  const settingsToUpdate = {
+    ...settings,
+  };
+
+  if (settings.providerApiKey) {
+    settingsToUpdate.providerApiKey = await encrypt(settings.providerApiKey);
+  }
+
+  const updated = await db
+    .update(projectSettings)
+    .set(settingsToUpdate)
+    .where(whereClause)
+    .returning()
+    .get();
+
+  if (updated) return updated;
+
+  return db
+    .insert(projectSettings)
+    .values({
+      ...settingsToUpdate,
+      projectId,
+      organizationId,
+    })
+    .returning()
     .get();
 };

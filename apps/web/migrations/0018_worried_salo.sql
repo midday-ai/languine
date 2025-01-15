@@ -1,0 +1,1 @@
+ALTER TABLE `project_settings` ADD `organization_id` text NOT NULL REFERENCES organizations(id);

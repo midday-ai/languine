@@ -44,7 +44,7 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="sticky top-0 h-screen">
+    <div className="sticky top-0 h-screen z-10">
       <SidebarBase
         collapsible="none"
         className="border-r border-border bg-noise overflow-hidden"
@@ -58,7 +58,7 @@ export function Sidebar() {
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupContent className="p-0">
-              <SidebarMenu className="divide-y divide-border">
+              <SidebarMenu className="divide-y divide-border h-full flex flex-col">
                 {navigation.map((item, index) => (
                   <SidebarMenuItem key={item.path}>
                     <SidebarMenuButton

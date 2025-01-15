@@ -9,20 +9,26 @@ import * as React from "react";
 interface CopyInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value: string;
   onUpdate?: () => void;
+  onCopy?: () => void;
 }
 
 export function CopyInput({
   value,
   className,
   onUpdate,
+  onCopy,
   ...props
 }: CopyInputProps) {
   const [copied, setCopied] = React.useState(false);
 
-  const onCopy = async () => {
+  const handleCopy = async () => {
     await navigator.clipboard.writeText(value);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+
+    onCopy?.();
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
@@ -30,7 +36,7 @@ export function CopyInput({
       <Input
         value={value}
         className={cn("pr-24 cursor-pointer", className)}
-        onClick={onCopy}
+        onClick={handleCopy}
         {...props}
         readOnly
       />
@@ -49,7 +55,7 @@ export function CopyInput({
         <Button
           variant="ghost"
           size="icon"
-          onClick={onCopy}
+          onClick={handleCopy}
           className="h-full px-3 transition-opacity hover:bg-transparent w-8"
         >
           {copied ? (

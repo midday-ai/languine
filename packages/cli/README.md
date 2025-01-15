@@ -63,3 +63,15 @@ have now extracted it into a standalone CLI tool.
 
 Midday is a all in one tool for invoicing, Time tracking, File reconciliation,
 Storage, Financial Overview & your own Assistant made for Freelancers
+
+
+## License
+
+This project is licensed under the **[AGPL-3.0](https://opensource.org/licenses/AGPL-3.0)** for non-commercial use. 
+
+### Commercial Use
+
+For commercial use or deployments requiring a setup fee, please contact us
+for a commercial license at [engineer@languine.ai](mailto:engineer@languine.ai).
+
+By using this software, you agree to the terms of the license.

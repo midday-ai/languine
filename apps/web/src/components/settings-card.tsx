@@ -53,7 +53,7 @@ export function SettingsCard({
   onSave?: (value: string) => void;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
-  options?: { label: string; value: string }[];
+  options?: { label: string; value: string; icon?: () => JSX.Element }[];
   placeholder?: string;
   isLoading?: boolean;
   validate?: "email" | "url" | "number" | "password" | "text";
@@ -67,6 +67,64 @@ export function SettingsCard({
     try {
       setIsSaving(true);
       await onSave?.(inputValue);
+
+      toast.success(t("settings.saved"), {
+        description: t("settings.savedDescription"),
+      });
+    } catch (error) {
+      if (error instanceof TRPCClientError) {
+        if (error.data?.code === "FORBIDDEN") {
+          toast.error(t("settings.permissionDenied"), {
+            description: t("settings.permissionDeniedDescription"),
+          });
+        } else {
+          toast.error(t("settings.error"), {
+            description: t("settings.errorDescription"),
+          });
+        }
+      } else {
+        toast.error(t("settings.error"), {
+          description: t("settings.errorDescription"),
+        });
+      }
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleCheckedChange = async (checked: boolean) => {
+    try {
+      setIsSaving(true);
+      await onCheckedChange?.(checked);
+
+      toast.success(t("settings.saved"), {
+        description: t("settings.savedDescription"),
+      });
+    } catch (error) {
+      if (error instanceof TRPCClientError) {
+        if (error.data?.code === "FORBIDDEN") {
+          toast.error(t("settings.permissionDenied"), {
+            description: t("settings.permissionDeniedDescription"),
+          });
+        } else {
+          toast.error(t("settings.error"), {
+            description: t("settings.errorDescription"),
+          });
+        }
+      } else {
+        toast.error(t("settings.error"), {
+          description: t("settings.errorDescription"),
+        });
+      }
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleSelectChange = async (value: string) => {
+    try {
+      setIsSaving(true);
+      await onChange?.(value);
 
       toast.success(t("settings.saved"), {
         description: t("settings.savedDescription"),
@@ -128,25 +186,38 @@ export function SettingsCard({
             {type === "switch" && (
               <Switch
                 checked={checked}
-                onCheckedChange={() => {
-                  onCheckedChange?.(!!checked);
-                  toast.success(t("settings.saved"), {
-                    description: t("settings.savedDescription"),
-                  });
+                onCheckedChange={(value) => {
+                  handleCheckedChange?.(!!value);
                 }}
               />
             )}
 
             {type === "select" && options && (
-              <div className="min-w-[240px]">
-                <Select value={value} onValueChange={onChange}>
-                  <SelectTrigger>
-                    <SelectValue />
+              <div className="min-w-[240px] ml-6">
+                <Select value={value} onValueChange={handleSelectChange}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder={placeholder}>
+                      <div className="flex items-center w-full gap-2">
+                        {options.find((opt) => opt.value === value)?.icon && (
+                          <span>
+                            {options
+                              .find((opt) => opt.value === value)
+                              ?.icon?.()}
+                          </span>
+                        )}
+                        <span>
+                          {options.find((opt) => opt.value === value)?.label}
+                        </span>
+                      </div>
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     {options.map((option) => (
                       <SelectItem key={option.value} value={option.value}>
-                        {option.label}
+                        <div className="flex items-center w-full gap-2">
+                          {option.icon && <span>{option.icon()}</span>}
+                          <span>{option.label}</span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -182,12 +253,29 @@ export function SettingsCard({
             </form>
           )}
           {type === "textarea" && (
-            <Textarea
-              value={value}
-              onChange={(e) => onChange?.(e.target.value)}
-              rows={4}
-              placeholder={placeholder}
-            />
+            <form
+              className="flex flex-col gap-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSave();
+              }}
+            >
+              <Textarea
+                value={inputValue}
+                onChange={(e) => setInputValue?.(e.target.value)}
+                rows={4}
+                placeholder={placeholder}
+                required
+              />
+              <Button
+                type="submit"
+                disabled={isSaving}
+                className="flex items-center gap-2 self-end mt-2"
+              >
+                {isSaving && <Spinner size="sm" />}
+                {t("settings.save")}
+              </Button>
+            </form>
           )}
           {type === "copy-input" && value && (
             <CopyInput

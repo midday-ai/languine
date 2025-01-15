@@ -26,7 +26,7 @@ export const providers: Record<Provider, ProviderConfig> = {
         hint: "recommended",
       },
       { value: "gpt-4", label: "GPT-4" },
-      { value: "gpt-4o", label: "GPT-4o", hint: "recommended" },
+      { value: "gpt-4o", label: "GPT-4o" },
       { value: "gpt-4o-mini", label: "GPT-4o mini" },
       { value: "gpt-3.5-turbo", label: "GPT-3.5 Turbo" },
     ],
