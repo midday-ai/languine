@@ -71,7 +71,6 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "languine": "link:languine",
     "@types/node": "^22",
     "@types/react": "^19",
     "react-email": "3.0.6",
