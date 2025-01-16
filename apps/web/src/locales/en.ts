@@ -447,4 +447,11 @@ export default {
       description_2: "for detailed guides and best practices.",
     },
   },
+  cli: {
+    success: {
+      title: "Languine CLI Login Success",
+      description: "Languine CLI was successfully authenticated as:",
+      description_2: "You can now close this tab and return to the CLI",
+    },
+  },
 } as const;

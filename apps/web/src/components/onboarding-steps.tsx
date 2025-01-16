@@ -35,9 +35,9 @@ export function OnboardingSteps() {
                   {t("onboarding.steps.1.description")}
                 </p>
                 <CopyInput
-                  value={`npx languine@latest --p=${project}`}
+                  value={`npx languine@latest init --p=${project}`}
                   onCopy={() => setStep(2)}
-                  className="border-dashed text-xs"
+                  className="border-dashed"
                 />
               </CardContent>
             </Card>

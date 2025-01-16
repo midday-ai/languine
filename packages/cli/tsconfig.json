@@ -1,7 +1,7 @@
 {
   "include": ["src/**/*.ts", "test/md.test.ts"],
   "compilerOptions": {
-    "target": "esnext",
+    "target": "esnext", 
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "allowJs": true,
@@ -15,6 +15,12 @@
     "declarationMap": true,
     "sourceMap": true,
     "noEmit": false,
-    "customConditions": ["source"]
+    "customConditions": ["source"],
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
