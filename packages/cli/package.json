@@ -21,11 +21,14 @@
   ],
   "dependencies": {
     "@clack/prompts": "^0.9.1",
+    "@trpc/client": "11.0.0-rc.700",
+    "@trpc/server": "11.0.0-rc.700",
     "chalk": "^5.4.1",
     "dedent": "^1.5.3",
     "dotenv": "^16.4.7",
     "open": "^10.1.0",
-    "simple-git": "^3.27.0"
+    "simple-git": "^3.27.0",
+    "superjson": "^2.2.2"
   },
   "devDependencies": {
     "tsup": "^8.3.5",

@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { intro, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import open from "open";
+import { saveSession } from "../../utils/session.js";
 
 export async function loginCommand() {
   intro("Login to Languine");
@@ -38,6 +39,8 @@ export async function loginCommand() {
       if (data.success) {
         s.stop("Successfully authenticated!");
         outro("You are now logged in");
+
+        saveSession(data.user);
         return;
       }
     } catch (error) {

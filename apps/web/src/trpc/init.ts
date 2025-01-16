@@ -28,6 +28,7 @@ async function validateApiKey(
       return { authenticatedId: user.id, type: "user" };
     }
   }
+
   return null;
 }
 

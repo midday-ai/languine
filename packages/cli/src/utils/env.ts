@@ -13,11 +13,16 @@ export function loadEnv() {
   });
 
   if (env.error) {
-    // Set default values if .env doesn't exist
-    process.env.BASE_URL = process.env.BASE_URL || "https://languine.ai";
-
-    return;
+    return {
+      DEBUG: process.env.DEBUG || false,
+      BASE_URL: process.env.BASE_URL || "https://languine.ai",
+    };
   }
 
   expand(env);
+
+  return {
+    DEBUG: process.env.DEBUG,
+    BASE_URL: process.env.BASE_URL,
+  };
 }

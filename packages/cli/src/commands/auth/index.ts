@@ -1,6 +1,8 @@
 import { select } from "@clack/prompts";
 import { isCancel } from "@clack/prompts";
 import { loginCommand } from "./login.js";
+import { logoutCommand } from "./logout.js";
+import { whoamiCommand } from "./whoami.js";
 
 export async function commands(subCommand?: string) {
   if (subCommand) {
@@ -9,13 +11,10 @@ export async function commands(subCommand?: string) {
         await loginCommand();
         break;
       case "logout":
-        // Handle logout
-        break;
-      case "token":
-        // Show auth token
+        await logoutCommand();
         break;
       case "whoami":
-        // Show current user
+        await whoamiCommand();
         break;
       default:
         console.error("Unknown auth subcommand:", subCommand);
@@ -29,11 +28,6 @@ export async function commands(subCommand?: string) {
     options: [
       { value: "login", label: "Login to the platform." },
       { value: "logout", label: "Log out currently logged in user." },
-      {
-        value: "token",
-        label:
-          "Shows the token used to authenticate you to Languine platform API.",
-      },
       { value: "whoami", label: "Show the currently logged in user." },
     ],
   });
