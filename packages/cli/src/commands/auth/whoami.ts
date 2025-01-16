@@ -1,14 +1,8 @@
-import { outro } from "@clack/prompts";
 import chalk from "chalk";
 import { client } from "../../utils/api.ts";
 
 export async function whoamiCommand() {
   const user = await client.user.me.query();
-
-  if (!user) {
-    outro("You are not logged in. Run `languine auth login` to authenticate.");
-    return;
-  }
 
   const details = [
     ["Name", user.name],
