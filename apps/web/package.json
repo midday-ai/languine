@@ -73,10 +73,12 @@
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
-    "react-email": "3.0.6",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.30.2",
     "postcss": "^8",
+    "react-email": "3.0.6",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "typescript": "^5",
+    "languine": "../../packages/cli"
   }
 }
