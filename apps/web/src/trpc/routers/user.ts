@@ -9,10 +9,6 @@ import { createTRPCRouter, protectedProcedure } from "../init";
 import { rateLimitMiddleware } from "../middlewares/ratelimits";
 
 export const userRouter = createTRPCRouter({
-  testRoute: protectedProcedure.query(async () => {
-    return "Hello World";
-  }),
-
   me: protectedProcedure.query(async ({ ctx }) => {
     return getUserById({ id: ctx.authenticatedId });
   }),
