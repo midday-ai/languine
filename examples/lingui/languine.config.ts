@@ -6,7 +6,6 @@ const biome = await Biome.create({
 });
 
 export default defineConfig({
-  version: "1.0.0",
   locale: {
     source: "en",
     targets: ["de"],
@@ -15,10 +14,6 @@ export default defineConfig({
     json: {
       include: ["locales/[locale].json"],
     },
-  },
-  llm: {
-    provider: "openai",
-    model: "gpt-4-turbo",
   },
   hooks: {
     // Optional: Format the content with Biome

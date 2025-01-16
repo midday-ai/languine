@@ -1,7 +1,7 @@
-import { defineConfig } from "languine";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { defaultTranslations } from "fumadocs-ui/i18n";
+import { defineConfig } from "languine";
 import { i18n } from "./lib/i18n";
 
 // translate Fumadocs' UI content
@@ -11,12 +11,6 @@ await writeFile(
 );
 
 export default defineConfig({
-  llm: {
-    provider: "openai",
-    model: "gpt-4-turbo",
-    temperature: 0,
-  },
-  version: "1.0.0",
   locale: {
     source: i18n.defaultLanguage,
     targets: i18n.languages.filter((v) => v !== i18n.defaultLanguage),

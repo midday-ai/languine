@@ -1,7 +1,6 @@
 import { defineConfig } from "languine";
 
 export default defineConfig({
-  version: "0.6.6",
   locale: {
     source: "en",
     targets: ["sv"],
@@ -10,9 +9,5 @@ export default defineConfig({
     json: {
       include: ["locales/[locale].json"],
     },
-  },
-  llm: {
-    provider: "openai",
-    model: "gpt-4-turbo",
   },
 });
