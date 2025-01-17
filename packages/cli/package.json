@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsup --clean",
     "dev": "tsup --watch --clean",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "bun test"
   },
   "files": [
     "dist",
@@ -24,13 +25,29 @@
     "@trpc/client": "11.0.0-rc.700",
     "@trpc/server": "11.0.0-rc.700",
     "chalk": "^5.4.1",
+    "csv-parse": "^5.5.5",
+    "csv-stringify": "^6.4.6",
     "dedent": "^1.5.3",
     "dotenv": "^16.4.7",
+    "fast-glob": "^3.3.3",
+    "fast-xml-parser": "^4.3.6",
+    "gettext-parser": "^7.0.1",
+    "jiti": "^2.4.2",
+    "marked": "^12.0.1",
+    "node-html-parser": "^6.1.12",
     "open": "^10.1.0",
+    "plist": "^3.1.0",
+    "properties": "^1.2.1",
     "simple-git": "^3.27.0",
-    "superjson": "^2.2.2"
+    "sucrase": "^3.35.0",
+    "superjson": "^2.2.2",
+    "yaml": "^2.4.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/plist": "^3.0.5",
+    "@types/gettext-parser": "^4.0.4",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3"
   }

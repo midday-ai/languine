@@ -2,6 +2,8 @@
  * Configuration interface for Languine
  */
 export interface Config {
+  /** Project ID from Languine */
+  projectId: string;
   /** Locale configuration */
   locale: {
     /** Source language code (e.g. 'en') */
@@ -13,36 +15,31 @@ export interface Config {
   files: {
     /** Configuration for each file format */
     [format: string]: {
-      /** Glob patterns or path mappings to include */
-      include: Include[];
-
-      /**
-       * Filter by file path, keep the file if `true` is returned
-       */
-      filter?: (file: string) => boolean;
+      /** Glob patterns to include */
+      include: (string | { glob: string })[];
     };
-  };
-  /** Glob patterns to extract translation keys from source files  */
-  extract?: string[];
-  /** Hook functions */
-  hooks?: {
-    /** Hook called after translation is complete */
-    afterTranslate?: (args: {
-      /** Translated content */
-      content: string;
-      /** Path to the translated file */
-      filePath: string;
-    }) => Promise<string>;
   };
 }
 
-export type Include =
-  | string
-  | {
-      from: string;
-      to: string | ((locale: string) => string);
-    }
-  | {
-      glob: string;
-      to: (file: string, locale: string) => string;
-    };
+export class ParserError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ParserError";
+  }
+}
+
+export interface ParserOptions {
+  indent?: number;
+  separator?: string;
+  createDirectories?: boolean;
+  encoding?: BufferEncoding;
+}
+
+export interface Parser {
+  parse(input: string, locale: string): Promise<Record<string, string>>;
+  serialize(
+    data: Record<string, string>,
+    locale: string,
+    options: ParserOptions | null,
+  ): Promise<string>;
+}

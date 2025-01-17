@@ -71,7 +71,7 @@ export function OnboardingSteps() {
                 </p>
               </div>
               <CopyInput
-                value="npx languine@latest push"
+                value="npx languine@latest translate"
                 className="border-dashed"
               />
             </CardContent>

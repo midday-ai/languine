@@ -3,7 +3,7 @@ import { defineConfig } from "languine";
 export default defineConfig({
   locale: {
     source: "en",
-    targets: ["es", "fr", "de", "ja", "zh", "ar", "ko", "sv", "no", "fi", "pt"],
+    targets: ["es"],
   },
   files: {
     ts: {
