@@ -41,6 +41,7 @@
     "open": "^10.1.0",
     "plist": "^3.1.0",
     "properties": "^1.2.1",
+    "rambda": "^9.4.2",
     "simple-git": "^3.27.0",
     "sucrase": "^3.35.0",
     "superjson": "^2.2.2",
