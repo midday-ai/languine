@@ -76,10 +76,6 @@ function parseMsgStr(line: string): string {
   return match ? unescapeQuotes(match[1]) : "";
 }
 
-function escapeQuotes(str: string): string {
-  return str.replace(/"/g, '\\"');
-}
-
 function unescapeQuotes(str: string): string {
   return str.replace(/\\"/g, '"');
 }
