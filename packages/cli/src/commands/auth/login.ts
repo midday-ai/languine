@@ -1,14 +1,17 @@
 import { randomUUID } from "node:crypto";
+import { loadEnv } from "@/utils/env.ts";
+import { saveSession } from "@/utils/session.ts";
 import { intro, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import open from "open";
-import { saveSession } from "../../utils/session.js";
+
+const { BASE_URL } = loadEnv();
 
 export async function loginCommand() {
   intro("Login to Languine");
 
   const loginId = randomUUID();
-  const loginUrl = `${process.env.BASE_URL}/api/auth/cli/${loginId}`;
+  const loginUrl = `${BASE_URL}/api/auth/cli/${loginId}`;
 
   const s = spinner();
 
@@ -32,7 +35,7 @@ export async function loginCommand() {
   for (let i = 0; i < 20; i++) {
     try {
       const response = await fetch(
-        `${process.env.BASE_URL}/api/auth/cli/${loginId}/verify`,
+        `${BASE_URL}/api/auth/cli/${loginId}/verify`,
       );
       const data = await response.json();
 

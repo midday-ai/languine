@@ -5,6 +5,7 @@ import type { Config } from "@/types.js";
 import { outro } from "@clack/prompts";
 import chalk from "chalk";
 import type { Jiti } from "jiti";
+import { loadEnv } from "./env.js";
 
 const CONFIG_NAME = "languine.config";
 
@@ -38,6 +39,7 @@ export async function loadConfig(): Promise<Config> {
   let jiti: Jiti | undefined;
 
   const { path: filePath, format } = await configFile();
+  const env = loadEnv();
 
   if (!filePath) {
     outro(
@@ -51,7 +53,12 @@ export async function loadConfig(): Promise<Config> {
 
   try {
     const configModule = await import(pathToFileURL(filePath).href);
-    return configModule.default;
+    const config = configModule.default;
+
+    return {
+      ...config,
+      projectId: config.projectId || env.LANGUINE_PROJECT_ID,
+    };
   } catch (error) {
     const { createJiti } = await import("jiti");
     const { transform } = await import("sucrase");
@@ -64,8 +71,21 @@ export async function loadConfig(): Promise<Config> {
       },
     });
 
-    return await jiti
+    const config = await jiti
       .import(filePath)
       .then((mod) => (mod as unknown as { default: Config }).default);
+
+    const projectId = config.projectId || env.LANGUINE_PROJECT_ID;
+
+    if (!projectId) {
+      throw new Error(
+        "Configuration file does not contain a projectId. Please set it in the config file or in the .env file.",
+      );
+    }
+
+    return {
+      ...config,
+      projectId,
+    };
   }
 }

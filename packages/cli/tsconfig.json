@@ -20,7 +20,8 @@
     "emitDeclarationOnly": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@jobs/*": ["../../apps/web/src/jobs/*"]
     }
   }
 }

@@ -12,17 +12,11 @@ export function loadEnv() {
     path: path.resolve(process.cwd(), ".env"),
   });
 
-  if (env.error) {
-    return {
-      DEBUG: process.env.DEBUG || false,
-      BASE_URL: process.env.BASE_URL || "https://languine.ai",
-    };
-  }
-
   expand(env);
 
   return {
-    DEBUG: process.env.DEBUG,
-    BASE_URL: process.env.BASE_URL,
+    DEBUG: env.parsed?.DEBUG || false,
+    BASE_URL: env.parsed?.BASE_URL || "https://languine.ai",
+    LANGUINE_PROJECT_ID: env.parsed?.LANGUINE_PROJECT_ID,
   };
 }

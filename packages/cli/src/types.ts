@@ -2,8 +2,8 @@
  * Configuration interface for Languine
  */
 export interface Config {
-  /** Project ID from Languine */
-  projectId: string;
+  /** Project ID from Languine (can be set via LANGUINE_PROJECT_ID env var) */
+  projectId?: string;
   /** Locale configuration */
   locale: {
     /** Source language code (e.g. 'en') */

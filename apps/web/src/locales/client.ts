@@ -11,7 +11,7 @@ export const {
 } = createI18nClient({
   en: () => import("./en"),
   // fr: () => import("./fr"),
-  // es: () => import("./es"),
+  es: () => import("./es"),
   // de: () => import("./de"),
   // no: () => import("./no"),
   // sv: () => import("./sv"),

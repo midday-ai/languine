@@ -1,7 +1,7 @@
+import { commands as authCommands } from "@/commands/auth/index.ts";
+import { commands as initCommands } from "@/commands/init.ts";
+import { translateCommand } from "@/commands/translate.ts";
 import { isCancel, select } from "@clack/prompts";
-import { commands as authCommands } from "./auth/index.js";
-import { commands as initCommands } from "./init.js";
-import { translateCommand } from "./translate.js";
 
 export async function runCommands() {
   const [mainCommand, subCommand, ...args] = process.argv.slice(2);

@@ -1,5 +1,5 @@
 export type PromptOptions = {
-  format: "json" | "js" | "md";
+  format: "json" | "js" | "ts" | "md";
   contentLocale: string;
   targetLocale: string;
 };

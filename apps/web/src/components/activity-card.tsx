@@ -20,16 +20,20 @@ export function ActivityCard({
   return (
     <div className="border border-border">
       <div className="text-secondary font-mono text-xs whitespace-nowrap overflow-hidden p-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-primary">{source} → </span>
-          <span>
+        <div className="flex items-center gap-2 overflow-hidden flex-1 max-w-[calc(100vw-400px)]">
+          <span className="text-primary truncate">{source} → </span>
+          <span
+            className="truncate flex-1"
+            title={`${targetLanguage}: ${content}`}
+          >
             {targetLanguage}: {content}
           </span>
         </div>
         <div className="flex items-center gap-2 text-secondary">
           {commit && (
             <>
-              <span>#{commit}</span> <FaGithub />
+              <span className="truncate max-w-[60px]">#{commit}</span>{" "}
+              <FaGithub />
             </>
           )}
 

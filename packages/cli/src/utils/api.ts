@@ -5,15 +5,15 @@ import { createTRPCClient, httpBatchLink, loggerLink } from "@trpc/client";
 import chalk from "chalk";
 import superjson from "superjson";
 
-loadEnv();
+const { DEBUG, BASE_URL } = loadEnv();
 
 export const client = createTRPCClient<AppRouter>({
   links: [
     loggerLink({
-      enabled: () => process.env.DEBUG === "true",
+      enabled: () => DEBUG === "true",
     }),
     httpBatchLink({
-      url: `${process.env.BASE_URL}/api/trpc`,
+      url: `${BASE_URL}/api/trpc`,
       transformer: superjson,
       headers: () => {
         const apiKey = getAPIKey();
@@ -27,6 +27,10 @@ export const client = createTRPCClient<AppRouter>({
         return fetch(url, options).then(async (res) => {
           if (!res.ok) {
             const error = await res.json().catch(() => null);
+
+            if (DEBUG === "true") {
+              console.log(JSON.stringify(error, null, 2));
+            }
 
             if (error[0]?.error?.json?.message === "UNAUTHORIZED") {
               console.log(

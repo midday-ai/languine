@@ -116,7 +116,7 @@ function unflattenTranslations(
 function formatTranslationObject(obj: Record<string, unknown>): string {
   return JSON.stringify(obj, null, 2)
     .replace(/\\"/g, '"') // Unescape quotes in text content
-    .replace(/"([^"]+)":/g, '"$1":'); // Re-escape quotes in object keys
+    .replace(/"([^"]+)":/g, "$1:"); // Remove quotes around object keys
 }
 
 function wrapInExport(content: string): string {
