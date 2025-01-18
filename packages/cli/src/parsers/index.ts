@@ -1,9 +1,11 @@
 import { z } from "zod";
-import type { Parser } from "./core/types.js";
-import { createJavaScriptParser } from "./formats/javascript.js";
-import { createJsonParser } from "./formats/json.js";
+import type { Parser } from "./core/types.ts";
+import { createJavaScriptParser } from "./formats/javascript.ts";
+import { createJsonParser } from "./formats/json.ts";
+import { createPoParser } from "./formats/po.ts";
+import { createYamlParser } from "./formats/yml.ts";
 
-export const parserTypeSchema = z.enum(["js", "ts", "json"]);
+export const parserTypeSchema = z.enum(["js", "ts", "json", "po", "yml"]);
 
 export type ParserType = z.infer<typeof parserTypeSchema>;
 
@@ -18,6 +20,10 @@ export function createParser(options: CreateParserOptions): Parser {
       return createJavaScriptParser();
     case "json":
       return createJsonParser();
+    case "po":
+      return createPoParser();
+    case "yml":
+      return createYamlParser();
     default:
       throw new Error(`Unsupported parser type: ${options.type}`);
   }

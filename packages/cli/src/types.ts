@@ -21,13 +21,6 @@ export interface Config {
   };
 }
 
-export class ParserError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "ParserError";
-  }
-}
-
 export interface ParserOptions {
   indent?: number;
   separator?: string;
