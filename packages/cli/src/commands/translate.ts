@@ -44,6 +44,7 @@ export async function translateCommand(args: string[] = []) {
         "Pro tip",
       );
     }
+
     s.start(checkOnly ? "Checking translations..." : "Translating...");
   }
 
