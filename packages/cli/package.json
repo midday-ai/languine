@@ -25,6 +25,7 @@
     "@trigger.dev/sdk": "3.3.11",
     "@trpc/client": "11.0.0-rc.700",
     "@trpc/server": "11.0.0-rc.700",
+    "@types/xml2js": "^0.4.14",
     "chalk": "^5.4.1",
     "csv-parse": "^5.6.0",
     "csv-stringify": "^6.5.2",
@@ -44,6 +45,7 @@
     "sucrase": "^3.35.0",
     "superjson": "^2.2.2",
     "tiny-updater": "^3.5.3",
+    "xml2js": "^0.6.2",
     "yaml": "^2.7.0",
     "zod": "^3.24.1"
   },
