@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
-import { type ParserType, createParser } from "@/parsers/index.ts";
+import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
@@ -39,7 +39,6 @@ export async function translateCommand() {
 
     // Process each file configuration
     for (const [type, fileConfig] of Object.entries(config.files)) {
-      const parserType = type as ParserType;
       const { include } = fileConfig as Config["files"][string];
 
       // Process each file pattern
@@ -52,25 +51,14 @@ export async function translateCommand() {
         const sourceFiles = await glob(sourcePattern, { absolute: true });
 
         for (const sourceFilePath of sourceFiles) {
-          const parser = createParser({
-            type: parserType,
-          });
+          const parser = createParser({ type });
 
           // Read and parse the source file
           const sourceFile = await readFile(sourceFilePath, "utf-8");
           const sourceContent = await parser.parse(sourceFile);
 
           // Detect changes in source file
-          const changes = await getDiff({
-            sourceFilePath,
-            type,
-          });
-
-          console.log({
-            changes,
-          });
-
-          return;
+          const changes = await getDiff({ sourceFilePath, type });
 
           // Only translate added and changed keys
           const keysToTranslate = [
@@ -95,7 +83,7 @@ export async function translateCommand() {
           const run = await tasks.trigger("translate", {
             apiKey: publicToken,
             projectId: config.projectId,
-            sourceFormat: parserType,
+            sourceFormat: type,
             sourceLanguage: sourceLocale,
             targetLanguages: targetLocales,
             content: translationInput,
@@ -142,7 +130,8 @@ export async function translateCommand() {
               const translatedContent = Object.fromEntries(
                 translationInput.map((item, index) => [
                   item.key,
-                  result.output.translations[targetLocale][index],
+                  result.output.translations[targetLocale][index]
+                    .translatedText,
                 ]),
               );
 

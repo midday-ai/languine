@@ -7,7 +7,7 @@ export const parserTypeSchema = z.enum(["js", "ts"]);
 export type ParserType = z.infer<typeof parserTypeSchema>;
 
 export interface CreateParserOptions {
-  type: ParserType;
+  type: string;
 }
 
 export function createParser(options: CreateParserOptions): Parser {
