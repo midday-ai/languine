@@ -7,6 +7,7 @@ import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
 import { note, outro, spinner } from "@clack/prompts";
+import type { translateTask } from "@jobs/translate/translate.ts";
 import { runs, tasks } from "@trigger.dev/sdk/v3";
 import chalk from "chalk";
 import glob from "fast-glob";
@@ -89,17 +90,11 @@ export async function translateCommand() {
             content: translationInput,
           });
 
-          let result: {
-            status: string;
-            output: {
-              translations: Record<
-                string,
-                Array<{ key: string; translatedText: string }>
-              >;
-            };
-          };
+          let result: typeof translateTask;
 
-          for await (const update of runs.subscribeToRun(run.id)) {
+          for await (const update of runs.subscribeToRun<typeof translateTask>(
+            run.id,
+          )) {
             if (update.metadata?.progress) {
               s.message(
                 `Translation progress: ${Math.round(
@@ -107,16 +102,12 @@ export async function translateCommand() {
                 )}%`,
               );
             }
-            if (update.status === "COMPLETED") {
+            if (update.finishedAt) {
               result = {
                 status: update.status,
-                output: update.output as {
-                  translations: Record<
-                    string,
-                    Array<{ key: string; translatedText: string }>
-                  >;
-                },
+                output: update.output,
               };
+
               break;
             }
           }

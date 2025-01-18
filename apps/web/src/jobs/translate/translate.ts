@@ -24,12 +24,6 @@ export const translateTask = schemaTask({
     concurrencyLimit: 1,
   },
   run: async (payload, { ctx }) => {
-    // Use the permission utility
-    // await validateJobPermissions({
-    //   apiKey: payload.apiKey,
-    //   projectId: payload.projectId,
-    // });
-
     // Simulate translation progress with smaller steps
     const totalSteps =
       payload.targetLanguages.length * payload.content.length * 10; // 10 mini-steps per translation
