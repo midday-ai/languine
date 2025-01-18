@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { Parser } from "./core/types.ts";
-import { createAndroidXmlParser } from "./formats/arb.ts";
+import { createAndroidXmlParser } from "./formats/android-xml.ts";
 import { createJavaScriptParser } from "./formats/javascript.ts";
 import { createJsonParser } from "./formats/json.ts";
 import { createMarkdownParser } from "./formats/markdown.ts";
@@ -8,7 +8,7 @@ import { createPoParser } from "./formats/po.ts";
 import { createXcodeStringsParser } from "./formats/xcode-strings.ts";
 import { createXliffParser } from "./formats/xliff.ts";
 import { createXmlParser } from "./formats/xml.ts";
-import { createYamlParser } from "./formats/yml.ts";
+import { createYamlParser } from "./formats/yaml.ts";
 
 export const parserTypeSchema = z.enum([
   "js",

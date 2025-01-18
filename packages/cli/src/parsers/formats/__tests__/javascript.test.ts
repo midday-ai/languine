@@ -119,7 +119,7 @@ describe("JavaScript/TypeScript Parser", () => {
     test("serializes flat object", async () => {
       const input = { key: "value" };
       const result = await parser.serialize(input);
-      expect(result).toBe(`export default {\n  "key": "value"\n} as const;\n`);
+      expect(result).toBe(`export default {\n  key: "value"\n} as const;\n`);
     });
 
     test("serializes nested keys", async () => {
@@ -129,7 +129,7 @@ describe("JavaScript/TypeScript Parser", () => {
       };
       const result = await parser.serialize(input);
       expect(result).toBe(
-        `export default {\n  "nested": {\n    "key": "value",\n    "deeper": {\n      "another": "test"\n    }\n  }\n} as const;\n`,
+        `export default {\n  nested: {\n    key: "value",\n    deeper: {\n      another: "test"\n    }\n  }\n} as const;\n`,
       );
     });
 
@@ -137,7 +137,7 @@ describe("JavaScript/TypeScript Parser", () => {
       const input = { key: 'value with "quotes"' };
       const result = await parser.serialize(input);
       expect(result).toBe(
-        `export default {\n  "key": "value with "quotes""\n} as const;\n`,
+        `export default {\n  key: "value with \\"quotes\\""\n} as const;\n`,
       );
     });
 

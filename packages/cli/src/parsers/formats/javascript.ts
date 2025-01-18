@@ -58,8 +58,54 @@ function validateParsedObject(
 }
 
 function formatTranslationObject(obj: Record<string, unknown>): string {
-  const jsonString = JSON.stringify(obj, null, 2);
-  return jsonString.replace(/\\"/g, '"');
+  return formatObjectLiteral(obj, 0);
+}
+
+function formatObjectLiteral(
+  obj: Record<string, unknown>,
+  indent: number,
+): string {
+  if (Object.keys(obj).length === 0) {
+    return "{}";
+  }
+
+  const indentStr = "  ".repeat(indent);
+  const innerIndentStr = "  ".repeat(indent + 1);
+
+  const entries = Object.entries(obj).map(([key, value]) => {
+    const formattedKey = needsQuotes(key) ? `"${key}"` : key;
+    const formattedValue =
+      typeof value === "object" && value !== null
+        ? formatObjectLiteral(value as Record<string, unknown>, indent + 1)
+        : `"${String(value).replace(/"/g, '\\"')}"`;
+    return `${innerIndentStr}${formattedKey}: ${formattedValue}`;
+  });
+
+  return `{\n${entries.join(",\n")}\n${indentStr}}`;
+}
+
+function needsQuotes(key: string): boolean {
+  // Keys need quotes if they:
+  // 1. Contain special characters
+  // 2. Start with a number
+  // 3. Contain a dot
+  // 4. Are not valid JavaScript identifiers
+  return (
+    /[^a-zA-Z0-9_$]/.test(key) || // Has special chars
+    /^\d/.test(key) || // Starts with number
+    key.includes(".") || // Contains dot
+    !isValidIdentifier(key) // Not a valid identifier
+  );
+}
+
+function isValidIdentifier(key: string): boolean {
+  // Check if the key is a valid JavaScript identifier
+  try {
+    new Function(`const ${key} = 0;`);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function wrapInExport(content: string): string {

@@ -29,13 +29,13 @@ export async function getDiff({
   // Parse current file content
   const currentContent = readFileSync(sourceFilePath, "utf-8");
   const currentJson = await parser.parse(currentContent);
-  const currentKeys = Object.keys(currentJson);
+  const currentKeys = Object.keys(currentJson).sort();
 
   try {
     // Get and parse previous version from git HEAD
     const content = await git.show([`HEAD:./${relativePath}`]);
     const previousJson = await parser.parse(content);
-    const previousKeys = Object.keys(previousJson);
+    const previousKeys = Object.keys(previousJson).sort();
 
     // Create sets for more efficient lookups
     const currentKeysSet = new Set(currentKeys);

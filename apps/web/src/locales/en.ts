@@ -454,4 +454,7 @@ export default {
       description_2: "You can now close this tab and return to the CLI",
     },
   },
+  test: {
+    translationProgress: "Translation progress: {progress}%",
+  },
 } as const;

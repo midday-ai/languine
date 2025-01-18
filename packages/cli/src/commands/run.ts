@@ -15,7 +15,7 @@ export async function runCommands() {
         await initCommands();
         break;
       case "translate": {
-        await translateCommand();
+        await translateCommand([...args, subCommand].filter(Boolean));
         break;
       }
       default:
@@ -45,7 +45,7 @@ export async function runCommands() {
       await initCommands();
       break;
     case "translate": {
-      await translateCommand();
+      await translateCommand([...args, subCommand].filter(Boolean));
       break;
     }
   }

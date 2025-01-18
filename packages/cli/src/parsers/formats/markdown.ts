@@ -33,6 +33,13 @@ export function createMarkdownParser(): Parser {
 
     async serialize(data: Record<string, string>): Promise<string> {
       try {
+        // Validate input data
+        for (const [key, value] of Object.entries(data)) {
+          if (value === undefined) {
+            throw new Error(`Value for key "${key}" is undefined`);
+          }
+        }
+
         const markdownParts: string[] = [];
 
         for (const [key, value] of Object.entries(data)) {
