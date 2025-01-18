@@ -35,14 +35,16 @@ class TranslationParseError extends Error {
 function preprocessInput(input: string): string {
   let processed = input.trim();
 
-  // Check if input starts with export default
-  if (processed.match(/^export\s+default\s+/)) {
-    processed = processed.replace(/export\s+default\s+/, "");
+  // Remove export default if present
+  if (processed.startsWith("export default")) {
+    processed = processed.slice("export default".length).trim();
   }
 
-  // Check if input ends with as const
-  if (processed.match(/\s*as\s+const\s*;?\s*$/)) {
-    processed = processed.replace(/\s*as\s+const\s*;?\s*$/, "");
+  // Remove as const if present
+  if (processed.endsWith("as const;")) {
+    processed = processed.slice(0, -"as const;".length).trim();
+  } else if (processed.endsWith("as const")) {
+    processed = processed.slice(0, -"as const".length).trim();
   }
 
   return processed;
@@ -114,9 +116,12 @@ function unflattenTranslations(
 }
 
 function formatTranslationObject(obj: Record<string, unknown>): string {
-  return JSON.stringify(obj, null, 2)
-    .replace(/\\"/g, '"') // Unescape quotes in text content
-    .replace(/"([^"]+)":/g, "$1:"); // Remove quotes around object keys
+  if (Object.keys(obj).length === 0) {
+    return "{}";
+  }
+
+  const stringified = JSON.stringify(obj, null, 2);
+  return stringified.replace(/\\"/g, '"');
 }
 
 function wrapInExport(content: string): string {

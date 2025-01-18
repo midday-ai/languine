@@ -1,9 +1,9 @@
 {
-  "key": "This is a wonderful day!",
+  "key": "This is a new value",
   "nested": {
-    "key": "How are you?"
+    "key": "Another new value"
   },
-  "interpolated": "Have a nice day, {{name}}!",
-  "pluralKey_one": "This is a nice example.",
-  "pluralKey_other": "This are nice examples."
+  "interpolated": "New value with {{name}}!",
+  "pluralKey_one": "One new value",
+  "pluralKey_other": "Multiple new values"
 }
