@@ -5,7 +5,7 @@ import { type ParserType, createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
-import { detectChanges } from "@/utils/diff.js";
+import { getDiff } from "@/utils/diff.js";
 import { note, outro, spinner } from "@clack/prompts";
 import { runs, tasks } from "@trigger.dev/sdk/v3";
 import chalk from "chalk";
@@ -61,9 +61,18 @@ export async function translateCommand() {
           const sourceContent = await parser.parse(sourceFile);
 
           // Detect changes in source file
-          const changes = await detectChanges(sourceFilePath);
+          const changes = await getDiff({
+            sourceFilePath,
+            type,
+          });
 
-          // Only translate changed, added or removed keys
+          console.log({
+            changes,
+          });
+
+          return;
+
+          // Only translate added and changed keys
           const keysToTranslate = [
             ...changes.addedKeys,
             ...changes.changedKeys,
