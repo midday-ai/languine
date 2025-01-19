@@ -19,7 +19,7 @@ type Format = typeof parserTypeSchema._type;
 
 const SUPPORTED_FORMATS = [
   { value: "json", label: "JSON (.json)" },
-  { value: "yml", label: "YAML (.yml, .yaml)" },
+  { value: "yaml", label: "YAML (.yml, .yaml)" },
   { value: "properties", label: "Java Properties (.properties)" },
   { value: "android", label: "Android (.xml)" },
   { value: "xcode-strings", label: "iOS Strings (.strings)" },
@@ -39,7 +39,7 @@ const SUPPORTED_FORMATS = [
 
 const FORMAT_EXAMPLES: Record<Format, string> = {
   json: "src/locales/[locale].json",
-  yml: "src/locales/[locale].yaml",
+  yaml: "src/locales/[locale].yaml",
   properties: "src/locales/messages_[locale].properties",
   android: "res/values-[locale]/strings.xml",
   "xcode-strings": "[locale].lproj/Localizable.strings",

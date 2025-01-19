@@ -3,34 +3,34 @@ goodbye: Gracias por usar nuestra app. ¡Hasta la próxima!
 nav:
   home: Inicio
   about: Acerca de
-  contact: Contáctenos
-  settings: Configuración
+  contact: Contáctanos
+  settings: Configuraciones
 user:
-  greeting: Hola, {name}!
+  greeting: ¡Hola, {name}!
   profile:
-    title: Tu Perfil
-    edit: Editar Perfil
-    save: Guardar Cambios
+    title: Tu perfil
+    edit: Editar perfil
+    save: Guardar cambios
     cancel: Cancelar
 errors:
   not_found: Página no encontrada
   server_error: Ocurrió un error en el servidor
   validation:
     required: Este campo es obligatorio
-    email: Por favor, introduce una dirección de correo válida
+    email: Por favor, introduce una dirección de correo electrónico válida
     password: La contraseña debe tener al menos 8 caracteres
 form:
-  email: Dirección de Correo Electrónico
+  email: Dirección de correo electrónico
   password: Contraseña
   submit: Enviar
-  reset: Restablecer Formulario
+  reset: Restablecer formulario
 success:
-  saved: Cambios guardados exitosamente
-  uploaded: Archivo subido exitosamente
-  deleted: Elemento eliminado exitosamente
+  saved: Cambios guardados con éxito
+  uploaded: Archivo subido con éxito
+  deleted: Elemento eliminado con éxito
 time:
   today: Hoy
   yesterday: Ayer
   tomorrow: Mañana
-  days_ago: Hace {count} días
+  days_ago: "{count} días atrás"
 hello: Hola

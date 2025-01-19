@@ -1,0 +1,36 @@
+welcome: Bienvenue dans notre application !
+goodbye: Merci d'utiliser notre application. À la prochaine !
+nav:
+  home: Accueil
+  about: À propos
+  contact: Contactez-nous
+  settings: Paramètres
+user:
+  greeting: Bonjour, {name} !
+  profile:
+    title: Votre profil
+    edit: Modifier le profil
+    save: Enregistrer les modifications
+    cancel: Annuler
+errors:
+  not_found: Page non trouvée
+  server_error: Une erreur s'est produite sur le serveur
+  validation:
+    required: Ce champ est requis
+    email: Veuillez entrer une adresse e-mail valide
+    password: Le mot de passe doit comporter au moins 8 caractères
+form:
+  email: Adresse e-mail
+  password: Mot de passe
+  submit: Soumettre
+  reset: Réinitialiser le formulaire
+success:
+  saved: Modifications enregistrées avec succès
+  uploaded: Fichier téléchargé avec succès
+  deleted: Élément supprimé avec succès
+time:
+  today: Aujourd'hui
+  yesterday: Hier
+  tomorrow: Demain
+  days_ago: "{count} jours auparavant"
+hello: Bonjour

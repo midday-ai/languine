@@ -21,7 +21,7 @@ export const parserTypeSchema = z.enum([
   "ts",
   "json",
   "po",
-  "yml",
+  "yaml",
   "xml",
   "xliff",
   "xcode-strings",
@@ -74,7 +74,7 @@ export function createParser(options: CreateParserOptions): Parser {
       return createXliffParser();
     case "xml":
       return createXmlParser();
-    case "yml":
+    case "yaml":
       return createYamlParser();
     default:
       throw new Error(`Unsupported parser type: ${options.type}`);
