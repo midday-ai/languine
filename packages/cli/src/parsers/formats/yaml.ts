@@ -19,7 +19,7 @@ export function createYamlParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       return YAML.stringify(unflatten(data), {
         lineWidth: -1,
       });

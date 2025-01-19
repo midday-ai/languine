@@ -46,7 +46,7 @@ export function createXliffParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         // Convert flat key-value pairs to XLIFF data structure
         const resources: XliffResources = {};

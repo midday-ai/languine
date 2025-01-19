@@ -50,12 +50,12 @@ greeting: "unclosed string
         "nested.message": "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("greeting: Hello\nnested:\n  message: World\n");
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toBe("{}\n");
     });
   });

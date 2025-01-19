@@ -2,7 +2,7 @@ import { build as buildPlist, parse as parsePlist } from "plist";
 import { createFormatParser } from "../core/format.ts";
 import type { Parser } from "../core/types.ts";
 
-export function createXcodeStringsParser(): Parser {
+export function createXcodeStringsDictParser(): Parser {
   return createFormatParser({
     async parse(input: string): Promise<Record<string, string>> {
       try {
@@ -26,7 +26,7 @@ export function createXcodeStringsParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         // Validate that all values are strings
         for (const [key, value] of Object.entries(data)) {

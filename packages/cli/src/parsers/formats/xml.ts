@@ -30,7 +30,7 @@ export function createXmlParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         const builder = new Builder({
           headless: true,

@@ -109,7 +109,7 @@ describe("JSON Parser", () => {
         hello: "world",
         test: "value",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(JSON.parse(result)).toEqual({
         hello: "world",
         test: "value",
@@ -121,7 +121,7 @@ describe("JSON Parser", () => {
         "nested.key": "value",
         "nested.another.deep": "test",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(JSON.parse(result)).toEqual({
         nested: {
           key: "value",
@@ -137,7 +137,7 @@ describe("JSON Parser", () => {
         "special@key": "value",
         "with spaces": "test",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(JSON.parse(result)).toEqual({
         "special@key": "value",
         "with spaces": "test",
@@ -146,13 +146,13 @@ describe("JSON Parser", () => {
 
     test("handles empty object", async () => {
       const input = {};
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(JSON.parse(result)).toEqual({});
     });
 
     test("adds newline at end of file", async () => {
       const input = { key: "value" };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result.endsWith("\n")).toBe(true);
     });
   });

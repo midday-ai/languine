@@ -78,7 +78,7 @@ msgstr "text with "quotes" inside"
         hello: "world",
         test: "value",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         'msgid "hello"\nmsgstr "world"\n\nmsgid "test"\nmsgstr "value"\n',
       );
@@ -88,7 +88,7 @@ msgstr "text with "quotes" inside"
       const input = {
         empty: "",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe('msgid "empty"\nmsgstr ""\n');
     });
 
@@ -96,7 +96,7 @@ msgstr "text with "quotes" inside"
       const input = {
         with_quotes: 'text with "quotes" inside',
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         'msgid "with_quotes"\nmsgstr "text with "quotes" inside"\n',
       );
@@ -104,13 +104,13 @@ msgstr "text with "quotes" inside"
 
     test("handles empty object", async () => {
       const input = {};
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("");
     });
 
     test("adds newline at end of file", async () => {
       const input = { key: "value" };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result.endsWith("\n")).toBe(true);
     });
   });

@@ -40,7 +40,7 @@ export function createPoParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         if (Object.keys(data).length === 0) {
           return "";

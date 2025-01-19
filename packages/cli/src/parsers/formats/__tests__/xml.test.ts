@@ -50,14 +50,14 @@ describe("XML parser", () => {
         "root.nested.message": "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         "<root><greeting>Hello</greeting><nested><message>World</message></nested></root>",
       );
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toBe("<root/>");
     });
 
@@ -66,7 +66,7 @@ describe("XML parser", () => {
         "root.message": "Hello & World < > \" '",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         "<root><message>Hello &amp; World &lt; &gt; &quot; &apos;</message></root>",
       );
@@ -77,7 +77,7 @@ describe("XML parser", () => {
         "root.level1.level2.level3.message": "Deep",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         "<root><level1><level2><level3><message>Deep</message></level3></level2></level1></root>",
       );

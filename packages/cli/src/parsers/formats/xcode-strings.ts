@@ -29,7 +29,7 @@ export function createXcodeStringsParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         const lines = Object.entries(data).map(([key, value]) => {
           const escapedValue = escapeXcodeString(value);

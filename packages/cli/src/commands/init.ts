@@ -11,10 +11,16 @@ type Format =
   | "properties"
   | "android"
   | "ios-strings"
+  | "ios-stringsdict"
   | "md"
   | "html"
   | "txt"
-  | "ts";
+  | "ts"
+  | "po"
+  | "xliff"
+  | "csv"
+  | "resx"
+  | "arb";
 
 const SUPPORTED_FORMATS = [
   { value: "json" as const, label: "JSON (.json)" },
@@ -22,10 +28,19 @@ const SUPPORTED_FORMATS = [
   { value: "properties" as const, label: "Java Properties (.properties)" },
   { value: "android" as const, label: "Android XML (.xml)" },
   { value: "ios-strings" as const, label: "iOS Strings (.strings)" },
+  {
+    value: "ios-stringsdict" as const,
+    label: "iOS Stringsdict (.stringsdict)",
+  },
   { value: "md" as const, label: "Markdown (.md)" },
   { value: "html" as const, label: "HTML (.html)" },
   { value: "txt" as const, label: "Text (.txt)" },
   { value: "ts" as const, label: "TypeScript (.ts)" },
+  { value: "po" as const, label: "Gettext PO (.po)" },
+  { value: "xliff" as const, label: "XLIFF (.xlf, .xliff)" },
+  { value: "csv" as const, label: "CSV (.csv)" },
+  { value: "resx" as const, label: ".NET RESX (.resx)" },
+  { value: "arb" as const, label: "Flutter ARB (.arb)" },
 ];
 
 const FORMAT_EXAMPLES: Record<Format, string> = {
@@ -34,10 +49,16 @@ const FORMAT_EXAMPLES: Record<Format, string> = {
   properties: "src/locales/messages_[locale].properties",
   android: "res/values-[locale]/strings.xml",
   "ios-strings": "[locale].lproj/Localizable.strings",
+  "ios-stringsdict": "[locale].lproj/Localizable.stringsdict",
   md: "src/docs/[locale]/*.md",
   html: "src/content/[locale]/**/*.html",
   txt: "src/content/[locale]/**/*.txt",
   ts: "src/locales/[locale].ts",
+  po: "src/locales/[locale].po",
+  xliff: "src/locales/[locale].xlf",
+  csv: "src/locales/[locale].csv",
+  resx: "src/locales/[locale].resx",
+  arb: "lib/l10n/app_[locale].arb",
 };
 
 export async function commands() {

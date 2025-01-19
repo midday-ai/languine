@@ -102,7 +102,7 @@ describe("Xcode xcstrings parser", () => {
         message: "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       const parsed = JSON.parse(result);
 
       expect(parsed.version).toBe("1.0");
@@ -116,7 +116,7 @@ describe("Xcode xcstrings parser", () => {
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       const parsed = JSON.parse(result);
 
       expect(parsed.version).toBe("1.0");
@@ -128,7 +128,7 @@ describe("Xcode xcstrings parser", () => {
         key: undefined,
       } as unknown as Record<string, string>;
 
-      await expect(parser.serialize(input)).rejects.toThrow(
+      await expect(parser.serialize("en", input)).rejects.toThrow(
         "Failed to serialize Xcode xcstrings translations",
       );
     });

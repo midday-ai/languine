@@ -64,7 +64,7 @@ describe("XLIFF parser", () => {
         "nested.message": "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toContain('xmlns="urn:oasis:names:tc:xliff:document:2.0"');
       expect(result).toContain('version="2.0"');
       expect(result).toContain("<source>Hello</source>");
@@ -72,7 +72,7 @@ describe("XLIFF parser", () => {
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toContain('xmlns="urn:oasis:names:tc:xliff:document:2.0"');
       expect(result).toContain('version="2.0"');
     });
@@ -82,7 +82,7 @@ describe("XLIFF parser", () => {
         message: "Hello & World < > \" '",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toContain(
         "<source>Hello &amp; World &lt; &gt; \" '</source>",
       );

@@ -19,7 +19,7 @@ export function createJsonParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       return `${JSON.stringify(unflatten(data), null, 2)}\n`;
     },
   });

@@ -67,12 +67,12 @@ describe("Xcode strings parser", () => {
         message: "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(`"greeting" = "Hello";\n"message" = "World";\n`);
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toBe("\n");
     });
 
@@ -81,7 +81,7 @@ describe("Xcode strings parser", () => {
         message: 'Hello "World" with \n newline',
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         `"message" = "Hello \\"World\\" with \\n newline";\n`,
       );

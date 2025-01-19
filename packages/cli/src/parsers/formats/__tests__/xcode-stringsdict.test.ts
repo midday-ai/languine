@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createXcodeStringsParser } from "../xcode-stringsdict.ts";
+import { createXcodeStringsDictParser } from "../../formats/xcode-stringsdict.ts";
 
 describe("Xcode stringsdict parser", () => {
-  const parser = createXcodeStringsParser();
+  const parser = createXcodeStringsDictParser();
 
   describe("parse", () => {
     it("should parse valid stringsdict plist", async () => {
@@ -72,7 +72,7 @@ describe("Xcode stringsdict parser", () => {
         message: "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toContain("<key>greeting</key>");
       expect(result).toContain("<string>Hello</string>");
       expect(result).toContain("<key>message</key>");
@@ -80,7 +80,7 @@ describe("Xcode stringsdict parser", () => {
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toContain("<dict/>");
     });
 
@@ -90,7 +90,7 @@ describe("Xcode stringsdict parser", () => {
         key: Symbol("test"),
       } as unknown as Record<string, string>;
 
-      await expect(parser.serialize(input)).rejects.toThrow(
+      await expect(parser.serialize("en", input)).rejects.toThrow(
         'Failed to serialize Xcode stringsdict translations: Value for key "key" must be a string',
       );
     });

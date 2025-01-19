@@ -54,14 +54,14 @@ describe("Android XML parser", () => {
         message: "World",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toContain('<?xml version="1.0" encoding="utf-8"?>');
       expect(result).toContain('<string name="greeting">Hello</string>');
       expect(result).toContain('<string name="message">World</string>');
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toContain('<?xml version="1.0" encoding="utf-8"?>');
       expect(result).toContain("<resources/>");
     });
@@ -71,7 +71,7 @@ describe("Android XML parser", () => {
         message: "Hello & World < > \" '",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toContain('<?xml version="1.0" encoding="utf-8"?>');
       expect(result).toContain(
         '<string name="message">Hello &amp; World &lt; &gt; " \'</string>',

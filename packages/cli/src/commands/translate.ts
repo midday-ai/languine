@@ -231,7 +231,12 @@ export async function translateCommand(args: string[] = []) {
                 ...translatedContent,
               };
 
-              const serialized = await parser.serialize(mergedContent);
+              const serialized = await parser.serialize(
+                targetLocale,
+                mergedContent,
+                existingContent,
+              );
+
               await writeFile(targetPath, serialized, "utf-8");
 
               if (translationInput.length > 0) {

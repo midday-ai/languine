@@ -12,5 +12,9 @@ export const parserOptionsSchema = z.object({
 
 export interface Parser {
   parse(input: string): Promise<Record<string, string>>;
-  serialize(data: Record<string, string>): Promise<string>;
+  serialize(
+    locale: string,
+    data: Record<string, string>,
+    originalData?: Record<string, string>,
+  ): Promise<string>;
 }

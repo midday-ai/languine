@@ -17,7 +17,7 @@ export function createJavaScriptParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       const nested = unflatten(data);
       const formatted = formatTranslationObject(nested);
       return wrapInExport(formatted);

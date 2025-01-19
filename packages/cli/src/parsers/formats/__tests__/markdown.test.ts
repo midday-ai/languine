@@ -57,7 +57,7 @@ describe("Markdown parser", () => {
         "heading.2": "Heading 2",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("# Heading 1\n## Heading 2\n");
     });
 
@@ -67,7 +67,7 @@ describe("Markdown parser", () => {
         "paragraph.1": "Second paragraph",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("First paragraph\n\nSecond paragraph\n\n");
     });
 
@@ -77,12 +77,12 @@ describe("Markdown parser", () => {
         "list.1": "Second item",
       };
 
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("- First item\n- Second item\n");
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize({});
+      const result = await parser.serialize("en", {});
       expect(result).toBe("");
     });
 
@@ -91,7 +91,7 @@ describe("Markdown parser", () => {
         invalid: undefined,
       } as unknown as Record<string, string>;
 
-      await expect(parser.serialize(input)).rejects.toThrow(
+      await expect(parser.serialize("en", input)).rejects.toThrow(
         "Failed to serialize Markdown translations",
       );
     });

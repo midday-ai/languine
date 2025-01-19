@@ -31,7 +31,7 @@ export function createMarkdownParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data): Promise<string> {
       try {
         // Validate input data
         for (const [key, value] of Object.entries(data)) {
