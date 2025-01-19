@@ -5,11 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/locales/client";
-import { useParams } from "next/navigation";
 import { parseAsInteger, useQueryState } from "nuqs";
 
-export function OnboardingSteps() {
-  const { project } = useParams();
+export function OnboardingSteps({ projectId }: { projectId: string }) {
   const t = useI18n();
   const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
 
@@ -35,9 +33,9 @@ export function OnboardingSteps() {
                   {t("onboarding.steps.1.description")}
                 </p>
                 <CopyInput
-                  value={`npx languine@latest init --p=${project}`}
+                  value={`npx languine@latest init --p=${projectId}`}
                   onCopy={() => setStep(2)}
-                  className="border-dashed"
+                  className="border-dashed !text-xs"
                 />
               </CardContent>
             </Card>
@@ -72,7 +70,7 @@ export function OnboardingSteps() {
               </div>
               <CopyInput
                 value="npx languine@latest translate"
-                className="border-dashed"
+                className="border-dashed !text-xs"
               />
             </CardContent>
           </Card>

@@ -1,10 +1,19 @@
-import { existsSync } from "node:fs";
+import { installDependencies } from "@/utils/install.ts";
 import { intro, isCancel, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
+import { z } from "zod";
 import type { parserTypeSchema } from "../parsers/index.js";
 import type { Config } from "../types.js";
 import { loadSession } from "../utils/session.js";
 import { commands as authCommands } from "./auth/index.js";
+
+const argsSchema = z.array(z.string()).transform((args) => {
+  const projectIdIndex = args.findIndex((arg) => arg.startsWith("--p="));
+  return {
+    projectId:
+      projectIdIndex !== -1 ? args[projectIdIndex].slice(4) : undefined,
+  };
+});
 
 type Format = typeof parserTypeSchema._type;
 
@@ -48,7 +57,8 @@ const FORMAT_EXAMPLES: Record<Format, string> = {
   arb: "lib/l10n/app_[locale].arb",
 };
 
-export async function commands() {
+export async function commands(args: string[] = []) {
+  const { projectId } = argsSchema.parse(args);
   intro("Initialize a new Languine configuration");
 
   // Check authentication first
@@ -136,30 +146,23 @@ export async function commands() {
     include: [pattern],
   };
 
-  // Check if project has TypeScript support
-  const hasTypeScript =
-    existsSync("tsconfig.json") || existsSync("package.json");
+  // Select config format
+  const configFormat = await select({
+    message: "Select configuration format",
+    options: [
+      { value: "typescript", label: "TypeScript (languine.config.ts)" },
+      { value: "json", label: "JSON (languine.config.json)" },
+    ],
+  });
 
-  let configFormat = "json";
-  if (hasTypeScript) {
-    const format = await select({
-      message: "Select configuration format",
-      options: [
-        { value: "typescript", label: "TypeScript (languine.config.ts)" },
-        { value: "json", label: "JSON (languine.config.json)" },
-      ],
-    });
-
-    if (isCancel(format)) {
-      outro("Configuration cancelled");
-      process.exit(0);
-    }
-    configFormat = format;
+  if (isCancel(configFormat)) {
+    outro("Configuration cancelled");
+    process.exit(0);
   }
 
   // Create config file
   const config: Config = {
-    projectId: "",
+    projectId: projectId || "",
     locale: {
       source: sourceLanguage,
       targets: targetLanguages.split(",").map((lang) => lang.trim()),
@@ -171,9 +174,12 @@ export async function commands() {
     const fs = await import("node:fs/promises");
 
     if (configFormat === "typescript") {
+      await installDependencies();
+
       const tsConfig = `import { defineConfig } from "languine";
 
 export default defineConfig({
+  projectId: ${JSON.stringify(projectId || "")},
   locale: {
     source: "${sourceLanguage}",
     targets: ["${targetLanguages

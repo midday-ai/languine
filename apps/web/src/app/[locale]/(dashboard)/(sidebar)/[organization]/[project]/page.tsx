@@ -31,7 +31,12 @@ export default async function Page({
 
   // If there are no translations, show the onboarding
   if (!translations.length) {
-    return <OnboardingSteps />;
+    const data = await trpc.project.getBySlug({
+      slug: project,
+      organizationId: organization,
+    });
+
+    return <OnboardingSteps projectId={data?.id} />;
   }
 
   return (

@@ -41,6 +41,7 @@
     "node-html-parser": "^7.0.1",
     "open": "^10.1.0",
     "plist": "^3.1.0",
+    "preferred-pm": "^4.0.0",
     "properties": "^1.2.1",
     "rambda": "^9.4.2",
     "simple-git": "^3.27.0",

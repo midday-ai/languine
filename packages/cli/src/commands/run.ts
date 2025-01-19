@@ -25,7 +25,7 @@ export async function runCommands() {
         await authCommands(subCommand);
         break;
       case "init":
-        await initCommands();
+        await initCommands([...args, subCommand].filter(Boolean));
         break;
       case "translate": {
         await translateCommand([...args, subCommand].filter(Boolean));
