@@ -50,19 +50,30 @@ describe("JSON Parser", () => {
       });
     });
 
+    test("extracts translations from complex objects", async () => {
+      const input = `{
+        "messageId": {
+          "translation": "Translated message",
+          "message": "Default message", 
+          "description": "Comment for translators"
+        },
+        "obsoleteId": {
+          "translation": "Obsolete message"
+        }
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        "messageId.translation": "Translated message",
+        "messageId.message": "Default message",
+        "messageId.description": "Comment for translators",
+        "obsoleteId.translation": "Obsolete message",
+      });
+    });
+
     test("throws on non-object input", async () => {
       const input = `"just a string"`;
       await expect(parser.parse(input)).rejects.toThrow(
         "Translation file must contain a JSON object",
-      );
-    });
-
-    test("throws on non-string values", async () => {
-      const input = `{
-        "key": 123
-      }`;
-      await expect(parser.parse(input)).rejects.toThrow(
-        "Invalid translation value",
       );
     });
 

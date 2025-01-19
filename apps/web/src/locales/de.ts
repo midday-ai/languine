@@ -353,9 +353,6 @@ export default {
     },
     cta: "Automatisierung starten"
   },
-  test: {
-    translationProgress: "Übersetzungsfortschritt: {progress}%"
-  },
   createTeam: {
     teamName: "Teamname",
     teamNamePlaceholder: "Geben Sie den Teamnamen ein",

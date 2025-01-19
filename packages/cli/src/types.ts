@@ -19,6 +19,14 @@ export interface Config {
       include: (string | { glob: string })[];
     };
   };
+  /** Hooks */
+  hooks?: {
+    /** Hook to run after translation */
+    afterTranslate?: (args: {
+      content: string;
+      filePath: string;
+    }) => Promise<string>;
+  };
 }
 
 export interface ParserOptions {

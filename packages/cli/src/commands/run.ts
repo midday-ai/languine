@@ -1,5 +1,6 @@
 import { commands as authCommands } from "@/commands/auth/index.ts";
 import { commands as initCommands } from "@/commands/init.ts";
+import { syncCommand } from "@/commands/sync.ts";
 import { translateCommand } from "@/commands/translate.ts";
 import { isCancel, select } from "@clack/prompts";
 
@@ -18,6 +19,10 @@ export async function runCommands() {
         await translateCommand([...args, subCommand].filter(Boolean));
         break;
       }
+      case "sync": {
+        await syncCommand([...args, subCommand].filter(Boolean));
+        break;
+      }
       default:
         process.exit(1);
     }
@@ -30,6 +35,10 @@ export async function runCommands() {
       { value: "init", label: "Initialize a new Languine configuration" },
       { value: "auth", label: "Manage authentication" },
       { value: "translate", label: "Translate files" },
+      {
+        value: "sync",
+        label: "Sync deleted keys between source and target files",
+      },
     ],
   });
 
@@ -46,6 +55,10 @@ export async function runCommands() {
       break;
     case "translate": {
       await translateCommand([...args, subCommand].filter(Boolean));
+      break;
+    }
+    case "sync": {
+      await syncCommand([...args, subCommand].filter(Boolean));
       break;
     }
   }

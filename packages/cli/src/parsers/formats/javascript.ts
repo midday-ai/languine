@@ -85,21 +85,15 @@ function formatObjectLiteral(
 }
 
 function needsQuotes(key: string): boolean {
-  // Keys need quotes if they:
-  // 1. Contain special characters
-  // 2. Start with a number
-  // 3. Contain a dot
-  // 4. Are not valid JavaScript identifiers
   return (
-    /[^a-zA-Z0-9_$]/.test(key) || // Has special chars
-    /^\d/.test(key) || // Starts with number
-    key.includes(".") || // Contains dot
-    !isValidIdentifier(key) // Not a valid identifier
+    /[^a-zA-Z0-9_$]/.test(key) ||
+    /^\d/.test(key) ||
+    key.includes(".") ||
+    !isValidIdentifier(key)
   );
 }
 
 function isValidIdentifier(key: string): boolean {
-  // Check if the key is a valid JavaScript identifier
   try {
     new Function(`const ${key} = 0;`);
     return true;

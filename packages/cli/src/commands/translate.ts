@@ -156,7 +156,7 @@ export async function translateCommand(args: string[] = []) {
           if (translationInput.length === 0 && !shouldRemoveKeys) {
             if (!isSilent) {
               s.message(
-                `No ${forceTranslate ? "" : "changes "}detected in ${sourceFilePath}, skipping...`,
+                `No ${forceTranslate ? "" : "changes"} detected in ${sourceFilePath}, skipping...`,
               );
             }
             continue;
@@ -237,7 +237,16 @@ export async function translateCommand(args: string[] = []) {
                 existingContent,
               );
 
-              await writeFile(targetPath, serialized, "utf-8");
+              // Run afterTranslate hook if configured
+              let finalContent = serialized;
+              if (config?.hooks?.afterTranslate) {
+                finalContent = await config.hooks.afterTranslate({
+                  content: serialized,
+                  filePath: targetPath,
+                });
+              }
+
+              await writeFile(targetPath, finalContent, "utf-8");
 
               if (translationInput.length > 0) {
                 translatedAnything = true;

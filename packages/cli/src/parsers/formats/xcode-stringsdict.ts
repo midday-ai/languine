@@ -1,4 +1,4 @@
-import { build as buildPlist, parse as parsePlist } from "plist";
+import plist from "plist";
 import { createFormatParser } from "../core/format.ts";
 import type { Parser } from "../core/types.ts";
 
@@ -6,7 +6,7 @@ export function createXcodeStringsDictParser(): Parser {
   return createFormatParser({
     async parse(input: string) {
       try {
-        const parsed = parsePlist(input) as Record<string, unknown>;
+        const parsed = plist.parse(input) as Record<string, unknown>;
         if (typeof parsed !== "object" || parsed === null) {
           throw new Error("Translation file must contain a valid plist");
         }
@@ -34,7 +34,7 @@ export function createXcodeStringsDictParser(): Parser {
             throw new Error(`Value for key "${key}" must be a string`);
           }
         }
-        return buildPlist(data);
+        return plist.build(data);
       } catch (error) {
         throw new Error(
           `Failed to serialize Xcode stringsdict translations: ${(error as Error).message}`,
