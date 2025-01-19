@@ -45,13 +45,6 @@ export async function translateCommand(args: string[] = []) {
   }
 
   if (!isSilent) {
-    if (!checkOnly) {
-      note(
-        "Upgrade to Pro for priority queue access at https://languine.ai/pricing",
-        "Pro tip",
-      );
-    }
-
     s.start(checkOnly ? "Checking translations..." : "Translating...");
   }
 
@@ -179,7 +172,7 @@ export async function translateCommand(args: string[] = []) {
 
           let result: TranslationResult;
 
-          const run = await client.jobs.startJob.mutate({
+          const { run, meta } = await client.jobs.startJob.mutate({
             apiKey: apiKey,
             projectId: config.projectId,
             sourceFormat: type,
@@ -187,6 +180,15 @@ export async function translateCommand(args: string[] = []) {
             targetLanguages: effectiveTargetLocales,
             content: translationInput,
           });
+
+          if (!isSilent && meta.plan === "free") {
+            if (!checkOnly) {
+              note(
+                "Upgrade to Pro for priority queue access at https://languine.ai/pricing",
+                "Pro tip",
+              );
+            }
+          }
 
           await auth.withAuth(
             { accessToken: run.publicAccessToken },

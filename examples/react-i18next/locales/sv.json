@@ -9,7 +9,7 @@
   },
   "notifications": {
     "messages": "Du har {{count}} nya meddelande(n).",
-    "empty": "Inga nya meddelanden."
+    "empty": "Inga nya aviseringar."
   },
   "date": {
     "today": "Idag är det {{date}}."

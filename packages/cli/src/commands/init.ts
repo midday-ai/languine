@@ -1,5 +1,5 @@
 import { installDependencies } from "@/utils/install.ts";
-import { intro, isCancel, outro, select, text } from "@clack/prompts";
+import { intro, isCancel, note, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
 import { z } from "zod";
 import type { parserTypeSchema } from "../parsers/index.js";
@@ -205,12 +205,17 @@ export default defineConfig({
 
     outro(chalk.green("Configuration file created successfully!"));
     console.log();
-    console.log("Next steps:");
-    console.log(
-      `1. Review your languine.config.${configFormat === "typescript" ? "ts" : "json"} file`,
+
+    note(
+      `Run 'languine translate' to start translating your files`,
+      "Next steps.",
     );
-    console.log("2. Run 'languine translate' to start translating your files");
+
     console.log();
+
+    outro(
+      `Problems? ${chalk.underline(chalk.cyan("https://git.new/problem"))}`,
+    );
   } catch (error) {
     outro(chalk.red("Failed to create configuration file"));
     console.error(error);

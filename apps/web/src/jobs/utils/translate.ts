@@ -1,8 +1,12 @@
-import { openai } from "@ai-sdk/openai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { generateObject } from "ai";
 import { z } from "zod";
 import { createFinalPrompt } from "./prompt";
 import type { PromptOptions } from "./types";
+
+const openai = createOpenAI({
+  baseURL: process.env.AI_GATEWAY_ENDPOINT,
+});
 
 function getPrompt(
   content: Array<{ key: string; sourceText: string }>,
@@ -26,7 +30,7 @@ export async function translate(
   const prompt = getPrompt(content, options);
 
   const { object } = await generateObject({
-    model: openai("gpt-4o-mini"),
+    model: openai(process.env.AI_MODEL!),
     prompt,
     mode: "json",
     schema: z.object({
