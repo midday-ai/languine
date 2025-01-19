@@ -4,7 +4,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createMarkdownParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const tokens = marked.lexer(input);
         const result: Record<string, string> = {};
@@ -31,7 +31,7 @@ export function createMarkdownParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         // Validate input data
         for (const [key, value] of Object.entries(data)) {

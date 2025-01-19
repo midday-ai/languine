@@ -4,7 +4,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createArbParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = JSON.parse(input);
         return pickBy((_, key) => !key.startsWith("@"), parsed);
@@ -15,7 +15,7 @@ export function createArbParser(): Parser {
       }
     },
 
-    async serialize(locale, data): Promise<string> {
+    async serialize(locale, data) {
       try {
         const result = merge({ "@@locale": locale }, data);
         return JSON.stringify(result, null, 2);

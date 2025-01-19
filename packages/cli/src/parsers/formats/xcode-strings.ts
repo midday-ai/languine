@@ -3,7 +3,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createXcodeStringsParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const lines = input.split("\n");
         const result: Record<string, string> = {};
@@ -29,7 +29,7 @@ export function createXcodeStringsParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         const lines = Object.entries(data).map(([key, value]) => {
           const escapedValue = escapeXcodeString(value);

@@ -5,7 +5,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createXmlParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         if (!input.trim().startsWith("<")) {
           throw new Error("Translation file must contain valid XML");
@@ -30,7 +30,7 @@ export function createXmlParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         const builder = new Builder({
           headless: true,

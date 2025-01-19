@@ -5,7 +5,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createJsonParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = JSON.parse(jsonrepair(input));
         if (typeof parsed !== "object" || parsed === null) {
@@ -19,7 +19,7 @@ export function createJsonParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       return `${JSON.stringify(unflatten(data), null, 2)}\n`;
     },
   });

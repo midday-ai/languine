@@ -3,7 +3,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createPoParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const result: Record<string, string> = {};
         const lines = input.split("\n");
@@ -40,7 +40,7 @@ export function createPoParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         if (Object.keys(data).length === 0) {
           return "";

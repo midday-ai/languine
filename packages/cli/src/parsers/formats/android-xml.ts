@@ -4,7 +4,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createAndroidXmlParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         if (!input.trim().startsWith("<")) {
           throw new Error("Translation file must contain valid Android XML");
@@ -28,7 +28,7 @@ export function createAndroidXmlParser(): Parser {
         const strings = parsed.resources?.string || [];
 
         for (const string of strings) {
-          if (string.$ && string.$.name && string._) {
+          if (string.$?.name && string._) {
             result[string.$.name] = string._;
           }
         }
@@ -41,7 +41,7 @@ export function createAndroidXmlParser(): Parser {
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
+    async serialize(_, data) {
       try {
         const resources = {
           resources: {

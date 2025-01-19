@@ -20,7 +20,7 @@ export function createCsvParser(): Parser {
   };
 
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = parse(input, {
           columns: true,
@@ -71,7 +71,7 @@ export function createCsvParser(): Parser {
       }
     },
 
-    async serialize(_, data, originalData): Promise<string> {
+    async serialize(_, data, originalData) {
       const usedColumns = Array.from(
         new Set([
           "id",

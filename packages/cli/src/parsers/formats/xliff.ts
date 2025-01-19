@@ -20,7 +20,7 @@ interface XliffData {
 
 export function createXliffParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = (await xliff.xliff2js(input)) as unknown as XliffData;
         if (typeof parsed !== "object" || parsed === null) {
@@ -46,7 +46,7 @@ export function createXliffParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         // Convert flat key-value pairs to XLIFF data structure
         const resources: XliffResources = {};

@@ -99,7 +99,7 @@ export function createHtmlParser(): Parser {
   }
 
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       const translations: Record<string, string> = {};
       const dom = new JSDOM(input);
       const doc = dom.window.document;
@@ -117,7 +117,7 @@ export function createHtmlParser(): Parser {
       return translations;
     },
 
-    async serialize(_, translations): Promise<string> {
+    async serialize(_, translations) {
       const dom = new JSDOM(
         "<!DOCTYPE html><html><head></head><body></body></html>",
       );

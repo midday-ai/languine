@@ -4,7 +4,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createXcodeStringsDictParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = parsePlist(input) as Record<string, unknown>;
         if (typeof parsed !== "object" || parsed === null) {
@@ -26,7 +26,7 @@ export function createXcodeStringsDictParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       try {
         // Validate that all values are strings
         for (const [key, value] of Object.entries(data)) {

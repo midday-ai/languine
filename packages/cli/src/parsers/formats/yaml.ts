@@ -5,7 +5,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createYamlParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const parsed = YAML.parse(input) || {};
         if (typeof parsed !== "object" || parsed === null) {
@@ -19,7 +19,7 @@ export function createYamlParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       return YAML.stringify(unflatten(data), {
         lineWidth: -1,
       });

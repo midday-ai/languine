@@ -4,7 +4,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createJavaScriptParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const cleanInput = preprocessInput(input);
         const parsed = evaluateJavaScript(cleanInput);
@@ -17,7 +17,7 @@ export function createJavaScriptParser(): Parser {
       }
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       const nested = unflatten(data);
       const formatted = formatTranslationObject(nested);
       return wrapInExport(formatted);

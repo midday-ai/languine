@@ -3,7 +3,7 @@ import type { Parser } from "../core/types.ts";
 
 export function createPropertiesParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       const result: Record<string, string> = {};
       const lines = input.split("\n");
 
@@ -24,7 +24,7 @@ export function createPropertiesParser(): Parser {
       return result;
     },
 
-    async serialize(_, data): Promise<string> {
+    async serialize(_, data) {
       return `${Object.entries(data)
         .filter(([_, value]) => value != null)
         .map(([key, value]) => `${key}=${value}`)
