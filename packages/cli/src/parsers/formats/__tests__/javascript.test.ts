@@ -118,8 +118,8 @@ describe("JavaScript/TypeScript Parser", () => {
   describe("serialize", () => {
     test("serializes flat object", async () => {
       const input = { key: "value" };
-      const result = await parser.serialize(input);
-      expect(result).toBe(`export default {\n  "key": "value"\n} as const;\n`);
+      const result = await parser.serialize("en", input);
+      expect(result).toBe(`export default {\n  key: "value"\n} as const;\n`);
     });
 
     test("serializes nested keys", async () => {
@@ -127,23 +127,23 @@ describe("JavaScript/TypeScript Parser", () => {
         "nested.key": "value",
         "nested.deeper.another": "test",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
-        `export default {\n  "nested": {\n    "key": "value",\n    "deeper": {\n      "another": "test"\n    }\n  }\n} as const;\n`,
+        `export default {\n  nested: {\n    key: "value",\n    deeper: {\n      another: "test"\n    }\n  }\n} as const;\n`,
       );
     });
 
     test("preserves quotes in text content", async () => {
       const input = { key: 'value with "quotes"' };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
-        `export default {\n  "key": "value with "quotes""\n} as const;\n`,
+        `export default {\n  key: "value with \\"quotes\\""\n} as const;\n`,
       );
     });
 
     test("handles empty object", async () => {
       const input = {};
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe("export default {} as const;\n");
     });
 
@@ -152,7 +152,7 @@ describe("JavaScript/TypeScript Parser", () => {
         "cows#one": "A cow",
         "cows#other": "{count} cows",
       };
-      const result = await parser.serialize(input);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
         `export default {\n  "cows#one": "A cow",\n  "cows#other": "{count} cows"\n} as const;\n`,
       );
@@ -164,7 +164,7 @@ describe("JavaScript/TypeScript Parser", () => {
         "nested.key": "nested value",
         "very.deep.structure.key": "deep value",
       };
-      const serialized = await parser.serialize(original);
+      const serialized = await parser.serialize("en", original);
       const parsed = await parser.parse(serialized);
       expect(parsed).toEqual(original);
     });
@@ -175,7 +175,7 @@ describe("JavaScript/TypeScript Parser", () => {
         "scope.more.stars#other": "{count} stars on GitHub",
         "scope.more.param": "A scope with {param}",
       };
-      const serialized = await parser.serialize(original);
+      const serialized = await parser.serialize("en", original);
       const parsed = await parser.parse(serialized);
       expect(parsed).toEqual(original);
     });

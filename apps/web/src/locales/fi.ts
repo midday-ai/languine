@@ -3,104 +3,96 @@ export default {
     pricing: "Hinnoittelu",
     docs: "Dokumentaatio",
     signIn: "Kirjaudu sisään",
-    goToApp: "Siirry sovellukseen",
+    goToApp: "Siirry sovellukseen"
   },
   hero: {
-    title: "Automatisoitu lokalisointi sovelluksillesi",
-    description:
-      "Virtaviivaista lokalisointiprosessisi tekoälypohjaisella CLI:llä ja putkistolla, joka on suunniteltu automatisoimaan käännökset kehittäjille.",
+    title: "Automaattinen lokalisointi sovelluksillesi",
+    description: "Tehosta lokalisointiprosessiasi AI-pohjaisella CLI:llä ja putkistolla, joka on suunniteltu automatisoimaan käännöksiä kehittäjille."
   },
   getStarted: {
     heading: "Aloita",
-    title: "Automatisoitu lokalisointi sovelluksillesi",
-    description:
-      "Virtaviivaista lokalisointiprosessisi tekoälypohjaisella CLI:llä ja putkistolla, joka on suunniteltu automatisoimaan käännökset kehittäjille.",
+    title: "Automaattinen lokalisointi sovelluksillesi",
+    description: "Tehosta lokalisointiprosessiasi AI-pohjaisella CLI:llä ja putkistolla, joka on suunniteltu automatisoimaan käännöksiä kehittäjille.",
     button: {
-      startAutomating: "Aloita automatisointi",
-      readDocumentation: "Lue dokumentaatio",
-    },
+      startAutomating: "Aloita automaatio",
+      readDocumentation: "Lue dokumentaatio"
+    }
   },
   companies: {
-    title: "Käyttäjinä",
-    addYourCompany: "+ Lisää yrityksesi",
+    title: "Käyttäjät",
+    addYourCompany: "+ Lisää yrityksesi"
   },
   activity: {
-    title: "Aktiviteetti",
+    title: "Toiminta",
+    loading: "Ladataan",
+    loadMore: "Näytä lisää"
   },
   features: {
     title: "Ominaisuudet",
-    fullyOpenSource: "Täysin avointa lähdekoodia",
-    fullyOpenSourceDescription:
-      "Koodimme on julkisesti saatavilla GitHubissa, mahdollistaen läpinäkyvyyden ja yhteisön osallistumisen.",
-    noVendorLockIn: "Ei toimittajalukkiutumista",
-    noVendorLockInDescription:
-      "Emme lukitse sinua tiettyyn palveluun, käytä omia kielimalleja.",
-    presetsForExpo: "Esiasetukset Expolle",
-    presetsForExpoDescription:
-      "Tarjoamme esiasetukset Expolle, jotta pääset nopeasti alkuun.",
+    fullyOpenSource: "Täysin avoimen lähdekoodin",
+    fullyOpenSourceDescription: "Koodimme on julkisesti saatavilla GitHubissa, mikä mahdollistaa läpinäkyvyyden ja yhteisön panostukset.",
+    noVendorLockIn: "Ei myyjäriippuvuutta",
+    noVendorLockInDescription: "Emme sitouta sinua tiettyyn palveluun, käytä omia LLM:si.",
+    presetsForExpo: "Esiasetukset Expoon",
+    presetsForExpoDescription: "Tarjoamme esiasetuksia Expoon, jotta voit aloittaa nopeasti.",
     presetForReactNative: "Esiasetus React Nativelle",
-    presetForReactNativeDescription:
-      "Tarjoamme esiasetuksen React Nativelle, jotta pääset nopeasti alkuun.",
+    presetForReactNativeDescription: "Tarjoamme esiasetuksen React Nativelle, jotta voit aloittaa nopeasti.",
     presetForReactEmail: "React Email -kirjasto",
-    presetForReactEmailDescription:
-      "Olemme luoneet i18n-kirjaston React Emailille.",
-    readyForI18nLibraries: "Valmis i18n-kirjastoille",
-    readyForI18nLibrariesDescription:
-      "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl, jne).",
+    presetForReactEmailDescription: "Olemme luoneet i18n-kirjaston React Emailille.",
+    readyForI18nLibraries: "Valmiina i18n-kirjastoille",
+    readyForI18nLibrariesDescription: "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl jne.)."
   },
   info: {
-    title:
-      "Käsittelee sovelluksesi lokalisoinnin kaikki osa-alueet, mukaan lukien",
+    title: "Käsittelee kaikki sovelluksesi lokalisointiin liittyvät näkökohdat, mukaan lukien",
     smartTranslation: {
       title: "Älykäs käännös",
       intelligentTranslation: "Älykäs käännös kontekstitietoisuudella",
-      brandVoice: "Brändiäänen ja -sävyn johdonmukaisuus",
-      terminology: "Terminologian hallinta",
-      linguisticFeatures: "Edistyneet kielelliset ominaisuudet",
-      realtimeUpdates: "Reaaliaikaiset käännöspäivitykset",
+      brandVoice: "Brändin ääni ja sävy",
+      terminology: "Termistöhallinta",
+      linguisticFeatures: "Edistyneet kielitieteelliset ominaisuudet",
+      realtimeUpdates: "Reaaliaikaiset käännöspäivitykset"
     },
     implementation: {
       title: "Toteutus",
       quickSetup: "Nopea asennus ja integrointi",
       fileFormat: "Tiedostomuotojen käsittely",
-      contentStructure: "Sisältörakenteen organisointi",
-      assetOrganization: "Resurssien organisointi",
+      contentStructure: "Sisältöstruktuurin organisointi",
+      assetOrganization: "Omaisuuden organisointi"
     },
     developer: {
       title: "Kehittäjäkokemus",
-      cli: "Komentorivityökalu",
+      cli: "Komentoriviliittymä",
       cicd: "CI/CD-integraatio",
       versionControl: "Versionhallinta",
-      workflow: "Kehittäjän työnkulku",
-      documentation: "Kattava dokumentaatio",
-    },
+      workflow: "Kehittäjätyöskentely",
+      documentation: "Kattava dokumentaatio"
+    }
   },
   login: {
     title: "Kirjaudu sisään",
-    github: "Kirjaudu GitHubilla",
-    google: "Kirjaudu Googlella",
+    github: "Kirjaudu sisään GitHubilla",
+    google: "Kirjaudu sisään Googlella",
     footer: "Automatisoi lokalisointisi.",
-    description:
-      "Kirjaudu sisään aloittaaksesi lokalisoinnin automatisoinnin sekunneissa.",
+    description: "Kirjaudu sisään aloittaaksesi lokalisointisi automatisoinnin sekunneissa.",
     terms: {
-      text: "Kirjautumalla hyväksyt meidän",
+      text: "Kirjautumalla sisään hyväksyt",
       termsOfService: "Käyttöehdot",
       and: "ja",
-      privacyPolicy: "Tietosuojakäytännön",
-    },
+      privacyPolicy: "Tietosuojakäytäntö"
+    }
   },
   translations: {
-    total_keys: "Yhteensä {total} avainta",
+    total_keys: "{total} avainta yhteensä"
   },
   userMenu: {
-    account: "Tiliasetukset",
+    account: "Tilin asetukset",
     signOut: "Kirjaudu ulos",
     createTeam: "Luo tiimi",
     homepage: "Etusivu",
-    team: "Tiimiasetukset",
+    team: "Tiimin asetukset"
   },
   teamSelector: {
-    addProject: "Lisää projekti",
+    addProject: "Luo projekti",
     createProjectTitle: "Luo uusi projekti",
     projectNamePlaceholder: "Projektin nimi",
     createProjectButton: "Luo projekti",
@@ -110,174 +102,230 @@ export default {
     createTeam: "Luo tiimi",
     createTeamTitle: "Luo uusi tiimi",
     teamNamePlaceholder: "Tiimin nimi",
-    createTeamButton: "Luo tiimi",
+    createTeamButton: "Luo tiimi"
   },
   coming_soon: {
-    title: "Languine on varhaisessa käyttövaiheessa",
-    description:
-      "Olemme tällä hetkellä varhaisessa käyttövaiheessa. Ota yhteyttä",
-    cta: "X:ssä saadaksesi varhaisen pääsyn.",
+    title: "Languine on varhaisessa käytössä",
+    description: "Olemme tällä hetkellä varhaisessa käytössä. Ota yhteyttä",
+    cta: "X:ssä saadaksesi varhaisen pääsyn."
   },
   account: {
     fullName: {
       title: "Koko nimi",
-      description: "Koko nimesi sellaisena kuin se näkyy alustalla.",
-      placeholder: "Syötä koko nimesi",
+      description: "Koko nimesi, kuten se näkyy alustalla.",
+      placeholder: "Syötä koko nimesi"
     },
     email: {
       title: "Sähköpostiosoite",
-      description: "Tiliisi liitetty sähköpostiosoite.",
-      placeholder: "Syötä sähköpostiosoitteesi",
+      description: "Sähköpostiosoite, joka on liitetty tiliisi.",
+      placeholder: "Syötä sähköpostiosoitteesi"
     },
     apiKey: {
       title: "API-avain",
-      description: "Henkilökohtainen API-avaimesi Languine API:n käyttöön.",
+      description: "Henkilökohtainen API-avaimesi Languine API:in ja CLI:stä pääsyyn."
     },
     deleteAccount: {
       title: "Poista tili",
-      description:
-        "Poista pysyvästi tilisi ja kaikki siihen liittyvät tiedot. Tätä toimintoa ei voi kumota.",
-      button: "Poista tili",
-    },
+      description: "Poista pysyvästi tilisi ja kaikki siihen liittyvät tiedot. Tätä toimintoa ei voi peruuttaa.",
+      button: "Poista tili"
+    }
   },
   copyInstall: {
-    copied: "Kopioitu leikepöydälle",
+    copied: "Kopioitu leikepöydälle"
   },
   dangerZone: {
     dialog: {
       title: "Oletko aivan varma?",
-      description:
-        "Tätä toimintoa ei voi kumota. Kirjoita DELETE vahvistaaksesi.",
+      description: "Tätä toimintoa ei voi peruuttaa. Kirjoita DELETE vahvistaaksesi.",
       placeholder: "Kirjoita DELETE vahvistaaksesi",
       confirm: "Vahvista poisto",
-    },
+      cancel: "Peruuta"
+    }
   },
   pipeline: {
-    title: "Työnkulku (CI/CD-putki)",
+    title: "Työprosessi (CI/CD-putki)",
     pro: "[pro]",
-    description:
-      "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-putkistoosi, kääntäen koodipohjan automaattisesti jokaisen pushin yhteydessä. Kun koodimuutoksia pusketaan, analysoimme muutetun sisällön, ylläpidämme käännösmuistia ja tuotamme tarkkoja käännöksiä säilyttäen brändiäänesi ja terminologian. Käännökset lähetetään sitten pull requesteina, mahdollistaen tarkistuksen ennen päähaaran yhdistämistä ja käyttöönottoa. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältösi pysyy synkronoituna kehityksen kanssa.",
+    description: "Käännösmootorimme integroituu saumattomasti olemassa olevaan CI/CD-putkeesi, automaattisesti kääntäen koodipohjaasi jokaisella työntämisellä. Kun koodimuutoksia työntyy, analysoimme muokattua sisältöä, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändisi äänen ja terminologian. Käännökset lähetetään sitten vetopyynnöinä, mikä mahdollistaa tarkastelun ennen niiden yhdistämistä päähaaraasi ja käyttöönottoa. Tämä automatisoitu työprosessi varmistaa, että lokalisoitu sisältösi pysyy synkronoituna kehityksen kanssa."
   },
   settings: {
     saved: "Asetukset tallennettu",
-    savedDescription: "Muutoksesi on tallennettu onnistuneesti",
+    savedDescription: "Muutoksesi on tallennettu onnistuneesti.",
     tabs: {
       project: "Projekti",
       account: "Tili",
       team: "Tiimi",
+      provider: "Palveluntarjoaja",
+      billing: "Laskutus"
     },
     project: {
       name: {
         title: "Projektin nimi",
         description: "Projektisi nimi",
-        placeholder: "Syötä projektin nimi",
+        placeholder: "Syötä projektin nimi"
       },
       id: {
         title: "Projektin ID",
-        description: "Yksilöllinen projektin tunniste",
-        placeholder: "Projektin ID",
+        description: "Ainutlaatuinen projektitunnisteesi",
+        placeholder: "Projektin ID"
       },
-      delete: {
+      "delete": {
         title: "Poista projekti",
-        description: "Poista pysyvästi tämä projekti ja kaikki sen tiedot",
-        button: "Poista projekti",
-      },
+        description: "Poista pysyvästi tämä projekti ja kaikki sen tiedot.",
+        button: "Poista projekti"
+      }
     },
     team: {
       name: {
         title: "Tiimin nimi",
         description: "Tiimisi nimi",
-        placeholder: "Syötä tiimin nimi",
+        placeholder: "Syötä tiimin nimi"
       },
       billing: {
         title: "Laskutussuunnitelma",
-        description: "Hallitse tiimisi laskutussuunnitelmaa",
+        description: "Hallitse tiimisi laskutussuunnitelmaa.",
         free: "Ilmainen",
         pro: "Pro",
+        unlimited: "Rajoittamaton"
       },
       apiKey: {
         title: "Tiimin API-avain",
-        description: "API-avain tiimin käyttöön",
-        placeholder: "Tiimin API-avain",
+        description: "API-avain tiimin käyttöön, käytä tätä CI/CD-putkessasi yhdessä projektin ID:n kanssa.",
+        placeholder: "Tiimin API-avain"
       },
       members: {
         title: "Jäsenet",
-        pendingInvitations: "Odottavat kutsut",
+        pendingInvitations: "Odotettavat kutsut",
         filterPlaceholder: "Suodata jäseniä...",
         allRoles: "Kaikki roolit",
         date: "Päivämäärä",
-        selectAll: "{count} valittu",
+        selectAll: "{count} valittua",
         noPendingInvitations: "Ei odottavia kutsuja",
-        inviteMembers: "Kutsu tiimin jäseniä yhteistyöhön",
+        inviteMembers: "Kutsu jäseniä yhteistyöhön",
         roles: {
           owner: "Omistaja",
           admin: "Ylläpitäjä",
-          member: "Jäsen",
+          member: "Jäsen"
         },
         dateSort: {
           newest: "Uusimmat",
-          oldest: "Vanhimmat",
+          oldest: "Vanhimmat"
         },
-      },
+        leaveTeamConfirm: "Jätä tiimi",
+        leaveTeamDescription: "Oletko varma, että haluat jättää tämän tiimin?",
+        cancel: "Peruuta",
+        leaveTeam: "Jätä tiimi",
+        invite: "Kutsu jäsen",
+        removeMember: "Poista jäsen",
+        removeMemberConfirm: "Poista jäsen",
+        removeMemberDescription: "Oletko varma, että haluat poistaa tämän jäsenen?",
+        noResults: "Ei jäseniä löytynyt",
+        tryDifferentSearch: "Yritä eri hakua",
+        deleteInvite: "Poista kutsu",
+        deleteInviteDescription: "Poista kutsu",
+        invitedBy: "Kutsunut {name}",
+        deleteInviteSuccess: "Kutsu poistettu",
+        deleteInviteError: "Kutsun poistaminen epäonnistui",
+        removeMemberSuccess: "Jäsen poistettu",
+        removeMemberError: "Jäsenen poistaminen epäonnistui",
+        removeMemberSuccessDescription: "Jäsen on poistettu onnistuneesti",
+        removeMemberErrorDescription: "Jäsenen poistaminen epäonnistui"
+      }
     },
+    badRequest: "Virheellinen pyyntö",
+    badRequestDescription: "Organisaatiolla on oltava vähintään yksi omistaja. Siirrä omistajuus toiselle jäsenelle ennen tämän omistajan poistamista.",
+    permissionDenied: "Käyttöoikeus evätty",
+    permissionDeniedDescription: "Sinun on oltava tiimin omistaja voidaksesi tehdä tämän toiminnon.",
+    deleteTeamTitle: "Poista tiimi",
+    deleteTeamDescription: "Et voi poistaa organisaatiota, kun olet ainoa jäsen, vaan poista tilisi sen sijaan.",
+    error: "Jotain meni pieleen",
+    errorDescription: "Yritä uudelleen tai ota yhteyttä tukeen.",
+    addTeam: "Luo tiimi",
+    apiKey: {
+      updated: "API-avain päivitetty",
+      updatedDescription: "API-avaimesi on päivitetty onnistuneesti ja kopioitu leikepöydällesi.",
+      title: "Päivitä API-avain",
+      description: "Oletko varma, että haluat luoda uuden API-avaimen? Vanha avain lakkaa toimimasta heti.",
+      cancel: "Peruuta",
+      "continue": "Jatka"
+    },
+    provider: {
+      updateSuccess: "Asetukset päivitetty onnistuneesti",
+      updateError: "Asetusten päivittäminen epäonnistui",
+      translationProvider: {
+        title: "Käännöspalveluntarjoaja",
+        description: "Valitse suosikkisi AI-palvelu käännösten tuottamiseen. Jokaisella palveluntarjoajalla on erilaisia ominaisuuksia ja hinnoittelua.",
+        placeholder: "Valitse palveluntarjoaja"
+      },
+      languageModel: {
+        title: "Kielimalli",
+        description: "Valitse AI-malli, joka parhaiten tasapainottaa laatua ja nopeutta käännöstarpeillesi. Tehokkaammat mallit voivat olla hitaampia, mutta tuottavat parempia tuloksia.",
+        placeholder: "Valitse malli"
+      },
+      apiKey: {
+        title: "Palveluntarjoajan API-avain",
+        description: "Syötä API-avaimesi autentikoidaksesi valitsemallesi palveluntarjoajalle. Pidä tämä avain turvassa - salakirjoitamme sen ennen tallentamista.",
+        placeholder: "Syötä API-avaimesi"
+      }
+    },
+    addProject: "Luo projekti",
+    save: "Tallenna"
   },
   tuning: {
     general: "Yleinen",
     translationMemory: {
       title: "Käännösmuisti",
-      description:
-        "Käytä käännösmuistia parantaaksesi johdonmukaisuutta ja tehokkuutta",
+      description: "Käytä käännösmuistia parantaaksesi johdonmukaisuutta ja tehokkuutta."
     },
     qualityChecks: {
-      title: "Laatutarkistukset",
-      description: "Ota käyttöön automaattiset laatutarkistukset käännöksille",
+      title: "Laatutarkastukset",
+      description: "Ota käyttöön automatisoidut laatutarkastukset käännöksille."
     },
     contextDetection: {
-      title: "Kontekstintunnistus",
-      description: "Tunnista ja säilytä konteksti käännöksissä automaattisesti",
+      title: "Kontekstin tunnistus",
+      description: "Tunnista ja säilytä konteksti automaattisesti käännöksissä."
     },
-    styleGuide: "Tyyliopas",
+    styleGuide: "Tyyliohje",
     lengthControl: {
       title: "Pituuden hallinta",
-      description: "Hallitse käännetyn tekstin pituutta",
+      description: "Hallitse käännetyn tekstin pituutta.",
       options: {
         flexible: "Joustava",
-        strict: "Tarkka",
-        exact: "Täsmällinen",
-        loose: "Väljä",
-      },
+        strict: "Tiukka",
+        exact: "Tarkka",
+        loose: "Löysä"
+      }
     },
     inclusiveLanguage: {
       title: "Inklusiivinen kieli",
-      description: "Varmista, että käännökset käyttävät inklusiivista kieltä",
+      description: "Varmista, että käännökset käyttävät inklusiivista kieltä."
     },
     formality: {
-      title: "Muodollisuus",
-      description: "Hallitse käännösten muodollisuustasoa",
+      title: "Virallisuus",
+      description: "Hallitse käännösten virallisuustasoa."
     },
     brandName: {
       title: "Brändin nimi",
-      description: "Aseta brändisi nimi johdonmukaista käyttöä varten",
-      placeholder: "Syötä brändisi nimi",
+      description: "Aseta brändisi nimi johdonmukaiselle käytölle.",
+      placeholder: "Syötä brändisi nimi"
     },
     brandVoice: {
       title: "Brändin ääni",
-      description: "Määritä brändisi ääni ja sävy",
-      placeholder: "Kuvaile brändisi ääntä...",
+      description: "Määritä brändisi ääni ja sävy.",
+      placeholder: "Kuvaile brändisi ääntä..."
     },
     localization: "Lokalisointi",
     idioms: {
       title: "Idiomit",
-      description: "Käsittele idiomeja asianmukaisesti",
+      description: "Käsittele idiomisia ilmauksia asianmukaisesti."
     },
     terminology: {
-      title: "Terminologia",
-      description: "Hallitse erikoisterminologiaa ja sanastoja",
+      title: "Termistö",
+      description: "Hallitse erikoistermistöä ja sanastoja."
     },
     culturalAdaptation: {
-      title: "Kulttuurinen sovitus",
-      description: "Sovita sisältö kulttuurisesti sopivaksi",
-    },
+      title: "Kulttuurinen sopeutus",
+      description: "Sovita sisältö kulttuurisesti sopivaksi."
+    }
   },
   pricing: {
     title: "Yksinkertainen hinnoittelu",
@@ -286,23 +334,99 @@ export default {
       price: "Ilmainen",
       keys_limit: "Jopa 100 avainta",
       features: {
-        unlimited_projects: "Rajattomat projektit",
-        fine_tuning: "Hienosäätöasetukset",
-        overrides: "Käännösten ohitukset",
+        unlimited_projects: "Rajoittamattomat projektit",
+        fine_tuning: "Hienosäätömahdollisuudet",
+        overrides: "Käännösohjaukset",
         analytics: "Analytiikka",
         context_memory: "Kontekstimuisti",
-        community_support: "Yhteisötuki",
-      },
+        community_support: "Yhteisön tuki"
+      }
     },
     pro: {
       title: "Pro",
-      includes_free: "Kaikki ilmaisessa versiossa, plus:",
+      includes_free: "Kaikki ilmaisessa, plus:",
       features: {
-        github_action: "GitHub Action -integraatio",
-        latest_features: "Varhainen pääsy uusiin ominaisuuksiin",
-        priority_support: "Prioriteettituki",
-      },
+        github_action: "GitHub-toiminnan integraatio",
+        latest_features: "Varhainen pääsy uusimpiin ominaisuuksiin",
+        priority_support: "Etusijatuettu"
+      }
     },
-    cta: "Aloita automatisointi",
+    cta: "Aloita automaatio"
   },
+  createTeam: {
+    teamName: "Tiimin nimi",
+    teamNamePlaceholder: "Syötä tiimin nimi",
+    createTeamButton: "Luo tiimi",
+    cancel: "Peruuta",
+    createTeamDescription: "Luo uusi tiimi hallitaksesi projektejasi ja yhteistyökumppaneitasi."
+  },
+  createProject: {
+    createProjectTitle: "Luo uusi projekti",
+    projectNamePlaceholder: "Syötä projektin nimi",
+    createProjectButton: "Luo projekti",
+    cancel: "Peruuta",
+    createProjectDescription: "Luo uusi projekti aloittaaksesi lokalisointisi automatisoinnin."
+  },
+  invite: {
+    inviteMember: "Kutsu jäsen",
+    inviteDescription: "Kutsu jäsen tiimiisi",
+    emailLabel: "Sähköposti",
+    emailPlaceholder: "Syötä sähköposti",
+    cancel: "Peruuta",
+    sendInvite: "Lähetä kutsu",
+    success: {
+      title: "Kutsu lähetetty",
+      description: "Kutsu lähetetty onnistuneesti osoitteeseen {email}"
+    },
+    error: {
+      title: "Virhe",
+      description: "Kutsun lähettäminen epäonnistui. Yritä uudelleen."
+    },
+    validation: {
+      invalidEmail: "Ole hyvä ja syötä voimassa oleva sähköposti"
+    }
+  },
+  months: {
+    "10": "Elo",
+    "11": "Marras",
+    "12": "Joulu",
+    "01": "Tammikuu",
+    "02": "Helmikuu",
+    "03": "Maaliskuu",
+    "04": "Huhtikuu",
+    "05": "Toukokuu",
+    "06": "Kesäkuu",
+    "07": "Heinäkuu",
+    "08": "Elokuu",
+    "09": "Syyskuu"
+  },
+  onboarding: {
+    steps: {
+      "1": {
+        title: "Aseta Languine CLI",
+        description: "Asenna ja konfiguroi Languine CLI hallitaksesi käännöksiä."
+      },
+      "2": {
+        title: "Työnnä käännökset",
+        description: "Odotetaan käännösten työntämistä."
+      },
+      "3": {
+        title: "Dokumentaatio",
+        description: "Tutustu dokumentaatioomme yksityiskohtaisille oppaille ja parhaimmille käytännöille.",
+        link: "dokumentaatio"
+      }
+    },
+    info: {
+      description: "Tarvitsetko apua? Tutustu",
+      link: "dokumentaatioomme",
+      description_2: "yksityiskohtaisille oppaille ja parhaimmille käytännöille."
+    }
+  },
+  cli: {
+    success: {
+      title: "Languine CLI -kirjautuminen onnistui",
+      description: "Languine CLI on onnistuneesti todennettu käyttäjänä:",
+      description_2: "Voit nyt sulkea tämän välilehden ja palata CLI:hin."
+    }
+  }
 } as const;

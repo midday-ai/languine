@@ -19,13 +19,14 @@ export interface Config {
       include: (string | { glob: string })[];
     };
   };
-}
-
-export class ParserError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "ParserError";
-  }
+  /** Hooks */
+  hooks?: {
+    /** Hook to run after translation */
+    afterTranslate?: (args: {
+      content: string;
+      filePath: string;
+    }) => Promise<string>;
+  };
 }
 
 export interface ParserOptions {

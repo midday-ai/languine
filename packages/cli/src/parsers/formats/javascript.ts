@@ -1,48 +1,41 @@
+import { flatten, unflatten } from "../core/flatten.ts";
 import { createFormatParser } from "../core/format.ts";
 import type { Parser } from "../core/types.ts";
 
 export function createJavaScriptParser(): Parser {
   return createFormatParser({
-    async parse(input: string): Promise<Record<string, string>> {
+    async parse(input: string) {
       try {
         const cleanInput = preprocessInput(input);
         const parsed = evaluateJavaScript(cleanInput);
         validateParsedObject(parsed);
-        return flattenTranslations(parsed as Record<string, unknown>);
+        return flatten(parsed);
       } catch (error) {
-        throw new TranslationParseError(error as Error);
+        throw new Error(
+          `Failed to parse JavaScript/TypeScript translations: ${(error as Error).message}`,
+        );
       }
     },
 
-    async serialize(data: Record<string, string>): Promise<string> {
-      const nested = unflattenTranslations(data);
+    async serialize(_, data) {
+      const nested = unflatten(data);
       const formatted = formatTranslationObject(nested);
       return wrapInExport(formatted);
     },
   });
 }
 
-// Error class for better error handling
-class TranslationParseError extends Error {
-  constructor(originalError: Error) {
-    super(
-      `Failed to parse JavaScript/TypeScript translations: ${originalError.message}`,
-    );
-    this.name = "TranslationParseError";
-  }
-}
-
 function preprocessInput(input: string): string {
   let processed = input.trim();
 
-  // Check if input starts with export default
-  if (processed.match(/^export\s+default\s+/)) {
-    processed = processed.replace(/export\s+default\s+/, "");
+  if (processed.startsWith("export default")) {
+    processed = processed.slice("export default".length).trim();
   }
 
-  // Check if input ends with as const
-  if (processed.match(/\s*as\s+const\s*;?\s*$/)) {
-    processed = processed.replace(/\s*as\s+const\s*;?\s*$/, "");
+  if (processed.endsWith("as const;")) {
+    processed = processed.slice(0, -"as const;".length).trim();
+  } else if (processed.endsWith("as const")) {
+    processed = processed.slice(0, -"as const".length).trim();
   }
 
   return processed;
@@ -64,59 +57,49 @@ function validateParsedObject(
   }
 }
 
-function flattenTranslations(
-  obj: Record<string, unknown>,
-  prefix = "",
-): Record<string, string> {
-  const result: Record<string, string> = {};
-
-  for (const [key, value] of Object.entries(obj)) {
-    const newKey = prefix ? `${prefix}.${key}` : key;
-
-    if (typeof value === "object" && value !== null) {
-      Object.assign(
-        result,
-        flattenTranslations(value as Record<string, unknown>, newKey),
-      );
-    } else if (typeof value === "string") {
-      result[newKey] = value;
-    } else {
-      throw new Error(
-        `Invalid translation value at "${newKey}": expected string, got ${typeof value}`,
-      );
-    }
-  }
-
-  return result;
-}
-
-function unflattenTranslations(
-  data: Record<string, string>,
-): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
-
-  for (const [key, value] of Object.entries(data)) {
-    const keys = key.split(".");
-    let current = result;
-
-    for (let i = 0; i < keys.length; i++) {
-      const k = keys[i];
-      if (i === keys.length - 1) {
-        current[k] = value;
-      } else {
-        current[k] = current[k] || {};
-        current = current[k] as Record<string, unknown>;
-      }
-    }
-  }
-
-  return result;
-}
-
 function formatTranslationObject(obj: Record<string, unknown>): string {
-  return JSON.stringify(obj, null, 2)
-    .replace(/\\"/g, '"') // Unescape quotes in text content
-    .replace(/"([^"]+)":/g, "$1:"); // Remove quotes around object keys
+  return formatObjectLiteral(obj, 0);
+}
+
+function formatObjectLiteral(
+  obj: Record<string, unknown>,
+  indent: number,
+): string {
+  if (Object.keys(obj).length === 0) {
+    return "{}";
+  }
+
+  const indentStr = "  ".repeat(indent);
+  const innerIndentStr = "  ".repeat(indent + 1);
+
+  const entries = Object.entries(obj).map(([key, value]) => {
+    const formattedKey = needsQuotes(key) ? `"${key}"` : key;
+    const formattedValue =
+      typeof value === "object" && value !== null
+        ? formatObjectLiteral(value as Record<string, unknown>, indent + 1)
+        : `"${String(value).replace(/"/g, '\\"')}"`;
+    return `${innerIndentStr}${formattedKey}: ${formattedValue}`;
+  });
+
+  return `{\n${entries.join(",\n")}\n${indentStr}}`;
+}
+
+function needsQuotes(key: string): boolean {
+  return (
+    /[^a-zA-Z0-9_$]/.test(key) ||
+    /^\d/.test(key) ||
+    key.includes(".") ||
+    !isValidIdentifier(key)
+  );
+}
+
+function isValidIdentifier(key: string): boolean {
+  try {
+    new Function(`const ${key} = 0;`);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function wrapInExport(content: string): string {

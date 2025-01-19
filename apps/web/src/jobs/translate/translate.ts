@@ -1,6 +1,7 @@
 import { validateJobPermissions } from "@/db/queries/permissions";
-import { logger, metadata, schemaTask, wait } from "@trigger.dev/sdk/v3";
+import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
+import { translate } from "../utils/translate";
 
 const translationSchema = z.object({
   projectId: z.string(),
@@ -21,42 +22,62 @@ export const translateTask = schemaTask({
   schema: translationSchema,
   maxDuration: 300,
   queue: {
-    concurrencyLimit: 1,
+    concurrencyLimit: 10,
   },
   run: async (payload, { ctx }) => {
-    // Use the permission utility
-    // await validateJobPermissions({
-    //   apiKey: payload.apiKey,
-    //   projectId: payload.projectId,
-    // });
-
-    // Simulate translation progress with smaller steps
-    const totalSteps =
-      payload.targetLanguages.length * payload.content.length * 10; // 10 mini-steps per translation
-    let completedSteps = 0;
+    // Validate permissions
+    // await validateJobPermissions(payload.projectId, payload.apiKey);
 
     const translations: Record<
       string,
       Array<{ key: string; translatedText: string }>
     > = {};
 
-    for (const lang of payload.targetLanguages) {
-      translations[lang] = [];
+    const totalTranslations =
+      payload.targetLanguages.length * payload.content.length;
+    let completedTranslations = 0;
 
-      for (const item of payload.content) {
-        // Split the 1 second wait into 10 smaller steps
-        for (let i = 0; i < 10; i++) {
-          await wait.for({ seconds: 0.1 });
-          completedSteps++;
-          metadata.set("progress", completedSteps / totalSteps);
-        }
+    metadata.set("progress", 0);
 
-        translations[lang].push({
-          key: item.key,
-          translatedText: `Translated: ${item.sourceText}`,
+    // Run translations in parallel for each target language
+    await Promise.all(
+      payload.targetLanguages.map(async (targetLocale) => {
+        translations[targetLocale] = [];
+
+        // Update progress before starting each language
+        metadata.set(
+          "progress",
+          Math.round((completedTranslations * 100) / totalTranslations),
+        );
+
+        const translatedContent = await translate(payload.content, {
+          sourceLocale: payload.sourceLanguage,
+          targetLocale,
         });
-      }
-    }
+
+        for (let i = 0; i < payload.content.length; i++) {
+          translations[targetLocale].push({
+            key: payload.content[i].key,
+            translatedText: translatedContent[i],
+          });
+
+          completedTranslations++;
+
+          // Update progress after each individual translation
+          const progress = Math.round(
+            (completedTranslations * 100) / totalTranslations,
+          );
+          metadata.set("progress", progress);
+
+          // Add micro-progress updates between translations
+          if (i < payload.content.length - 1) {
+            metadata.set("progress", progress + 0.5);
+          }
+        }
+      }),
+    );
+
+    metadata.set("progress", 100);
 
     return {
       translations,
