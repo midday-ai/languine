@@ -27,4 +27,5 @@ export type XcstringsOutput = {
     }
   >;
   version: string;
+  sourceLanguage: string;
 };

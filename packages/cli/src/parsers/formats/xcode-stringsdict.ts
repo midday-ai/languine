@@ -2,6 +2,31 @@ import plist from "plist";
 import { createFormatParser } from "../core/format.ts";
 import type { Parser } from "../core/types.ts";
 
+type PlistValue =
+  | string
+  | number
+  | boolean
+  | Date
+  | Buffer
+  | PlistValue[]
+  | { [key: string]: PlistValue };
+
+interface PluralDict {
+  NSStringLocalizedFormatKey: string;
+  [key: string]:
+    | {
+        NSStringFormatSpecTypeKey: string;
+        NSStringFormatValueTypeKey: string;
+        zero?: string;
+        one?: string;
+        two?: string;
+        few?: string;
+        many?: string;
+        other?: string;
+      }
+    | string;
+}
+
 export function createXcodeStringsDictParser(): Parser {
   return createFormatParser({
     async parse(input: string) {
@@ -15,6 +40,13 @@ export function createXcodeStringsDictParser(): Parser {
         for (const [key, value] of Object.entries(parsed)) {
           if (typeof value === "string") {
             result[key] = value;
+          } else if (typeof value === "object" && value !== null) {
+            // Handle plural rules
+            const pluralDict = value as PluralDict;
+            if (pluralDict.NSStringLocalizedFormatKey) {
+              // Store the plural forms as is - they will be handled by the iOS system
+              result[key] = JSON.stringify(value);
+            }
           }
         }
 
@@ -28,13 +60,34 @@ export function createXcodeStringsDictParser(): Parser {
 
     async serialize(_, data) {
       try {
-        // Validate that all values are strings
+        const result: Record<string, PlistValue> = {};
+
+        // Process each translation
         for (const [key, value] of Object.entries(data)) {
           if (typeof value !== "string") {
             throw new Error(`Value for key "${key}" must be a string`);
           }
+
+          // Try to parse as JSON to see if it's a plural rule
+          try {
+            const parsed = JSON.parse(value);
+            if (
+              typeof parsed === "object" &&
+              parsed.NSStringLocalizedFormatKey
+            ) {
+              result[key] = parsed as PlistValue;
+              continue;
+            }
+          } catch {
+            // Not JSON, treat as regular string
+          }
+
+          // Strip surrounding quotes if present
+          const cleanValue = value.replace(/^"(.*)"$/, "$1");
+          result[key] = cleanValue;
         }
-        return plist.build(data);
+
+        return plist.build(result);
       } catch (error) {
         throw new Error(
           `Failed to serialize Xcode stringsdict translations: ${(error as Error).message}`,

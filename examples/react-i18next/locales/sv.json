@@ -1,0 +1,17 @@
+{
+  "welcome": "Välkommen till vår applikation!",
+  "user": {
+    "greeting": "Hej, {{name}}!",
+    "profile": {
+      "title": "Din profil",
+      "edit": "Redigera profil"
+    }
+  },
+  "notifications": {
+    "messages": "Du har {{count}} nya meddelande(n).",
+    "empty": "Inga nya meddelanden."
+  },
+  "date": {
+    "today": "Idag är det {{date}}."
+  }
+}

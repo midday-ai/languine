@@ -42,7 +42,7 @@ export function createXcodeXcstringsParser(): Parser {
       }
     },
 
-    async serialize(_, data) {
+    async serialize(locale, data) {
       try {
         // Validate input data
         for (const [key, value] of Object.entries(data)) {
@@ -54,13 +54,14 @@ export function createXcodeXcstringsParser(): Parser {
         const result: XcstringsOutput = {
           strings: {},
           version: "1.0",
+          sourceLanguage: locale,
         };
 
         for (const [key, value] of Object.entries(data)) {
           result.strings[key] = {
             extractionState: "manual",
             localizations: {
-              en: {
+              [locale]: {
                 stringUnit: {
                   state: "translated",
                   value,

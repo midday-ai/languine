@@ -32,6 +32,7 @@ describe("Xcode xcstrings parser", () => {
           },
         },
         version: "1.0",
+        sourceLanguage: "en",
       });
 
       const result = await parser.parse(input);
@@ -69,6 +70,7 @@ describe("Xcode xcstrings parser", () => {
           },
         },
         version: "1.0",
+        sourceLanguage: "en",
       });
 
       const result = await parser.parse(input);
@@ -81,6 +83,7 @@ describe("Xcode xcstrings parser", () => {
       const input = JSON.stringify({
         strings: {},
         version: "1.0",
+        sourceLanguage: "en",
       });
 
       const result = await parser.parse(input);
@@ -106,6 +109,7 @@ describe("Xcode xcstrings parser", () => {
       const parsed = JSON.parse(result);
 
       expect(parsed.version).toBe("1.0");
+      expect(parsed.sourceLanguage).toBe("en");
       expect(parsed.strings.greeting.extractionState).toBe("manual");
       expect(parsed.strings.greeting.localizations.en.stringUnit.value).toBe(
         "Hello",
@@ -120,6 +124,7 @@ describe("Xcode xcstrings parser", () => {
       const parsed = JSON.parse(result);
 
       expect(parsed.version).toBe("1.0");
+      expect(parsed.sourceLanguage).toBe("en");
       expect(parsed.strings).toEqual({});
     });
 
