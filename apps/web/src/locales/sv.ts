@@ -145,7 +145,7 @@ export default {
   pipeline: {
     title: "Arbetsflöde (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, upprätthåller din översättningsminne och genererar exakta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
+    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, upprätthåller din översättningsminne och genererar exakta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll förblir synkroniserat med utvecklingen."
   },
   settings: {
     saved: "Inställningar sparade",
@@ -219,7 +219,7 @@ export default {
         removeMemberConfirm: "Ta bort medlem",
         removeMemberDescription: "Är du säker på att du vill ta bort denna medlem?",
         noResults: "Inga medlemmar hittades",
-        tryDifferentSearch: "Försök med en annan sökning",
+        tryDifferentSearch: "Försök en annan sökning",
         deleteInvite: "Radera inbjudan",
         deleteInviteDescription: "Radera inbjudan",
         invitedBy: "Bjuden av {name}",

@@ -13,4 +13,9 @@ export const { getI18n, getScopedI18n, getStaticParams } = createI18nServer({
   ja: () => import("./ja"),
   ko: () => import("./ko"),
   zh: () => import("./zh"),
+  it: () => import("./it"),
+  nl: () => import("./nl"),
+  pl: () => import("./pl"),
+  tr: () => import("./tr"),
+  vi: () => import("./vi"),
 });

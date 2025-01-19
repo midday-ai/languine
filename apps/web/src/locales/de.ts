@@ -47,7 +47,7 @@ export default {
     smartTranslation: {
       title: "Intelligente Übersetzung",
       intelligentTranslation: "Intelligente Übersetzung mit Kontextbewusstsein",
-      brandVoice: "Konsistenz der Markenstimme und des Tons",
+      brandVoice: "Markenstimme und Tonkonsistenz",
       terminology: "Terminologiemanagement",
       linguisticFeatures: "Erweiterte linguistische Funktionen",
       realtimeUpdates: "Echtzeit-Übersetzungsupdates"
@@ -165,12 +165,12 @@ export default {
       },
       id: {
         title: "Projekt-ID",
-        description: "Ihre eindeutige Projektkennung",
+        description: "Ihr eindeutiger Projektbezeichner",
         placeholder: "Projekt-ID"
       },
       "delete": {
         title: "Projekt löschen",
-        description: "Dieses Projekt und alle seine Daten dauerhaft löschen.",
+        description: "Dieses Projekt und alle seine Daten dauerhaft löschen",
         button: "Projekt löschen"
       }
     },
@@ -182,7 +182,7 @@ export default {
       },
       billing: {
         title: "Abrechnungsplan",
-        description: "Verwalten Sie den Abrechnungsplan Ihres Teams.",
+        description: "Verwalten Sie den Abrechnungsplan Ihres Teams",
         free: "Kostenlos",
         pro: "Pro",
         unlimited: "Unbegrenzt"
@@ -224,11 +224,11 @@ export default {
         deleteInviteDescription: "Löschen Sie die Einladung",
         invitedBy: "Eingeladen von {name}",
         deleteInviteSuccess: "Einladung gelöscht",
-        deleteInviteError: "Löschen der Einladung fehlgeschlagen",
+        deleteInviteError: "Fehler beim Löschen der Einladung",
         removeMemberSuccess: "Mitglied entfernt",
-        removeMemberError: "Mitglied konnte nicht entfernt werden",
+        removeMemberError: "Fehler beim Entfernen des Mitglieds",
         removeMemberSuccessDescription: "Mitglied wurde erfolgreich entfernt",
-        removeMemberErrorDescription: "Mitglied konnte nicht entfernt werden"
+        removeMemberErrorDescription: "Fehler beim Entfernen des Mitglieds"
       }
     },
     badRequest: "Ungültige Anfrage",
@@ -236,7 +236,7 @@ export default {
     permissionDenied: "Zugriff verweigert",
     permissionDeniedDescription: "Sie müssen Eigentümer des Teams sein, um diese Aktion auszuführen.",
     deleteTeamTitle: "Team löschen",
-    deleteTeamDescription: "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind, löschen Sie stattdessen Ihr Konto.",
+    deleteTeamDescription: "Sie können die Organisation nicht löschen, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
     error: "Etwas ist schiefgelaufen",
     errorDescription: "Bitte versuchen Sie es erneut oder kontaktieren Sie den Support.",
     addTeam: "Team erstellen",
@@ -250,7 +250,7 @@ export default {
     },
     provider: {
       updateSuccess: "Einstellungen erfolgreich aktualisiert",
-      updateError: "Aktualisierung der Einstellungen fehlgeschlagen",
+      updateError: "Fehler beim Aktualisieren der Einstellungen",
       translationProvider: {
         title: "Übersetzungsanbieter",
         description: "Wählen Sie Ihren bevorzugten KI-Dienst zur Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Funktionen und Preise.",
@@ -258,7 +258,7 @@ export default {
       },
       languageModel: {
         title: "Sprachmodell",
-        description: "Wählen Sie das KI-Modell, das am besten Qualität und Geschwindigkeit für Ihre Übersetzungsbedürfnisse ausbalanciert. Leistungsstärkere Modelle können langsamer sein, liefern jedoch bessere Ergebnisse.",
+        description: "Wählen Sie das KI-Modell, das Qualität und Geschwindigkeit für Ihre Übersetzungsbedürfnisse am besten ausbalanciert. Leistungsstärkere Modelle können langsamer sein, liefern jedoch bessere Ergebnisse.",
         placeholder: "Wählen Sie ein Modell"
       },
       apiKey: {
@@ -273,7 +273,7 @@ export default {
   tuning: {
     general: "Allgemein",
     translationMemory: {
-      title: "Übersetzungsspeicher",
+      title: "Übersetzungsgedächtnis",
       description: "Verwenden Sie das Übersetzungsgedächtnis, um Konsistenz und Effizienz zu verbessern."
     },
     qualityChecks: {
@@ -282,7 +282,7 @@ export default {
     },
     contextDetection: {
       title: "Kontextdetektion",
-      description: "Automatisch Kontext in Übersetzungen erkennen und bewahren."
+      description: "Automatische Erkennung und Bewahrung des Kontexts in Übersetzungen."
     },
     styleGuide: "Stilrichtlinie",
     lengthControl: {
