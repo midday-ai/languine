@@ -28,7 +28,24 @@
     <string name="calendar_event_time">Hora: %1$s - %2$s</string>
     <string name="calendar_event_location">Ubicación: %1$s</string>
     <string name="game_score">Puntuación: %1$d</string>
-    <string name="game_high_score">Puntuación Más Alta: %1$d</string>
+    <string name="game_high_score">Puntuación Alta: %1$d</string>
     <string name="game_lives_left">Vidas: %1$d</string>
     <string name="welcome_message">¡Bienvenido a nuestra aplicación!</string>
+    <plurals name="media_queue">
+        <item quantity="one">%d canción en cola</item>
+        <item quantity="other">%d canciones en cola</item>
+    </plurals>
+    <plurals name="notification_likes">
+        <item quantity="one">%d persona le gustó tu publicación</item>
+        <item quantity="other">%d personas le gustaron tu publicación</item>
+    </plurals>
+    <plurals name="game_achievements">
+        <item quantity="one">%d logro desbloqueado</item>
+        <item quantity="other">%d logros desbloqueados</item>
+    </plurals>
+    <string-array name="payment_methods">
+        <item>Tarjeta de Crédito</item>
+        <item>PayPal</item>
+        <item>Transferencia Bancaria</item>
+    </string-array>
 </resources>
