@@ -1,0 +1,17 @@
+{
+    "welcome": "Welcome to our application!",
+    "user": {
+      "greeting": "Hello, {{name}}!",
+      "profile": {
+        "title": "Your Profile",
+        "edit": "Edit Profile"
+      }
+    },
+    "notifications": {
+      "messages": "You have {{count}} new message(s).",
+      "empty": "No new notifications."
+    },
+    "date": {
+      "today": "Today is {{date}}."
+    }
+  }
