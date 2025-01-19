@@ -1,63 +1,50 @@
 import { existsSync } from "node:fs";
 import { intro, isCancel, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
+import type { parserTypeSchema } from "../parsers/index.js";
 import type { Config } from "../types.js";
 import { loadSession } from "../utils/session.js";
 import { commands as authCommands } from "./auth/index.js";
 
-type Format =
-  | "json"
-  | "yaml"
-  | "properties"
-  | "android"
-  | "ios-strings"
-  | "ios-stringsdict"
-  | "md"
-  | "html"
-  | "txt"
-  | "ts"
-  | "po"
-  | "xliff"
-  | "csv"
-  | "resx"
-  | "arb";
+type Format = typeof parserTypeSchema._type;
 
 const SUPPORTED_FORMATS = [
-  { value: "json" as const, label: "JSON (.json)" },
-  { value: "yaml" as const, label: "YAML (.yml, .yaml)" },
-  { value: "properties" as const, label: "Java Properties (.properties)" },
-  { value: "android" as const, label: "Android XML (.xml)" },
-  { value: "ios-strings" as const, label: "iOS Strings (.strings)" },
-  {
-    value: "ios-stringsdict" as const,
-    label: "iOS Stringsdict (.stringsdict)",
-  },
-  { value: "md" as const, label: "Markdown (.md)" },
-  { value: "html" as const, label: "HTML (.html)" },
-  { value: "txt" as const, label: "Text (.txt)" },
-  { value: "ts" as const, label: "TypeScript (.ts)" },
-  { value: "po" as const, label: "Gettext PO (.po)" },
-  { value: "xliff" as const, label: "XLIFF (.xlf, .xliff)" },
-  { value: "csv" as const, label: "CSV (.csv)" },
-  { value: "resx" as const, label: ".NET RESX (.resx)" },
-  { value: "arb" as const, label: "Flutter ARB (.arb)" },
-];
+  { value: "json", label: "JSON (.json)" },
+  { value: "yml", label: "YAML (.yml, .yaml)" },
+  { value: "properties", label: "Java Properties (.properties)" },
+  { value: "android-xml", label: "Android XML (.xml)" },
+  { value: "xcode-strings", label: "iOS Strings (.strings)" },
+  { value: "xcode-stringsdict", label: "iOS Stringsdict (.stringsdict)" },
+  { value: "xcode-xcstrings", label: "iOS XCStrings (.xcstrings)" },
+  { value: "md", label: "Markdown (.md)" },
+  { value: "mdx", label: "MDX (.mdx)" },
+  { value: "html", label: "HTML (.html)" },
+  { value: "js", label: "JavaScript (.js)" },
+  { value: "ts", label: "TypeScript (.ts)" },
+  { value: "po", label: "Gettext PO (.po)" },
+  { value: "xliff", label: "XLIFF (.xlf, .xliff)" },
+  { value: "csv", label: "CSV (.csv)" },
+  { value: "xml", label: "XML (.xml)" },
+  { value: "arb", label: "Flutter ARB (.arb)" },
+] as const;
 
 const FORMAT_EXAMPLES: Record<Format, string> = {
   json: "src/locales/[locale].json",
-  yaml: "src/locales/[locale].yaml",
+  yml: "src/locales/[locale].yaml",
   properties: "src/locales/messages_[locale].properties",
-  android: "res/values-[locale]/strings.xml",
-  "ios-strings": "[locale].lproj/Localizable.strings",
-  "ios-stringsdict": "[locale].lproj/Localizable.stringsdict",
+  "android-xml": "res/values-[locale]/strings.xml",
+  "xcode-strings": "[locale].lproj/Localizable.strings",
+  "xcode-stringsdict": "[locale].lproj/Localizable.stringsdict",
+  "xcode-xcstrings": "[locale].lproj/Localizable.xcstrings",
   md: "src/docs/[locale]/*.md",
+  mdx: "src/docs/[locale]/*.mdx",
   html: "src/content/[locale]/**/*.html",
-  txt: "src/content/[locale]/**/*.txt",
+  js: "src/locales/[locale].js",
   ts: "src/locales/[locale].ts",
   po: "src/locales/[locale].po",
   xliff: "src/locales/[locale].xlf",
   csv: "src/locales/[locale].csv",
-  resx: "src/locales/[locale].resx",
+  xml: "src/locales/[locale].xml",
   arb: "lib/l10n/app_[locale].arb",
 };
 
@@ -115,23 +102,21 @@ export async function commands() {
   const fileConfigs: Config["files"] = {};
 
   // Select format
-  const format = await select({
+  const format = (await select({
     message: "Select file format",
-    options: SUPPORTED_FORMATS,
-  });
+    options: [...SUPPORTED_FORMATS],
+  })) as Format;
 
   if (isCancel(format)) {
     outro("Configuration cancelled");
     process.exit(0);
   }
 
-  const formatKey = format as keyof typeof FORMAT_EXAMPLES;
-
   // Get file pattern
   const pattern = await text({
     message: "Enter the file pattern for translations",
-    placeholder: FORMAT_EXAMPLES[formatKey],
-    defaultValue: FORMAT_EXAMPLES[formatKey],
+    placeholder: FORMAT_EXAMPLES[format],
+    defaultValue: FORMAT_EXAMPLES[format],
     validate(value) {
       if (!value) return;
 
