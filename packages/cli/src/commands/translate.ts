@@ -6,8 +6,9 @@ import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
+import { getAPIKey } from "@/utils/session.ts";
 import { confirm, note, outro, spinner } from "@clack/prompts";
-import { runs, tasks } from "@trigger.dev/sdk/v3";
+import { auth, runs } from "@trigger.dev/sdk/v3";
 import chalk from "chalk";
 import glob from "fast-glob";
 import { z } from "zod";
@@ -37,6 +38,12 @@ export async function translateCommand(args: string[] = []) {
     argsSchema.parse(args);
   const s = spinner();
 
+  const apiKey = getAPIKey();
+
+  if (!apiKey) {
+    throw new Error("No API key found. Please run `languine login` first.");
+  }
+
   if (!isSilent) {
     if (!checkOnly) {
       note(
@@ -53,12 +60,20 @@ export async function translateCommand(args: string[] = []) {
     const config = await loadConfig();
 
     if (!config) {
-      throw new Error(
+      note(
         "Configuration file not found. Please run `languine init` to create one.",
       );
-    }
 
-    const publicToken = await client.jobs.createPublicToken.mutate();
+      process.exit(1);
+    }
+    if (!config.projectId && !process.env.LANGUINE_PROJECT_ID) {
+      note(
+        "Project ID not found in configuration file or LANGUINE_PROJECT_ID environment variable. Please run `languine init` to create one, set the `projectId` in your configuration file, or set the LANGUINE_PROJECT_ID environment variable.",
+        "Error",
+      );
+
+      process.exit(1);
+    }
 
     const { source: sourceLocale, targets: targetLocales } = config.locale;
 
@@ -162,8 +177,10 @@ export async function translateCommand(args: string[] = []) {
             continue;
           }
 
-          const run = await tasks.trigger("translate", {
-            apiKey: publicToken,
+          let result: TranslationResult;
+
+          const run = await client.jobs.startJob.mutate({
+            apiKey: apiKey,
             projectId: config.projectId,
             sourceFormat: type,
             sourceLanguage: sourceLocale,
@@ -171,21 +188,24 @@ export async function translateCommand(args: string[] = []) {
             content: translationInput,
           });
 
-          let result: TranslationResult;
-
-          for await (const update of runs.subscribeToRun(run.id)) {
-            if (update.metadata?.progress && !isSilent) {
-              s.message(
-                `Translation progress: ${Math.round(
-                  Number(update.metadata.progress),
-                )}%`,
-              );
-            }
-            if (update.finishedAt) {
-              result = update.output;
-              break;
-            }
-          }
+          await auth.withAuth(
+            { accessToken: run.publicAccessToken },
+            async () => {
+              for await (const update of runs.subscribeToRun(run.id)) {
+                if (update.metadata?.progress && !isSilent) {
+                  s.message(
+                    `Translation progress: ${Math.round(
+                      Number(update.metadata.progress),
+                    )}%`,
+                  );
+                }
+                if (update.finishedAt) {
+                  result = update.output;
+                  break;
+                }
+              }
+            },
+          );
 
           if (!isSilent) {
             s.message("Processing translations...");

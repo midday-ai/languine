@@ -1,9 +1,0 @@
-{
-  "key": "Det är en underbar dag!",
-  "nested": {
-    "key": "Hur mår du?"
-  },
-  "interpolated": "Ha en trevlig dag, {{name}}!",
-  "pluralKey_one": "Det här är ett fint exempel.",
-  "pluralKey_other": "Det här är fina exempel."
-}

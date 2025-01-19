@@ -2,7 +2,7 @@ import { Builder, parseStringPromise } from "xml2js";
 import { createFormatParser } from "../core/format.ts";
 import type { Parser } from "../core/types.ts";
 
-export function createAndroidXmlParser(): Parser {
+export function createAndroidParser(): Parser {
   return createFormatParser({
     async parse(input: string) {
       try {

@@ -10,5 +10,4 @@ export default defineConfig({
       include: ["locales/[locale].json"],
     },
   },
-  extract: ["./emails/**/*.tsx"],
 });

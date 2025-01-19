@@ -1,15 +1,36 @@
 export default {
-  hello: "Hello",
-  welcome: "Hello {name}!",
-  "about.you": "Hello {name}! You are {age} years old",
-  "scope.test": "A scope",
-  "scope.more.test": "A scope",
-  "scope.more.param": "A scope with {param}",
-  "scope.more.and.more.test": "A scope",
-  "scope.more.stars#one": "1 star on GitHub",
-  "scope.more.stars#other": "{count} stars on GitHub",
-  "missing.translation.in.fr": "This should work",
-  "cows#one": "A cow",
-  "cows#other": "{count} cows",
-  "languine.hello": "Hello Languine",
+  hello: "Bonjour",
+  welcome: "Bonjour {name}!",
+  about: {
+    you: "Bonjour {name}! Vous avez {age} ans",
+  },
+  scope: {
+    test: "Un champ",
+    more: {
+      test: "Un champ",
+      param: "Un champ avec {param}",
+      and: {
+        more: {
+          test: "Un champ",
+        },
+      },
+      "stars#one": "1 étoile sur GitHub",
+      "stars#other": "{count} étoiles sur GitHub",
+    },
+  },
+  missing: {
+    translation: {
+      in: {
+        fr: "Cela devrait fonctionner",
+      },
+    },
+  },
+  "cows#one": "Une vache",
+  "cows#other": "{count} vaches",
+  languine: {
+    hello: "Bonjour Languine",
+  },
+  test: {
+    hello: "Bonjour",
+  },
 } as const;

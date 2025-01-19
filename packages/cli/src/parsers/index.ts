@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { Parser } from "./core/types.ts";
-import { createAndroidXmlParser } from "./formats/android-xml.ts";
+import { createAndroidParser } from "./formats/android.ts";
 import { createArbParser } from "./formats/arb.ts";
 import { createCsvParser } from "./formats/csv.ts";
 import { createHtmlParser } from "./formats/html.ts";
@@ -28,7 +28,7 @@ export const parserTypeSchema = z.enum([
   "xcode-stringsdict",
   "xcode-xcstrings",
   "properties",
-  "android-xml",
+  "android",
   "md",
   "mdx",
   "html",
@@ -44,8 +44,8 @@ export interface CreateParserOptions {
 
 export function createParser(options: CreateParserOptions): Parser {
   switch (options.type) {
-    case "android-xml":
-      return createAndroidXmlParser();
+    case "android":
+      return createAndroidParser();
     case "arb":
       return createArbParser();
     case "csv":

@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createAndroidXmlParser } from "../android-xml.ts";
+import { createAndroidParser } from "../android.ts";
 
 describe("Android XML parser", () => {
-  const parser = createAndroidXmlParser();
+  const parser = createAndroidParser();
 
   describe("parse", () => {
     it("should parse valid Android XML", async () => {
