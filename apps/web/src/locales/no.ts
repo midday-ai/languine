@@ -453,5 +453,26 @@ export default {
   hero2: {
     title: "Automatisert lokalisering for dine applikasjoner",
     description: "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere."
+  },
+  language: {
+    en: "Engelsk",
+    es: "Spansk",
+    fr: "Fransk",
+    de: "Tysk",
+    it: "Italiensk",
+    pt: "Portugisisk",
+    zh: "Kinesisk",
+    ja: "Japansk",
+    ko: "Koreansk",
+    ar: "Arabisk",
+    hi: "Hindi",
+    tr: "Tyrkisk",
+    nl: "Nederlandsk",
+    pl: "Polsk",
+    no: "Norsk",
+    da: "Dansk",
+    sv: "Svensk",
+    fi: "Finsk",
+    vi: "Vietnamesisk"
   }
 } as const;

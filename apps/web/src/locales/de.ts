@@ -453,5 +453,26 @@ export default {
   hero2: {
     title: "Automatisierte Lokalisierung für Ihre Anwendungen",
     description: "Optimieren Sie Ihren Lokalisierungsprozess mit einer KI-gestützten CLI und einem Pipeline-System, das speziell für Entwickler entwickelt wurde, um Übersetzungen zu automatisieren."
+  },
+  language: {
+    en: "Englisch",
+    es: "Spanisch",
+    fr: "Französisch",
+    de: "Deutsch",
+    it: "Italienisch",
+    pt: "Portugiesisch",
+    zh: "Chinesisch",
+    ja: "Japanisch",
+    ko: "Koreanisch",
+    ar: "Arabisch",
+    hi: "Hindi",
+    tr: "Türkisch",
+    nl: "Niederländisch",
+    pl: "Polnisch",
+    no: "Norwegisch",
+    da: "Dänisch",
+    sv: "Schwedisch",
+    fi: "Finnisch",
+    vi: "Vietnamesisch"
   }
 } as const;

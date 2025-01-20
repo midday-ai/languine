@@ -452,5 +452,26 @@ export default {
   hero2: {
     title: "Automatyzacja lokalizacji dla Twoich aplikacji",
     description: "Usprawnij proces lokalizacji dzięki wspieranemu przez AI interfejsowi wiersza poleceń oraz potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
+  },
+  language: {
+    en: "Angielski",
+    es: "Hiszpański",
+    fr: "Francuski",
+    de: "Niemiecki",
+    it: "Włoski",
+    pt: "Portugalski",
+    zh: "Chiński",
+    ja: "Japoński",
+    ko: "Koreański",
+    ar: "Arabski",
+    hi: "Hindi",
+    tr: "Turecki",
+    nl: "Holenderski",
+    pl: "Polski",
+    no: "Norweski",
+    da: "Duński",
+    sv: "Szwedzki",
+    fi: "Fiński",
+    vi: "Wietnamski"
   }
 } as const;

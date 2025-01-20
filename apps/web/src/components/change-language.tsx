@@ -6,10 +6,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useChangeLocale, useCurrentLocale } from "@/locales/client";
+import { useChangeLocale, useCurrentLocale, useI18n } from "@/locales/client";
 import languineConfig from "../../languine.config";
 
 export function ChangeLanguage() {
+  const t = useI18n();
   const changeLocale = useChangeLocale();
   const currentLocale = useCurrentLocale();
 
@@ -38,7 +39,8 @@ export function ChangeLanguage() {
             onClick={() => changeLocale(locale)}
             className="uppercase text-xs"
           >
-            {locale}
+            {/* @ts-ignore */}
+            {t(`language.${locale}`)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

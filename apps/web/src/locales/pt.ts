@@ -452,5 +452,26 @@ export default {
   hero2: {
     title: "Localização automatizada para seus aplicativos",
     description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores."
+  },
+  language: {
+    en: "Inglês",
+    es: "Espanhol",
+    fr: "Francês",
+    de: "Alemão",
+    it: "Italiano",
+    pt: "Português",
+    zh: "Chinês",
+    ja: "Japonês",
+    ko: "Coreano",
+    ar: "Árabe",
+    hi: "Hindi",
+    tr: "Turco",
+    nl: "Holandês",
+    pl: "Polonês",
+    no: "Norueguês",
+    da: "Dinamarquês",
+    sv: "Sueco",
+    fi: "Finlandês",
+    vi: "Vietnamita"
   }
 } as const;

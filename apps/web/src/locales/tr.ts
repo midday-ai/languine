@@ -452,5 +452,26 @@ export default {
   hero2: {
     title: "Uygulamalarınız için otomatik yerelleştirme",
     description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış, yapay zeka destekli bir CLI ve ardışık düzen ile yerelleştirme sürecinizi kolaylaştırın."
+  },
+  language: {
+    en: "İngilizce",
+    es: "İspanyolca",
+    fr: "Fransızca",
+    de: "Almanca",
+    it: "İtalyanca",
+    pt: "Portekizce",
+    zh: "Çince",
+    ja: "Japonca",
+    ko: "Korece",
+    ar: "Arapça",
+    hi: "Hintçe",
+    tr: "Türkçe",
+    nl: "Hollandaca",
+    pl: "Lehçe",
+    no: "Norveççe",
+    da: "Danca",
+    sv: "İsveççe",
+    fi: "Fince",
+    vi: "Vietnamca"
   }
 } as const;

@@ -452,5 +452,26 @@ export default {
   hero2: {
     title: "Tự động hóa việc dịch thuật cho ứng dụng của bạn",
     description: "Tối ưu hóa quy trình dịch thuật của bạn với một CLI và hệ thống tự động hóa được hỗ trợ bởi AI, được thiết kế để giúp các nhà phát triển tự động hóa việc dịch thuật."
+  },
+  language: {
+    en: "Tiếng Anh",
+    es: "Tiếng Tây Ban Nha",
+    fr: "Tiếng Pháp",
+    de: "Tiếng Đức",
+    it: "Tiếng Ý",
+    pt: "Tiếng Bồ Đào Nha",
+    zh: "Tiếng Trung",
+    ja: "Tiếng Nhật",
+    ko: "Tiếng Hàn",
+    ar: "Tiếng Ả Rập",
+    hi: "Tiếng Hindi",
+    tr: "Tiếng Thổ Nhĩ Kỳ",
+    nl: "Tiếng Hà Lan",
+    pl: "Tiếng Ba Lan",
+    no: "Tiếng Na Uy",
+    da: "Tiếng Đan Mạch",
+    sv: "Tiếng Thụy Điển",
+    fi: "Tiếng Phần Lan",
+    vi: "Tiếng Việt"
   }
 } as const;

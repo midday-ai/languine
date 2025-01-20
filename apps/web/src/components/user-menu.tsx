@@ -8,6 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
 import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import Link from "next/link";
@@ -15,6 +16,7 @@ import { useParams, useRouter } from "next/navigation";
 
 export function UserMenu() {
   const { data: session } = authClient.useSession();
+  const { setOpen: openCreateTeamModal } = useCreateTeamModal();
   const params = useParams();
   const t = useI18n();
   const router = useRouter();
@@ -66,11 +68,15 @@ export function UserMenu() {
             {t("userMenu.team")}
           </DropdownMenuItem>
         </Link>
-        <Link href="/tuning" className="cursor-pointer text-xs">
+        <button
+          type="button"
+          onClick={() => openCreateTeamModal(true)}
+          className="cursor-pointer text-xs w-full"
+        >
           <DropdownMenuItem className="text-sm">
             {t("userMenu.createTeam")}
           </DropdownMenuItem>
-        </Link>
+        </button>
         <DropdownMenuSeparator />
         <Link href="/">
           <DropdownMenuItem className="text-sm">

@@ -453,5 +453,26 @@ export default {
   hero2: {
     title: "Automatisoi sovellustesi lokalisointi",
     description: "Yksinkertaista lokalisointiprosessisi tekoälyä hyödyntävällä CLI:llä ja putkistolla, jotka on suunniteltu automatisoimaan käännökset kehittäjille."
+  },
+  language: {
+    en: "Englanti",
+    es: "Espanja",
+    fr: "Ranska",
+    de: "Saksa",
+    it: "Italia",
+    pt: "Portugali",
+    zh: "Kiina",
+    ja: "Japani",
+    ko: "Korea",
+    ar: "Arabia",
+    hi: "Hindi",
+    tr: "Turkki",
+    nl: "Hollanti",
+    pl: "Puola",
+    no: "Norja",
+    da: "Tanska",
+    sv: "Ruotsi",
+    fi: "Suomi",
+    vi: "Vietnam"
   }
 } as const;

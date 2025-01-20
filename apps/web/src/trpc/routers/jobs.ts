@@ -72,8 +72,6 @@ export const jobsRouter = createTRPCRouter({
           error: {
             code: "LIMIT_REACHED",
             message: "You have reached the maximum number of keys",
-            currentKeysLimit,
-            nextTotalKeys,
           },
         };
       }

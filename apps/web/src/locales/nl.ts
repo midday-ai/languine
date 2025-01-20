@@ -452,5 +452,26 @@ export default {
   hero2: {
     title: "Geautomatiseerde lokalisatie voor uw applicaties",
     description: "Stroomlijn uw lokalisatieproces met een door AI aangedreven CLI en pijplijn die ontworpen is om vertalingen voor ontwikkelaars te automatiseren."
+  },
+  language: {
+    en: "Engels",
+    es: "Spaans",
+    fr: "Frans",
+    de: "Duits",
+    it: "Italiaans",
+    pt: "Portugees",
+    zh: "Chinees",
+    ja: "Japans",
+    ko: "Koreaans",
+    ar: "Arabisch",
+    hi: "Hindi",
+    tr: "Turks",
+    nl: "Nederlands",
+    pl: "Pools",
+    no: "Noors",
+    da: "Deens",
+    sv: "Zweeds",
+    fi: "Fins",
+    vi: "Vietnamees"
   }
 } as const;
