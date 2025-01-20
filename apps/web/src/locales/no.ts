@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Aktivitet",
     loading: "Laster",
-    loadMore: "Vis mer"
+    loadMore: "Vis mer",
+    noResults: "Ingen resultater for '{search}'",
+    clearSearch: "Tøm søk"
   },
   features: {
     title: "Funksjoner",
@@ -54,7 +56,7 @@ export default {
     },
     implementation: {
       title: "Implementering",
-      quickSetup: "Rask oppsett og integrasjon",
+      quickSetup: "Rask oppsett og integrering",
       fileFormat: "Filformatbehandling",
       contentStructure: "Innholdsstruktur organisering",
       assetOrganization: "Eiendomsorganisering"
@@ -81,9 +83,6 @@ export default {
       privacyPolicy: "Personvernerklæring"
     }
   },
-  translations: {
-    total_keys: "{total} nøkler totalt"
-  },
   userMenu: {
     account: "Kontoinnstillinger",
     signOut: "Logg ut",
@@ -98,7 +97,7 @@ export default {
     createProjectButton: "Opprett prosjekt",
     pro: "Pro",
     project: "Prosjekt",
-    teams: "Team",
+    teams: "Lag",
     createTeam: "Opprett team",
     createTeamTitle: "Opprett et nytt team",
     teamNamePlaceholder: "Teamnavn",
@@ -145,7 +144,7 @@ export default {
   pipeline: {
     title: "Arbeidsflyt (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer blir pushet, analyserer vi det endrede innholdet, opprettholder oversettelseshukommelsen din, og genererer nøyaktige oversettelser mens vi bevarer merkevarens stemme og terminologi. Oversettelsene blir deretter sendt inn som pull-forespørsel, noe som tillater gjennomgang før de blir slått sammen i hovedgrenen din og distribuert. Denne automatiserte arbeidsflyten sikrer at ditt lokaliserte innhold forblir synkronisert med utviklingen."
+    description: "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer blir pushet, analyserer vi det endrede innholdet, opprettholder oversettelseshukommelsen din, og genererer nøyaktige oversettelser mens vi bevarer merkevarens stemme og terminologi. Oversettelsene blir deretter sendt inn som pull-forespørsel, slik at de kan gjennomgås før de blir slått sammen i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokaliserte innhold forblir synkronisert med utviklingen."
   },
   settings: {
     saved: "Innstillinger lagret",
@@ -178,7 +177,7 @@ export default {
       name: {
         title: "Teamnavn",
         description: "Navnet på teamet ditt",
-        placeholder: "Skriv inn teamnavn"
+        placeholder: "Skriv inn teamnavnet"
       },
       billing: {
         title: "Faktureringsplan",
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Team API-nøkkel",
-        description: "API-nøkkel for teamtilgang, bruk dette fra CI/CD-pipelinen din sammen med prosjekt-ID-en.",
+        description: "API-nøkkel for teamtilgang, bruk dette fra CI/CD-pipelinen sammen med prosjekt-ID.",
         placeholder: "Team API-nøkkel"
       },
       members: {
@@ -227,7 +226,7 @@ export default {
         deleteInviteError: "Feil ved sletting av invitasjon",
         removeMemberSuccess: "Medlem fjernet",
         removeMemberError: "Feil ved fjerning av medlem",
-        removeMemberSuccessDescription: "Medlem har blitt fjernet.",
+        removeMemberSuccessDescription: "Medlem har blitt fjernet vellykket",
         removeMemberErrorDescription: "Feil ved fjerning av medlem"
       }
     },
@@ -236,7 +235,7 @@ export default {
     permissionDenied: "Tillatelse nektet",
     permissionDeniedDescription: "Du må være eier av teamet for å utføre denne handlingen.",
     deleteTeamTitle: "Slett team",
-    deleteTeamDescription: "Kan ikke slette organisasjonen når du er det eneste medlemmet, i stedet slett kontoen din.",
+    deleteTeamDescription: "Kan ikke slette organisasjon når du er det eneste medlemmet, i stedet slett kontoen din.",
     error: "Noe gikk galt",
     errorDescription: "Vennligst prøv igjen eller kontakt support.",
     addTeam: "Opprett team",
@@ -249,7 +248,7 @@ export default {
       "continue": "Fortsett"
     },
     provider: {
-      updateSuccess: "Innstillinger oppdatert",
+      updateSuccess: "Innstillinger oppdatert vellykket",
       updateError: "Feil ved oppdatering av innstillinger",
       translationProvider: {
         title: "Oversettelsesleverandør",
@@ -271,7 +270,7 @@ export default {
     save: "Lagre"
   },
   tuning: {
-    general: "Generelt",
+    general: "Generell",
     translationMemory: {
       title: "Oversettelseshukommelse",
       description: "Bruk oversettelseshukommelse for å forbedre konsistens og effektivitet."
@@ -355,7 +354,7 @@ export default {
   },
   createTeam: {
     teamName: "Teamnavn",
-    teamNamePlaceholder: "Skriv inn teamnavn",
+    teamNamePlaceholder: "Skriv inn teamnavnet",
     createTeamButton: "Opprett team",
     cancel: "Avbryt",
     createTeamDescription: "Opprett et nytt team for å administrere prosjektene og samarbeidspartnerne dine."
@@ -376,7 +375,7 @@ export default {
     sendInvite: "Send invitasjon",
     success: {
       title: "Invitasjon sendt",
-      description: "Invitasjonen til {email} ble sendt."
+      description: "Vellykket sendt invitasjon til {email}"
     },
     error: {
       title: "Feil",
@@ -425,8 +424,20 @@ export default {
   cli: {
     success: {
       title: "Languine CLI pålogging vellykket",
-      description: "Languine CLI ble autentisert som:",
+      description: "Languine CLI ble autentisert vellykket som:",
       description_2: "Du kan nå lukke denne fanen og gå tilbake til CLI."
     }
+  },
+  translations: {
+    header: "Oversatte nøkler"
+  },
+  search: {
+    placeholder: "Søk"
+  },
+  periods: {
+    daily: "Daglig",
+    weekly: "Ukentlig",
+    monthly: "Månedlig",
+    selectPeriod: "Velg periode"
   }
 } as const;

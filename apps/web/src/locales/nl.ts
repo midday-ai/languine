@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Activiteit",
     loading: "Laden",
-    loadMore: "Toon meer"
+    loadMore: "Toon meer",
+    noResults: "Geen resultaten voor '{search}'",
+    clearSearch: "Zoekopdracht wissen"
   },
   features: {
     title: "Kenmerken",
@@ -80,9 +82,6 @@ export default {
       and: "en",
       privacyPolicy: "Privacybeleid"
     }
-  },
-  translations: {
-    total_keys: "{total} sleutels in totaal"
   },
   userMenu: {
     account: "Accountinstellingen",
@@ -179,7 +178,7 @@ export default {
       updateError: "Instellingen bijwerken mislukt",
       translationProvider: {
         title: "Vertaalprovider",
-        description: "Kies uw favoriete AI-service voor het genereren van vertalingen. Elke provider biedt verschillende mogelijkheden en prijzen.",
+        description: "Kies uw voorkeurs AI-service voor het genereren van vertalingen. Elke provider biedt verschillende mogelijkheden en prijzen.",
         placeholder: "Selecteer een provider"
       },
       languageModel: {
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Provider API-sleutel",
-        description: "Voer uw API-sleutel in om te authenticeren bij uw gekozen provider. Houd deze sleutel veilig - we versleutelen deze voordat we deze opslaan.",
+        description: "Voer uw API-sleutel in om te authenticeren met uw gekozen provider. Houd deze sleutel veilig - we versleutelen deze voordat we deze opslaan.",
         placeholder: "Voer uw API-sleutel in"
       }
     },
@@ -346,7 +345,7 @@ export default {
       includes_free: "Alles in Gratis, plus:",
       features: {
         github_action: "GitHub Actie-integratie",
-        latest_features: "Vroegtijdige toegang tot de nieuwste functies.",
+        latest_features: "Vroegtoegang tot de nieuwste functies",
         priority_support: "Prioriteitssteun"
       }
     },
@@ -391,7 +390,7 @@ export default {
     "12": "Dec",
     "01": "Jan",
     "02": "Feb",
-    "03": "Mar",
+    "03": "Mrt",
     "04": "Apr",
     "05": "Mei",
     "06": "Jun",
@@ -406,8 +405,8 @@ export default {
         description: "Installeer en configureer de Languine CLI om vertalingen te beheren."
       },
       "2": {
-        title: "Vertalingen pushen",
-        description: "Wachten op het pushen van de vertalingen."
+        title: "Duw vertalingen",
+        description: "Wachten op het duwen van de vertalingen."
       },
       "3": {
         title: "Documentatie",
@@ -427,5 +426,17 @@ export default {
       description: "Languine CLI is succesvol geauthenticeerd als:",
       description_2: "U kunt nu dit tabblad sluiten en terugkeren naar de CLI."
     }
+  },
+  translations: {
+    header: "Vertaald sleutels"
+  },
+  search: {
+    placeholder: "Zoeken"
+  },
+  periods: {
+    daily: "Dagelijks",
+    weekly: "Wekelijks",
+    monthly: "Maandelijks",
+    selectPeriod: "Periode selecteren"
   }
 } as const;

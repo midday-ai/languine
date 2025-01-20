@@ -25,14 +25,16 @@ export default {
   activity: {
     title: "Attività",
     loading: "Caricamento",
-    loadMore: "Mostra di più"
+    loadMore: "Mostra di più",
+    noResults: "Nessun risultato per '{search}'",
+    clearSearch: "Cancella ricerca"
   },
   features: {
     title: "Caratteristiche",
     fullyOpenSource: "Completamente open source",
     fullyOpenSourceDescription: "Il nostro codice è disponibile pubblicamente su GitHub, garantendo trasparenza e contributi della comunità.",
-    noVendorLockIn: "Nessun blocco del fornitore",
-    noVendorLockInDescription: "Non ti blocchiamo in un servizio specifico, utilizza i tuoi LLM.",
+    noVendorLockIn: "Nessun vendor lock-in",
+    noVendorLockInDescription: "Non ti vincoliamo a un servizio specifico, utilizza i tuoi LLM.",
     presetsForExpo: "Impostazioni predefinite per Expo",
     presetsForExpoDescription: "Forniamo impostazioni predefinite per Expo, così puoi iniziare rapidamente.",
     presetForReactNative: "Impostazione predefinita per React Native",
@@ -49,7 +51,7 @@ export default {
       intelligentTranslation: "Traduzione intelligente con consapevolezza del contesto",
       brandVoice: "Coerenza della voce e del tono del marchio",
       terminology: "Gestione della terminologia",
-      linguisticFeatures: "Funzionalità linguistiche avanzate",
+      linguisticFeatures: "Caratteristiche linguistiche avanzate",
       realtimeUpdates: "Aggiornamenti di traduzione in tempo reale"
     },
     implementation: {
@@ -80,9 +82,6 @@ export default {
       and: "e",
       privacyPolicy: "Informativa sulla privacy"
     }
-  },
-  translations: {
-    total_keys: "{total} chiavi in totale"
   },
   userMenu: {
     account: "Impostazioni account",
@@ -161,7 +160,7 @@ export default {
     addTeam: "Crea team",
     apiKey: {
       updated: "Chiave API aggiornata",
-      updatedDescription: "La tua chiave API è stata aggiornata con successo e copiata negli appunti.",
+      updatedDescription: "La tua chiave API è stata aggiornata con successo ed è stata copiata negli appunti.",
       title: "Aggiorna chiave API",
       description: "Sei sicuro di voler generare una nuova chiave API? La vecchia chiave smetterà di funzionare immediatamente.",
       cancel: "Annulla",
@@ -273,7 +272,7 @@ export default {
     general: "Generale",
     translationMemory: {
       title: "Memoria di traduzione",
-      description: "Utilizza la memoria di traduzione per migliorare la coerenza e l'efficienza"
+      description: "Utilizza la memoria di traduzione per migliorare coerenza ed efficienza"
     },
     qualityChecks: {
       title: "Controlli di qualità",
@@ -323,7 +322,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adattamento culturale",
-      description: "Adatta i contenuti per la correttezza culturale"
+      description: "Adatta i contenuti per la loro appropriatezza culturale"
     }
   },
   pricing: {
@@ -427,5 +426,17 @@ export default {
       description: "Languine CLI è stato autenticato con successo come:",
       description_2: "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
+  },
+  translations: {
+    header: "Chiavi tradotte"
+  },
+  search: {
+    placeholder: "Cerca"
+  },
+  periods: {
+    daily: "Giornaliero",
+    weekly: "Settimanale",
+    monthly: "Mensile",
+    selectPeriod: "Seleziona periodo"
   }
 } as const;

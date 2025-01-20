@@ -1,15 +1,19 @@
 "use client";
 
 import { ActivityCard, ActivityCardSkeleton } from "@/components/activity-card";
+import { Button } from "@/components/ui/button";
+import { Loader } from "@/components/ui/loader";
+import { useSearch } from "@/hooks/use-search";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { useParams } from "next/navigation";
-import { useEffect, useRef } from "react";
-import { Button } from "./ui/button";
-import { Loader } from "./ui/loader";
+import { useDeferredValue, useEffect, useRef } from "react";
 
 export function Activity() {
   const { organization, project } = useParams();
+  const { search, setSearch } = useSearch();
+  const deferredSearch = useDeferredValue(search);
+
   const t = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -18,6 +22,7 @@ export function Activity() {
       {
         slug: project as string,
         organizationId: organization as string,
+        search: deferredSearch,
       },
       {
         getNextPageParam: (lastPage) => {
@@ -43,7 +48,7 @@ export function Activity() {
           fetchNextPage();
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.3 },
     );
 
     if (containerRef.current) {
@@ -55,63 +60,71 @@ export function Activity() {
 
   if (!pages) return <ActivitySkeleton />;
 
-  return (
-    <div className="p-8">
-      <h2 className="text-lg font-normal">{t("activity.title")}</h2>
+  if (search && pages[0].length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-2 mt-24">
+        <p className="text-secondary text-sm">
+          {t("activity.noResults", { search })}
+        </p>
 
-      <div className="flex flex-col gap-4 mt-6">
-        {pages.map((page) =>
-          page.map((item) => (
-            <ActivityCard
-              key={item.id}
-              source={item.sourceText}
-              content={item.translatedText}
-              createdAt={item.createdAt}
-              commit={item.commit}
-              targetLanguage={item.targetLanguage}
-            />
-          )),
+        <Button
+          variant="outline"
+          className="mt-4"
+          onClick={() => setSearch("")}
+        >
+          {t("activity.clearSearch")}
+        </Button>
+      </div>
+    );
+  }
+  return (
+    <div className="flex flex-col gap-4 mt-6">
+      {pages.map((page) =>
+        page.map((item) => (
+          <ActivityCard
+            key={item.id}
+            source={item.sourceText}
+            content={item.translatedText}
+            createdAt={item.createdAt}
+            commit={item.commit}
+            targetLanguage={item.targetLanguage}
+          />
+        )),
+      )}
+
+      <div
+        ref={containerRef}
+        className="h-8 flex items-center justify-center w-full"
+      >
+        {isFetching && (
+          <div className="flex items-center gap-2 pt-8">
+            <Loader />
+            <span className="text-xs text-secondary">
+              {t("activity.loading")}...
+            </span>
+          </div>
         )}
 
-        <div
-          ref={containerRef}
-          className="h-8 flex items-center justify-center w-full"
-        >
-          {isFetching && (
-            <div className="flex items-center gap-2 pt-8">
-              <Loader />
-              <span className="text-xs text-secondary">
-                {t("activity.loading")}...
-              </span>
-            </div>
-          )}
-
-          {hasNextPage && pages.length === 1 && !isFetching && (
-            <Button
-              variant="outline"
-              className="w-full mt-8"
-              onClick={() => fetchNextPage()}
-            >
-              {t("activity.loadMore")}
-            </Button>
-          )}
-        </div>
+        {hasNextPage && pages.length === 1 && !isFetching && (
+          <Button
+            variant="outline"
+            className="w-full mt-8 font-normal text-secondary"
+            onClick={() => fetchNextPage()}
+          >
+            {t("activity.loadMore")}
+          </Button>
+        )}
       </div>
     </div>
   );
 }
 
 export function ActivitySkeleton() {
-  const t = useI18n();
-
   return (
-    <div className="p-8">
-      <h2 className="text-lg font-normal">{t("activity.title")}</h2>
-      <div className="flex flex-col gap-4 mt-6">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <ActivityCardSkeleton key={i.toString()} />
-        ))}
-      </div>
+    <div className="flex flex-col gap-4 mt-6">
+      {Array.from({ length: 10 }).map((_, i) => (
+        <ActivityCardSkeleton key={i.toString()} />
+      ))}
     </div>
   );
 }

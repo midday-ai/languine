@@ -25,14 +25,16 @@ export default {
   activity: {
     title: "Aktywność",
     loading: "Ładowanie",
-    loadMore: "Pokaż więcej"
+    loadMore: "Pokaż więcej",
+    noResults: "Brak wyników dla '{search}'",
+    clearSearch: "Wyczyść wyszukiwanie"
   },
   features: {
     title: "Funkcje",
     fullyOpenSource: "W pełni otwarte źródło",
     fullyOpenSourceDescription: "Nasz kod jest publicznie dostępny na GitHubie, co umożliwia przejrzystość i wkład społeczności.",
-    noVendorLockIn: "Brak blokady dostawcy",
-    noVendorLockInDescription: "Nie zmuszamy Cię do korzystania z konkretnej usługi, użyj własnych LLM-ów.",
+    noVendorLockIn: "Brak uzależnienia od dostawcy",
+    noVendorLockInDescription: "Nie uzależniamy Cię od konkretnej usługi, użyj własnych LLM.",
     presetsForExpo: "Ustawienia dla Expo",
     presetsForExpoDescription: "Oferujemy ustawienia dla Expo, abyś mógł szybko zacząć.",
     presetForReactNative: "Ustawienia dla React Native",
@@ -81,9 +83,6 @@ export default {
       privacyPolicy: "Polityka prywatności"
     }
   },
-  translations: {
-    total_keys: "{total} kluczy w sumie"
-  },
   userMenu: {
     account: "Ustawienia konta",
     signOut: "Wyloguj się",
@@ -126,7 +125,7 @@ export default {
     },
     deleteAccount: {
       title: "Usuń konto",
-      description: "Na stałe usuń swoje konto i wszystkie powiązane dane. Ta akcja nie może być cofnięta.",
+      description: "Trwale usuń swoje konto i wszystkie powiązane dane. Ta akcja nie może być cofnięta.",
       button: "Usuń konto"
     }
   },
@@ -145,7 +144,7 @@ export default {
   pipeline: {
     title: "Przepływ pracy (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z Twoim istniejącym pipeline'em CI/CD, automatycznie tłumacząc Twój kod przy każdym przesłaniu. Gdy zmiany w kodzie są przesyłane, analizujemy zmodyfikowaną treść, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako prośby o ściągnięcie, co pozwala na przegląd przed scaleniem ich z Twoją główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że Twoje zlokalizowane treści pozostają w synchronizacji z rozwojem."
+    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z Twoim istniejącym pipeline'em CI/CD, automatycznie tłumacząc Twój kod przy każdym przesłaniu. Gdy zmiany w kodzie są przesyłane, analizujemy zmodyfikowaną treść, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako prośby o ściągnięcie, co pozwala na przegląd przed scaleniem ich do głównej gałęzi i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że Twoje zlokalizowane treści pozostają w synchronizacji z rozwojem."
   },
   settings: {
     badRequest: "Nieprawidłowe żądanie",
@@ -207,7 +206,7 @@ export default {
       },
       "delete": {
         title: "Usuń projekt",
-        description: "Na stałe usuń ten projekt i wszystkie jego dane",
+        description: "Trwale usuń ten projekt i wszystkie jego dane",
         button: "Usuń projekt"
       }
     },
@@ -304,8 +303,8 @@ export default {
     },
     brandName: {
       title: "Nazwa marki",
-      description: "Ustaw nazwę swojej marki dla spójnego użycia",
-      placeholder: "Wprowadź nazwę swojej marki"
+      description: "Ustaw swoją nazwę marki dla spójnego użycia",
+      placeholder: "Wprowadź swoją nazwę marki"
     },
     brandVoice: {
       title: "Głos marki",
@@ -423,9 +422,21 @@ export default {
   },
   cli: {
     success: {
-      title: "Zalogowanie do Languine CLI zakończone sukcesem",
+      title: "Sukces logowania Languine CLI",
       description: "Languine CLI został pomyślnie uwierzytelniony jako:",
       description_2: "Możesz teraz zamknąć tę kartę i wrócić do CLI"
     }
+  },
+  translations: {
+    header: "Przetłumaczone klucze"
+  },
+  search: {
+    placeholder: "Szukaj"
+  },
+  periods: {
+    daily: "Codziennie",
+    weekly: "Tygodniowo",
+    monthly: "Miesięcznie",
+    selectPeriod: "Wybierz okres"
   }
 } as const;

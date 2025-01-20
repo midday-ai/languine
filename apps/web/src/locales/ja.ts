@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "アクティビティ",
     loading: "読み込み中",
-    loadMore: "もっと表示"
+    loadMore: "もっと表示",
+    noResults: "検索 '{search}' の結果はありません",
+    clearSearch: "検索をクリア"
   },
   features: {
     title: "機能",
@@ -46,7 +48,7 @@ export default {
     title: "アプリのローカリゼーションのすべての側面を処理します。",
     smartTranslation: {
       title: "スマート翻訳",
-      intelligentTranslation: "コンテキストを考慮したインテリジェントな翻訳",
+      intelligentTranslation: "文脈を考慮したインテリジェントな翻訳",
       brandVoice: "ブランドの声とトーンの一貫性",
       terminology: "用語管理",
       linguisticFeatures: "高度な言語機能",
@@ -80,9 +82,6 @@ export default {
       and: "および",
       privacyPolicy: "プライバシーポリシー"
     }
-  },
-  translations: {
-    total_keys: "{total}のキーが合計で"
   },
   userMenu: {
     account: "アカウント設定",
@@ -137,7 +136,7 @@ export default {
     dialog: {
       title: "本当に確信していますか？",
       description: "この操作は元に戻せません。確認するにはDELETEと入力してください。",
-      placeholder: "確認するにはDELETEと入力",
+      placeholder: "確認のためにDELETEと入力",
       confirm: "削除を確認",
       cancel: "キャンセル"
     }
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "チームAPIキー",
-        description: "チームアクセス用のAPIキー。これをCI/CDパイプラインからプロジェクトIDと一緒に使用してください。",
+        description: "チームアクセス用のAPIキー。これをCI/CDパイプラインからプロジェクトIDと一緒に使用します。",
         placeholder: "チームAPIキー"
       },
       members: {
@@ -198,7 +197,7 @@ export default {
         filterPlaceholder: "メンバーをフィルタ...",
         allRoles: "すべての役割",
         date: "日付",
-        selectAll: "{count}が選択されました",
+        selectAll: "{count} 件が選択されました",
         noPendingInvitations: "保留中の招待はありません",
         inviteMembers: "コラボレーションのためにメンバーを招待",
         roles: {
@@ -222,7 +221,7 @@ export default {
         tryDifferentSearch: "別の検索を試してください",
         deleteInvite: "招待を削除",
         deleteInviteDescription: "招待を削除します。",
-        invitedBy: "招待者 {name}",
+        invitedBy: "招待されたのは{name}",
         deleteInviteSuccess: "招待が削除されました",
         deleteInviteError: "招待の削除に失敗しました",
         removeMemberSuccess: "メンバーが削除されました",
@@ -237,8 +236,8 @@ export default {
     permissionDeniedDescription: "このアクションを実行するには、チームのオーナーである必要があります。",
     deleteTeamTitle: "チームを削除",
     deleteTeamDescription: "唯一のメンバーである場合、組織を削除することはできません。代わりにアカウントを削除してください。",
-    error: "何かがうまくいきませんでした",
-    errorDescription: "もう一度お試しいただくか、サポートに連絡してください",
+    error: "何かがうまくいかなかった",
+    errorDescription: "もう一度お試しいただくか、サポートに連絡してください。",
     addTeam: "チームを作成",
     apiKey: {
       updated: "APIキーが更新されました",
@@ -281,8 +280,8 @@ export default {
       description: "翻訳の自動品質チェックを有効にします。"
     },
     contextDetection: {
-      title: "コンテキスト検出",
-      description: "翻訳でコンテキストを自動的に検出し、保持します。"
+      title: "文脈検出",
+      description: "翻訳における文脈を自動的に検出し、保持します。"
     },
     styleGuide: "スタイルガイド",
     lengthControl: {
@@ -297,7 +296,7 @@ export default {
     },
     inclusiveLanguage: {
       title: "包括的な言語",
-      description: "翻訳が包括的な言語を使用することを確認します。"
+      description: "翻訳が包括的な言語を使用することを保証します。"
     },
     formality: {
       title: "フォーマリティ",
@@ -335,16 +334,16 @@ export default {
       keys_limit: "最大100キー",
       features: {
         unlimited_projects: "無制限のプロジェクト",
-        fine_tuning: "ファインチューニングオプション",
+        fine_tuning: "微調整オプション",
         overrides: "翻訳のオーバーライド",
         analytics: "分析",
-        context_memory: "コンテキストメモリ",
+        context_memory: "文脈メモリ",
         community_support: "コミュニティサポート"
       }
     },
     pro: {
       title: "プロ",
-      includes_free: "無料のすべて、さらに：",
+      includes_free: "無料のすべてに加えて：",
       features: {
         github_action: "GitHubアクション統合",
         latest_features: "最新機能への早期アクセス",
@@ -358,14 +357,14 @@ export default {
     teamNamePlaceholder: "チーム名を入力",
     createTeamButton: "チームを作成",
     cancel: "キャンセル",
-    createTeamDescription: "プロジェクトとコラボレーターを管理するために新しいチームを作成します。"
+    createTeamDescription: "プロジェクトとコラボレーターを管理するための新しいチームを作成します。"
   },
   createProject: {
     createProjectTitle: "新しいプロジェクトを作成",
     projectNamePlaceholder: "プロジェクト名を入力",
     createProjectButton: "プロジェクトを作成",
     cancel: "キャンセル",
-    createProjectDescription: "ローカリゼーションの自動化を開始するために新しいプロジェクトを作成します。"
+    createProjectDescription: "ローカリゼーションの自動化を開始するための新しいプロジェクトを作成します。"
   },
   invite: {
     inviteMember: "メンバーを招待",
@@ -403,12 +402,12 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Languine CLIをセットアップ",
+        title: "Languine CLIのセットアップ",
         description: "翻訳を管理するためにLanguine CLIをインストールして構成します。"
       },
       "2": {
         title: "翻訳をプッシュ",
-        description: "翻訳がプッシュされるのを待っています。"
+        description: "翻訳がプッシュされるのを待っています"
       },
       "3": {
         title: "ドキュメント",
@@ -428,5 +427,17 @@ export default {
       description: "Languine CLIが正常に認証されました：",
       description_2: "このタブを閉じてCLIに戻ることができます。"
     }
+  },
+  translations: {
+    header: "翻訳されたキー"
+  },
+  search: {
+    placeholder: "検索"
+  },
+  periods: {
+    daily: "日次",
+    weekly: "週次",
+    monthly: "月次",
+    selectPeriod: "期間を選択"
   }
 } as const;

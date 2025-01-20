@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Etkinlik",
     loading: "Yükleniyor",
-    loadMore: "Daha fazla göster"
+    loadMore: "Daha fazla göster",
+    noResults: "'{search}' için sonuç bulunamadı",
+    clearSearch: "Aramayı temizle"
   },
   features: {
     title: "Özellikler",
@@ -39,7 +41,7 @@ export default {
     presetForReactNativeDescription: "Hızla başlamanız için React Native için bir ön ayar sağlıyoruz.",
     presetForReactEmail: "React Email Kütüphanesi",
     presetForReactEmailDescription: "React Email için bir i18n kütüphanesi oluşturduk.",
-    readyForI18nLibraries: "i18n kütüphaneleri için hazır",
+    readyForI18nLibraries: "i18n kütüphanelerine hazır",
     readyForI18nLibrariesDescription: "En popüler olanlar (next-intl, react-i18next, react-intl, vb.) dahil tüm kütüphaneleri destekliyoruz."
   },
   info: {
@@ -80,9 +82,6 @@ export default {
       and: "ve",
       privacyPolicy: "Gizlilik Politikası"
     }
-  },
-  translations: {
-    total_keys: "{total} toplam anahtar"
   },
   userMenu: {
     account: "Hesap Ayarları",
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Sağlayıcı API Anahtarı",
-        description: "Seçtiğiniz sağlayıcı ile kimlik doğrulamak için API anahtarınızı girin. Bu anahtarı güvende tutun - depolamadan önce şifreliyoruz.",
+        description: "Seçtiğiniz sağlayıcı ile kimlik doğrulamak için API anahtarınızı girin. Bu anahtarı güvenli tutun - depolamadan önce şifreliyoruz.",
         placeholder: "API anahtarınızı girin"
       }
     },
@@ -296,7 +295,7 @@ export default {
     },
     inclusiveLanguage: {
       title: "Kapsayıcı Dil",
-      description: "Çevirilerin kapsayıcı dil kullanmasını sağlayın."
+      description: "Çevirilerin kapsayıcı bir dil kullanmasını sağlayın."
     },
     formality: {
       title: "Resmiyet",
@@ -315,7 +314,7 @@ export default {
     localization: "Yerelleştirme",
     idioms: {
       title: "Deyimler",
-      description: "Deyimsel ifadeleri uygun şekilde ele alın."
+      description: "Deyimsel ifadeleri uygun şekilde yönetin."
     },
     terminology: {
       title: "Terminoloji",
@@ -368,7 +367,7 @@ export default {
   },
   invite: {
     inviteMember: "Üye davet et",
-    inviteDescription: "Takımınıza bir üye davet edin.",
+    inviteDescription: "Takımınıza bir üye davet et",
     emailLabel: "E-posta",
     emailPlaceholder: "E-posta girin",
     cancel: "İptal",
@@ -427,5 +426,17 @@ export default {
       description: "Languine CLI başarıyla kimlik doğrulandı:",
       description_2: "Artık bu sekmeyi kapatabilir ve CLI'ye dönebilirsiniz."
     }
+  },
+  translations: {
+    header: "Çevirilen anahtarlar"
+  },
+  search: {
+    placeholder: "Ara"
+  },
+  periods: {
+    daily: "Günlük",
+    weekly: "Haftalık",
+    monthly: "Aylık",
+    selectPeriod: "Dönem seç"
   }
 } as const;

@@ -59,7 +59,10 @@ export async function translateCommand(args: string[] = []) {
 
       process.exit(1);
     }
-    if (!config.projectId && !process.env.LANGUINE_PROJECT_ID) {
+
+    const projectId = config.projectId || process.env.LANGUINE_PROJECT_ID;
+
+    if (!projectId) {
       note(
         "Project ID not found in configuration file or LANGUINE_PROJECT_ID environment variable. Please run `languine init` to create one, set the `projectId` in your configuration file, or set the LANGUINE_PROJECT_ID environment variable.",
         "Error",
@@ -174,7 +177,7 @@ export async function translateCommand(args: string[] = []) {
 
           const { run, meta } = await client.jobs.startJob.mutate({
             apiKey: apiKey,
-            projectId: config.projectId,
+            projectId,
             sourceFormat: type,
             sourceLanguage: sourceLocale,
             targetLanguages: effectiveTargetLocales,

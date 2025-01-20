@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Actividad",
     loading: "Cargando",
-    loadMore: "Mostrar más"
+    loadMore: "Mostrar más",
+    noResults: "No hay resultados para '{search}'",
+    clearSearch: "Borrar búsqueda"
   },
   features: {
     title: "Características",
@@ -47,14 +49,14 @@ export default {
     smartTranslation: {
       title: "Traducción inteligente",
       intelligentTranslation: "Traducción inteligente con conciencia del contexto",
-      brandVoice: "Consistencia en la voz y el tono de la marca",
+      brandVoice: "Consistencia en la voz y tono de la marca",
       terminology: "Gestión de terminología",
       linguisticFeatures: "Características lingüísticas avanzadas",
       realtimeUpdates: "Actualizaciones de traducción en tiempo real"
     },
     implementation: {
       title: "Implementación",
-      quickSetup: "Configuración e integración rápidas",
+      quickSetup: "Configuración e integración rápida",
       fileFormat: "Manejo de formatos de archivo",
       contentStructure: "Organización de la estructura de contenido",
       assetOrganization: "Organización de activos"
@@ -80,9 +82,6 @@ export default {
       and: "y",
       privacyPolicy: "Política de privacidad"
     }
-  },
-  translations: {
-    total_keys: "{total} claves en total"
   },
   userMenu: {
     account: "Configuración de cuenta",
@@ -145,11 +144,11 @@ export default {
   pipeline: {
     title: "Flujo de trabajo (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y la terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado se mantenga sincronizado con el desarrollo."
+    description: "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado se mantenga sincronizado con el desarrollo."
   },
   settings: {
     saved: "Configuraciones guardadas",
-    savedDescription: "Tus cambios se han guardado correctamente.",
+    savedDescription: "Tus cambios se han guardado correctamente",
     tabs: {
       project: "Proyecto",
       account: "Cuenta",
@@ -170,7 +169,7 @@ export default {
       },
       "delete": {
         title: "Eliminar proyecto",
-        description: "Elimina permanentemente este proyecto y todos sus datos.",
+        description: "Elimina permanentemente este proyecto y todos sus datos",
         button: "Eliminar proyecto"
       }
     },
@@ -182,14 +181,14 @@ export default {
       },
       billing: {
         title: "Plan de facturación",
-        description: "Gestiona el plan de facturación de tu equipo.",
+        description: "Gestiona el plan de facturación de tu equipo",
         free: "Gratis",
         pro: "Pro",
         unlimited: "Ilimitado"
       },
       apiKey: {
         title: "Clave API del equipo",
-        description: "Clave API para acceso al equipo, úsala desde tu pipeline CI/CD junto con el ID del proyecto.",
+        description: "Clave API para acceso al equipo, úsala desde tu pipeline CI/CD junto con el ID del proyecto",
         placeholder: "Clave API del equipo"
       },
       members: {
@@ -200,7 +199,7 @@ export default {
         date: "Fecha",
         selectAll: "{count} seleccionados",
         noPendingInvitations: "No hay invitaciones pendientes",
-        inviteMembers: "Invita a miembros a colaborar",
+        inviteMembers: "Invitar miembros a colaborar",
         roles: {
           owner: "Propietario",
           admin: "Administrador",
@@ -227,18 +226,18 @@ export default {
         deleteInviteError: "Error al eliminar la invitación",
         removeMemberSuccess: "Miembro eliminado",
         removeMemberError: "Error al eliminar miembro",
-        removeMemberSuccessDescription: "El miembro ha sido eliminado correctamente.",
+        removeMemberSuccessDescription: "El miembro ha sido eliminado correctamente",
         removeMemberErrorDescription: "Error al eliminar miembro"
       }
     },
     badRequest: "Solicitud inválida",
     badRequestDescription: "La organización debe tener al menos un propietario. Transfiere la propiedad a otro miembro antes de eliminar a este propietario.",
     permissionDenied: "Permiso denegado",
-    permissionDeniedDescription: "Necesitas ser propietario del equipo para realizar esta acción.",
+    permissionDeniedDescription: "Necesitas ser propietario del equipo para realizar esta acción",
     deleteTeamTitle: "Eliminar equipo",
-    deleteTeamDescription: "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta.",
+    deleteTeamDescription: "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta",
     error: "Algo salió mal",
-    errorDescription: "Por favor, intenta de nuevo o contacta al soporte.",
+    errorDescription: "Por favor, intenta de nuevo o contacta al soporte",
     addTeam: "Crear equipo",
     apiKey: {
       updated: "Clave API actualizada",
@@ -274,20 +273,20 @@ export default {
     general: "General",
     translationMemory: {
       title: "Memoria de traducción",
-      description: "Usa la memoria de traducción para mejorar la consistencia y la eficiencia."
+      description: "Usa la memoria de traducción para mejorar la consistencia y eficiencia"
     },
     qualityChecks: {
       title: "Controles de calidad",
-      description: "Habilita controles de calidad automatizados para las traducciones."
+      description: "Habilita controles de calidad automatizados para traducciones"
     },
     contextDetection: {
       title: "Detección de contexto",
-      description: "Detecta y preserva automáticamente el contexto en las traducciones."
+      description: "Detecta y preserva automáticamente el contexto en las traducciones"
     },
     styleGuide: "Guía de estilo",
     lengthControl: {
       title: "Control de longitud",
-      description: "Controla la longitud del texto traducido.",
+      description: "Controla la longitud del texto traducido",
       options: {
         flexible: "Flexible",
         strict: "Estricto",
@@ -297,34 +296,34 @@ export default {
     },
     inclusiveLanguage: {
       title: "Lenguaje inclusivo",
-      description: "Asegúrate de que las traducciones usen lenguaje inclusivo."
+      description: "Asegúrate de que las traducciones usen lenguaje inclusivo"
     },
     formality: {
       title: "Formalidad",
-      description: "Controla el nivel de formalidad de las traducciones."
+      description: "Controla el nivel de formalidad de las traducciones"
     },
     brandName: {
       title: "Nombre de la marca",
-      description: "Establece el nombre de tu marca para un uso consistente.",
+      description: "Establece el nombre de tu marca para un uso consistente",
       placeholder: "Ingresa el nombre de tu marca"
     },
     brandVoice: {
       title: "Voz de la marca",
-      description: "Define la voz y el tono de tu marca.",
+      description: "Define la voz y tono de tu marca",
       placeholder: "Describe la voz de tu marca..."
     },
     localization: "Localización",
     idioms: {
       title: "Modismos",
-      description: "Maneja expresiones idiomáticas de manera apropiada."
+      description: "Maneja expresiones idiomáticas de manera apropiada"
     },
     terminology: {
       title: "Terminología",
-      description: "Gestiona terminología especializada y glosarios."
+      description: "Gestiona terminología especializada y glosarios"
     },
     culturalAdaptation: {
       title: "Adaptación cultural",
-      description: "Adapta el contenido para que sea culturalmente apropiado."
+      description: "Adapta el contenido para que sea culturalmente apropiado"
     }
   },
   pricing: {
@@ -347,7 +346,7 @@ export default {
       includes_free: "Todo en Gratis, más:",
       features: {
         github_action: "Integración de GitHub Action",
-        latest_features: "Acceso anticipado a las últimas características.",
+        latest_features: "Acceso anticipado a las últimas características",
         priority_support: "Soporte prioritario"
       }
     },
@@ -369,21 +368,21 @@ export default {
   },
   invite: {
     inviteMember: "Invitar miembro",
-    inviteDescription: "Invitar a un miembro a tu equipo.",
+    inviteDescription: "Invitar a un miembro a tu equipo",
     emailLabel: "Correo electrónico",
     emailPlaceholder: "Ingresa el correo electrónico",
     cancel: "Cancelar",
     sendInvite: "Enviar invitación",
     success: {
       title: "Invitación enviada",
-      description: "Invitación enviada con éxito a {email}"
+      description: "Invitación enviada correctamente a {email}"
     },
     error: {
       title: "Error",
       description: "Error al enviar la invitación. Por favor, intenta de nuevo."
     },
     validation: {
-      invalidEmail: "Por favor, ingresa un correo electrónico válido."
+      invalidEmail: "Por favor, ingresa un correo electrónico válido"
     }
   },
   months: {
@@ -404,15 +403,15 @@ export default {
     steps: {
       "1": {
         title: "Configurar Languine CLI",
-        description: "Instala y configura la CLI de Languine para gestionar traducciones."
+        description: "Instala y configura la CLI de Languine para gestionar traducciones"
       },
       "2": {
         title: "Enviar traducciones",
-        description: "Esperando a que se envíen las traducciones."
+        description: "Esperando a que se envíen las traducciones"
       },
       "3": {
         title: "Documentación",
-        description: "Consulta nuestra documentación para guías detalladas y mejores prácticas.",
+        description: "Consulta nuestra documentación para guías detalladas y mejores prácticas",
         link: "documentación"
       }
     },
@@ -425,8 +424,20 @@ export default {
   cli: {
     success: {
       title: "Inicio de sesión exitoso en Languine CLI",
-      description: "Languine CLI fue autenticado con éxito como:",
-      description_2: "Ahora puedes cerrar esta pestaña y volver a la CLI."
+      description: "Languine CLI fue autenticado exitosamente como:",
+      description_2: "Ahora puedes cerrar esta pestaña y volver a la CLI"
     }
+  },
+  translations: {
+    header: "Claves traducidas"
+  },
+  search: {
+    placeholder: "Buscar"
+  },
+  periods: {
+    daily: "Diario",
+    weekly: "Semanal",
+    monthly: "Mensual",
+    selectPeriod: "Seleccionar período"
   }
 } as const;

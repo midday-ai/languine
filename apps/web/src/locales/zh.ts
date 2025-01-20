@@ -7,25 +7,27 @@ export default {
   },
   hero: {
     title: "为您的应用程序提供自动本地化",
-    description: "通过一个由AI驱动的CLI和管道简化您的本地化流程，旨在为开发人员自动化翻译。"
+    description: "通过一个由AI驱动的CLI和管道简化您的本地化过程，旨在为开发人员自动化翻译。"
   },
   getStarted: {
     heading: "开始",
     title: "为您的应用程序提供自动本地化",
-    description: "通过一个由AI驱动的CLI和管道简化您的本地化流程，旨在为开发人员自动化翻译。",
+    description: "通过一个由AI驱动的CLI和管道简化您的本地化过程，旨在为开发人员自动化翻译。",
     button: {
       startAutomating: "开始自动化",
       readDocumentation: "阅读文档"
     }
   },
   companies: {
-    title: "被使用者",
+    title: "被使用于",
     addYourCompany: "+ 添加您的公司"
   },
   activity: {
     title: "活动",
     loading: "加载中",
-    loadMore: "显示更多"
+    loadMore: "显示更多",
+    noResults: "没有找到与 '{search}' 相关的结果",
+    clearSearch: "清除搜索"
   },
   features: {
     title: "功能",
@@ -80,9 +82,6 @@ export default {
       and: "和",
       privacyPolicy: "隐私政策"
     }
-  },
-  translations: {
-    total_keys: "{total} 个键总计"
   },
   userMenu: {
     account: "账户设置",
@@ -145,7 +144,7 @@ export default {
   pipeline: {
     title: "工作流（CI/CD管道）",
     pro: "[专业版]",
-    description: "我们的翻译引擎无缝集成到您现有的CI/CD管道中，在每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
+    description: "我们的翻译引擎无缝集成到您现有的CI/CD管道中，在每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。然后将翻译作为拉取请求提交，允许在合并到主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
   },
   settings: {
     saved: "设置已保存",
@@ -195,7 +194,7 @@ export default {
       members: {
         title: "成员",
         pendingInvitations: "待处理邀请",
-        filterPlaceholder: "筛选成员...",
+        filterPlaceholder: "过滤成员...",
         allRoles: "所有角色",
         date: "日期",
         selectAll: "{count} 已选择",
@@ -358,7 +357,7 @@ export default {
     teamNamePlaceholder: "输入团队名称",
     createTeamButton: "创建团队",
     cancel: "取消",
-    createTeamDescription: "创建一个新团队来管理您的项目和合作者。"
+    createTeamDescription: "创建一个新团队以管理您的项目和合作者。"
   },
   createProject: {
     createProjectTitle: "创建一个新项目",
@@ -428,5 +427,17 @@ export default {
       description: "Languine CLI已成功认证为：",
       description_2: "您现在可以关闭此标签并返回CLI"
     }
+  },
+  translations: {
+    header: "翻译的键"
+  },
+  search: {
+    placeholder: "搜索"
+  },
+  periods: {
+    daily: "每日",
+    weekly: "每周",
+    monthly: "每月",
+    selectPeriod: "选择时间段"
   }
 } as const;

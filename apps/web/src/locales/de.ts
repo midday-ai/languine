@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Aktivität",
     loading: "Laden",
-    loadMore: "Mehr anzeigen"
+    loadMore: "Mehr anzeigen",
+    noResults: "Keine Ergebnisse für '{search}'",
+    clearSearch: "Suche löschen"
   },
   features: {
     title: "Funktionen",
@@ -81,9 +83,6 @@ export default {
       privacyPolicy: "Datenschutzrichtlinie"
     }
   },
-  translations: {
-    total_keys: "{total} Schlüssel insgesamt"
-  },
   userMenu: {
     account: "Kontoeinstellungen",
     signOut: "Abmelden",
@@ -106,7 +105,7 @@ export default {
   },
   coming_soon: {
     title: "Languine ist im Early Access",
-    description: "Wir befinden uns derzeit im Early Access. Wenden Sie sich an",
+    description: "Wir befinden uns derzeit im Early Access. Kontaktieren Sie",
     cta: "auf X, um frühzeitigen Zugang zu erhalten."
   },
   account: {
@@ -136,8 +135,8 @@ export default {
   dangerZone: {
     dialog: {
       title: "Sind Sie sich absolut sicher?",
-      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN ein, um zu bestätigen.",
-      placeholder: "Geben Sie LÖSCHEN ein, um zu bestätigen",
+      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie DELETE ein, um zu bestätigen.",
+      placeholder: "Geben Sie DELETE zur Bestätigung ein",
       confirm: "Löschen bestätigen",
       cancel: "Abbrechen"
     }
@@ -165,7 +164,7 @@ export default {
       },
       id: {
         title: "Projekt-ID",
-        description: "Ihr eindeutiger Projektbezeichner",
+        description: "Ihre eindeutige Projektkennung",
         placeholder: "Projekt-ID"
       },
       "delete": {
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Team-API-Schlüssel",
-        description: "API-Schlüssel für den Teamzugriff, verwenden Sie dies von Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID.",
+        description: "API-Schlüssel für den Teamzugang, verwenden Sie dies von Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID.",
         placeholder: "Team-API-Schlüssel"
       },
       members: {
@@ -224,11 +223,11 @@ export default {
         deleteInviteDescription: "Löschen Sie die Einladung",
         invitedBy: "Eingeladen von {name}",
         deleteInviteSuccess: "Einladung gelöscht",
-        deleteInviteError: "Fehler beim Löschen der Einladung",
+        deleteInviteError: "Löschen der Einladung fehlgeschlagen",
         removeMemberSuccess: "Mitglied entfernt",
-        removeMemberError: "Fehler beim Entfernen des Mitglieds",
+        removeMemberError: "Mitglied entfernen fehlgeschlagen",
         removeMemberSuccessDescription: "Mitglied wurde erfolgreich entfernt",
-        removeMemberErrorDescription: "Fehler beim Entfernen des Mitglieds"
+        removeMemberErrorDescription: "Mitglied entfernen fehlgeschlagen"
       }
     },
     badRequest: "Ungültige Anfrage",
@@ -250,7 +249,7 @@ export default {
     },
     provider: {
       updateSuccess: "Einstellungen erfolgreich aktualisiert",
-      updateError: "Fehler beim Aktualisieren der Einstellungen",
+      updateError: "Aktualisierung der Einstellungen fehlgeschlagen",
       translationProvider: {
         title: "Übersetzungsanbieter",
         description: "Wählen Sie Ihren bevorzugten KI-Dienst zur Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Funktionen und Preise.",
@@ -258,7 +257,7 @@ export default {
       },
       languageModel: {
         title: "Sprachmodell",
-        description: "Wählen Sie das KI-Modell, das Qualität und Geschwindigkeit für Ihre Übersetzungsbedürfnisse am besten ausbalanciert. Leistungsstärkere Modelle können langsamer sein, liefern jedoch bessere Ergebnisse.",
+        description: "Wählen Sie das KI-Modell, das am besten Qualität und Geschwindigkeit für Ihre Übersetzungsbedürfnisse ausbalanciert. Leistungsstärkere Modelle können langsamer sein, liefern jedoch bessere Ergebnisse.",
         placeholder: "Wählen Sie ein Modell"
       },
       apiKey: {
@@ -282,7 +281,7 @@ export default {
     },
     contextDetection: {
       title: "Kontextdetektion",
-      description: "Automatische Erkennung und Bewahrung des Kontexts in Übersetzungen."
+      description: "Automatisch Kontext in Übersetzungen erkennen und bewahren."
     },
     styleGuide: "Stilrichtlinie",
     lengthControl: {
@@ -346,7 +345,7 @@ export default {
       title: "Pro",
       includes_free: "Alles in Kostenlos, plus:",
       features: {
-        github_action: "GitHub-Aktionsintegration",
+        github_action: "GitHub Action-Integration",
         latest_features: "Früher Zugang zu den neuesten Funktionen",
         priority_support: "Prioritätsunterstützung"
       }
@@ -383,7 +382,7 @@ export default {
       description: "Einladung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
     },
     validation: {
-      invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
     }
   },
   months: {
@@ -412,14 +411,14 @@ export default {
       },
       "3": {
         title: "Dokumentation",
-        description: "Schauen Sie sich unsere Dokumentation für detaillierte Anleitungen und Best Practices an.",
+        description: "Sehen Sie sich unsere Dokumentation für detaillierte Anleitungen und bewährte Verfahren an.",
         link: "Dokumentation"
       }
     },
     info: {
-      description: "Brauchen Sie Hilfe? Schauen Sie sich unsere",
+      description: "Brauchen Sie Hilfe? Sehen Sie sich unsere",
       link: "Dokumentation",
-      description_2: "für detaillierte Anleitungen und Best Practices an."
+      description_2: "für detaillierte Anleitungen und bewährte Verfahren an."
     }
   },
   cli: {
@@ -428,5 +427,17 @@ export default {
       description: "Languine CLI wurde erfolgreich authentifiziert als:",
       description_2: "Sie können jetzt diesen Tab schließen und zur CLI zurückkehren."
     }
+  },
+  translations: {
+    header: "Übersetzte Schlüssel"
+  },
+  search: {
+    placeholder: "Suche"
+  },
+  periods: {
+    daily: "Täglich",
+    weekly: "Wöchentlich",
+    monthly: "Monatlich",
+    selectPeriod: "Zeitraum auswählen"
   }
 } as const;

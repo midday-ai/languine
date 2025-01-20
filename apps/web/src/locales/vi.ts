@@ -25,12 +25,14 @@ export default {
   activity: {
     title: "Hoạt động",
     loading: "Đang tải",
-    loadMore: "Hiển thị thêm"
+    loadMore: "Hiển thị thêm",
+    noResults: "Không có kết quả cho '{search}'",
+    clearSearch: "Xóa tìm kiếm"
   },
   features: {
     title: "Tính năng",
     fullyOpenSource: "Hoàn toàn mã nguồn mở",
-    fullyOpenSourceDescription: "Mã của chúng tôi có sẵn công khai trên GitHub, cho phép sự minh bạch và đóng góp từ cộng đồng.",
+    fullyOpenSourceDescription: "Mã của chúng tôi có sẵn công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
     noVendorLockIn: "Không bị khóa nhà cung cấp",
     noVendorLockInDescription: "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng các LLM của riêng bạn.",
     presetsForExpo: "Cài đặt trước cho Expo",
@@ -47,7 +49,7 @@ export default {
     smartTranslation: {
       title: "Dịch thông minh",
       intelligentTranslation: "Dịch thông minh với nhận thức về ngữ cảnh",
-      brandVoice: "Tính nhất quán về giọng điệu và âm sắc thương hiệu",
+      brandVoice: "Độ nhất quán về giọng điệu và âm sắc thương hiệu",
       terminology: "Quản lý thuật ngữ",
       linguisticFeatures: "Các tính năng ngôn ngữ nâng cao",
       realtimeUpdates: "Cập nhật dịch thuật theo thời gian thực"
@@ -80,9 +82,6 @@ export default {
       and: "và",
       privacyPolicy: "Chính sách bảo mật"
     }
-  },
-  translations: {
-    total_keys: "{total} khóa tổng cộng"
   },
   userMenu: {
     account: "Cài đặt tài khoản",
@@ -136,8 +135,8 @@ export default {
   dangerZone: {
     dialog: {
       title: "Bạn có chắc chắn không?",
-      description: "Hành động này không thể hoàn tác. Vui lòng gõ DELETE để xác nhận.",
-      placeholder: "Gõ DELETE để xác nhận",
+      description: "Hành động này không thể hoàn tác. Vui lòng gõ XÓA để xác nhận.",
+      placeholder: "Gõ XÓA để xác nhận",
       confirm: "Xác nhận xóa",
       cancel: "Hủy"
     }
@@ -149,7 +148,7 @@ export default {
   },
   settings: {
     badRequest: "Yêu cầu không hợp lệ",
-    badRequestDescription: "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho một thành viên khác trước khi xóa chủ sở hữu này.",
+    badRequestDescription: "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển nhượng quyền sở hữu cho một thành viên khác trước khi xóa chủ sở hữu này.",
     permissionDenied: "Quyền truy cập bị từ chối",
     permissionDeniedDescription: "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
     deleteTeamTitle: "Xóa nhóm",
@@ -180,12 +179,12 @@ export default {
       translationProvider: {
         title: "Nhà cung cấp dịch thuật",
         description: "Chọn dịch vụ AI ưa thích của bạn để tạo bản dịch. Mỗi nhà cung cấp cung cấp các khả năng và mức giá khác nhau.",
-        placeholder: "Chọn nhà cung cấp"
+        placeholder: "Chọn một nhà cung cấp"
       },
       languageModel: {
         title: "Mô hình ngôn ngữ",
         description: "Chọn mô hình AI phù hợp nhất với chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh mẽ hơn có thể chậm hơn nhưng tạo ra kết quả tốt hơn.",
-        placeholder: "Chọn mô hình"
+        placeholder: "Chọn một mô hình"
       },
       apiKey: {
         title: "Khóa API nhà cung cấp",
@@ -382,7 +381,7 @@ export default {
       description: "Gửi lời mời không thành công. Vui lòng thử lại."
     },
     validation: {
-      invalidEmail: "Vui lòng nhập một email hợp lệ"
+      invalidEmail: "Vui lòng nhập email hợp lệ"
     }
   },
   months: {
@@ -427,5 +426,17 @@ export default {
       description: "Languine CLI đã được xác thực thành công với:",
       description_2: "Bạn có thể đóng tab này và quay lại CLI"
     }
+  },
+  translations: {
+    header: "Các khóa đã dịch"
+  },
+  search: {
+    placeholder: "Tìm kiếm"
+  },
+  periods: {
+    daily: "Hàng ngày",
+    weekly: "Hàng tuần",
+    monthly: "Hàng tháng",
+    selectPeriod: "Chọn khoảng thời gian"
   }
 } as const;

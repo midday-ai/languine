@@ -1,6 +1,6 @@
 import { db } from "@/db";
 import { projects, translations } from "@/db/schema";
-import { and, asc, desc, eq, gt } from "drizzle-orm";
+import { and, asc, desc, eq, gt, ilike, like, or, sql } from "drizzle-orm";
 
 export const createTranslation = async ({
   projectId,
@@ -53,9 +53,11 @@ export const getTranslationsBySlug = async ({
   limit = 10,
   slug,
   cursor,
+  search,
   organizationId,
 }: {
   slug: string;
+  search?: string | null;
   cursor?: string | null;
   organizationId: string;
   limit?: number;
@@ -69,6 +71,18 @@ export const getTranslationsBySlug = async ({
         eq(projects.slug, slug),
         eq(projects.organizationId, organizationId),
         cursor ? gt(translations.id, cursor) : undefined,
+        search
+          ? or(
+              like(
+                sql`LOWER(${translations.translationKey})`,
+                `%${search.toLowerCase()}%`,
+              ),
+              like(
+                sql`LOWER(${translations.sourceText})`,
+                `%${search.toLowerCase()}%`,
+              ),
+            )
+          : undefined,
       ),
     )
     .limit(limit)

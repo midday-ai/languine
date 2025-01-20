@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
@@ -8,10 +8,14 @@ import {
 } from "@/components/ui/chart";
 import type { ChartConfig } from "@/components/ui/chart";
 import { Skeleton } from "@/components/ui/skeleton";
+import { usePeriod } from "@/hooks/use-period";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import NumberFlow from "@number-flow/react";
+import { endOfWeek, format, parseISO, startOfWeek } from "date-fns";
 import { useParams } from "next/navigation";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import { PeriodSelector } from "../period-selector";
 
 const chartConfig = {
   value: {
@@ -22,27 +26,45 @@ const chartConfig = {
 export function AnalyticsChart() {
   const t = useI18n();
   const { organization, project } = useParams();
+  const { period: periodValue } = usePeriod();
 
-  const [{ monthlyStats, totalKeys }] =
+  const [{ data, totalKeys, period }] =
     trpc.analytics.getProjectStats.useSuspenseQuery({
       projectSlug: project as string,
       organizationId: organization as string,
+      period: periodValue,
     });
 
-  const translatedData = monthlyStats.map((stat) => ({
+  const translatedData = data.map((stat) => ({
     ...stat,
-    // @ts-ignore
-    month: t(`months.${stat.month.split("-").at(1)}`),
+    label:
+      period === "daily"
+        ? format(parseISO(stat.label), "MMM d")
+        : period === "weekly"
+          ? `${format(startOfWeek(parseISO(stat.label)), "MMM d")} - ${format(
+              endOfWeek(parseISO(stat.label)),
+              "d",
+              { weekStartsOn: 1 },
+            )}`
+          : // @ts-ignore
+            t(`months.${stat.label.split("-")[1]}`),
   }));
 
   return (
     <Card className="w-full border-none bg-noise">
-      <CardHeader>
-        <CardTitle className="text-primary text-lg font-normal">
-          <span className="text-secondary text-lg ml-2">
-            {t("translations.total_keys", { total: totalKeys })}
+      <CardHeader className="flex justify-between flex-row">
+        <div className="text-primary text-lg font-normal flex flex-col">
+          <span className="text-muted-foreground">
+            {t("translations.header")}
           </span>
-        </CardTitle>
+          <span className="text-primary text-2xl mt-2">
+            <NumberFlow value={totalKeys} />
+          </span>
+        </div>
+
+        <div>
+          <PeriodSelector />
+        </div>
       </CardHeader>
 
       <CardContent className="mt-4">
@@ -51,11 +73,12 @@ export function AnalyticsChart() {
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
 
             <XAxis
-              dataKey="month"
+              dataKey="label"
               fontSize={12}
               tickLine={false}
               axisLine={false}
               tickMargin={15}
+              interval={0}
               tick={{
                 fill: "#878787",
                 fontSize: 12,
@@ -97,8 +120,15 @@ export function AnalyticsChart() {
 export function AnalyticsChartSkeleton() {
   return (
     <Card className="w-full border-none bg-noise">
-      <CardHeader>
-        <Skeleton className="h-[22px] mt-1.5 w-48" />
+      <CardHeader className="flex justify-between flex-row">
+        <div className="flex flex-col mb-[4px]">
+          <Skeleton className="h-[20px] mt-2 w-48" />
+          <Skeleton className="h-[24px] mt-4 w-32" />
+        </div>
+
+        <div>
+          <PeriodSelector />
+        </div>
       </CardHeader>
 
       <CardContent className="mt-4">

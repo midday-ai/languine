@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Activité",
     loading: "Chargement",
-    loadMore: "Afficher plus"
+    loadMore: "Afficher plus",
+    noResults: "Aucun résultat pour '{search}'",
+    clearSearch: "Effacer la recherche"
   },
   features: {
     title: "Fonctionnalités",
@@ -56,7 +58,7 @@ export default {
       title: "Mise en œuvre",
       quickSetup: "Configuration rapide et intégration",
       fileFormat: "Gestion des formats de fichiers",
-      contentStructure: "Organisation de la structure de contenu",
+      contentStructure: "Organisation de la structure du contenu",
       assetOrganization: "Organisation des actifs"
     },
     developer: {
@@ -80,9 +82,6 @@ export default {
       and: "et",
       privacyPolicy: "Politique de confidentialité"
     }
-  },
-  translations: {
-    total_keys: "{total} clés au total"
   },
   userMenu: {
     account: "Paramètres du compte",
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Clé API de l'équipe",
-        description: "Clé API pour l'accès de l'équipe, utilisez ceci depuis votre pipeline CI/CD avec l'ID du projet",
+        description: "Clé API pour l'accès à l'équipe, utilisez ceci depuis votre pipeline CI/CD avec l'ID du projet",
         placeholder: "Clé API de l'équipe"
       },
       members: {
@@ -258,7 +257,7 @@ export default {
       },
       languageModel: {
         title: "Modèle de langue",
-        description: "Sélectionnez le modèle d'IA qui équilibre le mieux qualité et rapidité pour vos besoins de traduction. Les modèles plus puissants peuvent être plus lents mais produisent de meilleurs résultats.",
+        description: "Sélectionnez le modèle d'IA qui équilibre le mieux qualité et rapidité pour vos besoins de traduction. Des modèles plus puissants peuvent être plus lents mais produisent de meilleurs résultats.",
         placeholder: "Sélectionner un modèle"
       },
       apiKey: {
@@ -428,5 +427,17 @@ export default {
       description: "Languine CLI a été authentifié avec succès en tant que :",
       description_2: "Vous pouvez maintenant fermer cet onglet et revenir à l'interface en ligne de commande"
     }
+  },
+  translations: {
+    header: "Clés traduites"
+  },
+  search: {
+    placeholder: "Recherche"
+  },
+  periods: {
+    daily: "Quotidien",
+    weekly: "Hebdomadaire",
+    monthly: "Mensuel",
+    selectPeriod: "Sélectionner la période"
   }
 } as const;

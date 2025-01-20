@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "Toiminta",
     loading: "Ladataan",
-    loadMore: "Näytä lisää"
+    loadMore: "Näytä lisää",
+    noResults: "Ei tuloksia hakusanalle '{search}'",
+    clearSearch: "Tyhjennä haku"
   },
   features: {
     title: "Ominaisuudet",
@@ -43,7 +45,7 @@ export default {
     readyForI18nLibrariesDescription: "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl jne.)."
   },
   info: {
-    title: "Käsittelee kaikki sovelluksesi lokalisointiin liittyvät näkökohdat, mukaan lukien",
+    title: "Käsittelee kaikki sovelluksesi lokalisointiin liittyvät asiat, mukaan lukien",
     smartTranslation: {
       title: "Älykäs käännös",
       intelligentTranslation: "Älykäs käännös kontekstitietoisuudella",
@@ -57,14 +59,14 @@ export default {
       quickSetup: "Nopea asennus ja integrointi",
       fileFormat: "Tiedostomuotojen käsittely",
       contentStructure: "Sisältöstruktuurin organisointi",
-      assetOrganization: "Omaisuuden organisointi"
+      assetOrganization: "Aineistojen organisointi"
     },
     developer: {
       title: "Kehittäjäkokemus",
       cli: "Komentoriviliittymä",
       cicd: "CI/CD-integraatio",
       versionControl: "Versionhallinta",
-      workflow: "Kehittäjätyöskentely",
+      workflow: "Kehittäjätyöprosessi",
       documentation: "Kattava dokumentaatio"
     }
   },
@@ -80,9 +82,6 @@ export default {
       and: "ja",
       privacyPolicy: "Tietosuojakäytäntö"
     }
-  },
-  translations: {
-    total_keys: "{total} avainta yhteensä"
   },
   userMenu: {
     account: "Tilin asetukset",
@@ -207,8 +206,8 @@ export default {
           member: "Jäsen"
         },
         dateSort: {
-          newest: "Uusimmat",
-          oldest: "Vanhimmat"
+          newest: "Uusin",
+          oldest: "Vanhin"
         },
         leaveTeamConfirm: "Jätä tiimi",
         leaveTeamDescription: "Oletko varma, että haluat jättää tämän tiimin?",
@@ -236,7 +235,7 @@ export default {
     permissionDenied: "Käyttöoikeus evätty",
     permissionDeniedDescription: "Sinun on oltava tiimin omistaja voidaksesi tehdä tämän toiminnon.",
     deleteTeamTitle: "Poista tiimi",
-    deleteTeamDescription: "Et voi poistaa organisaatiota, kun olet ainoa jäsen, vaan poista tilisi sen sijaan.",
+    deleteTeamDescription: "Et voi poistaa organisaatiota, kun olet ainoa jäsen, vaan poista tilisi.",
     error: "Jotain meni pieleen",
     errorDescription: "Yritä uudelleen tai ota yhteyttä tukeen.",
     addTeam: "Luo tiimi",
@@ -249,7 +248,7 @@ export default {
       "continue": "Jatka"
     },
     provider: {
-      updateSuccess: "Asetukset päivitetty onnistuneesti",
+      updateSuccess: "Asetukset päivitettiin onnistuneesti",
       updateError: "Asetusten päivittäminen epäonnistui",
       translationProvider: {
         title: "Käännöspalveluntarjoaja",
@@ -263,7 +262,7 @@ export default {
       },
       apiKey: {
         title: "Palveluntarjoajan API-avain",
-        description: "Syötä API-avaimesi autentikoidaksesi valitsemallesi palveluntarjoajalle. Pidä tämä avain turvassa - salakirjoitamme sen ennen tallentamista.",
+        description: "Syötä API-avaimesi autentikoidaksesi valitsemallasi palveluntarjoajalla. Pidä tämä avain turvassa - salakirjoitamme sen ennen tallentamista.",
         placeholder: "Syötä API-avaimesi"
       }
     },
@@ -344,7 +343,7 @@ export default {
     },
     pro: {
       title: "Pro",
-      includes_free: "Kaikki ilmaisessa, plus:",
+      includes_free: "Kaikki ilmaisessa, lisäksi:",
       features: {
         github_action: "GitHub-toiminnan integraatio",
         latest_features: "Varhainen pääsy uusimpiin ominaisuuksiin",
@@ -369,27 +368,27 @@ export default {
   },
   invite: {
     inviteMember: "Kutsu jäsen",
-    inviteDescription: "Kutsu jäsen tiimiisi",
+    inviteDescription: "Kutsu jäsen tiimiisi.",
     emailLabel: "Sähköposti",
     emailPlaceholder: "Syötä sähköposti",
     cancel: "Peruuta",
     sendInvite: "Lähetä kutsu",
     success: {
       title: "Kutsu lähetetty",
-      description: "Kutsu lähetetty onnistuneesti osoitteeseen {email}"
+      description: "Kutsu lähetetty onnistuneesti osoitteeseen {email}."
     },
     error: {
       title: "Virhe",
       description: "Kutsun lähettäminen epäonnistui. Yritä uudelleen."
     },
     validation: {
-      invalidEmail: "Ole hyvä ja syötä voimassa oleva sähköposti"
+      invalidEmail: "Ole hyvä ja syötä voimassa oleva sähköposti."
     }
   },
   months: {
-    "10": "Elo",
-    "11": "Marras",
-    "12": "Joulu",
+    "10": "Lokakuu",
+    "11": "Marraskuu",
+    "12": "Joulukuu",
     "01": "Tammikuu",
     "02": "Helmikuu",
     "03": "Maaliskuu",
@@ -403,7 +402,7 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Aseta Languine CLI",
+        title: "Asenna Languine CLI",
         description: "Asenna ja konfiguroi Languine CLI hallitaksesi käännöksiä."
       },
       "2": {
@@ -428,5 +427,17 @@ export default {
       description: "Languine CLI on onnistuneesti todennettu käyttäjänä:",
       description_2: "Voit nyt sulkea tämän välilehden ja palata CLI:hin."
     }
+  },
+  translations: {
+    header: "Käännetyt avaimet"
+  },
+  search: {
+    placeholder: "Haku"
+  },
+  periods: {
+    daily: "Päivittäin",
+    weekly: "Viikoittain",
+    monthly: "Kuukausittain",
+    selectPeriod: "Valitse aikaväli"
   }
 } as const;

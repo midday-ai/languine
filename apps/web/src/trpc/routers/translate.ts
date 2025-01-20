@@ -11,6 +11,7 @@ export const translateRouter = createTRPCRouter({
         cursor: z.string().nullish(),
         slug: z.string(),
         limit: z.number().optional(),
+        search: z.string().nullish().optional(),
       }),
     )
     .use(isOrganizationMember)

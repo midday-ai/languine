@@ -7,12 +7,12 @@ export default {
   },
   hero: {
     title: "التعريب الآلي لتطبيقاتك",
-    description: "قم بتبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين."
+    description: "تبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين."
   },
   getStarted: {
     heading: "ابدأ الآن",
     title: "التعريب الآلي لتطبيقاتك",
-    description: "قم بتبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين.",
+    description: "تبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين.",
     button: {
       startAutomating: "ابدأ في الأتمتة",
       readDocumentation: "اقرأ الوثائق"
@@ -25,7 +25,9 @@ export default {
   activity: {
     title: "النشاط",
     loading: "جارٍ التحميل",
-    loadMore: "عرض المزيد"
+    loadMore: "عرض المزيد",
+    noResults: "لا توجد نتائج لـ '{search}'",
+    clearSearch: "مسح البحث"
   },
   features: {
     title: "الميزات",
@@ -80,9 +82,6 @@ export default {
       and: "و",
       privacyPolicy: "سياسة الخصوصية"
     }
-  },
-  translations: {
-    total_keys: "{total} مفاتيح في المجموع"
   },
   userMenu: {
     account: "إعدادات الحساب",
@@ -221,7 +220,7 @@ export default {
         noResults: "لا توجد أعضاء",
         tryDifferentSearch: "حاول بحث مختلف",
         deleteInvite: "حذف الدعوة",
-        deleteInviteDescription: "احذف الدعوة",
+        deleteInviteDescription: "حذف الدعوة",
         invitedBy: "تمت الدعوة بواسطة {name}",
         deleteInviteSuccess: "تم حذف الدعوة",
         deleteInviteError: "فشل في حذف الدعوة",
@@ -262,7 +261,7 @@ export default {
         placeholder: "اختر نموذجًا"
       },
       apiKey: {
-        title: "مفتاح API للمزود",
+        title: "مفتاح API لمزود الخدمة",
         description: "أدخل مفتاح API الخاص بك للمصادقة مع المزود الذي اخترته. احتفظ بهذا المفتاح آمنًا - نحن نقوم بتشفيره قبل التخزين.",
         placeholder: "أدخل مفتاح API الخاص بك"
       }
@@ -278,16 +277,16 @@ export default {
     },
     qualityChecks: {
       title: "فحوصات الجودة",
-      description: "قم بتمكين فحوصات الجودة الآلية للترجمات"
+      description: "تمكين فحوصات الجودة الآلية للترجمات"
     },
     contextDetection: {
       title: "كشف السياق",
-      description: "اكتشاف السياق والحفاظ عليه تلقائيًا في الترجمات"
+      description: "كشف السياق تلقائيًا والحفاظ عليه في الترجمات"
     },
     styleGuide: "دليل الأسلوب",
     lengthControl: {
       title: "التحكم في الطول",
-      description: "تحكم في طول النص المترجم",
+      description: "التحكم في طول النص المترجم",
       options: {
         flexible: "مرن",
         strict: "صارم",
@@ -297,11 +296,11 @@ export default {
     },
     inclusiveLanguage: {
       title: "لغة شاملة",
-      description: "تأكد من استخدام الترجمات للغة شاملة"
+      description: "ضمان استخدام الترجمات للغة شاملة"
     },
     formality: {
       title: "الرسمية",
-      description: "تحكم في مستوى الرسمية للترجمات"
+      description: "التحكم في مستوى الرسمية للترجمات"
     },
     brandName: {
       title: "اسم العلامة التجارية",
@@ -316,7 +315,7 @@ export default {
     localization: "التعريب",
     idioms: {
       title: "التعابير الاصطلاحية",
-      description: "تعامل مع التعبيرات الاصطلاحية بشكل مناسب"
+      description: "التعامل مع التعبيرات الاصطلاحية بشكل مناسب"
     },
     terminology: {
       title: "المصطلحات",
@@ -425,8 +424,20 @@ export default {
   cli: {
     success: {
       title: "نجاح تسجيل دخول Languine CLI",
-      description: "تم المصادقة على Languine CLI بنجاح كـ:",
+      description: "تمت مصادقة Languine CLI بنجاح كـ:",
       description_2: "يمكنك الآن إغلاق هذه النافذة والعودة إلى واجهة سطر الأوامر"
     }
+  },
+  translations: {
+    header: "المفاتيح المترجمة"
+  },
+  search: {
+    placeholder: "بحث"
+  },
+  periods: {
+    daily: "يومي",
+    weekly: "أسبوعي",
+    monthly: "شهري",
+    selectPeriod: "اختر الفترة"
   }
 } as const;
