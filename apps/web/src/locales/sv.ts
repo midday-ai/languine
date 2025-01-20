@@ -1,18 +1,18 @@
 export default {
   header: {
-    pricing: "Prissättning",
+    pricing: "Priser",
     docs: "Dokumentation",
     signIn: "Logga in",
-    goToApp: "Gå till appen"
+    goToApp: "Gå till app"
   },
   hero: {
     title: "Automatiserad lokalisering för dina applikationer",
-    description: "Strömlinjeforma din lokalisering med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare."
+    description: "Effektivisera din lokalisering med ett AI-drivet CLI och pipeline designad för att automatisera översättningar för utvecklare."
   },
   getStarted: {
     heading: "Kom igång",
     title: "Automatiserad lokalisering för dina applikationer",
-    description: "Strömlinjeforma din lokalisering med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare.",
+    description: "Effektivisera din lokalisering med ett AI-drivet CLI och pipeline designad för att automatisera översättningar för utvecklare.",
     button: {
       startAutomating: "Börja automatisera",
       readDocumentation: "Läs dokumentation"
@@ -25,45 +25,47 @@ export default {
   activity: {
     title: "Aktivitet",
     loading: "Laddar",
-    loadMore: "Visa mer"
+    loadMore: "Visa mer",
+    noResults: "Inga resultat för '{search}'",
+    clearSearch: "Rensa sökning"
   },
   features: {
     title: "Funktioner",
     fullyOpenSource: "Helt öppen källkod",
     fullyOpenSourceDescription: "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från gemenskapen.",
     noVendorLockIn: "Ingen leverantörslåsning",
-    noVendorLockInDescription: "Vi låser inte in dig i en specifik tjänst, använd dina egna LLM:er.",
+    noVendorLockInDescription: "Vi låser inte in dig i en specifik tjänst, använd dina egna LLMs.",
     presetsForExpo: "Förinställningar för Expo",
-    presetsForExpoDescription: "Vi tillhandahåller förinställningar för Expo, så att du kan komma igång snabbt.",
+    presetsForExpoDescription: "Vi tillhandahåller förinställningar för Expo, så du kan komma igång snabbt.",
     presetForReactNative: "Förinställning för React Native",
-    presetForReactNativeDescription: "Vi tillhandahåller en förinställning för React Native, så att du kan komma igång snabbt.",
+    presetForReactNativeDescription: "Vi tillhandahåller en förinställning för React Native, så du kan komma igång snabbt.",
     presetForReactEmail: "React Email-bibliotek",
     presetForReactEmailDescription: "Vi har skapat ett i18n-bibliotek för React Email.",
     readyForI18nLibraries: "Redo för i18n-bibliotek",
     readyForI18nLibrariesDescription: "Vi stöder alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
-    title: "Hantera varje aspekt av lokaliseringen av din app inklusive",
+    title: "Hanterar alla aspekter av att lokalisera din app inklusive",
     smartTranslation: {
       title: "Smart översättning",
       intelligentTranslation: "Intelligent översättning med kontextmedvetenhet",
-      brandVoice: "Varumärkesröst och tonkonsekvens",
+      brandVoice: "Varumärkesröst och tonkonsistens",
       terminology: "Terminologihantering",
       linguisticFeatures: "Avancerade språkliga funktioner",
-      realtimeUpdates: "Översättningsuppdateringar i realtid"
+      realtimeUpdates: "Uppdateringar av översättningar i realtid"
     },
     implementation: {
       title: "Implementering",
       quickSetup: "Snabb installation och integration",
-      fileFormat: "Filformatshantering",
-      contentStructure: "Innehållsstrukturorganisation",
-      assetOrganization: "Tillgångsorganisation"
+      fileFormat: "Hantering av filformat",
+      contentStructure: "Organisering av innehållsstruktur",
+      assetOrganization: "Organisering av tillgångar"
     },
     developer: {
       title: "Utvecklarupplevelse",
       cli: "Kommandoradsgränssnitt",
       cicd: "CI/CD-integration",
-      versionControl: "Versionskontroll",
+      versionControl: "Versionshantering",
       workflow: "Utvecklararbetsflöde",
       documentation: "Omfattande dokumentation"
     }
@@ -81,14 +83,11 @@ export default {
       privacyPolicy: "Integritetspolicy"
     }
   },
-  translations: {
-    total_keys: "{total} nycklar totalt"
-  },
   userMenu: {
     account: "Kontoinställningar",
     signOut: "Logga ut",
     createTeam: "Skapa team",
-    homepage: "Startsida",
+    homepage: "Hemsida",
     team: "Teaminställningar"
   },
   teamSelector: {
@@ -105,9 +104,9 @@ export default {
     createTeamButton: "Skapa team"
   },
   coming_soon: {
-    title: "Languine är i tidig åtkomst",
-    description: "Vi är för närvarande i tidig åtkomst. Kontakta",
-    cta: "på X för att få tidig åtkomst."
+    title: "Languine är i tidig tillgång",
+    description: "Vi är för närvarande i tidig tillgång. Kontakta",
+    cta: "på X för att få tidig tillgång."
   },
   account: {
     fullName: {
@@ -117,26 +116,26 @@ export default {
     },
     email: {
       title: "E-postadress",
-      description: "E-postadressen kopplad till ditt konto.",
+      description: "E-postadressen associerad med ditt konto.",
       placeholder: "Ange din e-postadress"
     },
     apiKey: {
       title: "API-nyckel",
-      description: "Din personliga API-nyckel för att få åtkomst till Languine API och från CLI."
+      description: "Din personliga API-nyckel för att komma åt Languine API och från CLI."
     },
     deleteAccount: {
       title: "Radera konto",
-      description: "Permanent radera ditt konto och all associerad data. Denna åtgärd kan inte ångras.",
+      description: "Radera ditt konto och all tillhörande data permanent. Denna åtgärd kan inte ångras.",
       button: "Radera konto"
     }
   },
   copyInstall: {
-    copied: "Kopierad till urklipp"
+    copied: "Kopierat till urklipp"
   },
   dangerZone: {
     dialog: {
-      title: "Är du helt säker?",
-      description: "Denna åtgärd kan inte ångras. Vänligen skriv DELETE för att bekräfta.",
+      title: "Är du absolut säker?",
+      description: "Denna åtgärd kan inte ångras. Skriv DELETE för att bekräfta.",
       placeholder: "Skriv DELETE för att bekräfta",
       confirm: "Bekräfta radering",
       cancel: "Avbryt"
@@ -145,7 +144,7 @@ export default {
   pipeline: {
     title: "Arbetsflöde (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, upprätthåller din översättningsminne och genererar exakta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll förblir synkroniserat med utvecklingen."
+    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, och översätter automatiskt din kodbas vid varje push. När kodändringar pushas analyserar vi det ändrade innehållet, underhåller ditt översättningsminne och genererar korrekta översättningar samtidigt som ditt varumärkes röst och terminologi bevaras. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
   },
   settings: {
     saved: "Inställningar sparade",
@@ -165,12 +164,12 @@ export default {
       },
       id: {
         title: "Projekt-ID",
-        description: "Ditt unika projektidentifierare",
+        description: "Din unika projektidentifierare",
         placeholder: "Projekt-ID"
       },
       "delete": {
         title: "Radera projekt",
-        description: "Permanent radera detta projekt och all dess data",
+        description: "Radera detta projekt och all dess data permanent",
         button: "Radera projekt"
       }
     },
@@ -182,7 +181,7 @@ export default {
       },
       billing: {
         title: "Faktureringsplan",
-        description: "Hantera ditt teams faktureringsplan",
+        description: "Hantera din teams faktureringsplan",
         free: "Gratis",
         pro: "Pro",
         unlimited: "Obegränsat"
@@ -207,8 +206,8 @@ export default {
           member: "Medlem"
         },
         dateSort: {
-          newest: "Nyast",
-          oldest: "Äldst"
+          newest: "Nyaste",
+          oldest: "Äldsta"
         },
         leaveTeamConfirm: "Lämna team",
         leaveTeamDescription: "Är du säker på att du vill lämna detta team?",
@@ -219,26 +218,26 @@ export default {
         removeMemberConfirm: "Ta bort medlem",
         removeMemberDescription: "Är du säker på att du vill ta bort denna medlem?",
         noResults: "Inga medlemmar hittades",
-        tryDifferentSearch: "Försök en annan sökning",
+        tryDifferentSearch: "Prova en annan sökning",
         deleteInvite: "Radera inbjudan",
         deleteInviteDescription: "Radera inbjudan",
-        invitedBy: "Bjuden av {name}",
+        invitedBy: "Inbjuden av {name}",
         deleteInviteSuccess: "Inbjudan raderad",
         deleteInviteError: "Misslyckades med att radera inbjudan",
         removeMemberSuccess: "Medlem borttagen",
         removeMemberError: "Misslyckades med att ta bort medlem",
-        removeMemberSuccessDescription: "Medlem har tagits bort framgångsrikt",
+        removeMemberSuccessDescription: "Medlemmen har tagits bort framgångsrikt",
         removeMemberErrorDescription: "Misslyckades med att ta bort medlem"
       }
     },
     badRequest: "Ogiltig begäran",
-    badRequestDescription: "Organisationen måste ha minst en ägare. Överför ägarskapet till en annan medlem innan du tar bort denna ägare.",
-    permissionDenied: "Behörighet nekad",
+    badRequestDescription: "Organisationen måste ha minst en ägare. Överför ägarskap till en annan medlem innan du tar bort denna ägare.",
+    permissionDenied: "Åtkomst nekad",
     permissionDeniedDescription: "Du måste vara ägare av teamet för att utföra denna åtgärd",
     deleteTeamTitle: "Radera team",
-    deleteTeamDescription: "Kan inte radera organisation när du är den enda medlemmen, istället radera ditt konto",
+    deleteTeamDescription: "Kan inte radera organisation när du är den enda medlemmen, radera istället ditt konto",
     error: "Något gick fel",
-    errorDescription: "Vänligen försök igen eller kontakta support",
+    errorDescription: "Försök igen eller kontakta support",
     addTeam: "Skapa team",
     apiKey: {
       updated: "API-nyckel uppdaterad",
@@ -249,20 +248,20 @@ export default {
       "continue": "Fortsätt"
     },
     provider: {
-      updateSuccess: "Inställningar uppdaterade framgångsrikt",
+      updateSuccess: "Inställningar uppdaterades framgångsrikt",
       updateError: "Misslyckades med att uppdatera inställningar",
       translationProvider: {
         title: "Översättningsleverantör",
-        description: "Välj din föredragna AI-tjänst för att generera översättningar. Varje leverantör erbjuder olika kapabiliteter och prissättning.",
+        description: "Välj din föredragna AI-tjänst för att generera översättningar. Varje leverantör erbjuder olika funktioner och prissättning.",
         placeholder: "Välj en leverantör"
       },
       languageModel: {
         title: "Språkmodell",
-        description: "Välj AI-modellen som bäst balanserar kvalitet och hastighet för dina översättningsbehov. Mer kraftfulla modeller kan vara långsammare men ger bättre resultat.",
+        description: "Välj den AI-modell som bäst balanserar kvalitet och hastighet för dina översättningsbehov. Kraftfullare modeller kan vara långsammare men producerar bättre resultat.",
         placeholder: "Välj en modell"
       },
       apiKey: {
-        title: "Leverantör API-nyckel",
+        title: "Leverantörs API-nyckel",
         description: "Ange din API-nyckel för att autentisera med din valda leverantör. Håll denna nyckel säker - vi krypterar den innan vi lagrar.",
         placeholder: "Ange din API-nyckel"
       }
@@ -274,15 +273,15 @@ export default {
     general: "Allmänt",
     translationMemory: {
       title: "Översättningsminne",
-      description: "Använd översättningsminne för att förbättra konsekvens och effektivitet"
+      description: "Använd översättningsminne för att förbättra konsistens och effektivitet"
     },
     qualityChecks: {
       title: "Kvalitetskontroller",
-      description: "Aktivera automatiserade kvalitetskontroller för översättningar"
+      description: "Aktivera automatiska kvalitetskontroller för översättningar"
     },
     contextDetection: {
-      title: "Kontextdetektion",
-      description: "Automatiskt upptäck och bevara kontext i översättningar"
+      title: "Kontextdetektering",
+      description: "Automatiskt detektera och bevara kontext i översättningar"
     },
     styleGuide: "Stilguide",
     lengthControl: {
@@ -300,12 +299,12 @@ export default {
       description: "Säkerställ att översättningar använder inkluderande språk"
     },
     formality: {
-      title: "Formalitet",
-      description: "Kontrollera formalitetsnivån för översättningar"
+      title: "Formellhet",
+      description: "Kontrollera formalitetsnivån på översättningar"
     },
     brandName: {
       title: "Varumärkesnamn",
-      description: "Ange ditt varumärkesnamn för konsekvent användning",
+      description: "Ställ in ditt varumärkesnamn för konsekvent användning",
       placeholder: "Ange ditt varumärkesnamn"
     },
     brandVoice: {
@@ -316,7 +315,7 @@ export default {
     localization: "Lokalisering",
     idioms: {
       title: "Idiom",
-      description: "Hantera idiomatiska uttryck på ett lämpligt sätt"
+      description: "Hantera idiomatiska uttryck på lämpligt sätt"
     },
     terminology: {
       title: "Terminologi",
@@ -328,7 +327,7 @@ export default {
     }
   },
   pricing: {
-    title: "Enkel prissättning",
+    title: "Enkla priser",
     free: {
       title: "Gratis (100 nycklar)",
       price: "Gratis",
@@ -336,10 +335,10 @@ export default {
       features: {
         unlimited_projects: "Obegränsade projekt",
         fine_tuning: "Finjusteringsalternativ",
-        overrides: "Översättningsöverskrivningar",
+        overrides: "Översättningsöverstyrningar",
         analytics: "Analys",
         context_memory: "Kontextminne",
-        community_support: "Gemenskapsstöd"
+        community_support: "Community-support"
       }
     },
     pro: {
@@ -347,8 +346,8 @@ export default {
       includes_free: "Allt i Gratis, plus:",
       features: {
         github_action: "GitHub Action-integration",
-        latest_features: "Tidigare åtkomst till de senaste funktionerna",
-        priority_support: "Prioriterad support"
+        latest_features: "Tidig tillgång till de senaste funktionerna",
+        priority_support: "Prioriterat stöd"
       }
     },
     cta: "Börja automatisera"
@@ -358,7 +357,7 @@ export default {
     teamNamePlaceholder: "Ange teamnamn",
     createTeamButton: "Skapa team",
     cancel: "Avbryt",
-    createTeamDescription: "Skapa ett nytt team för att hantera dina projekt och samarbetspartner."
+    createTeamDescription: "Skapa ett nytt team för att hantera dina projekt och samarbetspartners."
   },
   createProject: {
     createProjectTitle: "Skapa ett nytt projekt",
@@ -376,14 +375,14 @@ export default {
     sendInvite: "Skicka inbjudan",
     success: {
       title: "Inbjudan skickad",
-      description: "Inbjudan till {email} skickades framgångsrikt"
+      description: "Inbjudan skickades framgångsrikt till {email}"
     },
     error: {
       title: "Fel",
-      description: "Misslyckades med att skicka inbjudan. Vänligen försök igen."
+      description: "Misslyckades med att skicka inbjudan. Försök igen."
     },
     validation: {
-      invalidEmail: "Vänligen ange en giltig e-post"
+      invalidEmail: "Ange en giltig e-post"
     }
   },
   months: {
@@ -403,12 +402,12 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Installera Languine CLI",
+        title: "Konfigurera Languine CLI",
         description: "Installera och konfigurera Languine CLI för att hantera översättningar"
       },
       "2": {
-        title: "Skicka översättningar",
-        description: "Väntar på att översättningarna ska skickas"
+        title: "Pusha översättningar",
+        description: "Väntar på att översättningarna ska pushas"
       },
       "3": {
         title: "Dokumentation",
@@ -424,9 +423,35 @@ export default {
   },
   cli: {
     success: {
-      title: "Languine CLI inloggning lyckades",
+      title: "Languine CLI-inloggning lyckades",
       description: "Languine CLI autentiserades framgångsrikt som:",
-      description_2: "Du kan nu stänga denna flik och återvända till CLI"
+      description_2: "Du kan nu stänga denna flik och återgå till CLI"
     }
+  },
+  translations: {
+    header: "Översatta nycklar"
+  },
+  search: {
+    placeholder: "Sök"
+  },
+  periods: {
+    daily: "Dagligen",
+    weekly: "Veckovis",
+    monthly: "Månadsvis",
+    selectPeriod: "Välj period"
+  },
+  welcome: {
+    title: "Välkommen till Languine",
+    description: "Automatisera din lokalisationsprocess med Languine"
+  },
+  button: {
+    update: "Nya översättningar"
+  },
+  update: {
+    button: "Nya översättningar"
+  },
+  hero2: {
+    title: "Automatiserad lokalisering för dina applikationer",
+    description: "Förenkla din lokalisationsprocess med en AI-dragen CLI och pipeline som är utformad för att automatisera översättningar för utvecklare."
   }
 } as const;

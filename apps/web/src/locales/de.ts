@@ -1,9 +1,9 @@
 export default {
   header: {
     pricing: "Preise",
-    docs: "Dokumente",
+    docs: "Dokumentation",
     signIn: "Anmelden",
-    goToApp: "Zur App gehen"
+    goToApp: "Zur App"
   },
   hero: {
     title: "Automatisierte Lokalisierung für Ihre Anwendungen",
@@ -25,22 +25,24 @@ export default {
   activity: {
     title: "Aktivität",
     loading: "Laden",
-    loadMore: "Mehr anzeigen"
+    loadMore: "Mehr anzeigen",
+    noResults: "Keine Ergebnisse für '{search}'",
+    clearSearch: "Suche löschen"
   },
   features: {
     title: "Funktionen",
     fullyOpenSource: "Vollständig Open Source",
-    fullyOpenSourceDescription: "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Beiträge der Community ermöglicht.",
+    fullyOpenSourceDescription: "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Gemeinschaftsbeiträge ermöglicht.",
     noVendorLockIn: "Kein Vendor Lock-in",
     noVendorLockInDescription: "Wir binden Sie nicht an einen bestimmten Dienst, verwenden Sie Ihre eigenen LLMs.",
     presetsForExpo: "Voreinstellungen für Expo",
-    presetsForExpoDescription: "Wir bieten Voreinstellungen für Expo an, damit Sie schnell starten können.",
+    presetsForExpoDescription: "Wir bieten Voreinstellungen für Expo, damit Sie schnell starten können.",
     presetForReactNative: "Voreinstellung für React Native",
-    presetForReactNativeDescription: "Wir bieten eine Voreinstellung für React Native an, damit Sie schnell starten können.",
+    presetForReactNativeDescription: "Wir bieten eine Voreinstellung für React Native, damit Sie schnell starten können.",
     presetForReactEmail: "React Email Bibliothek",
     presetForReactEmailDescription: "Wir haben eine i18n-Bibliothek für React Email erstellt.",
     readyForI18nLibraries: "Bereit für i18n-Bibliotheken",
-    readyForI18nLibrariesDescription: "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl usw.)."
+    readyForI18nLibrariesDescription: "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
     title: "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
@@ -48,16 +50,16 @@ export default {
       title: "Intelligente Übersetzung",
       intelligentTranslation: "Intelligente Übersetzung mit Kontextbewusstsein",
       brandVoice: "Markenstimme und Tonkonsistenz",
-      terminology: "Terminologiemanagement",
+      terminology: "Terminologieverwaltung",
       linguisticFeatures: "Erweiterte linguistische Funktionen",
-      realtimeUpdates: "Echtzeit-Übersetzungsupdates"
+      realtimeUpdates: "Echtzeit-Übersetzungsaktualisierungen"
     },
     implementation: {
       title: "Implementierung",
       quickSetup: "Schnelle Einrichtung und Integration",
-      fileFormat: "Dateiformatverarbeitung",
-      contentStructure: "Inhaltsstrukturorganisation",
-      assetOrganization: "Asset-Organisation"
+      fileFormat: "Dateiformatbehandlung",
+      contentStructure: "Organisation der Inhaltsstruktur",
+      assetOrganization: "Organisation der Assets"
     },
     developer: {
       title: "Entwicklererfahrung",
@@ -73,7 +75,7 @@ export default {
     github: "Mit GitHub anmelden",
     google: "Mit Google anmelden",
     footer: "Automatisieren Sie Ihre Lokalisierung.",
-    description: "Melden Sie sich an, um Ihre Lokalisierung in Sekundenschnelle zu automatisieren.",
+    description: "Melden Sie sich an, um Ihre Lokalisierung in Sekunden zu automatisieren.",
     terms: {
       text: "Durch die Anmeldung stimmen Sie unseren",
       termsOfService: "Nutzungsbedingungen",
@@ -81,15 +83,12 @@ export default {
       privacyPolicy: "Datenschutzrichtlinie"
     }
   },
-  translations: {
-    total_keys: "{total} Schlüssel insgesamt"
-  },
   userMenu: {
     account: "Kontoeinstellungen",
     signOut: "Abmelden",
     createTeam: "Team erstellen",
     homepage: "Startseite",
-    team: "Teameinstellungen"
+    team: "Team-Einstellungen"
   },
   teamSelector: {
     addProject: "Projekt erstellen",
@@ -105,28 +104,28 @@ export default {
     createTeamButton: "Team erstellen"
   },
   coming_soon: {
-    title: "Languine ist im Early Access",
-    description: "Wir befinden uns derzeit im Early Access. Wenden Sie sich an",
+    title: "Languine ist in der Early Access-Phase",
+    description: "Wir befinden uns derzeit in der Early Access-Phase. Kontaktieren Sie",
     cta: "auf X, um frühzeitigen Zugang zu erhalten."
   },
   account: {
     fullName: {
       title: "Vollständiger Name",
-      description: "Ihr vollständiger Name, wie er auf der Plattform angezeigt wird.",
+      description: "Ihr vollständiger Name, wie er auf der Plattform erscheinen wird.",
       placeholder: "Geben Sie Ihren vollständigen Namen ein"
     },
     email: {
       title: "E-Mail-Adresse",
-      description: "Die mit Ihrem Konto verknüpfte E-Mail-Adresse.",
+      description: "Die E-Mail-Adresse, die mit Ihrem Konto verknüpft ist.",
       placeholder: "Geben Sie Ihre E-Mail-Adresse ein"
     },
     apiKey: {
       title: "API-Schlüssel",
-      description: "Ihr persönlicher API-Schlüssel für den Zugriff auf die Languine API und von der CLI."
+      description: "Ihr persönlicher API-Schlüssel für den Zugriff auf die Languine API und die CLI."
     },
     deleteAccount: {
       title: "Konto löschen",
-      description: "Löschen Sie Ihr Konto und alle zugehörigen Daten dauerhaft. Diese Aktion kann nicht rückgängig gemacht werden.",
+      description: "Ihr Konto und alle damit verbundenen Daten dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
       button: "Konto löschen"
     }
   },
@@ -135,9 +134,9 @@ export default {
   },
   dangerZone: {
     dialog: {
-      title: "Sind Sie sich absolut sicher?",
-      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN ein, um zu bestätigen.",
-      placeholder: "Geben Sie LÖSCHEN ein, um zu bestätigen",
+      title: "Sind Sie absolut sicher?",
+      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN zur Bestätigung ein.",
+      placeholder: "Geben Sie LÖSCHEN zur Bestätigung ein",
       confirm: "Löschen bestätigen",
       cancel: "Abbrechen"
     }
@@ -145,11 +144,11 @@ export default {
   pipeline: {
     title: "Workflow (CI/CD-Pipeline)",
     pro: "[pro]",
-    description: "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihren Code bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir den geänderten Inhalt, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull-Requests eingereicht, die zur Überprüfung bereitstehen, bevor sie in Ihren Hauptbranch zusammengeführt und bereitgestellt werden. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
+    description: "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihre Codebasis bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir die geänderten Inhalte, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull Requests eingereicht, die vor der Zusammenführung in Ihren Hauptzweig und der Bereitstellung überprüft werden können. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
   },
   settings: {
     saved: "Einstellungen gespeichert",
-    savedDescription: "Ihre Änderungen wurden erfolgreich gespeichert.",
+    savedDescription: "Ihre Änderungen wurden erfolgreich gespeichert",
     tabs: {
       project: "Projekt",
       account: "Konto",
@@ -189,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Team-API-Schlüssel",
-        description: "API-Schlüssel für den Teamzugriff, verwenden Sie dies von Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID.",
+        description: "API-Schlüssel für den Teamzugriff, verwenden Sie diesen von Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID",
         placeholder: "Team-API-Schlüssel"
       },
       members: {
@@ -200,9 +199,9 @@ export default {
         date: "Datum",
         selectAll: "{count} ausgewählt",
         noPendingInvitations: "Keine ausstehenden Einladungen",
-        inviteMembers: "Laden Sie Mitglieder ein, um zusammenzuarbeiten",
+        inviteMembers: "Laden Sie Mitglieder zur Zusammenarbeit ein",
         roles: {
-          owner: "Eigentümer",
+          owner: "Besitzer",
           admin: "Administrator",
           member: "Mitglied"
         },
@@ -232,19 +231,19 @@ export default {
       }
     },
     badRequest: "Ungültige Anfrage",
-    badRequestDescription: "Die Organisation muss mindestens einen Eigentümer haben. Übertragen Sie das Eigentum auf ein anderes Mitglied, bevor Sie diesen Eigentümer entfernen.",
+    badRequestDescription: "Die Organisation muss mindestens einen Besitzer haben. Übertragen Sie das Eigentum an ein anderes Mitglied, bevor Sie diesen Besitzer entfernen.",
     permissionDenied: "Zugriff verweigert",
-    permissionDeniedDescription: "Sie müssen Eigentümer des Teams sein, um diese Aktion auszuführen.",
+    permissionDeniedDescription: "Sie müssen ein Besitzer des Teams sein, um diese Aktion durchzuführen",
     deleteTeamTitle: "Team löschen",
-    deleteTeamDescription: "Sie können die Organisation nicht löschen, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
-    error: "Etwas ist schiefgelaufen",
-    errorDescription: "Bitte versuchen Sie es erneut oder kontaktieren Sie den Support.",
+    deleteTeamDescription: "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind, löschen Sie stattdessen Ihr Konto",
+    error: "Etwas ist schief gelaufen",
+    errorDescription: "Bitte versuchen Sie es erneut oder kontaktieren Sie den Support",
     addTeam: "Team erstellen",
     apiKey: {
       updated: "API-Schlüssel aktualisiert",
-      updatedDescription: "Ihr API-Schlüssel wurde erfolgreich aktualisiert und in die Zwischenablage kopiert.",
+      updatedDescription: "Ihr API-Schlüssel wurde erfolgreich aktualisiert und in Ihre Zwischenablage kopiert.",
       title: "API-Schlüssel aktualisieren",
-      description: "Sind Sie sicher, dass Sie einen neuen API-Schlüssel generieren möchten? Der alte Schlüssel wird sofort nicht mehr funktionieren.",
+      description: "Sind Sie sicher, dass Sie einen neuen API-Schlüssel generieren möchten? Der alte Schlüssel wird sofort ungültig.",
       cancel: "Abbrechen",
       "continue": "Fortfahren"
     },
@@ -253,17 +252,17 @@ export default {
       updateError: "Fehler beim Aktualisieren der Einstellungen",
       translationProvider: {
         title: "Übersetzungsanbieter",
-        description: "Wählen Sie Ihren bevorzugten KI-Dienst zur Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Funktionen und Preise.",
+        description: "Wählen Sie Ihren bevorzugten KI-Dienst für die Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Fähigkeiten und Preise.",
         placeholder: "Wählen Sie einen Anbieter"
       },
       languageModel: {
         title: "Sprachmodell",
-        description: "Wählen Sie das KI-Modell, das Qualität und Geschwindigkeit für Ihre Übersetzungsbedürfnisse am besten ausbalanciert. Leistungsstärkere Modelle können langsamer sein, liefern jedoch bessere Ergebnisse.",
+        description: "Wählen Sie das KI-Modell, das Qualität und Geschwindigkeit für Ihre Übersetzungsanforderungen am besten ausbalanciert. Leistungsfähigere Modelle können langsamer sein, aber bessere Ergebnisse liefern.",
         placeholder: "Wählen Sie ein Modell"
       },
       apiKey: {
         title: "Anbieter-API-Schlüssel",
-        description: "Geben Sie Ihren API-Schlüssel ein, um sich bei Ihrem gewählten Anbieter zu authentifizieren. Bewahren Sie diesen Schlüssel sicher auf - wir verschlüsseln ihn, bevor wir ihn speichern.",
+        description: "Geben Sie Ihren API-Schlüssel ein, um sich bei Ihrem gewählten Anbieter zu authentifizieren. Bewahren Sie diesen Schlüssel sicher auf - wir verschlüsseln ihn vor der Speicherung.",
         placeholder: "Geben Sie Ihren API-Schlüssel ein"
       }
     },
@@ -274,57 +273,57 @@ export default {
     general: "Allgemein",
     translationMemory: {
       title: "Übersetzungsgedächtnis",
-      description: "Verwenden Sie das Übersetzungsgedächtnis, um Konsistenz und Effizienz zu verbessern."
+      description: "Verwenden Sie das Übersetzungsgedächtnis, um Konsistenz und Effizienz zu verbessern"
     },
     qualityChecks: {
       title: "Qualitätsprüfungen",
-      description: "Aktivieren Sie automatisierte Qualitätsprüfungen für Übersetzungen."
+      description: "Aktivieren Sie automatische Qualitätsprüfungen für Übersetzungen"
     },
     contextDetection: {
-      title: "Kontextdetektion",
-      description: "Automatische Erkennung und Bewahrung des Kontexts in Übersetzungen."
+      title: "Kontexterkennung",
+      description: "Erkennen und bewahren Sie automatisch den Kontext in Übersetzungen"
     },
     styleGuide: "Stilrichtlinie",
     lengthControl: {
-      title: "Längensteuerung",
-      description: "Steuern Sie die Länge des übersetzten Textes.",
+      title: "Längenkontrolle",
+      description: "Kontrollieren Sie die Länge des übersetzten Textes",
       options: {
         flexible: "Flexibel",
         strict: "Streng",
-        exact: "Genau",
+        exact: "Exakt",
         loose: "Locker"
       }
     },
     inclusiveLanguage: {
       title: "Inklusive Sprache",
-      description: "Stellen Sie sicher, dass Übersetzungen inklusive Sprache verwenden."
+      description: "Stellen Sie sicher, dass Übersetzungen inklusive Sprache verwenden"
     },
     formality: {
-      title: "Formell",
-      description: "Steuern Sie das Formalitätsniveau der Übersetzungen."
+      title: "Formalität",
+      description: "Kontrollieren Sie das Formalitätsniveau von Übersetzungen"
     },
     brandName: {
       title: "Markenname",
-      description: "Legen Sie Ihren Markennamen für eine konsistente Verwendung fest.",
+      description: "Legen Sie Ihren Markennamen für eine konsistente Verwendung fest",
       placeholder: "Geben Sie Ihren Markennamen ein"
     },
     brandVoice: {
       title: "Markenstimme",
-      description: "Definieren Sie Ihre Markenstimme und -ton.",
+      description: "Definieren Sie Ihre Markenstimme und Ihren Ton",
       placeholder: "Beschreiben Sie Ihre Markenstimme..."
     },
     localization: "Lokalisierung",
     idioms: {
-      title: "Redewendungen",
-      description: "Gehen Sie angemessen mit idiomatischen Ausdrücken um."
+      title: "Idiome",
+      description: "Behandeln Sie idiomatische Ausdrücke angemessen"
     },
     terminology: {
       title: "Terminologie",
-      description: "Verwalten Sie spezialisierte Terminologie und Glossare."
+      description: "Verwalten Sie spezialisierte Terminologie und Glossare"
     },
     culturalAdaptation: {
       title: "Kulturelle Anpassung",
-      description: "Passen Sie Inhalte für kulturelle Angemessenheit an."
+      description: "Passen Sie Inhalte für kulturelle Angemessenheit an"
     }
   },
   pricing: {
@@ -346,9 +345,9 @@ export default {
       title: "Pro",
       includes_free: "Alles in Kostenlos, plus:",
       features: {
-        github_action: "GitHub-Aktionsintegration",
-        latest_features: "Früher Zugang zu den neuesten Funktionen",
-        priority_support: "Prioritätsunterstützung"
+        github_action: "GitHub-Action-Integration",
+        latest_features: "Frühzeitiger Zugang zu neuesten Funktionen",
+        priority_support: "Priorisierter Support"
       }
     },
     cta: "Automatisierung starten"
@@ -369,21 +368,21 @@ export default {
   },
   invite: {
     inviteMember: "Mitglied einladen",
-    inviteDescription: "Laden Sie ein Mitglied in Ihr Team ein.",
+    inviteDescription: "Laden Sie ein Mitglied in Ihr Team ein",
     emailLabel: "E-Mail",
     emailPlaceholder: "E-Mail eingeben",
     cancel: "Abbrechen",
     sendInvite: "Einladung senden",
     success: {
       title: "Einladung gesendet",
-      description: "Einladung erfolgreich an {email} gesendet."
+      description: "Einladung erfolgreich an {email} gesendet"
     },
     error: {
       title: "Fehler",
-      description: "Einladung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+      description: "Fehler beim Senden der Einladung. Bitte versuchen Sie es erneut."
     },
     validation: {
-      invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      invalidEmail: "Bitte geben Sie eine gültige E-Mail ein"
     }
   },
   months: {
@@ -404,15 +403,15 @@ export default {
     steps: {
       "1": {
         title: "Languine CLI einrichten",
-        description: "Installieren und konfigurieren Sie die Languine CLI, um Übersetzungen zu verwalten."
+        description: "Installieren und konfigurieren Sie die Languine CLI, um Übersetzungen zu verwalten"
       },
       "2": {
         title: "Übersetzungen pushen",
-        description: "Warten auf das Pushen der Übersetzungen."
+        description: "Warten auf das Pushen der Übersetzungen"
       },
       "3": {
         title: "Dokumentation",
-        description: "Schauen Sie sich unsere Dokumentation für detaillierte Anleitungen und Best Practices an.",
+        description: "Schauen Sie sich unsere Dokumentation für detaillierte Anleitungen und Best Practices an",
         link: "Dokumentation"
       }
     },
@@ -424,9 +423,35 @@ export default {
   },
   cli: {
     success: {
-      title: "Languine CLI-Anmeldung erfolgreich",
+      title: "Languine CLI Login erfolgreich",
       description: "Languine CLI wurde erfolgreich authentifiziert als:",
-      description_2: "Sie können jetzt diesen Tab schließen und zur CLI zurückkehren."
+      description_2: "Sie können diesen Tab jetzt schließen und zur CLI zurückkehren"
     }
+  },
+  translations: {
+    header: "Übersetzte Schlüssel"
+  },
+  search: {
+    placeholder: "Suche"
+  },
+  periods: {
+    daily: "Täglich",
+    weekly: "Wöchentlich",
+    monthly: "Monatlich",
+    selectPeriod: "Zeitraum auswählen"
+  },
+  welcome: {
+    title: "Willkommen bei Languine",
+    description: "Automatisieren Sie Ihren Lokalisierungsprozess mit Languine"
+  },
+  button: {
+    update: "Neue Übersetzungen"
+  },
+  update: {
+    button: "Neue Übersetzungen"
+  },
+  hero2: {
+    title: "Automatisierte Lokalisierung für Ihre Anwendungen",
+    description: "Optimieren Sie Ihren Lokalisierungsprozess mit einer KI-gestützten CLI und einem Pipeline-System, das speziell für Entwickler entwickelt wurde, um Übersetzungen zu automatisieren."
   }
 } as const;

@@ -5,10 +5,11 @@ import {
   organizations,
   projects,
   sessions,
+  translations,
   users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
-import { and, eq } from "drizzle-orm";
+import { and, count, eq } from "drizzle-orm";
 import slugify from "slugify";
 
 export async function createDefaultOrganization(user: {
@@ -242,6 +243,28 @@ export const updateOrganizationApiKey = async (organizationId: string) => {
   return db
     .update(organizations)
     .set({ apiKey: `org_${createId()}` })
+    .where(eq(organizations.id, organizationId))
+    .returning()
+    .get();
+};
+
+export const getOrganizationTotalKeys = async (organizationId: string) => {
+  return db
+    .select({ total: count(translations.translationKey) })
+    .from(translations)
+    .where(eq(translations.organizationId, organizationId))
+    .get();
+};
+
+export const updateOrganizationTier = async (
+  organizationId: string,
+  tier: number,
+) => {
+  const plan = tier === 0 ? "free" : "pro";
+
+  return db
+    .update(organizations)
+    .set({ tier, plan })
     .where(eq(organizations.id, organizationId))
     .returning()
     .get();

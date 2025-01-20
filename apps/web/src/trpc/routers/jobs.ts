@@ -1,7 +1,10 @@
 import { db } from "@/db";
-import { organizations } from "@/db/schema";
+import { getOrganizationTotalKeys } from "@/db/queries/organization";
+import { organizations, projects } from "@/db/schema";
 import type { translateTask } from "@/jobs/translate/translate";
+import { TIERS_MAX_KEYS } from "@/lib/tiers";
 import { tasks } from "@trigger.dev/sdk/v3";
+import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
@@ -16,6 +19,11 @@ export const jobsRouter = createTRPCRouter({
         sourceFormat: z.string(),
         sourceLanguage: z.string(),
         targetLanguages: z.array(z.string()),
+        branch: z.string().optional().nullable(),
+        commit: z.string().optional().nullable(),
+        commitLink: z.string().optional().nullable(),
+        sourceProvider: z.string().nullable().optional(),
+        commitMessage: z.string().optional().nullable(),
         content: z.array(
           z.object({
             key: z.string(),
@@ -26,13 +34,44 @@ export const jobsRouter = createTRPCRouter({
     )
     .use(rateLimitMiddleware)
     .mutation(async ({ input }) => {
-      const org = await db
+      const project = await db
         .select()
         .from(organizations)
-        .where(eq(organizations.id, input.projectId))
+        .innerJoin(projects, eq(projects.organizationId, organizations.id))
+        .where(eq(projects.id, input.projectId))
         .get();
 
+      const org = project?.organizations;
+
+      if (!org) {
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "Organization not found",
+        });
+      }
+
       const isFreeUser = org?.plan === "free";
+
+      const totalKeys = await getOrganizationTotalKeys(org?.id);
+
+      // Calculate the total number of keys, saved keys + new keys (for each target language)
+      const nextTotalKeys =
+        (totalKeys?.total ?? 0) +
+        input.content.length * input.targetLanguages.length;
+
+      const currentKeysLimit =
+        TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];
+
+      if (nextTotalKeys >= currentKeysLimit) {
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message: "You have reached the maximum number of keys",
+          cause: {
+            currentKeysLimit,
+            nextTotalKeys,
+          },
+        });
+      }
 
       const options = isFreeUser
         ? {
@@ -61,6 +100,11 @@ export const jobsRouter = createTRPCRouter({
           sourceLanguage: input.sourceLanguage,
           targetLanguages: input.targetLanguages,
           content: input.content,
+          branch: input.branch,
+          commit: input.commit,
+          sourceProvider: input.sourceProvider,
+          commitMessage: input.commitMessage,
+          commitLink: input.commitLink,
         },
         options,
       );

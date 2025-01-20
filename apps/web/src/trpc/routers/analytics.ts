@@ -11,6 +11,10 @@ export const analyticsRouter = createTRPCRouter({
         startDate: z.date().optional(),
         endDate: z.date().optional(),
         organizationId: z.string(),
+        period: z
+          .enum(["monthly", "weekly", "daily"])
+          .optional()
+          .default("daily"),
       }),
     )
     .use(isOrganizationMember)
@@ -20,12 +24,14 @@ export const analyticsRouter = createTRPCRouter({
         organizationId: input.organizationId,
         startDate: input.startDate,
         endDate: input.endDate,
+        period: input.period,
       });
 
       return {
-        monthlyStats: analytics.monthlyStats,
+        data: analytics.data,
         totalKeys: analytics.totalKeys,
         totalLanguages: analytics.totalLanguages,
+        period: analytics.period,
       };
     }),
 });

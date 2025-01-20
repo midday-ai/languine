@@ -27,6 +27,8 @@ export default {
   activity: {
     title: "Activity",
     loading: "Loading",
+    noResults: "No results for '{search}'",
+    clearSearch: "Clear search",
     loadMore: "Show more",
   },
   features: {
@@ -90,7 +92,7 @@ export default {
     },
   },
   translations: {
-    total_keys: "{total} keys in total",
+    header: "Translated keys",
   },
   userMenu: {
     account: "Account Settings",
@@ -453,5 +455,14 @@ export default {
       description: "Languine CLI was successfully authenticated as:",
       description_2: "You can now close this tab and return to the CLI",
     },
+  },
+  search: {
+    placeholder: "Search",
+  },
+  periods: {
+    daily: "Daily",
+    weekly: "Weekly",
+    monthly: "Monthly",
+    selectPeriod: "Select period",
   },
 } as const;

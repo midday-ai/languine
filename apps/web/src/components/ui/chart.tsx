@@ -109,7 +109,7 @@ const ChartTooltipContent = React.forwardRef<
     payload?: Array<{
       value: number;
       payload: {
-        month: string;
+        label: string;
         count: number;
       };
     }>;
@@ -121,9 +121,9 @@ const ChartTooltipContent = React.forwardRef<
 
   return (
     <div ref={ref} className="bg-[#1D1D1D] p-2 px-4">
-      <div className="flex gap-2 text-xs">
+      <div className="flex gap-2 text-xs font-medium">
         <span>{data.value.toLocaleString()}</span>
-        <div className="text-muted-foreground">{data.payload.month}</div>
+        <div className="text-[#878787]">{data.payload.label}</div>
       </div>
     </div>
   );

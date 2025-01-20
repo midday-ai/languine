@@ -1,20 +1,24 @@
 import { formatTimeAgo } from "@/lib/format";
-import { FaGithub } from "react-icons/fa";
+import { FaBitbucket, FaGithub } from "react-icons/fa";
 import { Skeleton } from "./ui/skeleton";
 
 type Props = {
   source: string;
   content: string;
-  createdAt: string;
+  updatedAt: Date;
   commit?: string | null;
+  commitLink?: string | null;
+  sourceProvider?: string | null;
   targetLanguage: string;
 };
 
 export function ActivityCard({
   source,
   content,
-  createdAt,
+  updatedAt,
   commit,
+  commitLink,
+  sourceProvider,
   targetLanguage,
 }: Props) {
   return (
@@ -30,14 +34,20 @@ export function ActivityCard({
           </span>
         </div>
         <div className="flex items-center gap-2 text-secondary">
-          {commit && (
-            <>
-              <span className="truncate max-w-[60px]">#{commit}</span>{" "}
-              <FaGithub />
-            </>
+          {commit && commitLink && (
+            <a
+              href={commitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-secondary"
+            >
+              {sourceProvider === "github" && <FaGithub />}
+              {sourceProvider === "bitbucket" && <FaBitbucket />}{" "}
+              <span className="truncate max-w-[60px]">#{commit}</span>
+            </a>
           )}
 
-          <span>{formatTimeAgo(new Date(createdAt))}</span>
+          <span>{formatTimeAgo(new Date(updatedAt))}</span>
         </div>
       </div>
     </div>

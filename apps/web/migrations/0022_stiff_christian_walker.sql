@@ -1,0 +1,1 @@
+ALTER TABLE `translations` ADD `commit_link` text;

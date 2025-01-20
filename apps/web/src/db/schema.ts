@@ -127,6 +127,7 @@ export const organizations = sqliteTable(
       .notNull()
       .unique()
       .$defaultFn(() => `org_${createId()}`),
+    tier: integer("tier").notNull().default(0),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
@@ -322,6 +323,8 @@ export const translations = sqliteTable(
     context: text("context"),
     branch: text("branch"),
     commit: text("commit"),
+    commitLink: text("commit_link"),
+    sourceProvider: text("source_provider"),
     commitMessage: text("commit_message"),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()

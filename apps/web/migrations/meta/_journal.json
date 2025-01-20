@@ -141,6 +141,41 @@
       "when": 1736938400515,
       "tag": "0019_glorious_orphan",
       "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "6",
+      "when": 1737317756205,
+      "tag": "0020_puzzling_true_believers",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "6",
+      "when": 1737323098765,
+      "tag": "0021_perpetual_hercules",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "6",
+      "when": 1737376076728,
+      "tag": "0022_stiff_christian_walker",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "6",
+      "when": 1737381546835,
+      "tag": "0023_real_nightcrawler",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "6",
+      "when": 1737383140628,
+      "tag": "0024_amazing_silverclaw",
+      "breakpoints": true
     }
   ]
 }

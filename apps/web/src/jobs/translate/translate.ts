@@ -1,6 +1,8 @@
 import { validateJobPermissions } from "@/db/queries/permissions";
+import { createTranslation } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
+import { calculateChunkSize } from "../utils/chunk";
 import { translate } from "../utils/translate";
 
 const translationSchema = z.object({
@@ -9,6 +11,11 @@ const translationSchema = z.object({
   sourceFormat: z.string(),
   sourceLanguage: z.string(),
   targetLanguages: z.array(z.string()),
+  branch: z.string().nullable().optional(),
+  commit: z.string().nullable().optional(),
+  sourceProvider: z.string().nullable().optional(),
+  commitMessage: z.string().nullable().optional(),
+  commitLink: z.string().nullable().optional(),
   content: z.array(
     z.object({
       key: z.string(),
@@ -20,13 +27,19 @@ const translationSchema = z.object({
 export const translateTask = schemaTask({
   id: "translate",
   schema: translationSchema,
-  maxDuration: 300,
+  maxDuration: 600,
   queue: {
     concurrencyLimit: 10,
   },
-  run: async (payload, { ctx }) => {
-    // Validate permissions
-    // await validateJobPermissions(payload.projectId, payload.apiKey);
+  run: async (payload) => {
+    const { project } = await validateJobPermissions({
+      projectId: payload.projectId,
+      apiKey: payload.apiKey,
+    });
+
+    if (!project) {
+      throw new Error("Permission denied");
+    }
 
     const translations: Record<
       string,
@@ -35,45 +48,76 @@ export const translateTask = schemaTask({
 
     const totalTranslations =
       payload.targetLanguages.length * payload.content.length;
+
     let completedTranslations = 0;
 
     metadata.set("progress", 0);
 
-    // Run translations in parallel for each target language
-    await Promise.all(
-      payload.targetLanguages.map(async (targetLocale) => {
-        translations[targetLocale] = [];
+    const chunkSize = calculateChunkSize(payload.content);
 
-        // Update progress before starting each language
+    // Split content into chunks for all languages
+    const allChunks = payload.targetLanguages.flatMap((targetLocale) => {
+      const contentChunks = [];
+      for (let i = 0; i < payload.content.length; i += chunkSize) {
+        contentChunks.push({
+          targetLocale,
+          chunk: payload.content.slice(i, i + chunkSize),
+        });
+      }
+      translations[targetLocale] = [];
+      return contentChunks;
+    });
+
+    // Process all chunks in parallel across all languages
+    await Promise.all(
+      allChunks.map(async ({ targetLocale, chunk }) => {
         metadata.set(
           "progress",
           Math.round((completedTranslations * 100) / totalTranslations),
         );
 
-        const translatedContent = await translate(payload.content, {
-          sourceLocale: payload.sourceLanguage,
-          targetLocale,
+        const translatedContent = await translate(
+          chunk,
+          {
+            sourceLocale: payload.sourceLanguage,
+            targetLocale,
+          },
+          totalTranslations,
+        );
+
+        await createTranslation({
+          projectId: project.id,
+          organizationId: project.organizationId,
+          sourceFormat: payload.sourceFormat,
+          branch: payload.branch,
+          commit: payload.commit,
+          sourceProvider: payload.sourceProvider,
+          commitMessage: payload.commitMessage,
+          commitLink: payload.commitLink,
+          translations: chunk.map((content, i) => ({
+            translationKey: content.key,
+            sourceLanguage: payload.sourceLanguage,
+            targetLanguage: targetLocale,
+            sourceText: content.sourceText,
+            translatedText: translatedContent[i],
+          })),
         });
 
-        for (let i = 0; i < payload.content.length; i++) {
+        // Process translations for this chunk
+        chunk.forEach((content, i) => {
           translations[targetLocale].push({
-            key: payload.content[i].key,
+            key: content.key,
             translatedText: translatedContent[i],
           });
 
           completedTranslations++;
 
-          // Update progress after each individual translation
+          // Update progress after each translation
           const progress = Math.round(
             (completedTranslations * 100) / totalTranslations,
           );
           metadata.set("progress", progress);
-
-          // Add micro-progress updates between translations
-          if (i < payload.content.length - 1) {
-            metadata.set("progress", progress + 0.5);
-          }
-        }
+        });
       }),
     );
 

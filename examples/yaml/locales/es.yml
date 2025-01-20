@@ -1,10 +1,10 @@
 welcome: ¡Bienvenido a nuestra aplicación!
-goodbye: Gracias por usar nuestra app. ¡Hasta la próxima!
+goodbye: Gracias por usar nuestra aplicación. ¡Hasta la próxima!
 nav:
   home: Inicio
   about: Acerca de
   contact: Contáctanos
-  settings: Configuraciones
+  settings: Configuración
 user:
   greeting: ¡Hola, {name}!
   profile:
@@ -32,5 +32,5 @@ time:
   today: Hoy
   yesterday: Ayer
   tomorrow: Mañana
-  days_ago: "{count} días atrás"
+  days_ago: Hace {count} días
 hello: Hola

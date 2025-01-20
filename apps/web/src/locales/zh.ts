@@ -6,50 +6,52 @@ export default {
     goToApp: "前往应用"
   },
   hero: {
-    title: "为您的应用程序提供自动本地化",
-    description: "通过一个由AI驱动的CLI和管道简化您的本地化流程，旨在为开发人员自动化翻译。"
+    title: "为您的应用程序提供自动化本地化",
+    description: "通过专为开发者设计的AI驱动的CLI和流水线，简化您的本地化流程，实现翻译自动化。"
   },
   getStarted: {
-    heading: "开始",
-    title: "为您的应用程序提供自动本地化",
-    description: "通过一个由AI驱动的CLI和管道简化您的本地化流程，旨在为开发人员自动化翻译。",
+    heading: "开始使用",
+    title: "为您的应用程序提供自动化本地化",
+    description: "通过专为开发者设计的AI驱动的CLI和流水线，简化您的本地化流程，实现翻译自动化。",
     button: {
       startAutomating: "开始自动化",
       readDocumentation: "阅读文档"
     }
   },
   companies: {
-    title: "被使用者",
+    title: "使用者",
     addYourCompany: "+ 添加您的公司"
   },
   activity: {
     title: "活动",
     loading: "加载中",
-    loadMore: "显示更多"
+    loadMore: "显示更多",
+    noResults: "没有找到'{search}'的结果",
+    clearSearch: "清除搜索"
   },
   features: {
     title: "功能",
     fullyOpenSource: "完全开源",
-    fullyOpenSourceDescription: "我们的代码在GitHub上公开可用，确保透明度和社区贡献。",
+    fullyOpenSourceDescription: "我们的代码在GitHub上公开可用，支持透明度和社区贡献。",
     noVendorLockIn: "无供应商锁定",
-    noVendorLockInDescription: "我们不会将您锁定在特定服务中，使用您自己的LLM。",
-    presetsForExpo: "Expo的预设",
+    noVendorLockInDescription: "我们不会将您锁定在特定服务中，您可以使用自己的LLMs。",
+    presetsForExpo: "Expo预设",
     presetsForExpoDescription: "我们为Expo提供预设，以便您可以快速开始。",
-    presetForReactNative: "React Native的预设",
+    presetForReactNative: "React Native预设",
     presetForReactNativeDescription: "我们为React Native提供预设，以便您可以快速开始。",
-    presetForReactEmail: "React电子邮件库",
-    presetForReactEmailDescription: "我们为React电子邮件创建了一个i18n库。",
-    readyForI18nLibraries: "准备好i18n库",
-    readyForI18nLibrariesDescription: "我们支持所有库，包括最流行的库（next-intl，react-i18next，react-intl等）。"
+    presetForReactEmail: "React Email库",
+    presetForReactEmailDescription: "我们为React Email创建了一个i18n库。",
+    readyForI18nLibraries: "支持i18n库",
+    readyForI18nLibrariesDescription: "我们支持所有库，包括最受欢迎的（next-intl, react-i18next, react-intl等）。"
   },
   info: {
-    title: "处理本地化应用的每个方面，包括",
+    title: "处理本地化应用的每一个方面，包括",
     smartTranslation: {
       title: "智能翻译",
       intelligentTranslation: "具有上下文意识的智能翻译",
       brandVoice: "品牌声音和语调一致性",
       terminology: "术语管理",
-      linguisticFeatures: "高级语言特性",
+      linguisticFeatures: "高级语言功能",
       realtimeUpdates: "实时翻译更新"
     },
     implementation: {
@@ -64,7 +66,7 @@ export default {
       cli: "命令行界面",
       cicd: "CI/CD集成",
       versionControl: "版本控制",
-      workflow: "开发者工作流",
+      workflow: "开发者工作流程",
       documentation: "全面的文档"
     }
   },
@@ -80,9 +82,6 @@ export default {
       and: "和",
       privacyPolicy: "隐私政策"
     }
-  },
-  translations: {
-    total_keys: "{total} 个键总计"
   },
   userMenu: {
     account: "账户设置",
@@ -112,7 +111,7 @@ export default {
   account: {
     fullName: {
       title: "全名",
-      description: "您的全名将在平台上显示。",
+      description: "您的全名将出现在整个平台上。",
       placeholder: "输入您的全名"
     },
     email: {
@@ -122,11 +121,11 @@ export default {
     },
     apiKey: {
       title: "API密钥",
-      description: "您个人的API密钥，用于访问Languine API和CLI。"
+      description: "您的个人API密钥，用于访问Languine API和CLI。"
     },
     deleteAccount: {
       title: "删除账户",
-      description: "永久删除您的账户及所有相关数据。此操作无法撤销。",
+      description: "永久删除您的账户和所有相关数据。此操作无法撤销。",
       button: "删除账户"
     }
   },
@@ -136,16 +135,16 @@ export default {
   dangerZone: {
     dialog: {
       title: "您确定吗？",
-      description: "此操作无法撤销。请键入DELETE以确认。",
-      placeholder: "键入DELETE以确认",
+      description: "此操作无法撤销。请输入DELETE以确认。",
+      placeholder: "输入DELETE以确认",
       confirm: "确认删除",
       cancel: "取消"
     }
   },
   pipeline: {
-    title: "工作流（CI/CD管道）",
+    title: "工作流程（CI/CD流水线）",
     pro: "[专业版]",
-    description: "我们的翻译引擎无缝集成到您现有的CI/CD管道中，在每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
+    description: "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流程确保您的本地化内容与开发保持同步。"
   },
   settings: {
     saved: "设置已保存",
@@ -154,13 +153,13 @@ export default {
       project: "项目",
       account: "账户",
       team: "团队",
-      provider: "提供者",
-      billing: "计费"
+      provider: "提供商",
+      billing: "账单"
     },
     project: {
       name: {
         title: "项目名称",
-        description: "您项目的名称",
+        description: "您的项目名称",
         placeholder: "输入项目名称"
       },
       id: {
@@ -177,32 +176,32 @@ export default {
     team: {
       name: {
         title: "团队名称",
-        description: "您团队的名称",
+        description: "您的团队名称",
         placeholder: "输入团队名称"
       },
       billing: {
-        title: "计费计划",
-        description: "管理您团队的计费计划",
+        title: "账单计划",
+        description: "管理您团队的账单计划",
         free: "免费",
         pro: "专业版",
-        unlimited: "无限制"
+        unlimited: "无限"
       },
       apiKey: {
         title: "团队API密钥",
-        description: "用于团队访问的API密钥，请在您的CI/CD管道中与项目ID一起使用",
+        description: "团队访问的API密钥，与项目ID一起从您的CI/CD流水线中使用",
         placeholder: "团队API密钥"
       },
       members: {
         title: "成员",
-        pendingInvitations: "待处理邀请",
-        filterPlaceholder: "筛选成员...",
+        pendingInvitations: "待处理的邀请",
+        filterPlaceholder: "过滤成员...",
         allRoles: "所有角色",
         date: "日期",
         selectAll: "{count} 已选择",
         noPendingInvitations: "没有待处理的邀请",
         inviteMembers: "邀请成员协作",
         roles: {
-          owner: "所有者",
+          owner: "拥有者",
           admin: "管理员",
           member: "成员"
         },
@@ -211,18 +210,18 @@ export default {
           oldest: "最旧"
         },
         leaveTeamConfirm: "离开团队",
-        leaveTeamDescription: "您确定要离开此团队吗？",
+        leaveTeamDescription: "您确定要离开这个团队吗？",
         cancel: "取消",
         leaveTeam: "离开团队",
         invite: "邀请成员",
         removeMember: "移除成员",
         removeMemberConfirm: "移除成员",
-        removeMemberDescription: "您确定要移除此成员吗？",
-        noResults: "未找到成员",
+        removeMemberDescription: "您确定要移除这个成员吗？",
+        noResults: "没有找到成员",
         tryDifferentSearch: "尝试不同的搜索",
         deleteInvite: "删除邀请",
         deleteInviteDescription: "删除邀请",
-        invitedBy: "被{name}邀请",
+        invitedBy: "由{name}邀请",
         deleteInviteSuccess: "邀请已删除",
         deleteInviteError: "删除邀请失败",
         removeMemberSuccess: "成员已移除",
@@ -232,12 +231,12 @@ export default {
       }
     },
     badRequest: "无效请求",
-    badRequestDescription: "组织必须至少有一个所有者。在删除此所有者之前，请将所有权转移给其他成员。",
+    badRequestDescription: "组织必须至少有一个所有者。在移除此所有者之前，请将所有权转移给另一个成员。",
     permissionDenied: "权限被拒绝",
-    permissionDeniedDescription: "您需要是团队的所有者才能执行此操作",
+    permissionDeniedDescription: "您需要是团队的拥有者才能执行此操作",
     deleteTeamTitle: "删除团队",
-    deleteTeamDescription: "当您是唯一成员时，无法删除组织，请删除您的账户",
-    error: "出现问题",
+    deleteTeamDescription: "当您是唯一成员时无法删除组织，请改为删除您的账户",
+    error: "出了点问题",
     errorDescription: "请重试或联系支持",
     addTeam: "创建团队",
     apiKey: {
@@ -249,21 +248,21 @@ export default {
       "continue": "继续"
     },
     provider: {
-      updateSuccess: "设置成功更新",
-      updateError: "更新设置失败",
+      updateSuccess: "设置更新成功",
+      updateError: "设置更新失败",
       translationProvider: {
-        title: "翻译提供者",
-        description: "选择您首选的AI服务以生成翻译。每个提供者提供不同的能力和定价。",
-        placeholder: "选择提供者"
+        title: "翻译提供商",
+        description: "选择您偏好的AI服务以生成翻译。每个提供商提供不同的能力和定价。",
+        placeholder: "选择一个提供商"
       },
       languageModel: {
         title: "语言模型",
-        description: "选择最能平衡质量和速度的AI模型以满足您的翻译需求。更强大的模型可能较慢，但能产生更好的结果。",
-        placeholder: "选择模型"
+        description: "选择最适合您翻译需求的AI模型，平衡质量和速度。更强大的模型可能更慢但产生更好的结果。",
+        placeholder: "选择一个模型"
       },
       apiKey: {
-        title: "提供者API密钥",
-        description: "输入您的API密钥以与所选提供者进行身份验证。请妥善保管此密钥 - 我们在存储之前会对其进行加密。",
+        title: "提供商API密钥",
+        description: "输入您的API密钥以与您选择的提供商进行身份验证。请保持此密钥安全 - 我们在存储前会加密它。",
         placeholder: "输入您的API密钥"
       }
     },
@@ -300,12 +299,12 @@ export default {
       description: "确保翻译使用包容性语言"
     },
     formality: {
-      title: "正式性",
-      description: "控制翻译的正式程度"
+      title: "正式度",
+      description: "控制翻译的正式度"
     },
     brandName: {
       title: "品牌名称",
-      description: "设置您的品牌名称以保持一致使用",
+      description: "设置您的品牌名称以确保一致使用",
       placeholder: "输入您的品牌名称"
     },
     brandVoice: {
@@ -316,15 +315,15 @@ export default {
     localization: "本地化",
     idioms: {
       title: "习语",
-      description: "适当地处理习惯用语"
+      description: "适当处理习语表达"
     },
     terminology: {
       title: "术语",
-      description: "管理专业术语和术语表"
+      description: "管理专业术语和词汇表"
     },
     culturalAdaptation: {
       title: "文化适应",
-      description: "为文化适宜性调整内容"
+      description: "适应内容以符合文化适宜性"
     }
   },
   pricing: {
@@ -344,10 +343,10 @@ export default {
     },
     pro: {
       title: "专业版",
-      includes_free: "免费版中的所有内容，加上：",
+      includes_free: "免费版的所有功能，加上：",
       features: {
         github_action: "GitHub Action集成",
-        latest_features: "优先访问最新功能",
+        latest_features: "早期访问最新功能",
         priority_support: "优先支持"
       }
     },
@@ -358,7 +357,7 @@ export default {
     teamNamePlaceholder: "输入团队名称",
     createTeamButton: "创建团队",
     cancel: "取消",
-    createTeamDescription: "创建一个新团队来管理您的项目和合作者。"
+    createTeamDescription: "创建一个新团队来管理您的项目和协作者。"
   },
   createProject: {
     createProjectTitle: "创建一个新项目",
@@ -369,14 +368,14 @@ export default {
   },
   invite: {
     inviteMember: "邀请成员",
-    inviteDescription: "邀请一名成员加入您的团队",
+    inviteDescription: "邀请成员加入您的团队",
     emailLabel: "电子邮件",
     emailPlaceholder: "输入电子邮件",
     cancel: "取消",
     sendInvite: "发送邀请",
     success: {
       title: "邀请已发送",
-      description: "成功向{email}发送邀请"
+      description: "成功发送邀请至{email}"
     },
     error: {
       title: "错误",
@@ -404,7 +403,7 @@ export default {
     steps: {
       "1": {
         title: "设置Languine CLI",
-        description: "安装和配置Languine CLI以管理翻译"
+        description: "安装并配置Languine CLI以管理翻译"
       },
       "2": {
         title: "推送翻译",
@@ -426,7 +425,33 @@ export default {
     success: {
       title: "Languine CLI登录成功",
       description: "Languine CLI已成功认证为：",
-      description_2: "您现在可以关闭此标签并返回CLI"
+      description_2: "您现在可以关闭此标签页并返回到CLI"
     }
+  },
+  translations: {
+    header: "翻译的键"
+  },
+  search: {
+    placeholder: "搜索"
+  },
+  periods: {
+    daily: "每日",
+    weekly: "每周",
+    monthly: "每月",
+    selectPeriod: "选择周期"
+  },
+  welcome: {
+    title: "欢迎使用 Languine",
+    description: "使用 Languine 自动化您的本地化流程"
+  },
+  button: {
+    update: "新翻译"
+  },
+  update: {
+    button: "新翻译"
+  },
+  hero2: {
+    title: "为您的应用程序自动化本地化",
+    description: "使用人工智能驱动的命令行界面和管道，简化您的本地化流程，为开发者自动化翻译。"
   }
 } as const;

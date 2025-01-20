@@ -6,9 +6,12 @@ import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
+import { getGitInfo } from "@/utils/git.ts";
 import { getAPIKey } from "@/utils/session.ts";
-import { confirm, note, outro, spinner } from "@clack/prompts";
+import { confirm, note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
+import { TRPCClientError } from "@trpc/client";
+import { TRPCError } from "@trpc/server";
 import chalk from "chalk";
 import glob from "fast-glob";
 import { z } from "zod";
@@ -39,6 +42,7 @@ export async function translateCommand(args: string[] = []) {
   const s = spinner();
 
   const apiKey = getAPIKey();
+  const gitInfo = await getGitInfo();
 
   if (!apiKey) {
     throw new Error("No API key found. Please run `languine login` first.");
@@ -59,7 +63,10 @@ export async function translateCommand(args: string[] = []) {
 
       process.exit(1);
     }
-    if (!config.projectId && !process.env.LANGUINE_PROJECT_ID) {
+
+    const projectId = config.projectId || process.env.LANGUINE_PROJECT_ID;
+
+    if (!projectId) {
       note(
         "Project ID not found in configuration file or LANGUINE_PROJECT_ID environment variable. Please run `languine init` to create one, set the `projectId` in your configuration file, or set the LANGUINE_PROJECT_ID environment variable.",
         "Error",
@@ -171,15 +178,46 @@ export async function translateCommand(args: string[] = []) {
           }
 
           let result: TranslationResult;
+          // let meta: { isFreeUser: boolean };
+          // let run: any;
 
+          // try {
           const { run, meta } = await client.jobs.startJob.mutate({
             apiKey: apiKey,
-            projectId: config.projectId,
+            projectId,
             sourceFormat: type,
             sourceLanguage: sourceLocale,
             targetLanguages: effectiveTargetLocales,
             content: translationInput,
+            branch: gitInfo?.branchName,
+            commit: gitInfo?.commitHash,
+            sourceProvider: gitInfo?.provider,
+            commitMessage: gitInfo?.commitMessage,
+            commitLink: gitInfo?.commitLink,
           });
+          // } catch (error) {
+          //   if (error instanceof TRPCClientError) {
+          //     note(
+          //       "Translation limit reached. Upgrade your plan to increase your limit.",
+          //       "Error",
+          //     );
+
+          //     const shouldUpgrade = await select({
+          //       message: "Would you like to upgrade your plan now?",
+          //       options: [
+          //         { label: "Upgrade plan", value: "upgrade" },
+          //         { label: "Cancel", value: "cancel" },
+          //       ],
+          //     });
+
+          //     // if (shouldUpgrade === "upgrade") {
+          //     //   // Open upgrade URL in browser
+          //     //   await open("https://languine.ai/pricing");
+          //     // }
+
+          //     process.exit(1);
+          //   }
+          // }
 
           if (!isSilent && meta.plan === "free") {
             if (!checkOnly) {

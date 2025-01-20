@@ -2,17 +2,17 @@ export default {
   header: {
     pricing: "Prijzen",
     docs: "Documentatie",
-    signIn: "Aanmelden",
+    signIn: "Inloggen",
     goToApp: "Ga naar app"
   },
   hero: {
     title: "Geautomatiseerde lokalisatie voor uw applicaties",
-    description: "Stroomlijn uw lokalisatieproces met een AI-gestuurde CLI en pipeline die is ontworpen om vertalingen voor ontwikkelaars te automatiseren."
+    description: "Stroomlijn uw lokalisatieproces met een AI-aangedreven CLI en pijplijn ontworpen om vertalingen voor ontwikkelaars te automatiseren."
   },
   getStarted: {
     heading: "Aan de slag",
     title: "Geautomatiseerde lokalisatie voor uw applicaties",
-    description: "Stroomlijn uw lokalisatieproces met een AI-gestuurde CLI en pipeline die is ontworpen om vertalingen voor ontwikkelaars te automatiseren.",
+    description: "Stroomlijn uw lokalisatieproces met een AI-aangedreven CLI en pijplijn ontworpen om vertalingen voor ontwikkelaars te automatiseren.",
     button: {
       startAutomating: "Begin met automatiseren",
       readDocumentation: "Lees documentatie"
@@ -25,89 +25,88 @@ export default {
   activity: {
     title: "Activiteit",
     loading: "Laden",
-    loadMore: "Toon meer"
+    loadMore: "Toon meer",
+    noResults: "Geen resultaten voor '{search}'",
+    clearSearch: "Zoekopdracht wissen"
   },
   features: {
-    title: "Kenmerken",
+    title: "Functies",
     fullyOpenSource: "Volledig open source",
     fullyOpenSourceDescription: "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
     noVendorLockIn: "Geen vendor lock-in",
-    noVendorLockInDescription: "We sluiten u niet op in een specifieke service, gebruik uw eigen LLM's.",
-    presetsForExpo: "Voorinstellingen voor Expo",
-    presetsForExpoDescription: "We bieden voorinstellingen voor Expo, zodat u snel aan de slag kunt.",
-    presetForReactNative: "Voorinstelling voor React Native",
-    presetForReactNativeDescription: "We bieden een voorinstelling voor React Native, zodat u snel aan de slag kunt.",
+    noVendorLockInDescription: "We sluiten u niet op in een specifieke service, gebruik uw eigen LLMs.",
+    presetsForExpo: "Presets voor Expo",
+    presetsForExpoDescription: "We bieden presets voor Expo, zodat u snel aan de slag kunt.",
+    presetForReactNative: "Preset voor React Native",
+    presetForReactNativeDescription: "We bieden een preset voor React Native, zodat u snel aan de slag kunt.",
     presetForReactEmail: "React Email Bibliotheek",
-    presetForReactEmailDescription: "We hebben een i18n-bibliotheek voor React Email gemaakt.",
-    readyForI18nLibraries: "Klaar voor i18n-bibliotheken",
-    readyForI18nLibrariesDescription: "We ondersteunen alle bibliotheken, inclusief de meest populaire (next-intl, react-i18next, react-intl, enz.)."
+    presetForReactEmailDescription: "We hebben een i18n bibliotheek gemaakt voor React Email.",
+    readyForI18nLibraries: "Klaar voor i18n bibliotheken",
+    readyForI18nLibrariesDescription: "We ondersteunen alle bibliotheken inclusief de meest populaire (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
-    title: "Behandelt elk aspect van het lokaliseren van uw app, inclusief",
+    title: "Behandelt elk aspect van het lokaliseren van uw app inclusief",
     smartTranslation: {
       title: "Slimme Vertaling",
       intelligentTranslation: "Intelligente vertaling met contextbewustzijn",
-      brandVoice: "Consistentie in merkstem en -toon",
+      brandVoice: "Consistentie in merkstem en toon",
       terminology: "Terminologiebeheer",
       linguisticFeatures: "Geavanceerde linguïstische functies",
-      realtimeUpdates: "Realtime vertaalupdates"
+      realtimeUpdates: "Real-time vertalingsupdates"
     },
     implementation: {
       title: "Implementatie",
-      quickSetup: "Snelle installatie en integratie",
-      fileFormat: "Bestandsformaatverwerking",
-      contentStructure: "Organisatie van de inhoudsstructuur",
-      assetOrganization: "Organisatie van activa"
+      quickSetup: "Snelle setup en integratie",
+      fileFormat: "Bestandsformaatbehandeling",
+      contentStructure: "Organisatie van contentstructuur",
+      assetOrganization: "Organisatie van assets"
     },
     developer: {
       title: "Ontwikkelaarservaring",
-      cli: "Opdrachtregelinterface",
-      cicd: "CI/CD-integratie",
+      cli: "Command-line interface",
+      cicd: "CI/CD integratie",
       versionControl: "Versiebeheer",
-      workflow: "Ontwikkelaarsworkflow",
+      workflow: "Ontwikkelaarswerkstroom",
       documentation: "Uitgebreide documentatie"
     }
   },
   login: {
-    title: "Aanmelden",
-    github: "Aanmelden met GitHub",
-    google: "Aanmelden met Google",
+    title: "Inloggen",
+    github: "Inloggen met GitHub",
+    google: "Inloggen met Google",
     footer: "Automatiseer uw lokalisatie.",
-    description: "Meld u aan om uw lokalisatie binnen enkele seconden te automatiseren.",
+    description: "Log in om uw lokalisatie in seconden te automatiseren.",
     terms: {
-      text: "Door u aan te melden, gaat u akkoord met onze",
+      text: "Door in te loggen gaat u akkoord met onze",
       termsOfService: "Servicevoorwaarden",
       and: "en",
       privacyPolicy: "Privacybeleid"
     }
   },
-  translations: {
-    total_keys: "{total} sleutels in totaal"
-  },
   userMenu: {
     account: "Accountinstellingen",
-    signOut: "Afmelden",
+    signOut: "Uitloggen",
     createTeam: "Team aanmaken",
     homepage: "Startpagina",
     team: "Teaminstellingen"
   },
   teamSelector: {
     addProject: "Project aanmaken",
-    createProjectTitle: "Maak een nieuw project aan",
+    createProjectTitle: "Een nieuw project aanmaken",
     projectNamePlaceholder: "Projectnaam",
     createProjectButton: "Project aanmaken",
     pro: "Pro",
     project: "Project",
     teams: "Teams",
     createTeam: "Team aanmaken",
-    createTeamTitle: "Maak een nieuw team aan",
+    createTeamTitle: "Een nieuw team aanmaken",
     teamNamePlaceholder: "Teamnaam",
     createTeamButton: "Team aanmaken"
   },
   coming_soon: {
-    title: "Languine is in Vroegtoegang",
-    description: "We zijn momenteel in vroege toegang. Neem contact op met",
-    cta: "op X om vroege toegang te krijgen."
+    title: "Languine is in Early Access",
+    description: "We zijn momenteel in early access. Neem contact op met",
+    cta: "op X om early access te krijgen."
   },
   account: {
     fullName: {
@@ -122,7 +121,7 @@ export default {
     },
     apiKey: {
       title: "API-sleutel",
-      description: "Uw persoonlijke API-sleutel voor toegang tot de Languine API en vanuit de CLI."
+      description: "Uw persoonlijke API-sleutel voor toegang tot de Languine API en vanaf de CLI."
     },
     deleteAccount: {
       title: "Account verwijderen",
@@ -138,32 +137,32 @@ export default {
       title: "Weet u het zeker?",
       description: "Deze actie kan niet ongedaan worden gemaakt. Typ DELETE om te bevestigen.",
       placeholder: "Typ DELETE om te bevestigen",
-      confirm: "Bevestig Verwijderen",
+      confirm: "Verwijderen bevestigen",
       cancel: "Annuleren"
     }
   },
   pipeline: {
     title: "Workflow (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Onze vertaalengine integreert naadloos in uw bestaande CI/CD-pipeline, vertaalt automatisch uw codebase bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, behouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, zodat ze kunnen worden beoordeeld voordat ze in uw hoofdbranch worden samengevoegd en gedeployed. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud in sync blijft met de ontwikkeling."
+    description: "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdtak en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
   },
   settings: {
     badRequest: "Ongeldig verzoek",
-    badRequestDescription: "De organisatie moet minstens één eigenaar hebben. Geef het eigendom over aan een ander lid voordat u deze eigenaar verwijdert.",
-    permissionDenied: "Toegang geweigerd",
-    permissionDeniedDescription: "U moet een eigenaar van het team zijn om deze actie uit te voeren.",
+    badRequestDescription: "Organisatie moet minimaal één eigenaar hebben. Draag eigendom over naar een ander lid voordat u deze eigenaar verwijdert.",
+    permissionDenied: "Toestemming geweigerd",
+    permissionDeniedDescription: "U moet eigenaar van het team zijn om deze actie uit te voeren",
     deleteTeamTitle: "Team verwijderen",
-    deleteTeamDescription: "Kan de organisatie niet verwijderen wanneer u het enige lid bent, verwijder in plaats daarvan uw account.",
+    deleteTeamDescription: "Kan organisatie niet verwijderen wanneer u het enige lid bent, verwijder in plaats daarvan uw account",
     saved: "Instellingen opgeslagen",
-    savedDescription: "Uw wijzigingen zijn succesvol opgeslagen.",
+    savedDescription: "Uw wijzigingen zijn succesvol opgeslagen",
     error: "Er is iets misgegaan",
-    errorDescription: "Probeer het opnieuw of neem contact op met de ondersteuning.",
+    errorDescription: "Probeer het opnieuw of neem contact op met ondersteuning",
     addTeam: "Team aanmaken",
     apiKey: {
       updated: "API-sleutel bijgewerkt",
       updatedDescription: "Uw API-sleutel is succesvol bijgewerkt en naar uw klembord gekopieerd.",
       title: "API-sleutel bijwerken",
-      description: "Weet u zeker dat u een nieuwe API-sleutel wilt genereren? De oude sleutel stopt onmiddellijk met werken.",
+      description: "Weet u zeker dat u een nieuwe API-sleutel wilt genereren? De oude sleutel werkt onmiddellijk niet meer.",
       cancel: "Annuleren",
       "continue": "Doorgaan"
     },
@@ -179,12 +178,12 @@ export default {
       updateError: "Instellingen bijwerken mislukt",
       translationProvider: {
         title: "Vertaalprovider",
-        description: "Kies uw favoriete AI-service voor het genereren van vertalingen. Elke provider biedt verschillende mogelijkheden en prijzen.",
+        description: "Kies uw voorkeurs AI-service voor het genereren van vertalingen. Elke provider biedt verschillende mogelijkheden en prijzen.",
         placeholder: "Selecteer een provider"
       },
       languageModel: {
         title: "Taalmodel",
-        description: "Selecteer het AI-model dat het beste de balans tussen kwaliteit en snelheid voor uw vertaalbehoeften biedt. Krachtigere modellen kunnen langzamer zijn, maar betere resultaten opleveren.",
+        description: "Selecteer het AI-model dat het beste balans biedt tussen kwaliteit en snelheid voor uw vertaalbehoeften. Krachtigere modellen kunnen langzamer zijn maar betere resultaten opleveren.",
         placeholder: "Selecteer een model"
       },
       apiKey: {
@@ -207,7 +206,7 @@ export default {
       },
       "delete": {
         title: "Project verwijderen",
-        description: "Verwijder dit project en al zijn gegevens permanent.",
+        description: "Verwijder dit project en alle bijbehorende gegevens permanent",
         button: "Project verwijderen"
       }
     },
@@ -220,14 +219,14 @@ export default {
       },
       billing: {
         title: "Factureringsplan",
-        description: "Beheer het factureringsplan van uw team.",
+        description: "Beheer het factureringsplan van uw team",
         free: "Gratis",
         pro: "Pro",
         unlimited: "Onbeperkt"
       },
       apiKey: {
         title: "Team API-sleutel",
-        description: "API-sleutel voor teamtoegang, gebruik deze vanuit uw CI/CD-pipeline samen met de Project-ID.",
+        description: "API-sleutel voor teamtoegang, gebruik deze vanuit uw CI/CD-pijplijn samen met de Project-ID",
         placeholder: "Team API-sleutel"
       },
       members: {
@@ -237,7 +236,7 @@ export default {
         leaveTeam: "Team verlaten",
         invite: "Lid uitnodigen",
         title: "Leden",
-        pendingInvitations: "In afwachting van uitnodigingen",
+        pendingInvitations: "Uitstaande uitnodigingen",
         removeMember: "Lid verwijderen",
         removeMemberConfirm: "Lid verwijderen",
         removeMemberDescription: "Weet u zeker dat u dit lid wilt verwijderen?",
@@ -255,9 +254,9 @@ export default {
         deleteInviteSuccess: "Uitnodiging verwijderd",
         deleteInviteError: "Verwijderen van uitnodiging mislukt",
         removeMemberSuccess: "Lid verwijderd",
-        removeMemberError: "Lid verwijderen mislukt",
+        removeMemberError: "Verwijderen van lid mislukt",
         removeMemberSuccessDescription: "Lid is succesvol verwijderd",
-        removeMemberErrorDescription: "Lid verwijderen mislukt",
+        removeMemberErrorDescription: "Verwijderen van lid mislukt",
         roles: {
           owner: "Eigenaar",
           member: "Lid"
@@ -273,20 +272,20 @@ export default {
     general: "Algemeen",
     translationMemory: {
       title: "Vertaalgeheugen",
-      description: "Gebruik vertaalgeheugen om consistentie en efficiëntie te verbeteren."
+      description: "Gebruik vertaalgeheugen om consistentie en efficiëntie te verbeteren"
     },
     qualityChecks: {
       title: "Kwaliteitscontroles",
-      description: "Schakel geautomatiseerde kwaliteitscontroles voor vertalingen in."
+      description: "Schakel automatische kwaliteitscontroles in voor vertalingen"
     },
     contextDetection: {
       title: "Contextdetectie",
-      description: "Detecteer en behoud automatisch context in vertalingen."
+      description: "Detecteer en behoud automatisch context in vertalingen"
     },
     styleGuide: "Stijlgids",
     lengthControl: {
       title: "Lengtecontrole",
-      description: "Beheer de lengte van de vertaalde tekst.",
+      description: "Beheer de lengte van vertaalde tekst",
       options: {
         flexible: "Flexibel",
         strict: "Strikt",
@@ -296,34 +295,34 @@ export default {
     },
     inclusiveLanguage: {
       title: "Inclusieve taal",
-      description: "Zorg ervoor dat vertalingen inclusieve taal gebruiken."
+      description: "Zorg ervoor dat vertalingen inclusieve taal gebruiken"
     },
     formality: {
       title: "Formaliteit",
-      description: "Beheer het formaliteitsniveau van vertalingen."
+      description: "Beheer het formaliteitsniveau van vertalingen"
     },
     brandName: {
       title: "Merknaam",
-      description: "Stel uw merknaam in voor consistent gebruik.",
+      description: "Stel uw merknaam in voor consistent gebruik",
       placeholder: "Voer uw merknaam in"
     },
     brandVoice: {
       title: "Merkstem",
-      description: "Definieer uw merkstem en -toon.",
+      description: "Definieer uw merkstem en toon",
       placeholder: "Beschrijf uw merkstem..."
     },
     localization: "Lokalisatie",
     idioms: {
-      title: "Idiomatiek",
-      description: "Behandel idiomatische uitdrukkingen op de juiste manier."
+      title: "Idiomen",
+      description: "Behandel idiomatische uitdrukkingen op de juiste manier"
     },
     terminology: {
       title: "Terminologie",
-      description: "Beheer gespecialiseerde terminologie en woordenlijsten."
+      description: "Beheer gespecialiseerde terminologie en woordenlijsten"
     },
     culturalAdaptation: {
       title: "Culturele aanpassing",
-      description: "Pas inhoud aan voor culturele geschiktheid."
+      description: "Pas inhoud aan voor culturele geschiktheid"
     }
   },
   pricing: {
@@ -334,20 +333,20 @@ export default {
       keys_limit: "Tot 100 sleutels",
       features: {
         unlimited_projects: "Onbeperkte projecten",
-        fine_tuning: "Fijn afstemmen opties",
-        overrides: "Vertaaloverschrijvingen",
+        fine_tuning: "Fine-tuning opties",
+        overrides: "Vertalingsoverrides",
         analytics: "Analytics",
         context_memory: "Contextgeheugen",
-        community_support: "Gemeenschapssteun"
+        community_support: "Community ondersteuning"
       }
     },
     pro: {
       title: "Pro",
       includes_free: "Alles in Gratis, plus:",
       features: {
-        github_action: "GitHub Actie-integratie",
-        latest_features: "Vroegtijdige toegang tot de nieuwste functies.",
-        priority_support: "Prioriteitssteun"
+        github_action: "GitHub Action integratie",
+        latest_features: "Vroege toegang tot de nieuwste functies",
+        priority_support: "Prioritaire ondersteuning"
       }
     },
     cta: "Begin met automatiseren"
@@ -357,10 +356,10 @@ export default {
     teamNamePlaceholder: "Voer teamnaam in",
     createTeamButton: "Team aanmaken",
     cancel: "Annuleren",
-    createTeamDescription: "Maak een nieuw team aan om uw projecten en samenwerkers te beheren."
+    createTeamDescription: "Maak een nieuw team aan om uw projecten en medewerkers te beheren."
   },
   createProject: {
-    createProjectTitle: "Maak een nieuw project aan",
+    createProjectTitle: "Een nieuw project aanmaken",
     projectNamePlaceholder: "Voer projectnaam in",
     createProjectButton: "Project aanmaken",
     cancel: "Annuleren",
@@ -368,14 +367,14 @@ export default {
   },
   invite: {
     inviteMember: "Lid uitnodigen",
-    inviteDescription: "Nodig een lid uit voor uw team.",
+    inviteDescription: "Nodig een lid uit voor uw team",
     emailLabel: "E-mail",
     emailPlaceholder: "Voer e-mail in",
     cancel: "Annuleren",
-    sendInvite: "Stuur uitnodiging",
+    sendInvite: "Uitnodiging verzenden",
     success: {
       title: "Uitnodiging verzonden",
-      description: "Uitnodiging succesvol verzonden naar {email}."
+      description: "Uitnodiging succesvol verzonden naar {email}"
     },
     error: {
       title: "Fout",
@@ -391,7 +390,7 @@ export default {
     "12": "Dec",
     "01": "Jan",
     "02": "Feb",
-    "03": "Mar",
+    "03": "Mrt",
     "04": "Apr",
     "05": "Mei",
     "06": "Jun",
@@ -402,21 +401,21 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Installeer Languine CLI",
-        description: "Installeer en configureer de Languine CLI om vertalingen te beheren."
+        title: "Languine CLI instellen",
+        description: "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        title: "Vertalingen pushen",
-        description: "Wachten op het pushen van de vertalingen."
+        title: "Push Vertalingen",
+        description: "Wachten tot de vertalingen worden gepusht"
       },
       "3": {
         title: "Documentatie",
-        description: "Bekijk onze documentatie voor gedetailleerde handleidingen en best practices.",
+        description: "Bekijk onze documentatie voor gedetailleerde handleidingen en best practices",
         link: "documentatie"
       }
     },
     info: {
-      description: "Heeft u hulp nodig? Bekijk onze",
+      description: "Hulp nodig? Bekijk onze",
       link: "documentatie",
       description_2: "voor gedetailleerde handleidingen en best practices."
     }
@@ -425,7 +424,33 @@ export default {
     success: {
       title: "Languine CLI Login Succes",
       description: "Languine CLI is succesvol geauthenticeerd als:",
-      description_2: "U kunt nu dit tabblad sluiten en terugkeren naar de CLI."
+      description_2: "U kunt dit tabblad nu sluiten en terugkeren naar de CLI"
     }
+  },
+  translations: {
+    header: "Vertaalde sleutels"
+  },
+  search: {
+    placeholder: "Zoeken"
+  },
+  periods: {
+    daily: "Dagelijks",
+    weekly: "Wekelijks",
+    monthly: "Maandelijks",
+    selectPeriod: "Selecteer periode"
+  },
+  welcome: {
+    title: "Welkom bij Languine",
+    description: "Automatiseer uw lokalisatieproces met Languine"
+  },
+  button: {
+    update: "Nieuwe vertalingen"
+  },
+  update: {
+    button: "Nieuwe vertalingen"
+  },
+  hero2: {
+    title: "Geautomatiseerde lokalisatie voor uw applicaties",
+    description: "Stroomlijn uw lokalisatieproces met een door AI aangedreven CLI en pijplijn die ontworpen is om vertalingen voor ontwikkelaars te automatiseren."
   }
 } as const;
