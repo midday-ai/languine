@@ -440,8 +440,18 @@ export default {
     monthly: "毎週",
     selectPeriod: "毎月"
   },
-  translate: {
-    chunkSize: "チャンクサイズ",
-    model: "モデル"
+  welcome: {
+    title: "Languineへようこそ",
+    description: "Languineでローカライゼーションプロセスを自動化"
+  },
+  button: {
+    update: "新しい翻訳"
+  },
+  update: {
+    button: "新しい翻訳"
+  },
+  hero2: {
+    title: "アプリケーションの自動ローカライズ",
+    description: "AI搭載のCLIとパイプラインを使用して、開発者向けの翻訳を自動化し、ローカライズプロセスを効率化します。"
   }
 } as const;

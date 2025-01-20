@@ -440,8 +440,18 @@ export default {
     monthly: "Monatlich",
     selectPeriod: "Zeitraum auswählen"
   },
-  translate: {
-    chunkSize: "Chunk-Größe",
-    model: "Modell"
+  welcome: {
+    title: "Willkommen bei Languine",
+    description: "Automatisieren Sie Ihren Lokalisierungsprozess mit Languine"
+  },
+  button: {
+    update: "Neue Übersetzungen"
+  },
+  update: {
+    button: "Neue Übersetzungen"
+  },
+  hero2: {
+    title: "Automatisierte Lokalisierung für Ihre Anwendungen",
+    description: "Optimieren Sie Ihren Lokalisierungsprozess mit einer KI-gestützten CLI und einem Pipeline-System, das speziell für Entwickler entwickelt wurde, um Übersetzungen zu automatisieren."
   }
 } as const;

@@ -3,7 +3,7 @@ goodbye: Merci d'utiliser notre application. À la prochaine !
 nav:
   home: Accueil
   about: À propos
-  contact: Contactez-nous
+  contact: Nous contacter
   settings: Paramètres
 user:
   greeting: Bonjour, {name} !
@@ -14,9 +14,9 @@ user:
     cancel: Annuler
 errors:
   not_found: Page non trouvée
-  server_error: Une erreur s'est produite sur le serveur
+  server_error: Une erreur est survenue sur le serveur
   validation:
-    required: Ce champ est requis
+    required: Ce champ est obligatoire
     email: Veuillez entrer une adresse e-mail valide
     password: Le mot de passe doit comporter au moins 8 caractères
 form:
@@ -32,5 +32,5 @@ time:
   today: Aujourd'hui
   yesterday: Hier
   tomorrow: Demain
-  days_ago: "{count} jours auparavant"
+  days_ago: Il y a {count} jours
 hello: Bonjour

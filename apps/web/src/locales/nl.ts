@@ -439,8 +439,18 @@ export default {
     monthly: "Maandelijks",
     selectPeriod: "Selecteer periode"
   },
-  translate: {
-    chunkSize: "Chunkgrootte",
-    model: "Model"
+  welcome: {
+    title: "Welkom bij Languine",
+    description: "Automatiseer uw lokalisatieproces met Languine"
+  },
+  button: {
+    update: "Nieuwe vertalingen"
+  },
+  update: {
+    button: "Nieuwe vertalingen"
+  },
+  hero2: {
+    title: "Geautomatiseerde lokalisatie voor uw applicaties",
+    description: "Stroomlijn uw lokalisatieproces met een door AI aangedreven CLI en pijplijn die ontworpen is om vertalingen voor ontwikkelaars te automatiseren."
   }
 } as const;

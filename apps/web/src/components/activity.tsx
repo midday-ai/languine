@@ -33,8 +33,13 @@ export function Activity() {
       },
     );
 
-  const { isFetching, isFetchingNextPage, fetchNextPage, hasNextPage } =
-    allTranslationsQuery;
+  const {
+    isFetching,
+    isFetchingNextPage,
+    fetchNextPage,
+    hasNextPage,
+    refetch,
+  } = allTranslationsQuery;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,20 +82,22 @@ export function Activity() {
       </div>
     );
   }
+
   return (
     <div className="flex flex-col gap-4 mt-6">
       {pages.map((page) =>
         page.map((item) => (
-          <ActivityCard
-            key={item.id}
-            source={item.sourceText}
-            content={item.translatedText}
-            updatedAt={item.updatedAt}
-            commit={item.commit}
-            targetLanguage={item.targetLanguage}
-            commitLink={item.commitLink}
-            sourceProvider={item.sourceProvider}
-          />
+          <div key={item.id}>
+            <ActivityCard
+              source={item.sourceText}
+              content={item.translatedText}
+              updatedAt={item.updatedAt}
+              commit={item.commit}
+              targetLanguage={item.targetLanguage}
+              commitLink={item.commitLink}
+              sourceProvider={item.sourceProvider}
+            />
+          </div>
         )),
       )}
 

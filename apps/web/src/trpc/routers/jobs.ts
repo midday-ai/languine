@@ -53,20 +53,25 @@ export const jobsRouter = createTRPCRouter({
       const isFreeUser = org?.plan === "free";
 
       const totalKeys = await getOrganizationTotalKeys(org?.id);
-      const nextTotalKeys = (totalKeys?.total ?? 0) + input.content.length;
+
+      // Calculate the total number of keys, saved keys + new keys (for each target language)
+      const nextTotalKeys =
+        (totalKeys?.total ?? 0) +
+        input.content.length * input.targetLanguages.length;
+
       const currentKeysLimit =
         TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];
 
-      // if (nextTotalKeys >= currentKeysLimit) {
-      //   throw new TRPCError({
-      //     code: "BAD_REQUEST",
-      //     message: "You have reached the maximum number of keys",
-      //     cause: {
-      //       currentKeysLimit,
-      //       nextTotalKeys,
-      //     },
-      //   });
-      // }
+      if (nextTotalKeys >= currentKeysLimit) {
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message: "You have reached the maximum number of keys",
+          cause: {
+            currentKeysLimit,
+            nextTotalKeys,
+          },
+        });
+      }
 
       const options = isFreeUser
         ? {

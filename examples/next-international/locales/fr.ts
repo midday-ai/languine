@@ -1,8 +1,8 @@
 export default {
   hello: "Bonjour",
-  welcome: "Bonjour {name}!",
+  welcome: "Bonjour {name} !",
   about: {
-    you: "Bonjour {name}! Vous avez {age} ans"
+    you: "Bonjour {name} ! Vous avez {age} ans"
   },
   scope: {
     test: "Un domaine",
@@ -21,7 +21,7 @@ export default {
   missing: {
     translation: {
       "in": {
-        fr: "Cela devrait fonctionner"
+        fr: "Ça devrait fonctionner"
       }
     }
   },

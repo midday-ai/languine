@@ -465,8 +465,4 @@ export default {
     monthly: "Monthly",
     selectPeriod: "Select period",
   },
-  translate: {
-    chunkSize: "Chunk size",
-    model: "Model",
-  },
 } as const;

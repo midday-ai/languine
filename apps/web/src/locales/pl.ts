@@ -439,8 +439,18 @@ export default {
     monthly: "Miesięcznie",
     selectPeriod: "Wybierz okres"
   },
-  translate: {
-    chunkSize: "Rozmiar fragmentu",
-    model: "Model"
+  welcome: {
+    title: "Witaj w Languine",
+    description: "Automatyzuj swój proces lokalizacji z Languine"
+  },
+  button: {
+    update: "Nowe tłumaczenia"
+  },
+  update: {
+    button: "Nowe tłumaczenia"
+  },
+  hero2: {
+    title: "Automatyzacja lokalizacji dla Twoich aplikacji",
+    description: "Usprawnij proces lokalizacji dzięki wspieranemu przez AI interfejsowi wiersza poleceń oraz potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
   }
 } as const;

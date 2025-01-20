@@ -440,8 +440,18 @@ export default {
     monthly: "每月",
     selectPeriod: "选择周期"
   },
-  translate: {
-    chunkSize: "块大小",
-    model: "模型"
+  welcome: {
+    title: "欢迎使用 Languine",
+    description: "使用 Languine 自动化您的本地化流程"
+  },
+  button: {
+    update: "新翻译"
+  },
+  update: {
+    button: "新翻译"
+  },
+  hero2: {
+    title: "为您的应用程序自动化本地化",
+    description: "使用人工智能驱动的命令行界面和管道，简化您的本地化流程，为开发者自动化翻译。"
   }
 } as const;

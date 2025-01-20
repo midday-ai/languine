@@ -439,8 +439,18 @@ export default {
     monthly: "Aylık",
     selectPeriod: "Dönem seçin"
   },
-  translate: {
-    chunkSize: "Parça boyutu",
-    model: "Model"
+  welcome: {
+    title: "Languine'e hoşgeldiniz",
+    description: "Languine ile lokalizasyon sürecinizi otomatikleştirin"
+  },
+  button: {
+    update: "Yeni çeviriler"
+  },
+  update: {
+    button: "Yeni çeviriler"
+  },
+  hero2: {
+    title: "Uygulamalarınız için otomatik yerelleştirme",
+    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış, yapay zeka destekli bir CLI ve ardışık düzen ile yerelleştirme sürecinizi kolaylaştırın."
   }
 } as const;

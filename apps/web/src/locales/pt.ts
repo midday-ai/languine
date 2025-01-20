@@ -439,8 +439,18 @@ export default {
     monthly: "Mensal",
     selectPeriod: "Selecione o período"
   },
-  translate: {
-    chunkSize: "Tamanho do bloco",
-    model: "Modelo"
+  welcome: {
+    title: "Bem-vindo ao Languine",
+    description: "Automatize seu processo de localização com o Languine"
+  },
+  button: {
+    update: "Novas traduções"
+  },
+  update: {
+    button: "Novas traduções"
+  },
+  hero2: {
+    title: "Localização automatizada para seus aplicativos",
+    description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores."
   }
 } as const;

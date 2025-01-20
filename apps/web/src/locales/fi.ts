@@ -440,8 +440,18 @@ export default {
     monthly: "Kuukausittain",
     selectPeriod: "Valitse ajanjakso"
   },
-  translate: {
-    chunkSize: "Palasen koko",
-    model: "Malli"
+  welcome: {
+    title: "Tervetuloa Languineen",
+    description: "Automatisoi lokalisointiprosessisi Languinen avulla"
+  },
+  button: {
+    update: "Uudet käännökset"
+  },
+  update: {
+    button: "Uudet käännökset"
+  },
+  hero2: {
+    title: "Automatisoi sovellustesi lokalisointi",
+    description: "Yksinkertaista lokalisointiprosessisi tekoälyä hyödyntävällä CLI:llä ja putkistolla, jotka on suunniteltu automatisoimaan käännökset kehittäjille."
   }
 } as const;

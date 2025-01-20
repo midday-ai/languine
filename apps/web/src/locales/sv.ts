@@ -440,8 +440,18 @@ export default {
     monthly: "Månadsvis",
     selectPeriod: "Välj period"
   },
-  translate: {
-    chunkSize: "Chunkstorlek",
-    model: "Modell"
+  welcome: {
+    title: "Välkommen till Languine",
+    description: "Automatisera din lokalisationsprocess med Languine"
+  },
+  button: {
+    update: "Nya översättningar"
+  },
+  update: {
+    button: "Nya översättningar"
+  },
+  hero2: {
+    title: "Automatiserad lokalisering för dina applikationer",
+    description: "Förenkla din lokalisationsprocess med en AI-dragen CLI och pipeline som är utformad för att automatisera översättningar för utvecklare."
   }
 } as const;

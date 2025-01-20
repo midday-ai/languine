@@ -440,8 +440,18 @@ export default {
     monthly: "매월",
     selectPeriod: "기간 선택"
   },
-  translate: {
-    chunkSize: "청크 크기",
-    model: "모델"
+  welcome: {
+    title: "Languine에 오신 것을 환영합니다",
+    description: "Languine으로 번역 작업을 자동화하세요"
+  },
+  button: {
+    update: "새로운 번역"
+  },
+  update: {
+    button: "새로운 번역"
+  },
+  hero2: {
+    title: "응용 프로그램의 자동화된 현지화",
+    description: "AI 기반 CLI 및 파이프라인을 통해 개발자를 위한 번역 자동화를 설계한 현지화 프로세스를 간소화하세요."
   }
 } as const;

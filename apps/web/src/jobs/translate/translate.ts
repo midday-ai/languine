@@ -27,16 +27,19 @@ const translationSchema = z.object({
 export const translateTask = schemaTask({
   id: "translate",
   schema: translationSchema,
-  maxDuration: 300,
+  maxDuration: 600,
   queue: {
     concurrencyLimit: 10,
   },
-  run: async (payload, { ctx }) => {
-    // Validate permissions
-    // const { type, org, project } = await validateJobPermissions({
-    //   projectId: payload.projectId,
-    //   apiKey: payload.apiKey,
-    // });
+  run: async (payload) => {
+    const { org, project } = await validateJobPermissions({
+      projectId: payload.projectId,
+      apiKey: payload.apiKey,
+    });
+
+    if (!org) {
+      throw new Error("Permission denied");
+    }
 
     const translations: Record<
       string,
@@ -83,8 +86,8 @@ export const translateTask = schemaTask({
         );
 
         await createTranslation({
-          projectId: payload.projectId,
-          organizationId: "bhm4edxdzlgse8zik4hxwuvf",
+          projectId: project.id,
+          organizationId: org.id,
           sourceFormat: payload.sourceFormat,
           branch: payload.branch,
           commit: payload.commit,
