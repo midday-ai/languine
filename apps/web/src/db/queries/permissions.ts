@@ -34,8 +34,6 @@ export async function validateJobPermissions({
     }
 
     return {
-      type: "organization",
-      org,
       project,
     };
   }
@@ -47,6 +45,8 @@ export async function validateJobPermissions({
     .where(eq(users.apiKey, apiKey))
     .get();
 
+  console.log("user", user);
+
   if (!user) {
     throw new Error("Invalid user token");
   }
@@ -54,19 +54,22 @@ export async function validateJobPermissions({
   // Check if user is a member of the organization and project
   const member = await db
     .select()
-    .from(members)
-    .innerJoin(organizations, eq(members.organizationId, organizations.id))
-    .innerJoin(projects, eq(projects.organizationId, organizations.id))
-    .where(and(eq(members.userId, user.id), eq(projects.id, projectId)))
+    .from(projects)
+    .leftJoin(
+      members,
+      and(
+        eq(members.organizationId, projects.organizationId),
+        eq(members.userId, user.id),
+      ),
+    )
+    .where(eq(projects.id, projectId))
     .get();
 
-  if (!member) {
+  if (!member?.projects) {
     throw new Error("User does not have access to this project");
   }
 
   return {
-    type: "user",
-    user,
-    member,
+    project: member.projects,
   };
 }

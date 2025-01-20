@@ -32,12 +32,12 @@ export const translateTask = schemaTask({
     concurrencyLimit: 10,
   },
   run: async (payload) => {
-    const { org, project } = await validateJobPermissions({
+    const { project } = await validateJobPermissions({
       projectId: payload.projectId,
       apiKey: payload.apiKey,
     });
 
-    if (!org) {
+    if (!project) {
       throw new Error("Permission denied");
     }
 
@@ -87,7 +87,7 @@ export const translateTask = schemaTask({
 
         await createTranslation({
           projectId: project.id,
-          organizationId: org.id,
+          organizationId: project.organizationId,
           sourceFormat: payload.sourceFormat,
           branch: payload.branch,
           commit: payload.commit,

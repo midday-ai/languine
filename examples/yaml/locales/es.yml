@@ -4,7 +4,7 @@ nav:
   home: Inicio
   about: Acerca de
   contact: Contáctanos
-  settings: Ajustes
+  settings: Configuración
 user:
   greeting: ¡Hola, {name}!
   profile:
