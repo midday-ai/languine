@@ -11,6 +11,7 @@ import {
   leaveOrganization,
   updateOrganization,
   updateOrganizationApiKey,
+  updateOrganizationTier,
 } from "@/db/queries/organization";
 import { members } from "@/db/schema";
 import { TRPCError } from "@trpc/server";
@@ -233,5 +234,18 @@ export const organizationRouter = createTRPCRouter({
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationApiKey(input.organizationId);
+    }),
+
+  updatePlan: protectedProcedure
+    .input(
+      z.object({
+        organizationId: z.string(),
+        tier: z.number().min(0).max(5),
+      }),
+    )
+    .use(rateLimitMiddleware)
+    .use(isOrganizationOwner)
+    .mutation(async ({ input }) => {
+      return updateOrganizationTier(input.organizationId, input.tier);
     }),
 });

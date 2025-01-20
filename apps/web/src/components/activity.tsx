@@ -85,7 +85,7 @@ export function Activity() {
             key={item.id}
             source={item.sourceText}
             content={item.translatedText}
-            createdAt={item.createdAt}
+            updatedAt={item.updatedAt}
             commit={item.commit}
             targetLanguage={item.targetLanguage}
             commitLink={item.commitLink}

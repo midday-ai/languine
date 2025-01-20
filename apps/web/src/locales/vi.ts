@@ -7,12 +7,12 @@ export default {
   },
   hero: {
     title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho các nhà phát triển."
+    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển."
   },
   getStarted: {
     heading: "Bắt đầu",
     title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho các nhà phát triển.",
+    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển.",
     button: {
       startAutomating: "Bắt đầu tự động hóa",
       readDocumentation: "Đọc tài liệu"
@@ -33,16 +33,16 @@ export default {
     title: "Tính năng",
     fullyOpenSource: "Mã nguồn mở hoàn toàn",
     fullyOpenSourceDescription: "Mã của chúng tôi được công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
-    noVendorLockIn: "Không bị khóa bởi nhà cung cấp",
+    noVendorLockIn: "Không bị khóa nhà cung cấp",
     noVendorLockInDescription: "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
     presetsForExpo: "Cài đặt sẵn cho Expo",
-    presetsForExpoDescription: "Chúng tôi cung cấp các cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
+    presetsForExpoDescription: "Chúng tôi cung cấp các cài đặt sẵn cho Expo, giúp bạn bắt đầu nhanh chóng.",
     presetForReactNative: "Cài đặt sẵn cho React Native",
-    presetForReactNativeDescription: "Chúng tôi cung cấp một cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
+    presetForReactNativeDescription: "Chúng tôi cung cấp một cài đặt sẵn cho React Native, giúp bạn bắt đầu nhanh chóng.",
     presetForReactEmail: "Thư viện React Email",
-    presetForReactEmailDescription: "Chúng tôi đã tạo ra một thư viện i18n cho React Email.",
+    presetForReactEmailDescription: "Chúng tôi đã tạo một thư viện i18n cho React Email.",
     readyForI18nLibraries: "Sẵn sàng cho các thư viện i18n",
-    readyForI18nLibrariesDescription: "Chúng tôi hỗ trợ tất cả các thư viện bao gồm cả những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
+    readyForI18nLibrariesDescription: "Chúng tôi hỗ trợ tất cả các thư viện bao gồm những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
   },
   info: {
     title: "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
@@ -72,8 +72,8 @@ export default {
   },
   login: {
     title: "Đăng nhập",
-    github: "Đăng nhập với GitHub",
-    google: "Đăng nhập với Google",
+    github: "Đăng nhập bằng GitHub",
+    google: "Đăng nhập bằng Google",
     footer: "Tự động hóa bản địa hóa của bạn.",
     description: "Đăng nhập để bắt đầu tự động hóa bản địa hóa của bạn trong vài giây.",
     terms: {
@@ -97,7 +97,7 @@ export default {
     createProjectButton: "Tạo dự án",
     pro: "Pro",
     project: "Dự án",
-    teams: "Các nhóm",
+    teams: "Nhóm",
     createTeam: "Tạo nhóm",
     createTeamTitle: "Tạo một nhóm mới",
     teamNamePlaceholder: "Tên nhóm",
@@ -138,13 +138,13 @@ export default {
       description: "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
       placeholder: "Nhập DELETE để xác nhận",
       confirm: "Xác nhận xóa",
-      cancel: "Hủy bỏ"
+      cancel: "Hủy"
     }
   },
   pipeline: {
     title: "Quy trình làm việc (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi có thay đổi code được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng pull requests, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển."
+    description: "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn mỗi khi đẩy lên. Khi có thay đổi code được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu thương hiệu và thuật ngữ của bạn. Các bản dịch sau đó được gửi dưới dạng pull request, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển."
   },
   settings: {
     badRequest: "Yêu cầu không hợp lệ",
@@ -162,8 +162,8 @@ export default {
       updated: "Khóa API đã được cập nhật",
       updatedDescription: "Khóa API của bạn đã được cập nhật thành công và sao chép vào clipboard của bạn.",
       title: "Cập nhật Khóa API",
-      description: "Bạn có chắc chắn muốn tạo một khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
-      cancel: "Hủy bỏ",
+      description: "Bạn có chắc chắn muốn tạo khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
+      cancel: "Hủy",
       "continue": "Tiếp tục"
     },
     tabs: {
@@ -183,11 +183,11 @@ export default {
       },
       languageModel: {
         title: "Mô hình ngôn ngữ",
-        description: "Chọn mô hình AI cân bằng tốt nhất giữa chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh hơn có thể chậm hơn nhưng cho kết quả tốt hơn.",
-        placeholder: "Chọn một mô hình"
+        description: "Chọn mô hình AI cân bằng tốt nhất giữa chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh mẽ hơn có thể chậm hơn nhưng cho kết quả tốt hơn.",
+        placeholder: "Chọn mô hình"
       },
       apiKey: {
-        title: "Khóa API của nhà cung cấp",
+        title: "Khóa API nhà cung cấp",
         description: "Nhập khóa API của bạn để xác thực với nhà cung cấp đã chọn. Giữ khóa này an toàn - chúng tôi mã hóa nó trước khi lưu trữ.",
         placeholder: "Nhập khóa API của bạn"
       }
@@ -232,7 +232,7 @@ export default {
       members: {
         leaveTeamConfirm: "Rời nhóm",
         leaveTeamDescription: "Bạn có chắc chắn muốn rời nhóm này không?",
-        cancel: "Hủy bỏ",
+        cancel: "Hủy",
         leaveTeam: "Rời nhóm",
         invite: "Mời thành viên",
         title: "Thành viên",
@@ -247,7 +247,7 @@ export default {
         noPendingInvitations: "Không có lời mời đang chờ",
         noResults: "Không tìm thấy thành viên",
         tryDifferentSearch: "Thử tìm kiếm khác",
-        inviteMembers: "Mời thành viên để cộng tác",
+        inviteMembers: "Mời thành viên cộng tác",
         deleteInvite: "Xóa lời mời",
         deleteInviteDescription: "Xóa lời mời",
         invitedBy: "Được mời bởi {name}",
@@ -355,14 +355,14 @@ export default {
     teamName: "Tên nhóm",
     teamNamePlaceholder: "Nhập tên nhóm",
     createTeamButton: "Tạo nhóm",
-    cancel: "Hủy bỏ",
+    cancel: "Hủy",
     createTeamDescription: "Tạo một nhóm mới để quản lý dự án và cộng tác viên của bạn."
   },
   createProject: {
     createProjectTitle: "Tạo một dự án mới",
     projectNamePlaceholder: "Nhập tên dự án",
     createProjectButton: "Tạo dự án",
-    cancel: "Hủy bỏ",
+    cancel: "Hủy",
     createProjectDescription: "Tạo một dự án mới để bắt đầu tự động hóa bản địa hóa của bạn."
   },
   invite: {
@@ -370,7 +370,7 @@ export default {
     inviteDescription: "Mời một thành viên vào nhóm của bạn",
     emailLabel: "Email",
     emailPlaceholder: "Nhập email",
-    cancel: "Hủy bỏ",
+    cancel: "Hủy",
     sendInvite: "Gửi lời mời",
     success: {
       title: "Lời mời đã được gửi",
@@ -428,7 +428,7 @@ export default {
     }
   },
   translations: {
-    header: "Các khóa đã dịch"
+    header: "Khóa đã dịch"
   },
   search: {
     placeholder: "Tìm kiếm"
@@ -437,6 +437,10 @@ export default {
     daily: "Hàng ngày",
     weekly: "Hàng tuần",
     monthly: "Hàng tháng",
-    selectPeriod: "Chọn khoảng thời gian"
+    selectPeriod: "Chọn kỳ"
+  },
+  translate: {
+    chunkSize: "Kích thước đoạn",
+    model: "Mô hình"
   }
 } as const;

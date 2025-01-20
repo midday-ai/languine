@@ -127,6 +127,7 @@ export const organizations = sqliteTable(
       .notNull()
       .unique()
       .$defaultFn(() => `org_${createId()}`),
+    tier: integer("tier").notNull().default(0),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),

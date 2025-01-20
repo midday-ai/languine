@@ -1,6 +1,6 @@
 export default {
   header: {
-    pricing: "Pris",
+    pricing: "Priser",
     docs: "Dokumentasjon",
     signIn: "Logg inn",
     goToApp: "Gå til app"
@@ -40,7 +40,7 @@ export default {
     presetForReactNative: "Forhåndsinnstilling for React Native",
     presetForReactNativeDescription: "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
     presetForReactEmail: "React Email-bibliotek",
-    presetForReactEmailDescription: "Vi har opprettet et i18n-bibliotek for React Email.",
+    presetForReactEmailDescription: "Vi har laget et i18n-bibliotek for React Email.",
     readyForI18nLibraries: "Klar for i18n-biblioteker",
     readyForI18nLibrariesDescription: "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, etc)."
   },
@@ -111,7 +111,7 @@ export default {
   account: {
     fullName: {
       title: "Fullt navn",
-      description: "Ditt fulle navn som det vil vises på plattformen.",
+      description: "Ditt fulle navn slik det vil vises på plattformen.",
       placeholder: "Skriv inn ditt fulle navn"
     },
     email: {
@@ -261,7 +261,7 @@ export default {
         placeholder: "Velg en modell"
       },
       apiKey: {
-        title: "Leverandør API-nøkkel",
+        title: "Leverandørens API-nøkkel",
         description: "Skriv inn din API-nøkkel for å autentisere med din valgte leverandør. Hold denne nøkkelen sikker - vi krypterer den før lagring.",
         placeholder: "Skriv inn din API-nøkkel"
       }
@@ -375,7 +375,7 @@ export default {
     sendInvite: "Send invitasjon",
     success: {
       title: "Invitasjon sendt",
-      description: "Invitasjon sendt til {email} vellykket"
+      description: "Invitasjon sendt til {email}"
     },
     error: {
       title: "Feil",
@@ -439,5 +439,9 @@ export default {
     weekly: "Ukentlig",
     monthly: "Månedlig",
     selectPeriod: "Velg periode"
+  },
+  translate: {
+    chunkSize: "Chunk-størrelse",
+    model: "Modell"
   }
 } as const;

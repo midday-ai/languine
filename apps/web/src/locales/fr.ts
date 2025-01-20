@@ -7,14 +7,14 @@ export default {
   },
   hero: {
     title: "Localisation automatisée pour vos applications",
-    description: "Simplifiez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA, conçus pour automatiser les traductions pour les développeurs."
+    description: "Rationalisez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs."
   },
   getStarted: {
     heading: "Commencer",
     title: "Localisation automatisée pour vos applications",
-    description: "Simplifiez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA, conçus pour automatiser les traductions pour les développeurs.",
+    description: "Rationalisez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs.",
     button: {
-      startAutomating: "Commencer l'automatisation",
+      startAutomating: "Commencez à automatiser",
       readDocumentation: "Lire la documentation"
     }
   },
@@ -34,7 +34,7 @@ export default {
     fullyOpenSource: "Entièrement open source",
     fullyOpenSourceDescription: "Notre code est disponible publiquement sur GitHub, permettant la transparence et les contributions de la communauté.",
     noVendorLockIn: "Pas de verrouillage fournisseur",
-    noVendorLockInDescription: "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLMs.",
+    noVendorLockInDescription: "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLM.",
     presetsForExpo: "Préréglages pour Expo",
     presetsForExpoDescription: "Nous fournissons des préréglages pour Expo, afin que vous puissiez commencer rapidement.",
     presetForReactNative: "Préréglage pour React Native",
@@ -49,7 +49,7 @@ export default {
     smartTranslation: {
       title: "Traduction intelligente",
       intelligentTranslation: "Traduction intelligente avec conscience du contexte",
-      brandVoice: "Cohérence de la voix et du ton de la marque",
+      brandVoice: "Consistance de la voix et du ton de la marque",
       terminology: "Gestion de la terminologie",
       linguisticFeatures: "Fonctionnalités linguistiques avancées",
       realtimeUpdates: "Mises à jour de traduction en temps réel"
@@ -66,7 +66,7 @@ export default {
       cli: "Interface en ligne de commande",
       cicd: "Intégration CI/CD",
       versionControl: "Contrôle de version",
-      workflow: "Flux de travail développeur",
+      workflow: "Workflow développeur",
       documentation: "Documentation complète"
     }
   },
@@ -125,7 +125,7 @@ export default {
     },
     deleteAccount: {
       title: "Supprimer le compte",
-      description: "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+      description: "Supprimer définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
       button: "Supprimer le compte"
     }
   },
@@ -169,7 +169,7 @@ export default {
       },
       "delete": {
         title: "Supprimer le projet",
-        description: "Supprimez définitivement ce projet et toutes ses données",
+        description: "Supprimer définitivement ce projet et toutes ses données",
         button: "Supprimer le projet"
       }
     },
@@ -197,7 +197,7 @@ export default {
         filterPlaceholder: "Filtrer les membres...",
         allRoles: "Tous les rôles",
         date: "Date",
-        selectAll: "{count} sélectionné",
+        selectAll: "{count} sélectionné(s)",
         noPendingInvitations: "Aucune invitation en attente",
         inviteMembers: "Invitez des membres à collaborer",
         roles: {
@@ -350,7 +350,7 @@ export default {
         priority_support: "Support prioritaire"
       }
     },
-    cta: "Commencer l'automatisation"
+    cta: "Commencez à automatiser"
   },
   createTeam: {
     teamName: "Nom de l'équipe",
@@ -402,12 +402,12 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Configurer la CLI Languine",
+        title: "Configurer Languine CLI",
         description: "Installez et configurez la CLI Languine pour gérer les traductions"
       },
       "2": {
         title: "Pousser les traductions",
-        description: "En attente de la poussée des traductions"
+        description: "En attente des traductions à pousser"
       },
       "3": {
         title: "Documentation",
@@ -439,5 +439,9 @@ export default {
     weekly: "Hebdomadaire",
     monthly: "Mensuel",
     selectPeriod: "Sélectionnez la période"
+  },
+  translate: {
+    chunkSize: "Taille du segment",
+    model: "Modèle"
   }
 } as const;

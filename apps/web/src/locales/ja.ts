@@ -34,14 +34,14 @@ export default {
     fullyOpenSource: "完全にオープンソース",
     fullyOpenSourceDescription: "私たちのコードはGitHubで公開されており、透明性とコミュニティの貢献を可能にしています。",
     noVendorLockIn: "ベンダーロックインなし",
-    noVendorLockInDescription: "特定のサービスに縛られることはありません。独自のLLMを使用してください。",
-    presetsForExpo: "Expoのプリセット",
-    presetsForExpoDescription: "Expoのプリセットを提供しているので、すぐに始めることができます。",
-    presetForReactNative: "React Nativeのプリセット",
-    presetForReactNativeDescription: "React Nativeのプリセットを提供しているので、すぐに始めることができます。",
+    noVendorLockInDescription: "特定のサービスに縛られることはありません。あなた自身のLLMを使用してください。",
+    presetsForExpo: "Expo用プリセット",
+    presetsForExpoDescription: "Expo用のプリセットを提供しているので、すぐに始めることができます。",
+    presetForReactNative: "React Native用プリセット",
+    presetForReactNativeDescription: "React Native用のプリセットを提供しているので、すぐに始めることができます。",
     presetForReactEmail: "React Emailライブラリ",
-    presetForReactEmailDescription: "React Emailのためのi18nライブラリを作成しました。",
-    readyForI18nLibraries: "i18nライブラリに対応",
+    presetForReactEmailDescription: "React Email用のi18nライブラリを作成しました。",
+    readyForI18nLibraries: "i18nライブラリ対応",
     readyForI18nLibrariesDescription: "最も人気のあるライブラリを含むすべてのライブラリをサポートしています（next-intl、react-i18next、react-intlなど）。"
   },
   info: {
@@ -52,7 +52,7 @@ export default {
       brandVoice: "ブランドの声とトーンの一貫性",
       terminology: "用語管理",
       linguisticFeatures: "高度な言語機能",
-      realtimeUpdates: "リアルタイムの翻訳更新"
+      realtimeUpdates: "リアルタイム翻訳更新"
     },
     implementation: {
       title: "実装",
@@ -75,7 +75,7 @@ export default {
     github: "GitHubでサインイン",
     google: "Googleでサインイン",
     footer: "ローカライゼーションを自動化する。",
-    description: "数秒でローカライゼーションの自動化を開始するためにサインインしてください。",
+    description: "サインインして、数秒でローカライゼーションの自動化を開始してください。",
     terms: {
       text: "サインインすることにより、あなたは私たちの",
       termsOfService: "利用規約",
@@ -106,11 +106,11 @@ export default {
   coming_soon: {
     title: "チームを作成",
     description: "Languineは早期アクセス中です",
-    cta: "私たちは現在早期アクセス中です。早期アクセスを得るためにXで連絡してください。"
+    cta: "私たちは現在早期アクセス中です。早期アクセスを得るには、Xで"
   },
   account: {
     fullName: {
-      title: "Xで早期アクセスを得るために連絡してください。",
+      title: "に連絡してください。",
       description: "フルネーム",
       placeholder: "プラットフォーム全体に表示されるあなたのフルネーム。"
     },
@@ -126,7 +126,7 @@ export default {
     deleteAccount: {
       title: "Languine APIおよびCLIからアクセスするための個人用APIキー。",
       description: "アカウントを削除",
-      button: "あなたのアカウントと関連するすべてのデータを永久に削除します。この操作は取り消せません。"
+      button: "あなたのアカウントと関連するすべてのデータを永久に削除します。この操作は取り消すことができません。"
     }
   },
   copyInstall: {
@@ -136,7 +136,7 @@ export default {
     dialog: {
       title: "クリップボードにコピーされました",
       description: "本当によろしいですか？",
-      placeholder: "この操作は取り消せません。確認のためにDELETEと入力してください。",
+      placeholder: "この操作は取り消すことができません。確認のためにDELETEと入力してください。",
       confirm: "確認のためにDELETEと入力してください",
       cancel: "削除を確認"
     }
@@ -189,7 +189,7 @@ export default {
       apiKey: {
         title: "無制限",
         description: "チームAPIキー",
-        placeholder: "チームアクセスのためのAPIキー、これをプロジェクトIDと一緒にCI/CDパイプラインから使用してください"
+        placeholder: "チームアクセスのためのAPIキー、これをCI/CDパイプラインと一緒にプロジェクトIDと共に使用してください"
       },
       members: {
         title: "メンバーを招待",
@@ -218,7 +218,7 @@ export default {
         removeMemberConfirm: "メンバーを削除",
         removeMemberDescription: "メンバーを削除",
         noResults: "保留中の招待はありません",
-        tryDifferentSearch: "メンバーが見つかりませんでした",
+        tryDifferentSearch: "メンバーが見つかりません",
         deleteInvite: "メンバーを招待して協力する",
         deleteInviteDescription: "招待を削除",
         invitedBy: "招待を削除する",
@@ -258,12 +258,12 @@ export default {
       languageModel: {
         title: "プロバイダーを選択",
         description: "言語モデル",
-        placeholder: "翻訳ニーズに最適な品質と速度のバランスを取るAIモデルを選択してください。より強力なモデルは遅くなるかもしれませんが、より良い結果を生み出します。"
+        placeholder: "翻訳ニーズに最適な品質と速度のバランスを取るAIモデルを選択してください。より強力なモデルは遅くなる可能性がありますが、より良い結果を生み出します。"
       },
       apiKey: {
         title: "モデルを選択",
         description: "プロバイダーAPIキー",
-        placeholder: "選択したプロバイダーで認証するためのAPIキーを入力してください。このキーは安全に保管してください - 保存する前に暗号化します。"
+        placeholder: "選択したプロバイダーで認証するためのAPIキーを入力してください。このキーは安全に保管してください - 保存前に暗号化します。"
       }
     },
     addProject: "APIキーを入力してください",
@@ -288,7 +288,7 @@ export default {
       title: "スタイルガイド",
       description: "長さ制御",
       options: {
-        flexible: "翻訳されたテキストの長さを制御する",
+        flexible: "翻訳テキストの長さを制御する",
         strict: "柔軟",
         exact: "厳格",
         loose: "正確"
@@ -327,7 +327,7 @@ export default {
     }
   },
   pricing: {
-    title: "文化的に適切なコンテンツに適応する",
+    title: "文化的に適切な内容に適応する",
     free: {
       title: "シンプルな価格設定",
       price: "無料（100キー）",
@@ -336,7 +336,7 @@ export default {
         unlimited_projects: "最大100キー",
         fine_tuning: "無制限のプロジェクト",
         overrides: "微調整オプション",
-        analytics: "翻訳の上書き",
+        analytics: "翻訳オーバーライド",
         context_memory: "分析",
         community_support: "コンテキストメモリ"
       }
@@ -412,12 +412,12 @@ export default {
       "3": {
         title: "翻訳がプッシュされるのを待っています",
         description: "ドキュメント",
-        link: "詳細なガイドとベストプラクティスについては、ドキュメントをチェックしてください"
+        link: "詳細なガイドとベストプラクティスについては、私たちのドキュメントをチェックしてください"
       }
     },
     info: {
       description: "ドキュメント",
-      link: "助けが必要ですか？詳細なガイドとベストプラクティスについては、",
+      link: "助けが必要ですか？詳細なガイドとベストプラクティスについては、私たちの",
       description_2: "ドキュメント"
     }
   },
@@ -439,5 +439,9 @@ export default {
     weekly: "毎日",
     monthly: "毎週",
     selectPeriod: "毎月"
+  },
+  translate: {
+    chunkSize: "チャンクサイズ",
+    model: "モデル"
   }
 } as const;

@@ -3,7 +3,7 @@ export default {
     pricing: "Preços",
     docs: "Documentação",
     signIn: "Entrar",
-    goToApp: "Ir para o app"
+    goToApp: "Ir para o aplicativo"
   },
   hero: {
     title: "Localização automatizada para suas aplicações",
@@ -110,18 +110,18 @@ export default {
   },
   account: {
     fullName: {
-      title: "Nome Completo",
+      title: "Nome completo",
       description: "Seu nome completo como aparecerá na plataforma.",
       placeholder: "Digite seu nome completo"
     },
     email: {
-      title: "Endereço de Email",
-      description: "O endereço de email associado à sua conta.",
-      placeholder: "Digite seu endereço de email"
+      title: "Endereço de e-mail",
+      description: "O endereço de e-mail associado à sua conta.",
+      placeholder: "Digite seu endereço de e-mail"
     },
     apiKey: {
-      title: "Chave API",
-      description: "Sua chave API pessoal para acessar a API Languine e da CLI."
+      title: "Chave da API",
+      description: "Sua chave de API pessoal para acessar a API Languine e da CLI."
     },
     deleteAccount: {
       title: "Excluir Conta",
@@ -142,12 +142,12 @@ export default {
     }
   },
   pipeline: {
-    title: "Fluxo de Trabalho (Pipeline CI/CD)",
+    title: "Fluxo de trabalho (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
+    description: "Nosso mecanismo de tradução integra-se perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça sincronizado com o desenvolvimento."
   },
   settings: {
-    badRequest: "Requisição inválida",
+    badRequest: "Solicitação inválida",
     badRequestDescription: "A organização deve ter pelo menos um proprietário. Transfira a propriedade para outro membro antes de remover este proprietário.",
     permissionDenied: "Permissão negada",
     permissionDeniedDescription: "Você precisa ser um proprietário da equipe para realizar esta ação",
@@ -159,10 +159,10 @@ export default {
     errorDescription: "Por favor, tente novamente ou entre em contato com o suporte",
     addTeam: "Criar equipe",
     apiKey: {
-      updated: "Chave API atualizada",
-      updatedDescription: "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
-      title: "Atualizar Chave API",
-      description: "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
+      updated: "Chave da API atualizada",
+      updatedDescription: "Sua chave da API foi atualizada com sucesso e copiada para sua área de transferência.",
+      title: "Atualizar Chave da API",
+      description: "Tem certeza de que deseja gerar uma nova chave da API? A chave antiga deixará de funcionar imediatamente.",
       cancel: "Cancelar",
       "continue": "Continuar"
     },
@@ -187,9 +187,9 @@ export default {
         placeholder: "Selecione um modelo"
       },
       apiKey: {
-        title: "Chave API do Provedor",
-        description: "Digite sua chave API para autenticar com seu provedor escolhido. Mantenha esta chave segura - nós a criptografamos antes de armazenar.",
-        placeholder: "Digite sua chave API"
+        title: "Chave da API do Provedor",
+        description: "Digite sua chave da API para autenticar com seu provedor escolhido. Mantenha esta chave segura - nós a criptografamos antes de armazenar.",
+        placeholder: "Digite sua chave da API"
       }
     },
     addProject: "Criar projeto",
@@ -201,7 +201,7 @@ export default {
       },
       id: {
         title: "ID do Projeto",
-        description: "Seu identificador único de projeto",
+        description: "Seu identificador de projeto único",
         placeholder: "ID do Projeto"
       },
       "delete": {
@@ -225,9 +225,9 @@ export default {
         unlimited: "Ilimitado"
       },
       apiKey: {
-        title: "Chave API da Equipe",
-        description: "Chave API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
-        placeholder: "Chave API da Equipe"
+        title: "Chave da API da Equipe",
+        description: "Chave da API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
+        placeholder: "Chave da API da Equipe"
       },
       members: {
         leaveTeamConfirm: "Sair da equipe",
@@ -252,7 +252,7 @@ export default {
         deleteInviteDescription: "Excluir o convite",
         invitedBy: "Convidado por {name}",
         deleteInviteSuccess: "Convite excluído",
-        deleteInviteError: "Falha ao excluir convite",
+        deleteInviteError: "Falha ao excluir o convite",
         removeMemberSuccess: "Membro removido",
         removeMemberError: "Falha ao remover membro",
         removeMemberSuccessDescription: "Membro foi removido com sucesso",
@@ -280,7 +280,7 @@ export default {
     },
     contextDetection: {
       title: "Detecção de Contexto",
-      description: "Detecte e preserve automaticamente o contexto em traduções"
+      description: "Detecte e preserve automaticamente o contexto nas traduções"
     },
     styleGuide: "Guia de Estilo",
     lengthControl: {
@@ -314,7 +314,7 @@ export default {
     localization: "Localização",
     idioms: {
       title: "Expressões Idiomáticas",
-      description: "Lide com expressões idiomáticas apropriadamente"
+      description: "Lide com expressões idiomáticas de forma apropriada"
     },
     terminology: {
       title: "Terminologia",
@@ -368,8 +368,8 @@ export default {
   invite: {
     inviteMember: "Convidar membro",
     inviteDescription: "Convide um membro para sua equipe",
-    emailLabel: "Email",
-    emailPlaceholder: "Digite o email",
+    emailLabel: "E-mail",
+    emailPlaceholder: "Digite o e-mail",
     cancel: "Cancelar",
     sendInvite: "Enviar convite",
     success: {
@@ -381,7 +381,7 @@ export default {
       description: "Falha ao enviar convite. Por favor, tente novamente."
     },
     validation: {
-      invalidEmail: "Por favor, insira um email válido"
+      invalidEmail: "Por favor, insira um e-mail válido"
     }
   },
   months: {
@@ -406,7 +406,7 @@ export default {
       },
       "2": {
         title: "Enviar Traduções",
-        description: "Aguardando as traduções serem enviadas"
+        description: "Aguardando o envio das traduções"
       },
       "3": {
         title: "Documentação",
@@ -422,7 +422,7 @@ export default {
   },
   cli: {
     success: {
-      title: "Login na CLI Languine bem-sucedido",
+      title: "Login da CLI Languine com Sucesso",
       description: "A CLI Languine foi autenticada com sucesso como:",
       description_2: "Você pode fechar esta aba e voltar para a CLI"
     }
@@ -434,9 +434,13 @@ export default {
     placeholder: "Pesquisar"
   },
   periods: {
-    daily: "Diariamente",
-    weekly: "Semanalmente",
-    monthly: "Mensalmente",
+    daily: "Diário",
+    weekly: "Semanal",
+    monthly: "Mensal",
     selectPeriod: "Selecione o período"
+  },
+  translate: {
+    chunkSize: "Tamanho do bloco",
+    model: "Modelo"
   }
 } as const;

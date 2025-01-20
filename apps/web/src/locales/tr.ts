@@ -33,7 +33,7 @@ export default {
     title: "Özellikler",
     fullyOpenSource: "Tamamen açık kaynak",
     fullyOpenSourceDescription: "Kodumuz GitHub'da herkese açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
-    noVendorLockIn: "Tedarikçi kilidi yok",
+    noVendorLockIn: "Satıcı kilidi yok",
     noVendorLockInDescription: "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
     presetsForExpo: "Expo için ön ayarlar",
     presetsForExpoDescription: "Expo için ön ayarlar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "İş Akışı (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana branch'e birleştirilmeden ve dağıtılmadan önce inceleme yapılır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri belleğinizi korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana dalınıza birleştirilmeden ve dağıtılmadan önce inceleme yapılır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   settings: {
     badRequest: "Geçersiz istek",
@@ -271,8 +271,8 @@ export default {
   tuning: {
     general: "Genel",
     translationMemory: {
-      title: "Çeviri Hafızası",
-      description: "Tutarlılık ve verimliliği artırmak için çeviri hafızasını kullanın"
+      title: "Çeviri Belleği",
+      description: "Tutarlılık ve verimliliği artırmak için çeviri belleğini kullanın"
     },
     qualityChecks: {
       title: "Kalite Kontrolleri",
@@ -299,7 +299,7 @@ export default {
     },
     formality: {
       title: "Resmiyet",
-      description: "Çevirilerin resmiyet seviyesini kontrol edin"
+      description: "Çevirilerin resmiyet düzeyini kontrol edin"
     },
     brandName: {
       title: "Marka Adı",
@@ -336,7 +336,7 @@ export default {
         fine_tuning: "İnce ayar seçenekleri",
         overrides: "Çeviri geçersiz kılmaları",
         analytics: "Analitik",
-        context_memory: "Bağlam hafızası",
+        context_memory: "Bağlam belleği",
         community_support: "Topluluk desteği"
       }
     },
@@ -385,24 +385,24 @@ export default {
     }
   },
   months: {
-    "10": "Eki",
-    "11": "Kas",
-    "12": "Ara",
-    "01": "Oca",
-    "02": "Şub",
-    "03": "Mar",
-    "04": "Nis",
-    "05": "May",
-    "06": "Haz",
-    "07": "Tem",
-    "08": "Ağu",
-    "09": "Eyl"
+    "10": "Ekim",
+    "11": "Kasım",
+    "12": "Aralık",
+    "01": "Ocak",
+    "02": "Şubat",
+    "03": "Mart",
+    "04": "Nisan",
+    "05": "Mayıs",
+    "06": "Haziran",
+    "07": "Temmuz",
+    "08": "Ağustos",
+    "09": "Eylül"
   },
   onboarding: {
     steps: {
       "1": {
         title: "Languine CLI Kurulumu",
-        description: "Çevirileri yönetmek için Languine CLI'yı kurun ve yapılandırın"
+        description: "Çevirileri yönetmek için Languine CLI'yi kurun ve yapılandırın"
       },
       "2": {
         title: "Çevirileri Gönder",
@@ -423,7 +423,7 @@ export default {
   cli: {
     success: {
       title: "Languine CLI Giriş Başarılı",
-      description: "Languine CLI başarıyla kimlik doğrulaması yapıldı:",
+      description: "Languine CLI başarıyla kimlik doğrulandı:",
       description_2: "Artık bu sekme kapatılabilir ve CLI'ye dönebilirsiniz"
     }
   },
@@ -438,5 +438,9 @@ export default {
     weekly: "Haftalık",
     monthly: "Aylık",
     selectPeriod: "Dönem seçin"
+  },
+  translate: {
+    chunkSize: "Parça boyutu",
+    model: "Model"
   }
 } as const;

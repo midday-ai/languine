@@ -42,7 +42,7 @@ export default {
     presetForReactEmail: "Biblioteka React Email",
     presetForReactEmailDescription: "Stworzyliśmy bibliotekę i18n dla React Email.",
     readyForI18nLibraries: "Gotowe na biblioteki i18n",
-    readyForI18nLibrariesDescription: "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itp.)."
+    readyForI18nLibrariesDescription: "Wspieramy wszystkie biblioteki, w tym te najbardziej popularne (next-intl, react-i18next, react-intl, itp.)."
   },
   info: {
     title: "Zarządza każdym aspektem lokalizacji twojej aplikacji, w tym",
@@ -80,7 +80,7 @@ export default {
       text: "Logując się, zgadzasz się na nasze",
       termsOfService: "Warunki usługi",
       and: "i",
-      privacyPolicy: "Polityka prywatności"
+      privacyPolicy: "Politykę prywatności"
     }
   },
   userMenu: {
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Przepływ pracy (Potok CI/CD)",
     pro: "[pro]",
-    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed włączeniem do głównej gałęzi i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoja zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
+    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z twoim istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed włączeniem do głównej gałęzi i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoja zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
   },
   settings: {
     badRequest: "Nieprawidłowe żądanie",
@@ -201,7 +201,7 @@ export default {
       },
       id: {
         title: "ID projektu",
-        description: "Unikalny identyfikator twojego projektu",
+        description: "Twój unikalny identyfikator projektu",
         placeholder: "ID projektu"
       },
       "delete": {
@@ -222,11 +222,11 @@ export default {
         description: "Zarządzaj planem rozliczeniowym swojego zespołu",
         free: "Darmowy",
         pro: "Pro",
-        unlimited: "Bez limitu"
+        unlimited: "Nieograniczony"
       },
       apiKey: {
         title: "Klucz API zespołu",
-        description: "Klucz API dostępu zespołu, używaj tego z potoku CI/CD razem z ID projektu",
+        description: "Klucz API dostępu zespołu, używaj go z potoku CI/CD razem z ID projektu",
         placeholder: "Klucz API zespołu"
       },
       members: {
@@ -272,11 +272,11 @@ export default {
     general: "Ogólne",
     translationMemory: {
       title: "Pamięć tłumaczeń",
-      description: "Użyj pamięci tłumaczeń, aby poprawić spójność i efektywność"
+      description: "Używaj pamięci tłumaczeń, aby poprawić spójność i efektywność"
     },
     qualityChecks: {
       title: "Kontrola jakości",
-      description: "Włącz automatyczne kontrole jakości tłumaczeń"
+      description: "Włącz automatyczną kontrolę jakości tłumaczeń"
     },
     contextDetection: {
       title: "Wykrywanie kontekstu",
@@ -295,7 +295,7 @@ export default {
     },
     inclusiveLanguage: {
       title: "Język inkluzywny",
-      description: "Upewnij się, że tłumaczenia używają języka inkluzywnego"
+      description: "Zapewnij, że tłumaczenia używają języka inkluzywnego"
     },
     formality: {
       title: "Formalność",
@@ -322,7 +322,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adaptacja kulturowa",
-      description: "Dostosuj treść do odpowiedniości kulturowej"
+      description: "Dostosuj zawartość do odpowiedniości kulturowej"
     }
   },
   pricing: {
@@ -333,7 +333,7 @@ export default {
       keys_limit: "Do 100 kluczy",
       features: {
         unlimited_projects: "Nieograniczone projekty",
-        fine_tuning: "Opcje dostosowywania",
+        fine_tuning: "Opcje dostosowania",
         overrides: "Nadpisania tłumaczeń",
         analytics: "Analityka",
         context_memory: "Pamięć kontekstu",
@@ -401,11 +401,11 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Konfiguracja Languine CLI",
+        title: "Skonfiguruj Languine CLI",
         description: "Zainstaluj i skonfiguruj Languine CLI do zarządzania tłumaczeniami"
       },
       "2": {
-        title: "Push tłumaczeń",
+        title: "Pushuj tłumaczenia",
         description: "Oczekiwanie na push tłumaczeń"
       },
       "3": {
@@ -417,12 +417,12 @@ export default {
     info: {
       description: "Potrzebujesz pomocy? Sprawdź naszą",
       link: "dokumentacja",
-      description_2: "po szczegółowe przewodniki i najlepsze praktyki."
+      description_2: "aby uzyskać szczegółowe przewodniki i najlepsze praktyki."
     }
   },
   cli: {
     success: {
-      title: "Languine CLI Logowanie Sukces",
+      title: "Sukces logowania Languine CLI",
       description: "Languine CLI zostało pomyślnie uwierzytelnione jako:",
       description_2: "Możesz teraz zamknąć tę kartę i wrócić do CLI"
     }
@@ -438,5 +438,9 @@ export default {
     weekly: "Tygodniowo",
     monthly: "Miesięcznie",
     selectPeriod: "Wybierz okres"
+  },
+  translate: {
+    chunkSize: "Rozmiar fragmentu",
+    model: "Model"
   }
 } as const;

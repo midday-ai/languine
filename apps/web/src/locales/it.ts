@@ -42,7 +42,7 @@ export default {
     presetForReactEmail: "Libreria React Email",
     presetForReactEmailDescription: "Abbiamo creato una libreria i18n per React Email.",
     readyForI18nLibraries: "Pronto per le librerie i18n",
-    readyForI18nLibrariesDescription: "Supportiamo tutte le librerie, comprese le più popolari (next-intl, react-i18next, react-intl, ecc.)."
+    readyForI18nLibrariesDescription: "Supportiamo tutte le librerie, comprese le più popolari (next-intl, react-i18next, react-intl, ecc)."
   },
   info: {
     title: "Gestisce ogni aspetto della localizzazione della tua app, inclusi",
@@ -52,7 +52,7 @@ export default {
       brandVoice: "Coerenza del tono e della voce del brand",
       terminology: "Gestione della terminologia",
       linguisticFeatures: "Funzionalità linguistiche avanzate",
-      realtimeUpdates: "Aggiornamenti di traduzione in tempo reale"
+      realtimeUpdates: "Aggiornamenti delle traduzioni in tempo reale"
     },
     implementation: {
       title: "Implementazione",
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Flusso di lavoro (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice base ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
+    description: "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice base ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato assicura che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
   },
   settings: {
     badRequest: "Richiesta non valida",
@@ -334,7 +334,7 @@ export default {
       features: {
         unlimited_projects: "Progetti illimitati",
         fine_tuning: "Opzioni di fine-tuning",
-        overrides: "Sovrascritture di traduzione",
+        overrides: "Sovrascritture delle traduzioni",
         analytics: "Analitiche",
         context_memory: "Memoria del contesto",
         community_support: "Supporto della comunità"
@@ -402,7 +402,7 @@ export default {
     steps: {
       "1": {
         title: "Configura Languine CLI",
-        description: "Installa e configura Languine CLI per gestire le traduzioni"
+        description: "Installa e configura la CLI di Languine per gestire le traduzioni"
       },
       "2": {
         title: "Push delle traduzioni",
@@ -422,8 +422,8 @@ export default {
   },
   cli: {
     success: {
-      title: "Accesso a Languine CLI riuscito",
-      description: "Languine CLI è stato autenticato con successo come:",
+      title: "Accesso alla CLI di Languine riuscito",
+      description: "La CLI di Languine è stata autenticata con successo come:",
       description_2: "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
   },
@@ -438,5 +438,9 @@ export default {
     weekly: "Settimanale",
     monthly: "Mensile",
     selectPeriod: "Seleziona periodo"
+  },
+  translate: {
+    chunkSize: "Dimensione del blocco",
+    model: "Modello"
   }
 } as const;

@@ -116,7 +116,7 @@ export default {
     },
     email: {
       title: "E-postadress",
-      description: "E-postadressen som är kopplad till ditt konto.",
+      description: "E-postadressen associerad med ditt konto.",
       placeholder: "Ange din e-postadress"
     },
     apiKey: {
@@ -124,9 +124,9 @@ export default {
       description: "Din personliga API-nyckel för att komma åt Languine API och från CLI."
     },
     deleteAccount: {
-      title: "Ta bort konto",
-      description: "Ta bort ditt konto och all tillhörande data permanent. Denna åtgärd kan inte ångras.",
-      button: "Ta bort konto"
+      title: "Radera konto",
+      description: "Radera ditt konto och all tillhörande data permanent. Denna åtgärd kan inte ångras.",
+      button: "Radera konto"
     }
   },
   copyInstall: {
@@ -134,17 +134,17 @@ export default {
   },
   dangerZone: {
     dialog: {
-      title: "Är du helt säker?",
+      title: "Är du absolut säker?",
       description: "Denna åtgärd kan inte ångras. Skriv DELETE för att bekräfta.",
       placeholder: "Skriv DELETE för att bekräfta",
-      confirm: "Bekräfta borttagning",
+      confirm: "Bekräfta radering",
       cancel: "Avbryt"
     }
   },
   pipeline: {
     title: "Arbetsflöde (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår översättningsmotor integreras sömlöst i ditt befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, underhåller ditt översättningsminne och genererar korrekta översättningar samtidigt som ditt varumärkes röst och terminologi bevaras. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
+    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, och översätter automatiskt din kodbas vid varje push. När kodändringar pushas analyserar vi det ändrade innehållet, underhåller ditt översättningsminne och genererar korrekta översättningar samtidigt som ditt varumärkes röst och terminologi bevaras. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
   },
   settings: {
     saved: "Inställningar sparade",
@@ -168,9 +168,9 @@ export default {
         placeholder: "Projekt-ID"
       },
       "delete": {
-        title: "Ta bort projekt",
-        description: "Ta bort detta projekt och all dess data permanent",
-        button: "Ta bort projekt"
+        title: "Radera projekt",
+        description: "Radera detta projekt och all dess data permanent",
+        button: "Radera projekt"
       }
     },
     team: {
@@ -219,11 +219,11 @@ export default {
         removeMemberDescription: "Är du säker på att du vill ta bort denna medlem?",
         noResults: "Inga medlemmar hittades",
         tryDifferentSearch: "Prova en annan sökning",
-        deleteInvite: "Ta bort inbjudan",
-        deleteInviteDescription: "Ta bort inbjudan",
+        deleteInvite: "Radera inbjudan",
+        deleteInviteDescription: "Radera inbjudan",
         invitedBy: "Inbjuden av {name}",
-        deleteInviteSuccess: "Inbjudan borttagen",
-        deleteInviteError: "Misslyckades med att ta bort inbjudan",
+        deleteInviteSuccess: "Inbjudan raderad",
+        deleteInviteError: "Misslyckades med att radera inbjudan",
         removeMemberSuccess: "Medlem borttagen",
         removeMemberError: "Misslyckades med att ta bort medlem",
         removeMemberSuccessDescription: "Medlemmen har tagits bort framgångsrikt",
@@ -232,10 +232,10 @@ export default {
     },
     badRequest: "Ogiltig begäran",
     badRequestDescription: "Organisationen måste ha minst en ägare. Överför ägarskap till en annan medlem innan du tar bort denna ägare.",
-    permissionDenied: "Tillstånd nekad",
+    permissionDenied: "Åtkomst nekad",
     permissionDeniedDescription: "Du måste vara ägare av teamet för att utföra denna åtgärd",
-    deleteTeamTitle: "Ta bort team",
-    deleteTeamDescription: "Kan inte ta bort organisation när du är den enda medlemmen, ta istället bort ditt konto",
+    deleteTeamTitle: "Radera team",
+    deleteTeamDescription: "Kan inte radera organisation när du är den enda medlemmen, radera istället ditt konto",
     error: "Något gick fel",
     errorDescription: "Försök igen eller kontakta support",
     addTeam: "Skapa team",
@@ -338,7 +338,7 @@ export default {
         overrides: "Översättningsöverstyrningar",
         analytics: "Analys",
         context_memory: "Kontextminne",
-        community_support: "Communitysupport"
+        community_support: "Community-support"
       }
     },
     pro: {
@@ -382,7 +382,7 @@ export default {
       description: "Misslyckades med att skicka inbjudan. Försök igen."
     },
     validation: {
-      invalidEmail: "Ange en giltig e-postadress"
+      invalidEmail: "Ange en giltig e-post"
     }
   },
   months: {
@@ -439,5 +439,9 @@ export default {
     weekly: "Veckovis",
     monthly: "Månadsvis",
     selectPeriod: "Välj period"
+  },
+  translate: {
+    chunkSize: "Chunkstorlek",
+    model: "Modell"
   }
 } as const;

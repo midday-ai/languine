@@ -8,8 +8,10 @@ import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
 import { getGitInfo } from "@/utils/git.ts";
 import { getAPIKey } from "@/utils/session.ts";
-import { confirm, note, outro, spinner } from "@clack/prompts";
+import { confirm, note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
+import { TRPCClientError } from "@trpc/client";
+import { TRPCError } from "@trpc/server";
 import chalk from "chalk";
 import glob from "fast-glob";
 import { z } from "zod";
@@ -176,7 +178,10 @@ export async function translateCommand(args: string[] = []) {
           }
 
           let result: TranslationResult;
+          // let meta: { isFreeUser: boolean };
+          // let run: any;
 
+          // try {
           const { run, meta } = await client.jobs.startJob.mutate({
             apiKey: apiKey,
             projectId,
@@ -190,6 +195,29 @@ export async function translateCommand(args: string[] = []) {
             commitMessage: gitInfo?.commitMessage,
             commitLink: gitInfo?.commitLink,
           });
+          // } catch (error) {
+          //   if (error instanceof TRPCClientError) {
+          //     note(
+          //       "Translation limit reached. Upgrade your plan to increase your limit.",
+          //       "Error",
+          //     );
+
+          //     const shouldUpgrade = await select({
+          //       message: "Would you like to upgrade your plan now?",
+          //       options: [
+          //         { label: "Upgrade plan", value: "upgrade" },
+          //         { label: "Cancel", value: "cancel" },
+          //       ],
+          //     });
+
+          //     // if (shouldUpgrade === "upgrade") {
+          //     //   // Open upgrade URL in browser
+          //     //   await open("https://languine.ai/pricing");
+          //     // }
+
+          //     process.exit(1);
+          //   }
+          // }
 
           if (!isSilent && meta.plan === "free") {
             if (!checkOnly) {

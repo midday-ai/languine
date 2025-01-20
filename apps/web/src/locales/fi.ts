@@ -37,15 +37,15 @@ export default {
     noVendorLockInDescription: "Emme sido sinua tiettyyn palveluun, käytä omia LLM:ejäsi.",
     presetsForExpo: "Esiasetukset Expolle",
     presetsForExpoDescription: "Tarjoamme esiasetukset Expolle, jotta pääset alkuun nopeasti.",
-    presetForReactNative: "Esiasetus React Nativelle",
-    presetForReactNativeDescription: "Tarjoamme esiasetuksen React Nativelle, jotta pääset alkuun nopeasti.",
+    presetForReactNative: "Esiasetus React Nativeen",
+    presetForReactNativeDescription: "Tarjoamme esiasetuksen React Nativeen, jotta pääset alkuun nopeasti.",
     presetForReactEmail: "React Email -kirjasto",
     presetForReactEmailDescription: "Olemme luoneet i18n-kirjaston React Emailille.",
     readyForI18nLibraries: "Valmis i18n-kirjastoille",
     readyForI18nLibrariesDescription: "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl, jne)."
   },
   info: {
-    title: "Hallitsee jokaisen sovelluksesi lokalisoinnin osa-alueen, mukaan lukien",
+    title: "Hallitse jokainen sovelluksesi lokalisoinnin osa-alue, mukaan lukien",
     smartTranslation: {
       title: "Älykäs käännös",
       intelligentTranslation: "Älykäs käännös kontekstitietoisuudella",
@@ -87,7 +87,7 @@ export default {
     account: "Tilin asetukset",
     signOut: "Kirjaudu ulos",
     createTeam: "Luo tiimi",
-    homepage: "Kotisivu",
+    homepage: "Etusivu",
     team: "Tiimin asetukset"
   },
   teamSelector: {
@@ -142,9 +142,9 @@ export default {
     }
   },
   pipeline: {
-    title: "Työnkulku (CI/CD-putki)",
+    title: "Työnkulku (CI/CD Putkisto)",
     pro: "[pro]",
-    description: "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-putkeesi, kääntäen koodipohjasi automaattisesti jokaisella push-toiminnolla. Kun koodimuutoksia työnnetään, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändin äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältö pysyy kehityksen mukana."
+    description: "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-putkistoosi, kääntäen koodipohjasi automaattisesti jokaisella pushauksella. Kun koodimuutoksia pushataan, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändin äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältö pysyy synkassa kehityksen kanssa."
   },
   settings: {
     saved: "Asetukset tallennettu",
@@ -188,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Tiimin API-avain",
-        description: "API-avain tiimin käyttöön, käytä tätä CI/CD-putkestasi yhdessä Projektin ID:n kanssa",
+        description: "API-avain tiimin käyttöön, käytä tätä CI/CD-putkistostasi yhdessä Projektin ID:n kanssa",
         placeholder: "Tiimin API-avain"
       },
       members: {
@@ -232,7 +232,7 @@ export default {
     },
     badRequest: "Virheellinen pyyntö",
     badRequestDescription: "Organisaatiolla on oltava vähintään yksi omistaja. Siirrä omistajuus toiselle jäsenelle ennen tämän omistajan poistamista.",
-    permissionDenied: "Käyttö estetty",
+    permissionDenied: "Käyttöoikeus evätty",
     permissionDeniedDescription: "Sinun on oltava tiimin omistaja tehdäksesi tämän toiminnon",
     deleteTeamTitle: "Poista tiimi",
     deleteTeamDescription: "Organisaatiota ei voi poistaa, kun olet ainoa jäsen, poista tilisi sen sijaan",
@@ -241,7 +241,7 @@ export default {
     addTeam: "Luo tiimi",
     apiKey: {
       updated: "API-avain päivitetty",
-      updatedDescription: "API-avain on päivitetty onnistuneesti ja kopioitu leikepöydällesi.",
+      updatedDescription: "API-avain on päivitetty onnistuneesti ja kopioitu leikepöydälle.",
       title: "Päivitä API-avain",
       description: "Haluatko varmasti luoda uuden API-avaimen? Vanha avain lakkaa toimimasta välittömästi.",
       cancel: "Peruuta",
@@ -252,17 +252,17 @@ export default {
       updateError: "Asetusten päivitys epäonnistui",
       translationProvider: {
         title: "Käännöspalveluntarjoaja",
-        description: "Valitse suosikki tekoälypalvelusi käännösten luomiseen. Jokainen palveluntarjoaja tarjoaa erilaisia ominaisuuksia ja hinnoittelua.",
+        description: "Valitse suosikkisi tekoälypalvelu käännösten luomiseen. Jokainen palveluntarjoaja tarjoaa erilaisia ominaisuuksia ja hinnoittelua.",
         placeholder: "Valitse palveluntarjoaja"
       },
       languageModel: {
         title: "Kielimalli",
-        description: "Valitse tekoälymalli, joka tarjoaa parhaan tasapainon laadun ja nopeuden välillä käännöstarpeisiisi. Tehokkaammat mallit voivat olla hitaampia, mutta tuottavat parempia tuloksia.",
+        description: "Valitse tekoälymalli, joka tarjoaa parhaan tasapainon laadun ja nopeuden välillä käännöstarpeisiisi. Tehokkaammat mallit voivat olla hitaampia, mutta tuottaa parempia tuloksia.",
         placeholder: "Valitse malli"
       },
       apiKey: {
         title: "Palveluntarjoajan API-avain",
-        description: "Syötä API-avain todennusta varten valitsemallesi palveluntarjoajalle. Pidä tämä avain turvallisena - salataan sen ennen tallennusta.",
+        description: "Syötä API-avain valitun palveluntarjoajan todentamiseksi. Pidä tämä avain turvassa - salataan sen ennen tallennusta.",
         placeholder: "Syötä API-avain"
       }
     },
@@ -276,8 +276,8 @@ export default {
       description: "Käytä käännösmuistia parantaaksesi yhdenmukaisuutta ja tehokkuutta"
     },
     qualityChecks: {
-      title: "Laatutarkastukset",
-      description: "Ota käyttöön automaattiset laatutarkastukset käännöksille"
+      title: "Laadun tarkistukset",
+      description: "Ota käyttöön automaattiset laadun tarkistukset käännöksille"
     },
     contextDetection: {
       title: "Kontekstin tunnistus",
@@ -286,7 +286,7 @@ export default {
     styleGuide: "Tyyliohje",
     lengthControl: {
       title: "Pituuden hallinta",
-      description: "Hallitse käännösten pituutta",
+      description: "Hallitse käännösten tekstin pituutta",
       options: {
         flexible: "Joustava",
         strict: "Tiukka",
@@ -343,7 +343,7 @@ export default {
     },
     pro: {
       title: "Pro",
-      includes_free: "Kaikki, mitä Ilmaisessa, plus:",
+      includes_free: "Kaikki ilmaisessa, plus:",
       features: {
         github_action: "GitHub Action -integraatio",
         latest_features: "Varhainen pääsy uusimpiin ominaisuuksiin",
@@ -375,7 +375,7 @@ export default {
     sendInvite: "Lähetä kutsu",
     success: {
       title: "Kutsu lähetetty",
-      description: "Kutsu lähetetty onnistuneesti osoitteeseen {email}"
+      description: "Kutsu lähetettiin onnistuneesti osoitteeseen {email}"
     },
     error: {
       title: "Virhe",
@@ -424,7 +424,7 @@ export default {
   cli: {
     success: {
       title: "Languine CLI -kirjautuminen onnistui",
-      description: "Languine CLI onnistuneesti todennettu käyttäjäksi:",
+      description: "Languine CLI todennettiin onnistuneesti käyttäjänä:",
       description_2: "Voit nyt sulkea tämän välilehden ja palata CLI:hin"
     }
   },
@@ -432,12 +432,16 @@ export default {
     header: "Käännetyt avaimet"
   },
   search: {
-    placeholder: "Hae"
+    placeholder: "Haku"
   },
   periods: {
     daily: "Päivittäin",
     weekly: "Viikoittain",
     monthly: "Kuukausittain",
     selectPeriod: "Valitse ajanjakso"
+  },
+  translate: {
+    chunkSize: "Palasen koko",
+    model: "Malli"
   }
 } as const;

@@ -4,7 +4,6 @@ import {
   AnalyticsChartSkeleton,
 } from "@/components/charts/analytics";
 import { OnboardingSteps } from "@/components/onboarding-steps";
-import { PeriodSelector } from "@/components/period-selector";
 import { SearchInput } from "@/components/search-input";
 import { getI18n } from "@/locales/server";
 import { HydrateClient, trpc } from "@/trpc/server";

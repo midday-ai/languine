@@ -3,7 +3,7 @@ export default {
     pricing: "Preise",
     docs: "Dokumentation",
     signIn: "Anmelden",
-    goToApp: "Zur App gehen"
+    goToApp: "Zur App"
   },
   hero: {
     title: "Automatisierte Lokalisierung für Ihre Anwendungen",
@@ -33,7 +33,7 @@ export default {
     title: "Funktionen",
     fullyOpenSource: "Vollständig Open Source",
     fullyOpenSourceDescription: "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Gemeinschaftsbeiträge ermöglicht.",
-    noVendorLockIn: "Kein Vendor-Lock-in",
+    noVendorLockIn: "Kein Vendor Lock-in",
     noVendorLockInDescription: "Wir binden Sie nicht an einen bestimmten Dienst, verwenden Sie Ihre eigenen LLMs.",
     presetsForExpo: "Voreinstellungen für Expo",
     presetsForExpoDescription: "Wir bieten Voreinstellungen für Expo, damit Sie schnell starten können.",
@@ -45,7 +45,7 @@ export default {
     readyForI18nLibrariesDescription: "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
-    title: "Kümmert sich um jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
+    title: "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
     smartTranslation: {
       title: "Intelligente Übersetzung",
       intelligentTranslation: "Intelligente Übersetzung mit Kontextbewusstsein",
@@ -105,7 +105,7 @@ export default {
   },
   coming_soon: {
     title: "Languine ist in der Early Access-Phase",
-    description: "Wir befinden uns derzeit in der Early Access-Phase. Kontaktieren Sie uns auf",
+    description: "Wir befinden uns derzeit in der Early Access-Phase. Kontaktieren Sie",
     cta: "auf X, um frühzeitigen Zugang zu erhalten."
   },
   account: {
@@ -135,8 +135,8 @@ export default {
   dangerZone: {
     dialog: {
       title: "Sind Sie absolut sicher?",
-      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN ein, um zu bestätigen.",
-      placeholder: "Geben Sie LÖSCHEN ein, um zu bestätigen",
+      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN zur Bestätigung ein.",
+      placeholder: "Geben Sie LÖSCHEN zur Bestätigung ein",
       confirm: "Löschen bestätigen",
       cancel: "Abbrechen"
     }
@@ -235,7 +235,7 @@ export default {
     permissionDenied: "Zugriff verweigert",
     permissionDeniedDescription: "Sie müssen ein Besitzer des Teams sein, um diese Aktion durchzuführen",
     deleteTeamTitle: "Team löschen",
-    deleteTeamDescription: "Die Organisation kann nicht gelöscht werden, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
+    deleteTeamDescription: "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind, löschen Sie stattdessen Ihr Konto",
     error: "Etwas ist schief gelaufen",
     errorDescription: "Bitte versuchen Sie es erneut oder kontaktieren Sie den Support",
     addTeam: "Team erstellen",
@@ -252,7 +252,7 @@ export default {
       updateError: "Fehler beim Aktualisieren der Einstellungen",
       translationProvider: {
         title: "Übersetzungsanbieter",
-        description: "Wählen Sie Ihren bevorzugten KI-Dienst für die Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Funktionen und Preise.",
+        description: "Wählen Sie Ihren bevorzugten KI-Dienst für die Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Fähigkeiten und Preise.",
         placeholder: "Wählen Sie einen Anbieter"
       },
       languageModel: {
@@ -439,5 +439,9 @@ export default {
     weekly: "Wöchentlich",
     monthly: "Monatlich",
     selectPeriod: "Zeitraum auswählen"
+  },
+  translate: {
+    chunkSize: "Chunk-Größe",
+    model: "Modell"
   }
 } as const;

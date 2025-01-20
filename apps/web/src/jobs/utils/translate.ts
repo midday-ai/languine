@@ -1,20 +1,15 @@
-import { createOpenAI } from "@ai-sdk/openai";
 import { generateObject } from "ai";
 import { z } from "zod";
+import { chooseModel } from "./model";
 import { createFinalPrompt } from "./prompt";
 import type { PromptOptions } from "./types";
-
-const openai = createOpenAI({
-  baseURL: process.env.AI_GATEWAY_ENDPOINT,
-  apiKey: process.env.AI_API_KEY,
-});
 
 function getPrompt(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
 ) {
   const codeblocks = content
-    .map(({ key, sourceText }) => {
+    .map(({ sourceText }) => {
       return `\`\`\`json
 ${sourceText}
 \`\`\``;
@@ -27,11 +22,12 @@ ${sourceText}
 export async function translate(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
+  totalItems: number,
 ) {
   const prompt = getPrompt(content, options);
 
   const { object } = await generateObject({
-    model: openai("deepseek-chat"),
+    model: chooseModel(totalItems),
     prompt,
     mode: "json",
     maxTokens: 8000,

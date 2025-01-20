@@ -42,7 +42,7 @@ export default {
     presetForReactEmail: "React Email Bibliotheek",
     presetForReactEmailDescription: "We hebben een i18n bibliotheek gemaakt voor React Email.",
     readyForI18nLibraries: "Klaar voor i18n bibliotheken",
-    readyForI18nLibrariesDescription: "We ondersteunen alle bibliotheken, inclusief de meest populaire (next-intl, react-i18next, react-intl, etc)."
+    readyForI18nLibrariesDescription: "We ondersteunen alle bibliotheken inclusief de meest populaire (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
     title: "Behandelt elk aspect van het lokaliseren van uw app inclusief",
@@ -58,7 +58,7 @@ export default {
       title: "Implementatie",
       quickSetup: "Snelle setup en integratie",
       fileFormat: "Bestandsformaatbehandeling",
-      contentStructure: "Organisatie van inhoudsstructuur",
+      contentStructure: "Organisatie van contentstructuur",
       assetOrganization: "Organisatie van assets"
     },
     developer: {
@@ -92,14 +92,14 @@ export default {
   },
   teamSelector: {
     addProject: "Project aanmaken",
-    createProjectTitle: "Maak een nieuw project",
+    createProjectTitle: "Een nieuw project aanmaken",
     projectNamePlaceholder: "Projectnaam",
     createProjectButton: "Project aanmaken",
     pro: "Pro",
     project: "Project",
     teams: "Teams",
     createTeam: "Team aanmaken",
-    createTeamTitle: "Maak een nieuw team",
+    createTeamTitle: "Een nieuw team aanmaken",
     teamNamePlaceholder: "Teamnaam",
     createTeamButton: "Team aanmaken"
   },
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Workflow (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdtak en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
+    description: "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdtak en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
   },
   settings: {
     badRequest: "Ongeldig verzoek",
@@ -222,7 +222,7 @@ export default {
         description: "Beheer het factureringsplan van uw team",
         free: "Gratis",
         pro: "Pro",
-        unlimited: "Ongelimiteerd"
+        unlimited: "Onbeperkt"
       },
       apiKey: {
         title: "Team API-sleutel",
@@ -252,11 +252,11 @@ export default {
         deleteInviteDescription: "Verwijder de uitnodiging",
         invitedBy: "Uitgenodigd door {name}",
         deleteInviteSuccess: "Uitnodiging verwijderd",
-        deleteInviteError: "Verwijderen uitnodiging mislukt",
+        deleteInviteError: "Verwijderen van uitnodiging mislukt",
         removeMemberSuccess: "Lid verwijderd",
-        removeMemberError: "Verwijderen lid mislukt",
+        removeMemberError: "Verwijderen van lid mislukt",
         removeMemberSuccessDescription: "Lid is succesvol verwijderd",
-        removeMemberErrorDescription: "Verwijderen lid mislukt",
+        removeMemberErrorDescription: "Verwijderen van lid mislukt",
         roles: {
           owner: "Eigenaar",
           member: "Lid"
@@ -332,20 +332,20 @@ export default {
       price: "Gratis",
       keys_limit: "Tot 100 sleutels",
       features: {
-        unlimited_projects: "Ongelimiteerde projecten",
-        fine_tuning: "Fijn afstemmingsopties",
+        unlimited_projects: "Onbeperkte projecten",
+        fine_tuning: "Fine-tuning opties",
         overrides: "Vertalingsoverrides",
         analytics: "Analytics",
         context_memory: "Contextgeheugen",
-        community_support: "Community-ondersteuning"
+        community_support: "Community ondersteuning"
       }
     },
     pro: {
       title: "Pro",
       includes_free: "Alles in Gratis, plus:",
       features: {
-        github_action: "GitHub Action-integratie",
-        latest_features: "Vroege toegang tot nieuwste functies",
+        github_action: "GitHub Action integratie",
+        latest_features: "Vroege toegang tot de nieuwste functies",
         priority_support: "Prioritaire ondersteuning"
       }
     },
@@ -356,14 +356,14 @@ export default {
     teamNamePlaceholder: "Voer teamnaam in",
     createTeamButton: "Team aanmaken",
     cancel: "Annuleren",
-    createTeamDescription: "Maak een nieuw team om uw projecten en medewerkers te beheren."
+    createTeamDescription: "Maak een nieuw team aan om uw projecten en medewerkers te beheren."
   },
   createProject: {
-    createProjectTitle: "Maak een nieuw project",
+    createProjectTitle: "Een nieuw project aanmaken",
     projectNamePlaceholder: "Voer projectnaam in",
     createProjectButton: "Project aanmaken",
     cancel: "Annuleren",
-    createProjectDescription: "Maak een nieuw project om uw lokalisatie te automatiseren."
+    createProjectDescription: "Maak een nieuw project aan om uw lokalisatie te automatiseren."
   },
   invite: {
     inviteMember: "Lid uitnodigen",
@@ -378,7 +378,7 @@ export default {
     },
     error: {
       title: "Fout",
-      description: "Verzenden uitnodiging mislukt. Probeer het opnieuw."
+      description: "Verzenden van uitnodiging mislukt. Probeer het opnieuw."
     },
     validation: {
       invalidEmail: "Voer een geldig e-mailadres in"
@@ -405,7 +405,7 @@ export default {
         description: "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        title: "Push vertalingen",
+        title: "Push Vertalingen",
         description: "Wachten tot de vertalingen worden gepusht"
       },
       "3": {
@@ -438,5 +438,9 @@ export default {
     weekly: "Wekelijks",
     monthly: "Maandelijks",
     selectPeriod: "Selecteer periode"
+  },
+  translate: {
+    chunkSize: "Chunkgrootte",
+    model: "Model"
   }
 } as const;

@@ -5,7 +5,7 @@ import { Skeleton } from "./ui/skeleton";
 type Props = {
   source: string;
   content: string;
-  createdAt: string;
+  updatedAt: Date;
   commit?: string | null;
   commitLink?: string | null;
   sourceProvider?: string | null;
@@ -15,7 +15,7 @@ type Props = {
 export function ActivityCard({
   source,
   content,
-  createdAt,
+  updatedAt,
   commit,
   commitLink,
   sourceProvider,
@@ -47,7 +47,7 @@ export function ActivityCard({
             </a>
           )}
 
-          <span>{formatTimeAgo(new Date(createdAt))}</span>
+          <span>{formatTimeAgo(new Date(updatedAt))}</span>
         </div>
       </div>
     </div>

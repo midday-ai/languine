@@ -1,7 +1,7 @@
 export function calculateChunkSize(
   content: Array<{ key: string; sourceText: string }>,
 ) {
-  const MAX_INPUT_TOKENS = 64000;
+  const MAX_INPUT_TOKENS = 128000;
   const AVERAGE_CHARS_PER_TOKEN = 4;
 
   const totalChars = content.reduce(
@@ -15,5 +15,6 @@ export function calculateChunkSize(
     1,
     Math.floor((MAX_INPUT_TOKENS / estimatedTokens) * content.length),
   );
+
   return itemsPerChunk;
 }
