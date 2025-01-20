@@ -6,15 +6,17 @@ import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
+import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
 import { getAPIKey } from "@/utils/session.ts";
 import { confirm, note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
-import { TRPCClientError } from "@trpc/client";
-import { TRPCError } from "@trpc/server";
 import chalk from "chalk";
 import glob from "fast-glob";
+import open from "open";
 import { z } from "zod";
+
+const { BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
   const forceIndex = args.indexOf("--force");
@@ -145,6 +147,7 @@ export async function translateCommand(args: string[] = []) {
                   );
                 }
               }
+
               continue;
             }
           }
@@ -178,11 +181,8 @@ export async function translateCommand(args: string[] = []) {
           }
 
           let result: TranslationResult;
-          // let meta: { isFreeUser: boolean };
-          // let run: any;
 
-          // try {
-          const { run, meta } = await client.jobs.startJob.mutate({
+          const { error, run, meta } = await client.jobs.startJob.mutate({
             apiKey: apiKey,
             projectId,
             sourceFormat: type,
@@ -195,34 +195,60 @@ export async function translateCommand(args: string[] = []) {
             commitMessage: gitInfo?.commitMessage,
             commitLink: gitInfo?.commitLink,
           });
-          // } catch (error) {
-          //   if (error instanceof TRPCClientError) {
-          //     note(
-          //       "Translation limit reached. Upgrade your plan to increase your limit.",
-          //       "Error",
-          //     );
 
-          //     const shouldUpgrade = await select({
-          //       message: "Would you like to upgrade your plan now?",
-          //       options: [
-          //         { label: "Upgrade plan", value: "upgrade" },
-          //         { label: "Cancel", value: "cancel" },
-          //       ],
-          //     });
+          if (error?.code === "LIMIT_REACHED") {
+            s.stop();
+            note(
+              "Translation limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
 
-          //     // if (shouldUpgrade === "upgrade") {
-          //     //   // Open upgrade URL in browser
-          //     //   await open("https://languine.ai/pricing");
-          //     // }
+            const shouldUpgrade = await select({
+              message: "Would you like to upgrade your plan now?",
+              options: [
+                { label: "Upgrade plan", value: "upgrade" },
+                { label: "Cancel", value: "cancel" },
+              ],
+            });
 
-          //     process.exit(1);
-          //   }
-          // }
+            if (shouldUpgrade === "upgrade") {
+              // Open upgrade URL in browser
+              if (meta?.plan === "free") {
+                await open(
+                  `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+                );
+              } else {
+                s.start("Upgrading plan...");
 
-          if (!isSilent && meta.plan === "free") {
+                // Just upgrade the plan
+                await client.organization.updatePlan.mutate({
+                  organizationId: meta?.organizationId,
+                  tier: meta?.tier + 1,
+                });
+
+                s.stop(chalk.green("Plan upgraded successfully"));
+
+                note(
+                  "Run `languine translate` again to continue.",
+                  "What's next?",
+                );
+              }
+            }
+
+            process.exit(1);
+          }
+
+          if (!run) {
+            s.stop();
+            note("Translation job not found", "Error");
+            process.exit(1);
+          }
+
+          // If in queue, show a pro tip
+          if (!isSilent && meta?.plan === "free") {
             if (!checkOnly) {
               note(
-                "Upgrade to Pro for priority queue access at https://languine.ai/pricing",
+                "Upgrade to Pro for faster translations https://languine.ai/pricing",
                 "Pro tip",
               );
             }

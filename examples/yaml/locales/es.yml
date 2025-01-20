@@ -14,7 +14,7 @@ user:
     cancel: Cancelar
 errors:
   not_found: Página no encontrada
-  server_error: Ocurrió un error en el servidor
+  server_error: Se produjo un error en el servidor
   validation:
     required: Este campo es obligatorio
     email: Por favor, introduce una dirección de correo electrónico válida

@@ -63,14 +63,19 @@ export const jobsRouter = createTRPCRouter({
         TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];
 
       if (nextTotalKeys >= currentKeysLimit) {
-        throw new TRPCError({
-          code: "BAD_REQUEST",
-          message: "You have reached the maximum number of keys",
-          cause: {
+        return {
+          meta: {
+            plan: org.plan,
+            tier: org.tier,
+            organizationId: org.id,
+          },
+          error: {
+            code: "LIMIT_REACHED",
+            message: "You have reached the maximum number of keys",
             currentKeysLimit,
             nextTotalKeys,
           },
-        });
+        };
       }
 
       const options = isFreeUser
