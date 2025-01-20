@@ -1,55 +1,55 @@
 export default {
   header: {
     pricing: "Precios",
-    docs: "Documentos",
+    docs: "Documentación",
     signIn: "Iniciar sesión",
     goToApp: "Ir a la aplicación"
   },
   hero: {
     title: "Localización automatizada para tus aplicaciones",
-    description: "Optimiza tu proceso de localización con una CLI y un pipeline impulsados por IA diseñados para automatizar traducciones para desarrolladores."
+    description: "Optimiza tu proceso de localización con una CLI y pipeline impulsada por IA diseñada para automatizar traducciones para desarrolladores."
   },
   getStarted: {
     heading: "Comenzar",
     title: "Localización automatizada para tus aplicaciones",
-    description: "Optimiza tu proceso de localización con una CLI y un pipeline impulsados por IA diseñados para automatizar traducciones para desarrolladores.",
+    description: "Optimiza tu proceso de localización con una CLI y pipeline impulsada por IA diseñada para automatizar traducciones para desarrolladores.",
     button: {
-      startAutomating: "Comienza a automatizar",
+      startAutomating: "Comenzar a automatizar",
       readDocumentation: "Leer documentación"
     }
   },
   companies: {
     title: "Usado por",
-    addYourCompany: "+ Agrega tu empresa"
+    addYourCompany: "+ Añade tu empresa"
   },
   activity: {
     title: "Actividad",
     loading: "Cargando",
     loadMore: "Mostrar más",
     noResults: "No hay resultados para '{search}'",
-    clearSearch: "Borrar búsqueda"
+    clearSearch: "Limpiar búsqueda"
   },
   features: {
     title: "Características",
-    fullyOpenSource: "Totalmente de código abierto",
-    fullyOpenSourceDescription: "Nuestro código está disponible públicamente en GitHub, lo que permite la transparencia y las contribuciones de la comunidad.",
-    noVendorLockIn: "Sin bloqueo de proveedor",
+    fullyOpenSource: "Completamente de código abierto",
+    fullyOpenSourceDescription: "Nuestro código está disponible públicamente en GitHub, permitiendo transparencia y contribuciones de la comunidad.",
+    noVendorLockIn: "Sin dependencia de proveedor",
     noVendorLockInDescription: "No te atamos a un servicio específico, usa tus propios LLMs.",
     presetsForExpo: "Preajustes para Expo",
     presetsForExpoDescription: "Proporcionamos preajustes para Expo, para que puedas comenzar rápidamente.",
     presetForReactNative: "Preajuste para React Native",
     presetForReactNativeDescription: "Proporcionamos un preajuste para React Native, para que puedas comenzar rápidamente.",
-    presetForReactEmail: "Biblioteca de correo electrónico de React",
+    presetForReactEmail: "Biblioteca React Email",
     presetForReactEmailDescription: "Hemos creado una biblioteca i18n para React Email.",
     readyForI18nLibraries: "Listo para bibliotecas i18n",
-    readyForI18nLibrariesDescription: "Soportamos todas las bibliotecas, incluidas las más populares (next-intl, react-i18next, react-intl, etc)."
+    readyForI18nLibrariesDescription: "Soportamos todas las bibliotecas incluyendo las más populares (next-intl, react-i18next, react-intl, etc)."
   },
   info: {
-    title: "Maneja cada aspecto de la localización de tu aplicación, incluyendo",
+    title: "Maneja cada aspecto de la localización de tu aplicación incluyendo",
     smartTranslation: {
-      title: "Traducción inteligente",
+      title: "Traducción Inteligente",
       intelligentTranslation: "Traducción inteligente con conciencia del contexto",
-      brandVoice: "Consistencia en la voz y tono de la marca",
+      brandVoice: "Consistencia de voz y tono de marca",
       terminology: "Gestión de terminología",
       linguisticFeatures: "Características lingüísticas avanzadas",
       realtimeUpdates: "Actualizaciones de traducción en tiempo real"
@@ -58,7 +58,7 @@ export default {
       title: "Implementación",
       quickSetup: "Configuración e integración rápida",
       fileFormat: "Manejo de formatos de archivo",
-      contentStructure: "Organización de la estructura de contenido",
+      contentStructure: "Organización de la estructura del contenido",
       assetOrganization: "Organización de activos"
     },
     developer: {
@@ -78,13 +78,13 @@ export default {
     description: "Inicia sesión para comenzar a automatizar tu localización en segundos.",
     terms: {
       text: "Al iniciar sesión, aceptas nuestros",
-      termsOfService: "Términos de servicio",
+      termsOfService: "Términos de Servicio",
       and: "y",
-      privacyPolicy: "Política de privacidad"
+      privacyPolicy: "Política de Privacidad"
     }
   },
   userMenu: {
-    account: "Configuración de cuenta",
+    account: "Configuración de la cuenta",
     signOut: "Cerrar sesión",
     createTeam: "Crear equipo",
     homepage: "Página de inicio",
@@ -104,14 +104,14 @@ export default {
     createTeamButton: "Crear equipo"
   },
   coming_soon: {
-    title: "Languine está en acceso anticipado",
-    description: "Actualmente estamos en acceso anticipado. Comunícate con",
+    title: "Languine está en Acceso Anticipado",
+    description: "Actualmente estamos en acceso anticipado. Contacta a",
     cta: "en X para obtener acceso anticipado."
   },
   account: {
     fullName: {
       title: "Nombre completo",
-      description: "Tu nombre completo tal como aparecerá en la plataforma.",
+      description: "Tu nombre completo como aparecerá en la plataforma.",
       placeholder: "Ingresa tu nombre completo"
     },
     email: {
@@ -125,7 +125,7 @@ export default {
     },
     deleteAccount: {
       title: "Eliminar cuenta",
-      description: "Elimina permanentemente tu cuenta y todos los datos asociados. Esta acción no se puede deshacer.",
+      description: "Eliminar permanentemente tu cuenta y todos los datos asociados. Esta acción no se puede deshacer.",
       button: "Eliminar cuenta"
     }
   },
@@ -135,20 +135,20 @@ export default {
   dangerZone: {
     dialog: {
       title: "¿Estás absolutamente seguro?",
-      description: "Esta acción no se puede deshacer. Por favor, escribe DELETE para confirmar.",
-      placeholder: "Escribe DELETE para confirmar",
-      confirm: "Confirmar eliminación",
+      description: "Esta acción no se puede deshacer. Por favor, escribe ELIMINAR para confirmar.",
+      placeholder: "Escribe ELIMINAR para confirmar",
+      confirm: "Confirmar Eliminación",
       cancel: "Cancelar"
     }
   },
   pipeline: {
     title: "Flujo de trabajo (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado se mantenga sincronizado con el desarrollo."
+    description: "Nuestro motor de traducción se integra perfectamente en tu pipeline CI/CD existente, traduciendo automáticamente tu base de código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz de tu marca y la terminología. Las traducciones se envían como solicitudes de extracción, permitiendo su revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado esté sincronizado con el desarrollo."
   },
   settings: {
     saved: "Configuraciones guardadas",
-    savedDescription: "Tus cambios se han guardado correctamente",
+    savedDescription: "Tus cambios han sido guardados exitosamente",
     tabs: {
       project: "Proyecto",
       account: "Cuenta",
@@ -169,7 +169,7 @@ export default {
       },
       "delete": {
         title: "Eliminar proyecto",
-        description: "Elimina permanentemente este proyecto y todos sus datos",
+        description: "Eliminar permanentemente este proyecto y todos sus datos",
         button: "Eliminar proyecto"
       }
     },
@@ -188,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Clave API del equipo",
-        description: "Clave API para acceso al equipo, úsala desde tu pipeline CI/CD junto con el ID del proyecto",
+        description: "Clave API para acceso del equipo, usa esto desde tu pipeline CI/CD junto con el ID del proyecto",
         placeholder: "Clave API del equipo"
       },
       members: {
@@ -197,9 +197,9 @@ export default {
         filterPlaceholder: "Filtrar miembros...",
         allRoles: "Todos los roles",
         date: "Fecha",
-        selectAll: "{count} seleccionados",
+        selectAll: "{count} seleccionado",
         noPendingInvitations: "No hay invitaciones pendientes",
-        inviteMembers: "Invitar miembros a colaborar",
+        inviteMembers: "Invita a miembros a colaborar",
         roles: {
           owner: "Propietario",
           admin: "Administrador",
@@ -209,10 +209,10 @@ export default {
           newest: "Más nuevo",
           oldest: "Más antiguo"
         },
-        leaveTeamConfirm: "Salir del equipo",
-        leaveTeamDescription: "¿Estás seguro de que deseas salir de este equipo?",
+        leaveTeamConfirm: "Abandonar equipo",
+        leaveTeamDescription: "¿Estás seguro de que deseas abandonar este equipo?",
         cancel: "Cancelar",
-        leaveTeam: "Salir del equipo",
+        leaveTeam: "Abandonar equipo",
         invite: "Invitar miembro",
         removeMember: "Eliminar miembro",
         removeMemberConfirm: "Eliminar miembro",
@@ -223,10 +223,10 @@ export default {
         deleteInviteDescription: "Eliminar la invitación",
         invitedBy: "Invitado por {name}",
         deleteInviteSuccess: "Invitación eliminada",
-        deleteInviteError: "Error al eliminar la invitación",
+        deleteInviteError: "Error al eliminar invitación",
         removeMemberSuccess: "Miembro eliminado",
         removeMemberError: "Error al eliminar miembro",
-        removeMemberSuccessDescription: "El miembro ha sido eliminado correctamente",
+        removeMemberSuccessDescription: "El miembro ha sido eliminado exitosamente",
         removeMemberErrorDescription: "Error al eliminar miembro"
       }
     },
@@ -237,18 +237,18 @@ export default {
     deleteTeamTitle: "Eliminar equipo",
     deleteTeamDescription: "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta",
     error: "Algo salió mal",
-    errorDescription: "Por favor, intenta de nuevo o contacta al soporte",
+    errorDescription: "Por favor, intenta de nuevo o contacta a soporte",
     addTeam: "Crear equipo",
     apiKey: {
       updated: "Clave API actualizada",
-      updatedDescription: "Tu clave API ha sido actualizada correctamente y copiada al portapapeles.",
-      title: "Actualizar clave API",
+      updatedDescription: "Tu clave API ha sido actualizada exitosamente y copiada a tu portapapeles.",
+      title: "Actualizar Clave API",
       description: "¿Estás seguro de que deseas generar una nueva clave API? La clave antigua dejará de funcionar inmediatamente.",
       cancel: "Cancelar",
       "continue": "Continuar"
     },
     provider: {
-      updateSuccess: "Configuraciones actualizadas correctamente",
+      updateSuccess: "Configuraciones actualizadas exitosamente",
       updateError: "Error al actualizar configuraciones",
       translationProvider: {
         title: "Proveedor de traducción",
@@ -257,12 +257,12 @@ export default {
       },
       languageModel: {
         title: "Modelo de lenguaje",
-        description: "Selecciona el modelo de IA que mejor equilibre calidad y velocidad para tus necesidades de traducción. Los modelos más potentes pueden ser más lentos pero producen mejores resultados.",
+        description: "Selecciona el modelo de IA que mejor equilibre calidad y velocidad para tus necesidades de traducción. Modelos más potentes pueden ser más lentos pero producen mejores resultados.",
         placeholder: "Selecciona un modelo"
       },
       apiKey: {
         title: "Clave API del proveedor",
-        description: "Ingresa tu clave API para autenticarte con tu proveedor elegido. Mantén esta clave segura: la encriptamos antes de almacenarla.",
+        description: "Ingresa tu clave API para autenticarte con tu proveedor elegido. Mantén esta clave segura - la encriptamos antes de almacenarla.",
         placeholder: "Ingresa tu clave API"
       }
     },
@@ -276,8 +276,8 @@ export default {
       description: "Usa la memoria de traducción para mejorar la consistencia y eficiencia"
     },
     qualityChecks: {
-      title: "Controles de calidad",
-      description: "Habilita controles de calidad automatizados para traducciones"
+      title: "Chequeos de calidad",
+      description: "Habilita chequeos de calidad automatizados para traducciones"
     },
     contextDetection: {
       title: "Detección de contexto",
@@ -291,12 +291,12 @@ export default {
         flexible: "Flexible",
         strict: "Estricto",
         exact: "Exacto",
-        loose: "Suave"
+        loose: "Suelto"
       }
     },
     inclusiveLanguage: {
       title: "Lenguaje inclusivo",
-      description: "Asegúrate de que las traducciones usen lenguaje inclusivo"
+      description: "Asegura que las traducciones usen lenguaje inclusivo"
     },
     formality: {
       title: "Formalidad",
@@ -314,8 +314,8 @@ export default {
     },
     localization: "Localización",
     idioms: {
-      title: "Modismos",
-      description: "Maneja expresiones idiomáticas de manera apropiada"
+      title: "Idiomas",
+      description: "Maneja expresiones idiomáticas apropiadamente"
     },
     terminology: {
       title: "Terminología",
@@ -323,7 +323,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adaptación cultural",
-      description: "Adapta el contenido para que sea culturalmente apropiado"
+      description: "Adapta el contenido para la adecuación cultural"
     }
   },
   pricing: {
@@ -336,7 +336,7 @@ export default {
         unlimited_projects: "Proyectos ilimitados",
         fine_tuning: "Opciones de ajuste fino",
         overrides: "Sobrescrituras de traducción",
-        analytics: "Analítica",
+        analytics: "Analíticas",
         context_memory: "Memoria de contexto",
         community_support: "Soporte comunitario"
       }
@@ -345,12 +345,12 @@ export default {
       title: "Pro",
       includes_free: "Todo en Gratis, más:",
       features: {
-        github_action: "Integración de GitHub Action",
+        github_action: "Integración con GitHub Action",
         latest_features: "Acceso anticipado a las últimas características",
         priority_support: "Soporte prioritario"
       }
     },
-    cta: "Comienza a automatizar"
+    cta: "Comenzar a automatizar"
   },
   createTeam: {
     teamName: "Nombre del equipo",
@@ -368,18 +368,18 @@ export default {
   },
   invite: {
     inviteMember: "Invitar miembro",
-    inviteDescription: "Invitar a un miembro a tu equipo",
+    inviteDescription: "Invita a un miembro a tu equipo",
     emailLabel: "Correo electrónico",
-    emailPlaceholder: "Ingresa el correo electrónico",
+    emailPlaceholder: "Ingresa correo electrónico",
     cancel: "Cancelar",
     sendInvite: "Enviar invitación",
     success: {
       title: "Invitación enviada",
-      description: "Invitación enviada correctamente a {email}"
+      description: "Invitación enviada exitosamente a {email}"
     },
     error: {
       title: "Error",
-      description: "Error al enviar la invitación. Por favor, intenta de nuevo."
+      description: "Error al enviar invitación. Por favor, intenta de nuevo."
     },
     validation: {
       invalidEmail: "Por favor, ingresa un correo electrónico válido"
@@ -406,8 +406,8 @@ export default {
         description: "Instala y configura la CLI de Languine para gestionar traducciones"
       },
       "2": {
-        title: "Enviar traducciones",
-        description: "Esperando a que se envíen las traducciones"
+        title: "Empujar traducciones",
+        description: "Esperando que las traducciones sean empujadas"
       },
       "3": {
         title: "Documentación",
@@ -423,9 +423,9 @@ export default {
   },
   cli: {
     success: {
-      title: "Inicio de sesión exitoso en Languine CLI",
+      title: "Inicio de sesión exitoso de Languine CLI",
       description: "Languine CLI fue autenticado exitosamente como:",
-      description_2: "Ahora puedes cerrar esta pestaña y volver a la CLI"
+      description_2: "Ahora puedes cerrar esta pestaña y regresar a la CLI"
     }
   },
   translations: {

@@ -3,16 +3,16 @@ export default {
     pricing: "Giá cả",
     docs: "Tài liệu",
     signIn: "Đăng nhập",
-    goToApp: "Đi đến ứng dụng"
+    goToApp: "Truy cập ứng dụng"
   },
   hero: {
-    title: "Địa phương hóa tự động cho các ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình địa phương hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa các bản dịch cho các nhà phát triển."
+    title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
+    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho các nhà phát triển."
   },
   getStarted: {
     heading: "Bắt đầu",
-    title: "Địa phương hóa tự động cho các ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình địa phương hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa các bản dịch cho các nhà phát triển.",
+    title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
+    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho các nhà phát triển.",
     button: {
       startAutomating: "Bắt đầu tự động hóa",
       readDocumentation: "Đọc tài liệu"
@@ -31,32 +31,32 @@ export default {
   },
   features: {
     title: "Tính năng",
-    fullyOpenSource: "Hoàn toàn mã nguồn mở",
-    fullyOpenSourceDescription: "Mã của chúng tôi có sẵn công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
-    noVendorLockIn: "Không bị khóa nhà cung cấp",
-    noVendorLockInDescription: "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng các LLM của riêng bạn.",
-    presetsForExpo: "Cài đặt trước cho Expo",
-    presetsForExpoDescription: "Chúng tôi cung cấp các cài đặt trước cho Expo, để bạn có thể bắt đầu nhanh chóng.",
-    presetForReactNative: "Cài đặt trước cho React Native",
-    presetForReactNativeDescription: "Chúng tôi cung cấp một cài đặt trước cho React Native, để bạn có thể bắt đầu nhanh chóng.",
-    presetForReactEmail: "Thư viện Email React",
-    presetForReactEmailDescription: "Chúng tôi đã tạo một thư viện i18n cho React Email.",
+    fullyOpenSource: "Mã nguồn mở hoàn toàn",
+    fullyOpenSourceDescription: "Mã của chúng tôi được công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
+    noVendorLockIn: "Không bị khóa bởi nhà cung cấp",
+    noVendorLockInDescription: "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
+    presetsForExpo: "Cài đặt sẵn cho Expo",
+    presetsForExpoDescription: "Chúng tôi cung cấp các cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
+    presetForReactNative: "Cài đặt sẵn cho React Native",
+    presetForReactNativeDescription: "Chúng tôi cung cấp một cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
+    presetForReactEmail: "Thư viện React Email",
+    presetForReactEmailDescription: "Chúng tôi đã tạo ra một thư viện i18n cho React Email.",
     readyForI18nLibraries: "Sẵn sàng cho các thư viện i18n",
-    readyForI18nLibrariesDescription: "Chúng tôi hỗ trợ tất cả các thư viện bao gồm những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
+    readyForI18nLibrariesDescription: "Chúng tôi hỗ trợ tất cả các thư viện bao gồm cả những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
   },
   info: {
-    title: "Xử lý mọi khía cạnh của việc địa phương hóa ứng dụng của bạn bao gồm",
+    title: "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
     smartTranslation: {
-      title: "Dịch thông minh",
-      intelligentTranslation: "Dịch thông minh với nhận thức về ngữ cảnh",
-      brandVoice: "Độ nhất quán về giọng điệu và âm sắc thương hiệu",
+      title: "Dịch thuật thông minh",
+      intelligentTranslation: "Dịch thuật thông minh với nhận thức ngữ cảnh",
+      brandVoice: "Nhất quán giọng điệu và phong cách thương hiệu",
       terminology: "Quản lý thuật ngữ",
-      linguisticFeatures: "Các tính năng ngôn ngữ nâng cao",
-      realtimeUpdates: "Cập nhật dịch thuật theo thời gian thực"
+      linguisticFeatures: "Tính năng ngôn ngữ nâng cao",
+      realtimeUpdates: "Cập nhật dịch thuật thời gian thực"
     },
     implementation: {
       title: "Triển khai",
-      quickSetup: "Cài đặt và tích hợp nhanh chóng",
+      quickSetup: "Thiết lập và tích hợp nhanh chóng",
       fileFormat: "Xử lý định dạng tệp",
       contentStructure: "Tổ chức cấu trúc nội dung",
       assetOrganization: "Tổ chức tài sản"
@@ -74,8 +74,8 @@ export default {
     title: "Đăng nhập",
     github: "Đăng nhập với GitHub",
     google: "Đăng nhập với Google",
-    footer: "Tự động hóa địa phương hóa của bạn.",
-    description: "Đăng nhập để bắt đầu tự động hóa địa phương hóa của bạn trong vài giây.",
+    footer: "Tự động hóa bản địa hóa của bạn.",
+    description: "Đăng nhập để bắt đầu tự động hóa bản địa hóa của bạn trong vài giây.",
     terms: {
       text: "Bằng cách đăng nhập, bạn đồng ý với",
       termsOfService: "Điều khoản dịch vụ",
@@ -95,23 +95,23 @@ export default {
     createProjectTitle: "Tạo một dự án mới",
     projectNamePlaceholder: "Tên dự án",
     createProjectButton: "Tạo dự án",
-    pro: "Chuyên nghiệp",
+    pro: "Pro",
     project: "Dự án",
-    teams: "Nhóm",
+    teams: "Các nhóm",
     createTeam: "Tạo nhóm",
     createTeamTitle: "Tạo một nhóm mới",
     teamNamePlaceholder: "Tên nhóm",
     createTeamButton: "Tạo nhóm"
   },
   coming_soon: {
-    title: "Languine đang trong giai đoạn truy cập sớm",
+    title: "Languine đang trong giai đoạn Truy cập Sớm",
     description: "Chúng tôi hiện đang trong giai đoạn truy cập sớm. Liên hệ với",
-    cta: "trên X để nhận quyền truy cập sớm."
+    cta: "trên X để được truy cập sớm."
   },
   account: {
     fullName: {
       title: "Họ và tên",
-      description: "Họ và tên của bạn như sẽ xuất hiện trên nền tảng.",
+      description: "Họ và tên của bạn sẽ xuất hiện trên toàn bộ nền tảng.",
       placeholder: "Nhập họ và tên của bạn"
     },
     email: {
@@ -135,35 +135,35 @@ export default {
   dangerZone: {
     dialog: {
       title: "Bạn có chắc chắn không?",
-      description: "Hành động này không thể hoàn tác. Vui lòng gõ XÓA để xác nhận.",
-      placeholder: "Gõ XÓA để xác nhận",
+      description: "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
+      placeholder: "Nhập DELETE để xác nhận",
       confirm: "Xác nhận xóa",
-      cancel: "Hủy"
+      cancel: "Hủy bỏ"
     }
   },
   pipeline: {
-    title: "Quy trình làm việc (Pipeline CI/CD)",
-    pro: "[chuyên nghiệp]",
-    description: "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch mã nguồn của bạn trên mỗi lần đẩy. Khi có thay đổi mã được đẩy lên, chúng tôi phân tích nội dung đã sửa đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng yêu cầu kéo, cho phép xem xét trước khi được hợp nhất vào nhánh chính của bạn và triển khai. Quy trình làm việc tự động này đảm bảo nội dung địa phương hóa của bạn luôn đồng bộ với phát triển."
+    title: "Quy trình làm việc (CI/CD Pipeline)",
+    pro: "[pro]",
+    description: "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi có thay đổi code được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng pull requests, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển."
   },
   settings: {
     badRequest: "Yêu cầu không hợp lệ",
-    badRequestDescription: "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển nhượng quyền sở hữu cho một thành viên khác trước khi xóa chủ sở hữu này.",
-    permissionDenied: "Quyền truy cập bị từ chối",
+    badRequestDescription: "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
+    permissionDenied: "Từ chối quyền",
     permissionDeniedDescription: "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
     deleteTeamTitle: "Xóa nhóm",
     deleteTeamDescription: "Không thể xóa tổ chức khi bạn là thành viên duy nhất, thay vào đó hãy xóa tài khoản của bạn",
     saved: "Cài đặt đã được lưu",
     savedDescription: "Thay đổi của bạn đã được lưu thành công",
-    error: "Có gì đó không ổn",
-    errorDescription: "Vui lòng thử lại hoặc liên hệ với hỗ trợ",
+    error: "Đã xảy ra lỗi",
+    errorDescription: "Vui lòng thử lại hoặc liên hệ hỗ trợ",
     addTeam: "Tạo nhóm",
     apiKey: {
       updated: "Khóa API đã được cập nhật",
-      updatedDescription: "Khóa API của bạn đã được cập nhật thành công và đã sao chép vào clipboard của bạn.",
-      title: "Cập nhật khóa API",
+      updatedDescription: "Khóa API của bạn đã được cập nhật thành công và sao chép vào clipboard của bạn.",
+      title: "Cập nhật Khóa API",
       description: "Bạn có chắc chắn muốn tạo một khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
-      cancel: "Hủy",
+      cancel: "Hủy bỏ",
       "continue": "Tiếp tục"
     },
     tabs: {
@@ -175,19 +175,19 @@ export default {
     },
     provider: {
       updateSuccess: "Cài đặt đã được cập nhật thành công",
-      updateError: "Cập nhật cài đặt không thành công",
+      updateError: "Không thể cập nhật cài đặt",
       translationProvider: {
         title: "Nhà cung cấp dịch thuật",
-        description: "Chọn dịch vụ AI ưa thích của bạn để tạo bản dịch. Mỗi nhà cung cấp cung cấp các khả năng và mức giá khác nhau.",
-        placeholder: "Chọn một nhà cung cấp"
+        description: "Chọn dịch vụ AI ưa thích của bạn để tạo bản dịch. Mỗi nhà cung cấp cung cấp các khả năng và giá cả khác nhau.",
+        placeholder: "Chọn nhà cung cấp"
       },
       languageModel: {
         title: "Mô hình ngôn ngữ",
-        description: "Chọn mô hình AI phù hợp nhất với chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh mẽ hơn có thể chậm hơn nhưng tạo ra kết quả tốt hơn.",
+        description: "Chọn mô hình AI cân bằng tốt nhất giữa chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh hơn có thể chậm hơn nhưng cho kết quả tốt hơn.",
         placeholder: "Chọn một mô hình"
       },
       apiKey: {
-        title: "Khóa API nhà cung cấp",
+        title: "Khóa API của nhà cung cấp",
         description: "Nhập khóa API của bạn để xác thực với nhà cung cấp đã chọn. Giữ khóa này an toàn - chúng tôi mã hóa nó trước khi lưu trữ.",
         placeholder: "Nhập khóa API của bạn"
       }
@@ -201,7 +201,7 @@ export default {
       },
       id: {
         title: "ID dự án",
-        description: "Mã định danh duy nhất của dự án của bạn",
+        description: "Định danh duy nhất của dự án của bạn",
         placeholder: "ID dự án"
       },
       "delete": {
@@ -221,18 +221,18 @@ export default {
         title: "Kế hoạch thanh toán",
         description: "Quản lý kế hoạch thanh toán của nhóm bạn",
         free: "Miễn phí",
-        pro: "Chuyên nghiệp",
+        pro: "Pro",
         unlimited: "Không giới hạn"
       },
       apiKey: {
         title: "Khóa API nhóm",
-        description: "Khóa API để truy cập nhóm, sử dụng điều này từ pipeline CI/CD của bạn cùng với ID dự án",
+        description: "Khóa API để truy cập nhóm, sử dụng từ pipeline CI/CD của bạn cùng với ID dự án",
         placeholder: "Khóa API nhóm"
       },
       members: {
         leaveTeamConfirm: "Rời nhóm",
         leaveTeamDescription: "Bạn có chắc chắn muốn rời nhóm này không?",
-        cancel: "Hủy",
+        cancel: "Hủy bỏ",
         leaveTeam: "Rời nhóm",
         invite: "Mời thành viên",
         title: "Thành viên",
@@ -245,18 +245,18 @@ export default {
         date: "Ngày",
         selectAll: "{count} đã chọn",
         noPendingInvitations: "Không có lời mời đang chờ",
-        noResults: "Không tìm thấy thành viên nào",
+        noResults: "Không tìm thấy thành viên",
         tryDifferentSearch: "Thử tìm kiếm khác",
-        inviteMembers: "Mời thành viên tham gia cộng tác",
+        inviteMembers: "Mời thành viên để cộng tác",
         deleteInvite: "Xóa lời mời",
         deleteInviteDescription: "Xóa lời mời",
         invitedBy: "Được mời bởi {name}",
         deleteInviteSuccess: "Lời mời đã bị xóa",
-        deleteInviteError: "Xóa lời mời không thành công",
+        deleteInviteError: "Không thể xóa lời mời",
         removeMemberSuccess: "Thành viên đã bị xóa",
-        removeMemberError: "Xóa thành viên không thành công",
+        removeMemberError: "Không thể xóa thành viên",
         removeMemberSuccessDescription: "Thành viên đã được xóa thành công",
-        removeMemberErrorDescription: "Xóa thành viên không thành công",
+        removeMemberErrorDescription: "Không thể xóa thành viên",
         roles: {
           owner: "Chủ sở hữu",
           member: "Thành viên"
@@ -276,16 +276,16 @@ export default {
     },
     qualityChecks: {
       title: "Kiểm tra chất lượng",
-      description: "Bật kiểm tra chất lượng tự động cho các bản dịch"
+      description: "Kích hoạt kiểm tra chất lượng tự động cho bản dịch"
     },
     contextDetection: {
       title: "Phát hiện ngữ cảnh",
-      description: "Tự động phát hiện và bảo tồn ngữ cảnh trong các bản dịch"
+      description: "Tự động phát hiện và bảo tồn ngữ cảnh trong bản dịch"
     },
     styleGuide: "Hướng dẫn phong cách",
     lengthControl: {
       title: "Kiểm soát độ dài",
-      description: "Kiểm soát độ dài của văn bản đã dịch",
+      description: "Kiểm soát độ dài của văn bản dịch",
       options: {
         flexible: "Linh hoạt",
         strict: "Nghiêm ngặt",
@@ -294,12 +294,12 @@ export default {
       }
     },
     inclusiveLanguage: {
-      title: "Ngôn ngữ bao hàm",
-      description: "Đảm bảo các bản dịch sử dụng ngôn ngữ bao hàm"
+      title: "Ngôn ngữ bao gồm",
+      description: "Đảm bảo bản dịch sử dụng ngôn ngữ bao gồm"
     },
     formality: {
-      title: "Tính trang trọng",
-      description: "Kiểm soát mức độ trang trọng của các bản dịch"
+      title: "Mức độ trang trọng",
+      description: "Kiểm soát mức độ trang trọng của bản dịch"
     },
     brandName: {
       title: "Tên thương hiệu",
@@ -308,21 +308,21 @@ export default {
     },
     brandVoice: {
       title: "Giọng điệu thương hiệu",
-      description: "Định nghĩa giọng điệu và âm sắc thương hiệu của bạn",
+      description: "Xác định giọng điệu và phong cách thương hiệu của bạn",
       placeholder: "Mô tả giọng điệu thương hiệu của bạn..."
     },
-    localization: "Địa phương hóa",
+    localization: "Bản địa hóa",
     idioms: {
       title: "Thành ngữ",
       description: "Xử lý các biểu thức thành ngữ một cách thích hợp"
     },
     terminology: {
       title: "Thuật ngữ",
-      description: "Quản lý thuật ngữ chuyên ngành và từ điển"
+      description: "Quản lý thuật ngữ chuyên ngành và bảng thuật ngữ"
     },
     culturalAdaptation: {
       title: "Thích ứng văn hóa",
-      description: "Thích ứng nội dung cho sự phù hợp văn hóa"
+      description: "Thích ứng nội dung cho phù hợp văn hóa"
     }
   },
   pricing: {
@@ -330,22 +330,22 @@ export default {
     free: {
       title: "Miễn phí (100 khóa)",
       price: "Miễn phí",
-      keys_limit: "Tối đa 100 khóa",
+      keys_limit: "Lên đến 100 khóa",
       features: {
         unlimited_projects: "Dự án không giới hạn",
         fine_tuning: "Tùy chọn tinh chỉnh",
-        overrides: "Ghi đè bản dịch",
+        overrides: "Ghi đè dịch thuật",
         analytics: "Phân tích",
         context_memory: "Bộ nhớ ngữ cảnh",
         community_support: "Hỗ trợ cộng đồng"
       }
     },
     pro: {
-      title: "Chuyên nghiệp",
-      includes_free: "Mọi thứ trong Miễn phí, cộng với:",
+      title: "Pro",
+      includes_free: "Tất cả trong Miễn phí, cộng thêm:",
       features: {
         github_action: "Tích hợp GitHub Action",
-        latest_features: "Quyền truy cập sớm vào các tính năng mới nhất",
+        latest_features: "Truy cập sớm các tính năng mới nhất",
         priority_support: "Hỗ trợ ưu tiên"
       }
     },
@@ -355,22 +355,22 @@ export default {
     teamName: "Tên nhóm",
     teamNamePlaceholder: "Nhập tên nhóm",
     createTeamButton: "Tạo nhóm",
-    cancel: "Hủy",
-    createTeamDescription: "Tạo một nhóm mới để quản lý các dự án và cộng tác viên của bạn."
+    cancel: "Hủy bỏ",
+    createTeamDescription: "Tạo một nhóm mới để quản lý dự án và cộng tác viên của bạn."
   },
   createProject: {
     createProjectTitle: "Tạo một dự án mới",
     projectNamePlaceholder: "Nhập tên dự án",
     createProjectButton: "Tạo dự án",
-    cancel: "Hủy",
-    createProjectDescription: "Tạo một dự án mới để bắt đầu tự động hóa địa phương hóa của bạn."
+    cancel: "Hủy bỏ",
+    createProjectDescription: "Tạo một dự án mới để bắt đầu tự động hóa bản địa hóa của bạn."
   },
   invite: {
     inviteMember: "Mời thành viên",
     inviteDescription: "Mời một thành viên vào nhóm của bạn",
     emailLabel: "Email",
     emailPlaceholder: "Nhập email",
-    cancel: "Hủy",
+    cancel: "Hủy bỏ",
     sendInvite: "Gửi lời mời",
     success: {
       title: "Lời mời đã được gửi",
@@ -378,7 +378,7 @@ export default {
     },
     error: {
       title: "Lỗi",
-      description: "Gửi lời mời không thành công. Vui lòng thử lại."
+      description: "Không thể gửi lời mời. Vui lòng thử lại."
     },
     validation: {
       invalidEmail: "Vui lòng nhập email hợp lệ"
@@ -401,30 +401,30 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Cài đặt Languine CLI",
-        description: "Cài đặt và cấu hình Languine CLI để quản lý các bản dịch"
+        title: "Thiết lập Languine CLI",
+        description: "Cài đặt và cấu hình Languine CLI để quản lý bản dịch"
       },
       "2": {
         title: "Đẩy bản dịch",
-        description: "Đang chờ đợi các bản dịch được đẩy lên"
+        description: "Đang chờ bản dịch được đẩy lên"
       },
       "3": {
         title: "Tài liệu",
-        description: "Xem tài liệu của chúng tôi để biết hướng dẫn chi tiết và các phương pháp tốt nhất",
+        description: "Xem tài liệu của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất",
         link: "tài liệu"
       }
     },
     info: {
-      description: "Cần giúp đỡ? Xem tài liệu của chúng tôi",
+      description: "Cần giúp đỡ? Xem",
       link: "tài liệu",
-      description_2: "để biết hướng dẫn chi tiết và các phương pháp tốt nhất."
+      description_2: "của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất."
     }
   },
   cli: {
     success: {
       title: "Đăng nhập Languine CLI thành công",
-      description: "Languine CLI đã được xác thực thành công với:",
-      description_2: "Bạn có thể đóng tab này và quay lại CLI"
+      description: "Languine CLI đã được xác thực thành công là:",
+      description_2: "Bây giờ bạn có thể đóng tab này và quay lại CLI"
     }
   },
   translations: {

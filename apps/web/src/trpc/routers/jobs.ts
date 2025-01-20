@@ -16,6 +16,11 @@ export const jobsRouter = createTRPCRouter({
         sourceFormat: z.string(),
         sourceLanguage: z.string(),
         targetLanguages: z.array(z.string()),
+        branch: z.string().optional().nullable(),
+        commit: z.string().optional().nullable(),
+        commitLink: z.string().optional().nullable(),
+        sourceProvider: z.string().nullable().optional(),
+        commitMessage: z.string().optional().nullable(),
         content: z.array(
           z.object({
             key: z.string(),
@@ -61,6 +66,11 @@ export const jobsRouter = createTRPCRouter({
           sourceLanguage: input.sourceLanguage,
           targetLanguages: input.targetLanguages,
           content: input.content,
+          branch: input.branch,
+          commit: input.commit,
+          sourceProvider: input.sourceProvider,
+          commitMessage: input.commitMessage,
+          commitLink: input.commitLink,
         },
         options,
       );

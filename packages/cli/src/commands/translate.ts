@@ -6,6 +6,7 @@ import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
+import { getGitInfo } from "@/utils/git.ts";
 import { getAPIKey } from "@/utils/session.ts";
 import { confirm, note, outro, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
@@ -39,6 +40,7 @@ export async function translateCommand(args: string[] = []) {
   const s = spinner();
 
   const apiKey = getAPIKey();
+  const gitInfo = await getGitInfo();
 
   if (!apiKey) {
     throw new Error("No API key found. Please run `languine login` first.");
@@ -182,6 +184,11 @@ export async function translateCommand(args: string[] = []) {
             sourceLanguage: sourceLocale,
             targetLanguages: effectiveTargetLocales,
             content: translationInput,
+            branch: gitInfo?.branchName,
+            commit: gitInfo?.commitHash,
+            sourceProvider: gitInfo?.provider,
+            commitMessage: gitInfo?.commitMessage,
+            commitLink: gitInfo?.commitLink,
           });
 
           if (!isSilent && meta.plan === "free") {

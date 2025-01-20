@@ -2,29 +2,8 @@ import { validateJobPermissions } from "@/db/queries/permissions";
 import { createTranslation } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
+import { calculateChunkSize } from "../utils/chunk";
 import { translate } from "../utils/translate";
-
-// Calculate chunk size based on input length to stay under 4k tokens
-function calculateChunkSize(
-  content: Array<{ key: string; sourceText: string }>,
-) {
-  const MAX_TOKENS = 4000;
-  const AVERAGE_CHARS_PER_TOKEN = 4; // Rough estimate
-
-  // Calculate total characters in content
-  const totalChars = content.reduce(
-    (sum, item) => sum + item.sourceText.length,
-    0,
-  );
-  const estimatedTokens = totalChars / AVERAGE_CHARS_PER_TOKEN;
-
-  // Calculate how many items we can fit in a chunk
-  const itemsPerChunk = Math.max(
-    1,
-    Math.floor((MAX_TOKENS / estimatedTokens) * content.length),
-  );
-  return itemsPerChunk;
-}
 
 const translationSchema = z.object({
   projectId: z.string(),
@@ -32,6 +11,11 @@ const translationSchema = z.object({
   sourceFormat: z.string(),
   sourceLanguage: z.string(),
   targetLanguages: z.array(z.string()),
+  branch: z.string().nullable().optional(),
+  commit: z.string().nullable().optional(),
+  sourceProvider: z.string().nullable().optional(),
+  commitMessage: z.string().nullable().optional(),
+  commitLink: z.string().nullable().optional(),
   content: z.array(
     z.object({
       key: z.string(),
@@ -92,12 +76,15 @@ export const translateTask = schemaTask({
               targetLocale,
             });
 
-            console.log(translatedContent);
-
             await createTranslation({
               projectId: payload.projectId,
               organizationId: "bhm4edxdzlgse8zik4hxwuvf",
               sourceFormat: payload.sourceFormat,
+              branch: payload.branch,
+              commit: payload.commit,
+              sourceProvider: payload.sourceProvider,
+              commitMessage: payload.commitMessage,
+              commitLink: payload.commitLink,
               translations: chunk.map((content, i) => ({
                 translationKey: content.key,
                 sourceLanguage: payload.sourceLanguage,

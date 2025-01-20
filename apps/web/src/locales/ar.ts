@@ -1,20 +1,20 @@
 export default {
   header: {
     pricing: "التسعير",
-    docs: "المستندات",
+    docs: "الوثائق",
     signIn: "تسجيل الدخول",
-    goToApp: "اذهب إلى التطبيق"
+    goToApp: "انتقل إلى التطبيق"
   },
   hero: {
-    title: "التعريب الآلي لتطبيقاتك",
-    description: "تبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين."
+    title: "التوطين الآلي لتطبيقاتك",
+    description: "بسّط عملية التوطين الخاصة بك باستخدام واجهة سطر الأوامر (CLI) وخط أنابيب مدعوم بالذكاء الاصطناعي مصمم لأتمتة الترجمات للمطورين."
   },
   getStarted: {
     heading: "ابدأ الآن",
-    title: "التعريب الآلي لتطبيقاتك",
-    description: "تبسيط عملية التعريب الخاصة بك باستخدام واجهة سطر الأوامر المدعومة بالذكاء الاصطناعي وخط الأنابيب المصمم لأتمتة الترجمات للمطورين.",
+    title: "التوطين الآلي لتطبيقاتك",
+    description: "بسّط عملية التوطين الخاصة بك باستخدام واجهة سطر الأوامر (CLI) وخط أنابيب مدعوم بالذكاء الاصطناعي مصمم لأتمتة الترجمات للمطورين.",
     button: {
-      startAutomating: "ابدأ في الأتمتة",
+      startAutomating: "ابدأ الأتمتة",
       readDocumentation: "اقرأ الوثائق"
     }
   },
@@ -24,7 +24,7 @@ export default {
   },
   activity: {
     title: "النشاط",
-    loading: "جارٍ التحميل",
+    loading: "جار التحميل",
     loadMore: "عرض المزيد",
     noResults: "لا توجد نتائج لـ '{search}'",
     clearSearch: "مسح البحث"
@@ -32,32 +32,32 @@ export default {
   features: {
     title: "الميزات",
     fullyOpenSource: "مفتوح المصدر بالكامل",
-    fullyOpenSourceDescription: "كودنا متاح للجمهور على GitHub، مما يتيح الشفافية ومساهمات المجتمع.",
-    noVendorLockIn: "لا يوجد قفل للبائع",
-    noVendorLockInDescription: "نحن لا نقيدك في خدمة معينة، استخدم نماذج اللغة الخاصة بك.",
-    presetsForExpo: "الإعدادات المسبقة لـ Expo",
-    presetsForExpoDescription: "نحن نقدم إعدادات مسبقة لـ Expo، حتى تتمكن من البدء بسرعة.",
-    presetForReactNative: "الإعداد المسبق لـ React Native",
-    presetForReactNativeDescription: "نحن نقدم إعدادًا مسبقًا لـ React Native، حتى تتمكن من البدء بسرعة.",
+    fullyOpenSourceDescription: "كودنا متاح للجمهور على GitHub، مما يتيح الشفافية والمساهمات المجتمعية.",
+    noVendorLockIn: "لا يوجد قفل من البائع",
+    noVendorLockInDescription: "نحن لا نلزمك بخدمة معينة، استخدم نماذج اللغة الخاصة بك.",
+    presetsForExpo: "إعدادات مسبقة لـ Expo",
+    presetsForExpoDescription: "نوفر إعدادات مسبقة لـ Expo، حتى تتمكن من البدء بسرعة.",
+    presetForReactNative: "إعداد مسبق لـ React Native",
+    presetForReactNativeDescription: "نوفر إعدادًا مسبقًا لـ React Native، حتى تتمكن من البدء بسرعة.",
     presetForReactEmail: "مكتبة React Email",
     presetForReactEmailDescription: "لقد أنشأنا مكتبة i18n لـ React Email.",
     readyForI18nLibraries: "جاهز لمكتبات i18n",
-    readyForI18nLibrariesDescription: "ندعم جميع المكتبات بما في ذلك الأكثر شيوعًا (next-intl، react-i18next، react-intl، إلخ)."
+    readyForI18nLibrariesDescription: "نحن ندعم جميع المكتبات بما في ذلك الأكثر شهرة (next-intl, react-i18next, react-intl، إلخ)."
   },
   info: {
-    title: "يتعامل مع كل جانب من جوانب تعريب تطبيقك بما في ذلك",
+    title: "يتعامل مع كل جانب من جوانب توطين تطبيقك بما في ذلك",
     smartTranslation: {
-      title: "ترجمة ذكية",
-      intelligentTranslation: "ترجمة ذكية مع وعي بالسياق",
-      brandVoice: "اتساق صوت العلامة التجارية والنغمة",
+      title: "الترجمة الذكية",
+      intelligentTranslation: "ترجمة ذكية مع إدراك السياق",
+      brandVoice: "اتساق صوت ونبرة العلامة التجارية",
       terminology: "إدارة المصطلحات",
       linguisticFeatures: "ميزات لغوية متقدمة",
-      realtimeUpdates: "تحديثات ترجمة في الوقت الحقيقي"
+      realtimeUpdates: "تحديثات الترجمة في الوقت الحقيقي"
     },
     implementation: {
-      title: "تنفيذ",
-      quickSetup: "إعداد سريع وتكامل",
-      fileFormat: "معالجة تنسيق الملفات",
+      title: "التنفيذ",
+      quickSetup: "إعداد سريع والتكامل",
+      fileFormat: "معالجة تنسيق الملف",
       contentStructure: "تنظيم هيكل المحتوى",
       assetOrganization: "تنظيم الأصول"
     },
@@ -65,7 +65,7 @@ export default {
       title: "تجربة المطور",
       cli: "واجهة سطر الأوامر",
       cicd: "تكامل CI/CD",
-      versionControl: "التحكم في الإصدارات",
+      versionControl: "التحكم في الإصدار",
       workflow: "سير عمل المطور",
       documentation: "وثائق شاملة"
     }
@@ -74,10 +74,10 @@ export default {
     title: "تسجيل الدخول",
     github: "تسجيل الدخول باستخدام GitHub",
     google: "تسجيل الدخول باستخدام Google",
-    footer: "قم بأتمتة التعريب الخاص بك.",
-    description: "قم بتسجيل الدخول لبدء أتمتة التعريب الخاص بك في ثوان.",
+    footer: "أتمتة التوطين الخاص بك.",
+    description: "سجل الدخول لبدء أتمتة التوطين الخاص بك في ثوانٍ.",
     terms: {
-      text: "من خلال تسجيل الدخول، فإنك توافق على",
+      text: "بتسجيل الدخول، فإنك توافق على",
       termsOfService: "شروط الخدمة",
       and: "و",
       privacyPolicy: "سياسة الخصوصية"
@@ -95,8 +95,8 @@ export default {
     createProjectTitle: "إنشاء مشروع جديد",
     projectNamePlaceholder: "اسم المشروع",
     createProjectButton: "إنشاء مشروع",
-    pro: "محترف",
-    project: "مشروع",
+    pro: "Pro",
+    project: "المشروع",
     teams: "الفرق",
     createTeam: "إنشاء فريق",
     createTeamTitle: "إنشاء فريق جديد",
@@ -121,11 +121,11 @@ export default {
     },
     apiKey: {
       title: "مفتاح API",
-      description: "مفتاح API الشخصي الخاص بك للوصول إلى واجهة برمجة تطبيقات Languine ومن واجهة سطر الأوامر."
+      description: "مفتاح API الشخصي الخاص بك للوصول إلى Languine API ومن CLI."
     },
     deleteAccount: {
       title: "حذف الحساب",
-      description: "احذف حسابك وجميع البيانات المرتبطة به بشكل دائم. لا يمكن التراجع عن هذا الإجراء.",
+      description: "حذف حسابك بشكل دائم وجميع البيانات المرتبطة به. لا يمكن التراجع عن هذا الإجراء.",
       button: "حذف الحساب"
     }
   },
@@ -143,18 +143,18 @@ export default {
   },
   pipeline: {
     title: "سير العمل (خط أنابيب CI/CD)",
-    pro: "[محترف]",
-    description: "محرك الترجمة لدينا يتكامل بسلاسة في خط أنابيب CI/CD الحالي لديك، مما يترجم تلقائيًا قاعدة الشيفرة الخاصة بك في كل دفع. عندما يتم دفع تغييرات الشيفرة، نقوم بتحليل المحتوى المعدل، والحفاظ على ذاكرة الترجمة الخاصة بك، وتوليد ترجمات دقيقة مع الحفاظ على صوت العلامة التجارية والمصطلحات الخاصة بك. ثم يتم تقديم الترجمات كطلبات سحب، مما يسمح بالمراجعة قبل دمجها في الفرع الرئيسي الخاص بك ونشرها. يضمن هذا سير العمل الآلي أن يظل المحتوى المحلي لديك متزامنًا مع التطوير."
+    pro: "[pro]",
+    description: "محرك الترجمة الخاص بنا يتكامل بسلاسة مع خط أنابيب CI/CD الحالي الخاص بك، ويترجم قاعدة الكود الخاصة بك تلقائيًا مع كل دفع. عندما يتم دفع تغييرات الكود، نقوم بتحليل المحتوى المعدل، والحفاظ على ذاكرة الترجمة الخاصة بك، وإنشاء ترجمات دقيقة مع الحفاظ على صوت علامتك التجارية والمصطلحات. ثم يتم تقديم الترجمات كطلبات سحب، مما يسمح بمراجعتها قبل دمجها في الفرع الرئيسي الخاص بك ونشرها. يضمن سير العمل الآلي هذا أن المحتوى المترجم الخاص بك يبقى متزامنًا مع التطوير."
   },
   settings: {
     saved: "تم حفظ الإعدادات",
     savedDescription: "تم حفظ تغييراتك بنجاح",
     tabs: {
-      project: "مشروع",
-      account: "حساب",
-      team: "فريق",
-      provider: "مزود",
-      billing: "الفوترة"
+      project: "المشروع",
+      account: "الحساب",
+      team: "الفريق",
+      provider: "المزود",
+      billing: "الفواتير"
     },
     project: {
       name: {
@@ -169,7 +169,7 @@ export default {
       },
       "delete": {
         title: "حذف المشروع",
-        description: "احذف هذا المشروع وجميع بياناته بشكل دائم",
+        description: "حذف هذا المشروع بشكل دائم وجميع بياناته",
         button: "حذف المشروع"
       }
     },
@@ -183,7 +183,7 @@ export default {
         title: "خطة الفوترة",
         description: "إدارة خطة الفوترة لفريقك",
         free: "مجاني",
-        pro: "محترف",
+        pro: "Pro",
         unlimited: "غير محدود"
       },
       apiKey: {
@@ -193,17 +193,17 @@ export default {
       },
       members: {
         title: "الأعضاء",
-        pendingInvitations: "دعوات معلقة",
+        pendingInvitations: "الدعوات المعلقة",
         filterPlaceholder: "تصفية الأعضاء...",
         allRoles: "جميع الأدوار",
         date: "التاريخ",
-        selectAll: "{count} محدد",
+        selectAll: "{count} مختارة",
         noPendingInvitations: "لا توجد دعوات معلقة",
-        inviteMembers: "دعوة الأعضاء للتعاون",
+        inviteMembers: "دعوة أعضاء للتعاون",
         roles: {
-          owner: "مالك",
+          owner: "المالك",
           admin: "مدير",
-          member: "عضو"
+          member: "العضو"
         },
         dateSort: {
           newest: "الأحدث",
@@ -217,52 +217,52 @@ export default {
         removeMember: "إزالة عضو",
         removeMemberConfirm: "إزالة عضو",
         removeMemberDescription: "هل أنت متأكد أنك تريد إزالة هذا العضو؟",
-        noResults: "لا توجد أعضاء",
-        tryDifferentSearch: "حاول بحث مختلف",
+        noResults: "لم يتم العثور على أعضاء",
+        tryDifferentSearch: "حاول بحثًا مختلفًا",
         deleteInvite: "حذف الدعوة",
         deleteInviteDescription: "حذف الدعوة",
         invitedBy: "تمت الدعوة بواسطة {name}",
         deleteInviteSuccess: "تم حذف الدعوة",
-        deleteInviteError: "فشل في حذف الدعوة",
+        deleteInviteError: "فشل حذف الدعوة",
         removeMemberSuccess: "تمت إزالة العضو",
-        removeMemberError: "فشل في إزالة العضو",
+        removeMemberError: "فشل إزالة العضو",
         removeMemberSuccessDescription: "تمت إزالة العضو بنجاح",
-        removeMemberErrorDescription: "فشل في إزالة العضو"
+        removeMemberErrorDescription: "فشل إزالة العضو"
       }
     },
     badRequest: "طلب غير صالح",
-    badRequestDescription: "يجب أن تحتوي المنظمة على مالك واحد على الأقل. نقل الملكية إلى عضو آخر قبل إزالة هذا المالك.",
-    permissionDenied: "إذن مرفوض",
-    permissionDeniedDescription: "يجب أن تكون مالك الفريق لتنفيذ هذا الإجراء",
+    badRequestDescription: "يجب أن يكون لدى المنظمة مالك واحد على الأقل. قم بنقل الملكية إلى عضو آخر قبل إزالة هذا المالك.",
+    permissionDenied: "تم الرفض",
+    permissionDeniedDescription: "تحتاج إلى أن تكون مالكًا للفريق لتنفيذ هذا الإجراء",
     deleteTeamTitle: "حذف الفريق",
-    deleteTeamDescription: "لا يمكن حذف المنظمة عندما تكون العضو الوحيد، بدلاً من ذلك احذف حسابك",
+    deleteTeamDescription: "لا يمكن حذف المنظمة عندما تكون العضو الوحيد، بدلاً من ذلك قم بحذف حسابك",
     error: "حدث خطأ ما",
     errorDescription: "يرجى المحاولة مرة أخرى أو الاتصال بالدعم",
     addTeam: "إنشاء فريق",
     apiKey: {
       updated: "تم تحديث مفتاح API",
-      updatedDescription: "تم تحديث مفتاح API الخاص بك بنجاح وتم نسخه إلى الحافظة.",
+      updatedDescription: "تم تحديث مفتاح API الخاص بك بنجاح ونسخه إلى الحافظة الخاصة بك.",
       title: "تحديث مفتاح API",
       description: "هل أنت متأكد أنك تريد إنشاء مفتاح API جديد؟ سيتوقف المفتاح القديم عن العمل على الفور.",
       cancel: "إلغاء",
-      "continue": "استمر"
+      "continue": "متابعة"
     },
     provider: {
       updateSuccess: "تم تحديث الإعدادات بنجاح",
-      updateError: "فشل في تحديث الإعدادات",
+      updateError: "فشل تحديث الإعدادات",
       translationProvider: {
         title: "مزود الترجمة",
-        description: "اختر خدمة الذكاء الاصطناعي المفضلة لديك لتوليد الترجمات. يقدم كل مزود قدرات وأسعار مختلفة.",
+        description: "اختر خدمة الذكاء الاصطناعي المفضلة لديك لإنشاء الترجمات. يقدم كل مزود إمكانيات وأسعار مختلفة.",
         placeholder: "اختر مزودًا"
       },
       languageModel: {
         title: "نموذج اللغة",
-        description: "اختر النموذج الذكي الذي يوازن بين الجودة والسرعة لاحتياجات الترجمة الخاصة بك. قد تكون النماذج الأكثر قوة أبطأ ولكنها تنتج نتائج أفضل.",
+        description: "اختر نموذج الذكاء الاصطناعي الذي يوازن بين الجودة والسرعة لاحتياجات الترجمة الخاصة بك. قد تكون النماذج الأكثر قوة أبطأ ولكنها تنتج نتائج أفضل.",
         placeholder: "اختر نموذجًا"
       },
       apiKey: {
-        title: "مفتاح API لمزود الخدمة",
-        description: "أدخل مفتاح API الخاص بك للمصادقة مع المزود الذي اخترته. احتفظ بهذا المفتاح آمنًا - نحن نقوم بتشفيره قبل التخزين.",
+        title: "مفتاح API للمزود",
+        description: "أدخل مفتاح API الخاص بك للتوثيق مع المزود الذي اخترته. احتفظ بهذا المفتاح آمنًا - نقوم بتشفيره قبل التخزين.",
         placeholder: "أدخل مفتاح API الخاص بك"
       }
     },
@@ -280,10 +280,10 @@ export default {
       description: "تمكين فحوصات الجودة الآلية للترجمات"
     },
     contextDetection: {
-      title: "كشف السياق",
-      description: "كشف السياق تلقائيًا والحفاظ عليه في الترجمات"
+      title: "اكتشاف السياق",
+      description: "اكتشاف السياق تلقائيًا والحفاظ عليه في الترجمات"
     },
-    styleGuide: "دليل الأسلوب",
+    styleGuide: "دليل النمط",
     lengthControl: {
       title: "التحكم في الطول",
       description: "التحكم في طول النص المترجم",
@@ -291,12 +291,12 @@ export default {
         flexible: "مرن",
         strict: "صارم",
         exact: "دقيق",
-        loose: "مرن"
+        loose: "فضفاض"
       }
     },
     inclusiveLanguage: {
       title: "لغة شاملة",
-      description: "ضمان استخدام الترجمات للغة شاملة"
+      description: "تأكد من استخدام الترجمات للغة شاملة"
     },
     formality: {
       title: "الرسمية",
@@ -309,13 +309,13 @@ export default {
     },
     brandVoice: {
       title: "صوت العلامة التجارية",
-      description: "حدد صوت علامتك التجارية ونغمتها",
+      description: "حدد صوت ونبرة علامتك التجارية",
       placeholder: "صف صوت علامتك التجارية..."
     },
-    localization: "التعريب",
+    localization: "التوطين",
     idioms: {
-      title: "التعابير الاصطلاحية",
-      description: "التعامل مع التعبيرات الاصطلاحية بشكل مناسب"
+      title: "التعبيرات الاصطلاحية",
+      description: "تعامل مع التعبيرات الاصطلاحية بشكل مناسب"
     },
     terminology: {
       title: "المصطلحات",
@@ -323,11 +323,11 @@ export default {
     },
     culturalAdaptation: {
       title: "التكيف الثقافي",
-      description: "تكييف المحتوى ليتناسب مع الثقافة"
+      description: "تكييف المحتوى ليكون مناسبًا ثقافيًا"
     }
   },
   pricing: {
-    title: "أسعار بسيطة",
+    title: "تسعير بسيط",
     free: {
       title: "مجاني (100 مفتاح)",
       price: "مجاني",
@@ -342,29 +342,29 @@ export default {
       }
     },
     pro: {
-      title: "محترف",
-      includes_free: "كل شيء في المجاني، بالإضافة إلى:",
+      title: "Pro",
+      includes_free: "كل ما في المجاني، بالإضافة إلى:",
       features: {
         github_action: "تكامل GitHub Action",
         latest_features: "الوصول المبكر إلى أحدث الميزات",
-        priority_support: "دعم ذو أولوية"
+        priority_support: "دعم أولوية"
       }
     },
-    cta: "ابدأ في الأتمتة"
+    cta: "ابدأ الأتمتة"
   },
   createTeam: {
     teamName: "اسم الفريق",
     teamNamePlaceholder: "أدخل اسم الفريق",
     createTeamButton: "إنشاء فريق",
     cancel: "إلغاء",
-    createTeamDescription: "إنشاء فريق جديد لإدارة مشاريعك ومتعاونينك."
+    createTeamDescription: "إنشاء فريق جديد لإدارة مشاريعك والمتعاونين معك."
   },
   createProject: {
     createProjectTitle: "إنشاء مشروع جديد",
     projectNamePlaceholder: "أدخل اسم المشروع",
     createProjectButton: "إنشاء مشروع",
     cancel: "إلغاء",
-    createProjectDescription: "إنشاء مشروع جديد لبدء أتمتة التعريب الخاص بك."
+    createProjectDescription: "إنشاء مشروع جديد لبدء أتمتة التوطين الخاص بك."
   },
   invite: {
     inviteMember: "دعوة عضو",
@@ -379,7 +379,7 @@ export default {
     },
     error: {
       title: "خطأ",
-      description: "فشل في إرسال الدعوة. يرجى المحاولة مرة أخرى."
+      description: "فشل إرسال الدعوة. يرجى المحاولة مرة أخرى."
     },
     validation: {
       invalidEmail: "يرجى إدخال بريد إلكتروني صالح"
@@ -411,21 +411,21 @@ export default {
       },
       "3": {
         title: "الوثائق",
-        description: "تحقق من وثائقنا للحصول على أدلة مفصلة وأفضل الممارسات",
+        description: "تحقق من وثائقنا للحصول على أدلة تفصيلية وأفضل الممارسات",
         link: "الوثائق"
       }
     },
     info: {
       description: "تحتاج إلى مساعدة؟ تحقق من",
       link: "الوثائق",
-      description_2: "للحصول على أدلة مفصلة وأفضل الممارسات."
+      description_2: "للحصول على أدلة تفصيلية وأفضل الممارسات."
     }
   },
   cli: {
     success: {
-      title: "نجاح تسجيل دخول Languine CLI",
+      title: "نجاح تسجيل الدخول إلى Languine CLI",
       description: "تمت مصادقة Languine CLI بنجاح كـ:",
-      description_2: "يمكنك الآن إغلاق هذه النافذة والعودة إلى واجهة سطر الأوامر"
+      description_2: "يمكنك الآن إغلاق هذه النافذة والعودة إلى CLI"
     }
   },
   translations: {

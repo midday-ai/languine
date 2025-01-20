@@ -88,6 +88,8 @@ export function Activity() {
             createdAt={item.createdAt}
             commit={item.commit}
             targetLanguage={item.targetLanguage}
+            commitLink={item.commitLink}
+            sourceProvider={item.sourceProvider}
           />
         )),
       )}

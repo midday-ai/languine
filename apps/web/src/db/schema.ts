@@ -322,6 +322,7 @@ export const translations = sqliteTable(
     context: text("context"),
     branch: text("branch"),
     commit: text("commit"),
+    commitLink: text("commit_link"),
     sourceProvider: text("source_provider"),
     commitMessage: text("commit_message"),
     createdAt: integer("created_at", { mode: "timestamp" })

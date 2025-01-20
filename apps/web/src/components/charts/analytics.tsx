@@ -104,12 +104,7 @@ export function AnalyticsChart() {
               className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
             />
 
-            <Bar
-              dataKey="count"
-              fill="var(--color-value)"
-              barSize={36}
-              isAnimationActive={false}
-            />
+            <Bar dataKey="count" fill="var(--color-value)" barSize={36} />
           </BarChart>
         </ChartContainer>
       </CardContent>

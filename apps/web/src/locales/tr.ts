@@ -1,29 +1,29 @@
 export default {
   header: {
     pricing: "Fiyatlandırma",
-    docs: "Belgeler",
+    docs: "Dokümanlar",
     signIn: "Giriş yap",
     goToApp: "Uygulamaya git"
   },
   hero: {
     title: "Uygulamalarınız için otomatik yerelleştirme",
-    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın."
+    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın."
   },
   getStarted: {
-    heading: "Başlayın",
+    heading: "Başla",
     title: "Uygulamalarınız için otomatik yerelleştirme",
-    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
+    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
     button: {
-      startAutomating: "Otomatikleştirmeye başlayın",
-      readDocumentation: "Belgeleri okuyun"
+      startAutomating: "Otomasyona başla",
+      readDocumentation: "Dokümantasyonu oku"
     }
   },
   companies: {
-    title: "Kullanılanlar",
+    title: "Tarafından kullanılan",
     addYourCompany: "+ Şirketinizi ekleyin"
   },
   activity: {
-    title: "Etkinlik",
+    title: "Aktivite",
     loading: "Yükleniyor",
     loadMore: "Daha fazla göster",
     noResults: "'{search}' için sonuç bulunamadı",
@@ -32,23 +32,23 @@ export default {
   features: {
     title: "Özellikler",
     fullyOpenSource: "Tamamen açık kaynak",
-    fullyOpenSourceDescription: "Kodumuz GitHub'da herkese açıktır, bu da şeffaflık ve topluluk katkılarını sağlar.",
-    noVendorLockIn: "Satıcı kilidi yok",
+    fullyOpenSourceDescription: "Kodumuz GitHub'da herkese açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
+    noVendorLockIn: "Tedarikçi kilidi yok",
     noVendorLockInDescription: "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
     presetsForExpo: "Expo için ön ayarlar",
-    presetsForExpoDescription: "Hızla başlamanız için Expo için ön ayarlar sağlıyoruz.",
+    presetsForExpoDescription: "Expo için ön ayarlar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     presetForReactNative: "React Native için ön ayar",
-    presetForReactNativeDescription: "Hızla başlamanız için React Native için bir ön ayar sağlıyoruz.",
+    presetForReactNativeDescription: "React Native için bir ön ayar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     presetForReactEmail: "React Email Kütüphanesi",
     presetForReactEmailDescription: "React Email için bir i18n kütüphanesi oluşturduk.",
     readyForI18nLibraries: "i18n kütüphanelerine hazır",
-    readyForI18nLibrariesDescription: "En popüler olanlar (next-intl, react-i18next, react-intl, vb.) dahil tüm kütüphaneleri destekliyoruz."
+    readyForI18nLibrariesDescription: "En popüler olanlar dahil tüm kütüphaneleri destekliyoruz (next-intl, react-i18next, react-intl, vb.)."
   },
   info: {
-    title: "Uygulamanızın yerelleştirilmesiyle ilgili her yönü ele alır",
+    title: "Uygulamanızın yerelleştirilmesinin her yönünü ele alır",
     smartTranslation: {
       title: "Akıllı Çeviri",
-      intelligentTranslation: "Bağlam farkındalığı ile zeki çeviri",
+      intelligentTranslation: "Bağlam farkındalığı ile akıllı çeviri",
       brandVoice: "Marka sesi ve ton tutarlılığı",
       terminology: "Terminoloji yönetimi",
       linguisticFeatures: "Gelişmiş dil özellikleri",
@@ -57,7 +57,7 @@ export default {
     implementation: {
       title: "Uygulama",
       quickSetup: "Hızlı kurulum ve entegrasyon",
-      fileFormat: "Dosya formatı yönetimi",
+      fileFormat: "Dosya formatı işleme",
       contentStructure: "İçerik yapısı organizasyonu",
       assetOrganization: "Varlık organizasyonu"
     },
@@ -67,7 +67,7 @@ export default {
       cicd: "CI/CD entegrasyonu",
       versionControl: "Sürüm kontrolü",
       workflow: "Geliştirici iş akışı",
-      documentation: "Kapsamlı belgeler"
+      documentation: "Kapsamlı dokümantasyon"
     }
   },
   login: {
@@ -75,9 +75,9 @@ export default {
     github: "GitHub ile giriş yap",
     google: "Google ile giriş yap",
     footer: "Yerelleştirmenizi otomatikleştirin.",
-    description: "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
+    description: "Saniyeler içinde yerelleştirmenizi otomatikleştirmeye başlamak için giriş yapın.",
     terms: {
-      text: "Giriş yaparak, bizimle",
+      text: "Giriş yaparak, bizim",
       termsOfService: "Hizmet Şartları",
       and: "ve",
       privacyPolicy: "Gizlilik Politikası"
@@ -104,24 +104,24 @@ export default {
     createTeamButton: "Takım oluştur"
   },
   coming_soon: {
-    title: "Languine Erken Erişim'te",
+    title: "Languine Erken Erişimde",
     description: "Şu anda erken erişimdeyiz. Erken erişim için",
-    cta: "X'te bizimle iletişime geçin."
+    cta: "X üzerinden bize ulaşın."
   },
   account: {
     fullName: {
-      title: "Tam Ad",
-      description: "Platformda görünecek tam adınız.",
+      title: "Tam Adı",
+      description: "Platform genelinde görünecek tam adınız.",
       placeholder: "Tam adınızı girin"
     },
     email: {
       title: "E-posta Adresi",
-      description: "Hesabınızla ilişkili e-posta adresi.",
+      description: "Hesabınızla ilişkilendirilmiş e-posta adresi.",
       placeholder: "E-posta adresinizi girin"
     },
     apiKey: {
       title: "API Anahtarı",
-      description: "Languine API'sine ve CLI'den erişim için kişisel API anahtarınız."
+      description: "Languine API'sine ve CLI'dan erişim için kişisel API anahtarınız."
     },
     deleteAccount: {
       title: "Hesabı Sil",
@@ -135,34 +135,34 @@ export default {
   dangerZone: {
     dialog: {
       title: "Kesinlikle emin misiniz?",
-      description: "Bu işlem geri alınamaz. Onaylamak için LİSTEYİ yazın.",
-      placeholder: "Onaylamak için LİSTEYİ yazın",
-      confirm: "Silme Onayı",
+      description: "Bu işlem geri alınamaz. Onaylamak için DELETE yazın.",
+      placeholder: "Onaylamak için DELETE yazın",
+      confirm: "Silme İşlemini Onayla",
       cancel: "İptal"
     }
   },
   pipeline: {
     title: "İş Akışı (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her itme işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri itildiğinde, değiştirilen içeriği analiz ederiz, çeviri belleğinizi koruruz ve marka sesinizi ve terminolojinizi koruyarak doğru çeviriler üretiriz. Çeviriler daha sonra gözden geçirilmek üzere pull request olarak sunulur ve ana dalınıza birleştirilip dağıtılmadan önce incelenir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana branch'e birleştirilmeden ve dağıtılmadan önce inceleme yapılır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   settings: {
     badRequest: "Geçersiz istek",
     badRequestDescription: "Organizasyonun en az bir sahibi olmalıdır. Bu sahibi kaldırmadan önce sahipliği başka bir üyeye devredin.",
     permissionDenied: "İzin reddedildi",
-    permissionDeniedDescription: "Bu işlemi gerçekleştirmek için takımın sahibi olmalısınız.",
+    permissionDeniedDescription: "Bu işlemi yapmak için takımın sahibi olmanız gerekiyor",
     deleteTeamTitle: "Takımı sil",
-    deleteTeamDescription: "Tek üye olduğunuzda organizasyonu silemezsiniz, bunun yerine hesabınızı silin.",
+    deleteTeamDescription: "Organizasyonu silemezsiniz, bunun yerine hesabınızı silin",
     saved: "Ayarlar kaydedildi",
-    savedDescription: "Değişiklikleriniz başarıyla kaydedildi.",
-    error: "Bir şeyler ters gitti",
-    errorDescription: "Lütfen tekrar deneyin veya destekle iletişime geçin.",
+    savedDescription: "Değişiklikleriniz başarıyla kaydedildi",
+    error: "Bir şeyler yanlış gitti",
+    errorDescription: "Lütfen tekrar deneyin veya destekle iletişime geçin",
     addTeam: "Takım oluştur",
     apiKey: {
       updated: "API anahtarı güncellendi",
-      updatedDescription: "API anahtarınız başarıyla güncellendi ve panoya kopyalandı.",
+      updatedDescription: "API anahtarınız başarıyla güncellendi ve panonuza kopyalandı.",
       title: "API Anahtarını Güncelle",
-      description: "Yeni bir API anahtarı oluşturmak istediğinizden emin misiniz? Eski anahtar hemen geçersiz olacaktır.",
+      description: "Yeni bir API anahtarı oluşturmak istediğinizden emin misiniz? Eski anahtar hemen çalışmayı durduracaktır.",
       cancel: "İptal",
       "continue": "Devam et"
     },
@@ -171,11 +171,11 @@ export default {
       account: "Hesap",
       team: "Takım",
       provider: "Sağlayıcı",
-      billing: "Faturalama"
+      billing: "Faturalandırma"
     },
     provider: {
-      updateSuccess: "Ayarlar başarıyla güncellendi.",
-      updateError: "Ayarları güncellemeye çalışırken hata oluştu.",
+      updateSuccess: "Ayarlar başarıyla güncellendi",
+      updateError: "Ayarlar güncellenemedi",
       translationProvider: {
         title: "Çeviri Sağlayıcısı",
         description: "Çevirileri oluşturmak için tercih ettiğiniz AI hizmetini seçin. Her sağlayıcı farklı yetenekler ve fiyatlandırma sunar.",
@@ -183,12 +183,12 @@ export default {
       },
       languageModel: {
         title: "Dil Modeli",
-        description: "Çeviri ihtiyaçlarınız için kalite ve hız arasında en iyi dengeyi sağlayan AI modelini seçin. Daha güçlü modeller daha yavaş olabilir ancak daha iyi sonuçlar üretir.",
+        description: "Çeviri ihtiyaçlarınız için kalite ve hızı en iyi şekilde dengeleyen AI modelini seçin. Daha güçlü modeller daha yavaş olabilir ancak daha iyi sonuçlar üretebilir.",
         placeholder: "Bir model seçin"
       },
       apiKey: {
         title: "Sağlayıcı API Anahtarı",
-        description: "Seçtiğiniz sağlayıcı ile kimlik doğrulamak için API anahtarınızı girin. Bu anahtarı güvenli tutun - depolamadan önce şifreliyoruz.",
+        description: "Seçtiğiniz sağlayıcı ile kimlik doğrulaması yapmak için API anahtarınızı girin. Bu anahtarı güvende tutun - saklamadan önce şifreleriz.",
         placeholder: "API anahtarınızı girin"
       }
     },
@@ -200,13 +200,13 @@ export default {
         placeholder: "Proje adını girin"
       },
       id: {
-        title: "Proje Kimliği",
-        description: "Benzersiz proje tanımlayıcınız",
-        placeholder: "Proje Kimliği"
+        title: "Proje ID",
+        description: "Projenizin benzersiz tanımlayıcısı",
+        placeholder: "Proje ID"
       },
       "delete": {
         title: "Projeyi Sil",
-        description: "Bu projeyi ve tüm verilerini kalıcı olarak silin.",
+        description: "Bu projeyi ve tüm verilerini kalıcı olarak sil",
         button: "Projeyi Sil"
       }
     },
@@ -218,15 +218,15 @@ export default {
         placeholder: "Takım adını girin"
       },
       billing: {
-        title: "Faturalama Planı",
-        description: "Takımınızın faturalama planını yönetin.",
+        title: "Faturalandırma Planı",
+        description: "Takımınızın faturalandırma planını yönetin",
         free: "Ücretsiz",
         pro: "Pro",
         unlimited: "Sınırsız"
       },
       apiKey: {
         title: "Takım API Anahtarı",
-        description: "Takım erişimi için API anahtarı, bunu CI/CD pipeline'ınızdan Proje Kimliği ile birlikte kullanın.",
+        description: "Takım erişimi için API anahtarı, bunu Proje ID ile birlikte CI/CD pipeline'ınızdan kullanın",
         placeholder: "Takım API Anahtarı"
       },
       members: {
@@ -236,7 +236,7 @@ export default {
         leaveTeam: "Takımdan ayrıl",
         invite: "Üye davet et",
         title: "Üyeler",
-        pendingInvitations: "Bekleyen Davetiyeler",
+        pendingInvitations: "Bekleyen Davetler",
         removeMember: "Üyeyi kaldır",
         removeMemberConfirm: "Üyeyi kaldır",
         removeMemberDescription: "Bu üyeyi kaldırmak istediğinizden emin misiniz?",
@@ -244,26 +244,26 @@ export default {
         allRoles: "Tüm Roller",
         date: "Tarih",
         selectAll: "{count} seçildi",
-        noPendingInvitations: "Bekleyen davetiye yok",
+        noPendingInvitations: "Bekleyen davet yok",
         noResults: "Üye bulunamadı",
         tryDifferentSearch: "Farklı bir arama deneyin",
-        inviteMembers: "İşbirliği için üye davet et",
-        deleteInvite: "Davetiyeyi Sil",
-        deleteInviteDescription: "Davetiyeyi sil",
-        invitedBy: "Davet edilen {name}",
+        inviteMembers: "İş birliği yapmak için üyeler davet edin",
+        deleteInvite: "Daveti sil",
+        deleteInviteDescription: "Daveti sil",
+        invitedBy: "{name} tarafından davet edildi",
         deleteInviteSuccess: "Davet silindi",
-        deleteInviteError: "Davetiyeyi silme başarısız oldu",
+        deleteInviteError: "Davet silinemedi",
         removeMemberSuccess: "Üye kaldırıldı",
-        removeMemberError: "Üyeyi kaldırma başarısız oldu",
+        removeMemberError: "Üye kaldırılamadı",
         removeMemberSuccessDescription: "Üye başarıyla kaldırıldı",
-        removeMemberErrorDescription: "Üyeyi kaldırma başarısız oldu",
+        removeMemberErrorDescription: "Üye kaldırılamadı",
         roles: {
           owner: "Sahip",
           member: "Üye"
         },
         dateSort: {
-          newest: "En Yeniler",
-          oldest: "En Eski"
+          newest: "En yeni",
+          oldest: "En eski"
         }
       }
     }
@@ -271,58 +271,58 @@ export default {
   tuning: {
     general: "Genel",
     translationMemory: {
-      title: "Çeviri Belleği",
-      description: "Tutarlılığı ve verimliliği artırmak için çeviri belleğini kullanın."
+      title: "Çeviri Hafızası",
+      description: "Tutarlılık ve verimliliği artırmak için çeviri hafızasını kullanın"
     },
     qualityChecks: {
       title: "Kalite Kontrolleri",
-      description: "Çeviriler için otomatik kalite kontrollerini etkinleştirin."
+      description: "Çeviriler için otomatik kalite kontrollerini etkinleştirin"
     },
     contextDetection: {
-      title: "Bağlam Tespiti",
-      description: "Çevirilerde bağlamı otomatik olarak tespit edin ve koruyun."
+      title: "Bağlam Algılama",
+      description: "Çevirilerde bağlamı otomatik olarak algılayın ve koruyun"
     },
-    styleGuide: "Stil Kılavuzu",
+    styleGuide: "Stil Rehberi",
     lengthControl: {
       title: "Uzunluk Kontrolü",
-      description: "Çevirilen metnin uzunluğunu kontrol edin.",
+      description: "Çevrilen metnin uzunluğunu kontrol edin",
       options: {
         flexible: "Esnek",
-        strict: "Sıkı",
+        strict: "Katı",
         exact: "Tam",
         loose: "Gevşek"
       }
     },
     inclusiveLanguage: {
       title: "Kapsayıcı Dil",
-      description: "Çevirilerin kapsayıcı bir dil kullanmasını sağlayın."
+      description: "Çevirilerin kapsayıcı dil kullandığından emin olun"
     },
     formality: {
       title: "Resmiyet",
-      description: "Çevirilerin resmiyet seviyesini kontrol edin."
+      description: "Çevirilerin resmiyet seviyesini kontrol edin"
     },
     brandName: {
       title: "Marka Adı",
-      description: "Tutarlı kullanım için marka adınızı belirleyin.",
+      description: "Tutarlı kullanım için marka adınızı belirleyin",
       placeholder: "Marka adınızı girin"
     },
     brandVoice: {
       title: "Marka Sesi",
-      description: "Marka sesinizi ve tonunuzu tanımlayın.",
+      description: "Marka sesinizi ve tonunuzu tanımlayın",
       placeholder: "Marka sesinizi tanımlayın..."
     },
     localization: "Yerelleştirme",
     idioms: {
       title: "Deyimler",
-      description: "Deyimsel ifadeleri uygun şekilde yönetin."
+      description: "Deyimsel ifadeleri uygun şekilde ele alın"
     },
     terminology: {
       title: "Terminoloji",
-      description: "Özelleşmiş terminolojiyi ve sözlükleri yönetin."
+      description: "Özel terminoloji ve sözlükleri yönetin"
     },
     culturalAdaptation: {
-      title: "Kültürel Adaptasyon",
-      description: "İçeriği kültürel uygunluk için uyarlayın."
+      title: "Kültürel Uyarlama",
+      description: "İçeriği kültürel uygunluk için uyarlayın"
     }
   },
   pricing: {
@@ -332,31 +332,31 @@ export default {
       price: "Ücretsiz",
       keys_limit: "100 anahtara kadar",
       features: {
-        unlimited_projects: "Sınırsız projeler",
+        unlimited_projects: "Sınırsız proje",
         fine_tuning: "İnce ayar seçenekleri",
         overrides: "Çeviri geçersiz kılmaları",
         analytics: "Analitik",
-        context_memory: "Bağlam belleği",
+        context_memory: "Bağlam hafızası",
         community_support: "Topluluk desteği"
       }
     },
     pro: {
       title: "Pro",
-      includes_free: "Ücretsizdeki her şey, artı:",
+      includes_free: "Ücretsiz'deki her şey, artı:",
       features: {
-        github_action: "GitHub Eylem entegrasyonu",
-        latest_features: "En son özelliklere erken erişim",
+        github_action: "GitHub Action entegrasyonu",
+        latest_features: "En yeni özelliklere erken erişim",
         priority_support: "Öncelikli destek"
       }
     },
-    cta: "Otomatikleştirmeye başlayın"
+    cta: "Otomasyona başla"
   },
   createTeam: {
     teamName: "Takım Adı",
     teamNamePlaceholder: "Takım adını girin",
     createTeamButton: "Takım oluştur",
     cancel: "İptal",
-    createTeamDescription: "Projelerinizi ve işbirlikçilerinizi yönetmek için yeni bir takım oluşturun."
+    createTeamDescription: "Projelerinizi ve iş birliği yapanları yönetmek için yeni bir takım oluşturun."
   },
   createProject: {
     createProjectTitle: "Yeni bir proje oluştur",
@@ -367,21 +367,21 @@ export default {
   },
   invite: {
     inviteMember: "Üye davet et",
-    inviteDescription: "Takımınıza bir üye davet et",
+    inviteDescription: "Takımınıza bir üye davet edin",
     emailLabel: "E-posta",
     emailPlaceholder: "E-posta girin",
     cancel: "İptal",
     sendInvite: "Davet gönder",
     success: {
       title: "Davet gönderildi",
-      description: "Başarıyla {email} adresine davet gönderildi."
+      description: "{email} adresine davet başarıyla gönderildi"
     },
     error: {
       title: "Hata",
-      description: "Davet göndermede hata oluştu. Lütfen tekrar deneyin."
+      description: "Davet gönderilemedi. Lütfen tekrar deneyin."
     },
     validation: {
-      invalidEmail: "Lütfen geçerli bir e-posta girin"
+      invalidEmail: "Lütfen geçerli bir e-posta adresi girin"
     }
   },
   months: {
@@ -401,34 +401,34 @@ export default {
   onboarding: {
     steps: {
       "1": {
-        title: "Languine CLI'yi Kur",
-        description: "Çevirileri yönetmek için Languine CLI'yi yükleyin ve yapılandırın."
+        title: "Languine CLI Kurulumu",
+        description: "Çevirileri yönetmek için Languine CLI'yı kurun ve yapılandırın"
       },
       "2": {
-        title: "Çevirileri İt",
-        description: "Çevirilerin itmesini bekliyor"
+        title: "Çevirileri Gönder",
+        description: "Çevirilerin gönderilmesi bekleniyor"
       },
       "3": {
-        title: "Belgeler",
-        description: "Detaylı kılavuzlar ve en iyi uygulamalar için belgelerimizi kontrol edin.",
-        link: "belgeler"
+        title: "Dokümantasyon",
+        description: "Detaylı rehberler ve en iyi uygulamalar için dokümantasyonumuza göz atın",
+        link: "dokümantasyon"
       }
     },
     info: {
-      description: "Yardım mı gerekiyor? Belgelerimizi kontrol edin",
-      link: "belgeler",
-      description_2: "detaylı kılavuzlar ve en iyi uygulamalar için."
+      description: "Yardıma mı ihtiyacınız var? Detaylı rehberler ve en iyi uygulamalar için",
+      link: "dokümantasyon",
+      description_2: "mıza göz atın."
     }
   },
   cli: {
     success: {
-      title: "Languine CLI Girişi Başarılı",
-      description: "Languine CLI başarıyla kimlik doğrulandı:",
-      description_2: "Artık bu sekmeyi kapatabilir ve CLI'ye dönebilirsiniz."
+      title: "Languine CLI Giriş Başarılı",
+      description: "Languine CLI başarıyla kimlik doğrulaması yapıldı:",
+      description_2: "Artık bu sekme kapatılabilir ve CLI'ye dönebilirsiniz"
     }
   },
   translations: {
-    header: "Çevirilen anahtarlar"
+    header: "Çevrilen anahtarlar"
   },
   search: {
     placeholder: "Ara"
@@ -437,6 +437,6 @@ export default {
     daily: "Günlük",
     weekly: "Haftalık",
     monthly: "Aylık",
-    selectPeriod: "Dönem seç"
+    selectPeriod: "Dönem seçin"
   }
 } as const;

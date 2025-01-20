@@ -6,6 +6,7 @@ import type { PromptOptions } from "./types";
 
 const openai = createOpenAI({
   baseURL: process.env.AI_GATEWAY_ENDPOINT,
+  apiKey: process.env.AI_API_KEY,
 });
 
 function getPrompt(
@@ -30,9 +31,10 @@ export async function translate(
   const prompt = getPrompt(content, options);
 
   const { object } = await generateObject({
-    model: openai(process.env.AI_MODEL!),
+    model: openai("deepseek-chat"),
     prompt,
     mode: "json",
+    maxTokens: 8000,
     schema: z.object({
       content: z.array(z.string()),
     }),

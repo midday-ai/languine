@@ -1,25 +1,25 @@
 export default {
   header: {
     pricing: "Prezzi",
-    docs: "Documenti",
+    docs: "Documentazione",
     signIn: "Accedi",
     goToApp: "Vai all'app"
   },
   hero: {
     title: "Localizzazione automatizzata per le tue applicazioni",
-    description: "Semplifica il tuo processo di localizzazione con un'interfaccia a riga di comando e una pipeline alimentate da AI progettate per automatizzare le traduzioni per gli sviluppatori."
+    description: "Ottimizza il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori."
   },
   getStarted: {
     heading: "Inizia",
     title: "Localizzazione automatizzata per le tue applicazioni",
-    description: "Semplifica il tuo processo di localizzazione con un'interfaccia a riga di comando e una pipeline alimentate da AI progettate per automatizzare le traduzioni per gli sviluppatori.",
+    description: "Ottimizza il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori.",
     button: {
-      startAutomating: "Inizia ad automatizzare",
+      startAutomating: "Inizia l'automazione",
       readDocumentation: "Leggi la documentazione"
     }
   },
   companies: {
-    title: "Utilizzato da",
+    title: "Usato da",
     addYourCompany: "+ Aggiungi la tua azienda"
   },
   activity: {
@@ -30,16 +30,16 @@ export default {
     clearSearch: "Cancella ricerca"
   },
   features: {
-    title: "Caratteristiche",
+    title: "Funzionalità",
     fullyOpenSource: "Completamente open source",
-    fullyOpenSourceDescription: "Il nostro codice è disponibile pubblicamente su GitHub, garantendo trasparenza e contributi della comunità.",
-    noVendorLockIn: "Nessun vendor lock-in",
-    noVendorLockInDescription: "Non ti vincoliamo a un servizio specifico, utilizza i tuoi LLM.",
-    presetsForExpo: "Impostazioni predefinite per Expo",
-    presetsForExpoDescription: "Forniamo impostazioni predefinite per Expo, così puoi iniziare rapidamente.",
-    presetForReactNative: "Impostazione predefinita per React Native",
-    presetForReactNativeDescription: "Forniamo un'impostazione predefinita per React Native, così puoi iniziare rapidamente.",
-    presetForReactEmail: "Libreria Email React",
+    fullyOpenSourceDescription: "Il nostro codice è pubblicamente disponibile su GitHub, consentendo trasparenza e contributi della comunità.",
+    noVendorLockIn: "Nessun vincolo di fornitore",
+    noVendorLockInDescription: "Non ti blocchiamo in un servizio specifico, usa i tuoi LLM.",
+    presetsForExpo: "Preset per Expo",
+    presetsForExpoDescription: "Forniamo preset per Expo, così puoi iniziare rapidamente.",
+    presetForReactNative: "Preset per React Native",
+    presetForReactNativeDescription: "Forniamo un preset per React Native, così puoi iniziare rapidamente.",
+    presetForReactEmail: "Libreria React Email",
     presetForReactEmailDescription: "Abbiamo creato una libreria i18n per React Email.",
     readyForI18nLibraries: "Pronto per le librerie i18n",
     readyForI18nLibrariesDescription: "Supportiamo tutte le librerie, comprese le più popolari (next-intl, react-i18next, react-intl, ecc.)."
@@ -49,14 +49,14 @@ export default {
     smartTranslation: {
       title: "Traduzione intelligente",
       intelligentTranslation: "Traduzione intelligente con consapevolezza del contesto",
-      brandVoice: "Coerenza della voce e del tono del marchio",
+      brandVoice: "Coerenza del tono e della voce del brand",
       terminology: "Gestione della terminologia",
-      linguisticFeatures: "Caratteristiche linguistiche avanzate",
+      linguisticFeatures: "Funzionalità linguistiche avanzate",
       realtimeUpdates: "Aggiornamenti di traduzione in tempo reale"
     },
     implementation: {
       title: "Implementazione",
-      quickSetup: "Configurazione e integrazione rapide",
+      quickSetup: "Configurazione e integrazione rapida",
       fileFormat: "Gestione dei formati di file",
       contentStructure: "Organizzazione della struttura dei contenuti",
       assetOrganization: "Organizzazione delle risorse"
@@ -80,12 +80,12 @@ export default {
       text: "Accedendo, accetti i nostri",
       termsOfService: "Termini di servizio",
       and: "e",
-      privacyPolicy: "Informativa sulla privacy"
+      privacyPolicy: "Politica sulla privacy"
     }
   },
   userMenu: {
-    account: "Impostazioni account",
-    signOut: "Disconnetti",
+    account: "Impostazioni dell'account",
+    signOut: "Esci",
     createTeam: "Crea team",
     homepage: "Homepage",
     team: "Impostazioni del team"
@@ -104,7 +104,7 @@ export default {
     createTeamButton: "Crea team"
   },
   coming_soon: {
-    title: "Languine è in accesso anticipato",
+    title: "Languine è in Accesso Anticipato",
     description: "Siamo attualmente in accesso anticipato. Contatta",
     cta: "su X per ottenere l'accesso anticipato."
   },
@@ -125,7 +125,7 @@ export default {
     },
     deleteAccount: {
       title: "Elimina account",
-      description: "Elimina permanentemente il tuo account e tutti i dati associati. Questa azione non può essere annullata.",
+      description: "Elimina definitivamente il tuo account e tutti i dati associati. Questa azione non può essere annullata.",
       button: "Elimina account"
     }
   },
@@ -135,8 +135,8 @@ export default {
   dangerZone: {
     dialog: {
       title: "Sei assolutamente sicuro?",
-      description: "Questa azione non può essere annullata. Si prega di digitare ELIMINA per confermare.",
-      placeholder: "Digita ELIMINA per confermare",
+      description: "Questa azione non può essere annullata. Digita DELETE per confermare.",
+      placeholder: "Digita DELETE per confermare",
       confirm: "Conferma eliminazione",
       cancel: "Annulla"
     }
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Flusso di lavoro (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono apportate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce e la terminologia del tuo marchio. Le traduzioni vengono quindi inviate come richieste di pull, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
+    description: "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice base ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
   },
   settings: {
     badRequest: "Richiesta non valida",
@@ -152,15 +152,15 @@ export default {
     permissionDenied: "Permesso negato",
     permissionDeniedDescription: "Devi essere un proprietario del team per eseguire questa azione",
     deleteTeamTitle: "Elimina team",
-    deleteTeamDescription: "Impossibile eliminare l'organizzazione quando sei l'unico membro, invece elimina il tuo account",
+    deleteTeamDescription: "Non puoi eliminare l'organizzazione quando sei l'unico membro, elimina invece il tuo account",
     saved: "Impostazioni salvate",
     savedDescription: "Le tue modifiche sono state salvate con successo",
     error: "Qualcosa è andato storto",
-    errorDescription: "Si prega di riprovare o contattare il supporto",
+    errorDescription: "Riprova o contatta il supporto",
     addTeam: "Crea team",
     apiKey: {
       updated: "Chiave API aggiornata",
-      updatedDescription: "La tua chiave API è stata aggiornata con successo ed è stata copiata negli appunti.",
+      updatedDescription: "La tua chiave API è stata aggiornata con successo e copiata negli appunti.",
       title: "Aggiorna chiave API",
       description: "Sei sicuro di voler generare una nuova chiave API? La vecchia chiave smetterà di funzionare immediatamente.",
       cancel: "Annulla",
@@ -177,18 +177,18 @@ export default {
       updateSuccess: "Impostazioni aggiornate con successo",
       updateError: "Impossibile aggiornare le impostazioni",
       translationProvider: {
-        title: "Fornitore di traduzione",
-        description: "Scegli il tuo servizio AI preferito per generare traduzioni. Ogni fornitore offre diverse capacità e prezzi.",
+        title: "Fornitore di traduzioni",
+        description: "Scegli il servizio AI preferito per generare traduzioni. Ogni fornitore offre diverse capacità e prezzi.",
         placeholder: "Seleziona un fornitore"
       },
       languageModel: {
         title: "Modello linguistico",
-        description: "Seleziona il modello AI che meglio bilancia qualità e velocità per le tue esigenze di traduzione. I modelli più potenti possono essere più lenti ma producono risultati migliori.",
+        description: "Seleziona il modello AI che bilancia meglio qualità e velocità per le tue esigenze di traduzione. Modelli più potenti possono essere più lenti ma producono risultati migliori.",
         placeholder: "Seleziona un modello"
       },
       apiKey: {
         title: "Chiave API del fornitore",
-        description: "Inserisci la tua chiave API per autenticarti con il fornitore scelto. Tieni questa chiave al sicuro: la crittografiamo prima di memorizzarla.",
+        description: "Inserisci la tua chiave API per autenticarti con il fornitore scelto. Mantieni questa chiave sicura - la crittiamo prima di memorizzarla.",
         placeholder: "Inserisci la tua chiave API"
       }
     },
@@ -206,7 +206,7 @@ export default {
       },
       "delete": {
         title: "Elimina progetto",
-        description: "Elimina permanentemente questo progetto e tutti i suoi dati",
+        description: "Elimina definitivamente questo progetto e tutti i suoi dati",
         button: "Elimina progetto"
       }
     },
@@ -226,14 +226,14 @@ export default {
       },
       apiKey: {
         title: "Chiave API del team",
-        description: "Chiave API per l'accesso al team, utilizzala dalla tua pipeline CI/CD insieme all'ID progetto",
+        description: "Chiave API per l'accesso del team, usala dalla tua pipeline CI/CD insieme all'ID progetto",
         placeholder: "Chiave API del team"
       },
       members: {
-        leaveTeamConfirm: "Lascia team",
+        leaveTeamConfirm: "Lascia il team",
         leaveTeamDescription: "Sei sicuro di voler lasciare questo team?",
         cancel: "Annulla",
-        leaveTeam: "Lascia team",
+        leaveTeam: "Lascia il team",
         invite: "Invita membro",
         title: "Membri",
         pendingInvitations: "Inviti in sospeso",
@@ -272,7 +272,7 @@ export default {
     general: "Generale",
     translationMemory: {
       title: "Memoria di traduzione",
-      description: "Utilizza la memoria di traduzione per migliorare coerenza ed efficienza"
+      description: "Usa la memoria di traduzione per migliorare la coerenza e l'efficienza"
     },
     qualityChecks: {
       title: "Controlli di qualità",
@@ -288,32 +288,32 @@ export default {
       description: "Controlla la lunghezza del testo tradotto",
       options: {
         flexible: "Flessibile",
-        strict: "Rigido",
+        strict: "Rigoroso",
         exact: "Esatto",
         loose: "Largo"
       }
     },
     inclusiveLanguage: {
-      title: "Lingua inclusiva",
-      description: "Assicurati che le traduzioni utilizzino un linguaggio inclusivo"
+      title: "Linguaggio inclusivo",
+      description: "Assicura che le traduzioni utilizzino un linguaggio inclusivo"
     },
     formality: {
       title: "Formalità",
       description: "Controlla il livello di formalità delle traduzioni"
     },
     brandName: {
-      title: "Nome del marchio",
-      description: "Imposta il tuo nome di marchio per un uso coerente",
-      placeholder: "Inserisci il tuo nome di marchio"
+      title: "Nome del brand",
+      description: "Imposta il nome del tuo brand per un uso coerente",
+      placeholder: "Inserisci il nome del tuo brand"
     },
     brandVoice: {
-      title: "Voce del marchio",
-      description: "Definisci la voce e il tono del tuo marchio",
-      placeholder: "Descrivi la voce del tuo marchio..."
+      title: "Voce del brand",
+      description: "Definisci la voce e il tono del tuo brand",
+      placeholder: "Descrivi la voce del tuo brand..."
     },
     localization: "Localizzazione",
     idioms: {
-      title: "Idiom",
+      title: "Idiomi",
       description: "Gestisci le espressioni idiomatiche in modo appropriato"
     },
     terminology: {
@@ -322,7 +322,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adattamento culturale",
-      description: "Adatta i contenuti per la loro appropriatezza culturale"
+      description: "Adatta i contenuti per l'appropriatezza culturale"
     }
   },
   pricing: {
@@ -333,23 +333,23 @@ export default {
       keys_limit: "Fino a 100 chiavi",
       features: {
         unlimited_projects: "Progetti illimitati",
-        fine_tuning: "Opzioni di affinamento",
+        fine_tuning: "Opzioni di fine-tuning",
         overrides: "Sovrascritture di traduzione",
-        analytics: "Analisi",
-        context_memory: "Memoria contestuale",
+        analytics: "Analitiche",
+        context_memory: "Memoria del contesto",
         community_support: "Supporto della comunità"
       }
     },
     pro: {
       title: "Pro",
-      includes_free: "Tutto in gratuito, più:",
+      includes_free: "Tutto ciò che è incluso in Gratuito, più:",
       features: {
         github_action: "Integrazione con GitHub Action",
         latest_features: "Accesso anticipato alle ultime funzionalità",
         priority_support: "Supporto prioritario"
       }
     },
-    cta: "Inizia ad automatizzare"
+    cta: "Inizia l'automazione"
   },
   createTeam: {
     teamName: "Nome del team",
@@ -378,10 +378,10 @@ export default {
     },
     error: {
       title: "Errore",
-      description: "Impossibile inviare l'invito. Si prega di riprovare."
+      description: "Impossibile inviare l'invito. Riprova."
     },
     validation: {
-      invalidEmail: "Si prega di inserire un'email valida"
+      invalidEmail: "Inserisci un'email valida"
     }
   },
   months: {
@@ -402,27 +402,27 @@ export default {
     steps: {
       "1": {
         title: "Configura Languine CLI",
-        description: "Installa e configura il Languine CLI per gestire le traduzioni"
+        description: "Installa e configura Languine CLI per gestire le traduzioni"
       },
       "2": {
-        title: "Invia traduzioni",
+        title: "Push delle traduzioni",
         description: "In attesa che le traduzioni vengano inviate"
       },
       "3": {
         title: "Documentazione",
-        description: "Controlla la nostra documentazione per guide dettagliate e migliori pratiche",
+        description: "Consulta la nostra documentazione per guide dettagliate e migliori pratiche",
         link: "documentazione"
       }
     },
     info: {
-      description: "Hai bisogno di aiuto? Controlla la nostra",
+      description: "Hai bisogno di aiuto? Consulta la nostra",
       link: "documentazione",
       description_2: "per guide dettagliate e migliori pratiche."
     }
   },
   cli: {
     success: {
-      title: "Accesso riuscito a Languine CLI",
+      title: "Accesso a Languine CLI riuscito",
       description: "Languine CLI è stato autenticato con successo come:",
       description_2: "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
