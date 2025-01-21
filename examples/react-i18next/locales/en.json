@@ -1,14 +1,14 @@
 {
-    "welcome": "Welcome to our application!",
-    "user": {
-      "greeting": "Hello, {{name}}!",
-      "profile": {
-        "title": "Your Profile",
-        "edit": "Edit Profile"
-      }
-    },
-    "notifications": {
-      "messages": "You have {{count}} new message(s).",
-      "empty": "No new notifications."
+  "welcome": "Välkommen till vår applikation!",
+  "user": {
+    "greeting": "Hej, {{name}}!",
+    "profile": {
+      "title": "Din profil",
+      "edit": "Redigera profil"
     }
+  },
+  "notifications": {
+    "messages": "Du har {{count}} nytt meddelande(n).",
+    "empty": "Inga nya notiser."
   }
+}

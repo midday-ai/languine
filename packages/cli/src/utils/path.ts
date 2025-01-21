@@ -28,25 +28,17 @@ export function transformLocalePath(
   // Convert absolute path to relative workspace path
   const relativePath = relative(workspacePath, sourcePath);
 
-  // Split the path into segments
-  const segments = relativePath.split("/");
-  const filename = segments[segments.length - 1];
-
-  // Check if locale is in the filename
-  if (filename.includes(`.${sourceLocale}.`)) {
-    return relativePath.replace(
-      new RegExp(`\\.${sourceLocale}\\.`),
-      `.${targetLocale}.`,
-    );
+  // If source locale is empty, this is a source file without locale suffix
+  if (!sourceLocale) {
+    // Insert target locale before the last extension
+    const lastDotIndex = relativePath.lastIndexOf(".");
+    if (lastDotIndex === -1) return relativePath;
+    return `${relativePath.slice(0, lastDotIndex)}.${targetLocale}${relativePath.slice(lastDotIndex)}`;
   }
 
-  // Find the last occurrence of the source locale in the directory structure
-  const localeIndex = segments.lastIndexOf(sourceLocale);
-  if (localeIndex !== -1) {
-    segments[localeIndex] = targetLocale;
-    return segments.join("/");
-  }
-
-  // If no locale found, return the original path
-  return relativePath;
+  // Find and replace the last occurrence of the locale in the path
+  const pattern = new RegExp(
+    `(?<=[/.])(${sourceLocale})(?=[./])(?!.*(?<=[/.])(${sourceLocale})(?=[./]))`,
+  );
+  return relativePath.replace(pattern, targetLocale);
 }

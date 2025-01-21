@@ -3,7 +3,7 @@ import { defineConfig } from "languine";
 export default defineConfig({
   locale: {
     source: "en",
-    targets: ["es"],
+    targets: ["es", "de"],
   },
   files: {
     "xcode-stringsdict": {

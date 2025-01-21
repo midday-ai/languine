@@ -107,16 +107,6 @@ export async function translateCommand(args: string[] = []) {
         const globPattern =
           pattern && typeof pattern === "object" ? pattern.glob : pattern;
 
-        // Check if [locale] placeholder exists in pattern
-        if (!globPattern.includes("[locale]")) {
-          s.stop();
-          note(
-            "Missing [locale] placeholder in file pattern. Please update your config file to include [locale] in file paths.\nLearn more at https://languine.ai/docs/getting-started/troubleshooting",
-            "Configuration",
-          );
-          process.exit(1);
-        }
-
         const sourcePattern = globPattern.replace("[locale]", sourceLocale);
 
         // Find all matching source files
@@ -184,8 +174,6 @@ export async function translateCommand(args: string[] = []) {
               sourceText: sourceText,
               documentName: sourceFilePath.split("/").pop(),
             }));
-
-          console.log(translationInput);
 
           let shouldRemoveKeys = false;
           if (!forceTranslate && removedKeys.length > 0) {

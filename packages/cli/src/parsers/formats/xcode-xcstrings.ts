@@ -1,3 +1,4 @@
+import JSON5 from "json5";
 import { mergeDeepRight } from "rambda";
 import { BaseParser } from "../core/base-parser.js";
 import type { XcstringsOutput, XcstringsTranslationEntity } from "./types.js";
@@ -5,7 +6,7 @@ import type { XcstringsOutput, XcstringsTranslationEntity } from "./types.js";
 export class XcodeXcstringsParser extends BaseParser {
   async parse(input: string) {
     try {
-      const parsed = JSON.parse(input);
+      const parsed = JSON5.parse(input);
       const result: Record<string, string> = {};
 
       for (const [key, translationEntity] of Object.entries(parsed.strings)) {
@@ -41,9 +42,9 @@ export class XcodeXcstringsParser extends BaseParser {
   }
 
   async serialize(
-    _locale: string,
+    locale: string,
     data: Record<string, string>,
-    _originalData?: Record<string, string>,
+    originalData?: string,
   ): Promise<string> {
     try {
       // Validate input data
@@ -53,27 +54,41 @@ export class XcodeXcstringsParser extends BaseParser {
         }
       }
 
-      const result: XcstringsOutput = {
-        strings: {},
-        version: "1.0",
-        sourceLanguage: _locale,
-      };
+      // Parse original data if provided, otherwise create new structure
+      const baseResult: XcstringsOutput = originalData
+        ? JSON5.parse(originalData)
+        : {
+            strings: {},
+            version: "1.0",
+            sourceLanguage: locale,
+          };
 
+      // Add or update translations for the target locale
       for (const [key, value] of Object.entries(data)) {
-        result.strings[key] = {
-          extractionState: "manual",
-          localizations: {
-            [_locale]: {
-              stringUnit: {
-                state: "translated",
-                value,
-              },
+        if (!baseResult.strings[key]) {
+          baseResult.strings[key] = {
+            extractionState: "manual",
+            localizations: {},
+          };
+        }
+
+        // Add the new locale translation while preserving existing ones
+        baseResult.strings[key].localizations = {
+          ...baseResult.strings[key].localizations,
+          [locale]: {
+            stringUnit: {
+              state: "translated",
+              value,
             },
           },
         };
       }
 
-      return JSON.stringify(mergeDeepRight({}, result), null, 2);
+      // Use JSON5 stringify for better readability
+      return JSON5.stringify(baseResult, {
+        space: 2,
+        quote: '"', // Keep double quotes for better Xcode compatibility
+      });
     } catch (error) {
       throw new Error(
         `Failed to serialize Xcode xcstrings translations: ${error instanceof Error ? error.message : String(error)}`,

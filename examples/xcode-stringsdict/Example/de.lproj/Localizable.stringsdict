@@ -13,17 +13,17 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>zero</key>
-        <string>No items available</string>
+        <string>Keine Artikel verfügbar</string>
         <key>one</key>
-        <string>One item available</string>
+        <string>Ein Artikel verfügbar</string>
         <key>two</key>
-        <string>Two items available</string>
+        <string>Zwei Artikel verfügbar</string>
         <key>few</key>
-        <string>%lld items available</string>
+        <string>%lld Artikel verfügbar</string>
         <key>many</key>
-        <string>%lld items available</string>
+        <string>%lld Artikel verfügbar</string>
         <key>other</key>
-        <string>%lld items available</string>
+        <string>%lld Artikel verfügbar</string>
       </dict>
     </dict>
     <key>countdown_days</key>
@@ -37,32 +37,32 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>zero</key>
-        <string>The event starts today!</string>
+        <string>Die Veranstaltung beginnt heute!</string>
         <key>one</key>
-        <string>The event starts tomorrow!</string>
+        <string>Die Veranstaltung beginnt morgen!</string>
         <key>two</key>
-        <string>The event starts in two days</string>
+        <string>Die Veranstaltung beginnt in zwei Tagen</string>
         <key>few</key>
-        <string>The event starts in %lld days</string>
+        <string>Die Veranstaltung beginnt in %lld Tagen</string>
         <key>many</key>
-        <string>The event starts in %lld days</string>
+        <string>Die Veranstaltung beginnt in %lld Tagen</string>
         <key>other</key>
-        <string>The event starts in %lld days</string>
+        <string>Die Veranstaltung beginnt in %lld Tagen</string>
       </dict>
     </dict>
     <key>hello</key>
-    <string>Hello</string>
+    <string>Hallo</string>
     <key>user_welcome</key>
-    <string>Welcome back, %@!</string>
+    <string>Willkommen zurück, %@!</string>
     <key>score_format</key>
-    <string>Player %1$@ earned %2$lld points with $%3$.2f remaining</string>
+    <string>Spieler %1$@ hat %2$lld Punkte mit $%3$.2f übrig verdient</string>
     <key>current_date</key>
-    <string>Current date: %@</string>
+    <string>Aktuelles Datum: %@</string>
     <key>formatted_message</key>
-    <string>Here is a &lt;b&gt;formatted&lt;/b&gt; message with:
-• HTML formatting
-• Special characters: ©®™
-• A &lt;a href="https://example.com"&gt;hyperlink&lt;/a&gt;</string>
+    <string>Hier ist eine &lt;b&gt;formatierte&lt;/b&gt; Nachricht mit:
+• HTML-Formatierung
+• Sonderzeichen: ©®™
+• Ein &lt;a href="https://example.com"&gt;Hyperlink&lt;/a&gt;</string>
     <key>alert_count</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
@@ -74,15 +74,15 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>zero</key>
-        <string>No new notifications</string>
+        <string>Keine neuen Benachrichtigungen</string>
         <key>one</key>
-        <string>One new notification</string>
+        <string>Eine neue Benachrichtigung</string>
         <key>other</key>
-        <string>%lld new notifications</string>
+        <string>%lld neue Benachrichtigungen</string>
       </dict>
     </dict>
     <key>remaining_time</key>
-    <string>Remaining time: %1$@ (%2$lld seconds)</string>
+    <string>Verbleibende Zeit: %1$@ (%2$lld Sekunden)</string>
     <key>version_info</key>
     <string>Version %1$@ (Build %2$@)</string>
     <key>test</key>

@@ -1,34 +1,16 @@
 export default {
   hello: "Bonjour",
   welcome: "Bonjour {name} !",
-  about: {
-    you: "Bonjour {name} ! Vous avez {age} ans",
-  },
-  scope: {
-    test: "Une portée",
-    more: {
-      test: "Une portée",
-      param: "Une portée avec {param}",
-      and: {
-        more: {
-          test: "Une portée",
-        },
-      },
-      "stars#one": "1 étoile sur GitHub",
-      "stars#other": "{count} étoiles sur GitHub",
-    },
-  },
-  missing: {
-    translation: {
-      in: {
-        fr: "Cela devrait fonctionner",
-      },
-    },
-  },
   "cows#one": "Une vache",
   "cows#other": "{count} vaches",
-  languine: {
-    hello: "Bonjour Languine",
-  },
+  "about.you": "Bonjour {name} ! Vous avez {age} ans",
+  "scope.test": "Une portée",
+  "scope.more.test": "Une portée",
+  "scope.more.param": "Une portée avec {param}",
+  "scope.more.and.more.test": "Une portée",
+  "scope.more.stars#one": "1 étoile sur GitHub",
+  "scope.more.stars#other": "{count} étoiles sur GitHub",
+  "missing.translation.in.fr": "Cela devrait fonctionner",
+  "languine.hello": "Bonjour Languine",
   "hello.world": "test",
 } as const;

@@ -1,8 +1,8 @@
 import { loadEnv } from "@/utils/env.js";
 import { getAPIKey } from "@/utils/session.js";
+import { note } from "@clack/prompts";
 import type { AppRouter } from "@languine/web/src/trpc/routers/_app.js";
 import { createTRPCClient, httpBatchLink, loggerLink } from "@trpc/client";
-import chalk from "chalk";
 import superjson from "superjson";
 
 const { DEBUG, BASE_URL } = loadEnv();
@@ -33,10 +33,17 @@ export const client = createTRPCClient<AppRouter>({
             }
 
             if (error[0]?.error?.json?.message === "UNAUTHORIZED") {
-              console.log(
-                chalk.red(
-                  "You are not logged in. Please run `languine auth login` first.",
-                ),
+              note(
+                "You are not logged in. Please run `languine auth login` first.\nNeed help? https://languine.dev/docs/getting-started",
+                "Unauthorized",
+              );
+              process.exit(1);
+            }
+
+            if (error[0]?.error?.json?.message === "NOT_FOUND") {
+              note(
+                "The resource you are looking for does not exist.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                "Not Found",
               );
               process.exit(1);
             }

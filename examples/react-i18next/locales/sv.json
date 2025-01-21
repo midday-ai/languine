@@ -8,7 +8,7 @@
     }
   },
   "notifications": {
-    "messages": "Du har {{count}} nya meddelande(n).",
-    "empty": "Inga nya aviseringar."
+    "messages": "Du har {{count}} nytt meddelande(n).",
+    "empty": "Inga nya notiser."
   }
 }

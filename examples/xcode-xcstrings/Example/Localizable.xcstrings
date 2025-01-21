@@ -1,83 +1,125 @@
 {
-  "version": "1.0",
-  "sourceLanguage": "en",
-  "strings": {
-    "welcome_message": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Willkommen bei der App"
-          }
-        }
-      }
+  version: "1.0",
+  sourceLanguage: "en",
+  strings: {
+    welcome_message: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "Willkommen bei der App",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Bienvenue dans l'application",
+          },
+        },
+      },
     },
-    "user_greeting": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hallo %@"
-          }
-        }
-      }
+    user_greeting: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "Hallo %@",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Bonjour %@",
+          },
+        },
+      },
     },
-    "items_count": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keine Einträge"
-          }
-        }
-      }
+    items_count: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "Keine Einträge",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Aucune entrée",
+          },
+        },
+      },
     },
-    "notification_time": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "In %lld Minute"
-          }
-        }
-      }
+    notification_time: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "In %lld Minute",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Dans %lld minute",
+          },
+        },
+      },
     },
-    "item_details": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld Details anzeigen"
-          }
-        }
-      }
+    item_details: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "%lld Details anzeigen",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Afficher %lld détails",
+          },
+        },
+      },
     },
-    "modified_date": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zuletzt geändert: %lld"
-          }
-        }
-      }
+    modified_date: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "Zuletzt geändert: %lld",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Dernière modification : %lld",
+          },
+        },
+      },
     },
-    "item_description": {
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Beschreibung: %lld"
-          }
-        }
-      }
-    }
-  }
+    item_description: {
+      extractionState: "manual",
+      localizations: {
+        de: {
+          stringUnit: {
+            state: "translated",
+            value: "Beschreibung: %lld",
+          },
+        },
+        fr: {
+          stringUnit: {
+            state: "translated",
+            value: "Description : %lld",
+          },
+        },
+      },
+    },
+  },
 }

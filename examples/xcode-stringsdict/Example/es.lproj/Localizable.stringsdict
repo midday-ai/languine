@@ -13,17 +13,17 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>zero</key>
-        <string>No hay elementos disponibles</string>
+        <string>No hay artículos disponibles</string>
         <key>one</key>
-        <string>Un elemento disponible</string>
+        <string>Un artículo disponible</string>
         <key>two</key>
-        <string>Dos elementos disponibles</string>
+        <string>Dos artículos disponibles</string>
         <key>few</key>
-        <string>%lld elementos disponibles</string>
+        <string>%lld artículos disponibles</string>
         <key>many</key>
-        <string>%lld elementos disponibles</string>
+        <string>%lld artículos disponibles</string>
         <key>other</key>
-        <string>%lld elementos disponibles</string>
+        <string>%lld artículos disponibles</string>
       </dict>
     </dict>
     <key>countdown_days</key>
@@ -55,11 +55,14 @@
     <key>user_welcome</key>
     <string>¡Bienvenido de nuevo, %@!</string>
     <key>score_format</key>
-    <string>El jugador %1$@ ha ganado %2$lld puntos con $%3$.2f restantes</string>
+    <string>El jugador %1$@ ganó %2$lld puntos con $%3$.2f restantes</string>
     <key>current_date</key>
     <string>Fecha actual: %@</string>
     <key>formatted_message</key>
-    <string>Aquí hay un &lt;b&gt;mensaje formateado&lt;/b&gt; con:\n• Formato HTML\n• Símbolos especiales: ©®™\n• Un &lt;a href=\"https://example.com\"&gt;hipervínculo&lt;/a&gt;</string>
+    <string>Aquí hay un mensaje &lt;b&gt;formateado&lt;/b&gt; con:
+• Formato HTML
+• Caracteres especiales: ©®™
+• Un &lt;a href="https://example.com"&gt;hipervínculo&lt;/a&gt;</string>
     <key>alert_count</key>
     <dict>
       <key>NSStringLocalizedFormatKey</key>
@@ -71,7 +74,7 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>lld</string>
         <key>zero</key>
-        <string>No hay nuevas notificaciones</string>
+        <string>No hay notificaciones nuevas</string>
         <key>one</key>
         <string>Una nueva notificación</string>
         <key>other</key>

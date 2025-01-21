@@ -43,10 +43,17 @@ export class JavaScriptParser extends BaseParser {
           explicitDotKeys,
           nestedPaths,
         );
-        formatted = this.formatMixedObject(nested, flat);
+        formatted = this.formatMixedObject(nested, flat, explicitDotKeys);
       } else {
         // Default to flat structure if no original data
-        formatted = this.formatFlatObject(data);
+        // Treat all dot notation keys as explicit
+        const explicitDotKeys = new Set<string>();
+        for (const key of Object.keys(data)) {
+          if (key.includes(".")) {
+            explicitDotKeys.add(key);
+          }
+        }
+        formatted = this.formatMixedObject({}, data, explicitDotKeys);
       }
       return this.wrapInExport(formatted);
     } catch (error) {
@@ -126,9 +133,8 @@ export class JavaScriptParser extends BaseParser {
   }
 
   private findExplicitDotKeys(input: string, keys: Set<string>) {
-    // Match both quoted dot notation keys and regular keys that are not nested objects
-    const keyRegex =
-      /(?:"([^"]+\.[^"]+)"|'([^']+\.[^']+)'|([^{},\s]+)):\s*(?:"[^"]*"|'[^']*'|\{[^}]*\})/g;
+    // Match both quoted and unquoted keys that contain dots
+    const keyRegex = /(?:"([^"]+)"|'([^']+)'|([^{},\s:]+))(?=\s*:)/g;
     let match: RegExpExecArray | null = null;
 
     do {
@@ -177,10 +183,10 @@ export class JavaScriptParser extends BaseParser {
         }
       }
 
-      if (
-        explicitDotKeys.has(key) ||
-        (!shouldNest && explicitDotKeys.has(rootPath))
-      ) {
+      // If the key contains dots and is not in nestedPaths, treat it as an explicit dot key
+      if (key.includes(".") && !shouldNest) {
+        flat[key] = value;
+      } else if (explicitDotKeys.has(key) || explicitDotKeys.has(rootPath)) {
         flat[key] = value;
       } else {
         nested[key] = value;
@@ -193,6 +199,7 @@ export class JavaScriptParser extends BaseParser {
   private formatMixedObject(
     nested: Record<string, string>,
     flat: Record<string, string>,
+    explicitDotKeys: Set<string>,
   ): string {
     if (Object.keys(nested).length === 0 && Object.keys(flat).length === 0) {
       return "{}";
@@ -202,7 +209,7 @@ export class JavaScriptParser extends BaseParser {
 
     // Format nested structure
     if (Object.keys(nested).length > 0) {
-      const nestedObj = this.buildNestedObject(nested);
+      const nestedObj = this.buildNestedObject(nested, explicitDotKeys);
       const nestedEntries = Object.entries(nestedObj).map(([key, value]) => {
         const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
         const formattedValue =
@@ -229,39 +236,50 @@ export class JavaScriptParser extends BaseParser {
 
   private buildNestedObject(
     flat: Record<string, string>,
+    explicitDotKeys: Set<string>,
   ): Record<string, unknown> {
     const result: Record<string, unknown> = {};
 
-    // First, identify all root paths that should be objects
-    const rootPaths = new Set<string>();
-    for (const key of Object.keys(flat)) {
-      const parts = key.split(".");
-      if (parts.length > 1) {
-        rootPaths.add(parts[0]);
-      }
-    }
-
     for (const [key, value] of Object.entries(flat)) {
-      const parts = key.split(".");
-
-      if (parts.length === 1) {
-        // This is a top-level key
+      // If this is an explicit dot key or contains dots but isn't marked for nesting, keep it flat
+      if (
+        explicitDotKeys.has(key) ||
+        (key.includes(".") && !this.shouldNestKey(key, explicitDotKeys))
+      ) {
         result[key] = value;
       } else {
-        // This is a nested key
-        let current = result;
-        for (let i = 0; i < parts.length - 1; i++) {
-          const part = parts[i];
-          if (!(part in current)) {
-            current[part] = {};
+        const parts = key.split(".");
+        if (parts.length === 1) {
+          // This is a top-level key
+          result[key] = value;
+        } else {
+          // This is a nested key
+          let current = result;
+          for (let i = 0; i < parts.length - 1; i++) {
+            const part = parts[i];
+            if (!(part in current)) {
+              current[part] = {};
+            }
+            current = current[part] as Record<string, unknown>;
           }
-          current = current[part] as Record<string, unknown>;
+          current[parts[parts.length - 1]] = value;
         }
-        current[parts[parts.length - 1]] = value;
       }
     }
 
     return result;
+  }
+
+  private shouldNestKey(key: string, explicitDotKeys: Set<string>): boolean {
+    const parts = key.split(".");
+    // Check if any parent path is an explicit dot key
+    for (let i = 1; i < parts.length; i++) {
+      const parentPath = parts.slice(0, i).join(".");
+      if (explicitDotKeys.has(parentPath)) {
+        return false;
+      }
+    }
+    return true;
   }
 
   private formatObjectLiteral(obj: Record<string, unknown>, level = 1): string {
