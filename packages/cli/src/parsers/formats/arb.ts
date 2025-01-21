@@ -1,5 +1,5 @@
 import { merge, pickBy } from "rambda";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 export class ArbParser extends BaseParser {
   async parse(input: string): Promise<Record<string, string>> {
@@ -27,8 +27,4 @@ export class ArbParser extends BaseParser {
       );
     }
   }
-}
-
-export function createArbParser(options: ParserOptions): ArbParser {
-  return new ArbParser(options);
 }

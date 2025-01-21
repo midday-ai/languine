@@ -1,5 +1,5 @@
 import xliff from "xliff";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 interface XliffUnit {
   source: string;
@@ -82,8 +82,4 @@ export class XliffParser extends BaseParser {
       );
     }
   }
-}
-
-export function createXliffParser(options: ParserOptions): XliffParser {
-  return new XliffParser(options);
 }

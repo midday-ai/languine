@@ -1,5 +1,5 @@
 import { Builder, parseStringPromise } from "xml2js";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 import { flatten, unflatten } from "../core/flatten.js";
 
 export class XmlParser extends BaseParser {
@@ -53,10 +53,6 @@ export class XmlParser extends BaseParser {
       );
     }
   }
-}
-
-export function createXmlParser(options: ParserOptions): XmlParser {
-  return new XmlParser(options);
 }
 
 function normalizeXMLString(xmlString: string): string {

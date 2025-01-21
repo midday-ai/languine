@@ -1,5 +1,5 @@
 import { jsonrepair } from "jsonrepair";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 import { flatten, unflatten } from "../core/flatten.js";
 
 export class JsonParser extends BaseParser {
@@ -24,8 +24,4 @@ export class JsonParser extends BaseParser {
   ): Promise<string> {
     return `${JSON.stringify(unflatten(data), null, 2)}\n`;
   }
-}
-
-export function createJsonParser(options: ParserOptions): JsonParser {
-  return new JsonParser(options);
 }

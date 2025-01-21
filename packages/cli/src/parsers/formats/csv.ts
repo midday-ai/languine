@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 import { stringify } from "csv-stringify/sync";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 interface CsvRow extends Record<string, string> {
   id: string;
@@ -135,8 +135,4 @@ export class CsvParser extends BaseParser {
       );
     }
   }
-}
-
-export function createCsvParser(options: ParserOptions): CsvParser {
-  return new CsvParser(options);
 }

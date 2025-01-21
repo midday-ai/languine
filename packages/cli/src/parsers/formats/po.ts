@@ -1,6 +1,6 @@
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
-class PoParser extends BaseParser {
+export class PoParser extends BaseParser {
   async parse(input: string): Promise<Record<string, string>> {
     try {
       const result: Record<string, string> = {};
@@ -61,10 +61,6 @@ class PoParser extends BaseParser {
       );
     }
   }
-}
-
-export function createPoParser(options: ParserOptions): PoParser {
-  return new PoParser(options);
 }
 
 function isSkippableLine(line: string): boolean {

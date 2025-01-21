@@ -14,6 +14,6 @@ export abstract class BaseParser implements Parser {
   abstract serialize(
     locale: string,
     data: Record<string, string>,
-    originalData?: Record<string, string>,
+    originalData?: string | Record<string, unknown>,
   ): Promise<string>;
 }

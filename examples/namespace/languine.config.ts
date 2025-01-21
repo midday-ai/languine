@@ -7,8 +7,11 @@ export default defineConfig({
     targets: ["es", "fr"],
   },
   files: {
-    json: {
-      include: ["locales/[locale]/*.json"],
+    // json: {
+    //   include: ["locales/[locale]/*.json"],
+    // },
+    md: {
+      include: ["docs/[locale]/*.md"],
     },
   },
 });

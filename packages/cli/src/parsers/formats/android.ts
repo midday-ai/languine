@@ -1,5 +1,5 @@
 import { Builder, parseStringPromise } from "xml2js";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 interface StringItem {
   $: { name: string };
@@ -171,8 +171,4 @@ export class AndroidParser extends BaseParser {
       );
     }
   }
-}
-
-export function createAndroidParser(options: ParserOptions): AndroidParser {
-  return new AndroidParser(options);
 }

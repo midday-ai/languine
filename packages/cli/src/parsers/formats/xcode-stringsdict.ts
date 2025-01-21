@@ -1,5 +1,5 @@
 import plist from "plist";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 type PlistValue =
   | string
@@ -93,10 +93,4 @@ export class XcodeStringsDictParser extends BaseParser {
       );
     }
   }
-}
-
-export function createXcodeStringsDictParser(
-  options: ParserOptions,
-): XcodeStringsDictParser {
-  return new XcodeStringsDictParser(options);
 }

@@ -1,5 +1,5 @@
 import YAML from "yaml";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 import { flatten, unflatten } from "../core/flatten.js";
 
 export class YamlParser extends BaseParser {
@@ -32,8 +32,4 @@ export class YamlParser extends BaseParser {
       );
     }
   }
-}
-
-export function createYamlParser(options: ParserOptions): YamlParser {
-  return new YamlParser(options);
 }

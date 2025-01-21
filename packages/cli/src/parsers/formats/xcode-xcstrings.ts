@@ -1,5 +1,5 @@
 import { mergeDeepRight } from "rambda";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 import type { XcstringsOutput, XcstringsTranslationEntity } from "./types.js";
 
 export class XcodeXcstringsParser extends BaseParser {
@@ -80,10 +80,4 @@ export class XcodeXcstringsParser extends BaseParser {
       );
     }
   }
-}
-
-export function createXcodeXcstringsParser(
-  options: ParserOptions,
-): XcodeXcstringsParser {
-  return new XcodeXcstringsParser(options);
 }

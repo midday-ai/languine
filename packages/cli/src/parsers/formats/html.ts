@@ -1,5 +1,5 @@
 import { JSDOM } from "jsdom";
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 // Import Node and HTMLElement constants from jsdom
 const { Node, HTMLElement } = new JSDOM().window;
@@ -185,8 +185,4 @@ export class HtmlParser extends BaseParser {
       }
     }
   }
-}
-
-export function createHtmlParser(options: ParserOptions): HtmlParser {
-  return new HtmlParser(options);
 }

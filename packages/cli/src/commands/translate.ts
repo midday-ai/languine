@@ -300,8 +300,10 @@ export async function translateCommand(args: string[] = []) {
 
               // Read existing target file if it exists
               let existingContent: Record<string, string> = {};
+              let originalFileContent: string | undefined;
               try {
                 const existingFile = await readFile(targetPath, "utf-8");
+                originalFileContent = existingFile;
                 existingContent = await parser.parse(existingFile);
               } catch (error) {
                 // File doesn't exist yet, use empty object
@@ -327,10 +329,11 @@ export async function translateCommand(args: string[] = []) {
                 ...translatedContent,
               };
 
+              // Pass the original file content as a string if it exists
               const serialized = await parser.serialize(
                 targetLocale,
                 mergedContent,
-                existingContent,
+                originalFileContent,
               );
 
               // Run afterTranslate hook if configured

@@ -1,4 +1,4 @@
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 export class XcodeStringsParser extends BaseParser {
   async parse(input: string): Promise<Record<string, string>> {
@@ -44,12 +44,6 @@ export class XcodeStringsParser extends BaseParser {
       );
     }
   }
-}
-
-export function createXcodeStringsParser(
-  options: ParserOptions,
-): XcodeStringsParser {
-  return new XcodeStringsParser(options);
 }
 
 function unescapeXcodeString(str: string): string {

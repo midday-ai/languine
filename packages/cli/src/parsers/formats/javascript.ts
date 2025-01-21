@@ -1,5 +1,4 @@
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
-import { unflatten } from "../core/flatten.js";
+import { BaseParser } from "../core/base-parser.js";
 
 export class JavaScriptParser extends BaseParser {
   async parse(input: string): Promise<Record<string, string>> {
@@ -317,10 +316,4 @@ export class JavaScriptParser extends BaseParser {
 
     return result;
   }
-}
-
-export function createJavaScriptParser(
-  options: ParserOptions,
-): JavaScriptParser {
-  return new JavaScriptParser(options);
 }

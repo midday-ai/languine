@@ -1,4 +1,4 @@
-import { BaseParser, type ParserOptions } from "../core/base-parser.js";
+import { BaseParser } from "../core/base-parser.js";
 
 export class PropertiesParser extends BaseParser {
   async parse(input: string): Promise<Record<string, string>> {
@@ -44,10 +44,4 @@ export class PropertiesParser extends BaseParser {
       );
     }
   }
-}
-
-export function createPropertiesParser(
-  options: ParserOptions,
-): PropertiesParser {
-  return new PropertiesParser(options);
 }

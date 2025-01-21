@@ -13,6 +13,6 @@ export interface Parser {
   serialize(
     locale: string,
     data: Record<string, string>,
-    originalData?: Record<string, unknown>,
+    originalData?: string | Record<string, unknown>,
   ): Promise<string>;
 }
