@@ -1,7 +1,7 @@
 import { BaseParser } from "../core/base-parser.js";
 
 export class JavaScriptParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const cleanInput = this.preprocessInput(input);
       const parsed = this.evaluateJavaScript(cleanInput);

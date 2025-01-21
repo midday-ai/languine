@@ -1,7 +1,7 @@
 import { BaseParser } from "../core/base-parser.js";
 
 export class XcodeStringsParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const lines = input.split("\n");
       const result: Record<string, string> = {};

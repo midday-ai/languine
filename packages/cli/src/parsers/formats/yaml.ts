@@ -3,7 +3,7 @@ import { BaseParser } from "../core/base-parser.js";
 import { flatten, unflatten } from "../core/flatten.js";
 
 export class YamlParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const parsed = YAML.parse(input) || {};
       if (typeof parsed !== "object" || parsed === null) {

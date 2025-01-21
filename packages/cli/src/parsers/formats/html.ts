@@ -2,7 +2,7 @@ import { JSDOM } from "jsdom";
 import { BaseParser } from "../core/base-parser.js";
 
 // Import Node and HTMLElement constants from jsdom
-const { Node, HTMLElement } = new JSDOM().window;
+const { Node } = new JSDOM().window;
 
 export class HtmlParser extends BaseParser {
   private TRANSLATABLE_ATTRS: Record<string, string[]> = {
@@ -16,7 +16,7 @@ export class HtmlParser extends BaseParser {
 
   private SKIP_TAGS = new Set(["script", "style", "noscript", "template"]);
 
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const dom = new JSDOM(input);
       const translations: Record<string, string> = {};

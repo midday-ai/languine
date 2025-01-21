@@ -39,7 +39,7 @@ const XML_BUILDER_OPTIONS = {
 } as const;
 
 export class AndroidParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       if (!input.trim().startsWith("<?xml")) {
         throw new Error("Input must be an XML document");

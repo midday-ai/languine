@@ -10,12 +10,21 @@ Translation Requirements:
 - Respect existing whitespace and newline patterns
 `;
 
+const mapFormatToPrompt = (format?: string) => {
+  switch (format) {
+    case "md":
+      return "Markdown";
+    default:
+      return "JSON";
+  }
+};
+
 export function createFinalPrompt(
   text: string,
   options: PromptOptions,
   settings?: Partial<typeof projectSettings.$inferSelect>,
 ) {
-  const basePrompt = `You are a professional translator working with JSON files.
+  const basePrompt = `You are a professional translator working with ${mapFormatToPrompt(options.sourceFormat)} files.
 
 Task: Translate the content below from ${options.sourceLocale} to ${options.targetLocale}.
 ${baseRequirements}`;

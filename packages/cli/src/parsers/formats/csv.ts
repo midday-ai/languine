@@ -18,7 +18,7 @@ export class CsvParser extends BaseParser {
     columnData: {},
   };
 
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const parsed = parse(input, {
         columns: true,

@@ -27,7 +27,7 @@ interface PluralDict {
 }
 
 export class XcodeStringsDictParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const parsed = plist.parse(input) as Record<string, unknown>;
       if (typeof parsed !== "object" || parsed === null) {

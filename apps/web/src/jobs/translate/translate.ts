@@ -3,7 +3,7 @@ import { createTranslation } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
-import { translate } from "../utils/translate";
+import { translateDocument, translateKeys } from "../utils/translate";
 
 const translationSchema = z.object({
   projectId: z.string(),
@@ -46,6 +46,32 @@ export const translateTask = schemaTask({
       Array<{ key: string; translatedText: string }>
     > = {};
 
+    // If the source format is markdown, we take the whole document and translate it
+    if (payload.sourceFormat === "md") {
+      for (const targetLocale of payload.targetLanguages) {
+        const translatedContent = await translateDocument(
+          payload.content.at(0)?.sourceText ?? "",
+          {
+            sourceLocale: payload.sourceLanguage,
+            targetLocale,
+          },
+        );
+
+        translations[targetLocale] = [
+          {
+            key: "content",
+            translatedText: translatedContent,
+          },
+        ];
+
+        // createDocument
+      }
+
+      return {
+        translations,
+      };
+    }
+
     const totalTranslations =
       payload.targetLanguages.length * payload.content.length;
 
@@ -76,7 +102,7 @@ export const translateTask = schemaTask({
           Math.round((completedTranslations * 100) / totalTranslations),
         );
 
-        const translatedContent = await translate(
+        const translatedContent = await translateKeys(
           chunk,
           {
             sourceLocale: payload.sourceLanguage,

@@ -18,7 +18,7 @@ interface XliffData {
 }
 
 export class XliffParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const parsed = (await xliff.xliff2js(input)) as unknown as XliffData;
       if (typeof parsed !== "object" || parsed === null) {

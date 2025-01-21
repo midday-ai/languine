@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { getOrganizationTotalKeys } from "@/db/queries/organization";
+import { getOrganizationLimits } from "@/db/queries/organization";
 import { organizations, projects } from "@/db/schema";
 import type { translateTask } from "@/jobs/translate/translate";
 import { TIERS_MAX_KEYS } from "@/lib/tiers";
@@ -52,12 +52,13 @@ export const jobsRouter = createTRPCRouter({
 
       const isFreeUser = org?.plan === "free";
 
-      const totalKeys = await getOrganizationTotalKeys(org?.id);
+      const { keysCount, documentsCount } = await getOrganizationLimits(
+        org?.id,
+      );
 
       // Calculate the total number of keys, saved keys + new keys (for each target language)
       const nextTotalKeys =
-        (totalKeys?.total ?? 0) +
-        input.content.length * input.targetLanguages.length;
+        keysCount + input.content.length * input.targetLanguages.length;
 
       const currentKeysLimit =
         TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];

@@ -3,7 +3,7 @@ import { BaseParser } from "../core/base-parser.js";
 import type { XcstringsOutput, XcstringsTranslationEntity } from "./types.js";
 
 export class XcodeXcstringsParser extends BaseParser {
-  async parse(input: string): Promise<Record<string, string>> {
+  async parse(input: string) {
     try {
       const parsed = JSON.parse(input);
       const result: Record<string, string> = {};

@@ -1,6 +1,6 @@
 import { generateObject } from "ai";
 import { z } from "zod";
-import { chooseModel } from "./model";
+import { chooseModel, getModels } from "./model";
 import { createFinalPrompt } from "./prompt";
 import type { PromptOptions } from "./types";
 
@@ -19,7 +19,7 @@ ${sourceText}
   return createFinalPrompt(codeblocks, options);
 }
 
-export async function translate(
+export async function translateKeys(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
   totalItems: number,
@@ -31,6 +31,24 @@ export async function translate(
     prompt,
     schema: z.object({
       content: z.array(z.string()),
+    }),
+  });
+
+  return object.content;
+}
+
+export async function translateDocument(
+  content: string,
+  options: PromptOptions,
+) {
+  const { large } = getModels();
+  const prompt = createFinalPrompt(content, options);
+
+  const { object } = await generateObject({
+    model: large,
+    prompt,
+    schema: z.object({
+      content: z.string(),
     }),
   });
 

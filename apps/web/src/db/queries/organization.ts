@@ -248,12 +248,17 @@ export const updateOrganizationApiKey = async (organizationId: string) => {
     .get();
 };
 
-export const getOrganizationTotalKeys = async (organizationId: string) => {
-  return db
-    .select({ total: count(translations.translationKey) })
+export const getOrganizationLimits = async (organizationId: string) => {
+  const t = await db
+    .select({ totalKeys: count(translations.translationKey) })
     .from(translations)
     .where(eq(translations.organizationId, organizationId))
     .get();
+
+  return {
+    keysCount: t?.totalKeys ?? 0,
+    documentsCount: 0,
+  };
 };
 
 export const updateOrganizationTier = async (
