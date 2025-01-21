@@ -27,10 +27,8 @@ export async function translate(
   const prompt = getPrompt(content, options);
 
   const { object } = await generateObject({
-    model: chooseModel(totalItems),
+    ...chooseModel(totalItems),
     prompt,
-    mode: "json",
-    maxTokens: 8000,
     schema: z.object({
       content: z.array(z.string()),
     }),
