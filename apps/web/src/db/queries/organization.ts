@@ -1,5 +1,6 @@
 import { db } from "@/db";
 import {
+  documents,
   invitations,
   members,
   organizations,
@@ -248,12 +249,28 @@ export const updateOrganizationApiKey = async (organizationId: string) => {
     .get();
 };
 
-export const getOrganizationTotalKeys = async (organizationId: string) => {
-  return db
-    .select({ total: count(translations.translationKey) })
-    .from(translations)
-    .where(eq(translations.organizationId, organizationId))
-    .get();
+export const getOrganizationLimits = async (organizationId: string) => {
+  const [totalKeys, totalDocuments] = await Promise.all([
+    db
+      .select({
+        count: count(translations.translationKey),
+      })
+      .from(translations)
+      .where(eq(translations.organizationId, organizationId))
+      .get(),
+    db
+      .select({
+        count: count(documents.id),
+      })
+      .from(documents)
+      .where(eq(documents.organizationId, organizationId))
+      .get(),
+  ]);
+
+  return {
+    totalKeys: totalKeys?.count ?? 0,
+    totalDocuments: totalDocuments?.count ?? 0,
+  };
 };
 
 export const updateOrganizationTier = async (

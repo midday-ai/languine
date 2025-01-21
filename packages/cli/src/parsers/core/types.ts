@@ -2,12 +2,10 @@ import { z } from "zod";
 
 export interface ParserOptions {
   type: string;
-  filePath: string;
 }
 
 export const parserOptionsSchema = z.object({
   type: z.string(),
-  filePath: z.string(),
 });
 
 export interface Parser {
@@ -15,6 +13,6 @@ export interface Parser {
   serialize(
     locale: string,
     data: Record<string, string>,
-    originalData?: Record<string, string>,
+    originalData?: string | Record<string, unknown>,
   ): Promise<string>;
 }

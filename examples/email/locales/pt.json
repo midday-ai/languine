@@ -1,12 +1,12 @@
 {
-  "previewText": "Junte-se a %{invitedByUsername} na %{company}",
+  "previewText": "Junte-se a %{invitedByUsername} no %{company}",
   "company": "%{company}",
   "logoAlt": "Logo da Vercel",
-  "joinTeamHeading": "Junte-se a %{teamName} na %{company}",
-  "greeting": "Oi %{username},",
-  "invitationText": "%{invitedByUsername} (%{email}) o convidou para se juntar à equipe %{teamName} na %{company}.",
+  "joinTeamHeading": "Junte-se a %{teamName} no %{company}",
+  "greeting": "Olá %{username},",
+  "invitationText": "%{invitedByUsername} (%{email}) convidou você para se juntar à equipe %{teamName} no %{company}.",
   "invitedToAlt": "Convidado para",
   "joinTeamButton": "Junte-se à equipe",
-  "copyUrlText": "Ou copie e cole esta URL no seu navegador:",
+  "copyUrlText": "Ou copie e cole este URL no seu navegador:",
   "footerText": "Este convite foi destinado a %{username} (%{ip} de %{location}). Se você não estava esperando por este convite, pode ignorar este e-mail. Se você está preocupado com a segurança da sua conta, por favor, responda a este e-mail para entrar em contato conosco."
 }

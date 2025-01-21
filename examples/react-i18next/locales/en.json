@@ -10,8 +10,5 @@
     "notifications": {
       "messages": "You have {{count}} new message(s).",
       "empty": "No new notifications."
-    },
-    "date": {
-      "today": "Today is {{date}}."
     }
   }

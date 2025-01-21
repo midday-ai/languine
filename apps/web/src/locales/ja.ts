@@ -34,21 +34,21 @@ export default {
     fullyOpenSource: "完全にオープンソース",
     fullyOpenSourceDescription: "私たちのコードはGitHubで公開されており、透明性とコミュニティの貢献を可能にしています。",
     noVendorLockIn: "ベンダーロックインなし",
-    noVendorLockInDescription: "特定のサービスに縛られることはありません。あなた自身のLLMを使用してください。",
-    presetsForExpo: "Expo用プリセット",
-    presetsForExpoDescription: "Expo用のプリセットを提供しているので、すぐに始めることができます。",
-    presetForReactNative: "React Native用プリセット",
-    presetForReactNativeDescription: "React Native用のプリセットを提供しているので、すぐに始めることができます。",
+    noVendorLockInDescription: "特定のサービスに縛られることはありません。独自のLLMを使用してください。",
+    presetsForExpo: "Expoのプリセット",
+    presetsForExpoDescription: "Expoのプリセットを提供しているので、すぐに始められます。",
+    presetForReactNative: "React Nativeのプリセット",
+    presetForReactNativeDescription: "React Nativeのプリセットを提供しているので、すぐに始められます。",
     presetForReactEmail: "React Emailライブラリ",
     presetForReactEmailDescription: "React Email用のi18nライブラリを作成しました。",
-    readyForI18nLibraries: "i18nライブラリ対応",
+    readyForI18nLibraries: "i18nライブラリに対応",
     readyForI18nLibrariesDescription: "最も人気のあるライブラリを含むすべてのライブラリをサポートしています（next-intl、react-i18next、react-intlなど）。"
   },
   info: {
     title: "アプリのローカライゼーションのあらゆる側面を扱います",
     smartTranslation: {
       title: "スマート翻訳",
-      intelligentTranslation: "コンテキストを意識したインテリジェントな翻訳",
+      intelligentTranslation: "コンテキスト認識によるインテリジェントな翻訳",
       brandVoice: "ブランドの声とトーンの一貫性",
       terminology: "用語管理",
       linguisticFeatures: "高度な言語機能",
@@ -75,7 +75,7 @@ export default {
     github: "GitHubでサインイン",
     google: "Googleでサインイン",
     footer: "ローカライゼーションを自動化する。",
-    description: "サインインして、数秒でローカライゼーションの自動化を開始してください。",
+    description: "サインインして、数秒でローカライゼーションの自動化を開始します。",
     terms: {
       text: "サインインすることにより、あなたは私たちの",
       termsOfService: "利用規約",
@@ -126,7 +126,7 @@ export default {
     deleteAccount: {
       title: "Languine APIおよびCLIからアクセスするための個人用APIキー。",
       description: "アカウントを削除",
-      button: "あなたのアカウントと関連するすべてのデータを永久に削除します。この操作は取り消すことができません。"
+      button: "アカウントと関連するすべてのデータを永久に削除します。この操作は取り消せません。"
     }
   },
   copyInstall: {
@@ -136,7 +136,7 @@ export default {
     dialog: {
       title: "クリップボードにコピーされました",
       description: "本当によろしいですか？",
-      placeholder: "この操作は取り消すことができません。確認のためにDELETEと入力してください。",
+      placeholder: "この操作は取り消せません。確認のためにDELETEと入力してください。",
       confirm: "確認のためにDELETEと入力してください",
       cancel: "削除を確認"
     }
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "キャンセル",
     pro: "ワークフロー（CI/CDパイプライン）",
-    description: "[pro]"
+    description: "[プロ]"
   },
   settings: {
     saved: "あなたが唯一のメンバーである場合、組織を削除することはできません。代わりにアカウントを削除してください",
@@ -230,7 +230,7 @@ export default {
         removeMemberErrorDescription: "メンバーが正常に削除されました"
       }
     },
-    badRequest: "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、すべてのプッシュでコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保持しながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、レビュー後にメインブランチにマージされ、デプロイされます。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。",
+    badRequest: "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、プッシュごとにコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保持しながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、レビュー後にメインブランチにマージされ、デプロイされます。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。",
     badRequestDescription: "無効なリクエスト",
     permissionDenied: "組織には少なくとも1人の所有者が必要です。この所有者を削除する前に、別のメンバーに所有権を移転してください。",
     permissionDeniedDescription: "許可が拒否されました",
@@ -242,7 +242,7 @@ export default {
     apiKey: {
       updated: "チームを作成",
       updatedDescription: "APIキーが更新されました",
-      title: "あなたのAPIキーが正常に更新され、クリップボードにコピーされました。",
+      title: "APIキーが正常に更新され、クリップボードにコピーされました。",
       description: "APIキーを更新",
       cancel: "新しいAPIキーを生成してもよろしいですか？古いキーはすぐに機能しなくなります。",
       "continue": "キャンセル"
@@ -288,7 +288,7 @@ export default {
       title: "スタイルガイド",
       description: "長さ制御",
       options: {
-        flexible: "翻訳テキストの長さを制御する",
+        flexible: "翻訳されたテキストの長さを制御する",
         strict: "柔軟",
         exact: "厳格",
         loose: "正確"
@@ -299,13 +299,13 @@ export default {
       description: "包括的な言語"
     },
     formality: {
-      title: "翻訳が包括的な言語を使用することを保証する",
+      title: "翻訳が包括的な言語を使用していることを確認する",
       description: "形式性"
     },
     brandName: {
-      title: "翻訳の形式レベルを制御する",
+      title: "翻訳の形式性レベルを制御する",
       description: "ブランド名",
-      placeholder: "ブランド名を設定して一貫した使用を保証する"
+      placeholder: "ブランド名を設定して一貫した使用を確保する"
     },
     brandVoice: {
       title: "ブランド名を入力してください",
@@ -336,7 +336,7 @@ export default {
         unlimited_projects: "最大100キー",
         fine_tuning: "無制限のプロジェクト",
         overrides: "微調整オプション",
-        analytics: "翻訳オーバーライド",
+        analytics: "翻訳の上書き",
         context_memory: "分析",
         community_support: "コンテキストメモリ"
       }
@@ -412,12 +412,12 @@ export default {
       "3": {
         title: "翻訳がプッシュされるのを待っています",
         description: "ドキュメント",
-        link: "詳細なガイドとベストプラクティスについては、私たちのドキュメントをチェックしてください"
+        link: "詳細なガイドとベストプラクティスについては、ドキュメントをチェックしてください"
       }
     },
     info: {
       description: "ドキュメント",
-      link: "助けが必要ですか？詳細なガイドとベストプラクティスについては、私たちの",
+      link: "助けが必要ですか？詳細なガイドとベストプラクティスについては、",
       description_2: "ドキュメント"
     }
   },
@@ -455,24 +455,24 @@ export default {
     description: "AI搭載のCLIとパイプラインを使用して、開発者向けの翻訳を自動化し、ローカライズプロセスを効率化します。"
   },
   language: {
-    en: "英語",
-    es: "スペイン語",
-    fr: "フランス語",
-    de: "ドイツ語",
-    it: "イタリア語",
-    pt: "ポルトガル語",
-    zh: "中国語",
-    ja: "日本語",
-    ko: "韓国語",
-    ar: "アラビア語",
-    hi: "ヒンディー語",
-    tr: "トルコ語",
-    nl: "オランダ語",
-    pl: "ポーランド語",
-    no: "ノルウェー語",
-    da: "デンマーク語",
-    sv: "スウェーデン語",
-    fi: "フィンランド語",
-    vi: "ベトナム語"
+    en: "期間を選択",
+    es: "英語",
+    fr: "スペイン語",
+    de: "フランス語",
+    it: "ドイツ語",
+    pt: "イタリア語",
+    zh: "ポルトガル語",
+    ja: "中国語",
+    ko: "日本語",
+    ar: "韓国語",
+    hi: "アラビア語",
+    tr: "ヒンディー語",
+    nl: "トルコ語",
+    pl: "オランダ語",
+    no: "ポーランド語",
+    da: "ノルウェー語",
+    sv: "デンマーク語",
+    fi: "スウェーデン語",
+    vi: "フィンランド語"
   }
 } as const;

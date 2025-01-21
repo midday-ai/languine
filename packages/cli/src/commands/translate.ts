@@ -5,9 +5,10 @@ import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
-import { getDiff } from "@/utils/diff.js";
+import { getDiff } from "@/utils/diff.ts";
 import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
+import { transformLocalePath } from "@/utils/path.js";
 import { getAPIKey } from "@/utils/session.ts";
 import { confirm, note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
@@ -105,6 +106,17 @@ export async function translateCommand(args: string[] = []) {
       for (const pattern of include) {
         const globPattern =
           pattern && typeof pattern === "object" ? pattern.glob : pattern;
+
+        // Check if [locale] placeholder exists in pattern
+        if (!globPattern.includes("[locale]")) {
+          s.stop();
+          note(
+            "Missing [locale] placeholder in file pattern. Please update your config file to include [locale] in file paths.\nLearn more at https://languine.ai/docs/getting-started/troubleshooting",
+            "Configuration",
+          );
+          process.exit(1);
+        }
+
         const sourcePattern = globPattern.replace("[locale]", sourceLocale);
 
         // Find all matching source files
@@ -125,9 +137,19 @@ export async function translateCommand(args: string[] = []) {
             keysToTranslate = Object.keys(sourceContent);
           } else {
             // Otherwise use normal diff detection
-            const changes = await getDiff({ sourceFilePath, type });
-            keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
-            removedKeys = changes.removedKeys;
+            try {
+              const changes = await getDiff({ sourceFilePath, type });
+              keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
+              removedKeys = changes.removedKeys;
+            } catch (error) {
+              console.log();
+              note(
+                "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                "Diffing",
+              );
+              console.log();
+              process.exit(1);
+            }
           }
 
           if (keysToTranslate.length > 0 || removedKeys.length > 0) {
@@ -159,7 +181,8 @@ export async function translateCommand(args: string[] = []) {
             .filter(([key]) => keysToTranslate.includes(key))
             .map(([key, sourceText]) => ({
               key,
-              sourceText: String(sourceText),
+              sourceText: sourceText,
+              documentName: sourceFilePath.split("/").pop(),
             }));
 
           let shouldRemoveKeys = false;
@@ -196,12 +219,23 @@ export async function translateCommand(args: string[] = []) {
             commitLink: gitInfo?.commitLink,
           });
 
-          if (error?.code === "LIMIT_REACHED") {
+          if (
+            error?.code === "DOCUMENT_LIMIT_REACHED" ||
+            error?.code === "KEY_LIMIT_REACHED"
+          ) {
             s.stop();
-            note(
-              "Translation limit reached. Upgrade your plan to increase your limit.",
-              "Limit reached",
-            );
+
+            if (error?.code === "DOCUMENT_LIMIT_REACHED") {
+              note(
+                "Document limit reached. Upgrade your plan to increase your limit.",
+                "Limit reached",
+              );
+            } else {
+              note(
+                "Translation keys limit reached. Upgrade your plan to increase your limit.",
+                "Limit reached",
+              );
+            }
 
             const shouldUpgrade = await select({
               message: "Would you like to upgrade your plan now?",
@@ -280,9 +314,11 @@ export async function translateCommand(args: string[] = []) {
           // Process results for each target locale
           for (const targetLocale of effectiveTargetLocales) {
             try {
-              const targetPath = sourceFilePath.replace(
+              const targetPath = transformLocalePath(
+                sourceFilePath,
                 sourceLocale,
                 targetLocale,
+                process.cwd(),
               );
 
               // Create directory if it doesn't exist
@@ -290,8 +326,10 @@ export async function translateCommand(args: string[] = []) {
 
               // Read existing target file if it exists
               let existingContent: Record<string, string> = {};
+              let originalFileContent: string | undefined;
               try {
                 const existingFile = await readFile(targetPath, "utf-8");
+                originalFileContent = existingFile;
                 existingContent = await parser.parse(existingFile);
               } catch (error) {
                 // File doesn't exist yet, use empty object
@@ -317,10 +355,11 @@ export async function translateCommand(args: string[] = []) {
                 ...translatedContent,
               };
 
+              // Pass the original file content as a string if it exists
               const serialized = await parser.serialize(
                 targetLocale,
                 mergedContent,
-                existingContent,
+                originalFileContent,
               );
 
               // Run afterTranslate hook if configured

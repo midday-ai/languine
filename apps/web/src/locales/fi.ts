@@ -87,7 +87,7 @@ export default {
     account: "Tilin asetukset",
     signOut: "Kirjaudu ulos",
     createTeam: "Luo tiimi",
-    homepage: "Etusivu",
+    homepage: "Kotisivu",
     team: "Tiimin asetukset"
   },
   teamSelector: {
@@ -142,9 +142,9 @@ export default {
     }
   },
   pipeline: {
-    title: "Työnkulku (CI/CD Putkisto)",
+    title: "Työnkulku (CI/CD-putki)",
     pro: "[pro]",
-    description: "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-putkistoosi, kääntäen koodipohjasi automaattisesti jokaisella pushauksella. Kun koodimuutoksia pushataan, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändin äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältö pysyy synkassa kehityksen kanssa."
+    description: "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-putkeesi, kääntäen koodipohjasi automaattisesti jokaisella push-toiminnolla. Kun koodimuutoksia työnnetään, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändisi äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältösi pysyy synkassa kehityksen kanssa."
   },
   settings: {
     saved: "Asetukset tallennettu",
@@ -188,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Tiimin API-avain",
-        description: "API-avain tiimin käyttöön, käytä tätä CI/CD-putkistostasi yhdessä Projektin ID:n kanssa",
+        description: "API-avain tiimin käyttöön, käytä tätä CI/CD-putkestasi yhdessä Projektin ID:n kanssa",
         placeholder: "Tiimin API-avain"
       },
       members: {
@@ -252,17 +252,17 @@ export default {
       updateError: "Asetusten päivitys epäonnistui",
       translationProvider: {
         title: "Käännöspalveluntarjoaja",
-        description: "Valitse suosikkisi tekoälypalvelu käännösten luomiseen. Jokainen palveluntarjoaja tarjoaa erilaisia ominaisuuksia ja hinnoittelua.",
+        description: "Valitse suosikki tekoälypalvelusi käännösten luomiseen. Jokainen palveluntarjoaja tarjoaa erilaisia ominaisuuksia ja hinnoittelua.",
         placeholder: "Valitse palveluntarjoaja"
       },
       languageModel: {
         title: "Kielimalli",
-        description: "Valitse tekoälymalli, joka tarjoaa parhaan tasapainon laadun ja nopeuden välillä käännöstarpeisiisi. Tehokkaammat mallit voivat olla hitaampia, mutta tuottaa parempia tuloksia.",
+        description: "Valitse tekoälymalli, joka tarjoaa parhaan tasapainon laadun ja nopeuden välillä käännöstarpeisiisi. Tehokkaammat mallit voivat olla hitaampia, mutta tuottavat parempia tuloksia.",
         placeholder: "Valitse malli"
       },
       apiKey: {
         title: "Palveluntarjoajan API-avain",
-        description: "Syötä API-avain valitun palveluntarjoajan todentamiseksi. Pidä tämä avain turvassa - salataan sen ennen tallennusta.",
+        description: "Syötä API-avain valitun palveluntarjoajan todentamiseksi. Pidä tämä avain turvallisena - salataan sen ennen tallennusta.",
         placeholder: "Syötä API-avain"
       }
     },
@@ -276,8 +276,8 @@ export default {
       description: "Käytä käännösmuistia parantaaksesi yhdenmukaisuutta ja tehokkuutta"
     },
     qualityChecks: {
-      title: "Laadun tarkistukset",
-      description: "Ota käyttöön automaattiset laadun tarkistukset käännöksille"
+      title: "Laatutarkistukset",
+      description: "Ota käyttöön automaattiset laatutarkistukset käännöksille"
     },
     contextDetection: {
       title: "Kontekstin tunnistus",
@@ -286,7 +286,7 @@ export default {
     styleGuide: "Tyyliohje",
     lengthControl: {
       title: "Pituuden hallinta",
-      description: "Hallitse käännösten tekstin pituutta",
+      description: "Hallitse käännösten pituutta",
       options: {
         flexible: "Joustava",
         strict: "Tiukka",
@@ -343,7 +343,7 @@ export default {
     },
     pro: {
       title: "Pro",
-      includes_free: "Kaikki ilmaisessa, plus:",
+      includes_free: "Kaikki ilmaisessa, lisäksi:",
       features: {
         github_action: "GitHub Action -integraatio",
         latest_features: "Varhainen pääsy uusimpiin ominaisuuksiin",
@@ -375,7 +375,7 @@ export default {
     sendInvite: "Lähetä kutsu",
     success: {
       title: "Kutsu lähetetty",
-      description: "Kutsu lähetettiin onnistuneesti osoitteeseen {email}"
+      description: "Kutsu lähetetty onnistuneesti osoitteeseen {email}"
     },
     error: {
       title: "Virhe",

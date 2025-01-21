@@ -1,14 +1,13 @@
 import { defineConfig } from "languine";
 
 export default defineConfig({
-  projectId: "",
   locale: {
     source: "en",
-    targets: ["es"],
+    targets: ["es", "fr"],
   },
   files: {
     json: {
-      include: ["src/locales/[locale].json"],
+      include: ["locales/[locale].json"],
     },
   },
 });

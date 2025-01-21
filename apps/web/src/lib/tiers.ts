@@ -9,3 +9,15 @@ export const TIERS_MAX_KEYS = {
   7: 500000,
   8: 1000000,
 };
+
+export const TIERS_MAX_DOCUMENTS = {
+  0: 5,
+  1: 20,
+  2: 50,
+  3: 100,
+  4: 200,
+  5: 500,
+  6: 1000,
+  7: 2000,
+  8: 5000,
+};

@@ -1,12 +1,11 @@
 import { JSDOM } from "jsdom";
-import { createFormatParser } from "../core/format.ts";
-import type { Parser } from "../core/types.ts";
+import { BaseParser } from "../core/base-parser.js";
 
 // Import Node and HTMLElement constants from jsdom
-const { Node, HTMLElement } = new JSDOM().window;
+const { Node } = new JSDOM().window;
 
-export function createHtmlParser(): Parser {
-  const TRANSLATABLE_ATTRS: Record<string, string[]> = {
+export class HtmlParser extends BaseParser {
+  private TRANSLATABLE_ATTRS: Record<string, string[]> = {
     meta: ["content"],
     img: ["alt", "title"],
     input: ["placeholder", "title", "value"],
@@ -15,9 +14,98 @@ export function createHtmlParser(): Parser {
     label: ["aria-label"],
   };
 
-  const SKIP_TAGS = new Set(["script", "style", "noscript", "template"]);
+  private SKIP_TAGS = new Set(["script", "style", "noscript", "template"]);
 
-  function buildNodeSelector(
+  async parse(input: string) {
+    try {
+      const dom = new JSDOM(input);
+      const translations: Record<string, string> = {};
+      this.extractTranslations(
+        dom.window.document.documentElement,
+        dom.window.document,
+        translations,
+      );
+      return translations;
+    } catch (error) {
+      throw new Error(
+        `Failed to parse HTML translations: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
+
+  async serialize(
+    _locale: string,
+    data: Record<string, string>,
+    _originalData?: Record<string, string>,
+  ): Promise<string> {
+    try {
+      const dom = new JSDOM(
+        "<!DOCTYPE html><html><head></head><body></body></html>",
+      );
+      const doc = dom.window.document;
+      const head = doc.head;
+      const body = doc.body;
+
+      // Process each translation key
+      for (const [key, value] of Object.entries(data)) {
+        const [path, attr] = key.split("@");
+        const parts = path.split("/");
+        const rootElement = parts[0];
+        const indices = parts.slice(1).map(Number);
+
+        // Determine target element (head or body)
+        const targetElement = rootElement === "head" ? head : body;
+
+        // Create or find the parent element
+        let currentElement = targetElement;
+        for (let i = 0; i < indices.length; i++) {
+          const index = indices[i];
+          // Create elements based on the path
+          while (currentElement.childNodes.length <= index) {
+            if (attr) {
+              // Create appropriate element based on attribute
+              let element: HTMLElement;
+              if (attr === "alt" || attr === "title") {
+                element = doc.createElement("img");
+              } else if (attr === "placeholder" || attr === "value") {
+                element = doc.createElement("input");
+              } else if (attr === "content") {
+                element = doc.createElement("meta");
+              } else if (attr === "aria-label") {
+                element = doc.createElement("button");
+              } else {
+                element = doc.createElement("div");
+              }
+              currentElement.appendChild(element);
+            } else {
+              // Create appropriate element based on context
+              const element = doc.createElement(
+                currentElement === head ? "title" : "div",
+              );
+              currentElement.appendChild(element);
+            }
+          }
+          currentElement = currentElement.childNodes[index] as HTMLElement;
+        }
+
+        if (attr) {
+          // Set attribute
+          currentElement.setAttribute(attr, value);
+        } else {
+          // Set text content
+          currentElement.textContent = value;
+        }
+      }
+
+      return dom.serialize();
+    } catch (error) {
+      throw new Error(
+        `Failed to serialize HTML translations: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
+
+  private buildNodeSelector(
     element: Node,
     doc: Document,
     attrName?: string,
@@ -58,14 +146,14 @@ export function createHtmlParser(): Parser {
     return attrName ? `${selector}@${attrName}` : selector;
   }
 
-  function extractTranslations(
+  private extractTranslations(
     node: Node,
     doc: Document,
     translations: Record<string, string>,
   ) {
     let ancestor = node.parentElement;
     while (ancestor) {
-      if (SKIP_TAGS.has(ancestor.tagName.toLowerCase())) {
+      if (this.SKIP_TAGS.has(ancestor.tagName.toLowerCase())) {
         return;
       }
       ancestor = ancestor.parentElement;
@@ -74,17 +162,17 @@ export function createHtmlParser(): Parser {
     if (node.nodeType === Node.TEXT_NODE) {
       const content = node.textContent?.trim() || "";
       if (content) {
-        translations[buildNodeSelector(node, doc)] = content;
+        translations[this.buildNodeSelector(node, doc)] = content;
       }
     } else if (node.nodeType === Node.ELEMENT_NODE) {
       const element = node as Element;
       const tag = element.tagName.toLowerCase();
 
-      const translatableAttrs = TRANSLATABLE_ATTRS[tag] || [];
+      const translatableAttrs = this.TRANSLATABLE_ATTRS[tag] || [];
       for (const attr of translatableAttrs) {
         const attrValue = element.getAttribute(attr);
         if (attrValue?.trim()) {
-          translations[buildNodeSelector(element, doc, attr)] = attrValue;
+          translations[this.buildNodeSelector(element, doc, attr)] = attrValue;
         }
       }
 
@@ -93,135 +181,8 @@ export function createHtmlParser(): Parser {
           n.nodeType === Node.ELEMENT_NODE ||
           (n.nodeType === Node.TEXT_NODE && n.textContent?.trim()),
       )) {
-        extractTranslations(child, doc, translations);
+        this.extractTranslations(child, doc, translations);
       }
     }
   }
-
-  return createFormatParser({
-    async parse(input: string) {
-      const translations: Record<string, string> = {};
-      const dom = new JSDOM(input);
-      const doc = dom.window.document;
-
-      for (const rootSection of [doc.head, doc.body]) {
-        for (const node of Array.from(rootSection.childNodes).filter(
-          (n) =>
-            n.nodeType === Node.ELEMENT_NODE ||
-            (n.nodeType === Node.TEXT_NODE && n.textContent?.trim()),
-        )) {
-          extractTranslations(node, doc, translations);
-        }
-      }
-
-      return translations;
-    },
-
-    async serialize(_, translations) {
-      const dom = new JSDOM(
-        "<!DOCTYPE html><html><head></head><body></body></html>",
-      );
-      const doc = dom.window.document;
-
-      // Helper to determine the tag name based on attributes and content path
-      function getTagName(attrs: string[], path: string): string {
-        // Special case for title tag
-        if (path.startsWith("head/") && !attrs.length) {
-          return "title";
-        }
-
-        for (const [tag, validAttrs] of Object.entries(TRANSLATABLE_ATTRS)) {
-          if (attrs.some((attr) => validAttrs.includes(attr))) {
-            return tag;
-          }
-        }
-        return "div";
-      }
-
-      // Group translations by their parent path
-      const groups: Record<string, Record<string, string>> = {};
-      for (const [path, content] of Object.entries(translations)) {
-        const [nodePath, attrName] = path.split("@");
-        const lastSlashIndex = nodePath.lastIndexOf("/");
-        const parentPath =
-          lastSlashIndex === -1 ? "" : nodePath.slice(0, lastSlashIndex);
-        const key = attrName ? `${nodePath}@${attrName}` : nodePath;
-
-        if (!groups[parentPath]) {
-          groups[parentPath] = {};
-        }
-        groups[parentPath][key] = content;
-      }
-
-      // Process translations in order of path depth
-      const sortedPaths = Object.keys(groups).sort(
-        (a, b) => a.split("/").length - b.split("/").length,
-      );
-
-      for (const parentPath of sortedPaths) {
-        const translations = groups[parentPath];
-        const [section, ...segments] = parentPath.split("/");
-
-        let parentElement = section === "head" ? doc.head : doc.body;
-
-        // Navigate to the parent element
-        for (const position of segments) {
-          const index = Number(position);
-          const visibleNodes = Array.from(parentElement.childNodes).filter(
-            (n) =>
-              n.nodeType === Node.ELEMENT_NODE ||
-              (n.nodeType === Node.TEXT_NODE && n.textContent?.trim()),
-          );
-
-          if (index >= visibleNodes.length) {
-            const container = doc.createElement("div");
-            parentElement.appendChild(container);
-            parentElement = container;
-          } else {
-            const node = visibleNodes[index];
-            if (node instanceof HTMLElement) {
-              parentElement = node;
-            }
-          }
-        }
-
-        // Group child translations by their position
-        const positionGroups: Record<string, Record<string, string>> = {};
-        for (const [path, content] of Object.entries(translations)) {
-          const [nodePath, attrName] = path.split("@");
-          const position = nodePath.split("/").pop() || "0";
-          if (!positionGroups[position]) {
-            positionGroups[position] = {};
-          }
-          if (attrName) {
-            positionGroups[position][attrName] = content;
-          } else {
-            positionGroups[position].text = content;
-          }
-        }
-
-        // Create elements for each position
-        for (const [position, attrs] of Object.entries(positionGroups)) {
-          const path = parentPath ? `${parentPath}/${position}` : position;
-          const tagName = getTagName(
-            Object.keys(attrs).filter((k) => k !== "text"),
-            path,
-          );
-          const element = doc.createElement(tagName);
-
-          for (const [attr, value] of Object.entries(attrs)) {
-            if (attr === "text") {
-              element.textContent = value;
-            } else {
-              element.setAttribute(attr, value);
-            }
-          }
-
-          parentElement.appendChild(element);
-        }
-      }
-
-      return dom.serialize();
-    },
-  });
 }

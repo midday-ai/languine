@@ -7,7 +7,6 @@
     "escaped": "Escape geschweifte Klammern mit einfachen Anführungszeichen (z.B. '{name'})",
     "rich": "Bitte beziehen Sie sich auf <guidelines>die Richtlinien</guidelines>.",
     "number": "Verfügbar ab {price, number, currency}",
-    "date": "Bestellt am {orderDate, date, medium}",
-    "hello": "Hallo"
+    "date": "Bestellt am {orderDate, date, medium}"
   }
 }

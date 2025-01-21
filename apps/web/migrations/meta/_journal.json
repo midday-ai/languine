@@ -176,6 +176,13 @@
       "when": 1737383140628,
       "tag": "0024_amazing_silverclaw",
       "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "6",
+      "when": 1737465891993,
+      "tag": "0025_pale_wonder_man",
+      "breakpoints": true
     }
   ]
 }

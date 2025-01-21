@@ -1,9 +1,8 @@
-import { createFormatParser } from "../core/format.ts";
-import type { Parser } from "../core/types.ts";
+import { BaseParser } from "../core/base-parser.js";
 
-export function createPropertiesParser(): Parser {
-  return createFormatParser({
-    async parse(input: string) {
+export class PropertiesParser extends BaseParser {
+  async parse(input: string) {
+    try {
       const result: Record<string, string> = {};
       const lines = input.split("\n");
 
@@ -22,13 +21,27 @@ export function createPropertiesParser(): Parser {
       }
 
       return result;
-    },
+    } catch (error) {
+      throw new Error(
+        `Failed to parse Properties: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
 
-    async serialize(_, data) {
+  async serialize(
+    _locale: string,
+    data: Record<string, string>,
+    _originalData?: Record<string, string>,
+  ): Promise<string> {
+    try {
       return `${Object.entries(data)
         .filter(([_, value]) => value != null)
         .map(([key, value]) => `${key}=${value}`)
         .join("\n")}\n`;
-    },
-  });
+    } catch (error) {
+      throw new Error(
+        `Failed to serialize Properties: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
 }

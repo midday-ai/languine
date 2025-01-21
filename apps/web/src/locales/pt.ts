@@ -3,7 +3,7 @@ export default {
     pricing: "Preços",
     docs: "Documentação",
     signIn: "Entrar",
-    goToApp: "Ir para o aplicativo"
+    goToApp: "Ir para o app"
   },
   hero: {
     title: "Localização automatizada para suas aplicações",
@@ -30,7 +30,7 @@ export default {
     clearSearch: "Limpar pesquisa"
   },
   features: {
-    title: "Recursos",
+    title: "Funcionalidades",
     fullyOpenSource: "Totalmente código aberto",
     fullyOpenSourceDescription: "Nosso código está publicamente disponível no GitHub, permitindo transparência e contribuições da comunidade.",
     noVendorLockIn: "Sem bloqueio de fornecedor",
@@ -110,18 +110,18 @@ export default {
   },
   account: {
     fullName: {
-      title: "Nome completo",
+      title: "Nome Completo",
       description: "Seu nome completo como aparecerá na plataforma.",
       placeholder: "Digite seu nome completo"
     },
     email: {
-      title: "Endereço de e-mail",
-      description: "O endereço de e-mail associado à sua conta.",
-      placeholder: "Digite seu endereço de e-mail"
+      title: "Endereço de Email",
+      description: "O endereço de email associado à sua conta.",
+      placeholder: "Digite seu endereço de email"
     },
     apiKey: {
-      title: "Chave da API",
-      description: "Sua chave de API pessoal para acessar a API Languine e da CLI."
+      title: "Chave API",
+      description: "Sua chave API pessoal para acessar a API Languine e da CLI."
     },
     deleteAccount: {
       title: "Excluir Conta",
@@ -135,19 +135,19 @@ export default {
   dangerZone: {
     dialog: {
       title: "Você tem certeza absoluta?",
-      description: "Esta ação não pode ser desfeita. Digite DELETE para confirmar.",
+      description: "Esta ação não pode ser desfeita. Por favor, digite DELETE para confirmar.",
       placeholder: "Digite DELETE para confirmar",
       confirm: "Confirmar Exclusão",
       cancel: "Cancelar"
     }
   },
   pipeline: {
-    title: "Fluxo de trabalho (Pipeline CI/CD)",
+    title: "Fluxo de Trabalho (Pipeline CI/CD)",
     pro: "[pro]",
-    description: "Nosso mecanismo de tradução integra-se perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça sincronizado com o desenvolvimento."
+    description: "Nosso mecanismo de tradução integra-se perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
   },
   settings: {
-    badRequest: "Solicitação inválida",
+    badRequest: "Requisição inválida",
     badRequestDescription: "A organização deve ter pelo menos um proprietário. Transfira a propriedade para outro membro antes de remover este proprietário.",
     permissionDenied: "Permissão negada",
     permissionDeniedDescription: "Você precisa ser um proprietário da equipe para realizar esta ação",
@@ -159,10 +159,10 @@ export default {
     errorDescription: "Por favor, tente novamente ou entre em contato com o suporte",
     addTeam: "Criar equipe",
     apiKey: {
-      updated: "Chave da API atualizada",
-      updatedDescription: "Sua chave da API foi atualizada com sucesso e copiada para sua área de transferência.",
-      title: "Atualizar Chave da API",
-      description: "Tem certeza de que deseja gerar uma nova chave da API? A chave antiga deixará de funcionar imediatamente.",
+      updated: "Chave API atualizada",
+      updatedDescription: "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
+      title: "Atualizar Chave API",
+      description: "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
       cancel: "Cancelar",
       "continue": "Continuar"
     },
@@ -177,9 +177,9 @@ export default {
       updateSuccess: "Configurações atualizadas com sucesso",
       updateError: "Falha ao atualizar as configurações",
       translationProvider: {
-        title: "Provedor de Tradução",
-        description: "Escolha seu serviço de IA preferido para gerar traduções. Cada provedor oferece diferentes capacidades e preços.",
-        placeholder: "Selecione um provedor"
+        title: "Fornecedor de Tradução",
+        description: "Escolha seu serviço de IA preferido para gerar traduções. Cada fornecedor oferece diferentes capacidades e preços.",
+        placeholder: "Selecione um fornecedor"
       },
       languageModel: {
         title: "Modelo de Linguagem",
@@ -187,9 +187,9 @@ export default {
         placeholder: "Selecione um modelo"
       },
       apiKey: {
-        title: "Chave da API do Provedor",
-        description: "Digite sua chave da API para autenticar com seu provedor escolhido. Mantenha esta chave segura - nós a criptografamos antes de armazenar.",
-        placeholder: "Digite sua chave da API"
+        title: "Chave API do Fornecedor",
+        description: "Digite sua chave API para autenticar com seu fornecedor escolhido. Mantenha esta chave segura - nós a criptografamos antes de armazenar.",
+        placeholder: "Digite sua chave API"
       }
     },
     addProject: "Criar projeto",
@@ -201,7 +201,7 @@ export default {
       },
       id: {
         title: "ID do Projeto",
-        description: "Seu identificador de projeto único",
+        description: "Seu identificador único de projeto",
         placeholder: "ID do Projeto"
       },
       "delete": {
@@ -225,9 +225,9 @@ export default {
         unlimited: "Ilimitado"
       },
       apiKey: {
-        title: "Chave da API da Equipe",
-        description: "Chave da API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
-        placeholder: "Chave da API da Equipe"
+        title: "Chave API da Equipe",
+        description: "Chave API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
+        placeholder: "Chave API da Equipe"
       },
       members: {
         leaveTeamConfirm: "Sair da equipe",
@@ -280,7 +280,7 @@ export default {
     },
     contextDetection: {
       title: "Detecção de Contexto",
-      description: "Detecte e preserve automaticamente o contexto nas traduções"
+      description: "Detecte e preserve automaticamente o contexto em traduções"
     },
     styleGuide: "Guia de Estilo",
     lengthControl: {
@@ -313,8 +313,8 @@ export default {
     },
     localization: "Localização",
     idioms: {
-      title: "Expressões Idiomáticas",
-      description: "Lide com expressões idiomáticas de forma apropriada"
+      title: "Idiomas",
+      description: "Lide com expressões idiomáticas apropriadamente"
     },
     terminology: {
       title: "Terminologia",
@@ -368,8 +368,8 @@ export default {
   invite: {
     inviteMember: "Convidar membro",
     inviteDescription: "Convide um membro para sua equipe",
-    emailLabel: "E-mail",
-    emailPlaceholder: "Digite o e-mail",
+    emailLabel: "Email",
+    emailPlaceholder: "Digite o email",
     cancel: "Cancelar",
     sendInvite: "Enviar convite",
     success: {
@@ -381,7 +381,7 @@ export default {
       description: "Falha ao enviar convite. Por favor, tente novamente."
     },
     validation: {
-      invalidEmail: "Por favor, insira um e-mail válido"
+      invalidEmail: "Por favor, insira um email válido"
     }
   },
   months: {
@@ -406,7 +406,7 @@ export default {
       },
       "2": {
         title: "Enviar Traduções",
-        description: "Aguardando o envio das traduções"
+        description: "Aguardando as traduções serem enviadas"
       },
       "3": {
         title: "Documentação",

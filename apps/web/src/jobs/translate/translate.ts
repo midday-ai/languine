@@ -1,9 +1,10 @@
+import { createDocument } from "@/db/queries/documents";
 import { validateJobPermissions } from "@/db/queries/permissions";
 import { createTranslation } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
-import { translate } from "../utils/translate";
+import { translateDocument, translateKeys } from "../utils/translate";
 
 const translationSchema = z.object({
   projectId: z.string(),
@@ -20,6 +21,7 @@ const translationSchema = z.object({
     z.object({
       key: z.string(),
       sourceText: z.string(),
+      documentName: z.string().nullable().optional(),
     }),
   ),
 });
@@ -45,6 +47,47 @@ export const translateTask = schemaTask({
       string,
       Array<{ key: string; translatedText: string }>
     > = {};
+
+    // If the source format is markdown, we take the whole document and translate it
+    if (payload.sourceFormat === "md") {
+      for (const targetLocale of payload.targetLanguages) {
+        const document = payload.content.at(0);
+
+        if (!document?.sourceText) {
+          continue;
+        }
+
+        const translatedContent = await translateDocument(document.sourceText, {
+          sourceLocale: payload.sourceLanguage,
+          targetLocale,
+          sourceFormat: payload.sourceFormat,
+        });
+
+        translations[targetLocale] = [
+          {
+            key: "content",
+            translatedText: translatedContent,
+          },
+        ];
+
+        if (document?.sourceText) {
+          await createDocument({
+            projectId: project.id,
+            organizationId: project.organizationId,
+            sourceText: document.sourceText,
+            sourceLanguage: payload.sourceLanguage,
+            targetLanguage: targetLocale,
+            translatedText: translatedContent,
+            sourceFormat: payload.sourceFormat,
+            name: document.documentName ?? "",
+          });
+        }
+      }
+
+      return {
+        translations,
+      };
+    }
 
     const totalTranslations =
       payload.targetLanguages.length * payload.content.length;
@@ -76,7 +119,7 @@ export const translateTask = schemaTask({
           Math.round((completedTranslations * 100) / totalTranslations),
         );
 
-        const translatedContent = await translate(
+        const translatedContent = await translateKeys(
           chunk,
           {
             sourceLocale: payload.sourceLanguage,

@@ -6,31 +6,30 @@ nav:
   contact: Contáctanos
   settings: Configuración
 user:
-  greeting: ¡Hola, {name}!
+  greeting: Hola, {name}!
   profile:
-    title: Tu perfil
-    edit: Editar perfil
-    save: Guardar cambios
+    title: Tu Perfil
+    edit: Editar Perfil
+    save: Guardar Cambios
     cancel: Cancelar
 errors:
   not_found: Página no encontrada
-  server_error: Se produjo un error en el servidor
+  server_error: Ocurrió un error en el servidor
   validation:
     required: Este campo es obligatorio
     email: Por favor, introduce una dirección de correo electrónico válida
     password: La contraseña debe tener al menos 8 caracteres
 form:
-  email: Dirección de correo electrónico
+  email: Dirección de Correo Electrónico
   password: Contraseña
   submit: Enviar
-  reset: Restablecer formulario
+  reset: Reiniciar Formulario
 success:
-  saved: Cambios guardados con éxito
-  uploaded: Archivo subido con éxito
-  deleted: Elemento eliminado con éxito
+  saved: Cambios guardados exitosamente
+  uploaded: Archivo subido exitosamente
+  deleted: Elemento eliminado exitosamente
 time:
   today: Hoy
   yesterday: Ayer
   tomorrow: Mañana
   days_ago: Hace {count} días
-hello: Hola

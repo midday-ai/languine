@@ -1,5 +1,4 @@
 import { createOpenAI } from "@ai-sdk/openai";
-import { calculateChunkSize } from "./chunk";
 
 export function getModels() {
   const createRegularModel = createOpenAI({
@@ -23,9 +22,18 @@ const MODEL_THRESHOLD = 200;
 export function chooseModel(totalItems: number) {
   const { large, regular } = getModels();
 
-  console.log(
-    `Choosing model ${totalItems > MODEL_THRESHOLD ? "large" : "regular"}`,
-  );
+  const isSmall = totalItems > MODEL_THRESHOLD;
 
-  return totalItems > MODEL_THRESHOLD ? large : regular;
+  if (isSmall) {
+    return {
+      model: regular,
+      maxTokens: 8000,
+    };
+  }
+
+  return {
+    model: large,
+    mode: "json",
+    maxTokens: 8000,
+  };
 }
