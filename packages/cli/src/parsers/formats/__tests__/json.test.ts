@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, test } from "bun:test";
+import { createParser } from "@/parsers/index.ts";
 import type { Parser } from "../../core/types.ts";
-import { createJsonParser } from "../json.ts";
 
 describe("JSON Parser", () => {
   let parser: Parser;
 
   beforeEach(() => {
-    parser = createJsonParser();
+    parser = createParser({ type: "json" });
   });
 
   describe("parse", () => {

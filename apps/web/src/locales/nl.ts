@@ -27,12 +27,12 @@ export default {
     loading: "Laden",
     loadMore: "Toon meer",
     noResults: "Geen resultaten voor '{search}'",
-    clearSearch: "Zoekopdracht wissen"
+    clearSearch: "Wis zoekopdracht"
   },
   features: {
     title: "Functies",
     fullyOpenSource: "Volledig open source",
-    fullyOpenSourceDescription: "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
+    fullyOpenSourceDescription: "Onze code is openbaar beschikbaar op GitHub, wat transparantie en gemeenschapsbijdragen mogelijk maakt.",
     noVendorLockIn: "Geen vendor lock-in",
     noVendorLockInDescription: "We sluiten u niet op in een specifieke service, gebruik uw eigen LLMs.",
     presetsForExpo: "Presets voor Expo",
@@ -49,7 +49,7 @@ export default {
     smartTranslation: {
       title: "Slimme Vertaling",
       intelligentTranslation: "Intelligente vertaling met contextbewustzijn",
-      brandVoice: "Consistentie in merkstem en toon",
+      brandVoice: "Consistentie van merkstem en toon",
       terminology: "Terminologiebeheer",
       linguisticFeatures: "Geavanceerde linguïstische functies",
       realtimeUpdates: "Real-time vertalingsupdates"
@@ -58,7 +58,7 @@ export default {
       title: "Implementatie",
       quickSetup: "Snelle setup en integratie",
       fileFormat: "Bestandsformaatbehandeling",
-      contentStructure: "Organisatie van contentstructuur",
+      contentStructure: "Organisatie van inhoudsstructuur",
       assetOrganization: "Organisatie van assets"
     },
     developer: {
@@ -92,14 +92,14 @@ export default {
   },
   teamSelector: {
     addProject: "Project aanmaken",
-    createProjectTitle: "Een nieuw project aanmaken",
+    createProjectTitle: "Maak een nieuw project",
     projectNamePlaceholder: "Projectnaam",
     createProjectButton: "Project aanmaken",
     pro: "Pro",
     project: "Project",
     teams: "Teams",
     createTeam: "Team aanmaken",
-    createTeamTitle: "Een nieuw team aanmaken",
+    createTeamTitle: "Maak een nieuw team",
     teamNamePlaceholder: "Teamnaam",
     createTeamButton: "Team aanmaken"
   },
@@ -111,7 +111,7 @@ export default {
   account: {
     fullName: {
       title: "Volledige naam",
-      description: "Uw volledige naam zoals deze op het platform zal verschijnen.",
+      description: "Uw volledige naam zoals deze over het platform zal verschijnen.",
       placeholder: "Voer uw volledige naam in"
     },
     email: {
@@ -137,14 +137,14 @@ export default {
       title: "Weet u het zeker?",
       description: "Deze actie kan niet ongedaan worden gemaakt. Typ DELETE om te bevestigen.",
       placeholder: "Typ DELETE om te bevestigen",
-      confirm: "Verwijderen bevestigen",
+      confirm: "Bevestig verwijderen",
       cancel: "Annuleren"
     }
   },
   pipeline: {
     title: "Workflow (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdtak en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
+    description: "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdbranch en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
   },
   settings: {
     badRequest: "Ongeldig verzoek",
@@ -230,15 +230,15 @@ export default {
         placeholder: "Team API-sleutel"
       },
       members: {
-        leaveTeamConfirm: "Team verlaten",
+        leaveTeamConfirm: "Verlaat team",
         leaveTeamDescription: "Weet u zeker dat u dit team wilt verlaten?",
         cancel: "Annuleren",
-        leaveTeam: "Team verlaten",
-        invite: "Lid uitnodigen",
+        leaveTeam: "Verlaat team",
+        invite: "Nodig lid uit",
         title: "Leden",
         pendingInvitations: "Uitstaande uitnodigingen",
-        removeMember: "Lid verwijderen",
-        removeMemberConfirm: "Lid verwijderen",
+        removeMember: "Verwijder lid",
+        removeMemberConfirm: "Verwijder lid",
         removeMemberDescription: "Weet u zeker dat u dit lid wilt verwijderen?",
         filterPlaceholder: "Filter leden...",
         allRoles: "Alle rollen",
@@ -248,15 +248,15 @@ export default {
         noResults: "Geen leden gevonden",
         tryDifferentSearch: "Probeer een andere zoekopdracht",
         inviteMembers: "Nodig leden uit om samen te werken",
-        deleteInvite: "Uitnodiging verwijderen",
+        deleteInvite: "Verwijder uitnodiging",
         deleteInviteDescription: "Verwijder de uitnodiging",
         invitedBy: "Uitgenodigd door {name}",
         deleteInviteSuccess: "Uitnodiging verwijderd",
-        deleteInviteError: "Verwijderen van uitnodiging mislukt",
+        deleteInviteError: "Verwijderen uitnodiging mislukt",
         removeMemberSuccess: "Lid verwijderd",
-        removeMemberError: "Verwijderen van lid mislukt",
+        removeMemberError: "Verwijderen lid mislukt",
         removeMemberSuccessDescription: "Lid is succesvol verwijderd",
-        removeMemberErrorDescription: "Verwijderen van lid mislukt",
+        removeMemberErrorDescription: "Verwijderen lid mislukt",
         roles: {
           owner: "Eigenaar",
           member: "Lid"
@@ -333,11 +333,11 @@ export default {
       keys_limit: "Tot 100 sleutels",
       features: {
         unlimited_projects: "Onbeperkte projecten",
-        fine_tuning: "Fine-tuning opties",
+        fine_tuning: "Fijn afstemmingsopties",
         overrides: "Vertalingsoverrides",
         analytics: "Analytics",
         context_memory: "Contextgeheugen",
-        community_support: "Community ondersteuning"
+        community_support: "Gemeenschapsondersteuning"
       }
     },
     pro: {
@@ -345,7 +345,7 @@ export default {
       includes_free: "Alles in Gratis, plus:",
       features: {
         github_action: "GitHub Action integratie",
-        latest_features: "Vroege toegang tot de nieuwste functies",
+        latest_features: "Vroege toegang tot nieuwste functies",
         priority_support: "Prioritaire ondersteuning"
       }
     },
@@ -356,17 +356,17 @@ export default {
     teamNamePlaceholder: "Voer teamnaam in",
     createTeamButton: "Team aanmaken",
     cancel: "Annuleren",
-    createTeamDescription: "Maak een nieuw team aan om uw projecten en medewerkers te beheren."
+    createTeamDescription: "Maak een nieuw team om uw projecten en medewerkers te beheren."
   },
   createProject: {
-    createProjectTitle: "Een nieuw project aanmaken",
+    createProjectTitle: "Maak een nieuw project",
     projectNamePlaceholder: "Voer projectnaam in",
     createProjectButton: "Project aanmaken",
     cancel: "Annuleren",
-    createProjectDescription: "Maak een nieuw project aan om uw lokalisatie te automatiseren."
+    createProjectDescription: "Maak een nieuw project om uw lokalisatie te automatiseren."
   },
   invite: {
-    inviteMember: "Lid uitnodigen",
+    inviteMember: "Nodig lid uit",
     inviteDescription: "Nodig een lid uit voor uw team",
     emailLabel: "E-mail",
     emailPlaceholder: "Voer e-mail in",
@@ -378,7 +378,7 @@ export default {
     },
     error: {
       title: "Fout",
-      description: "Verzenden van uitnodiging mislukt. Probeer het opnieuw."
+      description: "Verzenden uitnodiging mislukt. Probeer het opnieuw."
     },
     validation: {
       invalidEmail: "Voer een geldig e-mailadres in"
@@ -405,8 +405,8 @@ export default {
         description: "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        title: "Push Vertalingen",
-        description: "Wachten tot de vertalingen worden gepusht"
+        title: "Push vertalingen",
+        description: "Wachten op het pushen van de vertalingen"
       },
       "3": {
         title: "Documentatie",

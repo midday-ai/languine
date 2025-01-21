@@ -19,7 +19,7 @@ export default {
     }
   },
   companies: {
-    title: "使用者",
+    title: "使用公司",
     addYourCompany: "+ 添加您的公司"
   },
   activity: {
@@ -42,13 +42,13 @@ export default {
     presetForReactEmail: "React Email库",
     presetForReactEmailDescription: "我们为React Email创建了一个i18n库。",
     readyForI18nLibraries: "支持i18n库",
-    readyForI18nLibrariesDescription: "我们支持所有库，包括最受欢迎的（next-intl, react-i18next, react-intl等）。"
+    readyForI18nLibrariesDescription: "我们支持所有库，包括最受欢迎的库（next-intl、react-i18next、react-intl等）。"
   },
   info: {
-    title: "处理本地化应用的每一个方面，包括",
+    title: "处理本地化应用的各个方面，包括",
     smartTranslation: {
       title: "智能翻译",
-      intelligentTranslation: "具有上下文意识的智能翻译",
+      intelligentTranslation: "具有上下文感知的智能翻译",
       brandVoice: "品牌声音和语调一致性",
       terminology: "术语管理",
       linguisticFeatures: "高级语言功能",
@@ -66,8 +66,8 @@ export default {
       cli: "命令行界面",
       cicd: "CI/CD集成",
       versionControl: "版本控制",
-      workflow: "开发者工作流程",
-      documentation: "全面的文档"
+      workflow: "开发者工作流",
+      documentation: "全面文档"
     }
   },
   login: {
@@ -121,7 +121,7 @@ export default {
     },
     apiKey: {
       title: "API密钥",
-      description: "您的个人API密钥，用于访问Languine API和CLI。"
+      description: "您用于访问Languine API和CLI的个人API密钥。"
     },
     deleteAccount: {
       title: "删除账户",
@@ -142,9 +142,9 @@ export default {
     }
   },
   pipeline: {
-    title: "工作流程（CI/CD流水线）",
+    title: "工作流（CI/CD流水线）",
     pro: "[专业版]",
-    description: "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流程确保您的本地化内容与开发保持同步。"
+    description: "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
   },
   settings: {
     saved: "设置已保存",
@@ -193,12 +193,12 @@ export default {
       },
       members: {
         title: "成员",
-        pendingInvitations: "待处理的邀请",
+        pendingInvitations: "待定邀请",
         filterPlaceholder: "过滤成员...",
         allRoles: "所有角色",
         date: "日期",
         selectAll: "{count} 已选择",
-        noPendingInvitations: "没有待处理的邀请",
+        noPendingInvitations: "没有待定邀请",
         inviteMembers: "邀请成员协作",
         roles: {
           owner: "拥有者",
@@ -248,8 +248,8 @@ export default {
       "continue": "继续"
     },
     provider: {
-      updateSuccess: "设置更新成功",
-      updateError: "设置更新失败",
+      updateSuccess: "设置成功更新",
+      updateError: "更新设置失败",
       translationProvider: {
         title: "翻译提供商",
         description: "选择您偏好的AI服务以生成翻译。每个提供商提供不同的能力和定价。",
@@ -262,7 +262,7 @@ export default {
       },
       apiKey: {
         title: "提供商API密钥",
-        description: "输入您的API密钥以与您选择的提供商进行身份验证。请保持此密钥安全 - 我们在存储前会加密它。",
+        description: "输入您的API密钥以与您选择的提供商进行身份验证。请保持此密钥安全 - 我们在存储之前对其进行加密。",
         placeholder: "输入您的API密钥"
       }
     },
@@ -304,7 +304,7 @@ export default {
     },
     brandName: {
       title: "品牌名称",
-      description: "设置您的品牌名称以确保一致使用",
+      description: "设置您的品牌名称以保持一致性使用",
       placeholder: "输入您的品牌名称"
     },
     brandVoice: {
@@ -329,9 +329,9 @@ export default {
   pricing: {
     title: "简单定价",
     free: {
-      title: "免费（100个键）",
+      title: "免费（100键）",
       price: "免费",
-      keys_limit: "最多100个键",
+      keys_limit: "最多100键",
       features: {
         unlimited_projects: "无限项目",
         fine_tuning: "微调选项",
@@ -343,7 +343,7 @@ export default {
     },
     pro: {
       title: "专业版",
-      includes_free: "免费版的所有功能，加上：",
+      includes_free: "免费版中的所有内容，加上：",
       features: {
         github_action: "GitHub Action集成",
         latest_features: "早期访问最新功能",
@@ -425,7 +425,7 @@ export default {
     success: {
       title: "Languine CLI登录成功",
       description: "Languine CLI已成功认证为：",
-      description_2: "您现在可以关闭此标签页并返回到CLI"
+      description_2: "您现在可以关闭此标签并返回到CLI"
     }
   },
   translations: {

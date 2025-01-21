@@ -6,13 +6,13 @@ export default {
     goToApp: "Przejdź do aplikacji"
   },
   hero: {
-    title: "Automatyzacja lokalizacji dla twoich aplikacji",
-    description: "Usprawnij proces lokalizacji dzięki zasilanemu przez AI CLI i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
+    title: "Zautomatyzowana lokalizacja dla Twoich aplikacji",
+    description: "Usprawnij proces lokalizacji dzięki zasilanemu przez AI interfejsowi wiersza poleceń i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
   },
   getStarted: {
     heading: "Rozpocznij",
-    title: "Automatyzacja lokalizacji dla twoich aplikacji",
-    description: "Usprawnij proces lokalizacji dzięki zasilanemu przez AI CLI i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów.",
+    title: "Zautomatyzowana lokalizacja dla Twoich aplikacji",
+    description: "Usprawnij proces lokalizacji dzięki zasilanemu przez AI interfejsowi wiersza poleceń i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów.",
     button: {
       startAutomating: "Zacznij automatyzować",
       readDocumentation: "Przeczytaj dokumentację"
@@ -34,7 +34,7 @@ export default {
     fullyOpenSource: "W pełni open source",
     fullyOpenSourceDescription: "Nasz kod jest publicznie dostępny na GitHubie, umożliwiając przejrzystość i wkład społeczności.",
     noVendorLockIn: "Brak uzależnienia od dostawcy",
-    noVendorLockInDescription: "Nie zamykamy cię w określonej usłudze, używaj własnych LLM.",
+    noVendorLockInDescription: "Nie zamykamy Cię w określonej usłudze, używaj własnych LLM.",
     presetsForExpo: "Presety dla Expo",
     presetsForExpoDescription: "Dostarczamy presety dla Expo, abyś mógł szybko zacząć.",
     presetForReactNative: "Preset dla React Native",
@@ -42,10 +42,10 @@ export default {
     presetForReactEmail: "Biblioteka React Email",
     presetForReactEmailDescription: "Stworzyliśmy bibliotekę i18n dla React Email.",
     readyForI18nLibraries: "Gotowe na biblioteki i18n",
-    readyForI18nLibrariesDescription: "Wspieramy wszystkie biblioteki, w tym te najbardziej popularne (next-intl, react-i18next, react-intl, itp.)."
+    readyForI18nLibrariesDescription: "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itp.)."
   },
   info: {
-    title: "Zarządza każdym aspektem lokalizacji twojej aplikacji, w tym",
+    title: "Zarządza każdym aspektem lokalizacji Twojej aplikacji, w tym",
     smartTranslation: {
       title: "Inteligentne tłumaczenie",
       intelligentTranslation: "Inteligentne tłumaczenie z uwzględnieniem kontekstu",
@@ -80,7 +80,7 @@ export default {
       text: "Logując się, zgadzasz się na nasze",
       termsOfService: "Warunki usługi",
       and: "i",
-      privacyPolicy: "Politykę prywatności"
+      privacyPolicy: "Polityka prywatności"
     }
   },
   userMenu: {
@@ -116,7 +116,7 @@ export default {
     },
     email: {
       title: "Adres e-mail",
-      description: "Adres e-mail powiązany z twoim kontem.",
+      description: "Adres e-mail powiązany z Twoim kontem.",
       placeholder: "Wprowadź swój adres e-mail"
     },
     apiKey: {
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Przepływ pracy (Potok CI/CD)",
     pro: "[pro]",
-    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z twoim istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed włączeniem do głównej gałęzi i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoja zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
+    description: "Nasz silnik tłumaczeń bezproblemowo integruje się z Twoim istniejącym potokiem CI/CD, automatycznie tłumacząc Twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed włączeniem do głównej gałęzi i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że Twoja zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
   },
   settings: {
     badRequest: "Nieprawidłowe żądanie",
@@ -183,7 +183,7 @@ export default {
       },
       languageModel: {
         title: "Model językowy",
-        description: "Wybierz model AI, który najlepiej równoważy jakość i szybkość dla twoich potrzeb tłumaczeniowych. Bardziej zaawansowane modele mogą być wolniejsze, ale dają lepsze wyniki.",
+        description: "Wybierz model AI, który najlepiej równoważy jakość i szybkość dla Twoich potrzeb tłumaczeniowych. Bardziej zaawansowane modele mogą być wolniejsze, ale dają lepsze wyniki.",
         placeholder: "Wybierz model"
       },
       apiKey: {
@@ -196,12 +196,12 @@ export default {
     project: {
       name: {
         title: "Nazwa projektu",
-        description: "Nazwa twojego projektu",
+        description: "Nazwa Twojego projektu",
         placeholder: "Wprowadź nazwę projektu"
       },
       id: {
         title: "ID projektu",
-        description: "Twój unikalny identyfikator projektu",
+        description: "Unikalny identyfikator Twojego projektu",
         placeholder: "ID projektu"
       },
       "delete": {
@@ -214,7 +214,7 @@ export default {
     team: {
       name: {
         title: "Nazwa zespołu",
-        description: "Nazwa twojego zespołu",
+        description: "Nazwa Twojego zespołu",
         placeholder: "Wprowadź nazwę zespołu"
       },
       billing: {
@@ -226,7 +226,7 @@ export default {
       },
       apiKey: {
         title: "Klucz API zespołu",
-        description: "Klucz API dostępu zespołu, używaj go z potoku CI/CD razem z ID projektu",
+        description: "Klucz API dostępu do zespołu, używaj tego z Twojego potoku CI/CD razem z ID projektu",
         placeholder: "Klucz API zespołu"
       },
       members: {
@@ -272,11 +272,11 @@ export default {
     general: "Ogólne",
     translationMemory: {
       title: "Pamięć tłumaczeń",
-      description: "Używaj pamięci tłumaczeń, aby poprawić spójność i efektywność"
+      description: "Użyj pamięci tłumaczeń, aby poprawić spójność i efektywność"
     },
     qualityChecks: {
       title: "Kontrola jakości",
-      description: "Włącz automatyczną kontrolę jakości tłumaczeń"
+      description: "Włącz automatyczne kontrole jakości tłumaczeń"
     },
     contextDetection: {
       title: "Wykrywanie kontekstu",
@@ -322,7 +322,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adaptacja kulturowa",
-      description: "Dostosuj zawartość do odpowiedniości kulturowej"
+      description: "Dostosuj treść do odpowiedniości kulturowej"
     }
   },
   pricing: {
@@ -333,7 +333,7 @@ export default {
       keys_limit: "Do 100 kluczy",
       features: {
         unlimited_projects: "Nieograniczone projekty",
-        fine_tuning: "Opcje dostosowania",
+        fine_tuning: "Opcje dostosowywania",
         overrides: "Nadpisania tłumaczeń",
         analytics: "Analityka",
         context_memory: "Pamięć kontekstu",
@@ -342,7 +342,7 @@ export default {
     },
     pro: {
       title: "Pro",
-      includes_free: "Wszystko z Darmowego, plus:",
+      includes_free: "Wszystko, co w Darmowym, plus:",
       features: {
         github_action: "Integracja z GitHub Action",
         latest_features: "Wczesny dostęp do najnowszych funkcji",
@@ -402,10 +402,10 @@ export default {
     steps: {
       "1": {
         title: "Skonfiguruj Languine CLI",
-        description: "Zainstaluj i skonfiguruj Languine CLI do zarządzania tłumaczeniami"
+        description: "Zainstaluj i skonfiguruj Languine CLI, aby zarządzać tłumaczeniami"
       },
       "2": {
-        title: "Pushuj tłumaczenia",
+        title: "Push tłumaczeń",
         description: "Oczekiwanie na push tłumaczeń"
       },
       "3": {
@@ -422,7 +422,7 @@ export default {
   },
   cli: {
     success: {
-      title: "Sukces logowania Languine CLI",
+      title: "Languine CLI Logowanie Sukces",
       description: "Languine CLI zostało pomyślnie uwierzytelnione jako:",
       description_2: "Możesz teraz zamknąć tę kartę i wrócić do CLI"
     }
@@ -434,7 +434,7 @@ export default {
     placeholder: "Szukaj"
   },
   periods: {
-    daily: "Dziennie",
+    daily: "Codziennie",
     weekly: "Tygodniowo",
     monthly: "Miesięcznie",
     selectPeriod: "Wybierz okres"

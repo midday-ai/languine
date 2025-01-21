@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, test } from "bun:test";
+import { createParser } from "@/parsers/index.ts";
 import type { Parser } from "../../core/types.ts";
-import { createPoParser } from "../po.ts";
 
 describe("PO Parser", () => {
   let parser: Parser;
 
   beforeEach(() => {
-    parser = createPoParser();
+    parser = createParser({ type: "po" });
   });
 
   describe("parse", () => {

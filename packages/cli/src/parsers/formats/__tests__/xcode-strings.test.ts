@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createXcodeStringsParser } from "../xcode-strings.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("Xcode strings parser", () => {
-  const parser = createXcodeStringsParser();
+  const parser = createParser({ type: "xcode-strings" });
 
   describe("parse", () => {
     it("should parse valid Xcode strings", async () => {

@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createXliffParser } from "../xliff.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("XLIFF parser", () => {
-  const parser = createXliffParser();
+  const parser = createParser({ type: "xliff" });
 
   describe("parse", () => {
     it("should parse valid XLIFF", async () => {

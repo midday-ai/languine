@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { createHtmlParser } from "../html.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("HTML Parser", () => {
-  const parser = createHtmlParser();
+  const parser = createParser({ type: "html" });
 
   describe("parse", () => {
     test("extracts text content", async () => {

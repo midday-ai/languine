@@ -31,9 +31,9 @@ export default {
   },
   features: {
     title: "기능",
-    fullyOpenSource: "완전한 오픈 소스",
+    fullyOpenSource: "완전 오픈 소스",
     fullyOpenSourceDescription: "우리의 코드는 GitHub에서 공개적으로 이용 가능하며, 투명성과 커뮤니티 기여를 가능하게 합니다.",
-    noVendorLockIn: "공급업체 잠금 없음",
+    noVendorLockIn: "벤더 잠금 없음",
     noVendorLockInDescription: "특정 서비스에 묶이지 않습니다. 자신의 LLM을 사용하세요.",
     presetsForExpo: "Expo를 위한 사전 설정",
     presetsForExpoDescription: "Expo를 위한 사전 설정을 제공하여 빠르게 시작할 수 있습니다.",
@@ -79,7 +79,7 @@ export default {
     terms: {
       text: "로그인함으로써, 귀하는 우리의",
       termsOfService: "서비스 약관",
-      and: "및",
+      and: "과",
       privacyPolicy: "개인정보 보호정책"
     }
   },
@@ -105,23 +105,23 @@ export default {
   },
   coming_soon: {
     title: "팀 생성",
-    description: "Languine은 초기 접근 단계에 있습니다.",
-    cta: "현재 초기 접근 단계에 있습니다. 초기 접근을 받으려면 X로 연락하세요."
+    description: "Languine은 초기 액세스 중입니다",
+    cta: "현재 초기 액세스 중입니다. 초기 액세스를 받으려면 X로 연락하세요."
   },
   account: {
     fullName: {
       title: "전체 이름",
-      description: "플랫폼 전체에 표시될 귀하의 전체 이름.",
+      description: "플랫폼 전체에 표시될 귀하의 전체 이름입니다.",
       placeholder: "전체 이름 입력"
     },
     email: {
       title: "이메일 주소",
-      description: "귀하의 계정과 연결된 이메일 주소.",
+      description: "귀하의 계정과 연결된 이메일 주소입니다.",
       placeholder: "이메일 주소 입력"
     },
     apiKey: {
       title: "API 키",
-      description: "Languine API 및 CLI에 접근하기 위한 개인 API 키."
+      description: "Languine API 및 CLI에서 접근하기 위한 개인 API 키입니다."
     },
     deleteAccount: {
       title: "계정 삭제",
@@ -144,11 +144,11 @@ export default {
   pipeline: {
     title: "워크플로우(CI/CD 파이프라인)",
     pro: "[pro]",
-    description: "우리의 번역 엔진은 기존의 CI/CD 파이프라인에 원활하게 통합되어, 모든 푸시에서 코드베이스를 자동으로 번역합니다. 코드 변경이 푸시되면, 우리는 수정된 내용을 분석하고, 번역 메모리를 유지하며, 브랜드 음성과 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 메인 브랜치에 병합되고 배포되기 전에 검토할 수 있습니다. 이 자동화된 워크플로우는 현지화된 콘텐츠가 개발과 동기화되도록 보장합니다."
+    description: "우리의 번역 엔진은 기존의 CI/CD 파이프라인에 원활하게 통합되어, 모든 푸시에서 코드베이스를 자동으로 번역합니다. 코드 변경이 푸시되면, 우리는 수정된 내용을 분석하고, 번역 메모리를 유지하며, 브랜드 음성과 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 검토 후 메인 브랜치에 병합되고 배포됩니다. 이 자동화된 워크플로우는 현지화된 콘텐츠가 개발과 동기화되도록 보장합니다."
   },
   settings: {
     saved: "설정 저장됨",
-    savedDescription: "귀하의 변경 사항이 성공적으로 저장되었습니다.",
+    savedDescription: "변경 사항이 성공적으로 저장되었습니다.",
     tabs: {
       project: "프로젝트",
       account: "계정",
@@ -164,7 +164,7 @@ export default {
       },
       id: {
         title: "프로젝트 ID",
-        description: "귀하의 고유 프로젝트 식별자",
+        description: "고유한 프로젝트 식별자",
         placeholder: "프로젝트 ID"
       },
       "delete": {
@@ -206,8 +206,8 @@ export default {
           member: "멤버"
         },
         dateSort: {
-          newest: "최신",
-          oldest: "오래된"
+          newest: "최신순",
+          oldest: "오래된순"
         },
         leaveTeamConfirm: "팀 떠나기",
         leaveTeamDescription: "이 팀을 떠나시겠습니까?",
@@ -243,7 +243,7 @@ export default {
       updated: "API 키 업데이트됨",
       updatedDescription: "귀하의 API 키가 성공적으로 업데이트되었으며 클립보드에 복사되었습니다.",
       title: "API 키 업데이트",
-      description: "새 API 키를 생성하시겠습니까? 이전 키는 즉시 작동을 멈출 것입니다.",
+      description: "새 API 키를 생성하시겠습니까? 이전 키는 즉시 작동을 멈춥니다.",
       cancel: "취소",
       "continue": "계속"
     },
@@ -273,57 +273,57 @@ export default {
     general: "일반",
     translationMemory: {
       title: "번역 메모리",
-      description: "번역 메모리를 사용하여 일관성과 효율성 향상"
+      description: "번역 메모리를 사용하여 일관성과 효율성을 개선하세요."
     },
     qualityChecks: {
       title: "품질 검사",
-      description: "번역을 위한 자동 품질 검사 활성화"
+      description: "번역에 대한 자동 품질 검사 활성화"
     },
     contextDetection: {
       title: "컨텍스트 감지",
-      description: "번역에서 컨텍스트를 자동으로 감지하고 보존"
+      description: "번역에서 컨텍스트를 자동으로 감지하고 보존하세요."
     },
     styleGuide: "스타일 가이드",
     lengthControl: {
       title: "길이 제어",
-      description: "번역된 텍스트의 길이 제어",
+      description: "번역된 텍스트의 길이를 제어하세요.",
       options: {
-        flexible: "유연한",
-        strict: "엄격한",
-        exact: "정확한",
-        loose: "느슨한"
+        flexible: "유연함",
+        strict: "엄격함",
+        exact: "정확함",
+        loose: "느슨함"
       }
     },
     inclusiveLanguage: {
       title: "포용적인 언어",
-      description: "번역이 포용적인 언어를 사용하도록 보장"
+      description: "번역이 포용적인 언어를 사용하도록 보장하세요."
     },
     formality: {
       title: "공식성",
-      description: "번역의 공식성 수준 제어"
+      description: "번역의 공식성 수준을 제어하세요."
     },
     brandName: {
       title: "브랜드 이름",
-      description: "일관된 사용을 위해 브랜드 이름 설정",
+      description: "일관된 사용을 위해 브랜드 이름을 설정하세요.",
       placeholder: "브랜드 이름 입력"
     },
     brandVoice: {
       title: "브랜드 음성",
-      description: "브랜드 음성과 톤 정의",
+      description: "브랜드 음성과 톤을 정의하세요.",
       placeholder: "브랜드 음성 설명..."
     },
     localization: "현지화",
     idioms: {
       title: "관용구",
-      description: "관용적 표현을 적절히 처리"
+      description: "관용적 표현을 적절히 처리하세요."
     },
     terminology: {
       title: "용어",
-      description: "전문 용어와 용어집 관리"
+      description: "전문 용어와 용어집을 관리하세요."
     },
     culturalAdaptation: {
       title: "문화적 적응",
-      description: "문화적 적절성을 위해 콘텐츠 적응"
+      description: "문화적 적절성을 위해 콘텐츠를 적응시키세요."
     }
   },
   pricing: {
@@ -335,7 +335,7 @@ export default {
       features: {
         unlimited_projects: "무제한 프로젝트",
         fine_tuning: "세밀한 조정 옵션",
-        overrides: "번역 오버라이드",
+        overrides: "번역 재정의",
         analytics: "분석",
         context_memory: "컨텍스트 메모리",
         community_support: "커뮤니티 지원"
@@ -346,7 +346,7 @@ export default {
       includes_free: "무료의 모든 것, 추가로:",
       features: {
         github_action: "GitHub Action 통합",
-        latest_features: "최신 기능 초기 접근",
+        latest_features: "최신 기능 초기 액세스",
         priority_support: "우선 지원"
       }
     },
@@ -357,14 +357,14 @@ export default {
     teamNamePlaceholder: "팀 이름 입력",
     createTeamButton: "팀 생성",
     cancel: "취소",
-    createTeamDescription: "프로젝트와 협업자를 관리하기 위해 새 팀을 생성하세요."
+    createTeamDescription: "프로젝트와 협업자를 관리할 새 팀을 생성하세요."
   },
   createProject: {
     createProjectTitle: "새 프로젝트 생성",
     projectNamePlaceholder: "프로젝트 이름 입력",
     createProjectButton: "프로젝트 생성",
     cancel: "취소",
-    createProjectDescription: "현지화 자동화를 시작하기 위해 새 프로젝트를 생성하세요."
+    createProjectDescription: "현지화 자동화를 시작할 새 프로젝트를 생성하세요."
   },
   invite: {
     inviteMember: "멤버 초대",
@@ -411,12 +411,12 @@ export default {
       },
       "3": {
         title: "문서",
-        description: "상세 가이드와 모범 사례를 위해 우리의 문서를 확인하세요.",
+        description: "자세한 가이드와 모범 사례를 위해 우리의 문서를 확인하세요.",
         link: "문서"
       }
     },
     info: {
-      description: "도움이 필요하세요? 상세 가이드와 모범 사례를 위해 우리의",
+      description: "도움이 필요하세요? 자세한 가이드와 모범 사례를 위해 우리의",
       link: "문서",
       description_2: "를 확인하세요."
     }
@@ -435,9 +435,9 @@ export default {
     placeholder: "검색"
   },
   periods: {
-    daily: "매일",
-    weekly: "매주",
-    monthly: "매월",
+    daily: "일간",
+    weekly: "주간",
+    monthly: "월간",
     selectPeriod: "기간 선택"
   },
   welcome: {

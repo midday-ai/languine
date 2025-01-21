@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Arbeidsflyt (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne, og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen."
+    description: "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen."
   },
   settings: {
     saved: "Innstillinger lagret",
@@ -281,7 +281,7 @@ export default {
     },
     contextDetection: {
       title: "Kontekstdeteksjon",
-      description: "Automatisk detekter og bevar kontekst i oversettelser"
+      description: "Automatisk deteksjon og bevaring av kontekst i oversettelser"
     },
     styleGuide: "Stilguide",
     lengthControl: {
@@ -423,7 +423,7 @@ export default {
   },
   cli: {
     success: {
-      title: "Languine CLI Login Suksess",
+      title: "Languine CLI pålogging vellykket",
       description: "Languine CLI ble vellykket autentisert som:",
       description_2: "Du kan nå lukke denne fanen og gå tilbake til CLI"
     }

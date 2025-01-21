@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createArbParser } from "../../formats/arb.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("ARB parser", () => {
-  const parser = createArbParser();
+  const parser = createParser({ type: "arb" });
 
   describe("parse", () => {
     it("should parse valid ARB file", async () => {

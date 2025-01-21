@@ -7,12 +7,12 @@ export default {
   },
   hero: {
     title: "التوطين الآلي لتطبيقاتك",
-    description: "تبسيط عملية التوطين باستخدام واجهة سطر أوامر مدعومة بالذكاء الاصطناعي وخط أنابيب مصمم لأتمتة الترجمات للمطورين."
+    description: "بسّط عملية التوطين الخاصة بك باستخدام واجهة سطر الأوامر (CLI) وخط أنابيب مدعوم بالذكاء الاصطناعي مصمم لأتمتة الترجمات للمطورين."
   },
   getStarted: {
     heading: "ابدأ الآن",
     title: "التوطين الآلي لتطبيقاتك",
-    description: "تبسيط عملية التوطين باستخدام واجهة سطر أوامر مدعومة بالذكاء الاصطناعي وخط أنابيب مصمم لأتمتة الترجمات للمطورين.",
+    description: "بسّط عملية التوطين الخاصة بك باستخدام واجهة سطر الأوامر (CLI) وخط أنابيب مدعوم بالذكاء الاصطناعي مصمم لأتمتة الترجمات للمطورين.",
     button: {
       startAutomating: "ابدأ الأتمتة",
       readDocumentation: "اقرأ الوثائق"
@@ -33,7 +33,7 @@ export default {
     title: "الميزات",
     fullyOpenSource: "مفتوح المصدر بالكامل",
     fullyOpenSourceDescription: "كودنا متاح للجمهور على GitHub، مما يتيح الشفافية والمساهمات المجتمعية.",
-    noVendorLockIn: "لا يوجد قفل للبائع",
+    noVendorLockIn: "لا يوجد قفل من البائع",
     noVendorLockInDescription: "نحن لا نلزمك بخدمة معينة، استخدم نماذج اللغة الخاصة بك.",
     presetsForExpo: "إعدادات مسبقة لـ Expo",
     presetsForExpoDescription: "نوفر إعدادات مسبقة لـ Expo، حتى تتمكن من البدء بسرعة.",
@@ -42,7 +42,7 @@ export default {
     presetForReactEmail: "مكتبة React Email",
     presetForReactEmailDescription: "لقد أنشأنا مكتبة i18n لـ React Email.",
     readyForI18nLibraries: "جاهز لمكتبات i18n",
-    readyForI18nLibrariesDescription: "نحن ندعم جميع المكتبات بما في ذلك الأكثر شهرة (next-intl، react-i18next، react-intl، إلخ)."
+    readyForI18nLibrariesDescription: "ندعم جميع المكتبات بما في ذلك الأكثر شيوعًا (next-intl, react-i18next, react-intl، إلخ)."
   },
   info: {
     title: "يتعامل مع كل جانب من جوانب توطين تطبيقك بما في ذلك",
@@ -52,7 +52,7 @@ export default {
       brandVoice: "اتساق صوت ونبرة العلامة التجارية",
       terminology: "إدارة المصطلحات",
       linguisticFeatures: "ميزات لغوية متقدمة",
-      realtimeUpdates: "تحديثات الترجمة في الوقت الحقيقي"
+      realtimeUpdates: "تحديثات الترجمة في الوقت الفعلي"
     },
     implementation: {
       title: "التنفيذ",
@@ -121,7 +121,7 @@ export default {
     },
     apiKey: {
       title: "مفتاح API",
-      description: "مفتاح API الشخصي الخاص بك للوصول إلى واجهة برمجة تطبيقات Languine ومن واجهة سطر الأوامر."
+      description: "مفتاح API الشخصي الخاص بك للوصول إلى Languine API ومن CLI."
     },
     deleteAccount: {
       title: "حذف الحساب",
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "سير العمل (خط أنابيب CI/CD)",
     pro: "[pro]",
-    description: "محرك الترجمة الخاص بنا يتكامل بسلاسة مع خط أنابيب CI/CD الحالي الخاص بك، ويترجم قاعدة الكود الخاصة بك تلقائيًا مع كل دفع. عندما يتم دفع تغييرات الكود، نقوم بتحليل المحتوى المعدل، والحفاظ على ذاكرة الترجمة الخاصة بك، وإنشاء ترجمات دقيقة مع الحفاظ على صوت علامتك التجارية والمصطلحات. ثم يتم تقديم الترجمات كطلبات سحب، مما يسمح بمراجعتها قبل دمجها في الفرع الرئيسي الخاص بك ونشرها. يضمن سير العمل هذا أن المحتوى المترجم الخاص بك يبقى متزامنًا مع التطوير."
+    description: "محرك الترجمة الخاص بنا يتكامل بسلاسة مع خط أنابيب CI/CD الحالي الخاص بك، ويترجم قاعدة الكود الخاصة بك تلقائيًا مع كل دفع. عندما يتم دفع تغييرات الكود، نقوم بتحليل المحتوى المعدل، والحفاظ على ذاكرة الترجمة الخاصة بك، وإنشاء ترجمات دقيقة مع الحفاظ على صوت علامتك التجارية والمصطلحات. ثم يتم تقديم الترجمات كطلبات سحب، مما يسمح بمراجعتها قبل دمجها في الفرع الرئيسي الخاص بك ونشرها. يضمن سير العمل الآلي هذا أن محتواك المترجم يبقى متزامنًا مع التطوير."
   },
   settings: {
     saved: "تم حفظ الإعدادات",
@@ -197,7 +197,7 @@ export default {
         filterPlaceholder: "تصفية الأعضاء...",
         allRoles: "جميع الأدوار",
         date: "التاريخ",
-        selectAll: "{count} مختار",
+        selectAll: "{count} مختارة",
         noPendingInvitations: "لا توجد دعوات معلقة",
         inviteMembers: "دعوة أعضاء للتعاون",
         roles: {
@@ -224,9 +224,9 @@ export default {
         invitedBy: "تمت الدعوة بواسطة {name}",
         deleteInviteSuccess: "تم حذف الدعوة",
         deleteInviteError: "فشل حذف الدعوة",
-        removeMemberSuccess: "تم إزالة العضو",
+        removeMemberSuccess: "تمت إزالة العضو",
         removeMemberError: "فشل إزالة العضو",
-        removeMemberSuccessDescription: "تم إزالة العضو بنجاح",
+        removeMemberSuccessDescription: "تمت إزالة العضو بنجاح",
         removeMemberErrorDescription: "فشل إزالة العضو"
       }
     },
@@ -291,11 +291,11 @@ export default {
         flexible: "مرن",
         strict: "صارم",
         exact: "دقيق",
-        loose: "فضفاض"
+        loose: "مرن"
       }
     },
     inclusiveLanguage: {
-      title: "لغة شاملة",
+      title: "اللغة الشاملة",
       description: "تأكد من استخدام الترجمات للغة شاملة"
     },
     formality: {
@@ -315,7 +315,7 @@ export default {
     localization: "التوطين",
     idioms: {
       title: "التعبيرات الاصطلاحية",
-      description: "تعامل مع التعبيرات الاصطلاحية بشكل مناسب"
+      description: "التعامل مع التعبيرات الاصطلاحية بشكل مناسب"
     },
     terminology: {
       title: "المصطلحات",
@@ -327,7 +327,7 @@ export default {
     }
   },
   pricing: {
-    title: "تسعير بسيط",
+    title: "التسعير البسيط",
     free: {
       title: "مجاني (100 مفتاح)",
       price: "مجاني",
@@ -347,7 +347,7 @@ export default {
       features: {
         github_action: "تكامل GitHub Action",
         latest_features: "الوصول المبكر إلى أحدث الميزات",
-        priority_support: "دعم أولوية"
+        priority_support: "دعم ذو أولوية"
       }
     },
     cta: "ابدأ الأتمتة"
@@ -425,7 +425,7 @@ export default {
     success: {
       title: "نجاح تسجيل الدخول إلى Languine CLI",
       description: "تمت مصادقة Languine CLI بنجاح كـ:",
-      description_2: "يمكنك الآن إغلاق هذه النافذة والعودة إلى واجهة سطر الأوامر"
+      description_2: "يمكنك الآن إغلاق هذه النافذة والعودة إلى CLI"
     }
   },
   translations: {

@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { createJavaScriptParser } from "../javascript.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("JavaScript/TypeScript Parser", () => {
-  const parser = createJavaScriptParser();
+  const parser = createParser({ type: "js" });
 
   describe("parse", () => {
     test("parses simple object", async () => {

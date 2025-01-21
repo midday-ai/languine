@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createXmlParser } from "../xml.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("XML parser", () => {
-  const parser = createXmlParser();
+  const parser = createParser({ type: "xml" });
 
   describe("parse", () => {
     it("should parse valid XML", async () => {

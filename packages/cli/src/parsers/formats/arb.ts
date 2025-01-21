@@ -1,29 +1,34 @@
 import { merge, pickBy } from "rambda";
-import { createFormatParser } from "../core/format.ts";
-import type { Parser } from "../core/types.ts";
+import { BaseParser, type ParserOptions } from "../core/base-parser.js";
 
-export function createArbParser(): Parser {
-  return createFormatParser({
-    async parse(input: string) {
-      try {
-        const parsed = JSON.parse(input);
-        return pickBy((_, key) => !key.startsWith("@"), parsed);
-      } catch (error) {
-        throw new Error(
-          `Failed to parse ARB translations: ${(error as Error).message}`,
-        );
-      }
-    },
+export class ArbParser extends BaseParser {
+  async parse(input: string): Promise<Record<string, string>> {
+    try {
+      const parsed = JSON.parse(input);
+      return pickBy((_, key) => !key.startsWith("@"), parsed);
+    } catch (error) {
+      throw new Error(
+        `Failed to parse ARB translations: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
 
-    async serialize(locale, data) {
-      try {
-        const result = merge({ "@@locale": locale }, data);
-        return JSON.stringify(result, null, 2);
-      } catch (error) {
-        throw new Error(
-          `Failed to serialize ARB translations: ${(error as Error).message}`,
-        );
-      }
-    },
-  });
+  async serialize(
+    _locale: string,
+    data: Record<string, string>,
+    _originalData?: Record<string, string>,
+  ): Promise<string> {
+    try {
+      const result = merge({ "@@locale": _locale }, data);
+      return JSON.stringify(result, null, 2);
+    } catch (error) {
+      throw new Error(
+        `Failed to serialize ARB translations: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
+}
+
+export function createArbParser(options: ParserOptions): ArbParser {
+  return new ArbParser(options);
 }

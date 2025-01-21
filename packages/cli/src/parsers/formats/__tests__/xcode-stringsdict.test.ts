@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createXcodeStringsDictParser } from "../../formats/xcode-stringsdict.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("Xcode stringsdict parser", () => {
-  const parser = createXcodeStringsDictParser();
+  const parser = createParser({ type: "xcode-stringsdict" });
 
   describe("parse", () => {
     it("should parse valid stringsdict plist", async () => {

@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createYamlParser } from "../yaml.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("YAML parser", () => {
-  const parser = createYamlParser();
+  const parser = createParser({ type: "yaml" });
 
   describe("parse", () => {
     it("should parse valid YAML", async () => {

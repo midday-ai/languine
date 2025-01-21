@@ -1,20 +1,20 @@
 import { z } from "zod";
-import type { Parser } from "./core/types.ts";
-import { createAndroidParser } from "./formats/android.ts";
-import { createArbParser } from "./formats/arb.ts";
-import { createCsvParser } from "./formats/csv.ts";
-import { createHtmlParser } from "./formats/html.ts";
-import { createJavaScriptParser } from "./formats/javascript.ts";
-import { createJsonParser } from "./formats/json.ts";
-import { createMarkdownParser } from "./formats/markdown.ts";
-import { createPoParser } from "./formats/po.ts";
-import { createPropertiesParser } from "./formats/properties.ts";
-import { createXcodeStringsParser } from "./formats/xcode-strings.ts";
-import { createXcodeStringsDictParser } from "./formats/xcode-stringsdict.ts";
-import { createXcodeXcstringsParser } from "./formats/xcode-xcstrings.ts";
-import { createXliffParser } from "./formats/xliff.ts";
-import { createXmlParser } from "./formats/xml.ts";
-import { createYamlParser } from "./formats/yaml.ts";
+import type { Parser, ParserOptions } from "./core/types.js";
+import { createAndroidParser } from "./formats/android.js";
+import { createArbParser } from "./formats/arb.js";
+import { createCsvParser } from "./formats/csv.js";
+import { createHtmlParser } from "./formats/html.js";
+import { createJavaScriptParser } from "./formats/javascript.js";
+import { createJsonParser } from "./formats/json.js";
+import { createMarkdownParser } from "./formats/markdown.js";
+import { createPoParser } from "./formats/po.js";
+import { createPropertiesParser } from "./formats/properties.js";
+import { createXcodeStringsParser } from "./formats/xcode-strings.js";
+import { createXcodeStringsDictParser } from "./formats/xcode-stringsdict.js";
+import { createXcodeXcstringsParser } from "./formats/xcode-xcstrings.js";
+import { createXliffParser } from "./formats/xliff.js";
+import { createXmlParser } from "./formats/xml.js";
+import { createYamlParser } from "./formats/yaml.js";
 
 export const parserTypeSchema = z.enum([
   "js",
@@ -38,45 +38,43 @@ export const parserTypeSchema = z.enum([
 
 export type ParserType = z.infer<typeof parserTypeSchema>;
 
-export interface CreateParserOptions {
-  type: string;
-}
+export function createParser(options: ParserOptions): Parser {
+  const { type } = options;
 
-export function createParser(options: CreateParserOptions): Parser {
-  switch (options.type) {
+  switch (type) {
     case "android":
-      return createAndroidParser();
+      return createAndroidParser({ type });
     case "arb":
-      return createArbParser();
+      return createArbParser({ type });
     case "csv":
-      return createCsvParser();
+      return createCsvParser({ type });
     case "html":
-      return createHtmlParser();
+      return createHtmlParser({ type });
     case "js":
     case "ts":
-      return createJavaScriptParser();
+      return createJavaScriptParser({ type });
     case "json":
-      return createJsonParser();
+      return createJsonParser({ type });
     case "md":
     case "mdx":
-      return createMarkdownParser();
+      return createMarkdownParser({ type });
     case "po":
-      return createPoParser();
+      return createPoParser({ type });
     case "xcode-strings":
-      return createXcodeStringsParser();
+      return createXcodeStringsParser({ type });
     case "xcode-stringsdict":
-      return createXcodeStringsDictParser();
+      return createXcodeStringsDictParser({ type });
     case "xcode-xcstrings":
-      return createXcodeXcstringsParser();
+      return createXcodeXcstringsParser({ type });
     case "properties":
-      return createPropertiesParser();
+      return createPropertiesParser({ type });
     case "xliff":
-      return createXliffParser();
+      return createXliffParser({ type });
     case "xml":
-      return createXmlParser();
+      return createXmlParser({ type });
     case "yaml":
-      return createYamlParser();
+      return createYamlParser({ type });
     default:
-      throw new Error(`Unsupported parser type: ${options.type}`);
+      throw new Error(`Unsupported parser type: ${type}`);
   }
 }

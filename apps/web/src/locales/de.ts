@@ -32,7 +32,7 @@ export default {
   features: {
     title: "Funktionen",
     fullyOpenSource: "Vollständig Open Source",
-    fullyOpenSourceDescription: "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Gemeinschaftsbeiträge ermöglicht.",
+    fullyOpenSourceDescription: "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Community-Beiträge ermöglicht.",
     noVendorLockIn: "Kein Vendor Lock-in",
     noVendorLockInDescription: "Wir binden Sie nicht an einen bestimmten Dienst, verwenden Sie Ihre eigenen LLMs.",
     presetsForExpo: "Voreinstellungen für Expo",
@@ -42,7 +42,7 @@ export default {
     presetForReactEmail: "React Email Bibliothek",
     presetForReactEmailDescription: "Wir haben eine i18n-Bibliothek für React Email erstellt.",
     readyForI18nLibraries: "Bereit für i18n-Bibliotheken",
-    readyForI18nLibrariesDescription: "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
+    readyForI18nLibrariesDescription: "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc.)."
   },
   info: {
     title: "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
@@ -135,8 +135,8 @@ export default {
   dangerZone: {
     dialog: {
       title: "Sind Sie absolut sicher?",
-      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN zur Bestätigung ein.",
-      placeholder: "Geben Sie LÖSCHEN zur Bestätigung ein",
+      description: "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN ein, um zu bestätigen.",
+      placeholder: "Geben Sie LÖSCHEN ein, um zu bestätigen",
       confirm: "Löschen bestätigen",
       cancel: "Abbrechen"
     }
@@ -236,7 +236,7 @@ export default {
     permissionDeniedDescription: "Sie müssen ein Besitzer des Teams sein, um diese Aktion durchzuführen",
     deleteTeamTitle: "Team löschen",
     deleteTeamDescription: "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind, löschen Sie stattdessen Ihr Konto",
-    error: "Etwas ist schief gelaufen",
+    error: "Etwas ist schiefgelaufen",
     errorDescription: "Bitte versuchen Sie es erneut oder kontaktieren Sie den Support",
     addTeam: "Team erstellen",
     apiKey: {
@@ -252,7 +252,7 @@ export default {
       updateError: "Fehler beim Aktualisieren der Einstellungen",
       translationProvider: {
         title: "Übersetzungsanbieter",
-        description: "Wählen Sie Ihren bevorzugten KI-Dienst für die Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Fähigkeiten und Preise.",
+        description: "Wählen Sie Ihren bevorzugten KI-Dienst für die Generierung von Übersetzungen. Jeder Anbieter bietet unterschiedliche Funktionen und Preise.",
         placeholder: "Wählen Sie einen Anbieter"
       },
       languageModel: {
@@ -290,7 +290,7 @@ export default {
       options: {
         flexible: "Flexibel",
         strict: "Streng",
-        exact: "Exakt",
+        exact: "Genau",
         loose: "Locker"
       }
     },
@@ -338,7 +338,7 @@ export default {
         overrides: "Übersetzungsüberschreibungen",
         analytics: "Analytik",
         context_memory: "Kontextgedächtnis",
-        community_support: "Community-Support"
+        community_support: "Community-Unterstützung"
       }
     },
     pro: {
@@ -423,7 +423,7 @@ export default {
   },
   cli: {
     success: {
-      title: "Languine CLI Login erfolgreich",
+      title: "Languine CLI Login Erfolg",
       description: "Languine CLI wurde erfolgreich authentifiziert als:",
       description_2: "Sie können diesen Tab jetzt schließen und zur CLI zurückkehren"
     }

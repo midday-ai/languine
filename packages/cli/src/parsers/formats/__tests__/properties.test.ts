@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { createPropertiesParser } from "../properties.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("Properties Parser", () => {
-  const parser = createPropertiesParser();
+  const parser = createParser({ type: "properties" });
 
   describe("parse", () => {
     test("parses basic key-value pairs", async () => {

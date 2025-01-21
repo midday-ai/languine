@@ -52,7 +52,7 @@ export default {
       brandVoice: "Varumärkesröst och tonkonsistens",
       terminology: "Terminologihantering",
       linguisticFeatures: "Avancerade språkliga funktioner",
-      realtimeUpdates: "Uppdateringar av översättningar i realtid"
+      realtimeUpdates: "Realtidsuppdateringar av översättningar"
     },
     implementation: {
       title: "Implementering",
@@ -111,7 +111,7 @@ export default {
   account: {
     fullName: {
       title: "Fullständigt namn",
-      description: "Ditt fullständiga namn som det kommer att visas på plattformen.",
+      description: "Ditt fullständiga namn som det kommer att visas över hela plattformen.",
       placeholder: "Ange ditt fullständiga namn"
     },
     email: {
@@ -134,7 +134,7 @@ export default {
   },
   dangerZone: {
     dialog: {
-      title: "Är du absolut säker?",
+      title: "Är du helt säker?",
       description: "Denna åtgärd kan inte ångras. Skriv DELETE för att bekräfta.",
       placeholder: "Skriv DELETE för att bekräfta",
       confirm: "Bekräfta radering",
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "Arbetsflöde (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, och översätter automatiskt din kodbas vid varje push. När kodändringar pushas analyserar vi det ändrade innehållet, underhåller ditt översättningsminne och genererar korrekta översättningar samtidigt som ditt varumärkes röst och terminologi bevaras. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
+    description: "Vår översättningsmotor integreras sömlöst i ditt befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, upprätthåller ditt översättningsminne och genererar korrekta översättningar samtidigt som ditt varumärkes röst och terminologi bevaras. Översättningarna skickas sedan som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
   },
   settings: {
     saved: "Inställningar sparade",
@@ -188,7 +188,7 @@ export default {
       },
       apiKey: {
         title: "Team API-nyckel",
-        description: "API-nyckel för teamåtkomst, använd detta från din CI/CD-pipeline tillsammans med Projekt-ID",
+        description: "API-nyckel för teamåtkomst, använd detta från din CI/CD pipeline tillsammans med Projekt-ID",
         placeholder: "Team API-nyckel"
       },
       members: {
@@ -226,7 +226,7 @@ export default {
         deleteInviteError: "Misslyckades med att radera inbjudan",
         removeMemberSuccess: "Medlem borttagen",
         removeMemberError: "Misslyckades med att ta bort medlem",
-        removeMemberSuccessDescription: "Medlemmen har tagits bort framgångsrikt",
+        removeMemberSuccessDescription: "Medlem har tagits bort framgångsrikt",
         removeMemberErrorDescription: "Misslyckades med att ta bort medlem"
       }
     },
@@ -262,7 +262,7 @@ export default {
       },
       apiKey: {
         title: "Leverantörs API-nyckel",
-        description: "Ange din API-nyckel för att autentisera med din valda leverantör. Håll denna nyckel säker - vi krypterar den innan vi lagrar.",
+        description: "Ange din API-nyckel för att autentisera med din valda leverantör. Håll denna nyckel säker - vi krypterar den innan lagring.",
         placeholder: "Ange din API-nyckel"
       }
     },
@@ -277,7 +277,7 @@ export default {
     },
     qualityChecks: {
       title: "Kvalitetskontroller",
-      description: "Aktivera automatiska kvalitetskontroller för översättningar"
+      description: "Aktivera automatiserade kvalitetskontroller för översättningar"
     },
     contextDetection: {
       title: "Kontextdetektering",
@@ -338,7 +338,7 @@ export default {
         overrides: "Översättningsöverstyrningar",
         analytics: "Analys",
         context_memory: "Kontextminne",
-        community_support: "Community-support"
+        community_support: "Gemenskapssupport"
       }
     },
     pro: {
@@ -435,7 +435,7 @@ export default {
     placeholder: "Sök"
   },
   periods: {
-    daily: "Dagligen",
+    daily: "Daglig",
     weekly: "Veckovis",
     monthly: "Månadsvis",
     selectPeriod: "Välj period"
@@ -467,7 +467,7 @@ export default {
     ar: "Arabiska",
     hi: "Hindi",
     tr: "Turkiska",
-    nl: "Nederländska",
+    nl: "Holländska",
     pl: "Polska",
     no: "Norska",
     da: "Danska",

@@ -1,7 +1,7 @@
 export default {
   header: {
     pricing: "Fiyatlandırma",
-    docs: "Dokümanlar",
+    docs: "Belgeler",
     signIn: "Giriş yap",
     goToApp: "Uygulamaya git"
   },
@@ -15,7 +15,7 @@ export default {
     description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
     button: {
       startAutomating: "Otomasyona başla",
-      readDocumentation: "Dokümantasyonu oku"
+      readDocumentation: "Belgeleri oku"
     }
   },
   companies: {
@@ -32,7 +32,7 @@ export default {
   features: {
     title: "Özellikler",
     fullyOpenSource: "Tamamen açık kaynak",
-    fullyOpenSourceDescription: "Kodumuz GitHub'da herkese açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
+    fullyOpenSourceDescription: "Kodumuz GitHub'da halka açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
     noVendorLockIn: "Satıcı kilidi yok",
     noVendorLockInDescription: "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
     presetsForExpo: "Expo için ön ayarlar",
@@ -67,7 +67,7 @@ export default {
       cicd: "CI/CD entegrasyonu",
       versionControl: "Sürüm kontrolü",
       workflow: "Geliştirici iş akışı",
-      documentation: "Kapsamlı dokümantasyon"
+      documentation: "Kapsamlı belgeler"
     }
   },
   login: {
@@ -75,7 +75,7 @@ export default {
     github: "GitHub ile giriş yap",
     google: "Google ile giriş yap",
     footer: "Yerelleştirmenizi otomatikleştirin.",
-    description: "Saniyeler içinde yerelleştirmenizi otomatikleştirmeye başlamak için giriş yapın.",
+    description: "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
     terms: {
       text: "Giriş yaparak, bizim",
       termsOfService: "Hizmet Şartları",
@@ -106,7 +106,7 @@ export default {
   coming_soon: {
     title: "Languine Erken Erişimde",
     description: "Şu anda erken erişimdeyiz. Erken erişim için",
-    cta: "X üzerinden bize ulaşın."
+    cta: "X üzerinden ulaşın."
   },
   account: {
     fullName: {
@@ -144,7 +144,7 @@ export default {
   pipeline: {
     title: "İş Akışı (CI/CD Pipeline)",
     pro: "[pro]",
-    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri belleğinizi korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana dalınıza birleştirilmeden ve dağıtılmadan önce inceleme yapılır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana branch'ınıza birleştirilmeden ve dağıtılmadan önce incelemeye olanak tanır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   settings: {
     badRequest: "Geçersiz istek",
@@ -178,7 +178,7 @@ export default {
       updateError: "Ayarlar güncellenemedi",
       translationProvider: {
         title: "Çeviri Sağlayıcısı",
-        description: "Çevirileri oluşturmak için tercih ettiğiniz AI hizmetini seçin. Her sağlayıcı farklı yetenekler ve fiyatlandırma sunar.",
+        description: "Çeviriler oluşturmak için tercih ettiğiniz AI hizmetini seçin. Her sağlayıcı farklı yetenekler ve fiyatlandırma sunar.",
         placeholder: "Bir sağlayıcı seçin"
       },
       languageModel: {
@@ -201,7 +201,7 @@ export default {
       },
       id: {
         title: "Proje ID",
-        description: "Projenizin benzersiz tanımlayıcısı",
+        description: "Benzersiz proje tanımlayıcınız",
         placeholder: "Proje ID"
       },
       "delete": {
@@ -271,8 +271,8 @@ export default {
   tuning: {
     general: "Genel",
     translationMemory: {
-      title: "Çeviri Belleği",
-      description: "Tutarlılık ve verimliliği artırmak için çeviri belleğini kullanın"
+      title: "Çeviri Hafızası",
+      description: "Tutarlılığı ve verimliliği artırmak için çeviri hafızasını kullanın"
     },
     qualityChecks: {
       title: "Kalite Kontrolleri",
@@ -299,7 +299,7 @@ export default {
     },
     formality: {
       title: "Resmiyet",
-      description: "Çevirilerin resmiyet düzeyini kontrol edin"
+      description: "Çevirilerin resmiyet seviyesini kontrol edin"
     },
     brandName: {
       title: "Marka Adı",
@@ -336,7 +336,7 @@ export default {
         fine_tuning: "İnce ayar seçenekleri",
         overrides: "Çeviri geçersiz kılmaları",
         analytics: "Analitik",
-        context_memory: "Bağlam belleği",
+        context_memory: "Bağlam hafızası",
         community_support: "Topluluk desteği"
       }
     },
@@ -381,7 +381,7 @@ export default {
       description: "Davet gönderilemedi. Lütfen tekrar deneyin."
     },
     validation: {
-      invalidEmail: "Lütfen geçerli bir e-posta adresi girin"
+      invalidEmail: "Lütfen geçerli bir e-posta girin"
     }
   },
   months: {
@@ -402,29 +402,29 @@ export default {
     steps: {
       "1": {
         title: "Languine CLI Kurulumu",
-        description: "Çevirileri yönetmek için Languine CLI'yi kurun ve yapılandırın"
+        description: "Çevirileri yönetmek için Languine CLI'yı kurun ve yapılandırın"
       },
       "2": {
         title: "Çevirileri Gönder",
         description: "Çevirilerin gönderilmesi bekleniyor"
       },
       "3": {
-        title: "Dokümantasyon",
-        description: "Detaylı rehberler ve en iyi uygulamalar için dokümantasyonumuza göz atın",
-        link: "dokümantasyon"
+        title: "Belgeler",
+        description: "Detaylı rehberler ve en iyi uygulamalar için belgelerimize göz atın",
+        link: "belgeler"
       }
     },
     info: {
       description: "Yardıma mı ihtiyacınız var? Detaylı rehberler ve en iyi uygulamalar için",
-      link: "dokümantasyon",
-      description_2: "mıza göz atın."
+      link: "belgeler",
+      description_2: "belgelerimize göz atın."
     }
   },
   cli: {
     success: {
       title: "Languine CLI Giriş Başarılı",
       description: "Languine CLI başarıyla kimlik doğrulandı:",
-      description_2: "Artık bu sekme kapatılabilir ve CLI'ye dönebilirsiniz"
+      description_2: "Artık bu sekme kapatılabilir ve CLI'ya dönebilirsiniz"
     }
   },
   translations: {

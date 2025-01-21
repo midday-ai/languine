@@ -34,7 +34,7 @@ export default {
     fullyOpenSource: "Entièrement open source",
     fullyOpenSourceDescription: "Notre code est disponible publiquement sur GitHub, permettant la transparence et les contributions de la communauté.",
     noVendorLockIn: "Pas de verrouillage fournisseur",
-    noVendorLockInDescription: "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLM.",
+    noVendorLockInDescription: "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLMs.",
     presetsForExpo: "Préréglages pour Expo",
     presetsForExpoDescription: "Nous fournissons des préréglages pour Expo, afin que vous puissiez commencer rapidement.",
     presetForReactNative: "Préréglage pour React Native",
@@ -49,7 +49,7 @@ export default {
     smartTranslation: {
       title: "Traduction intelligente",
       intelligentTranslation: "Traduction intelligente avec conscience du contexte",
-      brandVoice: "Consistance de la voix et du ton de la marque",
+      brandVoice: "Cohérence de la voix et du ton de la marque",
       terminology: "Gestion de la terminologie",
       linguisticFeatures: "Fonctionnalités linguistiques avancées",
       realtimeUpdates: "Mises à jour de traduction en temps réel"
@@ -197,7 +197,7 @@ export default {
         filterPlaceholder: "Filtrer les membres...",
         allRoles: "Tous les rôles",
         date: "Date",
-        selectAll: "{count} sélectionné(s)",
+        selectAll: "{count} sélectionné",
         noPendingInvitations: "Aucune invitation en attente",
         inviteMembers: "Invitez des membres à collaborer",
         roles: {
@@ -252,12 +252,12 @@ export default {
       updateError: "Échec de la mise à jour des paramètres",
       translationProvider: {
         title: "Fournisseur de traduction",
-        description: "Choisissez votre service d'IA préféré pour générer des traductions. Chaque fournisseur offre différentes capacités et tarifications.",
+        description: "Choisissez votre service AI préféré pour générer des traductions. Chaque fournisseur offre des capacités et des tarifications différentes.",
         placeholder: "Sélectionnez un fournisseur"
       },
       languageModel: {
         title: "Modèle de langage",
-        description: "Sélectionnez le modèle d'IA qui équilibre le mieux qualité et vitesse pour vos besoins de traduction. Les modèles plus puissants peuvent être plus lents mais produisent de meilleurs résultats.",
+        description: "Sélectionnez le modèle AI qui équilibre le mieux qualité et vitesse pour vos besoins de traduction. Les modèles plus puissants peuvent être plus lents mais produisent de meilleurs résultats.",
         placeholder: "Sélectionnez un modèle"
       },
       apiKey: {

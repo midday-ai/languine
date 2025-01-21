@@ -1,8 +1,8 @@
 import { describe, expect, it } from "bun:test";
-import { createMarkdownParser } from "../markdown.ts";
+import { createParser } from "@/parsers/index.ts";
 
 describe("Markdown parser", () => {
-  const parser = createMarkdownParser();
+  const parser = createParser({ type: "md" });
 
   describe("parse", () => {
     it("should parse headings", async () => {

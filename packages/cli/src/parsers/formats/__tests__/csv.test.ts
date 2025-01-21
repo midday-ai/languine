@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { createCsvParser } from "../csv.js";
+import { createParser } from "@/parsers/index.ts";
 
 describe("CSV Parser", () => {
   test("parses CSV with id and value columns", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     const input = `id,value
 greeting,Hello
 farewell,Goodbye`;
@@ -17,7 +17,7 @@ farewell,Goodbye`;
   });
 
   test("ignores rows without id or value", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     const input = `id,value
 greeting,Hello
 ,Goodbye
@@ -32,7 +32,7 @@ invalid_row,
   });
 
   test("throws error on invalid CSV", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     const input = "invalid,csv,format";
 
     await expect(parser.parse(input)).rejects.toThrow(
@@ -41,7 +41,7 @@ invalid_row,
   });
 
   test("serializes data to CSV format", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     const data = {
       greeting: "Hello",
       farewell: "Goodbye",
@@ -56,7 +56,7 @@ farewell,Goodbye
   });
 
   test("preserves existing columns when serializing", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     // First parse a CSV with context data to initialize metadata
     const initialInput = `id,value,context
 greeting,Hello,Welcome message
@@ -79,7 +79,7 @@ newKey,New Value,
   });
 
   test("handles empty input when serializing", async () => {
-    const parser = createCsvParser();
+    const parser = createParser({ type: "csv" });
     const data = {
       greeting: "Hello",
     };
