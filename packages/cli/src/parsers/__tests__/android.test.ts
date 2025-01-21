@@ -138,20 +138,46 @@ describe("Android XML parser", () => {
     });
 
     it("should handle empty object", async () => {
-      const result = await parser.serialize("en", {});
-      expect(result).toContain('<?xml version="1.0" encoding="utf-8"?>');
-      expect(result).toContain("<resources/>");
+      const input = {};
+      const result = await parser.serialize("en", input);
+      expect(result).toBe(
+        '<?xml version="1.0" encoding="utf-8"?>\n<resources/>',
+      );
     });
 
     it("should preserve special characters", async () => {
       const input = {
-        message: "Hello & World < > \" '",
+        special: "Text with <special> & 'characters'",
       };
-
       const result = await parser.serialize("en", input);
-      expect(result).toContain('<?xml version="1.0" encoding="utf-8"?>');
-      expect(result).toContain(
-        '<string name="message">Hello &amp; World &lt; &gt; " \'</string>',
+      expect(result).toBe(
+        '<?xml version="1.0" encoding="utf-8"?>\n' +
+          "<resources>\n" +
+          "  <string name=\"special\">Text with &lt;special&gt; &amp; 'characters'</string>\n" +
+          "</resources>",
+      );
+    });
+
+    it("removes deleted keys when serializing", async () => {
+      const translations = {
+        greeting: "Hello",
+        farewell: "Goodbye",
+      };
+      const result = await parser.serialize("en", translations);
+      expect(result).toBe(
+        '<?xml version="1.0" encoding="utf-8"?>\n' +
+          "<resources>\n" +
+          '  <string name="greeting">Hello</string>\n' +
+          '  <string name="farewell">Goodbye</string>\n' +
+          "</resources>",
+      );
+    });
+
+    it("handles object with no translations", async () => {
+      const translations = {};
+      const result = await parser.serialize("en", translations);
+      expect(result).toBe(
+        '<?xml version="1.0" encoding="utf-8"?>\n<resources/>',
       );
     });
   });

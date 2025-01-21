@@ -42,7 +42,3 @@ msgstr "Spanish"
 #: src/components/HomePage.tsx:21
 msgid "Translation Demo"
 msgstr "Translation Demo"
-
-#: src/components/HomePage.tsx:28
-msgid "Welcome to <0>Next.js!</0>"
-msgstr "Welcome to <0>Next.js!</0>"

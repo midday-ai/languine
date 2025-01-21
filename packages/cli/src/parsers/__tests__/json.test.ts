@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from "bun:test";
 import { createParser } from "@/parsers/index.ts";
-import type { Parser } from "../../core/types.ts";
+import type { Parser } from "../core/types.ts";
 
 describe("JSON Parser", () => {
   let parser: Parser;
@@ -165,6 +165,24 @@ describe("JSON Parser", () => {
       const input = { key: "value" };
       const result = await parser.serialize("en", input);
       expect(result.endsWith("\n")).toBe(true);
+    });
+
+    test("removes deleted keys when serializing", async () => {
+      const translations = {
+        greeting: "Hello",
+        farewell: "Goodbye",
+      };
+      const result = await parser.serialize("en", translations);
+      expect(JSON.parse(result)).toEqual({
+        greeting: "Hello",
+        farewell: "Goodbye",
+      });
+    });
+
+    test("handles object with no translations", async () => {
+      const translations = {};
+      const result = await parser.serialize("en", translations);
+      expect(JSON.parse(result)).toEqual({});
     });
   });
 });

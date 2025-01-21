@@ -125,9 +125,19 @@ export async function translateCommand(args: string[] = []) {
             keysToTranslate = Object.keys(sourceContent);
           } else {
             // Otherwise use normal diff detection
-            const changes = await getDiff({ sourceFilePath, type });
-            keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
-            removedKeys = changes.removedKeys;
+            try {
+              const changes = await getDiff({ sourceFilePath, type });
+              keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
+              removedKeys = changes.removedKeys;
+            } catch (error) {
+              console.log();
+              note(
+                "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                "Diff Error",
+              );
+              console.log();
+              process.exit(1);
+            }
           }
 
           if (keysToTranslate.length > 0 || removedKeys.length > 0) {
