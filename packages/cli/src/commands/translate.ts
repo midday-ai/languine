@@ -185,6 +185,8 @@ export async function translateCommand(args: string[] = []) {
               documentName: sourceFilePath.split("/").pop(),
             }));
 
+          console.log(translationInput);
+
           let shouldRemoveKeys = false;
           if (!forceTranslate && removedKeys.length > 0) {
             s.stop();
