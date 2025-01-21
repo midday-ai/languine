@@ -1,0 +1,9 @@
+{
+  "header": {
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact"
+    }
+  }
+}

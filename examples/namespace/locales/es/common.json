@@ -1,0 +1,8 @@
+{
+  "common": {
+    "hero": {
+      "title": "Este es un título de héroe",
+      "description": "Esta es una descripción de héroe"
+    }
+  }
+}
