@@ -82,6 +82,16 @@ export async function createDocument({
       translatedText,
       updatedAt: new Date(),
     })
+    .onConflictDoUpdate({
+      target: [documents.projectId, documents.name, documents.targetLanguage],
+      set: {
+        translatedText: documents.translatedText,
+        branch,
+        commit,
+        commitLink,
+        updatedAt: new Date(),
+      },
+    })
     .returning();
 
   return document;

@@ -47,6 +47,8 @@ export async function translateDocument(
   const { object } = await generateObject({
     model: large,
     prompt,
+    maxTokens: 8000,
+    mode: "json",
     schema: z.object({
       content: z.string(),
     }),

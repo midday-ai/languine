@@ -19,6 +19,25 @@ const mapFormatToPrompt = (format?: string) => {
   }
 };
 
+const fileSpecificInstructions = (format?: string) => {
+  switch (format) {
+    case "md":
+      return `
+Markdown Specific Instructions:
+- Preserve all Markdown formatting and syntax
+- Keep code blocks, links, and other Markdown elements intact
+- Maintain heading levels and list structures
+
+Here is one example of a markdown file with code blocks to keep:
+\`\`\`js
+console.log('Hello World');
+\`\`\`
+`;
+    default:
+      return "";
+  }
+};
+
 export function createFinalPrompt(
   text: string,
   options: PromptOptions,
@@ -26,8 +45,10 @@ export function createFinalPrompt(
 ) {
   const basePrompt = `You are a professional translator working with ${mapFormatToPrompt(options.sourceFormat)} files.
 
-Task: Translate the content below from ${options.sourceLocale} to ${options.targetLocale}.
-${baseRequirements}`;
+Task: Translate the content below from ${options.sourceLocale.toUpperCase()} to ${options.targetLocale.toUpperCase()}.
+
+${baseRequirements}
+${fileSpecificInstructions(options.sourceFormat)}`;
 
   const tuningInstructions = settings
     ? [

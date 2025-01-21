@@ -5,9 +5,10 @@ import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
 import { loadConfig } from "@/utils/config.ts";
-import { getDiff } from "@/utils/diff.js";
+import { getDiff } from "@/utils/diff.ts";
 import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
+import { transformLocalePath } from "@/utils/path.js";
 import { getAPIKey } from "@/utils/session.ts";
 import { confirm, note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
@@ -105,6 +106,17 @@ export async function translateCommand(args: string[] = []) {
       for (const pattern of include) {
         const globPattern =
           pattern && typeof pattern === "object" ? pattern.glob : pattern;
+
+        // Check if [locale] placeholder exists in pattern
+        if (!globPattern.includes("[locale]")) {
+          s.stop();
+          note(
+            "Missing [locale] placeholder in file pattern. Please update your config file to include [locale] in file paths.\nLearn more at https://languine.ai/docs/getting-started/troubleshooting",
+            "Configuration",
+          );
+          process.exit(1);
+        }
+
         const sourcePattern = globPattern.replace("[locale]", sourceLocale);
 
         // Find all matching source files
@@ -133,7 +145,7 @@ export async function translateCommand(args: string[] = []) {
               console.log();
               note(
                 "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
-                "Diff Error",
+                "Diffing",
               );
               console.log();
               process.exit(1);
@@ -302,9 +314,11 @@ export async function translateCommand(args: string[] = []) {
           // Process results for each target locale
           for (const targetLocale of effectiveTargetLocales) {
             try {
-              const targetPath = sourceFilePath.replace(
+              const targetPath = transformLocalePath(
+                sourceFilePath,
                 sourceLocale,
                 targetLocale,
+                process.cwd(),
               );
 
               // Create directory if it doesn't exist

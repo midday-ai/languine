@@ -19,7 +19,7 @@ export default defineConfig({
       include: ["content/ui.[locale].json"],
     },
     md: {
-      include: ["content/docs/**/*.mdx"],
+      include: ["content/docs/[locale]/**/*.mdx"],
     },
   },
 });

@@ -60,6 +60,7 @@ export const translateTask = schemaTask({
         const translatedContent = await translateDocument(document.sourceText, {
           sourceLocale: payload.sourceLanguage,
           targetLocale,
+          sourceFormat: payload.sourceFormat,
         });
 
         translations[targetLocale] = [
