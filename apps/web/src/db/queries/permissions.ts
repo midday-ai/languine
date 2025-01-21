@@ -45,8 +45,6 @@ export async function validateJobPermissions({
     .where(eq(users.apiKey, apiKey))
     .get();
 
-  console.log("user", user);
-
   if (!user) {
     throw new Error("Invalid user token");
   }

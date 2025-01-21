@@ -207,12 +207,23 @@ export async function translateCommand(args: string[] = []) {
             commitLink: gitInfo?.commitLink,
           });
 
-          if (error?.code === "LIMIT_REACHED") {
+          if (
+            error?.code === "DOCUMENT_LIMIT_REACHED" ||
+            error?.code === "KEY_LIMIT_REACHED"
+          ) {
             s.stop();
-            note(
-              "Translation limit reached. Upgrade your plan to increase your limit.",
-              "Limit reached",
-            );
+
+            if (error?.code === "DOCUMENT_LIMIT_REACHED") {
+              note(
+                "Document limit reached. Upgrade your plan to increase your limit.",
+                "Limit reached",
+              );
+            } else {
+              note(
+                "Translation keys limit reached. Upgrade your plan to increase your limit.",
+                "Limit reached",
+              );
+            }
 
             const shouldUpgrade = await select({
               message: "Would you like to upgrade your plan now?",

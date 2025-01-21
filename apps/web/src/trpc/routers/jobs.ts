@@ -2,7 +2,7 @@ import { db } from "@/db";
 import { getOrganizationLimits } from "@/db/queries/organization";
 import { organizations, projects } from "@/db/schema";
 import type { translateTask } from "@/jobs/translate/translate";
-import { TIERS_MAX_KEYS } from "@/lib/tiers";
+import { TIERS_MAX_DOCUMENTS, TIERS_MAX_KEYS } from "@/lib/tiers";
 import { tasks } from "@trigger.dev/sdk/v3";
 import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
@@ -28,6 +28,7 @@ export const jobsRouter = createTRPCRouter({
           z.object({
             key: z.string(),
             sourceText: z.string(),
+            documentName: z.string().nullable().optional(),
           }),
         ),
       }),
@@ -52,13 +53,34 @@ export const jobsRouter = createTRPCRouter({
 
       const isFreeUser = org?.plan === "free";
 
-      const { keysCount, documentsCount } = await getOrganizationLimits(
+      const { totalKeys, totalDocuments } = await getOrganizationLimits(
         org?.id,
       );
 
+      console.log("totalDocuments", totalDocuments);
+
+      const nextTotalDocuments =
+        totalDocuments + 1 * input.targetLanguages.length;
+      const currentDocumentsLimit =
+        TIERS_MAX_DOCUMENTS[org.tier as keyof typeof TIERS_MAX_DOCUMENTS];
+
+      if (nextTotalDocuments >= currentDocumentsLimit) {
+        return {
+          meta: {
+            plan: org.plan,
+            tier: org.tier,
+            organizationId: org.id,
+          },
+          error: {
+            code: "DOCUMENT_LIMIT_REACHED",
+            message: "You have reached the maximum number of documents",
+          },
+        };
+      }
+
       // Calculate the total number of keys, saved keys + new keys (for each target language)
       const nextTotalKeys =
-        keysCount + input.content.length * input.targetLanguages.length;
+        totalKeys + input.content.length * input.targetLanguages.length;
 
       const currentKeysLimit =
         TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];
@@ -71,7 +93,7 @@ export const jobsRouter = createTRPCRouter({
             organizationId: org.id,
           },
           error: {
-            code: "LIMIT_REACHED",
+            code: "KEY_LIMIT_REACHED",
             message: "You have reached the maximum number of keys",
           },
         };

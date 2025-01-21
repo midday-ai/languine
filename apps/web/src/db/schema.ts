@@ -366,7 +366,7 @@ export const documents = sqliteTable(
     targetLanguage: text("target_language").notNull(),
     sourceText: text("source_text").notNull(),
     translatedText: text("translated_text").notNull(),
-    documentName: text("document_name").notNull(),
+    name: text("document_name").notNull(),
     branch: text("branch"),
     commit: text("commit"),
     commitLink: text("commit_link"),
@@ -385,7 +385,7 @@ export const documents = sqliteTable(
     uniqueIndex("unique_document_idx").on(
       table.projectId,
       table.targetLanguage,
-      table.documentName,
+      table.name,
     ),
     index("org_documents_idx").on(table.organizationId),
     index("documents_source_language_idx").on(table.sourceLanguage),

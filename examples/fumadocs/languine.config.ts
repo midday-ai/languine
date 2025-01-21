@@ -1,5 +1,4 @@
 import { writeFile } from "node:fs/promises";
-import path from "node:path";
 import { defaultTranslations } from "fumadocs-ui/i18n";
 import { defineConfig } from "languine";
 import { i18n } from "./lib/i18n";
@@ -17,30 +16,10 @@ export default defineConfig({
   },
   files: {
     json: {
-      include: [
-        {
-          from: "content/ui.json",
-          to: "content/ui.[locale].json",
-        },
-        {
-          from: "content/app.json",
-          to: "content/app.[locale].json",
-        },
-      ],
+      include: ["content/ui.[locale].json"],
     },
     md: {
-      include: [
-        {
-          glob: "content/docs/**/*.mdx",
-          to: (file, locale) => {
-            const { dir, name, ext } = path.parse(file);
-
-            return path.join(dir, `${name}.${locale}${ext}`);
-          },
-        },
-      ],
-      // ignore translated content
-      filter: (file) => path.basename(file).split(".").length === 2,
+      include: ["content/docs/**/*.mdx"],
     },
   },
 });

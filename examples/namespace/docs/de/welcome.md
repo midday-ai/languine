@@ -14,7 +14,7 @@ Um mit unserer Anwendung zu beginnen:
 
 Unsere Anwendung umfasst:
 
-- Echtzeit-Datensynchronisierung
+- Echtzeit-Datensynchronisation
 - Mehrsprachige Unterstützung
 - Responsives Design
 - Dunkle/Helle Themenmodi

@@ -17,7 +17,7 @@ Notre application comprend :
 - Synchronisation des données en temps réel
 - Support multilingue
 - Conception réactive
-- Modes de thème sombre/clair
+- Modes thème sombre/clair
 
 ## Documentation
 

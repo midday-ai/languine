@@ -22,10 +22,6 @@ const MODEL_THRESHOLD = 200;
 export function chooseModel(totalItems: number) {
   const { large, regular } = getModels();
 
-  console.log(
-    `Choosing model ${totalItems > MODEL_THRESHOLD ? "large" : "regular"}`,
-  );
-
   const isSmall = totalItems > MODEL_THRESHOLD;
 
   if (isSmall) {
