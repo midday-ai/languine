@@ -58,7 +58,10 @@ export function TeamSelector() {
           <span>{currentProject?.name}</span>
         </div>
       </PopoverTrigger>
-      <PopoverContent className="w-[480px] h-[240px] p-0" sideOffset={10}>
+      <PopoverContent
+        className="w-screen md:w-[480px] h-[240px] p-0 mt-[11px] md:mt-0"
+        sideOffset={10}
+      >
         <div className="flex divide-x divide-border h-[240px]">
           <div className="flex-1 flex flex-col">
             <div className="p-4 text-xs font-medium text-secondary">

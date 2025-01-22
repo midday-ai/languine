@@ -4,13 +4,14 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ChartContainer, ChartTooltip } from "@/components/ui/chart";
 import type { ChartConfig } from "@/components/ui/chart";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePeriod } from "@/hooks/use-period";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import NumberFlow from "@number-flow/react";
 import { endOfWeek, format, parseISO, startOfWeek } from "date-fns";
 import { useParams } from "next/navigation";
-import { Bar, CartesianGrid, ComposedChart, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import { PeriodSelector } from "../period-selector";
 
 const chartConfig = {
@@ -74,6 +75,7 @@ export function AnalyticsChart() {
   const t = useI18n();
   const { organization, project } = useParams();
   const { period: periodValue } = usePeriod();
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const [{ data, totalKeys, period }] =
     trpc.analytics.getProjectStats.useSuspenseQuery({
@@ -97,6 +99,19 @@ export function AnalyticsChart() {
             t(`months.${stat.label.split("-")[1]}`),
   }));
 
+  const displayData = isMobile
+    ? translatedData.slice(Math.floor((translatedData.length * 2) / 3))
+    : translatedData;
+
+  const maxValue = Math.max(
+    ...displayData.map((item) => item.keyCount + item.documentCount),
+  );
+
+  const yAxisWidth = Math.max(
+    String(maxValue).length * 8, // 8px per character at fontSize 12
+    30,
+  );
+
   return (
     <Card className="w-full border-none bg-noise">
       <CardHeader className="flex justify-between flex-row">
@@ -115,10 +130,9 @@ export function AnalyticsChart() {
           <PeriodSelector />
         </div>
       </CardHeader>
-
-      <CardContent className="mt-4">
+      <CardContent className="mt-4 max-w-[calc(100vw)] md:max-w-full">
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
-          <ComposedChart accessibilityLayer data={translatedData}>
+          <BarChart accessibilityLayer data={displayData}>
             <ChartTooltip cursor={false} content={<TooltipContent />} />
 
             <XAxis
@@ -135,6 +149,7 @@ export function AnalyticsChart() {
               }}
             />
             <YAxis
+              width={yAxisWidth}
               stroke="#888888"
               tickFormatter={(value) => `${value}`}
               fontSize={12}
@@ -168,7 +183,7 @@ export function AnalyticsChart() {
               barSize={36}
               stackId="a"
             />
-          </ComposedChart>
+          </BarChart>
         </ChartContainer>
       </CardContent>
     </Card>

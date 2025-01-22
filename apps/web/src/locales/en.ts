@@ -514,6 +514,13 @@ export default {
     fi: "Finnish",
     vi: "Vietnamese",
   },
+  menu: {
+    dashboard: "Dashboard",
+    tuning: "Tuning",
+    settings: "Settings",
+    docs: "Documentation",
+    account: "Account",
+  },
   billing: {
     title: "Billing",
   },

@@ -155,13 +155,15 @@ export function SettingsCard({
       <div className="mb-8 max-w-screen-xl">
         <Card className="w-full bg-noise">
           <CardHeader>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <Skeleton className="h-5 w-[200px] mb-2" />
                 <Skeleton className="h-4 w-[300px]" />
               </div>
               {type === "switch" && <Skeleton className="h-6 w-10" />}
-              {type === "select" && <Skeleton className="h-10 w-[240px]" />}
+              {type === "select" && (
+                <Skeleton className="h-10 w-full md:w-[240px]" />
+              )}
             </div>
           </CardHeader>
           <CardContent>
@@ -176,7 +178,7 @@ export function SettingsCard({
     <div className="mb-8 max-w-screen-xl">
       <Card className="w-full bg-noise">
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <CardTitle className="text-sm font-normal mb-2">
                 {title}
@@ -193,7 +195,7 @@ export function SettingsCard({
             )}
 
             {type === "select" && options && (
-              <div className="min-w-[240px] ml-6">
+              <div className="w-full md:w-[240px] md:ml-6">
                 <Select value={value} onValueChange={handleSelectChange}>
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder={placeholder}>
@@ -229,7 +231,7 @@ export function SettingsCard({
         <CardContent>
           {type === "input" && (
             <form
-              className="flex gap-2"
+              className="flex flex-col md:flex-row gap-2"
               onSubmit={(e) => {
                 e.preventDefault();
                 handleSave();
@@ -241,11 +243,12 @@ export function SettingsCard({
                 placeholder={placeholder}
                 type={validate}
                 required
+                className="flex-1"
               />
               <Button
                 type="submit"
                 disabled={isSaving}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 w-full md:w-auto mt-4 md:mt-0"
               >
                 {isSaving && <Spinner size="sm" />}
                 {t("settings.save")}
@@ -270,7 +273,7 @@ export function SettingsCard({
               <Button
                 type="submit"
                 disabled={isSaving}
-                className="flex items-center gap-2 self-end mt-2"
+                className="flex items-center gap-2 self-end mt-4 md:mt-0 w-full md:w-auto"
               >
                 {isSaving && <Spinner size="sm" />}
                 {t("settings.save")}

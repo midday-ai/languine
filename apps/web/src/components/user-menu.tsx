@@ -33,7 +33,7 @@ export function UserMenu() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="px-1">
+      <DropdownMenuTrigger>
         <Avatar className="size-6">
           {session?.user?.image ? (
             <AvatarImage

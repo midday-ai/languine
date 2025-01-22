@@ -23,7 +23,7 @@ export function ChangeLanguage() {
     <DropdownMenu>
       <DropdownMenuTrigger
         type="button"
-        className="flex items-center gap-2 text-secondary outline-none uppercase text-xs font-medium"
+        className="items-center gap-2 text-secondary outline-none uppercase text-xs font-medium hidden md:flex"
       >
         [{currentLocale}]
       </DropdownMenuTrigger>
