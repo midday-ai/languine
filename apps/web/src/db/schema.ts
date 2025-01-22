@@ -263,9 +263,6 @@ export const projectSettings = sqliteTable(
       .default("general"),
     // Tuning end
 
-    provider: text("provider").notNull().default("openai"),
-    model: text("model").notNull().default("gpt-4-turbo"),
-    providerApiKey: text("provider_api_key"),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),

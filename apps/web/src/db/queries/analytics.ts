@@ -1,5 +1,6 @@
 import { db } from "@/db";
 import { projects, translations } from "@/db/schema";
+import type { AnalyticsSchema } from "@/trpc/routers/schema";
 import { format, startOfWeek, subDays, subMonths } from "date-fns";
 import { and, count, countDistinct, eq, gte, lte, sql } from "drizzle-orm";
 
@@ -13,13 +14,7 @@ export async function getAnalytics({
       ? subMonths(new Date(), 3) // 3 months
       : subMonths(new Date(), 12), // 6 months
   endDate = new Date(),
-}: {
-  projectSlug: string;
-  organizationId: string;
-  startDate?: Date;
-  endDate?: Date;
-  period?: "monthly" | "weekly" | "daily";
-}) {
+}: AnalyticsSchema) {
   let dateFormat: string;
   let intervalStr: string;
 

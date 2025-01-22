@@ -6,33 +6,13 @@ import { TIERS_MAX_DOCUMENTS, TIERS_MAX_KEYS } from "@/lib/tiers";
 import { tasks } from "@trigger.dev/sdk/v3";
 import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
-import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 import { rateLimitMiddleware } from "../middlewares/ratelimits";
+import { jobsSchema } from "./schema";
 
 export const jobsRouter = createTRPCRouter({
   startJob: protectedProcedure
-    .input(
-      z.object({
-        apiKey: z.string(),
-        projectId: z.string(),
-        sourceFormat: z.string(),
-        sourceLanguage: z.string(),
-        targetLanguages: z.array(z.string()),
-        branch: z.string().optional().nullable(),
-        commit: z.string().optional().nullable(),
-        commitLink: z.string().optional().nullable(),
-        sourceProvider: z.string().nullable().optional(),
-        commitMessage: z.string().optional().nullable(),
-        content: z.array(
-          z.object({
-            key: z.string(),
-            sourceText: z.string(),
-            documentName: z.string().nullable().optional(),
-          }),
-        ),
-      }),
-    )
+    .input(jobsSchema)
     .use(rateLimitMiddleware)
     .mutation(async ({ input }) => {
       const project = await db
@@ -56,8 +36,6 @@ export const jobsRouter = createTRPCRouter({
       const { totalKeys, totalDocuments } = await getOrganizationLimits(
         org?.id,
       );
-
-      console.log("totalDocuments", totalDocuments);
 
       const nextTotalDocuments =
         totalDocuments + 1 * input.targetLanguages.length;

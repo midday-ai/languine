@@ -1,477 +1,298 @@
 export default {
-  header: {
-    pricing: "Preços",
-    docs: "Documentação",
-    signIn: "Entrar",
-    goToApp: "Ir para o app"
-  },
-  hero: {
-    title: "Localização automatizada para suas aplicações",
-    description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores."
-  },
-  getStarted: {
-    heading: "Começar",
-    title: "Localização automatizada para suas aplicações",
-    description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores.",
-    button: {
-      startAutomating: "Comece a automatizar",
-      readDocumentation: "Leia a documentação"
-    }
-  },
-  companies: {
-    title: "Usado por",
-    addYourCompany: "+ Adicionar sua empresa"
-  },
-  activity: {
-    title: "Atividade",
-    loading: "Carregando",
-    loadMore: "Mostrar mais",
-    noResults: "Nenhum resultado para '{search}'",
-    clearSearch: "Limpar pesquisa"
-  },
-  features: {
-    title: "Funcionalidades",
-    fullyOpenSource: "Totalmente código aberto",
-    fullyOpenSourceDescription: "Nosso código está publicamente disponível no GitHub, permitindo transparência e contribuições da comunidade.",
-    noVendorLockIn: "Sem bloqueio de fornecedor",
-    noVendorLockInDescription: "Nós não o prendemos a um serviço específico, use seus próprios LLMs.",
-    presetsForExpo: "Predefinições para Expo",
-    presetsForExpoDescription: "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
-    presetForReactNative: "Predefinição para React Native",
-    presetForReactNativeDescription: "Fornecemos uma predefinição para React Native, para que você possa começar rapidamente.",
-    presetForReactEmail: "Biblioteca React Email",
-    presetForReactEmailDescription: "Criamos uma biblioteca i18n para React Email.",
-    readyForI18nLibraries: "Pronto para bibliotecas i18n",
-    readyForI18nLibrariesDescription: "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc)."
-  },
-  info: {
-    title: "Lida com todos os aspectos da localização do seu aplicativo, incluindo",
-    smartTranslation: {
-      title: "Tradução Inteligente",
-      intelligentTranslation: "Tradução inteligente com consciência de contexto",
-      brandVoice: "Consistência de voz e tom da marca",
-      terminology: "Gerenciamento de terminologia",
-      linguisticFeatures: "Recursos linguísticos avançados",
-      realtimeUpdates: "Atualizações de tradução em tempo real"
-    },
-    implementation: {
-      title: "Implementação",
-      quickSetup: "Configuração e integração rápidas",
-      fileFormat: "Manuseio de formato de arquivo",
-      contentStructure: "Organização da estrutura de conteúdo",
-      assetOrganization: "Organização de ativos"
-    },
-    developer: {
-      title: "Experiência do Desenvolvedor",
-      cli: "Interface de linha de comando",
-      cicd: "Integração CI/CD",
-      versionControl: "Controle de versão",
-      workflow: "Fluxo de trabalho do desenvolvedor",
-      documentation: "Documentação abrangente"
-    }
-  },
-  login: {
-    title: "Entrar",
-    github: "Entrar com GitHub",
-    google: "Entrar com Google",
-    footer: "Automatize sua localização.",
-    description: "Entre para começar a automatizar sua localização em segundos.",
-    terms: {
-      text: "Ao entrar, você concorda com nossos",
-      termsOfService: "Termos de Serviço",
-      and: "e",
-      privacyPolicy: "Política de Privacidade"
-    }
-  },
-  userMenu: {
-    account: "Configurações da Conta",
-    signOut: "Sair",
-    createTeam: "Criar equipe",
-    homepage: "Página inicial",
-    team: "Configurações da Equipe"
-  },
-  teamSelector: {
-    addProject: "Criar projeto",
-    createProjectTitle: "Criar um novo projeto",
-    projectNamePlaceholder: "Nome do projeto",
-    createProjectButton: "Criar projeto",
-    pro: "Pro",
-    project: "Projeto",
-    teams: "Equipes",
-    createTeam: "Criar equipe",
-    createTeamTitle: "Criar uma nova equipe",
-    teamNamePlaceholder: "Nome da equipe",
-    createTeamButton: "Criar equipe"
-  },
-  coming_soon: {
-    title: "Languine está em Acesso Antecipado",
-    description: "Estamos atualmente em acesso antecipado. Entre em contato com",
-    cta: "no X para obter acesso antecipado."
-  },
-  account: {
-    fullName: {
-      title: "Nome Completo",
-      description: "Seu nome completo como aparecerá na plataforma.",
-      placeholder: "Digite seu nome completo"
-    },
-    email: {
-      title: "Endereço de Email",
-      description: "O endereço de email associado à sua conta.",
-      placeholder: "Digite seu endereço de email"
-    },
-    apiKey: {
-      title: "Chave API",
-      description: "Sua chave API pessoal para acessar a API Languine e da CLI."
-    },
-    deleteAccount: {
-      title: "Excluir Conta",
-      description: "Excluir permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
-      button: "Excluir Conta"
-    }
-  },
-  copyInstall: {
-    copied: "Copiado para a área de transferência"
-  },
-  dangerZone: {
-    dialog: {
-      title: "Você tem certeza absoluta?",
-      description: "Esta ação não pode ser desfeita. Por favor, digite DELETE para confirmar.",
-      placeholder: "Digite DELETE para confirmar",
-      confirm: "Confirmar Exclusão",
-      cancel: "Cancelar"
-    }
-  },
-  pipeline: {
-    title: "Fluxo de Trabalho (Pipeline CI/CD)",
-    pro: "[pro]",
-    description: "Nosso mecanismo de tradução integra-se perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
-  },
-  settings: {
-    badRequest: "Requisição inválida",
-    badRequestDescription: "A organização deve ter pelo menos um proprietário. Transfira a propriedade para outro membro antes de remover este proprietário.",
-    permissionDenied: "Permissão negada",
-    permissionDeniedDescription: "Você precisa ser um proprietário da equipe para realizar esta ação",
-    deleteTeamTitle: "Excluir equipe",
-    deleteTeamDescription: "Não é possível excluir a organização quando você é o único membro, em vez disso, exclua sua conta",
-    saved: "Configurações salvas",
-    savedDescription: "Suas alterações foram salvas com sucesso",
-    error: "Algo deu errado",
-    errorDescription: "Por favor, tente novamente ou entre em contato com o suporte",
-    addTeam: "Criar equipe",
-    apiKey: {
-      updated: "Chave API atualizada",
-      updatedDescription: "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
-      title: "Atualizar Chave API",
-      description: "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
-      cancel: "Cancelar",
-      "continue": "Continuar"
-    },
-    tabs: {
-      project: "Projeto",
-      account: "Conta",
-      team: "Equipe",
-      provider: "Fornecedor",
-      billing: "Cobrança"
-    },
-    provider: {
-      updateSuccess: "Configurações atualizadas com sucesso",
-      updateError: "Falha ao atualizar as configurações",
-      translationProvider: {
-        title: "Fornecedor de Tradução",
-        description: "Escolha seu serviço de IA preferido para gerar traduções. Cada fornecedor oferece diferentes capacidades e preços.",
-        placeholder: "Selecione um fornecedor"
-      },
-      languageModel: {
-        title: "Modelo de Linguagem",
-        description: "Selecione o modelo de IA que melhor equilibra qualidade e velocidade para suas necessidades de tradução. Modelos mais poderosos podem ser mais lentos, mas produzem melhores resultados.",
-        placeholder: "Selecione um modelo"
-      },
-      apiKey: {
-        title: "Chave API do Fornecedor",
-        description: "Digite sua chave API para autenticar com seu fornecedor escolhido. Mantenha esta chave segura - nós a criptografamos antes de armazenar.",
-        placeholder: "Digite sua chave API"
-      }
-    },
-    addProject: "Criar projeto",
-    project: {
-      name: {
-        title: "Nome do Projeto",
-        description: "O nome do seu projeto",
-        placeholder: "Digite o nome do projeto"
-      },
-      id: {
-        title: "ID do Projeto",
-        description: "Seu identificador único de projeto",
-        placeholder: "ID do Projeto"
-      },
-      "delete": {
-        title: "Excluir Projeto",
-        description: "Excluir permanentemente este projeto e todos os seus dados",
-        button: "Excluir Projeto"
-      }
-    },
-    save: "Salvar",
-    team: {
-      name: {
-        title: "Nome da Equipe",
-        description: "O nome da sua equipe",
-        placeholder: "Digite o nome da equipe"
-      },
-      billing: {
-        title: "Plano de Cobrança",
-        description: "Gerencie o plano de cobrança da sua equipe",
-        free: "Grátis",
-        pro: "Pro",
-        unlimited: "Ilimitado"
-      },
-      apiKey: {
-        title: "Chave API da Equipe",
-        description: "Chave API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
-        placeholder: "Chave API da Equipe"
-      },
-      members: {
-        leaveTeamConfirm: "Sair da equipe",
-        leaveTeamDescription: "Tem certeza de que deseja sair desta equipe?",
-        cancel: "Cancelar",
-        leaveTeam: "Sair da equipe",
-        invite: "Convidar membro",
-        title: "Membros",
-        pendingInvitations: "Convites Pendentes",
-        removeMember: "Remover membro",
-        removeMemberConfirm: "Remover membro",
-        removeMemberDescription: "Tem certeza de que deseja remover este membro?",
-        filterPlaceholder: "Filtrar membros...",
-        allRoles: "Todos os Papéis",
-        date: "Data",
-        selectAll: "{count} selecionado",
-        noPendingInvitations: "Nenhum convite pendente",
-        noResults: "Nenhum membro encontrado",
-        tryDifferentSearch: "Tente uma pesquisa diferente",
-        inviteMembers: "Convide membros para colaborar",
-        deleteInvite: "Excluir Convite",
-        deleteInviteDescription: "Excluir o convite",
-        invitedBy: "Convidado por {name}",
-        deleteInviteSuccess: "Convite excluído",
-        deleteInviteError: "Falha ao excluir o convite",
-        removeMemberSuccess: "Membro removido",
-        removeMemberError: "Falha ao remover membro",
-        removeMemberSuccessDescription: "Membro foi removido com sucesso",
-        removeMemberErrorDescription: "Falha ao remover membro",
-        roles: {
-          owner: "Proprietário",
-          member: "Membro"
-        },
-        dateSort: {
-          newest: "Mais novo",
-          oldest: "Mais antigo"
-        }
-      }
-    }
-  },
-  tuning: {
-    general: "Geral",
-    translationMemory: {
-      title: "Memória de Tradução",
-      description: "Use memória de tradução para melhorar consistência e eficiência"
-    },
-    qualityChecks: {
-      title: "Verificações de Qualidade",
-      description: "Habilite verificações de qualidade automatizadas para traduções"
-    },
-    contextDetection: {
-      title: "Detecção de Contexto",
-      description: "Detecte e preserve automaticamente o contexto em traduções"
-    },
-    styleGuide: "Guia de Estilo",
-    lengthControl: {
-      title: "Controle de Comprimento",
-      description: "Controle o comprimento do texto traduzido",
-      options: {
-        flexible: "Flexível",
-        strict: "Estrito",
-        exact: "Exato",
-        loose: "Frouxo"
-      }
-    },
-    inclusiveLanguage: {
-      title: "Linguagem Inclusiva",
-      description: "Garanta que as traduções usem linguagem inclusiva"
-    },
-    formality: {
-      title: "Formalidade",
-      description: "Controle o nível de formalidade das traduções"
-    },
-    brandName: {
-      title: "Nome da Marca",
-      description: "Defina o nome da sua marca para uso consistente",
-      placeholder: "Digite o nome da sua marca"
-    },
-    brandVoice: {
-      title: "Voz da Marca",
-      description: "Defina a voz e o tom da sua marca",
-      placeholder: "Descreva a voz da sua marca..."
-    },
-    localization: "Localização",
-    idioms: {
-      title: "Idiomas",
-      description: "Lide com expressões idiomáticas apropriadamente"
-    },
-    terminology: {
-      title: "Terminologia",
-      description: "Gerencie terminologia especializada e glossários"
-    },
-    culturalAdaptation: {
-      title: "Adaptação Cultural",
-      description: "Adapte o conteúdo para adequação cultural"
-    }
-  },
-  pricing: {
-    title: "Preços simples",
-    free: {
-      title: "Grátis (100 chaves)",
-      price: "Grátis",
-      keys_limit: "Até 100 chaves",
-      features: {
-        unlimited_projects: "Projetos ilimitados",
-        fine_tuning: "Opções de ajuste fino",
-        overrides: "Substituições de tradução",
-        analytics: "Análises",
-        context_memory: "Memória de contexto",
-        community_support: "Suporte da comunidade"
-      }
-    },
-    pro: {
-      title: "Pro",
-      includes_free: "Tudo no Grátis, mais:",
-      features: {
-        github_action: "Integração com GitHub Action",
-        latest_features: "Acesso antecipado aos últimos recursos",
-        priority_support: "Suporte prioritário"
-      }
-    },
-    cta: "Comece a automatizar"
-  },
-  createTeam: {
-    teamName: "Nome da Equipe",
-    teamNamePlaceholder: "Digite o nome da equipe",
-    createTeamButton: "Criar equipe",
-    cancel: "Cancelar",
-    createTeamDescription: "Crie uma nova equipe para gerenciar seus projetos e colaboradores."
-  },
-  createProject: {
-    createProjectTitle: "Criar um novo projeto",
-    projectNamePlaceholder: "Digite o nome do projeto",
-    createProjectButton: "Criar projeto",
-    cancel: "Cancelar",
-    createProjectDescription: "Crie um novo projeto para começar a automatizar sua localização."
-  },
-  invite: {
-    inviteMember: "Convidar membro",
-    inviteDescription: "Convide um membro para sua equipe",
-    emailLabel: "Email",
-    emailPlaceholder: "Digite o email",
-    cancel: "Cancelar",
-    sendInvite: "Enviar convite",
-    success: {
-      title: "Convite enviado",
-      description: "Convite enviado com sucesso para {email}"
-    },
-    error: {
-      title: "Erro",
-      description: "Falha ao enviar convite. Por favor, tente novamente."
-    },
-    validation: {
-      invalidEmail: "Por favor, insira um email válido"
-    }
-  },
-  months: {
-    "10": "Out",
-    "11": "Nov",
-    "12": "Dez",
-    "01": "Jan",
-    "02": "Fev",
-    "03": "Mar",
-    "04": "Abr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Ago",
-    "09": "Set"
-  },
-  onboarding: {
-    steps: {
-      "1": {
-        title: "Configurar CLI Languine",
-        description: "Instale e configure a CLI Languine para gerenciar traduções"
-      },
-      "2": {
-        title: "Enviar Traduções",
-        description: "Aguardando as traduções serem enviadas"
-      },
-      "3": {
-        title: "Documentação",
-        description: "Confira nossa documentação para guias detalhados e melhores práticas",
-        link: "documentação"
-      }
-    },
-    info: {
-      description: "Precisa de ajuda? Confira nossa",
-      link: "documentação",
-      description_2: "para guias detalhados e melhores práticas."
-    }
-  },
-  cli: {
-    success: {
-      title: "Login da CLI Languine com Sucesso",
-      description: "A CLI Languine foi autenticada com sucesso como:",
-      description_2: "Você pode fechar esta aba e voltar para a CLI"
-    }
-  },
-  translations: {
-    header: "Chaves traduzidas"
-  },
-  search: {
-    placeholder: "Pesquisar"
-  },
-  periods: {
-    daily: "Diário",
-    weekly: "Semanal",
-    monthly: "Mensal",
-    selectPeriod: "Selecione o período"
-  },
-  welcome: {
-    title: "Bem-vindo ao Languine",
-    description: "Automatize seu processo de localização com o Languine"
-  },
-  button: {
-    update: "Novas traduções"
-  },
-  update: {
-    button: "Novas traduções"
-  },
-  hero2: {
-    title: "Localização automatizada para seus aplicativos",
-    description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores."
-  },
-  language: {
-    en: "Inglês",
-    es: "Espanhol",
-    fr: "Francês",
-    de: "Alemão",
-    it: "Italiano",
-    pt: "Português",
-    zh: "Chinês",
-    ja: "Japonês",
-    ko: "Coreano",
-    ar: "Árabe",
-    hi: "Hindi",
-    tr: "Turco",
-    nl: "Holandês",
-    pl: "Polonês",
-    no: "Norueguês",
-    da: "Dinamarquês",
-    sv: "Sueco",
-    fi: "Finlandês",
-    vi: "Vietnamita"
-  }
+  "header.pricing": "Preços",
+  "header.docs": "Documentação",
+  "header.signIn": "Entrar",
+  "header.goToApp": "Ir para o app",
+  "hero.title": "Localização automatizada para suas aplicações",
+  "hero.description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores.",
+  "getStarted.heading": "Começar",
+  "getStarted.title": "Localização automatizada para suas aplicações",
+  "getStarted.description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores.",
+  "getStarted.button.startAutomating": "Comece a automatizar",
+  "getStarted.button.readDocumentation": "Leia a documentação",
+  "companies.title": "Usado por",
+  "companies.addYourCompany": "+ Adicionar sua empresa",
+  "activity.title": "Atividade",
+  "activity.loading": "Carregando",
+  "activity.loadMore": "Mostrar mais",
+  "activity.noResults": "Nenhum resultado para '{search}'",
+  "activity.clearSearch": "Limpar pesquisa",
+  "features.title": "Funcionalidades",
+  "features.fullyOpenSource": "Totalmente código aberto",
+  "features.fullyOpenSourceDescription": "Nosso código está publicamente disponível no GitHub, permitindo transparência e contribuições da comunidade.",
+  "features.noVendorLockIn": "Sem bloqueio de fornecedor",
+  "features.noVendorLockInDescription": "Nós não o prendemos a um serviço específico, use seus próprios LLMs.",
+  "features.presetsForExpo": "Predefinições para Expo",
+  "features.presetsForExpoDescription": "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
+  "features.presetForReactNative": "Predefinição para React Native",
+  "features.presetForReactNativeDescription": "Fornecemos uma predefinição para React Native, para que você possa começar rapidamente.",
+  "features.presetForReactEmail": "Biblioteca React Email",
+  "features.presetForReactEmailDescription": "Criamos uma biblioteca i18n para React Email.",
+  "features.readyForI18nLibraries": "Pronto para bibliotecas i18n",
+  "features.readyForI18nLibrariesDescription": "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc).",
+  "info.title": "Lida com todos os aspectos da localização do seu aplicativo, incluindo",
+  "info.smartTranslation.title": "Tradução Inteligente",
+  "info.smartTranslation.intelligentTranslation": "Tradução inteligente com consciência de contexto",
+  "info.smartTranslation.brandVoice": "Consistência de voz e tom da marca",
+  "info.smartTranslation.terminology": "Gerenciamento de terminologia",
+  "info.smartTranslation.linguisticFeatures": "Recursos linguísticos avançados",
+  "info.smartTranslation.realtimeUpdates": "Atualizações de tradução em tempo real",
+  "info.implementation.title": "Implementação",
+  "info.implementation.quickSetup": "Configuração e integração rápidas",
+  "info.implementation.fileFormat": "Manuseio de formato de arquivo",
+  "info.implementation.contentStructure": "Organização da estrutura de conteúdo",
+  "info.implementation.assetOrganization": "Organização de ativos",
+  "info.developer.title": "Experiência do Desenvolvedor",
+  "info.developer.cli": "Interface de linha de comando",
+  "info.developer.cicd": "Integração CI/CD",
+  "info.developer.versionControl": "Controle de versão",
+  "info.developer.workflow": "Fluxo de trabalho do desenvolvedor",
+  "info.developer.documentation": "Documentação abrangente",
+  "login.title": "Entrar",
+  "login.github": "Entrar com GitHub",
+  "login.google": "Entrar com Google",
+  "login.footer": "Automatize sua localização.",
+  "login.description": "Entre para começar a automatizar sua localização em segundos.",
+  "login.terms.text": "Ao entrar, você concorda com nossos",
+  "login.terms.termsOfService": "Termos de Serviço",
+  "login.terms.and": "e",
+  "login.terms.privacyPolicy": "Política de Privacidade",
+  "userMenu.account": "Configurações da Conta",
+  "userMenu.signOut": "Sair",
+  "userMenu.createTeam": "Criar equipe",
+  "userMenu.homepage": "Página inicial",
+  "userMenu.team": "Configurações da Equipe",
+  "teamSelector.addProject": "Criar projeto",
+  "teamSelector.createProjectTitle": "Criar um novo projeto",
+  "teamSelector.projectNamePlaceholder": "Nome do projeto",
+  "teamSelector.createProjectButton": "Criar projeto",
+  "teamSelector.pro": "Pro",
+  "teamSelector.project": "Projeto",
+  "teamSelector.teams": "Equipes",
+  "teamSelector.createTeam": "Criar equipe",
+  "teamSelector.createTeamTitle": "Criar uma nova equipe",
+  "teamSelector.teamNamePlaceholder": "Nome da equipe",
+  "teamSelector.createTeamButton": "Criar equipe",
+  "coming_soon.title": "Languine está em Acesso Antecipado",
+  "coming_soon.description": "Estamos atualmente em acesso antecipado. Entre em contato com",
+  "coming_soon.cta": "no X para obter acesso antecipado.",
+  "account.fullName.title": "Nome Completo",
+  "account.fullName.description": "Seu nome completo como aparecerá na plataforma.",
+  "account.fullName.placeholder": "Digite seu nome completo",
+  "account.email.title": "Endereço de Email",
+  "account.email.description": "O endereço de email associado à sua conta.",
+  "account.email.placeholder": "Digite seu endereço de email",
+  "account.apiKey.title": "Chave API",
+  "account.apiKey.description": "Sua chave API pessoal para acessar a API Languine e da CLI.",
+  "account.deleteAccount.title": "Excluir Conta",
+  "account.deleteAccount.description": "Excluir permanentemente sua conta e todos os dados associados. Esta ação não pode ser desfeita.",
+  "account.deleteAccount.button": "Excluir Conta",
+  "copyInstall.copied": "Copiado para a área de transferência",
+  "dangerZone.dialog.title": "Você tem certeza absoluta?",
+  "dangerZone.dialog.description": "Esta ação não pode ser desfeita. Por favor, digite DELETE para confirmar.",
+  "dangerZone.dialog.placeholder": "Digite DELETE para confirmar",
+  "dangerZone.dialog.confirm": "Confirmar Exclusão",
+  "dangerZone.dialog.cancel": "Cancelar",
+  "pipeline.title": "Fluxo de Trabalho (Pipeline CI/CD)",
+  "pipeline.pro": "[pro]",
+  "pipeline.description": "Nosso mecanismo de tradução integra-se perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento.",
+  "settings.badRequest": "Requisição inválida",
+  "settings.badRequestDescription": "A organização deve ter pelo menos um proprietário. Transfira a propriedade para outro membro antes de remover este proprietário.",
+  "settings.permissionDenied": "Permissão negada",
+  "settings.permissionDeniedDescription": "Você precisa ser um proprietário da equipe para realizar esta ação",
+  "settings.deleteTeamTitle": "Excluir equipe",
+  "settings.deleteTeamDescription": "Não é possível excluir a organização quando você é o único membro, em vez disso, exclua sua conta",
+  "settings.saved": "Configurações salvas",
+  "settings.savedDescription": "Suas alterações foram salvas com sucesso",
+  "settings.error": "Algo deu errado",
+  "settings.errorDescription": "Por favor, tente novamente ou entre em contato com o suporte",
+  "settings.addTeam": "Criar equipe",
+  "settings.apiKey.updated": "Chave API atualizada",
+  "settings.apiKey.updatedDescription": "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
+  "settings.apiKey.title": "Atualizar Chave API",
+  "settings.apiKey.description": "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
+  "settings.apiKey.cancel": "Cancelar",
+  "settings.apiKey.continue": "Continuar",
+  "settings.tabs.project": "Projeto",
+  "settings.tabs.account": "Conta",
+  "settings.tabs.team": "Equipe",
+  "settings.tabs.provider": "Fornecedor",
+  "settings.tabs.billing": "Cobrança",
+  "settings.addProject": "Criar projeto",
+  "settings.project.name.title": "Nome do Projeto",
+  "settings.project.name.description": "O nome do seu projeto",
+  "settings.project.name.placeholder": "Digite o nome do projeto",
+  "settings.project.id.title": "ID do Projeto",
+  "settings.project.id.description": "Seu identificador único de projeto",
+  "settings.project.id.placeholder": "ID do Projeto",
+  "settings.project.delete.title": "Excluir Projeto",
+  "settings.project.delete.description": "Excluir permanentemente este projeto e todos os seus dados",
+  "settings.project.delete.button": "Excluir Projeto",
+  "settings.save": "Salvar",
+  "settings.team.name.title": "Nome da Equipe",
+  "settings.team.name.description": "O nome da sua equipe",
+  "settings.team.name.placeholder": "Digite o nome da equipe",
+  "settings.team.billing.title": "Plano de Cobrança",
+  "settings.team.billing.description": "Gerencie o plano de cobrança da sua equipe",
+  "settings.team.billing.free": "Grátis",
+  "settings.team.billing.pro": "Pro",
+  "settings.team.billing.unlimited": "Ilimitado",
+  "settings.team.apiKey.title": "Chave API da Equipe",
+  "settings.team.apiKey.description": "Chave API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
+  "settings.team.apiKey.placeholder": "Chave API da Equipe",
+  "settings.team.members.leaveTeamConfirm": "Sair da equipe",
+  "settings.team.members.leaveTeamDescription": "Tem certeza de que deseja sair desta equipe?",
+  "settings.team.members.cancel": "Cancelar",
+  "settings.team.members.leaveTeam": "Sair da equipe",
+  "settings.team.members.invite": "Convidar membro",
+  "settings.team.members.title": "Membros",
+  "settings.team.members.pendingInvitations": "Convites Pendentes",
+  "settings.team.members.removeMember": "Remover membro",
+  "settings.team.members.removeMemberConfirm": "Remover membro",
+  "settings.team.members.removeMemberDescription": "Tem certeza de que deseja remover este membro?",
+  "settings.team.members.filterPlaceholder": "Filtrar membros...",
+  "settings.team.members.allRoles": "Todos os Papéis",
+  "settings.team.members.date": "Data",
+  "settings.team.members.selectAll": "{count} selecionado",
+  "settings.team.members.noPendingInvitations": "Nenhum convite pendente",
+  "settings.team.members.noResults": "Nenhum membro encontrado",
+  "settings.team.members.tryDifferentSearch": "Tente uma pesquisa diferente",
+  "settings.team.members.inviteMembers": "Convide membros para colaborar",
+  "settings.team.members.deleteInvite": "Excluir Convite",
+  "settings.team.members.deleteInviteDescription": "Excluir o convite",
+  "settings.team.members.invitedBy": "Convidado por {name}",
+  "settings.team.members.deleteInviteSuccess": "Convite excluído",
+  "settings.team.members.deleteInviteError": "Falha ao excluir o convite",
+  "settings.team.members.removeMemberSuccess": "Membro removido",
+  "settings.team.members.removeMemberError": "Falha ao remover membro",
+  "settings.team.members.removeMemberSuccessDescription": "Membro foi removido com sucesso",
+  "settings.team.members.removeMemberErrorDescription": "Falha ao remover membro",
+  "settings.team.members.roles.owner": "Proprietário",
+  "settings.team.members.roles.member": "Membro",
+  "settings.team.members.dateSort.newest": "Mais novo",
+  "settings.team.members.dateSort.oldest": "Mais antigo",
+  "tuning.general": "Geral",
+  "tuning.translationMemory.title": "Memória de Tradução",
+  "tuning.translationMemory.description": "Use memória de tradução para melhorar consistência e eficiência",
+  "tuning.qualityChecks.title": "Verificações de Qualidade",
+  "tuning.qualityChecks.description": "Habilite verificações de qualidade automatizadas para traduções",
+  "tuning.contextDetection.title": "Detecção de Contexto",
+  "tuning.contextDetection.description": "Detecte e preserve automaticamente o contexto em traduções",
+  "tuning.styleGuide": "Guia de Estilo",
+  "tuning.lengthControl.title": "Controle de Comprimento",
+  "tuning.lengthControl.description": "Controle o comprimento do texto traduzido",
+  "tuning.lengthControl.options.flexible": "Flexível",
+  "tuning.lengthControl.options.strict": "Estrito",
+  "tuning.lengthControl.options.exact": "Exato",
+  "tuning.lengthControl.options.loose": "Frouxo",
+  "tuning.inclusiveLanguage.title": "Linguagem Inclusiva",
+  "tuning.inclusiveLanguage.description": "Garanta que as traduções usem linguagem inclusiva",
+  "tuning.formality.title": "Formalidade",
+  "tuning.formality.description": "Controle o nível de formalidade das traduções",
+  "tuning.brandName.title": "Nome da Marca",
+  "tuning.brandName.description": "Defina o nome da sua marca para uso consistente",
+  "tuning.brandName.placeholder": "Digite o nome da sua marca",
+  "tuning.brandVoice.title": "Voz da Marca",
+  "tuning.brandVoice.description": "Defina a voz e o tom da sua marca",
+  "tuning.brandVoice.placeholder": "Descreva a voz da sua marca...",
+  "tuning.localization": "Localização",
+  "tuning.idioms.title": "Idiomas",
+  "tuning.idioms.description": "Lide com expressões idiomáticas apropriadamente",
+  "tuning.terminology.title": "Terminologia",
+  "tuning.terminology.description": "Gerencie terminologia especializada e glossários",
+  "tuning.culturalAdaptation.title": "Adaptação Cultural",
+  "tuning.culturalAdaptation.description": "Adapte o conteúdo para adequação cultural",
+  "pricing.title": "Preços simples",
+  "pricing.free.title": "Grátis (100 chaves)",
+  "pricing.free.price": "Grátis",
+  "pricing.free.keys_limit": "Até 100 chaves",
+  "pricing.free.features.unlimited_projects": "Projetos ilimitados",
+  "pricing.free.features.fine_tuning": "Opções de ajuste fino",
+  "pricing.free.features.overrides": "Substituições de tradução",
+  "pricing.free.features.analytics": "Análises",
+  "pricing.free.features.context_memory": "Memória de contexto",
+  "pricing.free.features.community_support": "Suporte da comunidade",
+  "pricing.pro.title": "Pro",
+  "pricing.pro.includes_free": "Tudo no Grátis, mais:",
+  "pricing.pro.features.github_action": "Integração com GitHub Action",
+  "pricing.pro.features.latest_features": "Acesso antecipado aos últimos recursos",
+  "pricing.pro.features.priority_support": "Suporte prioritário",
+  "pricing.cta": "Comece a automatizar",
+  "createTeam.teamName": "Nome da Equipe",
+  "createTeam.teamNamePlaceholder": "Digite o nome da equipe",
+  "createTeam.createTeamButton": "Criar equipe",
+  "createTeam.cancel": "Cancelar",
+  "createTeam.createTeamDescription": "Crie uma nova equipe para gerenciar seus projetos e colaboradores.",
+  "createProject.createProjectTitle": "Criar um novo projeto",
+  "createProject.projectNamePlaceholder": "Digite o nome do projeto",
+  "createProject.createProjectButton": "Criar projeto",
+  "createProject.cancel": "Cancelar",
+  "createProject.createProjectDescription": "Crie um novo projeto para começar a automatizar sua localização.",
+  "invite.inviteMember": "Convidar membro",
+  "invite.inviteDescription": "Convide um membro para sua equipe",
+  "invite.emailLabel": "Email",
+  "invite.emailPlaceholder": "Digite o email",
+  "invite.cancel": "Cancelar",
+  "invite.sendInvite": "Enviar convite",
+  "invite.success.title": "Convite enviado",
+  "invite.success.description": "Convite enviado com sucesso para {email}",
+  "invite.error.title": "Erro",
+  "invite.error.description": "Falha ao enviar convite. Por favor, tente novamente.",
+  "invite.validation.invalidEmail": "Por favor, insira um email válido",
+  "months.10": "Out",
+  "months.11": "Nov",
+  "months.12": "Dez",
+  "months.01": "Jan",
+  "months.02": "Fev",
+  "months.03": "Mar",
+  "months.04": "Abr",
+  "months.05": "Mai",
+  "months.06": "Jun",
+  "months.07": "Jul",
+  "months.08": "Ago",
+  "months.09": "Set",
+  "onboarding.steps.1.title": "Configurar CLI Languine",
+  "onboarding.steps.1.description": "Instale e configure a CLI Languine para gerenciar traduções",
+  "onboarding.steps.2.title": "Enviar Traduções",
+  "onboarding.steps.2.description": "Aguardando as traduções serem enviadas",
+  "onboarding.steps.3.title": "Documentação",
+  "onboarding.steps.3.description": "Confira nossa documentação para guias detalhados e melhores práticas",
+  "onboarding.steps.3.link": "documentação",
+  "onboarding.info.description": "Precisa de ajuda? Confira nossa",
+  "onboarding.info.link": "documentação",
+  "onboarding.info.description_2": "para guias detalhados e melhores práticas.",
+  "cli.success.title": "Login da CLI Languine com Sucesso",
+  "cli.success.description": "A CLI Languine foi autenticada com sucesso como:",
+  "cli.success.description_2": "Você pode fechar esta aba e voltar para a CLI",
+  "translations.header": "Chaves traduzidas",
+  "search.placeholder": "Pesquisar",
+  "periods.daily": "Diário",
+  "periods.weekly": "Semanal",
+  "periods.monthly": "Mensal",
+  "periods.selectPeriod": "Selecione o período",
+  "welcome.title": "Bem-vindo ao Languine",
+  "welcome.description": "Automatize seu processo de localização com o Languine",
+  "button.update": "Novas traduções",
+  "update.button": "Novas traduções",
+  "hero2.title": "Localização automatizada para seus aplicativos",
+  "hero2.description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores.",
+  "language.en": "Inglês",
+  "language.es": "Espanhol",
+  "language.fr": "Francês",
+  "language.de": "Alemão",
+  "language.it": "Italiano",
+  "language.pt": "Português",
+  "language.zh": "Chinês",
+  "language.ja": "Japonês",
+  "language.ko": "Coreano",
+  "language.ar": "Árabe",
+  "language.hi": "Hindi",
+  "language.tr": "Turco",
+  "language.nl": "Holandês",
+  "language.pl": "Polonês",
+  "language.no": "Norueguês",
+  "language.da": "Dinamarquês",
+  "language.sv": "Sueco",
+  "language.fi": "Finlandês",
+  "language.vi": "Vietnamita"
 } as const;

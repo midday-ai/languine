@@ -136,14 +136,14 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title="Formality"
-        description="Control the formality level of translations"
+        title={t("tuning.formality.title")}
+        description={t("tuning.formality.description")}
         type="select"
         value={projectData.settings?.formality ?? "casual"}
         options={[
-          { label: "Casual", value: "casual" },
-          { label: "Formal", value: "formal" },
-          { label: "Neutral", value: "neutral" },
+          { label: t("tuning.formality.options.casual"), value: "casual" },
+          { label: t("tuning.formality.options.formal"), value: "formal" },
+          { label: t("tuning.formality.options.neutral"), value: "neutral" },
         ]}
         onChange={async (value) => {
           await handleUpdate({ formality: value });
@@ -151,21 +151,33 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title="Tone of Voice"
-        description="Define the tone used in translations"
+        title={t("tuning.toneOfVoice.title")}
+        description={t("tuning.toneOfVoice.description")}
         type="select"
         value={projectData.settings?.toneOfVoice ?? "casual"}
         options={[
-          { label: "Casual", value: "casual" },
-          { label: "Formal", value: "formal" },
-          { label: "Friendly", value: "friendly" },
-          { label: "Professional", value: "professional" },
-          { label: "Playful", value: "playful" },
-          { label: "Serious", value: "serious" },
-          { label: "Confident", value: "confident" },
-          { label: "Humble", value: "humble" },
-          { label: "Direct", value: "direct" },
-          { label: "Diplomatic", value: "diplomatic" },
+          { label: t("tuning.toneOfVoice.options.casual"), value: "casual" },
+          { label: t("tuning.toneOfVoice.options.formal"), value: "formal" },
+          {
+            label: t("tuning.toneOfVoice.options.friendly"),
+            value: "friendly",
+          },
+          {
+            label: t("tuning.toneOfVoice.options.professional"),
+            value: "professional",
+          },
+          { label: t("tuning.toneOfVoice.options.playful"), value: "playful" },
+          { label: t("tuning.toneOfVoice.options.serious"), value: "serious" },
+          {
+            label: t("tuning.toneOfVoice.options.confident"),
+            value: "confident",
+          },
+          { label: t("tuning.toneOfVoice.options.humble"), value: "humble" },
+          { label: t("tuning.toneOfVoice.options.direct"), value: "direct" },
+          {
+            label: t("tuning.toneOfVoice.options.diplomatic"),
+            value: "diplomatic",
+          },
         ]}
         onChange={async (value) => {
           await handleUpdate({ toneOfVoice: value });
@@ -174,7 +186,7 @@ export function Tuning() {
 
       <SettingsSeparator />
 
-      <SettingsTitle title="Brand" />
+      <SettingsTitle title={t("tuning.brand")} />
       <SettingsCard
         title={t("tuning.brandName.title")}
         description={t("tuning.brandName.description")}
@@ -198,17 +210,35 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title="Emotive Intent"
-        description="Set the emotional tone for translations"
+        title={t("tuning.emotiveIntent.title")}
+        description={t("tuning.emotiveIntent.description")}
         type="select"
         value={projectData.settings?.emotiveIntent ?? "neutral"}
         options={[
-          { label: "Neutral", value: "neutral" },
-          { label: "Positive", value: "positive" },
-          { label: "Empathetic", value: "empathetic" },
-          { label: "Professional", value: "professional" },
-          { label: "Friendly", value: "friendly" },
-          { label: "Enthusiastic", value: "enthusiastic" },
+          {
+            label: t("tuning.emotiveIntent.options.neutral"),
+            value: "neutral",
+          },
+          {
+            label: t("tuning.emotiveIntent.options.positive"),
+            value: "positive",
+          },
+          {
+            label: t("tuning.emotiveIntent.options.empathetic"),
+            value: "empathetic",
+          },
+          {
+            label: t("tuning.emotiveIntent.options.professional"),
+            value: "professional",
+          },
+          {
+            label: t("tuning.emotiveIntent.options.friendly"),
+            value: "friendly",
+          },
+          {
+            label: t("tuning.emotiveIntent.options.enthusiastic"),
+            value: "enthusiastic",
+          },
         ]}
         onChange={async (value) => {
           await handleUpdate({ emotiveIntent: value });
@@ -217,20 +247,38 @@ export function Tuning() {
 
       <SettingsSeparator />
 
-      <SettingsTitle title="Domain & Expertise" />
+      <SettingsTitle title={t("tuning.domainExpertise.title")} />
       <SettingsCard
-        title="Domain Expertise"
-        description="Specify the domain context for translations"
+        title={t("tuning.domainExpertise.title")}
+        description={t("tuning.domainExpertise.description")}
         type="select"
         value={projectData.settings?.domainExpertise ?? "general"}
         options={[
-          { label: "General", value: "general" },
-          { label: "Technical", value: "technical" },
-          { label: "Medical", value: "medical" },
-          { label: "Legal", value: "legal" },
-          { label: "Financial", value: "financial" },
-          { label: "Marketing", value: "marketing" },
-          { label: "Academic", value: "academic" },
+          {
+            label: t("tuning.domainExpertise.options.general"),
+            value: "general",
+          },
+          {
+            label: t("tuning.domainExpertise.options.technical"),
+            value: "technical",
+          },
+          {
+            label: t("tuning.domainExpertise.options.medical"),
+            value: "medical",
+          },
+          { label: t("tuning.domainExpertise.options.legal"), value: "legal" },
+          {
+            label: t("tuning.domainExpertise.options.financial"),
+            value: "financial",
+          },
+          {
+            label: t("tuning.domainExpertise.options.marketing"),
+            value: "marketing",
+          },
+          {
+            label: t("tuning.domainExpertise.options.academic"),
+            value: "academic",
+          },
         ]}
         onChange={async (value) => {
           await handleUpdate({ domainExpertise: value });

@@ -1,9 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
+import { client } from "@/utils/api.ts";
 import { loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.js";
-import { confirm, outro, spinner } from "@clack/prompts";
+import { confirm, note, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import glob from "fast-glob";
 import { z } from "zod";
@@ -29,6 +30,12 @@ export async function syncCommand(args: string[] = []) {
     if (!config) {
       throw new Error(
         "Configuration file not found. Please run `languine init` to create one.",
+      );
+    }
+
+    if (!config.projectId) {
+      throw new Error(
+        "Project ID not found. Please run `languine init` to create one.",
       );
     }
 
@@ -69,15 +76,38 @@ export async function syncCommand(args: string[] = []) {
 
             let shouldRemoveKeys = false;
             s.stop();
+            note(
+              `Detected ${removedKeys.length} keys removed.\nThis will remove these keys from all target locale files and from the platform.`,
+              "Remove keys",
+            );
+
             shouldRemoveKeys = (await confirm({
-              message: `${removedKeys.length} keys were removed from ${sourceFilePath}. Do you want to remove them from target files as well?`,
+              message: "Do you want to continue?",
             })) as boolean;
             s.start();
 
             if (!shouldRemoveKeys) {
-              s.message(`Skipping deletion of keys in ${sourceFilePath}...`);
+              s.message("Skipping deletion of keys...");
               continue;
             }
+
+            // Remove keys from platform
+            s.message("Deleting keys from platform...");
+
+            const data = await client.translate.deleteKeys.mutate({
+              projectId: config.projectId,
+              keys: removedKeys,
+            });
+
+            if (data) {
+              s.stop();
+              s.message(chalk.green("Keys deleted from platform"));
+            } else {
+              s.stop();
+              s.message(chalk.red("Failed to delete keys from platform"));
+            }
+
+            return;
 
             // Process each target locale
             for (const targetLocale of targetLocales) {

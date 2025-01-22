@@ -1,478 +1,299 @@
 export default {
-  header: {
-    pricing: "Priser",
-    docs: "Dokumentasjon",
-    signIn: "Logg inn",
-    goToApp: "Gå til app"
-  },
-  hero: {
-    title: "Automatisert lokalisering for dine applikasjoner",
-    description: "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere."
-  },
-  getStarted: {
-    heading: "Kom i gang",
-    title: "Automatisert lokalisering for dine applikasjoner",
-    description: "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
-    button: {
-      startAutomating: "Start automatisering",
-      readDocumentation: "Les dokumentasjon"
-    }
-  },
-  companies: {
-    title: "Brukt av",
-    addYourCompany: "+ Legg til ditt selskap"
-  },
-  activity: {
-    title: "Aktivitet",
-    loading: "Laster",
-    loadMore: "Vis mer",
-    noResults: "Ingen resultater for '{search}'",
-    clearSearch: "Tøm søk"
-  },
-  features: {
-    title: "Funksjoner",
-    fullyOpenSource: "Fullstendig åpen kildekode",
-    fullyOpenSourceDescription: "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
-    noVendorLockIn: "Ingen leverandørlås",
-    noVendorLockInDescription: "Vi låser deg ikke til en spesifikk tjeneste, bruk dine egne LLMs.",
-    presetsForExpo: "Forhåndsinnstillinger for Expo",
-    presetsForExpoDescription: "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
-    presetForReactNative: "Forhåndsinnstilling for React Native",
-    presetForReactNativeDescription: "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
-    presetForReactEmail: "React Email-bibliotek",
-    presetForReactEmailDescription: "Vi har laget et i18n-bibliotek for React Email.",
-    readyForI18nLibraries: "Klar for i18n-biblioteker",
-    readyForI18nLibrariesDescription: "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, etc)."
-  },
-  info: {
-    title: "Håndterer alle aspekter av lokalisering av din app inkludert",
-    smartTranslation: {
-      title: "Smart oversettelse",
-      intelligentTranslation: "Intelligent oversettelse med kontekstbevissthet",
-      brandVoice: "Konsekvent stemme og tone for merkevaren",
-      terminology: "Terminologistyring",
-      linguisticFeatures: "Avanserte lingvistiske funksjoner",
-      realtimeUpdates: "Sanntidsoppdateringer av oversettelser"
-    },
-    implementation: {
-      title: "Implementering",
-      quickSetup: "Rask oppsett og integrasjon",
-      fileFormat: "Håndtering av filformat",
-      contentStructure: "Organisering av innholdsstruktur",
-      assetOrganization: "Organisering av ressurser"
-    },
-    developer: {
-      title: "Utvikleropplevelse",
-      cli: "Kommandolinjegrensesnitt",
-      cicd: "CI/CD-integrasjon",
-      versionControl: "Versjonskontroll",
-      workflow: "Utviklerarbeidsflyt",
-      documentation: "Omfattende dokumentasjon"
-    }
-  },
-  login: {
-    title: "Logg inn",
-    github: "Logg inn med GitHub",
-    google: "Logg inn med Google",
-    footer: "Automatiser din lokalisering.",
-    description: "Logg inn for å starte automatisering av din lokalisering på sekunder.",
-    terms: {
-      text: "Ved å logge inn godtar du våre",
-      termsOfService: "Tjenestevilkår",
-      and: "og",
-      privacyPolicy: "Personvernregler"
-    }
-  },
-  userMenu: {
-    account: "Kontoinnstillinger",
-    signOut: "Logg ut",
-    createTeam: "Opprett team",
-    homepage: "Hjemmeside",
-    team: "Teaminnstillinger"
-  },
-  teamSelector: {
-    addProject: "Opprett prosjekt",
-    createProjectTitle: "Opprett et nytt prosjekt",
-    projectNamePlaceholder: "Prosjektnavn",
-    createProjectButton: "Opprett prosjekt",
-    pro: "Pro",
-    project: "Prosjekt",
-    teams: "Team",
-    createTeam: "Opprett team",
-    createTeamTitle: "Opprett et nytt team",
-    teamNamePlaceholder: "Teamnavn",
-    createTeamButton: "Opprett team"
-  },
-  coming_soon: {
-    title: "Languine er i tidlig tilgang",
-    description: "Vi er for øyeblikket i tidlig tilgang. Kontakt",
-    cta: "på X for å få tidlig tilgang."
-  },
-  account: {
-    fullName: {
-      title: "Fullt navn",
-      description: "Ditt fulle navn slik det vil vises på plattformen.",
-      placeholder: "Skriv inn ditt fulle navn"
-    },
-    email: {
-      title: "E-postadresse",
-      description: "E-postadressen knyttet til din konto.",
-      placeholder: "Skriv inn din e-postadresse"
-    },
-    apiKey: {
-      title: "API-nøkkel",
-      description: "Din personlige API-nøkkel for å få tilgang til Languine API og fra CLI."
-    },
-    deleteAccount: {
-      title: "Slett konto",
-      description: "Slett kontoen din og all tilknyttet data permanent. Denne handlingen kan ikke angres.",
-      button: "Slett konto"
-    }
-  },
-  copyInstall: {
-    copied: "Kopiert til utklippstavlen"
-  },
-  dangerZone: {
-    dialog: {
-      title: "Er du helt sikker?",
-      description: "Denne handlingen kan ikke angres. Vennligst skriv DELETE for å bekrefte.",
-      placeholder: "Skriv DELETE for å bekrefte",
-      confirm: "Bekreft sletting",
-      cancel: "Avbryt"
-    }
-  },
-  pipeline: {
-    title: "Arbeidsflyt (CI/CD Pipeline)",
-    pro: "[pro]",
-    description: "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen."
-  },
-  settings: {
-    saved: "Innstillinger lagret",
-    savedDescription: "Dine endringer har blitt lagret vellykket",
-    tabs: {
-      project: "Prosjekt",
-      account: "Konto",
-      team: "Team",
-      provider: "Leverandør",
-      billing: "Fakturering"
-    },
-    project: {
-      name: {
-        title: "Prosjektnavn",
-        description: "Navnet på prosjektet ditt",
-        placeholder: "Skriv inn prosjektnavn"
-      },
-      id: {
-        title: "Prosjekt-ID",
-        description: "Din unike prosjektidentifikator",
-        placeholder: "Prosjekt-ID"
-      },
-      "delete": {
-        title: "Slett prosjekt",
-        description: "Slett dette prosjektet og all tilknyttet data permanent",
-        button: "Slett prosjekt"
-      }
-    },
-    team: {
-      name: {
-        title: "Teamnavn",
-        description: "Navnet på teamet ditt",
-        placeholder: "Skriv inn teamnavn"
-      },
-      billing: {
-        title: "Faktureringsplan",
-        description: "Administrer teamets faktureringsplan",
-        free: "Gratis",
-        pro: "Pro",
-        unlimited: "Ubegrenset"
-      },
-      apiKey: {
-        title: "Team API-nøkkel",
-        description: "API-nøkkel for teamtilgang, bruk denne fra din CI/CD-pipeline sammen med Prosjekt-ID",
-        placeholder: "Team API-nøkkel"
-      },
-      members: {
-        title: "Medlemmer",
-        pendingInvitations: "Ventende invitasjoner",
-        filterPlaceholder: "Filtrer medlemmer...",
-        allRoles: "Alle roller",
-        date: "Dato",
-        selectAll: "{count} valgt",
-        noPendingInvitations: "Ingen ventende invitasjoner",
-        inviteMembers: "Inviter medlemmer til å samarbeide",
-        roles: {
-          owner: "Eier",
-          admin: "Administrator",
-          member: "Medlem"
-        },
-        dateSort: {
-          newest: "Nyeste",
-          oldest: "Eldste"
-        },
-        leaveTeamConfirm: "Forlat team",
-        leaveTeamDescription: "Er du sikker på at du vil forlate dette teamet?",
-        cancel: "Avbryt",
-        leaveTeam: "Forlat team",
-        invite: "Inviter medlem",
-        removeMember: "Fjern medlem",
-        removeMemberConfirm: "Fjern medlem",
-        removeMemberDescription: "Er du sikker på at du vil fjerne dette medlemmet?",
-        noResults: "Ingen medlemmer funnet",
-        tryDifferentSearch: "Prøv et annet søk",
-        deleteInvite: "Slett invitasjon",
-        deleteInviteDescription: "Slett invitasjonen",
-        invitedBy: "Invitert av {name}",
-        deleteInviteSuccess: "Invitasjon slettet",
-        deleteInviteError: "Kunne ikke slette invitasjon",
-        removeMemberSuccess: "Medlem fjernet",
-        removeMemberError: "Kunne ikke fjerne medlem",
-        removeMemberSuccessDescription: "Medlemmet har blitt fjernet vellykket",
-        removeMemberErrorDescription: "Kunne ikke fjerne medlem"
-      }
-    },
-    badRequest: "Ugyldig forespørsel",
-    badRequestDescription: "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
-    permissionDenied: "Tilgang nektet",
-    permissionDeniedDescription: "Du må være eier av teamet for å utføre denne handlingen",
-    deleteTeamTitle: "Slett team",
-    deleteTeamDescription: "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
-    error: "Noe gikk galt",
-    errorDescription: "Vennligst prøv igjen eller kontakt support",
-    addTeam: "Opprett team",
-    apiKey: {
-      updated: "API-nøkkel oppdatert",
-      updatedDescription: "Din API-nøkkel har blitt oppdatert vellykket og kopiert til utklippstavlen din.",
-      title: "Oppdater API-nøkkel",
-      description: "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
-      cancel: "Avbryt",
-      "continue": "Fortsett"
-    },
-    provider: {
-      updateSuccess: "Innstillinger oppdatert vellykket",
-      updateError: "Kunne ikke oppdatere innstillinger",
-      translationProvider: {
-        title: "Oversettelsesleverandør",
-        description: "Velg din foretrukne AI-tjeneste for å generere oversettelser. Hver leverandør tilbyr forskjellige funksjoner og priser.",
-        placeholder: "Velg en leverandør"
-      },
-      languageModel: {
-        title: "Språkmodell",
-        description: "Velg AI-modellen som best balanserer kvalitet og hastighet for dine oversettelsesbehov. Kraftigere modeller kan være tregere, men produserer bedre resultater.",
-        placeholder: "Velg en modell"
-      },
-      apiKey: {
-        title: "Leverandørens API-nøkkel",
-        description: "Skriv inn din API-nøkkel for å autentisere med din valgte leverandør. Hold denne nøkkelen sikker - vi krypterer den før lagring.",
-        placeholder: "Skriv inn din API-nøkkel"
-      }
-    },
-    addProject: "Opprett prosjekt",
-    save: "Lagre"
-  },
-  tuning: {
-    general: "Generelt",
-    translationMemory: {
-      title: "Oversettelsesminne",
-      description: "Bruk oversettelsesminne for å forbedre konsistens og effektivitet"
-    },
-    qualityChecks: {
-      title: "Kvalitetssjekker",
-      description: "Aktiver automatiske kvalitetssjekker for oversettelser"
-    },
-    contextDetection: {
-      title: "Kontekstdeteksjon",
-      description: "Automatisk deteksjon og bevaring av kontekst i oversettelser"
-    },
-    styleGuide: "Stilguide",
-    lengthControl: {
-      title: "Lengdekontroll",
-      description: "Kontroller lengden på oversatt tekst",
-      options: {
-        flexible: "Fleksibel",
-        strict: "Streng",
-        exact: "Eksakt",
-        loose: "Løs"
-      }
-    },
-    inclusiveLanguage: {
-      title: "Inkluderende språk",
-      description: "Sikre at oversettelser bruker inkluderende språk"
-    },
-    formality: {
-      title: "Formellhet",
-      description: "Kontroller formalitetsnivået på oversettelser"
-    },
-    brandName: {
-      title: "Merkenavn",
-      description: "Sett ditt merkenavn for konsekvent bruk",
-      placeholder: "Skriv inn ditt merkenavn"
-    },
-    brandVoice: {
-      title: "Merkevarestemme",
-      description: "Definer din merkevarestemme og tone",
-      placeholder: "Beskriv din merkevarestemme..."
-    },
-    localization: "Lokalisering",
-    idioms: {
-      title: "Idiomer",
-      description: "Håndter idiomatiske uttrykk på riktig måte"
-    },
-    terminology: {
-      title: "Terminologi",
-      description: "Administrer spesialisert terminologi og ordlister"
-    },
-    culturalAdaptation: {
-      title: "Kulturell tilpasning",
-      description: "Tilpass innhold for kulturell hensiktsmessighet"
-    }
-  },
-  pricing: {
-    title: "Enkel prising",
-    free: {
-      title: "Gratis (100 nøkler)",
-      price: "Gratis",
-      keys_limit: "Opptil 100 nøkler",
-      features: {
-        unlimited_projects: "Ubegrensede prosjekter",
-        fine_tuning: "Finjusteringsalternativer",
-        overrides: "Oversettelsesoverstyringer",
-        analytics: "Analytikk",
-        context_memory: "Kontekstminne",
-        community_support: "Fellesskapsstøtte"
-      }
-    },
-    pro: {
-      title: "Pro",
-      includes_free: "Alt i Gratis, pluss:",
-      features: {
-        github_action: "GitHub Action-integrasjon",
-        latest_features: "Tidlig tilgang til de nyeste funksjonene",
-        priority_support: "Prioritert støtte"
-      }
-    },
-    cta: "Start automatisering"
-  },
-  createTeam: {
-    teamName: "Teamnavn",
-    teamNamePlaceholder: "Skriv inn teamnavn",
-    createTeamButton: "Opprett team",
-    cancel: "Avbryt",
-    createTeamDescription: "Opprett et nytt team for å administrere prosjekter og samarbeidspartnere."
-  },
-  createProject: {
-    createProjectTitle: "Opprett et nytt prosjekt",
-    projectNamePlaceholder: "Skriv inn prosjektnavn",
-    createProjectButton: "Opprett prosjekt",
-    cancel: "Avbryt",
-    createProjectDescription: "Opprett et nytt prosjekt for å starte automatisering av din lokalisering."
-  },
-  invite: {
-    inviteMember: "Inviter medlem",
-    inviteDescription: "Inviter et medlem til teamet ditt",
-    emailLabel: "E-post",
-    emailPlaceholder: "Skriv inn e-post",
-    cancel: "Avbryt",
-    sendInvite: "Send invitasjon",
-    success: {
-      title: "Invitasjon sendt",
-      description: "Invitasjon sendt til {email}"
-    },
-    error: {
-      title: "Feil",
-      description: "Kunne ikke sende invitasjon. Vennligst prøv igjen."
-    },
-    validation: {
-      invalidEmail: "Vennligst skriv inn en gyldig e-post"
-    }
-  },
-  months: {
-    "10": "Okt",
-    "11": "Nov",
-    "12": "Des",
-    "01": "Jan",
-    "02": "Feb",
-    "03": "Mar",
-    "04": "Apr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Aug",
-    "09": "Sep"
-  },
-  onboarding: {
-    steps: {
-      "1": {
-        title: "Sett opp Languine CLI",
-        description: "Installer og konfigurer Languine CLI for å administrere oversettelser"
-      },
-      "2": {
-        title: "Push oversettelser",
-        description: "Venter på at oversettelsene skal bli pushet"
-      },
-      "3": {
-        title: "Dokumentasjon",
-        description: "Sjekk ut vår dokumentasjon for detaljerte guider og beste praksis",
-        link: "dokumentasjon"
-      }
-    },
-    info: {
-      description: "Trenger du hjelp? Sjekk ut vår",
-      link: "dokumentasjon",
-      description_2: "for detaljerte guider og beste praksis."
-    }
-  },
-  cli: {
-    success: {
-      title: "Languine CLI pålogging vellykket",
-      description: "Languine CLI ble vellykket autentisert som:",
-      description_2: "Du kan nå lukke denne fanen og gå tilbake til CLI"
-    }
-  },
-  translations: {
-    header: "Oversatte nøkler"
-  },
-  search: {
-    placeholder: "Søk"
-  },
-  periods: {
-    daily: "Daglig",
-    weekly: "Ukentlig",
-    monthly: "Månedlig",
-    selectPeriod: "Velg periode"
-  },
-  welcome: {
-    title: "Velkommen til Languine",
-    description: "Automatiser din lokaliseringprosess med Languine"
-  },
-  button: {
-    update: "Nye oversettelser"
-  },
-  update: {
-    button: "Nye oversettelser"
-  },
-  hero2: {
-    title: "Automatisert lokalisering for dine applikasjoner",
-    description: "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere."
-  },
-  language: {
-    en: "Engelsk",
-    es: "Spansk",
-    fr: "Fransk",
-    de: "Tysk",
-    it: "Italiensk",
-    pt: "Portugisisk",
-    zh: "Kinesisk",
-    ja: "Japansk",
-    ko: "Koreansk",
-    ar: "Arabisk",
-    hi: "Hindi",
-    tr: "Tyrkisk",
-    nl: "Nederlandsk",
-    pl: "Polsk",
-    no: "Norsk",
-    da: "Dansk",
-    sv: "Svensk",
-    fi: "Finsk",
-    vi: "Vietnamesisk"
-  }
+  "header.pricing": "Priser",
+  "header.docs": "Dokumentasjon",
+  "header.signIn": "Logg inn",
+  "header.goToApp": "Gå til app",
+  "hero.title": "Automatisert lokalisering for dine applikasjoner",
+  "hero.description": "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
+  "getStarted.heading": "Kom i gang",
+  "getStarted.title": "Automatisert lokalisering for dine applikasjoner",
+  "getStarted.description": "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
+  "getStarted.button.startAutomating": "Start automatisering",
+  "getStarted.button.readDocumentation": "Les dokumentasjon",
+  "companies.title": "Brukt av",
+  "companies.addYourCompany": "+ Legg til ditt selskap",
+  "activity.title": "Aktivitet",
+  "activity.loading": "Laster",
+  "activity.loadMore": "Vis mer",
+  "activity.noResults": "Ingen resultater for '{search}'",
+  "activity.clearSearch": "Tøm søk",
+  "features.title": "Funksjoner",
+  "features.fullyOpenSource": "Fullstendig åpen kildekode",
+  "features.fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
+  "features.noVendorLockIn": "Ingen leverandørlås",
+  "features.noVendorLockInDescription": "Vi låser deg ikke til en spesifikk tjeneste, bruk dine egne LLMs.",
+  "features.presetsForExpo": "Forhåndsinnstillinger for Expo",
+  "features.presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
+  "features.presetForReactNative": "Forhåndsinnstilling for React Native",
+  "features.presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
+  "features.presetForReactEmail": "React Email-bibliotek",
+  "features.presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
+  "features.readyForI18nLibraries": "Klar for i18n-biblioteker",
+  "features.readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, etc).",
+  "info.title": "Håndterer alle aspekter av lokalisering av din app inkludert",
+  "info.smartTranslation.title": "Smart oversettelse",
+  "info.smartTranslation.intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
+  "info.smartTranslation.brandVoice": "Konsekvent stemme og tone for merkevaren",
+  "info.smartTranslation.terminology": "Terminologistyring",
+  "info.smartTranslation.linguisticFeatures": "Avanserte lingvistiske funksjoner",
+  "info.smartTranslation.realtimeUpdates": "Sanntidsoppdateringer av oversettelser",
+  "info.implementation.title": "Implementering",
+  "info.implementation.quickSetup": "Rask oppsett og integrasjon",
+  "info.implementation.fileFormat": "Håndtering av filformat",
+  "info.implementation.contentStructure": "Organisering av innholdsstruktur",
+  "info.implementation.assetOrganization": "Organisering av ressurser",
+  "info.developer.title": "Utvikleropplevelse",
+  "info.developer.cli": "Kommandolinjegrensesnitt",
+  "info.developer.cicd": "CI/CD-integrasjon",
+  "info.developer.versionControl": "Versjonskontroll",
+  "info.developer.workflow": "Utviklerarbeidsflyt",
+  "info.developer.documentation": "Omfattende dokumentasjon",
+  "login.title": "Logg inn",
+  "login.github": "Logg inn med GitHub",
+  "login.google": "Logg inn med Google",
+  "login.footer": "Automatiser din lokalisering.",
+  "login.description": "Logg inn for å starte automatisering av din lokalisering på sekunder.",
+  "login.terms.text": "Ved å logge inn godtar du våre",
+  "login.terms.termsOfService": "Tjenestevilkår",
+  "login.terms.and": "og",
+  "login.terms.privacyPolicy": "Personvernregler",
+  "userMenu.account": "Kontoinnstillinger",
+  "userMenu.signOut": "Logg ut",
+  "userMenu.createTeam": "Opprett team",
+  "userMenu.homepage": "Hjemmeside",
+  "userMenu.team": "Teaminnstillinger",
+  "teamSelector.addProject": "Opprett prosjekt",
+  "teamSelector.createProjectTitle": "Opprett et nytt prosjekt",
+  "teamSelector.projectNamePlaceholder": "Prosjektnavn",
+  "teamSelector.createProjectButton": "Opprett prosjekt",
+  "teamSelector.pro": "Pro",
+  "teamSelector.project": "Prosjekt",
+  "teamSelector.teams": "Team",
+  "teamSelector.createTeam": "Opprett team",
+  "teamSelector.createTeamTitle": "Opprett et nytt team",
+  "teamSelector.teamNamePlaceholder": "Teamnavn",
+  "teamSelector.createTeamButton": "Opprett team",
+  "coming_soon.title": "Languine er i tidlig tilgang",
+  "coming_soon.description": "Vi er for øyeblikket i tidlig tilgang. Kontakt",
+  "coming_soon.cta": "på X for å få tidlig tilgang.",
+  "account.fullName.title": "Fullt navn",
+  "account.fullName.description": "Ditt fulle navn slik det vil vises på plattformen.",
+  "account.fullName.placeholder": "Skriv inn ditt fulle navn",
+  "account.email.title": "E-postadresse",
+  "account.email.description": "E-postadressen knyttet til din konto.",
+  "account.email.placeholder": "Skriv inn din e-postadresse",
+  "account.apiKey.title": "API-nøkkel",
+  "account.apiKey.description": "Din personlige API-nøkkel for å få tilgang til Languine API og fra CLI.",
+  "account.deleteAccount.title": "Slett konto",
+  "account.deleteAccount.description": "Slett kontoen din og all tilknyttet data permanent. Denne handlingen kan ikke angres.",
+  "account.deleteAccount.button": "Slett konto",
+  "copyInstall.copied": "Kopiert til utklippstavlen",
+  "dangerZone.dialog.title": "Er du helt sikker?",
+  "dangerZone.dialog.description": "Denne handlingen kan ikke angres. Vennligst skriv DELETE for å bekrefte.",
+  "dangerZone.dialog.placeholder": "Skriv DELETE for å bekrefte",
+  "dangerZone.dialog.confirm": "Bekreft sletting",
+  "dangerZone.dialog.cancel": "Avbryt",
+  "pipeline.title": "Arbeidsflyt (CI/CD Pipeline)",
+  "pipeline.pro": "[pro]",
+  "pipeline.description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen.",
+  "settings.saved": "Innstillinger lagret",
+  "settings.savedDescription": "Dine endringer har blitt lagret vellykket",
+  "settings.tabs.project": "Prosjekt",
+  "settings.tabs.account": "Konto",
+  "settings.tabs.team": "Team",
+  "settings.tabs.provider": "Leverandør",
+  "settings.tabs.billing": "Fakturering",
+  "settings.project.name.title": "Prosjektnavn",
+  "settings.project.name.description": "Navnet på prosjektet ditt",
+  "settings.project.name.placeholder": "Skriv inn prosjektnavn",
+  "settings.project.id.title": "Prosjekt-ID",
+  "settings.project.id.description": "Din unike prosjektidentifikator",
+  "settings.project.id.placeholder": "Prosjekt-ID",
+  "settings.project.delete.title": "Slett prosjekt",
+  "settings.project.delete.description": "Slett dette prosjektet og all tilknyttet data permanent",
+  "settings.project.delete.button": "Slett prosjekt",
+  "settings.team.name.title": "Teamnavn",
+  "settings.team.name.description": "Navnet på teamet ditt",
+  "settings.team.name.placeholder": "Skriv inn teamnavn",
+  "settings.team.billing.title": "Faktureringsplan",
+  "settings.team.billing.description": "Administrer teamets faktureringsplan",
+  "settings.team.billing.free": "Gratis",
+  "settings.team.billing.pro": "Pro",
+  "settings.team.billing.unlimited": "Ubegrenset",
+  "settings.team.apiKey.title": "Team API-nøkkel",
+  "settings.team.apiKey.description": "API-nøkkel for teamtilgang, bruk denne fra din CI/CD-pipeline sammen med Prosjekt-ID",
+  "settings.team.apiKey.placeholder": "Team API-nøkkel",
+  "settings.team.members.title": "Medlemmer",
+  "settings.team.members.pendingInvitations": "Ventende invitasjoner",
+  "settings.team.members.filterPlaceholder": "Filtrer medlemmer...",
+  "settings.team.members.allRoles": "Alle roller",
+  "settings.team.members.date": "Dato",
+  "settings.team.members.selectAll": "{count} valgt",
+  "settings.team.members.noPendingInvitations": "Ingen ventende invitasjoner",
+  "settings.team.members.inviteMembers": "Inviter medlemmer til å samarbeide",
+  "settings.team.members.roles.owner": "Eier",
+  "settings.team.members.roles.admin": "Administrator",
+  "settings.team.members.roles.member": "Medlem",
+  "settings.team.members.dateSort.newest": "Nyeste",
+  "settings.team.members.dateSort.oldest": "Eldste",
+  "settings.team.members.leaveTeamConfirm": "Forlat team",
+  "settings.team.members.leaveTeamDescription": "Er du sikker på at du vil forlate dette teamet?",
+  "settings.team.members.cancel": "Avbryt",
+  "settings.team.members.leaveTeam": "Forlat team",
+  "settings.team.members.invite": "Inviter medlem",
+  "settings.team.members.removeMember": "Fjern medlem",
+  "settings.team.members.removeMemberConfirm": "Fjern medlem",
+  "settings.team.members.removeMemberDescription": "Er du sikker på at du vil fjerne dette medlemmet?",
+  "settings.team.members.noResults": "Ingen medlemmer funnet",
+  "settings.team.members.tryDifferentSearch": "Prøv et annet søk",
+  "settings.team.members.deleteInvite": "Slett invitasjon",
+  "settings.team.members.deleteInviteDescription": "Slett invitasjonen",
+  "settings.team.members.invitedBy": "Invitert av {name}",
+  "settings.team.members.deleteInviteSuccess": "Invitasjon slettet",
+  "settings.team.members.deleteInviteError": "Kunne ikke slette invitasjon",
+  "settings.team.members.removeMemberSuccess": "Medlem fjernet",
+  "settings.team.members.removeMemberError": "Kunne ikke fjerne medlem",
+  "settings.team.members.removeMemberSuccessDescription": "Medlemmet har blitt fjernet vellykket",
+  "settings.team.members.removeMemberErrorDescription": "Kunne ikke fjerne medlem",
+  "settings.badRequest": "Ugyldig forespørsel",
+  "settings.badRequestDescription": "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
+  "settings.permissionDenied": "Tilgang nektet",
+  "settings.permissionDeniedDescription": "Du må være eier av teamet for å utføre denne handlingen",
+  "settings.deleteTeamTitle": "Slett team",
+  "settings.deleteTeamDescription": "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
+  "settings.error": "Noe gikk galt",
+  "settings.errorDescription": "Vennligst prøv igjen eller kontakt support",
+  "settings.addTeam": "Opprett team",
+  "settings.apiKey.updated": "API-nøkkel oppdatert",
+  "settings.apiKey.updatedDescription": "Din API-nøkkel har blitt oppdatert vellykket og kopiert til utklippstavlen din.",
+  "settings.apiKey.title": "Oppdater API-nøkkel",
+  "settings.apiKey.description": "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
+  "settings.apiKey.cancel": "Avbryt",
+  "settings.apiKey.continue": "Fortsett",
+  "settings.addProject": "Opprett prosjekt",
+  "settings.save": "Lagre",
+  "tuning.general": "Generelt",
+  "tuning.translationMemory.title": "Oversettelsesminne",
+  "tuning.translationMemory.description": "Bruk oversettelsesminne for å forbedre konsistens og effektivitet",
+  "tuning.qualityChecks.title": "Kvalitetssjekker",
+  "tuning.qualityChecks.description": "Aktiver automatiske kvalitetssjekker for oversettelser",
+  "tuning.contextDetection.title": "Kontekstdeteksjon",
+  "tuning.contextDetection.description": "Automatisk deteksjon og bevaring av kontekst i oversettelser",
+  "tuning.styleGuide": "Stilguide",
+  "tuning.lengthControl.title": "Lengdekontroll",
+  "tuning.lengthControl.description": "Kontroller lengden på oversatt tekst",
+  "tuning.lengthControl.options.flexible": "Fleksibel",
+  "tuning.lengthControl.options.strict": "Streng",
+  "tuning.lengthControl.options.exact": "Eksakt",
+  "tuning.lengthControl.options.loose": "Løs",
+  "tuning.inclusiveLanguage.title": "Inkluderende språk",
+  "tuning.inclusiveLanguage.description": "Sikre at oversettelser bruker inkluderende språk",
+  "tuning.formality.title": "Formellhet",
+  "tuning.formality.description": "Kontroller formalitetsnivået på oversettelser",
+  "tuning.brandName.title": "Merkenavn",
+  "tuning.brandName.description": "Sett ditt merkenavn for konsekvent bruk",
+  "tuning.brandName.placeholder": "Skriv inn ditt merkenavn",
+  "tuning.brandVoice.title": "Merkevarestemme",
+  "tuning.brandVoice.description": "Definer din merkevarestemme og tone",
+  "tuning.brandVoice.placeholder": "Beskriv din merkevarestemme...",
+  "tuning.localization": "Lokalisering",
+  "tuning.idioms.title": "Idiomer",
+  "tuning.idioms.description": "Håndter idiomatiske uttrykk på riktig måte",
+  "tuning.terminology.title": "Terminologi",
+  "tuning.terminology.description": "Administrer spesialisert terminologi og ordlister",
+  "tuning.culturalAdaptation.title": "Kulturell tilpasning",
+  "tuning.culturalAdaptation.description": "Tilpass innhold for kulturell hensiktsmessighet",
+  "pricing.title": "Enkel prising",
+  "pricing.free.title": "Gratis (100 nøkler)",
+  "pricing.free.price": "Gratis",
+  "pricing.free.keys_limit": "Opptil 100 nøkler",
+  "pricing.free.features.unlimited_projects": "Ubegrensede prosjekter",
+  "pricing.free.features.fine_tuning": "Finjusteringsalternativer",
+  "pricing.free.features.overrides": "Oversettelsesoverstyringer",
+  "pricing.free.features.analytics": "Analytikk",
+  "pricing.free.features.context_memory": "Kontekstminne",
+  "pricing.free.features.community_support": "Fellesskapsstøtte",
+  "pricing.pro.title": "Pro",
+  "pricing.pro.includes_free": "Alt i Gratis, pluss:",
+  "pricing.pro.features.github_action": "GitHub Action-integrasjon",
+  "pricing.pro.features.latest_features": "Tidlig tilgang til de nyeste funksjonene",
+  "pricing.pro.features.priority_support": "Prioritert støtte",
+  "pricing.cta": "Start automatisering",
+  "createTeam.teamName": "Teamnavn",
+  "createTeam.teamNamePlaceholder": "Skriv inn teamnavn",
+  "createTeam.createTeamButton": "Opprett team",
+  "createTeam.cancel": "Avbryt",
+  "createTeam.createTeamDescription": "Opprett et nytt team for å administrere prosjekter og samarbeidspartnere.",
+  "createProject.createProjectTitle": "Opprett et nytt prosjekt",
+  "createProject.projectNamePlaceholder": "Skriv inn prosjektnavn",
+  "createProject.createProjectButton": "Opprett prosjekt",
+  "createProject.cancel": "Avbryt",
+  "createProject.createProjectDescription": "Opprett et nytt prosjekt for å starte automatisering av din lokalisering.",
+  "invite.inviteMember": "Inviter medlem",
+  "invite.inviteDescription": "Inviter et medlem til teamet ditt",
+  "invite.emailLabel": "E-post",
+  "invite.emailPlaceholder": "Skriv inn e-post",
+  "invite.cancel": "Avbryt",
+  "invite.sendInvite": "Send invitasjon",
+  "invite.success.title": "Invitasjon sendt",
+  "invite.success.description": "Invitasjon sendt til {email}",
+  "invite.error.title": "Feil",
+  "invite.error.description": "Kunne ikke sende invitasjon. Vennligst prøv igjen.",
+  "invite.validation.invalidEmail": "Vennligst skriv inn en gyldig e-post",
+  "months.10": "Okt",
+  "months.11": "Nov",
+  "months.12": "Des",
+  "months.01": "Jan",
+  "months.02": "Feb",
+  "months.03": "Mar",
+  "months.04": "Apr",
+  "months.05": "Mai",
+  "months.06": "Jun",
+  "months.07": "Jul",
+  "months.08": "Aug",
+  "months.09": "Sep",
+  "onboarding.steps.1.title": "Sett opp Languine CLI",
+  "onboarding.steps.1.description": "Installer og konfigurer Languine CLI for å administrere oversettelser",
+  "onboarding.steps.2.title": "Push oversettelser",
+  "onboarding.steps.2.description": "Venter på at oversettelsene skal bli pushet",
+  "onboarding.steps.3.title": "Dokumentasjon",
+  "onboarding.steps.3.description": "Sjekk ut vår dokumentasjon for detaljerte guider og beste praksis",
+  "onboarding.steps.3.link": "dokumentasjon",
+  "onboarding.info.description": "Trenger du hjelp? Sjekk ut vår",
+  "onboarding.info.link": "dokumentasjon",
+  "onboarding.info.description_2": "for detaljerte guider og beste praksis.",
+  "cli.success.title": "Languine CLI pålogging vellykket",
+  "cli.success.description": "Languine CLI ble vellykket autentisert som:",
+  "cli.success.description_2": "Du kan nå lukke denne fanen og gå tilbake til CLI",
+  "translations.header": "Oversatte nøkler",
+  "search.placeholder": "Søk",
+  "periods.daily": "Daglig",
+  "periods.weekly": "Ukentlig",
+  "periods.monthly": "Månedlig",
+  "periods.selectPeriod": "Velg periode",
+  "welcome.title": "Velkommen til Languine",
+  "welcome.description": "Automatiser din lokaliseringprosess med Languine",
+  "button.update": "Nye oversettelser",
+  "update.button": "Nye oversettelser",
+  "hero2.title": "Automatisert lokalisering for dine applikasjoner",
+  "hero2.description": "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
+  "language.en": "Engelsk",
+  "language.es": "Spansk",
+  "language.fr": "Fransk",
+  "language.de": "Tysk",
+  "language.it": "Italiensk",
+  "language.pt": "Portugisisk",
+  "language.zh": "Kinesisk",
+  "language.ja": "Japansk",
+  "language.ko": "Koreansk",
+  "language.ar": "Arabisk",
+  "language.hi": "Hindi",
+  "language.tr": "Tyrkisk",
+  "language.nl": "Nederlandsk",
+  "language.pl": "Polsk",
+  "language.no": "Norsk",
+  "language.da": "Dansk",
+  "language.sv": "Svensk",
+  "language.fi": "Finsk",
+  "language.vi": "Vietnamesisk"
 } as const;

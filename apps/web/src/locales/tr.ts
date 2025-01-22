@@ -1,477 +1,298 @@
 export default {
-  header: {
-    pricing: "Fiyatlandırma",
-    docs: "Belgeler",
-    signIn: "Giriş yap",
-    goToApp: "Uygulamaya git"
-  },
-  hero: {
-    title: "Uygulamalarınız için otomatik yerelleştirme",
-    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın."
-  },
-  getStarted: {
-    heading: "Başla",
-    title: "Uygulamalarınız için otomatik yerelleştirme",
-    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
-    button: {
-      startAutomating: "Otomasyona başla",
-      readDocumentation: "Belgeleri oku"
-    }
-  },
-  companies: {
-    title: "Tarafından kullanılan",
-    addYourCompany: "+ Şirketinizi ekleyin"
-  },
-  activity: {
-    title: "Aktivite",
-    loading: "Yükleniyor",
-    loadMore: "Daha fazla göster",
-    noResults: "'{search}' için sonuç bulunamadı",
-    clearSearch: "Aramayı temizle"
-  },
-  features: {
-    title: "Özellikler",
-    fullyOpenSource: "Tamamen açık kaynak",
-    fullyOpenSourceDescription: "Kodumuz GitHub'da halka açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
-    noVendorLockIn: "Satıcı kilidi yok",
-    noVendorLockInDescription: "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
-    presetsForExpo: "Expo için ön ayarlar",
-    presetsForExpoDescription: "Expo için ön ayarlar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
-    presetForReactNative: "React Native için ön ayar",
-    presetForReactNativeDescription: "React Native için bir ön ayar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
-    presetForReactEmail: "React Email Kütüphanesi",
-    presetForReactEmailDescription: "React Email için bir i18n kütüphanesi oluşturduk.",
-    readyForI18nLibraries: "i18n kütüphanelerine hazır",
-    readyForI18nLibrariesDescription: "En popüler olanlar dahil tüm kütüphaneleri destekliyoruz (next-intl, react-i18next, react-intl, vb.)."
-  },
-  info: {
-    title: "Uygulamanızın yerelleştirilmesinin her yönünü ele alır",
-    smartTranslation: {
-      title: "Akıllı Çeviri",
-      intelligentTranslation: "Bağlam farkındalığı ile akıllı çeviri",
-      brandVoice: "Marka sesi ve ton tutarlılığı",
-      terminology: "Terminoloji yönetimi",
-      linguisticFeatures: "Gelişmiş dil özellikleri",
-      realtimeUpdates: "Gerçek zamanlı çeviri güncellemeleri"
-    },
-    implementation: {
-      title: "Uygulama",
-      quickSetup: "Hızlı kurulum ve entegrasyon",
-      fileFormat: "Dosya formatı işleme",
-      contentStructure: "İçerik yapısı organizasyonu",
-      assetOrganization: "Varlık organizasyonu"
-    },
-    developer: {
-      title: "Geliştirici Deneyimi",
-      cli: "Komut satırı arayüzü",
-      cicd: "CI/CD entegrasyonu",
-      versionControl: "Sürüm kontrolü",
-      workflow: "Geliştirici iş akışı",
-      documentation: "Kapsamlı belgeler"
-    }
-  },
-  login: {
-    title: "Giriş yap",
-    github: "GitHub ile giriş yap",
-    google: "Google ile giriş yap",
-    footer: "Yerelleştirmenizi otomatikleştirin.",
-    description: "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
-    terms: {
-      text: "Giriş yaparak, bizim",
-      termsOfService: "Hizmet Şartları",
-      and: "ve",
-      privacyPolicy: "Gizlilik Politikası"
-    }
-  },
-  userMenu: {
-    account: "Hesap Ayarları",
-    signOut: "Çıkış yap",
-    createTeam: "Takım oluştur",
-    homepage: "Ana sayfa",
-    team: "Takım Ayarları"
-  },
-  teamSelector: {
-    addProject: "Proje oluştur",
-    createProjectTitle: "Yeni bir proje oluştur",
-    projectNamePlaceholder: "Proje adı",
-    createProjectButton: "Proje oluştur",
-    pro: "Pro",
-    project: "Proje",
-    teams: "Takımlar",
-    createTeam: "Takım oluştur",
-    createTeamTitle: "Yeni bir takım oluştur",
-    teamNamePlaceholder: "Takım adı",
-    createTeamButton: "Takım oluştur"
-  },
-  coming_soon: {
-    title: "Languine Erken Erişimde",
-    description: "Şu anda erken erişimdeyiz. Erken erişim için",
-    cta: "X üzerinden ulaşın."
-  },
-  account: {
-    fullName: {
-      title: "Tam Adı",
-      description: "Platform genelinde görünecek tam adınız.",
-      placeholder: "Tam adınızı girin"
-    },
-    email: {
-      title: "E-posta Adresi",
-      description: "Hesabınızla ilişkilendirilmiş e-posta adresi.",
-      placeholder: "E-posta adresinizi girin"
-    },
-    apiKey: {
-      title: "API Anahtarı",
-      description: "Languine API'sine ve CLI'dan erişim için kişisel API anahtarınız."
-    },
-    deleteAccount: {
-      title: "Hesabı Sil",
-      description: "Hesabınızı ve tüm ilişkili verileri kalıcı olarak silin. Bu işlem geri alınamaz.",
-      button: "Hesabı Sil"
-    }
-  },
-  copyInstall: {
-    copied: "Panoya kopyalandı"
-  },
-  dangerZone: {
-    dialog: {
-      title: "Kesinlikle emin misiniz?",
-      description: "Bu işlem geri alınamaz. Onaylamak için DELETE yazın.",
-      placeholder: "Onaylamak için DELETE yazın",
-      confirm: "Silme İşlemini Onayla",
-      cancel: "İptal"
-    }
-  },
-  pipeline: {
-    title: "İş Akışı (CI/CD Pipeline)",
-    pro: "[pro]",
-    description: "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana branch'ınıza birleştirilmeden ve dağıtılmadan önce incelemeye olanak tanır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
-  },
-  settings: {
-    badRequest: "Geçersiz istek",
-    badRequestDescription: "Organizasyonun en az bir sahibi olmalıdır. Bu sahibi kaldırmadan önce sahipliği başka bir üyeye devredin.",
-    permissionDenied: "İzin reddedildi",
-    permissionDeniedDescription: "Bu işlemi yapmak için takımın sahibi olmanız gerekiyor",
-    deleteTeamTitle: "Takımı sil",
-    deleteTeamDescription: "Organizasyonu silemezsiniz, bunun yerine hesabınızı silin",
-    saved: "Ayarlar kaydedildi",
-    savedDescription: "Değişiklikleriniz başarıyla kaydedildi",
-    error: "Bir şeyler yanlış gitti",
-    errorDescription: "Lütfen tekrar deneyin veya destekle iletişime geçin",
-    addTeam: "Takım oluştur",
-    apiKey: {
-      updated: "API anahtarı güncellendi",
-      updatedDescription: "API anahtarınız başarıyla güncellendi ve panonuza kopyalandı.",
-      title: "API Anahtarını Güncelle",
-      description: "Yeni bir API anahtarı oluşturmak istediğinizden emin misiniz? Eski anahtar hemen çalışmayı durduracaktır.",
-      cancel: "İptal",
-      "continue": "Devam et"
-    },
-    tabs: {
-      project: "Proje",
-      account: "Hesap",
-      team: "Takım",
-      provider: "Sağlayıcı",
-      billing: "Faturalandırma"
-    },
-    provider: {
-      updateSuccess: "Ayarlar başarıyla güncellendi",
-      updateError: "Ayarlar güncellenemedi",
-      translationProvider: {
-        title: "Çeviri Sağlayıcısı",
-        description: "Çeviriler oluşturmak için tercih ettiğiniz AI hizmetini seçin. Her sağlayıcı farklı yetenekler ve fiyatlandırma sunar.",
-        placeholder: "Bir sağlayıcı seçin"
-      },
-      languageModel: {
-        title: "Dil Modeli",
-        description: "Çeviri ihtiyaçlarınız için kalite ve hızı en iyi şekilde dengeleyen AI modelini seçin. Daha güçlü modeller daha yavaş olabilir ancak daha iyi sonuçlar üretebilir.",
-        placeholder: "Bir model seçin"
-      },
-      apiKey: {
-        title: "Sağlayıcı API Anahtarı",
-        description: "Seçtiğiniz sağlayıcı ile kimlik doğrulaması yapmak için API anahtarınızı girin. Bu anahtarı güvende tutun - saklamadan önce şifreleriz.",
-        placeholder: "API anahtarınızı girin"
-      }
-    },
-    addProject: "Proje oluştur",
-    project: {
-      name: {
-        title: "Proje Adı",
-        description: "Projenizin adı",
-        placeholder: "Proje adını girin"
-      },
-      id: {
-        title: "Proje ID",
-        description: "Benzersiz proje tanımlayıcınız",
-        placeholder: "Proje ID"
-      },
-      "delete": {
-        title: "Projeyi Sil",
-        description: "Bu projeyi ve tüm verilerini kalıcı olarak sil",
-        button: "Projeyi Sil"
-      }
-    },
-    save: "Kaydet",
-    team: {
-      name: {
-        title: "Takım Adı",
-        description: "Takımınızın adı",
-        placeholder: "Takım adını girin"
-      },
-      billing: {
-        title: "Faturalandırma Planı",
-        description: "Takımınızın faturalandırma planını yönetin",
-        free: "Ücretsiz",
-        pro: "Pro",
-        unlimited: "Sınırsız"
-      },
-      apiKey: {
-        title: "Takım API Anahtarı",
-        description: "Takım erişimi için API anahtarı, bunu Proje ID ile birlikte CI/CD pipeline'ınızdan kullanın",
-        placeholder: "Takım API Anahtarı"
-      },
-      members: {
-        leaveTeamConfirm: "Takımdan ayrıl",
-        leaveTeamDescription: "Bu takımdan ayrılmak istediğinizden emin misiniz?",
-        cancel: "İptal",
-        leaveTeam: "Takımdan ayrıl",
-        invite: "Üye davet et",
-        title: "Üyeler",
-        pendingInvitations: "Bekleyen Davetler",
-        removeMember: "Üyeyi kaldır",
-        removeMemberConfirm: "Üyeyi kaldır",
-        removeMemberDescription: "Bu üyeyi kaldırmak istediğinizden emin misiniz?",
-        filterPlaceholder: "Üyeleri filtrele...",
-        allRoles: "Tüm Roller",
-        date: "Tarih",
-        selectAll: "{count} seçildi",
-        noPendingInvitations: "Bekleyen davet yok",
-        noResults: "Üye bulunamadı",
-        tryDifferentSearch: "Farklı bir arama deneyin",
-        inviteMembers: "İş birliği yapmak için üyeler davet edin",
-        deleteInvite: "Daveti sil",
-        deleteInviteDescription: "Daveti sil",
-        invitedBy: "{name} tarafından davet edildi",
-        deleteInviteSuccess: "Davet silindi",
-        deleteInviteError: "Davet silinemedi",
-        removeMemberSuccess: "Üye kaldırıldı",
-        removeMemberError: "Üye kaldırılamadı",
-        removeMemberSuccessDescription: "Üye başarıyla kaldırıldı",
-        removeMemberErrorDescription: "Üye kaldırılamadı",
-        roles: {
-          owner: "Sahip",
-          member: "Üye"
-        },
-        dateSort: {
-          newest: "En yeni",
-          oldest: "En eski"
-        }
-      }
-    }
-  },
-  tuning: {
-    general: "Genel",
-    translationMemory: {
-      title: "Çeviri Hafızası",
-      description: "Tutarlılığı ve verimliliği artırmak için çeviri hafızasını kullanın"
-    },
-    qualityChecks: {
-      title: "Kalite Kontrolleri",
-      description: "Çeviriler için otomatik kalite kontrollerini etkinleştirin"
-    },
-    contextDetection: {
-      title: "Bağlam Algılama",
-      description: "Çevirilerde bağlamı otomatik olarak algılayın ve koruyun"
-    },
-    styleGuide: "Stil Rehberi",
-    lengthControl: {
-      title: "Uzunluk Kontrolü",
-      description: "Çevrilen metnin uzunluğunu kontrol edin",
-      options: {
-        flexible: "Esnek",
-        strict: "Katı",
-        exact: "Tam",
-        loose: "Gevşek"
-      }
-    },
-    inclusiveLanguage: {
-      title: "Kapsayıcı Dil",
-      description: "Çevirilerin kapsayıcı dil kullandığından emin olun"
-    },
-    formality: {
-      title: "Resmiyet",
-      description: "Çevirilerin resmiyet seviyesini kontrol edin"
-    },
-    brandName: {
-      title: "Marka Adı",
-      description: "Tutarlı kullanım için marka adınızı belirleyin",
-      placeholder: "Marka adınızı girin"
-    },
-    brandVoice: {
-      title: "Marka Sesi",
-      description: "Marka sesinizi ve tonunuzu tanımlayın",
-      placeholder: "Marka sesinizi tanımlayın..."
-    },
-    localization: "Yerelleştirme",
-    idioms: {
-      title: "Deyimler",
-      description: "Deyimsel ifadeleri uygun şekilde ele alın"
-    },
-    terminology: {
-      title: "Terminoloji",
-      description: "Özel terminoloji ve sözlükleri yönetin"
-    },
-    culturalAdaptation: {
-      title: "Kültürel Uyarlama",
-      description: "İçeriği kültürel uygunluk için uyarlayın"
-    }
-  },
-  pricing: {
-    title: "Basit fiyatlandırma",
-    free: {
-      title: "Ücretsiz (100 anahtar)",
-      price: "Ücretsiz",
-      keys_limit: "100 anahtara kadar",
-      features: {
-        unlimited_projects: "Sınırsız proje",
-        fine_tuning: "İnce ayar seçenekleri",
-        overrides: "Çeviri geçersiz kılmaları",
-        analytics: "Analitik",
-        context_memory: "Bağlam hafızası",
-        community_support: "Topluluk desteği"
-      }
-    },
-    pro: {
-      title: "Pro",
-      includes_free: "Ücretsiz'deki her şey, artı:",
-      features: {
-        github_action: "GitHub Action entegrasyonu",
-        latest_features: "En yeni özelliklere erken erişim",
-        priority_support: "Öncelikli destek"
-      }
-    },
-    cta: "Otomasyona başla"
-  },
-  createTeam: {
-    teamName: "Takım Adı",
-    teamNamePlaceholder: "Takım adını girin",
-    createTeamButton: "Takım oluştur",
-    cancel: "İptal",
-    createTeamDescription: "Projelerinizi ve iş birliği yapanları yönetmek için yeni bir takım oluşturun."
-  },
-  createProject: {
-    createProjectTitle: "Yeni bir proje oluştur",
-    projectNamePlaceholder: "Proje adını girin",
-    createProjectButton: "Proje oluştur",
-    cancel: "İptal",
-    createProjectDescription: "Yerelleştirmenizi otomatikleştirmeye başlamak için yeni bir proje oluşturun."
-  },
-  invite: {
-    inviteMember: "Üye davet et",
-    inviteDescription: "Takımınıza bir üye davet edin",
-    emailLabel: "E-posta",
-    emailPlaceholder: "E-posta girin",
-    cancel: "İptal",
-    sendInvite: "Davet gönder",
-    success: {
-      title: "Davet gönderildi",
-      description: "{email} adresine davet başarıyla gönderildi"
-    },
-    error: {
-      title: "Hata",
-      description: "Davet gönderilemedi. Lütfen tekrar deneyin."
-    },
-    validation: {
-      invalidEmail: "Lütfen geçerli bir e-posta girin"
-    }
-  },
-  months: {
-    "10": "Ekim",
-    "11": "Kasım",
-    "12": "Aralık",
-    "01": "Ocak",
-    "02": "Şubat",
-    "03": "Mart",
-    "04": "Nisan",
-    "05": "Mayıs",
-    "06": "Haziran",
-    "07": "Temmuz",
-    "08": "Ağustos",
-    "09": "Eylül"
-  },
-  onboarding: {
-    steps: {
-      "1": {
-        title: "Languine CLI Kurulumu",
-        description: "Çevirileri yönetmek için Languine CLI'yı kurun ve yapılandırın"
-      },
-      "2": {
-        title: "Çevirileri Gönder",
-        description: "Çevirilerin gönderilmesi bekleniyor"
-      },
-      "3": {
-        title: "Belgeler",
-        description: "Detaylı rehberler ve en iyi uygulamalar için belgelerimize göz atın",
-        link: "belgeler"
-      }
-    },
-    info: {
-      description: "Yardıma mı ihtiyacınız var? Detaylı rehberler ve en iyi uygulamalar için",
-      link: "belgeler",
-      description_2: "belgelerimize göz atın."
-    }
-  },
-  cli: {
-    success: {
-      title: "Languine CLI Giriş Başarılı",
-      description: "Languine CLI başarıyla kimlik doğrulandı:",
-      description_2: "Artık bu sekme kapatılabilir ve CLI'ya dönebilirsiniz"
-    }
-  },
-  translations: {
-    header: "Çevrilen anahtarlar"
-  },
-  search: {
-    placeholder: "Ara"
-  },
-  periods: {
-    daily: "Günlük",
-    weekly: "Haftalık",
-    monthly: "Aylık",
-    selectPeriod: "Dönem seçin"
-  },
-  welcome: {
-    title: "Languine'e hoşgeldiniz",
-    description: "Languine ile lokalizasyon sürecinizi otomatikleştirin"
-  },
-  button: {
-    update: "Yeni çeviriler"
-  },
-  update: {
-    button: "Yeni çeviriler"
-  },
-  hero2: {
-    title: "Uygulamalarınız için otomatik yerelleştirme",
-    description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış, yapay zeka destekli bir CLI ve ardışık düzen ile yerelleştirme sürecinizi kolaylaştırın."
-  },
-  language: {
-    en: "İngilizce",
-    es: "İspanyolca",
-    fr: "Fransızca",
-    de: "Almanca",
-    it: "İtalyanca",
-    pt: "Portekizce",
-    zh: "Çince",
-    ja: "Japonca",
-    ko: "Korece",
-    ar: "Arapça",
-    hi: "Hintçe",
-    tr: "Türkçe",
-    nl: "Hollandaca",
-    pl: "Lehçe",
-    no: "Norveççe",
-    da: "Danca",
-    sv: "İsveççe",
-    fi: "Fince",
-    vi: "Vietnamca"
-  }
+  "header.pricing": "Fiyatlandırma",
+  "header.docs": "Belgeler",
+  "header.signIn": "Giriş yap",
+  "header.goToApp": "Uygulamaya git",
+  "hero.title": "Uygulamalarınız için otomatik yerelleştirme",
+  "hero.description": "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
+  "getStarted.heading": "Başla",
+  "getStarted.title": "Uygulamalarınız için otomatik yerelleştirme",
+  "getStarted.description": "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve pipeline ile yerelleştirme sürecinizi kolaylaştırın.",
+  "getStarted.button.startAutomating": "Otomasyona başla",
+  "getStarted.button.readDocumentation": "Belgeleri oku",
+  "companies.title": "Tarafından kullanılan",
+  "companies.addYourCompany": "+ Şirketinizi ekleyin",
+  "activity.title": "Aktivite",
+  "activity.loading": "Yükleniyor",
+  "activity.loadMore": "Daha fazla göster",
+  "activity.noResults": "'{search}' için sonuç bulunamadı",
+  "activity.clearSearch": "Aramayı temizle",
+  "features.title": "Özellikler",
+  "features.fullyOpenSource": "Tamamen açık kaynak",
+  "features.fullyOpenSourceDescription": "Kodumuz GitHub'da halka açık, şeffaflık ve topluluk katkılarına olanak tanıyor.",
+  "features.noVendorLockIn": "Satıcı kilidi yok",
+  "features.noVendorLockInDescription": "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
+  "features.presetsForExpo": "Expo için ön ayarlar",
+  "features.presetsForExpoDescription": "Expo için ön ayarlar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
+  "features.presetForReactNative": "React Native için ön ayar",
+  "features.presetForReactNativeDescription": "React Native için bir ön ayar sunuyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
+  "features.presetForReactEmail": "React Email Kütüphanesi",
+  "features.presetForReactEmailDescription": "React Email için bir i18n kütüphanesi oluşturduk.",
+  "features.readyForI18nLibraries": "i18n kütüphanelerine hazır",
+  "features.readyForI18nLibrariesDescription": "En popüler olanlar dahil tüm kütüphaneleri destekliyoruz (next-intl, react-i18next, react-intl, vb.).",
+  "info.title": "Uygulamanızın yerelleştirilmesinin her yönünü ele alır",
+  "info.smartTranslation.title": "Akıllı Çeviri",
+  "info.smartTranslation.intelligentTranslation": "Bağlam farkındalığı ile akıllı çeviri",
+  "info.smartTranslation.brandVoice": "Marka sesi ve ton tutarlılığı",
+  "info.smartTranslation.terminology": "Terminoloji yönetimi",
+  "info.smartTranslation.linguisticFeatures": "Gelişmiş dil özellikleri",
+  "info.smartTranslation.realtimeUpdates": "Gerçek zamanlı çeviri güncellemeleri",
+  "info.implementation.title": "Uygulama",
+  "info.implementation.quickSetup": "Hızlı kurulum ve entegrasyon",
+  "info.implementation.fileFormat": "Dosya formatı işleme",
+  "info.implementation.contentStructure": "İçerik yapısı organizasyonu",
+  "info.implementation.assetOrganization": "Varlık organizasyonu",
+  "info.developer.title": "Geliştirici Deneyimi",
+  "info.developer.cli": "Komut satırı arayüzü",
+  "info.developer.cicd": "CI/CD entegrasyonu",
+  "info.developer.versionControl": "Sürüm kontrolü",
+  "info.developer.workflow": "Geliştirici iş akışı",
+  "info.developer.documentation": "Kapsamlı belgeler",
+  "login.title": "Giriş yap",
+  "login.github": "GitHub ile giriş yap",
+  "login.google": "Google ile giriş yap",
+  "login.footer": "Yerelleştirmenizi otomatikleştirin.",
+  "login.description": "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
+  "login.terms.text": "Giriş yaparak, bizim",
+  "login.terms.termsOfService": "Hizmet Şartları",
+  "login.terms.and": "ve",
+  "login.terms.privacyPolicy": "Gizlilik Politikası",
+  "userMenu.account": "Hesap Ayarları",
+  "userMenu.signOut": "Çıkış yap",
+  "userMenu.createTeam": "Takım oluştur",
+  "userMenu.homepage": "Ana sayfa",
+  "userMenu.team": "Takım Ayarları",
+  "teamSelector.addProject": "Proje oluştur",
+  "teamSelector.createProjectTitle": "Yeni bir proje oluştur",
+  "teamSelector.projectNamePlaceholder": "Proje adı",
+  "teamSelector.createProjectButton": "Proje oluştur",
+  "teamSelector.pro": "Pro",
+  "teamSelector.project": "Proje",
+  "teamSelector.teams": "Takımlar",
+  "teamSelector.createTeam": "Takım oluştur",
+  "teamSelector.createTeamTitle": "Yeni bir takım oluştur",
+  "teamSelector.teamNamePlaceholder": "Takım adı",
+  "teamSelector.createTeamButton": "Takım oluştur",
+  "coming_soon.title": "Languine Erken Erişimde",
+  "coming_soon.description": "Şu anda erken erişimdeyiz. Erken erişim için",
+  "coming_soon.cta": "X üzerinden ulaşın.",
+  "account.fullName.title": "Tam Adı",
+  "account.fullName.description": "Platform genelinde görünecek tam adınız.",
+  "account.fullName.placeholder": "Tam adınızı girin",
+  "account.email.title": "E-posta Adresi",
+  "account.email.description": "Hesabınızla ilişkilendirilmiş e-posta adresi.",
+  "account.email.placeholder": "E-posta adresinizi girin",
+  "account.apiKey.title": "API Anahtarı",
+  "account.apiKey.description": "Languine API'sine ve CLI'dan erişim için kişisel API anahtarınız.",
+  "account.deleteAccount.title": "Hesabı Sil",
+  "account.deleteAccount.description": "Hesabınızı ve tüm ilişkili verileri kalıcı olarak silin. Bu işlem geri alınamaz.",
+  "account.deleteAccount.button": "Hesabı Sil",
+  "copyInstall.copied": "Panoya kopyalandı",
+  "dangerZone.dialog.title": "Kesinlikle emin misiniz?",
+  "dangerZone.dialog.description": "Bu işlem geri alınamaz. Onaylamak için DELETE yazın.",
+  "dangerZone.dialog.placeholder": "Onaylamak için DELETE yazın",
+  "dangerZone.dialog.confirm": "Silme İşlemini Onayla",
+  "dangerZone.dialog.cancel": "İptal",
+  "pipeline.title": "İş Akışı (CI/CD Pipeline)",
+  "pipeline.pro": "[pro]",
+  "pipeline.description": "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana branch'ınıza birleştirilmeden ve dağıtılmadan önce incelemeye olanak tanır. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar.",
+  "settings.badRequest": "Geçersiz istek",
+  "settings.badRequestDescription": "Organizasyonun en az bir sahibi olmalıdır. Bu sahibi kaldırmadan önce sahipliği başka bir üyeye devredin.",
+  "settings.permissionDenied": "İzin reddedildi",
+  "settings.permissionDeniedDescription": "Bu işlemi yapmak için takımın sahibi olmanız gerekiyor",
+  "settings.deleteTeamTitle": "Takımı sil",
+  "settings.deleteTeamDescription": "Organizasyonu silemezsiniz, bunun yerine hesabınızı silin",
+  "settings.saved": "Ayarlar kaydedildi",
+  "settings.savedDescription": "Değişiklikleriniz başarıyla kaydedildi",
+  "settings.error": "Bir şeyler yanlış gitti",
+  "settings.errorDescription": "Lütfen tekrar deneyin veya destekle iletişime geçin",
+  "settings.addTeam": "Takım oluştur",
+  "settings.apiKey.updated": "API anahtarı güncellendi",
+  "settings.apiKey.updatedDescription": "API anahtarınız başarıyla güncellendi ve panonuza kopyalandı.",
+  "settings.apiKey.title": "API Anahtarını Güncelle",
+  "settings.apiKey.description": "Yeni bir API anahtarı oluşturmak istediğinizden emin misiniz? Eski anahtar hemen çalışmayı durduracaktır.",
+  "settings.apiKey.cancel": "İptal",
+  "settings.apiKey.continue": "Devam et",
+  "settings.tabs.project": "Proje",
+  "settings.tabs.account": "Hesap",
+  "settings.tabs.team": "Takım",
+  "settings.tabs.provider": "Sağlayıcı",
+  "settings.tabs.billing": "Faturalandırma",
+  "settings.addProject": "Proje oluştur",
+  "settings.project.name.title": "Proje Adı",
+  "settings.project.name.description": "Projenizin adı",
+  "settings.project.name.placeholder": "Proje adını girin",
+  "settings.project.id.title": "Proje ID",
+  "settings.project.id.description": "Benzersiz proje tanımlayıcınız",
+  "settings.project.id.placeholder": "Proje ID",
+  "settings.project.delete.title": "Projeyi Sil",
+  "settings.project.delete.description": "Bu projeyi ve tüm verilerini kalıcı olarak sil",
+  "settings.project.delete.button": "Projeyi Sil",
+  "settings.save": "Kaydet",
+  "settings.team.name.title": "Takım Adı",
+  "settings.team.name.description": "Takımınızın adı",
+  "settings.team.name.placeholder": "Takım adını girin",
+  "settings.team.billing.title": "Faturalandırma Planı",
+  "settings.team.billing.description": "Takımınızın faturalandırma planını yönetin",
+  "settings.team.billing.free": "Ücretsiz",
+  "settings.team.billing.pro": "Pro",
+  "settings.team.billing.unlimited": "Sınırsız",
+  "settings.team.apiKey.title": "Takım API Anahtarı",
+  "settings.team.apiKey.description": "Takım erişimi için API anahtarı, bunu Proje ID ile birlikte CI/CD pipeline'ınızdan kullanın",
+  "settings.team.apiKey.placeholder": "Takım API Anahtarı",
+  "settings.team.members.leaveTeamConfirm": "Takımdan ayrıl",
+  "settings.team.members.leaveTeamDescription": "Bu takımdan ayrılmak istediğinizden emin misiniz?",
+  "settings.team.members.cancel": "İptal",
+  "settings.team.members.leaveTeam": "Takımdan ayrıl",
+  "settings.team.members.invite": "Üye davet et",
+  "settings.team.members.title": "Üyeler",
+  "settings.team.members.pendingInvitations": "Bekleyen Davetler",
+  "settings.team.members.removeMember": "Üyeyi kaldır",
+  "settings.team.members.removeMemberConfirm": "Üyeyi kaldır",
+  "settings.team.members.removeMemberDescription": "Bu üyeyi kaldırmak istediğinizden emin misiniz?",
+  "settings.team.members.filterPlaceholder": "Üyeleri filtrele...",
+  "settings.team.members.allRoles": "Tüm Roller",
+  "settings.team.members.date": "Tarih",
+  "settings.team.members.selectAll": "{count} seçildi",
+  "settings.team.members.noPendingInvitations": "Bekleyen davet yok",
+  "settings.team.members.noResults": "Üye bulunamadı",
+  "settings.team.members.tryDifferentSearch": "Farklı bir arama deneyin",
+  "settings.team.members.inviteMembers": "İş birliği yapmak için üyeler davet edin",
+  "settings.team.members.deleteInvite": "Daveti sil",
+  "settings.team.members.deleteInviteDescription": "Daveti sil",
+  "settings.team.members.invitedBy": "{name} tarafından davet edildi",
+  "settings.team.members.deleteInviteSuccess": "Davet silindi",
+  "settings.team.members.deleteInviteError": "Davet silinemedi",
+  "settings.team.members.removeMemberSuccess": "Üye kaldırıldı",
+  "settings.team.members.removeMemberError": "Üye kaldırılamadı",
+  "settings.team.members.removeMemberSuccessDescription": "Üye başarıyla kaldırıldı",
+  "settings.team.members.removeMemberErrorDescription": "Üye kaldırılamadı",
+  "settings.team.members.roles.owner": "Sahip",
+  "settings.team.members.roles.member": "Üye",
+  "settings.team.members.dateSort.newest": "En yeni",
+  "settings.team.members.dateSort.oldest": "En eski",
+  "tuning.general": "Genel",
+  "tuning.translationMemory.title": "Çeviri Hafızası",
+  "tuning.translationMemory.description": "Tutarlılığı ve verimliliği artırmak için çeviri hafızasını kullanın",
+  "tuning.qualityChecks.title": "Kalite Kontrolleri",
+  "tuning.qualityChecks.description": "Çeviriler için otomatik kalite kontrollerini etkinleştirin",
+  "tuning.contextDetection.title": "Bağlam Algılama",
+  "tuning.contextDetection.description": "Çevirilerde bağlamı otomatik olarak algılayın ve koruyun",
+  "tuning.styleGuide": "Stil Rehberi",
+  "tuning.lengthControl.title": "Uzunluk Kontrolü",
+  "tuning.lengthControl.description": "Çevrilen metnin uzunluğunu kontrol edin",
+  "tuning.lengthControl.options.flexible": "Esnek",
+  "tuning.lengthControl.options.strict": "Katı",
+  "tuning.lengthControl.options.exact": "Tam",
+  "tuning.lengthControl.options.loose": "Gevşek",
+  "tuning.inclusiveLanguage.title": "Kapsayıcı Dil",
+  "tuning.inclusiveLanguage.description": "Çevirilerin kapsayıcı dil kullandığından emin olun",
+  "tuning.formality.title": "Resmiyet",
+  "tuning.formality.description": "Çevirilerin resmiyet seviyesini kontrol edin",
+  "tuning.brandName.title": "Marka Adı",
+  "tuning.brandName.description": "Tutarlı kullanım için marka adınızı belirleyin",
+  "tuning.brandName.placeholder": "Marka adınızı girin",
+  "tuning.brandVoice.title": "Marka Sesi",
+  "tuning.brandVoice.description": "Marka sesinizi ve tonunuzu tanımlayın",
+  "tuning.brandVoice.placeholder": "Marka sesinizi tanımlayın...",
+  "tuning.localization": "Yerelleştirme",
+  "tuning.idioms.title": "Deyimler",
+  "tuning.idioms.description": "Deyimsel ifadeleri uygun şekilde ele alın",
+  "tuning.terminology.title": "Terminoloji",
+  "tuning.terminology.description": "Özel terminoloji ve sözlükleri yönetin",
+  "tuning.culturalAdaptation.title": "Kültürel Uyarlama",
+  "tuning.culturalAdaptation.description": "İçeriği kültürel uygunluk için uyarlayın",
+  "pricing.title": "Basit fiyatlandırma",
+  "pricing.free.title": "Ücretsiz (100 anahtar)",
+  "pricing.free.price": "Ücretsiz",
+  "pricing.free.keys_limit": "100 anahtara kadar",
+  "pricing.free.features.unlimited_projects": "Sınırsız proje",
+  "pricing.free.features.fine_tuning": "İnce ayar seçenekleri",
+  "pricing.free.features.overrides": "Çeviri geçersiz kılmaları",
+  "pricing.free.features.analytics": "Analitik",
+  "pricing.free.features.context_memory": "Bağlam hafızası",
+  "pricing.free.features.community_support": "Topluluk desteği",
+  "pricing.pro.title": "Pro",
+  "pricing.pro.includes_free": "Ücretsiz'deki her şey, artı:",
+  "pricing.pro.features.github_action": "GitHub Action entegrasyonu",
+  "pricing.pro.features.latest_features": "En yeni özelliklere erken erişim",
+  "pricing.pro.features.priority_support": "Öncelikli destek",
+  "pricing.cta": "Otomasyona başla",
+  "createTeam.teamName": "Takım Adı",
+  "createTeam.teamNamePlaceholder": "Takım adını girin",
+  "createTeam.createTeamButton": "Takım oluştur",
+  "createTeam.cancel": "İptal",
+  "createTeam.createTeamDescription": "Projelerinizi ve iş birliği yapanları yönetmek için yeni bir takım oluşturun.",
+  "createProject.createProjectTitle": "Yeni bir proje oluştur",
+  "createProject.projectNamePlaceholder": "Proje adını girin",
+  "createProject.createProjectButton": "Proje oluştur",
+  "createProject.cancel": "İptal",
+  "createProject.createProjectDescription": "Yerelleştirmenizi otomatikleştirmeye başlamak için yeni bir proje oluşturun.",
+  "invite.inviteMember": "Üye davet et",
+  "invite.inviteDescription": "Takımınıza bir üye davet edin",
+  "invite.emailLabel": "E-posta",
+  "invite.emailPlaceholder": "E-posta girin",
+  "invite.cancel": "İptal",
+  "invite.sendInvite": "Davet gönder",
+  "invite.success.title": "Davet gönderildi",
+  "invite.success.description": "{email} adresine davet başarıyla gönderildi",
+  "invite.error.title": "Hata",
+  "invite.error.description": "Davet gönderilemedi. Lütfen tekrar deneyin.",
+  "invite.validation.invalidEmail": "Lütfen geçerli bir e-posta girin",
+  "months.10": "Ekim",
+  "months.11": "Kasım",
+  "months.12": "Aralık",
+  "months.01": "Ocak",
+  "months.02": "Şubat",
+  "months.03": "Mart",
+  "months.04": "Nisan",
+  "months.05": "Mayıs",
+  "months.06": "Haziran",
+  "months.07": "Temmuz",
+  "months.08": "Ağustos",
+  "months.09": "Eylül",
+  "onboarding.steps.1.title": "Languine CLI Kurulumu",
+  "onboarding.steps.1.description": "Çevirileri yönetmek için Languine CLI'yı kurun ve yapılandırın",
+  "onboarding.steps.2.title": "Çevirileri Gönder",
+  "onboarding.steps.2.description": "Çevirilerin gönderilmesi bekleniyor",
+  "onboarding.steps.3.title": "Belgeler",
+  "onboarding.steps.3.description": "Detaylı rehberler ve en iyi uygulamalar için belgelerimize göz atın",
+  "onboarding.steps.3.link": "belgeler",
+  "onboarding.info.description": "Yardıma mı ihtiyacınız var? Detaylı rehberler ve en iyi uygulamalar için",
+  "onboarding.info.link": "belgeler",
+  "onboarding.info.description_2": "belgelerimize göz atın.",
+  "cli.success.title": "Languine CLI Giriş Başarılı",
+  "cli.success.description": "Languine CLI başarıyla kimlik doğrulandı:",
+  "cli.success.description_2": "Artık bu sekme kapatılabilir ve CLI'ya dönebilirsiniz",
+  "translations.header": "Çevrilen anahtarlar",
+  "search.placeholder": "Ara",
+  "periods.daily": "Günlük",
+  "periods.weekly": "Haftalık",
+  "periods.monthly": "Aylık",
+  "periods.selectPeriod": "Dönem seçin",
+  "welcome.title": "Languine'e hoşgeldiniz",
+  "welcome.description": "Languine ile lokalizasyon sürecinizi otomatikleştirin",
+  "button.update": "Yeni çeviriler",
+  "update.button": "Yeni çeviriler",
+  "hero2.title": "Uygulamalarınız için otomatik yerelleştirme",
+  "hero2.description": "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış, yapay zeka destekli bir CLI ve ardışık düzen ile yerelleştirme sürecinizi kolaylaştırın.",
+  "language.en": "İngilizce",
+  "language.es": "İspanyolca",
+  "language.fr": "Fransızca",
+  "language.de": "Almanca",
+  "language.it": "İtalyanca",
+  "language.pt": "Portekizce",
+  "language.zh": "Çince",
+  "language.ja": "Japonca",
+  "language.ko": "Korece",
+  "language.ar": "Arapça",
+  "language.hi": "Hintçe",
+  "language.tr": "Türkçe",
+  "language.nl": "Hollandaca",
+  "language.pl": "Lehçe",
+  "language.no": "Norveççe",
+  "language.da": "Danca",
+  "language.sv": "İsveççe",
+  "language.fi": "Fince",
+  "language.vi": "Vietnamca"
 } as const;

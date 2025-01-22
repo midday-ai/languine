@@ -1,6 +1,7 @@
 import { db } from "@/db";
 import { projects, translations } from "@/db/schema";
-import { and, asc, desc, eq, gt, like, or, sql } from "drizzle-orm";
+import type { DeleteKeysSchema } from "@/trpc/routers/schema";
+import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
 
 export const createTranslation = async ({
   projectId,
@@ -103,4 +104,16 @@ export const getTranslationsBySlug = async ({
     )
     .limit(limit)
     .orderBy(desc(translations.updatedAt), asc(translations.id));
+};
+
+export const deleteKeys = async ({ projectId, keys }: DeleteKeysSchema) => {
+  return db
+    .delete(translations)
+    .where(
+      and(
+        eq(translations.projectId, projectId),
+        inArray(translations.translationKey, keys),
+      ),
+    )
+    .returning();
 };

@@ -1,478 +1,299 @@
 export default {
-  header: {
-    pricing: "価格設定",
-    docs: "ドキュメント",
-    signIn: "サインイン",
-    goToApp: "アプリへ移動"
-  },
-  hero: {
-    title: "アプリケーションの自動ローカライゼーション",
-    description: "AIを活用したCLIとパイプラインで、開発者のための翻訳を自動化し、ローカライゼーションプロセスを効率化します。"
-  },
-  getStarted: {
-    heading: "始める",
-    title: "アプリケーションの自動ローカライゼーション",
-    description: "AIを活用したCLIとパイプラインで、開発者のための翻訳を自動化し、ローカライゼーションプロセスを効率化します。",
-    button: {
-      startAutomating: "自動化を開始",
-      readDocumentation: "ドキュメントを読む"
-    }
-  },
-  companies: {
-    title: "使用されている",
-    addYourCompany: "+ あなたの会社を追加"
-  },
-  activity: {
-    title: "アクティビティ",
-    loading: "読み込み中",
-    loadMore: "もっと見る",
-    noResults: "'{search}'の結果はありません",
-    clearSearch: "検索をクリア"
-  },
-  features: {
-    title: "機能",
-    fullyOpenSource: "完全にオープンソース",
-    fullyOpenSourceDescription: "私たちのコードはGitHubで公開されており、透明性とコミュニティの貢献を可能にしています。",
-    noVendorLockIn: "ベンダーロックインなし",
-    noVendorLockInDescription: "特定のサービスに縛られることはありません。独自のLLMを使用してください。",
-    presetsForExpo: "Expoのプリセット",
-    presetsForExpoDescription: "Expoのプリセットを提供しているので、すぐに始められます。",
-    presetForReactNative: "React Nativeのプリセット",
-    presetForReactNativeDescription: "React Nativeのプリセットを提供しているので、すぐに始められます。",
-    presetForReactEmail: "React Emailライブラリ",
-    presetForReactEmailDescription: "React Email用のi18nライブラリを作成しました。",
-    readyForI18nLibraries: "i18nライブラリに対応",
-    readyForI18nLibrariesDescription: "最も人気のあるライブラリを含むすべてのライブラリをサポートしています（next-intl、react-i18next、react-intlなど）。"
-  },
-  info: {
-    title: "アプリのローカライゼーションのあらゆる側面を扱います",
-    smartTranslation: {
-      title: "スマート翻訳",
-      intelligentTranslation: "コンテキスト認識によるインテリジェントな翻訳",
-      brandVoice: "ブランドの声とトーンの一貫性",
-      terminology: "用語管理",
-      linguisticFeatures: "高度な言語機能",
-      realtimeUpdates: "リアルタイム翻訳更新"
-    },
-    implementation: {
-      title: "実装",
-      quickSetup: "迅速なセットアップと統合",
-      fileFormat: "ファイル形式の処理",
-      contentStructure: "コンテンツ構造の整理",
-      assetOrganization: "アセットの整理"
-    },
-    developer: {
-      title: "開発者体験",
-      cli: "コマンドラインインターフェース",
-      cicd: "CI/CD統合",
-      versionControl: "バージョン管理",
-      workflow: "開発者ワークフロー",
-      documentation: "包括的なドキュメント"
-    }
-  },
-  login: {
-    title: "サインイン",
-    github: "GitHubでサインイン",
-    google: "Googleでサインイン",
-    footer: "ローカライゼーションを自動化する。",
-    description: "サインインして、数秒でローカライゼーションの自動化を開始します。",
-    terms: {
-      text: "サインインすることにより、あなたは私たちの",
-      termsOfService: "利用規約",
-      and: "と",
-      privacyPolicy: "プライバシーポリシー"
-    }
-  },
-  userMenu: {
-    account: "翻訳されたキー",
-    signOut: "アカウント設定",
-    createTeam: "サインアウト",
-    homepage: "チームを作成",
-    team: "ホームページ"
-  },
-  teamSelector: {
-    addProject: "チーム設定",
-    createProjectTitle: "プロジェクトを作成",
-    projectNamePlaceholder: "新しいプロジェクトを作成",
-    createProjectButton: "プロジェクト名",
-    pro: "プロジェクトを作成",
-    project: "プロ",
-    teams: "プロジェクト",
-    createTeam: "チーム",
-    createTeamTitle: "チームを作成",
-    teamNamePlaceholder: "新しいチームを作成",
-    createTeamButton: "チーム名"
-  },
-  coming_soon: {
-    title: "チームを作成",
-    description: "Languineは早期アクセス中です",
-    cta: "私たちは現在早期アクセス中です。早期アクセスを得るには、Xで"
-  },
-  account: {
-    fullName: {
-      title: "に連絡してください。",
-      description: "フルネーム",
-      placeholder: "プラットフォーム全体に表示されるあなたのフルネーム。"
-    },
-    email: {
-      title: "フルネームを入力してください",
-      description: "メールアドレス",
-      placeholder: "あなたのアカウントに関連付けられたメールアドレス。"
-    },
-    apiKey: {
-      title: "メールアドレスを入力してください",
-      description: "APIキー"
-    },
-    deleteAccount: {
-      title: "Languine APIおよびCLIからアクセスするための個人用APIキー。",
-      description: "アカウントを削除",
-      button: "アカウントと関連するすべてのデータを永久に削除します。この操作は取り消せません。"
-    }
-  },
-  copyInstall: {
-    copied: "アカウントを削除"
-  },
-  dangerZone: {
-    dialog: {
-      title: "クリップボードにコピーされました",
-      description: "本当によろしいですか？",
-      placeholder: "この操作は取り消せません。確認のためにDELETEと入力してください。",
-      confirm: "確認のためにDELETEと入力してください",
-      cancel: "削除を確認"
-    }
-  },
-  pipeline: {
-    title: "キャンセル",
-    pro: "ワークフロー（CI/CDパイプライン）",
-    description: "[プロ]"
-  },
-  settings: {
-    saved: "あなたが唯一のメンバーである場合、組織を削除することはできません。代わりにアカウントを削除してください",
-    savedDescription: "設定が保存されました",
-    tabs: {
-      project: "続行",
-      account: "プロジェクト",
-      team: "アカウント",
-      provider: "チーム",
-      billing: "プロバイダー"
-    },
-    project: {
-      name: {
-        title: "プロジェクトを作成",
-        description: "プロジェクト名",
-        placeholder: "あなたのプロジェクトの名前"
-      },
-      id: {
-        title: "プロジェクト名を入力してください",
-        description: "プロジェクトID",
-        placeholder: "あなたのユニークなプロジェクト識別子"
-      },
-      "delete": {
-        title: "プロジェクトID",
-        description: "プロジェクトを削除",
-        button: "このプロジェクトとそのすべてのデータを永久に削除します"
-      }
-    },
-    team: {
-      name: {
-        title: "保存",
-        description: "チーム名",
-        placeholder: "あなたのチームの名前"
-      },
-      billing: {
-        title: "チーム名を入力してください",
-        description: "請求プラン",
-        free: "チームの請求プランを管理する",
-        pro: "無料",
-        unlimited: "プロ"
-      },
-      apiKey: {
-        title: "無制限",
-        description: "チームAPIキー",
-        placeholder: "チームアクセスのためのAPIキー、これをCI/CDパイプラインと一緒にプロジェクトIDと共に使用してください"
-      },
-      members: {
-        title: "メンバーを招待",
-        pendingInvitations: "メンバー",
-        filterPlaceholder: "このメンバーを削除してもよろしいですか？",
-        allRoles: "メンバーをフィルタリング...",
-        date: "すべての役割",
-        selectAll: "日付",
-        noPendingInvitations: "{count} 選択済み",
-        inviteMembers: "別の検索を試してください",
-        roles: {
-          owner: "メンバーの削除に失敗しました",
-          admin: "管理者",
-          member: "所有者"
-        },
-        dateSort: {
-          newest: "メンバー",
-          oldest: "最新"
-        },
-        leaveTeamConfirm: "チームAPIキー",
-        leaveTeamDescription: "チームを離れる",
-        cancel: "このチームを離れてもよろしいですか？",
-        leaveTeam: "キャンセル",
-        invite: "チームを離れる",
-        removeMember: "保留中の招待",
-        removeMemberConfirm: "メンバーを削除",
-        removeMemberDescription: "メンバーを削除",
-        noResults: "保留中の招待はありません",
-        tryDifferentSearch: "メンバーが見つかりません",
-        deleteInvite: "メンバーを招待して協力する",
-        deleteInviteDescription: "招待を削除",
-        invitedBy: "招待を削除する",
-        deleteInviteSuccess: "{name}によって招待されました",
-        deleteInviteError: "招待が削除されました",
-        removeMemberSuccess: "招待の削除に失敗しました",
-        removeMemberError: "メンバーが削除されました",
-        removeMemberSuccessDescription: "メンバーの削除に失敗しました",
-        removeMemberErrorDescription: "メンバーが正常に削除されました"
-      }
-    },
-    badRequest: "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、プッシュごとにコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保持しながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、レビュー後にメインブランチにマージされ、デプロイされます。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。",
-    badRequestDescription: "無効なリクエスト",
-    permissionDenied: "組織には少なくとも1人の所有者が必要です。この所有者を削除する前に、別のメンバーに所有権を移転してください。",
-    permissionDeniedDescription: "許可が拒否されました",
-    deleteTeamTitle: "この操作を行うには、チームの所有者である必要があります",
-    deleteTeamDescription: "チームを削除",
-    error: "変更が正常に保存されました",
-    errorDescription: "何か問題が発生しました",
-    addTeam: "もう一度試すか、サポートに連絡してください",
-    apiKey: {
-      updated: "チームを作成",
-      updatedDescription: "APIキーが更新されました",
-      title: "APIキーが正常に更新され、クリップボードにコピーされました。",
-      description: "APIキーを更新",
-      cancel: "新しいAPIキーを生成してもよろしいですか？古いキーはすぐに機能しなくなります。",
-      "continue": "キャンセル"
-    },
-    provider: {
-      updateSuccess: "請求",
-      updateError: "設定が正常に更新されました",
-      translationProvider: {
-        title: "設定の更新に失敗しました",
-        description: "翻訳プロバイダー",
-        placeholder: "翻訳を生成するための好みのAIサービスを選択してください。各プロバイダーは異なる機能と価格を提供しています。"
-      },
-      languageModel: {
-        title: "プロバイダーを選択",
-        description: "言語モデル",
-        placeholder: "翻訳ニーズに最適な品質と速度のバランスを取るAIモデルを選択してください。より強力なモデルは遅くなる可能性がありますが、より良い結果を生み出します。"
-      },
-      apiKey: {
-        title: "モデルを選択",
-        description: "プロバイダーAPIキー",
-        placeholder: "選択したプロバイダーで認証するためのAPIキーを入力してください。このキーは安全に保管してください - 保存前に暗号化します。"
-      }
-    },
-    addProject: "APIキーを入力してください",
-    save: "プロジェクトを削除"
-  },
-  tuning: {
-    general: "最古",
-    translationMemory: {
-      title: "一般",
-      description: "翻訳メモリ"
-    },
-    qualityChecks: {
-      title: "翻訳メモリを使用して一貫性と効率を向上させる",
-      description: "品質チェック"
-    },
-    contextDetection: {
-      title: "翻訳の自動品質チェックを有効にする",
-      description: "コンテキスト検出"
-    },
-    styleGuide: "翻訳でコンテキストを自動的に検出し、保持する",
-    lengthControl: {
-      title: "スタイルガイド",
-      description: "長さ制御",
-      options: {
-        flexible: "翻訳されたテキストの長さを制御する",
-        strict: "柔軟",
-        exact: "厳格",
-        loose: "正確"
-      }
-    },
-    inclusiveLanguage: {
-      title: "緩い",
-      description: "包括的な言語"
-    },
-    formality: {
-      title: "翻訳が包括的な言語を使用していることを確認する",
-      description: "形式性"
-    },
-    brandName: {
-      title: "翻訳の形式性レベルを制御する",
-      description: "ブランド名",
-      placeholder: "ブランド名を設定して一貫した使用を確保する"
-    },
-    brandVoice: {
-      title: "ブランド名を入力してください",
-      description: "ブランドの声",
-      placeholder: "ブランドの声とトーンを定義する"
-    },
-    localization: "ブランドの声を説明してください...",
-    idioms: {
-      title: "ローカライゼーション",
-      description: "イディオム"
-    },
-    terminology: {
-      title: "慣用表現を適切に扱う",
-      description: "用語"
-    },
-    culturalAdaptation: {
-      title: "専門用語と用語集を管理する",
-      description: "文化的適応"
-    }
-  },
-  pricing: {
-    title: "文化的に適切な内容に適応する",
-    free: {
-      title: "シンプルな価格設定",
-      price: "無料（100キー）",
-      keys_limit: "無料",
-      features: {
-        unlimited_projects: "最大100キー",
-        fine_tuning: "無制限のプロジェクト",
-        overrides: "微調整オプション",
-        analytics: "翻訳の上書き",
-        context_memory: "分析",
-        community_support: "コンテキストメモリ"
-      }
-    },
-    pro: {
-      title: "コミュニティサポート",
-      includes_free: "プロ",
-      features: {
-        github_action: "無料版のすべてに加えて：",
-        latest_features: "GitHubアクション統合",
-        priority_support: "最新機能への早期アクセス"
-      }
-    },
-    cta: "優先サポート"
-  },
-  createTeam: {
-    teamName: "自動化を開始",
-    teamNamePlaceholder: "チーム名",
-    createTeamButton: "チーム名を入力してください",
-    cancel: "チームを作成",
-    createTeamDescription: "キャンセル"
-  },
-  createProject: {
-    createProjectTitle: "新しいチームを作成して、プロジェクトと協力者を管理します。",
-    projectNamePlaceholder: "新しいプロジェクトを作成",
-    createProjectButton: "プロジェクト名を入力してください",
-    cancel: "プロジェクトを作成",
-    createProjectDescription: "キャンセル"
-  },
-  invite: {
-    inviteMember: "新しいプロジェクトを作成して、ローカライゼーションの自動化を開始します。",
-    inviteDescription: "メンバーを招待",
-    emailLabel: "チームにメンバーを招待する",
-    emailPlaceholder: "メール",
-    cancel: "メールを入力してください",
-    sendInvite: "キャンセル",
-    success: {
-      title: "招待を送信",
-      description: "招待が送信されました"
-    },
-    error: {
-      title: "{email}への招待が正常に送信されました",
-      description: "エラー"
-    },
-    validation: {
-      invalidEmail: "招待の送信に失敗しました。もう一度試してください。"
-    }
-  },
-  months: {
-    "10": "有効なメールアドレスを入力してください",
-    "11": "10月",
-    "12": "11月",
-    "01": "12月",
-    "02": "1月",
-    "03": "2月",
-    "04": "3月",
-    "05": "4月",
-    "06": "5月",
-    "07": "6月",
-    "08": "7月",
-    "09": "8月"
-  },
-  onboarding: {
-    steps: {
-      "1": {
-        title: "9月",
-        description: "Languine CLIのセットアップ"
-      },
-      "2": {
-        title: "Languine CLIをインストールして設定し、翻訳を管理します",
-        description: "翻訳をプッシュ"
-      },
-      "3": {
-        title: "翻訳がプッシュされるのを待っています",
-        description: "ドキュメント",
-        link: "詳細なガイドとベストプラクティスについては、ドキュメントをチェックしてください"
-      }
-    },
-    info: {
-      description: "ドキュメント",
-      link: "助けが必要ですか？詳細なガイドとベストプラクティスについては、",
-      description_2: "ドキュメント"
-    }
-  },
-  cli: {
-    success: {
-      title: "をチェックしてください。",
-      description: "Languine CLIログイン成功",
-      description_2: "Languine CLIは次のように正常に認証されました："
-    }
-  },
-  translations: {
-    header: "に同意するものとします。"
-  },
-  search: {
-    placeholder: "このタブを閉じてCLIに戻ることができます"
-  },
-  periods: {
-    daily: "検索",
-    weekly: "毎日",
-    monthly: "毎週",
-    selectPeriod: "毎月"
-  },
-  welcome: {
-    title: "Languineへようこそ",
-    description: "Languineでローカライゼーションプロセスを自動化"
-  },
-  button: {
-    update: "新しい翻訳"
-  },
-  update: {
-    button: "新しい翻訳"
-  },
-  hero2: {
-    title: "アプリケーションの自動ローカライズ",
-    description: "AI搭載のCLIとパイプラインを使用して、開発者向けの翻訳を自動化し、ローカライズプロセスを効率化します。"
-  },
-  language: {
-    en: "期間を選択",
-    es: "英語",
-    fr: "スペイン語",
-    de: "フランス語",
-    it: "ドイツ語",
-    pt: "イタリア語",
-    zh: "ポルトガル語",
-    ja: "中国語",
-    ko: "日本語",
-    ar: "韓国語",
-    hi: "アラビア語",
-    tr: "ヒンディー語",
-    nl: "トルコ語",
-    pl: "オランダ語",
-    no: "ポーランド語",
-    da: "ノルウェー語",
-    sv: "デンマーク語",
-    fi: "スウェーデン語",
-    vi: "フィンランド語"
-  }
+  "header.pricing": "価格設定",
+  "header.docs": "ドキュメント",
+  "header.signIn": "サインイン",
+  "header.goToApp": "アプリへ移動",
+  "hero.title": "アプリケーションの自動ローカライゼーション",
+  "hero.description": "AIを活用したCLIとパイプラインで、開発者のための翻訳を自動化し、ローカライゼーションプロセスを効率化します。",
+  "getStarted.heading": "始める",
+  "getStarted.title": "アプリケーションの自動ローカライゼーション",
+  "getStarted.description": "AIを活用したCLIとパイプラインで、開発者のための翻訳を自動化し、ローカライゼーションプロセスを効率化します。",
+  "getStarted.button.startAutomating": "自動化を開始",
+  "getStarted.button.readDocumentation": "ドキュメントを読む",
+  "companies.title": "使用されている",
+  "companies.addYourCompany": "+ あなたの会社を追加",
+  "activity.title": "アクティビティ",
+  "activity.loading": "読み込み中",
+  "activity.loadMore": "もっと見る",
+  "activity.noResults": "'{search}'の結果はありません",
+  "activity.clearSearch": "検索をクリア",
+  "features.title": "機能",
+  "features.fullyOpenSource": "完全にオープンソース",
+  "features.fullyOpenSourceDescription": "私たちのコードはGitHubで公開されており、透明性とコミュニティの貢献を可能にしています。",
+  "features.noVendorLockIn": "ベンダーロックインなし",
+  "features.noVendorLockInDescription": "特定のサービスに縛られることはありません。独自のLLMを使用してください。",
+  "features.presetsForExpo": "Expoのプリセット",
+  "features.presetsForExpoDescription": "Expoのプリセットを提供しているので、すぐに始められます。",
+  "features.presetForReactNative": "React Nativeのプリセット",
+  "features.presetForReactNativeDescription": "React Nativeのプリセットを提供しているので、すぐに始められます。",
+  "features.presetForReactEmail": "React Emailライブラリ",
+  "features.presetForReactEmailDescription": "React Email用のi18nライブラリを作成しました。",
+  "features.readyForI18nLibraries": "i18nライブラリに対応",
+  "features.readyForI18nLibrariesDescription": "最も人気のあるライブラリを含むすべてのライブラリをサポートしています（next-intl、react-i18next、react-intlなど）。",
+  "info.title": "アプリのローカライゼーションのあらゆる側面を扱います",
+  "info.smartTranslation.title": "スマート翻訳",
+  "info.smartTranslation.intelligentTranslation": "コンテキスト認識によるインテリジェントな翻訳",
+  "info.smartTranslation.brandVoice": "ブランドの声とトーンの一貫性",
+  "info.smartTranslation.terminology": "用語管理",
+  "info.smartTranslation.linguisticFeatures": "高度な言語機能",
+  "info.smartTranslation.realtimeUpdates": "リアルタイム翻訳更新",
+  "info.implementation.title": "実装",
+  "info.implementation.quickSetup": "迅速なセットアップと統合",
+  "info.implementation.fileFormat": "ファイル形式の処理",
+  "info.implementation.contentStructure": "コンテンツ構造の整理",
+  "info.implementation.assetOrganization": "アセットの整理",
+  "info.developer.title": "開発者体験",
+  "info.developer.cli": "コマンドラインインターフェース",
+  "info.developer.cicd": "CI/CD統合",
+  "info.developer.versionControl": "バージョン管理",
+  "info.developer.workflow": "開発者ワークフロー",
+  "info.developer.documentation": "包括的なドキュメント",
+  "login.title": "サインイン",
+  "login.github": "GitHubでサインイン",
+  "login.google": "Googleでサインイン",
+  "login.footer": "ローカライゼーションを自動化する。",
+  "login.description": "サインインして、数秒でローカライゼーションの自動化を開始します。",
+  "login.terms.text": "サインインすることにより、あなたは私たちの",
+  "login.terms.termsOfService": "利用規約",
+  "login.terms.and": "と",
+  "login.terms.privacyPolicy": "プライバシーポリシー",
+  "userMenu.account": "翻訳されたキー",
+  "userMenu.signOut": "アカウント設定",
+  "userMenu.createTeam": "サインアウト",
+  "userMenu.homepage": "チームを作成",
+  "userMenu.team": "ホームページ",
+  "teamSelector.addProject": "チーム設定",
+  "teamSelector.createProjectTitle": "プロジェクトを作成",
+  "teamSelector.projectNamePlaceholder": "新しいプロジェクトを作成",
+  "teamSelector.createProjectButton": "プロジェクト名",
+  "teamSelector.pro": "プロジェクトを作成",
+  "teamSelector.project": "プロ",
+  "teamSelector.teams": "プロジェクト",
+  "teamSelector.createTeam": "チーム",
+  "teamSelector.createTeamTitle": "チームを作成",
+  "teamSelector.teamNamePlaceholder": "新しいチームを作成",
+  "teamSelector.createTeamButton": "チーム名",
+  "coming_soon.title": "チームを作成",
+  "coming_soon.description": "Languineは早期アクセス中です",
+  "coming_soon.cta": "私たちは現在早期アクセス中です。早期アクセスを得るには、Xで",
+  "account.fullName.title": "に連絡してください。",
+  "account.fullName.description": "フルネーム",
+  "account.fullName.placeholder": "プラットフォーム全体に表示されるあなたのフルネーム。",
+  "account.email.title": "フルネームを入力してください",
+  "account.email.description": "メールアドレス",
+  "account.email.placeholder": "あなたのアカウントに関連付けられたメールアドレス。",
+  "account.apiKey.title": "メールアドレスを入力してください",
+  "account.apiKey.description": "APIキー",
+  "account.deleteAccount.title": "Languine APIおよびCLIからアクセスするための個人用APIキー。",
+  "account.deleteAccount.description": "アカウントを削除",
+  "account.deleteAccount.button": "アカウントと関連するすべてのデータを永久に削除します。この操作は取り消せません。",
+  "copyInstall.copied": "アカウントを削除",
+  "dangerZone.dialog.title": "クリップボードにコピーされました",
+  "dangerZone.dialog.description": "本当によろしいですか？",
+  "dangerZone.dialog.placeholder": "この操作は取り消せません。確認のためにDELETEと入力してください。",
+  "dangerZone.dialog.confirm": "確認のためにDELETEと入力してください",
+  "dangerZone.dialog.cancel": "削除を確認",
+  "pipeline.title": "キャンセル",
+  "pipeline.pro": "ワークフロー（CI/CDパイプライン）",
+  "pipeline.description": "[プロ]",
+  "settings.saved": "あなたが唯一のメンバーである場合、組織を削除することはできません。代わりにアカウントを削除してください",
+  "settings.savedDescription": "設定が保存されました",
+  "settings.tabs.project": "続行",
+  "settings.tabs.account": "プロジェクト",
+  "settings.tabs.team": "アカウント",
+  "settings.tabs.provider": "チーム",
+  "settings.tabs.billing": "プロバイダー",
+  "settings.project.name.title": "プロジェクトを作成",
+  "settings.project.name.description": "プロジェクト名",
+  "settings.project.name.placeholder": "あなたのプロジェクトの名前",
+  "settings.project.id.title": "プロジェクト名を入力してください",
+  "settings.project.id.description": "プロジェクトID",
+  "settings.project.id.placeholder": "あなたのユニークなプロジェクト識別子",
+  "settings.project.delete.title": "プロジェクトID",
+  "settings.project.delete.description": "プロジェクトを削除",
+  "settings.project.delete.button": "このプロジェクトとそのすべてのデータを永久に削除します",
+  "settings.team.name.title": "保存",
+  "settings.team.name.description": "チーム名",
+  "settings.team.name.placeholder": "あなたのチームの名前",
+  "settings.team.billing.title": "チーム名を入力してください",
+  "settings.team.billing.description": "請求プラン",
+  "settings.team.billing.free": "チームの請求プランを管理する",
+  "settings.team.billing.pro": "無料",
+  "settings.team.billing.unlimited": "プロ",
+  "settings.team.apiKey.title": "無制限",
+  "settings.team.apiKey.description": "チームAPIキー",
+  "settings.team.apiKey.placeholder": "チームアクセスのためのAPIキー、これをCI/CDパイプラインと一緒にプロジェクトIDと共に使用してください",
+  "settings.team.members.title": "メンバーを招待",
+  "settings.team.members.pendingInvitations": "メンバー",
+  "settings.team.members.filterPlaceholder": "このメンバーを削除してもよろしいですか？",
+  "settings.team.members.allRoles": "メンバーをフィルタリング...",
+  "settings.team.members.date": "すべての役割",
+  "settings.team.members.selectAll": "日付",
+  "settings.team.members.noPendingInvitations": "{count} 選択済み",
+  "settings.team.members.inviteMembers": "別の検索を試してください",
+  "settings.team.members.roles.owner": "メンバーの削除に失敗しました",
+  "settings.team.members.roles.admin": "管理者",
+  "settings.team.members.roles.member": "所有者",
+  "settings.team.members.dateSort.newest": "メンバー",
+  "settings.team.members.dateSort.oldest": "最新",
+  "settings.team.members.leaveTeamConfirm": "チームAPIキー",
+  "settings.team.members.leaveTeamDescription": "チームを離れる",
+  "settings.team.members.cancel": "このチームを離れてもよろしいですか？",
+  "settings.team.members.leaveTeam": "キャンセル",
+  "settings.team.members.invite": "チームを離れる",
+  "settings.team.members.removeMember": "保留中の招待",
+  "settings.team.members.removeMemberConfirm": "メンバーを削除",
+  "settings.team.members.removeMemberDescription": "メンバーを削除",
+  "settings.team.members.noResults": "保留中の招待はありません",
+  "settings.team.members.tryDifferentSearch": "メンバーが見つかりません",
+  "settings.team.members.deleteInvite": "メンバーを招待して協力する",
+  "settings.team.members.deleteInviteDescription": "招待を削除",
+  "settings.team.members.invitedBy": "招待を削除する",
+  "settings.team.members.deleteInviteSuccess": "{name}によって招待されました",
+  "settings.team.members.deleteInviteError": "招待が削除されました",
+  "settings.team.members.removeMemberSuccess": "招待の削除に失敗しました",
+  "settings.team.members.removeMemberError": "メンバーが削除されました",
+  "settings.team.members.removeMemberSuccessDescription": "メンバーの削除に失敗しました",
+  "settings.team.members.removeMemberErrorDescription": "メンバーが正常に削除されました",
+  "settings.badRequest": "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、プッシュごとにコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保持しながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、レビュー後にメインブランチにマージされ、デプロイされます。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。",
+  "settings.badRequestDescription": "無効なリクエスト",
+  "settings.permissionDenied": "組織には少なくとも1人の所有者が必要です。この所有者を削除する前に、別のメンバーに所有権を移転してください。",
+  "settings.permissionDeniedDescription": "許可が拒否されました",
+  "settings.deleteTeamTitle": "この操作を行うには、チームの所有者である必要があります",
+  "settings.deleteTeamDescription": "チームを削除",
+  "settings.error": "変更が正常に保存されました",
+  "settings.errorDescription": "何か問題が発生しました",
+  "settings.addTeam": "もう一度試すか、サポートに連絡してください",
+  "settings.apiKey.updated": "チームを作成",
+  "settings.apiKey.updatedDescription": "APIキーが更新されました",
+  "settings.apiKey.title": "APIキーが正常に更新され、クリップボードにコピーされました。",
+  "settings.apiKey.description": "APIキーを更新",
+  "settings.apiKey.cancel": "新しいAPIキーを生成してもよろしいですか？古いキーはすぐに機能しなくなります。",
+  "settings.apiKey.continue": "キャンセル",
+  "settings.addProject": "APIキーを入力してください",
+  "settings.save": "プロジェクトを削除",
+  "tuning.general": "最古",
+  "tuning.translationMemory.title": "一般",
+  "tuning.translationMemory.description": "翻訳メモリ",
+  "tuning.qualityChecks.title": "翻訳メモリを使用して一貫性と効率を向上させる",
+  "tuning.qualityChecks.description": "品質チェック",
+  "tuning.contextDetection.title": "翻訳の自動品質チェックを有効にする",
+  "tuning.contextDetection.description": "コンテキスト検出",
+  "tuning.styleGuide": "翻訳でコンテキストを自動的に検出し、保持する",
+  "tuning.lengthControl.title": "スタイルガイド",
+  "tuning.lengthControl.description": "長さ制御",
+  "tuning.lengthControl.options.flexible": "翻訳されたテキストの長さを制御する",
+  "tuning.lengthControl.options.strict": "柔軟",
+  "tuning.lengthControl.options.exact": "厳格",
+  "tuning.lengthControl.options.loose": "正確",
+  "tuning.inclusiveLanguage.title": "緩い",
+  "tuning.inclusiveLanguage.description": "包括的な言語",
+  "tuning.formality.title": "翻訳が包括的な言語を使用していることを確認する",
+  "tuning.formality.description": "形式性",
+  "tuning.brandName.title": "翻訳の形式性レベルを制御する",
+  "tuning.brandName.description": "ブランド名",
+  "tuning.brandName.placeholder": "ブランド名を設定して一貫した使用を確保する",
+  "tuning.brandVoice.title": "ブランド名を入力してください",
+  "tuning.brandVoice.description": "ブランドの声",
+  "tuning.brandVoice.placeholder": "ブランドの声とトーンを定義する",
+  "tuning.localization": "ブランドの声を説明してください...",
+  "tuning.idioms.title": "ローカライゼーション",
+  "tuning.idioms.description": "イディオム",
+  "tuning.terminology.title": "慣用表現を適切に扱う",
+  "tuning.terminology.description": "用語",
+  "tuning.culturalAdaptation.title": "専門用語と用語集を管理する",
+  "tuning.culturalAdaptation.description": "文化的適応",
+  "pricing.title": "文化的に適切な内容に適応する",
+  "pricing.free.title": "シンプルな価格設定",
+  "pricing.free.price": "無料（100キー）",
+  "pricing.free.keys_limit": "無料",
+  "pricing.free.features.unlimited_projects": "最大100キー",
+  "pricing.free.features.fine_tuning": "無制限のプロジェクト",
+  "pricing.free.features.overrides": "微調整オプション",
+  "pricing.free.features.analytics": "翻訳の上書き",
+  "pricing.free.features.context_memory": "分析",
+  "pricing.free.features.community_support": "コンテキストメモリ",
+  "pricing.pro.title": "コミュニティサポート",
+  "pricing.pro.includes_free": "プロ",
+  "pricing.pro.features.github_action": "無料版のすべてに加えて：",
+  "pricing.pro.features.latest_features": "GitHubアクション統合",
+  "pricing.pro.features.priority_support": "最新機能への早期アクセス",
+  "pricing.cta": "優先サポート",
+  "createTeam.teamName": "自動化を開始",
+  "createTeam.teamNamePlaceholder": "チーム名",
+  "createTeam.createTeamButton": "チーム名を入力してください",
+  "createTeam.cancel": "チームを作成",
+  "createTeam.createTeamDescription": "キャンセル",
+  "createProject.createProjectTitle": "新しいチームを作成して、プロジェクトと協力者を管理します。",
+  "createProject.projectNamePlaceholder": "新しいプロジェクトを作成",
+  "createProject.createProjectButton": "プロジェクト名を入力してください",
+  "createProject.cancel": "プロジェクトを作成",
+  "createProject.createProjectDescription": "キャンセル",
+  "invite.inviteMember": "新しいプロジェクトを作成して、ローカライゼーションの自動化を開始します。",
+  "invite.inviteDescription": "メンバーを招待",
+  "invite.emailLabel": "チームにメンバーを招待する",
+  "invite.emailPlaceholder": "メール",
+  "invite.cancel": "メールを入力してください",
+  "invite.sendInvite": "キャンセル",
+  "invite.success.title": "招待を送信",
+  "invite.success.description": "招待が送信されました",
+  "invite.error.title": "{email}への招待が正常に送信されました",
+  "invite.error.description": "エラー",
+  "invite.validation.invalidEmail": "招待の送信に失敗しました。もう一度試してください。",
+  "months.10": "有効なメールアドレスを入力してください",
+  "months.11": "10月",
+  "months.12": "11月",
+  "months.01": "12月",
+  "months.02": "1月",
+  "months.03": "2月",
+  "months.04": "3月",
+  "months.05": "4月",
+  "months.06": "5月",
+  "months.07": "6月",
+  "months.08": "7月",
+  "months.09": "8月",
+  "onboarding.steps.1.title": "9月",
+  "onboarding.steps.1.description": "Languine CLIのセットアップ",
+  "onboarding.steps.2.title": "Languine CLIをインストールして設定し、翻訳を管理します",
+  "onboarding.steps.2.description": "翻訳をプッシュ",
+  "onboarding.steps.3.title": "翻訳がプッシュされるのを待っています",
+  "onboarding.steps.3.description": "ドキュメント",
+  "onboarding.steps.3.link": "詳細なガイドとベストプラクティスについては、ドキュメントをチェックしてください",
+  "onboarding.info.description": "ドキュメント",
+  "onboarding.info.link": "助けが必要ですか？詳細なガイドとベストプラクティスについては、",
+  "onboarding.info.description_2": "ドキュメント",
+  "cli.success.title": "をチェックしてください。",
+  "cli.success.description": "Languine CLIログイン成功",
+  "cli.success.description_2": "Languine CLIは次のように正常に認証されました：",
+  "translations.header": "に同意するものとします。",
+  "search.placeholder": "このタブを閉じてCLIに戻ることができます",
+  "periods.daily": "検索",
+  "periods.weekly": "毎日",
+  "periods.monthly": "毎週",
+  "periods.selectPeriod": "毎月",
+  "welcome.title": "Languineへようこそ",
+  "welcome.description": "Languineでローカライゼーションプロセスを自動化",
+  "button.update": "新しい翻訳",
+  "update.button": "新しい翻訳",
+  "hero2.title": "アプリケーションの自動ローカライズ",
+  "hero2.description": "AI搭載のCLIとパイプラインを使用して、開発者向けの翻訳を自動化し、ローカライズプロセスを効率化します。",
+  "language.en": "期間を選択",
+  "language.es": "英語",
+  "language.fr": "スペイン語",
+  "language.de": "フランス語",
+  "language.it": "ドイツ語",
+  "language.pt": "イタリア語",
+  "language.zh": "ポルトガル語",
+  "language.ja": "中国語",
+  "language.ko": "日本語",
+  "language.ar": "韓国語",
+  "language.hi": "アラビア語",
+  "language.tr": "ヒンディー語",
+  "language.nl": "トルコ語",
+  "language.pl": "オランダ語",
+  "language.no": "ポーランド語",
+  "language.da": "ノルウェー語",
+  "language.sv": "デンマーク語",
+  "language.fi": "スウェーデン語",
+  "language.vi": "フィンランド語"
 } as const;
