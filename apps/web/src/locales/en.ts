@@ -30,6 +30,10 @@ export default {
     noResults: "No results for '{search}'",
     clearSearch: "Clear search",
     loadMore: "Show more",
+    type: {
+      key: "Key",
+      document: "Document",
+    },
   },
   features: {
     title: "Features",
@@ -193,28 +197,6 @@ export default {
       provider: "Provider",
       billing: "Billing",
     },
-    provider: {
-      updateSuccess: "Settings updated successfully",
-      updateError: "Failed to update settings",
-      translationProvider: {
-        title: "Translation Provider",
-        description:
-          "Choose your preferred AI service for generating translations. Each provider offers different capabilities and pricing.",
-        placeholder: "Select a provider",
-      },
-      languageModel: {
-        title: "Language Model",
-        description:
-          "Select the AI model that best balances quality and speed for your translation needs. More powerful models may be slower but produce better results.",
-        placeholder: "Select a model",
-      },
-      apiKey: {
-        title: "Provider API Key",
-        description:
-          "Enter your API key to authenticate with your chosen provider. Keep this key secure - we encrypt it before storing.",
-        placeholder: "Enter your API key",
-      },
-    },
     addProject: "Create project",
     project: {
       name: {
@@ -325,6 +307,11 @@ export default {
     formality: {
       title: "Formality",
       description: "Control the formality level of translations",
+      options: {
+        casual: "Casual",
+        formal: "Formal",
+        neutral: "Neutral",
+      },
     },
     brandName: {
       title: "Brand Name",
@@ -336,7 +323,48 @@ export default {
       description: "Define your brand voice and tone",
       placeholder: "Describe your brand voice...",
     },
-    localization: "Localization",
+    toneOfVoice: {
+      title: "Tone of Voice",
+      description: "Define the tone used in translations",
+      options: {
+        casual: "Casual",
+        formal: "Formal",
+        friendly: "Friendly",
+        professional: "Professional",
+        playful: "Playful",
+        serious: "Serious",
+        confident: "Confident",
+        humble: "Humble",
+        direct: "Direct",
+        diplomatic: "Diplomatic",
+      },
+    },
+    brand: "Brand",
+    emotiveIntent: {
+      title: "Emotive Intent",
+      description: "Set the emotional tone for translations",
+      options: {
+        neutral: "Neutral",
+        positive: "Positive",
+        empathetic: "Empathetic",
+        professional: "Professional",
+        friendly: "Friendly",
+        enthusiastic: "Enthusiastic",
+      },
+    },
+    domainExpertise: {
+      title: "Domain Expertise",
+      description: "Specify the domain context for translations",
+      options: {
+        general: "General",
+        technical: "Technical",
+        medical: "Medical",
+        legal: "Legal",
+        financial: "Financial",
+        marketing: "Marketing",
+        academic: "Academic",
+      },
+    },
     idioms: {
       title: "Idioms",
       description: "Handle idiomatic expressions appropriately",
@@ -485,5 +513,12 @@ export default {
     sv: "Swedish",
     fi: "Finnish",
     vi: "Vietnamese",
+  },
+  billing: {
+    title: "Billing",
+  },
+  analytics: {
+    key: "Translated keys",
+    document: "Translated documents",
   },
 } as const;

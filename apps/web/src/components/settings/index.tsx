@@ -6,7 +6,6 @@ import { useQueryState } from "nuqs";
 import { AccountSettings } from "./account";
 import { BillingSettings } from "./billing";
 import { ProjectSettings } from "./project";
-import { ProviderSettings } from "./provider";
 import { TeamSettings } from "./team";
 
 export function Settings() {
@@ -29,14 +28,10 @@ export function Settings() {
       id: "account",
       title: t("settings.tabs.account"),
     },
-    // {
-    //   id: "provider",
-    //   title: t("settings.tabs.provider"),
-    // },
-    // {
-    //   id: "billing",
-    //   title: t("settings.tabs.billing"),
-    // },
+    {
+      id: "billing",
+      title: t("settings.tabs.billing"),
+    },
   ];
 
   return (
@@ -65,10 +60,6 @@ export function Settings() {
 
       <TabsContent value="account">
         <AccountSettings />
-      </TabsContent>
-
-      <TabsContent value="provider">
-        <ProviderSettings />
       </TabsContent>
 
       <TabsContent value="billing">

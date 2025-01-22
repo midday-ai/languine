@@ -1,19 +1,13 @@
-import { getTranslationsBySlug } from "@/db/queries/translate";
-import { z } from "zod";
+import { deleteKeys, getTranslationsBySlug } from "@/db/queries/translate";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import { isOrganizationMember } from "../permissions/organization";
+import { hasProjectAccess } from "../permissions/project";
+import { deleteKeysSchema, translateSchema } from "./schema";
 
 export const translateRouter = createTRPCRouter({
   getTranslationsBySlug: protectedProcedure
-    .input(
-      z.object({
-        organizationId: z.string(),
-        cursor: z.string().nullish(),
-        slug: z.string(),
-        limit: z.number().optional(),
-        search: z.string().nullish().optional(),
-      }),
-    )
+    .input(translateSchema)
     .use(isOrganizationMember)
     .query(async ({ input }) => {
       const data = await getTranslationsBySlug(input);
@@ -22,5 +16,15 @@ export const translateRouter = createTRPCRouter({
         ...translations,
         createdAt: translations.createdAt.toISOString(),
       }));
+    }),
+
+  deleteKeys: protectedProcedure
+    .use(rateLimitMiddleware)
+    .input(deleteKeysSchema)
+    .use(hasProjectAccess)
+    .mutation(async ({ input }) => {
+      const data = await deleteKeys(input);
+
+      return data;
     }),
 });

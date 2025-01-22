@@ -1,22 +1,11 @@
 import { getAnalytics } from "@/db/queries/analytics";
-import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 import { isOrganizationMember } from "../permissions/organization";
+import { analyticsSchema } from "./schema";
 
 export const analyticsRouter = createTRPCRouter({
   getProjectStats: protectedProcedure
-    .input(
-      z.object({
-        projectSlug: z.string(),
-        startDate: z.date().optional(),
-        endDate: z.date().optional(),
-        organizationId: z.string(),
-        period: z
-          .enum(["monthly", "weekly", "daily"])
-          .optional()
-          .default("daily"),
-      }),
-    )
+    .input(analyticsSchema)
     .use(isOrganizationMember)
     .query(async ({ input }) => {
       const analytics = await getAnalytics({

@@ -12,7 +12,7 @@ export class JavaScriptParser extends BaseParser {
       this.findExplicitDotKeys(cleanInput, explicitDotKeys);
 
       // Then flatten while preserving explicit dot notation
-      return this.flattenPreservingExplicit(parsed, explicitDotKeys);
+      return this.flattenObject(parsed);
     } catch (error) {
       throw new Error(
         `Failed to parse JavaScript/TypeScript: ${error instanceof Error ? error.message : String(error)}`,
@@ -21,78 +21,108 @@ export class JavaScriptParser extends BaseParser {
   }
 
   async serialize(
-    _locale: string,
+    _: string,
     data: Record<string, string>,
-    originalData?: Record<string, unknown>,
+    originalData?: string | Record<string, unknown>,
+    sourceData?: string | Record<string, unknown>,
   ): Promise<string> {
+    let content: string;
+
+    if (sourceData) {
+      // If we have source data, use its format as a template
+      const isNestedFormat =
+        typeof sourceData === "string"
+          ? this.isNestedObjectFormat(sourceData)
+          : this.hasNestedObjects(sourceData);
+
+      content = isNestedFormat
+        ? this.formatNestedObject(data)
+        : this.formatFlatObject(data);
+    } else if (originalData) {
+      // Fall back to original data format if source not available
+      const isNestedFormat =
+        typeof originalData === "string"
+          ? this.isNestedObjectFormat(originalData)
+          : this.hasNestedObjects(originalData);
+
+      content = isNestedFormat
+        ? this.formatNestedObject(data)
+        : this.formatFlatObject(data);
+    } else {
+      // Default to flat object with dot notation
+      content = this.formatFlatObject(data);
+    }
+
+    return this.wrapInExport(content);
+  }
+
+  private isNestedObjectFormat(data: string): boolean {
     try {
-      let formatted: string;
-      if (originalData) {
-        // If we have original data, try to preserve its structure
-        const explicitDotKeys = new Set<string>();
-        const nestedPaths = new Set<string>();
+      const cleanInput = this.preprocessInput(data);
+      const parsed = this.evaluateJavaScript(cleanInput);
+      return this.hasNestedObjects(parsed);
+    } catch {
+      return false;
+    }
+  }
 
-        // Find both explicit dot keys and nested paths from original
-        const originalStr = JSON.stringify(originalData);
-        this.findExplicitDotKeys(originalStr, explicitDotKeys);
-        this.findNestedPaths(originalData, nestedPaths);
+  private hasNestedObjects(obj: unknown): boolean {
+    if (typeof obj !== "object" || obj === null) return false;
 
-        // Split data into nested and flat based on original structure
-        const [nested, flat] = this.partitionKeys(
-          data,
-          explicitDotKeys,
-          nestedPaths,
-        );
-        formatted = this.formatMixedObject(nested, flat, explicitDotKeys);
-      } else {
-        // Default to flat structure if no original data
-        // Treat all dot notation keys as explicit
-        const explicitDotKeys = new Set<string>();
-        for (const key of Object.keys(data)) {
-          if (key.includes(".")) {
-            explicitDotKeys.add(key);
-          }
-        }
-        formatted = this.formatMixedObject({}, data, explicitDotKeys);
+    for (const value of Object.values(obj)) {
+      if (typeof value === "object" && value !== null) {
+        return true;
       }
-      return this.wrapInExport(formatted);
-    } catch (error) {
-      throw new Error(
-        `Failed to serialize JavaScript/TypeScript: ${error instanceof Error ? error.message : String(error)}`,
-      );
     }
+    return false;
   }
 
-  private preprocessInput(input: string): string {
-    let processed = input.trim();
-
-    if (processed.startsWith("export default")) {
-      processed = processed.slice("export default".length).trim();
+  private formatNestedObject(data: Record<string, string>): string {
+    if (Object.keys(data).length === 0) {
+      return "{}";
     }
 
-    if (processed.endsWith("as const;")) {
-      processed = processed.slice(0, -"as const;".length).trim();
-    } else if (processed.endsWith("as const")) {
-      processed = processed.slice(0, -"as const".length).trim();
+    // Group by common prefixes
+    const groups: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(data)) {
+      const parts = key.split(".");
+      let current = groups;
+      for (let i = 0; i < parts.length - 1; i++) {
+        const part = parts[i];
+        if (!(part in current)) {
+          current[part] = {};
+        }
+        current = current[part] as Record<string, unknown>;
+      }
+      const lastPart = parts[parts.length - 1];
+      current[lastPart] = value;
     }
 
-    return processed;
+    return this.formatObjectRecursive(groups);
   }
 
-  private evaluateJavaScript(input: string): unknown {
-    try {
-      return new Function(`return ${input};`)();
-    } catch (error) {
-      throw new Error(`Invalid JavaScript syntax: ${(error as Error).message}`);
+  private formatObjectRecursive(
+    obj: Record<string, unknown>,
+    level = 1,
+  ): string {
+    if (Object.keys(obj).length === 0) {
+      return "{}";
     }
-  }
 
-  private validateParsedObject(
-    parsed: unknown,
-  ): asserts parsed is Record<string, unknown> {
-    if (typeof parsed !== "object" || parsed === null) {
-      throw new Error("Translation file must export an object");
-    }
+    const indent = "  ".repeat(level);
+    const entries = Object.entries(obj).map(([key, value]) => {
+      const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
+      const formattedValue =
+        typeof value === "object" && value !== null
+          ? this.formatObjectRecursive(
+              value as Record<string, unknown>,
+              level + 1,
+            )
+          : `"${String(value).replace(/"/g, '\\"')}"`;
+      return `${indent}${formattedKey}: ${formattedValue}`;
+    });
+
+    return `{\n${entries.join(",\n")}\n${"  ".repeat(level - 1)}}`;
   }
 
   private formatFlatObject(obj: Record<string, string>): string {
@@ -132,6 +162,57 @@ export class JavaScriptParser extends BaseParser {
     return `export default ${content} as const;\n`;
   }
 
+  private preprocessInput(input: string): string {
+    let processed = input.trim();
+
+    if (processed.startsWith("export default")) {
+      processed = processed.slice("export default".length).trim();
+    }
+
+    if (processed.endsWith("as const;")) {
+      processed = processed.slice(0, -"as const;".length).trim();
+    } else if (processed.endsWith("as const")) {
+      processed = processed.slice(0, -"as const".length).trim();
+    }
+
+    return processed;
+  }
+
+  private evaluateJavaScript(input: string): unknown {
+    try {
+      return new Function(`return ${input};`)();
+    } catch (error) {
+      throw new Error(`Invalid JavaScript syntax: ${(error as Error).message}`);
+    }
+  }
+
+  private validateParsedObject(
+    parsed: unknown,
+  ): asserts parsed is Record<string, string | Record<string, unknown>> {
+    if (typeof parsed !== "object" || parsed === null) {
+      throw new Error("Translation file must export an object");
+    }
+
+    const validateValue = (value: unknown, path: string[]): void => {
+      if (typeof value === "string") {
+        return;
+      }
+      if (typeof value === "object" && value !== null) {
+        for (const [key, val] of Object.entries(value)) {
+          validateValue(val, [...path, key]);
+        }
+        return;
+      }
+      throw new Error(
+        `Invalid translation value at ${path.join(".")}: values must be strings or nested objects with string values`,
+      );
+    };
+
+    for (const [key, value] of Object.entries(parsed)) {
+      validateValue(value, [key]);
+    }
+  }
+
   private findExplicitDotKeys(input: string, keys: Set<string>) {
     // Match both quoted and unquoted keys that contain dots
     const keyRegex = /(?:"([^"]+)"|'([^']+)'|([^{},\s:]+))(?=\s*:)/g;
@@ -148,187 +229,22 @@ export class JavaScriptParser extends BaseParser {
     } while (match);
   }
 
-  private findNestedPaths(
+  private flattenObject(
     obj: Record<string, unknown>,
-    paths: Set<string>,
-    prefix = "",
-  ) {
-    for (const [key, value] of Object.entries(obj)) {
-      const fullPath = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === "object" && value !== null) {
-        paths.add(fullPath);
-        this.findNestedPaths(value as Record<string, unknown>, paths, fullPath);
-      }
-    }
-  }
-
-  private partitionKeys(
-    data: Record<string, string>,
-    explicitDotKeys: Set<string>,
-    nestedPaths: Set<string>,
-  ): [Record<string, string>, Record<string, string>] {
-    const nested: Record<string, string> = {};
-    const flat: Record<string, string> = {};
-
-    for (const [key, value] of Object.entries(data)) {
-      const parts = key.split(".");
-      const rootPath = parts[0];
-
-      // Check if this key should be nested based on the original structure
-      let shouldNest = false;
-      for (const path of nestedPaths) {
-        if (key.startsWith(`${path}.`) || key === path) {
-          shouldNest = true;
-          break;
-        }
-      }
-
-      // If the key contains dots and is not in nestedPaths, treat it as an explicit dot key
-      if (key.includes(".") && !shouldNest) {
-        flat[key] = value;
-      } else if (explicitDotKeys.has(key) || explicitDotKeys.has(rootPath)) {
-        flat[key] = value;
-      } else {
-        nested[key] = value;
-      }
-    }
-
-    return [nested, flat];
-  }
-
-  private formatMixedObject(
-    nested: Record<string, string>,
-    flat: Record<string, string>,
-    explicitDotKeys: Set<string>,
-  ): string {
-    if (Object.keys(nested).length === 0 && Object.keys(flat).length === 0) {
-      return "{}";
-    }
-
-    const parts: string[] = [];
-
-    // Format nested structure
-    if (Object.keys(nested).length > 0) {
-      const nestedObj = this.buildNestedObject(nested, explicitDotKeys);
-      const nestedEntries = Object.entries(nestedObj).map(([key, value]) => {
-        const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
-        const formattedValue =
-          typeof value === "object" && value !== null
-            ? this.formatObjectLiteral(value as Record<string, unknown>, 2)
-            : `"${String(value).replace(/"/g, '\\"')}"`;
-        return `  ${formattedKey}: ${formattedValue}`;
-      });
-      parts.push(...nestedEntries);
-    }
-
-    // Format flat structure
-    if (Object.keys(flat).length > 0) {
-      const flatEntries = Object.entries(flat).map(([key, value]) => {
-        const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
-        const formattedValue = `"${String(value).replace(/"/g, '\\"')}"`;
-        return `  ${formattedKey}: ${formattedValue}`;
-      });
-      parts.push(...flatEntries);
-    }
-
-    return `{\n${parts.join(",\n")}\n}`;
-  }
-
-  private buildNestedObject(
-    flat: Record<string, string>,
-    explicitDotKeys: Set<string>,
-  ): Record<string, unknown> {
-    const result: Record<string, unknown> = {};
-
-    for (const [key, value] of Object.entries(flat)) {
-      // If this is an explicit dot key or contains dots but isn't marked for nesting, keep it flat
-      if (
-        explicitDotKeys.has(key) ||
-        (key.includes(".") && !this.shouldNestKey(key, explicitDotKeys))
-      ) {
-        result[key] = value;
-      } else {
-        const parts = key.split(".");
-        if (parts.length === 1) {
-          // This is a top-level key
-          result[key] = value;
-        } else {
-          // This is a nested key
-          let current = result;
-          for (let i = 0; i < parts.length - 1; i++) {
-            const part = parts[i];
-            if (!(part in current)) {
-              current[part] = {};
-            }
-            current = current[part] as Record<string, unknown>;
-          }
-          current[parts[parts.length - 1]] = value;
-        }
-      }
-    }
-
-    return result;
-  }
-
-  private shouldNestKey(key: string, explicitDotKeys: Set<string>): boolean {
-    const parts = key.split(".");
-    // Check if any parent path is an explicit dot key
-    for (let i = 1; i < parts.length; i++) {
-      const parentPath = parts.slice(0, i).join(".");
-      if (explicitDotKeys.has(parentPath)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private formatObjectLiteral(obj: Record<string, unknown>, level = 1): string {
-    if (Object.keys(obj).length === 0) {
-      return "{}";
-    }
-
-    const indent = "  ".repeat(level);
-    const entries = Object.entries(obj).map(([key, value]) => {
-      const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
-      const formattedValue =
-        typeof value === "object" && value !== null
-          ? this.formatObjectLiteral(
-              value as Record<string, unknown>,
-              level + 1,
-            )
-          : `"${String(value).replace(/"/g, '\\"')}"`;
-      return `${indent}${formattedKey}: ${formattedValue}`;
-    });
-
-    return `{\n${entries.join(",\n")}\n${"  ".repeat(level - 1)}}`;
-  }
-
-  private flattenPreservingExplicit(
-    obj: Record<string, unknown>,
-    explicitDotKeys: Set<string>,
     prefix = "",
   ): Record<string, string> {
     const result: Record<string, string> = {};
 
     for (const [key, value] of Object.entries(obj)) {
-      const fullKey = prefix ? `${prefix}.${key}` : key;
+      const fullPath = prefix ? `${prefix}.${key}` : key;
 
       if (typeof value === "string") {
-        result[fullKey] = value;
+        result[fullPath] = value;
       } else if (typeof value === "object" && value !== null) {
-        // If this is an explicit dot key, skip flattening this branch
-        if (explicitDotKeys.has(fullKey)) {
-          continue;
-        }
-
-        const nested = this.flattenPreservingExplicit(
-          value as Record<string, unknown>,
-          explicitDotKeys,
-          fullKey,
+        Object.assign(
+          result,
+          this.flattenObject(value as Record<string, unknown>, fullPath),
         );
-        Object.assign(result, nested);
-      } else {
-        throw new Error(`Invalid translation value for key "${fullKey}"`);
       }
     }
 

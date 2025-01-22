@@ -1,11 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { ChartContainer, ChartTooltip } from "@/components/ui/chart";
 import type { ChartConfig } from "@/components/ui/chart";
 import { Skeleton } from "@/components/ui/skeleton";
 import { usePeriod } from "@/hooks/use-period";
@@ -14,14 +10,65 @@ import { trpc } from "@/trpc/client";
 import NumberFlow from "@number-flow/react";
 import { endOfWeek, format, parseISO, startOfWeek } from "date-fns";
 import { useParams } from "next/navigation";
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import { Bar, CartesianGrid, ComposedChart, XAxis, YAxis } from "recharts";
 import { PeriodSelector } from "../period-selector";
 
 const chartConfig = {
   value: {
-    color: "hsl(var(--chart-1))",
+    color: "#646464",
+  },
+  value2: {
+    color: "#424242",
   },
 } satisfies ChartConfig;
+
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: Array<{
+    value: number;
+    name: string;
+    payload: {
+      label: string;
+    };
+  }>;
+}
+
+function TooltipContent({ active, payload }: CustomTooltipProps) {
+  const t = useI18n();
+
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-[#1D1D1D]">
+        <div className="border-b-[1px] border-background p-2 uppercase font-medium">
+          <span>{payload[0]?.payload?.label}</span>
+        </div>
+
+        <div className="flex flex-col gap-2 p-2">
+          <div className="flex items-center gap-2">
+            <div
+              className="h-2 w-2 rounded-full"
+              style={{ background: "var(--color-value)" }}
+            />
+            <span>
+              {payload[0].value} {t("analytics.key")}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div
+              className="h-2 w-2 rounded-full"
+              style={{ background: "var(--color-value2)" }}
+            />
+            <span>
+              {payload[1].value} {t("analytics.document")}
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
 
 export function AnalyticsChart() {
   const t = useI18n();
@@ -57,9 +104,11 @@ export function AnalyticsChart() {
           <span className="text-muted-foreground">
             {t("translations.header")}
           </span>
-          <span className="text-primary text-2xl mt-2">
-            <NumberFlow value={totalKeys} />
-          </span>
+          <div className="flex gap-4">
+            <span className="text-primary text-2xl mt-2">
+              <NumberFlow value={totalKeys} />
+            </span>
+          </div>
         </div>
 
         <div>
@@ -69,8 +118,8 @@ export function AnalyticsChart() {
 
       <CardContent className="mt-4">
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
-          <BarChart accessibilityLayer data={translatedData}>
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+          <ComposedChart accessibilityLayer data={translatedData}>
+            <ChartTooltip cursor={false} content={<TooltipContent />} />
 
             <XAxis
               dataKey="label"
@@ -99,13 +148,27 @@ export function AnalyticsChart() {
               }}
             />
             <CartesianGrid
-              strokeDasharray="3 3"
+              strokeDasharray="4 4"
               vertical={false}
-              className="stoke-[#DCDAD2] dark:stroke-[#2C2C2C]"
+              className="stoke-[#2C2C2C] dark:stroke-[#4f4e4e]"
             />
 
-            <Bar dataKey="count" fill="var(--color-value)" barSize={36} />
-          </BarChart>
+            <Bar
+              dataKey="keyCount"
+              name="Keys"
+              fill="var(--color-value)"
+              barSize={36}
+              stackId="a"
+            />
+
+            <Bar
+              dataKey="documentCount"
+              name="Documents"
+              fill="var(--color-value2)"
+              barSize={36}
+              stackId="a"
+            />
+          </ComposedChart>
         </ChartContainer>
       </CardContent>
     </Card>

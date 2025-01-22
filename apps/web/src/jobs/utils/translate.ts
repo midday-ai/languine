@@ -29,6 +29,7 @@ export async function translateKeys(
   const { object } = await generateObject({
     ...chooseModel(totalItems),
     prompt,
+    mode: "json",
     schema: z.object({
       content: z.array(z.string()),
     }),

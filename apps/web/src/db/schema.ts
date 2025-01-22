@@ -263,9 +263,6 @@ export const projectSettings = sqliteTable(
       .default("general"),
     // Tuning end
 
-    provider: text("provider").notNull().default("openai"),
-    model: text("model").notNull().default("gpt-4-turbo"),
-    providerApiKey: text("provider_api_key"),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .$defaultFn(() => new Date()),
@@ -315,6 +312,8 @@ export const translations = sqliteTable(
       .references(() => organizations.id, { onDelete: "cascade" }),
     userId: text("user_id").references(() => users.id, { onDelete: "cascade" }),
     sourceFormat: text("source_format").notNull(),
+    sourceFile: text("source_file").notNull(),
+    sourceType: text("source_type").default("key").notNull(),
     sourceLanguage: text("source_language").notNull(),
     targetLanguage: text("target_language").notNull(),
     translationKey: text("translation_key").notNull(),
@@ -345,51 +344,5 @@ export const translations = sqliteTable(
     index("source_language_idx").on(table.sourceLanguage),
     index("target_language_idx").on(table.targetLanguage),
     index("translations_project_id_idx").on(table.projectId),
-  ],
-);
-
-export const documents = sqliteTable(
-  "documents",
-  {
-    id: text()
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    projectId: text("project_id")
-      .notNull()
-      .references(() => projects.id, { onDelete: "cascade" }),
-    organizationId: text("organization_id")
-      .notNull()
-      .references(() => organizations.id, { onDelete: "cascade" }),
-    userId: text("user_id").references(() => users.id, { onDelete: "cascade" }),
-    sourceFormat: text("source_format").notNull(),
-    sourceLanguage: text("source_language").notNull(),
-    targetLanguage: text("target_language").notNull(),
-    sourceText: text("source_text").notNull(),
-    translatedText: text("translated_text").notNull(),
-    name: text("document_name").notNull(),
-    branch: text("branch"),
-    commit: text("commit"),
-    commitLink: text("commit_link"),
-    sourceProvider: text("source_provider"),
-    commitMessage: text("commit_message"),
-    createdAt: integer("created_at", { mode: "timestamp" })
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" })
-      .notNull()
-      .$defaultFn(() => new Date()),
-  },
-  (table) => [
-    index("project_documents_idx").on(table.projectId),
-    index("documents_created_at_idx").on(table.createdAt),
-    uniqueIndex("unique_document_idx").on(
-      table.projectId,
-      table.targetLanguage,
-      table.name,
-    ),
-    index("org_documents_idx").on(table.organizationId),
-    index("documents_source_language_idx").on(table.sourceLanguage),
-    index("documents_target_language_idx").on(table.targetLanguage),
-    index("documents_project_id_idx").on(table.projectId),
   ],
 );

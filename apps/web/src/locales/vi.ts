@@ -1,477 +1,335 @@
 export default {
-  header: {
-    pricing: "Giá cả",
-    docs: "Tài liệu",
-    signIn: "Đăng nhập",
-    goToApp: "Truy cập ứng dụng"
-  },
-  hero: {
-    title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển."
-  },
-  getStarted: {
-    heading: "Bắt đầu",
-    title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển.",
-    button: {
-      startAutomating: "Bắt đầu tự động hóa",
-      readDocumentation: "Đọc tài liệu"
-    }
-  },
-  companies: {
-    title: "Được sử dụng bởi",
-    addYourCompany: "+ Thêm công ty của bạn"
-  },
-  activity: {
-    title: "Hoạt động",
-    loading: "Đang tải",
-    loadMore: "Hiển thị thêm",
-    noResults: "Không có kết quả cho '{search}'",
-    clearSearch: "Xóa tìm kiếm"
-  },
-  features: {
-    title: "Tính năng",
-    fullyOpenSource: "Hoàn toàn mã nguồn mở",
-    fullyOpenSourceDescription: "Mã của chúng tôi được công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
-    noVendorLockIn: "Không bị khóa bởi nhà cung cấp",
-    noVendorLockInDescription: "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
-    presetsForExpo: "Cài đặt sẵn cho Expo",
-    presetsForExpoDescription: "Chúng tôi cung cấp các cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
-    presetForReactNative: "Cài đặt sẵn cho React Native",
-    presetForReactNativeDescription: "Chúng tôi cung cấp một cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
-    presetForReactEmail: "Thư viện React Email",
-    presetForReactEmailDescription: "Chúng tôi đã tạo một thư viện i18n cho React Email.",
-    readyForI18nLibraries: "Sẵn sàng cho các thư viện i18n",
-    readyForI18nLibrariesDescription: "Chúng tôi hỗ trợ tất cả các thư viện bao gồm cả những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
-  },
-  info: {
-    title: "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
-    smartTranslation: {
-      title: "Dịch thuật thông minh",
-      intelligentTranslation: "Dịch thuật thông minh với nhận thức ngữ cảnh",
-      brandVoice: "Nhất quán giọng điệu và phong cách thương hiệu",
-      terminology: "Quản lý thuật ngữ",
-      linguisticFeatures: "Tính năng ngôn ngữ học nâng cao",
-      realtimeUpdates: "Cập nhật bản dịch thời gian thực"
-    },
-    implementation: {
-      title: "Triển khai",
-      quickSetup: "Thiết lập và tích hợp nhanh chóng",
-      fileFormat: "Xử lý định dạng tệp",
-      contentStructure: "Tổ chức cấu trúc nội dung",
-      assetOrganization: "Tổ chức tài sản"
-    },
-    developer: {
-      title: "Trải nghiệm nhà phát triển",
-      cli: "Giao diện dòng lệnh",
-      cicd: "Tích hợp CI/CD",
-      versionControl: "Kiểm soát phiên bản",
-      workflow: "Quy trình làm việc của nhà phát triển",
-      documentation: "Tài liệu toàn diện"
-    }
-  },
-  login: {
-    title: "Đăng nhập",
-    github: "Đăng nhập với GitHub",
-    google: "Đăng nhập với Google",
-    footer: "Tự động hóa bản địa hóa của bạn.",
-    description: "Đăng nhập để bắt đầu tự động hóa bản địa hóa của bạn trong vài giây.",
-    terms: {
-      text: "Bằng cách đăng nhập, bạn đồng ý với",
-      termsOfService: "Điều khoản dịch vụ",
-      and: "và",
-      privacyPolicy: "Chính sách bảo mật"
-    }
-  },
-  userMenu: {
-    account: "Cài đặt tài khoản",
-    signOut: "Đăng xuất",
-    createTeam: "Tạo nhóm",
-    homepage: "Trang chủ",
-    team: "Cài đặt nhóm"
-  },
-  teamSelector: {
-    addProject: "Tạo dự án",
-    createProjectTitle: "Tạo một dự án mới",
-    projectNamePlaceholder: "Tên dự án",
-    createProjectButton: "Tạo dự án",
-    pro: "Pro",
-    project: "Dự án",
-    teams: "Nhóm",
-    createTeam: "Tạo nhóm",
-    createTeamTitle: "Tạo một nhóm mới",
-    teamNamePlaceholder: "Tên nhóm",
-    createTeamButton: "Tạo nhóm"
-  },
-  coming_soon: {
-    title: "Languine đang trong giai đoạn Truy cập Sớm",
-    description: "Chúng tôi hiện đang trong giai đoạn truy cập sớm. Liên hệ với",
-    cta: "trên X để được truy cập sớm."
-  },
-  account: {
-    fullName: {
-      title: "Họ và tên",
-      description: "Họ và tên của bạn sẽ xuất hiện trên toàn bộ nền tảng.",
-      placeholder: "Nhập họ và tên của bạn"
-    },
-    email: {
-      title: "Địa chỉ email",
-      description: "Địa chỉ email liên kết với tài khoản của bạn.",
-      placeholder: "Nhập địa chỉ email của bạn"
-    },
-    apiKey: {
-      title: "Khóa API",
-      description: "Khóa API cá nhân của bạn để truy cập API Languine và từ CLI."
-    },
-    deleteAccount: {
-      title: "Xóa tài khoản",
-      description: "Xóa vĩnh viễn tài khoản của bạn và tất cả dữ liệu liên quan. Hành động này không thể hoàn tác.",
-      button: "Xóa tài khoản"
-    }
-  },
-  copyInstall: {
-    copied: "Đã sao chép vào clipboard"
-  },
-  dangerZone: {
-    dialog: {
-      title: "Bạn có chắc chắn không?",
-      description: "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
-      placeholder: "Nhập DELETE để xác nhận",
-      confirm: "Xác nhận xóa",
-      cancel: "Hủy bỏ"
-    }
-  },
-  pipeline: {
-    title: "Quy trình làm việc (CI/CD Pipeline)",
-    pro: "[pro]",
-    description: "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi có thay đổi mã được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu thương hiệu và thuật ngữ của bạn. Các bản dịch sau đó được gửi dưới dạng pull request, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển."
-  },
-  settings: {
-    badRequest: "Yêu cầu không hợp lệ",
-    badRequestDescription: "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
-    permissionDenied: "Từ chối quyền",
-    permissionDeniedDescription: "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
-    deleteTeamTitle: "Xóa nhóm",
-    deleteTeamDescription: "Không thể xóa tổ chức khi bạn là thành viên duy nhất, thay vào đó hãy xóa tài khoản của bạn",
-    saved: "Cài đặt đã được lưu",
-    savedDescription: "Thay đổi của bạn đã được lưu thành công",
-    error: "Đã xảy ra lỗi",
-    errorDescription: "Vui lòng thử lại hoặc liên hệ hỗ trợ",
-    addTeam: "Tạo nhóm",
-    apiKey: {
-      updated: "Khóa API đã được cập nhật",
-      updatedDescription: "Khóa API của bạn đã được cập nhật thành công và sao chép vào clipboard của bạn.",
-      title: "Cập nhật Khóa API",
-      description: "Bạn có chắc chắn muốn tạo một khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
-      cancel: "Hủy bỏ",
-      "continue": "Tiếp tục"
-    },
-    tabs: {
-      project: "Dự án",
-      account: "Tài khoản",
-      team: "Nhóm",
-      provider: "Nhà cung cấp",
-      billing: "Thanh toán"
-    },
-    provider: {
-      updateSuccess: "Cài đặt đã được cập nhật thành công",
-      updateError: "Không thể cập nhật cài đặt",
-      translationProvider: {
-        title: "Nhà cung cấp dịch thuật",
-        description: "Chọn dịch vụ AI ưa thích của bạn để tạo bản dịch. Mỗi nhà cung cấp cung cấp các khả năng và giá cả khác nhau.",
-        placeholder: "Chọn nhà cung cấp"
-      },
-      languageModel: {
-        title: "Mô hình ngôn ngữ",
-        description: "Chọn mô hình AI cân bằng tốt nhất giữa chất lượng và tốc độ cho nhu cầu dịch thuật của bạn. Các mô hình mạnh hơn có thể chậm hơn nhưng tạo ra kết quả tốt hơn.",
-        placeholder: "Chọn một mô hình"
-      },
-      apiKey: {
-        title: "Khóa API của nhà cung cấp",
-        description: "Nhập khóa API của bạn để xác thực với nhà cung cấp đã chọn. Giữ khóa này an toàn - chúng tôi mã hóa nó trước khi lưu trữ.",
-        placeholder: "Nhập khóa API của bạn"
-      }
-    },
-    addProject: "Tạo dự án",
-    project: {
-      name: {
-        title: "Tên dự án",
-        description: "Tên của dự án của bạn",
-        placeholder: "Nhập tên dự án"
-      },
-      id: {
-        title: "ID dự án",
-        description: "Định danh duy nhất của dự án của bạn",
-        placeholder: "ID dự án"
-      },
-      "delete": {
-        title: "Xóa dự án",
-        description: "Xóa vĩnh viễn dự án này và tất cả dữ liệu của nó",
-        button: "Xóa dự án"
-      }
-    },
-    save: "Lưu",
-    team: {
-      name: {
-        title: "Tên nhóm",
-        description: "Tên của nhóm của bạn",
-        placeholder: "Nhập tên nhóm"
-      },
-      billing: {
-        title: "Kế hoạch thanh toán",
-        description: "Quản lý kế hoạch thanh toán của nhóm bạn",
-        free: "Miễn phí",
-        pro: "Pro",
-        unlimited: "Không giới hạn"
-      },
-      apiKey: {
-        title: "Khóa API của nhóm",
-        description: "Khóa API để truy cập nhóm, sử dụng từ pipeline CI/CD của bạn cùng với ID dự án",
-        placeholder: "Khóa API của nhóm"
-      },
-      members: {
-        leaveTeamConfirm: "Rời nhóm",
-        leaveTeamDescription: "Bạn có chắc chắn muốn rời nhóm này không?",
-        cancel: "Hủy bỏ",
-        leaveTeam: "Rời nhóm",
-        invite: "Mời thành viên",
-        title: "Thành viên",
-        pendingInvitations: "Lời mời đang chờ",
-        removeMember: "Xóa thành viên",
-        removeMemberConfirm: "Xóa thành viên",
-        removeMemberDescription: "Bạn có chắc chắn muốn xóa thành viên này không?",
-        filterPlaceholder: "Lọc thành viên...",
-        allRoles: "Tất cả vai trò",
-        date: "Ngày",
-        selectAll: "{count} đã chọn",
-        noPendingInvitations: "Không có lời mời đang chờ",
-        noResults: "Không tìm thấy thành viên",
-        tryDifferentSearch: "Thử tìm kiếm khác",
-        inviteMembers: "Mời thành viên để cộng tác",
-        deleteInvite: "Xóa lời mời",
-        deleteInviteDescription: "Xóa lời mời",
-        invitedBy: "Được mời bởi {name}",
-        deleteInviteSuccess: "Lời mời đã bị xóa",
-        deleteInviteError: "Không thể xóa lời mời",
-        removeMemberSuccess: "Thành viên đã bị xóa",
-        removeMemberError: "Không thể xóa thành viên",
-        removeMemberSuccessDescription: "Thành viên đã được xóa thành công",
-        removeMemberErrorDescription: "Không thể xóa thành viên",
-        roles: {
-          owner: "Chủ sở hữu",
-          member: "Thành viên"
-        },
-        dateSort: {
-          newest: "Mới nhất",
-          oldest: "Cũ nhất"
-        }
-      }
-    }
-  },
-  tuning: {
-    general: "Chung",
-    translationMemory: {
-      title: "Bộ nhớ dịch thuật",
-      description: "Sử dụng bộ nhớ dịch thuật để cải thiện tính nhất quán và hiệu quả"
-    },
-    qualityChecks: {
-      title: "Kiểm tra chất lượng",
-      description: "Kích hoạt kiểm tra chất lượng tự động cho bản dịch"
-    },
-    contextDetection: {
-      title: "Phát hiện ngữ cảnh",
-      description: "Tự động phát hiện và bảo tồn ngữ cảnh trong bản dịch"
-    },
-    styleGuide: "Hướng dẫn phong cách",
-    lengthControl: {
-      title: "Kiểm soát độ dài",
-      description: "Kiểm soát độ dài của văn bản dịch",
-      options: {
-        flexible: "Linh hoạt",
-        strict: "Nghiêm ngặt",
-        exact: "Chính xác",
-        loose: "Lỏng lẻo"
-      }
-    },
-    inclusiveLanguage: {
-      title: "Ngôn ngữ bao gồm",
-      description: "Đảm bảo bản dịch sử dụng ngôn ngữ bao gồm"
-    },
-    formality: {
-      title: "Mức độ trang trọng",
-      description: "Kiểm soát mức độ trang trọng của bản dịch"
-    },
-    brandName: {
-      title: "Tên thương hiệu",
-      description: "Đặt tên thương hiệu của bạn để sử dụng nhất quán",
-      placeholder: "Nhập tên thương hiệu của bạn"
-    },
-    brandVoice: {
-      title: "Giọng điệu thương hiệu",
-      description: "Xác định giọng điệu và phong cách thương hiệu của bạn",
-      placeholder: "Mô tả giọng điệu thương hiệu của bạn..."
-    },
-    localization: "Bản địa hóa",
-    idioms: {
-      title: "Thành ngữ",
-      description: "Xử lý các biểu thức thành ngữ một cách thích hợp"
-    },
-    terminology: {
-      title: "Thuật ngữ",
-      description: "Quản lý thuật ngữ chuyên ngành và bảng thuật ngữ"
-    },
-    culturalAdaptation: {
-      title: "Thích ứng văn hóa",
-      description: "Thích ứng nội dung cho phù hợp văn hóa"
-    }
-  },
-  pricing: {
-    title: "Giá cả đơn giản",
-    free: {
-      title: "Miễn phí (100 khóa)",
-      price: "Miễn phí",
-      keys_limit: "Lên đến 100 khóa",
-      features: {
-        unlimited_projects: "Dự án không giới hạn",
-        fine_tuning: "Tùy chọn tinh chỉnh",
-        overrides: "Ghi đè bản dịch",
-        analytics: "Phân tích",
-        context_memory: "Bộ nhớ ngữ cảnh",
-        community_support: "Hỗ trợ cộng đồng"
-      }
-    },
-    pro: {
-      title: "Pro",
-      includes_free: "Tất cả trong Miễn phí, cộng thêm:",
-      features: {
-        github_action: "Tích hợp GitHub Action",
-        latest_features: "Truy cập sớm các tính năng mới nhất",
-        priority_support: "Hỗ trợ ưu tiên"
-      }
-    },
-    cta: "Bắt đầu tự động hóa"
-  },
-  createTeam: {
-    teamName: "Tên nhóm",
-    teamNamePlaceholder: "Nhập tên nhóm",
-    createTeamButton: "Tạo nhóm",
-    cancel: "Hủy bỏ",
-    createTeamDescription: "Tạo một nhóm mới để quản lý dự án và cộng tác viên của bạn."
-  },
-  createProject: {
-    createProjectTitle: "Tạo một dự án mới",
-    projectNamePlaceholder: "Nhập tên dự án",
-    createProjectButton: "Tạo dự án",
-    cancel: "Hủy bỏ",
-    createProjectDescription: "Tạo một dự án mới để bắt đầu tự động hóa bản địa hóa của bạn."
-  },
-  invite: {
-    inviteMember: "Mời thành viên",
-    inviteDescription: "Mời một thành viên vào nhóm của bạn",
-    emailLabel: "Email",
-    emailPlaceholder: "Nhập email",
-    cancel: "Hủy bỏ",
-    sendInvite: "Gửi lời mời",
-    success: {
-      title: "Lời mời đã được gửi",
-      description: "Đã gửi lời mời thành công đến {email}"
-    },
-    error: {
-      title: "Lỗi",
-      description: "Không thể gửi lời mời. Vui lòng thử lại."
-    },
-    validation: {
-      invalidEmail: "Vui lòng nhập email hợp lệ"
-    }
-  },
-  months: {
-    "10": "Tháng 10",
-    "11": "Tháng 11",
-    "12": "Tháng 12",
-    "01": "Tháng 1",
-    "02": "Tháng 2",
-    "03": "Tháng 3",
-    "04": "Tháng 4",
-    "05": "Tháng 5",
-    "06": "Tháng 6",
-    "07": "Tháng 7",
-    "08": "Tháng 8",
-    "09": "Tháng 9"
-  },
-  onboarding: {
-    steps: {
-      "1": {
-        title: "Thiết lập Languine CLI",
-        description: "Cài đặt và cấu hình Languine CLI để quản lý bản dịch"
-      },
-      "2": {
-        title: "Đẩy bản dịch",
-        description: "Đang chờ bản dịch được đẩy lên"
-      },
-      "3": {
-        title: "Tài liệu",
-        description: "Kiểm tra tài liệu của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất",
-        link: "tài liệu"
-      }
-    },
-    info: {
-      description: "Cần giúp đỡ? Kiểm tra",
-      link: "tài liệu",
-      description_2: "của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất."
-    }
-  },
-  cli: {
-    success: {
-      title: "Đăng nhập CLI Languine thành công",
-      description: "CLI Languine đã được xác thực thành công như:",
-      description_2: "Bây giờ bạn có thể đóng tab này và quay lại CLI"
-    }
-  },
-  translations: {
-    header: "Các khóa đã dịch"
-  },
-  search: {
-    placeholder: "Tìm kiếm"
-  },
-  periods: {
-    daily: "Hàng ngày",
-    weekly: "Hàng tuần",
-    monthly: "Hàng tháng",
-    selectPeriod: "Chọn khoảng thời gian"
-  },
-  welcome: {
-    title: "Chào mừng đến với Languine",
-    description: "Tự động hóa quy trình dịch thuật của bạn với Languine"
-  },
-  button: {
-    update: "Dịch mới"
-  },
-  update: {
-    button: "Dịch mới"
-  },
-  hero2: {
-    title: "Tự động hóa việc dịch thuật cho ứng dụng của bạn",
-    description: "Tối ưu hóa quy trình dịch thuật của bạn với một CLI và hệ thống tự động hóa được hỗ trợ bởi AI, được thiết kế để giúp các nhà phát triển tự động hóa việc dịch thuật."
-  },
-  language: {
-    en: "Tiếng Anh",
-    es: "Tiếng Tây Ban Nha",
-    fr: "Tiếng Pháp",
-    de: "Tiếng Đức",
-    it: "Tiếng Ý",
-    pt: "Tiếng Bồ Đào Nha",
-    zh: "Tiếng Trung",
-    ja: "Tiếng Nhật",
-    ko: "Tiếng Hàn",
-    ar: "Tiếng Ả Rập",
-    hi: "Tiếng Hindi",
-    tr: "Tiếng Thổ Nhĩ Kỳ",
-    nl: "Tiếng Hà Lan",
-    pl: "Tiếng Ba Lan",
-    no: "Tiếng Na Uy",
-    da: "Tiếng Đan Mạch",
-    sv: "Tiếng Thụy Điển",
-    fi: "Tiếng Phần Lan",
-    vi: "Tiếng Việt"
-  }
+  test2: "Kiểm tra dịch với Languine",
+  "header.pricing": "Giá cả",
+  "header.docs": "Tài liệu",
+  "header.signIn": "Đăng nhập",
+  "header.goToApp": "Truy cập ứng dụng",
+  "hero.title": "Tự động hóa bản địa hóa cho ứng dụng của bạn",
+  "hero.description": "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển.",
+  "getStarted.heading": "Bắt đầu",
+  "getStarted.title": "Tự động hóa bản địa hóa cho ứng dụng của bạn",
+  "getStarted.description": "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển.",
+  "getStarted.button.startAutomating": "Bắt đầu tự động hóa",
+  "getStarted.button.readDocumentation": "Đọc tài liệu",
+  "companies.title": "Được sử dụng bởi",
+  "companies.addYourCompany": "+ Thêm công ty của bạn",
+  "activity.title": "Hoạt động",
+  "activity.loading": "Đang tải",
+  "activity.loadMore": "Hiển thị thêm",
+  "activity.noResults": "Không có kết quả cho '{search}'",
+  "activity.clearSearch": "Xóa tìm kiếm",
+  "features.title": "Tính năng",
+  "features.fullyOpenSource": "Mã nguồn mở hoàn toàn",
+  "features.fullyOpenSourceDescription": "Mã của chúng tôi được công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
+  "features.noVendorLockIn": "Không bị khóa nhà cung cấp",
+  "features.noVendorLockInDescription": "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
+  "features.presetsForExpo": "Cài đặt sẵn cho Expo",
+  "features.presetsForExpoDescription": "Chúng tôi cung cấp cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
+  "features.presetForReactNative": "Cài đặt sẵn cho React Native",
+  "features.presetForReactNativeDescription": "Chúng tôi cung cấp cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
+  "features.presetForReactEmail": "Thư viện React Email",
+  "features.presetForReactEmailDescription": "Chúng tôi đã tạo ra một thư viện i18n cho React Email.",
+  "features.readyForI18nLibraries": "Sẵn sàng cho các thư viện i18n",
+  "features.readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm cả những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.).",
+  "info.title": "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
+  "info.smartTranslation.title": "Dịch thuật thông minh",
+  "info.smartTranslation.intelligentTranslation": "Dịch thuật thông minh với nhận thức ngữ cảnh",
+  "info.smartTranslation.brandVoice": "Nhất quán giọng điệu và phong cách thương hiệu",
+  "info.smartTranslation.terminology": "Quản lý thuật ngữ",
+  "info.smartTranslation.linguisticFeatures": "Tính năng ngôn ngữ học nâng cao",
+  "info.smartTranslation.realtimeUpdates": "Cập nhật bản dịch thời gian thực",
+  "info.implementation.title": "Triển khai",
+  "info.implementation.quickSetup": "Thiết lập và tích hợp nhanh chóng",
+  "info.implementation.fileFormat": "Xử lý định dạng tệp",
+  "info.implementation.contentStructure": "Tổ chức cấu trúc nội dung",
+  "info.implementation.assetOrganization": "Tổ chức tài sản",
+  "info.developer.title": "Trải nghiệm nhà phát triển",
+  "info.developer.cli": "Giao diện dòng lệnh",
+  "info.developer.cicd": "Tích hợp CI/CD",
+  "info.developer.versionControl": "Kiểm soát phiên bản",
+  "info.developer.workflow": "Quy trình làm việc của nhà phát triển",
+  "info.developer.documentation": "Tài liệu toàn diện",
+  "login.title": "Đăng nhập",
+  "login.github": "Đăng nhập với GitHub",
+  "login.google": "Đăng nhập với Google",
+  "login.footer": "Tự động hóa bản địa hóa của bạn.",
+  "login.description": "Đăng nhập để bắt đầu tự động hóa bản địa hóa của bạn trong vài giây.",
+  "login.terms.text": "Bằng cách đăng nhập, bạn đồng ý với",
+  "login.terms.termsOfService": "Điều khoản dịch vụ",
+  "login.terms.and": "và",
+  "login.terms.privacyPolicy": "Chính sách bảo mật",
+  "userMenu.account": "Cài đặt tài khoản",
+  "userMenu.signOut": "Đăng xuất",
+  "userMenu.createTeam": "Tạo nhóm",
+  "userMenu.homepage": "Trang chủ",
+  "userMenu.team": "Cài đặt nhóm",
+  "teamSelector.addProject": "Tạo dự án",
+  "teamSelector.createProjectTitle": "Tạo một dự án mới",
+  "teamSelector.projectNamePlaceholder": "Tên dự án",
+  "teamSelector.createProjectButton": "Tạo dự án",
+  "teamSelector.pro": "Pro",
+  "teamSelector.project": "Dự án",
+  "teamSelector.teams": "Nhóm",
+  "teamSelector.createTeam": "Tạo nhóm",
+  "teamSelector.createTeamTitle": "Tạo một nhóm mới",
+  "teamSelector.teamNamePlaceholder": "Tên nhóm",
+  "teamSelector.createTeamButton": "Tạo nhóm",
+  "coming_soon.title": "Languine đang trong giai đoạn Truy cập Sớm",
+  "coming_soon.description": "Chúng tôi hiện đang trong giai đoạn truy cập sớm. Liên hệ với",
+  "coming_soon.cta": "trên X để được truy cập sớm.",
+  "account.fullName.title": "Họ và tên",
+  "account.fullName.description": "Họ và tên của bạn sẽ xuất hiện trên toàn bộ nền tảng.",
+  "account.fullName.placeholder": "Nhập họ và tên của bạn",
+  "account.email.title": "Địa chỉ email",
+  "account.email.description": "Địa chỉ email liên kết với tài khoản của bạn.",
+  "account.email.placeholder": "Nhập địa chỉ email của bạn",
+  "account.apiKey.title": "Khóa API",
+  "account.apiKey.description": "Khóa API cá nhân của bạn để truy cập API Languine và từ CLI.",
+  "account.deleteAccount.title": "Xóa tài khoản",
+  "account.deleteAccount.description": "Xóa vĩnh viễn tài khoản của bạn và tất cả dữ liệu liên quan. Hành động này không thể hoàn tác.",
+  "account.deleteAccount.button": "Xóa tài khoản",
+  "copyInstall.copied": "Đã sao chép vào clipboard",
+  "dangerZone.dialog.title": "Bạn có chắc chắn không?",
+  "dangerZone.dialog.description": "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
+  "dangerZone.dialog.placeholder": "Nhập DELETE để xác nhận",
+  "dangerZone.dialog.confirm": "Xác nhận xóa",
+  "dangerZone.dialog.cancel": "Hủy bỏ",
+  "pipeline.title": "Quy trình làm việc (CI/CD Pipeline)",
+  "pipeline.pro": "[pro]",
+  "pipeline.description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi có thay đổi code được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu thương hiệu và thuật ngữ của bạn. Các bản dịch sau đó được gửi dưới dạng pull request, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển.",
+  "settings.badRequest": "Yêu cầu không hợp lệ",
+  "settings.badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
+  "settings.permissionDenied": "Từ chối quyền",
+  "settings.permissionDeniedDescription": "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
+  "settings.deleteTeamTitle": "Xóa nhóm",
+  "settings.deleteTeamDescription": "Không thể xóa tổ chức khi bạn là thành viên duy nhất, thay vào đó hãy xóa tài khoản của bạn",
+  "settings.saved": "Cài đặt đã lưu",
+  "settings.savedDescription": "Thay đổi của bạn đã được lưu thành công",
+  "settings.error": "Đã xảy ra lỗi",
+  "settings.errorDescription": "Vui lòng thử lại hoặc liên hệ hỗ trợ",
+  "settings.addTeam": "Tạo nhóm",
+  "settings.apiKey.updated": "Khóa API đã cập nhật",
+  "settings.apiKey.updatedDescription": "Khóa API của bạn đã được cập nhật thành công và sao chép vào clipboard của bạn.",
+  "settings.apiKey.title": "Cập nhật Khóa API",
+  "settings.apiKey.description": "Bạn có chắc chắn muốn tạo khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
+  "settings.apiKey.cancel": "Hủy bỏ",
+  "settings.apiKey.continue": "Tiếp tục",
+  "settings.tabs.project": "Dự án",
+  "settings.tabs.account": "Tài khoản",
+  "settings.tabs.team": "Nhóm",
+  "settings.tabs.provider": "Nhà cung cấp",
+  "settings.tabs.billing": "Thanh toán",
+  "settings.addProject": "Tạo dự án",
+  "settings.project.name.title": "Tên dự án",
+  "settings.project.name.description": "Tên của dự án của bạn",
+  "settings.project.name.placeholder": "Nhập tên dự án",
+  "settings.project.id.title": "ID dự án",
+  "settings.project.id.description": "Định danh duy nhất của dự án của bạn",
+  "settings.project.id.placeholder": "ID dự án",
+  "settings.project.delete.title": "Xóa dự án",
+  "settings.project.delete.description": "Xóa vĩnh viễn dự án này và tất cả dữ liệu của nó",
+  "settings.project.delete.button": "Xóa dự án",
+  "settings.save": "Lưu",
+  "settings.team.name.title": "Tên nhóm",
+  "settings.team.name.description": "Tên của nhóm của bạn",
+  "settings.team.name.placeholder": "Nhập tên nhóm",
+  "settings.team.billing.title": "Kế hoạch thanh toán",
+  "settings.team.billing.description": "Quản lý kế hoạch thanh toán của nhóm bạn",
+  "settings.team.billing.free": "Miễn phí",
+  "settings.team.billing.pro": "Pro",
+  "settings.team.billing.unlimited": "Không giới hạn",
+  "settings.team.apiKey.title": "Khóa API nhóm",
+  "settings.team.apiKey.description": "Khóa API để truy cập nhóm, sử dụng từ pipeline CI/CD của bạn cùng với ID dự án",
+  "settings.team.apiKey.placeholder": "Khóa API nhóm",
+  "settings.team.members.leaveTeamConfirm": "Rời nhóm",
+  "settings.team.members.leaveTeamDescription": "Bạn có chắc chắn muốn rời nhóm này không?",
+  "settings.team.members.cancel": "Hủy bỏ",
+  "settings.team.members.leaveTeam": "Rời nhóm",
+  "settings.team.members.invite": "Mời thành viên",
+  "settings.team.members.title": "Thành viên",
+  "settings.team.members.pendingInvitations": "Lời mời đang chờ",
+  "settings.team.members.removeMember": "Xóa thành viên",
+  "settings.team.members.removeMemberConfirm": "Xóa thành viên",
+  "settings.team.members.removeMemberDescription": "Bạn có chắc chắn muốn xóa thành viên này không?",
+  "settings.team.members.filterPlaceholder": "Lọc thành viên...",
+  "settings.team.members.allRoles": "Tất cả vai trò",
+  "settings.team.members.date": "Ngày",
+  "settings.team.members.selectAll": "{count} đã chọn",
+  "settings.team.members.noPendingInvitations": "Không có lời mời đang chờ",
+  "settings.team.members.noResults": "Không tìm thấy thành viên",
+  "settings.team.members.tryDifferentSearch": "Thử tìm kiếm khác",
+  "settings.team.members.inviteMembers": "Mời thành viên cộng tác",
+  "settings.team.members.deleteInvite": "Xóa lời mời",
+  "settings.team.members.deleteInviteDescription": "Xóa lời mời",
+  "settings.team.members.invitedBy": "Được mời bởi {name}",
+  "settings.team.members.deleteInviteSuccess": "Lời mời đã xóa",
+  "settings.team.members.deleteInviteError": "Không thể xóa lời mời",
+  "settings.team.members.removeMemberSuccess": "Thành viên đã bị xóa",
+  "settings.team.members.removeMemberError": "Không thể xóa thành viên",
+  "settings.team.members.removeMemberSuccessDescription": "Thành viên đã được xóa thành công",
+  "settings.team.members.removeMemberErrorDescription": "Không thể xóa thành viên",
+  "settings.team.members.roles.owner": "Chủ sở hữu",
+  "settings.team.members.roles.member": "Thành viên",
+  "settings.team.members.dateSort.newest": "Mới nhất",
+  "settings.team.members.dateSort.oldest": "Cũ nhất",
+  "tuning.general": "Chung",
+  "tuning.translationMemory.title": "Bộ nhớ dịch thuật",
+  "tuning.translationMemory.description": "Sử dụng bộ nhớ dịch thuật để cải thiện tính nhất quán và hiệu quả",
+  "tuning.qualityChecks.title": "Kiểm tra chất lượng",
+  "tuning.qualityChecks.description": "Kích hoạt kiểm tra chất lượng tự động cho bản dịch",
+  "tuning.contextDetection.title": "Phát hiện ngữ cảnh",
+  "tuning.contextDetection.description": "Tự động phát hiện và bảo tồn ngữ cảnh trong bản dịch",
+  "tuning.styleGuide": "Hướng dẫn phong cách",
+  "tuning.lengthControl.title": "Kiểm soát độ dài",
+  "tuning.lengthControl.description": "Kiểm soát độ dài của văn bản dịch",
+  "tuning.lengthControl.options.flexible": "Linh hoạt",
+  "tuning.lengthControl.options.strict": "Nghiêm ngặt",
+  "tuning.lengthControl.options.exact": "Chính xác",
+  "tuning.lengthControl.options.loose": "Lỏng lẻo",
+  "tuning.inclusiveLanguage.title": "Ngôn ngữ bao gồm",
+  "tuning.inclusiveLanguage.description": "Đảm bảo bản dịch sử dụng ngôn ngữ bao gồm",
+  "tuning.formality.title": "Mức độ trang trọng",
+  "tuning.formality.description": "Kiểm soát mức độ trang trọng của bản dịch",
+  "tuning.brandName.title": "Tên thương hiệu",
+  "tuning.brandName.description": "Đặt tên thương hiệu của bạn để sử dụng nhất quán",
+  "tuning.brandName.placeholder": "Nhập tên thương hiệu của bạn",
+  "tuning.brandVoice.title": "Giọng điệu thương hiệu",
+  "tuning.brandVoice.description": "Xác định giọng điệu và phong cách thương hiệu của bạn",
+  "tuning.brandVoice.placeholder": "Mô tả giọng điệu thương hiệu của bạn...",
+  "tuning.localization": "Bản địa hóa",
+  "tuning.idioms.title": "Thành ngữ",
+  "tuning.idioms.description": "Xử lý các biểu thức thành ngữ một cách thích hợp",
+  "tuning.terminology.title": "Thuật ngữ",
+  "tuning.terminology.description": "Quản lý thuật ngữ chuyên ngành và bảng thuật ngữ",
+  "tuning.culturalAdaptation.title": "Thích ứng văn hóa",
+  "tuning.culturalAdaptation.description": "Thích ứng nội dung cho phù hợp văn hóa",
+  "pricing.title": "Giá cả đơn giản",
+  "pricing.free.title": "Miễn phí (100 khóa)",
+  "pricing.free.price": "Miễn phí",
+  "pricing.free.keys_limit": "Lên đến 100 khóa",
+  "pricing.free.features.unlimited_projects": "Dự án không giới hạn",
+  "pricing.free.features.fine_tuning": "Tùy chọn tinh chỉnh",
+  "pricing.free.features.overrides": "Ghi đè bản dịch",
+  "pricing.free.features.analytics": "Phân tích",
+  "pricing.free.features.context_memory": "Bộ nhớ ngữ cảnh",
+  "pricing.free.features.community_support": "Hỗ trợ cộng đồng",
+  "pricing.pro.title": "Pro",
+  "pricing.pro.includes_free": "Tất cả trong Miễn phí, cộng thêm:",
+  "pricing.pro.features.github_action": "Tích hợp GitHub Action",
+  "pricing.pro.features.latest_features": "Truy cập sớm các tính năng mới nhất",
+  "pricing.pro.features.priority_support": "Hỗ trợ ưu tiên",
+  "pricing.cta": "Bắt đầu tự động hóa",
+  "createTeam.teamName": "Tên nhóm",
+  "createTeam.teamNamePlaceholder": "Nhập tên nhóm",
+  "createTeam.createTeamButton": "Tạo nhóm",
+  "createTeam.cancel": "Hủy bỏ",
+  "createTeam.createTeamDescription": "Tạo một nhóm mới để quản lý dự án và cộng tác viên của bạn.",
+  "createProject.createProjectTitle": "Tạo một dự án mới",
+  "createProject.projectNamePlaceholder": "Nhập tên dự án",
+  "createProject.createProjectButton": "Tạo dự án",
+  "createProject.cancel": "Hủy bỏ",
+  "createProject.createProjectDescription": "Tạo một dự án mới để bắt đầu tự động hóa bản địa hóa của bạn.",
+  "invite.inviteMember": "Mời thành viên",
+  "invite.inviteDescription": "Mời một thành viên vào nhóm của bạn",
+  "invite.emailLabel": "Email",
+  "invite.emailPlaceholder": "Nhập email",
+  "invite.cancel": "Hủy bỏ",
+  "invite.sendInvite": "Gửi lời mời",
+  "invite.success.title": "Lời mời đã gửi",
+  "invite.success.description": "Đã gửi lời mời thành công đến {email}",
+  "invite.error.title": "Lỗi",
+  "invite.error.description": "Không thể gửi lời mời. Vui lòng thử lại.",
+  "invite.validation.invalidEmail": "Vui lòng nhập email hợp lệ",
+  "months.10": "Tháng 10",
+  "months.11": "Tháng 11",
+  "months.12": "Tháng 12",
+  "months.01": "Tháng 1",
+  "months.02": "Tháng 2",
+  "months.03": "Tháng 3",
+  "months.04": "Tháng 4",
+  "months.05": "Tháng 5",
+  "months.06": "Tháng 6",
+  "months.07": "Tháng 7",
+  "months.08": "Tháng 8",
+  "months.09": "Tháng 9",
+  "onboarding.steps.1.title": "Thiết lập Languine CLI",
+  "onboarding.steps.1.description": "Cài đặt và cấu hình Languine CLI để quản lý bản dịch",
+  "onboarding.steps.2.title": "Đẩy bản dịch",
+  "onboarding.steps.2.description": "Đang chờ bản dịch được đẩy lên",
+  "onboarding.steps.3.title": "Tài liệu",
+  "onboarding.steps.3.description": "Kiểm tra tài liệu của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất",
+  "onboarding.steps.3.link": "tài liệu",
+  "onboarding.info.description": "Cần giúp đỡ? Kiểm tra",
+  "onboarding.info.link": "tài liệu",
+  "onboarding.info.description_2": "của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất.",
+  "cli.success.title": "Đăng nhập CLI Languine thành công",
+  "cli.success.description": "CLI Languine đã được xác thực thành công như:",
+  "cli.success.description_2": "Bây giờ bạn có thể đóng tab này và quay lại CLI",
+  "translations.header": "Các khóa đã dịch",
+  "search.placeholder": "Tìm kiếm",
+  "periods.daily": "Hàng ngày",
+  "periods.weekly": "Hàng tuần",
+  "periods.monthly": "Hàng tháng",
+  "periods.selectPeriod": "Chọn kỳ",
+  "welcome.title": "Chào mừng đến với Languine",
+  "welcome.description": "Tự động hóa quy trình dịch thuật của bạn với Languine",
+  "button.update": "Dịch mới",
+  "update.button": "Dịch mới",
+  "hero2.title": "Tự động hóa việc dịch thuật cho ứng dụng của bạn",
+  "hero2.description": "Tối ưu hóa quy trình dịch thuật của bạn với một CLI và hệ thống tự động hóa được hỗ trợ bởi AI, được thiết kế để giúp các nhà phát triển tự động hóa việc dịch thuật.",
+  "language.en": "Tiếng Anh",
+  "language.es": "Tiếng Tây Ban Nha",
+  "language.fr": "Tiếng Pháp",
+  "language.de": "Tiếng Đức",
+  "language.it": "Tiếng Ý",
+  "language.pt": "Tiếng Bồ Đào Nha",
+  "language.zh": "Tiếng Trung",
+  "language.ja": "Tiếng Nhật",
+  "language.ko": "Tiếng Hàn",
+  "language.ar": "Tiếng Ả Rập",
+  "language.hi": "Tiếng Hindi",
+  "language.tr": "Tiếng Thổ Nhĩ Kỳ",
+  "language.nl": "Tiếng Hà Lan",
+  "language.pl": "Tiếng Ba Lan",
+  "language.no": "Tiếng Na Uy",
+  "language.da": "Tiếng Đan Mạch",
+  "language.sv": "Tiếng Thụy Điển",
+  "language.fi": "Tiếng Phần Lan",
+  "language.vi": "Tiếng Việt",
+  "tuning.formality.options.casual": "Thân mật",
+  "tuning.formality.options.formal": "Trang trọng",
+  "tuning.formality.options.neutral": "Trung lập",
+  "tuning.toneOfVoice.title": "Tông giọng",
+  "tuning.toneOfVoice.description": "Xác định tông giọng được sử dụng trong bản dịch",
+  "tuning.toneOfVoice.options.casual": "Thân mật",
+  "tuning.toneOfVoice.options.formal": "Trang trọng",
+  "tuning.toneOfVoice.options.friendly": "Thân thiện",
+  "tuning.toneOfVoice.options.professional": "Chuyên nghiệp",
+  "tuning.toneOfVoice.options.playful": "Vui vẻ",
+  "tuning.toneOfVoice.options.serious": "Nghiêm túc",
+  "tuning.toneOfVoice.options.confident": "Tự tin",
+  "tuning.toneOfVoice.options.humble": "Khiêm tốn",
+  "tuning.toneOfVoice.options.direct": "Trực tiếp",
+  "tuning.toneOfVoice.options.diplomatic": "Ngoại giao",
+  "tuning.brand": "Thương hiệu",
+  "tuning.emotiveIntent.title": "Ý định cảm xúc",
+  "tuning.emotiveIntent.description": "Đặt tông cảm xúc cho bản dịch",
+  "tuning.emotiveIntent.options.neutral": "Trung lập",
+  "tuning.emotiveIntent.options.positive": "Tích cực",
+  "tuning.emotiveIntent.options.empathetic": "Đồng cảm",
+  "tuning.emotiveIntent.options.professional": "Chuyên nghiệp",
+  "tuning.emotiveIntent.options.friendly": "Thân thiện",
+  "tuning.emotiveIntent.options.enthusiastic": "Nhiệt tình",
+  "tuning.domainExpertise.title": "Chuyên môn lĩnh vực",
+  "tuning.domainExpertise.description": "Chỉ định ngữ cảnh lĩnh vực cho bản dịch",
+  "tuning.domainExpertise.options.general": "Chung",
+  "tuning.domainExpertise.options.technical": "Kỹ thuật",
+  "tuning.domainExpertise.options.medical": "Y tế",
+  "tuning.domainExpertise.options.legal": "Pháp lý",
+  "tuning.domainExpertise.options.financial": "Tài chính",
+  "tuning.domainExpertise.options.marketing": "Tiếp thị",
+  "tuning.domainExpertise.options.academic": "Học thuật",
+  "billing.title": "Thanh toán",
+  "activity.type.key": "Khóa",
+  "activity.type.document": "Tài liệu"
 } as const;

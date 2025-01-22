@@ -1,4 +1,4 @@
-import { encrypt } from "@/lib/crypto";
+import type { ProjectSettings } from "@/trpc/routers/schema";
 import { and, eq } from "drizzle-orm";
 import slugify from "slugify";
 import { db } from "..";
@@ -112,11 +112,7 @@ export const updateProjectSettings = async ({
 }: {
   slug: string;
   organizationId: string;
-  settings: {
-    provider?: string;
-    model?: string;
-    providerApiKey?: string;
-  };
+  settings: ProjectSettings;
 }) => {
   const project = await db
     .select({
@@ -139,10 +135,6 @@ export const updateProjectSettings = async ({
   const settingsToUpdate = {
     ...settings,
   };
-
-  if (settings.providerApiKey) {
-    settingsToUpdate.providerApiKey = await encrypt(settings.providerApiKey);
-  }
 
   const updated = await db
     .update(projectSettings)

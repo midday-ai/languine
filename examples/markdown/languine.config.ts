@@ -1,13 +1,17 @@
 import { defineConfig } from "languine";
 
 export default defineConfig({
+  projectId: "",
   locale: {
     source: "en",
     targets: ["sv"],
   },
   files: {
-    ts: {
-      include: ["locales/[locale].ts"],
+    mdx: {
+      include: ["blog/[locale]/*.mdx"],
+    },
+    md: {
+      include: ["blog/[locale]/*.md"],
     },
   },
 });

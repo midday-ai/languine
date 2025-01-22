@@ -24,10 +24,18 @@ import {
   isOrganizationMember,
   isOrganizationOwner,
 } from "../permissions/organization";
+import {
+  createOrganizationSchema,
+  deleteOrganizationInviteSchema,
+  deleteOrganizationMemberSchema,
+  organizationSchema,
+  updateOrganizationSchema,
+  updateOrganizationTierSchema,
+} from "./schema";
 
 export const organizationRouter = createTRPCRouter({
   getById: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(isOrganizationMember)
     .query(async ({ input }) => {
       const org = await getOrganization(input.organizationId);
@@ -47,25 +55,21 @@ export const organizationRouter = createTRPCRouter({
   }),
 
   getMembers: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(isOrganizationMember)
     .query(async ({ input }) => {
       return getOrganizationMembers(input.organizationId);
     }),
 
   getInvites: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(isOrganizationMember)
     .query(async ({ input }) => {
       return getOrganizationInvites(input.organizationId);
     }),
 
   create: protectedProcedure
-    .input(
-      z.object({
-        name: z.string().min(1),
-      }),
-    )
+    .input(createOrganizationSchema)
     .use(rateLimitMiddleware)
     .mutation(async ({ input, ctx }) => {
       const org = await createOrganization({
@@ -84,13 +88,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   update: protectedProcedure
-    .input(
-      z.object({
-        organizationId: z.string(),
-        name: z.string().min(1),
-        logo: z.string().optional(),
-      }),
-    )
+    .input(updateOrganizationSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
@@ -111,7 +109,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   delete: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
@@ -138,12 +136,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   deleteInvite: protectedProcedure
-    .input(
-      z.object({
-        organizationId: z.string(),
-        inviteId: z.string(),
-      }),
-    )
+    .input(deleteOrganizationInviteSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
@@ -160,12 +153,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   deleteMember: protectedProcedure
-    .input(
-      z.object({
-        organizationId: z.string(),
-        memberId: z.string(),
-      }),
-    )
+    .input(deleteOrganizationMemberSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
@@ -202,7 +190,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   leave: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationMember)
     .mutation(async ({ input, ctx }) => {
@@ -229,7 +217,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   updateApiKey: protectedProcedure
-    .input(z.object({ organizationId: z.string() }))
+    .input(organizationSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
@@ -237,12 +225,7 @@ export const organizationRouter = createTRPCRouter({
     }),
 
   updatePlan: protectedProcedure
-    .input(
-      z.object({
-        organizationId: z.string(),
-        tier: z.number().min(0).max(5),
-      }),
-    )
+    .input(updateOrganizationTierSchema)
     .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {

@@ -3,11 +3,7 @@ import type { Parser, ParserOptions } from "./types.js";
 export type { ParserOptions };
 
 export abstract class BaseParser implements Parser {
-  protected type: string;
-
-  constructor(options: ParserOptions) {
-    this.type = options.type;
-  }
+  constructor(protected options: ParserOptions) {}
 
   abstract parse(input: string): Promise<Record<string, string>>;
 

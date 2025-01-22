@@ -84,7 +84,7 @@ export function Activity() {
   }
 
   return (
-    <div className="flex flex-col gap-4 mt-6">
+    <div className="flex flex-col gap-8 mt-6">
       {pages.map((page) =>
         page.map((item) => (
           <div key={item.id}>
@@ -96,6 +96,7 @@ export function Activity() {
               targetLanguage={item.targetLanguage}
               commitLink={item.commitLink}
               sourceProvider={item.sourceProvider}
+              sourceType={item.sourceType as "key" | "document"}
             />
           </div>
         )),

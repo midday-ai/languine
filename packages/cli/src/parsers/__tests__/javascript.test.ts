@@ -165,6 +165,63 @@ describe("JavaScript/TypeScript Parser", () => {
         "Invalid translation value",
       );
     });
+
+    test("handles template literals", async () => {
+      const input = `{
+        message: "Hello {name}",
+        template: "Multi line string"
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        message: "Hello {name}",
+        template: "Multi line string",
+      });
+    });
+
+    test("handles comments in source", async () => {
+      const input = `{
+        // Single line comment
+        key: "value",
+        /* Multi
+           line
+           comment */
+        other: "test"
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        key: "value",
+        other: "test",
+      });
+    });
+
+    test("preserves whitespace in translation strings", async () => {
+      const input = `{
+        greeting: "  Hello  World  ",
+        multiline: "Line 1\\nLine 2\\nLine 3"
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        greeting: "  Hello  World  ",
+        multiline: "Line 1\nLine 2\nLine 3",
+      });
+    });
+
+    test("serializes with consistent ordering", async () => {
+      const originalData = {
+        b: "original second",
+        a: "original first",
+        c: "original third",
+      };
+      const input = {
+        b: "second",
+        a: "first",
+        c: "third",
+      };
+      const result = await parser.serialize("en", input, originalData);
+      expect(result).toBe(
+        `export default {\n  b: "second",\n  a: "first",\n  c: "third"\n} as const;\n`,
+      );
+    });
   });
 
   describe("serialize", () => {
@@ -174,14 +231,49 @@ describe("JavaScript/TypeScript Parser", () => {
       expect(result).toBe(`export default {\n  key: "value"\n} as const;\n`);
     });
 
-    test("serializes nested keys", async () => {
-      const input = {
+    test("serializes dot notation keys when original uses dot notation", async () => {
+      const originalData = {
         "nested.key": "value",
         "nested.deeper.another": "test",
+        "scope.more.stars#one": "1 star on GitHub",
       };
-      const result = await parser.serialize("en", input);
+
+      const input = {
+        "nested.key": "valeur",
+        "nested.deeper.another": "tester",
+        "scope.more.stars#one": "1 étoile sur GitHub",
+      };
+
+      const result = await parser.serialize("fr", input, originalData);
       expect(result).toBe(
-        `export default {\n  "nested.key": "value",\n  "nested.deeper.another": "test"\n} as const;\n`,
+        `export default {\n  "nested.key": "valeur",\n  "nested.deeper.another": "tester",\n  "scope.more.stars#one": "1 étoile sur GitHub"\n} as const;\n`,
+      );
+    });
+
+    test("serializes as nested objects when original uses nested structure", async () => {
+      const originalData = {
+        nested: {
+          key: "value",
+          deeper: {
+            another: "test",
+          },
+        },
+        scope: {
+          more: {
+            "stars#one": "1 star on GitHub",
+          },
+        },
+      };
+
+      const input = {
+        "nested.key": "valeur",
+        "nested.deeper.another": "tester",
+        "scope.more.stars#one": "1 étoile sur GitHub",
+      };
+
+      const result = await parser.serialize("fr", input, originalData);
+      expect(result).toBe(
+        `export default {\n  nested: {\n    key: "valeur",\n    deeper: {\n      another: "tester"\n    }\n  },\n  scope: {\n    more: {\n      "stars#one": "1 étoile sur GitHub"\n    }\n  }\n} as const;\n`,
       );
     });
 
@@ -210,70 +302,99 @@ describe("JavaScript/TypeScript Parser", () => {
       );
     });
 
-    test("serializing and parsing flat and nested keys preserves original object", async () => {
-      const originalObject = {
-        simple: "value",
-        "nested.key": "nested value",
-        "very.deep.structure.key": "deep value",
-      };
-      const serialized = await parser.serialize("en", originalObject);
-      const parsed = await parser.parse(serialized);
-      expect(parsed).toEqual(originalObject);
-    });
-
-    test("serializing and parsing pluralization rules and parameters preserves original object", async () => {
-      const originalObject = {
+    test("defaults to dot notation when no original data is provided", async () => {
+      const input = {
         "scope.more.stars#one": "1 star on GitHub",
         "scope.more.stars#other": "{count} stars on GitHub",
         "scope.more.param": "A scope with {param}",
       };
-      const serialized = await parser.serialize("en", originalObject);
-      const parsed = await parser.parse(serialized);
-      expect(parsed).toEqual(originalObject);
-    });
-
-    test("serializes mixed nested and flat structure based on original", async () => {
-      const originalData = {
-        nested: {
-          key: "value",
-          deeper: {
-            another: "test",
-          },
-        },
-        "explicit.dot.key": "flat value",
-      };
-
-      const input = {
-        "nested.key": "value",
-        "nested.deeper.another": "test",
-        "explicit.dot.key": "flat value",
-      };
-
-      const result = await parser.serialize("en", input, originalData);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
-        `export default {\n  nested: {\n    key: "value",\n    deeper: {\n      another: "test"\n    }\n  },\n  "explicit.dot.key": "flat value"\n} as const;\n`,
+        `export default {\n  "scope.more.stars#one": "1 star on GitHub",\n  "scope.more.stars#other": "{count} stars on GitHub",\n  "scope.more.param": "A scope with {param}"\n} as const;\n`,
       );
     });
 
-    test("preserves nested objects from original structure", async () => {
+    test("maintains same structure as original file", async () => {
       const originalData = {
         hello: "Hello",
-        test: {
-          "cows#one": "A cow",
-          "cows#other": "{count} cows",
-        },
+        welcome: "Hello {name}!",
+        "about.you": "Hello {name}! You are {age} years old",
+        "scope.test": "A scope",
+        "scope.more.test": "A scope",
+        "scope.more.param": "A scope with {param}",
+        "scope.more.and.more.test": "A scope",
+        "scope.more.stars#one": "1 star on GitHub",
+        "scope.more.stars#other": "{count} stars on GitHub",
       };
 
       const input = {
         hello: "Bonjour",
-        "test.cows#one": "Une vache",
-        "test.cows#other": "{count} vaches",
+        welcome: "Bonjour {name} !",
+        "about.you": "Bonjour {name} ! Vous avez {age} ans",
+        "scope.test": "Un domaine",
+        "scope.more.test": "Un domaine",
+        "scope.more.param": "Un domaine avec {param}",
+        "scope.more.and.more.test": "Un domaine",
+        "scope.more.stars#one": "1 étoile sur GitHub",
+        "scope.more.stars#other": "{count} étoiles sur GitHub",
       };
 
       const result = await parser.serialize("fr", input, originalData);
       expect(result).toBe(
-        `export default {\n  hello: "Bonjour",\n  test: {\n    "cows#one": "Une vache",\n    "cows#other": "{count} vaches"\n  }\n} as const;\n`,
+        `export default {\n  hello: "Bonjour",\n  welcome: "Bonjour {name} !",\n  "about.you": "Bonjour {name} ! Vous avez {age} ans",\n  "scope.test": "Un domaine",\n  "scope.more.test": "Un domaine",\n  "scope.more.param": "Un domaine avec {param}",\n  "scope.more.and.more.test": "Un domaine",\n  "scope.more.stars#one": "1 étoile sur GitHub",\n  "scope.more.stars#other": "{count} étoiles sur GitHub"\n} as const;\n`,
       );
+    });
+
+    test("maintains same structure as example file", async () => {
+      const originalData = {
+        hello: {
+          world: "Hello World",
+        },
+      };
+
+      const input = {
+        "hello.world": "Bonjour le monde",
+      };
+
+      const result = await parser.serialize("fr", input, originalData);
+      expect(result).toBe(
+        `export default {\n  hello: {\n    world: "Bonjour le monde"\n  }\n} as const;\n`,
+      );
+    });
+
+    test("handles complex interpolation patterns", async () => {
+      const input = `{
+        message: "You have {count} item{count, plural, one{} other{s}} in your cart",
+        price: "Total: {currency}{amount, number, .00}"
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        message:
+          "You have {count} item{count, plural, one{} other{s}} in your cart",
+        price: "Total: {currency}{amount, number, .00}",
+      });
+    });
+
+    test("handles object spread syntax", async () => {
+      const input = `{
+        ...commonTranslations,
+        specific: "value"
+      }`;
+      await expect(parser.parse(input)).rejects.toThrow();
+    });
+
+    test("handles special characters in keys", async () => {
+      const input = `{
+        "special-key": "value",
+        "key_with_underscore": "test",
+        "123numeric": "number"
+      }`;
+      const result = await parser.parse(input);
+      expect(result).toEqual({
+        "special-key": "value",
+        key_with_underscore: "test",
+        "123numeric": "number",
+      });
     });
   });
 });
