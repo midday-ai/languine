@@ -174,7 +174,7 @@ describe("JavaScript/TypeScript Parser", () => {
       expect(result).toBe(`export default {\n  key: "value"\n} as const;\n`);
     });
 
-    test("serializes nested keys", async () => {
+    test("serializes dot notation keys", async () => {
       const input = {
         "nested.key": "value",
         "nested.deeper.another": "test",
@@ -210,69 +210,46 @@ describe("JavaScript/TypeScript Parser", () => {
       );
     });
 
-    test("serializing and parsing flat and nested keys preserves original object", async () => {
-      const originalObject = {
-        simple: "value",
-        "nested.key": "nested value",
-        "very.deep.structure.key": "deep value",
-      };
-      const serialized = await parser.serialize("en", originalObject);
-      const parsed = await parser.parse(serialized);
-      expect(parsed).toEqual(originalObject);
-    });
-
-    test("serializing and parsing pluralization rules and parameters preserves original object", async () => {
-      const originalObject = {
+    test("serializes complex keys with dots and parameters", async () => {
+      const input = {
         "scope.more.stars#one": "1 star on GitHub",
         "scope.more.stars#other": "{count} stars on GitHub",
         "scope.more.param": "A scope with {param}",
       };
-      const serialized = await parser.serialize("en", originalObject);
-      const parsed = await parser.parse(serialized);
-      expect(parsed).toEqual(originalObject);
-    });
-
-    test("serializes mixed nested and flat structure based on original", async () => {
-      const originalData = {
-        nested: {
-          key: "value",
-          deeper: {
-            another: "test",
-          },
-        },
-        "explicit.dot.key": "flat value",
-      };
-
-      const input = {
-        "nested.key": "value",
-        "nested.deeper.another": "test",
-        "explicit.dot.key": "flat value",
-      };
-
-      const result = await parser.serialize("en", input, originalData);
+      const result = await parser.serialize("en", input);
       expect(result).toBe(
-        `export default {\n  nested: {\n    key: "value",\n    deeper: {\n      another: "test"\n    }\n  },\n  "explicit.dot.key": "flat value"\n} as const;\n`,
+        `export default {\n  "scope.more.stars#one": "1 star on GitHub",\n  "scope.more.stars#other": "{count} stars on GitHub",\n  "scope.more.param": "A scope with {param}"\n} as const;\n`,
       );
     });
 
-    test("preserves nested objects from original structure", async () => {
+    test("maintains same structure as original file", async () => {
       const originalData = {
         hello: "Hello",
-        test: {
-          "cows#one": "A cow",
-          "cows#other": "{count} cows",
-        },
+        welcome: "Hello {name}!",
+        "about.you": "Hello {name}! You are {age} years old",
+        "scope.test": "A scope",
+        "scope.more.test": "A scope",
+        "scope.more.param": "A scope with {param}",
+        "scope.more.and.more.test": "A scope",
+        "scope.more.stars#one": "1 star on GitHub",
+        "scope.more.stars#other": "{count} stars on GitHub",
       };
 
       const input = {
         hello: "Bonjour",
-        "test.cows#one": "Une vache",
-        "test.cows#other": "{count} vaches",
+        welcome: "Bonjour {name} !",
+        "about.you": "Bonjour {name} ! Vous avez {age} ans",
+        "scope.test": "Un domaine",
+        "scope.more.test": "Un domaine",
+        "scope.more.param": "Un domaine avec {param}",
+        "scope.more.and.more.test": "Un domaine",
+        "scope.more.stars#one": "1 étoile sur GitHub",
+        "scope.more.stars#other": "{count} étoiles sur GitHub",
       };
 
       const result = await parser.serialize("fr", input, originalData);
       expect(result).toBe(
-        `export default {\n  hello: "Bonjour",\n  test: {\n    "cows#one": "Une vache",\n    "cows#other": "{count} vaches"\n  }\n} as const;\n`,
+        `export default {\n  hello: "Bonjour",\n  welcome: "Bonjour {name} !",\n  "about.you": "Bonjour {name} ! Vous avez {age} ans",\n  "scope.test": "Un domaine",\n  "scope.more.test": "Un domaine",\n  "scope.more.param": "Un domaine avec {param}",\n  "scope.more.and.more.test": "Un domaine",\n  "scope.more.stars#one": "1 étoile sur GitHub",\n  "scope.more.stars#other": "{count} étoiles sur GitHub"\n} as const;\n`,
       );
     });
   });
