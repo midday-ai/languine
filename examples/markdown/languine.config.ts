@@ -7,8 +7,8 @@ export default defineConfig({
     targets: ["sv"],
   },
   files: {
-    md: {
-      include: ["blog/[locale]/*.md"],
+    mdx: {
+      include: ["blog/[locale]/*.mdx"],
     },
   },
 });
