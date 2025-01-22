@@ -116,15 +116,15 @@ export async function translateCommand(args: string[] = []) {
           const parser = createParser({ type });
 
           // Read and parse the source file
-          const sourceFile = await readFile(sourceFilePath, "utf-8");
-          const sourceContent = await parser.parse(sourceFile);
+          const sourceFileContent = await readFile(sourceFilePath, "utf-8");
+          const parsedSourceFile = await parser.parse(sourceFileContent);
 
           let keysToTranslate: string[];
           let removedKeys: string[] = [];
 
           if (forceTranslate) {
             // If force flag is used, translate all keys
-            keysToTranslate = Object.keys(sourceContent);
+            keysToTranslate = Object.keys(parsedSourceFile);
           } else {
             // Otherwise use normal diff detection
             try {
@@ -167,7 +167,7 @@ export async function translateCommand(args: string[] = []) {
           if (checkOnly) continue;
 
           // Convert the content to the expected format
-          const translationInput = Object.entries(sourceContent)
+          const translationInput = Object.entries(parsedSourceFile)
             .filter(([key]) => keysToTranslate.includes(key))
             .map(([key, sourceText]) => ({
               key,
@@ -350,6 +350,7 @@ export async function translateCommand(args: string[] = []) {
                 targetLocale,
                 mergedContent,
                 originalFileContent,
+                sourceFileContent,
               );
 
               // Run afterTranslate hook if configured

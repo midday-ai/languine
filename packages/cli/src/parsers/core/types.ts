@@ -14,5 +14,6 @@ export interface Parser {
     locale: string,
     data: Record<string, string>,
     originalData?: string | Record<string, unknown>,
+    sourceData?: string | Record<string, unknown>,
   ): Promise<string>;
 }

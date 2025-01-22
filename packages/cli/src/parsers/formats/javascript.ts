@@ -21,14 +21,108 @@ export class JavaScriptParser extends BaseParser {
   }
 
   async serialize(
-    locale: string,
+    _: string,
     data: Record<string, string>,
     originalData?: string | Record<string, unknown>,
+    sourceData?: string | Record<string, unknown>,
   ): Promise<string> {
-    // Flatten any nested objects in the input data
-    const flatData = this.flattenObject(data);
-    const content = this.formatFlatObject(flatData);
+    let content: string;
+
+    if (sourceData) {
+      // If we have source data, use its format as a template
+      const isNestedFormat =
+        typeof sourceData === "string"
+          ? this.isNestedObjectFormat(sourceData)
+          : this.hasNestedObjects(sourceData);
+
+      content = isNestedFormat
+        ? this.formatNestedObject(data)
+        : this.formatFlatObject(data);
+    } else if (originalData) {
+      // Fall back to original data format if source not available
+      const isNestedFormat =
+        typeof originalData === "string"
+          ? this.isNestedObjectFormat(originalData)
+          : this.hasNestedObjects(originalData);
+
+      content = isNestedFormat
+        ? this.formatNestedObject(data)
+        : this.formatFlatObject(data);
+    } else {
+      // Default to flat object with dot notation
+      content = this.formatFlatObject(data);
+    }
+
     return this.wrapInExport(content);
+  }
+
+  private isNestedObjectFormat(data: string): boolean {
+    try {
+      const cleanInput = this.preprocessInput(data);
+      const parsed = this.evaluateJavaScript(cleanInput);
+      return this.hasNestedObjects(parsed);
+    } catch {
+      return false;
+    }
+  }
+
+  private hasNestedObjects(obj: unknown): boolean {
+    if (typeof obj !== "object" || obj === null) return false;
+
+    for (const value of Object.values(obj)) {
+      if (typeof value === "object" && value !== null) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private formatNestedObject(data: Record<string, string>): string {
+    if (Object.keys(data).length === 0) {
+      return "{}";
+    }
+
+    // Group by common prefixes
+    const groups: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(data)) {
+      const parts = key.split(".");
+      let current = groups;
+      for (let i = 0; i < parts.length - 1; i++) {
+        const part = parts[i];
+        if (!(part in current)) {
+          current[part] = {};
+        }
+        current = current[part] as Record<string, unknown>;
+      }
+      const lastPart = parts[parts.length - 1];
+      current[lastPart] = value;
+    }
+
+    return this.formatObjectRecursive(groups);
+  }
+
+  private formatObjectRecursive(
+    obj: Record<string, unknown>,
+    level = 1,
+  ): string {
+    if (Object.keys(obj).length === 0) {
+      return "{}";
+    }
+
+    const indent = "  ".repeat(level);
+    const entries = Object.entries(obj).map(([key, value]) => {
+      const formattedKey = this.needsQuotes(key) ? `"${key}"` : key;
+      const formattedValue =
+        typeof value === "object" && value !== null
+          ? this.formatObjectRecursive(
+              value as Record<string, unknown>,
+              level + 1,
+            )
+          : `"${String(value).replace(/"/g, '\\"')}"`;
+      return `${indent}${formattedKey}: ${formattedValue}`;
+    });
+
+    return `{\n${entries.join(",\n")}\n${"  ".repeat(level - 1)}}`;
   }
 
   private formatFlatObject(obj: Record<string, string>): string {
