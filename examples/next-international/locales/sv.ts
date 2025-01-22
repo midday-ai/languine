@@ -1,4 +1,6 @@
 export default {
+  "welcome.title": "Välkommen till appen",
+  "welcome.description": "Detta är en beskrivning av appen",
   hello: "Hej",
   welcome: "Hej {name}!",
   "about.you": "Hej {name}! Du är {age} år gammal",
@@ -11,5 +13,5 @@ export default {
   "missing.translation.in.fr": "Detta borde fungera",
   "cows#one": "En ko",
   "cows#other": "{count} kor",
-  "languine.hello": "Hej Languine",
+  "languine.hello": "Hej Languine"
 } as const;
