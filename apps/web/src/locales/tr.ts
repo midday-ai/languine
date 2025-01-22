@@ -329,5 +329,7 @@ export default {
   "tuning.domainExpertise.options.financial": "Finansal",
   "tuning.domainExpertise.options.marketing": "Pazarlama",
   "tuning.domainExpertise.options.academic": "Akademik",
-  "billing.title": "Faturalandırma"
+  "billing.title": "Faturalandırma",
+  "activity.type.key": "Anahtar",
+  "activity.type.document": "Belge"
 } as const;

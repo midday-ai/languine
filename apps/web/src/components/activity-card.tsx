@@ -1,4 +1,7 @@
+"use client";
+
 import { formatTimeAgo } from "@/lib/format";
+import { useI18n } from "@/locales/client";
 import { FaBitbucket, FaGithub } from "react-icons/fa";
 import { Skeleton } from "./ui/skeleton";
 
@@ -10,6 +13,7 @@ type Props = {
   commitLink?: string | null;
   sourceProvider?: string | null;
   targetLanguage: string;
+  sourceType: "key" | "document";
 };
 
 export function ActivityCard({
@@ -20,9 +24,18 @@ export function ActivityCard({
   commitLink,
   sourceProvider,
   targetLanguage,
+  sourceType,
 }: Props) {
+  const t = useI18n();
+
   return (
-    <div className="border border-border">
+    <div className="border border-border relative">
+      <div className="absolute -top-3.5 left-3 bg-background bg-noise px-4 py-1">
+        <h3 className="text-xs uppercase text-[#878787] font-medium">
+          {t(`activity.type.${sourceType}`)}
+        </h3>
+      </div>
+
       <div className="text-secondary font-mono text-xs whitespace-nowrap overflow-hidden p-6 flex items-center justify-between">
         <div className="flex items-center gap-2 overflow-hidden flex-1 max-w-[calc(100vw-400px)]">
           <span className="text-primary truncate">{source} → </span>

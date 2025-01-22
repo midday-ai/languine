@@ -47,7 +47,7 @@ export async function getAnalytics({
               .slice(0, 7) // YYYY-MM
           : currentDate.toISOString().slice(0, 10); // YYYY-MM-DD
 
-    dates.push({ period: formattedDate });
+    dates.push({ period: formattedDate, date: currentDate });
 
     // Advance to next period
     const nextDate = new Date(currentDate);
@@ -64,69 +64,106 @@ export async function getAnalytics({
     currentDate = nextDate;
   }
 
-  const stats = await db
-    .select({
-      period:
-        period === "weekly"
-          ? sql`strftime('%Y-W%W', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`.as(
-              "period",
-            )
-          : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`.as(
-              "period",
-            ),
-      count: count(translations.translationKey),
-    })
-    .from(translations)
-    .innerJoin(
-      projects,
-      and(
-        eq(projects.slug, projectSlug),
-        eq(projects.organizationId, organizationId),
-      ),
-    )
-    .where(
-      and(
-        eq(translations.projectId, projects.id),
-        gte(translations.createdAt, startDate),
-        lte(translations.createdAt, endDate),
-      ),
-    )
-    .groupBy(
-      period === "weekly"
-        ? sql`strftime('%Y-W%W', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`
-        : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`,
-    )
-    .orderBy(
-      period === "weekly"
-        ? sql`strftime('%Y-W%W', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`
-        : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`,
-    );
+  const periodSql =
+    period === "weekly"
+      ? sql`strftime('%Y-W%W', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`
+      : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`;
 
-  const totals = await db
-    .select({
-      totalKeys: count(translations.translationKey),
-      totalLanguages: countDistinct(translations.targetLanguage),
-    })
-    .from(translations)
-    .innerJoin(
-      projects,
-      and(
-        eq(projects.slug, projectSlug),
-        eq(projects.organizationId, organizationId),
-      ),
-    )
-    .where(eq(translations.projectId, projects.id));
+  const [keyStats, documentStats, totals] = await Promise.all([
+    // Get key stats by period
+    db
+      .select({
+        period: periodSql.as("period"),
+        keyCount: count(translations.translationKey).as("keyCount"),
+      })
+      .from(translations)
+      .innerJoin(
+        projects,
+        and(
+          eq(projects.slug, projectSlug),
+          eq(projects.organizationId, organizationId),
+        ),
+      )
+      .where(
+        and(
+          eq(translations.projectId, projects.id),
+          eq(translations.sourceType, "key"),
+          gte(translations.createdAt, startDate),
+          lte(translations.createdAt, endDate),
+        ),
+      )
+      .groupBy(periodSql)
+      .orderBy(periodSql),
 
-  // Create a map of existing stats
-  const statsMap = new Map(stats.map((stat) => [stat.period, stat.count]));
+    // Get document stats by period
+    db
+      .select({
+        period: periodSql.as("period"),
+        documentCount: count(translations.translationKey).as("documentCount"),
+      })
+      .from(translations)
+      .innerJoin(
+        projects,
+        and(
+          eq(projects.slug, projectSlug),
+          eq(projects.organizationId, organizationId),
+        ),
+      )
+      .where(
+        and(
+          eq(translations.projectId, projects.id),
+          eq(translations.sourceType, "document"),
+          gte(translations.createdAt, startDate),
+          lte(translations.createdAt, endDate),
+        ),
+      )
+      .groupBy(periodSql)
+      .orderBy(periodSql),
+
+    // Get overall totals
+    db
+      .select({
+        totalKeys: count(translations.translationKey).as("totalKeys"),
+        totalDocuments: count(translations.translationKey).as("totalDocuments"),
+        totalLanguages: countDistinct(translations.targetLanguage),
+      })
+      .from(translations)
+      .innerJoin(
+        projects,
+        and(
+          eq(projects.slug, projectSlug),
+          eq(projects.organizationId, organizationId),
+        ),
+      )
+      .where(
+        and(
+          eq(translations.projectId, projects.id),
+          sql`(
+            (${translations.sourceType} = 'key' AND ${translations.translationKey} IS NOT NULL) OR
+            (${translations.sourceType} = 'document' AND ${translations.translationKey} IS NOT NULL)
+          )`,
+        ),
+      ),
+  ]);
+
+  // Create maps of existing stats
+  const keyStatsMap = new Map(
+    keyStats.map((stat) => [stat.period, stat.keyCount]),
+  );
+  const documentStatsMap = new Map(
+    documentStats.map((stat) => [stat.period, stat.documentCount]),
+  );
 
   // Combine with all dates, using 0 for missing values
   return {
     data: dates.map((date) => ({
       label: String(date.period),
-      count: Number(statsMap.get(date.period) ?? 0),
+      date: date.period,
+      keyCount: Number(keyStatsMap.get(date.period) ?? 0),
+      documentCount: Number(documentStatsMap.get(date.period) ?? 0),
     })),
     totalKeys: Number(totals[0]?.totalKeys ?? 0),
+    totalDocuments: Number(totals[0]?.totalDocuments ?? 0),
     totalLanguages: Number(totals[0]?.totalLanguages ?? 0),
     period,
   };

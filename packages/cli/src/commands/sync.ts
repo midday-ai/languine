@@ -107,8 +107,6 @@ export async function syncCommand(args: string[] = []) {
               s.message(chalk.red("Failed to delete keys from platform"));
             }
 
-            return;
-
             // Process each target locale
             for (const targetLocale of targetLocales) {
               try {

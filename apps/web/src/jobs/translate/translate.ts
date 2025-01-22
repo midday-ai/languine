@@ -1,6 +1,5 @@
-import { createDocument } from "@/db/queries/documents";
 import { validateJobPermissions } from "@/db/queries/permissions";
-import { createTranslation } from "@/db/queries/translate";
+import { createDocument, createTranslations } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
@@ -21,7 +20,7 @@ const translationSchema = z.object({
     z.object({
       key: z.string(),
       sourceText: z.string(),
-      documentName: z.string().nullable().optional(),
+      sourceFile: z.string(),
     }),
   ),
 });
@@ -78,8 +77,13 @@ export const translateTask = schemaTask({
             sourceLanguage: payload.sourceLanguage,
             targetLanguage: targetLocale,
             translatedText: translatedContent,
+            sourceFile: document.sourceFile,
             sourceFormat: payload.sourceFormat,
-            name: document.documentName ?? "",
+            branch: payload.branch,
+            commit: payload.commit,
+            commitLink: payload.commitLink,
+            sourceProvider: payload.sourceProvider,
+            commitMessage: payload.commitMessage,
           });
         }
       }
@@ -128,7 +132,7 @@ export const translateTask = schemaTask({
           totalTranslations,
         );
 
-        await createTranslation({
+        await createTranslations({
           projectId: project.id,
           organizationId: project.organizationId,
           sourceFormat: payload.sourceFormat,
@@ -142,6 +146,7 @@ export const translateTask = schemaTask({
             sourceLanguage: payload.sourceLanguage,
             targetLanguage: targetLocale,
             sourceText: content.sourceText,
+            sourceFile: content.sourceFile,
             translatedText: translatedContent[i],
           })),
         });

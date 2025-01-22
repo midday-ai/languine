@@ -3,7 +3,7 @@ import { projects, translations } from "@/db/schema";
 import type { DeleteKeysSchema } from "@/trpc/routers/schema";
 import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
 
-export const createTranslation = async ({
+export const createTranslations = async ({
   projectId,
   organizationId,
   userId,
@@ -30,6 +30,7 @@ export const createTranslation = async ({
     targetLanguage: string;
     sourceText: string;
     translatedText: string;
+    sourceFile: string;
   }[];
 }) => {
   return db
@@ -49,6 +50,75 @@ export const createTranslation = async ({
         ...translation,
       })),
     )
+    .onConflictDoUpdate({
+      target: [
+        translations.projectId,
+        translations.translationKey,
+        translations.targetLanguage,
+      ],
+      set: {
+        translatedText: translations.translatedText,
+        branch,
+        commit,
+        commitLink,
+        updatedAt: new Date(),
+      },
+    })
+    .returning();
+};
+
+export const createDocument = async ({
+  projectId,
+  organizationId,
+  userId,
+  sourceFile,
+  sourceLanguage,
+  sourceText,
+  targetLanguage,
+  translatedText,
+  sourceFormat,
+  branch,
+  commit,
+  commitLink,
+  sourceProvider,
+  commitMessage,
+}: {
+  projectId: string;
+  sourceLanguage: string;
+  targetLanguage: string;
+  sourceText: string;
+  translatedText: string;
+  userId?: string;
+  organizationId: string;
+  sourceFormat: string;
+  sourceFile: string;
+  branch?: string | null;
+  commit?: string | null;
+  sourceProvider?: string | null;
+  commitMessage?: string | null;
+  commitLink?: string | null;
+}) => {
+  return db
+    .insert(translations)
+    .values({
+      projectId,
+      organizationId,
+      userId,
+      sourceFile,
+      sourceLanguage,
+      targetLanguage,
+      // Document translations are stored as a single key (filename)
+      translationKey: sourceFile,
+      sourceType: "document",
+      sourceFormat,
+      sourceText,
+      translatedText,
+      branch,
+      commit,
+      commitLink,
+      sourceProvider,
+      commitMessage,
+    })
     .onConflictDoUpdate({
       target: [
         translations.projectId,

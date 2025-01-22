@@ -329,5 +329,7 @@ export default {
   "tuning.domainExpertise.options.financial": "Financieel",
   "tuning.domainExpertise.options.marketing": "Marketing",
   "tuning.domainExpertise.options.academic": "Academisch",
-  "billing.title": "Facturering"
+  "billing.title": "Facturering",
+  "activity.type.key": "Sleutel",
+  "activity.type.document": "Document"
 } as const;

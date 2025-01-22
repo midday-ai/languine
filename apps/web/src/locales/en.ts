@@ -30,6 +30,10 @@ export default {
     noResults: "No results for '{search}'",
     clearSearch: "Clear search",
     loadMore: "Show more",
+    type: {
+      key: "Key",
+      document: "Document",
+    },
   },
   features: {
     title: "Features",
@@ -512,5 +516,9 @@ export default {
   },
   billing: {
     title: "Billing",
+  },
+  analytics: {
+    key: "Translated keys",
+    document: "Translated documents",
   },
 } as const;

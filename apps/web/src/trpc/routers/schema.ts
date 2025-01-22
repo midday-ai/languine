@@ -75,7 +75,7 @@ export const jobsSchema = z.object({
     z.object({
       key: z.string(),
       sourceText: z.string(),
-      documentName: z.string().nullable().optional(),
+      sourceFile: z.string(),
     }),
   ),
 });

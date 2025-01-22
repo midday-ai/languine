@@ -330,5 +330,7 @@ export default {
   "tuning.domainExpertise.options.financial": "Rahoitus",
   "tuning.domainExpertise.options.marketing": "Markkinointi",
   "tuning.domainExpertise.options.academic": "Akateeminen",
-  "billing.title": "Laskutus"
+  "billing.title": "Laskutus",
+  "activity.type.key": "Avain",
+  "activity.type.document": "Asiakirja"
 } as const;

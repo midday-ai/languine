@@ -172,7 +172,7 @@ export async function translateCommand(args: string[] = []) {
             .map(([key, sourceText]) => ({
               key,
               sourceText: sourceText,
-              documentName: sourceFilePath.split("/").pop(),
+              sourceFile: sourceFilePath.split("/").pop() ?? "",
             }));
 
           let shouldRemoveKeys = false;

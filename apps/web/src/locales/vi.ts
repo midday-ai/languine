@@ -329,5 +329,7 @@ export default {
   "tuning.domainExpertise.options.financial": "Tài chính",
   "tuning.domainExpertise.options.marketing": "Tiếp thị",
   "tuning.domainExpertise.options.academic": "Học thuật",
-  "billing.title": "Thanh toán"
+  "billing.title": "Thanh toán",
+  "activity.type.key": "Khóa",
+  "activity.type.document": "Tài liệu"
 } as const;

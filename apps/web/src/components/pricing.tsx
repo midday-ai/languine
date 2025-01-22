@@ -22,6 +22,7 @@ export function Pricing() {
                 {t("pricing.free.title")}
               </h3>
             </div>
+
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <MdCheck className="w-4 h-4 text-primary" />
@@ -56,6 +57,7 @@ export function Pricing() {
                 {t("pricing.pro.title")}
               </h3>
             </div>
+
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-secondary mb-4">
                 <span>{t("pricing.pro.includes_free")}</span>

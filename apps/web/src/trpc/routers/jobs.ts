@@ -19,7 +19,10 @@ export const jobsRouter = createTRPCRouter({
       const org = await getProjectOrganization(input.projectId);
 
       const limitCheckResult = await checkTranslationLimits(org, input);
-      if (limitCheckResult) return limitCheckResult;
+
+      if (limitCheckResult?.error) {
+        return limitCheckResult;
+      }
 
       const { options, isFreeUser } = getTranslationTaskOptions(org);
 

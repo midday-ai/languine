@@ -330,5 +330,7 @@ export default {
   "tuning.domainExpertise.options.financial": "法律",
   "tuning.domainExpertise.options.marketing": "金融",
   "tuning.domainExpertise.options.academic": "マーケティング",
-  "billing.title": "請求"
+  "billing.title": "請求",
+  "activity.type.key": "キー",
+  "activity.type.document": "ドキュメント"
 } as const;

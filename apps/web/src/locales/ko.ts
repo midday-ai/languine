@@ -330,5 +330,7 @@ export default {
   "tuning.domainExpertise.options.financial": "금융",
   "tuning.domainExpertise.options.marketing": "마케팅",
   "tuning.domainExpertise.options.academic": "학술",
-  "billing.title": "청구"
+  "billing.title": "청구",
+  "activity.type.key": "키",
+  "activity.type.document": "문서"
 } as const;

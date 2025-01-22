@@ -330,5 +330,7 @@ export default {
   "tuning.domainExpertise.options.financial": "财务",
   "tuning.domainExpertise.options.marketing": "营销",
   "tuning.domainExpertise.options.academic": "学术",
-  "billing.title": "账单"
+  "billing.title": "账单",
+  "activity.type.key": "键",
+  "activity.type.document": "文档"
 } as const;

@@ -87,7 +87,13 @@ export async function checkTranslationLimits(
     };
   }
 
-  return null;
+  return {
+    meta: {
+      plan: org.plan,
+      tier: String(org.tier),
+      organizationId: org.id,
+    },
+  };
 }
 
 export function getTranslationTaskOptions(

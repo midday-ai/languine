@@ -330,5 +330,7 @@ export default {
   "tuning.domainExpertise.options.financial": "مالي",
   "tuning.domainExpertise.options.marketing": "تسويقي",
   "tuning.domainExpertise.options.academic": "أكاديمي",
-  "billing.title": "الفواتير"
+  "billing.title": "الفواتير",
+  "activity.type.key": "مفتاح",
+  "activity.type.document": "وثيقة"
 } as const;
