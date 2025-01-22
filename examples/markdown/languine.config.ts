@@ -10,5 +10,8 @@ export default defineConfig({
     mdx: {
       include: ["blog/[locale]/*.mdx"],
     },
+    md: {
+      include: ["blog/[locale]/*.md"],
+    },
   },
 });

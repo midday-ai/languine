@@ -48,7 +48,7 @@ export const translateTask = schemaTask({
     > = {};
 
     // If the source format is markdown, we take the whole document and translate it
-    if (payload.sourceFormat === "md") {
+    if (payload.sourceFormat === "md" || payload.sourceFormat === "mdx") {
       for (const targetLocale of payload.targetLanguages) {
         const document = payload.content.at(0);
 
