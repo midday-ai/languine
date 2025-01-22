@@ -510,4 +510,7 @@ export default {
     fi: "Finnish",
     vi: "Vietnamese",
   },
+  billing: {
+    title: "Billing",
+  },
 } as const;

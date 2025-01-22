@@ -1,6 +1,8 @@
 import { deleteKeys, getTranslationsBySlug } from "@/db/queries/translate";
 import { createTRPCRouter, protectedProcedure } from "../init";
+import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import { isOrganizationMember } from "../permissions/organization";
+import { hasProjectAccess } from "../permissions/project";
 import { deleteKeysSchema, translateSchema } from "./schema";
 
 export const translateRouter = createTRPCRouter({
@@ -17,8 +19,9 @@ export const translateRouter = createTRPCRouter({
     }),
 
   deleteKeys: protectedProcedure
+    .use(rateLimitMiddleware)
     .input(deleteKeysSchema)
-    // .use(isOrganizationMember)
+    .use(hasProjectAccess)
     .mutation(async ({ input }) => {
       const data = await deleteKeys(input);
 
