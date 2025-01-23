@@ -353,12 +353,14 @@ export async function translateCommand(args: string[] = []) {
                 sourceFileContent,
               );
 
-              // Run afterTranslate hook if configured
+              // Run beforeSaving hook if configured
               let finalContent = serialized;
-              if (config?.hooks?.afterTranslate) {
-                finalContent = await config.hooks.afterTranslate({
+              if (config?.hooks?.beforeSaving) {
+                finalContent = await config.hooks.beforeSaving({
                   content: serialized,
                   filePath: targetPath,
+                  locale: targetLocale,
+                  format: type,
                 });
               }
 

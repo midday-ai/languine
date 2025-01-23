@@ -21,10 +21,12 @@ export interface Config {
   };
   /** Hooks */
   hooks?: {
-    /** Hook to run after translation */
-    afterTranslate?: (args: {
+    /** Hook to run before saving the file */
+    beforeSaving?: (args: {
       content: string;
       filePath: string;
+      locale: string;
+      format: string;
     }) => Promise<string>;
   };
 }
