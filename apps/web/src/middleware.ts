@@ -7,7 +7,7 @@ import { getSessionFromRequest } from "./lib/auth/middleware";
 const I18nMiddleware = createI18nMiddleware({
   locales: [...languineConfig.locale.targets, languineConfig.locale.source],
   defaultLocale: languineConfig.locale.source,
-  urlMappingStrategy: "rewrite",
+  urlMappingStrategy: "rewriteDefault",
 });
 
 export async function middleware(request: NextRequest) {
