@@ -19,7 +19,7 @@ export function Terminal() {
   useEffect(() => {
     const timer = setInterval(() => {
       setStep((prev) => {
-        if (prev < 7) {
+        if (prev < 11) {
           return prev + 1;
         }
         return prev;
@@ -42,7 +42,7 @@ export function Terminal() {
   }, [step]);
 
   return (
-    <div className="hidden md:block max-w-3xl w-full border border-border p-4 bg-[#121212] relative font-mono bg-noise overflow-hidden">
+    <div className="max-w-3xl w-full border border-border p-4 bg-[#121212] relative font-mono bg-noise overflow-hidden">
       <div className="select-none">
         <div className="flex gap-2 pb-4 bg-[#121212] bg-noise">
           <div className="w-3.5 h-3.5 rounded-full bg-primary" />
@@ -53,9 +53,9 @@ export function Terminal() {
 
       <div
         ref={terminalRef}
-        className="overflow-auto max-h-[520px] text-[#F5F5F3] scroll-smooth"
+        className="overflow-auto max-h-[380px] md:max-h-[520px] text-[#F5F5F3] scroll-smooth"
       >
-        <div className="text-sm flex flex-col tracking-wide leading-relaxed space-y-0.5">
+        <div className="text-xs flex flex-col tracking-wide leading-relaxed space-y-0.5">
           <span
             className={cn(
               "transition-opacity duration-100",
@@ -75,7 +75,7 @@ export function Terminal() {
               ◇ What would you like to do?
               {step === 0 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-2 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-2 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>
@@ -118,7 +118,7 @@ export function Terminal() {
               ◇ What is your source language?
               {step === 1 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>
@@ -153,7 +153,7 @@ export function Terminal() {
               ◇ What languages do you want to translate to?
               {step === 2 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>
@@ -188,7 +188,7 @@ export function Terminal() {
               ◇ Where should language files be stored?
               {step === 3 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>
@@ -201,7 +201,7 @@ export function Terminal() {
               step >= 3 ? "opacity-100" : "opacity-0",
             )}
           >
-            │ src/locales
+            │ src/locales/[locale].json
           </span>
           <span
             className={cn(
@@ -223,7 +223,7 @@ export function Terminal() {
               ◇ What format should language files use?
               {step === 4 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>
@@ -252,7 +252,7 @@ export function Terminal() {
               step >= 4 ? "opacity-100" : "opacity-0",
             )}
           >
-            │ ○ Markdown (.md)
+            │ ○ YAML (.yml, .yaml)
           </span>
           <span
             className={cn(
@@ -260,39 +260,7 @@ export function Terminal() {
               step >= 4 ? "opacity-100" : "opacity-0",
             )}
           >
-            │ ○ Xcode Strings (.strings)
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 4 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ Xcode Stringsdict (.stringsdict)
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 4 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ Xcode XCStrings (.xcstrings)
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 4 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ YAML (.yml)
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 4 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ Gettext (.po)
+            │ ○ Java Properties (.properties)
           </span>
           <span
             className={cn(
@@ -302,6 +270,102 @@ export function Terminal() {
           >
             │ ○ Android (.xml)
           </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ iOS Strings (.strings)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ iOS Stringsdict (.stringsdict)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ iOS XCStrings (.xcstrings)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ Markdown (.md)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ MDX (.mdx)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ HTML (.html)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ JavaScript (.js)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ Gettext PO (.po)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ XLIFF (.xlf, .xliff)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ CSV (.csv)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ XML (.xml)
+          </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ Flutter ARB (.arb)
+          </span>
 
           <span
             className={cn(
@@ -314,123 +378,91 @@ export function Terminal() {
 
           <span
             className={cn(
-              "transition-opacity duration-100",
-              step >= 5 ? "opacity-100" : "opacity-0",
-              "flex",
-            )}
-          >
-            <span>
-              ◇ Which provider would you like to use?
-              {step === 5 && (
-                <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
-                >
-                  █
-                </span>
-              )}
-            </span>
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 5 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ● Languine
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 5 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ OpenAI
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 5 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ Ollama
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-              "flex",
-            )}
-          >
-            <span>
-              ◇ Which model should be used for translations?
-              {step === 6 && (
-                <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
-                >
-                  █
-                </span>
-              )}
-            </span>
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ● GPT-4 (Default)
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ GPT-4 Turbo
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ GPT-4o
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ GPT-4o mini
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │ ○ GPT-3.5 Turbo
-          </span>
-          <span
-            className={cn(
-              "transition-opacity duration-100",
-              step >= 6 ? "opacity-100" : "opacity-0",
-            )}
-          >
-            │
-          </span>
-          <span
-            className={cn(
               "transition-opacity duration-100 -ml-[1.5px] flex",
-              step >= 7 ? "opacity-100" : "opacity-0",
+              step >= 5 ? "opacity-100" : "opacity-0",
             )}
           >
             <span>
               └ Configuration file and language files created successfully!
-              {step === 7 && (
+            </span>
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 5 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 6 ? "opacity-100" : "opacity-0",
+              "flex mt-4",
+            )}
+          >
+            <span>
+              ◇ languine translate
+              {step === 6 && (
                 <span
-                  className={`inline-block w-2 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
+                >
+                  █
+                </span>
+              )}
+            </span>
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 7 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ Translating to Spanish (es)...
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 8 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ Translating to Portuguese (pt)...
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 9 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ Translating to French (fr)...
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 10 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │
+          </span>
+
+          <span
+            className={cn(
+              "transition-opacity duration-100 -ml-[1.5px]",
+              step >= 11 ? "opacity-100" : "opacity-0",
+              "flex",
+            )}
+          >
+            <span>
+              └ Successfully translated to 3 languages!
+              {step === 11 && (
+                <span
+                  className={`inline-block w-1 h-4 bg-[#F5F5F3] ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"}`}
                 >
                   █
                 </span>

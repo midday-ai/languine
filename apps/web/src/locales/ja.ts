@@ -7,7 +7,7 @@ export default {
     goToApp: "アプリへ移動"
   },
   hero: {
-    title: "アプリケーションの自動ローカライゼーション",
+    title: "アプリケーションのための自動化されたローカライゼーションインフラ",
     description: "AIを活用したCLIとパイプラインで、開発者のための翻訳を自動化し、ローカライゼーションプロセスを効率化します。"
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "文化的に適切な内容に適応する",
     free: {
-      title: "シンプルな価格設定",
+      title: "無料",
       price: "無料（100キー）",
       keys_limit: "無料",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "微調整オプション",
         analytics: "翻訳の上書き",
         context_memory: "分析",
-        community_support: "コンテキストメモリ"
-      }
+        community_support: "コンテキストメモリ",
+        keys_limit: "最大100キー",
+        docs_limit: "最大5ドキュメント",
+        unlimited_languages: "無制限の言語"
+      },
+      description: "試すのに最適"
     },
     pro: {
       title: "コミュニティサポート",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "無料版のすべてに加えて：",
         latest_features: "GitHubアクション統合",
-        priority_support: "最新機能への早期アクセス"
+        priority_support: "最新機能への早期アクセス",
+        priority_queues: "優先翻訳キュー",
+        keys_limit: "10,000キーから開始",
+        docs_limit: "50ドキュメントから開始"
       }
     },
-    cta: "優先サポート"
+    cta: "優先サポート",
+    keys_limit_explanation: "翻訳キー: 20のソースキー（「サインアップ」や「ようこそ！」など）を5つの言語に翻訳すると、100の翻訳キー（20キー×5言語）に相当します。"
   },
   createTeam: {
     teamName: "自動化を開始",
@@ -517,5 +525,46 @@ export default {
     settings: "設定",
     docs: "ドキュメント",
     account: "アカウント"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Languineとは何ですか？",
+      answer: "Languineは、AIを活用したローカライゼーションプラットフォームで、アプリケーションの翻訳を自動化するのに役立ちます。微調整オプション、翻訳オーバーライド、分析、コンテキストメモリなどの機能を提供し、高品質の翻訳を保証します。"
+    },
+    key_limit: {
+      question: "キー制限はどのように機能しますか？",
+      answer: "翻訳キーは、ソースキーをターゲット言語に翻訳したときにカウントされます。例えば、20のソースキーを5つの言語に翻訳すると、100の翻訳キー（20キー×5言語）に相当します。"
+    },
+    supported_languages: {
+      question: "どの言語がサポートされていますか？",
+      answer: "Languineはすべてのプランで100以上の言語をサポートしています。AIを活用した翻訳は主要な言語で最も効果的ですが、サポートされているすべての言語で質の高い翻訳を提供するよう努めています。特定の言語要件や特定の言語の翻訳品質に関する質問がある場合は、サポートチームまでお問い合わせください。"
+    },
+    github_action: {
+      question: "GitHub Action統合はどのように機能しますか？",
+      answer: "GitHub Action統合（Proプランで利用可能）により、CI/CDパイプライン内で翻訳ワークフローを自動化できます。リポジトリに変更をプッシュすると、翻訳が自動的に更新されます。"
+    },
+    support: {
+      question: "どのようなサポートを提供していますか？",
+      answer: "無料ユーザーはコミュニティサポートにアクセスできますが、Proユーザーは優先サポートを受けられ、より速い応答時間と翻訳ニーズに対する専任の支援が提供されます。"
+    },
+    open_source: {
+      question: "Languineはオープンソースですか？",
+      answer: "はい！Languineは完全にオープンソースで、GitHubで利用可能です。プロジェクトに貢献したり、問題を報告したり、機能を提案したり、コードを検査したりできます。透明性と公開での構築を信じています。"
+    },
+    open_source_pricing: {
+      question: "オープンソースプロジェクトのための特別な価格設定を提供していますか？",
+      answer: "はい！私たちはオープンソースコミュニティを支援するのが大好きです。オープンソースプロジェクトを維持している場合、Pro機能に30％オフでアクセスできます。プロジェクトの詳細を私たちのチームに連絡するだけで、割引されたProアカウントを設定します。これは、私たちの仕事を可能にするコミュニティに還元する方法です。"
+    },
+    cancel_subscription: {
+      question: "サブスクリプションをキャンセルするにはどうすればよいですか？",
+      answer: "アカウント設定からいつでもサブスクリプションをキャンセルできます。Billing > Change Planに移動してください。サブスクリプションは現在の請求期間の終了まで有効で、その後は無料プランに移行します。"
+    }
+  },
+  pricing_slider: {
+    tier: "Tier {tier}",
+    keys: "翻訳キー",
+    documents: "翻訳ドキュメント",
+    period: "月"
   }
 } as const;

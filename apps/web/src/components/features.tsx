@@ -46,7 +46,7 @@ export function Features() {
             <Card className="rounded-none border-none p-4">
               <CardHeader>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium">{feature.title}</h3>
+                  <h3 className="text-sm font-regular">{feature.title}</h3>
                   <p className="text-secondary text-sm">
                     {feature.description}
                   </p>

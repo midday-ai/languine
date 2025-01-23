@@ -7,7 +7,7 @@ export default {
     goToApp: "앱으로 이동"
   },
   hero: {
-    title: "애플리케이션을 위한 자동화된 현지화",
+    title: "애플리케이션을 위한 자동화된 현지화 인프라",
     description: "개발자를 위한 번역 자동화를 위해 설계된 AI 기반 CLI 및 파이프라인으로 현지화 프로세스를 간소화하세요."
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "간단한 가격 정책",
     free: {
-      title: "무료(100 키)",
+      title: "무료",
       price: "무료",
       keys_limit: "최대 100 키",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "번역 재정의",
         analytics: "분석",
         context_memory: "컨텍스트 메모리",
-        community_support: "커뮤니티 지원"
-      }
+        community_support: "커뮤니티 지원",
+        keys_limit: "최대 100개의 키",
+        docs_limit: "최대 5개의 문서",
+        unlimited_languages: "무제한 언어"
+      },
+      description: "시험 사용에 완벽"
     },
     pro: {
       title: "프로",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "GitHub Action 통합",
         latest_features: "최신 기능 초기 접근",
-        priority_support: "우선 지원"
+        priority_support: "우선 지원",
+        priority_queues: "우선 순위 번역 큐",
+        keys_limit: "10,000개의 키부터 시작",
+        docs_limit: "50개의 문서부터 시작"
       }
     },
-    cta: "자동화 시작"
+    cta: "자동화 시작",
+    keys_limit_explanation: "번역된 키: 20개의 소스 키(예: \"가입\" 또는 \"환영합니다!\")를 5개 언어로 번역하면 100개의 번역된 키(20개의 키 x 5개 언어)가 됩니다."
   },
   createTeam: {
     teamName: "팀 이름",
@@ -517,5 +525,46 @@ export default {
     settings: "설정",
     docs: "문서",
     account: "계정"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Languine이란 무엇인가요?",
+      answer: "Languine은 애플리케이션의 번역을 자동화하는 데 도움을 주는 AI 기반 현지화 플랫폼입니다. 고품질 번역을 보장하기 위해 미세 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같은 기능을 제공합니다."
+    },
+    key_limit: {
+      question: "키 제한은 어떻게 작동하나요?",
+      answer: "번역된 키는 소스 키를 대상 언어로 번역할 때 계산됩니다. 예를 들어, 20개의 소스 키를 5개 언어로 번역하면 100개의 번역된 키(20개의 키 × 5개 언어)가 됩니다."
+    },
+    supported_languages: {
+      question: "어떤 언어를 지원하나요?",
+      answer: "Languine은 모든 요금제에서 100개 이상의 언어를 지원합니다. 우리의 AI 기반 번역은 주요 언어에서 가장 잘 작동하지만, 지원되는 모든 언어에서 품질 번역을 제공하기 위해 노력합니다. 특정 언어 요구 사항이나 특정 언어에 대한 번역 품질에 대한 질문이 있으면 지원 팀에 문의하십시오."
+    },
+    github_action: {
+      question: "GitHub Action 통합은 어떻게 작동하나요?",
+      answer: "GitHub Action 통합(Pro 요금제에서 사용 가능)은 CI/CD 파이프라인에서 직접 번역 워크플로우를 자동화할 수 있게 해줍니다. 저장소에 변경 사항을 푸시하면 번역이 자동으로 업데이트될 수 있습니다."
+    },
+    support: {
+      question: "어떤 종류의 지원을 제공하나요?",
+      answer: "무료 사용자는 커뮤니티 지원에 액세스할 수 있으며, Pro 사용자는 더 빠른 응답 시간과 번역 요구에 대한 전담 지원을 받습니다."
+    },
+    open_source: {
+      question: "Languine은 오픈 소스인가요?",
+      answer: "네! Languine은 완전히 오픈 소스이며 GitHub에서 사용할 수 있습니다. 프로젝트에 기여하고, 문제를 보고하고, 기능을 제안하고, 코드를 검사할 수 있습니다. 우리는 투명성과 공개적으로 구축하는 것을 믿습니다."
+    },
+    open_source_pricing: {
+      question: "오픈 소스 프로젝트를 위한 특별 가격을 제공하나요?",
+      answer: "네! 우리는 오픈 소스 커뮤니티를 지원하는 것을 좋아합니다. 오픈 소스 프로젝트를 유지 관리하는 경우 Pro 기능을 30% 할인된 가격에 이용할 수 있습니다. 프로젝트에 대한 세부 정보와 함께 우리 팀에 연락하면 할인된 Pro 계정을 설정해 드립니다. 이것은 우리의 작업을 가능하게 하는 커뮤니티에 보답하는 우리의 방법입니다."
+    },
+    cancel_subscription: {
+      question: "구독을 취소하려면 어떻게 해야 하나요?",
+      answer: "계정 설정에서 언제든지 구독을 취소할 수 있습니다. 청구 > 요금제 변경으로 이동하십시오. 구독은 현재 청구 기간이 끝날 때까지 활성 상태로 유지되며, 그 후에는 무료 요금제로 이동됩니다."
+    }
+  },
+  pricing_slider: {
+    tier: "티어 {tier}",
+    keys: "번역된 키",
+    documents: "번역된 문서",
+    period: "월"
   }
 } as const;

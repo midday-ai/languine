@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { Suspense } from "react";
 import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
+import { MobileMenu } from "./mobile-menu";
 
 export function Header() {
   const t = useI18n();
@@ -33,7 +34,7 @@ export function Header() {
           <Logo />
         </Link>
 
-        <div className="flex items-center gap-6 text-sm">
+        <div className="md:flex hidden items-center gap-6 text-sm">
           <Link href="https://git.new/languine">
             <Suspense fallback={<GithubStars />}>
               <GithubStars />
@@ -42,32 +43,36 @@ export function Header() {
 
           <ChangeLanguage />
 
-          {links.map((link, i) =>
-            link.component ? (
-              <div
-                key={i.toString()}
-                className={cn(
-                  "text-secondary hover:text-primary transition-colors",
-                  link.className,
-                )}
-              >
-                {link.component}
-              </div>
-            ) : (
-              <Link
-                href={link.href!}
-                className={cn(
-                  "text-secondary hover:text-primary transition-colors hidden md:block",
-                  link.className,
-                  pathname?.endsWith(link.href) && "text-primary",
-                )}
-                key={link.href}
-              >
-                {link.label}
-              </Link>
-            ),
-          )}
+          <div className="hidden md:flex items-center gap-6 text-sm">
+            {links.map((link, i) =>
+              link.component ? (
+                <div
+                  key={i.toString()}
+                  className={cn(
+                    "text-secondary hover:text-primary transition-colors",
+                    link.className,
+                  )}
+                >
+                  {link.component}
+                </div>
+              ) : (
+                <Link
+                  href={link.href!}
+                  className={cn(
+                    "text-secondary hover:text-primary transition-colors hidden md:block",
+                    link.className,
+                    pathname?.endsWith(link.href) && "text-primary",
+                  )}
+                  key={link.href}
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
+          </div>
         </div>
+
+        <MobileMenu />
       </div>
     </div>
   );

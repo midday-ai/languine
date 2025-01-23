@@ -66,8 +66,8 @@ export async function getAnalytics({
 
   const periodSql =
     period === "weekly"
-      ? sql`strftime('%Y-W%W', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`
-      : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.createdAt}, 'unixepoch', 'localtime'))`;
+      ? sql`strftime('%Y-W%W', datetime(${translations.updatedAt}, 'unixepoch', 'localtime'))`
+      : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.updatedAt}, 'unixepoch', 'localtime'))`;
 
   const [keyStats, documentStats, totals] = await Promise.all([
     // Get key stats by period
@@ -88,8 +88,8 @@ export async function getAnalytics({
         and(
           eq(translations.projectId, projects.id),
           eq(translations.sourceType, "key"),
-          gte(translations.createdAt, startDate),
-          lte(translations.createdAt, endDate),
+          gte(translations.updatedAt, startDate),
+          lte(translations.updatedAt, endDate),
         ),
       )
       .groupBy(periodSql)
@@ -113,8 +113,8 @@ export async function getAnalytics({
         and(
           eq(translations.projectId, projects.id),
           eq(translations.sourceType, "document"),
-          gte(translations.createdAt, startDate),
-          lte(translations.createdAt, endDate),
+          gte(translations.updatedAt, startDate),
+          lte(translations.updatedAt, endDate),
         ),
       )
       .groupBy(periodSql)

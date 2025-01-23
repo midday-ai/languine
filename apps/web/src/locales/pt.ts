@@ -7,7 +7,7 @@ export default {
     goToApp: "Ir para o app"
   },
   hero: {
-    title: "Localização automatizada para suas aplicações",
+    title: "Infraestrutura de localização automatizada para suas aplicações",
     description: "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores."
   },
   getStarted: {
@@ -361,7 +361,7 @@ export default {
   pricing: {
     title: "Preços simples",
     free: {
-      title: "Grátis (100 chaves)",
+      title: "Grátis",
       price: "Grátis",
       keys_limit: "Até 100 chaves",
       features: {
@@ -370,8 +370,12 @@ export default {
         overrides: "Substituições de tradução",
         analytics: "Análises",
         context_memory: "Memória de contexto",
-        community_support: "Suporte da comunidade"
-      }
+        community_support: "Suporte da comunidade",
+        keys_limit: "Até 100 chaves",
+        docs_limit: "Até 5 documentos",
+        unlimited_languages: "Idiomas ilimitados"
+      },
+      description: "Perfeito para experimentar"
     },
     pro: {
       title: "Pro",
@@ -379,10 +383,14 @@ export default {
       features: {
         github_action: "Integração com GitHub Action",
         latest_features: "Acesso antecipado aos últimos recursos",
-        priority_support: "Suporte prioritário"
+        priority_support: "Suporte prioritário",
+        priority_queues: "Filas de tradução prioritárias",
+        keys_limit: "A partir de 10.000 chaves",
+        docs_limit: "A partir de 50 documentos"
       }
     },
-    cta: "Comece a automatizar"
+    cta: "Comece a automatizar",
+    keys_limit_explanation: "Chave traduzida: Se você tem 20 chaves de origem (como \"Inscreva-se\" ou \"Bem-vindo!\") e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves x 5 idiomas)."
   },
   createTeam: {
     teamName: "Nome da Equipe",
@@ -516,5 +524,46 @@ export default {
     settings: "Configurações",
     docs: "Documentação",
     account: "Conta"
+  },
+  faq: {
+    title: "Perguntas frequentes",
+    what_is_languine: {
+      question: "O que é Languine?",
+      answer: "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de suas aplicações. Ele fornece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
+    },
+    key_limit: {
+      question: "Como funciona o limite de chaves?",
+      answer: "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma de destino. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
+    },
+    supported_languages: {
+      question: "Quais idiomas são suportados?",
+      answer: "Languine suporta mais de 100 idiomas em todos os planos. Embora nossas traduções alimentadas por IA funcionem melhor com os principais idiomas, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas específicos, entre em contato com nossa equipe de suporte."
+    },
+    github_action: {
+      question: "Como funciona a integração do GitHub Action?",
+      answer: "A integração do GitHub Action (disponível nos planos Pro) permite que você automatize seu fluxo de trabalho de tradução diretamente em seu pipeline de CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
+    },
+    support: {
+      question: "Que tipo de suporte você oferece?",
+      answer: "Usuários gratuitos têm acesso ao suporte da comunidade, enquanto usuários Pro recebem suporte prioritário com tempos de resposta mais rápidos e assistência dedicada para suas necessidades de tradução."
+    },
+    open_source: {
+      question: "O Languine é de código aberto?",
+      answer: "Sim! O Languine é totalmente de código aberto e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir recursos e inspecionar o código. Acreditamos em transparência e construção em público."
+    },
+    open_source_pricing: {
+      question: "Você oferece preços especiais para projetos de código aberto?",
+      answer: "Sim! Adoramos apoiar a comunidade de código aberto. Se você mantém um projeto de código aberto, pode obter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós configuramos uma conta Pro com desconto para você. Esta é a nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
+    },
+    cancel_subscription: {
+      question: "Como cancelo minha assinatura?",
+      answer: "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Faturamento > Alterar Plano. Sua assinatura permanecerá ativa até o final do seu período de faturamento atual, após o qual você será movido para o plano Grátis."
+    }
+  },
+  pricing_slider: {
+    tier: "Nível {tier}",
+    keys: "Chaves traduzidas",
+    documents: "Documentos traduzidos",
+    period: "seg"
   }
 } as const;

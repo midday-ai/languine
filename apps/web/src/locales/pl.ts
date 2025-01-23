@@ -7,7 +7,7 @@ export default {
     goToApp: "Przejdź do aplikacji"
   },
   hero: {
-    title: "Automatyzacja lokalizacji dla Twoich aplikacji",
+    title: "Zautomatyzowana infrastruktura lokalizacyjna dla Twoich aplikacji",
     description: "Usprawnij proces lokalizacji dzięki zasilanemu przez AI CLI i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
   },
   getStarted: {
@@ -361,7 +361,7 @@ export default {
   pricing: {
     title: "Proste ceny",
     free: {
-      title: "Darmowy (100 kluczy)",
+      title: "Darmowe",
       price: "Darmowy",
       keys_limit: "Do 100 kluczy",
       features: {
@@ -370,8 +370,12 @@ export default {
         overrides: "Nadpisania tłumaczeń",
         analytics: "Analityka",
         context_memory: "Pamięć kontekstu",
-        community_support: "Wsparcie społeczności"
-      }
+        community_support: "Wsparcie społeczności",
+        keys_limit: "Do 100 kluczy",
+        docs_limit: "Do 5 dokumentów",
+        unlimited_languages: "Nieograniczona liczba języków"
+      },
+      description: "Idealne do wypróbowania"
     },
     pro: {
       title: "Pro",
@@ -379,10 +383,14 @@ export default {
       features: {
         github_action: "Integracja z GitHub Action",
         latest_features: "Wczesny dostęp do najnowszych funkcji",
-        priority_support: "Priorytetowe wsparcie"
+        priority_support: "Priorytetowe wsparcie",
+        priority_queues: "Priorytetowe kolejki tłumaczeń",
+        keys_limit: "Począwszy od 10 000 kluczy",
+        docs_limit: "Począwszy od 50 dokumentów"
       }
     },
-    cta: "Zacznij automatyzować"
+    cta: "Zacznij automatyzować",
+    keys_limit_explanation: "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak „Zarejestruj się” lub „Witaj!”) i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy x 5 języków)."
   },
   createTeam: {
     teamName: "Nazwa zespołu",
@@ -516,5 +524,46 @@ export default {
     settings: "Ustawienia",
     docs: "Dokumentacja",
     account: "Konto"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Czym jest Languine?",
+      answer: "Languine to platforma lokalizacyjna napędzana sztuczną inteligencją, która pomaga automatyzować tłumaczenie Twoich aplikacji. Zapewnia funkcje takie jak opcje dostrajania, nadpisywanie tłumaczeń, analitykę i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
+    },
+    key_limit: {
+      question: "Jak działa limit kluczy?",
+      answer: "Przetłumaczony klucz jest liczony, gdy tłumaczysz klucz źródłowy na język docelowy. Na przykład, jeśli masz 20 kluczy źródłowych i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy × 5 języków)."
+    },
+    supported_languages: {
+      question: "Jakie języki są obsługiwane?",
+      answer: "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia napędzane sztuczną inteligencją działają najlepiej z głównymi językami, staramy się zapewnić wysoką jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz szczególne wymagania językowe lub pytania dotyczące jakości tłumaczeń dla konkretnych języków, skontaktuj się z naszym zespołem wsparcia."
+    },
+    github_action: {
+      question: "Jak działa integracja z GitHub Action?",
+      answer: "Integracja z GitHub Action (dostępna w planach Pro) pozwala na automatyzację procesu tłumaczenia bezpośrednio w Twoim potoku CI/CD. Kiedy wprowadzisz zmiany w swoim repozytorium, tłumaczenia mogą być automatycznie aktualizowane."
+    },
+    support: {
+      question: "Jakiego rodzaju wsparcie oferujecie?",
+      answer: "Użytkownicy darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem reakcji i dedykowaną pomocą w zakresie tłumaczeń."
+    },
+    open_source: {
+      question: "Czy Languine jest open source?",
+      answer: "Tak! Languine jest w pełni open source i dostępne na GitHub. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie w przestrzeni publicznej."
+    },
+    open_source_pricing: {
+      question: "Czy oferujecie specjalne ceny dla projektów open source?",
+      answer: "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla Ciebie konto Pro ze zniżką. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+    },
+    cancel_subscription: {
+      question: "Jak mogę anulować subskrypcję?",
+      answer: "Możesz anulować subskrypcję w dowolnym momencie z ustawień swojego konta. Przejdź do Rozliczenia > Zmień plan. Twoja subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego, po czym zostaniesz przeniesiony do planu darmowego."
+    }
+  },
+  pricing_slider: {
+    tier: "Poziom {tier}",
+    keys: "Przetłumaczone klucze",
+    documents: "Przetłumaczone dokumenty",
+    period: "pon"
   }
 } as const;

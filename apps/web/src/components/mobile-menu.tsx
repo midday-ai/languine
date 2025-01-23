@@ -1,46 +1,25 @@
 "use client";
 
+import { SignIn } from "@/components/sign-in";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/locales/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import {
-  MdClose,
-  MdGraphicEq,
-  MdMenu,
-  MdOutlineBook,
-  MdOutlineSettings,
-  MdOutlineStackedBarChart,
-} from "react-icons/md";
-import { UserMenu } from "./user-menu";
+import { MdClose, MdMenu } from "react-icons/md";
+import { ChangeLanguage } from "./change-language";
+import { GithubStars } from "./github-stars";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const params = useParams();
   const pathname = usePathname();
   const t = useI18n();
 
-  const navigation = [
-    {
-      icon: MdOutlineStackedBarChart,
-      path: "/",
-      isActive: pathname.endsWith(`/${params.organization}/${params.project}`),
-      label: t("menu.dashboard"),
-    },
-    {
-      icon: MdGraphicEq,
-      path: "/tuning",
-      isActive: pathname.endsWith("/tuning"),
-      label: t("menu.tuning"),
-    },
-    {
-      icon: MdOutlineSettings,
-      path: "/settings",
-      isActive: pathname.endsWith("/settings"),
-      label: t("menu.settings"),
-    },
+  const links = [
+    { href: "/pricing", label: t("header.pricing") },
+    { href: "https://git.new/languine", label: t("header.docs") },
+    { href: "https://github.com/midday-ai/languine", label: <GithubStars /> },
   ];
 
   useEffect(() => {
@@ -56,13 +35,15 @@ export function MobileMenu() {
 
   return (
     <>
-      <button type="button" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? (
-          <MdClose className="size-6" />
-        ) : (
-          <MdMenu className="size-6" />
-        )}
-      </button>
+      <div className="flex md:hidden">
+        <button type="button" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <MdClose className="size-6" />
+          ) : (
+            <MdMenu className="size-6" />
+          )}
+        </button>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
@@ -70,65 +51,42 @@ export function MobileMenu() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 top-[70px] bg-background bg-noise"
+            transition={{ duration: 0.1 }}
+            className="fixed inset-0 z-50 bg-background bg-noise w-full bottom-0 h-screen left-0 right-0 top-[50px]"
           >
             <div className="flex flex-col h-full">
-              {navigation.map((item, index) => (
+              {links.map((link, index) => (
                 <motion.div
-                  key={item.path}
+                  key={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  transition={{ delay: index * 0.02, duration: 0.1 }}
                 >
                   <Link
-                    href={`/${params.organization}/${params.project}${item.path}`}
+                    href={link.href}
                     className={cn(
-                      "flex items-center gap-4 px-6 py-5 border-b border-border text-secondary",
-                      item.isActive && "text-primary",
+                      "block py-5 text-secondary",
+                      pathname?.endsWith(link.href) && "text-primary",
                     )}
                     onClick={() => setIsOpen(false)}
                   >
-                    <item.icon className="size-6" />
-                    <span className="text-lg">{item.label}</span>
+                    {link.label}
                   </Link>
                 </motion.div>
               ))}
+
+              <ChangeLanguage />
+
               <motion.div
-                className="mt-auto border-t border-border"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                className="py-5 border-t border-border"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay: navigation.length * 0.05,
-                  duration: 0.3,
+                  delay: links.length * 0.02 + 0.05,
+                  duration: 0.1,
                 }}
               >
-                <Link href="/docs">
-                  <motion.div
-                    className="flex items-center gap-4 px-6 py-5"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: navigation.length * 0.05 + 0.1,
-                      duration: 0.2,
-                    }}
-                  >
-                    <MdOutlineBook className="size-6" />
-                    <span className="text-lg">{t("menu.docs")}</span>
-                  </motion.div>
-                </Link>
-
-                <motion.div
-                  className="flex items-center gap-4 px-6 py-5 border-t border-border"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    delay: navigation.length * 0.05 + 0.2,
-                    duration: 0.2,
-                  }}
-                >
-                  <UserMenu />
-                  <span className="text-lg">{t("menu.account")}</span>
-                </motion.div>
+                <SignIn />
               </motion.div>
             </div>
           </motion.div>

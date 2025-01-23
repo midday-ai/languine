@@ -17,10 +17,13 @@ export function GetStarted() {
       <div className="border border-primary p-1 bg-background overflow-hidden">
         <div className="border border-primary px-4 sm:px-32 py-12 sm:py-24 flex flex-col sm:flex-row gap-4 bg-background overflow-hidden relative">
           <div className="space-y-4 z-10">
-            <h4>{t("getStarted.description")}</h4>
-            <p className="text-secondary text-sm">
+            <h4 className="text-[16px] font-regular">
+              {t("getStarted.description")}
+            </h4>
+            <p className="text-secondary text-sm block pb-4">
               {t("getStarted.description")}
             </p>
+
             <div className="text-center sm:text-left">
               <Link href="/login">
                 <OutlinedButton>

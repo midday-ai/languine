@@ -141,9 +141,7 @@ export function Companies() {
           rel="noreferrer"
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
-            <span className="text-md font-sans font-medium">
-              {t("companies.addYourCompany")}
-            </span>
+            <span className="text-xs">{t("companies.addYourCompany")}</span>
           </div>
         </a>
         <a
@@ -152,9 +150,7 @@ export function Companies() {
           rel="noreferrer"
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
-            <span className="text-md font-sans font-medium">
-              {t("companies.addYourCompany")}
-            </span>
+            <span className="text-xs">{t("companies.addYourCompany")}</span>
           </div>
         </a>
       </div>

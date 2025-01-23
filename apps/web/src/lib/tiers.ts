@@ -21,3 +21,14 @@ export const TIERS_MAX_DOCUMENTS = {
   7: 5000,
   8: 10000,
 };
+
+export const TIER_PRICES = {
+  1: 49,
+  2: 149,
+  3: 299,
+  4: 499,
+  5: 999,
+  6: 1999,
+  7: 4999,
+  8: 9999,
+};

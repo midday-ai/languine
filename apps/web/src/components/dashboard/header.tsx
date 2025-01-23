@@ -1,6 +1,6 @@
 import { ChangeLanguage } from "@/components/change-language";
+import { MobileMenu } from "@/components/dashboard/mobile-menu";
 import { Logo } from "@/components/logo-square";
-import { MobileMenu } from "@/components/mobile-menu";
 import { TeamSelectorServer } from "@/components/team-selector.server";
 import { UserMenu } from "@/components/user-menu";
 import Link from "next/link";
@@ -10,9 +10,7 @@ export function Header() {
   return (
     <div className="h-[70px] border-b w-full flex items-center md:px-4 sticky top-0 bg-background z-10 bg-noise">
       <div className="flex md:hidden border-r border-border h-full items-center justify-center size-[70px]">
-        <Link href="/" className="block">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
 
       <div className="flex-1 flex justify-center">

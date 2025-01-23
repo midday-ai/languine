@@ -247,7 +247,7 @@ export async function translateCommand(args: string[] = []) {
                 // Just upgrade the plan
                 await client.organization.updatePlan.mutate({
                   organizationId: meta?.organizationId,
-                  tier: meta?.tier + 1,
+                  tier: Number(meta?.tier) + 1,
                 });
 
                 s.stop(chalk.green("Plan upgraded successfully"));

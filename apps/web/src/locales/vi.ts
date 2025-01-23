@@ -7,7 +7,7 @@ export default {
     goToApp: "Truy cập ứng dụng"
   },
   hero: {
-    title: "Tự động hóa bản địa hóa cho ứng dụng của bạn",
+    title: "Cơ sở hạ tầng bản địa hóa tự động cho ứng dụng của bạn",
     description: "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển."
   },
   getStarted: {
@@ -361,7 +361,7 @@ export default {
   pricing: {
     title: "Giá cả đơn giản",
     free: {
-      title: "Miễn phí (100 khóa)",
+      title: "Miễn phí",
       price: "Miễn phí",
       keys_limit: "Lên đến 100 khóa",
       features: {
@@ -370,8 +370,12 @@ export default {
         overrides: "Ghi đè bản dịch",
         analytics: "Phân tích",
         context_memory: "Bộ nhớ ngữ cảnh",
-        community_support: "Hỗ trợ cộng đồng"
-      }
+        community_support: "Hỗ trợ cộng đồng",
+        keys_limit: "Lên đến 100 khóa",
+        docs_limit: "Lên đến 5 tài liệu",
+        unlimited_languages: "Không giới hạn ngôn ngữ"
+      },
+      description: "Hoàn hảo khi thử nghiệm"
     },
     pro: {
       title: "Pro",
@@ -379,10 +383,14 @@ export default {
       features: {
         github_action: "Tích hợp GitHub Action",
         latest_features: "Truy cập sớm các tính năng mới nhất",
-        priority_support: "Hỗ trợ ưu tiên"
+        priority_support: "Hỗ trợ ưu tiên",
+        priority_queues: "Hàng đợi dịch ưu tiên",
+        keys_limit: "Bắt đầu từ 10 000 khóa",
+        docs_limit: "Bắt đầu từ 50 tài liệu"
       }
     },
-    cta: "Bắt đầu tự động hóa"
+    cta: "Bắt đầu tự động hóa",
+    keys_limit_explanation: "Khóa đã dịch: Nếu bạn có 20 khóa nguồn (như “Đăng ký” hoặc “Chào mừng!”) và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa x 5 ngôn ngữ)."
   },
   createTeam: {
     teamName: "Tên nhóm",
@@ -516,5 +524,46 @@ export default {
     settings: "Cài đặt",
     docs: "Tài liệu",
     account: "Tài khoản"
+  },
+  faq: {
+    title: "Câu hỏi thường gặp",
+    what_is_languine: {
+      question: "Languine là gì?",
+      answer: "Languine là một nền tảng bản địa hóa được hỗ trợ bởi AI giúp bạn tự động hóa việc dịch ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn tinh chỉnh, ghi đè bản dịch, phân tích và bộ nhớ ngữ cảnh để đảm bảo bản dịch chất lượng cao."
+    },
+    key_limit: {
+      question: "Giới hạn khóa hoạt động như thế nào?",
+      answer: "Một khóa đã dịch được tính khi bạn dịch một khóa nguồn sang một ngôn ngữ đích. Ví dụ: nếu bạn có 20 khóa nguồn và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa × 5 ngôn ngữ)."
+    },
+    supported_languages: {
+      question: "Những ngôn ngữ nào được hỗ trợ?",
+      answer: "Languine hỗ trợ hơn 100 ngôn ngữ trong tất cả các gói. Trong khi bản dịch được hỗ trợ bởi AI của chúng tôi hoạt động tốt nhất với các ngôn ngữ chính, chúng tôi cố gắng cung cấp bản dịch chất lượng trên tất cả các ngôn ngữ được hỗ trợ. Nếu bạn có yêu cầu ngôn ngữ cụ thể hoặc câu hỏi về chất lượng dịch thuật cho các ngôn ngữ cụ thể, vui lòng liên hệ với nhóm hỗ trợ của chúng tôi."
+    },
+    github_action: {
+      question: "Tích hợp GitHub Action hoạt động như thế nào?",
+      answer: "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình dịch thuật trực tiếp trong đường ống CI/CD của bạn. Khi bạn đẩy thay đổi lên kho lưu trữ của mình, bản dịch có thể được cập nhật tự động."
+    },
+    support: {
+      question: "Bạn cung cấp loại hỗ trợ nào?",
+      answer: "Người dùng miễn phí được tiếp cận với hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và hỗ trợ chuyên dụng cho nhu cầu dịch thuật của họ."
+    },
+    open_source: {
+      question: "Languine có mã nguồn mở không?",
+      answer: "Có! Languine hoàn toàn mã nguồn mở và có sẵn trên GitHub. Bạn có thể đóng góp cho dự án, báo cáo vấn đề, đề xuất tính năng và kiểm tra mã. Chúng tôi tin vào sự minh bạch và xây dựng công khai."
+    },
+    open_source_pricing: {
+      question: "Bạn có cung cấp giá đặc biệt cho các dự án mã nguồn mở không?",
+      answer: "Có! Chúng tôi yêu thích việc hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể truy cập các tính năng Pro của chúng tôi với giá giảm 30%. Chỉ cần liên hệ với nhóm của chúng tôi với thông tin chi tiết về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro được giảm giá. Đây là cách chúng tôi đền đáp cộng đồng đã làm cho công việc của chúng tôi trở nên khả thi."
+    },
+    cancel_subscription: {
+      question: "Làm thế nào để hủy đăng ký của tôi?",
+      answer: "Bạn có thể hủy đăng ký của mình bất cứ lúc nào từ cài đặt tài khoản của bạn. Điều hướng đến Thanh toán > Thay đổi Gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối kỳ thanh toán hiện tại, sau đó bạn sẽ được chuyển sang gói Miễn phí."
+    }
+  },
+  pricing_slider: {
+    tier: "Cấp {tier}",
+    keys: "Khóa đã dịch",
+    documents: "Tài liệu đã dịch",
+    period: "thứ hai"
   }
 } as const;

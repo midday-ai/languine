@@ -7,7 +7,7 @@ export default {
     goToApp: "Aller à l'application"
   },
   hero: {
-    title: "Localisation automatisée pour vos applications",
+    title: "Infrastructure de localisation automatisée pour vos applications",
     description: "Rationalisez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs."
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "Tarification simple",
     free: {
-      title: "Gratuit (100 clés)",
+      title: "Gratuit",
       price: "Gratuit",
       keys_limit: "Jusqu'à 100 clés",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "Remplacements de traduction",
         analytics: "Analytiques",
         context_memory: "Mémoire de contexte",
-        community_support: "Support communautaire"
-      }
+        community_support: "Support communautaire",
+        keys_limit: "Jusqu'à 100 clés",
+        docs_limit: "Jusqu'à 5 documents",
+        unlimited_languages: "Langues illimitées"
+      },
+      description: "Parfait pour essayer"
     },
     pro: {
       title: "Pro",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "Intégration GitHub Action",
         latest_features: "Accès anticipé aux dernières fonctionnalités",
-        priority_support: "Support prioritaire"
+        priority_support: "Support prioritaire",
+        priority_queues: "Files de traduction prioritaires",
+        keys_limit: "À partir de 10 000 clés",
+        docs_limit: "À partir de 50 documents"
       }
     },
-    cta: "Commencez à automatiser"
+    cta: "Commencez à automatiser",
+    keys_limit_explanation: "Clé traduite : Si vous avez 20 clés sources (comme \"Inscription\" ou \"Bienvenue !\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
   },
   createTeam: {
     teamName: "Nom de l'équipe",
@@ -517,5 +525,46 @@ export default {
     settings: "Paramètres",
     docs: "Documentation",
     account: "Compte"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Qu'est-ce que Languine ?",
+      answer: "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle propose des fonctionnalités comme des options de réglage fin, des remplacements de traduction, des analyses et une mémoire de contexte pour garantir des traductions de haute qualité."
+    },
+    key_limit: {
+      question: "Comment fonctionne la limite de clés ?",
+      answer: "Une clé traduite est comptabilisée lorsque vous traduisez une clé source dans une langue cible. Par exemple, si vous avez 20 clés sources et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés × 5 langues)."
+    },
+    supported_languages: {
+      question: "Quelles langues sont prises en charge ?",
+      answer: "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues principales, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour certaines langues, veuillez contacter notre équipe de support."
+    },
+    github_action: {
+      question: "Comment fonctionne l'intégration de l'action GitHub ?",
+      answer: "L'intégration de l'action GitHub (disponible dans les plans Pro) vous permet d'automatiser votre flux de travail de traduction directement dans votre pipeline CI/CD. Lorsque vous poussez des modifications vers votre dépôt, les traductions peuvent être automatiquement mises à jour."
+    },
+    support: {
+      question: "Quel type de support offrez-vous ?",
+      answer: "Les utilisateurs gratuits ont accès au support communautaire, tandis que les utilisateurs Pro bénéficient d'un support prioritaire avec des temps de réponse plus rapides et une assistance dédiée pour leurs besoins de traduction."
+    },
+    open_source: {
+      question: "Languine est-il open source ?",
+      answer: "Oui ! Languine est entièrement open source et disponible sur GitHub. Vous pouvez contribuer au projet, signaler des problèmes, suggérer des fonctionnalités et inspecter le code. Nous croyons en la transparence et en la construction en public."
+    },
+    open_source_pricing: {
+      question: "Proposez-vous des tarifs spéciaux pour les projets open source ?",
+      answer: "Oui ! Nous adorons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous configurerons un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+    },
+    cancel_subscription: {
+      question: "Comment puis-je annuler mon abonnement ?",
+      answer: "Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de votre compte. Accédez à Facturation > Changer de plan. Votre abonnement restera actif jusqu'à la fin de votre période de facturation en cours, après quoi vous serez transféré au plan Gratuit."
+    }
+  },
+  pricing_slider: {
+    tier: "Niveau {tier}",
+    keys: "Clés traduites",
+    documents: "Documents traduits",
+    period: "lun"
   }
 } as const;

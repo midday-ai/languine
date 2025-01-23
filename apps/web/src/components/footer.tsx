@@ -4,7 +4,7 @@ import { GetStarted } from "./get-started";
 
 export function Footer() {
   return (
-    <div className="mt-24">
+    <div className="mt-24 pb-8">
       <DottedSeparator />
 
       <div className="mt-24 mb-32 max-w-screen-lg mx-auto">

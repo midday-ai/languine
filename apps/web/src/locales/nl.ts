@@ -7,7 +7,7 @@ export default {
     goToApp: "Ga naar app"
   },
   hero: {
-    title: "Geautomatiseerde lokalisatie voor uw applicaties",
+    title: "Geautomatiseerde lokalisatie-infrastructuur voor uw applicaties",
     description: "Stroomlijn uw lokalisatieproces met een AI-aangedreven CLI en pijplijn ontworpen om vertalingen voor ontwikkelaars te automatiseren."
   },
   getStarted: {
@@ -361,7 +361,7 @@ export default {
   pricing: {
     title: "Eenvoudige prijzen",
     free: {
-      title: "Gratis (100 sleutels)",
+      title: "Gratis",
       price: "Gratis",
       keys_limit: "Tot 100 sleutels",
       features: {
@@ -370,8 +370,12 @@ export default {
         overrides: "Vertalingsoverrides",
         analytics: "Analytics",
         context_memory: "Contextgeheugen",
-        community_support: "Gemeenschapsondersteuning"
-      }
+        community_support: "Gemeenschapsondersteuning",
+        keys_limit: "Tot 100 sleutels",
+        docs_limit: "Tot 5 documenten",
+        unlimited_languages: "Onbeperkt aantal talen"
+      },
+      description: "Perfect om uit te proberen"
     },
     pro: {
       title: "Pro",
@@ -379,10 +383,14 @@ export default {
       features: {
         github_action: "GitHub Action-integratie",
         latest_features: "Vroege toegang tot de nieuwste functies",
-        priority_support: "Prioritaire ondersteuning"
+        priority_support: "Prioritaire ondersteuning",
+        priority_queues: "Prioritaire vertaalwachtrijen",
+        keys_limit: "Vanaf 10.000 sleutels",
+        docs_limit: "Vanaf 50 documenten"
       }
     },
-    cta: "Begin met automatiseren"
+    cta: "Begin met automatiseren",
+    keys_limit_explanation: "Vertaalde sleutel: Als je 20 bronsleutels hebt (zoals \"Aanmelden\" of \"Welkom!\") en deze vertaalt naar 5 talen, dan komt dat neer op 100 vertaalde sleutels (20 sleutels x 5 talen)."
   },
   createTeam: {
     teamName: "Teamnaam",
@@ -516,5 +524,46 @@ export default {
     settings: "Instellingen",
     docs: "Documentatie",
     account: "Account"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Wat is Languine?",
+      answer: "Languine is een AI-gestuurd lokalisatieplatform dat u helpt bij het automatiseren van de vertaling van uw applicaties. Het biedt functies zoals fine-tuning opties, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te garanderen."
+    },
+    key_limit: {
+      question: "Hoe werkt de sleutellimiet?",
+      answer: "Een vertaalde sleutel wordt geteld wanneer u een bronsleutel vertaalt naar een doeltaal. Bijvoorbeeld, als u 20 bronsleutels heeft en deze vertaalt naar 5 talen, dan komt dat neer op 100 vertaalde sleutels (20 sleutels × 5 talen)."
+    },
+    supported_languages: {
+      question: "Welke talen worden ondersteund?",
+      answer: "Languine ondersteunt meer dan 100 talen in alle plannen. Hoewel onze AI-gestuurde vertalingen het beste werken met grote talen, streven we ernaar om kwaliteitsvertalingen te bieden voor alle ondersteunde talen. Als u specifieke taalvereisten heeft of vragen heeft over de vertaalkwaliteit voor bepaalde talen, neem dan contact op met ons ondersteuningsteam."
+    },
+    github_action: {
+      question: "Hoe werkt de GitHub Action-integratie?",
+      answer: "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt u in staat om uw vertaalworkflow rechtstreeks in uw CI/CD-pijplijn te automatiseren. Wanneer u wijzigingen naar uw repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
+    },
+    support: {
+      question: "Wat voor soort ondersteuning bieden jullie?",
+      answer: "Gratis gebruikers krijgen toegang tot gemeenschapsondersteuning, terwijl Pro-gebruikers prioritaire ondersteuning krijgen met snellere reactietijden en toegewijde hulp voor hun vertaalbehoeften."
+    },
+    open_source: {
+      question: "Is Languine open source?",
+      answer: "Ja! Languine is volledig open source en beschikbaar op GitHub. U kunt bijdragen aan het project, problemen melden, functies voorstellen en de code inspecteren. We geloven in transparantie en openbaar bouwen."
+    },
+    open_source_pricing: {
+      question: "Bieden jullie speciale prijzen voor open source-projecten?",
+      answer: "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als u een open source-project onderhoudt, kunt u toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over uw project, en we zorgen ervoor dat u een Pro-account met korting krijgt. Dit is onze manier om iets terug te doen voor de gemeenschap die ons werk mogelijk maakt."
+    },
+    cancel_subscription: {
+      question: "Hoe annuleer ik mijn abonnement?",
+      answer: "U kunt uw abonnement op elk moment annuleren vanuit uw accountinstellingen. Navigeer naar Facturering > Plan wijzigen. Uw abonnement blijft actief tot het einde van uw huidige factureringsperiode, waarna u wordt overgezet naar het Gratis plan."
+    }
+  },
+  pricing_slider: {
+    tier: "Niveau {tier}",
+    keys: "Vertaalde sleutels",
+    documents: "Vertaalde documenten",
+    period: "ma"
   }
 } as const;

@@ -7,7 +7,7 @@ export default {
     goToApp: "前往应用"
   },
   hero: {
-    title: "为您的应用程序提供自动化本地化",
+    title: "为您的应用程序提供的自动化本地化基础设施",
     description: "通过专为开发者设计的AI驱动的CLI和流水线，简化您的本地化流程，实现翻译自动化。"
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "简单定价",
     free: {
-      title: "免费（100键）",
+      title: "免费",
       price: "免费",
       keys_limit: "最多100键",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "翻译覆盖",
         analytics: "分析",
         context_memory: "上下文记忆",
-        community_support: "社区支持"
-      }
+        community_support: "社区支持",
+        keys_limit: "最多100个键",
+        docs_limit: "最多5个文档",
+        unlimited_languages: "无限语言"
+      },
+      description: "试用时完美"
     },
     pro: {
       title: "专业版",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "GitHub Action集成",
         latest_features: "早期访问最新功能",
-        priority_support: "优先支持"
+        priority_support: "优先支持",
+        priority_queues: "优先翻译队列",
+        keys_limit: "从10,000个键开始",
+        docs_limit: "从50个文档开始"
       }
     },
-    cta: "开始自动化"
+    cta: "开始自动化",
+    keys_limit_explanation: "翻译键：如果您有20个源键（如“注册”或“欢迎！”）并将它们翻译成5种语言，那么等于100个翻译键（20个键×5种语言）。"
   },
   createTeam: {
     teamName: "团队名称",
@@ -517,5 +525,46 @@ export default {
     settings: "设置",
     docs: "文档",
     account: "账户"
+  },
+  faq: {
+    title: "常见问题",
+    what_is_languine: {
+      question: "什么是Languine？",
+      answer: "Languine是一个AI驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
+    },
+    key_limit: {
+      question: "键限制是如何工作的？",
+      answer: "当您将源键翻译成目标语言时，翻译键被计数。例如，如果您有20个源键并将它们翻译成5种语言，那么等于100个翻译键（20个键×5种语言）。"
+    },
+    supported_languages: {
+      question: "支持哪些语言？",
+      answer: "Languine在所有计划中支持超过100种语言。虽然我们的AI驱动翻译在主要语言上效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或关于特定语言翻译质量的问题，请联系我们的支持团队。"
+    },
+    github_action: {
+      question: "GitHub Action集成是如何工作的？",
+      answer: "GitHub Action集成（在Pro计划中可用）允许您直接在CI/CD管道中自动化您的翻译工作流程。当您将更改推送到您的仓库时，翻译可以自动更新。"
+    },
+    support: {
+      question: "你们提供什么样的支持？",
+      answer: "免费用户可以访问社区支持，而Pro用户则获得优先支持，响应时间更快，并为他们的翻译需求提供专门帮助。"
+    },
+    open_source: {
+      question: "Languine是开源的？",
+      answer: "是的！Languine是完全开源的，可以在GitHub上获得。您可以贡献项目、报告问题、建议功能并检查代码。我们相信透明度和公开建设。"
+    },
+    open_source_pricing: {
+      question: "你们为开源项目提供特别定价吗？",
+      answer: "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以30%的折扣获得我们的Pro功能。只需联系我们的团队，提供有关您项目的详细信息，我们将为您设置一个折扣的Pro账户。这是我们回馈使我们的工作成为可能的社区的方式。"
+    },
+    cancel_subscription: {
+      question: "如何取消我的订阅？",
+      answer: "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前计费周期结束前保持活动状态，之后您将被转移到免费计划。"
+    }
+  },
+  pricing_slider: {
+    tier: "层级{tier}",
+    keys: "翻译键",
+    documents: "翻译文档",
+    period: "月"
   }
 } as const;

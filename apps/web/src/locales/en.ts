@@ -6,7 +6,7 @@ export default {
     goToApp: "Go to app",
   },
   hero: {
-    title: "Automated localization for your applications",
+    title: "Automated localization infrastructure for your applications",
     description:
       "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
   },
@@ -381,9 +381,10 @@ export default {
   pricing: {
     title: "Simple pricing",
     free: {
-      title: "Free (100 keys)",
+      title: "Free",
       price: "Free",
       keys_limit: "Up to 100 keys",
+      description: "Perfect when trying out",
       features: {
         unlimited_projects: "Unlimited projects",
         fine_tuning: "Fine-tuning options",
@@ -391,6 +392,9 @@ export default {
         analytics: "Analytics",
         context_memory: "Context memory",
         community_support: "Community support",
+        keys_limit: "Up to 100 keys",
+        docs_limit: "Up to 5 documents",
+        unlimited_languages: "Unlimited languages",
       },
     },
     pro: {
@@ -400,9 +404,14 @@ export default {
         github_action: "GitHub Action integration",
         latest_features: "Early access to latest features",
         priority_support: "Priority support",
+        priority_queues: "Priority translation queues",
+        keys_limit: "Starting from 10 000 keys",
+        docs_limit: "Starting from 50 documents",
       },
     },
     cta: "Start automating",
+    keys_limit_explanation:
+      "Translated key: If you have 20 source keys (like “Sign Up” or “Welcome!”) and translate them into 5 languages, that equals 100 translated keys (20 keys x 5 languages).",
   },
   createTeam: {
     teamName: "Team Name",
@@ -527,5 +536,54 @@ export default {
   analytics: {
     key: "Translated keys",
     document: "Translated documents",
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "What is Languine?",
+      answer:
+        "Languine is an AI-powered localization platform that helps you automate the translation of your applications. It provides features like fine-tuning options, translation overrides, analytics, and context memory to ensure high-quality translations.",
+    },
+    key_limit: {
+      question: "How does the key limit work?",
+      answer:
+        "A translated key is counted when you translate a source key into a target language. For example, if you have 20 source keys and translate them into 5 languages, that equals 100 translated keys (20 keys × 5 languages).",
+    },
+    supported_languages: {
+      question: "What languages are supported?",
+      answer:
+        "Languine supports over 100 languages in all plans. While our AI-powered translations work best with major languages, we strive to provide quality translations across all supported languages. If you have specific language requirements or questions about translation quality for particular languages, please reach out to our support team.",
+    },
+    github_action: {
+      question: "How does the GitHub Action integration work?",
+      answer:
+        "The GitHub Action integration (available in Pro plans) allows you to automate your translation workflow directly in your CI/CD pipeline. When you push changes to your repository, translations can be automatically updated.",
+    },
+    support: {
+      question: "What kind of support do you offer?",
+      answer:
+        "Free users get access to community support, while Pro users receive priority support with faster response times and dedicated assistance for their translation needs.",
+    },
+    open_source: {
+      question: "Is Languine open source?",
+      answer:
+        "Yes! Languine is fully open source and available on GitHub. You can contribute to the project, report issues, suggest features, and inspect the code. We believe in transparency and building in public.",
+    },
+    open_source_pricing: {
+      question: "Do you offer special pricing for open source projects?",
+      answer:
+        "Yes! We love supporting the open source community. If you maintain an open source project, you can get access to our Pro features at 30% off. Just reach out to our team with details about your project, and we'll set you up with a discounted Pro account. This is our way of giving back to the community that makes our work possible.",
+    },
+    cancel_subscription: {
+      question: "How do I cancel my subscription?",
+      answer:
+        "You can cancel your subscription at any time from your account settings. Navigate to Billing > Change Plan. Your subscription will remain active until the end of your current billing period, after which you'll be moved to the Free plan.",
+    },
+  },
+  pricing_slider: {
+    tier: "Tier {tier}",
+    keys: "Translated keys",
+    documents: "Translated documents",
+    period: "mon",
   },
 } as const;

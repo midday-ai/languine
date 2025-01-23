@@ -7,7 +7,7 @@ export default {
     goToApp: "Uygulamaya git"
   },
   hero: {
-    title: "Uygulamalarınız için otomatik yerelleştirme",
+    title: "Uygulamalarınız için otomatik yerelleştirme altyapısı",
     description: "Geliştiriciler için çevirileri otomatikleştirmek üzere tasarlanmış bir AI destekli CLI ve boru hattı ile yerelleştirme sürecinizi kolaylaştırın."
   },
   getStarted: {
@@ -361,7 +361,7 @@ export default {
   pricing: {
     title: "Basit fiyatlandırma",
     free: {
-      title: "Ücretsiz (100 anahtar)",
+      title: "Ücretsiz",
       price: "Ücretsiz",
       keys_limit: "100 anahtara kadar",
       features: {
@@ -370,8 +370,12 @@ export default {
         overrides: "Çeviri geçersiz kılmaları",
         analytics: "Analitik",
         context_memory: "Bağlam belleği",
-        community_support: "Topluluk desteği"
-      }
+        community_support: "Topluluk desteği",
+        keys_limit: "100 anahtara kadar",
+        docs_limit: "5 belgeye kadar",
+        unlimited_languages: "Sınırsız dil"
+      },
+      description: "Deneme sırasında mükemmel"
     },
     pro: {
       title: "Pro",
@@ -379,10 +383,14 @@ export default {
       features: {
         github_action: "GitHub Action entegrasyonu",
         latest_features: "En son özelliklere erken erişim",
-        priority_support: "Öncelikli destek"
+        priority_support: "Öncelikli destek",
+        priority_queues: "Öncelikli çeviri kuyrukları",
+        keys_limit: "10.000 anahtardan başlayarak",
+        docs_limit: "50 belgeden başlayarak"
       }
     },
-    cta: "Otomasyona başla"
+    cta: "Otomasyona başla",
+    keys_limit_explanation: "Çevrilen anahtar: 20 kaynak anahtarınız (örneğin, “Kaydol” veya “Hoş Geldiniz!”) varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilen anahtara eşittir (20 anahtar x 5 dil)."
   },
   createTeam: {
     teamName: "Takım Adı",
@@ -516,5 +524,46 @@ export default {
     settings: "Ayarlar",
     docs: "Dokümantasyon",
     account: "Hesap"
+  },
+  faq: {
+    title: "SSS",
+    what_is_languine: {
+      question: "Languine nedir?",
+      answer: "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan bir AI destekli yerelleştirme platformudur. Yüksek kaliteli çeviriler sağlamak için ince ayar seçenekleri, çeviri geçersiz kılmaları, analitikler ve bağlam hafızası gibi özellikler sunar."
+    },
+    key_limit: {
+      question: "Anahtar sınırı nasıl çalışır?",
+      answer: "Bir kaynak anahtarını hedef dile çevirdiğinizde çevrilen bir anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilen anahtara eşittir (20 anahtar × 5 dil)."
+    },
+    supported_languages: {
+      question: "Hangi diller destekleniyor?",
+      answer: "Languine, tüm planlarda 100'den fazla dili destekler. AI destekli çevirilerimiz büyük dillerle en iyi şekilde çalışırken, desteklenen tüm dillerde kaliteli çeviriler sağlamaya çalışıyoruz. Belirli dil gereksinimleriniz varsa veya belirli diller için çeviri kalitesi hakkında sorularınız varsa, lütfen destek ekibimizle iletişime geçin."
+    },
+    github_action: {
+      question: "GitHub Action entegrasyonu nasıl çalışır?",
+      answer: "GitHub Action entegrasyonu (Pro planlarda mevcuttur), çeviri iş akışınızı doğrudan CI/CD işlem hattınızda otomatikleştirmenize olanak tanır. Deponuza değişiklikleri gönderdiğinizde, çeviriler otomatik olarak güncellenebilir."
+    },
+    support: {
+      question: "Ne tür destek sunuyorsunuz?",
+      answer: "Ücretsiz kullanıcılar topluluk desteğine erişebilirken, Pro kullanıcıları daha hızlı yanıt süreleri ve çeviri ihtiyaçları için özel yardım ile öncelikli destek alır."
+    },
+    open_source: {
+      question: "Languine açık kaynak mı?",
+      answer: "Evet! Languine tamamen açık kaynaktır ve GitHub'da mevcuttur. Projeye katkıda bulunabilir, sorunları bildirebilir, özellikler önerebilir ve kodu inceleyebilirsiniz. Şeffaflığa ve halka açık bir şekilde inşa etmeye inanıyoruz."
+    },
+    open_source_pricing: {
+      question: "Açık kaynak projeler için özel fiyatlandırma sunuyor musunuz?",
+      answer: "Evet! Açık kaynak topluluğunu desteklemeyi seviyoruz. Eğer bir açık kaynak projesi yürütüyorsanız, Pro özelliklerimize %30 indirimle erişebilirsiniz. Sadece projeniz hakkında detaylarla birlikte ekibimize ulaşın ve size indirimli bir Pro hesabı ayarlayalım. Bu, çalışmamızı mümkün kılan topluluğa geri verme şeklimizdir."
+    },
+    cancel_subscription: {
+      question: "Aboneliğimi nasıl iptal ederim?",
+      answer: "Aboneliğinizi hesap ayarlarınızdan istediğiniz zaman iptal edebilirsiniz. Faturalandırma > Planı Değiştir'e gidin. Aboneliğiniz mevcut faturalandırma döneminin sonuna kadar aktif kalacak, ardından Ücretsiz plana geçirileceksiniz."
+    }
+  },
+  pricing_slider: {
+    tier: "Seviye {tier}",
+    keys: "Çevrilen anahtarlar",
+    documents: "Çevrilen belgeler",
+    period: "pzt"
   }
 } as const;

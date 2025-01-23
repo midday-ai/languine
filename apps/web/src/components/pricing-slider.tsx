@@ -1,64 +1,104 @@
 import { Slider } from "@/components/ui/slider";
+import { TIERS_MAX_DOCUMENTS, TIERS_MAX_KEYS, TIER_PRICES } from "@/lib/tiers";
+import { useI18n } from "@/locales/client";
 import NumberFlow from "@number-flow/react";
 
 export function PricingSlider({
   value,
   setValue,
 }: { value: number[]; setValue: (value: number[]) => void }) {
+  const t = useI18n();
+
+  const getPriceForStep = (step: number) => {
+    return (
+      TIER_PRICES[(step + 1) as keyof typeof TIER_PRICES] || TIER_PRICES[1]
+    );
+  };
+
+  const getStepForPrice = (price: number) => {
+    const tier = Number(
+      Object.entries(TIER_PRICES).find(([_, p]) => p === price)?.[0] || 1,
+    );
+    return tier - 1;
+  };
+
   const getKeysForPrice = (price: number) => {
-    if (price <= 49) return 2000;
-
-    const tiers = Math.floor((price - 49) / 49);
-
-    if (getKeysForPrice(49 + (tiers - 1) * 49) <= 50000) {
-      return 2000 + tiers * 4000;
-    }
-
-    const tiersTo50k = 12;
-    const remainingTiers = tiers - tiersTo50k;
-    return 50000 + remainingTiers * 8000;
+    const tier = Object.entries(TIER_PRICES).find(([_, p]) => p === price)?.[0];
+    return tier
+      ? TIERS_MAX_KEYS[Number(tier) as keyof typeof TIERS_MAX_KEYS]
+      : TIERS_MAX_KEYS[1];
   };
 
-  const getMaxPrice = () => {
-    let price = 49;
-    while (getKeysForPrice(price) < 250000) {
-      price += 49;
-    }
-    return price;
+  const getTierNumber = (price: number) => {
+    return (
+      Object.entries(TIER_PRICES).find(([_, p]) => p === price)?.[0] || "1"
+    );
   };
 
-  const maxPrice = getMaxPrice();
+  const getDocumentsForPrice = (price: number) => {
+    const tier = Object.entries(TIER_PRICES).find(([_, p]) => p === price)?.[0];
+    return tier
+      ? TIERS_MAX_DOCUMENTS[Number(tier) as keyof typeof TIERS_MAX_DOCUMENTS]
+      : TIERS_MAX_DOCUMENTS[1];
+  };
+
+  const handleValueChange = (newValue: number[]) => {
+    setValue([getPriceForStep(Math.round(newValue[0]))]);
+  };
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 ml-[100px]">
       <div className="relative mb-6">
         <div
-          className="absolute -top-12 left-0 transform -translate-x-1/2 bg-background font-medium text-primary text-[11px] px-3 py-1 rounded-full border border-border text-center whitespace-nowrap"
-          style={{ left: `${(value[0] / maxPrice) * 100}%` }}
+          className="bg-[#1D1D1D] absolute -top-[105px] transform -translate-x-1/2 font-medium text-primary whitespace-nowrap flex flex-col gap-1 text-xs w-[210px]"
+          style={{
+            left: `${(getStepForPrice(value[0]) / 7) * 100}%`,
+          }}
         >
-          {Math.floor(getKeysForPrice(value[0]) / 1000)}k keys
+          <div className="border-b border-background p-2 uppercase">
+            {t("pricing_slider.tier", { tier: getTierNumber(value[0]) })}
+          </div>
+
+          <div className="text-xs flex items-center justify-between px-2 py-1">
+            <span className="text-primary">
+              {getKeysForPrice(value[0]).toLocaleString()}
+            </span>
+            <span className="text-secondary">{t("pricing_slider.keys")}</span>
+          </div>
+
+          <div className="text-xs flex items-center justify-between px-2 pb-2">
+            <span className="text-primary">
+              {getDocumentsForPrice(value[0]).toLocaleString()}
+            </span>
+            <span className="text-secondary">
+              {t("pricing_slider.documents")}
+            </span>
+          </div>
         </div>
-        <Slider
-          value={value}
-          onValueChange={(newValue) =>
-            setValue(newValue.map((v) => Math.max(49, v)))
-          }
-          step={49}
-          min={0}
-          max={maxPrice}
-        />
+
+        <div className="flex">
+          <div className="w-[100px] -ml-[100px] h-1.5 bg-white" />
+          <Slider
+            value={[getStepForPrice(value[0])]}
+            onValueChange={handleValueChange}
+            step={1}
+            min={0}
+            max={7}
+          />
+        </div>
       </div>
+
       <NumberFlow
         value={value[0]}
         defaultValue={49}
-        className="font-mono text-2xl"
+        className="font-mono text-2xl -ml-[100px]"
         locales="en-US"
         format={{
           style: "currency",
           currency: "USD",
           trailingZeroDisplay: "stripIfInteger",
         }}
-        suffix="/mon"
+        suffix={`/${t("pricing_slider.period")}`}
       />
     </div>
   );

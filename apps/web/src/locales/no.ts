@@ -7,7 +7,7 @@ export default {
     goToApp: "Gå til app"
   },
   hero: {
-    title: "Automatisert lokalisering for dine applikasjoner",
+    title: "Automatisert lokaliseringsinfrastruktur for dine applikasjoner",
     description: "Strømlinjeform din lokaliseringprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere."
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "Enkel prising",
     free: {
-      title: "Gratis (100 nøkler)",
+      title: "Gratis",
       price: "Gratis",
       keys_limit: "Opptil 100 nøkler",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "Oversettelsesoverstyringer",
         analytics: "Analytikk",
         context_memory: "Kontekstminne",
-        community_support: "Fellesskapsstøtte"
-      }
+        community_support: "Fellesskapsstøtte",
+        keys_limit: "Opptil 100 nøkler",
+        docs_limit: "Opptil 5 dokumenter",
+        unlimited_languages: "Ubegrensede språk"
+      },
+      description: "Perfekt for å prøve ut"
     },
     pro: {
       title: "Pro",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "GitHub Action-integrasjon",
         latest_features: "Tidlig tilgang til de nyeste funksjonene",
-        priority_support: "Prioritert støtte"
+        priority_support: "Prioritert støtte",
+        priority_queues: "Prioriterte oversettelseskøer",
+        keys_limit: "Starter fra 10 000 nøkler",
+        docs_limit: "Starter fra 50 dokumenter"
       }
     },
-    cta: "Start automatisering"
+    cta: "Start automatisering",
+    keys_limit_explanation: "Oversatt nøkkel: Hvis du har 20 kildenøkler (som \"Registrer deg\" eller \"Velkommen!\") og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
   },
   createTeam: {
     teamName: "Teamnavn",
@@ -517,5 +525,46 @@ export default {
     settings: "Innstillinger",
     docs: "Dokumentasjon",
     account: "Konto"
+  },
+  faq: {
+    title: "FAQ",
+    what_is_languine: {
+      question: "Hva er Languine?",
+      answer: "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som finjusteringsalternativer, oversettelsesoverstyringer, analyse og konteksthukommelse for å sikre oversettelser av høy kvalitet."
+    },
+    key_limit: {
+      question: "Hvordan fungerer nøkkelgrensen?",
+      answer: "En oversatt nøkkel telles når du oversetter en kildenøkkel til et målspråk. For eksempel, hvis du har 20 kildenøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
+    },
+    supported_languages: {
+      question: "Hvilke språk støttes?",
+      answer: "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med store språk, streber vi etter å levere kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt vårt supportteam."
+    },
+    github_action: {
+      question: "Hvordan fungerer GitHub Action-integrasjonen?",
+      answer: "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere oversettelsesarbeidsflyten direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
+    },
+    support: {
+      question: "Hva slags støtte tilbyr dere?",
+      answer: "Gratisbrukere får tilgang til fellesskapsstøtte, mens Pro-brukere mottar prioritert støtte med raskere responstider og dedikert hjelp for deres oversettelsesbehov."
+    },
+    open_source: {
+      question: "Er Languine open source?",
+      answer: "Ja! Languine er fullstendig open source og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge offentlig."
+    },
+    open_source_pricing: {
+      question: "Tilbyr dere spesialpriser for open source-prosjekter?",
+      answer: "Ja! Vi elsker å støtte open source-fellesskapet. Hvis du vedlikeholder et open source-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør arbeidet vårt mulig."
+    },
+    cancel_subscription: {
+      question: "Hvordan avbryter jeg abonnementet mitt?",
+      answer: "Du kan avbryte abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av din nåværende faktureringsperiode, hvoretter du vil bli flyttet til Gratis-planen."
+    }
+  },
+  pricing_slider: {
+    tier: "Nivå {tier}",
+    keys: "Oversatte nøkler",
+    documents: "Oversatte dokumenter",
+    period: "man"
   }
 } as const;

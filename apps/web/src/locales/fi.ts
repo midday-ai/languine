@@ -7,7 +7,7 @@ export default {
     goToApp: "Siirry sovellukseen"
   },
   hero: {
-    title: "Automatisoitu lokalisointi sovelluksillesi",
+    title: "Automatisoitu lokalisointiinfrastruktuuri sovelluksillesi",
     description: "Tehosta lokalisointiprosessiasi tekoälyllä varustetulla CLI:llä ja putkistolla, joka on suunniteltu automatisoida käännökset kehittäjille."
   },
   getStarted: {
@@ -362,7 +362,7 @@ export default {
   pricing: {
     title: "Yksinkertainen hinnoittelu",
     free: {
-      title: "Ilmainen (100 avainta)",
+      title: "Ilmainen",
       price: "Ilmainen",
       keys_limit: "Enintään 100 avainta",
       features: {
@@ -371,8 +371,12 @@ export default {
         overrides: "Käännöksen ohitukset",
         analytics: "Analytiikka",
         context_memory: "Kontekstimuisti",
-        community_support: "Yhteisötuki"
-      }
+        community_support: "Yhteisötuki",
+        keys_limit: "Jopa 100 avainta",
+        docs_limit: "Jopa 5 dokumenttia",
+        unlimited_languages: "Rajoittamaton määrä kieliä"
+      },
+      description: "Täydellinen kokeilua varten"
     },
     pro: {
       title: "Pro",
@@ -380,10 +384,14 @@ export default {
       features: {
         github_action: "GitHub Action -integraatio",
         latest_features: "Varhainen pääsy uusimpiin ominaisuuksiin",
-        priority_support: "Prioriteettituki"
+        priority_support: "Prioriteettituki",
+        priority_queues: "Prioriteettikäännösjonot",
+        keys_limit: "Alkaen 10 000 avainta",
+        docs_limit: "Alkaen 50 dokumenttia"
       }
     },
-    cta: "Aloita automatisointi"
+    cta: "Aloita automatisointi",
+    keys_limit_explanation: "Käännetty avain: Jos sinulla on 20 lähdeavainta (kuten \"Rekisteröidy\" tai \"Tervetuloa!\") ja käännät ne 5 kielelle, se vastaa 100 käännettyä avainta (20 avainta x 5 kieltä)."
   },
   createTeam: {
     teamName: "Tiimin nimi",
@@ -517,5 +525,46 @@ export default {
     settings: "Asetukset",
     docs: "Dokumentaatio",
     account: "Tili"
+  },
+  faq: {
+    title: "UKK",
+    what_is_languine: {
+      question: "Mikä on Languine?",
+      answer: "Languine on tekoälyavusteinen lokalisointialusta, joka auttaa sinua automatisoimaan sovellustesi käännökset. Se tarjoaa ominaisuuksia, kuten hienosäätövaihtoehdot, käännösylitykset, analytiikka ja kontekstimuisti, jotta voit taata korkealaatuiset käännökset."
+    },
+    key_limit: {
+      question: "Kuinka avainrajatoiminto toimii?",
+      answer: "Käännetty avain lasketaan, kun käännät lähdeavaimen kohdekielelle. Esimerkiksi, jos sinulla on 20 lähdeavainta ja käännät ne 5 kielelle, se vastaa 100 käännettyä avainta (20 avainta × 5 kieltä)."
+    },
+    supported_languages: {
+      question: "Mitä kieliä tuetaan?",
+      answer: "Languine tukee yli 100 kieltä kaikissa suunnitelmissa. Vaikka tekoälyavusteiset käännöksemme toimivat parhaiten suurilla kielillä, pyrimme tarjoamaan laadukkaita käännöksiä kaikille tuetuille kielille. Jos sinulla on erityisiä kielivaatimuksia tai kysymyksiä käännöksen laadusta tietyillä kielillä, ota yhteyttä tukitiimiimme."
+    },
+    github_action: {
+      question: "Kuinka GitHub Action -integraatio toimii?",
+      answer: "GitHub Action -integraatio (saatavilla Pro-suunnitelmissa) mahdollistaa käännösprosessisi automatisointiin suoraan CI/CD-pipelineessasi. Kun työnnät muutoksia arkistoosi, käännökset voidaan päivittää automaattisesti."
+    },
+    support: {
+      question: "Millaista tukea tarjoatte?",
+      answer: "Ilmaiset käyttäjät saavat pääsyn yhteisötukeen, kun taas Pro-käyttäjät saavat prioriteettitukea nopeammilla vastausajoilla ja omistetulla avulla käännöstarpeisiinsa."
+    },
+    open_source: {
+      question: "Onko Languine avoin lähdekoodi?",
+      answer: "Kyllä! Languine on täysin avointa lähdekoodia ja saatavilla GitHubissa. Voit osallistua projektiin, ilmoittaa ongelmista, ehdottaa ominaisuuksia ja tarkastella koodia. Uskomme avoimuuteen ja julkiseen rakentamiseen."
+    },
+    open_source_pricing: {
+      question: "Tarjoatteko erityishintoja avoimen lähdekoodin projekteille?",
+      answer: "Kyllä! Rakastamme tukea avoimen lähdekoodin yhteisöä. Jos ylläpidät avoimen lähdekoodin projektia, voit saada pääsyn Pro-ominaisuuksiin 30% alennuksella. Ota vain yhteyttä tiimiimme projektisi tiedoilla, ja järjestämme sinulle alennetun Pro-tilin. Tämä on tapa antaa takaisin yhteisölle, joka tekee työmme mahdolliseksi."
+    },
+    cancel_subscription: {
+      question: "Kuinka peruutan tilaukseni?",
+      answer: "Voit peruuttaa tilauksesi milloin tahansa tilisi asetuksista. Siirry Laskutus > Vaihda suunnitelmaa. Tilauksesi pysyy voimassa nykyisen laskutusjakson loppuun, jonka jälkeen siirryt Ilmaiseen suunnitelmaan."
+    }
+  },
+  pricing_slider: {
+    tier: "Taso {tier}",
+    keys: "Käännettyjä avaimia",
+    documents: "Käännettyjä dokumentteja",
+    period: "ma"
   }
 } as const;
