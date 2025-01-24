@@ -8,14 +8,14 @@ export default {
   },
   hero: {
     title: "Infraestructura de localización automatizada para tus aplicaciones",
-    description: "Optimiza tu proceso de localización con una CLI y pipeline impulsada por IA diseñada para automatizar traducciones para desarrolladores."
+    description: "Optimiza tu proceso de localización con una CLI y una canalización impulsada por IA diseñada para automatizar traducciones para desarrolladores."
   },
   getStarted: {
     heading: "Comenzar",
     title: "Localización automatizada para tus aplicaciones",
-    description: "Optimiza tu proceso de localización con una CLI y pipeline impulsada por IA diseñada para automatizar traducciones para desarrolladores.",
+    description: "Optimiza tu proceso de localización con una CLI y una canalización impulsada por IA diseñada para automatizar traducciones para desarrolladores.",
     button: {
-      startAutomating: "Comienza a automatizar",
+      startAutomating: "Comenzar a automatizar",
       readDocumentation: "Leer documentación"
     }
   },
@@ -38,7 +38,7 @@ export default {
     title: "Características",
     fullyOpenSource: "Completamente de código abierto",
     fullyOpenSourceDescription: "Nuestro código está disponible públicamente en GitHub, permitiendo transparencia y contribuciones de la comunidad.",
-    noVendorLockIn: "Sin dependencia de proveedor",
+    noVendorLockIn: "Sin bloqueo de proveedor",
     noVendorLockInDescription: "No te encerramos en un servicio específico, usa tus propios LLMs.",
     presetsForExpo: "Preajustes para Expo",
     presetsForExpoDescription: "Proporcionamos preajustes para Expo, para que puedas comenzar rápidamente.",
@@ -110,7 +110,7 @@ export default {
   },
   coming_soon: {
     title: "Languine está en Acceso Anticipado",
-    description: "Actualmente estamos en acceso anticipado. Contacta a",
+    description: "Actualmente estamos en acceso anticipado. Contacta con",
     cta: "en X para obtener acceso anticipado."
   },
   account: {
@@ -147,12 +147,12 @@ export default {
     }
   },
   pipeline: {
-    title: "Flujo de trabajo (Pipeline CI/CD)",
+    title: "Flujo de trabajo (Canalización CI/CD)",
     pro: "[pro]",
-    description: "Nuestro motor de traducción se integra perfectamente en tu pipeline CI/CD existente, traduciendo automáticamente tu base de código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz de tu marca y la terminología. Las traducciones se envían como pull requests, permitiendo su revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado esté sincronizado con el desarrollo."
+    description: "Nuestro motor de traducción se integra perfectamente en tu canalización CI/CD existente, traduciendo automáticamente tu base de código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz de tu marca y la terminología. Las traducciones se envían como solicitudes de extracción, permitiendo su revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado esté sincronizado con el desarrollo."
   },
   settings: {
-    saved: "Configuraciones guardadas",
+    saved: "Configuración guardada",
     savedDescription: "Tus cambios han sido guardados exitosamente",
     tabs: {
       project: "Proyecto",
@@ -169,7 +169,7 @@ export default {
       },
       id: {
         title: "ID del Proyecto",
-        description: "Tu identificador único del proyecto",
+        description: "Tu identificador único de proyecto",
         placeholder: "ID del Proyecto"
       },
       "delete": {
@@ -186,14 +186,14 @@ export default {
       },
       billing: {
         title: "Plan de Facturación",
-        description: "Gestiona el plan de facturación de tu equipo",
+        description: "Administra el plan de facturación de tu equipo",
         free: "Gratis",
         pro: "Pro",
         unlimited: "Ilimitado"
       },
       apiKey: {
         title: "Clave API del Equipo",
-        description: "Clave API para acceso del equipo, usa esto desde tu pipeline CI/CD junto con el ID del Proyecto",
+        description: "Clave API para acceso al equipo, usa esto desde tu canalización CI/CD junto con el ID del Proyecto",
         placeholder: "Clave API del Equipo"
       },
       members: {
@@ -242,7 +242,7 @@ export default {
     deleteTeamTitle: "Eliminar equipo",
     deleteTeamDescription: "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta",
     error: "Algo salió mal",
-    errorDescription: "Por favor, intenta de nuevo o contacta soporte",
+    errorDescription: "Por favor, intenta de nuevo o contacta al soporte",
     addTeam: "Crear equipo",
     apiKey: {
       updated: "Clave API actualizada",
@@ -314,7 +314,7 @@ export default {
     },
     culturalAdaptation: {
       title: "Adaptación Cultural",
-      description: "Adapta el contenido para la apropiación cultural"
+      description: "Adapta el contenido para la adecuación cultural"
     },
     toneOfVoice: {
       title: "Tono de Voz",
@@ -386,11 +386,11 @@ export default {
         latest_features: "Acceso anticipado a las últimas características",
         priority_support: "Soporte prioritario",
         priority_queues: "Colas de traducción prioritarias",
-        keys_limit: "A partir de 10 000 claves",
-        docs_limit: "A partir de 50 documentos"
+        keys_limit: "Desde 10 000 claves",
+        docs_limit: "Desde 50 documentos"
       }
     },
-    cta: "Comienza a automatizar",
+    cta: "Comenzar a automatizar",
     keys_limit_explanation: "Clave traducida: Si tienes 20 claves fuente (como \"Regístrate\" o \"¡Bienvenido!\") y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves x 5 idiomas)."
   },
   createTeam: {
@@ -448,7 +448,7 @@ export default {
       },
       "2": {
         title: "Empujar Traducciones",
-        description: "Esperando que las traducciones sean empujadas"
+        description: "Esperando que se empujen las traducciones"
       },
       "3": {
         title: "Documentación",
@@ -466,7 +466,7 @@ export default {
     success: {
       title: "Inicio de sesión exitoso en Languine CLI",
       description: "Languine CLI fue autenticado exitosamente como:",
-      description_2: "Ahora puedes cerrar esta pestaña y regresar a la CLI"
+      description_2: "Ahora puedes cerrar esta pestaña y volver a la CLI"
     }
   },
   translations: {
@@ -520,8 +520,8 @@ export default {
     title: "Facturación"
   },
   menu: {
-    dashboard: "Panel de control",
-    tuning: "Afinación",
+    dashboard: "Tablero",
+    tuning: "Ajuste",
     settings: "Configuración",
     docs: "Documentación",
     account: "Cuenta"
@@ -530,31 +530,31 @@ export default {
     title: "Preguntas frecuentes",
     what_is_languine: {
       question: "¿Qué es Languine?",
-      answer: "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Ofrece funciones como opciones de ajuste fino, anulaciones de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
+      answer: "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Proporciona características como opciones de ajuste fino, sobrescrituras de traducción, analíticas y memoria de contexto para asegurar traducciones de alta calidad."
     },
     key_limit: {
       question: "¿Cómo funciona el límite de claves?",
-      answer: "Una clave traducida se cuenta cuando traduces una clave fuente a un idioma de destino. Por ejemplo, si tienes 20 claves fuente y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves × 5 idiomas)."
+      answer: "Una clave traducida se cuenta cuando traduces una clave fuente a un idioma objetivo. Por ejemplo, si tienes 20 claves fuente y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves × 5 idiomas)."
     },
     supported_languages: {
-      question: "¿Qué idiomas son compatibles?",
-      answer: "Languine es compatible con más de 100 idiomas en todos los planes. Aunque nuestras traducciones impulsadas por IA funcionan mejor con los idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas compatibles. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
+      question: "¿Qué idiomas son soportados?",
+      answer: "Languine soporta más de 100 idiomas en todos los planes. Mientras nuestras traducciones impulsadas por IA funcionan mejor con los idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
     },
     github_action: {
-      question: "¿Cómo funciona la integración de GitHub Action?",
-      answer: "La integración de GitHub Action (disponible en los planes Pro) te permite automatizar tu flujo de trabajo de traducción directamente en tu pipeline de CI/CD. Cuando subes cambios a tu repositorio, las traducciones pueden actualizarse automáticamente."
+      question: "¿Cómo funciona la integración con GitHub Action?",
+      answer: "La integración con GitHub Action (disponible en planes Pro) te permite automatizar tu flujo de trabajo de traducción directamente en tu canalización CI/CD. Cuando envías cambios a tu repositorio, las traducciones pueden ser actualizadas automáticamente."
     },
     support: {
       question: "¿Qué tipo de soporte ofrecen?",
-      answer: "Los usuarios gratuitos obtienen acceso al soporte comunitario, mientras que los usuarios Pro reciben soporte prioritario con tiempos de respuesta más rápidos y asistencia dedicada para sus necesidades de traducción."
+      answer: "Los usuarios gratuitos tienen acceso al soporte comunitario, mientras que los usuarios Pro reciben soporte prioritario con tiempos de respuesta más rápidos y asistencia dedicada para sus necesidades de traducción."
     },
     open_source: {
       question: "¿Languine es de código abierto?",
-      answer: "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, reportar problemas, sugerir características e inspeccionar el código. Creemos en la transparencia y en construir en público."
+      answer: "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, reportar problemas, sugerir características e inspeccionar el código. Creemos en la transparencia y construir en público."
     },
     open_source_pricing: {
       question: "¿Ofrecen precios especiales para proyectos de código abierto?",
-      answer: "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes obtener acceso a nuestras características Pro con un 30% de descuento. Solo contacta a nuestro equipo con detalles sobre tu proyecto, y te configuraremos con una cuenta Pro con descuento. Esta es nuestra manera de devolverle a la comunidad que hace posible nuestro trabajo."
+      answer: "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes obtener acceso a nuestras características Pro con un 30% de descuento. Solo contacta a nuestro equipo con detalles sobre tu proyecto, y te configuraremos con una cuenta Pro con descuento. Esta es nuestra manera de devolver a la comunidad que hace posible nuestro trabajo."
     },
     cancel_subscription: {
       question: "¿Cómo cancelo mi suscripción?",
@@ -566,5 +566,9 @@ export default {
     keys: "Claves traducidas",
     documents: "Documentos traducidos",
     period: "lun"
+  },
+  analytics: {
+    key: "Claves traducidas",
+    document: "Documentos traducidos"
   }
 } as const;

@@ -9,7 +9,7 @@ import {
   users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
-import { and, count, eq } from "drizzle-orm";
+import { and, count, eq, sql } from "drizzle-orm";
 import slugify from "slugify";
 
 export async function createDefaultOrganization(user: {
@@ -252,10 +252,10 @@ export const getOrganizationLimits = async (organizationId: string) => {
   const result = await db
     .select({
       totalKeys: count(
-        and(eq(translations.sourceType, "key"), translations.id),
+        sql`CASE WHEN ${translations.sourceType} = 'key' THEN 1 END`,
       ).as("totalKeys"),
       totalDocuments: count(
-        and(eq(translations.sourceType, "document"), translations.id),
+        sql`CASE WHEN ${translations.sourceType} = 'document' THEN 1 END`,
       ).as("totalDocuments"),
     })
     .from(translations)

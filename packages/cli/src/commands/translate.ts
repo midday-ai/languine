@@ -97,6 +97,7 @@ export async function translateCommand(args: string[] = []) {
 
     let translatedAnything = false;
     let needsUpdates = false;
+    let totalKeysToTranslate = 0;
 
     // Process each file configuration
     for (const [type, fileConfig] of Object.entries(config.files)) {
@@ -142,6 +143,8 @@ export async function translateCommand(args: string[] = []) {
             }
           }
 
+          totalKeysToTranslate += keysToTranslate.length;
+
           if (keysToTranslate.length > 0 || removedKeys.length > 0) {
             needsUpdates = true;
             if (checkOnly) {
@@ -184,7 +187,13 @@ export async function translateCommand(args: string[] = []) {
             s.start();
           }
 
-          if (translationInput.length === 0 && !shouldRemoveKeys) {
+          if (translationInput.length > 0) {
+            if (!isSilent) {
+              s.message(
+                `Translating ${translationInput.length} keys to ${effectiveTargetLocales.length} languages...`,
+              );
+            }
+          } else if (!shouldRemoveKeys) {
             if (!isSilent) {
               s.message(
                 `No ${forceTranslate ? "" : "changes"} detected in ${sourceFilePath}, skipping...`,
@@ -284,7 +293,7 @@ export async function translateCommand(args: string[] = []) {
               for await (const update of runs.subscribeToRun(run.id)) {
                 if (update.metadata?.progress && !isSilent) {
                   s.message(
-                    `Translation progress: ${Math.round(
+                    `Translating: ${Math.round(
                       Number(update.metadata.progress),
                     )}%`,
                   );
