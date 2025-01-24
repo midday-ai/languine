@@ -1,0 +1,8 @@
+{
+  "name": "languine/supabase",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "drizzle-kit": "^0.20.0"
+  }
+}
