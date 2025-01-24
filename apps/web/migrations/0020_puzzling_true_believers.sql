@@ -1,1 +1,0 @@
-ALTER TABLE `translations` ADD `source_provider` text DEFAULT 'github' NOT NULL;

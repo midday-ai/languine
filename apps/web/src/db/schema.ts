@@ -1,30 +1,33 @@
 import { createId } from "@paralleldrive/cuid2";
+import { relations } from "drizzle-orm";
 import {
+  boolean,
   index,
   integer,
-  sqliteTable,
+  pgTable,
   text,
+  timestamp,
   uniqueIndex,
-} from "drizzle-orm/sqlite-core";
+} from "drizzle-orm/pg-core";
 
-export const users = sqliteTable(
+export const users = pgTable(
   "users",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     name: text("name").notNull(),
     email: text("email").notNull().unique(),
-    emailVerified: integer("email_verified", { mode: "boolean" }).notNull(),
+    emailVerified: boolean("email_verified").notNull(),
     image: text("image"),
     apiKey: text("api_key")
       .notNull()
       .unique()
       .$defaultFn(() => `user_${createId()}`),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+    updatedAt: timestamp("updated_at").notNull(),
   },
   (table) => [
     index("email_idx").on(table.email),
@@ -32,18 +35,18 @@ export const users = sqliteTable(
   ],
 );
 
-export const sessions = sqliteTable(
+export const sessions = pgTable(
   "sessions",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
-    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    expiresAt: timestamp("expires_at").notNull(),
     token: text("token").notNull().unique(),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+    updatedAt: timestamp("updated_at").notNull(),
     ipAddress: text("ip_address"),
     userAgent: text("user_agent"),
     userId: text("user_id")
@@ -58,10 +61,10 @@ export const sessions = sqliteTable(
   ],
 );
 
-export const accounts = sqliteTable(
+export const accounts = pgTable(
   "accounts",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     accountId: text("account_id").notNull(),
@@ -72,18 +75,14 @@ export const accounts = sqliteTable(
     accessToken: text("access_token"),
     refreshToken: text("refresh_token"),
     idToken: text("id_token"),
-    accessTokenExpiresAt: integer("access_token_expires_at", {
-      mode: "timestamp",
-    }),
-    refreshTokenExpiresAt: integer("refresh_token_expires_at", {
-      mode: "timestamp",
-    }),
+    accessTokenExpiresAt: timestamp("access_token_expires_at"),
+    refreshTokenExpiresAt: timestamp("refresh_token_expires_at"),
     scope: text("scope"),
     password: text("password"),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+    updatedAt: timestamp("updated_at").notNull(),
   },
   (table) => [
     index("accounts_user_id_idx").on(table.userId),
@@ -91,19 +90,17 @@ export const accounts = sqliteTable(
   ],
 );
 
-export const verifications = sqliteTable(
+export const verifications = pgTable(
   "verifications",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     identifier: text("identifier").notNull(),
     value: text("value").notNull(),
-    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
-    createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(
-      () => new Date(),
-    ),
-    updatedAt: integer("updated_at", { mode: "timestamp" }),
+    expiresAt: timestamp("expires_at").notNull(),
+    createdAt: timestamp("created_at").$defaultFn(() => new Date()),
+    updatedAt: timestamp("updated_at"),
   },
   (table) => [
     index("identifier_idx").on(table.identifier),
@@ -111,10 +108,10 @@ export const verifications = sqliteTable(
   ],
 );
 
-export const organizations = sqliteTable(
+export const organizations = pgTable(
   "organizations",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     name: text("name").notNull(),
@@ -128,7 +125,7 @@ export const organizations = sqliteTable(
       .unique()
       .$defaultFn(() => `org_${createId()}`),
     tier: integer("tier").notNull().default(0),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
     metadata: text("metadata"),
@@ -139,10 +136,10 @@ export const organizations = sqliteTable(
   ],
 );
 
-export const members = sqliteTable(
+export const members = pgTable(
   "members",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     organizationId: text("organization_id")
@@ -152,17 +149,17 @@ export const members = sqliteTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     role: text("role").notNull(),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
   },
   (table) => [index("org_user_idx").on(table.organizationId, table.userId)],
 );
 
-export const invitations = sqliteTable(
+export const invitations = pgTable(
   "invitations",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     organizationId: text("organization_id")
@@ -171,7 +168,7 @@ export const invitations = sqliteTable(
     email: text("email").notNull(),
     role: text("role"),
     status: text("status").notNull(),
-    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    expiresAt: timestamp("expires_at").notNull(),
     inviterId: text("inviter_id")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
@@ -182,10 +179,10 @@ export const invitations = sqliteTable(
   ],
 );
 
-export const projectSettings = sqliteTable(
+export const projectSettings = pgTable(
   "project_settings",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     projectId: text("project_id")
@@ -196,23 +193,15 @@ export const projectSettings = sqliteTable(
       .references(() => organizations.id, { onDelete: "cascade" }),
 
     // Tuning start
-    translationMemory: integer("translation_memory", { mode: "boolean" })
-      .notNull()
-      .default(true),
-    qualityChecks: integer("quality_checks", { mode: "boolean" })
-      .notNull()
-      .default(true),
-    contextDetection: integer("context_detection", { mode: "boolean" })
-      .notNull()
-      .default(true),
+    translationMemory: boolean("translation_memory").notNull().default(true),
+    qualityChecks: boolean("quality_checks").notNull().default(true),
+    contextDetection: boolean("context_detection").notNull().default(true),
     lengthControl: text("length_control", {
       enum: ["flexible", "strict", "exact", "loose"],
     })
       .notNull()
       .default("flexible"),
-    inclusiveLanguage: integer("inclusive_language", { mode: "boolean" })
-      .notNull()
-      .default(true),
+    inclusiveLanguage: boolean("inclusive_language").notNull().default(true),
     formality: text("formality", { enum: ["casual", "formal", "neutral"] })
       .notNull()
       .default("casual"),
@@ -246,7 +235,7 @@ export const projectSettings = sqliteTable(
     })
       .notNull()
       .default("neutral"),
-    idioms: integer("idioms", { mode: "boolean" }).notNull().default(true),
+    idioms: boolean("idioms").notNull().default(true),
     terminology: text("terminology"),
     domainExpertise: text("domain_expertise", {
       enum: [
@@ -263,7 +252,7 @@ export const projectSettings = sqliteTable(
       .default("general"),
     // Tuning end
 
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
   },
@@ -273,10 +262,10 @@ export const projectSettings = sqliteTable(
   ],
 );
 
-export const projects = sqliteTable(
+export const projects = pgTable(
   "projects",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     name: text("name").notNull(),
@@ -285,10 +274,10 @@ export const projects = sqliteTable(
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" }),
+    updatedAt: timestamp("updated_at"),
   },
   (table) => [
     index("org_idx").on(table.organizationId),
@@ -298,10 +287,10 @@ export const projects = sqliteTable(
   ],
 );
 
-export const translations = sqliteTable(
+export const translations = pgTable(
   "translations",
   {
-    id: text()
+    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
     projectId: text("project_id")
@@ -325,10 +314,10 @@ export const translations = sqliteTable(
     commitLink: text("commit_link"),
     sourceProvider: text("source_provider"),
     commitMessage: text("commit_message"),
-    createdAt: integer("created_at", { mode: "timestamp" })
+    createdAt: timestamp("created_at")
       .notNull()
       .$defaultFn(() => new Date()),
-    updatedAt: integer("updated_at", { mode: "timestamp" })
+    updatedAt: timestamp("updated_at")
       .notNull()
       .$defaultFn(() => new Date()),
   },
@@ -346,3 +335,94 @@ export const translations = sqliteTable(
     index("translations_project_id_idx").on(table.projectId),
   ],
 );
+
+export const usersRelations = relations(users, ({ many }) => ({
+  sessions: many(sessions),
+  accounts: many(accounts),
+  memberships: many(members),
+  sentInvitations: many(invitations, { relationName: "inviter" }),
+  translations: many(translations),
+}));
+
+export const sessionsRelations = relations(sessions, ({ one }) => ({
+  user: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}));
+
+export const accountsRelations = relations(accounts, ({ one }) => ({
+  user: one(users, {
+    fields: [accounts.userId],
+    references: [users.id],
+  }),
+}));
+
+export const organizationsRelations = relations(organizations, ({ many }) => ({
+  members: many(members),
+  projects: many(projects),
+  invitations: many(invitations),
+  translations: many(translations),
+  projectSettings: many(projectSettings),
+}));
+
+export const membersRelations = relations(members, ({ one }) => ({
+  user: one(users, {
+    fields: [members.userId],
+    references: [users.id],
+  }),
+  organization: one(organizations, {
+    fields: [members.organizationId],
+    references: [organizations.id],
+  }),
+}));
+
+export const invitationsRelations = relations(invitations, ({ one }) => ({
+  organization: one(organizations, {
+    fields: [invitations.organizationId],
+    references: [organizations.id],
+  }),
+  inviter: one(users, {
+    fields: [invitations.inviterId],
+    references: [users.id],
+    relationName: "inviter",
+  }),
+}));
+
+export const projectsRelations = relations(projects, ({ one, many }) => ({
+  organization: one(organizations, {
+    fields: [projects.organizationId],
+    references: [organizations.id],
+  }),
+  translations: many(translations),
+  settings: many(projectSettings),
+}));
+
+export const projectSettingsRelations = relations(
+  projectSettings,
+  ({ one }) => ({
+    project: one(projects, {
+      fields: [projectSettings.projectId],
+      references: [projects.id],
+    }),
+    organization: one(organizations, {
+      fields: [projectSettings.organizationId],
+      references: [organizations.id],
+    }),
+  }),
+);
+
+export const translationsRelations = relations(translations, ({ one }) => ({
+  project: one(projects, {
+    fields: [translations.projectId],
+    references: [projects.id],
+  }),
+  organization: one(organizations, {
+    fields: [translations.organizationId],
+    references: [organizations.id],
+  }),
+  user: one(users, {
+    fields: [translations.userId],
+    references: [users.id],
+  }),
+}));

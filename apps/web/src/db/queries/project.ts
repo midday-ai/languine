@@ -1,8 +1,8 @@
+import { connectDb } from "@/db";
+import { projectSettings, projects } from "@/db/schema";
 import type { ProjectSettings } from "@/trpc/routers/schema";
 import { and, eq } from "drizzle-orm";
 import slugify from "slugify";
-import { db } from "..";
-import { projectSettings, projects } from "../schema";
 
 export const createProject = async ({
   name,
@@ -11,15 +11,18 @@ export const createProject = async ({
   name: string;
   organizationId: string;
 }) => {
-  return db
+  const db = await connectDb();
+
+  const [project] = await db
     .insert(projects)
     .values({
       name,
       organizationId,
       slug: slugify(name, { lower: true }),
     })
-    .returning()
-    .get();
+    .returning();
+
+  return project;
 };
 
 export const updateProject = async ({
@@ -31,14 +34,17 @@ export const updateProject = async ({
   name: string;
   organizationId: string;
 }) => {
-  return db
+  const db = await connectDb();
+
+  const [project] = await db
     .update(projects)
     .set({ name })
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
     )
-    .returning()
-    .get();
+    .returning();
+
+  return project;
 };
 
 export const deleteProject = async ({
@@ -48,13 +54,16 @@ export const deleteProject = async ({
   slug: string;
   organizationId: string;
 }) => {
-  return db
+  const db = await connectDb();
+
+  const [project] = await db
     .delete(projects)
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
     )
-    .returning()
-    .get();
+    .returning();
+
+  return project;
 };
 
 export const getProjectBySlug = async ({
@@ -64,7 +73,9 @@ export const getProjectBySlug = async ({
   slug: string;
   organizationId: string;
 }) => {
-  const project = db
+  const db = await connectDb();
+
+  const [project] = await db
     .select({
       id: projects.id,
       name: projects.name,
@@ -79,8 +90,7 @@ export const getProjectBySlug = async ({
     .leftJoin(projectSettings, eq(projects.id, projectSettings.projectId))
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
-    )
-    .get();
+    );
 
   return project;
 };
@@ -90,7 +100,11 @@ export const getProjectById = async ({
 }: {
   id: string;
 }) => {
-  return db.select().from(projects).where(eq(projects.id, id)).get();
+  const db = await connectDb();
+
+  const [project] = await db.select().from(projects).where(eq(projects.id, id));
+
+  return project;
 };
 
 export const getProjectByOrganizationId = async ({
@@ -98,11 +112,14 @@ export const getProjectByOrganizationId = async ({
 }: {
   organizationId: string;
 }) => {
-  return db
+  const db = await connectDb();
+
+  const [project] = await db
     .select()
     .from(projects)
-    .where(eq(projects.organizationId, organizationId))
-    .get();
+    .where(eq(projects.organizationId, organizationId));
+
+  return project;
 };
 
 export const updateProjectSettings = async ({
@@ -114,15 +131,16 @@ export const updateProjectSettings = async ({
   organizationId: string;
   settings: ProjectSettings;
 }) => {
-  const project = await db
+  const db = await connectDb();
+
+  const [project] = await db
     .select({
       id: projects.id,
     })
     .from(projects)
     .where(
       and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
-    )
-    .get();
+    );
 
   if (!project) return null;
 
@@ -136,22 +154,22 @@ export const updateProjectSettings = async ({
     ...settings,
   };
 
-  const updated = await db
+  const [updated] = await db
     .update(projectSettings)
     .set(settingsToUpdate)
     .where(whereClause)
-    .returning()
-    .get();
+    .returning();
 
   if (updated) return updated;
 
-  return db
+  const [newSettings] = await db
     .insert(projectSettings)
     .values({
       ...settingsToUpdate,
       projectId,
       organizationId,
     })
-    .returning()
-    .get();
+    .returning();
+
+  return newSettings;
 };

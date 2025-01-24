@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { projects, translations } from "@/db/schema";
 import type { AnalyticsSchema } from "@/trpc/routers/schema";
 import { format, startOfWeek, subDays, subMonths } from "date-fns";
@@ -15,20 +15,22 @@ export async function getAnalytics({
       : subMonths(new Date(), 12), // 6 months
   endDate = new Date(),
 }: AnalyticsSchema) {
+  const db = await connectDb();
+
   let dateFormat: string;
   let intervalStr: string;
 
   switch (period) {
     case "monthly":
-      dateFormat = "%Y-%m";
+      dateFormat = "YYYY-MM";
       intervalStr = "1 month";
       break;
     case "weekly":
-      dateFormat = "%Y-%W";
+      dateFormat = "YYYY-WW";
       intervalStr = "7 days";
       break;
     default:
-      dateFormat = "%Y-%m-%d";
+      dateFormat = "YYYY-MM-DD";
       intervalStr = "1 day";
       break;
   }
@@ -66,8 +68,8 @@ export async function getAnalytics({
 
   const periodSql =
     period === "weekly"
-      ? sql`strftime('%Y-W%W', datetime(${translations.updatedAt}, 'unixepoch', 'localtime'))`
-      : sql`strftime('${sql.raw(dateFormat)}', datetime(${translations.updatedAt}, 'unixepoch', 'localtime'))`;
+      ? sql`to_char(${translations.updatedAt}::timestamp, 'YYYY-"W"WW')`
+      : sql`to_char(${translations.updatedAt}::timestamp, ${dateFormat})`;
 
   const [keyStats, documentStats, totals] = await Promise.all([
     // Get key stats by period
@@ -75,6 +77,7 @@ export async function getAnalytics({
       .select({
         period: periodSql.as("period"),
         keyCount: count(translations.translationKey).as("keyCount"),
+        updatedAt: translations.updatedAt,
       })
       .from(translations)
       .innerJoin(
@@ -92,7 +95,7 @@ export async function getAnalytics({
           lte(translations.updatedAt, endDate),
         ),
       )
-      .groupBy(periodSql)
+      .groupBy(periodSql, translations.updatedAt)
       .orderBy(periodSql),
 
     // Get document stats by period
@@ -100,6 +103,7 @@ export async function getAnalytics({
       .select({
         period: periodSql.as("period"),
         documentCount: count(translations.translationKey).as("documentCount"),
+        updatedAt: translations.updatedAt,
       })
       .from(translations)
       .innerJoin(
@@ -117,7 +121,7 @@ export async function getAnalytics({
           lte(translations.updatedAt, endDate),
         ),
       )
-      .groupBy(periodSql)
+      .groupBy(periodSql, translations.updatedAt)
       .orderBy(periodSql),
 
     // Get overall totals

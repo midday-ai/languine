@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import {
   createOrganization,
   deleteOrganization,
@@ -19,7 +19,6 @@ import { and, ne } from "drizzle-orm";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import {
   isOrganizationMember,
   isOrganizationOwner,
@@ -70,7 +69,6 @@ export const organizationRouter = createTRPCRouter({
 
   create: protectedProcedure
     .input(createOrganizationSchema)
-    .use(rateLimitMiddleware)
     .mutation(async ({ input, ctx }) => {
       const org = await createOrganization({
         name: input.name,
@@ -89,7 +87,6 @@ export const organizationRouter = createTRPCRouter({
 
   update: protectedProcedure
     .input(updateOrganizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const org = await updateOrganization({
@@ -110,7 +107,6 @@ export const organizationRouter = createTRPCRouter({
 
   delete: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const members = await getOrganizationMembers(input.organizationId);
@@ -137,7 +133,6 @@ export const organizationRouter = createTRPCRouter({
 
   deleteInvite: protectedProcedure
     .input(deleteOrganizationInviteSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const invite = await deleteOrganizationInvite(input.inviteId);
@@ -154,9 +149,10 @@ export const organizationRouter = createTRPCRouter({
 
   deleteMember: protectedProcedure
     .input(deleteOrganizationMemberSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
+      const db = await connectDb();
+
       const otherOwners = await db
         .select()
         .from(members)
@@ -166,8 +162,7 @@ export const organizationRouter = createTRPCRouter({
             eq(members.role, "owner"),
             ne(members.id, input.memberId),
           ),
-        )
-        .all();
+        );
 
       if (otherOwners.length === 0) {
         throw new TRPCError({
@@ -191,9 +186,10 @@ export const organizationRouter = createTRPCRouter({
 
   leave: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationMember)
     .mutation(async ({ input, ctx }) => {
+      const db = await connectDb();
+
       const otherOwners = await db
         .select()
         .from(members)
@@ -203,8 +199,7 @@ export const organizationRouter = createTRPCRouter({
             eq(members.role, "owner"),
             ne(members.userId, ctx.authenticatedId),
           ),
-        )
-        .all();
+        );
 
       if (otherOwners.length === 0) {
         throw new TRPCError({
@@ -218,7 +213,6 @@ export const organizationRouter = createTRPCRouter({
 
   updateApiKey: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationApiKey(input.organizationId);
@@ -226,7 +220,6 @@ export const organizationRouter = createTRPCRouter({
 
   updatePlan: protectedProcedure
     .input(updateOrganizationTierSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationTier(input.organizationId, input.tier);

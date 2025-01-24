@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { primaryDb } from "@/db";
 import * as schema from "@/db/schema";
 import InviteEmail from "@/emails/templates/invite";
 import { resend } from "@/lib/resend";
@@ -11,8 +11,8 @@ import { databaseHooks } from "./hooks";
 import { secondaryStorage } from "./storage";
 
 export const auth = betterAuth({
-  database: drizzleAdapter(db, {
-    provider: "sqlite",
+  database: drizzleAdapter(primaryDb, {
+    provider: "pg",
     usePlural: true,
     schema,
   }),

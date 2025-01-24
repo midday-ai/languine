@@ -1,1 +1,0 @@
-ALTER TABLE `project_settings` DROP COLUMN `updated_at`;

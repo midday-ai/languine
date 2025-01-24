@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { users } from "@/db/schema";
 import { organizations } from "@/db/schema";
 import { authClient } from "@/lib/auth/client";
@@ -9,21 +9,19 @@ import superjson from "superjson";
 async function validateApiKey(
   apiKey: string,
 ): Promise<{ authenticatedId: string; type: "user" | "organization" } | null> {
+  const db = await connectDb();
+
   if (apiKey.startsWith("org_")) {
-    const org = await db
-      .select()
-      .from(organizations)
-      .where(eq(organizations.apiKey, apiKey))
-      .get();
+    const org = await db.query.organizations.findFirst({
+      where: eq(organizations.apiKey, apiKey),
+    });
     if (org) {
       return { authenticatedId: org.id, type: "organization" };
     }
   } else {
-    const user = await db
-      .select()
-      .from(users)
-      .where(eq(users.apiKey, apiKey))
-      .get();
+    const user = await db.query.users.findFirst({
+      where: eq(users.apiKey, apiKey),
+    });
     if (user) {
       return { authenticatedId: user.id, type: "user" };
     }

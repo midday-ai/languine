@@ -1,7 +1,7 @@
 import { createI18nMiddleware } from "next-international/middleware";
 import { type NextRequest, NextResponse } from "next/server";
 import languineConfig from "../languine.config";
-import { getProjectByOrganizationId } from "./db/queries/project";
+// import { getProjectByOrganizationId } from "./db/queries/project";
 import { getSessionFromRequest } from "./lib/auth/middleware";
 
 const I18nMiddleware = createI18nMiddleware({
@@ -26,18 +26,18 @@ export async function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/api/invite/accept", request.url));
     }
 
-    if (data.session?.activeOrganizationId) {
-      const project = await getProjectByOrganizationId({
-        organizationId: data.session.activeOrganizationId,
-      });
+    // if (data.session?.activeOrganizationId) {
+    //   const project = await getProjectByOrganizationId({
+    //     organizationId: data.session.activeOrganizationId,
+    //   });
 
-      return NextResponse.redirect(
-        new URL(
-          `/${data.session.activeOrganizationId}/${project?.slug || "default"}`,
-          request.url,
-        ),
-      );
-    }
+    //   return NextResponse.redirect(
+    //     new URL(
+    //       `/${data.session.activeOrganizationId}/${project?.slug || "default"}`,
+    //       request.url,
+    //     ),
+    //   );
+    // }
   }
 
   return i18nResponse;

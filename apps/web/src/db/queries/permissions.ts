@@ -1,6 +1,6 @@
+import { connectDb } from "@/db";
+import { members, organizations, projects, users } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
-import { db } from "..";
-import { members, organizations, projects, users } from "../schema";
 
 export async function validateJobPermissions({
   apiKey,
@@ -9,25 +9,24 @@ export async function validateJobPermissions({
   apiKey: string;
   projectId: string;
 }) {
+  const db = await connectDb();
+
   // Handle organization tokens
   if (apiKey.startsWith("org_")) {
-    const org = await db
-      .select()
-      .from(organizations)
-      .where(eq(organizations.apiKey, apiKey))
-      .get();
+    const org = await db.query.organizations.findFirst({
+      where: eq(organizations.apiKey, apiKey),
+    });
 
     if (!org) {
       throw new Error("Invalid organization token");
     }
 
-    const project = await db
-      .select()
-      .from(projects)
-      .where(
-        and(eq(projects.id, projectId), eq(projects.organizationId, org.id)),
-      )
-      .get();
+    const project = await db.query.projects.findFirst({
+      where: and(
+        eq(projects.id, projectId),
+        eq(projects.organizationId, org.id),
+      ),
+    });
 
     if (!project) {
       throw new Error("Project does not belong to this organization");
@@ -39,35 +38,33 @@ export async function validateJobPermissions({
   }
 
   // Handle user tokens
-  const user = await db
-    .select()
-    .from(users)
-    .where(eq(users.apiKey, apiKey))
-    .get();
+  const user = await db.query.users.findFirst({
+    where: eq(users.apiKey, apiKey),
+  });
 
   if (!user) {
     throw new Error("Invalid user token");
   }
 
   // Check if user is a member of the organization and project
-  const member = await db
-    .select()
-    .from(projects)
-    .leftJoin(
-      members,
-      and(
-        eq(members.organizationId, projects.organizationId),
-        eq(members.userId, user.id),
-      ),
-    )
-    .where(eq(projects.id, projectId))
-    .get();
+  const project = await db.query.projects.findFirst({
+    where: eq(projects.id, projectId),
+    with: {
+      organization: {
+        with: {
+          members: {
+            where: eq(members.userId, user.id),
+          },
+        },
+      },
+    },
+  });
 
-  if (!member?.projects) {
+  if (!project || !project.organization.members.length) {
     throw new Error("User does not have access to this project");
   }
 
   return {
-    project: member.projects,
+    project,
   };
 }

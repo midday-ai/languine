@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { projects, translations } from "@/db/schema";
 import type { DeleteKeysSchema } from "@/trpc/routers/schema";
 import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
@@ -33,6 +33,8 @@ export const createTranslations = async ({
     sourceFile: string;
   }[];
 }) => {
+  const db = await connectDb();
+
   return db
     .insert(translations)
     .values(
@@ -98,6 +100,8 @@ export const createDocument = async ({
   commitMessage?: string | null;
   commitLink?: string | null;
 }) => {
+  const db = await connectDb();
+
   return db
     .insert(translations)
     .values({
@@ -149,6 +153,8 @@ export const getTranslationsBySlug = async ({
   organizationId: string;
   limit?: number;
 }) => {
+  const db = await connectDb();
+
   return db
     .select()
     .from(translations)
@@ -177,6 +183,8 @@ export const getTranslationsBySlug = async ({
 };
 
 export const deleteKeys = async ({ projectId, keys }: DeleteKeysSchema) => {
+  const db = await connectDb();
+
   return db
     .delete(translations)
     .where(

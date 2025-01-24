@@ -1,7 +1,6 @@
 import type { translateTask } from "@/jobs/translate/translate";
 import { tasks } from "@trigger.dev/sdk/v3";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import { hasProjectAccess } from "../permissions/project";
 import {
   checkTranslationLimits,
@@ -13,7 +12,6 @@ import { jobsSchema } from "./schema";
 export const jobsRouter = createTRPCRouter({
   startJob: protectedProcedure
     .input(jobsSchema)
-    .use(rateLimitMiddleware)
     .use(hasProjectAccess)
     .mutation(async ({ input }) => {
       const org = await getProjectOrganization(input.projectId);

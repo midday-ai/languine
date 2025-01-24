@@ -1,6 +1,5 @@
 import { kv } from "@/lib/kv";
 import type { Session } from "better-auth";
-import { cookies } from "next/headers";
 
 export const CLI_TOKEN_NAME = "cli-token";
 

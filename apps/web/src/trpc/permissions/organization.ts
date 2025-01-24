@@ -1,8 +1,8 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { members, organizations } from "@/db/schema";
+import { t } from "@/trpc/init";
 import { TRPCError } from "@trpc/server";
-import { and, eq } from "drizzle-orm";
-import { t } from "../init";
+import { eq } from "drizzle-orm";
 
 /**
  * Middleware to check if the authenticated user is a member of the specified organization.
@@ -28,21 +28,17 @@ export const isOrganizationMember = t.middleware(
       return next();
     }
 
+    const db = await connectDb();
+
     // Check if user is a member of the organization
-    const result = await db
-      .select({
-        member: members,
-      })
-      .from(organizations)
-      .leftJoin(
-        members,
-        and(
-          eq(members.organizationId, typedInput.organizationId),
-          eq(members.userId, ctx.authenticatedId),
-        ),
-      )
-      .where(eq(organizations.id, typedInput.organizationId))
-      .get();
+    const result = await db.query.organizations.findFirst({
+      where: eq(organizations.id, typedInput.organizationId),
+      with: {
+        members: {
+          where: eq(members.userId, ctx.authenticatedId),
+        },
+      },
+    });
 
     if (!result) {
       throw new TRPCError({
@@ -52,7 +48,7 @@ export const isOrganizationMember = t.middleware(
     }
 
     // Block access if not a member and not using org API key
-    if (!result.member && ctx.type !== "organization") {
+    if (result.members.length === 0 && ctx.type !== "organization") {
       throw new TRPCError({
         code: "FORBIDDEN",
         message: "You are not a member of this organization",
@@ -87,21 +83,17 @@ export const isOrganizationOwner = t.middleware(
       return next();
     }
 
+    const db = await connectDb();
+
     // Check if user is an owner of the organization
-    const result = await db
-      .select({
-        member: members,
-      })
-      .from(organizations)
-      .leftJoin(
-        members,
-        and(
-          eq(members.organizationId, typedInput.organizationId),
-          eq(members.userId, ctx.authenticatedId),
-        ),
-      )
-      .where(eq(organizations.id, typedInput.organizationId))
-      .get();
+    const result = await db.query.organizations.findFirst({
+      where: eq(organizations.id, typedInput.organizationId),
+      with: {
+        members: {
+          where: eq(members.userId, ctx.authenticatedId),
+        },
+      },
+    });
 
     if (!result) {
       throw new TRPCError({
@@ -111,7 +103,7 @@ export const isOrganizationOwner = t.middleware(
     }
 
     // Block access if not an owner and not using org API key
-    if (result.member?.role !== "owner" && ctx.type !== "organization") {
+    if (result.members[0]?.role !== "owner" && ctx.type !== "organization") {
       throw new TRPCError({
         code: "FORBIDDEN",
         message: "You are not an owner of this organization",
