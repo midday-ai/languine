@@ -13,15 +13,15 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Spinner } from "@/components/ui/spinner";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { createClient } from "@languine/supabase/client";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
 export function AccountSettings() {
-  const t = useI18n();
+  const t = useTranslations();
   const router = useRouter();
   const supabase = createClient();
   const [showUpdateKeyDialog, setShowUpdateKeyDialog] = useState(false);
@@ -93,9 +93,9 @@ export function AccountSettings() {
       >
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("settings.apiKey.title")}</AlertDialogTitle>
+            <AlertDialogTitle>{t("account.apiKey.title")}</AlertDialogTitle>
             <AlertDialogDescription>
-              {t("settings.apiKey.description")}
+              {t("account.apiKey.description")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

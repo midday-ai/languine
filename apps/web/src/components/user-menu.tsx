@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,16 +10,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSession } from "@/contexts/session";
 import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
-import { useI18n } from "@/locales/client";
 import { createClient } from "@languine/supabase/client";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 
 export function UserMenu() {
+  const t = useTranslations("userMenu");
   const { session } = useSession();
   const { setOpen: openCreateTeamModal } = useCreateTeamModal();
   const params = useParams();
-  const t = useI18n();
   const router = useRouter();
   const supabase = createClient();
 
@@ -33,9 +34,12 @@ export function UserMenu() {
       <DropdownMenuTrigger>
         <Avatar className="size-6">
           {session?.user?.user_metadata?.avatar_url ? (
-            <AvatarImage
+            <Image
               src={session.user.user_metadata.avatar_url}
               alt={session.user.user_metadata.full_name ?? ""}
+              width={24}
+              height={24}
+              className="rounded-full"
             />
           ) : (
             <AvatarFallback className="text-[10px]">
@@ -56,16 +60,14 @@ export function UserMenu() {
           href={`/${params.organization}/${params.project}/settings?tab=account`}
         >
           <DropdownMenuItem className="text-sm">
-            {t("userMenu.account")}
+            {t("account")}
           </DropdownMenuItem>
         </Link>
         <Link
           href={`/${params.organization}/${params.project}/settings?tab=team`}
           className="cursor-pointer"
         >
-          <DropdownMenuItem className="text-sm">
-            {t("userMenu.team")}
-          </DropdownMenuItem>
+          <DropdownMenuItem className="text-sm">{t("team")}</DropdownMenuItem>
         </Link>
         <button
           type="button"
@@ -73,17 +75,17 @@ export function UserMenu() {
           className="cursor-pointer text-xs w-full"
         >
           <DropdownMenuItem className="text-sm">
-            {t("userMenu.createTeam")}
+            {t("createTeam")}
           </DropdownMenuItem>
         </button>
         <DropdownMenuSeparator />
         <Link href="/">
           <DropdownMenuItem className="text-sm">
-            {t("userMenu.homepage")}
+            {t("homepage")}
           </DropdownMenuItem>
         </Link>
         <DropdownMenuItem onClick={handleSignOut} className="text-sm">
-          {t("userMenu.signOut")}
+          {t("signOut")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

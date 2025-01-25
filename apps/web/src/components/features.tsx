@@ -1,10 +1,10 @@
 "use client";
 
 import { Card, CardHeader } from "@/components/ui/card";
-import { useScopedI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function Features() {
-  const t = useScopedI18n("features");
+  const t = useTranslations("features");
 
   const features = [
     {

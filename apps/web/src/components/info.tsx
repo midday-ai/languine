@@ -1,86 +1,82 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function Info() {
-  const t = useI18n();
+  const t = useTranslations("info");
 
   return (
     <>
       <div className="flex flex-col space-y-12">
         <div>
           <h2 className="text-sm font-regular mb-4">
-            {t("info.smartTranslation.title")}
+            {t("smartTranslation.title")}
           </h2>
           <ul className="text-secondary mt-4">
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.smartTranslation.intelligentTranslation")}
+              {t("smartTranslation.intelligentTranslation")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.smartTranslation.brandVoice")}
+              {t("smartTranslation.brandVoice")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.smartTranslation.terminology")}
+              {t("smartTranslation.terminology")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.smartTranslation.linguisticFeatures")}
+              {t("smartTranslation.linguisticFeatures")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.smartTranslation.realtimeUpdates")}
+              {t("smartTranslation.realtimeUpdates")}
             </li>
           </ul>
         </div>
 
         <div>
           <h2 className="text-sm font-regular mb-4">
-            {t("info.implementation.title")}
+            {t("implementation.title")}
           </h2>
           <ul className="text-secondary mt-4">
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.implementation.quickSetup")}
+              {t("implementation.quickSetup")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.implementation.fileFormat")}
+              {t("implementation.fileFormat")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.implementation.contentStructure")}
+              {t("implementation.contentStructure")}
             </li>
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
-              {t("info.implementation.assetOrganization")}
+              {t("implementation.assetOrganization")}
             </li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-sm font-regular mb-4">
-            {t("info.developer.title")}
-          </h2>
+          <h2 className="text-sm font-regular mb-4">{t("developer.title")}</h2>
           <ul className="text-secondary mt-4">
             <li className="text-sm">
-              <span className="text-lg">◇</span> {t("info.developer.cli")}
+              <span className="text-lg">◇</span> {t("developer.cli")}
             </li>
             <li className="text-sm">
-              <span className="text-lg">◇</span> {t("info.developer.cicd")}
+              <span className="text-lg">◇</span> {t("developer.cicd")}
             </li>
             <li className="text-sm">
-              <span className="text-lg">◇</span>{" "}
-              {t("info.developer.versionControl")}
+              <span className="text-lg">◇</span> {t("developer.versionControl")}
             </li>
             <li className="text-sm">
-              <span className="text-lg">◇</span> {t("info.developer.workflow")}
+              <span className="text-lg">◇</span> {t("developer.workflow")}
             </li>
             <li className="text-sm">
-              <span className="text-lg">◇</span>{" "}
-              {t("info.developer.documentation")}
+              <span className="text-lg">◇</span> {t("developer.documentation")}
             </li>
           </ul>
         </div>

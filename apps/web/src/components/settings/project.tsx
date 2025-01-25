@@ -1,11 +1,11 @@
 import { DangerZone } from "@/components/danger-zone";
 import { SettingsCard, SettingsSeparator } from "@/components/settings-card";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 
 export function ProjectSettings() {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const router = useRouter();
 
   const { organization, project } = useParams();
@@ -33,10 +33,10 @@ export function ProjectSettings() {
   return (
     <div>
       <SettingsCard
-        title={t("settings.project.name.title")}
-        description={t("settings.project.name.description")}
+        title={t("project.name.title")}
+        description={t("project.name.description")}
         type="input"
-        placeholder={t("settings.project.name.placeholder")}
+        placeholder={t("project.name.placeholder")}
         value={data?.name}
         onSave={async (value) => {
           const updated = await updateMutation.mutateAsync({
@@ -49,10 +49,10 @@ export function ProjectSettings() {
       />
 
       <SettingsCard
-        title={t("settings.project.id.title")}
-        description={t("settings.project.id.description")}
+        title={t("project.id.title")}
+        description={t("project.id.description")}
         type="copy-input"
-        placeholder={t("settings.project.id.placeholder")}
+        placeholder={t("project.id.placeholder")}
         value={data?.id}
       />
 
@@ -60,9 +60,9 @@ export function ProjectSettings() {
         <>
           <SettingsSeparator />
           <DangerZone
-            title={t("settings.project.delete.title")}
-            description={t("settings.project.delete.description")}
-            buttonText={t("settings.project.delete.button")}
+            title={t("project.delete.title")}
+            description={t("project.delete.description")}
+            buttonText={t("project.delete.button")}
             onDelete={() => {
               deleteMutation.mutate({
                 slug: project as string,

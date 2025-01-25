@@ -1,5 +1,5 @@
-import { validateJobPermissions } from "@/db/queries/permissions";
-import { createDocument, createTranslations } from "@/db/queries/translate";
+// import { validateJobPermissions } from "@/db/queries/permissions";
+// import { createDocument, createTranslations } from "@/db/queries/translate";
 import { metadata, schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
@@ -33,14 +33,14 @@ export const translateTask = schemaTask({
     concurrencyLimit: 10,
   },
   run: async (payload) => {
-    const { project } = await validateJobPermissions({
-      projectId: payload.projectId,
-      apiKey: payload.apiKey,
-    });
+    // const { project } = await validateJobPermissions({
+    //   projectId: payload.projectId,
+    //   apiKey: payload.apiKey,
+    // });
 
-    if (!project) {
-      throw new Error("Permission denied");
-    }
+    // if (!project) {
+    //   throw new Error("Permission denied");
+    // }
 
     const translations: Record<
       string,
@@ -70,21 +70,21 @@ export const translateTask = schemaTask({
         ];
 
         if (document?.sourceText) {
-          await createDocument({
-            projectId: project.id,
-            organizationId: project.organizationId,
-            sourceText: document.sourceText,
-            sourceLanguage: payload.sourceLanguage,
-            targetLanguage: targetLocale,
-            translatedText: translatedContent,
-            sourceFile: document.sourceFile,
-            sourceFormat: payload.sourceFormat,
-            branch: payload.branch,
-            commit: payload.commit,
-            commitLink: payload.commitLink,
-            sourceProvider: payload.sourceProvider,
-            commitMessage: payload.commitMessage,
-          });
+          // await createDocument({
+          //   projectId: project.id,
+          //   organizationId: project.organizationId,
+          //   sourceText: document.sourceText,
+          //   sourceLanguage: payload.sourceLanguage,
+          //   targetLanguage: targetLocale,
+          //   translatedText: translatedContent,
+          //   sourceFile: document.sourceFile,
+          //   sourceFormat: payload.sourceFormat,
+          //   branch: payload.branch,
+          //   commit: payload.commit,
+          //   commitLink: payload.commitLink,
+          //   sourceProvider: payload.sourceProvider,
+          //   commitMessage: payload.commitMessage,
+          // });
         }
       }
 
@@ -132,24 +132,24 @@ export const translateTask = schemaTask({
           totalTranslations,
         );
 
-        await createTranslations({
-          projectId: project.id,
-          organizationId: project.organizationId,
-          sourceFormat: payload.sourceFormat,
-          branch: payload.branch,
-          commit: payload.commit,
-          sourceProvider: payload.sourceProvider,
-          commitMessage: payload.commitMessage,
-          commitLink: payload.commitLink,
-          translations: chunk.map((content, i) => ({
-            translationKey: content.key,
-            sourceLanguage: payload.sourceLanguage,
-            targetLanguage: targetLocale,
-            sourceText: content.sourceText,
-            sourceFile: content.sourceFile,
-            translatedText: translatedContent[i],
-          })),
-        });
+        // await createTranslations({
+        //   projectId: project.id,
+        //   organizationId: project.organizationId,
+        //   sourceFormat: payload.sourceFormat,
+        //   branch: payload.branch,
+        //   commit: payload.commit,
+        //   sourceProvider: payload.sourceProvider,
+        //   commitMessage: payload.commitMessage,
+        //   commitLink: payload.commitLink,
+        //   translations: chunk.map((content, i) => ({
+        //     translationKey: content.key,
+        //     sourceLanguage: payload.sourceLanguage,
+        //     targetLanguage: targetLocale,
+        //     sourceText: content.sourceText,
+        //     sourceFile: content.sourceFile,
+        //     translatedText: translatedContent[i],
+        //   })),
+        // });
 
         // Process translations for this chunk
         chunk.forEach((content, i) => {

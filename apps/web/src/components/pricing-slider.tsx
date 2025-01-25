@@ -1,13 +1,13 @@
 import { Slider } from "@/components/ui/slider";
 import { TIERS_MAX_DOCUMENTS, TIERS_MAX_KEYS, TIER_PRICES } from "@/lib/tiers";
-import { useI18n } from "@/locales/client";
 import NumberFlow from "@number-flow/react";
+import { useTranslations } from "next-intl";
 
 export function PricingSlider({
   value,
   setValue,
 }: { value: number[]; setValue: (value: number[]) => void }) {
-  const t = useI18n();
+  const t = useTranslations("pricing_slider");
 
   const getPriceForStep = (step: number) => {
     return (
@@ -56,23 +56,21 @@ export function PricingSlider({
           }}
         >
           <div className="border-b border-background p-2 uppercase">
-            {t("pricing_slider.tier", { tier: getTierNumber(value[0]) })}
+            {t("tier", { tier: getTierNumber(value[0]) })}
           </div>
 
           <div className="text-xs flex items-center justify-between px-2 py-1">
             <span className="text-primary">
               {getKeysForPrice(value[0]).toLocaleString()}
             </span>
-            <span className="text-secondary">{t("pricing_slider.keys")}</span>
+            <span className="text-secondary">{t("keys")}</span>
           </div>
 
           <div className="text-xs flex items-center justify-between px-2 pb-2">
             <span className="text-primary">
               {getDocumentsForPrice(value[0]).toLocaleString()}
             </span>
-            <span className="text-secondary">
-              {t("pricing_slider.documents")}
-            </span>
+            <span className="text-secondary">{t("documents")}</span>
           </div>
         </div>
 
@@ -98,7 +96,7 @@ export function PricingSlider({
           currency: "USD",
           trailingZeroDisplay: "stripIfInteger",
         }}
-        suffix={`/${t("pricing_slider.period")}`}
+        suffix={`/${t("period")}`}
       />
     </div>
   );

@@ -2,13 +2,13 @@
 
 import { OutlinedButton } from "@/components/ui/outlined-button";
 import { Spinner } from "@/components/ui/spinner";
-import { useI18n } from "@/locales/client";
 import { createClient } from "@languine/supabase/client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 
 export default function GoogleSignIn() {
-  const t = useI18n();
+  const t = useTranslations("login");
   const [isLoading, setIsLoading] = useState(false);
   const supabase = createClient();
 
@@ -36,7 +36,7 @@ export default function GoogleSignIn() {
     >
       <div className="flex items-center gap-2 w-full justify-center sm:w-auto sm:justify-start">
         {isLoading ? <Spinner size="sm" /> : <FaGoogle className="h-4 w-4" />}
-        {t("login.google")}
+        {t("google")}
       </div>
     </OutlinedButton>
   );

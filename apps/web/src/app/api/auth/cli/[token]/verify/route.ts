@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { users } from "@/db/schema";
 import { getCLISession } from "@/lib/auth/cli";
 import { eq } from "drizzle-orm";
@@ -21,16 +21,17 @@ export async function GET(
     );
   }
 
-  const user = await db
-    .select({
-      id: users.id,
-      name: users.name,
-      email: users.email,
-      apiKey: users.apiKey,
-    })
-    .from(users)
-    .where(eq(users.id, cliSession.userId))
-    .get();
+  const db = await connectDb();
+
+  const user = await db.query.users.findFirst({
+    where: eq(users.id, cliSession.user.id),
+    columns: {
+      id: true,
+      name: true,
+      email: true,
+      apiKey: true,
+    },
+  });
 
   return NextResponse.json({
     success: true,

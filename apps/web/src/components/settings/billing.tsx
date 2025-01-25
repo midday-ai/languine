@@ -1,9 +1,9 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function BillingSettings() {
-  const t = useI18n();
+  const t = useTranslations("billing");
 
-  return <div>{t("billing.title")}</div>;
+  return <div>{t("title")}</div>;
 }

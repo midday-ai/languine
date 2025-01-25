@@ -5,10 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSession } from "@/contexts/session";
 import { useInviteModal } from "@/hooks/use-invite-modal";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { TRPCClientError } from "@trpc/client";
 import { MoreHorizontal, Search } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import { useQueryState } from "nuqs";
 import { useState } from "react";
@@ -34,7 +34,7 @@ import {
 import { Skeleton } from "./ui/skeleton";
 
 function Members({ searchQuery }: { searchQuery: string }) {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const params = useParams();
   const router = useRouter();
   const utils = trpc.useUtils();
@@ -48,28 +48,28 @@ function Members({ searchQuery }: { searchQuery: string }) {
   const deleteMemberMutation = trpc.organization.deleteMember.useMutation({
     onSuccess: () => {
       utils.organization.getMembers.invalidate();
-      toast.success(t("settings.team.members.removeMemberSuccess"), {
-        description: t("settings.team.members.removeMemberSuccessDescription"),
+      toast.success(t("team.members.removeMemberSuccess"), {
+        description: t("team.members.removeMemberSuccessDescription"),
       });
     },
     onError: (error) => {
       if (error instanceof TRPCClientError) {
         if (error.data?.code === "FORBIDDEN") {
-          toast.error(t("settings.permissionDenied"), {
-            description: t("settings.permissionDeniedDescription"),
+          toast.error(t("permissionDenied"), {
+            description: t("permissionDeniedDescription"),
           });
         } else if (error.data?.code === "BAD_REQUEST") {
-          toast.error(t("settings.badRequest"), {
-            description: t("settings.badRequestDescription"),
+          toast.error(t("badRequest"), {
+            description: t("badRequestDescription"),
           });
         } else {
-          toast.error(t("settings.error"), {
-            description: t("settings.errorDescription"),
+          toast.error(t("error"), {
+            description: t("errorDescription"),
           });
         }
       } else {
-        toast.error(t("settings.error"), {
-          description: t("settings.errorDescription"),
+        toast.error(t("error"), {
+          description: t("errorDescription"),
         });
       }
     },
@@ -81,8 +81,8 @@ function Members({ searchQuery }: { searchQuery: string }) {
       router.push("/login");
     },
     onError: () => {
-      toast.error(t("settings.permissionDenied"), {
-        description: t("settings.permissionDeniedDescription"),
+      toast.error(t("permissionDenied"), {
+        description: t("permissionDeniedDescription"),
       });
     },
   });
@@ -116,11 +116,9 @@ function Members({ searchQuery }: { searchQuery: string }) {
   if (!filteredMembers?.length) {
     return (
       <div className="border border-border p-8 text-center min-h-[500px] flex flex-col items-center justify-center">
-        <h3 className="text-md mb-2 text-sm">
-          {t("settings.team.members.noResults")}
-        </h3>
+        <h3 className="text-md mb-2 text-sm">{t("team.members.noResults")}</h3>
         <p className="text-secondary text-xs">
-          {t("settings.team.members.tryDifferentSearch")}
+          {t("team.members.tryDifferentSearch")}
         </p>
       </div>
     );
@@ -149,7 +147,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
             <div className="text-sm text-secondary">
               {t(
                 // @ts-ignore
-                `settings.team.members.roles.${member.role?.toLowerCase() ?? "member"}`,
+                `team.members.roles.${member.role?.toLowerCase() ?? "member"}`,
               )}
             </div>
 
@@ -167,21 +165,21 @@ function Members({ searchQuery }: { searchQuery: string }) {
                         className="text-destructive"
                         onSelect={(e) => e.preventDefault()}
                       >
-                        {t("settings.team.members.leaveTeam")}
+                        {t("team.members.leaveTeam")}
                       </DropdownMenuItem>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                       <AlertDialogHeader>
                         <AlertDialogTitle>
-                          {t("settings.team.members.leaveTeamConfirm")}
+                          {t("team.members.leaveTeamConfirm")}
                         </AlertDialogTitle>
                         <AlertDialogDescription>
-                          {t("settings.team.members.leaveTeamDescription")}
+                          {t("team.members.leaveTeamDescription")}
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>
-                          {t("settings.team.members.cancel")}
+                          {t("team.members.cancel")}
                         </AlertDialogCancel>
                         <AlertDialogAction
                           onClick={() => {
@@ -190,7 +188,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
                             });
                           }}
                         >
-                          {t("settings.team.members.leaveTeam")}
+                          {t("team.members.leaveTeam")}
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -202,21 +200,21 @@ function Members({ searchQuery }: { searchQuery: string }) {
                         className="text-destructive"
                         onSelect={(e) => e.preventDefault()}
                       >
-                        {t("settings.team.members.removeMember")}
+                        {t("team.members.removeMember")}
                       </DropdownMenuItem>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                       <AlertDialogHeader>
                         <AlertDialogTitle>
-                          {t("settings.team.members.removeMemberConfirm")}
+                          {t("team.members.removeMemberConfirm")}
                         </AlertDialogTitle>
                         <AlertDialogDescription>
-                          {t("settings.team.members.removeMemberDescription")}
+                          {t("team.members.removeMemberDescription")}
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>
-                          {t("settings.team.members.cancel")}
+                          {t("team.members.cancel")}
                         </AlertDialogCancel>
                         <AlertDialogAction
                           onClick={() => {
@@ -226,7 +224,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
                             });
                           }}
                         >
-                          {t("settings.team.members.removeMember")}
+                          {t("team.members.removeMember")}
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -242,7 +240,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
 }
 
 function Invites({ searchQuery }: { searchQuery: string }) {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const params = useParams();
   const utils = trpc.useUtils();
 
@@ -255,10 +253,10 @@ function Invites({ searchQuery }: { searchQuery: string }) {
     onSuccess: () => {
       utils.organization.getInvites.invalidate();
 
-      toast.success(t("settings.team.members.deleteInviteSuccess"));
+      toast.success(t("team.members.deleteInviteSuccess"));
     },
     onError: () => {
-      toast.error(t("settings.team.members.deleteInviteError"));
+      toast.error(t("team.members.deleteInviteError"));
     },
   });
 
@@ -289,10 +287,10 @@ function Invites({ searchQuery }: { searchQuery: string }) {
     return (
       <div className="border border-border p-8 text-center min-h-[500px] flex flex-col items-center justify-center">
         <h3 className="text-md mb-2 text-sm">
-          {t("settings.team.members.noPendingInvitations")}
+          {t("team.members.noPendingInvitations")}
         </h3>
         <p className="text-secondary text-xs">
-          {t("settings.team.members.inviteMembers")}
+          {t("team.members.inviteMembers")}
         </p>
       </div>
     );
@@ -309,7 +307,7 @@ function Invites({ searchQuery }: { searchQuery: string }) {
             <div>
               <div className="text-sm">{invite.email}</div>
               <div className="text-xs text-secondary">
-                {t("settings.team.members.invitedBy", {
+                {t("team.members.invitedBy", {
                   name: invite.inviter.name,
                 })}
               </div>
@@ -318,7 +316,7 @@ function Invites({ searchQuery }: { searchQuery: string }) {
           <div className="text-sm text-secondary">
             {t(
               // @ts-ignore
-              `settings.team.members.roles.${invite.role?.toLowerCase() ?? "member"}`,
+              `team.members.roles.${invite.role?.toLowerCase() ?? "member"}`,
             )}
           </div>
           <DropdownMenu>
@@ -334,21 +332,21 @@ function Invites({ searchQuery }: { searchQuery: string }) {
                     className="text-destructive"
                     onSelect={(e) => e.preventDefault()}
                   >
-                    {t("settings.team.members.deleteInvite")}
+                    {t("team.members.deleteInvite")}
                   </DropdownMenuItem>
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
                     <AlertDialogTitle>
-                      {t("settings.team.members.deleteInviteConfirm")}
+                      {t("team.members.deleteInviteConfirm")}
                     </AlertDialogTitle>
                     <AlertDialogDescription>
-                      {t("settings.team.members.deleteInviteDescription")}
+                      {t("team.members.deleteInviteDescription")}
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>
-                      {t("settings.team.members.cancel")}
+                      {t("team.members.cancel")}
                     </AlertDialogCancel>
                     <AlertDialogAction
                       onClick={() => {
@@ -358,7 +356,7 @@ function Invites({ searchQuery }: { searchQuery: string }) {
                         });
                       }}
                     >
-                      {t("settings.team.members.deleteInvite")}
+                      {t("team.members.deleteInvite")}
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
@@ -372,7 +370,7 @@ function Invites({ searchQuery }: { searchQuery: string }) {
 }
 
 export function TeamManagement() {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const [searchQuery, setSearchQuery] = useState("");
   const { setOpen } = useInviteModal();
   const [tab, setTab] = useQueryState("management", {
@@ -387,13 +385,13 @@ export function TeamManagement() {
             value="members"
             className="rounded-none border-b-2 border-transparent data-[state=active]:border-white data-[state=active]:bg-transparent px-0 py-2"
           >
-            {t("settings.team.members.title")}
+            {t("team.members.title")}
           </TabsTrigger>
           <TabsTrigger
             value="pending"
             className="rounded-none border-b-2 border-transparent data-[state=active]:border-white data-[state=active]:bg-transparent px-0 py-2"
           >
-            {t("settings.team.members.pendingInvitations")}
+            {t("team.members.pendingInvitations")}
           </TabsTrigger>
         </TabsList>
 
@@ -401,14 +399,14 @@ export function TeamManagement() {
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
             <Input
-              placeholder={t("settings.team.members.filterPlaceholder")}
+              placeholder={t("team.members.filterPlaceholder")}
               className="pl-9 bg-transparent border-border"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
           <Button onClick={() => setOpen(true)} size="sm">
-            {t("settings.team.members.invite")}
+            {t("team.members.invite")}
           </Button>
         </div>
 

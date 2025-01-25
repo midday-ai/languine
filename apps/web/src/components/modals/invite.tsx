@@ -17,11 +17,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Spinner } from "@/components/ui/spinner";
 import { useInviteModal } from "@/hooks/use-invite-modal";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -29,7 +28,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 export function InviteModal() {
-  const t = useI18n();
+  const t = useTranslations("invite");
   const { open, setOpen } = useInviteModal();
   const utils = trpc.useUtils();
   const params = useParams();
@@ -37,7 +36,7 @@ export function InviteModal() {
   const form = useForm<{ email: string }>({
     resolver: zodResolver(
       z.object({
-        email: z.string().email(t("invite.validation.invalidEmail")),
+        email: z.string().email(t("validation.invalidEmail")),
       }),
     ),
     defaultValues: {
@@ -56,16 +55,16 @@ export function InviteModal() {
       utils.organization.getInvites.invalidate();
       form.reset();
       setOpen(false);
-      toast.success(t("invite.success.title"), {
-        description: t("invite.success.description", {
+      toast.success(t("success.title"), {
+        description: t("success.description", {
           email: form.getValues("email"),
         }),
       });
     },
     onError: (error) => {
       console.error("Failed to invite member:", error);
-      toast.error(t("invite.error.title"), {
-        description: error.message || t("invite.error.description"),
+      toast.error(t("error.title"), {
+        description: error.message || t("error.description"),
       });
     },
   });
@@ -82,11 +81,9 @@ export function InviteModal() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{t("invite.inviteMember")}</DialogTitle>
+          <DialogTitle>{t("inviteMember")}</DialogTitle>
         </DialogHeader>
-        <p className="text-sm text-secondary">
-          {t("invite.inviteDescription")}
-        </p>
+        <p className="text-sm text-secondary">{t("inviteDescription")}</p>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -97,11 +94,11 @@ export function InviteModal() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("invite.emailLabel")}</FormLabel>
+                  <FormLabel>{t("emailLabel")}</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
-                      placeholder={t("invite.emailPlaceholder")}
+                      placeholder={t("emailPlaceholder")}
                       {...field}
                     />
                   </FormControl>
@@ -115,10 +112,10 @@ export function InviteModal() {
                 variant="ghost"
                 onClick={() => setOpen(false)}
               >
-                {t("invite.cancel")}
+                {t("cancel")}
               </Button>
-              <Button type="submit" loading={inviteMutation.isLoading}>
-                {t("invite.submit")}
+              <Button type="submit" disabled={inviteMutation.isLoading}>
+                {t("submit")}
               </Button>
             </DialogFooter>
           </form>

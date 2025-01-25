@@ -12,14 +12,14 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Spinner } from "@/components/ui/spinner";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
 export function TeamSettings() {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const { organization } = useParams();
   const router = useRouter();
 
@@ -37,8 +37,8 @@ export function TeamSettings() {
 
       setShowUpdateKeyDialog(false);
 
-      toast.success(t("settings.apiKey.updated"), {
-        description: t("settings.apiKey.updatedDescription"),
+      toast.success(t("apiKey.updated"), {
+        description: t("apiKey.updatedDescription"),
       });
     },
   });
@@ -59,12 +59,12 @@ export function TeamSettings() {
     },
     onError: (error) => {
       if (error.data?.code === "BAD_REQUEST") {
-        toast.error(t("settings.deleteTeamTitle"), {
-          description: t("settings.deleteTeamDescription"),
+        toast.error(t("deleteTeamTitle"), {
+          description: t("deleteTeamDescription"),
         });
       } else {
-        toast.error(t("settings.error"), {
-          description: t("settings.errorDescription"),
+        toast.error(t("error"), {
+          description: t("errorDescription"),
         });
       }
     },
@@ -73,10 +73,10 @@ export function TeamSettings() {
   return (
     <div>
       <SettingsCard
-        title={t("settings.team.name.title")}
-        description={t("settings.team.name.description")}
+        title={t("team.name.title")}
+        description={t("team.name.description")}
         type="input"
-        placeholder={t("settings.team.name.placeholder")}
+        placeholder={t("team.name.placeholder")}
         value={data?.name}
         onSave={async (value) => {
           await updateMutation.mutateAsync({
@@ -87,10 +87,10 @@ export function TeamSettings() {
       />
 
       <SettingsCard
-        title={t("settings.team.apiKey.title")}
-        description={t("settings.team.apiKey.description")}
+        title={t("team.apiKey.title")}
+        description={t("team.apiKey.description")}
         type="copy-input"
-        placeholder={t("settings.team.apiKey.placeholder")}
+        placeholder={t("team.apiKey.placeholder")}
         value={data?.apiKey}
         onUpdate={() => setShowUpdateKeyDialog(true)}
       />
@@ -101,13 +101,13 @@ export function TeamSettings() {
       >
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("settings.apiKey.title")}</AlertDialogTitle>
+            <AlertDialogTitle>{t("apiKey.title")}</AlertDialogTitle>
             <AlertDialogDescription>
-              {t("settings.apiKey.description")}
+              {t("apiKey.description")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>{t("settings.apiKey.cancel")}</AlertDialogCancel>
+            <AlertDialogCancel>{t("apiKey.cancel")}</AlertDialogCancel>
             <AlertDialogAction
               onClick={() =>
                 updateApiKey.mutate({ organizationId: organization as string })
@@ -116,7 +116,7 @@ export function TeamSettings() {
               className="flex items-center gap-2"
             >
               {updateApiKey.isPending && <Spinner size="sm" />}
-              {t("settings.apiKey.continue")}
+              {t("apiKey.continue")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

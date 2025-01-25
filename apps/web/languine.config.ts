@@ -23,8 +23,8 @@ export default defineConfig({
     ],
   },
   files: {
-    ts: {
-      include: ["src/locales/[locale].ts"],
+    json: {
+      include: ["src/messages/[locale].json"],
     },
   },
 });

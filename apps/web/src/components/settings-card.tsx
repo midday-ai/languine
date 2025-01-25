@@ -15,8 +15,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Spinner } from "@/components/ui/spinner";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
-import { useI18n } from "@/locales/client";
 import { TRPCClientError } from "@trpc/client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -59,7 +59,7 @@ export function SettingsCard({
   validate?: "email" | "url" | "number" | "password" | "text";
   onUpdate?: () => void;
 }) {
-  const t = useI18n();
+  const t = useTranslations("settings");
   const [isSaving, setIsSaving] = useState(false);
   const [inputValue, setInputValue] = useState(value ?? "");
 
@@ -68,23 +68,23 @@ export function SettingsCard({
       setIsSaving(true);
       await onSave?.(inputValue);
 
-      toast.success(t("settings.saved"), {
-        description: t("settings.savedDescription"),
+      toast.success(t("saved"), {
+        description: t("savedDescription"),
       });
     } catch (error) {
       if (error instanceof TRPCClientError) {
         if (error.data?.code === "FORBIDDEN") {
-          toast.error(t("settings.permissionDenied"), {
-            description: t("settings.permissionDeniedDescription"),
+          toast.error(t("permissionDenied"), {
+            description: t("permissionDeniedDescription"),
           });
         } else {
-          toast.error(t("settings.error"), {
-            description: t("settings.errorDescription"),
+          toast.error(t("error"), {
+            description: t("errorDescription"),
           });
         }
       } else {
-        toast.error(t("settings.error"), {
-          description: t("settings.errorDescription"),
+        toast.error(t("error"), {
+          description: t("errorDescription"),
         });
       }
     } finally {
@@ -97,23 +97,23 @@ export function SettingsCard({
       setIsSaving(true);
       await onCheckedChange?.(checked);
 
-      toast.success(t("settings.saved"), {
-        description: t("settings.savedDescription"),
+      toast.success(t("saved"), {
+        description: t("savedDescription"),
       });
     } catch (error) {
       if (error instanceof TRPCClientError) {
         if (error.data?.code === "FORBIDDEN") {
-          toast.error(t("settings.permissionDenied"), {
-            description: t("settings.permissionDeniedDescription"),
+          toast.error(t("permissionDenied"), {
+            description: t("permissionDeniedDescription"),
           });
         } else {
-          toast.error(t("settings.error"), {
-            description: t("settings.errorDescription"),
+          toast.error(t("error"), {
+            description: t("errorDescription"),
           });
         }
       } else {
-        toast.error(t("settings.error"), {
-          description: t("settings.errorDescription"),
+        toast.error(t("error"), {
+          description: t("errorDescription"),
         });
       }
     } finally {
@@ -126,23 +126,23 @@ export function SettingsCard({
       setIsSaving(true);
       await onChange?.(value);
 
-      toast.success(t("settings.saved"), {
-        description: t("settings.savedDescription"),
+      toast.success(t("saved"), {
+        description: t("savedDescription"),
       });
     } catch (error) {
       if (error instanceof TRPCClientError) {
         if (error.data?.code === "FORBIDDEN") {
-          toast.error(t("settings.permissionDenied"), {
-            description: t("settings.permissionDeniedDescription"),
+          toast.error(t("permissionDenied"), {
+            description: t("permissionDeniedDescription"),
           });
         } else {
-          toast.error(t("settings.error"), {
-            description: t("settings.errorDescription"),
+          toast.error(t("error"), {
+            description: t("errorDescription"),
           });
         }
       } else {
-        toast.error(t("settings.error"), {
-          description: t("settings.errorDescription"),
+        toast.error(t("error"), {
+          description: t("errorDescription"),
         });
       }
     } finally {
@@ -251,7 +251,7 @@ export function SettingsCard({
                 className="flex items-center gap-2 w-full md:w-auto mt-4 md:mt-0"
               >
                 {isSaving && <Spinner size="sm" />}
-                {t("settings.save")}
+                {t("save")}
               </Button>
             </form>
           )}
@@ -276,7 +276,7 @@ export function SettingsCard({
                 className="flex items-center gap-2 self-end mt-4 md:mt-0 w-full md:w-auto"
               >
                 {isSaving && <Spinner size="sm" />}
-                {t("settings.save")}
+                {t("save")}
               </Button>
             </form>
           )}

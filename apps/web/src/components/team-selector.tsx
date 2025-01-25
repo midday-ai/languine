@@ -7,14 +7,14 @@ import {
 } from "@/components/ui/popover";
 import { useCreateProjectModal } from "@/hooks/use-create-project-modal";
 import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { Check, Plus, Settings } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import * as React from "react";
 
 export function TeamSelector() {
-  const t = useI18n();
+  const t = useTranslations("teamSelector");
   const params = useParams();
   const router = useRouter();
 
@@ -65,7 +65,7 @@ export function TeamSelector() {
         <div className="flex divide-x divide-border h-[240px]">
           <div className="flex-1 flex flex-col">
             <div className="p-4 text-xs font-medium text-secondary">
-              {t("teamSelector.teams")}
+              {t("teams")}
             </div>
             <div className="flex-1 overflow-y-auto scrollbar-hide">
               {organizations.map((org) => (
@@ -102,13 +102,13 @@ export function TeamSelector() {
               className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
             >
               <Plus className="h-4 w-4" />
-              {t("teamSelector.createTeam")}
+              {t("createTeam")}
             </button>
           </div>
 
           <div className="flex-1 flex flex-col">
             <div className="p-4 text-xs font-medium text-secondary">
-              {t("teamSelector.project")}
+              {t("project")}
             </div>
             <div className="flex-1 overflow-y-auto scrollbar-hide">
               {currentTeam?.projects.map((project) => (
@@ -147,7 +147,7 @@ export function TeamSelector() {
               className="flex w-full items-center gap-2 p-2 pb-3 text-xs text-secondary hover:text-primary transition-colors duration-100 border-t border-border"
             >
               <Plus className="h-4 w-4" />
-              {t("teamSelector.addProject")}
+              {t("addProject")}
             </button>
           </div>
         </div>

@@ -1,21 +1,28 @@
 import { withReplicas } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { headers } from "next/headers";
+import postgres from "postgres";
 import * as schema from "./schema";
 
-export const primaryDb = drizzle(process.env.DATABASE_PRIMARY_URL!, { schema });
+export const primaryDb = drizzle(
+  postgres(process.env.DATABASE_PRIMARY_URL!, { prepare: false }),
+  { schema },
+);
 
-const usReplica = drizzle(process.env.DATABASE_US_URL!, {
-  schema,
-});
+const usReplica = drizzle(
+  postgres(process.env.DATABASE_US_URL!, { prepare: false }),
+  { schema },
+);
 
-const euReplica = drizzle(process.env.DATABASE_EU_URL!, {
-  schema,
-});
+const euReplica = drizzle(
+  postgres(process.env.DATABASE_EU_URL!, { prepare: false }),
+  { schema },
+);
 
-const auReplica = drizzle(process.env.DATABASE_AU_URL!, {
-  schema,
-});
+const auReplica = drizzle(
+  postgres(process.env.DATABASE_AU_URL!, { prepare: false }),
+  { schema },
+);
 
 export const connectDb = async () => {
   const headerList = await headers();

@@ -1,0 +1,571 @@
+{
+  "header": {
+    "pricing": "Giá cả",
+    "docs": "Tài liệu",
+    "signIn": "Đăng nhập",
+    "goToApp": "Đi đến ứng dụng"
+  },
+  "hero": {
+    "title": "Cơ sở hạ tầng bản địa hóa tự động cho ứng dụng của bạn",
+    "description": "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển."
+  },
+  "navigation": {
+    "dashboard": "Bảng điều khiển",
+    "tuning": "Điều chỉnh",
+    "settings": "Cài đặt",
+    "pricing": "Giá cả",
+    "docs": "Tài liệu",
+    "account": "Tài khoản"
+  },
+  "getStarted": {
+    "heading": "Bắt đầu",
+    "title": "Bản địa hóa tự động cho ứng dụng của bạn",
+    "description": "Tối ưu hóa quy trình bản địa hóa của bạn với CLI và pipeline được hỗ trợ bởi AI, được thiết kế để tự động hóa bản dịch cho nhà phát triển.",
+    "button": {
+      "startAutomating": "Bắt đầu tự động hóa",
+      "readDocumentation": "Đọc tài liệu"
+    }
+  },
+  "companies": {
+    "title": "Được sử dụng bởi",
+    "addYourCompany": "+ Thêm công ty của bạn"
+  },
+  "activity": {
+    "title": "Hoạt động",
+    "loading": "Đang tải",
+    "noResults": "Không có kết quả cho '{search}'",
+    "clearSearch": "Xóa tìm kiếm",
+    "loadMore": "Hiển thị thêm",
+    "type": {
+      "key": "Khóa",
+      "document": "Tài liệu"
+    }
+  },
+  "features": {
+    "title": "Tính năng",
+    "fullyOpenSource": "Hoàn toàn mã nguồn mở",
+    "fullyOpenSourceDescription": "Mã của chúng tôi được công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
+    "noVendorLockIn": "Không bị khóa bởi nhà cung cấp",
+    "noVendorLockInDescription": "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
+    "presetsForExpo": "Cài đặt sẵn cho Expo",
+    "presetsForExpoDescription": "Chúng tôi cung cấp cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
+    "presetForReactNative": "Cài đặt sẵn cho React Native",
+    "presetForReactNativeDescription": "Chúng tôi cung cấp cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
+    "presetForReactEmail": "Thư viện React Email",
+    "presetForReactEmailDescription": "Chúng tôi đã tạo một thư viện i18n cho React Email.",
+    "readyForI18nLibraries": "Sẵn sàng cho các thư viện i18n",
+    "readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
+  },
+  "info": {
+    "title": "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
+    "smartTranslation": {
+      "title": "Dịch thuật thông minh",
+      "intelligentTranslation": "Dịch thuật thông minh với nhận thức ngữ cảnh",
+      "brandVoice": "Nhất quán giọng điệu và phong cách thương hiệu",
+      "terminology": "Quản lý thuật ngữ",
+      "linguisticFeatures": "Tính năng ngôn ngữ nâng cao",
+      "realtimeUpdates": "Cập nhật dịch thuật thời gian thực"
+    },
+    "implementation": {
+      "title": "Triển khai",
+      "quickSetup": "Thiết lập và tích hợp nhanh chóng",
+      "fileFormat": "Xử lý định dạng tệp",
+      "contentStructure": "Tổ chức cấu trúc nội dung",
+      "assetOrganization": "Tổ chức tài sản"
+    },
+    "developer": {
+      "title": "Trải nghiệm nhà phát triển",
+      "cli": "Giao diện dòng lệnh",
+      "cicd": "Tích hợp CI/CD",
+      "versionControl": "Kiểm soát phiên bản",
+      "workflow": "Quy trình làm việc của nhà phát triển",
+      "documentation": "Tài liệu toàn diện"
+    }
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "github": "Đăng nhập với GitHub",
+    "google": "Đăng nhập với Google",
+    "footer": "Tự động hóa bản địa hóa của bạn.",
+    "description": "Đăng nhập để bắt đầu tự động hóa bản địa hóa của bạn trong vài giây.",
+    "terms": {
+      "text": "Bằng cách đăng nhập, bạn đồng ý với",
+      "termsOfService": "Điều khoản dịch vụ",
+      "and": "và",
+      "privacyPolicy": "Chính sách bảo mật"
+    }
+  },
+  "translations": {
+    "header": "Khóa đã dịch"
+  },
+  "userMenu": {
+    "account": "Cài đặt tài khoản",
+    "signOut": "Đăng xuất",
+    "createTeam": "Tạo nhóm",
+    "homepage": "Trang chủ",
+    "team": "Cài đặt nhóm"
+  },
+  "teamSelector": {
+    "addProject": "Tạo dự án",
+    "createProjectTitle": "Tạo một dự án mới",
+    "projectNamePlaceholder": "Tên dự án",
+    "createProjectButton": "Tạo dự án",
+    "pro": "Pro",
+    "project": "Dự án",
+    "teams": "Nhóm",
+    "createTeam": "Tạo nhóm",
+    "createTeamTitle": "Tạo một nhóm mới",
+    "teamNamePlaceholder": "Tên nhóm",
+    "createTeamButton": "Tạo nhóm"
+  },
+  "coming_soon": {
+    "title": "Languine đang trong giai đoạn Truy cập Sớm",
+    "description": "Chúng tôi hiện đang trong giai đoạn truy cập sớm. Liên hệ với",
+    "cta": "trên X để được truy cập sớm."
+  },
+  "account": {
+    "fullName": {
+      "title": "Họ và tên",
+      "description": "Họ và tên của bạn như sẽ xuất hiện trên nền tảng.",
+      "placeholder": "Nhập họ và tên của bạn"
+    },
+    "email": {
+      "title": "Địa chỉ email",
+      "description": "Địa chỉ email liên kết với tài khoản của bạn.",
+      "placeholder": "Nhập địa chỉ email của bạn"
+    },
+    "apiKey": {
+      "title": "Khóa API",
+      "description": "Khóa API cá nhân của bạn để truy cập API Languine và từ CLI."
+    },
+    "deleteAccount": {
+      "title": "Xóa tài khoản",
+      "description": "Xóa vĩnh viễn tài khoản của bạn và tất cả dữ liệu liên quan. Hành động này không thể hoàn tác.",
+      "button": "Xóa tài khoản"
+    }
+  },
+  "copyInstall": {
+    "copied": "Đã sao chép vào clipboard"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Bạn có chắc chắn không?",
+      "description": "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
+      "placeholder": "Nhập DELETE để xác nhận",
+      "confirm": "Xác nhận xóa",
+      "cancel": "Hủy bỏ"
+    }
+  },
+  "pipeline": {
+    "title": "Quy trình làm việc (Pipeline CI/CD)",
+    "pro": "[pro]",
+    "description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi có thay đổi code được đẩy lên, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu thương hiệu và thuật ngữ của bạn. Các bản dịch sau đó được gửi dưới dạng pull request, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với quá trình phát triển."
+  },
+  "settings": {
+    "badRequest": "Yêu cầu không hợp lệ",
+    "badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
+    "permissionDenied": "Từ chối quyền",
+    "permissionDeniedDescription": "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
+    "deleteTeamTitle": "Xóa nhóm",
+    "deleteTeamDescription": "Không thể xóa tổ chức khi bạn là thành viên duy nhất, thay vào đó hãy xóa tài khoản của bạn",
+    "saved": "Cài đặt đã lưu",
+    "savedDescription": "Thay đổi của bạn đã được lưu thành công",
+    "error": "Đã xảy ra lỗi",
+    "errorDescription": "Vui lòng thử lại hoặc liên hệ hỗ trợ",
+    "addTeam": "Tạo nhóm",
+    "apiKey": {
+      "updated": "Khóa API đã cập nhật",
+      "updatedDescription": "Khóa API của bạn đã được cập nhật thành công và sao chép vào clipboard của bạn.",
+      "title": "Cập nhật Khóa API",
+      "description": "Bạn có chắc chắn muốn tạo khóa API mới không? Khóa cũ sẽ ngừng hoạt động ngay lập tức.",
+      "cancel": "Hủy bỏ",
+      "continue": "Tiếp tục"
+    },
+    "tabs": {
+      "project": "Dự án",
+      "account": "Tài khoản",
+      "team": "Nhóm",
+      "provider": "Nhà cung cấp",
+      "billing": "Thanh toán"
+    },
+    "addProject": "Tạo dự án",
+    "project": {
+      "name": {
+        "title": "Tên dự án",
+        "description": "Tên của dự án của bạn",
+        "placeholder": "Nhập tên dự án"
+      },
+      "id": {
+        "title": "ID dự án",
+        "description": "Định danh duy nhất của dự án của bạn",
+        "placeholder": "ID dự án"
+      },
+      "delete": {
+        "title": "Xóa dự án",
+        "description": "Xóa vĩnh viễn dự án này và tất cả dữ liệu của nó",
+        "button": "Xóa dự án"
+      }
+    },
+    "save": "Lưu",
+    "team": {
+      "name": {
+        "title": "Tên nhóm",
+        "description": "Tên của nhóm của bạn",
+        "placeholder": "Nhập tên nhóm"
+      },
+      "billing": {
+        "title": "Gói thanh toán",
+        "description": "Quản lý gói thanh toán của nhóm bạn",
+        "free": "Miễn phí",
+        "pro": "Pro",
+        "unlimited": "Không giới hạn"
+      },
+      "apiKey": {
+        "title": "Khóa API nhóm",
+        "description": "Khóa API để truy cập nhóm, sử dụng từ pipeline CI/CD của bạn cùng với ID dự án",
+        "placeholder": "Khóa API nhóm"
+      },
+      "members": {
+        "leaveTeamConfirm": "Rời nhóm",
+        "leaveTeamDescription": "Bạn có chắc chắn muốn rời nhóm này không?",
+        "cancel": "Hủy bỏ",
+        "leaveTeam": "Rời nhóm",
+        "invite": "Mời thành viên",
+        "title": "Thành viên",
+        "pendingInvitations": "Lời mời đang chờ",
+        "removeMember": "Xóa thành viên",
+        "removeMemberConfirm": "Xóa thành viên",
+        "removeMemberDescription": "Bạn có chắc chắn muốn xóa thành viên này không?",
+        "filterPlaceholder": "Lọc thành viên...",
+        "allRoles": "Tất cả vai trò",
+        "date": "Ngày",
+        "selectAll": "{count} đã chọn",
+        "noPendingInvitations": "Không có lời mời đang chờ",
+        "noResults": "Không tìm thấy thành viên",
+        "tryDifferentSearch": "Thử tìm kiếm khác",
+        "inviteMembers": "Mời thành viên cộng tác",
+        "deleteInvite": "Xóa lời mời",
+        "deleteInviteDescription": "Xóa lời mời",
+        "invitedBy": "Được mời bởi {name}",
+        "deleteInviteSuccess": "Lời mời đã xóa",
+        "deleteInviteError": "Không thể xóa lời mời",
+        "removeMemberSuccess": "Thành viên đã xóa",
+        "removeMemberError": "Không thể xóa thành viên",
+        "removeMemberSuccessDescription": "Thành viên đã được xóa thành công",
+        "removeMemberErrorDescription": "Không thể xóa thành viên",
+        "roles": {
+          "owner": "Chủ sở hữu",
+          "member": "Thành viên"
+        },
+        "dateSort": {
+          "newest": "Mới nhất",
+          "oldest": "Cũ nhất"
+        },
+        "deleteInviteConfirm": "Xóa lời mời"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Chung",
+    "translationMemory": {
+      "title": "Bộ nhớ dịch thuật",
+      "description": "Sử dụng bộ nhớ dịch thuật để cải thiện tính nhất quán và hiệu quả"
+    },
+    "qualityChecks": {
+      "title": "Kiểm tra chất lượng",
+      "description": "Kích hoạt kiểm tra chất lượng tự động cho bản dịch"
+    },
+    "contextDetection": {
+      "title": "Phát hiện ngữ cảnh",
+      "description": "Tự động phát hiện và bảo tồn ngữ cảnh trong bản dịch"
+    },
+    "styleGuide": "Hướng dẫn phong cách",
+    "lengthControl": {
+      "title": "Kiểm soát độ dài",
+      "description": "Kiểm soát độ dài của văn bản dịch",
+      "options": {
+        "flexible": "Linh hoạt",
+        "strict": "Nghiêm ngặt",
+        "exact": "Chính xác",
+        "loose": "Lỏng lẻo"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Ngôn ngữ bao gồm",
+      "description": "Đảm bảo bản dịch sử dụng ngôn ngữ bao gồm"
+    },
+    "formality": {
+      "title": "Mức độ trang trọng",
+      "description": "Kiểm soát mức độ trang trọng của bản dịch",
+      "options": {
+        "casual": "Thân mật",
+        "formal": "Trang trọng",
+        "neutral": "Trung lập"
+      }
+    },
+    "brandName": {
+      "title": "Tên thương hiệu",
+      "description": "Đặt tên thương hiệu của bạn để sử dụng nhất quán",
+      "placeholder": "Nhập tên thương hiệu của bạn"
+    },
+    "brandVoice": {
+      "title": "Giọng điệu thương hiệu",
+      "description": "Xác định giọng điệu và phong cách thương hiệu của bạn",
+      "placeholder": "Mô tả giọng điệu thương hiệu của bạn..."
+    },
+    "toneOfVoice": {
+      "title": "Tông giọng",
+      "description": "Xác định tông giọng được sử dụng trong bản dịch",
+      "options": {
+        "casual": "Thân mật",
+        "formal": "Trang trọng",
+        "friendly": "Thân thiện",
+        "professional": "Chuyên nghiệp",
+        "playful": "Vui vẻ",
+        "serious": "Nghiêm túc",
+        "confident": "Tự tin",
+        "humble": "Khiêm tốn",
+        "direct": "Trực tiếp",
+        "diplomatic": "Ngoại giao"
+      }
+    },
+    "brand": "Thương hiệu",
+    "emotiveIntent": {
+      "title": "Ý định cảm xúc",
+      "description": "Đặt tông cảm xúc cho bản dịch",
+      "options": {
+        "neutral": "Trung lập",
+        "positive": "Tích cực",
+        "empathetic": "Đồng cảm",
+        "professional": "Chuyên nghiệp",
+        "friendly": "Thân thiện",
+        "enthusiastic": "Nhiệt tình"
+      }
+    },
+    "domainExpertise": {
+      "title": "Chuyên môn lĩnh vực",
+      "description": "Chỉ định ngữ cảnh lĩnh vực cho bản dịch",
+      "options": {
+        "general": "Chung",
+        "technical": "Kỹ thuật",
+        "medical": "Y tế",
+        "legal": "Pháp lý",
+        "financial": "Tài chính",
+        "marketing": "Marketing",
+        "academic": "Học thuật"
+      }
+    },
+    "idioms": {
+      "title": "Thành ngữ",
+      "description": "Xử lý các biểu thức thành ngữ một cách thích hợp"
+    },
+    "terminology": {
+      "title": "Thuật ngữ",
+      "description": "Quản lý thuật ngữ chuyên ngành và bảng thuật ngữ"
+    },
+    "culturalAdaptation": {
+      "title": "Thích ứng văn hóa",
+      "description": "Thích ứng nội dung cho phù hợp văn hóa"
+    }
+  },
+  "pricing": {
+    "title": "Giá cả đơn giản",
+    "free": {
+      "title": "Miễn phí",
+      "price": "Miễn phí",
+      "keys_limit": "Lên đến 100 khóa",
+      "description": "Hoàn hảo khi thử nghiệm",
+      "features": {
+        "unlimited_projects": "Dự án không giới hạn",
+        "fine_tuning": "Tùy chọn tinh chỉnh",
+        "overrides": "Ghi đè dịch thuật",
+        "analytics": "Phân tích",
+        "context_memory": "Bộ nhớ ngữ cảnh",
+        "community_support": "Hỗ trợ cộng đồng",
+        "keys_limit": "Lên đến 100 khóa",
+        "docs_limit": "Lên đến 5 tài liệu",
+        "unlimited_languages": "Ngôn ngữ không giới hạn"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Tất cả trong Miễn phí, cộng thêm:",
+      "features": {
+        "github_action": "Tích hợp GitHub Action",
+        "latest_features": "Truy cập sớm các tính năng mới nhất",
+        "priority_support": "Hỗ trợ ưu tiên",
+        "priority_queues": "Hàng đợi dịch thuật ưu tiên",
+        "keys_limit": "Bắt đầu từ 10 000 khóa",
+        "docs_limit": "Bắt đầu từ 50 tài liệu"
+      }
+    },
+    "cta": "Bắt đầu tự động hóa",
+    "keys_limit_explanation": "Khóa đã dịch: Nếu bạn có 20 khóa nguồn (như \"Đăng ký\" hoặc \"Chào mừng!\") và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa x 5 ngôn ngữ)."
+  },
+  "createTeam": {
+    "teamName": "Tên nhóm",
+    "teamNamePlaceholder": "Nhập tên nhóm",
+    "createTeamButton": "Tạo nhóm",
+    "cancel": "Hủy bỏ",
+    "createTeamDescription": "Tạo một nhóm mới để quản lý dự án và cộng tác viên của bạn."
+  },
+  "createProject": {
+    "createProjectTitle": "Tạo một dự án mới",
+    "projectNamePlaceholder": "Nhập tên dự án",
+    "createProjectButton": "Tạo dự án",
+    "cancel": "Hủy bỏ",
+    "createProjectDescription": "Tạo một dự án mới để bắt đầu tự động hóa bản địa hóa của bạn."
+  },
+  "invite": {
+    "inviteMember": "Mời thành viên",
+    "inviteDescription": "Mời một thành viên vào nhóm của bạn",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Nhập email",
+    "cancel": "Hủy bỏ",
+    "submit": "Gửi",
+    "success": {
+      "title": "Lời mời đã gửi",
+      "description": "Đã gửi lời mời thành công đến {email}"
+    },
+    "error": {
+      "title": "Lỗi",
+      "description": "Không thể gửi lời mời. Vui lòng thử lại."
+    },
+    "validation": {
+      "invalidEmail": "Vui lòng nhập email hợp lệ"
+    }
+  },
+  "months": {
+    "10": "Tháng 10",
+    "11": "Tháng 11",
+    "12": "Tháng 12",
+    "01": "Tháng 1",
+    "02": "Tháng 2",
+    "03": "Tháng 3",
+    "04": "Tháng 4",
+    "05": "Tháng 5",
+    "06": "Tháng 6",
+    "07": "Tháng 7",
+    "08": "Tháng 8",
+    "09": "Tháng 9"
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Thiết lập Languine CLI",
+        "description": "Cài đặt và cấu hình Languine CLI để quản lý bản dịch"
+      },
+      "2": {
+        "title": "Đẩy bản dịch",
+        "description": "Đang chờ bản dịch được đẩy lên"
+      },
+      "3": {
+        "title": "Tài liệu",
+        "description": "Xem tài liệu của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất",
+        "link": "tài liệu"
+      }
+    },
+    "info": {
+      "description": "Cần giúp đỡ? Xem",
+      "link": "tài liệu",
+      "description_2": "của chúng tôi để biết hướng dẫn chi tiết và thực hành tốt nhất."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Đăng nhập Languine CLI thành công",
+      "description": "Languine CLI đã được xác thực thành công như:",
+      "description_2": "Bây giờ bạn có thể đóng tab này và quay lại CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Tìm kiếm"
+  },
+  "periods": {
+    "daily": "Hàng ngày",
+    "weekly": "Hàng tuần",
+    "monthly": "Hàng tháng",
+    "selectPeriod": "Chọn kỳ"
+  },
+  "language": {
+    "en": "Tiếng Anh",
+    "es": "Tiếng Tây Ban Nha",
+    "fr": "Tiếng Pháp",
+    "de": "Tiếng Đức",
+    "it": "Tiếng Ý",
+    "pt": "Tiếng Bồ Đào Nha",
+    "zh": "Tiếng Trung",
+    "ja": "Tiếng Nhật",
+    "ko": "Tiếng Hàn",
+    "ar": "Tiếng Ả Rập",
+    "hi": "Tiếng Hindi",
+    "tr": "Tiếng Thổ Nhĩ Kỳ",
+    "nl": "Tiếng Hà Lan",
+    "pl": "Tiếng Ba Lan",
+    "no": "Tiếng Na Uy",
+    "da": "Tiếng Đan Mạch",
+    "sv": "Tiếng Thụy Điển",
+    "fi": "Tiếng Phần Lan",
+    "vi": "Tiếng Việt"
+  },
+  "menu": {
+    "dashboard": "Bảng điều khiển",
+    "tuning": "Điều chỉnh",
+    "settings": "Cài đặt",
+    "pricing": "Giá cả",
+    "docs": "Tài liệu",
+    "account": "Tài khoản"
+  },
+  "billing": {
+    "title": "Thanh toán"
+  },
+  "analytics": {
+    "key": "Khóa đã dịch",
+    "document": "Tài liệu đã dịch"
+  },
+  "faq": {
+    "title": "FAQ",
+    "what_is_languine": {
+      "question": "Languine là gì?",
+      "answer": "Languine là một nền tảng bản địa hóa được hỗ trợ bởi AI giúp bạn tự động hóa việc dịch ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn tinh chỉnh, ghi đè dịch thuật, phân tích và bộ nhớ ngữ cảnh để đảm bảo bản dịch chất lượng cao."
+    },
+    "key_limit": {
+      "question": "Giới hạn khóa hoạt động như thế nào?",
+      "answer": "Một khóa đã dịch được tính khi bạn dịch một khóa nguồn sang một ngôn ngữ đích. Ví dụ, nếu bạn có 20 khóa nguồn và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa × 5 ngôn ngữ)."
+    },
+    "supported_languages": {
+      "question": "Những ngôn ngữ nào được hỗ trợ?",
+      "answer": "Languine hỗ trợ hơn 100 ngôn ngữ trong tất cả các gói. Trong khi bản dịch được hỗ trợ bởi AI của chúng tôi hoạt động tốt nhất với các ngôn ngữ chính, chúng tôi cố gắng cung cấp bản dịch chất lượng trên tất cả các ngôn ngữ được hỗ trợ. Nếu bạn có yêu cầu ngôn ngữ cụ thể hoặc câu hỏi về chất lượng dịch thuật cho các ngôn ngữ cụ thể, vui lòng liên hệ với đội hỗ trợ của chúng tôi."
+    },
+    "github_action": {
+      "question": "Tích hợp GitHub Action hoạt động như thế nào?",
+      "answer": "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình làm việc dịch thuật trực tiếp trong pipeline CI/CD của bạn. Khi bạn đẩy thay đổi lên kho lưu trữ của mình, bản dịch có thể được cập nhật tự động."
+    },
+    "support": {
+      "question": "Bạn cung cấp loại hỗ trợ nào?",
+      "answer": "Người dùng miễn phí được truy cập hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và hỗ trợ chuyên dụng cho nhu cầu dịch thuật của họ."
+    },
+    "open_source": {
+      "question": "Languine có mã nguồn mở không?",
+      "answer": "Có! Languine hoàn toàn mã nguồn mở và có sẵn trên GitHub. Bạn có thể đóng góp vào dự án, báo cáo vấn đề, đề xuất tính năng và kiểm tra mã. Chúng tôi tin vào sự minh bạch và xây dựng công khai."
+    },
+    "open_source_pricing": {
+      "question": "Bạn có cung cấp giá đặc biệt cho các dự án mã nguồn mở không?",
+      "answer": "Có! Chúng tôi yêu thích việc hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể nhận được quyền truy cập vào các tính năng Pro của chúng tôi với giá giảm 30%. Chỉ cần liên hệ với đội ngũ của chúng tôi với thông tin chi tiết về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro được giảm giá. Đây là cách chúng tôi đền đáp lại cộng đồng đã làm cho công việc của chúng tôi trở nên khả thi."
+    },
+    "cancel_subscription": {
+      "question": "Làm thế nào để hủy đăng ký của tôi?",
+      "answer": "Bạn có thể hủy đăng ký của mình bất kỳ lúc nào từ cài đặt tài khoản của bạn. Điều hướng đến Thanh toán > Thay đổi Gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối kỳ thanh toán hiện tại, sau đó bạn sẽ được chuyển sang gói Miễn phí."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Cấp {tier}",
+    "keys": "Khóa đã dịch",
+    "documents": "Tài liệu đã dịch",
+    "period": "thứ hai",
+    "keys_prefix": "",
+    "keys_suffix": " khóa",
+    "docs_prefix": "",
+    "docs_suffix": " tài liệu"
+  }
+}

@@ -4,14 +4,14 @@ import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
 import { getOrganizationByUserId } from "@/db/queries/organization";
-import { getI18n } from "@/locales/server";
 import { getSession } from "@languine/supabase/session";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getI18n();
+  const t = await getTranslations();
 
   return {
     title: `${t("login.title")} | Languine`,
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const t = await getI18n();
+  const t = await getTranslations();
 
   const {
     data: { session },

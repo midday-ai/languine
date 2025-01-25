@@ -10,7 +10,7 @@ import type { jobsSchema } from "./schema";
 export interface TranslationLimitCheckResult {
   meta: {
     plan: string;
-    tier: string;
+    tier: number;
     organizationId: string;
   };
   error?: {
@@ -61,7 +61,7 @@ export async function checkTranslationLimits(
     return {
       meta: {
         plan: org.plan,
-        tier: String(org.tier),
+        tier: org.tier,
         organizationId: org.id,
       },
       error: {
@@ -80,7 +80,7 @@ export async function checkTranslationLimits(
     return {
       meta: {
         plan: org.plan,
-        tier: String(org.tier),
+        tier: org.tier,
         organizationId: org.id,
       },
       error: {
@@ -93,7 +93,7 @@ export async function checkTranslationLimits(
   return {
     meta: {
       plan: org.plan,
-      tier: String(org.tier),
+      tier: org.tier,
       organizationId: org.id,
     },
   };

@@ -5,12 +5,12 @@ import {
   SettingsSeparator,
   SettingsTitle,
 } from "@/components/settings-card";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 
 export function Tuning() {
-  const t = useI18n();
+  const t = useTranslations("tuning");
   const { organization, project } = useParams();
 
   const trpcUtils = trpc.useUtils();
@@ -72,10 +72,10 @@ export function Tuning() {
 
   return (
     <div className="px-8">
-      <SettingsTitle title={t("tuning.general")} />
+      <SettingsTitle title={t("general")} />
       <SettingsCard
-        title={t("tuning.translationMemory.title")}
-        description={t("tuning.translationMemory.description")}
+        title={t("translationMemory.title")}
+        description={t("translationMemory.description")}
         type="switch"
         checked={projectData.settings?.translationMemory ?? true}
         onCheckedChange={async (checked) => {
@@ -84,8 +84,8 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.qualityChecks.title")}
-        description={t("tuning.qualityChecks.description")}
+        title={t("qualityChecks.title")}
+        description={t("qualityChecks.description")}
         type="switch"
         checked={projectData.settings?.qualityChecks ?? true}
         onCheckedChange={async (checked) => {
@@ -94,8 +94,8 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.contextDetection.title")}
-        description={t("tuning.contextDetection.description")}
+        title={t("contextDetection.title")}
+        description={t("contextDetection.description")}
         type="switch"
         checked={projectData.settings?.contextDetection ?? true}
         onCheckedChange={async (checked) => {
@@ -105,20 +105,20 @@ export function Tuning() {
 
       <SettingsSeparator />
 
-      <SettingsTitle title={t("tuning.styleGuide")} />
+      <SettingsTitle title={t("styleGuide")} />
       <SettingsCard
-        title={t("tuning.lengthControl.title")}
-        description={t("tuning.lengthControl.description")}
+        title={t("lengthControl.title")}
+        description={t("lengthControl.description")}
         type="select"
         value={projectData.settings?.lengthControl ?? "flexible"}
         options={[
           {
-            label: t("tuning.lengthControl.options.flexible"),
+            label: t("lengthControl.options.flexible"),
             value: "flexible",
           },
-          { label: t("tuning.lengthControl.options.strict"), value: "strict" },
-          { label: t("tuning.lengthControl.options.exact"), value: "exact" },
-          { label: t("tuning.lengthControl.options.loose"), value: "loose" },
+          { label: t("lengthControl.options.strict"), value: "strict" },
+          { label: t("lengthControl.options.exact"), value: "exact" },
+          { label: t("lengthControl.options.loose"), value: "loose" },
         ]}
         onChange={async (value) => {
           await handleUpdate({ lengthControl: value });
@@ -126,8 +126,8 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.inclusiveLanguage.title")}
-        description={t("tuning.inclusiveLanguage.description")}
+        title={t("inclusiveLanguage.title")}
+        description={t("inclusiveLanguage.description")}
         type="switch"
         checked={projectData.settings?.inclusiveLanguage ?? true}
         onCheckedChange={async (checked) => {
@@ -136,14 +136,14 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.formality.title")}
-        description={t("tuning.formality.description")}
+        title={t("formality.title")}
+        description={t("formality.description")}
         type="select"
         value={projectData.settings?.formality ?? "casual"}
         options={[
-          { label: t("tuning.formality.options.casual"), value: "casual" },
-          { label: t("tuning.formality.options.formal"), value: "formal" },
-          { label: t("tuning.formality.options.neutral"), value: "neutral" },
+          { label: t("formality.options.casual"), value: "casual" },
+          { label: t("formality.options.formal"), value: "formal" },
+          { label: t("formality.options.neutral"), value: "neutral" },
         ]}
         onChange={async (value) => {
           await handleUpdate({ formality: value });
@@ -151,31 +151,31 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.toneOfVoice.title")}
-        description={t("tuning.toneOfVoice.description")}
+        title={t("toneOfVoice.title")}
+        description={t("toneOfVoice.description")}
         type="select"
         value={projectData.settings?.toneOfVoice ?? "casual"}
         options={[
-          { label: t("tuning.toneOfVoice.options.casual"), value: "casual" },
-          { label: t("tuning.toneOfVoice.options.formal"), value: "formal" },
+          { label: t("toneOfVoice.options.casual"), value: "casual" },
+          { label: t("toneOfVoice.options.formal"), value: "formal" },
           {
-            label: t("tuning.toneOfVoice.options.friendly"),
+            label: t("toneOfVoice.options.friendly"),
             value: "friendly",
           },
           {
-            label: t("tuning.toneOfVoice.options.professional"),
+            label: t("toneOfVoice.options.professional"),
             value: "professional",
           },
-          { label: t("tuning.toneOfVoice.options.playful"), value: "playful" },
-          { label: t("tuning.toneOfVoice.options.serious"), value: "serious" },
+          { label: t("toneOfVoice.options.playful"), value: "playful" },
+          { label: t("toneOfVoice.options.serious"), value: "serious" },
           {
-            label: t("tuning.toneOfVoice.options.confident"),
+            label: t("toneOfVoice.options.confident"),
             value: "confident",
           },
-          { label: t("tuning.toneOfVoice.options.humble"), value: "humble" },
-          { label: t("tuning.toneOfVoice.options.direct"), value: "direct" },
+          { label: t("toneOfVoice.options.humble"), value: "humble" },
+          { label: t("toneOfVoice.options.direct"), value: "direct" },
           {
-            label: t("tuning.toneOfVoice.options.diplomatic"),
+            label: t("toneOfVoice.options.diplomatic"),
             value: "diplomatic",
           },
         ]}
@@ -186,12 +186,12 @@ export function Tuning() {
 
       <SettingsSeparator />
 
-      <SettingsTitle title={t("tuning.brand")} />
+      <SettingsTitle title={t("brand")} />
       <SettingsCard
-        title={t("tuning.brandName.title")}
-        description={t("tuning.brandName.description")}
+        title={t("brandName.title")}
+        description={t("brandName.description")}
         type="input"
-        placeholder={t("tuning.brandName.placeholder")}
+        placeholder={t("brandName.placeholder")}
         value={projectData.settings?.brandName ?? ""}
         onSave={async (value) => {
           await handleUpdate({ brandName: value });
@@ -199,10 +199,10 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.brandVoice.title")}
-        description={t("tuning.brandVoice.description")}
+        title={t("brandVoice.title")}
+        description={t("brandVoice.description")}
         type="textarea"
-        placeholder={t("tuning.brandVoice.placeholder")}
+        placeholder={t("brandVoice.placeholder")}
         value={projectData.settings?.brandVoice ?? ""}
         onSave={async (value) => {
           await handleUpdate({ brandVoice: value });
@@ -210,33 +210,33 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.emotiveIntent.title")}
-        description={t("tuning.emotiveIntent.description")}
+        title={t("emotiveIntent.title")}
+        description={t("emotiveIntent.description")}
         type="select"
         value={projectData.settings?.emotiveIntent ?? "neutral"}
         options={[
           {
-            label: t("tuning.emotiveIntent.options.neutral"),
+            label: t("emotiveIntent.options.neutral"),
             value: "neutral",
           },
           {
-            label: t("tuning.emotiveIntent.options.positive"),
+            label: t("emotiveIntent.options.positive"),
             value: "positive",
           },
           {
-            label: t("tuning.emotiveIntent.options.empathetic"),
+            label: t("emotiveIntent.options.empathetic"),
             value: "empathetic",
           },
           {
-            label: t("tuning.emotiveIntent.options.professional"),
+            label: t("emotiveIntent.options.professional"),
             value: "professional",
           },
           {
-            label: t("tuning.emotiveIntent.options.friendly"),
+            label: t("emotiveIntent.options.friendly"),
             value: "friendly",
           },
           {
-            label: t("tuning.emotiveIntent.options.enthusiastic"),
+            label: t("emotiveIntent.options.enthusiastic"),
             value: "enthusiastic",
           },
         ]}
@@ -247,36 +247,36 @@ export function Tuning() {
 
       <SettingsSeparator />
 
-      <SettingsTitle title={t("tuning.domainExpertise.title")} />
+      <SettingsTitle title={t("domainExpertise.title")} />
       <SettingsCard
-        title={t("tuning.domainExpertise.title")}
-        description={t("tuning.domainExpertise.description")}
+        title={t("domainExpertise.title")}
+        description={t("domainExpertise.description")}
         type="select"
         value={projectData.settings?.domainExpertise ?? "general"}
         options={[
           {
-            label: t("tuning.domainExpertise.options.general"),
+            label: t("domainExpertise.options.general"),
             value: "general",
           },
           {
-            label: t("tuning.domainExpertise.options.technical"),
+            label: t("domainExpertise.options.technical"),
             value: "technical",
           },
           {
-            label: t("tuning.domainExpertise.options.medical"),
+            label: t("domainExpertise.options.medical"),
             value: "medical",
           },
-          { label: t("tuning.domainExpertise.options.legal"), value: "legal" },
+          { label: t("domainExpertise.options.legal"), value: "legal" },
           {
-            label: t("tuning.domainExpertise.options.financial"),
+            label: t("domainExpertise.options.financial"),
             value: "financial",
           },
           {
-            label: t("tuning.domainExpertise.options.marketing"),
+            label: t("domainExpertise.options.marketing"),
             value: "marketing",
           },
           {
-            label: t("tuning.domainExpertise.options.academic"),
+            label: t("domainExpertise.options.academic"),
             value: "academic",
           },
         ]}
@@ -286,8 +286,8 @@ export function Tuning() {
       />
 
       <SettingsCard
-        title={t("tuning.idioms.title")}
-        description={t("tuning.idioms.description")}
+        title={t("idioms.title")}
+        description={t("idioms.description")}
         type="switch"
         checked={projectData.settings?.idioms ?? true}
         onCheckedChange={async (checked) => {

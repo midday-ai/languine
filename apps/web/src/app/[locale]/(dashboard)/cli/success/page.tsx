@@ -1,9 +1,9 @@
-import { getI18n } from "@/locales/server";
 import { getSession } from "@languine/supabase/session";
+import { getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
 
 export default async function Page() {
-  const t = await getI18n();
+  const t = await getTranslations();
   const {
     data: { session },
   } = await getSession();

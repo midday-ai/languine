@@ -4,8 +4,8 @@ import { ActivityCard, ActivityCardSkeleton } from "@/components/activity-card";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/ui/loader";
 import { useSearch } from "@/hooks/use-search";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useDeferredValue, useEffect, useRef } from "react";
 
@@ -14,7 +14,7 @@ export function Activity() {
   const { search, setSearch } = useSearch();
   const deferredSearch = useDeferredValue(search);
 
-  const t = useI18n();
+  const t = useTranslations("activity");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [{ pages }, allTranslationsQuery] =
@@ -68,16 +68,14 @@ export function Activity() {
   if (search && pages[0].length === 0) {
     return (
       <div className="flex flex-col items-center justify-center gap-2 mt-24">
-        <p className="text-secondary text-sm">
-          {t("activity.noResults", { search })}
-        </p>
+        <p className="text-secondary text-sm">{t("noResults", { search })}</p>
 
         <Button
           variant="outline"
           className="mt-4"
           onClick={() => setSearch("")}
         >
-          {t("activity.clearSearch")}
+          {t("clearSearch")}
         </Button>
       </div>
     );
@@ -109,9 +107,7 @@ export function Activity() {
         {isFetching && (
           <div className="flex items-center gap-2 pt-8">
             <Loader />
-            <span className="text-xs text-secondary">
-              {t("activity.loading")}...
-            </span>
+            <span className="text-xs text-secondary">{t("loading")}...</span>
           </div>
         )}
 
@@ -121,7 +117,7 @@ export function Activity() {
             className="w-full mt-8 font-normal text-secondary"
             onClick={() => fetchNextPage()}
           >
-            {t("activity.loadMore")}
+            {t("loadMore")}
           </Button>
         )}
       </div>

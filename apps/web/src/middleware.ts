@@ -1,17 +1,12 @@
+import { routing } from "@/i18n/routing";
 import { updateSession } from "@languine/supabase/middleware";
 import { getSession } from "@languine/supabase/session";
-import { createI18nMiddleware } from "next-international/middleware";
+import createMiddleware from "next-intl/middleware";
 import { type NextRequest, NextResponse } from "next/server";
-import languineConfig from "../languine.config";
 
-const I18nMiddleware = createI18nMiddleware({
-  locales: [...languineConfig.locale.targets, languineConfig.locale.source],
-  defaultLocale: languineConfig.locale.source,
-  urlMappingStrategy: "rewriteDefault",
-});
+const I18nMiddleware = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
-  // @ts-ignore
   const response = await updateSession(request, I18nMiddleware(request));
 
   // Only proceed with organization check for login path
@@ -35,5 +30,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|static|.*\\..*|_next|favicon.ico|robots.txt).*)"],
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
 };

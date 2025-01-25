@@ -1,10 +1,10 @@
-import { getI18n } from "@/locales/server";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import GithubSignIn from "./github-sign-in";
 import GoogleSignIn from "./google-sign-in";
 
 export default async function Login() {
-  const t = await getI18n();
+  const t = await getTranslations();
 
   return (
     <div className="flex min-h-screen flex-col justify-center -mt-16 sm:mt-0 max-w-xl px-4 sm:px-0">

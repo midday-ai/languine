@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/select";
 import { usePeriod } from "@/hooks/use-period";
 import { periods } from "@/hooks/use-period";
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function PeriodSelector() {
   const { period, setPeriod } = usePeriod();
-  const t = useI18n();
+  const t = useTranslations("periods");
 
   return (
     <Select value={period} onValueChange={setPeriod}>
@@ -23,7 +23,7 @@ export function PeriodSelector() {
       <SelectContent>
         {periods.map((period) => (
           <SelectItem key={period} value={period} className="text-xs">
-            {t(`periods.${period}`)}
+            {t(period)}
           </SelectItem>
         ))}
       </SelectContent>

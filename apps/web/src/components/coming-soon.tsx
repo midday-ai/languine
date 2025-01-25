@@ -1,11 +1,11 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { CopyInstall } from "./copy-install";
 
 export function ComingSoon() {
-  const t = useI18n();
+  const t = useTranslations("coming_soon");
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
