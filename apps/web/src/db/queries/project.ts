@@ -107,21 +107,6 @@ export const getProjectById = async ({
   return project;
 };
 
-export const getProjectByOrganizationId = async ({
-  organizationId,
-}: {
-  organizationId: string;
-}) => {
-  const db = await connectDb();
-
-  const [project] = await db
-    .select()
-    .from(projects)
-    .where(eq(projects.organizationId, organizationId));
-
-  return project;
-};
-
 export const updateProjectSettings = async ({
   slug,
   organizationId,

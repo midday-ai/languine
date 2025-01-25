@@ -2,21 +2,25 @@
 
 import { OutlinedButton } from "@/components/ui/outlined-button";
 import { Spinner } from "@/components/ui/spinner";
-import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
+import { createClient } from "@languine/supabase/client";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 export default function GithubSignIn() {
   const t = useI18n();
   const [isLoading, setIsLoading] = useState(false);
+  const supabase = createClient();
 
   const handleGithubLogin = async () => {
     setIsLoading(true);
+
     try {
-      await authClient.signIn.social({
+      await supabase.auth.signInWithOAuth({
         provider: "github",
-        callbackURL: `${window.location.origin}/login`,
+        options: {
+          redirectTo: `${window.location.origin}/api/auth/callback`,
+        },
       });
     } finally {
       setTimeout(() => {

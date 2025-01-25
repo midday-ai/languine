@@ -7,6 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { DialogFooter } from "@/components/ui/dialog";
 import {
   Form,
   FormControl,
@@ -18,10 +19,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Spinner } from "@/components/ui/spinner";
 import { useInviteModal } from "@/hooks/use-invite-modal";
-import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -31,6 +32,7 @@ export function InviteModal() {
   const t = useI18n();
   const { open, setOpen } = useInviteModal();
   const utils = trpc.useUtils();
+  const params = useParams();
 
   const form = useForm<{ email: string }>({
     resolver: zodResolver(
@@ -49,25 +51,31 @@ export function InviteModal() {
     }
   }, [open]);
 
-  async function onSubmit(values: { email: string }) {
-    try {
-      await authClient.organization.inviteMember({
-        email: values.email,
-        role: "member",
-      });
-
+  const inviteMutation = trpc.organization.inviteMember.useMutation({
+    onSuccess: () => {
       utils.organization.getInvites.invalidate();
       form.reset();
       setOpen(false);
       toast.success(t("invite.success.title"), {
-        description: t("invite.success.description", { email: values.email }),
+        description: t("invite.success.description", {
+          email: form.getValues("email"),
+        }),
       });
-    } catch (error) {
+    },
+    onError: (error) => {
       console.error("Failed to invite member:", error);
       toast.error(t("invite.error.title"), {
-        description: t("invite.error.description"),
+        description: error.message || t("invite.error.description"),
       });
-    }
+    },
+  });
+
+  async function onSubmit(values: { email: string }) {
+    inviteMutation.mutate({
+      organizationId: params.organization as string,
+      email: values.email,
+      role: "member",
+    });
   }
 
   return (
@@ -101,27 +109,18 @@ export function InviteModal() {
                 </FormItem>
               )}
             />
-            <div className="flex gap-2 pt-4 justify-end">
+            <DialogFooter>
               <Button
-                size="sm"
-                variant="outline"
-                onClick={() => setOpen(false)}
                 type="button"
+                variant="ghost"
+                onClick={() => setOpen(false)}
               >
                 {t("invite.cancel")}
               </Button>
-              <Button
-                type="submit"
-                size="sm"
-                disabled={form.formState.isSubmitting}
-              >
-                {form.formState.isSubmitting ? (
-                  <Spinner className="mr-2 h-4 w-4" />
-                ) : (
-                  t("invite.sendInvite")
-                )}
+              <Button type="submit" loading={inviteMutation.isLoading}>
+                {t("invite.submit")}
               </Button>
-            </div>
+            </DialogFooter>
           </form>
         </Form>
       </DialogContent>

@@ -1,6 +1,7 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import { getOrganizationLimits } from "@/db/queries/organization";
-import { organizations, projects } from "@/db/schema";
+import type { organizations } from "@/db/schema";
+import { projects } from "@/db/schema";
 import { TIERS_MAX_DOCUMENTS, TIERS_MAX_KEYS } from "@/lib/tiers";
 import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
@@ -27,21 +28,23 @@ export interface TranslationTaskOptions {
 }
 
 export async function getProjectOrganization(projectId: string) {
-  const project = await db
-    .select()
-    .from(organizations)
-    .innerJoin(projects, eq(projects.organizationId, organizations.id))
-    .where(eq(projects.id, projectId))
-    .get();
+  const db = await connectDb();
 
-  if (!project?.organizations) {
+  const project = await db.query.projects.findFirst({
+    where: eq(projects.id, projectId),
+    with: {
+      organization: true,
+    },
+  });
+
+  if (!project?.organization) {
     throw new TRPCError({
       code: "NOT_FOUND",
       message: "Organization not found",
     });
   }
 
-  return project.organizations;
+  return project.organization;
 }
 
 export async function checkTranslationLimits(

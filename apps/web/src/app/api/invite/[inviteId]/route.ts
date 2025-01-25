@@ -1,45 +1,49 @@
-import { acceptInvitation } from "@/lib/auth/queries";
-import { getSession } from "@/lib/session";
 import { trpc } from "@/trpc/server";
+// import { acceptInvitation } from "@/lib/auth/queries";
+import { getSession } from "@languine/supabase/session";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function GET(
-  _: Request,
+  request: Request,
   { params }: { params: { inviteId: string } },
 ) {
   try {
     const { inviteId } = params;
-
-    // Check if user is logged in
-    const session = await getSession();
     const cookieStore = await cookies();
 
-    if (!session?.data) {
-      // Set invitation cookie before redirecting
+    // Check if user is logged in
+    const {
+      data: { session },
+    } = await getSession();
+
+    if (!session) {
+      // Store invitation ID in cookie and redirect to login
       cookieStore.set("invitationId", inviteId);
       redirect("/login");
     }
 
-    const invite = await acceptInvitation(inviteId);
+    // User is logged in, try to accept the invitation
+    const storedInviteId = cookieStore.get("invitationId")?.value;
+    const invitationIdToUse = storedInviteId || inviteId;
 
-    if (!invite) {
+    const result = await trpc.organization.acceptInvitation.mutate({
+      invitationId: invitationIdToUse,
+    });
+
+    if (!result) {
       redirect("/login");
     }
 
-    // Get organization details
-    const organization = await trpc.organization.getById({
-      organizationId: invite.invitation.organizationId,
-    });
-
-    // Redirect to organization dashboard if found
-    if (organization) {
-      redirect(`/${organization.slug}/default`);
+    // Clear any stored invitation cookie
+    if (storedInviteId) {
+      cookieStore.delete("invitationId");
     }
 
-    // Fallback redirect to login
-    redirect("/login");
+    // Redirect to organization dashboard
+    redirect(`/${result.invitation.organizationId}/default`);
   } catch (error) {
+    console.error("Failed to accept invitation:", error);
     redirect("/login");
   }
 }

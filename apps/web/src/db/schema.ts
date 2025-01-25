@@ -8,103 +8,26 @@ import {
   text,
   timestamp,
   uniqueIndex,
+  uuid,
 } from "drizzle-orm/pg-core";
 
 export const users = pgTable(
   "users",
   {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
+    id: uuid("id").primaryKey().defaultRandom(),
     name: text("name").notNull(),
     email: text("email").notNull().unique(),
-    emailVerified: boolean("email_verified").notNull(),
     image: text("image"),
     apiKey: text("api_key")
       .notNull()
       .unique()
       .$defaultFn(() => `user_${createId()}`),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at").notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
     index("email_idx").on(table.email),
     index("api_key_idx").on(table.apiKey),
-  ],
-);
-
-export const sessions = pgTable(
-  "sessions",
-  {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    expiresAt: timestamp("expires_at").notNull(),
-    token: text("token").notNull().unique(),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at").notNull(),
-    ipAddress: text("ip_address"),
-    userAgent: text("user_agent"),
-    userId: text("user_id")
-      .notNull()
-      .references(() => users.id, { onDelete: "cascade" }),
-    activeOrganizationId: text("active_organization_id"),
-  },
-  (table) => [
-    index("user_id_idx").on(table.userId),
-    index("token_idx").on(table.token),
-    index("expires_at_idx").on(table.expiresAt),
-  ],
-);
-
-export const accounts = pgTable(
-  "accounts",
-  {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    accountId: text("account_id").notNull(),
-    providerId: text("provider_id").notNull(),
-    userId: text("user_id")
-      .notNull()
-      .references(() => users.id, { onDelete: "cascade" }),
-    accessToken: text("access_token"),
-    refreshToken: text("refresh_token"),
-    idToken: text("id_token"),
-    accessTokenExpiresAt: timestamp("access_token_expires_at"),
-    refreshTokenExpiresAt: timestamp("refresh_token_expires_at"),
-    scope: text("scope"),
-    password: text("password"),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at").notNull(),
-  },
-  (table) => [
-    index("accounts_user_id_idx").on(table.userId),
-    index("provider_compound_idx").on(table.providerId, table.accountId),
-  ],
-);
-
-export const verifications = pgTable(
-  "verifications",
-  {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
-    identifier: text("identifier").notNull(),
-    value: text("value").notNull(),
-    expiresAt: timestamp("expires_at").notNull(),
-    createdAt: timestamp("created_at").$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at"),
-  },
-  (table) => [
-    index("identifier_idx").on(table.identifier),
-    index("verifications_expires_at_idx").on(table.expiresAt),
   ],
 );
 
@@ -115,7 +38,6 @@ export const organizations = pgTable(
       .primaryKey()
       .$defaultFn(() => createId()),
     name: text("name").notNull(),
-    slug: text("slug").unique(),
     logo: text("logo"),
     plan: text("plan", { enum: ["free", "pro"] })
       .notNull()
@@ -125,33 +47,24 @@ export const organizations = pgTable(
       .unique()
       .$defaultFn(() => `org_${createId()}`),
     tier: integer("tier").notNull().default(0),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
     metadata: text("metadata"),
   },
-  (table) => [
-    index("slug_idx").on(table.slug),
-    index("org_api_key_idx").on(table.apiKey),
-  ],
+  (table) => [index("org_api_key_idx").on(table.apiKey)],
 );
 
 export const members = pgTable(
   "members",
   {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
+    id: uuid("id").primaryKey().defaultRandom(),
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
-    userId: text("user_id")
+    userId: uuid("user_id")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     role: text("role").notNull(),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
   },
   (table) => [index("org_user_idx").on(table.organizationId, table.userId)],
 );
@@ -159,9 +72,7 @@ export const members = pgTable(
 export const invitations = pgTable(
   "invitations",
   {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
+    id: uuid("id").primaryKey().defaultRandom(),
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
@@ -169,7 +80,7 @@ export const invitations = pgTable(
     role: text("role"),
     status: text("status").notNull(),
     expiresAt: timestamp("expires_at").notNull(),
-    inviterId: text("inviter_id")
+    inviterId: uuid("inviter_id")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
   },
@@ -184,7 +95,7 @@ export const projectSettings = pgTable(
   {
     id: text("id")
       .primaryKey()
-      .$defaultFn(() => createId()),
+      .$defaultFn(() => `prj_${createId()}`),
     projectId: text("project_id")
       .notNull()
       .references(() => projects.id, { onDelete: "cascade" }),
@@ -252,9 +163,7 @@ export const projectSettings = pgTable(
       .default("general"),
     // Tuning end
 
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
   },
   (table) => [
     index("project_idx").on(table.projectId),
@@ -267,17 +176,15 @@ export const projects = pgTable(
   {
     id: text("id")
       .primaryKey()
-      .$defaultFn(() => createId()),
+      .$defaultFn(() => `prj_${createId()}`),
     name: text("name").notNull(),
     slug: text("slug").notNull(),
     description: text("description"),
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
     index("org_idx").on(table.organizationId),
@@ -290,16 +197,14 @@ export const projects = pgTable(
 export const translations = pgTable(
   "translations",
   {
-    id: text("id")
-      .primaryKey()
-      .$defaultFn(() => createId()),
+    id: uuid("id").primaryKey().defaultRandom(),
     projectId: text("project_id")
       .notNull()
       .references(() => projects.id, { onDelete: "cascade" }),
     organizationId: text("organization_id")
       .notNull()
       .references(() => organizations.id, { onDelete: "cascade" }),
-    userId: text("user_id").references(() => users.id, { onDelete: "cascade" }),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }),
     sourceFormat: text("source_format").notNull(),
     sourceFile: text("source_file").notNull(),
     sourceType: text("source_type").default("key").notNull(),
@@ -314,12 +219,8 @@ export const translations = pgTable(
     commitLink: text("commit_link"),
     sourceProvider: text("source_provider"),
     commitMessage: text("commit_message"),
-    createdAt: timestamp("created_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
-    updatedAt: timestamp("updated_at")
-      .notNull()
-      .$defaultFn(() => new Date()),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
     index("project_translations_idx").on(table.projectId),
@@ -337,25 +238,9 @@ export const translations = pgTable(
 );
 
 export const usersRelations = relations(users, ({ many }) => ({
-  sessions: many(sessions),
-  accounts: many(accounts),
   memberships: many(members),
   sentInvitations: many(invitations, { relationName: "inviter" }),
   translations: many(translations),
-}));
-
-export const sessionsRelations = relations(sessions, ({ one }) => ({
-  user: one(users, {
-    fields: [sessions.userId],
-    references: [users.id],
-  }),
-}));
-
-export const accountsRelations = relations(accounts, ({ one }) => ({
-  user: one(users, {
-    fields: [accounts.userId],
-    references: [users.id],
-  }),
 }));
 
 export const organizationsRelations = relations(organizations, ({ many }) => ({

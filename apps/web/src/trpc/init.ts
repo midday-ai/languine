@@ -1,7 +1,7 @@
 import { connectDb } from "@/db";
 import { users } from "@/db/schema";
 import { organizations } from "@/db/schema";
-import { authClient } from "@/lib/auth/client";
+import { getSession } from "@languine/supabase/session";
 import { TRPCError, initTRPC } from "@trpc/server";
 import { eq } from "drizzle-orm";
 import superjson from "superjson";
@@ -15,15 +15,22 @@ async function validateApiKey(
     const org = await db.query.organizations.findFirst({
       where: eq(organizations.apiKey, apiKey),
     });
+
     if (org) {
-      return { authenticatedId: org.id, type: "organization" };
+      return {
+        authenticatedId: org.id,
+        type: "organization",
+      };
     }
   } else {
     const user = await db.query.users.findFirst({
       where: eq(users.apiKey, apiKey),
     });
     if (user) {
-      return { authenticatedId: user.id, type: "user" };
+      return {
+        authenticatedId: user.id,
+        type: "user",
+      };
     }
   }
 
@@ -44,14 +51,12 @@ export const createTRPCContext = async (opts: { headers: Headers }) => {
     }
   }
 
-  const session = await authClient.getSession({
-    fetchOptions: {
-      headers: opts.headers,
-    },
-  });
+  const {
+    data: { session },
+  } = await getSession();
 
   return {
-    authenticatedId: session?.data?.user?.id,
+    authenticatedId: session?.user?.id,
     type: "user",
   };
 };

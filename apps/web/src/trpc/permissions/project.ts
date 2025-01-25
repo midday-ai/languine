@@ -1,7 +1,7 @@
-import { db } from "@/db";
-import { members, organizations, projects } from "@/db/schema";
+import { connectDb } from "@/db";
+import { members, projects } from "@/db/schema";
 import { TRPCError } from "@trpc/server";
-import { and, eq } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { t } from "../init";
 
 /**
@@ -19,24 +19,21 @@ export const hasProjectAccess = t.middleware(async ({ ctx, next, input }) => {
 
   const typedInput = input as { projectId: string };
 
+  const db = await connectDb();
+
   // Get project and its organization
-  const result = await db
-    .select({
-      project: projects,
-      organization: organizations,
-      member: members,
-    })
-    .from(projects)
-    .innerJoin(organizations, eq(organizations.id, projects.organizationId))
-    .leftJoin(
-      members,
-      and(
-        eq(members.organizationId, organizations.id),
-        eq(members.userId, ctx.authenticatedId),
-      ),
-    )
-    .where(eq(projects.id, typedInput.projectId))
-    .get();
+  const result = await db.query.projects.findFirst({
+    where: eq(projects.id, typedInput.projectId),
+    with: {
+      organization: {
+        with: {
+          members: {
+            where: eq(members.userId, ctx.authenticatedId),
+          },
+        },
+      },
+    },
+  });
 
   if (!result) {
     throw new TRPCError({
@@ -54,7 +51,7 @@ export const hasProjectAccess = t.middleware(async ({ ctx, next, input }) => {
   }
 
   // Block access if not a member and not using org API key
-  if (!result.member && ctx.type !== "organization") {
+  if (!result.organization.members.length && ctx.type !== "organization") {
     throw new TRPCError({
       code: "FORBIDDEN",
       message: "You do not have access to this project",

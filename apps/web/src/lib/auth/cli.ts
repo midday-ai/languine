@@ -1,5 +1,5 @@
 import { kv } from "@/lib/kv";
-import type { Session } from "better-auth";
+import type { Session } from "@supabase/supabase-js";
 
 export const CLI_TOKEN_NAME = "cli-token";
 

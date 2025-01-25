@@ -13,9 +13,9 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Spinner } from "@/components/ui/spinner";
-import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
+import { createClient } from "@languine/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -23,6 +23,7 @@ import { toast } from "sonner";
 export function AccountSettings() {
   const t = useI18n();
   const router = useRouter();
+  const supabase = createClient();
   const [showUpdateKeyDialog, setShowUpdateKeyDialog] = useState(false);
   const utils = trpc.useUtils();
 
@@ -45,13 +46,8 @@ export function AccountSettings() {
 
   const deleteUser = trpc.user.delete.useMutation({
     onSuccess: async () => {
-      await authClient.signOut({
-        fetchOptions: {
-          onSuccess: () => {
-            router.push("/login");
-          },
-        },
-      });
+      await supabase.auth.signOut();
+      router.push("/login");
     },
   });
 

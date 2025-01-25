@@ -2,7 +2,7 @@ import { connectDb } from "@/db";
 import { members, organizations } from "@/db/schema";
 import { t } from "@/trpc/init";
 import { TRPCError } from "@trpc/server";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 
 /**
  * Middleware to check if the authenticated user is a member of the specified organization.
@@ -31,12 +31,10 @@ export const isOrganizationMember = t.middleware(
     const db = await connectDb();
 
     // Check if user is a member of the organization
-    const result = await db.query.organizations.findFirst({
-      where: eq(organizations.id, typedInput.organizationId),
+    const result = await db.query.members.findFirst({
+      where: (members) => eq(members.organizationId, typedInput.organizationId),
       with: {
-        members: {
-          where: eq(members.userId, ctx.authenticatedId),
-        },
+        organization: true,
       },
     });
 
@@ -48,7 +46,10 @@ export const isOrganizationMember = t.middleware(
     }
 
     // Block access if not a member and not using org API key
-    if (result.members.length === 0 && ctx.type !== "organization") {
+    if (
+      result.organizationId !== typedInput.organizationId &&
+      ctx.type !== "organization"
+    ) {
       throw new TRPCError({
         code: "FORBIDDEN",
         message: "You are not a member of this organization",
@@ -90,20 +91,15 @@ export const isOrganizationOwner = t.middleware(
       where: eq(organizations.id, typedInput.organizationId),
       with: {
         members: {
-          where: eq(members.userId, ctx.authenticatedId),
+          where: and(
+            eq(members.userId, ctx.authenticatedId),
+            eq(members.role, "owner"),
+          ),
         },
       },
     });
 
     if (!result) {
-      throw new TRPCError({
-        code: "NOT_FOUND",
-        message: "Organization not found",
-      });
-    }
-
-    // Block access if not an owner and not using org API key
-    if (result.members[0]?.role !== "owner" && ctx.type !== "organization") {
       throw new TRPCError({
         code: "FORBIDDEN",
         message: "You are not an owner of this organization",

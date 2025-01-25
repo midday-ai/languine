@@ -4,13 +4,10 @@ import {
   members,
   organizations,
   projects,
-  sessions,
   translations,
-  users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
 import { and, count, eq, sql } from "drizzle-orm";
-import slugify from "slugify";
 
 export async function createDefaultOrganization(user: {
   id: string;
@@ -23,7 +20,6 @@ export async function createDefaultOrganization(user: {
     .insert(organizations)
     .values({
       name: user.name,
-      slug: `${slugify(user.name, { lower: true })}-${createId().slice(0, 8)}`,
     })
     .returning();
 
@@ -41,12 +37,6 @@ export async function createDefaultOrganization(user: {
     slug: "default",
   });
 
-  // Set active organization for new user's session
-  await db
-    .update(sessions)
-    .set({ activeOrganizationId: org.id })
-    .where(eq(sessions.userId, user.id));
-
   return org;
 }
 
@@ -63,7 +53,6 @@ export const createOrganization = async ({
     .insert(organizations)
     .values({
       name,
-      slug: `${slugify(name, { lower: true })}-${createId().slice(0, 8)}`,
     })
     .returning();
 
@@ -266,4 +255,108 @@ export const updateOrganizationTier = async (
     .set({ tier, plan })
     .where(eq(organizations.id, organizationId))
     .returning();
+};
+
+export const getOrganizationByUserId = async (userId: string) => {
+  const db = await connectDb();
+
+  return db.query.members.findFirst({
+    where: eq(members.userId, userId),
+    with: {
+      organization: true,
+    },
+  });
+};
+
+export const inviteMember = async ({
+  organizationId,
+  email,
+  role,
+  inviterId,
+}: {
+  organizationId: string;
+  email: string;
+  role: string;
+  inviterId: string;
+}) => {
+  const db = await connectDb();
+
+  // Check if user is already a member
+  const existingMember = await db.query.members.findFirst({
+    where: and(
+      eq(members.organizationId, organizationId),
+      eq(members.userId, inviterId),
+    ),
+  });
+
+  if (existingMember) {
+    throw new Error("User is already a member of this organization");
+  }
+
+  // Check if there's already a pending invitation
+  const existingInvite = await db.query.invitations.findFirst({
+    where: and(
+      eq(invitations.organizationId, organizationId),
+      eq(invitations.email, email),
+      eq(invitations.status, "pending"),
+    ),
+  });
+
+  if (existingInvite) {
+    throw new Error("User already has a pending invitation");
+  }
+
+  // Create invitation
+  const [invitation] = await db
+    .insert(invitations)
+    .values({
+      organizationId,
+      email,
+      role,
+      status: "pending",
+      inviterId,
+      expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days from now
+    })
+    .returning();
+
+  return invitation;
+};
+
+export const acceptInvitation = async (invitationId: string) => {
+  const db = await connectDb();
+
+  // Get the invitation
+  const invitation = await db.query.invitations.findFirst({
+    where: eq(invitations.id, invitationId),
+  });
+
+  if (!invitation) {
+    throw new Error("Invitation not found");
+  }
+
+  if (invitation.status !== "pending") {
+    throw new Error("Invitation is no longer valid");
+  }
+
+  if (new Date() > invitation.expiresAt) {
+    throw new Error("Invitation has expired");
+  }
+
+  // Add user as member
+  const [member] = await db
+    .insert(members)
+    .values({
+      organizationId: invitation.organizationId,
+      userId: invitation.inviterId,
+      role: invitation.role || "member",
+    })
+    .returning();
+
+  // Update invitation status
+  await db
+    .update(invitations)
+    .set({ status: "accepted" })
+    .where(eq(invitations.id, invitationId));
+
+  return { member, invitation };
 };

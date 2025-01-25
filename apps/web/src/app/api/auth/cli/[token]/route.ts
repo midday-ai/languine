@@ -1,5 +1,5 @@
 import { CLI_TOKEN_NAME, saveCLISession } from "@/lib/auth/cli";
-import { getSession } from "@/lib/session";
+import { getSession } from "@languine/supabase/session";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -8,9 +8,11 @@ export async function GET(
 ) {
   const { token } = await params;
 
-  const session = await getSession();
+  const {
+    data: { session },
+  } = await getSession();
 
-  if (!session?.data) {
+  if (!session) {
     const response = NextResponse.redirect(new URL("/login", request.url), {
       status: 302,
     });
@@ -24,8 +26,8 @@ export async function GET(
     return response;
   }
 
-  if (session?.data?.session) {
-    await saveCLISession(session.data.session, token);
+  if (session) {
+    await saveCLISession(session, token);
   }
 
   const response = NextResponse.redirect(new URL("/cli/success", request.url), {

@@ -1,5 +1,6 @@
 import { connectDb } from "@/db";
 import {
+  acceptInvitation,
   createOrganization,
   deleteOrganization,
   deleteOrganizationInvite,
@@ -8,6 +9,7 @@ import {
   getOrganization,
   getOrganizationInvites,
   getOrganizationMembers,
+  inviteMember,
   leaveOrganization,
   updateOrganization,
   updateOrganizationApiKey,
@@ -24,9 +26,11 @@ import {
   isOrganizationOwner,
 } from "../permissions/organization";
 import {
+  acceptInvitationSchema,
   createOrganizationSchema,
   deleteOrganizationInviteSchema,
   deleteOrganizationMemberSchema,
+  inviteMemberSchema,
   organizationSchema,
   updateOrganizationSchema,
   updateOrganizationTierSchema,
@@ -223,5 +227,52 @@ export const organizationRouter = createTRPCRouter({
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationTier(input.organizationId, input.tier);
+    }),
+
+  inviteMember: protectedProcedure
+    .input(inviteMemberSchema)
+    .use(isOrganizationOwner)
+    .mutation(async ({ input, ctx }) => {
+      try {
+        const invite = await inviteMember({
+          organizationId: input.organizationId,
+          email: input.email,
+          role: input.role,
+          inviterId: ctx.authenticatedId,
+        });
+
+        return invite;
+      } catch (error) {
+        if (error instanceof Error) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: error.message,
+          });
+        }
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to invite member",
+        });
+      }
+    }),
+
+  acceptInvitation: protectedProcedure
+    .input(acceptInvitationSchema)
+    .mutation(async ({ input }) => {
+      try {
+        const result = await acceptInvitation(input.invitationId);
+        return result;
+      } catch (error) {
+        if (error instanceof Error) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: error.message,
+          });
+        }
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to accept invitation",
+        });
+      }
     }),
 });

@@ -3,8 +3,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useSession } from "@/contexts/session";
 import { useInviteModal } from "@/hooks/use-invite-modal";
-import { authClient } from "@/lib/auth/client";
 import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { TRPCClientError } from "@trpc/client";
@@ -38,8 +38,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
   const params = useParams();
   const router = useRouter();
   const utils = trpc.useUtils();
-
-  const session = authClient.useSession();
+  const { session } = useSession();
 
   const { data: members, isLoading: membersLoading } =
     trpc.organization.getMembers.useQuery({
@@ -129,7 +128,7 @@ function Members({ searchQuery }: { searchQuery: string }) {
   return (
     <div className="border border-border">
       {filteredMembers?.map((member) => {
-        const isCurrentUser = member.user.id === session.data?.user.id;
+        const isCurrentUser = member.user.id === session?.user?.id;
 
         return (
           <div key={member.id} className="p-4 flex items-center gap-4">
