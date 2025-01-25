@@ -54,14 +54,14 @@
     "presetForReactEmail": "React Email Bibliothek",
     "presetForReactEmailDescription": "Wir haben eine i18n-Bibliothek für React Email erstellt.",
     "readyForI18nLibraries": "Bereit für i18n-Bibliotheken",
-    "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc.)."
+    "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
+    "title": "Kümmert sich um jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
     "smartTranslation": {
       "title": "Intelligente Übersetzung",
       "intelligentTranslation": "Intelligente Übersetzung mit Kontextbewusstsein",
-      "brandVoice": "Markenstimme und Tonkonsistenz",
+      "brandVoice": "Konsistenz von Markenstimme und -ton",
       "terminology": "Terminologieverwaltung",
       "linguisticFeatures": "Erweiterte linguistische Funktionen",
       "realtimeUpdates": "Echtzeit-Übersetzungsaktualisierungen"
@@ -69,9 +69,9 @@
     "implementation": {
       "title": "Implementierung",
       "quickSetup": "Schnelle Einrichtung und Integration",
-      "fileFormat": "Dateiformatbehandlung",
+      "fileFormat": "Handhabung von Dateiformaten",
       "contentStructure": "Organisation der Inhaltsstruktur",
-      "assetOrganization": "Organisation der Assets"
+      "assetOrganization": "Organisation von Assets"
     },
     "developer": {
       "title": "Entwicklererfahrung",
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-Mail-Adresse",
-      "description": "Die E-Mail-Adresse, die mit Ihrem Konto verknüpft ist.",
+      "description": "Die mit Ihrem Konto verknüpfte E-Mail-Adresse.",
       "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
     },
     "apiKey": {
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Workflow (CI/CD-Pipeline)",
     "pro": "[pro]",
-    "description": "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihre Codebasis bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir die geänderten Inhalte, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull Requests eingereicht, die vor dem Zusammenführen in Ihren Hauptzweig und der Bereitstellung überprüft werden können. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
+    "description": "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihre Codebasis bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir die geänderten Inhalte, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull Requests eingereicht, die vor der Zusammenführung in Ihren Hauptzweig und der Bereitstellung überprüft werden können. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
   },
   "settings": {
     "badRequest": "Ungültige Anfrage",
@@ -167,7 +167,7 @@
     "permissionDenied": "Zugriff verweigert",
     "permissionDeniedDescription": "Sie müssen ein Besitzer des Teams sein, um diese Aktion durchzuführen",
     "deleteTeamTitle": "Team löschen",
-    "deleteTeamDescription": "Sie können die Organisation nicht löschen, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto",
+    "deleteTeamDescription": "Die Organisation kann nicht gelöscht werden, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
     "saved": "Einstellungen gespeichert",
     "savedDescription": "Ihre Änderungen wurden erfolgreich gespeichert",
     "error": "Etwas ist schief gelaufen",
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Projekt löschen",
-        "description": "Dieses Projekt und alle seine Daten dauerhaft löschen",
+        "description": "Dieses Projekt und alle zugehörigen Daten dauerhaft löschen",
         "button": "Projekt löschen"
       }
     },
@@ -245,7 +245,7 @@
         "tryDifferentSearch": "Versuchen Sie eine andere Suche",
         "inviteMembers": "Laden Sie Mitglieder zur Zusammenarbeit ein",
         "deleteInvite": "Einladung löschen",
-        "deleteInviteDescription": "Löschen Sie die Einladung",
+        "deleteInviteDescription": "Die Einladung löschen",
         "invitedBy": "Eingeladen von {name}",
         "deleteInviteSuccess": "Einladung gelöscht",
         "deleteInviteError": "Einladung konnte nicht gelöscht werden",
@@ -279,7 +279,7 @@
       "title": "Kontexterkennung",
       "description": "Erkennen und bewahren Sie automatisch den Kontext in Übersetzungen"
     },
-    "styleGuide": "Stilrichtlinie",
+    "styleGuide": "Stilhandbuch",
     "lengthControl": {
       "title": "Längenkontrolle",
       "description": "Kontrollieren Sie die Länge des übersetzten Textes",
@@ -310,7 +310,7 @@
     },
     "brandVoice": {
       "title": "Markenstimme",
-      "description": "Definieren Sie Ihre Markenstimme und Ihren Ton",
+      "description": "Definieren Sie Ihre Markenstimme und -ton",
       "placeholder": "Beschreiben Sie Ihre Markenstimme..."
     },
     "toneOfVoice": {
@@ -400,7 +400,7 @@
       }
     },
     "cta": "Automatisierung starten",
-    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie \"Anmelden\" oder \"Willkommen!\") haben und sie in 5 Sprachen übersetzen, entspricht das 100 übersetzten Schlüsseln (20 Schlüssel x 5 Sprachen)."
+    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie 'Anmelden' oder 'Willkommen!') haben und sie in 5 Sprachen übersetzen, entspricht das 100 übersetzten Schlüsseln (20 Schlüssel x 5 Sprachen)."
   },
   "createTeam": {
     "teamName": "Teamname",
@@ -432,22 +432,8 @@
       "description": "Einladung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
     },
     "validation": {
-      "invalidEmail": "Bitte geben Sie eine gültige E-Mail ein"
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
     }
-  },
-  "months": {
-    "10": "Okt",
-    "11": "Nov",
-    "12": "Dez",
-    "01": "Jan",
-    "02": "Feb",
-    "03": "Mär",
-    "04": "Apr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Aug",
-    "09": "Sep"
   },
   "onboarding": {
     "steps": {
@@ -521,13 +507,28 @@
   },
   "analytics": {
     "key": "Übersetzte Schlüssel",
-    "document": "Übersetzte Dokumente"
+    "document": "Übersetzte Dokumente",
+    "header": "Übersetzungen",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Dez",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mär",
+      "04": "Apr",
+      "05": "Mai",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
   },
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
       "question": "Was ist Languine?",
-      "answer": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Es bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analytik und Kontextgedächtnis, um hochwertige Übersetzungen zu gewährleisten."
+      "answer": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextgedächtnis, um hochwertige Übersetzungen zu gewährleisten."
     },
     "key_limit": {
       "question": "Wie funktioniert das Schlüssellimit?",
@@ -535,7 +536,7 @@
     },
     "supported_languages": {
       "question": "Welche Sprachen werden unterstützt?",
-      "answer": "Languine unterstützt in allen Plänen über 100 Sprachen. Während unsere KI-gestützten Übersetzungen mit den Hauptsprachen am besten funktionieren, streben wir an, qualitativ hochwertige Übersetzungen für alle unterstützten Sprachen bereitzustellen. Wenn Sie spezifische Sprachanforderungen haben oder Fragen zur Übersetzungsqualität für bestimmte Sprachen haben, wenden Sie sich bitte an unser Support-Team."
+      "answer": "Languine unterstützt in allen Plänen über 100 Sprachen. Während unsere KI-gestützten Übersetzungen mit den Hauptsprachen am besten funktionieren, bemühen wir uns, qualitativ hochwertige Übersetzungen für alle unterstützten Sprachen bereitzustellen. Wenn Sie spezifische Sprachanforderungen haben oder Fragen zur Übersetzungsqualität für bestimmte Sprachen haben, wenden Sie sich bitte an unser Support-Team."
     },
     "github_action": {
       "question": "Wie funktioniert die GitHub Action Integration?",
@@ -551,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Bieten Sie Sonderpreise für Open-Source-Projekte an?",
-      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein reduziertes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit ermöglicht."
+      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein ermäßigtes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
     },
     "cancel_subscription": {
       "question": "Wie kann ich mein Abonnement kündigen?",

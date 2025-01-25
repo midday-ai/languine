@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
 
   // Only proceed with organization check for login path
   if (request.nextUrl.pathname.includes("/login")) {
-    const invitationId = request.cookies.get("invitationId")?.value;
+    const inviteId = request.cookies.get("invite-id")?.value;
 
     const {
       data: { session },
@@ -21,7 +21,7 @@ export async function middleware(request: NextRequest) {
       return response;
     }
 
-    if (invitationId) {
+    if (inviteId) {
       return NextResponse.redirect(new URL("/api/invite/accept", request.url));
     }
   }

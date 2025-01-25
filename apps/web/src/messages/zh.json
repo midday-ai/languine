@@ -27,7 +27,7 @@
     }
   },
   "companies": {
-    "title": "用户",
+    "title": "使用者",
     "addYourCompany": "+ 添加您的公司"
   },
   "activity": {
@@ -53,8 +53,8 @@
     "presetForReactNativeDescription": "我们为React Native提供预设，以便您可以快速开始。",
     "presetForReactEmail": "React Email库",
     "presetForReactEmailDescription": "我们为React Email创建了一个i18n库。",
-    "readyForI18nLibraries": "准备好用于i18n库",
-    "readyForI18nLibrariesDescription": "我们支持所有库，包括最受欢迎的（next-intl, react-i18next, react-intl等）。"
+    "readyForI18nLibraries": "支持i18n库",
+    "readyForI18nLibrariesDescription": "我们支持所有库，包括最流行的（next-intl, react-i18next, react-intl等）。"
   },
   "info": {
     "title": "处理本地化应用的每一个方面，包括",
@@ -89,7 +89,7 @@
     "footer": "自动化您的本地化。",
     "description": "登录以在几秒钟内开始自动化您的本地化。",
     "terms": {
-      "text": "登录即表示您同意我们的",
+      "text": "通过登录，您同意我们的",
       "termsOfService": "服务条款",
       "and": "和",
       "privacyPolicy": "隐私政策"
@@ -107,14 +107,14 @@
   },
   "teamSelector": {
     "addProject": "创建项目",
-    "createProjectTitle": "创建新项目",
+    "createProjectTitle": "创建一个新项目",
     "projectNamePlaceholder": "项目名称",
     "createProjectButton": "创建项目",
     "pro": "专业版",
     "project": "项目",
     "teams": "团队",
     "createTeam": "创建团队",
-    "createTeamTitle": "创建新团队",
+    "createTeamTitle": "创建一个新团队",
     "teamNamePlaceholder": "团队名称",
     "createTeamButton": "创建团队"
   },
@@ -126,7 +126,7 @@
   "account": {
     "fullName": {
       "title": "全名",
-      "description": "您的全名，将显示在整个平台上。",
+      "description": "您的全名，它将出现在整个平台上。",
       "placeholder": "输入您的全名"
     },
     "email": {
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "删除账户",
-      "description": "永久删除您的账户及所有相关数据。此操作无法撤销。",
+      "description": "永久删除您的账户和所有相关数据。此操作无法撤销。",
       "button": "删除账户"
     }
   },
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "工作流程（CI/CD流水线）",
     "pro": "[专业版]",
-    "description": "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流程确保您的本地化内容与开发保持同步。"
+    "description": "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，自动在每次推送时翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流程确保您的本地化内容与开发保持同步。"
   },
   "settings": {
     "badRequest": "无效请求",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "团队API密钥",
-        "description": "团队访问的API密钥，与项目ID一起从您的CI/CD流水线中使用",
+        "description": "用于团队访问的API密钥，与项目ID一起从您的CI/CD流水线中使用",
         "placeholder": "团队API密钥"
       },
       "members": {
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "质量检查",
-      "description": "启用翻译的自动质量检查"
+      "description": "启用自动翻译质量检查"
     },
     "contextDetection": {
       "title": "上下文检测",
@@ -295,8 +295,8 @@
       "description": "确保翻译使用包容性语言"
     },
     "formality": {
-      "title": "正式程度",
-      "description": "控制翻译的正式程度",
+      "title": "正式度",
+      "description": "控制翻译的正式度",
       "options": {
         "casual": "随意",
         "formal": "正式",
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "专业版",
-      "includes_free": "免费版的所有功能，加上：",
+      "includes_free": "免费版的所有内容，加上：",
       "features": {
         "github_action": "GitHub Action集成",
         "latest_features": "早期访问最新功能",
@@ -400,7 +400,7 @@
       }
     },
     "cta": "开始自动化",
-    "keys_limit_explanation": "翻译的键：如果您有20个源键（如“注册”或“欢迎！”）并将它们翻译成5种语言，则等于100个翻译的键（20个键×5种语言）。"
+    "keys_limit_explanation": "翻译的键：如果您有20个源键（如“注册”或“欢迎！”）并将它们翻译成5种语言，那么等于100个翻译的键（20个键×5种语言）。"
   },
   "createTeam": {
     "teamName": "团队名称",
@@ -418,7 +418,7 @@
   },
   "invite": {
     "inviteMember": "邀请成员",
-    "inviteDescription": "邀请成员加入您的团队",
+    "inviteDescription": "邀请成员到您的团队",
     "emailLabel": "电子邮件",
     "emailPlaceholder": "输入电子邮件",
     "cancel": "取消",
@@ -434,20 +434,6 @@
     "validation": {
       "invalidEmail": "请输入有效的电子邮件"
     }
-  },
-  "months": {
-    "10": "十月",
-    "11": "十一月",
-    "12": "十二月",
-    "01": "一月",
-    "02": "二月",
-    "03": "三月",
-    "04": "四月",
-    "05": "五月",
-    "06": "六月",
-    "07": "七月",
-    "08": "八月",
-    "09": "九月"
   },
   "onboarding": {
     "steps": {
@@ -521,7 +507,22 @@
   },
   "analytics": {
     "key": "翻译的键",
-    "document": "翻译的文档"
+    "document": "翻译的文档",
+    "header": "翻译",
+    "months": {
+      "10": "十月",
+      "11": "十一月",
+      "12": "十二月",
+      "01": "一月",
+      "02": "二月",
+      "03": "三月",
+      "04": "四月",
+      "05": "五月",
+      "06": "六月",
+      "07": "七月",
+      "08": "八月",
+      "09": "九月"
+    }
   },
   "faq": {
     "title": "常见问题",
@@ -531,7 +532,7 @@
     },
     "key_limit": {
       "question": "键限制是如何工作的？",
-      "answer": "当您将源键翻译成目标语言时，翻译的键被计数。例如，如果您有20个源键并将它们翻译成5种语言，则等于100个翻译的键（20个键×5种语言）。"
+      "answer": "当您将源键翻译成目标语言时，翻译的键被计数。例如，如果您有20个源键并将它们翻译成5种语言，那么等于100个翻译的键（20个键×5种语言）。"
     },
     "supported_languages": {
       "question": "支持哪些语言？",
@@ -555,7 +556,7 @@
     },
     "cancel_subscription": {
       "question": "如何取消我的订阅？",
-      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前计费周期结束前保持活动状态，之后您将被转移到免费计划。"
+      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前账单周期结束前保持活动状态，之后您将被转移到免费计划。"
     }
   },
   "pricing_slider": {

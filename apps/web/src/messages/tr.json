@@ -44,13 +44,13 @@
   "features": {
     "title": "Özellikler",
     "fullyOpenSource": "Tamamen açık kaynak",
-    "fullyOpenSourceDescription": "Kodumuz GitHub'da halka açık, şeffaflık ve topluluk katkılarına olanak sağlıyor.",
+    "fullyOpenSourceDescription": "Kodumuz GitHub'da halka açıktır, şeffaflık ve topluluk katkılarına olanak tanır.",
     "noVendorLockIn": "Satıcı kilidi yok",
     "noVendorLockInDescription": "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
     "presetsForExpo": "Expo için ön ayarlar",
-    "presetsForExpoDescription": "Expo için ön ayarlar sağlıyoruz, böylece hızlıca başlayabilirsiniz.",
+    "presetsForExpoDescription": "Expo için ön ayarlar sağlıyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     "presetForReactNative": "React Native için ön ayar",
-    "presetForReactNativeDescription": "React Native için bir ön ayar sağlıyoruz, böylece hızlıca başlayabilirsiniz.",
+    "presetForReactNativeDescription": "React Native için bir ön ayar sağlıyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     "presetForReactEmail": "React Email Kütüphanesi",
     "presetForReactEmailDescription": "React Email için bir i18n kütüphanesi oluşturduk.",
     "readyForI18nLibraries": "i18n kütüphanelerine hazır",
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "İş Akışı (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi koruyarak doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana dalınıza birleştirilmeden ve dağıtılmadan önce gözden geçirilir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    "description": "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi koruyarak doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir ve ana dalınıza birleştirilip dağıtılmadan önce gözden geçirilir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   "settings": {
     "badRequest": "Geçersiz istek",
@@ -269,7 +269,7 @@
     "general": "Genel",
     "translationMemory": {
       "title": "Çeviri Hafızası",
-      "description": "Tutarlılığı ve verimliliği artırmak için çeviri hafızasını kullanın"
+      "description": "Tutarlılık ve verimliliği artırmak için çeviri hafızasını kullanın"
     },
     "qualityChecks": {
       "title": "Kalite Kontrolleri",
@@ -335,7 +335,7 @@
       "description": "Çeviriler için duygusal tonu ayarlayın",
       "options": {
         "neutral": "Tarafsız",
-        "positive": "Pozitif",
+        "positive": "Olumlu",
         "empathetic": "Empatik",
         "professional": "Profesyonel",
         "friendly": "Dostane",
@@ -374,7 +374,7 @@
       "title": "Ücretsiz",
       "price": "Ücretsiz",
       "keys_limit": "100 anahtara kadar",
-      "description": "Denemek için mükemmel",
+      "description": "Deneme yaparken mükemmel",
       "features": {
         "unlimited_projects": "Sınırsız proje",
         "fine_tuning": "İnce ayar seçenekleri",
@@ -395,12 +395,12 @@
         "latest_features": "En yeni özelliklere erken erişim",
         "priority_support": "Öncelikli destek",
         "priority_queues": "Öncelikli çeviri kuyrukları",
-        "keys_limit": "10 000 anahtardan başlayan",
+        "keys_limit": "10.000 anahtardan başlayan",
         "docs_limit": "50 belgeden başlayan"
       }
     },
     "cta": "Otomasyona başla",
-    "keys_limit_explanation": "Çevrilmiş anahtar: 20 kaynak anahtarınız (örneğin \"Kaydol\" veya \"Hoş Geldiniz!\") varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar demektir (20 anahtar x 5 dil)."
+    "keys_limit_explanation": "Çevrilmiş anahtar: 20 kaynak anahtarınız (örneğin \"Kaydol\" veya \"Hoş Geldiniz!\") varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar (20 anahtar x 5 dil) anlamına gelir."
   },
   "createTeam": {
     "teamName": "Takım Adı",
@@ -434,20 +434,6 @@
     "validation": {
       "invalidEmail": "Lütfen geçerli bir e-posta adresi girin"
     }
-  },
-  "months": {
-    "10": "Eki",
-    "11": "Kas",
-    "12": "Ara",
-    "01": "Oca",
-    "02": "Şub",
-    "03": "Mar",
-    "04": "Nis",
-    "05": "May",
-    "06": "Haz",
-    "07": "Tem",
-    "08": "Ağu",
-    "09": "Eyl"
   },
   "onboarding": {
     "steps": {
@@ -521,7 +507,22 @@
   },
   "analytics": {
     "key": "Çevrilmiş anahtarlar",
-    "document": "Çevrilmiş belgeler"
+    "document": "Çevrilmiş belgeler",
+    "header": "Çeviriler",
+    "months": {
+      "10": "Eki",
+      "11": "Kas",
+      "12": "Ara",
+      "01": "Oca",
+      "02": "Şub",
+      "03": "Mar",
+      "04": "Nis",
+      "05": "May",
+      "06": "Haz",
+      "07": "Tem",
+      "08": "Ağu",
+      "09": "Eyl"
+    }
   },
   "faq": {
     "title": "SSS",
@@ -531,11 +532,11 @@
     },
     "key_limit": {
       "question": "Anahtar sınırı nasıl çalışır?",
-      "answer": "Bir kaynak anahtarını hedef dile çevirdiğinizde çevrilmiş bir anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar demektir (20 anahtar × 5 dil)."
+      "answer": "Bir kaynak anahtarını hedef dile çevirdiğinizde çevrilmiş bir anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar (20 anahtar × 5 dil) anlamına gelir."
     },
     "supported_languages": {
       "question": "Hangi diller destekleniyor?",
-      "answer": "Languine tüm planlarda 100'den fazla dili destekler. AI destekli çevirilerimiz büyük dillerde en iyi şekilde çalışırken, desteklenen tüm dillerde kaliteli çeviriler sağlamaya çalışıyoruz. Belirli dil gereksinimleriniz varsa veya belirli diller için çeviri kalitesi hakkında sorularınız varsa, lütfen destek ekibimizle iletişime geçin."
+      "answer": "Languine, tüm planlarda 100'den fazla dili destekler. AI destekli çevirilerimiz büyük dillerle en iyi şekilde çalışırken, desteklenen tüm dillerde kaliteli çeviriler sağlamaya çalışıyoruz. Belirli dil gereksinimleriniz varsa veya belirli diller için çeviri kalitesi hakkında sorularınız varsa, lütfen destek ekibimizle iletişime geçin."
     },
     "github_action": {
       "question": "GitHub Action entegrasyonu nasıl çalışır?",
@@ -547,7 +548,7 @@
     },
     "open_source": {
       "question": "Languine açık kaynak mı?",
-      "answer": "Evet! Languine tamamen açık kaynaktır ve GitHub'da mevcuttur. Projeye katkıda bulunabilir, sorunları bildirebilir, özellikler önerebilir ve kodu inceleyebilirsiniz. Şeffaflığa ve halka açık bir şekilde inşa etmeye inanıyoruz."
+      "answer": "Evet! Languine tamamen açık kaynaktır ve GitHub'da mevcuttur. Projeye katkıda bulunabilir, sorunları bildirebilir, özellikler önerebilir ve kodu inceleyebilirsiniz. Şeffaflığa ve kamuya açık bir şekilde inşa etmeye inanıyoruz."
     },
     "open_source_pricing": {
       "question": "Açık kaynak projeler için özel fiyatlandırma sunuyor musunuz?",

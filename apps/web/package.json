@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.1.2",
+    "@date-fns/utc": "^2.1.0",
     "@hookform/resolvers": "^3.10.0",
     "@languine/supabase": "workspace:*",
     "@number-flow/react": "^0.5.5",

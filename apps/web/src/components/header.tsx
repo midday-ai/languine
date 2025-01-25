@@ -64,6 +64,7 @@ export function Header() {
                     pathname?.endsWith(link.href) && "text-primary",
                   )}
                   key={link.href}
+                  prefetch
                 >
                   {link.label}
                 </Link>

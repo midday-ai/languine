@@ -2,12 +2,12 @@
   "header": {
     "pricing": "Tarification",
     "docs": "Documentation",
-    "signIn": "Connexion",
+    "signIn": "Se connecter",
     "goToApp": "Aller à l'application"
   },
   "hero": {
     "title": "Infrastructure de localisation automatisée pour vos applications",
-    "description": "Simplifiez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs."
+    "description": "Rationalisez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Commencer",
     "title": "Localisation automatisée pour vos applications",
-    "description": "Simplifiez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs.",
+    "description": "Rationalisez votre processus de localisation avec une CLI et un pipeline alimentés par l'IA conçus pour automatiser les traductions pour les développeurs.",
     "button": {
       "startAutomating": "Commencez à automatiser",
       "readDocumentation": "Lire la documentation"
@@ -44,7 +44,7 @@
   "features": {
     "title": "Fonctionnalités",
     "fullyOpenSource": "Entièrement open source",
-    "fullyOpenSourceDescription": "Notre code est disponible publiquement sur GitHub, permettant la transparence et les contributions de la communauté.",
+    "fullyOpenSourceDescription": "Notre code est publiquement disponible sur GitHub, permettant la transparence et les contributions de la communauté.",
     "noVendorLockIn": "Pas de verrouillage fournisseur",
     "noVendorLockInDescription": "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLMs.",
     "presetsForExpo": "Préréglages pour Expo",
@@ -61,13 +61,13 @@
     "smartTranslation": {
       "title": "Traduction intelligente",
       "intelligentTranslation": "Traduction intelligente avec conscience du contexte",
-      "brandVoice": "Cohérence de la voix et du ton de la marque",
+      "brandVoice": "Consistance de la voix et du ton de la marque",
       "terminology": "Gestion de la terminologie",
       "linguisticFeatures": "Fonctionnalités linguistiques avancées",
       "realtimeUpdates": "Mises à jour de traduction en temps réel"
     },
     "implementation": {
-      "title": "Implémentation",
+      "title": "Mise en œuvre",
       "quickSetup": "Configuration et intégration rapides",
       "fileFormat": "Gestion des formats de fichiers",
       "contentStructure": "Organisation de la structure du contenu",
@@ -83,9 +83,9 @@
     }
   },
   "login": {
-    "title": "Connexion",
-    "github": "Connexion avec GitHub",
-    "google": "Connexion avec Google",
+    "title": "Se connecter",
+    "github": "Se connecter avec GitHub",
+    "google": "Se connecter avec Google",
     "footer": "Automatisez votre localisation.",
     "description": "Connectez-vous pour commencer à automatiser votre localisation en quelques secondes.",
     "terms": {
@@ -100,7 +100,7 @@
   },
   "userMenu": {
     "account": "Paramètres du compte",
-    "signOut": "Déconnexion",
+    "signOut": "Se déconnecter",
     "createTeam": "Créer une équipe",
     "homepage": "Page d'accueil",
     "team": "Paramètres de l'équipe"
@@ -242,10 +242,10 @@
         "selectAll": "{count} sélectionné",
         "noPendingInvitations": "Aucune invitation en attente",
         "noResults": "Aucun membre trouvé",
-        "tryDifferentSearch": "Essayez une recherche différente",
+        "tryDifferentSearch": "Essayez une autre recherche",
         "inviteMembers": "Invitez des membres à collaborer",
         "deleteInvite": "Supprimer l'invitation",
-        "deleteInviteDescription": "Supprimez l'invitation",
+        "deleteInviteDescription": "Supprimer l'invitation",
         "invitedBy": "Invité par {name}",
         "deleteInviteSuccess": "Invitation supprimée",
         "deleteInviteError": "Échec de la suppression de l'invitation",
@@ -394,13 +394,13 @@
         "github_action": "Intégration GitHub Action",
         "latest_features": "Accès anticipé aux dernières fonctionnalités",
         "priority_support": "Support prioritaire",
-        "priority_queues": "Files de traduction prioritaires",
+        "priority_queues": "Files d'attente de traduction prioritaires",
         "keys_limit": "À partir de 10 000 clés",
         "docs_limit": "À partir de 50 documents"
       }
     },
     "cta": "Commencez à automatiser",
-    "keys_limit_explanation": "Clé traduite : Si vous avez 20 clés sources (comme \"Inscription\" ou \"Bienvenue !\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
+    "keys_limit_explanation": "Clé traduite : Si vous avez 20 clés sources (comme \"S'inscrire\" ou \"Bienvenue !\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
   },
   "createTeam": {
     "teamName": "Nom de l'équipe",
@@ -435,29 +435,15 @@
       "invalidEmail": "Veuillez entrer un e-mail valide"
     }
   },
-  "months": {
-    "10": "Oct",
-    "11": "Nov",
-    "12": "Déc",
-    "01": "Jan",
-    "02": "Fév",
-    "03": "Mar",
-    "04": "Avr",
-    "05": "Mai",
-    "06": "Juin",
-    "07": "Juil",
-    "08": "Août",
-    "09": "Sep"
-  },
   "onboarding": {
     "steps": {
       "1": {
         "title": "Configurer Languine CLI",
-        "description": "Installez et configurez Languine CLI pour gérer les traductions"
+        "description": "Installez et configurez la CLI Languine pour gérer les traductions"
       },
       "2": {
         "title": "Pousser les traductions",
-        "description": "En attente de la poussée des traductions"
+        "description": "En attente des traductions à pousser"
       },
       "3": {
         "title": "Documentation",
@@ -474,7 +460,7 @@
   "cli": {
     "success": {
       "title": "Connexion CLI Languine réussie",
-      "description": "Languine CLI a été authentifié avec succès en tant que :",
+      "description": "La CLI Languine a été authentifiée avec succès en tant que :",
       "description_2": "Vous pouvez maintenant fermer cet onglet et retourner à la CLI"
     }
   },
@@ -521,7 +507,22 @@
   },
   "analytics": {
     "key": "Clés traduites",
-    "document": "Documents traduits"
+    "document": "Documents traduits",
+    "header": "Traductions",
+    "months": {
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Déc",
+      "01": "Jan",
+      "02": "Fév",
+      "03": "Mar",
+      "04": "Avr",
+      "05": "Mai",
+      "06": "Juin",
+      "07": "Juil",
+      "08": "Août",
+      "09": "Sep"
+    }
   },
   "faq": {
     "title": "FAQ",
@@ -535,7 +536,7 @@
     },
     "supported_languages": {
       "question": "Quelles langues sont supportées ?",
-      "answer": "Languine supporte plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues supportées. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour des langues particulières, veuillez contacter notre équipe de support."
+      "answer": "Languine supporte plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues supportées. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour certaines langues, veuillez contacter notre équipe de support."
     },
     "github_action": {
       "question": "Comment fonctionne l'intégration GitHub Action ?",
@@ -551,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Offrez-vous des tarifs spéciaux pour les projets open source ?",
-      "answer": "Oui ! Nous adorons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez obtenir accès à nos fonctionnalités Pro avec une réduction de 30 %. Contactez simplement notre équipe avec des détails sur votre projet, et nous vous configurerons un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+      "answer": "Oui ! Nous adorons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez obtenir accès à nos fonctionnalités Pro avec 30% de réduction. Contactez simplement notre équipe avec des détails sur votre projet, et nous vous configurerons un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
     },
     "cancel_subscription": {
       "question": "Comment puis-je annuler mon abonnement ?",

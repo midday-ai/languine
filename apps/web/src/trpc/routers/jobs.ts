@@ -13,7 +13,7 @@ export const jobsRouter = createTRPCRouter({
   startJob: protectedProcedure
     .input(jobsSchema)
     .use(hasProjectAccess)
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const org = await getProjectOrganization(input.projectId);
 
       const limitCheckResult = await checkTranslationLimits(org, input);
@@ -38,6 +38,7 @@ export const jobsRouter = createTRPCRouter({
           sourceProvider: input.sourceProvider,
           commitMessage: input.commitMessage,
           commitLink: input.commitLink,
+          userId: ctx.type === "user" ? ctx.authenticatedId : null,
         },
         options,
       );

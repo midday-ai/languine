@@ -5,6 +5,7 @@ import {
   organizations,
   projects,
   translations,
+  users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
 import { and, count, eq, sql } from "drizzle-orm";
@@ -93,11 +94,30 @@ export const getDefaultOrganization = async (userId: string) => {
 export const getAllOrganizationsWithProjects = async (userId: string) => {
   const db = await connectDb();
 
-  return db.query.organizations.findMany({
+  const result = await db.query.members.findMany({
+    where: eq(members.userId, userId),
     with: {
-      projects: true,
+      organization: {
+        with: {
+          projects: true,
+        },
+      },
     },
   });
+
+  // Create a Map to store unique organizations by ID
+  const uniqueOrgs = new Map();
+
+  for (const member of result) {
+    if (!uniqueOrgs.has(member.organization.id)) {
+      uniqueOrgs.set(member.organization.id, {
+        ...member.organization,
+        projects: member.organization.projects,
+      });
+    }
+  }
+
+  return Array.from(uniqueOrgs.values());
 };
 
 export const getOrganization = async (id: string) => {
@@ -214,11 +234,13 @@ export const leaveOrganization = async (
 export const updateOrganizationApiKey = async (organizationId: string) => {
   const db = await connectDb();
 
-  return db
+  const [result] = await db
     .update(organizations)
     .set({ apiKey: `org_${createId()}` })
     .where(eq(organizations.id, organizationId))
     .returning();
+
+  return result;
 };
 
 export const getOrganizationLimits = async (organizationId: string) => {
@@ -282,12 +304,14 @@ export const inviteMember = async ({
   const db = await connectDb();
 
   // Check if user is already a member
-  const existingMember = await db.query.members.findFirst({
-    where: and(
-      eq(members.organizationId, organizationId),
-      eq(members.userId, inviterId),
-    ),
-  });
+  const [existingMember] = await db
+    .select()
+    .from(members)
+    .innerJoin(users, eq(members.userId, users.id))
+    .where(
+      and(eq(members.organizationId, organizationId), eq(users.email, email)),
+    )
+    .limit(1);
 
   if (existingMember) {
     throw new Error("User is already a member of this organization");

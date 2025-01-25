@@ -22,18 +22,18 @@ const MODEL_THRESHOLD = 200;
 export function chooseModel(totalItems: number) {
   const { large, regular } = getModels();
 
-  const isLarge = totalItems > MODEL_THRESHOLD;
+  // const isLarge = totalItems > MODEL_THRESHOLD;
 
-  if (isLarge) {
-    return {
-      model: large,
-      mode: "json",
-      maxTokens: 8000,
-    };
-  }
-
+  // if (isLarge) {
   return {
-    model: regular,
+    model: large,
+    mode: "json",
     maxTokens: 8000,
   };
+  // }
+
+  // return {
+  //   model: regular,
+  //   maxTokens: 8000,
+  // };
 }

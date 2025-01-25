@@ -19,7 +19,7 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Automatisert lokaliseringsinfrastruktur for dine applikasjoner",
+    "title": "Automatisert lokalisering for dine applikasjoner",
     "description": "Strømlinjeform din lokaliseringsprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
     "button": {
       "startAutomating": "Start automatisering",
@@ -44,7 +44,7 @@
   "features": {
     "title": "Funksjoner",
     "fullyOpenSource": "Fullstendig åpen kildekode",
-    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra samfunnet.",
+    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
     "noVendorLockIn": "Ingen leverandørlås",
     "noVendorLockInDescription": "Vi låser deg ikke til en spesifikk tjeneste, bruk dine egne LLM-er.",
     "presetsForExpo": "Forhåndsinnstillinger for Expo",
@@ -57,7 +57,7 @@
     "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Håndterer alle aspekter av å lokalisere appen din inkludert",
+    "title": "Håndterer alle aspekter av lokalisering av din app inkludert",
     "smartTranslation": {
       "title": "Smart oversettelse",
       "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
@@ -76,7 +76,7 @@
     "developer": {
       "title": "Utvikleropplevelse",
       "cli": "Kommandolinjegrensesnitt",
-      "cicd": "CI/CD-integrasjon",
+      "cicd": "CI/CD-integrering",
       "versionControl": "Versjonskontroll",
       "workflow": "Utviklerarbeidsflyt",
       "documentation": "Omfattende dokumentasjon"
@@ -89,10 +89,10 @@
     "footer": "Automatiser din lokalisering.",
     "description": "Logg inn for å starte automatisering av din lokalisering på sekunder.",
     "terms": {
-      "text": "Ved å logge inn godtar du våre",
+      "text": "Ved å logge inn, godtar du våre",
       "termsOfService": "Tjenestevilkår",
       "and": "og",
-      "privacyPolicy": "Personvernpolicy"
+      "privacyPolicy": "Personvernregler"
     }
   },
   "translations": {
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadresse",
-      "description": "E-postadressen knyttet til kontoen din.",
+      "description": "E-postadressen knyttet til din konto.",
       "placeholder": "Skriv inn din e-postadresse"
     },
     "apiKey": {
@@ -169,13 +169,13 @@
     "deleteTeamTitle": "Slett team",
     "deleteTeamDescription": "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
     "saved": "Innstillinger lagret",
-    "savedDescription": "Dine endringer har blitt lagret",
+    "savedDescription": "Dine endringer har blitt lagret vellykket",
     "error": "Noe gikk galt",
-    "errorDescription": "Vennligst prøv igjen eller kontakt kundestøtte",
+    "errorDescription": "Vennligst prøv igjen eller kontakt support",
     "addTeam": "Opprett team",
     "apiKey": {
       "updated": "API-nøkkel oppdatert",
-      "updatedDescription": "Din API-nøkkel har blitt oppdatert og kopiert til utklippstavlen.",
+      "updatedDescription": "Din API-nøkkel har blitt oppdatert vellykket og kopiert til utklippstavlen din.",
       "title": "Oppdater API-nøkkel",
       "description": "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
       "cancel": "Avbryt",
@@ -251,7 +251,7 @@
         "deleteInviteError": "Kunne ikke slette invitasjon",
         "removeMemberSuccess": "Medlem fjernet",
         "removeMemberError": "Kunne ikke fjerne medlem",
-        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet",
+        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet vellykket",
         "removeMemberErrorDescription": "Kunne ikke fjerne medlem",
         "roles": {
           "owner": "Eier",
@@ -276,8 +276,8 @@
       "description": "Aktiver automatiske kvalitetssjekker for oversettelser"
     },
     "contextDetection": {
-      "title": "Kontekstgjenkjenning",
-      "description": "Automatisk gjenkjenning og bevaring av kontekst i oversettelser"
+      "title": "Kontekstdeteksjon",
+      "description": "Automatisk detekter og bevar kontekst i oversettelser"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -344,7 +344,7 @@
     },
     "domainExpertise": {
       "title": "Domeneekspertise",
-      "description": "Spesifiser domenecontexten for oversettelser",
+      "description": "Spesifiser domene-konteksten for oversettelser",
       "options": {
         "general": "Generelt",
         "technical": "Teknisk",
@@ -391,7 +391,7 @@
       "title": "Pro",
       "includes_free": "Alt i Gratis, pluss:",
       "features": {
-        "github_action": "GitHub Action-integrasjon",
+        "github_action": "GitHub Action-integrering",
         "latest_features": "Tidlig tilgang til de nyeste funksjonene",
         "priority_support": "Prioritert støtte",
         "priority_queues": "Prioriterte oversettelseskøer",
@@ -400,7 +400,7 @@
       }
     },
     "cta": "Start automatisering",
-    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde-nøkler (som 'Registrer deg' eller 'Velkommen!') og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
+    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde-nøkler (som \"Registrer deg\" eller \"Velkommen!\") og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
   },
   "createTeam": {
     "teamName": "Teamnavn",
@@ -435,20 +435,6 @@
       "invalidEmail": "Vennligst skriv inn en gyldig e-post"
     }
   },
-  "months": {
-    "10": "Okt",
-    "11": "Nov",
-    "12": "Des",
-    "01": "Jan",
-    "02": "Feb",
-    "03": "Mar",
-    "04": "Apr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Aug",
-    "09": "Sep"
-  },
   "onboarding": {
     "steps": {
       "1": {
@@ -474,7 +460,7 @@
   "cli": {
     "success": {
       "title": "Languine CLI pålogging vellykket",
-      "description": "Languine CLI ble autentisert som:",
+      "description": "Languine CLI ble vellykket autentisert som:",
       "description_2": "Du kan nå lukke denne fanen og gå tilbake til CLI"
     }
   },
@@ -521,13 +507,28 @@
   },
   "analytics": {
     "key": "Oversatte nøkler",
-    "document": "Oversatte dokumenter"
+    "document": "Oversatte dokumenter",
+    "header": "Oversettelser",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Des",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Mai",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
   },
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
       "question": "Hva er Languine?",
-      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som tilpasningsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
+      "answer": "Languine er en AI-drevet lokaliseringplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som tilpasningsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre høykvalitets oversettelser."
     },
     "key_limit": {
       "question": "Hvordan fungerer nøkkelgrensen?",
@@ -535,11 +536,11 @@
     },
     "supported_languages": {
       "question": "Hvilke språk støttes?",
-      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt vårt støtteteam."
+      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser over alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt supportteamet vårt."
     },
     "github_action": {
-      "question": "Hvordan fungerer GitHub Action-integrasjonen?",
-      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
+      "question": "Hvordan fungerer GitHub Action-integreringen?",
+      "answer": "GitHub Action-integreringen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
     },
     "support": {
       "question": "Hva slags støtte tilbyr dere?",
@@ -551,11 +552,11 @@
     },
     "open_source_pricing": {
       "question": "Tilbyr dere spesialpriser for åpen kildekode-prosjekter?",
-      "answer": "Ja! Vi elsker å støtte det åpne kildekode-samfunnet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til samfunnet som gjør vårt arbeid mulig."
+      "answer": "Ja! Vi elsker å støtte åpen kildekode-fellesskapet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør vårt arbeid mulig."
     },
     "cancel_subscription": {
-      "question": "Hvordan avslutter jeg abonnementet mitt?",
-      "answer": "Du kan avslutte abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av din nåværende faktureringsperiode, hvoretter du vil bli flyttet til Gratis-planen."
+      "question": "Hvordan avbryter jeg abonnementet mitt?",
+      "answer": "Du kan avbryte abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av din nåværende faktureringsperiode, hvoretter du vil bli flyttet til Gratis-planen."
     }
   },
   "pricing_slider": {

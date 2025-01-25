@@ -1,6 +1,7 @@
-import { connectDb } from "@/db";
+import { connectDb, primaryDb } from "@/db";
 import { projects, translations } from "@/db/schema";
 import type { DeleteKeysSchema } from "@/trpc/routers/schema";
+import { UTCDate } from "@date-fns/utc";
 import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
 
 export const createTranslations = async ({
@@ -16,7 +17,7 @@ export const createTranslations = async ({
   commitLink,
 }: {
   projectId: string;
-  userId?: string;
+  userId?: string | null;
   organizationId: string;
   sourceFormat: string;
   branch?: string | null;
@@ -33,9 +34,7 @@ export const createTranslations = async ({
     sourceFile: string;
   }[];
 }) => {
-  const db = await connectDb();
-
-  return db
+  return primaryDb
     .insert(translations)
     .values(
       translationItems.map((translation) => ({
@@ -48,7 +47,6 @@ export const createTranslations = async ({
         sourceProvider,
         commitMessage,
         commitLink,
-        updatedAt: new Date(),
         ...translation,
       })),
     )
@@ -63,7 +61,7 @@ export const createTranslations = async ({
         branch,
         commit,
         commitLink,
-        updatedAt: new Date(),
+        updatedAt: new UTCDate(),
       },
     })
     .returning();
@@ -90,7 +88,7 @@ export const createDocument = async ({
   targetLanguage: string;
   sourceText: string;
   translatedText: string;
-  userId?: string;
+  userId?: string | null;
   organizationId: string;
   sourceFormat: string;
   sourceFile: string;
@@ -100,9 +98,7 @@ export const createDocument = async ({
   commitMessage?: string | null;
   commitLink?: string | null;
 }) => {
-  const db = await connectDb();
-
-  return db
+  return primaryDb
     .insert(translations)
     .values({
       projectId,
@@ -134,7 +130,7 @@ export const createDocument = async ({
         branch,
         commit,
         commitLink,
-        updatedAt: new Date(),
+        updatedAt: new UTCDate(),
       },
     })
     .returning();

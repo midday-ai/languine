@@ -5,7 +5,6 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 import { usePeriod } from "@/hooks/use-period";
 import { periods } from "@/hooks/use-period";
@@ -17,8 +16,8 @@ export function PeriodSelector() {
 
   return (
     <Select value={period} onValueChange={setPeriod}>
-      <SelectTrigger className="w-[120px] text-xs h-auto">
-        <SelectValue placeholder={t("periods.selectPeriod")} />
+      <SelectTrigger className="w-[120px] text-xs h-auto flex-1 space-x-1">
+        <span className="line-clamp-1">{t(period)}</span>
       </SelectTrigger>
       <SelectContent>
         {periods.map((period) => (

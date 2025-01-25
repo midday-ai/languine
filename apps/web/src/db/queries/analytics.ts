@@ -1,6 +1,7 @@
 import { connectDb } from "@/db";
 import { projects, translations } from "@/db/schema";
 import type { AnalyticsSchema } from "@/trpc/routers/schema";
+import { UTCDate } from "@date-fns/utc";
 import { format, startOfWeek, subDays, subMonths } from "date-fns";
 import { and, count, countDistinct, eq, gte, lte, sql } from "drizzle-orm";
 
@@ -9,11 +10,11 @@ export async function getAnalytics({
   organizationId,
   period = "daily",
   startDate = period === "daily"
-    ? subDays(new Date(), 14) // 14 days
+    ? subDays(new UTCDate(), 14) // 14 days
     : period === "weekly"
-      ? subMonths(new Date(), 3) // 3 months
-      : subMonths(new Date(), 12), // 6 months
-  endDate = new Date(),
+      ? subMonths(new UTCDate(), 3) // 3 months
+      : subMonths(new UTCDate(), 12), // 6 months
+  endDate = new UTCDate(),
 }: AnalyticsSchema) {
   const db = await connectDb();
 
@@ -52,7 +53,7 @@ export async function getAnalytics({
     dates.push({ period: formattedDate, date: currentDate });
 
     // Advance to next period
-    const nextDate = new Date(currentDate);
+    const nextDate = new UTCDate(currentDate);
     switch (period) {
       case "monthly":
         nextDate.setMonth(nextDate.getMonth() + 1);
@@ -68,15 +69,15 @@ export async function getAnalytics({
 
   const periodSql =
     period === "weekly"
-      ? sql`to_char(${translations.updatedAt}::timestamp, 'YYYY-"W"WW')`
-      : sql`to_char(${translations.updatedAt}::timestamp, ${dateFormat})`;
+      ? sql`to_char(${translations.updatedAt}::timestamp without time zone, 'YYYY-"W"WW')`
+      : sql`to_char(${translations.updatedAt}::timestamp without time zone, ${dateFormat})`;
 
   const [keyStats, documentStats, totals] = await Promise.all([
     // Get key stats by period
     db
       .select({
         period: periodSql.as("period"),
-        keyCount: count(translations.translationKey).as("keyCount"),
+        keyCount: count().as("keyCount"),
         updatedAt: translations.updatedAt,
       })
       .from(translations)
@@ -102,7 +103,7 @@ export async function getAnalytics({
     db
       .select({
         period: periodSql.as("period"),
-        documentCount: count(translations.translationKey).as("documentCount"),
+        documentCount: count().as("documentCount"),
         updatedAt: translations.updatedAt,
       })
       .from(translations)
@@ -127,8 +128,8 @@ export async function getAnalytics({
     // Get overall totals
     db
       .select({
-        totalKeys: count(translations.translationKey).as("totalKeys"),
-        totalDocuments: count(translations.translationKey).as("totalDocuments"),
+        totalKeys: count().as("totalKeys"),
+        totalDocuments: count().as("totalDocuments"),
         totalLanguages: countDistinct(translations.targetLanguage),
       })
       .from(translations)

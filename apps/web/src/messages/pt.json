@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "Chave API",
-      "description": "Sua chave API pessoal para acessar a API Languine e da CLI."
+      "description": "Sua chave API pessoal para acessar a API Languine e a CLI."
     },
     "deleteAccount": {
       "title": "Excluir Conta",
@@ -177,7 +177,7 @@
       "updated": "Chave API atualizada",
       "updatedDescription": "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
       "title": "Atualizar Chave API",
-      "description": "Tem certeza de que deseja gerar uma nova chave API? A chave antiga parará de funcionar imediatamente.",
+      "description": "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
       "cancel": "Cancelar",
       "continue": "Continuar"
     },
@@ -185,7 +185,7 @@
       "project": "Projeto",
       "account": "Conta",
       "team": "Equipe",
-      "provider": "Fornecedor",
+      "provider": "Provedor",
       "billing": "Cobrança"
     },
     "addProject": "Criar projeto",
@@ -269,7 +269,7 @@
     "general": "Geral",
     "translationMemory": {
       "title": "Memória de Tradução",
-      "description": "Use memória de tradução para melhorar consistência e eficiência"
+      "description": "Use a memória de tradução para melhorar a consistência e eficiência"
     },
     "qualityChecks": {
       "title": "Verificações de Qualidade",
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Detecção de Contexto",
-      "description": "Detecte e preserve automaticamente o contexto em traduções"
+      "description": "Detecte e preserve automaticamente o contexto nas traduções"
     },
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
@@ -332,7 +332,7 @@
     "brand": "Marca",
     "emotiveIntent": {
       "title": "Intenção Emocional",
-      "description": "Defina o tom emocional para traduções",
+      "description": "Defina o tom emocional para as traduções",
       "options": {
         "neutral": "Neutro",
         "positive": "Positivo",
@@ -344,7 +344,7 @@
     },
     "domainExpertise": {
       "title": "Especialização de Domínio",
-      "description": "Especifique o contexto de domínio para traduções",
+      "description": "Especifique o contexto de domínio para as traduções",
       "options": {
         "general": "Geral",
         "technical": "Técnico",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Expressões Idiomáticas",
-      "description": "Lide com expressões idiomáticas apropriadamente"
+      "description": "Lide com expressões idiomáticas de forma apropriada"
     },
     "terminology": {
       "title": "Terminologia",
@@ -435,20 +435,6 @@
       "invalidEmail": "Por favor, insira um email válido"
     }
   },
-  "months": {
-    "10": "Out",
-    "11": "Nov",
-    "12": "Dez",
-    "01": "Jan",
-    "02": "Fev",
-    "03": "Mar",
-    "04": "Abr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Ago",
-    "09": "Set"
-  },
   "onboarding": {
     "steps": {
       "1": {
@@ -457,7 +443,7 @@
       },
       "2": {
         "title": "Enviar Traduções",
-        "description": "Aguardando as traduções serem enviadas"
+        "description": "Aguardando o envio das traduções"
       },
       "3": {
         "title": "Documentação",
@@ -475,17 +461,17 @@
     "success": {
       "title": "Login do Languine CLI Bem-sucedido",
       "description": "O Languine CLI foi autenticado com sucesso como:",
-      "description_2": "Você pode fechar esta aba e voltar para a CLI"
+      "description_2": "Agora você pode fechar esta aba e voltar para a CLI"
     }
   },
   "search": {
     "placeholder": "Pesquisar"
   },
   "periods": {
-    "daily": "Diário",
-    "weekly": "Semanal",
-    "monthly": "Mensal",
-    "selectPeriod": "Selecionar período"
+    "daily": "Diariamente",
+    "weekly": "Semanalmente",
+    "monthly": "Mensalmente",
+    "selectPeriod": "Selecione o período"
   },
   "language": {
     "en": "Inglês",
@@ -521,13 +507,28 @@
   },
   "analytics": {
     "key": "Chaves traduzidas",
-    "document": "Documentos traduzidos"
+    "document": "Documentos traduzidos",
+    "header": "Traduções",
+    "months": {
+      "10": "Out",
+      "11": "Nov",
+      "12": "Dez",
+      "01": "Jan",
+      "02": "Fev",
+      "03": "Mar",
+      "04": "Abr",
+      "05": "Mai",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Ago",
+      "09": "Set"
+    }
   },
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
       "question": "O que é Languine?",
-      "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de suas aplicações. Ele fornece funcionalidades como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
+      "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de suas aplicações. Ela fornece funcionalidades como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
@@ -535,7 +536,7 @@
     },
     "supported_languages": {
       "question": "Quais idiomas são suportados?",
-      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Enquanto nossas traduções alimentadas por IA funcionam melhor com os principais idiomas, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas específicos, entre em contato com nossa equipe de suporte."
+      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Enquanto nossas traduções alimentadas por IA funcionam melhor com os principais idiomas, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para determinados idiomas, entre em contato com nossa equipe de suporte."
     },
     "github_action": {
       "question": "Como funciona a integração com GitHub Action?",
@@ -546,11 +547,11 @@
       "answer": "Usuários gratuitos têm acesso ao suporte da comunidade, enquanto usuários Pro recebem suporte prioritário com tempos de resposta mais rápidos e assistência dedicada para suas necessidades de tradução."
     },
     "open_source": {
-      "question": "O Languine é código aberto?",
-      "answer": "Sim! O Languine é totalmente código aberto e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir funcionalidades e inspecionar o código. Acreditamos em transparência e construir em público."
+      "question": "Languine é código aberto?",
+      "answer": "Sim! Languine é totalmente código aberto e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir funcionalidades e inspecionar o código. Acreditamos em transparência e construir em público."
     },
     "open_source_pricing": {
-      "question": "Você oferece preços especiais para projetos de código aberto?",
+      "question": "Vocês oferecem preços especiais para projetos de código aberto?",
       "answer": "Sim! Adoramos apoiar a comunidade de código aberto. Se você mantém um projeto de código aberto, pode obter acesso às nossas funcionalidades Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {

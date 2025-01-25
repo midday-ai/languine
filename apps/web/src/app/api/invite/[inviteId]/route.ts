@@ -1,11 +1,10 @@
-import { trpc } from "@/trpc/server";
-// import { acceptInvitation } from "@/lib/auth/queries";
+import { acceptInvitation } from "@/db/queries/organization";
 import { getSession } from "@languine/supabase/session";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function GET(
-  request: Request,
+  _: Request,
   { params }: { params: { inviteId: string } },
 ) {
   try {
@@ -19,17 +18,15 @@ export async function GET(
 
     if (!session) {
       // Store invitation ID in cookie and redirect to login
-      cookieStore.set("invitationId", inviteId);
+      cookieStore.set("invite-id", inviteId);
       redirect("/login");
     }
 
     // User is logged in, try to accept the invitation
-    const storedInviteId = cookieStore.get("invitationId")?.value;
-    const invitationIdToUse = storedInviteId || inviteId;
+    const storedInviteId = cookieStore.get("invite-id")?.value;
+    const inviteIdToUse = storedInviteId || inviteId;
 
-    const result = await trpc.organization.acceptInvitation.mutate({
-      invitationId: invitationIdToUse,
-    });
+    const result = await acceptInvitation(inviteIdToUse);
 
     if (!result) {
       redirect("/login");
@@ -37,7 +34,7 @@ export async function GET(
 
     // Clear any stored invitation cookie
     if (storedInviteId) {
-      cookieStore.delete("invitationId");
+      cookieStore.delete("invite-id");
     }
 
     // Redirect to organization dashboard

@@ -10,7 +10,7 @@
     "description": "Usprawnij proces lokalizacji dzięki zasilanemu AI CLI i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
   },
   "navigation": {
-    "dashboard": "Panel",
+    "dashboard": "Panel sterowania",
     "tuning": "Dostrajanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
@@ -53,7 +53,7 @@
     "presetForReactNativeDescription": "Dostarczamy preset dla React Native, abyś mógł szybko zacząć.",
     "presetForReactEmail": "Biblioteka React Email",
     "presetForReactEmailDescription": "Stworzyliśmy bibliotekę i18n dla React Email.",
-    "readyForI18nLibraries": "Gotowe dla bibliotek i18n",
+    "readyForI18nLibraries": "Gotowe na biblioteki i18n",
     "readyForI18nLibrariesDescription": "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itp.)."
   },
   "info": {
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Przepływ pracy (Potok CI/CD)",
     "pro": "[pro]",
-    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc Twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos marki i terminologię. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
+    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc Twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że Twoje zlokalizowane treści pozostają zsynchronizowane z rozwojem."
   },
   "settings": {
     "badRequest": "Nieprawidłowe żądanie",
@@ -218,7 +218,7 @@
         "description": "Zarządzaj planem rozliczeniowym swojego zespołu",
         "free": "Darmowy",
         "pro": "Pro",
-        "unlimited": "Nielimitowany"
+        "unlimited": "Bez limitu"
       },
       "apiKey": {
         "title": "Klucz API zespołu",
@@ -239,7 +239,7 @@
         "filterPlaceholder": "Filtruj członków...",
         "allRoles": "Wszystkie role",
         "date": "Data",
-        "selectAll": "{count} wybrane",
+        "selectAll": "{count} wybranych",
         "noPendingInvitations": "Brak oczekujących zaproszeń",
         "noResults": "Nie znaleziono członków",
         "tryDifferentSearch": "Spróbuj innego wyszukiwania",
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "Kontrola jakości",
-      "description": "Włącz automatyczne kontrole jakości tłumaczeń"
+      "description": "Włącz automatyczną kontrolę jakości tłumaczeń"
     },
     "contextDetection": {
       "title": "Wykrywanie kontekstu",
@@ -292,7 +292,7 @@
     },
     "inclusiveLanguage": {
       "title": "Język inkluzywny",
-      "description": "Zapewnij, że tłumaczenia używają języka inkluzywnego"
+      "description": "Upewnij się, że tłumaczenia używają języka inkluzywnego"
     },
     "formality": {
       "title": "Formalność",
@@ -376,15 +376,15 @@
       "keys_limit": "Do 100 kluczy",
       "description": "Idealne do wypróbowania",
       "features": {
-        "unlimited_projects": "Nielimitowane projekty",
+        "unlimited_projects": "Nieograniczona liczba projektów",
         "fine_tuning": "Opcje dostrajania",
         "overrides": "Nadpisania tłumaczeń",
-        "analytics": "Analizy",
+        "analytics": "Analityka",
         "context_memory": "Pamięć kontekstu",
         "community_support": "Wsparcie społeczności",
         "keys_limit": "Do 100 kluczy",
         "docs_limit": "Do 5 dokumentów",
-        "unlimited_languages": "Nielimitowane języki"
+        "unlimited_languages": "Nieograniczona liczba języków"
       }
     },
     "pro": {
@@ -422,7 +422,7 @@
     "emailLabel": "E-mail",
     "emailPlaceholder": "Wprowadź e-mail",
     "cancel": "Anuluj",
-    "submit": "Prześlij",
+    "submit": "Wyślij",
     "success": {
       "title": "Zaproszenie wysłane",
       "description": "Pomyślnie wysłano zaproszenie do {email}"
@@ -434,20 +434,6 @@
     "validation": {
       "invalidEmail": "Wprowadź poprawny adres e-mail"
     }
-  },
-  "months": {
-    "10": "Paź",
-    "11": "Lis",
-    "12": "Gru",
-    "01": "Sty",
-    "02": "Lut",
-    "03": "Mar",
-    "04": "Kwi",
-    "05": "Maj",
-    "06": "Cze",
-    "07": "Lip",
-    "08": "Sie",
-    "09": "Wrz"
   },
   "onboarding": {
     "steps": {
@@ -473,7 +459,7 @@
   },
   "cli": {
     "success": {
-      "title": "Sukces logowania Languine CLI",
+      "title": "Sukces logowania do Languine CLI",
       "description": "Languine CLI zostało pomyślnie uwierzytelnione jako:",
       "description_2": "Możesz teraz zamknąć tę kartę i wrócić do CLI"
     }
@@ -509,7 +495,7 @@
     "vi": "Wietnamski"
   },
   "menu": {
-    "dashboard": "Panel",
+    "dashboard": "Panel sterowania",
     "tuning": "Dostrajanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
@@ -521,13 +507,28 @@
   },
   "analytics": {
     "key": "Przetłumaczone klucze",
-    "document": "Przetłumaczone dokumenty"
+    "document": "Przetłumaczone dokumenty",
+    "header": "Tłumaczenia",
+    "months": {
+      "10": "Paź",
+      "11": "Lis",
+      "12": "Gru",
+      "01": "Sty",
+      "02": "Lut",
+      "03": "Mar",
+      "04": "Kwi",
+      "05": "Maj",
+      "06": "Cze",
+      "07": "Lip",
+      "08": "Sie",
+      "09": "Wrz"
+    }
   },
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
       "question": "Co to jest Languine?",
-      "answer": "Languine to zasilana AI platforma lokalizacyjna, która pomaga automatyzować tłumaczenie Twoich aplikacji. Zapewnia funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analizy i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
+      "answer": "Languine to zasilana AI platforma lokalizacyjna, która pomaga automatyzować tłumaczenie Twoich aplikacji. Zapewnia funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
     },
     "key_limit": {
       "question": "Jak działa limit kluczy?",
@@ -539,7 +540,7 @@
     },
     "github_action": {
       "question": "Jak działa integracja z GitHub Action?",
-      "answer": "Integracja z GitHub Action (dostępna w planach Pro) pozwala na automatyzację przepływu pracy tłumaczeń bezpośrednio w potoku CI/CD. Gdy pushujesz zmiany do swojego repozytorium, tłumaczenia mogą być automatycznie aktualizowane."
+      "answer": "Integracja z GitHub Action (dostępna w planach Pro) pozwala na automatyzację przepływu pracy tłumaczeń bezpośrednio w Twoim potoku CI/CD. Gdy pushujesz zmiany do swojego repozytorium, tłumaczenia mogą być automatycznie aktualizowane."
     },
     "support": {
       "question": "Jakiego rodzaju wsparcie oferujecie?",
@@ -551,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Czy oferujecie specjalne ceny dla projektów open source?",
-      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla Ciebie konto Pro ze zniżką. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla Ciebie konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
     },
     "cancel_subscription": {
       "question": "Jak mogę anulować swoją subskrypcję?",

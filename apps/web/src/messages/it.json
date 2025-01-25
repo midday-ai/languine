@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruttura di localizzazione automatizzata per le tue applicazioni",
-    "description": "Semplifica il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori."
+    "description": "Ottimizza il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Inizia",
     "title": "Localizzazione automatizzata per le tue applicazioni",
-    "description": "Semplifica il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori.",
+    "description": "Ottimizza il tuo processo di localizzazione con una CLI e una pipeline alimentate dall'IA progettate per automatizzare le traduzioni per gli sviluppatori.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
       "readDocumentation": "Leggi la documentazione"
@@ -69,7 +69,7 @@
     "implementation": {
       "title": "Implementazione",
       "quickSetup": "Configurazione e integrazione rapida",
-      "fileFormat": "Gestione del formato dei file",
+      "fileFormat": "Gestione dei formati di file",
       "contentStructure": "Organizzazione della struttura dei contenuti",
       "assetOrganization": "Organizzazione delle risorse"
     },
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Flusso di lavoro (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
+    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice base ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che i tuoi contenuti localizzati rimangano sincronizzati con lo sviluppo."
   },
   "settings": {
     "badRequest": "Richiesta non valida",
@@ -167,7 +167,7 @@
     "permissionDenied": "Permesso negato",
     "permissionDeniedDescription": "Devi essere un proprietario del team per eseguire questa azione",
     "deleteTeamTitle": "Elimina team",
-    "deleteTeamDescription": "Non puoi eliminare l'organizzazione quando sei l'unico membro, elimina invece il tuo account",
+    "deleteTeamDescription": "Non puoi eliminare l'organizzazione quando sei l'unico membro, invece elimina il tuo account",
     "saved": "Impostazioni salvate",
     "savedDescription": "Le tue modifiche sono state salvate con successo",
     "error": "Qualcosa è andato storto",
@@ -292,7 +292,7 @@
     },
     "inclusiveLanguage": {
       "title": "Linguaggio inclusivo",
-      "description": "Assicurati che le traduzioni utilizzino un linguaggio inclusivo"
+      "description": "Assicura che le traduzioni utilizzino un linguaggio inclusivo"
     },
     "formality": {
       "title": "Formalità",
@@ -314,7 +314,7 @@
       "placeholder": "Descrivi la voce del tuo brand..."
     },
     "toneOfVoice": {
-      "title": "Tono della voce",
+      "title": "Tono di voce",
       "description": "Definisci il tono usato nelle traduzioni",
       "options": {
         "casual": "Informale",
@@ -418,7 +418,7 @@
   },
   "invite": {
     "inviteMember": "Invita membro",
-    "inviteDescription": "Invita un membro al tuo team",
+    "inviteDescription": "Invita un membro nel tuo team",
     "emailLabel": "Email",
     "emailPlaceholder": "Inserisci email",
     "cancel": "Annulla",
@@ -434,20 +434,6 @@
     "validation": {
       "invalidEmail": "Inserisci un'email valida"
     }
-  },
-  "months": {
-    "10": "Ott",
-    "11": "Nov",
-    "12": "Dic",
-    "01": "Gen",
-    "02": "Feb",
-    "03": "Mar",
-    "04": "Apr",
-    "05": "Mag",
-    "06": "Giu",
-    "07": "Lug",
-    "08": "Ago",
-    "09": "Set"
   },
   "onboarding": {
     "steps": {
@@ -473,7 +459,7 @@
   },
   "cli": {
     "success": {
-      "title": "Accesso CLI Languine riuscito",
+      "title": "Accesso alla CLI di Languine riuscito",
       "description": "La CLI di Languine è stata autenticata con successo come:",
       "description_2": "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
@@ -521,13 +507,28 @@
   },
   "analytics": {
     "key": "Chiavi tradotte",
-    "document": "Documenti tradotti"
+    "document": "Documenti tradotti",
+    "header": "Traduzioni",
+    "months": {
+      "10": "Ott",
+      "11": "Nov",
+      "12": "Dic",
+      "01": "Gen",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Mag",
+      "06": "Giu",
+      "07": "Lug",
+      "08": "Ago",
+      "09": "Set"
+    }
   },
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
       "question": "Cos'è Languine?",
-      "answer": "Languine è una piattaforma di localizzazione alimentata dall'IA che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Offre funzionalità come opzioni di ottimizzazione, sovrascritture delle traduzioni, analisi e memoria del contesto per garantire traduzioni di alta qualità."
+      "answer": "Languine è una piattaforma di localizzazione alimentata dall'IA che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Fornisce funzionalità come opzioni di ottimizzazione, sovrascritture delle traduzioni, analisi e memoria del contesto per garantire traduzioni di alta qualità."
     },
     "key_limit": {
       "question": "Come funziona il limite delle chiavi?",
@@ -539,7 +540,7 @@
     },
     "github_action": {
       "question": "Come funziona l'integrazione con GitHub Action?",
-      "answer": "L'integrazione con GitHub Action (disponibile nei piani Pro) ti permette di automatizzare il flusso di lavoro di traduzione direttamente nella tua pipeline CI/CD. Quando effettui push delle modifiche al tuo repository, le traduzioni possono essere aggiornate automaticamente."
+      "answer": "L'integrazione con GitHub Action (disponibile nei piani Pro) ti permette di automatizzare il flusso di lavoro delle traduzioni direttamente nella tua pipeline CI/CD. Quando effettui push delle modifiche al tuo repository, le traduzioni possono essere aggiornate automaticamente."
     },
     "support": {
       "question": "Che tipo di supporto offrite?",
@@ -561,7 +562,7 @@
   "pricing_slider": {
     "tier": "Livello {tier}",
     "keys": "Chiavi tradotte",
-    "documents": "Documenti tradotte",
+    "documents": "Documenti tradotti",
     "period": "lun",
     "keys_prefix": "",
     "keys_suffix": " chiavi",

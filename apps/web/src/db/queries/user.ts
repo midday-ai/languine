@@ -1,3 +1,4 @@
+import { UTCDate } from "@date-fns/utc";
 import { createId } from "@paralleldrive/cuid2";
 import { and, eq, ne } from "drizzle-orm";
 import { connectDb } from "..";
@@ -19,7 +20,7 @@ export const updateUser = async ({
     .set({
       ...(name && { name }),
       ...(email && { email }),
-      updatedAt: new Date(),
+      updatedAt: new UTCDate(),
     })
     .where(eq(users.id, id))
     .returning();

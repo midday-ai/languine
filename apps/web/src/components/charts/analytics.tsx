@@ -116,9 +116,7 @@ export function AnalyticsChart() {
     <Card className="w-full border-none bg-noise">
       <CardHeader className="flex justify-between flex-row">
         <div className="text-primary text-lg font-normal flex flex-col">
-          <span className="text-muted-foreground">
-            {t("translations.header")}
-          </span>
+          <span className="text-muted-foreground">{t("header")}</span>
           <div className="flex gap-4">
             <span className="text-primary text-2xl mt-2">
               <NumberFlow value={totalKeys} />

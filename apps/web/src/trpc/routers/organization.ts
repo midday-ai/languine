@@ -16,7 +16,12 @@ import {
   updateOrganizationTier,
 } from "@/db/queries/organization";
 import { members } from "@/db/schema";
+import InviteEmail from "@/emails/templates/invite";
+import { resend } from "@/lib/resend";
+import { getAppUrl } from "@/lib/url";
+import { getSession } from "@languine/supabase/session";
 import { TRPCError } from "@trpc/server";
+import { waitUntil } from "@vercel/functions";
 import { and, ne } from "drizzle-orm";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
@@ -26,7 +31,6 @@ import {
   isOrganizationOwner,
 } from "../permissions/organization";
 import {
-  acceptInvitationSchema,
   createOrganizationSchema,
   deleteOrganizationInviteSchema,
   deleteOrganizationMemberSchema,
@@ -241,6 +245,42 @@ export const organizationRouter = createTRPCRouter({
           inviterId: ctx.authenticatedId,
         });
 
+        const organization = await getOrganization(input.organizationId);
+
+        if (!organization) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: "Organization not found",
+          });
+        }
+
+        const {
+          data: { session },
+        } = await getSession();
+
+        if (!session?.user) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: "User not found",
+          });
+        }
+
+        const inviteLink = `${getAppUrl()}/api/invite/${invite.id}`;
+
+        waitUntil(
+          resend.emails.send({
+            from: "Languine <hello@emails.languine.ai>",
+            to: input.email,
+            subject: `You've been invited to join ${organization.name} on Languine`,
+            react: InviteEmail({
+              invitedByUsername: session.user.user_metadata.full_name,
+              invitedByEmail: session.user.email!,
+              teamName: organization.name,
+              inviteLink,
+            }),
+          }),
+        );
+
         return invite;
       } catch (error) {
         if (error instanceof Error) {
@@ -252,26 +292,6 @@ export const organizationRouter = createTRPCRouter({
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
           message: "Failed to invite member",
-        });
-      }
-    }),
-
-  acceptInvitation: protectedProcedure
-    .input(acceptInvitationSchema)
-    .mutation(async ({ input }) => {
-      try {
-        const result = await acceptInvitation(input.invitationId);
-        return result;
-      } catch (error) {
-        if (error instanceof Error) {
-          throw new TRPCError({
-            code: "BAD_REQUEST",
-            message: error.message,
-          });
-        }
-        throw new TRPCError({
-          code: "INTERNAL_SERVER_ERROR",
-          message: "Failed to accept invitation",
         });
       }
     }),

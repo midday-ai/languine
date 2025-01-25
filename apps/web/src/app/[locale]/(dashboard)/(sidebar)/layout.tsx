@@ -10,7 +10,7 @@ import { getSession } from "@languine/supabase/session";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
-const admins = ["pontus@lostisland.co", "viktor@midday.ai"];
+const admins = ["pontus@lostisland.co", "viktor@midday.ai", "pontus@midday.ai"];
 
 export default async function Layout({
   children,
