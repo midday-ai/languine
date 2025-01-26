@@ -4,7 +4,6 @@ import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
 import { getOrganizationByUserId } from "@/db/queries/organization";
-import { PREFERENCES_COOKIE_NAME } from "@/lib/user-preferences";
 import { getSession } from "@languine/supabase/session";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -30,13 +29,14 @@ export default async function Page() {
 
   if (session) {
     const cookieStore = await cookies();
-    const preferenceCookie = cookieStore.get(PREFERENCES_COOKIE_NAME);
+    const preferenceCookie = cookieStore.get("user-preferences");
 
     let preferences = {};
 
     if (preferenceCookie) {
       try {
         preferences = JSON.parse(preferenceCookie.value);
+        console.log(preferences);
       } catch {}
     }
 

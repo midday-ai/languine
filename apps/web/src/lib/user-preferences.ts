@@ -5,7 +5,7 @@ interface UserPreferences {
   lastProjectSlug: string;
 }
 
-export const PREFERENCES_COOKIE_NAME = "user-preferences";
+const PREFERENCES_COOKIE_NAME = "user-preferences";
 const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
 
 export function saveUserPreferences(preferences: Partial<UserPreferences>) {

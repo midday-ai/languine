@@ -47,7 +47,11 @@ export function TeamSelector() {
   const handleSetActiveTeam = async (organizationId: string) => {
     if (!organizationId) return;
 
-    saveUserPreferences({ lastOrganizationId: organizationId });
+    saveUserPreferences({
+      lastOrganizationId: organizationId,
+      lastProjectSlug: currentProject?.slug,
+    });
+
     router.push(`/${organizationId}/default`);
     setOpen(false);
   };
