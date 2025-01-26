@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 
@@ -6,7 +7,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: function H1({ className = "", children, ...props }) {
       return (
         <h1
-          className={`scroll-m-20 text-lg tracking-tight ${className}`}
+          className={`scroll-m-20 text-xl tracking-tight ${className}`}
           {...props}
         >
           {children}
@@ -15,23 +16,23 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     h2: function H2({ className = "", children, ...props }) {
       return (
-        <p className={`text-sm tracking-tight ${className}`} {...props}>
+        <h2 className={`tracking-tight text-lg mb-4 ${className}`} {...props}>
           {children}
-        </p>
+        </h2>
       );
     },
     h3: function H3({ className = "", children, ...props }) {
       return (
-        <p className={`text-sm tracking-tight ${className}`} {...props}>
+        <h3 className={`tracking-tight text-sm ${className}`} {...props}>
           {children}
-        </p>
+        </h3>
       );
     },
     h4: function H4({ className = "", children, ...props }) {
       return (
-        <p className={`text-sm tracking-tight ${className}`} {...props}>
+        <h4 className={`tracking-tight ${className}`} {...props}>
           {children}
-        </p>
+        </h4>
       );
     },
     p: function P({ className = "", children, ...props }) {

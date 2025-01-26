@@ -5,7 +5,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  // pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   redirects: async () => {
     return [
       {
@@ -33,8 +32,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-});
+const withMDX = createMDX();
 
 export default withNextIntl(withMDX(nextConfig));
