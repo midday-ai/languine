@@ -568,5 +568,19 @@
     "keys_suffix": " 키",
     "docs_prefix": "",
     "docs_suffix": " 문서"
+  },
+  "docs": {
+    "getting-started": "시작하기",
+    "introduction": "소개",
+    "installation": "설치",
+    "quickstart": "빠른 시작",
+    "guides": "가이드",
+    "configuration": "설정",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "고급",
+    "custom-parsers": "사용자 정의 파서",
+    "workflows": "워크플로우",
+    "self-hosting": "셀프 호스팅"
   }
 }

@@ -568,5 +568,19 @@
     "keys_suffix": " avainta",
     "docs_prefix": "",
     "docs_suffix": " dokumenttia"
+  },
+  "docs": {
+    "getting-started": "Aloitus",
+    "introduction": "Johdanto",
+    "installation": "Asennus",
+    "quickstart": "Pika-aloitus",
+    "guides": "Oppaat",
+    "configuration": "Asetukset",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Edistyneet",
+    "custom-parsers": "Mukautetut jäsentimet",
+    "workflows": "Työnkulut",
+    "self-hosting": "Oma isännöinti"
   }
 }

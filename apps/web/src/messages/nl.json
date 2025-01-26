@@ -568,5 +568,19 @@
     "keys_suffix": " sleutels",
     "docs_prefix": "",
     "docs_suffix": " docs"
+  },
+  "docs": {
+    "getting-started": "Aan de slag",
+    "introduction": "Inleiding",
+    "installation": "Installatie",
+    "quickstart": "Snelstart",
+    "guides": "Gidsen",
+    "configuration": "Configuratie",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Geavanceerd",
+    "custom-parsers": "Aangepaste Parsers",
+    "workflows": "Workflows",
+    "self-hosting": "Zelfhosting"
   }
 }

@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { Link } from "@/i18n/routing";
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 
@@ -7,7 +8,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: function H1({ className = "", children, ...props }) {
       return (
         <h1
-          className={`scroll-m-20 text-xl tracking-tight ${className}`}
+          className={`scroll-m-20 text-xl tracking-tight mb-6 ${className}`}
           {...props}
         >
           {children}
@@ -48,7 +49,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: function UL({ className = "", children, ...props }) {
       return (
         <ul
-          className={`my-6 ml-6 list-disc text-sm text-secondary [&>li]:mt-2 ${className}`}
+          className={`my-6 ml-6 mb-6 list-disc text-sm text-secondary [&>li]:mt-2 ${className}`}
           {...props}
         >
           {children}
@@ -58,7 +59,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ol: function OL({ className = "", children, ...props }) {
       return (
         <ol
-          className={`my-6 ml-6 list-decimal text-sm text-secondary [&>li]:mt-2 ${className}`}
+          className={`my-6 ml-6 mb-6 list-decimal text-sm text-secondary [&>li]:mt-2 ${className}`}
           {...props}
         >
           {children}
@@ -87,12 +88,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     a: function A({ className = "", children, ...props }) {
       return (
-        <a
-          className={`font-medium text-primary underline underline-offset-4 hover:text-primary/80 ${className}`}
+        <Link
+          className={`text-primary underline underline-offset-4 hover:text-primary/80 ${className}`}
           {...props}
         >
           {children}
-        </a>
+        </Link>
       );
     },
     img: function Img(props) {

@@ -568,5 +568,19 @@
     "keys_suffix": " anahtarlar",
     "docs_prefix": "",
     "docs_suffix": " belgeler"
+  },
+  "docs": {
+    "getting-started": "Başlarken",
+    "introduction": "Giriş",
+    "installation": "Kurulum",
+    "quickstart": "Hızlı Başlangıç",
+    "guides": "Rehberler",
+    "configuration": "Yapılandırma",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Gelişmiş",
+    "custom-parsers": "Özel Ayrıştırıcılar",
+    "workflows": "İş Akışları",
+    "self-hosting": "Kendi Sunucunuzda Barındırma"
   }
 }

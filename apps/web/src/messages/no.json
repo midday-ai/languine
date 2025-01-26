@@ -568,5 +568,19 @@
     "keys_suffix": " nøkler",
     "docs_prefix": "",
     "docs_suffix": " dokumenter"
+  },
+  "docs": {
+    "getting-started": "Kom i gang",
+    "introduction": "Introduksjon",
+    "installation": "Installasjon",
+    "quickstart": "Hurtigstart",
+    "guides": "Guider",
+    "configuration": "Konfigurasjon",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Avansert",
+    "custom-parsers": "Egendefinerte parsere",
+    "workflows": "Arbeidsflyter",
+    "self-hosting": "Selvhøsting"
   }
 }

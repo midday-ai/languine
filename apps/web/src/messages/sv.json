@@ -568,5 +568,19 @@
     "keys_suffix": " nycklar",
     "docs_prefix": "",
     "docs_suffix": " dokument"
+  },
+  "docs": {
+    "getting-started": "Kom igång",
+    "introduction": "Introduktion",
+    "installation": "Installation",
+    "quickstart": "Snabbstart",
+    "guides": "Guider",
+    "configuration": "Konfiguration",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Avancerat",
+    "custom-parsers": "Anpassade parsers",
+    "workflows": "Arbetsflöden",
+    "self-hosting": "Självhosting"
   }
 }

@@ -568,5 +568,19 @@
     "keys_suffix": " مفاتيح",
     "docs_prefix": "",
     "docs_suffix": " مستندات"
+  },
+  "docs": {
+    "getting-started": "بدء الاستخدام",
+    "introduction": "مقدمة",
+    "installation": "التثبيت",
+    "quickstart": "بدء سريع",
+    "guides": "الإرشادات",
+    "configuration": "التكوين",
+    "cli": "واجهة سطر الأوامر",
+    "api": "واجهة برمجة التطبيقات",
+    "advanced": "متقدم",
+    "custom-parsers": "المحللات المخصصة",
+    "workflows": "سير العمل",
+    "self-hosting": "الاستضافة الذاتية"
   }
 }

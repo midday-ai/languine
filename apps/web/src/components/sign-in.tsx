@@ -4,8 +4,8 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 function getCookie(name: string) {
-  const cookies = document.cookie.split("; ");
-  const cookie = cookies.find((row) => row.includes(name));
+  const cookies = document?.cookie.split("; ");
+  const cookie = cookies?.find((row) => row.includes(name));
   return cookie ? cookie.split("=")[1] : null;
 }
 

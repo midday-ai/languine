@@ -11,13 +11,13 @@ import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
 import { MobileMenu } from "./mobile-menu";
 
-export function Header() {
+export function Header({ fullWidth = false }: { fullWidth?: boolean }) {
   const t = useTranslations("header");
   const pathname = usePathname();
 
   const links = [
     { href: "/pricing", label: t("pricing") },
-    { href: "https://git.new/languine", label: t("docs") },
+    { href: "/docs", label: t("docs") },
     {
       component: <SignIn />,
       className:
@@ -29,7 +29,12 @@ export function Header() {
 
   return (
     <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg">
-      <div className="flex items-center justify-between container mx-auto py-4">
+      <div
+        className={cn(
+          "flex items-center justify-between mx-auto py-4",
+          !fullWidth && "container",
+        )}
+      >
         <Link href="/" className="block">
           <Logo />
         </Link>

@@ -61,6 +61,7 @@
     "motion": "^12.0.5",
     "next": "15.1.6",
     "next-intl": "^3.26.3",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.4",
     "nuqs": "^2.3.1",
     "postgres": "^3.4.5",

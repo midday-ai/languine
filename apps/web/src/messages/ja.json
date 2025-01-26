@@ -568,5 +568,19 @@
     "keys_suffix": " キー",
     "docs_prefix": "",
     "docs_suffix": " ドキュメント"
+  },
+  "docs": {
+    "getting-started": "はじめに",
+    "introduction": "イントロダクション",
+    "installation": "インストール",
+    "quickstart": "クイックスタート",
+    "guides": "ガイド",
+    "configuration": "設定",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "上級者向け",
+    "custom-parsers": "カスタムパーサー",
+    "workflows": "ワークフロー",
+    "self-hosting": "セルフホスティング"
   }
 }

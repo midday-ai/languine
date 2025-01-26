@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/docs/sidebar";
+import { DocsSidebar } from "@/components/docs-sidebar";
 import { Header } from "@/components/header";
 
 export default function DocsLayout({
@@ -6,12 +6,14 @@ export default function DocsLayout({
 }: { children: React.ReactNode }) {
   return (
     <div className="p-6">
-      <Header />
+      <Header fullWidth />
 
       <div className="flex flex-row mt-10">
-        <Sidebar />
+        <DocsSidebar />
 
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 max-w-3xl mx-auto relative md:-left-32">
+          {children}
+        </div>
       </div>
     </div>
   );

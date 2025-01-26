@@ -568,5 +568,19 @@
     "keys_suffix": "键",
     "docs_prefix": "",
     "docs_suffix": "文档"
+  },
+  "docs": {
+    "getting-started": "入门",
+    "introduction": "介绍",
+    "installation": "安装",
+    "quickstart": "快速开始",
+    "guides": "指南",
+    "configuration": "配置",
+    "cli": "命令行界面",
+    "api": "API",
+    "advanced": "高级",
+    "custom-parsers": "自定义解析器",
+    "workflows": "工作流程",
+    "self-hosting": "自托管"
   }
 }

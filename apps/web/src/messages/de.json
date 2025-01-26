@@ -568,5 +568,19 @@
     "keys_suffix": " Schlüssel",
     "docs_prefix": "",
     "docs_suffix": " Dokumente"
+  },
+  "docs": {
+    "getting-started": "Erste Schritte",
+    "introduction": "Einführung",
+    "installation": "Installation",
+    "quickstart": "Schnellstart",
+    "guides": "Anleitungen",
+    "configuration": "Konfiguration",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Fortgeschritten",
+    "custom-parsers": "Benutzerdefinierte Parser",
+    "workflows": "Workflows",
+    "self-hosting": "Selbsthosting"
   }
 }

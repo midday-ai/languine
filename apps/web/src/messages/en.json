@@ -569,5 +569,18 @@
     "docs_prefix": "",
     "docs_suffix": " docs"
   },
-  "keys_limit_reached": "You have reached the maximum number of keys"
+  "docs": {
+    "getting-started": "Getting Started",
+    "introduction": "Introduction",
+    "installation": "Installation",
+    "quickstart": "Quickstart",
+    "guides": "Guides",
+    "configuration": "Configuration",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Advanced",
+    "custom-parsers": "Custom Parsers",
+    "workflows": "Workflows",
+    "self-hosting": "Self-Hosting"
+  }
 }

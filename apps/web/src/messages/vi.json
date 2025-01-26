@@ -568,5 +568,19 @@
     "keys_suffix": " khóa",
     "docs_prefix": "",
     "docs_suffix": " tài liệu"
+  },
+  "docs": {
+    "getting-started": "Bắt Đầu",
+    "introduction": "Giới Thiệu",
+    "installation": "Cài Đặt",
+    "quickstart": "Khởi Đầu Nhanh",
+    "guides": "Hướng Dẫn",
+    "configuration": "Cấu Hình",
+    "cli": "CLI",
+    "api": "API",
+    "advanced": "Nâng Cao",
+    "custom-parsers": "Bộ Phân Tích Tùy Chỉnh",
+    "workflows": "Quy Trình Làm Việc",
+    "self-hosting": "Tự Lưu Trữ"
   }
 }
