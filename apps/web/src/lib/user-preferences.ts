@@ -15,7 +15,7 @@ export function saveUserPreferences(preferences: Partial<UserPreferences>) {
     ...preferences,
   };
 
-  document.cookie = `${PREFERENCES_COOKIE_NAME}=${JSON.stringify(newPreferences)}; path=/; max-age=${THIRTY_DAYS}; SameSite=Lax`;
+  document.cookie = `${PREFERENCES_COOKIE_NAME}=${JSON.stringify(newPreferences)}; path=/; max-age=${THIRTY_DAYS};`;
 }
 
 export function getUserPreferences(): Partial<UserPreferences> {
