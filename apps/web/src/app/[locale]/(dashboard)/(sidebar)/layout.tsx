@@ -4,45 +4,52 @@ import { GlobalModals } from "@/components/modals";
 import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
-import { getSession } from "@/lib/session";
+import { SessionProvider } from "@/contexts/session";
 import { TRPCProvider } from "@/trpc/client";
+import { getSession } from "@languine/supabase/session";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
-const admins = ["pontus@lostisland.co", "viktor@midday.ai"];
+const admins = ["pontus@lostisland.co", "viktor@midday.ai", "pontus@midday.ai"];
 
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getSession();
+  const {
+    data: { session },
+  } = await getSession();
 
-  if (!session?.data) {
-    redirect("/login");
+  if (!session) {
+    return redirect("/login");
   }
 
   return (
-    <TRPCProvider>
-      <NuqsAdapter>
-        <SidebarProvider>
-          <div className="flex min-h-screen w-full">
-            <Sidebar />
+    <SessionProvider session={session}>
+      <TRPCProvider>
+        <NuqsAdapter>
+          <SidebarProvider>
+            <div className="flex min-h-screen w-full">
+              <Sidebar />
 
-            <SidebarInset className="flex-1 bg-noise pb-8">
-              <Header />
+              <SidebarInset className="flex-1 bg-noise pb-8">
+                <Header />
 
-              <main className="pt-4">
-                {children}
+                <main className="pt-4">
+                  {children}
 
-                {!admins.includes(session.data.user.email) && <ComingSoon />}
-                <Toaster />
-              </main>
-            </SidebarInset>
-          </div>
-        </SidebarProvider>
-        <GlobalModals />
-      </NuqsAdapter>
-    </TRPCProvider>
+                  {!admins.includes(session?.user.email ?? "") && (
+                    <ComingSoon />
+                  )}
+                  <Toaster />
+                </main>
+              </SidebarInset>
+            </div>
+          </SidebarProvider>
+          <GlobalModals />
+        </NuqsAdapter>
+      </TRPCProvider>
+    </SessionProvider>
   );
 }

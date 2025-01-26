@@ -1,7 +1,7 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -66,7 +66,7 @@ function GitHubIcon() {
 }
 
 export function CopyInstall() {
-  const t = useI18n();
+  const t = useTranslations("copyInstall");
   const [copied, setCopied] = useState(false);
 
   const copyCommand = () => {
@@ -105,7 +105,7 @@ export function CopyInstall() {
             exit={{ opacity: 0, y: -40 }}
             className="absolute left-1/2 -translate-x-1/2 top-0 text-xs text-primary"
           >
-            {t("copyInstall.copied")}
+            {t("copied")}
           </motion.div>
         )}
       </AnimatePresence>

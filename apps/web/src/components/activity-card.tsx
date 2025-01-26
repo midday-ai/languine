@@ -1,7 +1,7 @@
 "use client";
 
 import { formatTimeAgo } from "@/lib/format";
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import { FaBitbucket, FaGithub } from "react-icons/fa";
 import { Skeleton } from "./ui/skeleton";
 
@@ -26,13 +26,13 @@ export function ActivityCard({
   targetLanguage,
   sourceType,
 }: Props) {
-  const t = useI18n();
+  const t = useTranslations("activity");
 
   return (
     <div className="border border-border relative">
       <div className="absolute -top-3.5 left-3 bg-background bg-noise px-4 py-1">
         <h3 className="text-xs uppercase text-[#878787] font-medium">
-          {t(`activity.type.${sourceType}`)}
+          {t(`type.${sourceType}`)}
         </h3>
       </div>
 

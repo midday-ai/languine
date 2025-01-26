@@ -1,26 +1,25 @@
 "use client";
 
 import { Terminal } from "@/components/terminal";
-import { useI18n } from "@/locales/client";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { CopyInstall } from "./copy-install";
 import { OutlinedButton } from "./ui/outlined-button";
 
 export function Hero() {
-  const t = useI18n();
+  const t = useTranslations("hero");
+  const buttonT = useTranslations("getStarted.button");
 
   return (
     <div className="py-12 md:py-28 flex flex-col lg:flex-row gap-12 justify-between items-center">
       <div className="lg:max-w-lg space-y-8 w-full">
-        <h1 className="xl:text-4xl text-3xl">{t("hero.title")}</h1>
-        <p className="text-secondary text-sm">{t("hero.description")}</p>
+        <h1 className="xl:text-4xl text-3xl">{t("title")}</h1>
+        <p className="text-secondary text-sm">{t("description")}</p>
         <CopyInstall />
 
         <div className="flex items-center gap-8">
           <Link href="/login" className="text-sm text-secondary underline">
-            <OutlinedButton>
-              {t("getStarted.button.startAutomating")}
-            </OutlinedButton>
+            <OutlinedButton>{buttonT("startAutomating")}</OutlinedButton>
           </Link>
 
           <Link
@@ -28,7 +27,7 @@ export function Hero() {
             className="hidden md:block text-sm text-secondary underline"
           >
             <OutlinedButton variant="secondary">
-              {t("getStarted.button.readDocumentation")}
+              {buttonT("readDocumentation")}
             </OutlinedButton>
           </Link>
         </div>

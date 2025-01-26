@@ -16,9 +16,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -29,7 +29,7 @@ const formSchema = z.object({
 });
 
 export function CreateTeamModal() {
-  const t = useI18n();
+  const t = useTranslations("createTeam");
   const { open, setOpen } = useCreateTeamModal();
   const router = useRouter();
   const utils = trpc.useUtils();
@@ -69,11 +69,9 @@ export function CreateTeamModal() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{t("teamSelector.createTeamTitle")}</DialogTitle>
+          <DialogTitle>{t("teamName")}</DialogTitle>
         </DialogHeader>
-        <p className="text-sm text-secondary">
-          {t("createTeam.createTeamDescription")}
-        </p>
+        <p className="text-sm text-secondary">{t("createTeamDescription")}</p>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -84,12 +82,9 @@ export function CreateTeamModal() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("createTeam.teamName")}</FormLabel>
+                  <FormLabel>{t("teamName")}</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder={t("createTeam.teamNamePlaceholder")}
-                      {...field}
-                    />
+                    <Input placeholder={t("teamNamePlaceholder")} {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -101,10 +96,10 @@ export function CreateTeamModal() {
                 onClick={() => setOpen(false)}
                 type="button"
               >
-                {t("createTeam.cancel")}
+                {t("cancel")}
               </Button>
               <Button type="submit" size="sm">
-                {t("createTeam.createTeamButton")}
+                {t("createTeamButton")}
               </Button>
             </div>
           </form>

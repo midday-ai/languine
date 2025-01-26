@@ -6,50 +6,50 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function FAQ() {
-  const t = useI18n();
+  const t = useTranslations("faq");
 
   const faqs = [
     {
-      question: t("faq.what_is_languine.question"),
-      answer: t("faq.what_is_languine.answer"),
+      question: t("what_is_languine.question"),
+      answer: t("what_is_languine.answer"),
     },
     {
-      question: t("faq.key_limit.question"),
-      answer: t("faq.key_limit.answer"),
+      question: t("key_limit.question"),
+      answer: t("key_limit.answer"),
     },
     {
-      question: t("faq.supported_languages.question"),
-      answer: t("faq.supported_languages.answer"),
+      question: t("supported_languages.question"),
+      answer: t("supported_languages.answer"),
     },
     {
-      question: t("faq.github_action.question"),
-      answer: t("faq.github_action.answer"),
+      question: t("github_action.question"),
+      answer: t("github_action.answer"),
     },
     {
-      question: t("faq.support.question"),
-      answer: t("faq.support.answer"),
+      question: t("support.question"),
+      answer: t("support.answer"),
     },
     {
-      question: t("faq.open_source.question"),
-      answer: t("faq.open_source.answer"),
+      question: t("open_source.question"),
+      answer: t("open_source.answer"),
     },
     {
-      question: t("faq.open_source_pricing.question"),
-      answer: t("faq.open_source_pricing.answer"),
+      question: t("open_source_pricing.question"),
+      answer: t("open_source_pricing.answer"),
     },
     {
-      question: t("faq.cancel_subscription.question"),
-      answer: t("faq.cancel_subscription.answer"),
+      question: t("cancel_subscription.question"),
+      answer: t("cancel_subscription.answer"),
     },
   ];
 
   return (
     <div className="pt-10 md:pt-20">
       <h2 className="text-sm font-regular border-b border-border pb-4 mb-2">
-        {t("faq.title")}
+        {t("title")}
       </h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (

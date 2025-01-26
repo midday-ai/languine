@@ -16,6 +16,7 @@ const translationSchema = z.object({
   sourceProvider: z.string().nullable().optional(),
   commitMessage: z.string().nullable().optional(),
   commitLink: z.string().nullable().optional(),
+  userId: z.string().nullable().optional(),
   content: z.array(
     z.object({
       key: z.string(),
@@ -84,6 +85,7 @@ export const translateTask = schemaTask({
             commitLink: payload.commitLink,
             sourceProvider: payload.sourceProvider,
             commitMessage: payload.commitMessage,
+            userId: payload.userId,
           });
         }
       }
@@ -141,6 +143,7 @@ export const translateTask = schemaTask({
           sourceProvider: payload.sourceProvider,
           commitMessage: payload.commitMessage,
           commitLink: payload.commitLink,
+          userId: payload.userId,
           translations: chunk.map((content, i) => ({
             translationKey: content.key,
             sourceLanguage: payload.sourceLanguage,

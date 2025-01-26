@@ -1,6 +1,5 @@
-import { acceptInvitation } from "@/lib/auth/queries";
-import { getSession } from "@/lib/session";
-import { trpc } from "@/trpc/server";
+import { acceptInvitation } from "@/db/queries/organization";
+import { getSession } from "@languine/supabase/session";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -10,36 +9,38 @@ export async function GET(
 ) {
   try {
     const { inviteId } = params;
-
-    // Check if user is logged in
-    const session = await getSession();
     const cookieStore = await cookies();
 
-    if (!session?.data) {
-      // Set invitation cookie before redirecting
-      cookieStore.set("invitationId", inviteId);
+    // Check if user is logged in
+    const {
+      data: { session },
+    } = await getSession();
+
+    if (!session) {
+      // Store invitation ID in cookie and redirect to login
+      cookieStore.set("invite-id", inviteId);
       redirect("/login");
     }
 
-    const invite = await acceptInvitation(inviteId);
+    // User is logged in, try to accept the invitation
+    const storedInviteId = cookieStore.get("invite-id")?.value;
+    const inviteIdToUse = storedInviteId || inviteId;
 
-    if (!invite) {
+    const result = await acceptInvitation(inviteIdToUse);
+
+    if (!result) {
       redirect("/login");
     }
 
-    // Get organization details
-    const organization = await trpc.organization.getById({
-      organizationId: invite.invitation.organizationId,
-    });
-
-    // Redirect to organization dashboard if found
-    if (organization) {
-      redirect(`/${organization.slug}/default`);
+    // Clear any stored invitation cookie
+    if (storedInviteId) {
+      cookieStore.delete("invite-id");
     }
 
-    // Fallback redirect to login
-    redirect("/login");
+    // Redirect to organization dashboard
+    redirect(`/${result.invitation.organizationId}/default`);
   } catch (error) {
+    console.error("Failed to accept invitation:", error);
     redirect("/login");
   }
 }

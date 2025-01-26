@@ -142,3 +142,17 @@ export const deleteKeysSchema = z.object({
 });
 
 export type DeleteKeysSchema = z.infer<typeof deleteKeysSchema>;
+
+export const inviteMemberSchema = z.object({
+  organizationId: z.string(),
+  email: z.string().email(),
+  role: z.string(),
+});
+
+export type InviteMemberSchema = z.infer<typeof inviteMemberSchema>;
+
+export const acceptInvitationSchema = z.object({
+  invitationId: z.string(),
+});
+
+export type AcceptInvitationSchema = z.infer<typeof acceptInvitationSchema>;

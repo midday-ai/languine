@@ -1,11 +1,11 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { CopyInstall } from "./copy-install";
 
 export function ComingSoon() {
-  const t = useI18n();
+  const t = useTranslations("coming_soon");
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -17,9 +17,9 @@ export function ComingSoon() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
       <div className="flex flex-col items-center gap-6 max-w-lg text-center p-8">
-        <h2 className="text-2xl font-medium">{t("coming_soon.title")}</h2>
+        <h2 className="text-2xl font-medium">{t("title")}</h2>
         <p className="text-muted-foreground">
-          {t("coming_soon.description")}{" "}
+          {t("description")}{" "}
           <a
             href="https://twitter.com/languine_ai"
             target="_blank"
@@ -28,7 +28,7 @@ export function ComingSoon() {
           >
             @languine_ai
           </a>{" "}
-          {t("coming_soon.cta")}
+          {t("cta")}
         </p>
         <CopyInstall />
       </div>

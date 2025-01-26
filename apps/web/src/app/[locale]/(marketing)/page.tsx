@@ -4,10 +4,10 @@ import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
 import { Info } from "@/components/info";
 import { Pipeline } from "@/components/pipeline";
-import { getI18n } from "@/locales/server";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
-  const t = await getI18n();
+  const t = await getTranslations();
 
   return {
     title: `Languine - ${t("hero.title")}`,

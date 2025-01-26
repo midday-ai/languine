@@ -1,30 +1,28 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import {
   invitations,
   members,
   organizations,
   projects,
-  sessions,
   translations,
   users,
 } from "@/db/schema";
 import { createId } from "@paralleldrive/cuid2";
 import { and, count, eq, sql } from "drizzle-orm";
-import slugify from "slugify";
 
 export async function createDefaultOrganization(user: {
   id: string;
   name: string;
 }) {
+  const db = await connectDb();
+
   // Create default organization for new user
-  const org = await db
+  const [org] = await db
     .insert(organizations)
     .values({
       name: user.name,
-      slug: `${slugify(user.name, { lower: true })}-${createId().slice(0, 8)}`,
     })
-    .returning()
-    .get();
+    .returning();
 
   // Add user as member of organization
   await db.insert(members).values({
@@ -40,12 +38,6 @@ export async function createDefaultOrganization(user: {
     slug: "default",
   });
 
-  // Set active organization for new user's session
-  await db
-    .update(sessions)
-    .set({ activeOrganizationId: org.id })
-    .where(eq(sessions.userId, user.id));
-
   return org;
 }
 
@@ -56,14 +48,14 @@ export const createOrganization = async ({
   name: string;
   userId: string;
 }) => {
-  const org = await db
+  const db = await connectDb();
+
+  const [org] = await db
     .insert(organizations)
     .values({
       name,
-      slug: `${slugify(name, { lower: true })}-${createId().slice(0, 8)}`,
     })
-    .returning()
-    .get();
+    .returning();
 
   if (org) {
     await db.insert(members).values({
@@ -83,51 +75,57 @@ export const createOrganization = async ({
 };
 
 export const deleteOrganization = async (id: string) => {
-  return db
-    .delete(organizations)
-    .where(eq(organizations.id, id))
-    .returning()
-    .get();
+  const db = await connectDb();
+
+  return db.delete(organizations).where(eq(organizations.id, id)).returning();
 };
 
 export const getDefaultOrganization = async (userId: string) => {
-  return db
-    .select()
-    .from(members)
-    .where(eq(members.userId, userId))
-    .leftJoin(organizations, eq(organizations.id, members.organizationId))
-    .limit(1)
-    .get();
+  const db = await connectDb();
+
+  return db.query.members.findFirst({
+    where: eq(members.userId, userId),
+    with: {
+      organization: true,
+    },
+  });
 };
 
 export const getAllOrganizationsWithProjects = async (userId: string) => {
-  const orgs = await db
-    .select()
-    .from(organizations)
-    .leftJoin(members, eq(members.organizationId, organizations.id))
-    .where(eq(members.userId, userId))
-    .all();
+  const db = await connectDb();
 
-  const orgsWithProjects = await Promise.all(
-    orgs.map(async (org) => {
-      const orgProjects = await db
-        .select()
-        .from(projects)
-        .where(eq(projects.organizationId, org.organizations.id))
-        .all();
+  const result = await db.query.members.findMany({
+    where: eq(members.userId, userId),
+    with: {
+      organization: {
+        with: {
+          projects: true,
+        },
+      },
+    },
+  });
 
-      return {
-        ...org.organizations,
-        projects: orgProjects,
-      };
-    }),
-  );
+  // Create a Map to store unique organizations by ID
+  const uniqueOrgs = new Map();
 
-  return orgsWithProjects;
+  for (const member of result) {
+    if (!uniqueOrgs.has(member.organization.id)) {
+      uniqueOrgs.set(member.organization.id, {
+        ...member.organization,
+        projects: member.organization.projects,
+      });
+    }
+  }
+
+  return Array.from(uniqueOrgs.values());
 };
 
 export const getOrganization = async (id: string) => {
-  return db.select().from(organizations).where(eq(organizations.id, id)).get();
+  const db = await connectDb();
+
+  return db.query.organizations.findFirst({
+    where: eq(organizations.id, id),
+  });
 };
 
 export const updateOrganization = async ({
@@ -139,6 +137,8 @@ export const updateOrganization = async ({
   name: string;
   logo?: string;
 }) => {
+  const db = await connectDb();
+
   return db
     .update(organizations)
     .set({
@@ -146,87 +146,80 @@ export const updateOrganization = async ({
       logo,
     })
     .where(eq(organizations.id, id))
-    .returning()
-    .get();
+    .returning();
 };
 
 export const getOrganizationMembers = async (organizationId: string) => {
-  return db
-    .select({
-      id: members.id,
-      role: members.role,
-      user: {
-        id: users.id,
-        name: users.name,
-        email: users.email,
-        image: users.image,
-      },
-    })
-    .from(members)
-    .innerJoin(users, eq(members.userId, users.id))
-    .where(eq(members.organizationId, organizationId))
-    .all();
+  const db = await connectDb();
+
+  return db.query.members.findMany({
+    where: eq(members.organizationId, organizationId),
+    with: {
+      user: true,
+    },
+  });
 };
 
 export const getOrganizationInvites = async (organizationId: string) => {
-  return db
-    .select({
-      id: invitations.id,
-      email: invitations.email,
-      role: invitations.role,
-      status: invitations.status,
-      expiresAt: invitations.expiresAt,
-      inviter: {
-        id: users.id,
-        name: users.name,
-        email: users.email,
-        image: users.image,
-      },
-    })
-    .from(invitations)
-    .innerJoin(users, eq(invitations.inviterId, users.id))
-    .where(eq(invitations.organizationId, organizationId))
-    .all();
+  const db = await connectDb();
+
+  return db.query.invitations.findMany({
+    where: eq(invitations.organizationId, organizationId),
+    with: {
+      inviter: true,
+    },
+    columns: {
+      id: true,
+      email: true,
+      role: true,
+      status: true,
+      expiresAt: true,
+    },
+  });
 };
 
 export const deleteOrganizationInvite = async (inviteId: string) => {
-  return db
-    .delete(invitations)
-    .where(eq(invitations.id, inviteId))
-    .returning()
-    .get();
+  const db = await connectDb();
+
+  return db.delete(invitations).where(eq(invitations.id, inviteId)).returning();
 };
 
 export const deleteOrganizationMember = async (memberId: string) => {
-  return db.delete(members).where(eq(members.id, memberId)).returning().get();
+  const db = await connectDb();
+
+  return db.delete(members).where(eq(members.id, memberId)).returning();
 };
 
 export const getOrganizationInvite = async (invitationId: string) => {
-  return db
-    .select({
-      invitation: invitations,
+  const db = await connectDb();
+
+  return db.query.invitations.findFirst({
+    where: eq(invitations.id, invitationId),
+    with: {
       organization: {
-        name: organizations.name,
+        columns: {
+          name: true,
+        },
       },
-    })
-    .from(invitations)
-    .innerJoin(organizations, eq(invitations.organizationId, organizations.id))
-    .where(eq(invitations.id, invitationId))
-    .get();
+    },
+  });
 };
 
 export const deleteInvitation = async (invitationId: string) => {
+  const db = await connectDb();
+
   return db
     .delete(invitations)
     .where(eq(invitations.id, invitationId))
-    .returning()
-    .get();
+    .returning();
 };
 
 export const leaveOrganization = async (
   organizationId: string,
   userId: string,
 ) => {
+  const db = await connectDb();
+
   return db
     .delete(members)
     .where(
@@ -235,21 +228,25 @@ export const leaveOrganization = async (
         eq(members.userId, userId),
       ),
     )
-    .returning()
-    .get();
+    .returning();
 };
 
 export const updateOrganizationApiKey = async (organizationId: string) => {
-  return db
+  const db = await connectDb();
+
+  const [result] = await db
     .update(organizations)
     .set({ apiKey: `org_${createId()}` })
     .where(eq(organizations.id, organizationId))
-    .returning()
-    .get();
+    .returning();
+
+  return result;
 };
 
 export const getOrganizationLimits = async (organizationId: string) => {
-  const result = await db
+  const db = await connectDb();
+
+  const [result] = await db
     .select({
       totalKeys: count(
         sql`CASE WHEN ${translations.sourceType} = 'key' THEN 1 END`,
@@ -259,8 +256,7 @@ export const getOrganizationLimits = async (organizationId: string) => {
       ).as("totalDocuments"),
     })
     .from(translations)
-    .where(eq(translations.organizationId, organizationId))
-    .get();
+    .where(eq(translations.organizationId, organizationId));
 
   return {
     totalKeys: result?.totalKeys ?? 0,
@@ -274,10 +270,117 @@ export const updateOrganizationTier = async (
 ) => {
   const plan = tier === 0 ? "free" : "pro";
 
+  const db = await connectDb();
+
   return db
     .update(organizations)
     .set({ tier, plan })
     .where(eq(organizations.id, organizationId))
-    .returning()
-    .get();
+    .returning();
+};
+
+export const getOrganizationByUserId = async (userId: string) => {
+  const db = await connectDb();
+
+  return db.query.members.findFirst({
+    where: eq(members.userId, userId),
+    with: {
+      organization: true,
+    },
+  });
+};
+
+export const inviteMember = async ({
+  organizationId,
+  email,
+  role,
+  inviterId,
+}: {
+  organizationId: string;
+  email: string;
+  role: string;
+  inviterId: string;
+}) => {
+  const db = await connectDb();
+
+  // Check if user is already a member
+  const [existingMember] = await db
+    .select()
+    .from(members)
+    .innerJoin(users, eq(members.userId, users.id))
+    .where(
+      and(eq(members.organizationId, organizationId), eq(users.email, email)),
+    )
+    .limit(1);
+
+  if (existingMember) {
+    throw new Error("User is already a member of this organization");
+  }
+
+  // Check if there's already a pending invitation
+  const existingInvite = await db.query.invitations.findFirst({
+    where: and(
+      eq(invitations.organizationId, organizationId),
+      eq(invitations.email, email),
+      eq(invitations.status, "pending"),
+    ),
+  });
+
+  if (existingInvite) {
+    throw new Error("User already has a pending invitation");
+  }
+
+  // Create invitation
+  const [invitation] = await db
+    .insert(invitations)
+    .values({
+      organizationId,
+      email,
+      role,
+      status: "pending",
+      inviterId,
+      expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days from now
+    })
+    .returning();
+
+  return invitation;
+};
+
+export const acceptInvitation = async (invitationId: string) => {
+  const db = await connectDb();
+
+  // Get the invitation
+  const invitation = await db.query.invitations.findFirst({
+    where: eq(invitations.id, invitationId),
+  });
+
+  if (!invitation) {
+    throw new Error("Invitation not found");
+  }
+
+  if (invitation.status !== "pending") {
+    throw new Error("Invitation is no longer valid");
+  }
+
+  if (new Date() > invitation.expiresAt) {
+    throw new Error("Invitation has expired");
+  }
+
+  // Add user as member
+  const [member] = await db
+    .insert(members)
+    .values({
+      organizationId: invitation.organizationId,
+      userId: invitation.inviterId,
+      role: invitation.role || "member",
+    })
+    .returning();
+
+  // Update invitation status
+  await db
+    .update(invitations)
+    .set({ status: "accepted" })
+    .where(eq(invitations.id, invitationId));
+
+  return { member, invitation };
 };

@@ -1,5 +1,6 @@
-import { db } from "@/db";
+import { connectDb } from "@/db";
 import {
+  acceptInvitation,
   createOrganization,
   deleteOrganization,
   deleteOrganizationInvite,
@@ -8,18 +9,23 @@ import {
   getOrganization,
   getOrganizationInvites,
   getOrganizationMembers,
+  inviteMember,
   leaveOrganization,
   updateOrganization,
   updateOrganizationApiKey,
   updateOrganizationTier,
 } from "@/db/queries/organization";
 import { members } from "@/db/schema";
+import InviteEmail from "@/emails/templates/invite";
+import { resend } from "@/lib/resend";
+import { getAppUrl } from "@/lib/url";
+import { getSession } from "@languine/supabase/session";
 import { TRPCError } from "@trpc/server";
+import { waitUntil } from "@vercel/functions";
 import { and, ne } from "drizzle-orm";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import {
   isOrganizationMember,
   isOrganizationOwner,
@@ -28,6 +34,7 @@ import {
   createOrganizationSchema,
   deleteOrganizationInviteSchema,
   deleteOrganizationMemberSchema,
+  inviteMemberSchema,
   organizationSchema,
   updateOrganizationSchema,
   updateOrganizationTierSchema,
@@ -70,7 +77,6 @@ export const organizationRouter = createTRPCRouter({
 
   create: protectedProcedure
     .input(createOrganizationSchema)
-    .use(rateLimitMiddleware)
     .mutation(async ({ input, ctx }) => {
       const org = await createOrganization({
         name: input.name,
@@ -89,7 +95,6 @@ export const organizationRouter = createTRPCRouter({
 
   update: protectedProcedure
     .input(updateOrganizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const org = await updateOrganization({
@@ -110,7 +115,6 @@ export const organizationRouter = createTRPCRouter({
 
   delete: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const members = await getOrganizationMembers(input.organizationId);
@@ -137,7 +141,6 @@ export const organizationRouter = createTRPCRouter({
 
   deleteInvite: protectedProcedure
     .input(deleteOrganizationInviteSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const invite = await deleteOrganizationInvite(input.inviteId);
@@ -154,9 +157,10 @@ export const organizationRouter = createTRPCRouter({
 
   deleteMember: protectedProcedure
     .input(deleteOrganizationMemberSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
+      const db = await connectDb();
+
       const otherOwners = await db
         .select()
         .from(members)
@@ -166,8 +170,7 @@ export const organizationRouter = createTRPCRouter({
             eq(members.role, "owner"),
             ne(members.id, input.memberId),
           ),
-        )
-        .all();
+        );
 
       if (otherOwners.length === 0) {
         throw new TRPCError({
@@ -191,9 +194,10 @@ export const organizationRouter = createTRPCRouter({
 
   leave: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationMember)
     .mutation(async ({ input, ctx }) => {
+      const db = await connectDb();
+
       const otherOwners = await db
         .select()
         .from(members)
@@ -203,8 +207,7 @@ export const organizationRouter = createTRPCRouter({
             eq(members.role, "owner"),
             ne(members.userId, ctx.authenticatedId),
           ),
-        )
-        .all();
+        );
 
       if (otherOwners.length === 0) {
         throw new TRPCError({
@@ -218,7 +221,6 @@ export const organizationRouter = createTRPCRouter({
 
   updateApiKey: protectedProcedure
     .input(organizationSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationApiKey(input.organizationId);
@@ -226,9 +228,71 @@ export const organizationRouter = createTRPCRouter({
 
   updatePlan: protectedProcedure
     .input(updateOrganizationTierSchema)
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationTier(input.organizationId, input.tier);
+    }),
+
+  inviteMember: protectedProcedure
+    .input(inviteMemberSchema)
+    .use(isOrganizationOwner)
+    .mutation(async ({ input, ctx }) => {
+      try {
+        const invite = await inviteMember({
+          organizationId: input.organizationId,
+          email: input.email,
+          role: input.role,
+          inviterId: ctx.authenticatedId,
+        });
+
+        const organization = await getOrganization(input.organizationId);
+
+        if (!organization) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: "Organization not found",
+          });
+        }
+
+        const {
+          data: { session },
+        } = await getSession();
+
+        if (!session?.user) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: "User not found",
+          });
+        }
+
+        const inviteLink = `${getAppUrl()}/api/invite/${invite.id}`;
+
+        waitUntil(
+          resend.emails.send({
+            from: "Languine <hello@emails.languine.ai>",
+            to: input.email,
+            subject: `You've been invited to join ${organization.name} on Languine`,
+            react: InviteEmail({
+              invitedByUsername: session.user.user_metadata.full_name,
+              invitedByEmail: session.user.email!,
+              teamName: organization.name,
+              inviteLink,
+            }),
+          }),
+        );
+
+        return invite;
+      } catch (error) {
+        if (error instanceof Error) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: error.message,
+          });
+        }
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to invite member",
+        });
+      }
     }),
 });

@@ -2,8 +2,8 @@
 
 import { UserMenu } from "@/components/user-menu";
 import { cn } from "@/lib/utils";
-import { useI18n } from "@/locales/client";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,29 +17,29 @@ import {
 } from "react-icons/md";
 
 export function MobileMenu() {
+  const t = useTranslations("navigation");
   const [isOpen, setIsOpen] = useState(false);
   const params = useParams();
   const pathname = usePathname();
-  const t = useI18n();
 
   const navigation = [
     {
       icon: MdOutlineStackedBarChart,
       path: "/",
       isActive: pathname.endsWith(`/${params.organization}/${params.project}`),
-      label: t("menu.dashboard"),
+      label: t("dashboard"),
     },
     {
       icon: MdGraphicEq,
       path: "/tuning",
       isActive: pathname.endsWith("/tuning"),
-      label: t("menu.tuning"),
+      label: t("tuning"),
     },
     {
       icon: MdOutlineSettings,
       path: "/settings",
       isActive: pathname.endsWith("/settings"),
-      label: t("menu.settings"),
+      label: t("settings"),
     },
   ];
 
@@ -114,7 +114,7 @@ export function MobileMenu() {
                     }}
                   >
                     <MdOutlineBook className="size-6" />
-                    <span className="text-lg">{t("menu.docs")}</span>
+                    <span className="text-lg">{t("docs")}</span>
                   </motion.div>
                 </Link>
 
@@ -128,7 +128,7 @@ export function MobileMenu() {
                   }}
                 >
                   <UserMenu />
-                  <span className="text-lg">{t("menu.account")}</span>
+                  <span className="text-lg">{t("account")}</span>
                 </motion.div>
               </motion.div>
             </div>

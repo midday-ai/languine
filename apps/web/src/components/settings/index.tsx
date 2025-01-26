@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import { useQueryState } from "nuqs";
 import { AccountSettings } from "./account";
 import { BillingSettings } from "./billing";
@@ -9,7 +9,7 @@ import { ProjectSettings } from "./project";
 import { TeamSettings } from "./team";
 
 export function Settings() {
-  const t = useI18n();
+  const t = useTranslations("settings");
 
   const [tab, setTab] = useQueryState("tab", {
     defaultValue: "project",
@@ -18,19 +18,19 @@ export function Settings() {
   const tabs = [
     {
       id: "project",
-      title: t("settings.tabs.project"),
+      title: t("tabs.project"),
     },
     {
       id: "team",
-      title: t("settings.tabs.team"),
+      title: t("tabs.team"),
     },
     {
       id: "account",
-      title: t("settings.tabs.account"),
+      title: t("tabs.account"),
     },
     {
       id: "billing",
-      title: t("settings.tabs.billing"),
+      title: t("tabs.billing"),
     },
   ];
 

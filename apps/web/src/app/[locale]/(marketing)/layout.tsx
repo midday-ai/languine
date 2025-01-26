@@ -1,11 +1,11 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { getStaticParams } from "@/locales/server";
-import { setStaticParamsLocale } from "next-international/server";
+import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 import type { ReactElement } from "react";
 
 export function generateStaticParams() {
-  return getStaticParams();
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function Layout({
@@ -17,7 +17,7 @@ export default async function Layout({
 }) {
   const { locale } = await params;
 
-  setStaticParamsLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <div className="p-6">

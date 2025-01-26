@@ -16,12 +16,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useCreateProjectModal } from "@/hooks/use-create-project-modal";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -29,7 +30,7 @@ const formSchema = z.object({
 });
 
 export function CreateProjectModal() {
-  const t = useI18n();
+  const t = useTranslations("createProject");
   const { open, setOpen } = useCreateProjectModal();
   const params = useParams();
   const organizationId = params.organization as string;
@@ -75,10 +76,10 @@ export function CreateProjectModal() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{t("createProject.createProjectTitle")}</DialogTitle>
+          <DialogTitle>{t("createProjectTitle")}</DialogTitle>
         </DialogHeader>
         <p className="text-sm text-secondary">
-          {t("createProject.createProjectDescription")}
+          {t("createProjectDescription")}
         </p>
         <Form {...form}>
           <form
@@ -93,7 +94,7 @@ export function CreateProjectModal() {
                   <FormLabel>Project Name</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder={t("createProject.projectNamePlaceholder")}
+                      placeholder={t("projectNamePlaceholder")}
                       {...field}
                     />
                   </FormControl>
@@ -107,10 +108,10 @@ export function CreateProjectModal() {
                 onClick={() => setOpen(false)}
                 type="button"
               >
-                {t("createProject.cancel")}
+                {t("cancel")}
               </Button>
               <Button type="submit" size="sm">
-                {t("createProject.createProjectButton")}
+                {t("createProjectButton")}
               </Button>
             </div>
           </form>

@@ -1,2 +1,0 @@
-ALTER TABLE `translations` ADD `translation_key` text NOT NULL;--> statement-breakpoint
-CREATE UNIQUE INDEX `unique_translation_idx` ON `translations` (`project_id`,`translation_key`,`target_language`);

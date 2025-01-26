@@ -6,10 +6,10 @@ import type { ChartConfig } from "@/components/ui/chart";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { usePeriod } from "@/hooks/use-period";
-import { useI18n } from "@/locales/client";
 import { trpc } from "@/trpc/client";
 import NumberFlow from "@number-flow/react";
 import { endOfWeek, format, parseISO, startOfWeek } from "date-fns";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import { PeriodSelector } from "../period-selector";
@@ -35,7 +35,7 @@ interface CustomTooltipProps {
 }
 
 function TooltipContent({ active, payload }: CustomTooltipProps) {
-  const t = useI18n();
+  const t = useTranslations("analytics");
 
   if (active && payload && payload.length) {
     return (
@@ -51,7 +51,7 @@ function TooltipContent({ active, payload }: CustomTooltipProps) {
               style={{ background: "var(--color-value)" }}
             />
             <span>
-              {payload[0].value} {t("analytics.key")}
+              {payload[0].value} {t("key")}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ function TooltipContent({ active, payload }: CustomTooltipProps) {
               style={{ background: "var(--color-value2)" }}
             />
             <span>
-              {payload[1].value} {t("analytics.document")}
+              {payload[1].value} {t("document")}
             </span>
           </div>
         </div>
@@ -72,7 +72,7 @@ function TooltipContent({ active, payload }: CustomTooltipProps) {
 }
 
 export function AnalyticsChart() {
-  const t = useI18n();
+  const t = useTranslations("analytics");
   const { organization, project } = useParams();
   const { period: periodValue } = usePeriod();
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -107,18 +107,13 @@ export function AnalyticsChart() {
     ...displayData.map((item) => item.keyCount + item.documentCount),
   );
 
-  const yAxisWidth = Math.max(
-    String(maxValue).length * 8, // 8px per character at fontSize 12
-    30,
-  );
+  const yAxisWidth = Math.max(String(maxValue).length * 12, 30);
 
   return (
     <Card className="w-full border-none bg-noise">
       <CardHeader className="flex justify-between flex-row">
         <div className="text-primary text-lg font-normal flex flex-col">
-          <span className="text-muted-foreground">
-            {t("translations.header")}
-          </span>
+          <span className="text-muted-foreground">{t("header")}</span>
           <div className="flex gap-4">
             <span className="text-primary text-2xl mt-2">
               <NumberFlow value={totalKeys} />

@@ -1,6 +1,7 @@
+import { UTCDate } from "@date-fns/utc";
 import { createId } from "@paralleldrive/cuid2";
 import { and, eq, ne } from "drizzle-orm";
-import { db } from "..";
+import { connectDb } from "..";
 import { members, organizations, users } from "../schema";
 
 export const updateUser = async ({
@@ -12,19 +13,24 @@ export const updateUser = async ({
   name?: string;
   email?: string;
 }) => {
-  return db
+  const db = await connectDb();
+
+  const [user] = await db
     .update(users)
     .set({
       ...(name && { name }),
       ...(email && { email }),
-      updatedAt: new Date(),
+      updatedAt: new UTCDate(),
     })
     .where(eq(users.id, id))
-    .returning()
-    .get();
+    .returning();
+
+  return user;
 };
 
 export const deleteUser = async ({ id }: { id: string }) => {
+  const db = await connectDb();
+
   // Get all organizations where user is a member
   const userOrgs = await db
     .select({
@@ -32,8 +38,7 @@ export const deleteUser = async ({ id }: { id: string }) => {
       role: members.role,
     })
     .from(members)
-    .where(eq(members.userId, id))
-    .all();
+    .where(eq(members.userId, id));
 
   // For each org where user is owner, check if they're the last owner
   for (const org of userOrgs) {
@@ -47,8 +52,7 @@ export const deleteUser = async ({ id }: { id: string }) => {
             eq(members.role, "owner"),
             ne(members.userId, id),
           ),
-        )
-        .all();
+        );
 
       // If no other owners, delete the organization
       if (otherOwners.length === 0) {
@@ -60,18 +64,30 @@ export const deleteUser = async ({ id }: { id: string }) => {
   }
 
   // Finally delete the user
-  return db.delete(users).where(eq(users.id, id)).returning().get();
+  const [deletedUser] = await db
+    .delete(users)
+    .where(eq(users.id, id))
+    .returning();
+
+  return deletedUser;
 };
 
 export const getUserById = async ({ id }: { id: string }) => {
-  return db.select().from(users).where(eq(users.id, id)).get();
+  const db = await connectDb();
+
+  const [user] = await db.select().from(users).where(eq(users.id, id));
+
+  return user;
 };
 
 export const updateUserApiKey = async (userId: string) => {
-  return db
+  const db = await connectDb();
+
+  const [user] = await db
     .update(users)
     .set({ apiKey: `user_${createId()}` })
     .where(eq(users.id, userId))
-    .returning()
-    .get();
+    .returning();
+
+  return user;
 };

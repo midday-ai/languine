@@ -1,30 +1,18 @@
 import { CLI_TOKEN_NAME, saveCLISession } from "@/lib/auth/cli";
-import { getSession } from "@/lib/session";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+import { getSession } from "@languine/supabase/session";
 import { NextResponse } from "next/server";
-
-const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(5, "60s"),
-});
 
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ token: string }> },
 ) {
-  const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
-  const { success } = await ratelimit.limit(ip);
-
-  if (!success) {
-    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
-  }
-
   const { token } = await params;
 
-  const session = await getSession();
+  const {
+    data: { session },
+  } = await getSession();
 
-  if (!session?.data) {
+  if (!session) {
     const response = NextResponse.redirect(new URL("/login", request.url), {
       status: 302,
     });
@@ -38,8 +26,8 @@ export async function GET(
     return response;
   }
 
-  if (session?.data?.session) {
-    await saveCLISession(session.data.session, token);
+  if (session) {
+    await saveCLISession(session, token);
   }
 
   const response = NextResponse.redirect(new URL("/cli/success", request.url), {

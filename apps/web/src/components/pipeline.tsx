@@ -1,19 +1,19 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function Pipeline() {
-  const t = useI18n();
+  const t = useTranslations("pipeline");
 
   return (
     <div>
       <h2 className="text-sm font-regular mb-4">
-        {t("pipeline.title")}{" "}
+        {t("title")}{" "}
         <span className="text-secondary text-xs relative -top-1">
-          {t("pipeline.pro")}
+          {t("pro")}
         </span>
       </h2>
-      <p className="text-secondary text-sm">{t("pipeline.description")}</p>
+      <p className="text-secondary text-sm">{t("description")}</p>
 
       <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre

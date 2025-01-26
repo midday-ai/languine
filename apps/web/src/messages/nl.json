@@ -1,0 +1,572 @@
+{
+  "header": {
+    "pricing": "Prijzen",
+    "docs": "Documentatie",
+    "signIn": "Inloggen",
+    "goToApp": "Ga naar app"
+  },
+  "hero": {
+    "title": "Geautomatiseerde lokalisatie-infrastructuur voor uw applicaties",
+    "description": "Stroomlijn uw lokalisatieproces met een AI-aangedreven CLI en pijplijn ontworpen om vertalingen voor ontwikkelaars te automatiseren."
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "tuning": "Afstemming",
+    "settings": "Instellingen",
+    "pricing": "Prijzen",
+    "docs": "Documentatie",
+    "account": "Account"
+  },
+  "getStarted": {
+    "heading": "Aan de slag",
+    "title": "Geautomatiseerde lokalisatie voor uw applicaties",
+    "description": "Stroomlijn uw lokalisatieproces met een AI-aangedreven CLI en pijplijn ontworpen om vertalingen voor ontwikkelaars te automatiseren.",
+    "button": {
+      "startAutomating": "Begin met automatiseren",
+      "readDocumentation": "Lees documentatie"
+    }
+  },
+  "companies": {
+    "title": "Gebruikt door",
+    "addYourCompany": "+ Voeg uw bedrijf toe"
+  },
+  "activity": {
+    "title": "Activiteit",
+    "loading": "Laden",
+    "noResults": "Geen resultaten voor '{search}'",
+    "clearSearch": "Wis zoekopdracht",
+    "loadMore": "Toon meer",
+    "type": {
+      "key": "Sleutel",
+      "document": "Document"
+    }
+  },
+  "features": {
+    "title": "Functies",
+    "fullyOpenSource": "Volledig open source",
+    "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en gemeenschapsbijdragen mogelijk maakt.",
+    "noVendorLockIn": "Geen vendor lock-in",
+    "noVendorLockInDescription": "We sluiten u niet op in een specifieke service, gebruik uw eigen LLM's.",
+    "presetsForExpo": "Presets voor Expo",
+    "presetsForExpoDescription": "We bieden presets voor Expo, zodat u snel aan de slag kunt.",
+    "presetForReactNative": "Preset voor React Native",
+    "presetForReactNativeDescription": "We bieden een preset voor React Native, zodat u snel aan de slag kunt.",
+    "presetForReactEmail": "React Email Bibliotheek",
+    "presetForReactEmailDescription": "We hebben een i18n-bibliotheek gemaakt voor React Email.",
+    "readyForI18nLibraries": "Klaar voor i18n-bibliotheken",
+    "readyForI18nLibrariesDescription": "We ondersteunen alle bibliotheken, inclusief de meest populaire (next-intl, react-i18next, react-intl, etc)."
+  },
+  "info": {
+    "title": "Behandelt elk aspect van het lokaliseren van uw app, inclusief",
+    "smartTranslation": {
+      "title": "Slimme Vertaling",
+      "intelligentTranslation": "Intelligente vertaling met contextbewustzijn",
+      "brandVoice": "Consistentie in merkstem en toon",
+      "terminology": "Terminologiebeheer",
+      "linguisticFeatures": "Geavanceerde linguïstische functies",
+      "realtimeUpdates": "Real-time vertalingsupdates"
+    },
+    "implementation": {
+      "title": "Implementatie",
+      "quickSetup": "Snelle setup en integratie",
+      "fileFormat": "Bestandsformaatbehandeling",
+      "contentStructure": "Organisatie van inhoudsstructuur",
+      "assetOrganization": "Organisatie van middelen"
+    },
+    "developer": {
+      "title": "Ontwikkelaarservaring",
+      "cli": "Command-line interface",
+      "cicd": "CI/CD-integratie",
+      "versionControl": "Versiebeheer",
+      "workflow": "Ontwikkelaarswerkstroom",
+      "documentation": "Uitgebreide documentatie"
+    }
+  },
+  "login": {
+    "title": "Inloggen",
+    "github": "Inloggen met GitHub",
+    "google": "Inloggen met Google",
+    "footer": "Automatiseer uw lokalisatie.",
+    "description": "Log in om uw lokalisatie in seconden te automatiseren.",
+    "terms": {
+      "text": "Door in te loggen gaat u akkoord met onze",
+      "termsOfService": "Servicevoorwaarden",
+      "and": "en",
+      "privacyPolicy": "Privacybeleid"
+    }
+  },
+  "translations": {
+    "header": "Vertaalde sleutels"
+  },
+  "userMenu": {
+    "account": "Accountinstellingen",
+    "signOut": "Uitloggen",
+    "createTeam": "Team aanmaken",
+    "homepage": "Startpagina",
+    "team": "Teaminstellingen"
+  },
+  "teamSelector": {
+    "addProject": "Project aanmaken",
+    "createProjectTitle": "Een nieuw project aanmaken",
+    "projectNamePlaceholder": "Projectnaam",
+    "createProjectButton": "Project aanmaken",
+    "pro": "Pro",
+    "project": "Project",
+    "teams": "Teams",
+    "createTeam": "Team aanmaken",
+    "createTeamTitle": "Een nieuw team aanmaken",
+    "teamNamePlaceholder": "Teamnaam",
+    "createTeamButton": "Team aanmaken"
+  },
+  "coming_soon": {
+    "title": "Languine is in Early Access",
+    "description": "We zijn momenteel in early access. Neem contact op met",
+    "cta": "op X om early access te krijgen."
+  },
+  "account": {
+    "fullName": {
+      "title": "Volledige Naam",
+      "description": "Uw volledige naam zoals deze op het platform zal verschijnen.",
+      "placeholder": "Voer uw volledige naam in"
+    },
+    "email": {
+      "title": "E-mailadres",
+      "description": "Het e-mailadres dat aan uw account is gekoppeld.",
+      "placeholder": "Voer uw e-mailadres in"
+    },
+    "apiKey": {
+      "title": "API-sleutel",
+      "description": "Uw persoonlijke API-sleutel voor toegang tot de Languine API en vanaf de CLI."
+    },
+    "deleteAccount": {
+      "title": "Account verwijderen",
+      "description": "Verwijder uw account en alle bijbehorende gegevens permanent. Deze actie kan niet ongedaan worden gemaakt.",
+      "button": "Account verwijderen"
+    }
+  },
+  "copyInstall": {
+    "copied": "Gekopieerd naar klembord"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Weet u het zeker?",
+      "description": "Deze actie kan niet ongedaan worden gemaakt. Typ DELETE om te bevestigen.",
+      "placeholder": "Typ DELETE om te bevestigen",
+      "confirm": "Bevestig verwijderen",
+      "cancel": "Annuleren"
+    }
+  },
+  "pipeline": {
+    "title": "Workflow (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Onze vertaalmachine integreert naadloos in uw bestaande CI/CD-pijplijn en vertaalt uw codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdbranch en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
+  },
+  "settings": {
+    "badRequest": "Ongeldig verzoek",
+    "badRequestDescription": "Organisatie moet minimaal één eigenaar hebben. Draag eigendom over naar een ander lid voordat u deze eigenaar verwijdert.",
+    "permissionDenied": "Toestemming geweigerd",
+    "permissionDeniedDescription": "U moet eigenaar van het team zijn om deze actie uit te voeren",
+    "deleteTeamTitle": "Team verwijderen",
+    "deleteTeamDescription": "Kan organisatie niet verwijderen wanneer u het enige lid bent, verwijder in plaats daarvan uw account",
+    "saved": "Instellingen opgeslagen",
+    "savedDescription": "Uw wijzigingen zijn succesvol opgeslagen",
+    "error": "Er is iets misgegaan",
+    "errorDescription": "Probeer het opnieuw of neem contact op met ondersteuning",
+    "addTeam": "Team aanmaken",
+    "apiKey": {
+      "updated": "API-sleutel bijgewerkt",
+      "updatedDescription": "Uw API-sleutel is succesvol bijgewerkt en naar uw klembord gekopieerd.",
+      "title": "API-sleutel bijwerken",
+      "description": "Weet u zeker dat u een nieuwe API-sleutel wilt genereren? De oude sleutel werkt onmiddellijk niet meer.",
+      "cancel": "Annuleren",
+      "continue": "Doorgaan"
+    },
+    "tabs": {
+      "project": "Project",
+      "account": "Account",
+      "team": "Team",
+      "provider": "Provider",
+      "billing": "Facturering"
+    },
+    "addProject": "Project aanmaken",
+    "project": {
+      "name": {
+        "title": "Projectnaam",
+        "description": "De naam van uw project",
+        "placeholder": "Voer projectnaam in"
+      },
+      "id": {
+        "title": "Project-ID",
+        "description": "Uw unieke projectidentificatie",
+        "placeholder": "Project-ID"
+      },
+      "delete": {
+        "title": "Project verwijderen",
+        "description": "Verwijder dit project en alle bijbehorende gegevens permanent",
+        "button": "Project verwijderen"
+      }
+    },
+    "save": "Opslaan",
+    "team": {
+      "name": {
+        "title": "Teamnaam",
+        "description": "De naam van uw team",
+        "placeholder": "Voer teamnaam in"
+      },
+      "billing": {
+        "title": "Factureringsplan",
+        "description": "Beheer het factureringsplan van uw team",
+        "free": "Gratis",
+        "pro": "Pro",
+        "unlimited": "Onbeperkt"
+      },
+      "apiKey": {
+        "title": "Team API-sleutel",
+        "description": "API-sleutel voor teamtoegang, gebruik deze vanuit uw CI/CD-pijplijn samen met de Project-ID",
+        "placeholder": "Team API-sleutel"
+      },
+      "members": {
+        "leaveTeamConfirm": "Team verlaten",
+        "leaveTeamDescription": "Weet u zeker dat u dit team wilt verlaten?",
+        "cancel": "Annuleren",
+        "leaveTeam": "Team verlaten",
+        "invite": "Lid uitnodigen",
+        "title": "Leden",
+        "pendingInvitations": "In afwachting van uitnodigingen",
+        "removeMember": "Lid verwijderen",
+        "removeMemberConfirm": "Lid verwijderen",
+        "removeMemberDescription": "Weet u zeker dat u dit lid wilt verwijderen?",
+        "filterPlaceholder": "Filter leden...",
+        "allRoles": "Alle rollen",
+        "date": "Datum",
+        "selectAll": "{count} geselecteerd",
+        "noPendingInvitations": "Geen uitnodigingen in afwachting",
+        "noResults": "Geen leden gevonden",
+        "tryDifferentSearch": "Probeer een andere zoekopdracht",
+        "inviteMembers": "Nodig leden uit om samen te werken",
+        "deleteInvite": "Uitnodiging verwijderen",
+        "deleteInviteDescription": "Verwijder de uitnodiging",
+        "invitedBy": "Uitgenodigd door {name}",
+        "deleteInviteSuccess": "Uitnodiging verwijderd",
+        "deleteInviteError": "Verwijderen van uitnodiging mislukt",
+        "removeMemberSuccess": "Lid verwijderd",
+        "removeMemberError": "Verwijderen van lid mislukt",
+        "removeMemberSuccessDescription": "Lid is succesvol verwijderd",
+        "removeMemberErrorDescription": "Verwijderen van lid mislukt",
+        "roles": {
+          "owner": "Eigenaar",
+          "member": "Lid"
+        },
+        "dateSort": {
+          "newest": "Nieuwste",
+          "oldest": "Oudste"
+        },
+        "deleteInviteConfirm": "Uitnodiging verwijderen"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Algemeen",
+    "translationMemory": {
+      "title": "Vertaalgeheugen",
+      "description": "Gebruik vertaalgeheugen om consistentie en efficiëntie te verbeteren"
+    },
+    "qualityChecks": {
+      "title": "Kwaliteitscontroles",
+      "description": "Schakel automatische kwaliteitscontroles in voor vertalingen"
+    },
+    "contextDetection": {
+      "title": "Contextdetectie",
+      "description": "Detecteer en behoud context automatisch in vertalingen"
+    },
+    "styleGuide": "Stijlgids",
+    "lengthControl": {
+      "title": "Lengtecontrole",
+      "description": "Beheer de lengte van vertaalde tekst",
+      "options": {
+        "flexible": "Flexibel",
+        "strict": "Strikt",
+        "exact": "Exact",
+        "loose": "Los"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Inclusieve taal",
+      "description": "Zorg ervoor dat vertalingen inclusieve taal gebruiken"
+    },
+    "formality": {
+      "title": "Formaliteit",
+      "description": "Beheer het formaliteitsniveau van vertalingen",
+      "options": {
+        "casual": "Informeel",
+        "formal": "Formeel",
+        "neutral": "Neutraal"
+      }
+    },
+    "brandName": {
+      "title": "Merknaam",
+      "description": "Stel uw merknaam in voor consistent gebruik",
+      "placeholder": "Voer uw merknaam in"
+    },
+    "brandVoice": {
+      "title": "Merkstem",
+      "description": "Definieer uw merkstem en toon",
+      "placeholder": "Beschrijf uw merkstem..."
+    },
+    "toneOfVoice": {
+      "title": "Toon van stem",
+      "description": "Definieer de toon die in vertalingen wordt gebruikt",
+      "options": {
+        "casual": "Informeel",
+        "formal": "Formeel",
+        "friendly": "Vriendelijk",
+        "professional": "Professioneel",
+        "playful": "Speels",
+        "serious": "Serieus",
+        "confident": "Zelfverzekerd",
+        "humble": "Nederig",
+        "direct": "Direct",
+        "diplomatic": "Diplomatiek"
+      }
+    },
+    "brand": "Merk",
+    "emotiveIntent": {
+      "title": "Emotionele intentie",
+      "description": "Stel de emotionele toon in voor vertalingen",
+      "options": {
+        "neutral": "Neutraal",
+        "positive": "Positief",
+        "empathetic": "Empathisch",
+        "professional": "Professioneel",
+        "friendly": "Vriendelijk",
+        "enthusiastic": "Enthousiast"
+      }
+    },
+    "domainExpertise": {
+      "title": "Domeinexpertise",
+      "description": "Specificeer de domeincontext voor vertalingen",
+      "options": {
+        "general": "Algemeen",
+        "technical": "Technisch",
+        "medical": "Medisch",
+        "legal": "Juridisch",
+        "financial": "Financieel",
+        "marketing": "Marketing",
+        "academic": "Academisch"
+      }
+    },
+    "idioms": {
+      "title": "Idioom",
+      "description": "Behandel idiomatische uitdrukkingen op de juiste manier"
+    },
+    "terminology": {
+      "title": "Terminologie",
+      "description": "Beheer gespecialiseerde terminologie en woordenlijsten"
+    },
+    "culturalAdaptation": {
+      "title": "Culturele aanpassing",
+      "description": "Pas inhoud aan voor culturele geschiktheid"
+    }
+  },
+  "pricing": {
+    "title": "Eenvoudige prijzen",
+    "free": {
+      "title": "Gratis",
+      "price": "Gratis",
+      "keys_limit": "Tot 100 sleutels",
+      "description": "Perfect om uit te proberen",
+      "features": {
+        "unlimited_projects": "Onbeperkte projecten",
+        "fine_tuning": "Afstemoopties",
+        "overrides": "Vertalingsoverrides",
+        "analytics": "Analytics",
+        "context_memory": "Contextgeheugen",
+        "community_support": "Gemeenschapsondersteuning",
+        "keys_limit": "Tot 100 sleutels",
+        "docs_limit": "Tot 5 documenten",
+        "unlimited_languages": "Onbeperkte talen"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Alles in Gratis, plus:",
+      "features": {
+        "github_action": "GitHub Action-integratie",
+        "latest_features": "Vroege toegang tot de nieuwste functies",
+        "priority_support": "Prioritaire ondersteuning",
+        "priority_queues": "Prioritaire vertaalwachtrijen",
+        "keys_limit": "Vanaf 10.000 sleutels",
+        "docs_limit": "Vanaf 50 documenten"
+      }
+    },
+    "cta": "Begin met automatiseren",
+    "keys_limit_explanation": "Vertaalde sleutel: Als u 20 bronsleutels heeft (zoals 'Aanmelden' of 'Welkom!') en ze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels x 5 talen)."
+  },
+  "createTeam": {
+    "teamName": "Teamnaam",
+    "teamNamePlaceholder": "Voer teamnaam in",
+    "createTeamButton": "Team aanmaken",
+    "cancel": "Annuleren",
+    "createTeamDescription": "Maak een nieuw team aan om uw projecten en medewerkers te beheren."
+  },
+  "createProject": {
+    "createProjectTitle": "Een nieuw project aanmaken",
+    "projectNamePlaceholder": "Voer projectnaam in",
+    "createProjectButton": "Project aanmaken",
+    "cancel": "Annuleren",
+    "createProjectDescription": "Maak een nieuw project aan om uw lokalisatie te automatiseren."
+  },
+  "invite": {
+    "inviteMember": "Lid uitnodigen",
+    "inviteDescription": "Nodig een lid uit voor uw team",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Voer e-mail in",
+    "cancel": "Annuleren",
+    "submit": "Indienen",
+    "success": {
+      "title": "Uitnodiging verzonden",
+      "description": "Uitnodiging succesvol verzonden naar {email}"
+    },
+    "error": {
+      "title": "Fout",
+      "description": "Verzenden van uitnodiging mislukt. Probeer het opnieuw."
+    },
+    "validation": {
+      "invalidEmail": "Voer een geldig e-mailadres in"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Languine CLI instellen",
+        "description": "Installeer en configureer de Languine CLI om vertalingen te beheren"
+      },
+      "2": {
+        "title": "Vertalingen pushen",
+        "description": "Wachten tot de vertalingen worden gepusht"
+      },
+      "3": {
+        "title": "Documentatie",
+        "description": "Bekijk onze documentatie voor gedetailleerde handleidingen en best practices",
+        "link": "documentatie"
+      }
+    },
+    "info": {
+      "description": "Hulp nodig? Bekijk onze",
+      "link": "documentatie",
+      "description_2": "voor gedetailleerde handleidingen en best practices."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Languine CLI Login Succes",
+      "description": "Languine CLI is succesvol geverifieerd als:",
+      "description_2": "U kunt dit tabblad nu sluiten en terugkeren naar de CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Zoeken"
+  },
+  "periods": {
+    "daily": "Dagelijks",
+    "weekly": "Wekelijks",
+    "monthly": "Maandelijks",
+    "selectPeriod": "Selecteer periode"
+  },
+  "language": {
+    "en": "Engels",
+    "es": "Spaans",
+    "fr": "Frans",
+    "de": "Duits",
+    "it": "Italiaans",
+    "pt": "Portugees",
+    "zh": "Chinees",
+    "ja": "Japans",
+    "ko": "Koreaans",
+    "ar": "Arabisch",
+    "hi": "Hindi",
+    "tr": "Turks",
+    "nl": "Nederlands",
+    "pl": "Pools",
+    "no": "Noors",
+    "da": "Deens",
+    "sv": "Zweeds",
+    "fi": "Fins",
+    "vi": "Vietnamees"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "tuning": "Afstemming",
+    "settings": "Instellingen",
+    "pricing": "Prijzen",
+    "docs": "Documentatie",
+    "account": "Account"
+  },
+  "billing": {
+    "title": "Facturering"
+  },
+  "analytics": {
+    "key": "Vertaalde sleutels",
+    "document": "Vertaalde documenten",
+    "header": "Vertalingen",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Dec",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mrt",
+      "04": "Apr",
+      "05": "Mei",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "what_is_languine": {
+      "question": "Wat is Languine?",
+      "answer": "Languine is een AI-aangedreven lokalisatieplatform dat u helpt bij het automatiseren van de vertaling van uw applicaties. Het biedt functies zoals afstemoopties, vertalingsoverrides, analytics en contextgeheugen om hoogwaardige vertalingen te garanderen."
+    },
+    "key_limit": {
+      "question": "Hoe werkt de sleutellimiet?",
+      "answer": "Een vertaalde sleutel wordt geteld wanneer u een bronsleutel vertaalt in een doeltaal. Als u bijvoorbeeld 20 bronsleutels heeft en ze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels × 5 talen)."
+    },
+    "supported_languages": {
+      "question": "Welke talen worden ondersteund?",
+      "answer": "Languine ondersteunt meer dan 100 talen in alle plannen. Hoewel onze AI-aangedreven vertalingen het beste werken met grote talen, streven we ernaar om kwaliteitsvertalingen te bieden voor alle ondersteunde talen. Als u specifieke taalvereisten heeft of vragen heeft over de vertaalkwaliteit voor bepaalde talen, neem dan contact op met ons ondersteuningsteam."
+    },
+    "github_action": {
+      "question": "Hoe werkt de GitHub Action-integratie?",
+      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt u in staat om uw vertaalworkflow direct in uw CI/CD-pijplijn te automatiseren. Wanneer u wijzigingen naar uw repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
+    },
+    "support": {
+      "question": "Wat voor soort ondersteuning bieden jullie?",
+      "answer": "Gratis gebruikers krijgen toegang tot gemeenschapsondersteuning, terwijl Pro-gebruikers prioritaire ondersteuning krijgen met snellere reactietijden en toegewijde assistentie voor hun vertaalbehoeften."
+    },
+    "open_source": {
+      "question": "Is Languine open source?",
+      "answer": "Ja! Languine is volledig open source en beschikbaar op GitHub. U kunt bijdragen aan het project, problemen melden, functies voorstellen en de code inspecteren. We geloven in transparantie en openbaar bouwen."
+    },
+    "open_source_pricing": {
+      "question": "Bieden jullie speciale prijzen voor open source-projecten?",
+      "answer": "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als u een open source-project onderhoudt, kunt u toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over uw project, en we zorgen ervoor dat u een Pro-account met korting krijgt. Dit is onze manier om iets terug te doen voor de gemeenschap die ons werk mogelijk maakt."
+    },
+    "cancel_subscription": {
+      "question": "Hoe annuleer ik mijn abonnement?",
+      "answer": "U kunt uw abonnement op elk moment annuleren vanuit uw accountinstellingen. Navigeer naar Facturering > Plan wijzigen. Uw abonnement blijft actief tot het einde van uw huidige factureringsperiode, waarna u wordt overgezet naar het Gratis plan."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Niveau {tier}",
+    "keys": "Vertaalde sleutels",
+    "documents": "Vertaalde documenten",
+    "period": "ma",
+    "keys_prefix": "",
+    "keys_suffix": " sleutels",
+    "docs_prefix": "",
+    "docs_suffix": " docs"
+  }
+}

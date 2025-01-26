@@ -1,16 +1,17 @@
 "use client";
 
-import { authClient } from "@/lib/auth/client";
-import { useI18n } from "@/locales/client";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+// import { useSession } from "@/contexts/session";
+import { useTranslations } from "next-intl";
 
 export function SignIn() {
-  const t = useI18n();
-  const { data: session } = authClient.useSession();
+  const t = useTranslations("header");
+  // const { session } = useSession();
 
   return (
     <Link href="/login">
-      {session ? t("header.goToApp") : t("header.signIn")}
+      {t("signIn")}
+      {/* {session ? t("goToApp") : t("signIn")} */}
     </Link>
   );
 }

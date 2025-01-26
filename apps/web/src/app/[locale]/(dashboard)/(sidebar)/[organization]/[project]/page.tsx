@@ -5,8 +5,8 @@ import {
 } from "@/components/charts/analytics";
 import { OnboardingSteps } from "@/components/onboarding-steps";
 import { SearchInput } from "@/components/search-input";
-import { getI18n } from "@/locales/server";
 import { HydrateClient, trpc } from "@/trpc/server";
+import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 
 export default async function Page({
@@ -19,7 +19,7 @@ export default async function Page({
     period?: "monthly" | "weekly" | "daily";
   }>;
 }) {
-  const t = await getI18n();
+  const t = await getTranslations();
   const { organization, project } = await params;
   const { q, period } = await searchParams;
 

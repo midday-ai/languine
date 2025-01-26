@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://languine.ai
+Sitemap: https://languine.ai/sitemap.xml

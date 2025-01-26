@@ -6,13 +6,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useChangeLocale, useCurrentLocale, useI18n } from "@/locales/client";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 import languineConfig from "../../languine.config";
 
 export function ChangeLanguage() {
-  const t = useI18n();
-  const changeLocale = useChangeLocale();
-  const currentLocale = useCurrentLocale();
+  const t = useTranslations("language");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const locales = [
     languineConfig.locale.source,
@@ -25,22 +27,20 @@ export function ChangeLanguage() {
         type="button"
         className="items-center gap-2 text-secondary outline-none uppercase text-xs font-medium hidden md:flex"
       >
-        [{currentLocale}]
+        [{locale}]
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="start"
         sideOffset={10}
         className="max-h-[300px] overflow-y-auto"
       >
-        {locales.map((locale) => (
+        {locales.map((loc) => (
           <DropdownMenuItem
-            key={locale}
-            // @ts-ignore
-            onClick={() => changeLocale(locale)}
+            key={loc}
+            onClick={() => router.replace(pathname, { locale: loc })}
             className="uppercase text-xs"
           >
-            {/* @ts-ignore */}
-            {t(`language.${locale}`)}
+            {t(loc)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

@@ -1,13 +1,13 @@
 "use client";
 
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 
 export function Companies() {
-  const t = useI18n();
+  const t = useTranslations("companies");
 
   return (
     <div>
-      <h3>{t("companies.title")}</h3>
+      <h3>{t("title")}</h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
         <a
@@ -141,7 +141,7 @@ export function Companies() {
           rel="noreferrer"
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
-            <span className="text-xs">{t("companies.addYourCompany")}</span>
+            <span className="text-xs">{t("addYourCompany")}</span>
           </div>
         </a>
         <a
@@ -150,7 +150,7 @@ export function Companies() {
           rel="noreferrer"
         >
           <div className="h-[84px] border border-primary flex items-center justify-center">
-            <span className="text-xs">{t("companies.addYourCompany")}</span>
+            <span className="text-xs">{t("addYourCompany")}</span>
           </div>
         </a>
       </div>

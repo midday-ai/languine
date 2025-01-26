@@ -8,7 +8,6 @@ import {
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
-import { rateLimitMiddleware } from "../middlewares/ratelimits";
 import {
   isOrganizationMember,
   isOrganizationOwner,
@@ -38,7 +37,6 @@ export const projectRouter = createTRPCRouter({
     }),
 
   create: protectedProcedure
-    .use(rateLimitMiddleware)
     .input(
       z.object({
         name: z.string().min(1),
@@ -66,7 +64,6 @@ export const projectRouter = createTRPCRouter({
         name: z.string().min(1),
       }),
     )
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const project = await updateProject(input);
@@ -89,7 +86,6 @@ export const projectRouter = createTRPCRouter({
         settings: projectSettingsSchema,
       }),
     )
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const project = await updateProjectSettings(input);
@@ -111,7 +107,6 @@ export const projectRouter = createTRPCRouter({
         organizationId: z.string(),
       }),
     )
-    .use(rateLimitMiddleware)
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       const project = await deleteProject(input);

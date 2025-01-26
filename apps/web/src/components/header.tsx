@@ -2,9 +2,9 @@
 
 import { Logo } from "@/components/logo";
 import { SignIn } from "@/components/sign-in";
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
-import { useI18n } from "@/locales/client";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { Suspense } from "react";
 import { ChangeLanguage } from "./change-language";
@@ -12,12 +12,12 @@ import { GithubStars } from "./github-stars";
 import { MobileMenu } from "./mobile-menu";
 
 export function Header() {
-  const t = useI18n();
+  const t = useTranslations("header");
   const pathname = usePathname();
 
   const links = [
-    { href: "/pricing", label: t("header.pricing") },
-    { href: "https://git.new/languine", label: t("header.docs") },
+    { href: "/pricing", label: t("pricing") },
+    { href: "https://git.new/languine", label: t("docs") },
     {
       component: <SignIn />,
       className:
@@ -64,6 +64,7 @@ export function Header() {
                     pathname?.endsWith(link.href) && "text-primary",
                   )}
                   key={link.href}
+                  prefetch
                 >
                   {link.label}
                 </Link>

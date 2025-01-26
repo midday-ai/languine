@@ -4,11 +4,11 @@ import { CopyInput } from "@/components/copy-input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
-import { useI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import { parseAsInteger, useQueryState } from "nuqs";
 
 export function OnboardingSteps({ projectId }: { projectId: string }) {
-  const t = useI18n();
+  const t = useTranslations("onboarding");
   const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
 
   return (
@@ -25,12 +25,12 @@ export function OnboardingSteps({ projectId }: { projectId: string }) {
             >
               <CardHeader className="py-4">
                 <CardTitle className="text-sm">
-                  1. {t("onboarding.steps.1.title")}
+                  1. {t("steps.1.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-xs text-secondary">
-                  {t("onboarding.steps.1.description")}
+                  {t("steps.1.description")}
                 </p>
                 <CopyInput
                   value={`npx languine@latest init --p=${projectId}`}
@@ -56,16 +56,14 @@ export function OnboardingSteps({ projectId }: { projectId: string }) {
             onClick={() => setStep(2)}
           >
             <CardHeader className="py-4">
-              <CardTitle className="text-sm">
-                2. {t("onboarding.steps.2.title")}
-              </CardTitle>
+              <CardTitle className="text-sm">2. {t("steps.2.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className=" flex items-center gap-1.5">
                 {step === 2 && <Loader />}
 
                 <p className="text-xs text-secondar">
-                  {t("onboarding.steps.2.description")}
+                  {t("steps.2.description")}
                 </p>
               </div>
               <CopyInput
@@ -76,16 +74,16 @@ export function OnboardingSteps({ projectId }: { projectId: string }) {
           </Card>
 
           <p className="text-xs text-secondary text-center mt-10 leading-6">
-            {t("onboarding.info.description")}{" "}
+            {t("info.description")}{" "}
             <a
               href="https://languine.ai/docs"
               className="underline hover:opacity-70"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t("onboarding.info.link")}
+              {t("info.link")}
             </a>{" "}
-            {t("onboarding.info.description_2")}
+            {t("info.description_2")}
           </p>
         </div>
       </div>
