@@ -4,6 +4,7 @@ import { UTCDate } from "@date-fns/utc";
 import { createClient } from "@languine/supabase/server";
 import { getSession } from "@languine/supabase/session";
 import { setSkipSessionRefreshCookie } from "@languine/supabase/utils";
+import { waitUntil } from "@vercel/functions";
 import { differenceInSeconds } from "date-fns";
 import { NextResponse } from "next/server";
 
@@ -33,14 +34,16 @@ export async function GET(request: Request) {
         ) < 10
       ) {
         try {
-          await resend.emails.send({
-            from: "Languine <hello@emails.languine.ai>",
-            to: session.user.email!,
-            subject: "Welcome to Languine",
-            react: WelcomeEmail({
-              name: session.user.user_metadata.full_name,
+          waitUntil(
+            resend.emails.send({
+              from: "Languine <hello@emails.languine.ai>",
+              to: session.user.email!,
+              subject: "Welcome to Languine",
+              react: WelcomeEmail({
+                name: session.user.user_metadata.full_name,
+              }),
             }),
-          });
+          );
         } catch (error) {
           console.error("Error sending welcome email", error);
         }

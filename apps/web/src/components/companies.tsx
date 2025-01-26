@@ -136,7 +136,7 @@ export function Companies() {
           </div>
         </a>
         <a
-          href="https://fumadocs.vercel.app/?utm_source=languine"
+          href="https://github.com/midday-ai/languine/issues/new"
           target="_blank"
           rel="noreferrer"
         >

@@ -571,16 +571,18 @@
   },
   "docs": {
     "getting-started": "Getting Started",
+    "workflow": "Workflow",
+    "ci": "CI",
+    "presets": "Presets", 
+    "formats": "Formats",
+    "platform": "Platform",
     "introduction": "Introduction",
-    "installation": "Installation",
     "quickstart": "Quickstart",
-    "guides": "Guides",
+    "authentication": "Authentication",
     "configuration": "Configuration",
     "cli": "CLI",
-    "api": "API",
-    "advanced": "Advanced",
-    "custom-parsers": "Custom Parsers",
-    "workflows": "Workflows",
-    "self-hosting": "Self-Hosting"
+    "github-actions": "GitHub Actions",
+    "tuning": "Tuning",
+    "settings": "Settings"
   }
 }
