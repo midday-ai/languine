@@ -22,8 +22,8 @@ import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { z } from "zod";
+import { SubmitButton } from "../ui/submit-button";
 
 const formSchema = z.object({
   name: z.string().min(1, "Project name is required"),
@@ -66,6 +66,7 @@ export function CreateProjectModal() {
         organizationId,
       });
 
+      setOpen(false);
       form.reset();
     } catch (error) {
       console.error("Failed to create project:", error);
@@ -110,9 +111,9 @@ export function CreateProjectModal() {
               >
                 {t("cancel")}
               </Button>
-              <Button type="submit" size="sm">
+              <SubmitButton isSubmitting={createProject.isPending}>
                 {t("createProjectButton")}
-              </Button>
+              </SubmitButton>
             </div>
           </form>
         </Form>

@@ -23,6 +23,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { SubmitButton } from "../ui/submit-button";
 
 const formSchema = z.object({
   name: z.string().min(1, "Team name is required"),
@@ -37,6 +38,7 @@ export function CreateTeamModal() {
   const createTeam = trpc.organization.create.useMutation({
     onSuccess: (team) => {
       utils.organization.invalidate();
+
       router.replace(`/${team.id}/default`);
     },
   });
@@ -60,6 +62,7 @@ export function CreateTeamModal() {
         name: values.name,
       });
       form.reset();
+      setOpen(false);
     } catch (error) {
       console.error("Failed to create team:", error);
     }
@@ -98,9 +101,9 @@ export function CreateTeamModal() {
               >
                 {t("cancel")}
               </Button>
-              <Button type="submit" size="sm">
+              <SubmitButton isSubmitting={createTeam.isPending} size="sm">
                 {t("createTeamButton")}
-              </Button>
+              </SubmitButton>
             </div>
           </form>
         </Form>

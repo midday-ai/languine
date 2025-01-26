@@ -3,9 +3,24 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
+const COOKIE_NAME = "github-stars";
+const ONE_HOUR = 60 * 60 * 1000;
+
 const formatStars = (count: number | null) => {
   if (!count) return null;
   return count >= 1000 ? `${(count / 1000).toFixed(1)}k` : count;
+};
+
+const getCookie = (name: string): string | null => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(";").shift() ?? null;
+  return null;
+};
+
+const setCookie = (name: string, value: string) => {
+  const expires = new Date(Date.now() + ONE_HOUR).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
 };
 
 export function GithubStars() {
@@ -14,12 +29,22 @@ export function GithubStars() {
 
   useEffect(() => {
     async function fetchStars() {
+      const cachedStars = getCookie(COOKIE_NAME);
+
+      if (cachedStars) {
+        setStars(Number.parseInt(cachedStars, 10));
+        setIsLoaded(true);
+        return;
+      }
+
       try {
         const response = await fetch(
           "https://api.github.com/repos/midday-ai/languine",
         );
         const data = (await response.json()) as { stargazers_count: number };
         setStars(data.stargazers_count);
+        // Save to cookie for 1 hour
+        setCookie(COOKIE_NAME, data.stargazers_count.toString());
         setIsLoaded(true);
       } catch (error) {
         console.error("Error fetching GitHub stars:", error);

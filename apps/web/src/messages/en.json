@@ -568,5 +568,6 @@
     "keys_suffix": " keys",
     "docs_prefix": "",
     "docs_suffix": " docs"
-  }
+  },
+  "keys_limit_reached": "You have reached the maximum number of keys"
 }

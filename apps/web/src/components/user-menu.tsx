@@ -1,5 +1,6 @@
 "use client";
 
+import { signOut } from "@/actions/sign-out";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -10,23 +11,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSession } from "@/contexts/session";
 import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
-import { createClient } from "@languine/supabase/client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 export function UserMenu() {
   const t = useTranslations("userMenu");
   const { session } = useSession();
   const { setOpen: openCreateTeamModal } = useCreateTeamModal();
   const params = useParams();
-  const router = useRouter();
-  const supabase = createClient();
 
   const handleSignOut = async () => {
-    await supabase.auth.signOut();
-    router.push("/login");
+    await signOut();
   };
 
   return (

@@ -71,8 +71,26 @@ export async function checkTranslationLimits(
     };
   }
 
-  const nextTotalKeys =
-    totalKeys + input.content.length * input.targetLanguages.length;
+  const db = await connectDb();
+  const existingKeys = await db.query.translations.findMany({
+    where: (translations, { eq }) => {
+      return eq(translations.projectId, input.projectId);
+    },
+    columns: {
+      translationKey: true,
+    },
+  });
+
+  const existingKeysSet = new Set(
+    existingKeys.map((row) => row.translationKey),
+  );
+
+  // Count how many keys from input.content are not in existingKeysSet
+  const newKeysCount = input.content.filter(
+    (item) => !existingKeysSet.has(item.key),
+  ).length;
+
+  const nextTotalKeys = totalKeys + newKeysCount * input.targetLanguages.length;
   const currentKeysLimit =
     TIERS_MAX_KEYS[org.tier as keyof typeof TIERS_MAX_KEYS];
 

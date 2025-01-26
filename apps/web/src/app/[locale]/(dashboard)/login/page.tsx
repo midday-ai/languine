@@ -4,9 +4,11 @@ import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
 import { getOrganizationByUserId } from "@/db/queries/organization";
+import { PREFERENCES_COOKIE_NAME } from "@/lib/user-preferences";
 import { getSession } from "@languine/supabase/session";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -27,8 +29,28 @@ export default async function Page() {
   } = await getSession();
 
   if (session) {
-    const organization = await getOrganizationByUserId(session?.user.id);
+    const cookieStore = await cookies();
+    const preferenceCookie = cookieStore.get(PREFERENCES_COOKIE_NAME);
 
+    let preferences = {};
+
+    if (preferenceCookie) {
+      try {
+        preferences = JSON.parse(preferenceCookie.value);
+      } catch {}
+    }
+
+    const { lastOrganizationId, lastProjectSlug } = preferences as {
+      lastOrganizationId?: string;
+      lastProjectSlug?: string;
+    };
+
+    if (lastOrganizationId && lastProjectSlug) {
+      redirect(`/${lastOrganizationId}/${lastProjectSlug}`);
+    }
+
+    // Fallback to default organization if no preferences found
+    const organization = await getOrganizationByUserId(session?.user.id);
     redirect(`/${organization?.organization.id}/default`);
   }
 

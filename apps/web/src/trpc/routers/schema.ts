@@ -52,8 +52,8 @@ export type ProjectSettings = z.infer<typeof projectSettingsSchema>;
 
 export const analyticsSchema = z.object({
   projectSlug: z.string(),
-  startDate: z.date().optional(),
-  endDate: z.date().optional(),
+  startDate: z.string().optional(),
+  endDate: z.string().optional(),
   organizationId: z.string(),
   period: z.enum(["monthly", "weekly", "daily"]).optional().default("daily"),
 });

@@ -7,11 +7,18 @@ import {
 } from "@/components/ui/popover";
 import { useCreateProjectModal } from "@/hooks/use-create-project-modal";
 import { useCreateTeamModal } from "@/hooks/use-create-team-modal";
+import { saveUserPreferences } from "@/lib/user-preferences";
 import { trpc } from "@/trpc/client";
 import { Check, Plus, Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import * as React from "react";
+
+interface Project {
+  id: string;
+  name: string;
+  slug: string;
+}
 
 export function TeamSelector() {
   const t = useTranslations("teamSelector");
@@ -32,7 +39,7 @@ export function TeamSelector() {
     : null;
 
   const currentProject = currentTeam?.projects?.find(
-    (project: { slug: string }) => project.slug === projectSlug,
+    (project: Project) => project.slug === projectSlug,
   );
 
   const [open, setOpen] = React.useState(false);
@@ -40,6 +47,7 @@ export function TeamSelector() {
   const handleSetActiveTeam = async (organizationId: string) => {
     if (!organizationId) return;
 
+    saveUserPreferences({ lastOrganizationId: organizationId });
     router.push(`/${organizationId}/default`);
     setOpen(false);
   };
@@ -111,12 +119,16 @@ export function TeamSelector() {
               {t("project")}
             </div>
             <div className="flex-1 overflow-y-auto scrollbar-hide">
-              {currentTeam?.projects.map((project) => (
+              {currentTeam?.projects.map((project: Project) => (
                 <button
                   type="button"
                   key={project.id}
                   className="group flex w-full items-center justify-between p-2 px-4 text-xs hover:bg-muted relative"
                   onClick={() => {
+                    saveUserPreferences({
+                      lastOrganizationId: currentTeam.id,
+                      lastProjectSlug: project.slug,
+                    });
                     router.push(`/${currentTeam?.id}/${project.slug}`);
                     setOpen(false);
                   }}
