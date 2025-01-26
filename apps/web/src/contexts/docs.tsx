@@ -83,6 +83,25 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
       ],
     },
     {
+      title: t("hooks"),
+      items: [
+        { href: "/docs/biome", label: "Biome" },
+        { href: "/docs/prettier", label: "Prettier" },
+      ],
+    },
+    {
+      title: t("examples"),
+      items: [
+        { href: "/docs/fumadocs", label: "Fumadocs" },
+        { href: "/docs/expofile", label: "Expo" },
+        { href: "/docs/react-email", label: "React Email" },
+        { href: "/docs/i18next", label: "i18next" },
+        { href: "/docs/lingui", label: "Lingui" },
+        { href: "/docs/next-international", label: "Next International" },
+        { href: "/docs/react-i18next", label: "React i18next" },
+      ],
+    },
+    {
       title: t("platform"),
       items: [
         { href: "/docs/tuning", label: t("tuning") },

@@ -53,7 +53,7 @@ export function DocsSidebar() {
         <nav className="space-y-8 overflow-y-auto h-full pb-16">
           {sections.map((section) => (
             <div key={section.title}>
-              <h5 className="mb-4 text-sm font-medium">{section.title}</h5>
+              <h5 className="text-sm font-medium mb-4">{section.title}</h5>
               <ul className="space-y-2 pl-2">
                 {section.items.map((item) => (
                   <li key={item.href}>
@@ -87,28 +87,32 @@ export function DocsNavigation() {
     <div className="border-t mt-16">
       <div className="max-w-3xl mx-auto flex justify-between items-center py-6">
         {previousPage ? (
-          <OutlinedButton variant="secondary">
-            <Link
-              href={previousPage.href}
-              className="flex items-center gap-2 text-sm"
-            >
-              <MdArrowBack />
-              {previousPage.label}
-            </Link>
-          </OutlinedButton>
+          <div className="hover:-translate-x-1 transition-transform">
+            <OutlinedButton variant="secondary">
+              <Link
+                href={previousPage.href}
+                className="flex items-center gap-2 text-sm"
+              >
+                <MdArrowBack />
+                {previousPage.label}
+              </Link>
+            </OutlinedButton>
+          </div>
         ) : (
           <div />
         )}
         {nextPage ? (
-          <OutlinedButton variant="secondary">
-            <Link
-              href={nextPage.href}
-              className="flex items-center gap-2 text-sm"
-            >
-              {nextPage.label}
-              <MdArrowForward />
-            </Link>
-          </OutlinedButton>
+          <div className="hover:translate-x-1 transition-transform">
+            <OutlinedButton variant="secondary">
+              <Link
+                href={nextPage.href}
+                className="flex items-center gap-2 text-sm"
+              >
+                {nextPage.label}
+                <MdArrowForward />
+              </Link>
+            </OutlinedButton>
+          </div>
         ) : (
           <div />
         )}

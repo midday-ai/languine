@@ -572,7 +572,7 @@
   "docs": {
     "getting-started": "Getting Started",
     "workflow": "Workflow",
-    "ci": "CI",
+    "ci": "CI/CD",
     "presets": "Presets", 
     "formats": "Formats",
     "platform": "Platform",
@@ -583,6 +583,9 @@
     "cli": "CLI",
     "github-actions": "GitHub Actions",
     "tuning": "Tuning",
-    "settings": "Settings"
+    "settings": "Settings",
+    "hooks": "Hooks",
+    "examples": "Examples"
+
   }
 }

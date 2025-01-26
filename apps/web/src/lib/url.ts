@@ -3,5 +3,5 @@ export function getAppUrl() {
     return "http://localhost:3000";
   }
 
-  return process.env.VERCEL_URL;
+  return "https://languine.ai";
 }

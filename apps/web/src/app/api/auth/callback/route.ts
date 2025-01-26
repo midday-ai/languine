@@ -33,20 +33,16 @@ export async function GET(request: Request) {
           new UTCDate(session.user.created_at),
         ) < 10
       ) {
-        try {
-          waitUntil(
-            resend.emails.send({
-              from: "Languine <hello@emails.languine.ai>",
-              to: session.user.email!,
-              subject: "Welcome to Languine",
-              react: WelcomeEmail({
-                name: session.user.user_metadata.full_name,
-              }),
+        waitUntil(
+          resend.emails.send({
+            from: "Languine <hello@emails.languine.ai>",
+            to: session.user.email!,
+            subject: "Welcome to Languine",
+            react: WelcomeEmail({
+              name: session.user.user_metadata.full_name,
             }),
-          );
-        } catch (error) {
-          console.error("Error sending welcome email", error);
-        }
+          }),
+        );
       }
 
       const response = isLocalEnv
