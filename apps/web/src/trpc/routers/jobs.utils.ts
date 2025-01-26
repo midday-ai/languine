@@ -126,8 +126,9 @@ export function getTranslationTaskOptions(
     ? {
         queue: {
           name: "free-users",
-          concurrencyLimit: 1,
+          concurrencyLimit: 5,
         },
+        // General concurrency
         concurrencyKey: "free-users",
       }
     : {
@@ -135,6 +136,7 @@ export function getTranslationTaskOptions(
           name: "paid-users",
           concurrencyLimit: 5,
         },
+        // Per organization concurrency
         concurrencyKey: org.id,
       };
 

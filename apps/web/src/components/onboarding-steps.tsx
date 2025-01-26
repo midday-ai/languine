@@ -1,77 +1,19 @@
 "use client";
 
-import { CopyInput } from "@/components/copy-input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader } from "@/components/ui/loader";
-import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { parseAsInteger, useQueryState } from "nuqs";
+import Step1 from "./onboarding/step-1";
+import Step2 from "./onboarding/step-2";
 
 export function OnboardingSteps({ projectId }: { projectId: string }) {
   const t = useTranslations("onboarding");
-  const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
 
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-200px)] -ml-[70px]">
       <div className="max-w-xl w-full space-y-6">
         <div className="flex flex-col relative">
-          <div>
-            <Card
-              className={cn(
-                "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed cursor-pointer",
-                step < 1 ? "opacity-50" : "opacity-100 border-primary",
-              )}
-              onClick={() => setStep(1)}
-            >
-              <CardHeader className="py-4">
-                <CardTitle className="text-sm">
-                  1. {t("steps.1.title")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-xs text-secondary">
-                  {t("steps.1.description")}
-                </p>
-                <CopyInput
-                  value={`npx languine@latest init --p=${projectId}`}
-                  onCopy={() => setStep(2)}
-                  className="border-dashed !text-xs"
-                />
-              </CardContent>
-            </Card>
+          <Step1 projectId={projectId} />
 
-            <div
-              className={cn(
-                "w-[1px] h-8 border-l border-dashed mx-auto z-0",
-                step >= 2 ? "border-primary" : "border-border",
-              )}
-            />
-          </div>
-
-          <Card
-            className={cn(
-              "overflow-hidden bg-transparent transition-opacity duration-300 border-dashed cursor-pointer",
-              step < 2 ? "opacity-50" : "opacity-100 border-primary",
-            )}
-            onClick={() => setStep(2)}
-          >
-            <CardHeader className="py-4">
-              <CardTitle className="text-sm">2. {t("steps.2.title")}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className=" flex items-center gap-1.5">
-                {step === 2 && <Loader />}
-
-                <p className="text-xs text-secondar">
-                  {t("steps.2.description")}
-                </p>
-              </div>
-              <CopyInput
-                value="npx languine@latest translate"
-                className="border-dashed !text-xs"
-              />
-            </CardContent>
-          </Card>
+          <Step2 />
 
           <p className="text-xs text-secondary text-center mt-10 leading-6">
             {t("info.description")}{" "}
