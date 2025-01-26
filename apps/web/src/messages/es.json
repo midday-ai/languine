@@ -22,7 +22,7 @@
     "title": "Localización automatizada para tus aplicaciones",
     "description": "Optimiza tu proceso de localización con una CLI y una canalización impulsada por IA diseñada para automatizar traducciones para desarrolladores.",
     "button": {
-      "startAutomating": "Comenzar la automatización",
+      "startAutomating": "Comienza a automatizar",
       "readDocumentation": "Leer documentación"
     }
   },
@@ -76,7 +76,7 @@
     "developer": {
       "title": "Experiencia del desarrollador",
       "cli": "Interfaz de línea de comandos",
-      "cicd": "Integración de CI/CD",
+      "cicd": "Integración CI/CD",
       "versionControl": "Control de versiones",
       "workflow": "Flujo de trabajo del desarrollador",
       "documentation": "Documentación completa"
@@ -171,7 +171,7 @@
     "saved": "Configuración guardada",
     "savedDescription": "Tus cambios han sido guardados exitosamente",
     "error": "Algo salió mal",
-    "errorDescription": "Por favor, inténtalo de nuevo o contacta con soporte",
+    "errorDescription": "Por favor, intenta de nuevo o contacta al soporte",
     "addTeam": "Crear equipo",
     "apiKey": {
       "updated": "Clave API actualizada",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Clave API del equipo",
-        "description": "Clave API para acceso del equipo, úsala desde tu canalización CI/CD junto con el ID del proyecto",
+        "description": "Clave API para acceso del equipo, usa esto desde tu canalización CI/CD junto con el ID del proyecto",
         "placeholder": "Clave API del equipo"
       },
       "members": {
@@ -391,15 +391,15 @@
       "title": "Pro",
       "includes_free": "Todo en Gratis, más:",
       "features": {
-        "github_action": "Integración de GitHub Action",
+        "github_action": "Integración con GitHub Action",
         "latest_features": "Acceso anticipado a las últimas características",
         "priority_support": "Soporte prioritario",
         "priority_queues": "Colas de traducción prioritarias",
-        "keys_limit": "Desde 10 000 claves",
-        "docs_limit": "Desde 50 documentos"
+        "keys_limit": "A partir de 10 000 claves",
+        "docs_limit": "A partir de 50 documentos"
       }
     },
-    "cta": "Comenzar la automatización",
+    "cta": "Comienza a automatizar",
     "keys_limit_explanation": "Clave traducida: Si tienes 20 claves fuente (como 'Regístrate' o '¡Bienvenido!') y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves x 5 idiomas)."
   },
   "createTeam": {
@@ -429,7 +429,7 @@
     },
     "error": {
       "title": "Error",
-      "description": "Error al enviar la invitación. Por favor, inténtalo de nuevo."
+      "description": "Error al enviar la invitación. Por favor, intenta de nuevo."
     },
     "validation": {
       "invalidEmail": "Por favor, ingresa un correo electrónico válido"
@@ -461,7 +461,7 @@
     "success": {
       "title": "Inicio de sesión de Languine CLI exitoso",
       "description": "Languine CLI fue autenticado exitosamente como:",
-      "description_2": "Ahora puedes cerrar esta pestaña y volver a la CLI"
+      "description_2": "Ahora puedes cerrar esta pestaña y regresar a la CLI"
     }
   },
   "search": {
@@ -536,11 +536,11 @@
     },
     "supported_languages": {
       "question": "¿Qué idiomas son soportados?",
-      "answer": "Languine soporta más de 100 idiomas en todos los planes. Mientras nuestras traducciones impulsadas por IA funcionan mejor con los idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
+      "answer": "Languine soporta más de 100 idiomas en todos los planes. Mientras que nuestras traducciones impulsadas por IA funcionan mejor con los idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
     },
     "github_action": {
-      "question": "¿Cómo funciona la integración de GitHub Action?",
-      "answer": "La integración de GitHub Action (disponible en planes Pro) te permite automatizar tu flujo de trabajo de traducción directamente en tu canalización CI/CD. Cuando envías cambios a tu repositorio, las traducciones pueden actualizarse automáticamente."
+      "question": "¿Cómo funciona la integración con GitHub Action?",
+      "answer": "La integración con GitHub Action (disponible en planes Pro) te permite automatizar tu flujo de trabajo de traducción directamente en tu canalización CI/CD. Cuando envías cambios a tu repositorio, las traducciones pueden ser actualizadas automáticamente."
     },
     "support": {
       "question": "¿Qué tipo de soporte ofrecen?",

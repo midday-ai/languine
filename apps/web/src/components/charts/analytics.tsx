@@ -107,10 +107,7 @@ export function AnalyticsChart() {
     ...displayData.map((item) => item.keyCount + item.documentCount),
   );
 
-  const yAxisWidth = Math.max(
-    String(maxValue).length * 8, // 8px per character at fontSize 12
-    30,
-  );
+  const yAxisWidth = Math.max(String(maxValue).length * 12, 30);
 
   return (
     <Card className="w-full border-none bg-noise">

@@ -2,7 +2,7 @@
   "header": {
     "pricing": "Tarification",
     "docs": "Documentation",
-    "signIn": "Se connecter",
+    "signIn": "Connexion",
     "goToApp": "Aller à l'application"
   },
   "hero": {
@@ -44,7 +44,7 @@
   "features": {
     "title": "Fonctionnalités",
     "fullyOpenSource": "Entièrement open source",
-    "fullyOpenSourceDescription": "Notre code est publiquement disponible sur GitHub, permettant la transparence et les contributions de la communauté.",
+    "fullyOpenSourceDescription": "Notre code est disponible publiquement sur GitHub, permettant la transparence et les contributions de la communauté.",
     "noVendorLockIn": "Pas de verrouillage fournisseur",
     "noVendorLockInDescription": "Nous ne vous enfermons pas dans un service spécifique, utilisez vos propres LLMs.",
     "presetsForExpo": "Préréglages pour Expo",
@@ -61,13 +61,13 @@
     "smartTranslation": {
       "title": "Traduction intelligente",
       "intelligentTranslation": "Traduction intelligente avec conscience du contexte",
-      "brandVoice": "Consistance de la voix et du ton de la marque",
+      "brandVoice": "Cohérence de la voix et du ton de la marque",
       "terminology": "Gestion de la terminologie",
       "linguisticFeatures": "Fonctionnalités linguistiques avancées",
       "realtimeUpdates": "Mises à jour de traduction en temps réel"
     },
     "implementation": {
-      "title": "Mise en œuvre",
+      "title": "Implémentation",
       "quickSetup": "Configuration et intégration rapides",
       "fileFormat": "Gestion des formats de fichiers",
       "contentStructure": "Organisation de la structure du contenu",
@@ -83,9 +83,9 @@
     }
   },
   "login": {
-    "title": "Se connecter",
-    "github": "Se connecter avec GitHub",
-    "google": "Se connecter avec Google",
+    "title": "Connexion",
+    "github": "Connexion avec GitHub",
+    "google": "Connexion avec Google",
     "footer": "Automatisez votre localisation.",
     "description": "Connectez-vous pour commencer à automatiser votre localisation en quelques secondes.",
     "terms": {
@@ -100,7 +100,7 @@
   },
   "userMenu": {
     "account": "Paramètres du compte",
-    "signOut": "Se déconnecter",
+    "signOut": "Déconnexion",
     "createTeam": "Créer une équipe",
     "homepage": "Page d'accueil",
     "team": "Paramètres de l'équipe"
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "Supprimer le compte",
-      "description": "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+      "description": "Supprimer définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
       "button": "Supprimer le compte"
     }
   },
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Supprimer le projet",
-        "description": "Supprimez définitivement ce projet et toutes ses données",
+        "description": "Supprimer définitivement ce projet et toutes ses données",
         "button": "Supprimer le projet"
       }
     },
@@ -242,7 +242,7 @@
         "selectAll": "{count} sélectionné",
         "noPendingInvitations": "Aucune invitation en attente",
         "noResults": "Aucun membre trouvé",
-        "tryDifferentSearch": "Essayez une autre recherche",
+        "tryDifferentSearch": "Essayez une recherche différente",
         "inviteMembers": "Invitez des membres à collaborer",
         "deleteInvite": "Supprimer l'invitation",
         "deleteInviteDescription": "Supprimer l'invitation",
@@ -394,13 +394,13 @@
         "github_action": "Intégration GitHub Action",
         "latest_features": "Accès anticipé aux dernières fonctionnalités",
         "priority_support": "Support prioritaire",
-        "priority_queues": "Files d'attente de traduction prioritaires",
+        "priority_queues": "Files de traduction prioritaires",
         "keys_limit": "À partir de 10 000 clés",
         "docs_limit": "À partir de 50 documents"
       }
     },
     "cta": "Commencez à automatiser",
-    "keys_limit_explanation": "Clé traduite : Si vous avez 20 clés sources (comme \"S'inscrire\" ou \"Bienvenue !\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
+    "keys_limit_explanation": "Clé traduite : Si vous avez 20 clés sources (comme \"Inscription\" ou \"Bienvenue !\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
   },
   "createTeam": {
     "teamName": "Nom de l'équipe",
@@ -432,18 +432,18 @@
       "description": "Échec de l'envoi de l'invitation. Veuillez réessayer."
     },
     "validation": {
-      "invalidEmail": "Veuillez entrer un e-mail valide"
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide"
     }
   },
   "onboarding": {
     "steps": {
       "1": {
-        "title": "Configurer Languine CLI",
+        "title": "Configurer la CLI Languine",
         "description": "Installez et configurez la CLI Languine pour gérer les traductions"
       },
       "2": {
         "title": "Pousser les traductions",
-        "description": "En attente des traductions à pousser"
+        "description": "En attente de la poussée des traductions"
       },
       "3": {
         "title": "Documentation",
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Qu'est-ce que Languine ?",
-      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle fournit des fonctionnalités comme des options de réglage fin, des remplacements de traduction, des analytiques et une mémoire de contexte pour assurer des traductions de haute qualité."
+      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle propose des fonctionnalités comme des options de réglage fin, des remplacements de traduction, des analytiques et une mémoire de contexte pour assurer des traductions de haute qualité."
     },
     "key_limit": {
       "question": "Comment fonctionne la limite de clés ?",
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Offrez-vous des tarifs spéciaux pour les projets open source ?",
-      "answer": "Oui ! Nous adorons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez obtenir accès à nos fonctionnalités Pro avec 30% de réduction. Contactez simplement notre équipe avec des détails sur votre projet, et nous vous configurerons un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+      "answer": "Oui ! Nous adorons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez obtenir accès à nos fonctionnalités Pro avec une réduction de 30%. Contactez simplement notre équipe avec des détails sur votre projet, et nous vous configurerons un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
     },
     "cancel_subscription": {
       "question": "Comment puis-je annuler mon abonnement ?",

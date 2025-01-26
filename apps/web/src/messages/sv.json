@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Automatiserad lokaliseringsinfrastruktur för dina applikationer",
-    "description": "Effektivisera din lokaliseringsprocess med ett AI-drivet CLI och pipeline designad för att automatisera översättningar för utvecklare."
+    "description": "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare."
   },
   "navigation": {
     "dashboard": "Instrumentpanel",
@@ -19,11 +19,11 @@
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Automatiserad lokalisering för dina applikationer",
-    "description": "Effektivisera din lokaliseringsprocess med ett AI-drivet CLI och pipeline designad för att automatisera översättningar för utvecklare.",
+    "title": "Automatiserad lokaliseringsinfrastruktur för dina applikationer",
+    "description": "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare.",
     "button": {
       "startAutomating": "Börja automatisera",
-      "readDocumentation": "Läs dokumentation"
+      "readDocumentation": "Läs dokumentationen"
     }
   },
   "companies": {
@@ -44,7 +44,7 @@
   "features": {
     "title": "Funktioner",
     "fullyOpenSource": "Helt öppen källkod",
-    "fullyOpenSourceDescription": "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från gemenskapen.",
+    "fullyOpenSourceDescription": "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från samhället.",
     "noVendorLockIn": "Ingen leverantörslåsning",
     "noVendorLockInDescription": "Vi låser inte in dig i en specifik tjänst, använd dina egna LLMs.",
     "presetsForExpo": "Förinställningar för Expo",
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadress",
-      "description": "E-postadressen som är kopplad till ditt konto.",
+      "description": "E-postadressen associerad med ditt konto.",
       "placeholder": "Ange din e-postadress"
     },
     "apiKey": {
@@ -149,7 +149,7 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Är du helt säker?",
+      "title": "Är du absolut säker?",
       "description": "Denna åtgärd kan inte ångras. Vänligen skriv DELETE för att bekräfta.",
       "placeholder": "Skriv DELETE för att bekräfta",
       "confirm": "Bekräfta borttagning",
@@ -164,7 +164,7 @@
   "settings": {
     "badRequest": "Ogiltig begäran",
     "badRequestDescription": "Organisationen måste ha minst en ägare. Överför ägarskap till en annan medlem innan du tar bort denna ägare.",
-    "permissionDenied": "Tillstånd nekad",
+    "permissionDenied": "Tillstånd nekades",
     "permissionDeniedDescription": "Du måste vara ägare av teamet för att utföra denna åtgärd",
     "deleteTeamTitle": "Ta bort team",
     "deleteTeamDescription": "Kan inte ta bort organisation när du är den enda medlemmen, ta istället bort ditt konto",
@@ -215,7 +215,7 @@
       },
       "billing": {
         "title": "Faktureringsplan",
-        "description": "Hantera din teams faktureringsplan",
+        "description": "Hantera ditt teams faktureringsplan",
         "free": "Gratis",
         "pro": "Pro",
         "unlimited": "Obegränsat"
@@ -239,7 +239,7 @@
         "filterPlaceholder": "Filtrera medlemmar...",
         "allRoles": "Alla roller",
         "date": "Datum",
-        "selectAll": "{count} vald",
+        "selectAll": "{count} valda",
         "noPendingInvitations": "Inga väntande inbjudningar",
         "noResults": "Inga medlemmar hittades",
         "tryDifferentSearch": "Prova en annan sökning",
@@ -331,8 +331,8 @@
     },
     "brand": "Varumärke",
     "emotiveIntent": {
-      "title": "Emotivt syfte",
-      "description": "Ställ in den emotionella tonen för översättningar",
+      "title": "Känslomässig avsikt",
+      "description": "Ställ in den känslomässiga tonen för översättningar",
       "options": {
         "neutral": "Neutral",
         "positive": "Positiv",
@@ -347,12 +347,12 @@
       "description": "Specificera domänkontexten för översättningar",
       "options": {
         "general": "Allmänt",
-        "technical": "Teknisk",
-        "medical": "Medicinsk",
-        "legal": "Juridisk",
-        "financial": "Finansiell",
+        "technical": "Tekniskt",
+        "medical": "Medicinskt",
+        "legal": "Juridiskt",
+        "financial": "Finansiellt",
         "marketing": "Marknadsföring",
-        "academic": "Akademisk"
+        "academic": "Akademiskt"
       }
     },
     "idioms": {
@@ -381,7 +381,7 @@
         "overrides": "Översättningsöverstyrningar",
         "analytics": "Analys",
         "context_memory": "Kontextminne",
-        "community_support": "Gemenskapssupport",
+        "community_support": "Communitysupport",
         "keys_limit": "Upp till 100 nycklar",
         "docs_limit": "Upp till 5 dokument",
         "unlimited_languages": "Obegränsade språk"
@@ -432,7 +432,7 @@
       "description": "Misslyckades att skicka inbjudan. Försök igen."
     },
     "validation": {
-      "invalidEmail": "Vänligen ange en giltig e-post"
+      "invalidEmail": "Vänligen ange en giltig e-postadress"
     }
   },
   "onboarding": {
@@ -544,7 +544,7 @@
     },
     "support": {
       "question": "Vilket stöd erbjuder ni?",
-      "answer": "Gratisanvändare får tillgång till gemenskapssupport, medan Pro-användare får prioriterat stöd med snabbare svarstider och dedikerad hjälp för deras översättningsbehov."
+      "answer": "Gratisanvändare får tillgång till communitysupport, medan Pro-användare får prioriterat stöd med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
     },
     "open_source": {
       "question": "Är Languine öppen källkod?",
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Erbjuder ni specialpriser för öppen källkod-projekt?",
-      "answer": "Ja! Vi älskar att stödja öppen källkod-gemenskapen. Om du underhåller ett öppen källkod-projekt kan du få tillgång till våra Pro-funktioner till 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så sätter vi upp ett rabatterat Pro-konto åt dig. Detta är vårt sätt att ge tillbaka till gemenskapen som gör vårt arbete möjligt."
+      "answer": "Ja! Vi älskar att stödja öppen källkod-samhället. Om du underhåller ett öppen källkod-projekt kan du få tillgång till våra Pro-funktioner till 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så sätter vi upp ett rabatterat Pro-konto åt dig. Detta är vårt sätt att ge tillbaka till samhället som gör vårt arbete möjligt."
     },
     "cancel_subscription": {
       "question": "Hur avslutar jag mitt abonnemang?",

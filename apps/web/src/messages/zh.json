@@ -27,7 +27,7 @@
     }
   },
   "companies": {
-    "title": "使用者",
+    "title": "用户",
     "addYourCompany": "+ 添加您的公司"
   },
   "activity": {
@@ -54,7 +54,7 @@
     "presetForReactEmail": "React Email库",
     "presetForReactEmailDescription": "我们为React Email创建了一个i18n库。",
     "readyForI18nLibraries": "支持i18n库",
-    "readyForI18nLibrariesDescription": "我们支持所有库，包括最流行的（next-intl, react-i18next, react-intl等）。"
+    "readyForI18nLibrariesDescription": "我们支持所有库，包括最受欢迎的（next-intl, react-i18next, react-intl等）。"
   },
   "info": {
     "title": "处理本地化应用的每一个方面，包括",
@@ -78,7 +78,7 @@
       "cli": "命令行界面",
       "cicd": "CI/CD集成",
       "versionControl": "版本控制",
-      "workflow": "开发者工作流程",
+      "workflow": "开发者工作流",
       "documentation": "全面的文档"
     }
   },
@@ -89,7 +89,7 @@
     "footer": "自动化您的本地化。",
     "description": "登录以在几秒钟内开始自动化您的本地化。",
     "terms": {
-      "text": "通过登录，您同意我们的",
+      "text": "登录即表示您同意我们的",
       "termsOfService": "服务条款",
       "and": "和",
       "privacyPolicy": "隐私政策"
@@ -107,26 +107,26 @@
   },
   "teamSelector": {
     "addProject": "创建项目",
-    "createProjectTitle": "创建一个新项目",
+    "createProjectTitle": "创建新项目",
     "projectNamePlaceholder": "项目名称",
     "createProjectButton": "创建项目",
     "pro": "专业版",
     "project": "项目",
     "teams": "团队",
     "createTeam": "创建团队",
-    "createTeamTitle": "创建一个新团队",
+    "createTeamTitle": "创建新团队",
     "teamNamePlaceholder": "团队名称",
     "createTeamButton": "创建团队"
   },
   "coming_soon": {
     "title": "Languine处于早期访问阶段",
-    "description": "我们目前处于早期访问阶段。请联系",
+    "description": "我们目前处于早期访问阶段。联系",
     "cta": "在X上获取早期访问。"
   },
   "account": {
     "fullName": {
       "title": "全名",
-      "description": "您的全名，它将出现在整个平台上。",
+      "description": "您的全名，将显示在整个平台上。",
       "placeholder": "输入您的全名"
     },
     "email": {
@@ -157,17 +157,17 @@
     }
   },
   "pipeline": {
-    "title": "工作流程（CI/CD流水线）",
+    "title": "工作流（CI/CD流水线）",
     "pro": "[专业版]",
-    "description": "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，自动在每次推送时翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流程确保您的本地化内容与开发保持同步。"
+    "description": "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
   },
   "settings": {
     "badRequest": "无效请求",
-    "badRequestDescription": "组织必须至少有一个所有者。在删除此所有者之前，将所有权转移给另一个成员。",
+    "badRequestDescription": "组织必须至少有一个所有者。在移除此所有者之前，请将所有权转移给另一个成员。",
     "permissionDenied": "权限被拒绝",
     "permissionDeniedDescription": "您需要是团队的所有者才能执行此操作",
     "deleteTeamTitle": "删除团队",
-    "deleteTeamDescription": "当您是唯一成员时无法删除组织，而是删除您的账户",
+    "deleteTeamDescription": "当您是唯一成员时无法删除组织，请改为删除您的账户",
     "saved": "设置已保存",
     "savedDescription": "您的更改已成功保存",
     "error": "出了点问题",
@@ -343,7 +343,7 @@
       }
     },
     "domainExpertise": {
-      "title": "领域专业知识",
+      "title": "领域专长",
       "description": "指定翻译的领域上下文",
       "options": {
         "general": "常规",
@@ -374,7 +374,7 @@
       "title": "免费",
       "price": "免费",
       "keys_limit": "最多100个键",
-      "description": "尝试时完美",
+      "description": "试用时完美",
       "features": {
         "unlimited_projects": "无限项目",
         "fine_tuning": "调优选项",
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "专业版",
-      "includes_free": "免费版的所有内容，加上：",
+      "includes_free": "免费版的所有功能，加上：",
       "features": {
         "github_action": "GitHub Action集成",
         "latest_features": "早期访问最新功能",
@@ -400,7 +400,7 @@
       }
     },
     "cta": "开始自动化",
-    "keys_limit_explanation": "翻译的键：如果您有20个源键（如“注册”或“欢迎！”）并将它们翻译成5种语言，那么等于100个翻译的键（20个键×5种语言）。"
+    "keys_limit_explanation": "翻译的键：如果您有20个源键（如“注册”或“欢迎！”）并将它们翻译成5种语言，则等于100个翻译的键（20个键×5种语言）。"
   },
   "createTeam": {
     "teamName": "团队名称",
@@ -418,7 +418,7 @@
   },
   "invite": {
     "inviteMember": "邀请成员",
-    "inviteDescription": "邀请成员到您的团队",
+    "inviteDescription": "邀请成员加入您的团队",
     "emailLabel": "电子邮件",
     "emailPlaceholder": "输入电子邮件",
     "cancel": "取消",
@@ -461,7 +461,7 @@
     "success": {
       "title": "Languine CLI登录成功",
       "description": "Languine CLI已成功认证为：",
-      "description_2": "您现在可以关闭此标签并返回到CLI"
+      "description_2": "您现在可以关闭此标签页并返回CLI"
     }
   },
   "search": {
@@ -532,7 +532,7 @@
     },
     "key_limit": {
       "question": "键限制是如何工作的？",
-      "answer": "当您将源键翻译成目标语言时，翻译的键被计数。例如，如果您有20个源键并将它们翻译成5种语言，那么等于100个翻译的键（20个键×5种语言）。"
+      "answer": "当您将源键翻译成目标语言时，翻译的键被计数。例如，如果您有20个源键并将它们翻译成5种语言，则等于100个翻译的键（20个键×5种语言）。"
     },
     "supported_languages": {
       "question": "支持哪些语言？",
@@ -540,7 +540,7 @@
     },
     "github_action": {
       "question": "GitHub Action集成是如何工作的？",
-      "answer": "GitHub Action集成（在专业版计划中可用）允许您直接在CI/CD流水线中自动化您的翻译工作流程。当您推送更改到您的仓库时，翻译可以自动更新。"
+      "answer": "GitHub Action集成（在专业版计划中可用）允许您直接在CI/CD流水线中自动化您的翻译工作流。当您推送更改到您的仓库时，翻译可以自动更新。"
     },
     "support": {
       "question": "您提供什么样的支持？",

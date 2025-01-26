@@ -3,11 +3,11 @@
     "pricing": "Preços",
     "docs": "Documentação",
     "signIn": "Entrar",
-    "goToApp": "Ir para o aplicativo"
+    "goToApp": "Ir para o app"
   },
   "hero": {
     "title": "Infraestrutura de localização automatizada para suas aplicações",
-    "description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores."
+    "description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Começar",
     "title": "Localização automatizada para suas aplicações",
-    "description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA projetados para automatizar traduções para desenvolvedores.",
+    "description": "Simplifique seu processo de localização com uma CLI e pipeline alimentados por IA, projetados para automatizar traduções para desenvolvedores.",
     "button": {
       "startAutomating": "Comece a automatizar",
       "readDocumentation": "Leia a documentação"
@@ -177,7 +177,7 @@
       "updated": "Chave API atualizada",
       "updatedDescription": "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
       "title": "Atualizar Chave API",
-      "description": "Tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
+      "description": "Tem certeza de que deseja gerar uma nova chave API? A chave antiga parará de funcionar imediatamente.",
       "cancel": "Cancelar",
       "continue": "Continuar"
     },
@@ -185,7 +185,7 @@
       "project": "Projeto",
       "account": "Conta",
       "team": "Equipe",
-      "provider": "Provedor",
+      "provider": "Fornecedor",
       "billing": "Cobrança"
     },
     "addProject": "Criar projeto",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "ID do Projeto",
-        "description": "Seu identificador único de projeto",
+        "description": "Seu identificador de projeto único",
         "placeholder": "ID do Projeto"
       },
       "delete": {
@@ -468,9 +468,9 @@
     "placeholder": "Pesquisar"
   },
   "periods": {
-    "daily": "Diariamente",
-    "weekly": "Semanalmente",
-    "monthly": "Mensalmente",
+    "daily": "Diário",
+    "weekly": "Semanal",
+    "monthly": "Mensal",
     "selectPeriod": "Selecione o período"
   },
   "language": {
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "O que é Languine?",
-      "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de suas aplicações. Ela fornece funcionalidades como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
+      "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de suas aplicações. Ele fornece funcionalidades como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
@@ -548,10 +548,10 @@
     },
     "open_source": {
       "question": "Languine é código aberto?",
-      "answer": "Sim! Languine é totalmente código aberto e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir funcionalidades e inspecionar o código. Acreditamos em transparência e construir em público."
+      "answer": "Sim! Languine é totalmente código aberto e disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir funcionalidades e inspecionar o código. Acreditamos em transparência e construir em público."
     },
     "open_source_pricing": {
-      "question": "Vocês oferecem preços especiais para projetos de código aberto?",
+      "question": "Você oferece preços especiais para projetos de código aberto?",
       "answer": "Sim! Adoramos apoiar a comunidade de código aberto. Se você mantém um projeto de código aberto, pode obter acesso às nossas funcionalidades Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {

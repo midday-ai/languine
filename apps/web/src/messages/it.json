@@ -314,7 +314,7 @@
       "placeholder": "Descrivi la voce del tuo brand..."
     },
     "toneOfVoice": {
-      "title": "Tono di voce",
+      "title": "Tono della voce",
       "description": "Definisci il tono usato nelle traduzioni",
       "options": {
         "casual": "Informale",
@@ -418,7 +418,7 @@
   },
   "invite": {
     "inviteMember": "Invita membro",
-    "inviteDescription": "Invita un membro nel tuo team",
+    "inviteDescription": "Invita un membro al tuo team",
     "emailLabel": "Email",
     "emailPlaceholder": "Inserisci email",
     "cancel": "Annulla",
@@ -439,7 +439,7 @@
     "steps": {
       "1": {
         "title": "Configura Languine CLI",
-        "description": "Installa e configura la CLI di Languine per gestire le traduzioni"
+        "description": "Installa e configura Languine CLI per gestire le traduzioni"
       },
       "2": {
         "title": "Push delle traduzioni",
@@ -459,8 +459,8 @@
   },
   "cli": {
     "success": {
-      "title": "Accesso alla CLI di Languine riuscito",
-      "description": "La CLI di Languine è stata autenticata con successo come:",
+      "title": "Accesso a Languine CLI riuscito",
+      "description": "Languine CLI è stato autenticato con successo come:",
       "description_2": "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
   },
@@ -532,11 +532,11 @@
     },
     "key_limit": {
       "question": "Come funziona il limite delle chiavi?",
-      "answer": "Una chiave tradotta viene conteggiata quando traduci una chiave sorgente in una lingua di destinazione. Ad esempio, se hai 20 chiavi sorgente e le traduci in 5 lingue, ciò equivale a 100 chiavi tradotte (20 chiavi × 5 lingue)."
+      "answer": "Una chiave tradotta viene conteggiata quando traduci una chiave sorgente in una lingua target. Ad esempio, se hai 20 chiavi sorgente e le traduci in 5 lingue, ciò equivale a 100 chiavi tradotte (20 chiavi × 5 lingue)."
     },
     "supported_languages": {
       "question": "Quali lingue sono supportate?",
-      "answer": "Languine supporta oltre 100 lingue in tutti i piani. Mentre le nostre traduzioni alimentate dall'IA funzionano al meglio con le lingue principali, ci sforziamo di fornire traduzioni di qualità in tutte le lingue supportate. Se hai requisiti linguistici specifici o domande sulla qualità della traduzione per lingue particolari, contatta il nostro team di supporto."
+      "answer": "Languine supporta oltre 100 lingue in tutti i piani. Mentre le nostre traduzioni alimentate dall'IA funzionano meglio con le lingue principali, ci sforziamo di fornire traduzioni di qualità in tutte le lingue supportate. Se hai requisiti linguistici specifici o domande sulla qualità della traduzione per lingue particolari, contatta il nostro team di supporto."
     },
     "github_action": {
       "question": "Come funziona l'integrazione con GitHub Action?",
@@ -562,7 +562,7 @@
   "pricing_slider": {
     "tier": "Livello {tier}",
     "keys": "Chiavi tradotte",
-    "documents": "Documenti tradotti",
+    "documents": "Documenti tradotte",
     "period": "lun",
     "keys_prefix": "",
     "keys_suffix": " chiavi",

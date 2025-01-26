@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "アプリケーションのための自動化されたローカライゼーション基盤",
-    "description": "開発者のための翻訳を自動化するAI搭載CLIとパイプラインでローカライゼーションプロセスを効率化。"
+    "description": "開発者向けに翻訳を自動化するAI搭載CLIとパイプラインでローカライゼーションプロセスを効率化。"
   },
   "navigation": {
     "dashboard": "ダッシュボード",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "始める",
     "title": "アプリケーションのための自動化されたローカライゼーション",
-    "description": "開発者のための翻訳を自動化するAI搭載CLIとパイプラインでローカライゼーションプロセスを効率化。",
+    "description": "開発者向けに翻訳を自動化するAI搭載CLIとパイプラインでローカライゼーションプロセスを効率化。",
     "button": {
       "startAutomating": "自動化を開始",
       "readDocumentation": "ドキュメントを読む"
@@ -46,21 +46,21 @@
     "fullyOpenSource": "完全にオープンソース",
     "fullyOpenSourceDescription": "私たちのコードはGitHubで公開されており、透明性とコミュニティの貢献を可能にします。",
     "noVendorLockIn": "ベンダーロックインなし",
-    "noVendorLockInDescription": "特定のサービスに縛られることはありません、あなた自身のLLMを使用してください。",
-    "presetsForExpo": "Expoのためのプリセット",
-    "presetsForExpoDescription": "Expoのためのプリセットを提供し、すぐに始められるようにします。",
-    "presetForReactNative": "React Nativeのためのプリセット",
-    "presetForReactNativeDescription": "React Nativeのためのプリセットを提供し、すぐに始められるようにします。",
+    "noVendorLockInDescription": "特定のサービスに縛られることはありません。独自のLLMを使用してください。",
+    "presetsForExpo": "Expo用プリセット",
+    "presetsForExpoDescription": "Expo用のプリセットを提供しているので、すぐに始められます。",
+    "presetForReactNative": "React Native用プリセット",
+    "presetForReactNativeDescription": "React Native用のプリセットを提供しているので、すぐに始められます。",
     "presetForReactEmail": "React Emailライブラリ",
-    "presetForReactEmailDescription": "React Emailのためのi18nライブラリを作成しました。",
-    "readyForI18nLibraries": "i18nライブラリの準備ができています",
-    "readyForI18nLibrariesDescription": "最も人気のあるライブラリを含むすべてのライブラリをサポートします（next-intl、react-i18next、react-intlなど）。"
+    "presetForReactEmailDescription": "React Email用のi18nライブラリを作成しました。",
+    "readyForI18nLibraries": "i18nライブラリに対応",
+    "readyForI18nLibrariesDescription": "最も人気のあるライブラリを含むすべてのライブラリをサポートしています（next-intl、react-i18next、react-intlなど）。"
   },
   "info": {
     "title": "アプリのローカライゼーションのあらゆる側面を扱います",
     "smartTranslation": {
       "title": "スマート翻訳",
-      "intelligentTranslation": "コンテキスト認識によるインテリジェントな翻訳",
+      "intelligentTranslation": "コンテキストを意識したインテリジェントな翻訳",
       "brandVoice": "ブランドの声とトーンの一貫性",
       "terminology": "用語管理",
       "linguisticFeatures": "高度な言語機能",
@@ -87,7 +87,7 @@
     "github": "GitHubでサインイン",
     "google": "Googleでサインイン",
     "footer": "ローカライゼーションを自動化。",
-    "description": "サインインして、数秒でローカライゼーションの自動化を開始。",
+    "description": "数秒でローカライゼーションの自動化を開始するためにサインインしてください。",
     "terms": {
       "text": "サインインすることにより、あなたは私たちの",
       "termsOfService": "利用規約",
@@ -96,7 +96,7 @@
     }
   },
   "translations": {
-    "header": "に同意します。"
+    "header": "に同意するものとします。"
   },
   "userMenu": {
     "account": "翻訳されたキー",
@@ -121,27 +121,27 @@
   "coming_soon": {
     "title": "チームを作成",
     "description": "Languineは早期アクセス中です",
-    "cta": "私たちは現在早期アクセス中です。早期アクセスを得るにはXで連絡してください。"
+    "cta": "現在、早期アクセス中です。早期アクセスを得るためにXで連絡してください。"
   },
   "account": {
     "fullName": {
       "title": "フルネーム",
       "description": "プラットフォーム全体に表示されるあなたのフルネーム。",
-      "placeholder": "フルネームを入力"
+      "placeholder": "フルネームを入力してください"
     },
     "email": {
       "title": "メールアドレス",
       "description": "あなたのアカウントに関連付けられたメールアドレス。",
-      "placeholder": "メールアドレスを入力"
+      "placeholder": "メールアドレスを入力してください"
     },
     "apiKey": {
       "title": "APIキー",
       "description": "Languine APIおよびCLIからアクセスするための個人用APIキー。"
     },
     "deleteAccount": {
-      "title": "アカウント削除",
+      "title": "アカウントを削除",
       "description": "アカウントと関連するすべてのデータを永久に削除します。この操作は取り消せません。",
-      "button": "アカウント削除"
+      "button": "アカウントを削除"
     }
   },
   "copyInstall": {
@@ -151,7 +151,7 @@
     "dialog": {
       "title": "本当によろしいですか？",
       "description": "この操作は取り消せません。確認のためにDELETEと入力してください。",
-      "placeholder": "確認のためにDELETEと入力",
+      "placeholder": "確認のためにDELETEと入力してください",
       "confirm": "削除を確認",
       "cancel": "キャンセル"
     }
@@ -159,11 +159,11 @@
   "pipeline": {
     "title": "ワークフロー（CI/CDパイプライン）",
     "pro": "[プロ]",
-    "description": "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、プッシュごとにコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保持しながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、メインブランチにマージされデプロイされる前にレビューが可能です。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。"
+    "description": "私たちの翻訳エンジンは、既存のCI/CDパイプラインにシームレスに統合され、プッシュごとにコードベースを自動的に翻訳します。コードの変更がプッシュされると、変更された内容を分析し、翻訳メモリを維持し、ブランドの声と用語を保ちながら正確な翻訳を生成します。翻訳はプルリクエストとして提出され、メインブランチにマージされてデプロイされる前にレビューが可能です。この自動化されたワークフローにより、ローカライズされたコンテンツが開発と同期し続けます。"
   },
   "settings": {
     "badRequest": "無効なリクエスト",
-    "badRequestDescription": "組織には少なくとも1人の所有者が必要です。この所有者を削除する前に、別のメンバーに所有権を移譲してください。",
+    "badRequestDescription": "組織には少なくとも1人の所有者が必要です。この所有者を削除する前に、別のメンバーに所有権を移転してください。",
     "permissionDenied": "許可が拒否されました",
     "permissionDeniedDescription": "この操作を行うには、チームの所有者である必要があります",
     "deleteTeamTitle": "チームを削除",
@@ -193,7 +193,7 @@
       "name": {
         "title": "プロジェクト名",
         "description": "プロジェクトの名前",
-        "placeholder": "プロジェクト名を入力"
+        "placeholder": "プロジェクト名を入力してください"
       },
       "id": {
         "title": "プロジェクトID",
@@ -210,8 +210,8 @@
     "team": {
       "name": {
         "title": "チーム名",
-        "description": "チームの名前",
-        "placeholder": "チーム名を入力"
+        "description": "あなたのチームの名前",
+        "placeholder": "チーム名を入力してください"
       },
       "billing": {
         "title": "請求プラン",
@@ -245,7 +245,7 @@
         "tryDifferentSearch": "別の検索を試してください",
         "inviteMembers": "メンバーを招待して協力する",
         "deleteInvite": "招待を削除",
-        "deleteInviteDescription": "招待を削除",
+        "deleteInviteDescription": "招待を削除する",
         "invitedBy": "{name} によって招待されました",
         "deleteInviteSuccess": "招待が削除されました",
         "deleteInviteError": "招待の削除に失敗しました",
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "コンテキスト検出",
-      "description": "翻訳でコンテキストを自動的に検出し保持"
+      "description": "翻訳でコンテキストを自動的に検出して保持"
     },
     "styleGuide": "スタイルガイド",
     "lengthControl": {
@@ -292,7 +292,7 @@
     },
     "inclusiveLanguage": {
       "title": "包括的な言語",
-      "description": "翻訳が包括的な言語を使用することを保証"
+      "description": "翻訳が包括的な言語を使用していることを確認"
     },
     "formality": {
       "title": "形式",
@@ -305,13 +305,13 @@
     },
     "brandName": {
       "title": "ブランド名",
-      "description": "ブランド名を設定して一貫した使用を保証",
-      "placeholder": "ブランド名を入力"
+      "description": "ブランド名を設定して一貫した使用を確保",
+      "placeholder": "ブランド名を入力してください"
     },
     "brandVoice": {
       "title": "ブランドの声",
       "description": "ブランドの声とトーンを定義",
-      "placeholder": "ブランドの声を説明..."
+      "placeholder": "ブランドの声を説明してください..."
     },
     "toneOfVoice": {
       "title": "トーン",
@@ -322,9 +322,9 @@
         "friendly": "友好的",
         "professional": "プロフェッショナル",
         "playful": "遊び心のある",
-        "serious": "真剣",
+        "serious": "真剣な",
         "confident": "自信のある",
-        "humble": "謙虚",
+        "humble": "謙虚な",
         "direct": "直接的",
         "diplomatic": "外交的"
       }
@@ -343,7 +343,7 @@
       }
     },
     "domainExpertise": {
-      "title": "ドメイン専門知識",
+      "title": "ドメインの専門知識",
       "description": "翻訳のドメインコンテキストを指定",
       "options": {
         "general": "一般",
@@ -352,11 +352,11 @@
         "legal": "法的",
         "financial": "金融",
         "marketing": "マーケティング",
-        "academic": "学術"
+        "academic": "学術的"
       }
     },
     "idioms": {
-      "title": "イディオム",
+      "title": "慣用句",
       "description": "慣用表現を適切に扱う"
     },
     "terminology": {
@@ -378,7 +378,7 @@
       "features": {
         "unlimited_projects": "無制限のプロジェクト",
         "fine_tuning": "チューニングオプション",
-        "overrides": "翻訳オーバーライド",
+        "overrides": "翻訳の上書き",
         "analytics": "分析",
         "context_memory": "コンテキストメモリ",
         "community_support": "コミュニティサポート",
@@ -400,27 +400,27 @@
       }
     },
     "cta": "自動化を開始",
-    "keys_limit_explanation": "翻訳キー：20のソースキー（「サインアップ」や「ようこそ！」など）を5つの言語に翻訳すると、100の翻訳キー（20キー×5言語）に相当します。"
+    "keys_limit_explanation": "翻訳されたキー：20のソースキー（「サインアップ」や「ようこそ！」など）を5つの言語に翻訳すると、100の翻訳キー（20キー×5言語）に相当します。"
   },
   "createTeam": {
     "teamName": "チーム名",
-    "teamNamePlaceholder": "チーム名を入力",
+    "teamNamePlaceholder": "チーム名を入力してください",
     "createTeamButton": "チームを作成",
     "cancel": "キャンセル",
-    "createTeamDescription": "新しいチームを作成してプロジェクトと協力者を管理。"
+    "createTeamDescription": "新しいチームを作成してプロジェクトと協力者を管理します。"
   },
   "createProject": {
     "createProjectTitle": "新しいプロジェクトを作成",
-    "projectNamePlaceholder": "プロジェクト名を入力",
+    "projectNamePlaceholder": "プロジェクト名を入力してください",
     "createProjectButton": "プロジェクトを作成",
     "cancel": "キャンセル",
-    "createProjectDescription": "新しいプロジェクトを作成してローカライゼーションの自動化を開始。"
+    "createProjectDescription": "新しいプロジェクトを作成してローカライゼーションの自動化を開始します。"
   },
   "invite": {
     "inviteMember": "メンバーを招待",
     "inviteDescription": "チームにメンバーを招待",
     "emailLabel": "メール",
-    "emailPlaceholder": "メールを入力",
+    "emailPlaceholder": "メールを入力してください",
     "cancel": "キャンセル",
     "submit": "送信",
     "success": {
@@ -439,7 +439,7 @@
     "steps": {
       "1": {
         "title": "Languine CLIのセットアップ",
-        "description": "Languine CLIをインストールして設定し、翻訳を管理"
+        "description": "翻訳を管理するためにLanguine CLIをインストールして設定"
       },
       "2": {
         "title": "翻訳をプッシュ",
@@ -447,12 +447,12 @@
       },
       "3": {
         "title": "ドキュメント",
-        "description": "詳細なガイドとベストプラクティスについては、私たちのドキュメントをチェックしてください",
+        "description": "詳細なガイドとベストプラクティスについては、ドキュメントをチェックしてください",
         "link": "ドキュメント"
       }
     },
     "info": {
-      "description": "助けが必要ですか？詳細なガイドとベストプラクティスについては、私たちの",
+      "description": "助けが必要ですか？詳細なガイドとベストプラクティスについては、",
       "link": "ドキュメント",
       "description_2": "をチェックしてください。"
     }
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Languineとは何ですか？",
-      "answer": "Languineは、アプリケーションの翻訳を自動化するAI搭載のローカライゼーションプラットフォームです。高品質の翻訳を保証するために、チューニングオプション、翻訳オーバーライド、分析、コンテキストメモリなどの機能を提供します。"
+      "answer": "Languineは、アプリケーションの翻訳を自動化するAI搭載のローカライゼーションプラットフォームです。高品質の翻訳を確保するために、チューニングオプション、翻訳の上書き、分析、コンテキストメモリなどの機能を提供します。"
     },
     "key_limit": {
       "question": "キー制限はどのように機能しますか？",
@@ -536,7 +536,7 @@
     },
     "supported_languages": {
       "question": "どの言語がサポートされていますか？",
-      "answer": "Languineはすべてのプランで100以上の言語をサポートしています。私たちのAI搭載翻訳は主要な言語で最もよく機能しますが、サポートされているすべての言語で品質の翻訳を提供するよう努めています。特定の言語要件や特定の言語の翻訳品質に関する質問がある場合は、サポートチームまでお問い合わせください。"
+      "answer": "Languineはすべてのプランで100以上の言語をサポートしています。AI搭載の翻訳は主要な言語で最も効果的ですが、サポートされているすべての言語で品質の高い翻訳を提供するよう努めています。特定の言語要件や特定の言語の翻訳品質に関する質問がある場合は、サポートチームまでお問い合わせください。"
     },
     "github_action": {
       "question": "GitHubアクション統合はどのように機能しますか？",
@@ -544,19 +544,19 @@
     },
     "support": {
       "question": "どのようなサポートを提供していますか？",
-      "answer": "無料ユーザーはコミュニティサポートにアクセスできますが、プロユーザーは優先サポートを受け、翻訳ニーズに対する迅速な対応と専用の支援を提供します。"
+      "answer": "無料ユーザーはコミュニティサポートにアクセスでき、プロユーザーは優先サポートを受けて、翻訳ニーズに対する迅速な対応と専用の支援を受けられます。"
     },
     "open_source": {
       "question": "Languineはオープンソースですか？",
-      "answer": "はい！Languineは完全にオープンソースで、GitHubで利用可能です。プロジェクトに貢献したり、問題を報告したり、機能を提案したり、コードを検査したりできます。私たちは透明性と公開での構築を信じています。"
+      "answer": "はい！Languineは完全にオープンソースで、GitHubで利用可能です。プロジェクトに貢献したり、問題を報告したり、機能を提案したり、コードを検査したりできます。透明性と公開での構築を信じています。"
     },
     "open_source_pricing": {
-      "question": "オープンソースプロジェクトのための特別な価格設定を提供していますか？",
-      "answer": "はい！私たちはオープンソースコミュニティを支援するのが大好きです。オープンソースプロジェクトを維持している場合、プロ機能を30％オフで利用できます。プロジェクトの詳細について私たちのチームに連絡し、割引されたプロアカウントを設定します。これは、私たちの仕事を可能にするコミュニティに還元する方法です。"
+      "question": "オープンソースプロジェクト向けの特別な価格設定はありますか？",
+      "answer": "はい！私たちはオープンソースコミュニティを支援するのが大好きです。オープンソースプロジェクトを維持している場合、プロ機能を30％オフで利用できます。プロジェクトの詳細について私たちのチームに連絡してください。割引されたプロアカウントを設定します。これは私たちの仕事を可能にするコミュニティに還元する方法です。"
     },
     "cancel_subscription": {
       "question": "サブスクリプションをキャンセルするにはどうすればよいですか？",
-      "answer": "アカウント設定からいつでもサブスクリプションをキャンセルできます。請求 > プラン変更に移動してください。現在の請求期間の終了までサブスクリプションはアクティブのままです。その後、無料プランに移行します。"
+      "answer": "アカウント設定からいつでもサブスクリプションをキャンセルできます。請求 > プラン変更に移動してください。現在の請求期間が終了するまでサブスクリプションはアクティブのままです。その後、無料プランに移行します。"
     }
   },
   "pricing_slider": {

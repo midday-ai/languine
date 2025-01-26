@@ -57,7 +57,7 @@
     "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Kümmert sich um jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
+    "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
     "smartTranslation": {
       "title": "Intelligente Übersetzung",
       "intelligentTranslation": "Intelligente Übersetzung mit Kontextbewusstsein",
@@ -150,8 +150,8 @@
   "dangerZone": {
     "dialog": {
       "title": "Sind Sie absolut sicher?",
-      "description": "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN ein, um zu bestätigen.",
-      "placeholder": "Geben Sie LÖSCHEN ein, um zu bestätigen",
+      "description": "Diese Aktion kann nicht rückgängig gemacht werden. Bitte geben Sie LÖSCHEN zur Bestätigung ein.",
+      "placeholder": "Geben Sie LÖSCHEN zur Bestätigung ein",
       "confirm": "Löschen bestätigen",
       "cancel": "Abbrechen"
     }
@@ -245,7 +245,7 @@
         "tryDifferentSearch": "Versuchen Sie eine andere Suche",
         "inviteMembers": "Laden Sie Mitglieder zur Zusammenarbeit ein",
         "deleteInvite": "Einladung löschen",
-        "deleteInviteDescription": "Die Einladung löschen",
+        "deleteInviteDescription": "Löschen Sie die Einladung",
         "invitedBy": "Eingeladen von {name}",
         "deleteInviteSuccess": "Einladung gelöscht",
         "deleteInviteError": "Einladung konnte nicht gelöscht werden",
@@ -296,7 +296,7 @@
     },
     "formality": {
       "title": "Formalität",
-      "description": "Kontrollieren Sie das Formalitätsniveau von Übersetzungen",
+      "description": "Kontrollieren Sie das Formalitätsniveau der Übersetzungen",
       "options": {
         "casual": "Lässig",
         "formal": "Formell",
@@ -356,7 +356,7 @@
       }
     },
     "idioms": {
-      "title": "Redewendungen",
+      "title": "Idiome",
       "description": "Behandeln Sie idiomatische Ausdrücke angemessen"
     },
     "terminology": {
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Bieten Sie Sonderpreise für Open-Source-Projekte an?",
-      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein ermäßigtes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
+      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt pflegen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein ermäßigtes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
     },
     "cancel_subscription": {
       "question": "Wie kann ich mein Abonnement kündigen?",

@@ -46,7 +46,7 @@
     "fullyOpenSource": "Volledig open source",
     "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en gemeenschapsbijdragen mogelijk maakt.",
     "noVendorLockIn": "Geen vendor lock-in",
-    "noVendorLockInDescription": "We sluiten u niet op in een specifieke service, gebruik uw eigen LLMs.",
+    "noVendorLockInDescription": "We sluiten u niet op in een specifieke service, gebruik uw eigen LLM's.",
     "presetsForExpo": "Presets voor Expo",
     "presetsForExpoDescription": "We bieden presets voor Expo, zodat u snel aan de slag kunt.",
     "presetForReactNative": "Preset voor React Native",
@@ -71,7 +71,7 @@
       "quickSetup": "Snelle setup en integratie",
       "fileFormat": "Bestandsformaatbehandeling",
       "contentStructure": "Organisatie van inhoudsstructuur",
-      "assetOrganization": "Organisatie van assets"
+      "assetOrganization": "Organisatie van middelen"
     },
     "developer": {
       "title": "Ontwikkelaarservaring",
@@ -102,7 +102,7 @@
     "account": "Accountinstellingen",
     "signOut": "Uitloggen",
     "createTeam": "Team aanmaken",
-    "homepage": "Homepage",
+    "homepage": "Startpagina",
     "team": "Teaminstellingen"
   },
   "teamSelector": {
@@ -163,7 +163,7 @@
   },
   "settings": {
     "badRequest": "Ongeldig verzoek",
-    "badRequestDescription": "Organisatie moet ten minste één eigenaar hebben. Draag eigendom over naar een ander lid voordat u deze eigenaar verwijdert.",
+    "badRequestDescription": "Organisatie moet minimaal één eigenaar hebben. Draag eigendom over naar een ander lid voordat u deze eigenaar verwijdert.",
     "permissionDenied": "Toestemming geweigerd",
     "permissionDeniedDescription": "U moet eigenaar van het team zijn om deze actie uit te voeren",
     "deleteTeamTitle": "Team verwijderen",
@@ -273,11 +273,11 @@
     },
     "qualityChecks": {
       "title": "Kwaliteitscontroles",
-      "description": "Schakel geautomatiseerde kwaliteitscontroles voor vertalingen in"
+      "description": "Schakel automatische kwaliteitscontroles in voor vertalingen"
     },
     "contextDetection": {
       "title": "Contextdetectie",
-      "description": "Detecteer en behoud context in vertalingen automatisch"
+      "description": "Detecteer en behoud context automatisch in vertalingen"
     },
     "styleGuide": "Stijlgids",
     "lengthControl": {
@@ -332,7 +332,7 @@
     "brand": "Merk",
     "emotiveIntent": {
       "title": "Emotionele intentie",
-      "description": "Stel de emotionele toon voor vertalingen in",
+      "description": "Stel de emotionele toon in voor vertalingen",
       "options": {
         "neutral": "Neutraal",
         "positive": "Positief",
@@ -377,7 +377,7 @@
       "description": "Perfect om uit te proberen",
       "features": {
         "unlimited_projects": "Onbeperkte projecten",
-        "fine_tuning": "Afstemoogelijkheden",
+        "fine_tuning": "Afstemoopties",
         "overrides": "Vertalingsoverrides",
         "analytics": "Analytics",
         "context_memory": "Contextgeheugen",
@@ -442,7 +442,7 @@
         "description": "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        "title": "Push vertalingen",
+        "title": "Vertalingen pushen",
         "description": "Wachten tot de vertalingen worden gepusht"
       },
       "3": {
@@ -528,11 +528,11 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Wat is Languine?",
-      "answer": "Languine is een AI-aangedreven lokalisatieplatform dat u helpt bij het automatiseren van de vertaling van uw applicaties. Het biedt functies zoals afstemoogelijkheden, vertalingsoverrides, analytics en contextgeheugen om hoogwaardige vertalingen te garanderen."
+      "answer": "Languine is een AI-aangedreven lokalisatieplatform dat u helpt bij het automatiseren van de vertaling van uw applicaties. Het biedt functies zoals afstemoopties, vertalingsoverrides, analytics en contextgeheugen om hoogwaardige vertalingen te garanderen."
     },
     "key_limit": {
       "question": "Hoe werkt de sleutellimiet?",
-      "answer": "Een vertaalde sleutel wordt geteld wanneer u een bronsleutel vertaalt in een doeltaal. Als u bijvoorbeeld 20 bronsleutels heeft en deze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels × 5 talen)."
+      "answer": "Een vertaalde sleutel wordt geteld wanneer u een bronsleutel vertaalt in een doeltaal. Als u bijvoorbeeld 20 bronsleutels heeft en ze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels × 5 talen)."
     },
     "supported_languages": {
       "question": "Welke talen worden ondersteund?",
@@ -540,18 +540,18 @@
     },
     "github_action": {
       "question": "Hoe werkt de GitHub Action-integratie?",
-      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt u in staat om uw vertaalworkflow rechtstreeks in uw CI/CD-pijplijn te automatiseren. Wanneer u wijzigingen naar uw repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
+      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt u in staat om uw vertaalworkflow direct in uw CI/CD-pijplijn te automatiseren. Wanneer u wijzigingen naar uw repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
     },
     "support": {
-      "question": "Wat voor soort ondersteuning biedt u?",
+      "question": "Wat voor soort ondersteuning bieden jullie?",
       "answer": "Gratis gebruikers krijgen toegang tot gemeenschapsondersteuning, terwijl Pro-gebruikers prioritaire ondersteuning krijgen met snellere reactietijden en toegewijde assistentie voor hun vertaalbehoeften."
     },
     "open_source": {
       "question": "Is Languine open source?",
-      "answer": "Ja! Languine is volledig open source en beschikbaar op GitHub. U kunt bijdragen aan het project, problemen melden, functies voorstellen en de code inspecteren. We geloven in transparantie en bouwen in het openbaar."
+      "answer": "Ja! Languine is volledig open source en beschikbaar op GitHub. U kunt bijdragen aan het project, problemen melden, functies voorstellen en de code inspecteren. We geloven in transparantie en openbaar bouwen."
     },
     "open_source_pricing": {
-      "question": "Biedt u speciale prijzen voor open source-projecten?",
+      "question": "Bieden jullie speciale prijzen voor open source-projecten?",
       "answer": "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als u een open source-project onderhoudt, kunt u toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over uw project, en we zorgen ervoor dat u een Pro-account met korting krijgt. Dit is onze manier om iets terug te doen voor de gemeenschap die ons werk mogelijk maakt."
     },
     "cancel_subscription": {

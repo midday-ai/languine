@@ -44,20 +44,20 @@
   "features": {
     "title": "Funksjoner",
     "fullyOpenSource": "Fullstendig åpen kildekode",
-    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
+    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra samfunnet.",
     "noVendorLockIn": "Ingen leverandørlås",
     "noVendorLockInDescription": "Vi låser deg ikke til en spesifikk tjeneste, bruk dine egne LLM-er.",
     "presetsForExpo": "Forhåndsinnstillinger for Expo",
-    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
+    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme raskt i gang.",
     "presetForReactNative": "Forhåndsinnstilling for React Native",
-    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
+    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme raskt i gang.",
     "presetForReactEmail": "React Email-bibliotek",
     "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
     "readyForI18nLibraries": "Klar for i18n-biblioteker",
-    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, osv)."
   },
   "info": {
-    "title": "Håndterer alle aspekter av lokalisering av din app inkludert",
+    "title": "Håndterer alle aspekter av lokalisering av appen din inkludert",
     "smartTranslation": {
       "title": "Smart oversettelse",
       "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
@@ -76,7 +76,7 @@
     "developer": {
       "title": "Utvikleropplevelse",
       "cli": "Kommandolinjegrensesnitt",
-      "cicd": "CI/CD-integrering",
+      "cicd": "CI/CD-integrasjon",
       "versionControl": "Versjonskontroll",
       "workflow": "Utviklerarbeidsflyt",
       "documentation": "Omfattende dokumentasjon"
@@ -120,7 +120,7 @@
   },
   "coming_soon": {
     "title": "Languine er i tidlig tilgang",
-    "description": "Vi er for øyeblikket i tidlig tilgang. Kontakt",
+    "description": "Vi er for øyeblikket i tidlig tilgang. Ta kontakt med",
     "cta": "på X for å få tidlig tilgang."
   },
   "account": {
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadresse",
-      "description": "E-postadressen knyttet til din konto.",
+      "description": "E-postadressen knyttet til kontoen din.",
       "placeholder": "Skriv inn din e-postadresse"
     },
     "apiKey": {
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "Slett konto",
-      "description": "Slett kontoen din permanent og all tilknyttet data. Denne handlingen kan ikke angres.",
+      "description": "Slett kontoen din og all tilknyttet data permanent. Denne handlingen kan ikke angres.",
       "button": "Slett konto"
     }
   },
@@ -164,7 +164,7 @@
   "settings": {
     "badRequest": "Ugyldig forespørsel",
     "badRequestDescription": "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
-    "permissionDenied": "Tilgang nektet",
+    "permissionDenied": "Tillatelse nektet",
     "permissionDeniedDescription": "Du må være eier av teamet for å utføre denne handlingen",
     "deleteTeamTitle": "Slett team",
     "deleteTeamDescription": "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Slett prosjekt",
-        "description": "Slett dette prosjektet permanent og all tilknyttet data",
+        "description": "Slett dette prosjektet og all tilknyttet data permanent",
         "button": "Slett prosjekt"
       }
     },
@@ -273,11 +273,11 @@
     },
     "qualityChecks": {
       "title": "Kvalitetssjekker",
-      "description": "Aktiver automatiske kvalitetssjekker for oversettelser"
+      "description": "Aktiver automatiserte kvalitetssjekker for oversettelser"
     },
     "contextDetection": {
-      "title": "Kontekstdeteksjon",
-      "description": "Automatisk detekter og bevar kontekst i oversettelser"
+      "title": "Kontekstgjenkjenning",
+      "description": "Automatisk gjenkjenning og bevaring av kontekst i oversettelser"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -295,8 +295,8 @@
       "description": "Sikre at oversettelser bruker inkluderende språk"
     },
     "formality": {
-      "title": "Formellhet",
-      "description": "Kontroller formalitetsnivået på oversettelser",
+      "title": "Formellitet",
+      "description": "Kontroller formellitetsnivået på oversettelser",
       "options": {
         "casual": "Uformell",
         "formal": "Formell",
@@ -329,7 +329,7 @@
         "diplomatic": "Diplomatisk"
       }
     },
-    "brand": "Merke",
+    "brand": "Merkevare",
     "emotiveIntent": {
       "title": "Emosjonell intensjon",
       "description": "Sett den emosjonelle tonen for oversettelser",
@@ -344,7 +344,7 @@
     },
     "domainExpertise": {
       "title": "Domeneekspertise",
-      "description": "Spesifiser domene-konteksten for oversettelser",
+      "description": "Spesifiser domenecontexten for oversettelser",
       "options": {
         "general": "Generelt",
         "technical": "Teknisk",
@@ -391,16 +391,16 @@
       "title": "Pro",
       "includes_free": "Alt i Gratis, pluss:",
       "features": {
-        "github_action": "GitHub Action-integrering",
+        "github_action": "GitHub Action-integrasjon",
         "latest_features": "Tidlig tilgang til de nyeste funksjonene",
         "priority_support": "Prioritert støtte",
         "priority_queues": "Prioriterte oversettelseskøer",
-        "keys_limit": "Fra 10 000 nøkler",
-        "docs_limit": "Fra 50 dokumenter"
+        "keys_limit": "Starter fra 10 000 nøkler",
+        "docs_limit": "Starter fra 50 dokumenter"
       }
     },
     "cta": "Start automatisering",
-    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde-nøkler (som \"Registrer deg\" eller \"Velkommen!\") og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
+    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde nøkler (som 'Registrer deg' eller 'Velkommen!') og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
   },
   "createTeam": {
     "teamName": "Teamnavn",
@@ -459,7 +459,7 @@
   },
   "cli": {
     "success": {
-      "title": "Languine CLI pålogging vellykket",
+      "title": "Languine CLI Login Suksess",
       "description": "Languine CLI ble vellykket autentisert som:",
       "description_2": "Du kan nå lukke denne fanen og gå tilbake til CLI"
     }
@@ -528,19 +528,19 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Hva er Languine?",
-      "answer": "Languine er en AI-drevet lokaliseringplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som tilpasningsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre høykvalitets oversettelser."
+      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som tilpasningsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
     },
     "key_limit": {
       "question": "Hvordan fungerer nøkkelgrensen?",
-      "answer": "En oversatt nøkkel telles når du oversetter en kilde-nøkkel til et målspråk. For eksempel, hvis du har 20 kilde-nøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
+      "answer": "En oversatt nøkkel telles når du oversetter en kilde nøkkel til et målspråk. For eksempel, hvis du har 20 kilde nøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
     },
     "supported_languages": {
       "question": "Hvilke språk støttes?",
-      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser over alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt supportteamet vårt."
+      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt supportteamet vårt."
     },
     "github_action": {
-      "question": "Hvordan fungerer GitHub Action-integreringen?",
-      "answer": "GitHub Action-integreringen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
+      "question": "Hvordan fungerer GitHub Action-integrasjonen?",
+      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
     },
     "support": {
       "question": "Hva slags støtte tilbyr dere?",
@@ -548,15 +548,15 @@
     },
     "open_source": {
       "question": "Er Languine åpen kildekode?",
-      "answer": "Ja! Languine er fullstendig åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge i det offentlige."
+      "answer": "Ja! Languine er fullstendig åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge offentlig."
     },
     "open_source_pricing": {
       "question": "Tilbyr dere spesialpriser for åpen kildekode-prosjekter?",
-      "answer": "Ja! Vi elsker å støtte åpen kildekode-fellesskapet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør vårt arbeid mulig."
+      "answer": "Ja! Vi elsker å støtte åpen kildekode-samfunnet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til samfunnet som gjør vårt arbeid mulig."
     },
     "cancel_subscription": {
-      "question": "Hvordan avbryter jeg abonnementet mitt?",
-      "answer": "Du kan avbryte abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av din nåværende faktureringsperiode, hvoretter du vil bli flyttet til Gratis-planen."
+      "question": "Hvordan avslutter jeg abonnementet mitt?",
+      "answer": "Du kan avslutte abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av din nåværende faktureringsperiode, hvoretter du vil bli flyttet til Gratis-planen."
     }
   },
   "pricing_slider": {

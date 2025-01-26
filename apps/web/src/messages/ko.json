@@ -33,7 +33,7 @@
   "activity": {
     "title": "활동",
     "loading": "로딩 중",
-    "noResults": "'{search}'에 대한 결과가 없습니다",
+    "noResults": "'{search}'에 대한 결과 없음",
     "clearSearch": "검색 지우기",
     "loadMore": "더 보기",
     "type": {
@@ -120,8 +120,8 @@
   },
   "coming_soon": {
     "title": "팀 생성",
-    "description": "Languine은 초기 접근 단계에 있습니다",
-    "cta": "우리는 현재 초기 접근 단계에 있습니다. 초기 접근을 얻으려면 X로 연락하세요."
+    "description": "Languine은 초기 액세스 중입니다",
+    "cta": "우리는 현재 초기 액세스 중입니다. 초기 액세스를 받으려면 X로 연락하세요."
   },
   "account": {
     "fullName": {
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "워크플로우(CI/CD 파이프라인)",
     "pro": "[프로]",
-    "description": "우리의 번역 엔진은 기존 CI/CD 파이프라인에 원활하게 통합되어, 모든 푸시마다 코드베이스를 자동으로 번역합니다. 코드 변경이 푸시되면, 우리는 수정된 콘텐츠를 분석하고, 번역 메모리를 유지하며, 브랜드 목소리와 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 병합 전 검토를 거쳐 메인 브랜치에 병합되고 배포됩니다. 이 자동화된 워크플로우는 현지화된 콘텐츠가 개발과 동기화되도록 보장합니다."
+    "description": "우리의 번역 엔진은 기존의 CI/CD 파이프라인에 원활하게 통합되어, 모든 푸시에서 코드베이스를 자동으로 번역합니다. 코드 변경이 푸시되면, 우리는 수정된 내용을 분석하고, 번역 메모리를 유지하며, 브랜드 목소리와 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 병합 및 배포 전에 검토할 수 있습니다. 이 자동화된 워크플로우는 현지화된 콘텐츠가 개발과 동기화되도록 보장합니다."
   },
   "settings": {
     "badRequest": "잘못된 요청",
@@ -227,7 +227,7 @@
       },
       "members": {
         "leaveTeamConfirm": "팀 떠나기",
-        "leaveTeamDescription": "이 팀을 떠나시겠습니까?",
+        "leaveTeamDescription": "정말로 이 팀을 떠나시겠습니까?",
         "cancel": "취소",
         "leaveTeam": "팀 떠나기",
         "invite": "멤버 초대",
@@ -235,14 +235,14 @@
         "pendingInvitations": "보류 중인 초대",
         "removeMember": "멤버 제거",
         "removeMemberConfirm": "멤버 제거",
-        "removeMemberDescription": "이 멤버를 제거하시겠습니까?",
+        "removeMemberDescription": "정말로 이 멤버를 제거하시겠습니까?",
         "filterPlaceholder": "멤버 필터링...",
         "allRoles": "모든 역할",
         "date": "날짜",
         "selectAll": "{count} 선택됨",
         "noPendingInvitations": "보류 중인 초대 없음",
         "noResults": "멤버를 찾을 수 없음",
-        "tryDifferentSearch": "다른 검색어를 시도해 보세요",
+        "tryDifferentSearch": "다른 검색 시도",
         "inviteMembers": "협업을 위해 멤버 초대",
         "deleteInvite": "초대 삭제",
         "deleteInviteDescription": "초대 삭제",
@@ -325,7 +325,7 @@
         "serious": "진지한",
         "confident": "자신감 있는",
         "humble": "겸손한",
-        "direct": "직설적인",
+        "direct": "직접적인",
         "diplomatic": "외교적인"
       }
     },
@@ -374,7 +374,7 @@
       "title": "무료",
       "price": "무료",
       "keys_limit": "최대 100개 키",
-      "description": "시험 사용에 적합",
+      "description": "시험 사용에 완벽",
       "features": {
         "unlimited_projects": "무제한 프로젝트",
         "fine_tuning": "튜닝 옵션",
@@ -389,10 +389,10 @@
     },
     "pro": {
       "title": "프로",
-      "includes_free": "무료의 모든 기능, 추가로:",
+      "includes_free": "무료의 모든 것, 추가로:",
       "features": {
         "github_action": "GitHub Action 통합",
-        "latest_features": "최신 기능에 대한 초기 접근",
+        "latest_features": "최신 기능 초기 액세스",
         "priority_support": "우선 지원",
         "priority_queues": "우선 번역 큐",
         "keys_limit": "10,000개 키부터 시작",
@@ -400,21 +400,21 @@
       }
     },
     "cta": "자동화 시작",
-    "keys_limit_explanation": "번역된 키: 20개의 소스 키(예: '가입' 또는 '환영합니다!')를 5개 언어로 번역하면, 100개의 번역된 키(20개 키 x 5개 언어)가 됩니다."
+    "keys_limit_explanation": "번역된 키: 20개의 소스 키(예: '가입하기' 또는 '환영합니다!')를 5개 언어로 번역하면, 100개의 번역된 키(20개 키 x 5개 언어)가 됩니다."
   },
   "createTeam": {
     "teamName": "팀 이름",
     "teamNamePlaceholder": "팀 이름 입력",
     "createTeamButton": "팀 생성",
     "cancel": "취소",
-    "createTeamDescription": "프로젝트와 협업자를 관리하기 위해 새 팀을 생성하세요."
+    "createTeamDescription": "프로젝트와 협업자를 관리할 새 팀을 생성하세요."
   },
   "createProject": {
     "createProjectTitle": "새 프로젝트 생성",
     "projectNamePlaceholder": "프로젝트 이름 입력",
     "createProjectButton": "프로젝트 생성",
     "cancel": "취소",
-    "createProjectDescription": "현지화 자동화를 시작하기 위해 새 프로젝트를 생성하세요."
+    "createProjectDescription": "현지화 자동화를 시작할 새 프로젝트를 생성하세요."
   },
   "invite": {
     "inviteMember": "멤버 초대",
@@ -425,7 +425,7 @@
     "submit": "제출",
     "success": {
       "title": "초대 전송됨",
-      "description": "{email}로 초대를 성공적으로 전송했습니다"
+      "description": "{email}로 초대를 성공적으로 전송했습니다."
     },
     "error": {
       "title": "오류",
@@ -439,7 +439,7 @@
     "steps": {
       "1": {
         "title": "Languine CLI 설정",
-        "description": "번역을 관리하기 위해 Languine CLI를 설치하고 구성하세요"
+        "description": "Languine CLI를 설치하고 번역 관리를 위해 구성하세요"
       },
       "2": {
         "title": "번역 푸시",
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Languine이란 무엇인가요?",
-      "answer": "Languine은 애플리케이션의 번역을 자동화하는 데 도움을 주는 AI 기반 현지화 플랫폼입니다. 튜닝 옵션, 번역 오버라이드, 분석, 컨텍스트 메모리와 같은 기능을 제공하여 고품질 번역을 보장합니다."
+      "answer": "Languine은 애플리케이션의 번역을 자동화하는 데 도움을 주는 AI 기반 현지화 플랫폼입니다. 고품질 번역을 보장하기 위해 튜닝 옵션, 번역 오버라이드, 분석, 컨텍스트 메모리와 같은 기능을 제공합니다."
     },
     "key_limit": {
       "question": "키 제한은 어떻게 작동하나요?",
@@ -536,7 +536,7 @@
     },
     "supported_languages": {
       "question": "어떤 언어를 지원하나요?",
-      "answer": "Languine은 모든 계획에서 100개 이상의 언어를 지원합니다. 우리의 AI 기반 번역은 주요 언어에서 가장 잘 작동하지만, 지원되는 모든 언어에 대해 품질 번역을 제공하기 위해 노력합니다. 특정 언어 요구 사항이나 특정 언어에 대한 번역 품질에 대한 질문이 있으면 지원팀에 문의하세요."
+      "answer": "Languine은 모든 계획에서 100개 이상의 언어를 지원합니다. 우리의 AI 기반 번역은 주요 언어에서 가장 잘 작동하지만, 지원되는 모든 언어에서 품질 번역을 제공하기 위해 노력합니다. 특정 언어 요구 사항이나 특정 언어에 대한 번역 품질에 대한 질문이 있으면 지원팀에 문의하세요."
     },
     "github_action": {
       "question": "GitHub Action 통합은 어떻게 작동하나요?",
@@ -552,11 +552,11 @@
     },
     "open_source_pricing": {
       "question": "오픈 소스 프로젝트를 위한 특별 가격을 제공하나요?",
-      "answer": "네! 우리는 오픈 소스 커뮤니티를 지원하는 것을 좋아합니다. 오픈 소스 프로젝트를 유지 관리하는 경우, 프로 기능을 30% 할인된 가격에 이용할 수 있습니다. 프로젝트에 대한 세부 정보와 함께 우리 팀에 연락하면, 할인된 프로 계정을 설정해 드립니다. 이것은 우리의 작업을 가능하게 하는 커뮤니티에 감사하는 우리의 방식입니다."
+      "answer": "네! 우리는 오픈 소스 커뮤니티를 지원하는 것을 좋아합니다. 오픈 소스 프로젝트를 관리하는 경우, 프로 기능을 30% 할인된 가격에 이용할 수 있습니다. 프로젝트에 대한 세부 정보와 함께 우리 팀에 연락하면, 할인된 프로 계정을 설정해 드립니다. 이것은 우리의 작업을 가능하게 하는 커뮤니티에 감사하는 우리의 방식입니다."
     },
     "cancel_subscription": {
       "question": "구독을 어떻게 취소하나요?",
-      "answer": "계정 설정에서 언제든지 구독을 취소할 수 있습니다. 결제 > 계획 변경으로 이동하세요. 현재 결제 기간이 끝날 때까지 구독은 활성 상태로 유지되며, 그 후 무료 계획으로 전환됩니다."
+      "answer": "계정 설정에서 언제든지 구독을 취소할 수 있습니다. 결제 > 계획 변경으로 이동하세요. 현재 결제 기간이 끝날 때까지 구독은 활성 상태로 유지되며, 그 후 무료 계획으로 이동됩니다."
     }
   },
   "pricing_slider": {
