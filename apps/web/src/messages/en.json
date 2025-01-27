@@ -6,8 +6,8 @@
     "goToApp": "Go to app"
   },
   "hero": {
-    "title": "Automated localization infrastructure for your applications",
-    "description": "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers."
+    "title": "Automated localization infrastructure",
+    "description": "Translate your app's content directly in your development workflow. Our CLI integrates with GitHub Actions and other CI/CD tools to automate translations as you code."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Get started",
-    "title": "Automated localization for your applications",
-    "description": "Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.",
+    "title": "Automated localization infrastructure",
+    "description": "Translate your app's content directly in your development workflow. Our CLI integrates with GitHub Actions and other CI/CD tools to automate translations as you code.",
     "button": {
       "startAutomating": "Start automating",
       "readDocumentation": "Read documentation"
