@@ -4,6 +4,7 @@ import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
 import { translateLocaleTask } from "./translate-locale";
 
+// trigger
 type TranslationOutput = {
   translations: Array<{ key: string; translatedText: string }>;
   targetLocale: string;
