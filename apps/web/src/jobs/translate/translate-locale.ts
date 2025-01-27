@@ -1,4 +1,4 @@
-import { createDocument, createTranslations } from "@/db/queries/translate";
+// import { createDocument, createTranslations } from "@/db/queries/translate";
 import { schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { translateDocument, translateKeys } from "../utils/translate";
@@ -38,51 +38,53 @@ export const translateLocaleTask = schemaTask({
     const translations: Array<{ key: string; translatedText: string }> = [];
 
     // If the source format is markdown, we take the whole document and translate it
-    if (payload.sourceFormat === "md" || payload.sourceFormat === "mdx") {
-      const document = payload.content.at(0);
+    // if (payload.sourceFormat === "md" || payload.sourceFormat === "mdx") {
+    //   const document = payload.content.at(0);
 
-      if (!document?.sourceText) {
-        return {
-          translations: [],
-          targetLocale: payload.targetLocale,
-        };
-      }
+    //   if (!document?.sourceText) {
+    //     return {
+    //       translations: [],
+    //       targetLocale: payload.targetLocale,
+    //     };
+    //   }
 
-      const translatedContent = await translateDocument(document.sourceText, {
-        sourceLocale: payload.sourceLanguage,
-        targetLocale: payload.targetLocale,
-        sourceFormat: payload.sourceFormat,
-      });
+    //   const translatedContent = await translateDocument(document.sourceText, {
+    //     sourceLocale: payload.sourceLanguage,
+    //     targetLocale: payload.targetLocale,
+    //     sourceFormat: payload.sourceFormat,
+    //   });
 
-      translations.push({
-        key: "content",
-        translatedText: translatedContent,
-      });
+    //   console.log(translatedContent);
 
-      if (document?.sourceText) {
-        await createDocument({
-          projectId: payload.projectId,
-          organizationId: payload.organizationId,
-          sourceText: document.sourceText,
-          sourceLanguage: payload.sourceLanguage,
-          targetLanguage: payload.targetLocale,
-          translatedText: translatedContent,
-          sourceFile: document.sourceFile,
-          sourceFormat: payload.sourceFormat,
-          branch: payload.branch,
-          commit: payload.commit,
-          commitLink: payload.commitLink,
-          sourceProvider: payload.sourceProvider,
-          commitMessage: payload.commitMessage,
-          userId: payload.userId,
-        });
-      }
+    //   translations.push({
+    //     key: "content",
+    //     translatedText: translatedContent,
+    //   });
 
-      return {
-        translations,
-        targetLocale: payload.targetLocale,
-      };
-    }
+    //   //   if (document?.sourceText) {
+    //   //     await createDocument({
+    //   //       projectId: payload.projectId,
+    //   //       organizationId: payload.organizationId,
+    //   //       sourceText: document.sourceText,
+    //   //       sourceLanguage: payload.sourceLanguage,
+    //   //       targetLanguage: payload.targetLocale,
+    //   //       translatedText: translatedContent,
+    //   //       sourceFile: document.sourceFile,
+    //   //       sourceFormat: payload.sourceFormat,
+    //   //       branch: payload.branch,
+    //   //       commit: payload.commit,
+    //   //       commitLink: payload.commitLink,
+    //   //       sourceProvider: payload.sourceProvider,
+    //   //       commitMessage: payload.commitMessage,
+    //   //       userId: payload.userId,
+    //   //     });
+    //   //   }
+
+    //   return {
+    //     translations,
+    //     targetLocale: payload.targetLocale,
+    //   };
+    // }
 
     // Split content into chunks
     const contentChunks = [];
@@ -104,25 +106,27 @@ export const translateLocaleTask = schemaTask({
         totalChunks,
       );
 
-      await createTranslations({
-        projectId: payload.projectId,
-        organizationId: payload.organizationId,
-        sourceFormat: payload.sourceFormat,
-        branch: payload.branch,
-        commit: payload.commit,
-        sourceProvider: payload.sourceProvider,
-        commitMessage: payload.commitMessage,
-        commitLink: payload.commitLink,
-        userId: payload.userId,
-        translations: chunk.map((content, i) => ({
-          translationKey: content.key,
-          sourceLanguage: payload.sourceLanguage,
-          targetLanguage: payload.targetLocale,
-          sourceText: content.sourceText,
-          sourceFile: content.sourceFile,
-          translatedText: translatedContent[i],
-        })),
-      });
+      console.log(translatedContent);
+
+      //   await createTranslations({
+      //     projectId: payload.projectId,
+      //     organizationId: payload.organizationId,
+      //     sourceFormat: payload.sourceFormat,
+      //     branch: payload.branch,
+      //     commit: payload.commit,
+      //     sourceProvider: payload.sourceProvider,
+      //     commitMessage: payload.commitMessage,
+      //     commitLink: payload.commitLink,
+      //     userId: payload.userId,
+      //     translations: chunk.map((content, i) => ({
+      //       translationKey: content.key,
+      //       sourceLanguage: payload.sourceLanguage,
+      //       targetLanguage: payload.targetLocale,
+      //       sourceText: content.sourceText,
+      //       sourceFile: content.sourceFile,
+      //       translatedText: translatedContent[i],
+      //     })),
+      //   });
 
       // Process translations for this chunk
       chunk.forEach((content, i) => {

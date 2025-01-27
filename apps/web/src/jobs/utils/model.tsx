@@ -25,11 +25,11 @@ export function chooseModel(totalItems: number) {
   // const isLarge = totalItems > MODEL_THRESHOLD;
 
   // if (isLarge) {
-  // return {
-  //   model: large,
-  //   mode: "json",
-  //   maxTokens: 8000,
-  // };
+  return {
+    model: large,
+    mode: "json",
+    maxTokens: 8000,
+  };
   // }
 
   return {

@@ -3,11 +3,11 @@
     "pricing": "Priser",
     "docs": "Dokumentation",
     "signIn": "Logga in",
-    "goToApp": "Gå till app"
+    "goToApp": "Gå till appen"
   },
   "hero": {
-    "title": "Automatiserad lokaliseringsinfrastruktur för dina applikationer",
-    "description": "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare."
+    "title": "Automatiserad lokalisationsinfrastruktur",
+    "description": "Översätt ditt apps innehåll direkt i din utvecklingsprocess. Vår CLI integreras med GitHub Actions och andra CI/CD-verktyg för att automatisera översättningar medan du kodar."
   },
   "navigation": {
     "dashboard": "Instrumentpanel",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Automatiserad lokaliseringsinfrastruktur för dina applikationer",
-    "description": "Effektivisera din lokaliseringsprocess med en AI-driven CLI och pipeline designad för att automatisera översättningar för utvecklare.",
+    "title": "Automatiserad lokalisationsinfrastruktur",
+    "description": "Översätt ditt apps innehåll direkt i din utvecklingsprocess. Vår CLI integreras med GitHub Actions och andra CI/CD-verktyg för att automatisera översättningar medan du kodar.",
     "button": {
       "startAutomating": "Börja automatisera",
       "readDocumentation": "Läs dokumentationen"
@@ -44,27 +44,27 @@
   "features": {
     "title": "Funktioner",
     "fullyOpenSource": "Helt öppen källkod",
-    "fullyOpenSourceDescription": "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från samhället.",
+    "fullyOpenSourceDescription": "Vår kod är offentligt tillgänglig på GitHub, vilket möjliggör transparens och bidrag från gemenskapen.",
     "noVendorLockIn": "Ingen leverantörslåsning",
-    "noVendorLockInDescription": "Vi låser inte in dig i en specifik tjänst, använd dina egna LLMs.",
+    "noVendorLockInDescription": "Vi låser dig inte till en specifik tjänst, använd dina egna LLMs.",
     "presetsForExpo": "Förinställningar för Expo",
-    "presetsForExpoDescription": "Vi tillhandahåller förinställningar för Expo, så du kan komma igång snabbt.",
+    "presetsForExpoDescription": "Vi erbjuder förinställningar för Expo, så att du snabbt kan komma igång.",
     "presetForReactNative": "Förinställning för React Native",
-    "presetForReactNativeDescription": "Vi tillhandahåller en förinställning för React Native, så du kan komma igång snabbt.",
-    "presetForReactEmail": "React Email-bibliotek",
+    "presetForReactNativeDescription": "Vi erbjuder en förinställning för React Native, så att du snabbt kan komma igång.",
+    "presetForReactEmail": "React Email Library",
     "presetForReactEmailDescription": "Vi har skapat ett i18n-bibliotek för React Email.",
     "readyForI18nLibraries": "Redo för i18n-bibliotek",
-    "readyForI18nLibrariesDescription": "Vi stöder alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Vi stödjer alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Hanterar alla aspekter av att lokalisera din app inklusive",
+    "title": "Hantera alla aspekter av att lokalisera din app inklusive",
     "smartTranslation": {
       "title": "Smart översättning",
       "intelligentTranslation": "Intelligent översättning med kontextmedvetenhet",
       "brandVoice": "Konsekvens i varumärkesröst och ton",
       "terminology": "Terminologihantering",
-      "linguisticFeatures": "Avancerade språkliga funktioner",
-      "realtimeUpdates": "Uppdateringar av översättningar i realtid"
+      "linguisticFeatures": "Avancerade språkfunktioner",
+      "realtimeUpdates": "Real tidsöversättningsuppdateringar"
     },
     "implementation": {
       "title": "Implementering",
@@ -77,8 +77,8 @@
       "title": "Utvecklarupplevelse",
       "cli": "Kommandoradsgränssnitt",
       "cicd": "CI/CD-integration",
-      "versionControl": "Versionshantering",
-      "workflow": "Utvecklararbetsflöde",
+      "versionControl": "Versionskontroll",
+      "workflow": "Utvecklingsarbetsflöde",
       "documentation": "Omfattande dokumentation"
     }
   },
@@ -87,7 +87,7 @@
     "github": "Logga in med GitHub",
     "google": "Logga in med Google",
     "footer": "Automatisera din lokalisering.",
-    "description": "Logga in för att börja automatisera din lokalisering på några sekunder.",
+    "description": "Logga in för att börja automatisera din lokalisering på sekunder.",
     "terms": {
       "text": "Genom att logga in godkänner du våra",
       "termsOfService": "Användarvillkor",
@@ -119,7 +119,7 @@
     "createTeamButton": "Skapa team"
   },
   "coming_soon": {
-    "title": "Languine är i tidig tillgång",
+    "title": "Languine är i Early Access",
     "description": "Vi är för närvarande i tidig tillgång. Kontakta",
     "cta": "på X för att få tidig tillgång."
   },
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadress",
-      "description": "E-postadressen associerad med ditt konto.",
+      "description": "E-postadressen kopplad till ditt konto.",
       "placeholder": "Ange din e-postadress"
     },
     "apiKey": {
@@ -139,45 +139,45 @@
       "description": "Din personliga API-nyckel för att komma åt Languine API och från CLI."
     },
     "deleteAccount": {
-      "title": "Ta bort konto",
-      "description": "Ta permanent bort ditt konto och all tillhörande data. Denna åtgärd kan inte ångras.",
-      "button": "Ta bort konto"
+      "title": "Radera konto",
+      "description": "Radera permanent ditt konto och alla associerade data. Denna åtgärd kan inte ångras.",
+      "button": "Radera konto"
     }
   },
   "copyInstall": {
-    "copied": "Kopierat till urklipp"
+    "copied": "Kopierad till urklipp"
   },
   "dangerZone": {
     "dialog": {
       "title": "Är du absolut säker?",
       "description": "Denna åtgärd kan inte ångras. Vänligen skriv DELETE för att bekräfta.",
       "placeholder": "Skriv DELETE för att bekräfta",
-      "confirm": "Bekräfta borttagning",
+      "confirm": "Bekräfta radering",
       "cancel": "Avbryt"
     }
   },
   "pipeline": {
     "title": "Arbetsflöde (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Vår översättningsmotor integreras sömlöst i ditt befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar pushas analyserar vi det modifierade innehållet, underhåller ditt översättningsminne och genererar korrekta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan in som pull requests, vilket möjliggör granskning innan de slås samman i din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
+    "description": "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline, automatiskt översätter din kodbas vid varje push. När kodändringar skickas analyserar vi det modifierade innehållet, upprätthåller ditt översättningsminne och genererar korrekta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull-förfrågningar, vilket möjliggör granskning innan de slås samman till din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
   },
   "settings": {
     "badRequest": "Ogiltig begäran",
     "badRequestDescription": "Organisationen måste ha minst en ägare. Överför ägarskap till en annan medlem innan du tar bort denna ägare.",
-    "permissionDenied": "Tillstånd nekades",
+    "permissionDenied": "Behörighet nekad",
     "permissionDeniedDescription": "Du måste vara ägare av teamet för att utföra denna åtgärd",
-    "deleteTeamTitle": "Ta bort team",
-    "deleteTeamDescription": "Kan inte ta bort organisation när du är den enda medlemmen, ta istället bort ditt konto",
+    "deleteTeamTitle": "Radera team",
+    "deleteTeamDescription": "Kan inte radera organisationen när du är den enda medlemmen, radera istället ditt konto",
     "saved": "Inställningar sparade",
     "savedDescription": "Dina ändringar har sparats framgångsrikt",
     "error": "Något gick fel",
-    "errorDescription": "Försök igen eller kontakta support",
+    "errorDescription": "Vänligen försök igen eller kontakta support",
     "addTeam": "Skapa team",
     "apiKey": {
       "updated": "API-nyckel uppdaterad",
       "updatedDescription": "Din API-nyckel har uppdaterats framgångsrikt och kopierats till ditt urklipp.",
       "title": "Uppdatera API-nyckel",
-      "description": "Är du säker på att du vill generera en ny API-nyckel? Den gamla nyckeln kommer att sluta fungera omedelbart.",
+      "description": "Är du säker på att du vill generera en ny API-nyckel? Den gamla nyckeln slutar fungera omedelbart.",
       "cancel": "Avbryt",
       "continue": "Fortsätt"
     },
@@ -201,9 +201,9 @@
         "placeholder": "Projekt-ID"
       },
       "delete": {
-        "title": "Ta bort projekt",
-        "description": "Ta permanent bort detta projekt och all dess data",
-        "button": "Ta bort projekt"
+        "title": "Radera projekt",
+        "description": "Radera permanent detta projekt och alla dess data",
+        "button": "Radera projekt"
       }
     },
     "save": "Spara",
@@ -218,7 +218,7 @@
         "description": "Hantera ditt teams faktureringsplan",
         "free": "Gratis",
         "pro": "Pro",
-        "unlimited": "Obegränsat"
+        "unlimited": "Obegränsad"
       },
       "apiKey": {
         "title": "Team API-nyckel",
@@ -242,17 +242,17 @@
         "selectAll": "{count} valda",
         "noPendingInvitations": "Inga väntande inbjudningar",
         "noResults": "Inga medlemmar hittades",
-        "tryDifferentSearch": "Prova en annan sökning",
+        "tryDifferentSearch": "Försök med en annan sökning",
         "inviteMembers": "Bjud in medlemmar att samarbeta",
-        "deleteInvite": "Ta bort inbjudan",
-        "deleteInviteDescription": "Ta bort inbjudan",
+        "deleteInvite": "Radera inbjudan",
+        "deleteInviteDescription": "Radera inbjudan",
         "invitedBy": "Inbjuden av {name}",
-        "deleteInviteSuccess": "Inbjudan borttagen",
-        "deleteInviteError": "Misslyckades att ta bort inbjudan",
+        "deleteInviteSuccess": "Inbjudan raderad",
+        "deleteInviteError": "Misslyckades med att radera inbjudan",
         "removeMemberSuccess": "Medlem borttagen",
-        "removeMemberError": "Misslyckades att ta bort medlem",
-        "removeMemberSuccessDescription": "Medlemmen har tagits bort framgångsrikt",
-        "removeMemberErrorDescription": "Misslyckades att ta bort medlem",
+        "removeMemberError": "Misslyckades med att ta bort medlem",
+        "removeMemberSuccessDescription": "Medlem har tagits bort framgångsrikt",
+        "removeMemberErrorDescription": "Misslyckades med att ta bort medlem",
         "roles": {
           "owner": "Ägare",
           "member": "Medlem"
@@ -261,7 +261,7 @@
           "newest": "Nyaste",
           "oldest": "Äldsta"
         },
-        "deleteInviteConfirm": "Ta bort inbjudan"
+        "deleteInviteConfirm": "Radera inbjudan"
       }
     }
   },
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Kontextdetektering",
-      "description": "Automatiskt detektera och bevara kontext i översättningar"
+      "description": "Automatiskt upptäcka och bevara kontext i översättningar"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -295,17 +295,17 @@
       "description": "Säkerställ att översättningar använder inkluderande språk"
     },
     "formality": {
-      "title": "Formellhet",
+      "title": "Formalitet",
       "description": "Kontrollera formalitetsnivån på översättningar",
       "options": {
-        "casual": "Casual",
+        "casual": "Avslappnad",
         "formal": "Formell",
         "neutral": "Neutral"
       }
     },
     "brandName": {
       "title": "Varumärkesnamn",
-      "description": "Ställ in ditt varumärkesnamn för konsekvent användning",
+      "description": "Ange ditt varumärkesnamn för konsekvent användning",
       "placeholder": "Ange ditt varumärkesnamn"
     },
     "brandVoice": {
@@ -317,7 +317,7 @@
       "title": "Ton i rösten",
       "description": "Definiera tonen som används i översättningar",
       "options": {
-        "casual": "Casual",
+        "casual": "Avslappnad",
         "formal": "Formell",
         "friendly": "Vänlig",
         "professional": "Professionell",
@@ -347,17 +347,17 @@
       "description": "Specificera domänkontexten för översättningar",
       "options": {
         "general": "Allmänt",
-        "technical": "Tekniskt",
-        "medical": "Medicinskt",
-        "legal": "Juridiskt",
-        "financial": "Finansiellt",
+        "technical": "Teknisk",
+        "medical": "Medicinsk",
+        "legal": "Juridisk",
+        "financial": "Finansiell",
         "marketing": "Marknadsföring",
-        "academic": "Akademiskt"
+        "academic": "Akademisk"
       }
     },
     "idioms": {
-      "title": "Idiom",
-      "description": "Hantera idiomatiska uttryck på lämpligt sätt"
+      "title": "Idiomatiska uttryck",
+      "description": "Hantera idiomatiska uttryck på rätt sätt"
     },
     "terminology": {
       "title": "Terminologi",
@@ -369,19 +369,19 @@
     }
   },
   "pricing": {
-    "title": "Enkla priser",
+    "title": "Enkel prissättning",
     "free": {
       "title": "Gratis",
       "price": "Gratis",
       "keys_limit": "Upp till 100 nycklar",
-      "description": "Perfekt när du testar",
+      "description": "Perfekt när du provar",
       "features": {
         "unlimited_projects": "Obegränsade projekt",
         "fine_tuning": "Finjusteringsalternativ",
-        "overrides": "Översättningsöverstyrningar",
+        "overrides": "Översättningsöverskridningar",
         "analytics": "Analys",
         "context_memory": "Kontextminne",
-        "community_support": "Communitysupport",
+        "community_support": "Gemenskapsstöd",
         "keys_limit": "Upp till 100 nycklar",
         "docs_limit": "Upp till 5 dokument",
         "unlimited_languages": "Obegränsade språk"
@@ -392,15 +392,15 @@
       "includes_free": "Allt i Gratis, plus:",
       "features": {
         "github_action": "GitHub Action-integration",
-        "latest_features": "Tidig tillgång till de senaste funktionerna",
+        "latest_features": "Tidig tillgång till senaste funktionerna",
         "priority_support": "Prioriterat stöd",
         "priority_queues": "Prioriterade översättningsköer",
-        "keys_limit": "Börjar från 10 000 nycklar",
-        "docs_limit": "Börjar från 50 dokument"
+        "keys_limit": "Från 10 000 nycklar",
+        "docs_limit": "Från 50 dokument"
       }
     },
     "cta": "Börja automatisera",
-    "keys_limit_explanation": "Översatt nyckel: Om du har 20 källnycklar (som \"Registrera dig\" eller \"Välkommen!\") och översätter dem till 5 språk, motsvarar det 100 översatta nycklar (20 nycklar x 5 språk)."
+    "keys_limit_explanation": "Översatt nyckel: Om du har 20 källnycklar (som 'Registrera dig' eller 'Välkommen!') och översätter dem till 5 språk, motsvarar det 100 översatta nycklar (20 nycklar x 5 språk)."
   },
   "createTeam": {
     "teamName": "Teamnamn",
@@ -425,20 +425,20 @@
     "submit": "Skicka",
     "success": {
       "title": "Inbjudan skickad",
-      "description": "Inbjudan skickades framgångsrikt till {email}"
+      "description": "Skickade framgångsrikt inbjudan till {email}"
     },
     "error": {
       "title": "Fel",
-      "description": "Misslyckades att skicka inbjudan. Försök igen."
+      "description": "Misslyckades med att skicka inbjudan. Vänligen försök igen."
     },
     "validation": {
-      "invalidEmail": "Vänligen ange en giltig e-postadress"
+      "invalidEmail": "Vänligen ange en giltig e-post"
     }
   },
   "onboarding": {
     "steps": {
       "1": {
-        "title": "Konfigurera Languine CLI",
+        "title": "Installera Languine CLI",
         "description": "Installera och konfigurera Languine CLI för att hantera översättningar"
       },
       "2": {
@@ -459,9 +459,9 @@
   },
   "cli": {
     "success": {
-      "title": "Languine CLI-inloggning lyckades",
+      "title": "Languine CLI Inloggning lyckades",
       "description": "Languine CLI autentiserades framgångsrikt som:",
-      "description_2": "Du kan nu stänga denna flik och återgå till CLI"
+      "description_2": "Du kan nu stänga denna flik och återvända till CLI"
     }
   },
   "search": {
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Vad är Languine?",
-      "answer": "Languine är en AI-driven lokaliseringsplattform som hjälper dig att automatisera översättningen av dina applikationer. Den tillhandahåller funktioner som finjusteringsalternativ, översättningsöverstyrningar, analys och kontextminne för att säkerställa högkvalitativa översättningar."
+      "answer": "Languine är en AI-drivet lokalisationsplattform som hjälper dig att automatisera översättningen av dina applikationer. Den erbjuder funktioner som finjusteringsalternativ, översättningsöverskridningar, analys och kontextminne för att säkerställa högkvalitativa översättningar."
     },
     "key_limit": {
       "question": "Hur fungerar nyckelgränsen?",
@@ -536,53 +536,63 @@
     },
     "supported_languages": {
       "question": "Vilka språk stöds?",
-      "answer": "Languine stöder över 100 språk i alla planer. Även om våra AI-drivna översättningar fungerar bäst med större språk, strävar vi efter att tillhandahålla kvalitetsöversättningar över alla stödda språk. Om du har specifika språkkrav eller frågor om översättningskvalitet för vissa språk, vänligen kontakta vårt supportteam."
+      "answer": "Languine stöder över 100 språk i alla planer. Medan våra AI-drivna översättningar fungerar bäst med större språk, strävar vi efter att tillhandahålla kvalitetsöversättningar över alla stödda språk. Om du har specifika språkkrav eller frågor om översättningskvalitet för särskilda språk, vänligen kontakta vårt supportteam."
     },
     "github_action": {
       "question": "Hur fungerar GitHub Action-integrationen?",
-      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) låter dig automatisera ditt översättningsarbetsflöde direkt i din CI/CD-pipeline. När du pushar ändringar till ditt repository kan översättningar automatiskt uppdateras."
+      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) gör det möjligt att automatisera ditt översättningsarbetsflöde direkt i din CI/CD-pipeline. När du pushar ändringar till din databas kan översättningar automatiskt uppdateras."
     },
     "support": {
-      "question": "Vilket stöd erbjuder ni?",
-      "answer": "Gratisanvändare får tillgång till communitysupport, medan Pro-användare får prioriterat stöd med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
+      "question": "Vilken typ av support erbjuder ni?",
+      "answer": "Gratis användare får tillgång till gemenskapsstöd, medan Pro-användare får prioriterat stöd med snabbare svarstider och dedikerad hjälp för deras översättningsbehov."
     },
     "open_source": {
       "question": "Är Languine öppen källkod?",
       "answer": "Ja! Languine är helt öppen källkod och tillgänglig på GitHub. Du kan bidra till projektet, rapportera problem, föreslå funktioner och inspektera koden. Vi tror på transparens och att bygga offentligt."
     },
     "open_source_pricing": {
-      "question": "Erbjuder ni specialpriser för öppen källkod-projekt?",
-      "answer": "Ja! Vi älskar att stödja öppen källkod-samhället. Om du underhåller ett öppen källkod-projekt kan du få tillgång till våra Pro-funktioner till 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så sätter vi upp ett rabatterat Pro-konto åt dig. Detta är vårt sätt att ge tillbaka till samhället som gör vårt arbete möjligt."
+      "question": "Erbjuder ni specialpriser för öppen källkodsprojekt?",
+      "answer": "Ja! Vi älskar att stödja öppen källkodsgemenskapen. Om du underhåller ett öppen källkodsprojekt kan du få tillgång till våra Pro-funktioner till 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, och vi kommer att sätta upp dig med ett rabatterat Pro-konto. Detta är vårt sätt att ge tillbaka till gemenskapen som gör vårt arbete möjligt."
     },
     "cancel_subscription": {
-      "question": "Hur avslutar jag mitt abonnemang?",
-      "answer": "Du kan avsluta ditt abonnemang när som helst från dina kontoinställningar. Navigera till Fakturering > Ändra plan. Ditt abonnemang kommer att förbli aktivt till slutet av din nuvarande faktureringsperiod, varefter du flyttas till Gratis-planen."
+      "question": "Hur avslutar jag min prenumeration?",
+      "answer": "Du kan avsluta din prenumeration när som helst från dina kontoinställningar. Gå till Fakturering > Ändra plan. Din prenumeration kommer att vara aktiv tills slutet av din nuvarande faktureringsperiod, varefter du flyttas till Gratis-planen."
     }
   },
   "pricing_slider": {
-    "tier": "Nivå {tier}",
+    "tier": "Tier {tier}",
     "keys": "Översatta nycklar",
     "documents": "Översatta dokument",
     "period": "mån",
-    "keys_prefix": "",
-    "keys_suffix": " nycklar",
-    "docs_prefix": "",
-    "docs_suffix": " dokument"
+    "keys_prefix": " nycklar",
+    "keys_suffix": " dokument",
+    "docs_prefix": "Komma igång",
+    "docs_suffix": "Arbetsflöde"
   },
   "docs": {
-    "getting-started": "Kom igång",
-    "introduction": "Introduktion",
+    "getting-started": "CI/CD",
+    "introduction": "Autentisering",
     "installation": "Installation",
-    "quickstart": "Snabbstart",
+    "quickstart": "Konfiguration",
     "guides": "Guider",
-    "configuration": "Konfiguration",
-    "cli": "CLI",
+    "configuration": "GitHub Actions",
+    "cli": "Justering",
     "api": "API",
     "advanced": "Avancerat",
     "custom-parsers": "Anpassade parsers",
     "workflows": "Arbetsflöden",
     "self-hosting": "Självhosting",
     "jobs": "Jobb",
-    "support": "Support"
+    "support": "Support",
+    "workflow": "Förinställningar",
+    "ci": "Format",
+    "presets": "Plattform",
+    "formats": "Introduktion",
+    "platform": "Snabbstart",
+    "authentication": "CLI",
+    "github-actions": "Inställningar",
+    "tuning": "Hooks",
+    "settings": "Exempel",
+    "hooks": "Team"
   }
 }
