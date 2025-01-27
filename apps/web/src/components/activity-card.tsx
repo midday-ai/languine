@@ -8,7 +8,7 @@ import { Skeleton } from "./ui/skeleton";
 type Props = {
   source: string;
   content: string;
-  updatedAt: Date;
+  updatedAt: string;
   commit?: string | null;
   commitLink?: string | null;
   sourceProvider?: string | null;

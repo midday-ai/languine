@@ -11,10 +11,7 @@ export const translateRouter = createTRPCRouter({
     .query(async ({ input }) => {
       const data = await getTranslationsBySlug(input);
 
-      return data.map(({ translations }) => ({
-        ...translations,
-        createdAt: translations.createdAt.toISOString(),
-      }));
+      return data;
     }),
 
   deleteKeys: protectedProcedure

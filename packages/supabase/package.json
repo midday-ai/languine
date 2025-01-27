@@ -2,6 +2,9 @@
   "name": "@languine/supabase",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "db:generate": "supabase gen types typescript --project-id xvpqpmlvmhucygfkofgz --schema public > src/db/types.ts"
+  },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.48.1",
@@ -12,6 +15,7 @@
     "./client": "./src/client/client.ts",
     "./server": "./src/client/server.ts",
     "./middleware": "./src/client/middleware.ts",
-    "./utils": "./src/client/utils.ts"
+    "./utils": "./src/client/utils.ts",
+    "./types": "./src/db/types.ts"
   }
 }
