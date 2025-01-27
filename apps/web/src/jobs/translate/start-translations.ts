@@ -4,12 +4,9 @@ import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
 import { translateLocaleTask } from "./translate-locale";
 
-// trigger
 type TranslationOutput = {
   translations: Array<{ key: string; translatedText: string }>;
   targetLocale: string;
-  status: string;
-  progress: number;
 };
 
 const startTranslationsSchema = z.object({
@@ -71,33 +68,21 @@ export const startTranslationsTask = schemaTask({
       })),
     );
 
-    console.log("jobs", jobs);
-
     // Aggregate translations from all jobs
     const translations: Record<
       string,
       Array<{ key: string; translatedText: string }>
     > = {};
 
-    // Treat jobs as an array since BatchResult contains an array of results
-    const jobResults = jobs as unknown as Array<{
-      output: TranslationOutput | undefined;
-      status: string;
-    }>;
-
-    console.log("jobResults", jobResults);
-
-    for (const job of jobResults) {
-      if (job.output) {
-        translations[job.output.targetLocale] = job.output.translations;
+    for (const run of jobs.runs) {
+      if (run.ok && run.output) {
+        const output = run.output as TranslationOutput;
+        translations[output.targetLocale] = output.translations;
       }
     }
 
     return {
       translations,
-      jobs: jobResults.map((job) => ({
-        locale: job.output?.targetLocale,
-      })),
     };
   },
 });

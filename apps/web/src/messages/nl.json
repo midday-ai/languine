@@ -581,6 +581,8 @@
     "advanced": "Geavanceerd",
     "custom-parsers": "Aangepaste Parsers",
     "workflows": "Workflows",
-    "self-hosting": "Zelfhosting"
+    "self-hosting": "Zelfhosting",
+    "jobs": "Banen",
+    "support": "Ondersteuning"
   }
 }

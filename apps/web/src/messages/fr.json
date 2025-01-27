@@ -581,6 +581,8 @@
     "advanced": "Avancé",
     "custom-parsers": "Analyseurs personnalisés",
     "workflows": "Flux de travail",
-    "self-hosting": "Auto-hébergement"
+    "self-hosting": "Auto-hébergement",
+    "jobs": "Emplois",
+    "support": "Support"
   }
 }

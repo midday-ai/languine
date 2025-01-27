@@ -581,6 +581,8 @@
     "advanced": "고급",
     "custom-parsers": "사용자 정의 파서",
     "workflows": "워크플로우",
-    "self-hosting": "셀프 호스팅"
+    "self-hosting": "셀프 호스팅",
+    "jobs": "작업",
+    "support": "지원"
   }
 }

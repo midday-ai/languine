@@ -30,6 +30,10 @@ export const translateLocaleTask = schemaTask({
   id: "translate-locale",
   schema: translateLocaleSchema,
   maxDuration: 600,
+  queue: {
+    // Global limit for all tasks
+    concurrencyLimit: 5,
+  },
   run: async (payload) => {
     const translations: Array<{ key: string; translatedText: string }> = [];
 
@@ -41,8 +45,6 @@ export const translateLocaleTask = schemaTask({
         return {
           translations: [],
           targetLocale: payload.targetLocale,
-          status: "completed",
-          progress: 100,
         };
       }
 

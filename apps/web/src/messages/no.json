@@ -581,6 +581,8 @@
     "advanced": "Avansert",
     "custom-parsers": "Egendefinerte parsere",
     "workflows": "Arbeidsflyter",
-    "self-hosting": "Selvhøsting"
+    "self-hosting": "Selvhøsting",
+    "jobs": "Jobber",
+    "support": "Støtte"
   }
 }

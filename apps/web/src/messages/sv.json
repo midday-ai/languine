@@ -581,6 +581,8 @@
     "advanced": "Avancerat",
     "custom-parsers": "Anpassade parsers",
     "workflows": "Arbetsflöden",
-    "self-hosting": "Självhosting"
+    "self-hosting": "Självhosting",
+    "jobs": "Jobb",
+    "support": "Support"
   }
 }

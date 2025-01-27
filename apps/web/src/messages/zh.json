@@ -581,6 +581,8 @@
     "advanced": "高级",
     "custom-parsers": "自定义解析器",
     "workflows": "工作流程",
-    "self-hosting": "自托管"
+    "self-hosting": "自托管",
+    "jobs": "工作",
+    "support": "支持"
   }
 }

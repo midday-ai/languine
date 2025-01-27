@@ -581,6 +581,8 @@
     "advanced": "Gelişmiş",
     "custom-parsers": "Özel Ayrıştırıcılar",
     "workflows": "İş Akışları",
-    "self-hosting": "Kendi Sunucunuzda Barındırma"
+    "self-hosting": "Kendi Sunucunuzda Barındırma",
+    "jobs": "İşler",
+    "support": "Destek"
   }
 }

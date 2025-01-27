@@ -581,6 +581,8 @@
     "advanced": "上級者向け",
     "custom-parsers": "カスタムパーサー",
     "workflows": "ワークフロー",
-    "self-hosting": "セルフホスティング"
+    "self-hosting": "セルフホスティング",
+    "jobs": "仕事",
+    "support": "サポート"
   }
 }

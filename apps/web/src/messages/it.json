@@ -581,6 +581,8 @@
     "advanced": "Avanzato",
     "custom-parsers": "Parser personalizzati",
     "workflows": "Flussi di lavoro",
-    "self-hosting": "Self-Hosting"
+    "self-hosting": "Self-Hosting",
+    "jobs": "Lavori",
+    "support": "Supporto"
   }
 }
