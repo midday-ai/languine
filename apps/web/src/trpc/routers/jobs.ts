@@ -1,4 +1,4 @@
-import type { translateTask } from "@/jobs/translate/translate";
+import type { startTranslationsTask } from "@/jobs/translate/start-translations";
 import { tasks } from "@trigger.dev/sdk/v3";
 import { createTRPCRouter, protectedProcedure } from "../init";
 import { hasProjectAccess } from "../permissions/project";
@@ -24,8 +24,8 @@ export const jobsRouter = createTRPCRouter({
 
       const { options, isFreeUser } = getTranslationTaskOptions(org);
 
-      const run = await tasks.trigger<typeof translateTask>(
-        "translate",
+      const run = await tasks.trigger<typeof startTranslationsTask>(
+        "start-translations",
         {
           apiKey: input.apiKey,
           projectId: input.projectId,

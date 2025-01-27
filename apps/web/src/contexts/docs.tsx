@@ -4,26 +4,26 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { createContext, useContext, useMemo } from "react";
 
+interface DocsItem {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+interface DocsSection {
+  title: string;
+  items: DocsItem[];
+}
+
+interface DocsPageItem extends DocsItem {
+  section: string;
+}
+
 interface DocsContextType {
-  sections: {
-    title: string;
-    items: { href: string; label: string }[];
-  }[];
-  currentPage: {
-    href: string;
-    label: string;
-    section: string;
-  } | null;
-  nextPage: {
-    href: string;
-    label: string;
-    section: string;
-  } | null;
-  previousPage: {
-    href: string;
-    label: string;
-    section: string;
-  } | null;
+  sections: DocsSection[];
+  currentPage: DocsPageItem | null;
+  nextPage: DocsPageItem | null;
+  previousPage: DocsPageItem | null;
 }
 
 const DocsContext = createContext<DocsContextType | undefined>(undefined);
@@ -92,13 +92,42 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
     {
       title: t("examples"),
       items: [
-        { href: "/docs/fumadocs", label: "Fumadocs" },
-        { href: "/docs/expofile", label: "Expo" },
-        { href: "/docs/react-email", label: "React Email" },
-        { href: "/docs/i18next", label: "i18next" },
-        { href: "/docs/lingui", label: "Lingui" },
-        { href: "/docs/next-international", label: "Next International" },
-        { href: "/docs/react-i18next", label: "React i18next" },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/fumadocs",
+          label: "Fumadocs",
+          external: true,
+        },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/expo",
+          label: "Expo",
+          external: true,
+        },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/email",
+          label: "React Email",
+          external: true,
+        },
+        { href: "/docs/i18next", label: "i18next", external: true },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/lingui",
+          label: "Lingui",
+          external: true,
+        },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/next-international",
+          label: "Next International",
+          external: true,
+        },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/react-i18next",
+          label: "React i18next",
+          external: true,
+        },
+        {
+          href: "https://github.com/midday-ai/languine/tree/main/examples/next-intl",
+          label: "Next Intl",
+          external: true,
+        },
       ],
     },
     {
@@ -106,6 +135,7 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
       items: [
         { href: "/docs/tuning", label: t("tuning") },
         { href: "/docs/settings", label: t("settings") },
+        { href: "/docs/team", label: t("team") },
       ],
     },
   ];
@@ -118,11 +148,13 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
         section: section.title,
       })),
     );
-
     const pathWithoutLocale = pathname.split("/").slice(2).join("/");
     const currentPageIndex = allPages.findIndex(
-      (page) => page.href === `/${pathWithoutLocale}`,
+      (page) =>
+        ("external" in page ? !page.external : true) &&
+        page.href === `/${pathWithoutLocale}`,
     );
+
     const currentPage =
       currentPageIndex !== -1 ? allPages[currentPageIndex] : null;
     const previousPage =
