@@ -298,6 +298,7 @@ export async function translateCommand(args: string[] = []) {
                     )}%`,
                   );
                 }
+
                 if (update.finishedAt) {
                   result = update.output;
                   break;

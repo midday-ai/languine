@@ -15,7 +15,7 @@ import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { MdArrowBack, MdArrowForward, MdCallMade } from "react-icons/md";
 
 export function DocsSidebar() {
   const t = useTranslations("docs");
@@ -41,6 +41,7 @@ export function DocsSidebar() {
                 {section.items.map((item) => (
                   <SelectItem key={item.href} value={item.href}>
                     {item.label}
+                    {item.external && <MdCallMade className="inline ml-1" />}
                   </SelectItem>
                 ))}
               </SelectGroup>
@@ -68,6 +69,7 @@ export function DocsSidebar() {
                       )}
                     >
                       {item.label}
+                      {item.external && <MdCallMade className="inline ml-1" />}
                     </Link>
                   </li>
                 ))}
