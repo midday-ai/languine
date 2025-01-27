@@ -44,13 +44,13 @@
   "features": {
     "title": "Funktionen",
     "fullyOpenSource": "Vollständig Open Source",
-    "fullyOpenSourceDescription": "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Gemeinschaftsbeiträge ermöglicht.",
+    "fullyOpenSourceDescription": "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Community-Beiträge ermöglicht.",
     "noVendorLockIn": "Kein Vendor Lock-in",
-    "noVendorLockInDescription": "Wir binden Sie nicht an einen bestimmten Dienst, verwenden Sie Ihre eigenen LLMs.",
+    "noVendorLockInDescription": "Wir schränken Sie nicht auf einen bestimmten Dienst ein, verwenden Sie Ihre eigenen LLMs.",
     "presetsForExpo": "Voreinstellungen für Expo",
-    "presetsForExpoDescription": "Wir bieten Voreinstellungen für Expo, damit Sie schnell starten können.",
+    "presetsForExpoDescription": "Wir bieten Voreinstellungen für Expo, damit Sie schnell loslegen können.",
     "presetForReactNative": "Voreinstellung für React Native",
-    "presetForReactNativeDescription": "Wir bieten eine Voreinstellung für React Native, damit Sie schnell starten können.",
+    "presetForReactNativeDescription": "Wir bieten eine Voreinstellung für React Native, damit Sie schnell loslegen können.",
     "presetForReactEmail": "React Email Bibliothek",
     "presetForReactEmailDescription": "Wir haben eine i18n-Bibliothek für React Email erstellt.",
     "readyForI18nLibraries": "Bereit für i18n-Bibliotheken",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Team-API-Schlüssel",
-        "description": "API-Schlüssel für den Teamzugriff, verwenden Sie diesen in Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID",
+        "description": "API-Schlüssel für den Teamzugriff, verwenden Sie diesen von Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID",
         "placeholder": "Team-API-Schlüssel"
       },
       "members": {
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "Qualitätsprüfungen",
-      "description": "Aktivieren Sie automatische Qualitätsprüfungen für Übersetzungen"
+      "description": "Aktivieren Sie automatisierte Qualitätsprüfungen für Übersetzungen"
     },
     "contextDetection": {
       "title": "Kontexterkennung",
@@ -391,7 +391,7 @@
       "title": "Pro",
       "includes_free": "Alles in Kostenlos, plus:",
       "features": {
-        "github_action": "GitHub Action-Integration",
+        "github_action": "GitHub Action Integration",
         "latest_features": "Frühzeitiger Zugang zu neuesten Funktionen",
         "priority_support": "Priorisierter Support",
         "priority_queues": "Priorisierte Übersetzungswarteschlangen",
@@ -539,8 +539,8 @@
       "answer": "Languine unterstützt in allen Plänen über 100 Sprachen. Während unsere KI-gestützten Übersetzungen mit den Hauptsprachen am besten funktionieren, bemühen wir uns, qualitativ hochwertige Übersetzungen für alle unterstützten Sprachen bereitzustellen. Wenn Sie spezifische Sprachanforderungen haben oder Fragen zur Übersetzungsqualität für bestimmte Sprachen haben, wenden Sie sich bitte an unser Support-Team."
     },
     "github_action": {
-      "question": "Wie funktioniert die GitHub Action-Integration?",
-      "answer": "Die GitHub Action-Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungs-Workflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen in Ihr Repository pushen, können Übersetzungen automatisch aktualisiert werden."
+      "question": "Wie funktioniert die GitHub Action Integration?",
+      "answer": "Die GitHub Action Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungs-Workflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen in Ihr Repository pushen, können Übersetzungen automatisch aktualisiert werden."
     },
     "support": {
       "question": "Welche Art von Support bieten Sie an?",

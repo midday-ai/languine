@@ -44,24 +44,24 @@
   "features": {
     "title": "Funksjoner",
     "fullyOpenSource": "Fullstendig åpen kildekode",
-    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra samfunnet.",
+    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
     "noVendorLockIn": "Ingen leverandørlås",
     "noVendorLockInDescription": "Vi låser deg ikke til en spesifikk tjeneste, bruk dine egne LLM-er.",
     "presetsForExpo": "Forhåndsinnstillinger for Expo",
-    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme raskt i gang.",
+    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
     "presetForReactNative": "Forhåndsinnstilling for React Native",
-    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme raskt i gang.",
+    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
     "presetForReactEmail": "React Email-bibliotek",
-    "presetForReactEmailDescription": "Vi har opprettet et i18n-bibliotek for React Email.",
+    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
     "readyForI18nLibraries": "Klar for i18n-biblioteker",
     "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, osv)."
   },
   "info": {
-    "title": "Håndterer alle aspekter av lokaliseringsarbeidet for appen din inkludert",
+    "title": "Håndterer alle aspekter av å lokalisere appen din inkludert",
     "smartTranslation": {
       "title": "Smart oversettelse",
       "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
-      "brandVoice": "Konsekvens i merkevarestemme og tone",
+      "brandVoice": "Konsekvent stemme og tone for merkevaren",
       "terminology": "Terminologistyring",
       "linguisticFeatures": "Avanserte lingvistiske funksjoner",
       "realtimeUpdates": "Sanntidsoppdateringer av oversettelser"
@@ -87,7 +87,7 @@
     "github": "Logg inn med GitHub",
     "google": "Logg inn med Google",
     "footer": "Automatiser din lokalisering.",
-    "description": "Logg inn for å starte automatiseringen av din lokalisering på sekunder.",
+    "description": "Logg inn for å starte automatisering av din lokalisering på sekunder.",
     "terms": {
       "text": "Ved å logge inn godtar du våre",
       "termsOfService": "Tjenestevilkår",
@@ -120,7 +120,7 @@
   },
   "coming_soon": {
     "title": "Languine er i tidlig tilgang",
-    "description": "Vi er for øyeblikket i tidlig tilgang. Ta kontakt med",
+    "description": "Vi er for øyeblikket i tidlig tilgang. Kontakt",
     "cta": "på X for å få tidlig tilgang."
   },
   "account": {
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadresse",
-      "description": "E-postadressen knyttet til din konto.",
+      "description": "E-postadressen knyttet til kontoen din.",
       "placeholder": "Skriv inn din e-postadresse"
     },
     "apiKey": {
@@ -159,23 +159,23 @@
   "pipeline": {
     "title": "Arbeidsflyt (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokaliserte innhold holder tritt med utviklingen."
+    "description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter kodebasen din automatisk ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen."
   },
   "settings": {
     "badRequest": "Ugyldig forespørsel",
     "badRequestDescription": "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
-    "permissionDenied": "Tilgang nektet",
+    "permissionDenied": "Tillatelse nektet",
     "permissionDeniedDescription": "Du må være eier av teamet for å utføre denne handlingen",
     "deleteTeamTitle": "Slett team",
     "deleteTeamDescription": "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
     "saved": "Innstillinger lagret",
-    "savedDescription": "Dine endringer har blitt lagret vellykket",
+    "savedDescription": "Dine endringer har blitt lagret",
     "error": "Noe gikk galt",
     "errorDescription": "Vennligst prøv igjen eller kontakt support",
     "addTeam": "Opprett team",
     "apiKey": {
       "updated": "API-nøkkel oppdatert",
-      "updatedDescription": "Din API-nøkkel har blitt oppdatert vellykket og kopiert til utklippstavlen din.",
+      "updatedDescription": "Din API-nøkkel har blitt oppdatert og kopiert til utklippstavlen.",
       "title": "Oppdater API-nøkkel",
       "description": "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
       "cancel": "Avbryt",
@@ -251,7 +251,7 @@
         "deleteInviteError": "Kunne ikke slette invitasjon",
         "removeMemberSuccess": "Medlem fjernet",
         "removeMemberError": "Kunne ikke fjerne medlem",
-        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet vellykket",
+        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet",
         "removeMemberErrorDescription": "Kunne ikke fjerne medlem",
         "roles": {
           "owner": "Eier",
@@ -295,8 +295,8 @@
       "description": "Sikre at oversettelser bruker inkluderende språk"
     },
     "formality": {
-      "title": "Formellitet",
-      "description": "Kontroller formellitetsnivået i oversettelser",
+      "title": "Formellhet",
+      "description": "Kontroller formalitetsnivået på oversettelser",
       "options": {
         "casual": "Uformell",
         "formal": "Formell",
@@ -314,7 +314,7 @@
       "placeholder": "Beskriv din merkevarestemme..."
     },
     "toneOfVoice": {
-      "title": "Tonen i stemmen",
+      "title": "Tonemåte",
       "description": "Definer tonen som brukes i oversettelser",
       "options": {
         "casual": "Uformell",
@@ -329,7 +329,7 @@
         "diplomatic": "Diplomatisk"
       }
     },
-    "brand": "Merke",
+    "brand": "Merkevare",
     "emotiveIntent": {
       "title": "Emosjonell intensjon",
       "description": "Sett den emosjonelle tonen for oversettelser",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Idiomer",
-      "description": "Håndter idiomatiske uttrykk på en hensiktsmessig måte"
+      "description": "Håndter idiomatiske uttrykk på riktig måte"
     },
     "terminology": {
       "title": "Terminologi",
@@ -377,7 +377,7 @@
       "description": "Perfekt når du prøver ut",
       "features": {
         "unlimited_projects": "Ubegrensede prosjekter",
-        "fine_tuning": "Justeringsalternativer",
+        "fine_tuning": "Finjusteringsalternativer",
         "overrides": "Oversettelsesoverstyringer",
         "analytics": "Analytikk",
         "context_memory": "Kontekstminne",
@@ -395,8 +395,8 @@
         "latest_features": "Tidlig tilgang til de nyeste funksjonene",
         "priority_support": "Prioritert støtte",
         "priority_queues": "Prioriterte oversettelseskøer",
-        "keys_limit": "Starter fra 10 000 nøkler",
-        "docs_limit": "Starter fra 50 dokumenter"
+        "keys_limit": "Fra 10 000 nøkler",
+        "docs_limit": "Fra 50 dokumenter"
       }
     },
     "cta": "Start automatisering",
@@ -414,7 +414,7 @@
     "projectNamePlaceholder": "Skriv inn prosjektnavn",
     "createProjectButton": "Opprett prosjekt",
     "cancel": "Avbryt",
-    "createProjectDescription": "Opprett et nytt prosjekt for å starte automatiseringen av din lokalisering."
+    "createProjectDescription": "Opprett et nytt prosjekt for å starte automatisering av din lokalisering."
   },
   "invite": {
     "inviteMember": "Inviter medlem",
@@ -447,7 +447,7 @@
       },
       "3": {
         "title": "Dokumentasjon",
-        "description": "Sjekk ut vår dokumentasjon for detaljerte guider og beste praksis",
+        "description": "Sjekk ut dokumentasjonen vår for detaljerte guider og beste praksis",
         "link": "dokumentasjon"
       }
     },
@@ -460,7 +460,7 @@
   "cli": {
     "success": {
       "title": "Languine CLI Login Suksess",
-      "description": "Languine CLI ble vellykket autentisert som:",
+      "description": "Languine CLI ble autentisert som:",
       "description_2": "Du kan nå lukke denne fanen og gå tilbake til CLI"
     }
   },
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Hva er Languine?",
-      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som justeringsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
+      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som finjusteringsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
     },
     "key_limit": {
       "question": "Hvordan fungerer nøkkelgrensen?",
@@ -536,7 +536,7 @@
     },
     "supported_languages": {
       "question": "Hvilke språk støttes?",
-      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser over alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt vårt supportteam."
+      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt supportteamet vårt."
     },
     "github_action": {
       "question": "Hvordan fungerer GitHub Action-integreringen?",
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Tilbyr dere spesialpriser for åpen kildekode-prosjekter?",
-      "answer": "Ja! Vi elsker å støtte det åpne kildekode-samfunnet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til samfunnet som gjør vårt arbeid mulig."
+      "answer": "Ja! Vi elsker å støtte det åpne kildekode-fellesskapet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør vårt arbeid mulig."
     },
     "cancel_subscription": {
       "question": "Hvordan avslutter jeg abonnementet mitt?",

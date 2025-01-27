@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et d'autres outils CI/CD pour automatiser les traductions pendant que vous codez."
+    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Commencer",
     "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et d'autres outils CI/CD pour automatiser les traductions pendant que vous codez.",
+    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez.",
     "button": {
       "startAutomating": "Commencez à automatiser",
       "readDocumentation": "Lire la documentation"
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "Supprimer le compte",
-      "description": "Supprimer définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
+      "description": "Supprimez définitivement votre compte et toutes les données associées. Cette action ne peut pas être annulée.",
       "button": "Supprimer le compte"
     }
   },
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Flux de travail (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Notre moteur de traduction s'intègre de manière transparente dans votre pipeline CI/CD existant, traduisant automatiquement votre base de code à chaque push. Lorsque des modifications de code sont poussées, nous analysons le contenu modifié, maintenons votre mémoire de traduction et générons des traductions précises tout en préservant la voix de votre marque et la terminologie. Les traductions sont ensuite soumises sous forme de pull requests, permettant une revue avant d'être fusionnées dans votre branche principale et déployées. Ce flux de travail automatisé garantit que votre contenu localisé reste synchronisé avec le développement."
+    "description": "Notre moteur de traduction s'intègre parfaitement à votre pipeline CI/CD existant, traduisant automatiquement votre base de code à chaque push. Lorsque des modifications de code sont poussées, nous analysons le contenu modifié, maintenons votre mémoire de traduction et générons des traductions précises tout en préservant la voix de votre marque et la terminologie. Les traductions sont ensuite soumises sous forme de pull requests, permettant une revue avant d'être fusionnées dans votre branche principale et déployées. Ce flux de travail automatisé assure que votre contenu localisé reste synchronisé avec le développement."
   },
   "settings": {
     "badRequest": "Requête invalide",
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Supprimer le projet",
-        "description": "Supprimer définitivement ce projet et toutes ses données",
+        "description": "Supprimez définitivement ce projet et toutes ses données",
         "button": "Supprimer le projet"
       }
     },
@@ -239,13 +239,13 @@
         "filterPlaceholder": "Filtrer les membres...",
         "allRoles": "Tous les rôles",
         "date": "Date",
-        "selectAll": "{count} sélectionné(s)",
+        "selectAll": "{count} sélectionné",
         "noPendingInvitations": "Aucune invitation en attente",
         "noResults": "Aucun membre trouvé",
         "tryDifferentSearch": "Essayez une recherche différente",
         "inviteMembers": "Invitez des membres à collaborer",
         "deleteInvite": "Supprimer l'invitation",
-        "deleteInviteDescription": "Supprimer l'invitation",
+        "deleteInviteDescription": "Supprimez l'invitation",
         "invitedBy": "Invité par {name}",
         "deleteInviteSuccess": "Invitation supprimée",
         "deleteInviteError": "Échec de la suppression de l'invitation",
@@ -439,7 +439,7 @@
     "steps": {
       "1": {
         "title": "Configurer Languine CLI",
-        "description": "Installez et configurez Languine CLI pour gérer les traductions"
+        "description": "Installez et configurez la CLI Languine pour gérer les traductions"
       },
       "2": {
         "title": "Pousser les traductions",
@@ -460,7 +460,7 @@
   "cli": {
     "success": {
       "title": "Connexion CLI Languine réussie",
-      "description": "Languine CLI a été authentifié avec succès en tant que :",
+      "description": "La CLI Languine a été authentifiée avec succès en tant que :",
       "description_2": "Vous pouvez maintenant fermer cet onglet et retourner à la CLI"
     }
   },
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Qu'est-ce que Languine ?",
-      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle fournit des fonctionnalités comme des options de réglage fin, des remplacements de traduction, des analytiques et une mémoire de contexte pour garantir des traductions de haute qualité."
+      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle fournit des fonctionnalités comme des options de réglage fin, des remplacements de traduction, des analytiques et une mémoire de contexte pour assurer des traductions de haute qualité."
     },
     "key_limit": {
       "question": "Comment fonctionne la limite de clés ?",
@@ -540,7 +540,7 @@
     },
     "github_action": {
       "question": "Comment fonctionne l'intégration GitHub Action ?",
-      "answer": "L'intégration GitHub Action (disponible dans les plans Pro) vous permet d'automatiser votre flux de travail de traduction directement dans votre pipeline CI/CD. Lorsque vous poussez des modifications dans votre dépôt, les traductions peuvent être automatiquement mises à jour."
+      "answer": "L'intégration GitHub Action (disponible dans les plans Pro) vous permet d'automatiser votre flux de travail de traduction directement dans votre pipeline CI/CD. Lorsque vous poussez des modifications à votre dépôt, les traductions peuvent être automatiquement mises à jour."
     },
     "support": {
       "question": "Quel type de support offrez-vous ?",
@@ -591,7 +591,7 @@
     "github-actions": "GitHub Actions",
     "tuning": "Réglage",
     "settings": "Paramètres",
-    "hooks": "Crochets",
+    "hooks": "Hooks",
     "examples": "Exemples",
     "team": "Équipe"
   },

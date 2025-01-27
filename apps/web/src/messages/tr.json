@@ -1,7 +1,7 @@
 {
   "header": {
     "pricing": "Fiyatlandırma",
-    "docs": "Dokümanlar",
+    "docs": "Belgeler",
     "signIn": "Giriş yap",
     "goToApp": "Uygulamaya git"
   },
@@ -14,20 +14,20 @@
     "tuning": "İnce Ayar",
     "settings": "Ayarlar",
     "pricing": "Fiyatlandırma",
-    "docs": "Dokümantasyon",
+    "docs": "Belgelendirme",
     "account": "Hesap"
   },
   "getStarted": {
-    "heading": "Başla",
+    "heading": "Başlayın",
     "title": "Otomatik yerelleştirme altyapısı",
     "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'mız, kod yazarken çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur.",
     "button": {
-      "startAutomating": "Otomasyona başla",
-      "readDocumentation": "Dokümantasyonu oku"
+      "startAutomating": "Otomasyona başlayın",
+      "readDocumentation": "Belgelendirmeyi oku"
     }
   },
   "companies": {
-    "title": "Kullanıcılar",
+    "title": "Tarafından kullanılan",
     "addYourCompany": "+ Şirketinizi ekleyin"
   },
   "activity": {
@@ -44,13 +44,13 @@
   "features": {
     "title": "Özellikler",
     "fullyOpenSource": "Tamamen açık kaynak",
-    "fullyOpenSourceDescription": "Kodumuz GitHub'da halka açık, şeffaflık ve topluluk katkılarına olanak sağlıyor.",
-    "noVendorLockIn": "Satıcı kilidi yok",
+    "fullyOpenSourceDescription": "Kodumuz GitHub'da halka açıktır, şeffaflık ve topluluk katkılarına olanak tanır.",
+    "noVendorLockIn": "Tedarikçi kilidi yok",
     "noVendorLockInDescription": "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
     "presetsForExpo": "Expo için ön ayarlar",
-    "presetsForExpoDescription": "Expo için ön ayarlar sağlıyoruz, böylece hızlıca başlayabilirsiniz.",
+    "presetsForExpoDescription": "Expo için ön ayarlar sağlıyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     "presetForReactNative": "React Native için ön ayar",
-    "presetForReactNativeDescription": "React Native için bir ön ayar sağlıyoruz, böylece hızlıca başlayabilirsiniz.",
+    "presetForReactNativeDescription": "React Native için bir ön ayar sağlıyoruz, böylece hızlı bir şekilde başlayabilirsiniz.",
     "presetForReactEmail": "React Email Kütüphanesi",
     "presetForReactEmailDescription": "React Email için bir i18n kütüphanesi oluşturduk.",
     "readyForI18nLibraries": "i18n kütüphanelerine hazır",
@@ -79,7 +79,7 @@
       "cicd": "CI/CD entegrasyonu",
       "versionControl": "Sürüm kontrolü",
       "workflow": "Geliştirici iş akışı",
-      "documentation": "Kapsamlı dokümantasyon"
+      "documentation": "Kapsamlı belgelendirme"
     }
   },
   "login": {
@@ -87,7 +87,7 @@
     "github": "GitHub ile giriş yap",
     "google": "Google ile giriş yap",
     "footer": "Yerelleştirmenizi otomatikleştirin.",
-    "description": "Saniyeler içinde yerelleştirmenizi otomatikleştirmeye başlamak için giriş yapın.",
+    "description": "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
     "terms": {
       "text": "Giriş yaparak, bizim",
       "termsOfService": "Hizmet Şartları",
@@ -120,8 +120,8 @@
   },
   "coming_soon": {
     "title": "Languine Erken Erişimde",
-    "description": "Şu anda erken erişimdeyiz. Erken erişim için",
-    "cta": "X'te bize ulaşın."
+    "description": "Şu anda erken erişimdeyiz. Erken erişim almak için X'te",
+    "cta": "ile iletişime geçin."
   },
   "account": {
     "fullName": {
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-posta Adresi",
-      "description": "Hesabınızla ilişkilendirilmiş e-posta adresi.",
+      "description": "Hesabınızla ilişkili e-posta adresi.",
       "placeholder": "E-posta adresinizi girin"
     },
     "apiKey": {
@@ -149,9 +149,9 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Gerçekten emin misiniz?",
-      "description": "Bu işlem geri alınamaz. Onaylamak için LÜTFEN SİL yazın.",
-      "placeholder": "Onaylamak için SİL yazın",
+      "title": "Kesinlikle emin misiniz?",
+      "description": "Bu işlem geri alınamaz. Onaylamak için DELETE yazın.",
+      "placeholder": "Onaylamak için DELETE yazın",
       "confirm": "Silme İşlemini Onayla",
       "cancel": "İptal"
     }
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "İş Akışı (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Çeviri motorumuz, mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push'ta kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri push edildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için pull request olarak gönderilir, ana dalınıza birleştirilmeden ve dağıtılmadan önce gözden geçirilir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    "description": "Çeviri motorumuz mevcut CI/CD iş akışınıza sorunsuz bir şekilde entegre olur, her itmede kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri itildiğinde, değiştirilen içeriği analiz eder, çeviri hafızanızı korur ve marka sesinizi ve terminolojinizi korurken doğru çeviriler üretir. Çeviriler daha sonra inceleme için çekme istekleri olarak gönderilir, ana dalınıza birleştirilmeden ve dağıtılmadan önce gözden geçirilir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   "settings": {
     "badRequest": "Geçersiz istek",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Takım API Anahtarı",
-        "description": "Takım erişimi için API anahtarı, bunu Proje Kimliği ile birlikte CI/CD pipeline'ınızdan kullanın",
+        "description": "Takım erişimi için API anahtarı, Proje Kimliği ile birlikte CI/CD iş akışınızdan kullanın",
         "placeholder": "Takım API Anahtarı"
       },
       "members": {
@@ -243,7 +243,7 @@
         "noPendingInvitations": "Bekleyen davet yok",
         "noResults": "Üye bulunamadı",
         "tryDifferentSearch": "Farklı bir arama deneyin",
-        "inviteMembers": "İş birliği yapmak için üyeleri davet edin",
+        "inviteMembers": "İş birliği yapmak için üyeler davet edin",
         "deleteInvite": "Daveti sil",
         "deleteInviteDescription": "Davetiyeyi sil",
         "invitedBy": "{name} tarafından davet edildi",
@@ -261,15 +261,15 @@
           "newest": "En yeni",
           "oldest": "En eski"
         },
-        "deleteInviteConfirm": "Daveti Sil"
+        "deleteInviteConfirm": "Daveti sil"
       }
     }
   },
   "tuning": {
     "general": "Genel",
     "translationMemory": {
-      "title": "Çeviri Hafızası",
-      "description": "Tutarlılığı ve verimliliği artırmak için çeviri hafızasını kullanın"
+      "title": "Çeviri Belleği",
+      "description": "Çeviri belleğini kullanarak tutarlılığı ve verimliliği artırın"
     },
     "qualityChecks": {
       "title": "Kalite Kontrolleri",
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Bağlam Algılama",
-      "description": "Çevirilerde bağlamı otomatik olarak algıla ve koru"
+      "description": "Çevirilerde bağlamı otomatik olarak algılayın ve koruyun"
     },
     "styleGuide": "Stil Rehberi",
     "lengthControl": {
@@ -286,7 +286,7 @@
       "options": {
         "flexible": "Esnek",
         "strict": "Katı",
-        "exact": "Tam",
+        "exact": "Kesin",
         "loose": "Gevşek"
       }
     },
@@ -296,7 +296,7 @@
     },
     "formality": {
       "title": "Resmiyet",
-      "description": "Çevirilerin resmiyet seviyesini kontrol edin",
+      "description": "Çevirilerin resmiyet düzeyini kontrol edin",
       "options": {
         "casual": "Gündelik",
         "formal": "Resmi",
@@ -374,13 +374,13 @@
       "title": "Ücretsiz",
       "price": "Ücretsiz",
       "keys_limit": "100 anahtara kadar",
-      "description": "Denemek için mükemmel",
+      "description": "Deneme yaparken mükemmel",
       "features": {
         "unlimited_projects": "Sınırsız proje",
         "fine_tuning": "İnce ayar seçenekleri",
         "overrides": "Çeviri geçersiz kılmaları",
         "analytics": "Analitik",
-        "context_memory": "Bağlam hafızası",
+        "context_memory": "Bağlam belleği",
         "community_support": "Topluluk desteği",
         "keys_limit": "100 anahtara kadar",
         "docs_limit": "5 belgeye kadar",
@@ -395,12 +395,12 @@
         "latest_features": "En yeni özelliklere erken erişim",
         "priority_support": "Öncelikli destek",
         "priority_queues": "Öncelikli çeviri kuyrukları",
-        "keys_limit": "10.000 anahtardan başlayan",
-        "docs_limit": "50 belgeden başlayan"
+        "keys_limit": "10.000 anahtardan başlayarak",
+        "docs_limit": "50 belgeden başlayarak"
       }
     },
-    "cta": "Otomasyona başla",
-    "keys_limit_explanation": "Çevrilmiş anahtar: 20 kaynak anahtarınız (\"Kaydol\" veya \"Hoş Geldiniz!\" gibi) varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtara eşittir (20 anahtar x 5 dil)."
+    "cta": "Otomasyona başlayın",
+    "keys_limit_explanation": "Çevrilmiş anahtar: 20 kaynak anahtarınız (örneğin 'Kaydol' veya 'Hoş Geldiniz!') varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar (20 anahtar x 5 dil) anlamına gelir."
   },
   "createTeam": {
     "teamName": "Takım Adı",
@@ -438,23 +438,23 @@
   "onboarding": {
     "steps": {
       "1": {
-        "title": "Languine CLI Kurulumu",
+        "title": "Languine CLI'yi Kur",
         "description": "Çevirileri yönetmek için Languine CLI'yi kurun ve yapılandırın"
       },
       "2": {
-        "title": "Çevirileri Gönder",
-        "description": "Çevirilerin gönderilmesi bekleniyor"
+        "title": "Çevirileri İt",
+        "description": "Çevirilerin itilmesi bekleniyor"
       },
       "3": {
-        "title": "Dokümantasyon",
-        "description": "Detaylı rehberler ve en iyi uygulamalar için dokümantasyonumuza göz atın",
-        "link": "dokümantasyon"
+        "title": "Belgelendirme",
+        "description": "Ayrıntılı rehberler ve en iyi uygulamalar için belgelendirmemize göz atın",
+        "link": "belgelendirme"
       }
     },
     "info": {
-      "description": "Yardıma mı ihtiyacınız var? Detaylı rehberler ve en iyi uygulamalar için",
-      "link": "dokümantasyon",
-      "description_2": "dokümantasyonumuza göz atın."
+      "description": "Yardıma mı ihtiyacınız var? Ayrıntılı rehberler ve en iyi uygulamalar için",
+      "link": "belgelendirmemize",
+      "description_2": "göz atın."
     }
   },
   "cli": {
@@ -486,7 +486,7 @@
     "ar": "Arapça",
     "hi": "Hintçe",
     "tr": "Türkçe",
-    "nl": "Felemenkçe",
+    "nl": "Hollandaca",
     "pl": "Lehçe",
     "no": "Norveççe",
     "da": "Danca",
@@ -499,7 +499,7 @@
     "tuning": "İnce Ayar",
     "settings": "Ayarlar",
     "pricing": "Fiyatlandırma",
-    "docs": "Dokümantasyon",
+    "docs": "Belgelendirme",
     "account": "Hesap"
   },
   "billing": {
@@ -528,27 +528,27 @@
     "title": "SSS",
     "what_is_languine": {
       "question": "Languine nedir?",
-      "answer": "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan bir AI destekli yerelleştirme platformudur. İnce ayar seçenekleri, çeviri geçersiz kılmaları, analitik ve bağlam hafızası gibi özellikler sunarak yüksek kaliteli çeviriler sağlar."
+      "answer": "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan bir AI destekli yerelleştirme platformudur. İnce ayar seçenekleri, çeviri geçersiz kılmaları, analitik ve bağlam belleği gibi özellikler sunarak yüksek kaliteli çeviriler sağlar."
     },
     "key_limit": {
       "question": "Anahtar sınırı nasıl çalışır?",
-      "answer": "Bir kaynak anahtarını bir hedef dile çevirdiğinizde çevrilmiş bir anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtara eşittir (20 anahtar × 5 dil)."
+      "answer": "Bir kaynak anahtarını bir hedef dile çevirdiğinizde çevrilmiş bir anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilmiş anahtar (20 anahtar × 5 dil) anlamına gelir."
     },
     "supported_languages": {
       "question": "Hangi diller destekleniyor?",
-      "answer": "Languine, tüm planlarda 100'den fazla dili destekler. AI destekli çevirilerimiz büyük dillerle en iyi şekilde çalışırken, desteklenen tüm dillerde kaliteli çeviriler sağlamaya çalışıyoruz. Belirli dil gereksinimleriniz varsa veya belirli diller için çeviri kalitesi hakkında sorularınız varsa, lütfen destek ekibimizle iletişime geçin."
+      "answer": "Languine tüm planlarda 100'den fazla dili destekler. AI destekli çevirilerimiz büyük dillerle en iyi şekilde çalışırken, desteklenen tüm dillerde kaliteli çeviriler sağlamaya çalışıyoruz. Belirli dil gereksinimleriniz varsa veya belirli diller için çeviri kalitesi hakkında sorularınız varsa, lütfen destek ekibimizle iletişime geçin."
     },
     "github_action": {
       "question": "GitHub Action entegrasyonu nasıl çalışır?",
-      "answer": "GitHub Action entegrasyonu (Pro planlarda mevcuttur), çeviri iş akışınızı doğrudan CI/CD pipeline'ınızda otomatikleştirmenizi sağlar. Deponuza değişiklikler push ettiğinizde, çeviriler otomatik olarak güncellenebilir."
+      "answer": "GitHub Action entegrasyonu (Pro planlarda mevcuttur), çeviri iş akışınızı doğrudan CI/CD iş akışınızda otomatikleştirmenizi sağlar. Deponuza değişiklikleri ittiğinizde, çeviriler otomatik olarak güncellenebilir."
     },
     "support": {
-      "question": "Ne tür bir destek sunuyorsunuz?",
-      "answer": "Ücretsiz kullanıcılar topluluk desteğine erişebilirken, Pro kullanıcıları öncelikli destek alır ve çeviri ihtiyaçları için daha hızlı yanıt süreleri ve özel yardım alır."
+      "question": "Ne tür destek sunuyorsunuz?",
+      "answer": "Ücretsiz kullanıcılar topluluk desteğine erişebilirken, Pro kullanıcıları çeviri ihtiyaçları için daha hızlı yanıt süreleri ve özel yardım ile öncelikli destek alır."
     },
     "open_source": {
       "question": "Languine açık kaynak mı?",
-      "answer": "Evet! Languine tamamen açık kaynaktır ve GitHub'da mevcuttur. Projeye katkıda bulunabilir, sorunları bildirebilir, özellikler önerebilir ve kodu inceleyebilirsiniz. Şeffaflığa ve halka açık bir şekilde inşa etmeye inanıyoruz."
+      "answer": "Evet! Languine tamamen açık kaynaktır ve GitHub'da mevcuttur. Projeye katkıda bulunabilir, sorunları bildirebilir, özellikler önerebilir ve kodu inceleyebilirsiniz. Şeffaflığa ve kamuya açık bir şekilde inşa etmeye inanıyoruz."
     },
     "open_source_pricing": {
       "question": "Açık kaynak projeler için özel fiyatlandırma sunuyor musunuz?",
@@ -560,12 +560,12 @@
     }
   },
   "pricing_slider": {
-    "tier": "Kademe {tier}",
+    "tier": "Seviye {tier}",
     "keys": "Çevrilmiş anahtarlar",
     "documents": "Çevrilmiş belgeler",
-    "period": "Pzt",
-    "keys_suffix": " anahtarlar",
-    "docs_suffix": " belgeler"
+    "period": "pzt",
+    "keys_suffix": " anahtar",
+    "docs_suffix": " belge"
   },
   "docs": {
     "getting-started": "Başlarken",

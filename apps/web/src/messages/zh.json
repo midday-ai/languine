@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "自动化本地化基础设施",
-    "description": "直接在您的开发工作流程中翻译您的应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。"
+    "description": "直接在您的开发工作流程中翻译应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。"
   },
   "navigation": {
     "dashboard": "仪表板",
@@ -20,14 +20,14 @@
   "getStarted": {
     "heading": "开始使用",
     "title": "自动化本地化基础设施",
-    "description": "直接在您的开发工作流程中翻译您的应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。",
+    "description": "直接在您的开发工作流程中翻译应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。",
     "button": {
       "startAutomating": "开始自动化",
       "readDocumentation": "阅读文档"
     }
   },
   "companies": {
-    "title": "使用于",
+    "title": "使用",
     "addYourCompany": "+ 添加您的公司"
   },
   "activity": {
@@ -57,7 +57,7 @@
     "readyForI18nLibrariesDescription": "我们支持所有库，包括最受欢迎的库（next-intl, react-i18next, react-intl等）。"
   },
   "info": {
-    "title": "处理本地化应用的每一个方面，包括",
+    "title": "处理本地化应用的每个方面，包括",
     "smartTranslation": {
       "title": "智能翻译",
       "intelligentTranslation": "具有上下文意识的智能翻译",
@@ -126,7 +126,7 @@
   "account": {
     "fullName": {
       "title": "全名",
-      "description": "您的全名，它将出现在整个平台上。",
+      "description": "您的全名将出现在整个平台上。",
       "placeholder": "输入您的全名"
     },
     "email": {
@@ -471,7 +471,7 @@
     "daily": "每日",
     "weekly": "每周",
     "monthly": "每月",
-    "selectPeriod": "选择期间"
+    "selectPeriod": "选择周期"
   },
   "language": {
     "en": "英语",
@@ -536,7 +536,7 @@
     },
     "supported_languages": {
       "question": "支持哪些语言？",
-      "answer": "Languine在所有计划中支持超过100种语言。虽然我们的AI驱动翻译在主要语言中效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或关于特定语言翻译质量的问题，请联系我们的支持团队。"
+      "answer": "Languine在所有计划中支持超过100种语言。虽然我们的AI驱动翻译在主要语言上效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或关于特定语言翻译质量的问题，请联系我们的支持团队。"
     },
     "github_action": {
       "question": "GitHub Action集成如何工作？",
@@ -544,19 +544,19 @@
     },
     "support": {
       "question": "您提供什么样的支持？",
-      "answer": "免费用户可以获得社区支持，而专业用户则获得优先支持，响应时间更快，并为他们的翻译需求提供专门帮助。"
+      "answer": "免费用户可以获得社区支持，而专业用户则获得优先支持，响应时间更快，并为其翻译需求提供专门协助。"
     },
     "open_source": {
       "question": "Languine是开源的吗？",
-      "answer": "是的！Languine是完全开源的，可在GitHub上获得。您可以贡献项目、报告问题、建议功能并检查代码。我们相信透明度和公开建设。"
+      "answer": "是的！Languine是完全开源的，并在GitHub上可用。您可以贡献项目、报告问题、建议功能并检查代码。我们相信透明度和公开建设。"
     },
     "open_source_pricing": {
       "question": "您为开源项目提供特别定价吗？",
-      "answer": "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以30%的折扣获得我们的专业功能。只需联系我们的团队，提供有关您项目的详细信息，我们将为您设置一个折扣的专业账户。这是我们回馈使我们的工作成为可能的社区的方式。"
+      "answer": "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以30%的折扣获得我们的专业功能。只需联系我们的团队并提供有关您项目的详细信息，我们将为您设置一个折扣的专业账户。这是我们回馈使我们的工作成为可能的社区的方式。"
     },
     "cancel_subscription": {
       "question": "如何取消我的订阅？",
-      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前计费周期结束前保持活动状态，之后您将被转移到免费计划。"
+      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前账单周期结束前保持活动状态，之后您将被转移到免费计划。"
     }
   },
   "pricing_slider": {

@@ -22,8 +22,8 @@
     "title": "Geautomatiseerde lokalisatie-infrastructuur",
     "description": "Vertaal de inhoud van je app direct in je ontwikkelworkflow. Onze CLI integreert met GitHub Actions en andere CI/CD-tools om vertalingen te automatiseren terwijl je code schrijft.",
     "button": {
-      "startAutomating": "Start met automatiseren",
-      "readDocumentation": "Lees de documentatie"
+      "startAutomating": "Begin met automatiseren",
+      "readDocumentation": "Lees documentatie"
     }
   },
   "companies": {
@@ -44,7 +44,7 @@
   "features": {
     "title": "Functies",
     "fullyOpenSource": "Volledig open source",
-    "fullyOpenSourceDescription": "Onze code is publiekelijk beschikbaar op GitHub, wat transparantie en gemeenschapsbijdragen mogelijk maakt.",
+    "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
     "noVendorLockIn": "Geen vendor lock-in",
     "noVendorLockInDescription": "We sluiten je niet op in een specifieke service, gebruik je eigen LLMs.",
     "presetsForExpo": "Presets voor Expo",
@@ -102,7 +102,7 @@
     "account": "Accountinstellingen",
     "signOut": "Uitloggen",
     "createTeam": "Team aanmaken",
-    "homepage": "Homepage",
+    "homepage": "Startpagina",
     "team": "Teaminstellingen"
   },
   "teamSelector": {
@@ -159,11 +159,11 @@
   "pipeline": {
     "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Onze vertaalmachine integreert naadloos in je bestaande CI/CD-pipeline en vertaalt je codebase automatisch bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we je vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we je merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in je hoofdbranch en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat je gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
+    "description": "Onze vertaalmachine integreert naadloos in je bestaande CI/CD-pipeline en vertaalt je codebase automatisch bij elke push. Wanneer code wijzigingen worden gepusht, analyseren we de gewijzigde inhoud, onderhouden we je vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we je merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull requests, waardoor ze kunnen worden beoordeeld voordat ze worden samengevoegd in je hoofd branch en worden geïmplementeerd. Deze geautomatiseerde workflow zorgt ervoor dat je gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
   },
   "settings": {
     "badRequest": "Ongeldig verzoek",
-    "badRequestDescription": "Organisatie moet minimaal één eigenaar hebben. Draag het eigendom over naar een ander lid voordat je deze eigenaar verwijdert.",
+    "badRequestDescription": "Organisatie moet minimaal één eigenaar hebben. Draag eigendom over naar een ander lid voordat je deze eigenaar verwijdert.",
     "permissionDenied": "Toestemming geweigerd",
     "permissionDeniedDescription": "Je moet eigenaar van het team zijn om deze actie uit te voeren",
     "deleteTeamTitle": "Team verwijderen",
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "Kwaliteitscontroles",
-      "description": "Schakel geautomatiseerde kwaliteitscontroles in voor vertalingen"
+      "description": "Schakel automatische kwaliteitscontroles in voor vertalingen"
     },
     "contextDetection": {
       "title": "Contextdetectie",
@@ -356,7 +356,7 @@
       }
     },
     "idioms": {
-      "title": "Idioom",
+      "title": "Idiomen",
       "description": "Behandel idiomatische uitdrukkingen op de juiste manier"
     },
     "terminology": {
@@ -399,8 +399,8 @@
         "docs_limit": "Vanaf 50 documenten"
       }
     },
-    "cta": "Start met automatiseren",
-    "keys_limit_explanation": "Vertaalde sleutel: Als je 20 bronsleutels hebt (zoals 'Aanmelden' of 'Welkom!') en ze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels x 5 talen)."
+    "cta": "Begin met automatiseren",
+    "keys_limit_explanation": "Vertaalde sleutel: Als je 20 bron sleutels hebt (zoals 'Aanmelden' of 'Welkom!') en ze vertaalt in 5 talen, dan is dat gelijk aan 100 vertaalde sleutels (20 sleutels x 5 talen)."
   },
   "createTeam": {
     "teamName": "Teamnaam",
@@ -442,7 +442,7 @@
         "description": "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        "title": "Vertalingen pushen",
+        "title": "Push vertalingen",
         "description": "Wachten tot de vertalingen worden gepusht"
       },
       "3": {
@@ -544,7 +544,7 @@
     },
     "support": {
       "question": "Wat voor soort ondersteuning bieden jullie?",
-      "answer": "Gratis gebruikers krijgen toegang tot community-ondersteuning, terwijl Pro-gebruikers prioritaire ondersteuning krijgen met snellere reactietijden en toegewijde hulp voor hun vertaalbehoeften."
+      "answer": "Gratis gebruikers krijgen toegang tot community-ondersteuning, terwijl Pro-gebruikers prioritaire ondersteuning krijgen met snellere reactietijden en toegewijde assistentie voor hun vertaalbehoeften."
     },
     "open_source": {
       "question": "Is Languine open source?",

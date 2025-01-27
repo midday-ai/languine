@@ -1,7 +1,7 @@
 {
   "header": {
     "pricing": "Hinnasto",
-    "docs": "Dokumentit",
+    "docs": "Dokumentaatio",
     "signIn": "Kirjaudu sisään",
     "goToApp": "Siirry sovellukseen"
   },
@@ -48,16 +48,16 @@
     "noVendorLockIn": "Ei toimittajalukkoa",
     "noVendorLockInDescription": "Emme sido sinua tiettyyn palveluun, käytä omia LLM:ejäsi.",
     "presetsForExpo": "Esiasetukset Expolle",
-    "presetsForExpoDescription": "Tarjoamme esiasetukset Expolle, jotta pääset alkuun nopeasti.",
+    "presetsForExpoDescription": "Tarjoamme esiasetukset Expolle, jotta pääset nopeasti alkuun.",
     "presetForReactNative": "Esiasetus React Nativeen",
-    "presetForReactNativeDescription": "Tarjoamme esiasetuksen React Nativeen, jotta pääset alkuun nopeasti.",
+    "presetForReactNativeDescription": "Tarjoamme esiasetuksen React Nativeen, jotta pääset nopeasti alkuun.",
     "presetForReactEmail": "React Email -kirjasto",
     "presetForReactEmailDescription": "Olemme luoneet i18n-kirjaston React Emailille.",
-    "readyForI18nLibraries": "Valmis i18n-kirjastoille",
+    "readyForI18nLibraries": "Valmiina i18n-kirjastoille",
     "readyForI18nLibrariesDescription": "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl, jne)."
   },
   "info": {
-    "title": "Hoitaa jokaisen sovelluksesi lokalisoinnin osa-alueen, mukaan lukien",
+    "title": "Hallitsee jokaisen sovelluksesi lokalisoinnin osa-alueen, mukaan lukien",
     "smartTranslation": {
       "title": "Älykäs käännös",
       "intelligentTranslation": "Älykäs käännös kontekstitietoisuudella",
@@ -120,8 +120,8 @@
   },
   "coming_soon": {
     "title": "Languine on Early Access -vaiheessa",
-    "description": "Olemme tällä hetkellä Early Access -vaiheessa. Ota yhteyttä",
-    "cta": "X:ssä saadaksesi varhaisen pääsyn."
+    "description": "Olemme tällä hetkellä early access -vaiheessa. Ota yhteyttä",
+    "cta": "X:ssä saadaksesi early access -oikeudet."
   },
   "account": {
     "fullName": {
@@ -159,12 +159,12 @@
   "pipeline": {
     "title": "Työnkulku (CI/CD-pipeline)",
     "pro": "[pro]",
-    "description": "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-pipeilneesi, kääntäen koodipohjasi automaattisesti jokaisella push-toiminnolla. Kun koodimuutoksia työnnetään, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändin äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältö pysyy synkassa kehityksen kanssa."
+    "description": "Käännösmoottorimme integroituu saumattomasti olemassa olevaan CI/CD-pipelineesi, kääntäen koodipohjasi automaattisesti jokaisella push-toiminnolla. Kun koodimuutoksia työnnetään, analysoimme muokatun sisällön, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändisi äänen ja terminologian. Käännökset lähetetään sitten pull-pyyntöinä, jolloin ne voidaan tarkistaa ennen kuin ne yhdistetään päähaaraan ja otetaan käyttöön. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältösi pysyy synkassa kehityksen kanssa."
   },
   "settings": {
     "badRequest": "Virheellinen pyyntö",
     "badRequestDescription": "Organisaatiolla on oltava vähintään yksi omistaja. Siirrä omistajuus toiselle jäsenelle ennen tämän omistajan poistamista.",
-    "permissionDenied": "Käyttö estetty",
+    "permissionDenied": "Käyttöoikeus evätty",
     "permissionDeniedDescription": "Sinun on oltava tiimin omistaja tehdäksesi tämän toiminnon",
     "deleteTeamTitle": "Poista tiimi",
     "deleteTeamDescription": "Organisaatiota ei voi poistaa, kun olet ainoa jäsen, poista tilisi sen sijaan",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "Projektin ID",
-        "description": "Projektisi yksilöllinen tunniste",
+        "description": "Yksilöllinen projektitunniste",
         "placeholder": "Projektin ID"
       },
       "delete": {
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Tiimin API-avain",
-        "description": "API-avain tiimin käyttöön, käytä tätä CI/CD-pipeilnestäsi yhdessä Projektin ID:n kanssa",
+        "description": "API-avain tiimikäyttöön, käytä tätä CI/CD-pipelinessäsi yhdessä Projektin ID:n kanssa",
         "placeholder": "Tiimin API-avain"
       },
       "members": {
@@ -272,8 +272,8 @@
       "description": "Käytä käännösmuistia parantaaksesi yhdenmukaisuutta ja tehokkuutta"
     },
     "qualityChecks": {
-      "title": "Laadun tarkistukset",
-      "description": "Ota käyttöön automaattiset laadun tarkistukset käännöksille"
+      "title": "Laadunvalvonta",
+      "description": "Ota käyttöön automaattinen laadunvalvonta käännöksille"
     },
     "contextDetection": {
       "title": "Kontekstin tunnistus",
@@ -310,8 +310,8 @@
     },
     "brandVoice": {
       "title": "Brändin ääni",
-      "description": "Määrittele brändin ääni ja sävy",
-      "placeholder": "Kuvaile brändin ääntäsi..."
+      "description": "Määrittele brändisi ääni ja sävy",
+      "placeholder": "Kuvaile brändisi ääntä..."
     },
     "toneOfVoice": {
       "title": "Äänensävy",
@@ -331,20 +331,20 @@
     },
     "brand": "Brändi",
     "emotiveIntent": {
-      "title": "Tunteellinen tarkoitus",
-      "description": "Aseta käännöksille tunteellinen sävy",
+      "title": "Tunnetarkoitus",
+      "description": "Aseta tunnetaso käännöksille",
       "options": {
         "neutral": "Neutraali",
         "positive": "Positiivinen",
         "empathetic": "Empaattinen",
         "professional": "Ammattimainen",
         "friendly": "Ystävällinen",
-        "enthusiastic": "Innostunut"
+        "enthusiastic": "Innoissaan"
       }
     },
     "domainExpertise": {
       "title": "Alaosaaminen",
-      "description": "Määrittele käännöksille alakonteksti",
+      "description": "Määrittele käännöksien alayhteys",
       "options": {
         "general": "Yleinen",
         "technical": "Tekninen",
@@ -374,9 +374,9 @@
       "title": "Ilmainen",
       "price": "Ilmainen",
       "keys_limit": "Enintään 100 avainta",
-      "description": "Täydellinen kokeilussa",
+      "description": "Täydellinen kokeiluvaiheessa",
       "features": {
-        "unlimited_projects": "Rajoittamattomat projektit",
+        "unlimited_projects": "Rajoittamaton määrä projekteja",
         "fine_tuning": "Hienosäätövaihtoehdot",
         "overrides": "Käännöksen ohitukset",
         "analytics": "Analytiikka",
@@ -384,12 +384,12 @@
         "community_support": "Yhteisötuki",
         "keys_limit": "Enintään 100 avainta",
         "docs_limit": "Enintään 5 dokumenttia",
-        "unlimited_languages": "Rajoittamattomat kielet"
+        "unlimited_languages": "Rajoittamaton määrä kieliä"
       }
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Kaikki Ilmaisessa, lisäksi:",
+      "includes_free": "Kaikki ilmaisessa, lisäksi:",
       "features": {
         "github_action": "GitHub Action -integraatio",
         "latest_features": "Varhainen pääsy uusimpiin ominaisuuksiin",
@@ -425,7 +425,7 @@
     "submit": "Lähetä",
     "success": {
       "title": "Kutsu lähetetty",
-      "description": "Kutsu lähetettiin onnistuneesti osoitteeseen {email}"
+      "description": "Kutsu lähetetty onnistuneesti osoitteeseen {email}"
     },
     "error": {
       "title": "Virhe",
@@ -447,20 +447,20 @@
       },
       "3": {
         "title": "Dokumentaatio",
-        "description": "Tutustu dokumentaatioomme yksityiskohtaisia ohjeita ja parhaita käytäntöjä varten",
+        "description": "Tutustu dokumentaatioomme yksityiskohtaisia oppaita ja parhaita käytäntöjä varten",
         "link": "dokumentaatio"
       }
     },
     "info": {
       "description": "Tarvitsetko apua? Tutustu",
       "link": "dokumentaatio",
-      "description_2": "yksityiskohtaisia ohjeita ja parhaita käytäntöjä varten."
+      "description_2": "yksityiskohtaisiin oppaisiin ja parhaisiin käytäntöihin."
     }
   },
   "cli": {
     "success": {
       "title": "Languine CLI -kirjautuminen onnistui",
-      "description": "Languine CLI todennettiin onnistuneesti käyttäjänä:",
+      "description": "Languine CLI tunnistettiin onnistuneesti:",
       "description_2": "Voit nyt sulkea tämän välilehden ja palata CLI:hin"
     }
   },
@@ -468,9 +468,9 @@
     "placeholder": "Haku"
   },
   "periods": {
-    "daily": "Päivittäinen",
-    "weekly": "Viikoittainen",
-    "monthly": "Kuukausittainen",
+    "daily": "Päivittäin",
+    "weekly": "Viikoittain",
+    "monthly": "Kuukausittain",
     "selectPeriod": "Valitse ajanjakso"
   },
   "language": {
@@ -536,11 +536,11 @@
     },
     "supported_languages": {
       "question": "Mitä kieliä tuetaan?",
-      "answer": "Languine tukee yli 100 kieltä kaikissa suunnitelmissa. Vaikka tekoälyavusteiset käännöksemme toimivat parhaiten pääkielillä, pyrimme tarjoamaan laadukkaita käännöksiä kaikille tuetuille kielille. Jos sinulla on erityisiä kielivaatimuksia tai kysymyksiä käännöksen laadusta tietyille kielille, ota yhteyttä tukitiimiimme."
+      "answer": "Languine tukee yli 100 kieltä kaikissa suunnitelmissa. Vaikka tekoälyavusteiset käännöksemme toimivat parhaiten pääkielillä, pyrimme tarjoamaan laadukkaita käännöksiä kaikille tuetuille kielille. Jos sinulla on erityisiä kielivaatimuksia tai kysymyksiä käännösten laadusta tietyillä kielillä, ota yhteyttä tukitiimiimme."
     },
     "github_action": {
       "question": "Miten GitHub Action -integraatio toimii?",
-      "answer": "GitHub Action -integraatio (saatavilla Pro-suunnitelmissa) mahdollistaa käännösprosessisi automatisointin suoraan CI/CD-pipeilneessäsi. Kun työnnät muutoksia arkistoosi, käännökset voidaan päivittää automaattisesti."
+      "answer": "GitHub Action -integraatio (saatavilla Pro-suunnitelmissa) mahdollistaa käännösprosessisi automatisointin suoraan CI/CD-pipelinessäsi. Kun työnnät muutoksia repositoryysi, käännökset voidaan päivittää automaattisesti."
     },
     "support": {
       "question": "Millaista tukea tarjoatte?",
@@ -552,11 +552,11 @@
     },
     "open_source_pricing": {
       "question": "Tarjoatteko erityishinnoittelua avoimen lähdekoodin projekteille?",
-      "answer": "Kyllä! Rakastamme tukea avoimen lähdekoodin yhteisöä. Jos ylläpidät avoimen lähdekoodin projektia, voit saada pääsyn Pro-ominaisuuksiin 30% alennuksella. Ota vain yhteyttä tiimiimme projektisi tiedoilla, ja järjestämme sinulle alennetun Pro-tilin. Tämä on tapa antaa takaisin yhteisölle, joka tekee työmme mahdolliseksi."
+      "answer": "Kyllä! Rakastamme tukea avoimen lähdekoodin yhteisöä. Jos ylläpidät avoimen lähdekoodin projektia, voit saada pääsyn Pro-ominaisuuksiin 30% alennuksella. Ota vain yhteyttä tiimiimme projektisi tiedoilla, ja järjestämme sinulle alennetun Pro-tilin. Tämä on tapa antaa takaisin yhteisölle, joka mahdollistaa työmme."
     },
     "cancel_subscription": {
       "question": "Miten peruutan tilaukseni?",
-      "answer": "Voit peruuttaa tilauksesi milloin tahansa tilin asetuksista. Siirry Laskutus > Vaihda suunnitelma. Tilauksesi pysyy aktiivisena nykyisen laskutusjakson loppuun, jonka jälkeen siirryt Ilmaiseen suunnitelmaan."
+      "answer": "Voit peruuttaa tilauksesi milloin tahansa tilin asetuksistasi. Siirry Laskutus > Vaihda suunnitelmaa. Tilauksesi pysyy voimassa nykyisen laskutusjakson loppuun, jonka jälkeen siirryt Ilmaiseen suunnitelmaan."
     }
   },
   "pricing_slider": {
@@ -587,7 +587,7 @@
     "presets": "Esiasetukset",
     "formats": "Muodot",
     "platform": "Alusta",
-    "authentication": "Todennus",
+    "authentication": "Tunnistautuminen",
     "github-actions": "GitHub Actions",
     "tuning": "Hienosäätö",
     "settings": "Asetukset",

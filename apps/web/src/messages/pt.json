@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Fluxo de Trabalho (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça sincronizado com o desenvolvimento."
+    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente sua base de código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz da marca e a terminologia. As traduções são então enviadas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça sincronizado com o desenvolvimento."
   },
   "settings": {
     "badRequest": "Requisição inválida",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "ID do Projeto",
-        "description": "Seu identificador único de projeto",
+        "description": "Seu identificador de projeto único",
         "placeholder": "ID do Projeto"
       },
       "delete": {
@@ -246,7 +246,7 @@
         "inviteMembers": "Convide membros para colaborar",
         "deleteInvite": "Excluir Convite",
         "deleteInviteDescription": "Excluir o convite",
-        "invitedBy": "Convidado por {nome}",
+        "invitedBy": "Convidado por {name}",
         "deleteInviteSuccess": "Convite excluído",
         "deleteInviteError": "Falha ao excluir convite",
         "removeMemberSuccess": "Membro removido",
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Detecção de Contexto",
-      "description": "Detecte e preserve automaticamente o contexto nas traduções"
+      "description": "Detecte e preserve automaticamente o contexto em traduções"
     },
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
@@ -332,7 +332,7 @@
     "brand": "Marca",
     "emotiveIntent": {
       "title": "Intenção Emocional",
-      "description": "Defina o tom emocional para as traduções",
+      "description": "Defina o tom emocional para traduções",
       "options": {
         "neutral": "Neutro",
         "positive": "Positivo",
@@ -344,7 +344,7 @@
     },
     "domainExpertise": {
       "title": "Especialização de Domínio",
-      "description": "Especifique o contexto de domínio para as traduções",
+      "description": "Especifique o contexto de domínio para traduções",
       "options": {
         "general": "Geral",
         "technical": "Técnico",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Expressões Idiomáticas",
-      "description": "Lide com expressões idiomáticas de forma apropriada"
+      "description": "Lide com expressões idiomáticas apropriadamente"
     },
     "terminology": {
       "title": "Terminologia",
@@ -443,7 +443,7 @@
       },
       "2": {
         "title": "Enviar Traduções",
-        "description": "Aguardando o envio das traduções"
+        "description": "Aguardando as traduções serem enviadas"
       },
       "3": {
         "title": "Documentação",
@@ -459,7 +459,7 @@
   },
   "cli": {
     "success": {
-      "title": "Login do Languine CLI com sucesso",
+      "title": "Login do Languine CLI com Sucesso",
       "description": "Languine CLI foi autenticado com sucesso como:",
       "description_2": "Você pode fechar esta aba e voltar ao CLI"
     }
@@ -525,7 +525,7 @@
     }
   },
   "faq": {
-    "title": "Perguntas Frequentes",
+    "title": "FAQ",
     "what_is_languine": {
       "question": "O que é Languine?",
       "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda você a automatizar a tradução de seus aplicativos. Ele fornece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Vocês oferecem preços especiais para projetos open source?",
-      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode obter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
+      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode obter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós configuramos uma conta Pro com desconto para você. Esta é nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {
       "question": "Como cancelo minha assinatura?",

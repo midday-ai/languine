@@ -1,6 +1,6 @@
 {
   "header": {
-    "pricing": "Định giá",
+    "pricing": "Giá",
     "docs": "Tài liệu",
     "signIn": "Đăng nhập",
     "goToApp": "Truy cập ứng dụng"
@@ -11,9 +11,9 @@
   },
   "navigation": {
     "dashboard": "Bảng điều khiển",
-    "tuning": "Tinh chỉnh",
+    "tuning": "Điều chỉnh",
     "settings": "Cài đặt",
-    "pricing": "Định giá",
+    "pricing": "Giá",
     "docs": "Tài liệu",
     "account": "Tài khoản"
   },
@@ -43,9 +43,9 @@
   },
   "features": {
     "title": "Tính năng",
-    "fullyOpenSource": "Mã nguồn mở hoàn toàn",
+    "fullyOpenSource": "Hoàn toàn mã nguồn mở",
     "fullyOpenSourceDescription": "Mã của chúng tôi có sẵn công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
-    "noVendorLockIn": "Không bị khóa nhà cung cấp",
+    "noVendorLockIn": "Không bị khóa bởi nhà cung cấp",
     "noVendorLockInDescription": "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng LLM của riêng bạn.",
     "presetsForExpo": "Cài đặt sẵn cho Expo",
     "presetsForExpoDescription": "Chúng tôi cung cấp các cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
@@ -54,7 +54,7 @@
     "presetForReactEmail": "Thư viện React Email",
     "presetForReactEmailDescription": "Chúng tôi đã tạo một thư viện i18n cho React Email.",
     "readyForI18nLibraries": "Sẵn sàng cho các thư viện i18n",
-    "readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
+    "readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm cả những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
   },
   "info": {
     "title": "Xử lý mọi khía cạnh của việc bản địa hóa ứng dụng của bạn bao gồm",
@@ -64,7 +64,7 @@
       "brandVoice": "Nhất quán giọng điệu và phong cách thương hiệu",
       "terminology": "Quản lý thuật ngữ",
       "linguisticFeatures": "Tính năng ngôn ngữ nâng cao",
-      "realtimeUpdates": "Cập nhật bản dịch thời gian thực"
+      "realtimeUpdates": "Cập nhật dịch thuật thời gian thực"
     },
     "implementation": {
       "title": "Triển khai",
@@ -157,13 +157,13 @@
     }
   },
   "pipeline": {
-    "title": "Quy trình làm việc (Pipeline CI/CD)",
+    "title": "Quy trình làm việc (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào pipeline CI/CD hiện có của bạn, tự động dịch codebase của bạn trên mỗi lần đẩy. Khi các thay đổi mã được đẩy, chúng tôi phân tích nội dung đã sửa đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ nguyên giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng yêu cầu kéo, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với phát triển."
+    "description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào quy trình CI/CD hiện có của bạn, tự động dịch mã nguồn của bạn trên mỗi lần đẩy. Khi mã thay đổi được đẩy, chúng tôi phân tích nội dung đã thay đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi bảo toàn giọng điệu thương hiệu và thuật ngữ của bạn. Các bản dịch sau đó được gửi dưới dạng yêu cầu kéo, cho phép xem xét trước khi được hợp nhất vào nhánh chính và triển khai. Quy trình làm việc tự động này đảm bảo nội dung bản địa hóa của bạn luôn đồng bộ với phát triển."
   },
   "settings": {
     "badRequest": "Yêu cầu không hợp lệ",
-    "badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
+    "badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu sang thành viên khác trước khi xóa chủ sở hữu này.",
     "permissionDenied": "Từ chối quyền",
     "permissionDeniedDescription": "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
     "deleteTeamTitle": "Xóa nhóm",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "ID dự án",
-        "description": "Định danh duy nhất của dự án của bạn",
+        "description": "Định danh dự án duy nhất của bạn",
         "placeholder": "ID dự án"
       },
       "delete": {
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Khóa API nhóm",
-        "description": "Khóa API để truy cập nhóm, sử dụng từ pipeline CI/CD của bạn cùng với ID dự án",
+        "description": "Khóa API để truy cập nhóm, sử dụng từ quy trình CI/CD của bạn cùng với ID dự án",
         "placeholder": "Khóa API nhóm"
       },
       "members": {
@@ -243,7 +243,7 @@
         "noPendingInvitations": "Không có lời mời đang chờ",
         "noResults": "Không tìm thấy thành viên",
         "tryDifferentSearch": "Thử tìm kiếm khác",
-        "inviteMembers": "Mời thành viên cộng tác",
+        "inviteMembers": "Mời thành viên để cộng tác",
         "deleteInvite": "Xóa lời mời",
         "deleteInviteDescription": "Xóa lời mời",
         "invitedBy": "Được mời bởi {name}",
@@ -273,11 +273,11 @@
     },
     "qualityChecks": {
       "title": "Kiểm tra chất lượng",
-      "description": "Bật kiểm tra chất lượng tự động cho bản dịch"
+      "description": "Kích hoạt kiểm tra chất lượng tự động cho bản dịch"
     },
     "contextDetection": {
       "title": "Phát hiện ngữ cảnh",
-      "description": "Tự động phát hiện và bảo tồn ngữ cảnh trong bản dịch"
+      "description": "Tự động phát hiện và bảo toàn ngữ cảnh trong bản dịch"
     },
     "styleGuide": "Hướng dẫn phong cách",
     "lengthControl": {
@@ -291,8 +291,8 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "Ngôn ngữ bao gồm",
-      "description": "Đảm bảo bản dịch sử dụng ngôn ngữ bao gồm"
+      "title": "Ngôn ngữ bao hàm",
+      "description": "Đảm bảo bản dịch sử dụng ngôn ngữ bao hàm"
     },
     "formality": {
       "title": "Mức độ trang trọng",
@@ -314,8 +314,8 @@
       "placeholder": "Mô tả giọng điệu thương hiệu của bạn..."
     },
     "toneOfVoice": {
-      "title": "Giọng điệu",
-      "description": "Xác định giọng điệu được sử dụng trong bản dịch",
+      "title": "Tông giọng",
+      "description": "Xác định tông giọng được sử dụng trong bản dịch",
       "options": {
         "casual": "Thân mật",
         "formal": "Trang trọng",
@@ -332,7 +332,7 @@
     "brand": "Thương hiệu",
     "emotiveIntent": {
       "title": "Ý định cảm xúc",
-      "description": "Đặt giọng điệu cảm xúc cho bản dịch",
+      "description": "Đặt tông cảm xúc cho bản dịch",
       "options": {
         "neutral": "Trung lập",
         "positive": "Tích cực",
@@ -361,7 +361,7 @@
     },
     "terminology": {
       "title": "Thuật ngữ",
-      "description": "Quản lý thuật ngữ chuyên ngành và từ điển"
+      "description": "Quản lý thuật ngữ chuyên ngành và bảng thuật ngữ"
     },
     "culturalAdaptation": {
       "title": "Thích ứng văn hóa",
@@ -369,7 +369,7 @@
     }
   },
   "pricing": {
-    "title": "Định giá đơn giản",
+    "title": "Giá đơn giản",
     "free": {
       "title": "Miễn phí",
       "price": "Miễn phí",
@@ -377,8 +377,8 @@
       "description": "Hoàn hảo khi thử nghiệm",
       "features": {
         "unlimited_projects": "Dự án không giới hạn",
-        "fine_tuning": "Tùy chọn tinh chỉnh",
-        "overrides": "Ghi đè bản dịch",
+        "fine_tuning": "Tùy chọn điều chỉnh",
+        "overrides": "Ghi đè dịch thuật",
         "analytics": "Phân tích",
         "context_memory": "Bộ nhớ ngữ cảnh",
         "community_support": "Hỗ trợ cộng đồng",
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Mọi thứ trong Miễn phí, cộng thêm:",
+      "includes_free": "Tất cả trong Miễn phí, cộng thêm:",
       "features": {
         "github_action": "Tích hợp GitHub Action",
         "latest_features": "Truy cập sớm các tính năng mới nhất",
@@ -460,7 +460,7 @@
   "cli": {
     "success": {
       "title": "Đăng nhập Languine CLI thành công",
-      "description": "Languine CLI đã được xác thực thành công với:",
+      "description": "Languine CLI đã được xác thực thành công như:",
       "description_2": "Bây giờ bạn có thể đóng tab này và quay lại CLI"
     }
   },
@@ -471,7 +471,7 @@
     "daily": "Hàng ngày",
     "weekly": "Hàng tuần",
     "monthly": "Hàng tháng",
-    "selectPeriod": "Chọn khoảng thời gian"
+    "selectPeriod": "Chọn kỳ"
   },
   "language": {
     "en": "Tiếng Anh",
@@ -496,9 +496,9 @@
   },
   "menu": {
     "dashboard": "Bảng điều khiển",
-    "tuning": "Tinh chỉnh",
+    "tuning": "Điều chỉnh",
     "settings": "Cài đặt",
-    "pricing": "Định giá",
+    "pricing": "Giá",
     "docs": "Tài liệu",
     "account": "Tài khoản"
   },
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Languine là gì?",
-      "answer": "Languine là một nền tảng bản địa hóa được hỗ trợ bởi AI giúp bạn tự động hóa việc dịch ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn tinh chỉnh, ghi đè bản dịch, phân tích và bộ nhớ ngữ cảnh để đảm bảo bản dịch chất lượng cao."
+      "answer": "Languine là một nền tảng bản địa hóa được hỗ trợ bởi AI giúp bạn tự động hóa việc dịch ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn điều chỉnh, ghi đè dịch thuật, phân tích và bộ nhớ ngữ cảnh để đảm bảo bản dịch chất lượng cao."
     },
     "key_limit": {
       "question": "Giới hạn khóa hoạt động như thế nào?",
@@ -536,15 +536,15 @@
     },
     "supported_languages": {
       "question": "Những ngôn ngữ nào được hỗ trợ?",
-      "answer": "Languine hỗ trợ hơn 100 ngôn ngữ trong tất cả các gói. Trong khi bản dịch được hỗ trợ bởi AI của chúng tôi hoạt động tốt nhất với các ngôn ngữ chính, chúng tôi cố gắng cung cấp bản dịch chất lượng trên tất cả các ngôn ngữ được hỗ trợ. Nếu bạn có yêu cầu ngôn ngữ cụ thể hoặc câu hỏi về chất lượng bản dịch cho các ngôn ngữ cụ thể, vui lòng liên hệ với đội hỗ trợ của chúng tôi."
+      "answer": "Languine hỗ trợ hơn 100 ngôn ngữ trong tất cả các gói. Trong khi bản dịch được hỗ trợ bởi AI của chúng tôi hoạt động tốt nhất với các ngôn ngữ chính, chúng tôi cố gắng cung cấp bản dịch chất lượng trên tất cả các ngôn ngữ được hỗ trợ. Nếu bạn có yêu cầu ngôn ngữ cụ thể hoặc câu hỏi về chất lượng dịch thuật cho các ngôn ngữ cụ thể, vui lòng liên hệ với đội hỗ trợ của chúng tôi."
     },
     "github_action": {
       "question": "Tích hợp GitHub Action hoạt động như thế nào?",
-      "answer": "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình làm việc dịch thuật trực tiếp trong pipeline CI/CD của bạn. Khi bạn đẩy thay đổi vào kho lưu trữ của mình, bản dịch có thể được tự động cập nhật."
+      "answer": "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình dịch thuật của mình trực tiếp trong quy trình CI/CD của bạn. Khi bạn đẩy thay đổi vào kho lưu trữ của mình, bản dịch có thể được tự động cập nhật."
     },
     "support": {
       "question": "Bạn cung cấp loại hỗ trợ nào?",
-      "answer": "Người dùng miễn phí được truy cập hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và hỗ trợ chuyên dụng cho nhu cầu dịch thuật của họ."
+      "answer": "Người dùng miễn phí được tiếp cận với hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và hỗ trợ chuyên dụng cho nhu cầu dịch thuật của họ."
     },
     "open_source": {
       "question": "Languine có mã nguồn mở không?",
@@ -552,11 +552,11 @@
     },
     "open_source_pricing": {
       "question": "Bạn có cung cấp giá đặc biệt cho các dự án mã nguồn mở không?",
-      "answer": "Có! Chúng tôi yêu thích hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể nhận được quyền truy cập vào các tính năng Pro của chúng tôi với giá giảm 30%. Chỉ cần liên hệ với đội ngũ của chúng tôi với thông tin chi tiết về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro được giảm giá. Đây là cách chúng tôi đền đáp cộng đồng đã làm nên công việc của chúng tôi."
+      "answer": "Có! Chúng tôi yêu thích hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể được tiếp cận các tính năng Pro của chúng tôi với giá giảm 30%. Chỉ cần liên hệ với đội ngũ của chúng tôi với thông tin chi tiết về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro với giá ưu đãi. Đây là cách chúng tôi đền đáp cộng đồng đã làm nên công việc của chúng tôi."
     },
     "cancel_subscription": {
       "question": "Làm thế nào để hủy đăng ký của tôi?",
-      "answer": "Bạn có thể hủy đăng ký của mình bất kỳ lúc nào từ cài đặt tài khoản của bạn. Điều hướng đến Thanh toán > Thay đổi Gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối kỳ thanh toán hiện tại, sau đó bạn sẽ được chuyển sang gói Miễn phí."
+      "answer": "Bạn có thể hủy đăng ký của mình bất kỳ lúc nào từ cài đặt tài khoản. Điều hướng đến Thanh toán > Thay đổi Gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối kỳ thanh toán hiện tại, sau đó bạn sẽ được chuyển sang gói Miễn phí."
     }
   },
   "pricing_slider": {
@@ -564,8 +564,8 @@
     "keys": "Các khóa đã dịch",
     "documents": "Tài liệu đã dịch",
     "period": "thứ hai",
-    "keys_suffix": " khóa",
-    "docs_suffix": " tài liệu"
+    "keys_suffix": "khóa",
+    "docs_suffix": "tài liệu"
   },
   "docs": {
     "getting-started": "Bắt đầu",
@@ -589,9 +589,9 @@
     "platform": "Nền tảng",
     "authentication": "Xác thực",
     "github-actions": "GitHub Actions",
-    "tuning": "Tinh chỉnh",
+    "tuning": "Điều chỉnh",
     "settings": "Cài đặt",
-    "hooks": "Hook",
+    "hooks": "Hooks",
     "examples": "Ví dụ",
     "team": "Nhóm"
   },

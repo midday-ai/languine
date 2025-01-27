@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruttura di localizzazione automatizzata",
-    "description": "Traduci il contenuto della tua app direttamente nel tuo flusso di lavoro di sviluppo. Il nostro CLI si integra con GitHub Actions e altri strumenti CI/CD per automatizzare le traduzioni mentre programmi."
+    "description": "Traduci il contenuto della tua app direttamente nel tuo flusso di lavoro di sviluppo. La nostra CLI si integra con GitHub Actions e altri strumenti CI/CD per automatizzare le traduzioni mentre programmi."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,9 +20,9 @@
   "getStarted": {
     "heading": "Inizia",
     "title": "Infrastruttura di localizzazione automatizzata",
-    "description": "Traduci il contenuto della tua app direttamente nel tuo flusso di lavoro di sviluppo. Il nostro CLI si integra con GitHub Actions e altri strumenti CI/CD per automatizzare le traduzioni mentre programmi.",
+    "description": "Traduci il contenuto della tua app direttamente nel tuo flusso di lavoro di sviluppo. La nostra CLI si integra con GitHub Actions e altri strumenti CI/CD per automatizzare le traduzioni mentre programmi.",
     "button": {
-      "startAutomating": "Inizia ad automatizzare",
+      "startAutomating": "Inizia l'automazione",
       "readDocumentation": "Leggi la documentazione"
     }
   },
@@ -54,7 +54,7 @@
     "presetForReactEmail": "Libreria React Email",
     "presetForReactEmailDescription": "Abbiamo creato una libreria i18n per React Email.",
     "readyForI18nLibraries": "Pronto per le librerie i18n",
-    "readyForI18nLibrariesDescription": "Supportiamo tutte le librerie, comprese le più popolari (next-intl, react-i18next, react-intl, ecc)."
+    "readyForI18nLibrariesDescription": "Supportiamo tutte le librerie, comprese le più popolari (next-intl, react-i18next, react-intl, ecc.)."
   },
   "info": {
     "title": "Gestisce ogni aspetto della localizzazione della tua app, inclusi",
@@ -64,12 +64,12 @@
       "brandVoice": "Coerenza del tono e della voce del brand",
       "terminology": "Gestione della terminologia",
       "linguisticFeatures": "Funzionalità linguistiche avanzate",
-      "realtimeUpdates": "Aggiornamenti di traduzione in tempo reale"
+      "realtimeUpdates": "Aggiornamenti delle traduzioni in tempo reale"
     },
     "implementation": {
       "title": "Implementazione",
       "quickSetup": "Configurazione e integrazione rapida",
-      "fileFormat": "Gestione del formato dei file",
+      "fileFormat": "Gestione dei formati di file",
       "contentStructure": "Organizzazione della struttura del contenuto",
       "assetOrganization": "Organizzazione delle risorse"
     },
@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "Chiave API",
-      "description": "La tua chiave API personale per accedere all'API di Languine e dal CLI."
+      "description": "La tua chiave API personale per accedere all'API di Languine e dalla CLI."
     },
     "deleteAccount": {
       "title": "Elimina account",
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Flusso di lavoro (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato assicura che il tuo contenuto localizzato rimanga sincronizzato con lo sviluppo."
+    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice base ad ogni push. Quando vengono effettuate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce del tuo brand e la terminologia. Le traduzioni vengono quindi inviate come pull request, consentendo la revisione prima di essere unite nel tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato assicura che il tuo contenuto localizzato rimanga sincronizzato con lo sviluppo."
   },
   "settings": {
     "badRequest": "Richiesta non valida",
@@ -185,7 +185,7 @@
       "project": "Progetto",
       "account": "Account",
       "team": "Team",
-      "provider": "Provider",
+      "provider": "Fornitore",
       "billing": "Fatturazione"
     },
     "addProject": "Crea progetto",
@@ -196,9 +196,9 @@
         "placeholder": "Inserisci il nome del progetto"
       },
       "id": {
-        "title": "ID del progetto",
+        "title": "ID progetto",
         "description": "Il tuo identificatore unico del progetto",
-        "placeholder": "ID del progetto"
+        "placeholder": "ID progetto"
       },
       "delete": {
         "title": "Elimina progetto",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Chiave API del team",
-        "description": "Chiave API per l'accesso del team, usala dalla tua pipeline CI/CD insieme all'ID del progetto",
+        "description": "Chiave API per l'accesso del team, usala dalla tua pipeline CI/CD insieme all'ID progetto",
         "placeholder": "Chiave API del team"
       },
       "members": {
@@ -314,7 +314,7 @@
       "placeholder": "Descrivi la voce del tuo brand..."
     },
     "toneOfVoice": {
-      "title": "Tono della voce",
+      "title": "Tono di voce",
       "description": "Definisci il tono usato nelle traduzioni",
       "options": {
         "casual": "Informale",
@@ -343,8 +343,8 @@
       }
     },
     "domainExpertise": {
-      "title": "Competenza del dominio",
-      "description": "Specifica il contesto del dominio per le traduzioni",
+      "title": "Competenza di dominio",
+      "description": "Specifica il contesto di dominio per le traduzioni",
       "options": {
         "general": "Generale",
         "technical": "Tecnico",
@@ -399,8 +399,8 @@
         "docs_limit": "A partire da 50 documenti"
       }
     },
-    "cta": "Inizia ad automatizzare",
-    "keys_limit_explanation": "Chiave tradotta: Se hai 20 chiavi sorgente (come 'Registrati' o 'Benvenuto!') e le traduci in 5 lingue, ciò equivale a 100 chiavi tradotte (20 chiavi x 5 lingue)."
+    "cta": "Inizia l'automazione",
+    "keys_limit_explanation": "Chiave tradotta: Se hai 20 chiavi sorgente (come \"Registrati\" o \"Benvenuto!\") e le traduci in 5 lingue, ciò equivale a 100 chiavi tradotte (20 chiavi x 5 lingue)."
   },
   "createTeam": {
     "teamName": "Nome del team",
@@ -461,7 +461,7 @@
     "success": {
       "title": "Accesso a Languine CLI riuscito",
       "description": "Languine CLI è stato autenticato con successo come:",
-      "description_2": "Ora puoi chiudere questa scheda e tornare al CLI"
+      "description_2": "Ora puoi chiudere questa scheda e tornare alla CLI"
     }
   },
   "search": {
@@ -562,13 +562,13 @@
   "pricing_slider": {
     "tier": "Livello {tier}",
     "keys": "Chiavi tradotte",
-    "documents": "Documenti tradotti",
+    "documents": "Documenti tradotte",
     "period": "lun",
     "keys_suffix": " chiavi",
     "docs_suffix": " documenti"
   },
   "docs": {
-    "getting-started": "Inizia",
+    "getting-started": "Iniziare",
     "introduction": "Introduzione",
     "installation": "Installazione",
     "quickstart": "Guida rapida",

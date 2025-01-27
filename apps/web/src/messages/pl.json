@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Zautomatyzowana infrastruktura lokalizacji",
-    "description": "Tłumacz treść swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
+    "description": "Tłumacz treści swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
   },
   "navigation": {
     "dashboard": "Panel sterowania",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Rozpocznij",
     "title": "Zautomatyzowana infrastruktura lokalizacji",
-    "description": "Tłumacz treść swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
+    "description": "Tłumacz treści swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
     "button": {
       "startAutomating": "Zacznij automatyzować",
       "readDocumentation": "Przeczytaj dokumentację"
@@ -90,7 +90,7 @@
     "description": "Zaloguj się, aby zacząć automatyzować swoją lokalizację w kilka sekund.",
     "terms": {
       "text": "Logując się, zgadzasz się na nasze",
-      "termsOfService": "Warunki korzystania z usługi",
+      "termsOfService": "Warunki świadczenia usług",
       "and": "i",
       "privacyPolicy": "Polityka prywatności"
     }
@@ -126,7 +126,7 @@
   "account": {
     "fullName": {
       "title": "Pełne imię i nazwisko",
-      "description": "Twoje pełne imię i nazwisko, które będzie widoczne na platformie.",
+      "description": "Twoje pełne imię i nazwisko, jakie będzie widoczne na platformie.",
       "placeholder": "Wprowadź swoje pełne imię i nazwisko"
     },
     "email": {
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Przepływ pracy (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną treść, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoja zlokalizowana treść pozostaje zsynchronizowana z rozwojem."
+    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoje zlokalizowane treści pozostają zsynchronizowane z rozwojem."
   },
   "settings": {
     "badRequest": "Nieprawidłowe żądanie",
@@ -176,7 +176,7 @@
     "apiKey": {
       "updated": "Klucz API zaktualizowany",
       "updatedDescription": "Twój klucz API został pomyślnie zaktualizowany i skopiowany do schowka.",
-      "title": "Zaktualizuj klucz API",
+      "title": "Aktualizuj klucz API",
       "description": "Czy na pewno chcesz wygenerować nowy klucz API? Stary klucz przestanie działać natychmiast.",
       "cancel": "Anuluj",
       "continue": "Kontynuuj"
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "ID projektu",
-        "description": "Twój unikalny identyfikator projektu",
+        "description": "Unikalny identyfikator twojego projektu",
         "placeholder": "ID projektu"
       },
       "delete": {
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Klucz API zespołu",
-        "description": "Klucz API dostępu do zespołu, używaj go z potoku CI/CD razem z ID projektu",
+        "description": "Klucz API dostępu do zespołu, używaj tego z potoku CI/CD razem z ID projektu",
         "placeholder": "Klucz API zespołu"
       },
       "members": {
@@ -269,11 +269,11 @@
     "general": "Ogólne",
     "translationMemory": {
       "title": "Pamięć tłumaczeń",
-      "description": "Użyj pamięci tłumaczeń, aby poprawić spójność i efektywność"
+      "description": "Używaj pamięci tłumaczeń, aby poprawić spójność i efektywność"
     },
     "qualityChecks": {
       "title": "Kontrola jakości",
-      "description": "Włącz automatyczne kontrole jakości tłumaczeń"
+      "description": "Włącz automatyczną kontrolę jakości tłumaczeń"
     },
     "contextDetection": {
       "title": "Wykrywanie kontekstu",
@@ -365,7 +365,7 @@
     },
     "culturalAdaptation": {
       "title": "Adaptacja kulturowa",
-      "description": "Dostosuj treść do odpowiedniości kulturowej"
+      "description": "Dostosuj treści do odpowiedniości kulturowej"
     }
   },
   "pricing": {
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Wszystko, co w Darmowym, plus:",
+      "includes_free": "Wszystko z Darmowego, plus:",
       "features": {
         "github_action": "Integracja z GitHub Action",
         "latest_features": "Wczesny dostęp do najnowszych funkcji",
@@ -400,7 +400,7 @@
       }
     },
     "cta": "Zacznij automatyzować",
-    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak 'Zarejestruj się' lub 'Witaj!') i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy x 5 języków)."
+    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak \"Zarejestruj się\" lub \"Witaj!\") i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy x 5 języków)."
   },
   "createTeam": {
     "teamName": "Nazwa zespołu",
@@ -468,7 +468,7 @@
     "placeholder": "Szukaj"
   },
   "periods": {
-    "daily": "Dziennie",
+    "daily": "Codziennie",
     "weekly": "Tygodniowo",
     "monthly": "Miesięcznie",
     "selectPeriod": "Wybierz okres"
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Co to jest Languine?",
-      "answer": "Languine to platforma lokalizacji napędzana sztuczną inteligencją, która pomaga automatyzować tłumaczenie twoich aplikacji. Oferuje funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
+      "answer": "Languine to platforma lokalizacji napędzana sztuczną inteligencją, która pomaga automatyzować tłumaczenie twoich aplikacji. Dostarcza funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
     },
     "key_limit": {
       "question": "Jak działa limit kluczy?",
@@ -544,15 +544,15 @@
     },
     "support": {
       "question": "Jakiego rodzaju wsparcie oferujecie?",
-      "answer": "Użytkownicy Darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem odpowiedzi i dedykowaną pomocą w zakresie tłumaczeń."
+      "answer": "Użytkownicy Darmowego planu mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem odpowiedzi i dedykowaną pomocą w zakresie tłumaczeń."
     },
     "open_source": {
       "question": "Czy Languine jest open source?",
-      "answer": "Tak! Languine jest w pełni open source i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie w przestrzeni publicznej."
+      "answer": "Tak! Languine jest w pełni open source i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie publicznie."
     },
     "open_source_pricing": {
       "question": "Czy oferujecie specjalne ceny dla projektów open source?",
-      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla ciebie konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla ciebie konto Pro ze zniżką. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
     },
     "cancel_subscription": {
       "question": "Jak mogę anulować swoją subskrypcję?",
