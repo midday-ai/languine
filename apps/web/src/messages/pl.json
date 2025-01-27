@@ -6,11 +6,11 @@
     "goToApp": "Przejdź do aplikacji"
   },
   "hero": {
-    "title": "Automatyczna infrastruktura lokalizacyjna dla Twoich aplikacji",
-    "description": "Usprawnij proces lokalizacji dzięki zasilanemu AI interfejsowi wiersza poleceń i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów."
+    "title": "Zautomatyzowana infrastruktura lokalizacji",
+    "description": "Tłumacz treść swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
   },
   "navigation": {
-    "dashboard": "Panel",
+    "dashboard": "Panel sterowania",
     "tuning": "Dostrajanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Rozpocznij",
-    "title": "Automatyczna lokalizacja dla Twoich aplikacji",
-    "description": "Usprawnij proces lokalizacji dzięki zasilanemu AI interfejsowi wiersza poleceń i potokowi zaprojektowanemu do automatyzacji tłumaczeń dla programistów.",
+    "title": "Zautomatyzowana infrastruktura lokalizacji",
+    "description": "Tłumacz treść swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
     "button": {
       "startAutomating": "Zacznij automatyzować",
       "readDocumentation": "Przeczytaj dokumentację"
@@ -46,18 +46,18 @@
     "fullyOpenSource": "W pełni open source",
     "fullyOpenSourceDescription": "Nasz kod jest publicznie dostępny na GitHubie, umożliwiając przejrzystość i wkład społeczności.",
     "noVendorLockIn": "Brak uzależnienia od dostawcy",
-    "noVendorLockInDescription": "Nie zamykamy Cię w określonej usłudze, używaj własnych LLM.",
+    "noVendorLockInDescription": "Nie zamykamy cię w określonej usłudze, używaj własnych LLM.",
     "presetsForExpo": "Presety dla Expo",
     "presetsForExpoDescription": "Dostarczamy presety dla Expo, abyś mógł szybko zacząć.",
     "presetForReactNative": "Preset dla React Native",
     "presetForReactNativeDescription": "Dostarczamy preset dla React Native, abyś mógł szybko zacząć.",
     "presetForReactEmail": "Biblioteka React Email",
     "presetForReactEmailDescription": "Stworzyliśmy bibliotekę i18n dla React Email.",
-    "readyForI18nLibraries": "Gotowe na biblioteki i18n",
-    "readyForI18nLibrariesDescription": "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl itp.)."
+    "readyForI18nLibraries": "Gotowe dla bibliotek i18n",
+    "readyForI18nLibrariesDescription": "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itp.)."
   },
   "info": {
-    "title": "Zarządza każdym aspektem lokalizacji Twojej aplikacji, w tym",
+    "title": "Zarządza każdym aspektem lokalizacji twojej aplikacji, w tym",
     "smartTranslation": {
       "title": "Inteligentne tłumaczenie",
       "intelligentTranslation": "Inteligentne tłumaczenie z uwzględnieniem kontekstu",
@@ -74,11 +74,11 @@
       "assetOrganization": "Organizacja zasobów"
     },
     "developer": {
-      "title": "Doświadczenie programisty",
+      "title": "Doświadczenie dewelopera",
       "cli": "Interfejs wiersza poleceń",
       "cicd": "Integracja CI/CD",
       "versionControl": "Kontrola wersji",
-      "workflow": "Przepływ pracy programisty",
+      "workflow": "Przepływ pracy dewelopera",
       "documentation": "Kompletna dokumentacja"
     }
   },
@@ -90,9 +90,9 @@
     "description": "Zaloguj się, aby zacząć automatyzować swoją lokalizację w kilka sekund.",
     "terms": {
       "text": "Logując się, zgadzasz się na nasze",
-      "termsOfService": "Warunki usługi",
+      "termsOfService": "Warunki korzystania z usługi",
       "and": "i",
-      "privacyPolicy": "Politykę prywatności"
+      "privacyPolicy": "Polityka prywatności"
     }
   },
   "translations": {
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "Adres e-mail",
-      "description": "Adres e-mail powiązany z Twoim kontem.",
+      "description": "Adres e-mail powiązany z twoim kontem.",
       "placeholder": "Wprowadź swój adres e-mail"
     },
     "apiKey": {
@@ -157,9 +157,9 @@
     }
   },
   "pipeline": {
-    "title": "Przepływ pracy (potok CI/CD)",
+    "title": "Przepływ pracy (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc Twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos marki i terminologię. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że zlokalizowana zawartość pozostaje zsynchronizowana z rozwojem."
+    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną treść, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoja zlokalizowana treść pozostaje zsynchronizowana z rozwojem."
   },
   "settings": {
     "badRequest": "Nieprawidłowe żądanie",
@@ -192,12 +192,12 @@
     "project": {
       "name": {
         "title": "Nazwa projektu",
-        "description": "Nazwa Twojego projektu",
+        "description": "Nazwa twojego projektu",
         "placeholder": "Wprowadź nazwę projektu"
       },
       "id": {
         "title": "ID projektu",
-        "description": "Unikalny identyfikator Twojego projektu",
+        "description": "Twój unikalny identyfikator projektu",
         "placeholder": "ID projektu"
       },
       "delete": {
@@ -210,7 +210,7 @@
     "team": {
       "name": {
         "title": "Nazwa zespołu",
-        "description": "Nazwa Twojego zespołu",
+        "description": "Nazwa twojego zespołu",
         "placeholder": "Wprowadź nazwę zespołu"
       },
       "billing": {
@@ -346,13 +346,13 @@
       "title": "Ekspertyza domeny",
       "description": "Określ kontekst domeny dla tłumaczeń",
       "options": {
-        "general": "Ogólny",
-        "technical": "Techniczny",
-        "medical": "Medyczny",
-        "legal": "Prawny",
-        "financial": "Finansowy",
-        "marketing": "Marketingowy",
-        "academic": "Akademicki"
+        "general": "Ogólne",
+        "technical": "Techniczne",
+        "medical": "Medyczne",
+        "legal": "Prawne",
+        "financial": "Finansowe",
+        "marketing": "Marketingowe",
+        "academic": "Akademickie"
       }
     },
     "idioms": {
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Wszystko z Darmowego, plus:",
+      "includes_free": "Wszystko, co w Darmowym, plus:",
       "features": {
         "github_action": "Integracja z GitHub Action",
         "latest_features": "Wczesny dostęp do najnowszych funkcji",
@@ -422,7 +422,7 @@
     "emailLabel": "E-mail",
     "emailPlaceholder": "Wprowadź e-mail",
     "cancel": "Anuluj",
-    "submit": "Wyślij",
+    "submit": "Zatwierdź",
     "success": {
       "title": "Zaproszenie wysłane",
       "description": "Pomyślnie wysłano zaproszenie do {email}"
@@ -453,7 +453,7 @@
     },
     "info": {
       "description": "Potrzebujesz pomocy? Sprawdź naszą",
-      "link": "dokumentację",
+      "link": "dokumentacja",
       "description_2": "aby uzyskać szczegółowe przewodniki i najlepsze praktyki."
     }
   },
@@ -495,7 +495,7 @@
     "vi": "Wietnamski"
   },
   "menu": {
-    "dashboard": "Panel",
+    "dashboard": "Panel sterowania",
     "tuning": "Dostrajanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Co to jest Languine?",
-      "answer": "Languine to zasilana AI platforma lokalizacyjna, która pomaga automatyzować tłumaczenie Twoich aplikacji. Zapewnia funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
+      "answer": "Languine to platforma lokalizacji napędzana sztuczną inteligencją, która pomaga automatyzować tłumaczenie twoich aplikacji. Oferuje funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
     },
     "key_limit": {
       "question": "Jak działa limit kluczy?",
@@ -536,7 +536,7 @@
     },
     "supported_languages": {
       "question": "Jakie języki są obsługiwane?",
-      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze zasilane AI tłumaczenia działają najlepiej z głównymi językami, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz szczególne wymagania językowe lub pytania dotyczące jakości tłumaczeń dla konkretnych języków, skontaktuj się z naszym zespołem wsparcia."
+      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia napędzane sztuczną inteligencją działają najlepiej z głównymi językami, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz szczególne wymagania językowe lub pytania dotyczące jakości tłumaczeń dla konkretnych języków, skontaktuj się z naszym zespołem wsparcia."
     },
     "github_action": {
       "question": "Jak działa integracja z GitHub Action?",
@@ -544,7 +544,7 @@
     },
     "support": {
       "question": "Jakiego rodzaju wsparcie oferujecie?",
-      "answer": "Użytkownicy Darmowego planu mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem odpowiedzi i dedykowaną pomocą w zakresie tłumaczeń."
+      "answer": "Użytkownicy Darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem odpowiedzi i dedykowaną pomocą w zakresie tłumaczeń."
     },
     "open_source": {
       "question": "Czy Languine jest open source?",
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Czy oferujecie specjalne ceny dla projektów open source?",
-      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla Ciebie konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla ciebie konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
     },
     "cancel_subscription": {
       "question": "Jak mogę anulować swoją subskrypcję?",
@@ -564,9 +564,7 @@
     "keys": "Przetłumaczone klucze",
     "documents": "Przetłumaczone dokumenty",
     "period": "pon",
-    "keys_prefix": "",
     "keys_suffix": " klucze",
-    "docs_prefix": "",
     "docs_suffix": " dokumenty"
   },
   "docs": {
@@ -583,6 +581,27 @@
     "workflows": "Przepływy pracy",
     "self-hosting": "Hostowanie własne",
     "jobs": "Zawody",
-    "support": "Wsparcie"
+    "support": "Wsparcie",
+    "workflow": "Przepływ pracy",
+    "ci": "CI/CD",
+    "presets": "Presety",
+    "formats": "Formaty",
+    "platform": "Platforma",
+    "authentication": "Uwierzytelnianie",
+    "github-actions": "GitHub Actions",
+    "tuning": "Dostrajanie",
+    "settings": "Ustawienia",
+    "hooks": "Haki",
+    "examples": "Przykłady",
+    "team": "Zespół"
+  },
+  "test": {
+    "title": "To jest test",
+    "description": "A to jest opis testu",
+    "button": "Kliknij mnie"
+  },
+  "welcome": {
+    "title": "Witamy w Languine",
+    "description": "Languine to platforma lokalizacyjna napędzana sztuczną inteligencją, która pomaga zautomatyzować tłumaczenie aplikacji. Oferuje funkcje takie jak opcje dostrajania, nadpisywanie tłumaczeń, analitykę i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
   }
 }

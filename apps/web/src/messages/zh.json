@@ -6,8 +6,8 @@
     "goToApp": "前往应用"
   },
   "hero": {
-    "title": "为您的应用程序提供自动化的本地化基础设施",
-    "description": "通过为开发者设计的AI驱动的CLI和流水线，简化您的本地化流程，自动化翻译。"
+    "title": "自动化本地化基础设施",
+    "description": "直接在您的开发工作流程中翻译您的应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。"
   },
   "navigation": {
     "dashboard": "仪表板",
@@ -19,15 +19,15 @@
   },
   "getStarted": {
     "heading": "开始使用",
-    "title": "为您的应用程序提供自动化本地化",
-    "description": "通过为开发者设计的AI驱动的CLI和流水线，简化您的本地化流程，自动化翻译。",
+    "title": "自动化本地化基础设施",
+    "description": "直接在您的开发工作流程中翻译您的应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动翻译。",
     "button": {
       "startAutomating": "开始自动化",
       "readDocumentation": "阅读文档"
     }
   },
   "companies": {
-    "title": "用户",
+    "title": "使用于",
     "addYourCompany": "+ 添加您的公司"
   },
   "activity": {
@@ -53,15 +53,15 @@
     "presetForReactNativeDescription": "我们为React Native提供预设，以便您可以快速开始。",
     "presetForReactEmail": "React Email库",
     "presetForReactEmailDescription": "我们为React Email创建了一个i18n库。",
-    "readyForI18nLibraries": "支持i18n库",
-    "readyForI18nLibrariesDescription": "我们支持所有库，包括最受欢迎的（next-intl, react-i18next, react-intl等）。"
+    "readyForI18nLibraries": "准备好用于i18n库",
+    "readyForI18nLibrariesDescription": "我们支持所有库，包括最受欢迎的库（next-intl, react-i18next, react-intl等）。"
   },
   "info": {
     "title": "处理本地化应用的每一个方面，包括",
     "smartTranslation": {
       "title": "智能翻译",
       "intelligentTranslation": "具有上下文意识的智能翻译",
-      "brandVoice": "品牌声音和语调一致性",
+      "brandVoice": "品牌声音和语气一致性",
       "terminology": "术语管理",
       "linguisticFeatures": "高级语言功能",
       "realtimeUpdates": "实时翻译更新"
@@ -78,8 +78,8 @@
       "cli": "命令行界面",
       "cicd": "CI/CD集成",
       "versionControl": "版本控制",
-      "workflow": "开发者工作流",
-      "documentation": "全面的文档"
+      "workflow": "开发者工作流程",
+      "documentation": "全面文档"
     }
   },
   "login": {
@@ -89,7 +89,7 @@
     "footer": "自动化您的本地化。",
     "description": "登录以在几秒钟内开始自动化您的本地化。",
     "terms": {
-      "text": "登录即表示您同意我们的",
+      "text": "通过登录，您同意我们的",
       "termsOfService": "服务条款",
       "and": "和",
       "privacyPolicy": "隐私政策"
@@ -107,26 +107,26 @@
   },
   "teamSelector": {
     "addProject": "创建项目",
-    "createProjectTitle": "创建新项目",
+    "createProjectTitle": "创建一个新项目",
     "projectNamePlaceholder": "项目名称",
     "createProjectButton": "创建项目",
     "pro": "专业版",
     "project": "项目",
     "teams": "团队",
     "createTeam": "创建团队",
-    "createTeamTitle": "创建新团队",
+    "createTeamTitle": "创建一个新团队",
     "teamNamePlaceholder": "团队名称",
     "createTeamButton": "创建团队"
   },
   "coming_soon": {
     "title": "Languine处于早期访问阶段",
-    "description": "我们目前处于早期访问阶段。联系",
+    "description": "我们目前处于早期访问阶段。请联系",
     "cta": "在X上获取早期访问。"
   },
   "account": {
     "fullName": {
       "title": "全名",
-      "description": "您的全名，将显示在整个平台上。",
+      "description": "您的全名，它将出现在整个平台上。",
       "placeholder": "输入您的全名"
     },
     "email": {
@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "API密钥",
-      "description": "您的个人API密钥，用于访问Languine API和CLI。"
+      "description": "您用于访问Languine API和CLI的个人API密钥。"
     },
     "deleteAccount": {
       "title": "删除账户",
@@ -157,17 +157,17 @@
     }
   },
   "pipeline": {
-    "title": "工作流（CI/CD流水线）",
+    "title": "工作流程（CI/CD管道）",
     "pro": "[专业版]",
-    "description": "我们的翻译引擎无缝集成到您现有的CI/CD流水线中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。这个自动化工作流确保您的本地化内容与开发保持同步。"
+    "description": "我们的翻译引擎无缝集成到您现有的CI/CD管道中，每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译随后作为拉取请求提交，允许在合并到您的主分支并部署之前进行审查。此自动化工作流程确保您的本地化内容与开发保持同步。"
   },
   "settings": {
     "badRequest": "无效请求",
-    "badRequestDescription": "组织必须至少有一个所有者。在移除此所有者之前，请将所有权转移给另一个成员。",
+    "badRequestDescription": "组织必须至少有一个所有者。在删除此所有者之前，请将所有权转移给另一个成员。",
     "permissionDenied": "权限被拒绝",
     "permissionDeniedDescription": "您需要是团队的所有者才能执行此操作",
     "deleteTeamTitle": "删除团队",
-    "deleteTeamDescription": "当您是唯一成员时无法删除组织，请改为删除您的账户",
+    "deleteTeamDescription": "当您是唯一成员时无法删除组织，而是删除您的账户",
     "saved": "设置已保存",
     "savedDescription": "您的更改已成功保存",
     "error": "出了点问题",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "团队API密钥",
-        "description": "用于团队访问的API密钥，与项目ID一起从您的CI/CD流水线中使用",
+        "description": "用于团队访问的API密钥，与项目ID一起从您的CI/CD管道中使用",
         "placeholder": "团队API密钥"
       },
       "members": {
@@ -236,7 +236,7 @@
         "removeMember": "移除成员",
         "removeMemberConfirm": "移除成员",
         "removeMemberDescription": "您确定要移除这个成员吗？",
-        "filterPlaceholder": "筛选成员...",
+        "filterPlaceholder": "过滤成员...",
         "allRoles": "所有角色",
         "date": "日期",
         "selectAll": "{count} 已选择",
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "质量检查",
-      "description": "启用自动翻译质量检查"
+      "description": "启用翻译的自动质量检查"
     },
     "contextDetection": {
       "title": "上下文检测",
@@ -295,8 +295,8 @@
       "description": "确保翻译使用包容性语言"
     },
     "formality": {
-      "title": "正式度",
-      "description": "控制翻译的正式度",
+      "title": "正式性",
+      "description": "控制翻译的正式性水平",
       "options": {
         "casual": "随意",
         "formal": "正式",
@@ -305,17 +305,17 @@
     },
     "brandName": {
       "title": "品牌名称",
-      "description": "设置您的品牌名称以确保一致使用",
+      "description": "设置您的品牌名称以保持一致使用",
       "placeholder": "输入您的品牌名称"
     },
     "brandVoice": {
       "title": "品牌声音",
-      "description": "定义您的品牌声音和语调",
+      "description": "定义您的品牌声音和语气",
       "placeholder": "描述您的品牌声音..."
     },
     "toneOfVoice": {
-      "title": "语调",
-      "description": "定义翻译中使用的语调",
+      "title": "语气",
+      "description": "定义翻译中使用的语气",
       "options": {
         "casual": "随意",
         "formal": "正式",
@@ -332,25 +332,25 @@
     "brand": "品牌",
     "emotiveIntent": {
       "title": "情感意图",
-      "description": "设置翻译的情感语调",
+      "description": "设置翻译的情感基调",
       "options": {
         "neutral": "中性",
         "positive": "积极",
-        "empathetic": "同理心",
+        "empathetic": "同情",
         "professional": "专业",
         "friendly": "友好",
         "enthusiastic": "热情"
       }
     },
     "domainExpertise": {
-      "title": "领域专长",
+      "title": "领域专业知识",
       "description": "指定翻译的领域上下文",
       "options": {
-        "general": "常规",
+        "general": "一般",
         "technical": "技术",
         "medical": "医疗",
         "legal": "法律",
-        "financial": "金融",
+        "financial": "财务",
         "marketing": "营销",
         "academic": "学术"
       }
@@ -374,10 +374,10 @@
       "title": "免费",
       "price": "免费",
       "keys_limit": "最多100个键",
-      "description": "试用时完美",
+      "description": "尝试时完美",
       "features": {
         "unlimited_projects": "无限项目",
-        "fine_tuning": "调优选项",
+        "fine_tuning": "微调选项",
         "overrides": "翻译覆盖",
         "analytics": "分析",
         "context_memory": "上下文记忆",
@@ -389,7 +389,7 @@
     },
     "pro": {
       "title": "专业版",
-      "includes_free": "免费版的所有功能，加上：",
+      "includes_free": "免费版中的所有内容，加上：",
       "features": {
         "github_action": "GitHub Action集成",
         "latest_features": "早期访问最新功能",
@@ -418,7 +418,7 @@
   },
   "invite": {
     "inviteMember": "邀请成员",
-    "inviteDescription": "邀请成员加入您的团队",
+    "inviteDescription": "邀请成员到您的团队",
     "emailLabel": "电子邮件",
     "emailPlaceholder": "输入电子邮件",
     "cancel": "取消",
@@ -461,7 +461,7 @@
     "success": {
       "title": "Languine CLI登录成功",
       "description": "Languine CLI已成功认证为：",
-      "description_2": "您现在可以关闭此标签页并返回CLI"
+      "description_2": "您现在可以关闭此标签并返回到CLI"
     }
   },
   "search": {
@@ -471,7 +471,7 @@
     "daily": "每日",
     "weekly": "每周",
     "monthly": "每月",
-    "selectPeriod": "选择周期"
+    "selectPeriod": "选择期间"
   },
   "language": {
     "en": "英语",
@@ -528,35 +528,35 @@
     "title": "常见问题",
     "what_is_languine": {
       "question": "什么是Languine？",
-      "answer": "Languine是一个AI驱动的本地化平台，帮助您自动化应用程序的翻译。它提供调优选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
+      "answer": "Languine是一个AI驱动的本地化平台，帮助您自动化应用程序的翻译。它提供微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
     },
     "key_limit": {
-      "question": "键限制是如何工作的？",
+      "question": "键限制如何工作？",
       "answer": "当您将源键翻译成目标语言时，翻译的键被计数。例如，如果您有20个源键并将它们翻译成5种语言，则等于100个翻译的键（20个键×5种语言）。"
     },
     "supported_languages": {
       "question": "支持哪些语言？",
-      "answer": "Languine在所有计划中支持超过100种语言。虽然我们的AI驱动翻译在主要语言上效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或关于特定语言翻译质量的问题，请联系我们的支持团队。"
+      "answer": "Languine在所有计划中支持超过100种语言。虽然我们的AI驱动翻译在主要语言中效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或关于特定语言翻译质量的问题，请联系我们的支持团队。"
     },
     "github_action": {
-      "question": "GitHub Action集成是如何工作的？",
-      "answer": "GitHub Action集成（在专业版计划中可用）允许您直接在CI/CD流水线中自动化您的翻译工作流。当您推送更改到您的仓库时，翻译可以自动更新。"
+      "question": "GitHub Action集成如何工作？",
+      "answer": "GitHub Action集成（在专业版中可用）允许您直接在CI/CD管道中自动化您的翻译工作流程。当您推送更改到您的仓库时，翻译可以自动更新。"
     },
     "support": {
       "question": "您提供什么样的支持？",
-      "answer": "免费用户可以获得社区支持，而专业版用户则获得优先支持，响应时间更快，并为他们的翻译需求提供专门帮助。"
+      "answer": "免费用户可以获得社区支持，而专业用户则获得优先支持，响应时间更快，并为他们的翻译需求提供专门帮助。"
     },
     "open_source": {
       "question": "Languine是开源的吗？",
-      "answer": "是的！Languine是完全开源的，并在GitHub上可用。您可以贡献项目、报告问题、建议功能并检查代码。我们相信透明度和公开建设。"
+      "answer": "是的！Languine是完全开源的，可在GitHub上获得。您可以贡献项目、报告问题、建议功能并检查代码。我们相信透明度和公开建设。"
     },
     "open_source_pricing": {
       "question": "您为开源项目提供特别定价吗？",
-      "answer": "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以30%的折扣获得我们的专业版功能。只需联系我们的团队，提供有关您项目的详细信息，我们将为您设置一个折扣的专业版账户。这是我们回馈使我们的工作成为可能的社区的方式。"
+      "answer": "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以30%的折扣获得我们的专业功能。只需联系我们的团队，提供有关您项目的详细信息，我们将为您设置一个折扣的专业账户。这是我们回馈使我们的工作成为可能的社区的方式。"
     },
     "cancel_subscription": {
       "question": "如何取消我的订阅？",
-      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前账单周期结束前保持活动状态，之后您将被转移到免费计划。"
+      "answer": "您可以随时从您的账户设置中取消订阅。导航到账单>更改计划。您的订阅将在当前计费周期结束前保持活动状态，之后您将被转移到免费计划。"
     }
   },
   "pricing_slider": {
@@ -564,9 +564,7 @@
     "keys": "翻译的键",
     "documents": "翻译的文档",
     "period": "周一",
-    "keys_prefix": "",
     "keys_suffix": "键",
-    "docs_prefix": "",
     "docs_suffix": "文档"
   },
   "docs": {
@@ -576,13 +574,34 @@
     "quickstart": "快速开始",
     "guides": "指南",
     "configuration": "配置",
-    "cli": "命令行界面",
+    "cli": "CLI",
     "api": "API",
     "advanced": "高级",
     "custom-parsers": "自定义解析器",
     "workflows": "工作流程",
     "self-hosting": "自托管",
     "jobs": "工作",
-    "support": "支持"
+    "support": "支持",
+    "workflow": "工作流程",
+    "ci": "CI/CD",
+    "presets": "预设",
+    "formats": "格式",
+    "platform": "平台",
+    "authentication": "认证",
+    "github-actions": "GitHub Actions",
+    "tuning": "调优",
+    "settings": "设置",
+    "hooks": "钩子",
+    "examples": "示例",
+    "team": "团队"
+  },
+  "test": {
+    "title": "这是一个测试",
+    "description": "这是一个测试描述",
+    "button": "点击我"
+  },
+  "welcome": {
+    "title": "欢迎来到Languine",
+    "description": "Languine是一个AI驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
   }
 }

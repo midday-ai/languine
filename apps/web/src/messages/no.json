@@ -6,12 +6,12 @@
     "goToApp": "Gå til app"
   },
   "hero": {
-    "title": "Automatisert lokaliseringsinfrastruktur for dine applikasjoner",
-    "description": "Strømlinjeform din lokaliseringsprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere."
+    "title": "Automatisert lokaliseringsinfrastruktur",
+    "description": "Oversett appens innhold direkte i din utviklingsarbeidsflyt. Vår CLI integrerer med GitHub Actions og andre CI/CD-verktøy for å automatisere oversettelser mens du koder."
   },
   "navigation": {
     "dashboard": "Dashbord",
-    "tuning": "Tilpasning",
+    "tuning": "Justering",
     "settings": "Innstillinger",
     "pricing": "Priser",
     "docs": "Dokumentasjon",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Automatisert lokalisering for dine applikasjoner",
-    "description": "Strømlinjeform din lokaliseringsprosess med en AI-drevet CLI og pipeline designet for å automatisere oversettelser for utviklere.",
+    "title": "Automatisert lokaliseringsinfrastruktur",
+    "description": "Oversett appens innhold direkte i din utviklingsarbeidsflyt. Vår CLI integrerer med GitHub Actions og andre CI/CD-verktøy for å automatisere oversettelser mens du koder.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjonen"
@@ -52,12 +52,12 @@
     "presetForReactNative": "Forhåndsinnstilling for React Native",
     "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme raskt i gang.",
     "presetForReactEmail": "React Email-bibliotek",
-    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
+    "presetForReactEmailDescription": "Vi har opprettet et i18n-bibliotek for React Email.",
     "readyForI18nLibraries": "Klar for i18n-biblioteker",
     "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker inkludert de mest populære (next-intl, react-i18next, react-intl, osv)."
   },
   "info": {
-    "title": "Håndterer alle aspekter av lokalisering av appen din inkludert",
+    "title": "Håndterer alle aspekter av lokaliseringsarbeidet for appen din inkludert",
     "smartTranslation": {
       "title": "Smart oversettelse",
       "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
@@ -76,7 +76,7 @@
     "developer": {
       "title": "Utvikleropplevelse",
       "cli": "Kommandolinjegrensesnitt",
-      "cicd": "CI/CD-integrasjon",
+      "cicd": "CI/CD-integrering",
       "versionControl": "Versjonskontroll",
       "workflow": "Utviklerarbeidsflyt",
       "documentation": "Omfattende dokumentasjon"
@@ -87,9 +87,9 @@
     "github": "Logg inn med GitHub",
     "google": "Logg inn med Google",
     "footer": "Automatiser din lokalisering.",
-    "description": "Logg inn for å starte automatisering av din lokalisering på sekunder.",
+    "description": "Logg inn for å starte automatiseringen av din lokalisering på sekunder.",
     "terms": {
-      "text": "Ved å logge inn, godtar du våre",
+      "text": "Ved å logge inn godtar du våre",
       "termsOfService": "Tjenestevilkår",
       "and": "og",
       "privacyPolicy": "Personvernregler"
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "E-postadresse",
-      "description": "E-postadressen knyttet til kontoen din.",
+      "description": "E-postadressen knyttet til din konto.",
       "placeholder": "Skriv inn din e-postadresse"
     },
     "apiKey": {
@@ -159,12 +159,12 @@
   "pipeline": {
     "title": "Arbeidsflyt (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne, og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokalisert innhold holder tritt med utviklingen."
+    "description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer pushes, analyserer vi det endrede innholdet, opprettholder din oversettelsesminne og genererer nøyaktige oversettelser samtidig som vi bevarer din merkevarestemme og terminologi. Oversettelsene sendes deretter som pull-forespørsler, slik at de kan gjennomgås før de flettes inn i hovedgrenen din og distribueres. Denne automatiserte arbeidsflyten sikrer at ditt lokaliserte innhold holder tritt med utviklingen."
   },
   "settings": {
     "badRequest": "Ugyldig forespørsel",
     "badRequestDescription": "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
-    "permissionDenied": "Tillatelse nektet",
+    "permissionDenied": "Tilgang nektet",
     "permissionDeniedDescription": "Du må være eier av teamet for å utføre denne handlingen",
     "deleteTeamTitle": "Slett team",
     "deleteTeamDescription": "Kan ikke slette organisasjon når du er det eneste medlemmet, slett i stedet kontoen din",
@@ -273,7 +273,7 @@
     },
     "qualityChecks": {
       "title": "Kvalitetssjekker",
-      "description": "Aktiver automatiserte kvalitetssjekker for oversettelser"
+      "description": "Aktiver automatiske kvalitetssjekker for oversettelser"
     },
     "contextDetection": {
       "title": "Kontekstgjenkjenning",
@@ -296,7 +296,7 @@
     },
     "formality": {
       "title": "Formellitet",
-      "description": "Kontroller formellitetsnivået på oversettelser",
+      "description": "Kontroller formellitetsnivået i oversettelser",
       "options": {
         "casual": "Uformell",
         "formal": "Formell",
@@ -314,7 +314,7 @@
       "placeholder": "Beskriv din merkevarestemme..."
     },
     "toneOfVoice": {
-      "title": "Tone",
+      "title": "Tonen i stemmen",
       "description": "Definer tonen som brukes i oversettelser",
       "options": {
         "casual": "Uformell",
@@ -329,7 +329,7 @@
         "diplomatic": "Diplomatisk"
       }
     },
-    "brand": "Merkevare",
+    "brand": "Merke",
     "emotiveIntent": {
       "title": "Emosjonell intensjon",
       "description": "Sett den emosjonelle tonen for oversettelser",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Idiomer",
-      "description": "Håndter idiomatiske uttrykk på riktig måte"
+      "description": "Håndter idiomatiske uttrykk på en hensiktsmessig måte"
     },
     "terminology": {
       "title": "Terminologi",
@@ -377,7 +377,7 @@
       "description": "Perfekt når du prøver ut",
       "features": {
         "unlimited_projects": "Ubegrensede prosjekter",
-        "fine_tuning": "Tilpasningsalternativer",
+        "fine_tuning": "Justeringsalternativer",
         "overrides": "Oversettelsesoverstyringer",
         "analytics": "Analytikk",
         "context_memory": "Kontekstminne",
@@ -391,7 +391,7 @@
       "title": "Pro",
       "includes_free": "Alt i Gratis, pluss:",
       "features": {
-        "github_action": "GitHub Action-integrasjon",
+        "github_action": "GitHub Action-integrering",
         "latest_features": "Tidlig tilgang til de nyeste funksjonene",
         "priority_support": "Prioritert støtte",
         "priority_queues": "Prioriterte oversettelseskøer",
@@ -400,21 +400,21 @@
       }
     },
     "cta": "Start automatisering",
-    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde nøkler (som 'Registrer deg' eller 'Velkommen!') og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
+    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde-nøkler (som 'Registrer deg' eller 'Velkommen!') og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
   },
   "createTeam": {
     "teamName": "Teamnavn",
     "teamNamePlaceholder": "Skriv inn teamnavn",
     "createTeamButton": "Opprett team",
     "cancel": "Avbryt",
-    "createTeamDescription": "Opprett et nytt team for å administrere prosjektene og samarbeidspartnerne dine."
+    "createTeamDescription": "Opprett et nytt team for å administrere prosjekter og samarbeidspartnere."
   },
   "createProject": {
     "createProjectTitle": "Opprett et nytt prosjekt",
     "projectNamePlaceholder": "Skriv inn prosjektnavn",
     "createProjectButton": "Opprett prosjekt",
     "cancel": "Avbryt",
-    "createProjectDescription": "Opprett et nytt prosjekt for å starte automatisering av din lokalisering."
+    "createProjectDescription": "Opprett et nytt prosjekt for å starte automatiseringen av din lokalisering."
   },
   "invite": {
     "inviteMember": "Inviter medlem",
@@ -447,7 +447,7 @@
       },
       "3": {
         "title": "Dokumentasjon",
-        "description": "Sjekk ut dokumentasjonen vår for detaljerte guider og beste praksis",
+        "description": "Sjekk ut vår dokumentasjon for detaljerte guider og beste praksis",
         "link": "dokumentasjon"
       }
     },
@@ -496,7 +496,7 @@
   },
   "menu": {
     "dashboard": "Dashbord",
-    "tuning": "Tilpasning",
+    "tuning": "Justering",
     "settings": "Innstillinger",
     "pricing": "Priser",
     "docs": "Dokumentasjon",
@@ -528,19 +528,19 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Hva er Languine?",
-      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som tilpasningsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
+      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av dine applikasjoner. Den tilbyr funksjoner som justeringsalternativer, oversettelsesoverstyringer, analytikk og kontekstminne for å sikre oversettelser av høy kvalitet."
     },
     "key_limit": {
       "question": "Hvordan fungerer nøkkelgrensen?",
-      "answer": "En oversatt nøkkel telles når du oversetter en kilde nøkkel til et målspråk. For eksempel, hvis du har 20 kilde nøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
+      "answer": "En oversatt nøkkel telles når du oversetter en kilde-nøkkel til et målspråk. For eksempel, hvis du har 20 kilde-nøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
     },
     "supported_languages": {
       "question": "Hvilke språk støttes?",
-      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt supportteamet vårt."
+      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med hovedspråk, streber vi etter å levere kvalitetsoversettelser over alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt vårt supportteam."
     },
     "github_action": {
-      "question": "Hvordan fungerer GitHub Action-integrasjonen?",
-      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
+      "question": "Hvordan fungerer GitHub Action-integreringen?",
+      "answer": "GitHub Action-integreringen (tilgjengelig i Pro-planer) lar deg automatisere din oversettelsesarbeidsflyt direkte i din CI/CD-pipeline. Når du pusher endringer til ditt repository, kan oversettelser automatisk oppdateres."
     },
     "support": {
       "question": "Hva slags støtte tilbyr dere?",
@@ -548,11 +548,11 @@
     },
     "open_source": {
       "question": "Er Languine åpen kildekode?",
-      "answer": "Ja! Languine er fullstendig åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge offentlig."
+      "answer": "Ja! Languine er fullstendig åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge i det offentlige."
     },
     "open_source_pricing": {
       "question": "Tilbyr dere spesialpriser for åpen kildekode-prosjekter?",
-      "answer": "Ja! Vi elsker å støtte åpen kildekode-samfunnet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til samfunnet som gjør vårt arbeid mulig."
+      "answer": "Ja! Vi elsker å støtte det åpne kildekode-samfunnet. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare kontakt teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til samfunnet som gjør vårt arbeid mulig."
     },
     "cancel_subscription": {
       "question": "Hvordan avslutter jeg abonnementet mitt?",
@@ -564,9 +564,7 @@
     "keys": "Oversatte nøkler",
     "documents": "Oversatte dokumenter",
     "period": "man",
-    "keys_prefix": "",
     "keys_suffix": " nøkler",
-    "docs_prefix": "",
     "docs_suffix": " dokumenter"
   },
   "docs": {
@@ -583,6 +581,27 @@
     "workflows": "Arbeidsflyter",
     "self-hosting": "Selvhøsting",
     "jobs": "Jobber",
-    "support": "Støtte"
+    "support": "Støtte",
+    "workflow": "Arbeidsflyt",
+    "ci": "CI/CD",
+    "presets": "Forhåndsinnstillinger",
+    "formats": "Formater",
+    "platform": "Plattform",
+    "authentication": "Autentisering",
+    "github-actions": "GitHub Actions",
+    "tuning": "Justering",
+    "settings": "Innstillinger",
+    "hooks": "Hooks",
+    "examples": "Eksempler",
+    "team": "Team"
+  },
+  "test": {
+    "title": "Dette er en test",
+    "description": "Og dette er en testbeskrivelse",
+    "button": "Klikk på meg"
+  },
+  "welcome": {
+    "title": "Velkommen til Languine",
+    "description": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av applikasjonene dine. Den tilbyr funksjoner som finjusteringsalternativer, oversettelsesoverstyringer, analyser og konteksthukommelse for å sikre oversettelser av høy kvalitet."
   }
 }

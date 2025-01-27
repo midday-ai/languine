@@ -3,11 +3,11 @@
     "pricing": "Preise",
     "docs": "Dokumentation",
     "signIn": "Anmelden",
-    "goToApp": "Zur App"
+    "goToApp": "Zur App gehen"
   },
   "hero": {
-    "title": "Automatisierte Lokalisierungsinfrastruktur für Ihre Anwendungen",
-    "description": "Optimieren Sie Ihren Lokalisierungsprozess mit einer KI-gestützten CLI und Pipeline, die entwickelt wurde, um Übersetzungen für Entwickler zu automatisieren."
+    "title": "Automatisierte Lokalisierungsinfrastruktur",
+    "description": "Übersetzen Sie den Inhalt Ihrer App direkt in Ihrem Entwicklungs-Workflow. Unsere CLI integriert sich in GitHub Actions und andere CI/CD-Tools, um Übersetzungen zu automatisieren, während Sie programmieren."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Loslegen",
-    "title": "Automatisierte Lokalisierung für Ihre Anwendungen",
-    "description": "Optimieren Sie Ihren Lokalisierungsprozess mit einer KI-gestützten CLI und Pipeline, die entwickelt wurde, um Übersetzungen für Entwickler zu automatisieren.",
+    "title": "Automatisierte Lokalisierungsinfrastruktur",
+    "description": "Übersetzen Sie den Inhalt Ihrer App direkt in Ihrem Entwicklungs-Workflow. Unsere CLI integriert sich in GitHub Actions und andere CI/CD-Tools, um Übersetzungen zu automatisieren, während Sie programmieren.",
     "button": {
       "startAutomating": "Automatisierung starten",
       "readDocumentation": "Dokumentation lesen"
@@ -54,14 +54,14 @@
     "presetForReactEmail": "React Email Bibliothek",
     "presetForReactEmailDescription": "Wir haben eine i18n-Bibliothek für React Email erstellt.",
     "readyForI18nLibraries": "Bereit für i18n-Bibliotheken",
-    "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl, etc.)."
   },
   "info": {
     "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
     "smartTranslation": {
       "title": "Intelligente Übersetzung",
       "intelligentTranslation": "Intelligente Übersetzung mit Kontextbewusstsein",
-      "brandVoice": "Konsistenz von Markenstimme und -ton",
+      "brandVoice": "Markenstimme und Tonkonsistenz",
       "terminology": "Terminologieverwaltung",
       "linguisticFeatures": "Erweiterte linguistische Funktionen",
       "realtimeUpdates": "Echtzeit-Übersetzungsaktualisierungen"
@@ -69,9 +69,9 @@
     "implementation": {
       "title": "Implementierung",
       "quickSetup": "Schnelle Einrichtung und Integration",
-      "fileFormat": "Handhabung von Dateiformaten",
+      "fileFormat": "Dateiformatbehandlung",
       "contentStructure": "Organisation der Inhaltsstruktur",
-      "assetOrganization": "Organisation von Assets"
+      "assetOrganization": "Organisation der Assets"
     },
     "developer": {
       "title": "Entwicklererfahrung",
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Workflow (CI/CD-Pipeline)",
     "pro": "[pro]",
-    "description": "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihre Codebasis bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir die geänderten Inhalte, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull Requests eingereicht, die vor der Zusammenführung in Ihren Hauptzweig und der Bereitstellung überprüft werden können. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
+    "description": "Unsere Übersetzungsmaschine integriert sich nahtlos in Ihre bestehende CI/CD-Pipeline und übersetzt automatisch Ihre Codebasis bei jedem Push. Wenn Codeänderungen gepusht werden, analysieren wir den geänderten Inhalt, pflegen Ihr Übersetzungsgedächtnis und generieren genaue Übersetzungen, während wir Ihre Markenstimme und Terminologie bewahren. Die Übersetzungen werden dann als Pull Requests eingereicht, die vor der Zusammenführung in Ihren Hauptzweig und der Bereitstellung überprüft werden können. Dieser automatisierte Workflow stellt sicher, dass Ihre lokalisierten Inhalte mit der Entwicklung synchron bleiben."
   },
   "settings": {
     "badRequest": "Ungültige Anfrage",
@@ -167,7 +167,7 @@
     "permissionDenied": "Zugriff verweigert",
     "permissionDeniedDescription": "Sie müssen ein Besitzer des Teams sein, um diese Aktion durchzuführen",
     "deleteTeamTitle": "Team löschen",
-    "deleteTeamDescription": "Die Organisation kann nicht gelöscht werden, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
+    "deleteTeamDescription": "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind, löschen Sie stattdessen Ihr Konto",
     "saved": "Einstellungen gespeichert",
     "savedDescription": "Ihre Änderungen wurden erfolgreich gespeichert",
     "error": "Etwas ist schief gelaufen",
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Projekt löschen",
-        "description": "Dieses Projekt und alle zugehörigen Daten dauerhaft löschen",
+        "description": "Dieses Projekt und alle seine Daten dauerhaft löschen",
         "button": "Projekt löschen"
       }
     },
@@ -273,20 +273,20 @@
     },
     "qualityChecks": {
       "title": "Qualitätsprüfungen",
-      "description": "Aktivieren Sie automatisierte Qualitätsprüfungen für Übersetzungen"
+      "description": "Aktivieren Sie automatische Qualitätsprüfungen für Übersetzungen"
     },
     "contextDetection": {
       "title": "Kontexterkennung",
       "description": "Erkennen und bewahren Sie automatisch den Kontext in Übersetzungen"
     },
-    "styleGuide": "Stilhandbuch",
+    "styleGuide": "Stilrichtlinie",
     "lengthControl": {
       "title": "Längenkontrolle",
       "description": "Kontrollieren Sie die Länge des übersetzten Textes",
       "options": {
         "flexible": "Flexibel",
         "strict": "Streng",
-        "exact": "Exakt",
+        "exact": "Genau",
         "loose": "Locker"
       }
     },
@@ -296,7 +296,7 @@
     },
     "formality": {
       "title": "Formalität",
-      "description": "Kontrollieren Sie das Formalitätsniveau der Übersetzungen",
+      "description": "Kontrollieren Sie das Formalitätsniveau von Übersetzungen",
       "options": {
         "casual": "Lässig",
         "formal": "Formell",
@@ -310,7 +310,7 @@
     },
     "brandVoice": {
       "title": "Markenstimme",
-      "description": "Definieren Sie Ihre Markenstimme und -ton",
+      "description": "Definieren Sie Ihre Markenstimme und Ihren Ton",
       "placeholder": "Beschreiben Sie Ihre Markenstimme..."
     },
     "toneOfVoice": {
@@ -356,7 +356,7 @@
       }
     },
     "idioms": {
-      "title": "Idiome",
+      "title": "Redewendungen",
       "description": "Behandeln Sie idiomatische Ausdrücke angemessen"
     },
     "terminology": {
@@ -391,7 +391,7 @@
       "title": "Pro",
       "includes_free": "Alles in Kostenlos, plus:",
       "features": {
-        "github_action": "GitHub Action Integration",
+        "github_action": "GitHub Action-Integration",
         "latest_features": "Frühzeitiger Zugang zu neuesten Funktionen",
         "priority_support": "Priorisierter Support",
         "priority_queues": "Priorisierte Übersetzungswarteschlangen",
@@ -400,7 +400,7 @@
       }
     },
     "cta": "Automatisierung starten",
-    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie 'Anmelden' oder 'Willkommen!') haben und sie in 5 Sprachen übersetzen, entspricht das 100 übersetzten Schlüsseln (20 Schlüssel x 5 Sprachen)."
+    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie \"Anmelden\" oder \"Willkommen!\") haben und sie in 5 Sprachen übersetzen, entspricht das 100 übersetzten Schlüsseln (20 Schlüssel x 5 Sprachen)."
   },
   "createTeam": {
     "teamName": "Teamname",
@@ -528,7 +528,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Was ist Languine?",
-      "answer": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextgedächtnis, um hochwertige Übersetzungen zu gewährleisten."
+      "answer": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analytik und Kontextgedächtnis, um hochwertige Übersetzungen zu gewährleisten."
     },
     "key_limit": {
       "question": "Wie funktioniert das Schlüssellimit?",
@@ -539,8 +539,8 @@
       "answer": "Languine unterstützt in allen Plänen über 100 Sprachen. Während unsere KI-gestützten Übersetzungen mit den Hauptsprachen am besten funktionieren, bemühen wir uns, qualitativ hochwertige Übersetzungen für alle unterstützten Sprachen bereitzustellen. Wenn Sie spezifische Sprachanforderungen haben oder Fragen zur Übersetzungsqualität für bestimmte Sprachen haben, wenden Sie sich bitte an unser Support-Team."
     },
     "github_action": {
-      "question": "Wie funktioniert die GitHub Action Integration?",
-      "answer": "Die GitHub Action Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungsworkflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen in Ihr Repository pushen, können Übersetzungen automatisch aktualisiert werden."
+      "question": "Wie funktioniert die GitHub Action-Integration?",
+      "answer": "Die GitHub Action-Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungs-Workflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen in Ihr Repository pushen, können Übersetzungen automatisch aktualisiert werden."
     },
     "support": {
       "question": "Welche Art von Support bieten Sie an?",
@@ -552,7 +552,7 @@
     },
     "open_source_pricing": {
       "question": "Bieten Sie Sonderpreise für Open-Source-Projekte an?",
-      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt pflegen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein ermäßigtes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
+      "answer": "Ja! Wir lieben es, die Open-Source-Community zu unterstützen. Wenn Sie ein Open-Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach an unser Team mit Details über Ihr Projekt, und wir richten Ihnen ein ermäßigtes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
     },
     "cancel_subscription": {
       "question": "Wie kann ich mein Abonnement kündigen?",
@@ -563,10 +563,8 @@
     "tier": "Stufe {tier}",
     "keys": "Übersetzte Schlüssel",
     "documents": "Übersetzte Dokumente",
-    "period": "Mo",
-    "keys_prefix": "",
+    "period": "mon",
     "keys_suffix": " Schlüssel",
-    "docs_prefix": "",
     "docs_suffix": " Dokumente"
   },
   "docs": {
@@ -583,6 +581,27 @@
     "workflows": "Workflows",
     "self-hosting": "Selbsthosting",
     "jobs": "Berufe",
-    "support": "Unterstützung"
+    "support": "Unterstützung",
+    "workflow": "Workflow",
+    "ci": "CI/CD",
+    "presets": "Voreinstellungen",
+    "formats": "Formate",
+    "platform": "Plattform",
+    "authentication": "Authentifizierung",
+    "github-actions": "GitHub Actions",
+    "tuning": "Feinabstimmung",
+    "settings": "Einstellungen",
+    "hooks": "Hooks",
+    "examples": "Beispiele",
+    "team": "Team"
+  },
+  "test": {
+    "title": "Dies ist ein Test",
+    "description": "Und dies ist eine Testbeschreibung",
+    "button": "Klicken Sie mich"
+  },
+  "welcome": {
+    "title": "Willkommen bei Languine",
+    "description": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextgedächtnis, um hochwertige Übersetzungen zu gewährleisten."
   }
 }

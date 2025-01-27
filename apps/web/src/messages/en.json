@@ -564,9 +564,7 @@
     "keys": "Translated keys",
     "documents": "Translated documents",
     "period": "mon",
-    "keys_prefix": "",
     "keys_suffix": " keys",
-    "docs_prefix": "",
     "docs_suffix": " docs"
   },
   "docs": {
