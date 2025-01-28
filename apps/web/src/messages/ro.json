@@ -609,9 +609,12 @@
     "examples": "Exemple",
     "team": "Echipă"
   },
-  "test": {
-    "title": "Acesta este un test",
-    "description": "Și aceasta este o descriere a testului",
-    "button": "Apasă-mă"
+  "welcome": {
+    "title": "Bine ați venit la Languine",
+    "description": "Languine este o platformă de localizare alimentată de AI care vă ajută să automatizați traducerea aplicațiilor dumneavoastră. Oferă funcții precum opțiuni de ajustare fină, suprascrierea traducerilor, analize și memorie de context pentru a asigura traduceri de înaltă calitate."
+  },
+  "limit_reached": {
+    "title": "Limită atinsă",
+    "description": "Ați atins limita pentru planul dumneavoastră. Vă rugăm să vă actualizați planul pentru a continua."
   }
 }

@@ -10,7 +10,7 @@ import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
 import { transformLocalePath } from "@/utils/path.js";
 import { getAPIKey } from "@/utils/session.ts";
-import { confirm, note, outro, select, spinner } from "@clack/prompts";
+import { note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
 import chalk from "chalk";
 import glob from "fast-glob";
@@ -43,6 +43,7 @@ export async function translateCommand(args: string[] = []) {
   const { forceTranslate, isSilent, checkOnly, forcedLocales } =
     argsSchema.parse(args);
   const s = spinner();
+  const startTime = Date.now();
 
   const apiKey = getAPIKey();
   const gitInfo = await getGitInfo();
@@ -68,6 +69,9 @@ export async function translateCommand(args: string[] = []) {
     }
 
     const projectId = config.projectId || process.env.LANGUINE_PROJECT_ID;
+    let translatedAnything = false;
+    let needsUpdates = false;
+    let totalKeysToTranslate = 0;
 
     if (!projectId) {
       note(
@@ -95,10 +99,6 @@ export async function translateCommand(args: string[] = []) {
       }
     }
 
-    let translatedAnything = false;
-    let needsUpdates = false;
-    let totalKeysToTranslate = 0;
-
     // Process each file configuration
     for (const [type, fileConfig] of Object.entries(config.files)) {
       const { include } = fileConfig as Config["files"][string];
@@ -121,7 +121,6 @@ export async function translateCommand(args: string[] = []) {
           const parsedSourceFile = await parser.parse(sourceFileContent);
 
           let keysToTranslate: string[];
-          let removedKeys: string[] = [];
 
           if (forceTranslate) {
             // If force flag is used, translate all keys
@@ -134,7 +133,6 @@ export async function translateCommand(args: string[] = []) {
             try {
               const changes = await getDiff({ sourceFilePath, type });
               keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
-              removedKeys = changes.removedKeys;
             } catch (error) {
               console.log();
               note(
@@ -148,24 +146,16 @@ export async function translateCommand(args: string[] = []) {
 
           totalKeysToTranslate += keysToTranslate.length;
 
-          if (keysToTranslate.length > 0 || removedKeys.length > 0) {
+          if (keysToTranslate.length > 0) {
             needsUpdates = true;
             if (checkOnly) {
               if (!isSilent) {
-                if (keysToTranslate.length > 0) {
-                  console.log(
-                    chalk.yellow(
-                      `  Keys to translate: ${keysToTranslate.length}`,
-                    ),
-                  );
-                }
-                if (removedKeys.length > 0) {
-                  console.log(
-                    chalk.yellow(`  Keys to remove: ${removedKeys.length}`),
-                  );
-                }
+                console.log(
+                  chalk.yellow(
+                    `  ${keysToTranslate.length} ${keysToTranslate.length === 1 ? "key" : "keys"} to translate`,
+                  ),
+                );
               }
-
               continue;
             }
           }
@@ -181,25 +171,19 @@ export async function translateCommand(args: string[] = []) {
               sourceFile: sourceFilePath.split("/").pop() ?? "",
             }));
 
-          let shouldRemoveKeys = false;
-          if (!forceTranslate && removedKeys.length > 0) {
-            s.stop();
-            shouldRemoveKeys = (await confirm({
-              message: `${removedKeys.length} keys were removed from the source file. Do you want to remove them from target files as well?`,
-            })) as boolean;
-            s.start();
-          }
-
           if (translationInput.length > 0) {
             if (!isSilent) {
               s.message(
                 `Translating ${translationInput.length} keys to ${effectiveTargetLocales.length} languages...`,
               );
             }
-          } else if (!shouldRemoveKeys) {
+          } else {
             if (!isSilent) {
-              s.message(
-                `No ${forceTranslate ? "" : "changes"} detected in ${sourceFilePath}, skipping...`,
+              s.stop("No keys to translate, skipping...");
+              console.log();
+              note(
+                "You can use the --force flag to translate all keys.",
+                "Force translation",
               );
             }
             continue;
@@ -338,13 +322,6 @@ export async function translateCommand(args: string[] = []) {
                 // File doesn't exist yet, use empty object
               }
 
-              // Remove deleted keys if user confirmed
-              if (shouldRemoveKeys) {
-                for (const key of removedKeys) {
-                  delete existingContent[key];
-                }
-              }
-
               // Convert the translations and merge with existing content
               const translatedContent = Object.fromEntries(
                 translationInput.map((item, index) => [
@@ -382,14 +359,10 @@ export async function translateCommand(args: string[] = []) {
               if (translationInput.length > 0) {
                 translatedAnything = true;
               }
-            } catch (error) {
-              const translationError = error as Error;
-              console.error(
-                chalk.red(
-                  `Translation failed for ${chalk.bold(
-                    targetLocale,
-                  )}: ${translationError.message}`,
-                ),
+            } catch {
+              note(
+                chalk.red(`Translation failed for ${targetLocale}`),
+                "Error",
               );
             }
           }
@@ -398,6 +371,7 @@ export async function translateCommand(args: string[] = []) {
     }
 
     if (!isSilent) {
+      const duration = Math.round((Date.now() - startTime) / 1000);
       if (checkOnly) {
         if (needsUpdates) {
           s.stop("Updates needed");
@@ -407,9 +381,18 @@ export async function translateCommand(args: string[] = []) {
           process.exit(0);
         }
       } else {
-        s.stop("Completed");
+        s.stop();
         if (translatedAnything) {
-          outro("All translations completed successfully!");
+          outro(
+            chalk.green(
+              `All translations completed in ${duration >= 60 ? `${Math.floor(duration / 60)}m ` : ""}${duration % 60}s`,
+            ),
+          );
+          s.stop();
+          note(
+            "Visit https://languine.ai/login to add brand guidelines, fine-tune and more.",
+            "Tip",
+          );
         }
       }
     }

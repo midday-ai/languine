@@ -609,9 +609,12 @@
     "examples": "Przykłady",
     "team": "Zespół"
   },
-  "test": {
-    "title": "To jest test",
-    "description": "A to jest opis testu",
-    "button": "Kliknij mnie"
+  "welcome": {
+    "title": "Witamy w Languine",
+    "description": "Languine to platforma lokalizacyjna zasilana sztuczną inteligencją, która pomaga w automatyzacji tłumaczenia Twoich aplikacji. Oferuje funkcje takie jak opcje dostosowywania, nadpisywanie tłumaczeń, analityka i pamięć kontekstowa, aby zapewnić wysoką jakość tłumaczeń."
+  },
+  "limit_reached": {
+    "title": "Osiągnięto limit",
+    "description": "Osiągnąłeś limit swojego planu. Proszę zaktualizować plan, aby kontynuować."
   }
 }

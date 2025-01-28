@@ -609,9 +609,12 @@
     "examples": "Ejemplos",
     "team": "Equipo"
   },
-  "test": {
-    "title": "Este es un test",
-    "description": "Y esta es una descripción de prueba",
-    "button": "Haz clic en mí"
+  "welcome": {
+    "title": "Bienvenido a Languine",
+    "description": "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Ofrece características como opciones de ajuste fino, sobrescrituras de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
+  },
+  "limit_reached": {
+    "title": "Límite alcanzado",
+    "description": "Has alcanzado el límite de tu plan. Por favor, actualiza tu plan para continuar."
   }
 }

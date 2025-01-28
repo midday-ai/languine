@@ -19,7 +19,15 @@ export const jobsRouter = createTRPCRouter({
       const limitCheckResult = await checkTranslationLimits(org, input);
 
       if (limitCheckResult?.error) {
-        return limitCheckResult;
+        return {
+          run: null,
+          error: limitCheckResult.error,
+          meta: {
+            plan: limitCheckResult.meta.plan,
+            tier: limitCheckResult.meta.tier,
+            organizationId: org.id,
+          },
+        };
       }
 
       const { options, isFreeUser } = getTranslationTaskOptions(org);
@@ -40,13 +48,15 @@ export const jobsRouter = createTRPCRouter({
           commitLink: input.commitLink,
           userId: ctx.type === "user" ? ctx.authenticatedId : null,
         },
-        // options,
+        options,
       );
 
       return {
         run,
         meta: {
           plan: isFreeUser ? "free" : "pro",
+          tier: org.tier,
+          organizationId: org.id,
         },
       };
     }),

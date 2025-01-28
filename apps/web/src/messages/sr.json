@@ -609,9 +609,12 @@
     "examples": "Primeri",
     "team": "Tim"
   },
-  "test": {
-    "title": "Ovo je test",
-    "description": "I ovo je opis testa",
-    "button": "Klikni me"
+  "welcome": {
+    "title": "Dobrodošli u Languine",
+    "description": "Languine je platforma za lokalizaciju pokretana veštačkom inteligencijom koja vam pomaže da automatizujete prevođenje vaših aplikacija. Pruža funkcije kao što su opcije za fino podešavanje, preklapanje prevoda, analitiku i kontekstualno pamćenje kako bi osigurala visokokvalitetne prevode."
+  },
+  "limit_reached": {
+    "title": "Dostignut limit",
+    "description": "Dostigli ste limit za vaš plan. Molimo vas da nadogradite svoj plan kako biste nastavili."
   }
 }

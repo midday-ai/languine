@@ -609,9 +609,12 @@
     "examples": "Piemēri",
     "team": "Komanda"
   },
-  "test": {
-    "title": "Tas ir tests",
-    "description": "Un tas ir testa apraksts",
-    "button": "Noklikšķiniet uz manis"
+  "welcome": {
+    "title": "Laipni lūdzam Languine",
+    "description": "Languine ir mākslīgā intelekta vadīta lokalizācijas platforma, kas palīdz automatizēt jūsu lietotņu tulkošanu. Tā piedāvā tādas funkcijas kā precizēšanas iespējas, tulkošanas pārrakstīšana, analītika un konteksta atmiņa, lai nodrošinātu augstas kvalitātes tulkojumus."
+  },
+  "limit_reached": {
+    "title": "Limits sasniegts",
+    "description": "Jūs esat sasniedzis sava plāna limitu. Lūdzu, jauniniet savu plānu, lai turpinātu."
   }
 }

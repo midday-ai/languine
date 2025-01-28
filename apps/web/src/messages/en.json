@@ -608,10 +608,5 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
-  },
-  "test": {
-    "title": "This is a test",
-    "description": "And this is a test description",
-    "button": "Click me"
   }
 }

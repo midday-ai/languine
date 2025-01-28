@@ -46,6 +46,7 @@
     "simple-git": "^3.27.0",
     "sucrase": "^3.35.0",
     "superjson": "^2.2.2",
+    "table-layout": "^4.1.1",
     "tiny-updater": "^3.5.3",
     "xliff": "^6.2.1",
     "xml2js": "^0.6.2",

@@ -609,9 +609,12 @@
     "examples": "Contoh",
     "team": "Tim"
   },
-  "test": {
-    "title": "Ini adalah sebuah tes",
-    "description": "Dan ini adalah deskripsi tes",
-    "button": "Klik saya"
+  "welcome": {
+    "title": "Selamat Datang di Languine",
+    "description": "Languine adalah platform lokalisasi yang didukung AI yang membantu Anda mengotomatiskan terjemahan aplikasi Anda. Ini menyediakan fitur seperti opsi penyesuaian, penggantian terjemahan, analitik, dan memori konteks untuk memastikan terjemahan berkualitas tinggi."
+  },
+  "limit_reached": {
+    "title": "Batas tercapai",
+    "description": "Anda telah mencapai batas untuk rencana Anda. Silakan tingkatkan rencana Anda untuk melanjutkan."
   }
 }

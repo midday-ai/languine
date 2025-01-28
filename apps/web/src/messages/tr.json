@@ -609,9 +609,12 @@
     "examples": "Örnekler",
     "team": "Ekip"
   },
-  "test": {
-    "title": "Bu bir test",
-    "description": "Ve bu bir test açıklaması",
-    "button": "Bana tıkla"
+  "welcome": {
+    "title": "Languine'e Hoş Geldiniz",
+    "description": "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan AI destekli bir yerelleştirme platformudur. Yüksek kaliteli çeviriler sağlamak için ince ayar seçenekleri, çeviri geçersiz kılmaları, analizler ve bağlam hafızası gibi özellikler sunar."
+  },
+  "limit_reached": {
+    "title": "Limit aşıldı",
+    "description": "Planınız için limiti aştınız. Devam etmek için lütfen planınızı yükseltin."
   }
 }

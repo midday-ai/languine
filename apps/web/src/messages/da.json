@@ -609,9 +609,12 @@
     "examples": "Eksempler",
     "team": "Team"
   },
-  "test": {
-    "title": "Dette er en test",
-    "description": "Og dette er en testbeskrivelse",
-    "button": "Klik på mig"
+  "welcome": {
+    "title": "Velkommen til Languine",
+    "description": "Languine er en AI-drevet lokaliseringsplatform, der hjælper dig med at automatisere oversættelsen af dine applikationer. Den tilbyder funktioner som finjusteringsmuligheder, oversættelsesoverstyringer, analyser og konteksthukommelse for at sikre oversættelser af høj kvalitet."
+  },
+  "limit_reached": {
+    "title": "Grænse nået",
+    "description": "Du har nået grænsen for din plan. Opgrader venligst din plan for at fortsætte."
   }
 }

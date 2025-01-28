@@ -609,9 +609,12 @@
     "examples": "範例",
     "team": "團隊"
   },
-  "test": {
-    "title": "這是一個測試",
-    "description": "這是一個測試描述",
-    "button": "點擊我"
+  "welcome": {
+    "title": "歡迎來到 Languine",
+    "description": "Languine 是一個由 AI 驅動的本地化平台，幫助您自動化應用程式的翻譯。它提供了微調選項、翻譯覆蓋、分析和上下文記憶等功能，以確保高品質的翻譯。"
+  },
+  "limit_reached": {
+    "title": "達到限制",
+    "description": "您已達到您的計劃限制。請升級您的計劃以繼續。"
   }
 }
