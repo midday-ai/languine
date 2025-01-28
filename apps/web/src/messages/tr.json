@@ -18,7 +18,7 @@
     "account": "Hesap"
   },
   "getStarted": {
-    "heading": "Başlayın",
+    "heading": "Başlayın 2",
     "title": "Otomatik yerelleştirme altyapısı",
     "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'mız, kodladıkça çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Limit aşıldı",
     "description": "Planınız için limiti aştınız. Devam etmek için lütfen planınızı yükseltin."
+  },
+  "translate": {
+    "tip": "Marka yönergelerini eklemek, ince ayar yapmak ve daha fazlası için https://languine.ai/login adresini ziyaret edin."
   }
 }

@@ -18,7 +18,7 @@
     "account": "Konts"
   },
   "getStarted": {
-    "heading": "Sākt",
+    "heading": "Sāciet 2",
     "title": "Automatizēta lokalizācijas infrastruktūra",
     "description": "Tulkojiet sava lietotnes saturu tieši savā izstrādes darba plūsmā. Mūsu CLI integrējas ar GitHub Actions un citiem CI/CD rīkiem, lai automatizētu tulkojumus, kamēr jūs kodējat.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Limits sasniegts",
     "description": "Jūs esat sasniedzis sava plāna limitu. Lūdzu, jauniniet savu plānu, lai turpinātu."
+  },
+  "translate": {
+    "tip": "Apmeklējiet https://languine.ai/login, lai pievienotu zīmola vadlīnijas, precizētu un vēl vairāk."
   }
 }

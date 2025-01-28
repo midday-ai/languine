@@ -392,11 +392,6 @@ export async function translateCommand(args: string[] = []) {
               `All translations completed in ${duration >= 60 ? `${Math.floor(duration / 60)}m ` : ""}${duration % 60}s`,
             ),
           );
-          s.stop();
-          note(
-            "Visit https://languine.ai/login to add brand guidelines, fine-tune and more.",
-            "Tip",
-          );
         }
       }
     }

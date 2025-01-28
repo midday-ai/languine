@@ -18,7 +18,7 @@
     "account": "Konto"
   },
   "getStarted": {
-    "heading": "Rozpocznij",
+    "heading": "Zacznij 2",
     "title": "Zautomatyzowana infrastruktura lokalizacyjna",
     "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby zautomatyzować tłumaczenia podczas kodowania.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Osiągnięto limit",
     "description": "Osiągnąłeś limit swojego planu. Proszę zaktualizować plan, aby kontynuować."
+  },
+  "translate": {
+    "tip": "Odwiedź https://languine.ai/login, aby dodać wytyczne dotyczące marki, dostosować i więcej."
   }
 }

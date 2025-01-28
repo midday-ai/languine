@@ -18,7 +18,7 @@
     "account": "Konto"
   },
   "getStarted": {
-    "heading": "Kom i gang",
+    "heading": "Kom i gang 2",
     "title": "Automatisert lokaliseringsinfrastruktur",
     "description": "Oversett innholdet i appen din direkte i utviklingsarbeidsflyten din. Vår CLI integreres med GitHub Actions og andre CI/CD-verktøy for å automatisere oversettelser mens du koder.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Grensen er nådd",
     "description": "Du har nådd grensen for planen din. Vennligst oppgrader planen din for å fortsette."
+  },
+  "translate": {
+    "tip": "Besøk https://languine.ai/login for å legge til merkevare retningslinjer, finjustere og mer."
   }
 }

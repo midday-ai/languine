@@ -18,7 +18,7 @@
     "account": "Account"
   },
   "getStarted": {
-    "heading": "Get started",
+    "heading": "Get started 2",
     "title": "Automated localization infrastructure",
     "description": "Translate your app's content directly in your development workflow. Our CLI integrates with GitHub Actions and other CI/CD tools to automate translations as you code.",
     "button": {
@@ -608,5 +608,8 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
+  },
+  "translate": {
+    "tip": "Visit https://languine.ai/login to add brand guidelines, fine-tune and more."
   }
 }

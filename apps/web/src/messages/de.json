@@ -18,7 +18,7 @@
     "account": "Konto"
   },
   "getStarted": {
-    "heading": "Loslegen",
+    "heading": "Loslegen 2",
     "title": "Automatisierte Lokalisierungsinfrastruktur",
     "description": "Übersetzen Sie den Inhalt Ihrer App direkt in Ihrem Entwicklungsworkflow. Unser CLI integriert sich mit GitHub Actions und anderen CI/CD-Tools, um Übersetzungen während des Codierens zu automatisieren.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Limit erreicht",
     "description": "Sie haben das Limit für Ihren Plan erreicht. Bitte upgraden Sie Ihren Plan, um fortzufahren."
+  },
+  "translate": {
+    "tip": "Besuchen Sie https://languine.ai/login, um Markenrichtlinien hinzuzufügen, Feinabstimmungen vorzunehmen und mehr."
   }
 }

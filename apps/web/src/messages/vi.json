@@ -18,7 +18,7 @@
     "account": "Tài khoản"
   },
   "getStarted": {
-    "heading": "Bắt đầu",
+    "heading": "Bắt đầu 2",
     "title": "Hệ thống hạ tầng địa phương hóa tự động",
     "description": "Dịch nội dung ứng dụng của bạn trực tiếp trong quy trình phát triển. CLI của chúng tôi tích hợp với GitHub Actions và các công cụ CI/CD khác để tự động hóa việc dịch khi bạn lập trình.",
     "button": {
@@ -616,5 +616,8 @@
   "limit_reached": {
     "title": "Đã đạt giới hạn",
     "description": "Bạn đã đạt giới hạn cho gói của mình. Vui lòng nâng cấp gói của bạn để tiếp tục."
+  },
+  "translate": {
+    "tip": "Truy cập https://languine.ai/login để thêm hướng dẫn thương hiệu, tinh chỉnh và nhiều hơn nữa."
   }
 }
