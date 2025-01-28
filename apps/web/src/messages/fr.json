@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de développement. Notre CLI s'intègre avec GitHub Actions et d'autres outils CI/CD pour automatiser les traductions pendant que vous codez."
+    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Commencer",
     "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de développement. Notre CLI s'intègre avec GitHub Actions et d'autres outils CI/CD pour automatiser les traductions pendant que vous codez.",
+    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez.",
     "button": {
       "startAutomating": "Commencer à automatiser",
       "readDocumentation": "Lire la documentation"
@@ -54,7 +54,7 @@
     "presetForReactEmail": "Bibliothèque React Email",
     "presetForReactEmailDescription": "Nous avons créé une bibliothèque i18n pour React Email.",
     "readyForI18nLibraries": "Prêt pour les bibliothèques i18n",
-    "readyForI18nLibrariesDescription": "Nous supportons toutes les bibliothèques y compris les plus populaires (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Nous supportons toutes les bibliothèques, y compris les plus populaires (next-intl, react-i18next, react-intl, etc.)."
   },
   "info": {
     "title": "Gère chaque aspect de la localisation de votre application, y compris",
@@ -68,17 +68,17 @@
     },
     "implementation": {
       "title": "Mise en œuvre",
-      "quickSetup": "Configuration rapide et intégration",
+      "quickSetup": "Configuration et intégration rapides",
       "fileFormat": "Gestion des formats de fichiers",
-      "contentStructure": "Organisation de la structure du contenu",
-      "assetOrganization": "Organisation des actifs"
+      "contentStructure": "Organisation de la structure de contenu",
+      "assetOrganization": "Organisation des ressources"
     },
     "developer": {
       "title": "Expérience développeur",
       "cli": "Interface en ligne de commande",
       "cicd": "Intégration CI/CD",
       "versionControl": "Contrôle de version",
-      "workflow": "Flux de travail développeur",
+      "workflow": "Flux de travail des développeurs",
       "documentation": "Documentation complète"
     }
   },
@@ -273,15 +273,15 @@
     },
     "qualityChecks": {
       "title": "Contrôles de qualité",
-      "description": "Activez les contrôles de qualité automatisés pour les traductions"
+      "description": "Activer les contrôles de qualité automatisés pour les traductions"
     },
     "contextDetection": {
       "title": "Détection de contexte",
-      "description": "Détectez et préservez automatiquement le contexte dans les traductions"
+      "description": "Détecter et préserver automatiquement le contexte dans les traductions"
     },
     "styleGuide": "Guide de style",
     "lengthControl": {
-      "title": "Contrôle de la longueur",
+      "title": "Contrôle de longueur",
       "description": "Contrôlez la longueur du texte traduit",
       "options": {
         "flexible": "Flexible",
@@ -295,7 +295,7 @@
       "description": "Assurez-vous que les traductions utilisent un langage inclusif"
     },
     "formality": {
-      "title": "Formalité",
+      "title": "Niveau de formalité",
       "description": "Contrôlez le niveau de formalité des traductions",
       "options": {
         "casual": "Décontracté",
@@ -324,14 +324,14 @@
         "playful": "Ludique",
         "serious": "Sérieux",
         "confident": "Confiant",
-        "humble": "Humile",
+        "humble": "Humble",
         "direct": "Direct",
         "diplomatic": "Diplomatique"
       }
     },
     "brand": "Marque",
     "emotiveIntent": {
-      "title": "Intention Émotive",
+      "title": "Intention émotive",
       "description": "Définissez le ton émotionnel pour les traductions",
       "options": {
         "neutral": "Neutre",
@@ -343,7 +343,7 @@
       }
     },
     "domainExpertise": {
-      "title": "Expertise de Domaine",
+      "title": "Expertise de domaine",
       "description": "Spécifiez le contexte de domaine pour les traductions",
       "options": {
         "general": "Général",
@@ -364,8 +364,8 @@
       "description": "Gérez la terminologie spécialisée et les glossaires"
     },
     "culturalAdaptation": {
-      "title": "Adaptation Culturelle",
-      "description": "Adaptez le contenu pour une pertinence culturelle"
+      "title": "Adaptation culturelle",
+      "description": "Adaptez le contenu pour qu'il soit culturellement approprié"
     }
   },
   "pricing": {
@@ -395,7 +395,7 @@
         "latest_features": "Accès anticipé aux dernières fonctionnalités",
         "priority_support": "Support prioritaire",
         "priority_queues": "Files d'attente de traduction prioritaires",
-        "languages": "Langues illimitées",
+        "languages": "À partir de 8 langues",
         "keys_limit": "À partir de 10 000 clés",
         "docs_limit": "À partir de 50 documents"
       }
@@ -519,7 +519,7 @@
   },
   "menu": {
     "dashboard": "Tableau de bord",
-    "tuning": "Ajustement",
+    "tuning": "Réglage",
     "settings": "Paramètres",
     "pricing": "Tarification",
     "docs": "Documentation",
@@ -541,8 +541,8 @@
       "03": "Mar",
       "04": "Avr",
       "05": "Mai",
-      "06": "Juin",
-      "07": "Juil",
+      "06": "Jun",
+      "07": "Jul",
       "08": "Août",
       "09": "Sep"
     }
@@ -551,7 +551,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Qu'est-ce que Languine ?",
-      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle propose des fonctionnalités telles que des options de réglage, des remplacements de traduction, des analyses et une mémoire de contexte pour garantir des traductions de haute qualité."
+      "answer": "Languine est une plateforme de localisation alimentée par l'IA qui vous aide à automatiser la traduction de vos applications. Elle propose des fonctionnalités telles que des options de réglage fin, des remplacements de traduction, des analyses et une mémoire contextuelle pour garantir des traductions de haute qualité."
     },
     "key_limit": {
       "question": "Comment fonctionne la limite de clés ?",
@@ -562,20 +562,20 @@
       "answer": "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour certaines langues, veuillez contacter notre équipe de support."
     },
     "github_action": {
-      "question": "Comment fonctionne l'intégration GitHub Action ?",
-      "answer": "L'intégration GitHub Action (disponible dans les plans Pro) vous permet d'automatiser votre flux de travail de traduction directement dans votre pipeline CI/CD. Lorsque vous poussez des modifications dans votre dépôt, les traductions peuvent être mises à jour automatiquement."
+      "question": "Comment fonctionne l'intégration de GitHub Action ?",
+      "answer": "L'intégration de GitHub Action (disponible dans les plans Pro) vous permet d'automatiser votre flux de travail de traduction directement dans votre pipeline CI/CD. Lorsque vous poussez des modifications dans votre dépôt, les traductions peuvent être mises à jour automatiquement."
     },
     "support": {
       "question": "Quel type de support offrez-vous ?",
       "answer": "Les utilisateurs gratuits ont accès à un support communautaire, tandis que les utilisateurs Pro bénéficient d'un support prioritaire avec des temps de réponse plus rapides et une assistance dédiée pour leurs besoins de traduction."
     },
     "open_source": {
-      "question": "Languine est-il open source ?",
-      "answer": "Oui ! Languine est entièrement open source et disponible sur GitHub. Vous pouvez contribuer au projet, signaler des problèmes, suggérer des fonctionnalités et inspecter le code. Nous croyons en la transparence et à la construction en public."
+      "question": "Languine est-elle open source ?",
+      "answer": "Oui ! Languine est entièrement open source et disponible sur GitHub. Vous pouvez contribuer au projet, signaler des problèmes, suggérer des fonctionnalités et inspecter le code. Nous croyons en la transparence et en la construction en public."
     },
     "open_source_pricing": {
       "question": "Offrez-vous des tarifs spéciaux pour les projets open source ?",
-      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à tarif réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
     },
     "cancel_subscription": {
       "question": "Comment annuler mon abonnement ?",
@@ -588,7 +588,8 @@
     "documents": "Documents traduits",
     "period": "mois",
     "keys_suffix": " clés",
-    "docs_suffix": " docs"
+    "docs_suffix": " docs",
+    "languages": "Langues"
   },
   "docs": {
     "getting-started": "Commencer",

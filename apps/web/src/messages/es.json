@@ -1,13 +1,13 @@
 {
   "header": {
     "pricing": "Precios",
-    "docs": "Documentos",
+    "docs": "Documentación",
     "signIn": "Iniciar sesión",
     "goToApp": "Ir a la aplicación"
   },
   "hero": {
     "title": "Infraestructura de localización automatizada",
-    "description": "Traduce el contenido de tu aplicación directamente en tu flujo de trabajo de desarrollo. Nuestra CLI se integra con GitHub Actions y otras herramientas de CI/CD para automatizar traducciones mientras codificas."
+    "description": "Traduce el contenido de tu aplicación directamente en tu flujo de trabajo de desarrollo. Nuestra CLI se integra con GitHub Actions y otras herramientas de CI/CD para automatizar las traducciones mientras codificas."
   },
   "navigation": {
     "dashboard": "Tablero",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Comenzar",
     "title": "Infraestructura de localización automatizada",
-    "description": "Traduce el contenido de tu aplicación directamente en tu flujo de trabajo de desarrollo. Nuestra CLI se integra con GitHub Actions y otras herramientas de CI/CD para automatizar traducciones mientras codificas.",
+    "description": "Traduce el contenido de tu aplicación directamente en tu flujo de trabajo de desarrollo. Nuestra CLI se integra con GitHub Actions y otras herramientas de CI/CD para automatizar las traducciones mientras codificas.",
     "button": {
       "startAutomating": "Comenzar a automatizar",
       "readDocumentation": "Leer documentación"
@@ -28,7 +28,7 @@
   },
   "companies": {
     "title": "Usado por",
-    "addYourCompany": "+ Agrega tu empresa"
+    "addYourCompany": "+ Agregar tu empresa"
   },
   "activity": {
     "title": "Actividad",
@@ -54,7 +54,7 @@
     "presetForReactEmail": "Biblioteca de React Email",
     "presetForReactEmailDescription": "Hemos creado una biblioteca i18n para React Email.",
     "readyForI18nLibraries": "Listo para bibliotecas i18n",
-    "readyForI18nLibrariesDescription": "Soportamos todas las bibliotecas, incluidas las más populares (next-intl, react-i18next, react-intl, etc.)."
+    "readyForI18nLibrariesDescription": "Soportamos todas las bibliotecas, incluyendo las más populares (next-intl, react-i18next, react-intl, etc.)."
   },
   "info": {
     "title": "Maneja cada aspecto de la localización de tu aplicación, incluyendo",
@@ -76,7 +76,7 @@
     "developer": {
       "title": "Experiencia del Desarrollador",
       "cli": "Interfaz de línea de comandos",
-      "cicd": "Integración CI/CD",
+      "cicd": "Integración de CI/CD",
       "versionControl": "Control de versiones",
       "workflow": "Flujo de trabajo del desarrollador",
       "documentation": "Documentación completa"
@@ -131,7 +131,7 @@
     },
     "email": {
       "title": "Dirección de Correo Electrónico",
-      "description": "La dirección de correo electrónico asociada a tu cuenta.",
+      "description": "La dirección de correo electrónico asociada con tu cuenta.",
       "placeholder": "Ingresa tu dirección de correo electrónico"
     },
     "apiKey": {
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "Eliminar Cuenta",
-      "description": "Eliminar permanentemente tu cuenta y todos los datos asociados. Esta acción no se puede deshacer.",
+      "description": "Elimina permanentemente tu cuenta y todos los datos asociados. Esta acción no se puede deshacer.",
       "button": "Eliminar Cuenta"
     }
   },
@@ -150,8 +150,8 @@
   "dangerZone": {
     "dialog": {
       "title": "¿Estás absolutamente seguro?",
-      "description": "Esta acción no se puede deshacer. Por favor escribe DELETE para confirmar.",
-      "placeholder": "Escribe ELIMINAR para confirmar",
+      "description": "Esta acción no se puede deshacer. Por favor, escribe DELETE para confirmar.",
+      "placeholder": "Escribe DELETE para confirmar",
       "confirm": "Confirmar eliminación",
       "cancel": "Cancelar"
     }
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Flujo de trabajo (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu base de código en cada push. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y la terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado esté sincronizado con el desarrollo."
+    "description": "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu base de código en cada envío. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y la terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado se mantenga sincronizado con el desarrollo."
   },
   "settings": {
     "badRequest": "Solicitud inválida",
@@ -169,13 +169,13 @@
     "deleteTeamTitle": "Eliminar equipo",
     "deleteTeamDescription": "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta",
     "saved": "Configuraciones guardadas",
-    "savedDescription": "Tus cambios se han guardado correctamente",
+    "savedDescription": "Tus cambios se han guardado con éxito",
     "error": "Algo salió mal",
-    "errorDescription": "Por favor intenta de nuevo o contacta al soporte",
+    "errorDescription": "Por favor, intenta de nuevo o contacta al soporte",
     "addTeam": "Crear equipo",
     "apiKey": {
       "updated": "Clave API actualizada",
-      "updatedDescription": "Tu clave API ha sido actualizada correctamente y copiada al portapapeles.",
+      "updatedDescription": "Tu clave API ha sido actualizada con éxito y copiada en tu portapapeles.",
       "title": "Actualizar clave API",
       "description": "¿Estás seguro de que deseas generar una nueva clave API? La clave antigua dejará de funcionar inmediatamente.",
       "cancel": "Cancelar",
@@ -191,39 +191,39 @@
     "addProject": "Crear proyecto",
     "project": {
       "name": {
-        "title": "Nombre del Proyecto",
+        "title": "Nombre del proyecto",
         "description": "El nombre de tu proyecto",
         "placeholder": "Ingresa el nombre del proyecto"
       },
       "id": {
-        "title": "ID del Proyecto",
+        "title": "ID del proyecto",
         "description": "Tu identificador único de proyecto",
-        "placeholder": "ID del Proyecto"
+        "placeholder": "ID del proyecto"
       },
       "delete": {
-        "title": "Eliminar Proyecto",
+        "title": "Eliminar proyecto",
         "description": "Eliminar permanentemente este proyecto y todos sus datos",
-        "button": "Eliminar Proyecto"
+        "button": "Eliminar proyecto"
       }
     },
     "save": "Guardar",
     "team": {
       "name": {
-        "title": "Nombre del Equipo",
+        "title": "Nombre del equipo",
         "description": "El nombre de tu equipo",
         "placeholder": "Ingresa el nombre del equipo"
       },
       "billing": {
-        "title": "Plan de Facturación",
+        "title": "Plan de facturación",
         "description": "Gestiona el plan de facturación de tu equipo",
         "free": "Gratis",
         "pro": "Pro",
         "unlimited": "Ilimitado"
       },
       "apiKey": {
-        "title": "Clave API del Equipo",
-        "description": "Clave API para acceso del equipo, usa esto desde tu pipeline CI/CD junto con el ID del Proyecto",
-        "placeholder": "Clave API del Equipo"
+        "title": "Clave API del equipo",
+        "description": "Clave API para acceso del equipo, úsala desde tu pipeline CI/CD junto con el ID del proyecto",
+        "placeholder": "Clave API del equipo"
       },
       "members": {
         "leaveTeamConfirm": "Salir del equipo",
@@ -232,71 +232,71 @@
         "leaveTeam": "Salir del equipo",
         "invite": "Invitar miembro",
         "title": "Miembros",
-        "pendingInvitations": "Invitaciones Pendientes",
+        "pendingInvitations": "Invitaciones pendientes",
         "removeMember": "Eliminar miembro",
         "removeMemberConfirm": "Eliminar miembro",
         "removeMemberDescription": "¿Estás seguro de que deseas eliminar a este miembro?",
         "filterPlaceholder": "Filtrar miembros...",
-        "allRoles": "Todos los Roles",
+        "allRoles": "Todos los roles",
         "date": "Fecha",
         "selectAll": "{count} seleccionados",
         "noPendingInvitations": "No hay invitaciones pendientes",
         "noResults": "No se encontraron miembros",
         "tryDifferentSearch": "Intenta una búsqueda diferente",
         "inviteMembers": "Invitar miembros a colaborar",
-        "deleteInvite": "Eliminar Invitación",
+        "deleteInvite": "Eliminar invitación",
         "deleteInviteDescription": "Eliminar la invitación",
         "invitedBy": "Invitado por {name}",
         "deleteInviteSuccess": "Invitación eliminada",
         "deleteInviteError": "Error al eliminar la invitación",
         "removeMemberSuccess": "Miembro eliminado",
         "removeMemberError": "Error al eliminar el miembro",
-        "removeMemberSuccessDescription": "El miembro ha sido eliminado correctamente",
+        "removeMemberSuccessDescription": "El miembro ha sido eliminado con éxito",
         "removeMemberErrorDescription": "Error al eliminar el miembro",
         "roles": {
           "owner": "Propietario",
           "member": "Miembro"
         },
         "dateSort": {
-          "newest": "Más nuevo",
+          "newest": "Más reciente",
           "oldest": "Más antiguo"
         },
-        "deleteInviteConfirm": "Eliminar Invitación"
+        "deleteInviteConfirm": "Eliminar invitación"
       }
     }
   },
   "tuning": {
     "general": "General",
     "translationMemory": {
-      "title": "Memoria de Traducción",
+      "title": "Memoria de traducción",
       "description": "Usa la memoria de traducción para mejorar la consistencia y eficiencia"
     },
     "qualityChecks": {
-      "title": "Controles de Calidad",
-      "description": "Habilita controles de calidad automatizados para traducciones"
+      "title": "Controles de calidad",
+      "description": "Habilitar controles de calidad automatizados para traducciones"
     },
     "contextDetection": {
-      "title": "Detección de Contexto",
+      "title": "Detección de contexto",
       "description": "Detectar y preservar automáticamente el contexto en las traducciones"
     },
-    "styleGuide": "Guía de Estilo",
+    "styleGuide": "Guía de estilo",
     "lengthControl": {
-      "title": "Control de Longitud",
-      "description": "Controla la longitud del texto traducido",
+      "title": "Control de longitud",
+      "description": "Controlar la longitud del texto traducido",
       "options": {
         "flexible": "Flexible",
         "strict": "Estricto",
         "exact": "Exacto",
-        "loose": "Amplio"
+        "loose": "Suave"
       }
     },
     "inclusiveLanguage": {
-      "title": "Lenguaje Inclusivo",
-      "description": "Asegúrate de que las traducciones usen lenguaje inclusivo"
+      "title": "Lenguaje inclusivo",
+      "description": "Asegurar que las traducciones utilicen lenguaje inclusivo"
     },
     "formality": {
       "title": "Formalidad",
-      "description": "Controla el nivel de formalidad de las traducciones",
+      "description": "Controlar el nivel de formalidad de las traducciones",
       "options": {
         "casual": "Informal",
         "formal": "Formal",
@@ -357,15 +357,15 @@
     },
     "idioms": {
       "title": "Modismos",
-      "description": "Maneja expresiones idiomáticas adecuadamente"
+      "description": "Maneja expresiones idiomáticas de manera apropiada"
     },
     "terminology": {
       "title": "Terminología",
-      "description": "Gestiona terminología especializada y glosarios"
+      "description": "Gestiona la terminología especializada y los glosarios"
     },
     "culturalAdaptation": {
       "title": "Adaptación Cultural",
-      "description": "Adapta el contenido para la adecuación cultural"
+      "description": "Adapta el contenido para su adecuación cultural"
     }
   },
   "pricing": {
@@ -392,16 +392,16 @@
       "includes_free": "Todo en Gratis, más:",
       "features": {
         "github_action": "Integración de GitHub Action",
-        "latest_features": "Acceso anticipado a las últimas funciones",
+        "latest_features": "Acceso anticipado a las últimas características",
         "priority_support": "Soporte prioritario",
         "priority_queues": "Colas de traducción prioritarias",
-        "languages": "Idiomas ilimitados",
+        "languages": "A partir de 8 idiomas",
         "keys_limit": "A partir de 10,000 claves",
         "docs_limit": "A partir de 50 documentos"
       }
     },
     "cta": "Comienza a automatizar",
-    "keys_limit_explanation": "Clave traducida: Si tienes 20 claves de origen (como \"Regístrate\" o \"¡Bienvenido!\") y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves x 5 idiomas)."
+    "keys_limit_explanation": "Clave traducida: Si tienes 20 claves de origen (como \"Registrarse\" o \"¡Bienvenido!\") y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves x 5 idiomas)."
   },
   "createTeam": {
     "teamName": "Nombre del Equipo",
@@ -430,7 +430,7 @@
     },
     "error": {
       "title": "Error",
-      "description": "No se pudo enviar la invitación. Por favor, inténtalo de nuevo."
+      "description": "No se pudo enviar la invitación. Por favor, intenta de nuevo."
     },
     "validation": {
       "invalidEmail": "Por favor, ingresa un correo electrónico válido"
@@ -439,7 +439,7 @@
   "onboarding": {
     "steps": {
       "1": {
-        "title": "Configurar Languine CLI",
+        "title": "Configura Languine CLI",
         "description": "Instala y configura el Languine CLI para gestionar traducciones"
       },
       "2": {
@@ -551,15 +551,15 @@
     "title": "Preguntas Frecuentes",
     "what_is_languine": {
       "question": "¿Qué es Languine?",
-      "answer": "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Proporciona características como opciones de ajuste fino, sobrescrituras de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
+      "answer": "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Ofrece características como opciones de ajuste fino, sobrescrituras de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
     },
     "key_limit": {
       "question": "¿Cómo funciona el límite de claves?",
       "answer": "Una clave traducida se cuenta cuando traduces una clave de origen a un idioma de destino. Por ejemplo, si tienes 20 claves de origen y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves × 5 idiomas)."
     },
     "supported_languages": {
-      "question": "¿Qué idiomas son compatibles?",
-      "answer": "Languine admite más de 100 idiomas en todos los planes. Si bien nuestras traducciones impulsadas por IA funcionan mejor con idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas compatibles. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, comunícate con nuestro equipo de soporte."
+      "question": "¿Qué idiomas están soportados?",
+      "answer": "Languine soporta más de 100 idiomas en todos los planes. Mientras que nuestras traducciones impulsadas por IA funcionan mejor con idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
     },
     "github_action": {
       "question": "¿Cómo funciona la integración de GitHub Action?",
@@ -571,15 +571,15 @@
     },
     "open_source": {
       "question": "¿Es Languine de código abierto?",
-      "answer": "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, informar problemas, sugerir funciones e inspeccionar el código. Creemos en la transparencia y en construir en público."
+      "answer": "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, informar problemas, sugerir características e inspeccionar el código. Creemos en la transparencia y en construir en público."
     },
     "open_source_pricing": {
       "question": "¿Ofrecen precios especiales para proyectos de código abierto?",
-      "answer": "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes acceder a nuestras funciones Pro con un 30% de descuento. Solo comunícate con nuestro equipo con detalles sobre tu proyecto y te configuraremos una cuenta Pro con descuento. Esta es nuestra forma de retribuir a la comunidad que hace posible nuestro trabajo."
+      "answer": "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes acceder a nuestras características Pro con un 30% de descuento. Solo contacta a nuestro equipo con detalles sobre tu proyecto y te configuraremos una cuenta Pro con descuento. Esta es nuestra forma de retribuir a la comunidad que hace posible nuestro trabajo."
     },
     "cancel_subscription": {
       "question": "¿Cómo cancelo mi suscripción?",
-      "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Navega a Facturación > Cambiar Plan. Tu suscripción permanecerá activa hasta el final de tu período de facturación actual, después del cual serás trasladado al plan gratuito."
+      "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Navega a Facturación > Cambiar Plan. Tu suscripción permanecerá activa hasta el final de tu período de facturación actual, después del cual serás trasladado al plan Gratuito."
     }
   },
   "pricing_slider": {
@@ -588,24 +588,25 @@
     "documents": "Documentos traducidos",
     "period": "mes",
     "keys_suffix": " claves",
-    "docs_suffix": " docs"
+    "docs_suffix": " docs",
+    "languages": "Idiomas"
   },
   "docs": {
     "getting-started": "Introducción",
     "workflow": "Flujo de trabajo",
     "ci": "CI/CD",
-    "presets": "Ajustes predefinidos",
+    "presets": "Preajustes",
     "formats": "Formatos",
     "platform": "Plataforma",
     "introduction": "Introducción",
-    "quickstart": "Inicio rápido",
+    "quickstart": "Inicio Rápido",
     "authentication": "Autenticación",
     "configuration": "Configuración",
     "cli": "CLI",
-    "github-actions": "GitHub Actions",
-    "tuning": "Ajustes",
+    "github-actions": "Acciones de GitHub",
+    "tuning": "Ajuste",
     "settings": "Configuraciones",
-    "hooks": "Hooks",
+    "hooks": "Ganchos",
     "examples": "Ejemplos",
     "team": "Equipo"
   },

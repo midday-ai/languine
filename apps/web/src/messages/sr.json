@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Automatizovana infrastruktura za lokalizaciju",
-    "description": "Prevedite sadržaj vaše aplikacije direktno u vašem razvojnim toku. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodirate."
+    "description": "Prevodi sadržaj tvoje aplikacije direktno u svom razvoju. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodiraš."
   },
   "navigation": {
     "dashboard": "Kontrolna tabla",
@@ -18,17 +18,17 @@
     "account": "Nalog"
   },
   "getStarted": {
-    "heading": "Počnite",
+    "heading": "Započni",
     "title": "Automatizovana infrastruktura za lokalizaciju",
-    "description": "Prevedite sadržaj vaše aplikacije direktno u vašem razvojnim toku. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodirate.",
+    "description": "Prevodi sadržaj tvoje aplikacije direktno u svom razvoju. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodiraš.",
     "button": {
-      "startAutomating": "Počnite sa automatizacijom",
-      "readDocumentation": "Pročitajte dokumentaciju"
+      "startAutomating": "Započni automatizaciju",
+      "readDocumentation": "Pročitaj dokumentaciju"
     }
   },
   "companies": {
     "title": "Koriste",
-    "addYourCompany": "+ Dodajte svoju kompaniju"
+    "addYourCompany": "+ Dodaj svoju kompaniju"
   },
   "activity": {
     "title": "Aktivnost",
@@ -43,21 +43,21 @@
   },
   "features": {
     "title": "Karakteristike",
-    "fullyOpenSource": "Potpuno otvoren izvor",
+    "fullyOpenSource": "Potpuno otvoren kod",
     "fullyOpenSourceDescription": "Naš kod je javno dostupan na GitHub-u, omogućavajući transparentnost i doprinos zajednice.",
-    "noVendorLockIn": "Bez zaključavanja dobavljača",
-    "noVendorLockInDescription": "Ne zaključavamo vas u specifičnu uslugu, koristite svoje LLM-ove.",
+    "noVendorLockIn": "Bez zaključavanja kod dobavljača",
+    "noVendorLockInDescription": "Ne zaključavamo te na određenu uslugu, koristi svoje LLM-ove.",
     "presetsForExpo": "Predlošci za Expo",
-    "presetsForExpoDescription": "Pružamo predloške za Expo, tako da možete brzo početi.",
+    "presetsForExpoDescription": "Pružamo predloške za Expo, tako da možeš brzo da počneš.",
     "presetForReactNative": "Predložak za React Native",
-    "presetForReactNativeDescription": "Pružamo predložak za React Native, tako da možete brzo početi.",
+    "presetForReactNativeDescription": "Pružamo predložak za React Native, tako da možeš brzo da počneš.",
     "presetForReactEmail": "React Email biblioteka",
     "presetForReactEmailDescription": "Kreirali smo i18n biblioteku za React Email.",
     "readyForI18nLibraries": "Spremno za i18n biblioteke",
     "readyForI18nLibrariesDescription": "Podržavamo sve biblioteke uključujući najpopularnije (next-intl, react-i18next, react-intl, itd.)."
   },
   "info": {
-    "title": "Obuhvata svaki aspekt lokalizacije vaše aplikacije uključujući",
+    "title": "Obuhvata svaki aspekt lokalizacije tvoje aplikacije uključujući",
     "smartTranslation": {
       "title": "Pametan prevod",
       "intelligentTranslation": "Inteligentan prevod sa svesti o kontekstu",
@@ -71,14 +71,14 @@
       "quickSetup": "Brza postavka i integracija",
       "fileFormat": "Rukovanje formatima datoteka",
       "contentStructure": "Organizacija strukture sadržaja",
-      "assetOrganization": "Organizacija sredstava"
+      "assetOrganization": "Organizacija resursa"
     },
     "developer": {
       "title": "Iskustvo programera",
       "cli": "Interfejs komandne linije",
       "cicd": "CI/CD integracija",
       "versionControl": "Upravljanje verzijama",
-      "workflow": "Tok rada programera",
+      "workflow": "Radni tok programera",
       "documentation": "Sveobuhvatna dokumentacija"
     }
   },
@@ -86,10 +86,10 @@
     "title": "Prijavi se",
     "github": "Prijavi se sa GitHub-om",
     "google": "Prijavi se sa Google-om",
-    "footer": "Automatizujte svoju lokalizaciju.",
-    "description": "Prijavite se da biste počeli sa automatizacijom vaše lokalizacije za nekoliko sekundi.",
+    "footer": "Automatizuj svoju lokalizaciju.",
+    "description": "Prijavi se da započneš automatizaciju svoje lokalizacije za nekoliko sekundi.",
     "terms": {
-      "text": "Prijavljivanjem se slažete sa našim",
+      "text": "Prijavljivanjem se slažeš sa našim",
       "termsOfService": "Uslovima korišćenja",
       "and": "i",
       "privacyPolicy": "Politikom privatnosti"
@@ -121,26 +121,26 @@
   "coming_soon": {
     "title": "Languine je u ranoj fazi pristupa",
     "description": "Trenutno smo u ranoj fazi pristupa. Kontaktirajte",
-    "cta": "na X da biste dobili rani pristup."
+    "cta": "na X da dobijete rani pristup."
   },
   "account": {
     "fullName": {
       "title": "Puno ime",
-      "description": "Vaše puno ime kako će se prikazivati na platformi.",
-      "placeholder": "Unesite svoje puno ime"
+      "description": "Tvoje puno ime kako će se prikazivati na platformi.",
+      "placeholder": "Unesi svoje puno ime"
     },
     "email": {
       "title": "Email adresa",
-      "description": "Email adresa povezana sa vašim nalogom.",
-      "placeholder": "Unesite svoju email adresu"
+      "description": "Email adresa povezana sa tvojim nalogom.",
+      "placeholder": "Unesi svoju email adresu"
     },
     "apiKey": {
       "title": "API ključ",
-      "description": "Vaš lični API ključ za pristup Languine API-ju i iz CLI-a."
+      "description": "Tvoj lični API ključ za pristup Languine API-ju i iz CLI-a."
     },
     "deleteAccount": {
       "title": "Obriši nalog",
-      "description": "Trajno obrišite svoj nalog i sve povezane podatke. Ova akcija se ne može poništiti.",
+      "description": "Trajno obriši svoj nalog i sve povezane podatke. Ova radnja se ne može poništiti.",
       "button": "Obriši nalog"
     }
   },
@@ -149,8 +149,8 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Da li ste potpuno sigurni?",
-      "description": "Ova akcija se ne može poništiti. Molimo vas da otkucate DELETE da biste potvrdili.",
+      "title": "Da li si potpuno siguran?",
+      "description": "Ova radnja se ne može poništiti. Molimo te da otkucaš DELETE da potvrdiš.",
       "placeholder": "Otpišite DELETE da potvrdite",
       "confirm": "Potvrdi brisanje",
       "cancel": "Otkaži"
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Tok rada (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Naš prevodilački sistem se besprekorno integriše u vaš postojeći CI/CD tok rada, automatski prevodeći vašu kodnu bazu pri svakom slanju. Kada se promene u kodu pošalju, analiziramo izmenjeni sadržaj, održavamo vašu memoriju prevoda i generišemo tačne prevode dok čuvamo vaš glas brenda i terminologiju. Prevodi se zatim šalju kao zahtevi za povlačenje, omogućavajući pregled pre nego što budu spojeni u vašu glavnu granu i implementirani. Ovaj automatizovani tok rada osigurava da vaš lokalizovani sadržaj ostane usklađen sa razvojem."
+    "description": "Naš prevodilački sistem se besprekorno integriše u vaš postojeći CI/CD pipeline, automatski prevodeći vašu kodnu bazu pri svakom slanju. Kada se promene u kodu pošalju, analiziramo izmenjeni sadržaj, održavamo vašu memoriju prevoda i generišemo tačne prevode dok čuvamo vaš brend glas i terminologiju. Prevodi se zatim šalju kao zahtevi za povlačenje, omogućavajući pregled pre nego što budu spojeni u vašu glavnu granu i implementirani. Ovaj automatizovani tok rada osigurava da vaš lokalizovani sadržaj ostane usklađen sa razvojem."
   },
   "settings": {
     "badRequest": "Nevažeći zahtev",
@@ -171,7 +171,7 @@
     "saved": "Podešavanja sačuvana",
     "savedDescription": "Vaše promene su uspešno sačuvane",
     "error": "Nešto je pošlo po zlu",
-    "errorDescription": "Molimo pokušajte ponovo ili kontaktirajte podršku",
+    "errorDescription": "Pokušajte ponovo ili kontaktirajte podršku",
     "addTeam": "Kreiraj tim",
     "apiKey": {
       "updated": "API ključ ažuriran",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "API ključ tima",
-        "description": "API ključ za pristup timu, koristite ovo iz vašeg CI/CD toka rada zajedno sa ID-jem projekta",
+        "description": "API ključ za pristup timu, koristite ovo iz vašeg CI/CD pipeline zajedno sa ID-jem projekta",
         "placeholder": "API ključ tima"
       },
       "members": {
@@ -239,7 +239,7 @@
         "filterPlaceholder": "Filtriraj članove...",
         "allRoles": "Sve uloge",
         "date": "Datum",
-        "selectAll": "{count} izabrano",
+        "selectAll": "{count} odabrano",
         "noPendingInvitations": "Nema pozivnica na čekanju",
         "noResults": "Nema pronađenih članova",
         "tryDifferentSearch": "Pokušajte drugačije pretraživanje",
@@ -258,8 +258,8 @@
           "member": "Član"
         },
         "dateSort": {
-          "newest": "Najnoviji",
-          "oldest": "Najstariji"
+          "newest": "Najnovije",
+          "oldest": "Najstarije"
         },
         "deleteInviteConfirm": "Obriši pozivnicu"
       }
@@ -277,9 +277,9 @@
     },
     "contextDetection": {
       "title": "Otkrivanje konteksta",
-      "description": "Automatski otkrivajte i čuvajte kontekst u prevodima"
+      "description": "Automatski otkrijte i sačuvajte kontekst u prevodima"
     },
-    "styleGuide": "Priručnik za stil",
+    "styleGuide": "Vodič za stil",
     "lengthControl": {
       "title": "Kontrola dužine",
       "description": "Kontrolišite dužinu prevedenog teksta",
@@ -351,13 +351,13 @@
         "medical": "Medicinsko",
         "legal": "Pravno",
         "financial": "Finansijsko",
-        "marketing": "Marketing",
+        "marketing": "Marketinško",
         "academic": "Akademsko"
       }
     },
     "idioms": {
       "title": "Idiom",
-      "description": "Pravilno rukujte idiomatskim izrazima"
+      "description": "Pravilno obradite idiomatske izraze"
     },
     "terminology": {
       "title": "Terminologija",
@@ -374,13 +374,13 @@
       "title": "Besplatno",
       "price": "Besplatno",
       "keys_limit": "Do 100 ključeva",
-      "description": "Savršeno za probu",
+      "description": "Savršeno za isprobavanje",
       "features": {
         "unlimited_projects": "Neograničeni projekti",
-        "fine_tuning": "Opcije podešavanja",
+        "fine_tuning": "Opcije finog podešavanja",
         "overrides": "Prekoračenja prevoda",
         "analytics": "Analitika",
-        "context_memory": "Memorija konteksta",
+        "context_memory": "Pamćenje konteksta",
         "community_support": "Podrška zajednice",
         "keys_limit": "Do 100 ključeva",
         "docs_limit": "Do 5 dokumenata",
@@ -389,13 +389,13 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Sve u besplatnoj verziji, plus:",
+      "includes_free": "Sve u besplatnom, plus:",
       "features": {
-        "github_action": "Integracija GitHub akcije",
+        "github_action": "GitHub Action integracija",
         "latest_features": "Rani pristup najnovijim funkcijama",
         "priority_support": "Prioritetna podrška",
         "priority_queues": "Prioritetne redove prevoda",
-        "languages": "Neograničeni jezici",
+        "languages": "Počinje od 8 jezika",
         "keys_limit": "Počinje od 10 000 ključeva",
         "docs_limit": "Počinje od 50 dokumenata"
       }
@@ -408,14 +408,14 @@
     "teamNamePlaceholder": "Unesite ime tima",
     "createTeamButton": "Kreirajte tim",
     "cancel": "Otkaži",
-    "createTeamDescription": "Kreirajte novi tim za upravljanje svojim projektima i saradnicima."
+    "createTeamDescription": "Kreirajte novi tim za upravljanje vašim projektima i saradnicima."
   },
   "createProject": {
     "createProjectTitle": "Kreirajte novi projekat",
     "projectNamePlaceholder": "Unesite ime projekta",
     "createProjectButton": "Kreirajte projekat",
     "cancel": "Otkaži",
-    "createProjectDescription": "Kreirajte novi projekat da biste započeli automatizaciju svoje lokalizacije."
+    "createProjectDescription": "Kreirajte novi projekat da biste započeli automatizaciju vaše lokalizacije."
   },
   "invite": {
     "inviteMember": "Pozovite člana",
@@ -430,7 +430,7 @@
     },
     "error": {
       "title": "Greška",
-      "description": "Slanje pozivnice nije uspelo. Pokušajte ponovo."
+      "description": "Nije uspelo slanje pozivnice. Pokušajte ponovo."
     },
     "validation": {
       "invalidEmail": "Molimo unesite važeći email"
@@ -543,23 +543,23 @@
       "05": "Maj",
       "06": "Jun",
       "07": "Jul",
-      "08": "Aug",
+      "08": "Avg",
       "09": "Sep"
     }
   },
   "faq": {
-    "title": "Često postavljana pitanja",
+    "title": "Česta pitanja",
     "what_is_languine": {
       "question": "Šta je Languine?",
-      "answer": "Languine je platforma za lokalizaciju pokretana veštačkom inteligencijom koja vam pomaže da automatizujete prevođenje vaših aplikacija. Pruža funkcije kao što su opcije finog podešavanja, preklapanje prevoda, analitika i kontekstualna memorija kako bi se osigurao visok kvalitet prevoda."
+      "answer": "Languine je platforma za lokalizaciju pokretana veštačkom inteligencijom koja vam pomaže da automatizujete prevođenje vaših aplikacija. Pruža funkcije kao što su opcije finog podešavanja, preklapanje prevoda, analitika i kontekstualna memorija kako bi osigurala visok kvalitet prevoda."
     },
     "key_limit": {
-      "question": "Kako funkcioniše ograničenje ključeva?",
+      "question": "Kako funkcioniše limit ključeva?",
       "answer": "Prevedeni ključ se broji kada prevedete izvorni ključ na ciljni jezik. Na primer, ako imate 20 izvora ključeva i prevedete ih na 5 jezika, to je jednako 100 prevedenih ključeva (20 ključeva × 5 jezika)."
     },
     "supported_languages": {
       "question": "Koji jezici su podržani?",
-      "answer": "Languine podržava više od 100 jezika u svim planovima. Dok naši prevodi pokretani veštačkom inteligencijom najbolje funkcionišu sa glavnim jezicima, trudimo se da obezbedimo kvalitetne prevode na svim podržanim jezicima. Ako imate specifične zahteve za jezikom ili pitanja o kvalitetu prevoda za određene jezike, slobodno se obratite našem timu za podršku."
+      "answer": "Languine podržava više od 100 jezika u svim planovima. Iako naši prevodi pokretani veštačkom inteligencijom najbolje funkcionišu sa glavnim jezicima, trudimo se da pružimo kvalitetne prevode na svim podržanim jezicima. Ako imate specifične zahteve za jezikom ili pitanja o kvalitetu prevoda za određene jezike, molimo vas da se obratite našem timu za podršku."
     },
     "github_action": {
       "question": "Kako funkcioniše integracija GitHub Action?",
@@ -567,19 +567,19 @@
     },
     "support": {
       "question": "Kakvu podršku nudite?",
-      "answer": "Besplatni korisnici imaju pristup podršci zajednice, dok Pro korisnici dobijaju prioritetnu podršku sa bržim vremenima odgovora i posvećenom pomoći za njihove potrebe prevođenja."
+      "answer": "Besplatni korisnici imaju pristup zajedničkoj podršci, dok Pro korisnici dobijaju prioritetnu podršku sa bržim vremenima odgovora i posvećenom pomoći za njihove potrebe prevođenja."
     },
     "open_source": {
       "question": "Da li je Languine otvoren izvor?",
-      "answer": "Da! Languine je potpuno otvoren izvor i dostupan na GitHub-u. Možete doprineti projektu, prijaviti probleme, predložiti funkcije i pregledati kod. Verujemo u transparentnost i rad u javnosti."
+      "answer": "Da! Languine je potpuno otvoren izvor i dostupan je na GitHub-u. Možete doprineti projektu, prijaviti probleme, predložiti funkcije i pregledati kod. Verujemo u transparentnost i rad u javnosti."
     },
     "open_source_pricing": {
       "question": "Da li nudite posebne cene za projekte otvorenog koda?",
-      "answer": "Da! Volimo da podržavamo zajednicu otvorenog koda. Ako održavate projekat otvorenog koda, možete dobiti pristup našim Pro funkcijama uz 30% popusta. Samo se obratite našem timu sa detaljima o vašem projektu, i postavićemo vam račun sa popustom na Pro. Ovo je naš način da se zahvalimo zajednici koja omogućava naš rad."
+      "answer": "Da! Volimo da podržavamo zajednicu otvorenog koda. Ako održavate projekat otvorenog koda, možete dobiti pristup našim Pro funkcijama uz popust od 30%. Samo se obratite našem timu sa detaljima o vašem projektu, i mi ćemo vam omogućiti račun sa popustom. Ovo je naš način da se zahvalimo zajednici koja omogućava naš rad."
     },
     "cancel_subscription": {
       "question": "Kako da otkažem svoju pretplatu?",
-      "answer": "Možete otkazati svoju pretplatu u bilo kojem trenutku iz podešavanja vašeg naloga. Idite na Fakturacija > Promeni plan. Vaša pretplata će ostati aktivna do kraja trenutnog obračunskog perioda, nakon čega ćete biti prebačeni na besplatni plan."
+      "answer": "Možete otkazati svoju pretplatu u bilo kojem trenutku iz podešavanja vašeg naloga. Idite na Fakturacija > Promeni plan. Vaša pretplata će ostati aktivna do kraja trenutnog obračunskog perioda, nakon čega ćete biti prebačeni na besplatan plan."
     }
   },
   "pricing_slider": {
@@ -588,7 +588,8 @@
     "documents": "Prevedeni dokumenti",
     "period": "mes",
     "keys_suffix": " ključeva",
-    "docs_suffix": " dokumenata"
+    "docs_suffix": " dokumenata",
+    "languages": "Jezici"
   },
   "docs": {
     "getting-started": "Uvod",
@@ -602,7 +603,7 @@
     "authentication": "Autentifikacija",
     "configuration": "Konfiguracija",
     "cli": "CLI",
-    "github-actions": "GitHub akcije",
+    "github-actions": "GitHub Akcije",
     "tuning": "Podešavanje",
     "settings": "Podešavanja",
     "hooks": "Hooks",

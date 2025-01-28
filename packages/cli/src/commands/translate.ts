@@ -209,6 +209,48 @@ export async function translateCommand(args: string[] = []) {
             commitLink: gitInfo?.commitLink,
           });
 
+          if (error?.code === "LANGUAGES_LIMIT_REACHED") {
+            s.stop();
+            note(
+              "Languages limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
+
+            const shouldUpgrade = await select({
+              message: "Would you like to upgrade your plan now?",
+              options: [
+                { label: "Upgrade plan", value: "upgrade" },
+                { label: "Cancel", value: "cancel" },
+              ],
+            });
+
+            if (shouldUpgrade === "upgrade") {
+              // Open upgrade URL in browser
+              if (meta?.plan === "free") {
+                await open(
+                  `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+                );
+              } else {
+                s.start("Upgrading plan...");
+
+                // Just upgrade the plan
+                await client.organization.updatePlan.mutate({
+                  organizationId: meta?.organizationId,
+                  tier: Number(meta?.tier) + 1,
+                });
+
+                s.stop(chalk.green("Plan upgraded successfully"));
+
+                note(
+                  "Run `languine translate` again to continue.",
+                  "What's next?",
+                );
+              }
+            }
+
+            process.exit(1);
+          }
+
           if (
             error?.code === "DOCUMENT_LIMIT_REACHED" ||
             error?.code === "KEY_LIMIT_REACHED"

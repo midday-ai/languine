@@ -23,7 +23,7 @@
     "description": "Tradueix el contingut de la teva aplicació directament en el teu flux de treball de desenvolupament. La nostra CLI s'integra amb GitHub Actions i altres eines CI/CD per automatitzar les traduccions mentre codifiques.",
     "button": {
       "startAutomating": "Comença a automatitzar",
-      "readDocumentation": "Llegeix la documentació"
+      "readDocumentation": "Llegir la documentació"
     }
   },
   "companies": {
@@ -34,8 +34,8 @@
     "title": "Activitat",
     "loading": "Carregant",
     "noResults": "Sense resultats per '{search}'",
-    "clearSearch": "Neteja la cerca",
-    "loadMore": "Mostra més",
+    "clearSearch": "Esborrar cerca",
+    "loadMore": "Mostrar més",
     "type": {
       "key": "Clau",
       "document": "Document"
@@ -46,18 +46,18 @@
     "fullyOpenSource": "Totalment de codi obert",
     "fullyOpenSourceDescription": "El nostre codi està disponible públicament a GitHub, permetent transparència i contribucions de la comunitat.",
     "noVendorLockIn": "Sense bloqueig de proveïdor",
-    "noVendorLockInDescription": "No et bloquegem en un servei específic, utilitza els teus propis LLMs.",
+    "noVendorLockInDescription": "No et bloquegem en un servei específic, utilitza els teus propis LLM.",
     "presetsForExpo": "Preconfiguracions per a Expo",
     "presetsForExpoDescription": "Proporcionem preconfiguracions per a Expo, així que pots començar ràpidament.",
     "presetForReactNative": "Preconfiguració per a React Native",
     "presetForReactNativeDescription": "Proporcionem una preconfiguració per a React Native, així que pots començar ràpidament.",
-    "presetForReactEmail": "Biblioteca de correu electrònic React",
+    "presetForReactEmail": "Biblioteca de React Email",
     "presetForReactEmailDescription": "Hem creat una biblioteca i18n per a React Email.",
     "readyForI18nLibraries": "Preparat per a biblioteques i18n",
-    "readyForI18nLibrariesDescription": "Donem suport a totes les biblioteques, incloent les més populars (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Donem suport a totes les biblioteques, incloent les més populars (next-intl, react-i18next, react-intl, etc.)."
   },
   "info": {
-    "title": "Gestiona cada aspecte de la localització de la teva aplicació, incloent",
+    "title": "Gestiona tots els aspectes de la localització de la teva aplicació, incloent",
     "smartTranslation": {
       "title": "Traducció Intel·ligent",
       "intelligentTranslation": "Traducció intel·ligent amb consciència del context",
@@ -92,7 +92,7 @@
       "text": "En iniciar sessió, acceptes els nostres",
       "termsOfService": "Termes de Servei",
       "and": "i",
-      "privacyPolicy": "Política de Privadesa"
+      "privacyPolicy": "Política de Privacitat"
     }
   },
   "translations": {
@@ -139,9 +139,9 @@
       "description": "La teva clau API personal per accedir a l'API de Languine i des de la CLI."
     },
     "deleteAccount": {
-      "title": "Eliminar Compte",
-      "description": "Elimina permanentment el teu compte i totes les dades associades. Aquesta acció no es pot desfer.",
-      "button": "Eliminar Compte"
+      "title": "Esborrar Compte",
+      "description": "Esborra permanentment el teu compte i totes les dades associades. Aquesta acció no es pot desfer.",
+      "button": "Esborrar Compte"
     }
   },
   "copyInstall": {
@@ -159,19 +159,19 @@
   "pipeline": {
     "title": "Flux de treball (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "El nostre motor de traducció s'integra perfectament al teu flux de treball CI/CD existent, traduint automàticament la teva base de codi en cada enviament. Quan es pengen canvis de codi, analitzem el contingut modificat, mantenim la teva memòria de traducció i generem traduccions precises mentre preservem la veu i la terminologia de la teva marca. Les traduccions es presenten com a sol·licituds de tirada, permetent la seva revisió abans de ser fusionades a la teva branca principal i desplegades. Aquest flux de treball automatitzat assegura que el teu contingut localitzat es mantingui sincronitzat amb el desenvolupament."
+    "description": "El nostre motor de traducció s'integra perfectament al teu flux de treball CI/CD existent, traduint automàticament la teva base de codi en cada enviament. Quan es realitzen canvis al codi, analitzem el contingut modificat, mantenim la teva memòria de traducció i generem traduccions precises mentre preservem la veu i la terminologia de la teva marca. Les traduccions es presenten com a sol·licituds de tirada, permetent la seva revisió abans de ser fusionades a la teva branca principal i desplegades. Aquest flux de treball automatitzat assegura que el teu contingut localitzat es mantingui sincronitzat amb el desenvolupament."
   },
   "settings": {
     "badRequest": "Sol·licitud no vàlida",
-    "badRequestDescription": "L'organització ha de tenir almenys un propietari. Transfereix la propietat a un altre membre abans de retirar aquest propietari.",
+    "badRequestDescription": "L'organització ha de tenir almenys un propietari. Transfereix la propietat a un altre membre abans d'eliminar aquest propietari.",
     "permissionDenied": "Permís denegat",
-    "permissionDeniedDescription": "Has de ser propietari de l'equip per realitzar aquesta acció",
+    "permissionDeniedDescription": "Necessites ser propietari de l'equip per realitzar aquesta acció",
     "deleteTeamTitle": "Eliminar equip",
     "deleteTeamDescription": "No es pot eliminar l'organització quan ets l'únic membre, en canvi, elimina el teu compte",
     "saved": "Configuracions desades",
     "savedDescription": "Els teus canvis s'han desat correctament",
     "error": "Alguna cosa ha anat malament",
-    "errorDescription": "Si us plau, torna a intentar-ho o contacta amb el suport",
+    "errorDescription": "Si us plau, torna-ho a intentar o contacta amb el suport",
     "addTeam": "Crear equip",
     "apiKey": {
       "updated": "Clau API actualitzada",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "ID del projecte",
-        "description": "El teu identificador únic de projecte",
+        "description": "El teu identificador únic del projecte",
         "placeholder": "ID del projecte"
       },
       "delete": {
@@ -272,8 +272,8 @@
       "description": "Utilitza la memòria de traducció per millorar la coherència i l'eficiència"
     },
     "qualityChecks": {
-      "title": "Comprovacions de qualitat",
-      "description": "Habilita comprovacions de qualitat automatitzades per a les traduccions"
+      "title": "Controls de qualitat",
+      "description": "Activa controls de qualitat automatitzats per a les traduccions"
     },
     "contextDetection": {
       "title": "Detecció de context",
@@ -314,7 +314,7 @@
       "placeholder": "Descriu la veu de la teva marca..."
     },
     "toneOfVoice": {
-      "title": "Tonalitat",
+      "title": "To de veu",
       "description": "Defineix el to utilitzat en les traduccions",
       "options": {
         "casual": "Informal",
@@ -322,7 +322,7 @@
         "friendly": "Amigable",
         "professional": "Professional",
         "playful": "Jocós",
-        "serious": "Seriós",
+        "serious": "Sèrius",
         "confident": "Confiat",
         "humble": "Humil",
         "direct": "Directe",
@@ -331,7 +331,7 @@
     },
     "brand": "Marca",
     "emotiveIntent": {
-      "title": "Intenció Emotiva",
+      "title": "Intenció emotiva",
       "description": "Estableix el to emocional per a les traduccions",
       "options": {
         "neutral": "Neutral",
@@ -343,7 +343,7 @@
       }
     },
     "domainExpertise": {
-      "title": "Experiència en el Domini",
+      "title": "Expertise en el domini",
       "description": "Especifica el context del domini per a les traduccions",
       "options": {
         "general": "General",
@@ -357,14 +357,14 @@
     },
     "idioms": {
       "title": "Idiomes",
-      "description": "Gestiona les expressions idiomàtiques adequadament"
+      "description": "Gestiona les expressions idiomàtiques de manera adequada"
     },
     "terminology": {
       "title": "Terminologia",
       "description": "Gestiona la terminologia especialitzada i els glossaris"
     },
     "culturalAdaptation": {
-      "title": "Adaptació Cultural",
+      "title": "Adaptació cultural",
       "description": "Adapta el contingut per a la seva adequació cultural"
     }
   },
@@ -377,7 +377,7 @@
       "description": "Perfecte per provar",
       "features": {
         "unlimited_projects": "Projectes il·limitats",
-        "fine_tuning": "Opcions de perfeccionament",
+        "fine_tuning": "Opcions de refinament",
         "overrides": "Substitucions de traducció",
         "analytics": "Anàlisis",
         "context_memory": "Memòria de context",
@@ -395,7 +395,7 @@
         "latest_features": "Accés anticipat a les últimes funcions",
         "priority_support": "Suport prioritari",
         "priority_queues": "Cues de traducció prioritàries",
-        "languages": "Idiomes il·limitats",
+        "languages": "A partir de 8 idiomes",
         "keys_limit": "A partir de 10.000 claus",
         "docs_limit": "A partir de 50 documents"
       }
@@ -430,7 +430,7 @@
     },
     "error": {
       "title": "Error",
-      "description": "No s'ha pogut enviar la invitació. Si us plau, torna a intentar-ho."
+      "description": "No s'ha pogut enviar l'invitació. Si us plau, torna a intentar-ho."
     },
     "validation": {
       "invalidEmail": "Si us plau, introdueix un correu electrònic vàlid"
@@ -472,7 +472,7 @@
     "daily": "Diari",
     "weekly": "Setmanal",
     "monthly": "Mensual",
-    "selectPeriod": "Selecciona el període"
+    "selectPeriod": "Seleccioneu el període"
   },
   "language": {
     "en": "Anglès",
@@ -519,7 +519,7 @@
   },
   "menu": {
     "dashboard": "Tauler de control",
-    "tuning": "Ajustament",
+    "tuning": "Ajustaments",
     "settings": "Configuració",
     "pricing": "Preus",
     "docs": "Documentació",
@@ -540,7 +540,7 @@
       "02": "Feb",
       "03": "Mar",
       "04": "Abr",
-      "05": "Mai",
+      "05": "Maig",
       "06": "Jun",
       "07": "Jul",
       "08": "Aug",
@@ -551,7 +551,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Què és Languine?",
-      "answer": "Languine és una plataforma de localització impulsada per IA que t'ajuda a automatitzar la traducció de les teves aplicacions. Proporciona funcions com opcions d'ajustament, substitucions de traducció, analítiques i memòria de context per garantir traduccions de alta qualitat."
+      "answer": "Languine és una plataforma de localització impulsada per IA que t'ajuda a automatitzar la traducció de les teves aplicacions. Ofereix funcions com opcions de personalització, substitucions de traducció, anàlisis i memòria de context per garantir traduccions de alta qualitat."
     },
     "key_limit": {
       "question": "Com funciona el límit de claus?",
@@ -563,11 +563,11 @@
     },
     "github_action": {
       "question": "Com funciona la integració de GitHub Action?",
-      "answer": "La integració de GitHub Action (disponible en plans Pro) et permet automatitzar el teu flux de treball de traducció directament en el teu pipeline CI/CD. Quan envies canvis al teu repositori, les traduccions es poden actualitzar automàticament."
+      "answer": "La integració de GitHub Action (disponible en plans Pro) et permet automatitzar el teu flux de treball de traducció directament al teu pipeline CI/CD. Quan envies canvis al teu repositori, les traduccions es poden actualitzar automàticament."
     },
     "support": {
       "question": "Quin tipus de suport oferiu?",
-      "answer": "Els usuaris gratuïts tenen accés al suport de la comunitat, mentre que els usuaris Pro reben suport prioritari amb temps de resposta més ràpids i assistència dedicada per a les seves necessitats de traducció."
+      "answer": "Els usuaris gratuïts tenen accés al suport comunitari, mentre que els usuaris Pro reben suport prioritari amb temps de resposta més ràpids i assistència dedicada per a les seves necessitats de traducció."
     },
     "open_source": {
       "question": "És Languine de codi obert?",
@@ -575,7 +575,7 @@
     },
     "open_source_pricing": {
       "question": "Oferiu preus especials per a projectes de codi obert?",
-      "answer": "Sí! Ens encanta donar suport a la comunitat de codi obert. Si mantens un projecte de codi obert, pots accedir a les nostres funcions Pro amb un 30% de descompte. Només contacta amb el nostre equip amb detalls sobre el teu projecte, i et configurarem un compte Pro amb descompte. Aquesta és la nostra manera de retornar a la comunitat que fa possible la nostra feina."
+      "answer": "Sí! Ens encanta donar suport a la comunitat de codi obert. Si mantens un projecte de codi obert, pots accedir a les nostres funcions Pro amb un descompte del 30%. Només has de contactar amb el nostre equip amb detalls sobre el teu projecte, i et configurarem un compte Pro amb descompte. Aquesta és la nostra manera de retornar a la comunitat que fa possible la nostra feina."
     },
     "cancel_subscription": {
       "question": "Com puc cancel·lar la meva subscripció?",
@@ -588,7 +588,8 @@
     "documents": "Documents traduïts",
     "period": "mes",
     "keys_suffix": " claus",
-    "docs_suffix": " docs"
+    "docs_suffix": " docs",
+    "languages": "Idiomes"
   },
   "docs": {
     "getting-started": "Introducció",
@@ -604,7 +605,7 @@
     "cli": "CLI",
     "github-actions": "Accions de GitHub",
     "tuning": "Ajustament",
-    "settings": "Configuració",
+    "settings": "Configuracions",
     "hooks": "Hooks",
     "examples": "Exemples",
     "team": "Equip"

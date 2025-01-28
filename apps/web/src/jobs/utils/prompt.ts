@@ -42,7 +42,21 @@ console.log('Hello World');
 export function createFinalPrompt(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
-  settings?: Partial<typeof projectSettings.$inferSelect>,
+  settings: Partial<typeof projectSettings.$inferSelect> = {
+    formality: "neutral",
+    toneOfVoice: "professional",
+    emotiveIntent: "neutral",
+    brandName: null,
+    brandVoice: null,
+    lengthControl: "exact",
+    domainExpertise: "general",
+    terminology: null,
+    translationMemory: true,
+    qualityChecks: true,
+    contextDetection: true,
+    inclusiveLanguage: true,
+    idioms: true,
+  },
 ) {
   const basePrompt = `You are a professional translator working with ${mapFormatToPrompt(options.sourceFormat)} files.
 
@@ -51,43 +65,41 @@ Task: Translate the content below from ${getLanguageName(options.sourceLocale)} 
 ${baseRequirements}
 ${fileSpecificInstructions(options.sourceFormat)}`;
 
-  const tuningInstructions = settings
-    ? [
-        // Style and tone settings
-        settings.formality && `- Use ${settings.formality} language style`,
-        settings.toneOfVoice &&
-          `- Maintain a ${settings.toneOfVoice} tone of voice`,
-        settings.emotiveIntent &&
-          `- Convey a ${settings.emotiveIntent} emotional tone`,
+  const tuningInstructions = [
+    // Style and tone settings
+    settings.formality && `- Use ${settings.formality} language style`,
+    settings.toneOfVoice &&
+      `- Maintain a ${settings.toneOfVoice} tone of voice`,
+    settings.emotiveIntent &&
+      `- Convey a ${settings.emotiveIntent} emotional tone`,
 
-        // Brand-specific settings
-        settings.brandName &&
-          `- Use "${settings.brandName}" consistently for brand references`,
-        settings.brandVoice &&
-          `- Follow brand voice guidelines: ${settings.brandVoice}`,
+    // Brand-specific settings
+    settings.brandName &&
+      `- Use "${settings.brandName}" consistently for brand references`,
+    settings.brandVoice &&
+      `- Follow brand voice guidelines: ${settings.brandVoice}`,
 
-        // Technical settings
-        settings.lengthControl &&
-          `- Apply ${settings.lengthControl} length control`,
-        settings.domainExpertise &&
-          `- Use terminology appropriate for ${settings.domainExpertise} domain`,
-        settings.terminology &&
-          `- Follow specific terminology: ${settings.terminology}`,
+    // Technical settings
+    settings.lengthControl &&
+      `- Apply ${settings.lengthControl} length control`,
+    settings.domainExpertise &&
+      `- Use terminology appropriate for ${settings.domainExpertise} domain`,
+    settings.terminology &&
+      `- Follow specific terminology: ${settings.terminology}`,
 
-        // Feature flags
-        settings.translationMemory &&
-          "- Maintain consistency with previous translations",
-        settings.qualityChecks &&
-          "- Ensure high-quality output with proper grammar and spelling",
-        settings.contextDetection &&
-          "- Consider surrounding context for accurate translations",
-        settings.inclusiveLanguage &&
-          "- Use inclusive and non-discriminatory language",
-        settings.idioms && "- Adapt idioms appropriately for target culture",
-      ]
-        .filter(Boolean)
-        .join("\n")
-    : "";
+    // Feature flags
+    settings.translationMemory &&
+      "- Maintain consistency with previous translations",
+    settings.qualityChecks &&
+      "- Ensure high-quality output with proper grammar and spelling",
+    settings.contextDetection &&
+      "- Consider surrounding context for accurate translations",
+    settings.inclusiveLanguage &&
+      "- Use inclusive and non-discriminatory language",
+    settings.idioms && "- Adapt idioms appropriately for target culture",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return `${basePrompt}${
     tuningInstructions

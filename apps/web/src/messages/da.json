@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Automatiseret lokaliseringsinfrastruktur",
-    "description": "Oversæt indholdet i din app direkte i din udviklingsarbejdsgang. Vores CLI integreres med GitHub Actions og andre CI/CD-værktøjer for at automatisere oversættelser, mens du koder."
+    "description": "Oversæt indholdet i din app direkte i din udviklingsarbejdsgang. Vores CLI integreres med GitHub Actions og andre CI/CD værktøjer for at automatisere oversættelser, mens du koder."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Kom i gang",
     "title": "Automatiseret lokaliseringsinfrastruktur",
-    "description": "Oversæt indholdet i din app direkte i din udviklingsarbejdsgang. Vores CLI integreres med GitHub Actions og andre CI/CD-værktøjer for at automatisere oversættelser, mens du koder.",
+    "description": "Oversæt indholdet i din app direkte i din udviklingsarbejdsgang. Vores CLI integreres med GitHub Actions og andre CI/CD værktøjer for at automatisere oversættelser, mens du koder.",
     "button": {
       "startAutomating": "Begynd at automatisere",
       "readDocumentation": "Læs dokumentation"
@@ -46,23 +46,23 @@
     "fullyOpenSource": "Fuldstændig open source",
     "fullyOpenSourceDescription": "Vores kode er offentligt tilgængelig på GitHub, hvilket muliggør gennemsigtighed og bidrag fra fællesskabet.",
     "noVendorLockIn": "Ingen leverandørbinding",
-    "noVendorLockInDescription": "Vi binder dig ikke til en bestemt tjeneste, brug dine egne LLM'er.",
-    "presetsForExpo": "Præindstillinger til Expo",
-    "presetsForExpoDescription": "Vi tilbyder præindstillinger til Expo, så du kan komme hurtigt i gang.",
-    "presetForReactNative": "Præindstilling til React Native",
-    "presetForReactNativeDescription": "Vi tilbyder en præindstilling til React Native, så du kan komme hurtigt i gang.",
+    "noVendorLockInDescription": "Vi binder dig ikke til en specifik tjeneste, brug dine egne LLM'er.",
+    "presetsForExpo": "Præindstillinger for Expo",
+    "presetsForExpoDescription": "Vi tilbyder præindstillinger for Expo, så du kan komme hurtigt i gang.",
+    "presetForReactNative": "Præindstilling for React Native",
+    "presetForReactNativeDescription": "Vi tilbyder en præindstilling for React Native, så du kan komme hurtigt i gang.",
     "presetForReactEmail": "React Email Bibliotek",
-    "presetForReactEmailDescription": "Vi har oprettet et i18n-bibliotek til React Email.",
-    "readyForI18nLibraries": "Klar til i18n-biblioteker",
+    "presetForReactEmailDescription": "Vi har oprettet et i18n bibliotek til React Email.",
+    "readyForI18nLibraries": "Klar til i18n biblioteker",
     "readyForI18nLibrariesDescription": "Vi understøtter alle biblioteker, herunder de mest populære (next-intl, react-i18next, react-intl osv.)."
   },
   "info": {
     "title": "Håndterer alle aspekter af at lokalisere din app, herunder",
     "smartTranslation": {
-      "title": "Smart Oversættelse",
+      "title": "Intelligent Oversættelse",
       "intelligentTranslation": "Intelligent oversættelse med kontekstbevidsthed",
       "brandVoice": "Brandstemme og tonekonsistens",
-      "terminology": "Terminologihåndtering",
+      "terminology": "Terminologistyring",
       "linguisticFeatures": "Avancerede sproglige funktioner",
       "realtimeUpdates": "Opdateringer af oversættelser i realtid"
     },
@@ -90,7 +90,7 @@
     "description": "Log ind for at begynde at automatisere din lokalisering på få sekunder.",
     "terms": {
       "text": "Ved at logge ind accepterer du vores",
-      "termsOfService": "Servicevilkår",
+      "termsOfService": "Brugsbetingelser",
       "and": "og",
       "privacyPolicy": "Privatlivspolitik"
     }
@@ -103,7 +103,7 @@
     "signOut": "Log ud",
     "createTeam": "Opret team",
     "homepage": "Hjemmeside",
-    "team": "Teaminstillinger"
+    "team": "Teamindstillinger"
   },
   "teamSelector": {
     "addProject": "Opret projekt",
@@ -126,17 +126,17 @@
   "account": {
     "fullName": {
       "title": "Fulde navn",
-      "description": "Dit fulde navn, som det vil fremgå på platformen.",
+      "description": "Dit fulde navn som det vil fremgå på platformen.",
       "placeholder": "Indtast dit fulde navn"
     },
     "email": {
-      "title": "E-mailadresse",
-      "description": "E-mailadressen, der er knyttet til din konto.",
-      "placeholder": "Indtast din e-mailadresse"
+      "title": "Emailadresse",
+      "description": "Den emailadresse, der er knyttet til din konto.",
+      "placeholder": "Indtast din emailadresse"
     },
     "apiKey": {
       "title": "API-nøgle",
-      "description": "Din personlige API-nøgle til adgang til Languine API'et og fra CLI."
+      "description": "Din personlige API-nøgle til adgang til Languine API'et og fra CLI'en."
     },
     "deleteAccount": {
       "title": "Slet konto",
@@ -159,12 +159,12 @@
   "pipeline": {
     "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Vores oversættelsesmotor integreres problemfrit i din eksisterende CI/CD pipeline og oversætter automatisk din kodebase ved hver push. Når kodeændringer pushes, analyserer vi det ændrede indhold, opretholder din oversættelseshukommelse og genererer nøjagtige oversættelser, samtidig med at vi bevarer din brandstemme og terminologi. Oversættelserne indsendes derefter som pull requests, hvilket muliggør gennemgang, før de flettes ind i din hovedgren og implementeres. Denne automatiserede arbejdsgang sikrer, at dit lokaliserede indhold forbliver synkroniseret med udviklingen."
+    "description": "Vores oversættelsesmotor integreres problemfrit i din eksisterende CI/CD pipeline og oversætter automatisk din kodebase ved hver push. Når kodeændringer bliver sendt, analyserer vi det ændrede indhold, opretholder din oversættelseshukommelse og genererer nøjagtige oversættelser, mens vi bevarer din brandstemme og terminologi. Oversættelserne indsendes derefter som pull-anmodninger, hvilket muliggør gennemgang, før de bliver flettet ind i din hovedgren og implementeret. Denne automatiserede arbejdsgang sikrer, at dit lokaliserede indhold forbliver synkroniseret med udviklingen."
   },
   "settings": {
     "badRequest": "Ugyldig anmodning",
     "badRequestDescription": "Organisationen skal have mindst én ejer. Overfør ejerskab til et andet medlem, før du fjerner denne ejer.",
-    "permissionDenied": "Adgang nægtet",
+    "permissionDenied": "Tilladelse nægtet",
     "permissionDeniedDescription": "Du skal være ejer af teamet for at udføre denne handling",
     "deleteTeamTitle": "Slet team",
     "deleteTeamDescription": "Kan ikke slette organisation, når du er det eneste medlem, slet i stedet din konto",
@@ -177,7 +177,7 @@
       "updated": "API-nøgle opdateret",
       "updatedDescription": "Din API-nøgle er blevet opdateret med succes og kopieret til din udklipsholder.",
       "title": "Opdater API-nøgle",
-      "description": "Er du sikker på, at du vil generere en ny API-nøgle? Den gamle nøgle vil stoppe med at fungere med det samme.",
+      "description": "Er du sikker på, at du vil generere en ny API-nøgle? Den gamle nøgle vil stoppe med at fungere straks.",
       "cancel": "Annuller",
       "continue": "Fortsæt"
     },
@@ -191,7 +191,7 @@
     "addProject": "Opret projekt",
     "project": {
       "name": {
-        "title": "Projekt Navn",
+        "title": "Projekt navn",
         "description": "Navnet på dit projekt",
         "placeholder": "Indtast projektnavn"
       },
@@ -201,24 +201,24 @@
         "placeholder": "Projekt ID"
       },
       "delete": {
-        "title": "Slet Projekt",
+        "title": "Slet projekt",
         "description": "Slet dette projekt og alle dets data permanent",
-        "button": "Slet Projekt"
+        "button": "Slet projekt"
       }
     },
     "save": "Gem",
     "team": {
       "name": {
-        "title": "Team Navn",
+        "title": "Team navn",
         "description": "Navnet på dit team",
-        "placeholder": "Indtast teamnavn"
+        "placeholder": "Indtast team navn"
       },
       "billing": {
         "title": "Faktureringsplan",
         "description": "Administrer dit teams faktureringsplan",
         "free": "Gratis",
         "pro": "Pro",
-        "unlimited": "Ubegribset"
+        "unlimited": "Ubegrænset"
       },
       "apiKey": {
         "title": "Team API-nøgle",
@@ -232,7 +232,7 @@
         "leaveTeam": "Forlad team",
         "invite": "Inviter medlem",
         "title": "Medlemmer",
-        "pendingInvitations": "Afventende invitationer",
+        "pendingInvitations": "Ventende invitationer",
         "removeMember": "Fjern medlem",
         "removeMemberConfirm": "Fjern medlem",
         "removeMemberDescription": "Er du sikker på, at du vil fjerne dette medlem?",
@@ -240,7 +240,7 @@
         "allRoles": "Alle roller",
         "date": "Dato",
         "selectAll": "{count} valgt",
-        "noPendingInvitations": "Ingen afventende invitationer",
+        "noPendingInvitations": "Ingen ventende invitationer",
         "noResults": "Ingen medlemmer fundet",
         "tryDifferentSearch": "Prøv en anden søgning",
         "inviteMembers": "Inviter medlemmer til at samarbejde",
@@ -248,11 +248,11 @@
         "deleteInviteDescription": "Slet invitationen",
         "invitedBy": "Inviteret af {name}",
         "deleteInviteSuccess": "Invitation slettet",
-        "deleteInviteError": "Kunne ikke slette invitation",
+        "deleteInviteError": "Fejl ved sletning af invitation",
         "removeMemberSuccess": "Medlem fjernet",
-        "removeMemberError": "Kunne ikke fjerne medlem",
+        "removeMemberError": "Fejl ved fjernelse af medlem",
         "removeMemberSuccessDescription": "Medlemmet er blevet fjernet med succes",
-        "removeMemberErrorDescription": "Kunne ikke fjerne medlem",
+        "removeMemberErrorDescription": "Fejl ved fjernelse af medlem",
         "roles": {
           "owner": "Ejer",
           "member": "Medlem"
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Kontekstdetektion",
-      "description": "Automatisk detektere og bevare kontekst i oversættelser"
+      "description": "Automatisk detektere og bevare konteksten i oversættelser"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -291,8 +291,8 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "Inkluderende sprog",
-      "description": "Sikre at oversættelser bruger inkluderende sprog"
+      "title": "Inklusiv sprog",
+      "description": "Sikre, at oversættelser bruger inkluderende sprog"
     },
     "formality": {
       "title": "Formelhed",
@@ -305,17 +305,17 @@
     },
     "brandName": {
       "title": "Brandnavn",
-      "description": "Indstil dit brandnavn for konsistent brug",
+      "description": "Indstil dit brandnavn for konsekvent brug",
       "placeholder": "Indtast dit brandnavn"
     },
     "brandVoice": {
-      "title": "Brandstemme",
-      "description": "Definér din brandstemme og tone",
-      "placeholder": "Beskriv din brandstemme..."
+      "title": "Brandstemning",
+      "description": "Definer din brandstemning og tone",
+      "placeholder": "Beskriv din brandstemning..."
     },
     "toneOfVoice": {
       "title": "Tone of Voice",
-      "description": "Definér tonen der bruges i oversættelser",
+      "description": "Definer tonen der bruges i oversættelser",
       "options": {
         "casual": "Uformel",
         "formal": "Formel",
@@ -378,9 +378,9 @@
       "features": {
         "unlimited_projects": "Ubegrænsede projekter",
         "fine_tuning": "Finjusteringsmuligheder",
-        "overrides": "Oversættelsesoverrulninger",
+        "overrides": "Oversættelsesoverskrivninger",
         "analytics": "Analyse",
-        "context_memory": "Kontekstmind",
+        "context_memory": "Kontekstmemo",
         "community_support": "Fællesskabsstøtte",
         "keys_limit": "Op til 100 nøgler",
         "docs_limit": "Op til 5 dokumenter",
@@ -395,7 +395,7 @@
         "latest_features": "Tidlig adgang til de nyeste funktioner",
         "priority_support": "Prioriteret support",
         "priority_queues": "Prioriterede oversættelseskøer",
-        "languages": "Ubegrænsede sprog",
+        "languages": "Starter fra 8 sprog",
         "keys_limit": "Starter fra 10.000 nøgler",
         "docs_limit": "Starter fra 50 dokumenter"
       }
@@ -444,7 +444,7 @@
       },
       "2": {
         "title": "Push Oversættelser",
-        "description": "Venter på, at oversættelserne bliver sendt"
+        "description": "Venter på at oversættelserne bliver sendt"
       },
       "3": {
         "title": "Dokumentation",
@@ -494,7 +494,7 @@
     "vi": "Vietnamesisk",
     "az": "Aserbajdsjansk",
     "bg": "Bulgarisk",
-    "ca": "Catalansk",
+    "ca": "Katalansk",
     "cs": "Tjekkisk",
     "el": "Græsk",
     "et": "Estisk",
@@ -512,7 +512,7 @@
     "sk": "Slovakisk",
     "sr": "Serbisk",
     "ta": "Tamil",
-    "th": "Thailandsk",
+    "th": "Thai",
     "uk": "Ukrainsk",
     "zh-CN": "Kinesisk (Forenklet)",
     "zh-TW": "Kinesisk (Traditionelt)"
@@ -551,7 +551,7 @@
     "title": "Ofte stillede spørgsmål",
     "what_is_languine": {
       "question": "Hvad er Languine?",
-      "answer": "Languine er en AI-drevet lokaliseringsplatform, der hjælper dig med at automatisere oversættelsen af dine applikationer. Den tilbyder funktioner som finjusteringsmuligheder, oversættelsesoverstyringer, analyser og konteksthukommelse for at sikre høj kvalitet i oversættelserne."
+      "answer": "Languine er en AI-drevet lokaliseringsplatform, der hjælper dig med at automatisere oversættelsen af dine applikationer. Den tilbyder funktioner som finjusteringsmuligheder, oversættelsesoverstyringer, analyser og konteksthukommelse for at sikre oversættelser af høj kvalitet."
     },
     "key_limit": {
       "question": "Hvordan fungerer nøglegrænsen?",
@@ -574,12 +574,12 @@
       "answer": "Ja! Languine er helt open source og tilgængelig på GitHub. Du kan bidrage til projektet, rapportere problemer, foreslå funktioner og inspicere koden. Vi tror på gennemsigtighed og at bygge i offentligheden."
     },
     "open_source_pricing": {
-      "question": "Tilbyder I specielle priser for open source projekter?",
-      "answer": "Ja! Vi elsker at støtte open source fællesskabet. Hvis du vedligeholder et open source projekt, kan du få adgang til vores Pro funktioner med 30% rabat. Bare kontakt vores team med oplysninger om dit projekt, så sørger vi for, at du får en rabatteret Pro-konto. Dette er vores måde at give tilbage til det fællesskab, der gør vores arbejde muligt."
+      "question": "Tilbyder I specielle priser til open source projekter?",
+      "answer": "Ja! Vi elsker at støtte open source fællesskabet. Hvis du vedligeholder et open source projekt, kan du få adgang til vores Pro funktioner med 30% rabat. Kontakt blot vores team med oplysninger om dit projekt, så hjælper vi dig med at få en rabatteret Pro konto. Dette er vores måde at give tilbage til det fællesskab, der gør vores arbejde muligt."
     },
     "cancel_subscription": {
       "question": "Hvordan annullerer jeg mit abonnement?",
-      "answer": "Du kan annullere dit abonnement når som helst fra dine kontoindstillinger. Naviger til Fakturering > Skift plan. Dit abonnement forbliver aktivt indtil slutningen af din nuværende faktureringsperiode, hvorefter du vil blive flyttet til den gratis plan."
+      "answer": "Du kan annullere dit abonnement når som helst fra dine kontoinstillinger. Naviger til Fakturering > Skift plan. Dit abonnement forbliver aktivt indtil slutningen af din nuværende faktureringsperiode, hvorefter du vil blive flyttet til den gratis plan."
     }
   },
   "pricing_slider": {
@@ -588,13 +588,14 @@
     "documents": "Oversatte dokumenter",
     "period": "md.",
     "keys_suffix": " nøgler",
-    "docs_suffix": " dokumenter"
+    "docs_suffix": " dokumenter",
+    "languages": "Sprog"
   },
   "docs": {
     "getting-started": "Kom godt i gang",
     "workflow": "Arbejdsgang",
     "ci": "CI/CD",
-    "presets": "Forudindstillinger",
+    "presets": "Præindstillinger",
     "formats": "Formater",
     "platform": "Platform",
     "introduction": "Introduktion",
@@ -603,7 +604,7 @@
     "configuration": "Konfiguration",
     "cli": "CLI",
     "github-actions": "GitHub Actions",
-    "tuning": "Tuning",
+    "tuning": "Justering",
     "settings": "Indstillinger",
     "hooks": "Hooks",
     "examples": "Eksempler",

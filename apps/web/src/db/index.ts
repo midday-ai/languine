@@ -39,6 +39,7 @@ export const connectDb = async () => {
     (replicas) => {
       // Use US DB for North/South America
       const americasRegions = ["US", "CA", "MX", "BR", "AR", "CO", "PE", "CL"];
+
       if (americasRegions.includes(region)) {
         return replicas[0]!;
       }
@@ -56,6 +57,7 @@ export const connectDb = async () => {
         "VN",
         "PH",
       ];
+
       if (oceaniaRegions.includes(region)) {
         return replicas[2]!;
       }

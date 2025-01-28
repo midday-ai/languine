@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Zautomatyzowana infrastruktura lokalizacyjna",
-    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby zautomatyzować tłumaczenia podczas kodowania."
+    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -18,9 +18,9 @@
     "account": "Konto"
   },
   "getStarted": {
-    "heading": "Zacznij",
+    "heading": "Rozpocznij",
     "title": "Zautomatyzowana infrastruktura lokalizacyjna",
-    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby zautomatyzować tłumaczenia podczas kodowania.",
+    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"
@@ -46,29 +46,29 @@
     "fullyOpenSource": "W pełni otwarte źródło",
     "fullyOpenSourceDescription": "Nasz kod jest publicznie dostępny na GitHubie, co umożliwia przejrzystość i wkład społeczności.",
     "noVendorLockIn": "Brak uzależnienia od dostawcy",
-    "noVendorLockInDescription": "Nie uzależniamy Cię od konkretnej usługi, używaj własnych LLM.",
+    "noVendorLockInDescription": "Nie uzależniamy Cię od konkretnej usługi, używaj własnych LLM-ów.",
     "presetsForExpo": "Ustawienia wstępne dla Expo",
-    "presetsForExpoDescription": "Oferujemy ustawienia wstępne dla Expo, abyś mógł szybko zacząć.",
+    "presetsForExpoDescription": "Oferujemy ustawienia wstępne dla Expo, abyś mógł szybko rozpocząć.",
     "presetForReactNative": "Ustawienia wstępne dla React Native",
-    "presetForReactNativeDescription": "Oferujemy ustawienia wstępne dla React Native, abyś mógł szybko zacząć.",
+    "presetForReactNativeDescription": "Oferujemy ustawienia wstępne dla React Native, abyś mógł szybko rozpocząć.",
     "presetForReactEmail": "Biblioteka React Email",
     "presetForReactEmailDescription": "Stworzyliśmy bibliotekę i18n dla React Email.",
-    "readyForI18nLibraries": "Gotowe dla bibliotek i18n",
-    "readyForI18nLibrariesDescription": "Obsługujemy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl itd.)."
+    "readyForI18nLibraries": "Gotowe do bibliotek i18n",
+    "readyForI18nLibrariesDescription": "Obsługujemy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itd.)."
   },
   "info": {
     "title": "Obsługuje każdy aspekt lokalizacji Twojej aplikacji, w tym",
     "smartTranslation": {
-      "title": "Inteligentne Tłumaczenie",
+      "title": "Inteligentne tłumaczenie",
       "intelligentTranslation": "Inteligentne tłumaczenie z uwzględnieniem kontekstu",
       "brandVoice": "Spójność głosu i tonu marki",
       "terminology": "Zarządzanie terminologią",
-      "linguisticFeatures": "Zaawansowane funkcje językowe",
+      "linguisticFeatures": "Zaawansowane cechy językowe",
       "realtimeUpdates": "Aktualizacje tłumaczeń w czasie rzeczywistym"
     },
     "implementation": {
-      "title": "Wdrożenie",
-      "quickSetup": "Szybkie ustawienie i integracja",
+      "title": "Implementacja",
+      "quickSetup": "Szybka konfiguracja i integracja",
       "fileFormat": "Obsługa formatów plików",
       "contentStructure": "Organizacja struktury treści",
       "assetOrganization": "Organizacja zasobów"
@@ -89,7 +89,7 @@
     "footer": "Zautomatyzuj swoją lokalizację.",
     "description": "Zaloguj się, aby rozpocząć automatyzację swojej lokalizacji w kilka sekund.",
     "terms": {
-      "text": "Logując się, akceptujesz nasze",
+      "text": "Logując się, zgadzasz się na nasze",
       "termsOfService": "Warunki korzystania z usługi",
       "and": "i",
       "privacyPolicy": "Polityka prywatności"
@@ -119,8 +119,8 @@
     "createTeamButton": "Utwórz zespół"
   },
   "coming_soon": {
-    "title": "Languine jest w Wczesnym Dostępie",
-    "description": "Obecnie jesteśmy w wczesnym dostępie. Skontaktuj się z",
+    "title": "Languine jest w fazie wczesnego dostępu",
+    "description": "Obecnie jesteśmy w fazie wczesnego dostępu. Skontaktuj się z",
     "cta": "na X, aby uzyskać wczesny dostęp."
   },
   "account": {
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym pipeline'em CI/CD, automatycznie tłumacząc Twój kod przy każdym pushu. Gdy zmiany w kodzie są przesyłane, analizujemy zmodyfikowaną treść, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, co umożliwia ich przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany workflow zapewnia, że Twoja zlokalizowana treść pozostaje w synchronizacji z rozwojem."
+    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym pipeline'em CI/CD, automatycznie tłumacząc Twoją bazę kodu przy każdym przesłaniu. Gdy zmiany w kodzie są przesyłane, analizujemy zmodyfikowaną treść, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako prośby o połączenie, co pozwala na przegląd przed scaleniem ich z Twoją główną gałęzią i wdrożeniem. Ten zautomatyzowany workflow zapewnia, że Twoja zlokalizowana treść pozostaje w synchronizacji z rozwojem."
   },
   "settings": {
     "badRequest": "Nieprawidłowe żądanie",
@@ -176,7 +176,7 @@
     "apiKey": {
       "updated": "Klucz API zaktualizowany",
       "updatedDescription": "Twój klucz API został pomyślnie zaktualizowany i skopiowany do schowka.",
-      "title": "Aktualizuj klucz API",
+      "title": "Zaktualizuj klucz API",
       "description": "Czy na pewno chcesz wygenerować nowy klucz API? Stary klucz przestanie działać natychmiast.",
       "cancel": "Anuluj",
       "continue": "Kontynuuj"
@@ -186,7 +186,7 @@
       "account": "Konto",
       "team": "Zespół",
       "provider": "Dostawca",
-      "billing": "Fakturowanie"
+      "billing": "Faktura"
     },
     "addProject": "Utwórz projekt",
     "project": {
@@ -214,15 +214,15 @@
         "placeholder": "Wprowadź nazwę zespołu"
       },
       "billing": {
-        "title": "Plan fakturowania",
-        "description": "Zarządzaj planem fakturowania swojego zespołu",
+        "title": "Plan rozliczeniowy",
+        "description": "Zarządzaj planem rozliczeniowym swojego zespołu",
         "free": "Darmowy",
         "pro": "Pro",
         "unlimited": "Nieograniczony"
       },
       "apiKey": {
         "title": "Klucz API zespołu",
-        "description": "Klucz API do dostępu zespołu, użyj go w swoim pipeline CI/CD razem z ID projektu",
+        "description": "Klucz API do dostępu zespołu, użyj go z pipeline'em CI/CD razem z ID projektu",
         "placeholder": "Klucz API zespołu"
       },
       "members": {
@@ -258,8 +258,8 @@
           "member": "Członek"
         },
         "dateSort": {
-          "newest": "Najnowsze",
-          "oldest": "Najstarsze"
+          "newest": "Najmłodszy",
+          "oldest": "Najstarszy"
         },
         "deleteInviteConfirm": "Usuń zaproszenie"
       }
@@ -284,21 +284,21 @@
       "title": "Kontrola długości",
       "description": "Kontroluj długość przetłumaczonego tekstu",
       "options": {
-        "flexible": "Elastyczne",
-        "strict": "Ścisłe",
-        "exact": "Dokładne",
-        "loose": "Luźne"
+        "flexible": "Elastyczny",
+        "strict": "Ścisły",
+        "exact": "Dokładny",
+        "loose": "Luźny"
       }
     },
     "inclusiveLanguage": {
       "title": "Język inkluzywny",
-      "description": "Zapewnij, że tłumaczenia używają języka inkluzywnego"
+      "description": "Zapewnij, aby tłumaczenia używały języka inkluzywnego"
     },
     "formality": {
       "title": "Formalność",
       "description": "Kontroluj poziom formalności tłumaczeń",
       "options": {
-        "casual": "Casual",
+        "casual": "Casualny",
         "formal": "Formalny",
         "neutral": "Neutralny"
       }
@@ -317,7 +317,7 @@
       "title": "Ton Głosu",
       "description": "Zdefiniuj ton używany w tłumaczeniach",
       "options": {
-        "casual": "Casual",
+        "casual": "Casualny",
         "formal": "Formalny",
         "friendly": "Przyjazny",
         "professional": "Profesjonalny",
@@ -331,7 +331,7 @@
     },
     "brand": "Marka",
     "emotiveIntent": {
-      "title": "Emocjonalny Zamiar",
+      "title": "Emocjonalny Zamysł",
       "description": "Ustaw emocjonalny ton dla tłumaczeń",
       "options": {
         "neutral": "Neutralny",
@@ -356,16 +356,16 @@
       }
     },
     "idioms": {
-      "title": "Idiomaty",
-      "description": "Zarządzaj wyrażeniami idiomatycznymi odpowiednio"
+      "title": "Idiomy",
+      "description": "Zajmij się wyrażeniami idiomatycznymi odpowiednio"
     },
     "terminology": {
       "title": "Terminologia",
-      "description": "Zarządzaj specjalistyczną terminologią i słownikami"
+      "description": "Zarządzaj specjalistyczną terminologią i glosariuszami"
     },
     "culturalAdaptation": {
       "title": "Adaptacja Kulturowa",
-      "description": "Dostosuj treści do odpowiedniości kulturowej"
+      "description": "Dostosuj treści do kulturowej odpowiedniości"
     }
   },
   "pricing": {
@@ -380,7 +380,7 @@
         "fine_tuning": "Opcje dostosowywania",
         "overrides": "Nadpisania tłumaczeń",
         "analytics": "Analizy",
-        "context_memory": "Pamięć kontekstowa",
+        "context_memory": "Pamięć kontekstu",
         "community_support": "Wsparcie społeczności",
         "keys_limit": "Do 100 kluczy",
         "docs_limit": "Do 5 dokumentów",
@@ -395,13 +395,13 @@
         "latest_features": "Wczesny dostęp do najnowszych funkcji",
         "priority_support": "Priorytetowe wsparcie",
         "priority_queues": "Priorytetowe kolejki tłumaczeń",
-        "languages": "Nieograniczone języki",
-        "keys_limit": "Od 10 000 kluczy",
-        "docs_limit": "Od 50 dokumentów"
+        "languages": "Począwszy od 8 języków",
+        "keys_limit": "Począwszy od 10 000 kluczy",
+        "docs_limit": "Począwszy od 50 dokumentów"
       }
     },
     "cta": "Rozpocznij automatyzację",
-    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak \"Zarejestruj się\" lub \"Witaj!\") i przetłumaczysz je na 5 języków, to daje 100 przetłumaczonych kluczy (20 kluczy x 5 języków)."
+    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (takich jak \"Zarejestruj się\" lub \"Witaj!\") i przetłumaczysz je na 5 języków, to daje 100 przetłumaczonych kluczy (20 kluczy x 5 języków)."
   },
   "createTeam": {
     "teamName": "Nazwa Zespołu",
@@ -433,7 +433,7 @@
       "description": "Nie udało się wysłać zaproszenia. Proszę spróbować ponownie."
     },
     "validation": {
-      "invalidEmail": "Proszę wprowadzić prawidłowy adres email"
+      "invalidEmail": "Proszę wprowadzić poprawny adres email"
     }
   },
   "onboarding": {
@@ -470,8 +470,8 @@
   },
   "periods": {
     "daily": "Codziennie",
-    "weekly": "Tygodniowo",
-    "monthly": "Miesięcznie",
+    "weekly": "Co tydzień",
+    "monthly": "Co miesiąc",
     "selectPeriod": "Wybierz okres"
   },
   "language": {
@@ -518,7 +518,7 @@
     "zh-TW": "Chiński (Tradycyjny)"
   },
   "menu": {
-    "dashboard": "Panel sterowania",
+    "dashboard": "Panel",
     "tuning": "Dostosowanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
@@ -559,7 +559,7 @@
     },
     "supported_languages": {
       "question": "Jakie języki są obsługiwane?",
-      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia zasilane sztuczną inteligencją najlepiej działają z głównymi językami, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz konkretne wymagania językowe lub pytania dotyczące jakości tłumaczenia dla określonych języków, skontaktuj się z naszym zespołem wsparcia."
+      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia zasilane sztuczną inteligencją najlepiej działają z językami głównymi, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz szczególne wymagania językowe lub pytania dotyczące jakości tłumaczenia dla konkretnych języków, skontaktuj się z naszym zespołem wsparcia."
     },
     "github_action": {
       "question": "Jak działa integracja z GitHub Action?",
@@ -567,19 +567,19 @@
     },
     "support": {
       "question": "Jakiego rodzaju wsparcie oferujecie?",
-      "answer": "Użytkownicy darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszymi czasami odpowiedzi i dedykowaną pomocą w zakresie ich potrzeb tłumaczeniowych."
+      "answer": "Użytkownicy darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszymi czasami odpowiedzi i dedykowaną pomocą w zakresie swoich potrzeb tłumaczeniowych."
     },
     "open_source": {
-      "question": "Czy Languine jest open source?",
-      "answer": "Tak! Languine jest w pełni open source i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie w przestrzeni publicznej."
+      "question": "Czy Languine jest otwartym oprogramowaniem?",
+      "answer": "Tak! Languine jest w pełni otwartym oprogramowaniem i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie w sposób publiczny."
     },
     "open_source_pricing": {
       "question": "Czy oferujecie specjalne ceny dla projektów open source?",
-      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my założymy Ci konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my założymy Ci konto Pro z rabatem. To nasz sposób na oddanie społeczności, która sprawia, że nasza praca jest możliwa."
     },
     "cancel_subscription": {
       "question": "Jak mogę anulować subskrypcję?",
-      "answer": "Możesz anulować swoją subskrypcję w dowolnym momencie z ustawień swojego konta. Przejdź do Fakturowanie > Zmień plan. Twoja subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego, po czym zostaniesz przeniesiony na plan darmowy."
+      "answer": "Możesz anulować subskrypcję w dowolnym momencie z ustawień swojego konta. Przejdź do Fakturowanie > Zmień plan. Twoja subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego, po czym zostaniesz przeniesiony do planu darmowego."
     }
   },
   "pricing_slider": {
@@ -588,7 +588,8 @@
     "documents": "Przetłumaczone dokumenty",
     "period": "mies.",
     "keys_suffix": " kluczy",
-    "docs_suffix": " dokumentów"
+    "docs_suffix": " dokumentów",
+    "languages": "Języki"
   },
   "docs": {
     "getting-started": "Rozpoczęcie",

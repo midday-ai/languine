@@ -62,7 +62,7 @@
       "title": "Slimme Vertaling",
       "intelligentTranslation": "Intelligente vertaling met contextbewustzijn",
       "brandVoice": "Consistentie in merkstem en toon",
-      "terminology": "Terminologiebeheer",
+      "terminology": "Terminologiemanagement",
       "linguisticFeatures": "Geavanceerde linguïstische functies",
       "realtimeUpdates": "Realtime vertaalupdates"
     },
@@ -70,7 +70,7 @@
       "title": "Implementatie",
       "quickSetup": "Snelle installatie en integratie",
       "fileFormat": "Bestandsformaatverwerking",
-      "contentStructure": "Organisatie van inhoudsstructuur",
+      "contentStructure": "Organisatie van de inhoudsstructuur",
       "assetOrganization": "Organisatie van activa"
     },
     "developer": {
@@ -78,7 +78,7 @@
       "cli": "Opdrachtregelinterface",
       "cicd": "CI/CD-integratie",
       "versionControl": "Versiebeheer",
-      "workflow": "Ontwikkelaarworkflow",
+      "workflow": "Ontwikkelaarsworkflow",
       "documentation": "Uitgebreide documentatie"
     }
   },
@@ -107,19 +107,19 @@
   },
   "teamSelector": {
     "addProject": "Project aanmaken",
-    "createProjectTitle": "Maak een nieuw project",
+    "createProjectTitle": "Maak een nieuw project aan",
     "projectNamePlaceholder": "Projectnaam",
     "createProjectButton": "Project aanmaken",
     "pro": "Pro",
     "project": "Project",
     "teams": "Teams",
     "createTeam": "Team aanmaken",
-    "createTeamTitle": "Maak een nieuw team",
+    "createTeamTitle": "Maak een nieuw team aan",
     "teamNamePlaceholder": "Teamnaam",
     "createTeamButton": "Team aanmaken"
   },
   "coming_soon": {
-    "title": "Languine is in Vroegtoegang",
+    "title": "Languine is in Vroeg Toegang",
     "description": "We zijn momenteel in vroege toegang. Neem contact op met",
     "cta": "op X voor vroege toegang."
   },
@@ -159,25 +159,25 @@
   "pipeline": {
     "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Onze vertaalengine integreert naadloos in je bestaande CI/CD-pipeline en vertaalt automatisch je codebase bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, behouden we je vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we je merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, zodat ze kunnen worden beoordeeld voordat ze worden samengevoegd in je hoofdbranch en worden gedeployed. Deze geautomatiseerde workflow zorgt ervoor dat je gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
+    "description": "Onze vertaalengine integreert naadloos in uw bestaande CI/CD-pipeline en vertaalt automatisch uw codebase bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, behouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, zodat ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdbranch en worden gedeployed. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud in sync blijft met de ontwikkeling."
   },
   "settings": {
     "badRequest": "Ongeldig verzoek",
-    "badRequestDescription": "De organisatie moet minstens één eigenaar hebben. Geef het eigendom over aan een ander lid voordat je deze eigenaar verwijdert.",
+    "badRequestDescription": "De organisatie moet minstens één eigenaar hebben. Geef het eigendom over aan een ander lid voordat u deze eigenaar verwijdert.",
     "permissionDenied": "Toegang geweigerd",
-    "permissionDeniedDescription": "Je moet een eigenaar van het team zijn om deze actie uit te voeren",
+    "permissionDeniedDescription": "U moet een eigenaar van het team zijn om deze actie uit te voeren",
     "deleteTeamTitle": "Verwijder team",
-    "deleteTeamDescription": "Kan de organisatie niet verwijderen wanneer je het enige lid bent, verwijder in plaats daarvan je account",
+    "deleteTeamDescription": "Kan de organisatie niet verwijderen wanneer u het enige lid bent, verwijder in plaats daarvan uw account",
     "saved": "Instellingen opgeslagen",
-    "savedDescription": "Je wijzigingen zijn succesvol opgeslagen",
+    "savedDescription": "Uw wijzigingen zijn succesvol opgeslagen",
     "error": "Er is iets misgegaan",
     "errorDescription": "Probeer het opnieuw of neem contact op met de ondersteuning",
     "addTeam": "Maak team aan",
     "apiKey": {
       "updated": "API-sleutel bijgewerkt",
-      "updatedDescription": "Je API-sleutel is succesvol bijgewerkt en naar je klembord gekopieerd.",
+      "updatedDescription": "Uw API-sleutel is succesvol bijgewerkt en naar uw klembord gekopieerd.",
       "title": "API-sleutel bijwerken",
-      "description": "Weet je zeker dat je een nieuwe API-sleutel wilt genereren? De oude sleutel stopt onmiddellijk met werken.",
+      "description": "Weet u zeker dat u een nieuwe API-sleutel wilt genereren? De oude sleutel stopt onmiddellijk met werken.",
       "cancel": "Annuleren",
       "continue": "Doorgaan"
     },
@@ -192,12 +192,12 @@
     "project": {
       "name": {
         "title": "Projectnaam",
-        "description": "De naam van je project",
+        "description": "De naam van uw project",
         "placeholder": "Voer projectnaam in"
       },
       "id": {
         "title": "Project-ID",
-        "description": "Je unieke projectidentificator",
+        "description": "Uw unieke projectidentificator",
         "placeholder": "Project-ID"
       },
       "delete": {
@@ -210,24 +210,24 @@
     "team": {
       "name": {
         "title": "Teamnaam",
-        "description": "De naam van je team",
+        "description": "De naam van uw team",
         "placeholder": "Voer teamnaam in"
       },
       "billing": {
         "title": "Factureringsplan",
-        "description": "Beheer het factureringsplan van je team",
+        "description": "Beheer het factureringsplan van uw team",
         "free": "Gratis",
         "pro": "Pro",
         "unlimited": "Onbeperkt"
       },
       "apiKey": {
         "title": "Team API-sleutel",
-        "description": "API-sleutel voor teamtoegang, gebruik deze vanuit je CI/CD-pipeline samen met de Project-ID",
+        "description": "API-sleutel voor teamtoegang, gebruik deze vanuit uw CI/CD-pipeline samen met de Project-ID",
         "placeholder": "Team API-sleutel"
       },
       "members": {
         "leaveTeamConfirm": "Verlaat team",
-        "leaveTeamDescription": "Weet je zeker dat je dit team wilt verlaten?",
+        "leaveTeamDescription": "Weet u zeker dat u dit team wilt verlaten?",
         "cancel": "Annuleren",
         "leaveTeam": "Verlaat team",
         "invite": "Nodig lid uit",
@@ -235,7 +235,7 @@
         "pendingInvitations": "In afwachting van uitnodigingen",
         "removeMember": "Verwijder lid",
         "removeMemberConfirm": "Verwijder lid",
-        "removeMemberDescription": "Weet je zeker dat je dit lid wilt verwijderen?",
+        "removeMemberDescription": "Weet u zeker dat u dit lid wilt verwijderen?",
         "filterPlaceholder": "Filter leden...",
         "allRoles": "Alle Rollen",
         "date": "Datum",
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Contextdetectie",
-      "description": "Detecteer en behoud automatisch de context in vertalingen"
+      "description": "Detecteer en behoud automatisch context in vertalingen"
     },
     "styleGuide": "Stijlgids",
     "lengthControl": {
@@ -305,13 +305,13 @@
     },
     "brandName": {
       "title": "Merknaam",
-      "description": "Stel je merknaam in voor consistent gebruik",
-      "placeholder": "Voer je merknaam in"
+      "description": "Stel uw merknaam in voor consistent gebruik",
+      "placeholder": "Voer uw merknaam in"
     },
     "brandVoice": {
       "title": "Merkstem",
-      "description": "Definieer je merkstem en -toon",
-      "placeholder": "Beschrijf je merkstem..."
+      "description": "Definieer uw merkstem en -toon",
+      "placeholder": "Beschrijf uw merkstem..."
     },
     "toneOfVoice": {
       "title": "Toon van de Stem",
@@ -377,7 +377,7 @@
       "description": "Perfect voor uitproberen",
       "features": {
         "unlimited_projects": "Onbeperkte projecten",
-        "fine_tuning": "Fijn afstemmen opties",
+        "fine_tuning": "Fijnafstemmingsopties",
         "overrides": "Vertaaloverschrijvingen",
         "analytics": "Analytics",
         "context_memory": "Contextgeheugen",
@@ -395,31 +395,31 @@
         "latest_features": "Vroeg toegang tot de nieuwste functies",
         "priority_support": "Prioriteitssteun",
         "priority_queues": "Prioriteitsvertalingswachtrijen",
-        "languages": "Onbeperkte talen",
-        "keys_limit": "Vanaf 10.000 sleutels",
-        "docs_limit": "Vanaf 50 documenten"
+        "languages": "Beginnend vanaf 8 talen",
+        "keys_limit": "Beginnend vanaf 10.000 sleutels",
+        "docs_limit": "Beginnend vanaf 50 documenten"
       }
     },
     "cta": "Begin met automatiseren",
-    "keys_limit_explanation": "Vertaalde sleutel: Als je 20 bronsleutels hebt (zoals \"Aanmelden\" of \"Welkom!\") en deze in 5 talen vertaalt, komt dat neer op 100 vertaalde sleutels (20 sleutels x 5 talen)."
+    "keys_limit_explanation": "Vertaald sleutel: Als u 20 bronsleutels heeft (zoals \"Aanmelden\" of \"Welkom!\") en deze in 5 talen vertaalt, komt dat neer op 100 vertaalde sleutels (20 sleutels x 5 talen)."
   },
   "createTeam": {
     "teamName": "Teamnaam",
     "teamNamePlaceholder": "Voer teamnaam in",
     "createTeamButton": "Team aanmaken",
     "cancel": "Annuleren",
-    "createTeamDescription": "Maak een nieuw team aan om je projecten en samenwerkers te beheren."
+    "createTeamDescription": "Maak een nieuw team aan om uw projecten en samenwerkers te beheren."
   },
   "createProject": {
-    "createProjectTitle": "Maak een nieuw project aan",
+    "createProjectTitle": "Maak een nieuw project",
     "projectNamePlaceholder": "Voer projectnaam in",
     "createProjectButton": "Project aanmaken",
     "cancel": "Annuleren",
-    "createProjectDescription": "Maak een nieuw project aan om je lokalisatie te automatiseren."
+    "createProjectDescription": "Maak een nieuw project aan om uw lokalisatie te automatiseren."
   },
   "invite": {
     "inviteMember": "Lid uitnodigen",
-    "inviteDescription": "Nodig een lid uit voor je team",
+    "inviteDescription": "Nodig een lid uit voor uw team",
     "emailLabel": "E-mail",
     "emailPlaceholder": "Voer e-mail in",
     "cancel": "Annuleren",
@@ -439,12 +439,12 @@
   "onboarding": {
     "steps": {
       "1": {
-        "title": "Installeer Languine CLI",
+        "title": "Instellen Languine CLI",
         "description": "Installeer en configureer de Languine CLI om vertalingen te beheren"
       },
       "2": {
-        "title": "Verzend Vertalingen",
-        "description": "Wachten op het verzenden van de vertalingen"
+        "title": "Vertalingen Pushen",
+        "description": "Wachten op het pushen van de vertalingen"
       },
       "3": {
         "title": "Documentatie",
@@ -455,7 +455,7 @@
     "info": {
       "description": "Hulp nodig? Bekijk onze",
       "link": "documentatie",
-      "description_2": "voor gedetailleerde handleidingen en best practices."
+      "description_2": "voor gedetailleerde handleidingen en beste praktijken."
     }
   },
   "cli": {
@@ -548,10 +548,10 @@
     }
   },
   "faq": {
-    "title": "FAQ",
+    "title": "Veelgestelde Vragen",
     "what_is_languine": {
       "question": "Wat is Languine?",
-      "answer": "Languine is een AI-gestuurde lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals afstemopties, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te waarborgen."
+      "answer": "Languine is een AI-gestuurde lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals opties voor fijn afstemmen, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te waarborgen."
     },
     "key_limit": {
       "question": "Hoe werkt de sleutel limiet?",
@@ -563,11 +563,11 @@
     },
     "github_action": {
       "question": "Hoe werkt de GitHub Action-integratie?",
-      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt je in staat om je vertaalworkflow automatisch te automatiseren in je CI/CD-pijplijn. Wanneer je wijzigingen naar je repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
+      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt je in staat om je vertaalworkflow automatisch te maken in je CI/CD-pijplijn. Wanneer je wijzigingen naar je repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
     },
     "support": {
       "question": "Wat voor soort ondersteuning bieden jullie?",
-      "answer": "Gratis gebruikers krijgen toegang tot community-ondersteuning, terwijl Pro-gebruikers prioriteitssteun ontvangen met snellere responstijden en toegewijde hulp voor hun vertaalbehoeften."
+      "answer": "Gratis gebruikers krijgen toegang tot community-ondersteuning, terwijl Pro-gebruikers prioriteitssteun ontvangen met snellere reactietijden en toegewijde hulp voor hun vertaalbehoeften."
     },
     "open_source": {
       "question": "Is Languine open source?",
@@ -578,8 +578,8 @@
       "answer": "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als je een open source-project beheert, kun je toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over je project, en we zorgen ervoor dat je een kortingsaccount voor Pro krijgt. Dit is onze manier om iets terug te geven aan de gemeenschap die ons werk mogelijk maakt."
     },
     "cancel_subscription": {
-      "question": "Hoe kan ik mijn abonnement annuleren?",
-      "answer": "Je kunt je abonnement op elk moment annuleren vanuit je accountinstellingen. Ga naar Facturering > Plan Wijzigen. Je abonnement blijft actief tot het einde van je huidige factureringsperiode, waarna je naar het Gratis plan wordt overgezet."
+      "question": "Hoe annuleer ik mijn abonnement?",
+      "answer": "Je kunt je abonnement op elk moment annuleren vanuit je accountinstellingen. Ga naar Facturering > Wijzig Plan. Je abonnement blijft actief tot het einde van je huidige factureringsperiode, waarna je naar het Gratis plan wordt overgezet."
     }
   },
   "pricing_slider": {
@@ -588,7 +588,8 @@
     "documents": "Vertaald documenten",
     "period": "maand",
     "keys_suffix": " sleutels",
-    "docs_suffix": " documenten"
+    "docs_suffix": " documenten",
+    "languages": "Talen"
   },
   "docs": {
     "getting-started": "Aan de Slag",
@@ -598,7 +599,7 @@
     "formats": "Indelingen",
     "platform": "Platform",
     "introduction": "Inleiding",
-    "quickstart": "Snelle Start",
+    "quickstart": "Snelle start",
     "authentication": "Authenticatie",
     "configuration": "Configuratie",
     "cli": "CLI",

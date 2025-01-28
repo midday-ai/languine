@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "自动化本地化基础设施",
-    "description": "直接在您的开发工作流程中翻译应用内容。我们的 CLI 与 GitHub Actions 和其他 CI/CD 工具集成，以便在您编码时自动翻译。"
+    "description": "在您的开发工作流程中直接翻译应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动化翻译。"
   },
   "navigation": {
     "dashboard": "仪表板",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "开始使用",
     "title": "自动化本地化基础设施",
-    "description": "直接在您的开发工作流程中翻译应用内容。我们的 CLI 与 GitHub Actions 和其他 CI/CD 工具集成，以便在您编码时自动翻译。",
+    "description": "在您的开发工作流程中直接翻译应用内容。我们的CLI与GitHub Actions和其他CI/CD工具集成，以在您编码时自动化翻译。",
     "button": {
       "startAutomating": "开始自动化",
       "readDocumentation": "阅读文档"
@@ -44,20 +44,20 @@
   "features": {
     "title": "功能",
     "fullyOpenSource": "完全开源",
-    "fullyOpenSourceDescription": "我们的代码在 GitHub 上公开可用，确保透明度和社区贡献。",
+    "fullyOpenSourceDescription": "我们的代码在GitHub上公开可用，确保透明度和社区贡献。",
     "noVendorLockIn": "无供应商锁定",
-    "noVendorLockInDescription": "我们不将您锁定在特定服务中，您可以使用自己的 LLM。",
-    "presetsForExpo": "Expo 预设",
-    "presetsForExpoDescription": "我们提供 Expo 的预设，以便您快速入门。",
-    "presetForReactNative": "React Native 预设",
-    "presetForReactNativeDescription": "我们为 React Native 提供预设，以便您快速入门。",
-    "presetForReactEmail": "React 邮件库",
-    "presetForReactEmailDescription": "我们为 React 邮件创建了一个 i18n 库。",
-    "readyForI18nLibraries": "支持 i18n 库",
-    "readyForI18nLibrariesDescription": "我们支持所有库，包括最流行的库（next-intl、react-i18next、react-intl 等）。"
+    "noVendorLockInDescription": "我们不会将您锁定在特定服务中，可以使用您自己的LLMs。",
+    "presetsForExpo": "Expo预设",
+    "presetsForExpoDescription": "我们提供Expo的预设，以便您快速入门。",
+    "presetForReactNative": "React Native预设",
+    "presetForReactNativeDescription": "我们为React Native提供预设，以便您快速入门。",
+    "presetForReactEmail": "React电子邮件库",
+    "presetForReactEmailDescription": "我们为React电子邮件创建了一个i18n库。",
+    "readyForI18nLibraries": "支持i18n库",
+    "readyForI18nLibrariesDescription": "我们支持所有库，包括最流行的库（next-intl、react-i18next、react-intl等）。"
   },
   "info": {
-    "title": "处理本地化应用的每个方面，包括",
+    "title": "处理本地化应用的各个方面，包括",
     "smartTranslation": {
       "title": "智能翻译",
       "intelligentTranslation": "具有上下文意识的智能翻译",
@@ -76,7 +76,7 @@
     "developer": {
       "title": "开发者体验",
       "cli": "命令行界面",
-      "cicd": "CI/CD 集成",
+      "cicd": "CI/CD集成",
       "versionControl": "版本控制",
       "workflow": "开发者工作流程",
       "documentation": "全面的文档"
@@ -84,8 +84,8 @@
   },
   "login": {
     "title": "登录",
-    "github": "使用 GitHub 登录",
-    "google": "使用 Google 登录",
+    "github": "使用GitHub登录",
+    "google": "使用Google登录",
     "footer": "自动化您的本地化。",
     "description": "登录以在几秒钟内开始自动化您的本地化。",
     "terms": {
@@ -119,9 +119,9 @@
     "createTeamButton": "创建团队"
   },
   "coming_soon": {
-    "title": "Languine 正在进行早期访问",
+    "title": "Languine正在进行早期访问",
     "description": "我们目前处于早期访问阶段。请联系",
-    "cta": "在 X 上获取早期访问。"
+    "cta": "在X上获取早期访问。"
   },
   "account": {
     "fullName": {
@@ -135,8 +135,8 @@
       "placeholder": "输入您的电子邮件地址"
     },
     "apiKey": {
-      "title": "API 密钥",
-      "description": "您个人的 API 密钥，用于访问 Languine API 和 CLI。"
+      "title": "API密钥",
+      "description": "您个人的API密钥，用于访问Languine API和CLI。"
     },
     "deleteAccount": {
       "title": "删除账户",
@@ -150,7 +150,7 @@
   "dangerZone": {
     "dialog": {
       "title": "您确定吗？",
-      "description": "此操作无法撤销。请键入 DELETE 以确认。",
+      "description": "此操作无法撤销。请键入DELETE以确认。",
       "placeholder": "输入 DELETE 以确认",
       "confirm": "确认删除",
       "cancel": "取消"
@@ -159,15 +159,15 @@
   "pipeline": {
     "title": "工作流 (CI/CD 管道)",
     "pro": "[专业版]",
-    "description": "我们的翻译引擎无缝集成到您现有的 CI/CD 管道中，自动在每次推送时翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译结果随后作为拉取请求提交，允许在合并到主分支并部署之前进行审核。这个自动化工作流确保您的本地化内容与开发保持同步。"
+    "description": "我们的翻译引擎无缝集成到您现有的 CI/CD 管道中，在每次推送时自动翻译您的代码库。当代码更改被推送时，我们分析修改的内容，维护您的翻译记忆，并生成准确的翻译，同时保留您的品牌声音和术语。翻译结果随后作为拉取请求提交，允许在合并到主分支并部署之前进行审核。这个自动化工作流确保您的本地化内容与开发保持同步。"
   },
   "settings": {
     "badRequest": "无效请求",
-    "badRequestDescription": "组织必须至少有一个所有者。在移除该所有者之前，请将所有权转移给其他成员。",
+    "badRequestDescription": "组织必须至少有一个所有者。在移除此所有者之前，请将所有权转移给其他成员。",
     "permissionDenied": "权限被拒绝",
     "permissionDeniedDescription": "您需要是团队的所有者才能执行此操作",
     "deleteTeamTitle": "删除团队",
-    "deleteTeamDescription": "当您是唯一成员时无法删除组织，而是删除您的账户",
+    "deleteTeamDescription": "当您是唯一成员时无法删除组织，请删除您的帐户",
     "saved": "设置已保存",
     "savedDescription": "您的更改已成功保存",
     "error": "出现问题",
@@ -183,7 +183,7 @@
     },
     "tabs": {
       "project": "项目",
-      "account": "账户",
+      "account": "帐户",
       "team": "团队",
       "provider": "提供者",
       "billing": "账单"
@@ -214,28 +214,28 @@
         "placeholder": "输入团队名称"
       },
       "billing": {
-        "title": "账单计划",
-        "description": "管理您团队的账单计划",
+        "title": "计费计划",
+        "description": "管理您的团队计费计划",
         "free": "免费",
         "pro": "专业版",
         "unlimited": "无限制"
       },
       "apiKey": {
         "title": "团队 API 密钥",
-        "description": "团队访问的 API 密钥，请在您的 CI/CD 管道中与项目 ID 一起使用",
+        "description": "团队访问的 API 密钥，使用此密钥与项目 ID 一起从您的 CI/CD 管道中访问",
         "placeholder": "团队 API 密钥"
       },
       "members": {
         "leaveTeamConfirm": "离开团队",
-        "leaveTeamDescription": "您确定要离开这个团队吗？",
+        "leaveTeamDescription": "您确定要离开此团队吗？",
         "cancel": "取消",
         "leaveTeam": "离开团队",
         "invite": "邀请成员",
         "title": "成员",
-        "pendingInvitations": "待处理的邀请",
+        "pendingInvitations": "待处理邀请",
         "removeMember": "移除成员",
         "removeMemberConfirm": "移除成员",
-        "removeMemberDescription": "您确定要移除这个成员吗？",
+        "removeMemberDescription": "您确定要移除此成员吗？",
         "filterPlaceholder": "筛选成员...",
         "allRoles": "所有角色",
         "date": "日期",
@@ -295,12 +295,12 @@
       "description": "确保翻译使用包容性语言"
     },
     "formality": {
-      "title": "正式性",
+      "title": "正式程度",
       "description": "控制翻译的正式程度",
       "options": {
-        "casual": "随意",
+        "casual": "休闲",
         "formal": "正式",
-        "neutral": "中立"
+        "neutral": "中性"
       }
     },
     "brandName": {
@@ -317,11 +317,11 @@
       "title": "语气",
       "description": "定义翻译中使用的语气",
       "options": {
-        "casual": "随意",
+        "casual": "休闲",
         "formal": "正式",
         "friendly": "友好",
         "professional": "专业",
-        "playful": "顽皮",
+        "playful": "俏皮",
         "serious": "严肃",
         "confident": "自信",
         "humble": "谦逊",
@@ -332,11 +332,11 @@
     "brand": "品牌",
     "emotiveIntent": {
       "title": "情感意图",
-      "description": "为翻译设置情感语调",
+      "description": "设置翻译的情感语调",
       "options": {
-        "neutral": "中立",
+        "neutral": "中性",
         "positive": "积极",
-        "empathetic": "同理心",
+        "empathetic": "同理",
         "professional": "专业",
         "friendly": "友好",
         "enthusiastic": "热情"
@@ -374,7 +374,7 @@
       "title": "免费",
       "price": "免费",
       "keys_limit": "最多 100 个键",
-      "description": "尝试时的完美选择",
+      "description": "适合试用时使用",
       "features": {
         "unlimited_projects": "无限项目",
         "fine_tuning": "微调选项",
@@ -384,20 +384,20 @@
         "community_support": "社区支持",
         "keys_limit": "最多 100 个键",
         "docs_limit": "最多 5 个文档",
-        "languages": "2种语言"
+        "languages": "2 种语言"
       }
     },
     "pro": {
       "title": "专业版",
-      "includes_free": "免费版中的所有内容，外加：",
+      "includes_free": "包含免费版的所有内容，以及：",
       "features": {
         "github_action": "GitHub Action 集成",
-        "latest_features": "提前访问最新功能",
+        "latest_features": "优先访问最新功能",
         "priority_support": "优先支持",
         "priority_queues": "优先翻译队列",
-        "languages": "无限语言",
-        "keys_limit": "起始于 10,000 个键",
-        "docs_limit": "起始于 50 个文档"
+        "languages": "起始支持 8 种语言",
+        "keys_limit": "起始支持 10,000 个键",
+        "docs_limit": "起始支持 50 个文档"
       }
     },
     "cta": "开始自动化",
@@ -419,7 +419,7 @@
   },
   "invite": {
     "inviteMember": "邀请成员",
-    "inviteDescription": "邀请一名成员加入您的团队",
+    "inviteDescription": "邀请一位成员加入您的团队",
     "emailLabel": "电子邮件",
     "emailPlaceholder": "输入电子邮件",
     "cancel": "取消",
@@ -440,7 +440,7 @@
     "steps": {
       "1": {
         "title": "设置 Languine CLI",
-        "description": "安装和配置 Languine CLI 以管理翻译"
+        "description": "安装并配置 Languine CLI 以管理翻译"
       },
       "2": {
         "title": "推送翻译",
@@ -453,7 +453,7 @@
       }
     },
     "info": {
-      "description": "需要帮助？查看我们的",
+      "description": "需要帮助吗？查看我们的",
       "link": "文档",
       "description_2": "详细指南和最佳实践。"
     }
@@ -551,35 +551,35 @@
     "title": "常见问题",
     "what_is_languine": {
       "question": "什么是 Languine？",
-      "answer": "Languine 是一个由 AI 驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
+      "answer": "Languine 是一个基于 AI 的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
     },
     "key_limit": {
       "question": "键限制是如何工作的？",
-      "answer": "当您将源键翻译成目标语言时，会计算一个翻译的键。例如，如果您有 20 个源键并将它们翻译成 5 种语言，则等于 100 个翻译的键（20 个键 × 5 种语言）。"
+      "answer": "当您将源键翻译成目标语言时，会计算一个翻译的键。例如，如果您有 20 个源键并将它们翻译成 5 种语言，则总共为 100 个翻译的键（20 个键 × 5 种语言）。"
     },
     "supported_languages": {
       "question": "支持哪些语言？",
-      "answer": "Languine 在所有计划中支持超过 100 种语言。虽然我们的 AI 驱动翻译在主要语言上效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言要求或对特定语言的翻译质量有疑问，请联系我们的支持团队。"
+      "answer": "Languine 在所有计划中支持超过 100 种语言。虽然我们的 AI 驱动翻译在主要语言中效果最佳，但我们努力在所有支持的语言中提供高质量的翻译。如果您有特定的语言需求或对某些语言的翻译质量有疑问，请与我们的支持团队联系。"
     },
     "github_action": {
       "question": "GitHub Action 集成是如何工作的？",
-      "answer": "GitHub Action 集成（在专业计划中可用）允许您直接在 CI/CD 管道中自动化翻译工作流程。当您将更改推送到您的代码库时，翻译可以自动更新。"
+      "answer": "GitHub Action 集成（在专业计划中提供）允许您直接在 CI/CD 管道中自动化翻译工作流程。当您将更改推送到您的代码库时，翻译可以自动更新。"
     },
     "support": {
       "question": "您提供什么样的支持？",
-      "answer": "免费用户可以访问社区支持，而专业用户则获得优先支持，响应时间更快，并为他们的翻译需求提供专门的帮助。"
+      "answer": "免费用户可以访问社区支持，而专业用户则享有优先支持，响应时间更快，并为他们的翻译需求提供专门的帮助。"
     },
     "open_source": {
       "question": "Languine 是开源的吗？",
-      "answer": "是的！Languine 完全开源，并可在 GitHub 上获得。您可以为该项目做出贡献，报告问题，建议功能，并检查代码。我们相信透明度和公开构建。"
+      "answer": "是的！Languine 完全开源，并可在 GitHub 上获取。您可以为该项目做出贡献，报告问题，建议功能，并检查代码。我们相信透明度和公开构建。"
     },
     "open_source_pricing": {
       "question": "您为开源项目提供特殊定价吗？",
       "answer": "是的！我们喜欢支持开源社区。如果您维护一个开源项目，您可以以 30% 的折扣获得我们的专业功能。只需与我们的团队联系，提供有关您项目的详细信息，我们将为您设置一个折扣的专业账户。这是我们回馈使我们工作成为可能的社区的方式。"
     },
     "cancel_subscription": {
-      "question": "我如何取消我的订阅？",
-      "answer": "您可以随时从账户设置中取消订阅。导航到账单 > 更改计划。您的订阅将在当前账单周期结束之前保持有效，之后您将转到免费计划。"
+      "question": "我如何取消订阅？",
+      "answer": "您可以随时从账户设置中取消订阅。导航到账单 > 更改计划。您的订阅将在当前账单周期结束之前保持有效，之后您将转移到免费计划。"
     }
   },
   "pricing_slider": {
@@ -588,7 +588,8 @@
     "documents": "翻译的文档",
     "period": "月",
     "keys_suffix": " 个键",
-    "docs_suffix": " 个文档"
+    "docs_suffix": " 个文档",
+    "languages": "语言"
   },
   "docs": {
     "getting-started": "入门",
@@ -598,10 +599,10 @@
     "formats": "格式",
     "platform": "平台",
     "introduction": "介绍",
-    "quickstart": "快速开始",
-    "authentication": "认证",
+    "quickstart": "快速入门",
+    "authentication": "身份验证",
     "configuration": "配置",
-    "cli": "CLI",
+    "cli": "命令行接口",
     "github-actions": "GitHub Actions",
     "tuning": "调优",
     "settings": "设置",

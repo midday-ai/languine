@@ -3,11 +3,11 @@
     "pricing": "Preços",
     "docs": "Documentos",
     "signIn": "Entrar",
-    "goToApp": "Ir para o app"
+    "goToApp": "Ir para o aplicativo"
   },
   "hero": {
     "title": "Infraestrutura de localização automatizada",
-    "description": "Traduza o conteúdo do seu app diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra com GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica."
+    "description": "Traduza o conteúdo do seu aplicativo diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra ao GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Comece agora",
     "title": "Infraestrutura de localização automatizada",
-    "description": "Traduza o conteúdo do seu app diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra com GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica.",
+    "description": "Traduza o conteúdo do seu aplicativo diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra ao GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica.",
     "button": {
       "startAutomating": "Comece a automatizar",
       "readDocumentation": "Leia a documentação"
@@ -46,7 +46,7 @@
     "fullyOpenSource": "Totalmente open source",
     "fullyOpenSourceDescription": "Nosso código está disponível publicamente no GitHub, permitindo transparência e contribuições da comunidade.",
     "noVendorLockIn": "Sem bloqueio de fornecedor",
-    "noVendorLockInDescription": "Não o bloqueamos em um serviço específico, use seus próprios LLMs.",
+    "noVendorLockInDescription": "Não o prendemos a um serviço específico, use seus próprios LLMs.",
     "presetsForExpo": "Predefinições para Expo",
     "presetsForExpoDescription": "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
     "presetForReactNative": "Predefinição para React Native",
@@ -57,7 +57,7 @@
     "readyForI18nLibrariesDescription": "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Cuida de todos os aspectos da localização do seu app, incluindo",
+    "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
     "smartTranslation": {
       "title": "Tradução Inteligente",
       "intelligentTranslation": "Tradução inteligente com consciência de contexto",
@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "Chave da API",
-      "description": "Sua chave pessoal da API para acessar a API do Languine e pela CLI."
+      "description": "Sua chave pessoal da API para acessar a API do Languine e a partir da CLI."
     },
     "deleteAccount": {
       "title": "Excluir Conta",
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Fluxo de Trabalho (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada push. Quando alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz e a terminologia da sua marca. As traduções são então enviadas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
+    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada push. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas enquanto preservamos a voz e a terminologia da sua marca. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
   },
   "settings": {
     "badRequest": "Solicitação inválida",
@@ -215,7 +215,7 @@
       },
       "billing": {
         "title": "Plano de Cobrança",
-        "description": "Gerencie o plano de cobrança da sua equipe",
+        "description": "Gerenciar o plano de cobrança da sua equipe",
         "free": "Gratuito",
         "pro": "Pro",
         "unlimited": "Ilimitado"
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Detecção de Contexto",
-      "description": "Detecte e preserve automaticamente o contexto nas traduções"
+      "description": "Detectar e preservar automaticamente o contexto nas traduções"
     },
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
@@ -315,7 +315,7 @@
     },
     "toneOfVoice": {
       "title": "Tom de Voz",
-      "description": "Defina o tom usado nas traduções",
+      "description": "Defina o tom utilizado nas traduções",
       "options": {
         "casual": "Casual",
         "formal": "Formal",
@@ -339,7 +339,7 @@
         "empathetic": "Empático",
         "professional": "Profissional",
         "friendly": "Amigável",
-        "enthusiastic": "Entusiasmado"
+        "enthusiastic": "Entusiástico"
       }
     },
     "domainExpertise": {
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Expressões Idiomáticas",
-      "description": "Lide com expressões idiomáticas de forma apropriada"
+      "description": "Trate expressões idiomáticas de forma apropriada"
     },
     "terminology": {
       "title": "Terminologia",
@@ -395,7 +395,7 @@
         "latest_features": "Acesso antecipado às últimas funcionalidades",
         "priority_support": "Suporte prioritário",
         "priority_queues": "Filas de tradução prioritárias",
-        "languages": "Idiomas ilimitados",
+        "languages": "A partir de 8 idiomas",
         "keys_limit": "A partir de 10.000 chaves",
         "docs_limit": "A partir de 50 documentos"
       }
@@ -461,8 +461,8 @@
   "cli": {
     "success": {
       "title": "Sucesso no Login do Languine CLI",
-      "description": "Languine CLI foi autenticado com sucesso como:",
-      "description_2": "Você pode agora fechar esta aba e voltar ao CLI"
+      "description": "O Languine CLI foi autenticado com sucesso como:",
+      "description_2": "Você pode agora fechar esta aba e retornar ao CLI"
     }
   },
   "search": {
@@ -551,19 +551,19 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "O que é Languine?",
-      "answer": "Languine é uma plataforma de localização alimentada por IA que ajuda a automatizar a tradução de suas aplicações. Ela oferece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
+      "answer": "Languine é uma plataforma de localização impulsionada por IA que ajuda a automatizar a tradução de suas aplicações. Ela oferece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
-      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma-alvo. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
+      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma alvo. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
     },
     "supported_languages": {
       "question": "Quais idiomas são suportados?",
-      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Embora nossas traduções alimentadas por IA funcionem melhor com idiomas principais, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas particulares, entre em contato com nossa equipe de suporte."
+      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Embora nossas traduções impulsionadas por IA funcionem melhor com idiomas principais, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas particulares, entre em contato com nossa equipe de suporte."
     },
     "github_action": {
       "question": "Como funciona a integração do GitHub Action?",
-      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
+      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline de CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
     },
     "support": {
       "question": "Que tipo de suporte vocês oferecem?",
@@ -575,10 +575,10 @@
     },
     "open_source_pricing": {
       "question": "Vocês oferecem preços especiais para projetos open source?",
-      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é a nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
+      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é a nossa forma de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {
-      "question": "Como faço para cancelar minha assinatura?",
+      "question": "Como cancelo minha assinatura?",
       "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Cobrança > Mudar Plano. Sua assinatura permanecerá ativa até o final do seu período de cobrança atual, após o qual você será movido para o plano Gratuito."
     }
   },
@@ -588,7 +588,8 @@
     "documents": "Documentos traduzidos",
     "period": "mês",
     "keys_suffix": " chaves",
-    "docs_suffix": " docs"
+    "docs_suffix": " docs",
+    "languages": "Idiomas"
   },
   "docs": {
     "getting-started": "Introdução",
@@ -598,11 +599,11 @@
     "formats": "Formatos",
     "platform": "Plataforma",
     "introduction": "Introdução",
-    "quickstart": "Início Rápido",
+    "quickstart": "Introdução Rápida",
     "authentication": "Autenticação",
     "configuration": "Configuração",
     "cli": "CLI",
-    "github-actions": "GitHub Actions",
+    "github-actions": "Ações do GitHub",
     "tuning": "Ajustes",
     "settings": "Configurações",
     "hooks": "Ganchos",

@@ -27,15 +27,15 @@
     }
   },
   "companies": {
-    "title": "Utilizat de",
+    "title": "Folosite de",
     "addYourCompany": "+ Adăugați compania dvs."
   },
   "activity": {
     "title": "Activitate",
     "loading": "Se încarcă",
-    "noResults": "Niciun rezultat pentru '{search}'",
+    "noResults": "Nu există rezultate pentru '{search}'",
     "clearSearch": "Ștergeți căutarea",
-    "loadMore": "Arată mai mult",
+    "loadMore": "Arată mai multe",
     "type": {
       "key": "Cheie",
       "document": "Document"
@@ -44,9 +44,9 @@
   "features": {
     "title": "Funcționalități",
     "fullyOpenSource": "Complet open source",
-    "fullyOpenSourceDescription": "Codul nostru este disponibil public pe GitHub, permițând transparența și contribuțiile comunității.",
+    "fullyOpenSourceDescription": "Codul nostru este disponibil public pe GitHub, permițând transparență și contribuții din partea comunității.",
     "noVendorLockIn": "Fără blocare a furnizorului",
-    "noVendorLockInDescription": "Nu vă legăm de un serviciu specific, folosiți propriile LLM-uri.",
+    "noVendorLockInDescription": "Nu vă blocăm într-un serviciu specific, folosiți propriile LLM-uri.",
     "presetsForExpo": "Presetări pentru Expo",
     "presetsForExpoDescription": "Oferim presetări pentru Expo, astfel încât să puteți începe rapid.",
     "presetForReactNative": "Presetare pentru React Native",
@@ -54,7 +54,7 @@
     "presetForReactEmail": "Biblioteca React Email",
     "presetForReactEmailDescription": "Am creat o bibliotecă i18n pentru React Email.",
     "readyForI18nLibraries": "Pregătit pentru biblioteci i18n",
-    "readyForI18nLibrariesDescription": "Susținem toate bibliotecile, inclusiv cele mai populare (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Susținem toate bibliotecile, inclusiv cele mai populare (next-intl, react-i18next, react-intl etc.)."
   },
   "info": {
     "title": "Gestionează fiecare aspect al localizării aplicației tale, inclusiv",
@@ -89,7 +89,7 @@
     "footer": "Automatizați localizarea dvs.",
     "description": "Conectați-vă pentru a începe automatizarea localizării în câteva secunde.",
     "terms": {
-      "text": "Prin conectare, acceptați",
+      "text": "Prin conectare, sunteți de acord cu",
       "termsOfService": "Termenii de serviciu",
       "and": "și",
       "privacyPolicy": "Politica de confidențialitate"
@@ -139,9 +139,9 @@
       "description": "Cheia dvs. personală API pentru accesarea API-ului Languine și din CLI."
     },
     "deleteAccount": {
-      "title": "Șterge contul",
+      "title": "Ștergeți contul",
       "description": "Ștergeți permanent contul dvs. și toate datele asociate. Această acțiune nu poate fi anulată.",
-      "button": "Șterge contul"
+      "button": "Ștergeți contul"
     }
   },
   "copyInstall": {
@@ -149,7 +149,7 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Ești absolut sigur?",
+      "title": "Sunteți absolut sigur?",
       "description": "Această acțiune nu poate fi anulată. Vă rugăm să tastați DELETE pentru a confirma.",
       "placeholder": "Scrieți DELETE pentru a confirma",
       "confirm": "Confirmați ștergerea",
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Flux de lucru (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Motorul nostru de traducere se integrează perfect în fluxul dvs. de lucru CI/CD existent, traducând automat codul dvs. la fiecare push. Când modificările de cod sunt trimise, analizăm conținutul modificat, menținem memoria de traducere și generăm traduceri precise, păstrând vocea și terminologia brandului dvs. Traducrea este apoi trimisă ca cereri de pull, permițând revizuirea înainte de a fi fuzionată în ramura principală și desfășurată. Acest flux de lucru automatizat asigură că conținutul localizat rămâne sincronizat cu dezvoltarea."
+    "description": "Motorul nostru de traducere se integrează perfect în fluxul dumneavoastră CI/CD existent, traducând automat codul la fiecare push. Când modificările de cod sunt trimise, analizăm conținutul modificat, menținem memoria de traducere și generăm traduceri precise, păstrând vocea și terminologia brandului dumneavoastră. Traducrea este apoi trimisă ca cerere de pull, permițând revizuirea înainte de a fi fuzionată în ramura principală și desfășurată. Acest flux de lucru automatizat asigură că conținutul localizat rămâne sincronizat cu dezvoltarea."
   },
   "settings": {
     "badRequest": "Cerere invalidă",
@@ -167,15 +167,15 @@
     "permissionDenied": "Permisiune refuzată",
     "permissionDeniedDescription": "Trebuie să fiți proprietar al echipei pentru a efectua această acțiune",
     "deleteTeamTitle": "Șterge echipa",
-    "deleteTeamDescription": "Nu se poate șterge organizația când sunteți singurul membru, în schimb, ștergeți contul dvs.",
-    "saved": "Setări salvate",
-    "savedDescription": "Modificările dvs. au fost salvate cu succes",
+    "deleteTeamDescription": "Nu se poate șterge organizația când sunteți singurul membru, în schimb, ștergeți contul dumneavoastră",
+    "saved": "Setările au fost salvate",
+    "savedDescription": "Modificările dumneavoastră au fost salvate cu succes",
     "error": "Ceva a mers prost",
     "errorDescription": "Vă rugăm să încercați din nou sau să contactați suportul",
     "addTeam": "Creează echipă",
     "apiKey": {
-      "updated": "Cheia API actualizată",
-      "updatedDescription": "Cheia dvs. API a fost actualizată cu succes și copiată în clipboard.",
+      "updated": "Cheia API a fost actualizată",
+      "updatedDescription": "Cheia dumneavoastră API a fost actualizată cu succes și copiată în clipboard.",
       "title": "Actualizează cheia API",
       "description": "Sunteți sigur că doriți să generați o nouă cheie API? Cheia veche va înceta să funcționeze imediat.",
       "cancel": "Anulează",
@@ -191,13 +191,13 @@
     "addProject": "Creează proiect",
     "project": {
       "name": {
-        "title": "Numele Proiectului",
-        "description": "Numele proiectului dvs.",
+        "title": "Numele proiectului",
+        "description": "Numele proiectului dumneavoastră",
         "placeholder": "Introduceți numele proiectului"
       },
       "id": {
         "title": "ID Proiect",
-        "description": "Identificatorul dvs. unic al proiectului",
+        "description": "Identificatorul dumneavoastră unic de proiect",
         "placeholder": "ID Proiect"
       },
       "delete": {
@@ -209,27 +209,27 @@
     "save": "Salvează",
     "team": {
       "name": {
-        "title": "Numele Echipei",
-        "description": "Numele echipei dvs.",
+        "title": "Numele echipei",
+        "description": "Numele echipei dumneavoastră",
         "placeholder": "Introduceți numele echipei"
       },
       "billing": {
-        "title": "Plan de Facturare",
-        "description": "Gestionați planul de facturare al echipei dvs.",
+        "title": "Plan de facturare",
+        "description": "Gestionați planul de facturare al echipei dumneavoastră",
         "free": "Gratuit",
         "pro": "Pro",
         "unlimited": "Nelimitat"
       },
       "apiKey": {
-        "title": "Cheia API a Echipei",
-        "description": "Cheia API pentru accesul echipei, folosiți aceasta din fluxul dvs. CI/CD împreună cu ID-ul Proiectului",
-        "placeholder": "Cheia API a Echipei"
+        "title": "Cheia API a echipei",
+        "description": "Cheia API pentru accesul echipei, folosiți aceasta din fluxul dumneavoastră CI/CD împreună cu ID-ul Proiectului",
+        "placeholder": "Cheia API a echipei"
       },
       "members": {
-        "leaveTeamConfirm": "Părăsiți echipa",
+        "leaveTeamConfirm": "Părăsește echipa",
         "leaveTeamDescription": "Sunteți sigur că doriți să părăsiți această echipă?",
         "cancel": "Anulează",
-        "leaveTeam": "Părăsiți echipa",
+        "leaveTeam": "Părăsește echipa",
         "invite": "Invită membru",
         "title": "Membri",
         "pendingInvitations": "Invitații în așteptare",
@@ -237,10 +237,10 @@
         "removeMemberConfirm": "Elimină membru",
         "removeMemberDescription": "Sunteți sigur că doriți să eliminați acest membru?",
         "filterPlaceholder": "Filtrați membrii...",
-        "allRoles": "Toate Rolurile",
+        "allRoles": "Toate rolurile",
         "date": "Data",
         "selectAll": "{count} selectați",
-        "noPendingInvitations": "Nu sunt invitații în așteptare",
+        "noPendingInvitations": "Nu există invitații în așteptare",
         "noResults": "Nu au fost găsiți membri",
         "tryDifferentSearch": "Încercați o căutare diferită",
         "inviteMembers": "Invitați membri să colaboreze",
@@ -248,18 +248,18 @@
         "deleteInviteDescription": "Ștergeți invitația",
         "invitedBy": "Invitat de {name}",
         "deleteInviteSuccess": "Invitația a fost ștearsă",
-        "deleteInviteError": "Nu s-a reușit ștergerea invitației",
+        "deleteInviteError": "Ștergerea invitației a eșuat",
         "removeMemberSuccess": "Membru eliminat",
-        "removeMemberError": "Nu s-a reușit eliminarea membrului",
+        "removeMemberError": "Eliminarea membrului a eșuat",
         "removeMemberSuccessDescription": "Membrul a fost eliminat cu succes",
-        "removeMemberErrorDescription": "Nu s-a reușit eliminarea membrului",
+        "removeMemberErrorDescription": "Eliminarea membrului a eșuat",
         "roles": {
           "owner": "Proprietar",
           "member": "Membru"
         },
         "dateSort": {
-          "newest": "Cea mai recentă",
-          "oldest": "Cea mai veche"
+          "newest": "Cele mai recente",
+          "oldest": "Cele mai vechi"
         },
         "deleteInviteConfirm": "Șterge invitația"
       }
@@ -268,20 +268,20 @@
   "tuning": {
     "general": "General",
     "translationMemory": {
-      "title": "Memorie de Traducere",
+      "title": "Memorie de traducere",
       "description": "Utilizați memoria de traducere pentru a îmbunătăți consistența și eficiența"
     },
     "qualityChecks": {
-      "title": "Verificări de Calitate",
+      "title": "Verificări de calitate",
       "description": "Activați verificările automate de calitate pentru traduceri"
     },
     "contextDetection": {
-      "title": "Detectarea Contextului",
+      "title": "Detectarea contextului",
       "description": "Detectați și păstrați automat contextul în traduceri"
     },
-    "styleGuide": "Ghid de Stil",
+    "styleGuide": "Ghid de stil",
     "lengthControl": {
-      "title": "Controlul Lungimii",
+      "title": "Controlul lungimii",
       "description": "Controlați lungimea textului tradus",
       "options": {
         "flexible": "Flexibil",
@@ -291,14 +291,14 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "Limbaj Inclusiv",
+      "title": "Limbaj inclusiv",
       "description": "Asigurați-vă că traducerile folosesc limbaj inclusiv"
     },
     "formality": {
       "title": "Formalitate",
       "description": "Controlați nivelul de formalitate al traducerilor",
       "options": {
-        "casual": "Casual",
+        "casual": "Informal",
         "formal": "Formal",
         "neutral": "Neutral"
       }
@@ -315,9 +315,9 @@
     },
     "toneOfVoice": {
       "title": "Tonul Vocii",
-      "description": "Definiți tonul utilizat în traduceri",
+      "description": "Definiți tonul folosit în traduceri",
       "options": {
-        "casual": "Casual",
+        "casual": "Informal",
         "formal": "Formal",
         "friendly": "Prietenos",
         "professional": "Profesional",
@@ -381,7 +381,7 @@
         "overrides": "Suprascrierea traducerii",
         "analytics": "Analitice",
         "context_memory": "Memorie de context",
-        "community_support": "Suport comunitar",
+        "community_support": "Asistență comunitară",
         "keys_limit": "Până la 100 de chei",
         "docs_limit": "Până la 5 documente",
         "languages": "2 limbi"
@@ -393,25 +393,25 @@
       "features": {
         "github_action": "Integrarea GitHub Action",
         "latest_features": "Acces anticipat la cele mai recente caracteristici",
-        "priority_support": "Suport prioritar",
+        "priority_support": "Asistență prioritară",
         "priority_queues": "Cozi de traducere prioritare",
-        "languages": "Limbi nelimitate",
+        "languages": "Începând de la 8 limbi",
         "keys_limit": "Începând de la 10 000 de chei",
         "docs_limit": "Începând de la 50 de documente"
       }
     },
     "cta": "Începeți automatizarea",
-    "keys_limit_explanation": "Cheie tradusă: Dacă aveți 20 de chei sursă (cum ar fi \"Înscrieți-vă\" sau \"Bun venit!\") și le traduceți în 5 limbi, aceasta este echivalentul a 100 de chei traduse (20 de chei x 5 limbi)."
+    "keys_limit_explanation": "Cheie tradusă: Dacă aveți 20 de chei sursă (cum ar fi \"Înscrieți-vă\" sau \"Bine ați venit!\") și le traduceți în 5 limbi, aceasta înseamnă 100 de chei traduse (20 de chei x 5 limbi)."
   },
   "createTeam": {
     "teamName": "Numele Echipei",
     "teamNamePlaceholder": "Introduceți numele echipei",
     "createTeamButton": "Creează echipă",
     "cancel": "Anulează",
-    "createTeamDescription": "Creează o nouă echipă pentru a-ți gestiona proiectele și colaboratorii."
+    "createTeamDescription": "Creează o nouă echipă pentru a gestiona proiectele și colaboratorii tăi."
   },
   "createProject": {
-    "createProjectTitle": "Creează un nou proiect",
+    "createProjectTitle": "Creează un proiect nou",
     "projectNamePlaceholder": "Introduceți numele proiectului",
     "createProjectButton": "Creează proiect",
     "cancel": "Anulează",
@@ -443,17 +443,17 @@
         "description": "Instalați și configurați Languine CLI pentru a gestiona traducerile"
       },
       "2": {
-        "title": "Trimiteți Traduceri",
+        "title": "Trimiteți Traducre",
         "description": "Așteptând ca traducerile să fie trimise"
       },
       "3": {
         "title": "Documentație",
-        "description": "Verificați documentația noastră pentru ghiduri detaliate și cele mai bune practici",
+        "description": "Consultați documentația noastră pentru ghiduri detaliate și cele mai bune practici",
         "link": "documentație"
       }
     },
     "info": {
-      "description": "Aveți nevoie de ajutor? Verificați",
+      "description": "Aveți nevoie de ajutor? Consultați",
       "link": "documentația",
       "description_2": "pentru ghiduri detaliate și cele mai bune practici."
     }
@@ -488,7 +488,7 @@
     "nl": "Olandeză",
     "pl": "Poloneză",
     "no": "Norvegiană",
-    "da": "Dană",
+    "da": "Daneză",
     "sv": "Suedeză",
     "fi": "Finlandeză",
     "vi": "Vietnameză",
@@ -503,14 +503,14 @@
     "hu": "Maghiară",
     "id": "Indoneziană",
     "iw": "Ebraică",
-    "km": "Khmer",
-    "lv": "Lituaniană",
+    "km": "Khmeră",
+    "lv": "Letonă",
     "pt-BR": "Portugheză (Brazilia)",
     "ro": "Română",
     "ru": "Rusă",
     "sk-SK": "Slovacă (Slovacia)",
     "sk": "Slovacă",
-    "sr": "Sârbo",
+    "sr": "Sârbească",
     "ta": "Tamilă",
     "th": "Thailandeză",
     "uk": "Ucrainiană",
@@ -551,7 +551,7 @@
     "title": "Întrebări frecvente",
     "what_is_languine": {
       "question": "Ce este Languine?",
-      "answer": "Languine este o platformă de localizare alimentată de AI care te ajută să automatizezi traducerea aplicațiilor tale. Oferă caracteristici precum opțiuni de ajustare fină, suprascrierea traducerilor, analize și memorie de context pentru a asigura traduceri de înaltă calitate."
+      "answer": "Languine este o platformă de localizare alimentată de AI care te ajută să automatizezi traducerea aplicațiilor tale. Oferă funcții precum opțiuni de ajustare fină, suprascrierea traducerilor, analize și memorie de context pentru a asigura traduceri de înaltă calitate."
     },
     "key_limit": {
       "question": "Cum funcționează limita de chei?",
@@ -567,7 +567,7 @@
     },
     "support": {
       "question": "Ce fel de suport oferiți?",
-      "answer": "Utilizatorii gratuiti au acces la suport comunitar, în timp ce utilizatorii Pro primesc suport prioritar cu timpi de răspuns mai rapizi și asistență dedicată pentru nevoile lor de traducere."
+      "answer": "Utilizatorii gratuiti au acces la suportul comunității, în timp ce utilizatorii Pro primesc suport prioritar cu timpi de răspuns mai rapizi și asistență dedicată pentru nevoile lor de traducere."
     },
     "open_source": {
       "question": "Este Languine open source?",
@@ -588,10 +588,11 @@
     "documents": "Documente traduse",
     "period": "lună",
     "keys_suffix": " chei",
-    "docs_suffix": " documente"
+    "docs_suffix": " documente",
+    "languages": "Limbi"
   },
   "docs": {
-    "getting-started": "Început",
+    "getting-started": "Începuturi",
     "workflow": "Flux de lucru",
     "ci": "CI/CD",
     "presets": "Presetări",
@@ -602,7 +603,7 @@
     "authentication": "Autentificare",
     "configuration": "Configurare",
     "cli": "CLI",
-    "github-actions": "GitHub Actions",
+    "github-actions": "Acțiuni GitHub",
     "tuning": "Ajustare",
     "settings": "Setări",
     "hooks": "Hooks",
