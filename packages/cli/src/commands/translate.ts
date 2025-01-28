@@ -132,7 +132,11 @@ export async function translateCommand(args: string[] = []) {
             // Otherwise use normal diff detection
             try {
               const changes = await getDiff({ sourceFilePath, type });
-              keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
+              // Include both new keys and changed values
+              keysToTranslate = [
+                ...changes.addedKeys,
+                ...changes.valueChanges.map((change) => change.key),
+              ];
             } catch (error) {
               console.log();
               note(

@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
-import { relative, resolve } from "node:path";
+import { existsSync } from "node:fs";
+import { dirname, join, relative, resolve } from "node:path";
 import { createParser } from "@/parsers/index.ts";
 import { simpleGit } from "simple-git";
 
@@ -7,11 +8,19 @@ interface DiffResult {
   addedKeys: string[];
   removedKeys: string[];
   changedKeys: string[];
+  valueChanges: Array<{
+    key: string;
+    oldValue: string;
+    newValue: string;
+  }>;
 }
 
 /**
  * Detects changes between the current state and HEAD.
- * Returns an object containing arrays of added, removed and changed keys.
+ * For untracked files, treats all keys as additions.
+ * Also detects when source values change without key changes.
+ * Returns an object containing arrays of added, removed and changed keys,
+ * plus details about value changes.
  */
 export async function getDiff({
   sourceFilePath,
@@ -20,11 +29,9 @@ export async function getDiff({
   sourceFilePath: string;
   type: string;
 }): Promise<DiffResult> {
-  const git = simpleGit();
+  // Initialize git in the directory containing the source file
+  const git = simpleGit(dirname(sourceFilePath));
   const parser = createParser({ type });
-
-  // Get relative path from current working directory
-  const relativePath = relative(process.cwd(), resolve(sourceFilePath));
 
   // Parse current file content
   const currentContent = readFileSync(sourceFilePath, "utf-8");
@@ -32,7 +39,26 @@ export async function getDiff({
   const currentKeys = Object.keys(currentJson).sort();
 
   try {
+    // Check if file is tracked by git
+    const isTracked = await git.raw(["ls-files", sourceFilePath]);
+
+    // If file is not tracked, treat all keys as additions
+    if (!isTracked) {
+      return {
+        addedKeys: currentKeys,
+        removedKeys: [],
+        changedKeys: [],
+        valueChanges: currentKeys.map((key) => ({
+          key,
+          oldValue: "",
+          newValue: currentJson[key],
+        })),
+      };
+    }
+
     // Get and parse previous version from git HEAD
+    // Use relative path from git root
+    const relativePath = relative(dirname(sourceFilePath), sourceFilePath);
     const content = await git.show([`HEAD:./${relativePath}`]);
     const previousJson = await parser.parse(content);
     const previousKeys = Object.keys(previousJson).sort();
@@ -41,22 +67,40 @@ export async function getDiff({
     const currentKeysSet = new Set(currentKeys);
     const previousKeysSet = new Set(previousKeys);
 
+    // Track value changes for existing keys
+    const valueChanges = currentKeys
+      .filter(
+        (key) =>
+          previousKeysSet.has(key) && currentJson[key] !== previousJson[key],
+      )
+      .map((key) => ({
+        key,
+        oldValue: previousJson[key],
+        newValue: currentJson[key],
+      }));
+
     return {
       // New keys that don't exist in HEAD
       addedKeys: currentKeys.filter((key) => !previousKeysSet.has(key)),
-
       // Keys that existed in HEAD but were removed
       removedKeys: previousKeys.filter((key) => !currentKeysSet.has(key)),
-
       // Keys that exist in both but have different values
-      changedKeys: currentKeys.filter(
-        (key) =>
-          previousKeysSet.has(key) && currentJson[key] !== previousJson[key],
-      ),
+      changedKeys: valueChanges.map((change) => change.key),
+      // Detailed value changes
+      valueChanges,
     };
   } catch (error) {
-    throw new Error(
-      `Failed to detect changes: ${error instanceof Error ? error.message : String(error)}`,
-    );
+    // If we can't get the previous version (e.g., file not in git yet),
+    // treat all keys as additions
+    return {
+      addedKeys: currentKeys,
+      removedKeys: [],
+      changedKeys: [],
+      valueChanges: currentKeys.map((key) => ({
+        key,
+        oldValue: "",
+        newValue: currentJson[key],
+      })),
+    };
   }
 }

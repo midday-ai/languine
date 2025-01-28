@@ -10,7 +10,8 @@ const argsSchema = z.array(z.string()).transform((args) => {
   const localeList = locales
     .join("")
     .split(",")
-    .map((l) => l.trim());
+    .map((l) => l.trim())
+    .filter(Boolean); // Filter out empty strings
 
   return {
     command,
@@ -100,19 +101,16 @@ function updateTargetsInConfig(
   configContent: string,
   targets: string[],
 ): string {
-  if (configContent.includes("targets:")) {
-    // For TypeScript config
-    if (configContent.includes("defineConfig")) {
-      return configContent.replace(
-        /targets:\s*\[(.*?)\]/s,
-        `targets: ["${targets.join('", "')}"]`,
-      );
-    }
-    // For JSON config
+  try {
+    // Try parsing as JSON first
+    const config = JSON.parse(configContent);
+    config.locale.targets = targets;
+    return JSON.stringify(config, null, 2);
+  } catch {
+    // If not valid JSON, assume TypeScript config
     return configContent.replace(
-      /"targets"\s*:\s*\[(.*?)\]/s,
-      `"targets": ["${targets.join('", "')}"]`,
+      /targets:\s*\[(.*?)\]/s,
+      `targets: ["${targets.join('", "')}"]`,
     );
   }
-  return configContent;
 }

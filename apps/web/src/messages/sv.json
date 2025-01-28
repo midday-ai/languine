@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivitet",
     "loading": "Laddar",
-    "noResults": "Inga resultat för '{search}'",
+    "noResults": "Inga resultat för ”{search}”",
     "clearSearch": "Rensa sökning",
     "loadMore": "Visa mer",
     "type": {
