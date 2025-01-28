@@ -24,16 +24,22 @@ const auReplica = drizzle(
   { schema },
 );
 
+// Create a single replicated DB instance
+let db: ReturnType<typeof withReplicas>;
+
 export const connectDb = async () => {
+  if (db) return db;
+
   const headerList = await headers();
   const region = headerList.get("x-vercel-ip-country") || "EU";
 
-  return withReplicas(
+  db = withReplicas(
     primaryDb,
     [usReplica, euReplica, auReplica],
     (replicas) => {
       // Use US DB for North/South America
       const americasRegions = ["US", "CA", "MX", "BR", "AR", "CO", "PE", "CL"];
+
       if (americasRegions.includes(region)) {
         return replicas[0]!;
       }
@@ -51,6 +57,7 @@ export const connectDb = async () => {
         "VN",
         "PH",
       ];
+
       if (oceaniaRegions.includes(region)) {
         return replicas[2]!;
       }
@@ -59,4 +66,6 @@ export const connectDb = async () => {
       return replicas[1]!;
     },
   );
+
+  return db;
 };

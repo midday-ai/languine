@@ -103,7 +103,7 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
           external: true,
         },
         {
-          href: "https://github.com/midday-ai/languine/tree/main/examples/email",
+          href: "https://github.com/midday-ai/languine/tree/main/examples/react-email",
           label: "React Email",
           external: true,
         },

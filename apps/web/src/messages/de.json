@@ -28,11 +28,11 @@
   },
   "companies": {
     "title": "Verwendet von",
-    "addYourCompany": "+ Fügen Sie Ihr Unternehmen hinzu"
+    "addYourCompany": "+ Ihr Unternehmen hinzufügen"
   },
   "activity": {
     "title": "Aktivität",
-    "loading": "Laden",
+    "loading": "Lädt",
     "noResults": "Keine Ergebnisse für '{search}'",
     "clearSearch": "Suche löschen",
     "loadMore": "Mehr anzeigen",
@@ -61,7 +61,7 @@
     "smartTranslation": {
       "title": "Intelligente Übersetzung",
       "intelligentTranslation": "Intelligente Übersetzung mit Kontextbewusstsein",
-      "brandVoice": "Markenstimme und Konsistenz im Ton",
+      "brandVoice": "Konsistenz von Markenstimme und -ton",
       "terminology": "Terminologiemanagement",
       "linguisticFeatures": "Erweiterte linguistische Funktionen",
       "realtimeUpdates": "Echtzeit-Übersetzungsupdates"
@@ -70,8 +70,8 @@
       "title": "Implementierung",
       "quickSetup": "Schnelle Einrichtung und Integration",
       "fileFormat": "Dateiformatverarbeitung",
-      "contentStructure": "Inhaltsstrukturorganisation",
-      "assetOrganization": "Asset-Organisation"
+      "contentStructure": "Organisation der Inhaltsstruktur",
+      "assetOrganization": "Vermögensorganisation"
     },
     "developer": {
       "title": "Entwicklererfahrung",
@@ -87,7 +87,7 @@
     "github": "Mit GitHub anmelden",
     "google": "Mit Google anmelden",
     "footer": "Automatisieren Sie Ihre Lokalisierung.",
-    "description": "Melden Sie sich an, um Ihre Lokalisierung in Sekunden zu automatisieren.",
+    "description": "Melden Sie sich an, um Ihre Lokalisierung in Sekundenschnelle zu automatisieren.",
     "terms": {
       "text": "Durch die Anmeldung stimmen Sie unseren",
       "termsOfService": "Nutzungsbedingungen",
@@ -103,7 +103,7 @@
     "signOut": "Abmelden",
     "createTeam": "Team erstellen",
     "homepage": "Startseite",
-    "team": "Team-Einstellungen"
+    "team": "Teameinstellungen"
   },
   "teamSelector": {
     "addProject": "Projekt erstellen",
@@ -131,12 +131,12 @@
     },
     "email": {
       "title": "E-Mail-Adresse",
-      "description": "Die E-Mail-Adresse, die mit Ihrem Konto verknüpft ist.",
+      "description": "Die mit Ihrem Konto verknüpfte E-Mail-Adresse.",
       "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
     },
     "apiKey": {
       "title": "API-Schlüssel",
-      "description": "Ihr persönlicher API-Schlüssel für den Zugriff auf die Languine-API und von der CLI."
+      "description": "Ihr persönlicher API-Schlüssel für den Zugriff auf die Languine API und von der CLI."
     },
     "deleteAccount": {
       "title": "Konto löschen",
@@ -165,7 +165,7 @@
     "badRequest": "Ungültige Anfrage",
     "badRequestDescription": "Die Organisation muss mindestens einen Eigentümer haben. Übertragen Sie das Eigentum auf ein anderes Mitglied, bevor Sie diesen Eigentümer entfernen.",
     "permissionDenied": "Zugriff verweigert",
-    "permissionDeniedDescription": "Sie müssen Eigentümer des Teams sein, um diese Aktion auszuführen",
+    "permissionDeniedDescription": "Sie müssen Eigentümer des Teams sein, um diese Aktion durchzuführen",
     "deleteTeamTitle": "Team löschen",
     "deleteTeamDescription": "Kann die Organisation nicht löschen, wenn Sie das einzige Mitglied sind. Löschen Sie stattdessen Ihr Konto.",
     "saved": "Einstellungen gespeichert",
@@ -175,7 +175,7 @@
     "addTeam": "Team erstellen",
     "apiKey": {
       "updated": "API-Schlüssel aktualisiert",
-      "updatedDescription": "Ihr API-Schlüssel wurde erfolgreich aktualisiert und in die Zwischenablage kopiert.",
+      "updatedDescription": "Ihr API-Schlüssel wurde erfolgreich aktualisiert und in Ihre Zwischenablage kopiert.",
       "title": "API-Schlüssel aktualisieren",
       "description": "Sind Sie sicher, dass Sie einen neuen API-Schlüssel generieren möchten? Der alte Schlüssel wird sofort nicht mehr funktionieren.",
       "cancel": "Abbrechen",
@@ -197,7 +197,7 @@
       },
       "id": {
         "title": "Projekt-ID",
-        "description": "Ihr eindeutiger Projektidentifikator",
+        "description": "Ihr eindeutiger Projektbezeichner",
         "placeholder": "Projekt-ID"
       },
       "delete": {
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Team-API-Schlüssel",
-        "description": "API-Schlüssel für den Teamzugang, verwenden Sie diesen zusammen mit der Projekt-ID in Ihrer CI/CD-Pipeline",
+        "description": "API-Schlüssel für den Teamzugriff, verwenden Sie diesen in Ihrer CI/CD-Pipeline zusammen mit der Projekt-ID",
         "placeholder": "Team-API-Schlüssel"
       },
       "members": {
@@ -287,7 +287,7 @@
         "flexible": "Flexibel",
         "strict": "Streng",
         "exact": "Genau",
-        "loose": "Locker"
+        "loose": "Lässig"
       }
     },
     "inclusiveLanguage": {
@@ -310,7 +310,7 @@
     },
     "brandVoice": {
       "title": "Markenstimme",
-      "description": "Definieren Sie Ihre Markenstimme und den Ton",
+      "description": "Definieren Sie Ihre Markenstimme und -ton",
       "placeholder": "Beschreiben Sie Ihre Markenstimme..."
     },
     "toneOfVoice": {
@@ -332,7 +332,7 @@
     "brand": "Marke",
     "emotiveIntent": {
       "title": "Emotionale Absicht",
-      "description": "Legen Sie den emotionalen Ton für Übersetzungen fest",
+      "description": "Setzen Sie den emotionalen Ton für Übersetzungen",
       "options": {
         "neutral": "Neutral",
         "positive": "Positiv",
@@ -395,13 +395,13 @@
         "latest_features": "Früher Zugang zu den neuesten Funktionen",
         "priority_support": "Prioritätsunterstützung",
         "priority_queues": "Prioritätsübersetzungswarteschlangen",
-        "languages": "Unbegrenzte Sprachen",
+        "languages": "Ab 8 Sprachen",
         "keys_limit": "Ab 10.000 Schlüsseln",
         "docs_limit": "Ab 50 Dokumenten"
       }
     },
     "cta": "Automatisierung starten",
-    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie \"Registrieren\" oder \"Willkommen!\") haben und diese in 5 Sprachen übersetzen, entspricht das 100 übersetzten Schlüsseln (20 Schlüssel x 5 Sprachen)."
+    "keys_limit_explanation": "Übersetzter Schlüssel: Wenn Sie 20 Quellschlüssel (wie \"Anmelden\" oder \"Willkommen!\") haben und diese in 5 Sprachen übersetzen, ergibt das 100 übersetzte Schlüssel (20 Schlüssel x 5 Sprachen)."
   },
   "createTeam": {
     "teamName": "Teamname",
@@ -411,7 +411,7 @@
     "createTeamDescription": "Erstellen Sie ein neues Team, um Ihre Projekte und Mitarbeiter zu verwalten."
   },
   "createProject": {
-    "createProjectTitle": "Ein neues Projekt erstellen",
+    "createProjectTitle": "Neues Projekt erstellen",
     "projectNamePlaceholder": "Geben Sie den Projektnamen ein",
     "createProjectButton": "Projekt erstellen",
     "cancel": "Abbrechen",
@@ -448,14 +448,14 @@
       },
       "3": {
         "title": "Dokumentation",
-        "description": "Sehen Sie sich unsere Dokumentation für detaillierte Anleitungen und Best Practices an",
+        "description": "Schauen Sie sich unsere Dokumentation für detaillierte Anleitungen und bewährte Verfahren an",
         "link": "Dokumentation"
       }
     },
     "info": {
-      "description": "Brauchen Sie Hilfe? Sehen Sie sich unsere",
+      "description": "Brauchen Sie Hilfe? Schauen Sie sich unsere",
       "link": "Dokumentation",
-      "description_2": "für detaillierte Anleitungen und bewährte Verfahren."
+      "description_2": "für detaillierte Anleitungen und bewährte Praktiken."
     }
   },
   "cli": {
@@ -512,7 +512,7 @@
     "sk": "Slowakisch",
     "sr": "Serbisch",
     "ta": "Tamil",
-    "th": "Thailändisch",
+    "th": "Thai",
     "uk": "Ukrainisch",
     "zh-CN": "Chinesisch (Vereinfacht)",
     "zh-TW": "Chinesisch (Traditionell)"
@@ -548,7 +548,7 @@
     }
   },
   "faq": {
-    "title": "Häufige Fragen",
+    "title": "Häufig gestellte Fragen",
     "what_is_languine": {
       "question": "Was ist Languine?",
       "answer": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextspeicher, um qualitativ hochwertige Übersetzungen sicherzustellen."
@@ -563,7 +563,7 @@
     },
     "github_action": {
       "question": "Wie funktioniert die GitHub Action-Integration?",
-      "answer": "Die GitHub Action-Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungsworkflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen an Ihrem Repository pushen, können Übersetzungen automatisch aktualisiert werden."
+      "answer": "Die GitHub Action-Integration (verfügbar in Pro-Plänen) ermöglicht es Ihnen, Ihren Übersetzungsworkflow direkt in Ihrer CI/CD-Pipeline zu automatisieren. Wenn Sie Änderungen an Ihrem Repository vornehmen, können Übersetzungen automatisch aktualisiert werden."
     },
     "support": {
       "question": "Welche Art von Unterstützung bieten Sie an?",
@@ -575,10 +575,10 @@
     },
     "open_source_pricing": {
       "question": "Bieten Sie spezielle Preise für Open Source-Projekte an?",
-      "answer": "Ja! Wir unterstützen gerne die Open Source-Community. Wenn Sie ein Open Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30% Rabatt erhalten. Wenden Sie sich einfach mit Details zu Ihrem Projekt an unser Team, und wir richten Ihnen ein rabattiertes Pro-Konto ein. Dies ist unsere Art, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
+      "answer": "Ja! Wir unterstützen die Open Source-Community gerne. Wenn Sie ein Open Source-Projekt betreuen, können Sie Zugang zu unseren Pro-Funktionen mit 30 % Rabatt erhalten. Wenden Sie sich einfach mit Details zu Ihrem Projekt an unser Team, und wir richten Ihnen ein rabattiertes Pro-Konto ein. Dies ist unser Weg, der Community etwas zurückzugeben, die unsere Arbeit möglich macht."
     },
     "cancel_subscription": {
-      "question": "Wie kündige ich mein Abonnement?",
+      "question": "Wie kann ich mein Abonnement kündigen?",
       "answer": "Sie können Ihr Abonnement jederzeit in Ihren Kontoeinstellungen kündigen. Navigieren Sie zu Abrechnung > Plan ändern. Ihr Abonnement bleibt bis zum Ende Ihres aktuellen Abrechnungszeitraums aktiv, danach werden Sie auf den kostenlosen Plan umgestellt."
     }
   },
@@ -588,7 +588,8 @@
     "documents": "Übersetzte Dokumente",
     "period": "Monat",
     "keys_suffix": " Schlüssel",
-    "docs_suffix": " Dokumente"
+    "docs_suffix": " Dokumente",
+    "languages": "Sprachen"
   },
   "docs": {
     "getting-started": "Erste Schritte",
@@ -602,7 +603,7 @@
     "authentication": "Authentifizierung",
     "configuration": "Konfiguration",
     "cli": "CLI",
-    "github-actions": "GitHub Actions",
+    "github-actions": "GitHub-Aktionen",
     "tuning": "Feinabstimmung",
     "settings": "Einstellungen",
     "hooks": "Hooks",

@@ -6,7 +6,7 @@ import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
 import { trpc } from "@/trpc/client";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { parseAsInteger } from "nuqs";
 import { useQueryState } from "nuqs";
 import { useEffect } from "react";
@@ -15,23 +15,25 @@ export default function Step2() {
   const [step, setStep] = useQueryState("step", parseAsInteger.withDefault(1));
   const t = useTranslations("onboarding");
   const { organization, project } = useParams();
+  const router = useRouter();
 
-  const utils = trpc.useUtils();
+  const { data, isRefetching } = trpc.analytics.getProjectStats.useQuery(
+    {
+      projectSlug: project as string,
+      organizationId: organization as string,
+      period: "daily",
+    },
+    {
+      enabled: !!organization && !!project,
+      refetchInterval: 5000,
+    },
+  );
 
   useEffect(() => {
-    if (!organization || !project) return;
-
-    const interval = setInterval(() => {
-      console.log("invalidating");
-      utils.analytics.getProjectStats.invalidate({
-        projectSlug: project as string,
-        organizationId: organization as string,
-        period: "daily",
-      });
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [organization, project]);
+    if (data && data.totalKeys > 0) {
+      router.refresh();
+    }
+  }, [data, isRefetching]);
 
   return (
     <Card

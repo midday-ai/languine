@@ -1,7 +1,7 @@
 {
   "header": {
     "pricing": "Prezzi",
-    "docs": "Documentazione",
+    "docs": "Documenti",
     "signIn": "Accedi",
     "goToApp": "Vai all'app"
   },
@@ -10,8 +10,8 @@
     "description": "Traduci il contenuto della tua app direttamente nel tuo flusso di lavoro di sviluppo. La nostra CLI si integra con GitHub Actions e altri strumenti CI/CD per automatizzare le traduzioni mentre codifichi."
   },
   "navigation": {
-    "dashboard": "Dashboard",
-    "tuning": "Ottimizzazione",
+    "dashboard": "Cruscotto",
+    "tuning": "Regolazione",
     "settings": "Impostazioni",
     "pricing": "Prezzi",
     "docs": "Documentazione",
@@ -27,7 +27,7 @@
     }
   },
   "companies": {
-    "title": "Usato da",
+    "title": "Utilizzato da",
     "addYourCompany": "+ Aggiungi la tua azienda"
   },
   "activity": {
@@ -45,12 +45,12 @@
     "title": "Caratteristiche",
     "fullyOpenSource": "Completamente open source",
     "fullyOpenSourceDescription": "Il nostro codice è disponibile pubblicamente su GitHub, garantendo trasparenza e contributi della comunità.",
-    "noVendorLockIn": "Nessun vincolo del fornitore",
-    "noVendorLockInDescription": "Non ti vincoliamo a un servizio specifico, usa i tuoi LLM.",
-    "presetsForExpo": "Preset per Expo",
-    "presetsForExpoDescription": "Forniamo preset per Expo, così puoi iniziare rapidamente.",
-    "presetForReactNative": "Preset per React Native",
-    "presetForReactNativeDescription": "Forniamo un preset per React Native, così puoi iniziare rapidamente.",
+    "noVendorLockIn": "Nessun blocco del fornitore",
+    "noVendorLockInDescription": "Non ti vincoliamo a un servizio specifico, utilizza i tuoi LLM.",
+    "presetsForExpo": "Impostazioni predefinite per Expo",
+    "presetsForExpoDescription": "Forniamo impostazioni predefinite per Expo, così puoi iniziare rapidamente.",
+    "presetForReactNative": "Impostazione predefinita per React Native",
+    "presetForReactNativeDescription": "Forniamo un'impostazione predefinita per React Native, così puoi iniziare rapidamente.",
     "presetForReactEmail": "Libreria React Email",
     "presetForReactEmailDescription": "Abbiamo creato una libreria i18n per React Email.",
     "readyForI18nLibraries": "Pronto per le librerie i18n",
@@ -63,12 +63,12 @@
       "intelligentTranslation": "Traduzione intelligente con consapevolezza del contesto",
       "brandVoice": "Coerenza della voce e del tono del marchio",
       "terminology": "Gestione della terminologia",
-      "linguisticFeatures": "Funzionalità linguistiche avanzate",
+      "linguisticFeatures": "Caratteristiche linguistiche avanzate",
       "realtimeUpdates": "Aggiornamenti di traduzione in tempo reale"
     },
     "implementation": {
       "title": "Implementazione",
-      "quickSetup": "Configurazione e integrazione rapida",
+      "quickSetup": "Impostazione e integrazione rapide",
       "fileFormat": "Gestione dei formati di file",
       "contentStructure": "Organizzazione della struttura dei contenuti",
       "assetOrganization": "Organizzazione delle risorse"
@@ -159,7 +159,7 @@
   "pipeline": {
     "title": "Workflow (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono apportate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce e la terminologia del tuo marchio. Le traduzioni vengono quindi inviate come richieste di pull, consentendo la revisione prima di essere unite al tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che il tuo contenuto localizzato rimanga sincronizzato con lo sviluppo."
+    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono apportate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce e la terminologia del tuo marchio. Le traduzioni vengono quindi inviate come richieste di pull, consentendo la revisione prima di essere unite al tuo ramo principale e distribuite. Questo workflow automatizzato garantisce che il tuo contenuto localizzato rimanga sincronizzato con lo sviluppo."
   },
   "settings": {
     "badRequest": "Richiesta non valida",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Chiave API del team",
-        "description": "Chiave API per l'accesso al team, usala dalla tua pipeline CI/CD insieme all'ID del progetto",
+        "description": "Chiave API per l'accesso al team, utilizzala dalla tua pipeline CI/CD insieme all'ID del progetto",
         "placeholder": "Chiave API del team"
       },
       "members": {
@@ -305,7 +305,7 @@
     },
     "brandName": {
       "title": "Nome del Brand",
-      "description": "Imposta il nome del tuo brand per un uso coerente",
+      "description": "Imposta il nome del tuo brand per un utilizzo coerente",
       "placeholder": "Inserisci il nome del tuo brand"
     },
     "brandVoice": {
@@ -365,7 +365,7 @@
     },
     "culturalAdaptation": {
       "title": "Adattamento Culturale",
-      "description": "Adatta i contenuti per la loro adeguatezza culturale"
+      "description": "Adatta i contenuti per la loro appropriatezza culturale"
     }
   },
   "pricing": {
@@ -395,7 +395,7 @@
         "latest_features": "Accesso anticipato alle ultime funzionalità",
         "priority_support": "Supporto prioritario",
         "priority_queues": "Code di traduzione prioritarie",
-        "languages": "Lingue illimitate",
+        "languages": "A partire da 8 lingue",
         "keys_limit": "A partire da 10.000 chiavi",
         "docs_limit": "A partire da 50 documenti"
       }
@@ -550,7 +550,7 @@
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
-      "question": "Cos'è Languine?",
+      "question": "Che cos'è Languine?",
       "answer": "Languine è una piattaforma di localizzazione alimentata da AI che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Offre funzionalità come opzioni di ottimizzazione, sovrascritture di traduzione, analisi e memoria contestuale per garantire traduzioni di alta qualità."
     },
     "key_limit": {
@@ -562,8 +562,8 @@
       "answer": "Languine supporta oltre 100 lingue in tutti i piani. Anche se le nostre traduzioni alimentate da AI funzionano meglio con le lingue principali, ci impegniamo a fornire traduzioni di qualità in tutte le lingue supportate. Se hai requisiti linguistici specifici o domande sulla qualità della traduzione per lingue particolari, ti preghiamo di contattare il nostro team di supporto."
     },
     "github_action": {
-      "question": "Come funziona l'integrazione di GitHub Action?",
-      "answer": "L'integrazione di GitHub Action (disponibile nei piani Pro) ti consente di automatizzare il tuo flusso di lavoro di traduzione direttamente nella tua pipeline CI/CD. Quando apporti modifiche al tuo repository, le traduzioni possono essere aggiornate automaticamente."
+      "question": "Come funziona l'integrazione con GitHub Action?",
+      "answer": "L'integrazione con GitHub Action (disponibile nei piani Pro) ti consente di automatizzare il tuo flusso di lavoro di traduzione direttamente nella tua pipeline CI/CD. Quando apporti modifiche al tuo repository, le traduzioni possono essere aggiornate automaticamente."
     },
     "support": {
       "question": "Che tipo di supporto offrite?",
@@ -578,8 +578,8 @@
       "answer": "Sì! Ci piace supportare la comunità open source. Se gestisci un progetto open source, puoi accedere alle nostre funzionalità Pro con uno sconto del 30%. Contatta il nostro team con i dettagli del tuo progetto e ti aiuteremo a ottenere un account Pro scontato. Questo è il nostro modo di restituire alla comunità che rende possibile il nostro lavoro."
     },
     "cancel_subscription": {
-      "question": "Come posso annullare il mio abbonamento?",
-      "answer": "Puoi annullare il tuo abbonamento in qualsiasi momento dalle impostazioni del tuo account. Vai su Fatturazione > Cambia piano. Il tuo abbonamento rimarrà attivo fino alla fine del tuo attuale periodo di fatturazione, dopodiché verrai spostato al piano gratuito."
+      "question": "Come posso cancellare il mio abbonamento?",
+      "answer": "Puoi cancellare il tuo abbonamento in qualsiasi momento dalle impostazioni del tuo account. Vai su Fatturazione > Cambia piano. Il tuo abbonamento rimarrà attivo fino alla fine del tuo attuale periodo di fatturazione, dopodiché verrai spostato al piano gratuito."
     }
   },
   "pricing_slider": {
@@ -588,10 +588,11 @@
     "documents": "Documenti tradotti",
     "period": "mese",
     "keys_suffix": " chiavi",
-    "docs_suffix": " documenti"
+    "docs_suffix": " documenti",
+    "languages": "Lingue"
   },
   "docs": {
-    "getting-started": "Inizio",
+    "getting-started": "Iniziare",
     "workflow": "Flusso di lavoro",
     "ci": "CI/CD",
     "presets": "Impostazioni predefinite",

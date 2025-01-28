@@ -116,14 +116,33 @@ export const organizationRouter = createTRPCRouter({
   delete: protectedProcedure
     .input(organizationSchema)
     .use(isOrganizationOwner)
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const members = await getOrganizationMembers(input.organizationId);
+      const userOrgs = await getAllOrganizationsWithProjects(
+        ctx.authenticatedId,
+      );
 
       if (members.length === 1) {
+        // Get all organizations for this user
+
+        // Allow deletion if user has more than one organization
+        if (userOrgs.length > 1) {
+          const org = await deleteOrganization(input.organizationId);
+
+          if (!org) {
+            throw new TRPCError({
+              code: "INTERNAL_SERVER_ERROR",
+              message: "Failed to delete organization",
+            });
+          }
+
+          return org;
+        }
+
         throw new TRPCError({
           code: "BAD_REQUEST",
           message:
-            "Cannot delete organization when you are the only member, instead delete your account",
+            "Cannot delete your only organization, instead delete your account",
         });
       }
 
@@ -136,7 +155,10 @@ export const organizationRouter = createTRPCRouter({
         });
       }
 
-      return org;
+      return {
+        organization: org,
+        organizations: userOrgs,
+      };
     }),
 
   deleteInvite: protectedProcedure

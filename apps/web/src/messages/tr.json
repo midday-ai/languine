@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Otomatik yerelleştirme altyapısı",
-    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'mız, kodladıkça çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur."
+    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'miz, çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur."
   },
   "navigation": {
     "dashboard": "Gösterge Paneli",
@@ -20,7 +20,7 @@
   "getStarted": {
     "heading": "Başlayın",
     "title": "Otomatik yerelleştirme altyapısı",
-    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'mız, kodladıkça çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur.",
+    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'miz, çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur.",
     "button": {
       "startAutomating": "Otomatikleştirmeye başlayın",
       "readDocumentation": "Dokümantasyonu okuyun"
@@ -46,11 +46,11 @@
     "fullyOpenSource": "Tamamen açık kaynak",
     "fullyOpenSourceDescription": "Kodumuz GitHub'da herkese açıktır, şeffaflık ve topluluk katkılarını sağlar.",
     "noVendorLockIn": "Satıcı bağımlılığı yok",
-    "noVendorLockInDescription": "Sizi belirli bir hizmete kilitlemiyoruz, kendi LLM'lerinizi kullanın.",
+    "noVendorLockInDescription": "Sizi belirli bir hizmete bağlamıyoruz, kendi LLM'lerinizi kullanın.",
     "presetsForExpo": "Expo için ön ayarlar",
-    "presetsForExpoDescription": "Hızla başlamanız için Expo için ön ayarlar sağlıyoruz.",
+    "presetsForExpoDescription": "Hızlı başlamanız için Expo için ön ayarlar sağlıyoruz.",
     "presetForReactNative": "React Native için ön ayar",
-    "presetForReactNativeDescription": "Hızla başlamanız için React Native için bir ön ayar sağlıyoruz.",
+    "presetForReactNativeDescription": "Hızlı başlamanız için React Native için bir ön ayar sağlıyoruz.",
     "presetForReactEmail": "React Email Kütüphanesi",
     "presetForReactEmailDescription": "React Email için bir i18n kütüphanesi oluşturduk.",
     "readyForI18nLibraries": "i18n kütüphaneleri için hazır",
@@ -63,7 +63,7 @@
       "intelligentTranslation": "Bağlam farkındalığı ile akıllı çeviri",
       "brandVoice": "Marka sesi ve ton tutarlılığı",
       "terminology": "Terminoloji yönetimi",
-      "linguisticFeatures": "Gelişmiş dil özellikleri",
+      "linguisticFeatures": "Gelişmiş dilbilgisel özellikler",
       "realtimeUpdates": "Gerçek zamanlı çeviri güncellemeleri"
     },
     "implementation": {
@@ -87,7 +87,7 @@
     "github": "GitHub ile giriş yap",
     "google": "Google ile giriş yap",
     "footer": "Yerelleştirmenizi otomatikleştirin.",
-    "description": "Yerelleştirmenizi saniyeler içinde otomatikleştirmeye başlamak için giriş yapın.",
+    "description": "Yerelleştirmenizi otomatikleştirmeye başlamak için giriş yapın.",
     "terms": {
       "text": "Giriş yaparak,",
       "termsOfService": "Hizmet Şartları",
@@ -96,13 +96,13 @@
     }
   },
   "translations": {
-    "header": "Çevirilmiş anahtarlar"
+    "header": "Çevrilen anahtarlar"
   },
   "userMenu": {
     "account": "Hesap Ayarları",
     "signOut": "Çıkış yap",
     "createTeam": "Takım oluştur",
-    "homepage": "Ana sayfa",
+    "homepage": "Ana Sayfa",
     "team": "Takım Ayarları"
   },
   "teamSelector": {
@@ -120,12 +120,12 @@
   },
   "coming_soon": {
     "title": "Languine Erken Erişim Aşamasında",
-    "description": "Şu anda erken erişim aşamasındayız. Erken erişim için",
+    "description": "Şu anda erken erişim aşamasındayız. Erken erişim almak için",
     "cta": "X üzerinden bizimle iletişime geçin."
   },
   "account": {
     "fullName": {
-      "title": "Tam İsim",
+      "title": "Tam Ad",
       "description": "Platformda görünecek tam adınız.",
       "placeholder": "Tam adınızı girin"
     },
@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "API Anahtarı",
-      "description": "Languine API'sine ve CLI'den erişim için kişisel API anahtarınız."
+      "description": "Languine API'sine ve CLI'dan erişmek için kişisel API anahtarınız."
     },
     "deleteAccount": {
       "title": "Hesabı Sil",
@@ -159,11 +159,11 @@
   "pipeline": {
     "title": "İş Akışı (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri gönderildiğinde, değiştirilen içeriği analiz ederiz, çeviri belleğinizi koruruz ve markanızın sesi ve terminolojisini koruyarak doğru çeviriler üretiriz. Çeviriler daha sonra gözden geçirilmek üzere pull request olarak sunulur ve ana dalınıza birleştirilip dağıtılmadan önce incelenir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
+    "description": "Çeviri motorumuz mevcut CI/CD pipeline'ınıza sorunsuz bir şekilde entegre olur, her push işleminde kod tabanınızı otomatik olarak çevirir. Kod değişiklikleri gönderildiğinde, değiştirilen içeriği analiz ederiz, çeviri belleğinizi koruruz ve marka sesinizi ve terminolojinizi koruyarak doğru çeviriler üretiriz. Çeviriler daha sonra gözden geçirilmek üzere pull request olarak sunulur ve ana dalınıza birleştirilip dağıtılmadan önce incelenir. Bu otomatik iş akışı, yerelleştirilmiş içeriğinizin geliştirme ile senkronize kalmasını sağlar."
   },
   "settings": {
     "badRequest": "Geçersiz istek",
-    "badRequestDescription": "Organizasyonun en az bir sahibi olmalıdır. Bu sahibi kaldırmadan önce mülkiyeti başka bir üyeye devredin.",
+    "badRequestDescription": "Organizasyonun en az bir sahibi olmalıdır. Bu sahibi kaldırmadan önce sahipliği başka bir üyeye devredin.",
     "permissionDenied": "İzin reddedildi",
     "permissionDeniedDescription": "Bu işlemi gerçekleştirmek için takımın sahibi olmalısınız",
     "deleteTeamTitle": "Takımı Sil",
@@ -196,9 +196,9 @@
         "placeholder": "Proje adını girin"
       },
       "id": {
-        "title": "Proje ID",
+        "title": "Proje Kimliği",
         "description": "Eşsiz proje tanımlayıcınız",
-        "placeholder": "Proje ID"
+        "placeholder": "Proje Kimliği"
       },
       "delete": {
         "title": "Projeyi Sil",
@@ -222,7 +222,7 @@
       },
       "apiKey": {
         "title": "Takım API Anahtarı",
-        "description": "Takım erişimi için API anahtarı, bunu CI/CD pipeline'ınızda Proje ID ile birlikte kullanın",
+        "description": "Takım erişimi için API anahtarı, bunu CI/CD pipeline'ınızdan Proje Kimliği ile birlikte kullanın",
         "placeholder": "Takım API Anahtarı"
       },
       "members": {
@@ -292,7 +292,7 @@
     },
     "inclusiveLanguage": {
       "title": "Kapsayıcı Dil",
-      "description": "Çevirilerin kapsayıcı bir dil kullandığından emin olun"
+      "description": "Çevirilerin kapsayıcı dil kullandığından emin olun"
     },
     "formality": {
       "title": "Resmiyet",
@@ -339,7 +339,7 @@
         "empathetic": "Empatik",
         "professional": "Profesyonel",
         "friendly": "Samimi",
-        "enthusiastic": "Heyecanlı"
+        "enthusiastic": "Hevesli"
       }
     },
     "domainExpertise": {
@@ -357,11 +357,11 @@
     },
     "idioms": {
       "title": "Deyimler",
-      "description": "Deyimsel ifadeleri uygun şekilde yönetin"
+      "description": "Deyimsel ifadeleri uygun şekilde ele alın"
     },
     "terminology": {
       "title": "Terminoloji",
-      "description": "Özel terminolojiyi ve sözlükleri yönetin"
+      "description": "Uzman terminolojisini ve sözlükleri yönetin"
     },
     "culturalAdaptation": {
       "title": "Kültürel Adaptasyon",
@@ -379,7 +379,7 @@
         "unlimited_projects": "Sınırsız projeler",
         "fine_tuning": "İnce ayar seçenekleri",
         "overrides": "Çeviri geçersiz kılmaları",
-        "analytics": "Analitik",
+        "analytics": "Analiz",
         "context_memory": "Bağlam hafızası",
         "community_support": "Topluluk desteği",
         "keys_limit": "100 anahtara kadar",
@@ -392,16 +392,16 @@
       "includes_free": "Ücretsizdeki her şey, artı:",
       "features": {
         "github_action": "GitHub Action entegrasyonu",
-        "latest_features": "Son özelliklere erken erişim",
+        "latest_features": "En son özelliklere erken erişim",
         "priority_support": "Öncelikli destek",
         "priority_queues": "Öncelikli çeviri kuyrukları",
-        "languages": "Sınırsız diller",
+        "languages": "8 dilden itibaren",
         "keys_limit": "10.000 anahtardan itibaren",
         "docs_limit": "50 belgeden itibaren"
       }
     },
     "cta": "Otomasyona başlayın",
-    "keys_limit_explanation": "Çevrilen anahtar: Eğer 20 kaynak anahtarınız (örneğin \"Kayıt Ol\" veya \"Hoş Geldiniz!\") varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilen anahtara eşittir (20 anahtar x 5 dil)."
+    "keys_limit_explanation": "Çevirilen anahtar: Eğer 20 kaynak anahtarınız (örneğin \"Kayıt Ol\" veya \"Hoş Geldiniz!\") varsa ve bunları 5 dile çevirirseniz, bu 100 çevirilen anahtara eşittir (20 anahtar x 5 dil)."
   },
   "createTeam": {
     "teamName": "Takım Adı",
@@ -415,13 +415,13 @@
     "projectNamePlaceholder": "Proje adını girin",
     "createProjectButton": "Proje oluştur",
     "cancel": "İptal",
-    "createProjectDescription": "Yerelleştirmenizi otomasyona başlatmak için yeni bir proje oluşturun."
+    "createProjectDescription": "Yerelleştirmenizi otomasyona başlamak için yeni bir proje oluşturun."
   },
   "invite": {
     "inviteMember": "Üye davet et",
     "inviteDescription": "Takımınıza bir üye davet edin",
     "emailLabel": "E-posta",
-    "emailPlaceholder": "E-postayı girin",
+    "emailPlaceholder": "E-posta girin",
     "cancel": "İptal",
     "submit": "Gönder",
     "success": {
@@ -443,18 +443,18 @@
         "description": "Çevirileri yönetmek için Languine CLI'yi yükleyin ve yapılandırın"
       },
       "2": {
-        "title": "Çevirileri Gönderin",
-        "description": "Çevirilerin gönderilmesini bekliyoruz"
+        "title": "Çevirileri Gönder",
+        "description": "Çevirilerin gönderilmesini bekliyor"
       },
       "3": {
-        "title": "Belgeler",
-        "description": "Detaylı kılavuzlar ve en iyi uygulamalar için belgelerimize göz atın",
-        "link": "belgeler"
+        "title": "Dokümantasyon",
+        "description": "Detaylı kılavuzlar ve en iyi uygulamalar için dokümantasyonumuzu kontrol edin",
+        "link": "dokümantasyon"
       }
     },
     "info": {
-      "description": "Yardıma mı ihtiyacınız var? Belgelerimize göz atın",
-      "link": "belgeler",
+      "description": "Yardıma mı ihtiyacınız var? Dokümantasyonumuzu kontrol edin",
+      "link": "dokümantasyon",
       "description_2": "detaylı kılavuzlar ve en iyi uygulamalar için."
     }
   },
@@ -462,7 +462,7 @@
     "success": {
       "title": "Languine CLI Giriş Başarılı",
       "description": "Languine CLI başarıyla kimlik doğrulandı:",
-      "description_2": "Artık bu sekmeyi kapatabilir ve CLI'ye dönebilirsiniz"
+      "description_2": "Bu sekmeyi kapatabilir ve CLI'ye dönebilirsiniz"
     }
   },
   "search": {
@@ -472,7 +472,7 @@
     "daily": "Günlük",
     "weekly": "Haftalık",
     "monthly": "Aylık",
-    "selectPeriod": "Dönem seçin"
+    "selectPeriod": "Dönem seç"
   },
   "language": {
     "en": "İngilizce",
@@ -555,7 +555,7 @@
     },
     "key_limit": {
       "question": "Anahtar limiti nasıl çalışır?",
-      "answer": "Bir kaynak anahtarı hedef bir dile çevirdiğinizde, bir çevrilen anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevrilen anahtar eder (20 anahtar × 5 dil)."
+      "answer": "Bir kaynak anahtarı hedef bir dile çevirdiğinizde bir çevirilen anahtar sayılır. Örneğin, 20 kaynak anahtarınız varsa ve bunları 5 dile çevirirseniz, bu 100 çevirilen anahtar eder (20 anahtar × 5 dil)."
     },
     "supported_languages": {
       "question": "Hangi diller destekleniyor?",
@@ -563,11 +563,11 @@
     },
     "github_action": {
       "question": "GitHub Action entegrasyonu nasıl çalışır?",
-      "answer": "GitHub Action entegrasyonu (Pro planlarda mevcut), çeviri iş akışınızı doğrudan CI/CD hattınızda otomatikleştirmenizi sağlar. Depo değişiklikleri yaptığınızda, çeviriler otomatik olarak güncellenebilir."
+      "answer": "GitHub Action entegrasyonu (Pro planlarda mevcut), çeviri iş akışınızı doğrudan CI/CD hattınızda otomatikleştirmenizi sağlar. Depo değişikliklerini gönderdiğinizde, çeviriler otomatik olarak güncellenebilir."
     },
     "support": {
       "question": "Ne tür bir destek sunuyorsunuz?",
-      "answer": "Ücretsiz kullanıcılar topluluk desteğine erişim sağlarken, Pro kullanıcılar daha hızlı yanıt süreleri ve çeviri ihtiyaçları için özel yardım ile öncelikli destek alırlar."
+      "answer": "Ücretsiz kullanıcılar topluluk desteğine erişim alırken, Pro kullanıcılar daha hızlı yanıt süreleri ve çeviri ihtiyaçları için özel yardım ile öncelikli destek alır."
     },
     "open_source": {
       "question": "Languine açık kaynak mı?",
@@ -575,20 +575,21 @@
     },
     "open_source_pricing": {
       "question": "Açık kaynak projeleri için özel fiyatlandırma sunuyor musunuz?",
-      "answer": "Evet! Açık kaynak topluluğunu desteklemeyi seviyoruz. Eğer bir açık kaynak projesi yürütüyorsanız, Pro özelliklerimize %30 indirimle erişim sağlayabilirsiniz. Projenizle ilgili detaylarla ekibimizle iletişime geçin, size indirimli bir Pro hesabı ayarlayalım. Bu, işimizi mümkün kılan topluluğa geri verme şeklimizdir."
+      "answer": "Evet! Açık kaynak topluluğunu desteklemeyi seviyoruz. Eğer bir açık kaynak projesini yönetiyorsanız, Pro özelliklerimize %30 indirimle erişim alabilirsiniz. Proje detaylarınızla ekibimizle iletişime geçin, size indirimli bir Pro hesabı ayarlayalım. Bu, işimizi mümkün kılan topluluğa geri verme şeklimizdir."
     },
     "cancel_subscription": {
-      "question": "Aboneliğimi nasıl iptal ederim?",
-      "answer": "Aboneliğinizi istediğiniz zaman hesap ayarlarınızdan iptal edebilirsiniz. Faturalama > Plan Değiştir'e gidin. Aboneliğiniz mevcut faturalama döneminizin sonuna kadar aktif kalacaktır, ardından Ücretsiz plana geçeceksiniz."
+      "question": "Aboneliğimi nasıl iptal edebilirim?",
+      "answer": "Aboneliğinizi istediğiniz zaman hesap ayarlarınızdan iptal edebilirsiniz. Faturalama > Plan Değiştir bölümüne gidin. Aboneliğiniz mevcut faturalama dönemi sonuna kadar aktif kalacak, ardından Ücretsiz plana geçeceksiniz."
     }
   },
   "pricing_slider": {
-    "tier": "Katman {tier}",
+    "tier": "Seviye {tier}",
     "keys": "Çevirilen anahtarlar",
     "documents": "Çevirilen belgeler",
     "period": "ay",
     "keys_suffix": " anahtar",
-    "docs_suffix": " belge"
+    "docs_suffix": " belge",
+    "languages": "Diller"
   },
   "docs": {
     "getting-started": "Başlarken",

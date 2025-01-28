@@ -38,7 +38,6 @@ export function CreateTeamModal() {
   const createTeam = trpc.organization.create.useMutation({
     onSuccess: (team) => {
       utils.organization.invalidate();
-
       router.replace(`/${team.id}/default`);
     },
   });
@@ -61,8 +60,8 @@ export function CreateTeamModal() {
       await createTeam.mutateAsync({
         name: values.name,
       });
+
       form.reset();
-      setOpen(false);
     } catch (error) {
       console.error("Failed to create team:", error);
     }

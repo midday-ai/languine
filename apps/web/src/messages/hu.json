@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Automatizált lokalizációs infrastruktúra",
-    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. A CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz."
+    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz."
   },
   "navigation": {
     "dashboard": "Irányítópult",
@@ -20,9 +20,9 @@
   "getStarted": {
     "heading": "Kezdj el",
     "title": "Automatizált lokalizációs infrastruktúra",
-    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. A CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz.",
+    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz.",
     "button": {
-      "startAutomating": "Automatizálás indítása",
+      "startAutomating": "Automatizálás megkezdése",
       "readDocumentation": "Dokumentáció olvasása"
     }
   },
@@ -33,7 +33,7 @@
   "activity": {
     "title": "Tevékenység",
     "loading": "Betöltés",
-    "noResults": "Nincs találat a '{search}' keresésre",
+    "noResults": "Nincsenek eredmények a '{search}' keresésre",
     "clearSearch": "Keresés törlése",
     "loadMore": "Továbbiak megjelenítése",
     "type": {
@@ -48,20 +48,20 @@
     "noVendorLockIn": "Nincs beszállítói zárolás",
     "noVendorLockInDescription": "Nem zárunk be egy adott szolgáltatásba, használj saját LLM-eket.",
     "presetsForExpo": "Előbeállítások Expo-hoz",
-    "presetsForExpoDescription": "Előbeállításokat biztosítunk Expo-hoz, így gyorsan elkezdhetsz.",
+    "presetsForExpoDescription": "Előbeállításokat biztosítunk az Expo-hoz, így gyorsan elindulhatsz.",
     "presetForReactNative": "Előbeállítás React Native-hoz",
-    "presetForReactNativeDescription": "Előbeállítást biztosítunk React Native-hoz, így gyorsan elkezdhetsz.",
+    "presetForReactNativeDescription": "Előbeállítást biztosítunk a React Native-hoz, így gyorsan elindulhatsz.",
     "presetForReactEmail": "React Email Könyvtár",
-    "presetForReactEmailDescription": "Létrehoztunk egy i18n könyvtárat a React Email-hez.",
+    "presetForReactEmailDescription": "Létrehoztunk egy i18n könyvtárat a React Email számára.",
     "readyForI18nLibraries": "Készen áll az i18n könyvtárakra",
-    "readyForI18nLibrariesDescription": "Támogatjuk az összes könyvtárat, beleértve a legnépszerűbbeket (next-intl, react-i18next, react-intl stb.)."
+    "readyForI18nLibrariesDescription": "Támogatjuk az összes könyvtárat, beleértve a legnépszerűbbeket is (next-intl, react-i18next, react-intl stb.)."
   },
   "info": {
-    "title": "Minden aspektust kezel az alkalmazásod lokalizálásának, beleértve",
+    "title": "Minden aspektust kezel az alkalmazásod lokalizálásában, beleértve",
     "smartTranslation": {
       "title": "Intelligens Fordítás",
       "intelligentTranslation": "Intelligens fordítás kontextus tudatossággal",
-      "brandVoice": "Márka hangzás és tónus következetesség",
+      "brandVoice": "Márkahang és tónus következetessége",
       "terminology": "Terminológia kezelés",
       "linguisticFeatures": "Fejlett nyelvi jellemzők",
       "realtimeUpdates": "Valós idejű fordítási frissítések"
@@ -87,7 +87,7 @@
     "github": "Bejelentkezés GitHub-bal",
     "google": "Bejelentkezés Google-lal",
     "footer": "Automatizáld a lokalizációdat.",
-    "description": "Jelentkezz be, hogy másodpercek alatt elkezdhessd automatizálni a lokalizációdat.",
+    "description": "Jelentkezz be, hogy másodpercek alatt elkezdhesd automatizálni a lokalizációdat.",
     "terms": {
       "text": "A bejelentkezéssel elfogadod a",
       "termsOfService": "Szolgáltatási feltételek",
@@ -126,13 +126,13 @@
   "account": {
     "fullName": {
       "title": "Teljes név",
-      "description": "A teljes neved, ahogy a platformon megjelenik.",
+      "description": "A teljes neved, ahogyan a platformon megjelenik.",
       "placeholder": "Add meg a teljes neved"
     },
     "email": {
-      "title": "E-mail cím",
-      "description": "Az e-mail cím, amely a fiókodhoz van társítva.",
-      "placeholder": "Add meg az e-mail címed"
+      "title": "Email cím",
+      "description": "Az email cím, amely a fiókodhoz kapcsolódik.",
+      "placeholder": "Add meg az email címed"
     },
     "apiKey": {
       "title": "API kulcs",
@@ -150,7 +150,7 @@
   "dangerZone": {
     "dialog": {
       "title": "Biztos vagy benne?",
-      "description": "Ez a művelet nem vonható vissza. Kérlek, írd be a DELETE-et a megerősítéshez.",
+      "description": "Ez a művelet nem vonható vissza. Kérlek, írd be a DELETE-t a megerősítéshez.",
       "placeholder": "Írd be a TÖRÖL szót a megerősítéshez",
       "confirm": "Törlés megerősítése",
       "cancel": "Mégse"
@@ -159,11 +159,11 @@
   "pipeline": {
     "title": "Munkafolyamat (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Fordító motorunk zökkenőmentesen integrálódik a meglévő CI/CD munkafolyamatodba, automatikusan lefordítva a kódalapodat minden egyes push során. Amikor a kód módosul, elemezzük a megváltozott tartalmat, fenntartjuk a fordítási memóriádat, és pontos fordításokat generálunk, miközben megőrizzük a márkád hangzását és terminológiáját. A fordításokat ezután pull requestekként nyújtjuk be, lehetővé téve a felülvizsgálatot, mielőtt egyesülnének a fő ággal és települnének. Ez az automatizált munkafolyamat biztosítja, hogy a lokalizált tartalmad szinkronban maradjon a fejlesztéssel."
+    "description": "Fordító motorunk zökkenőmentesen integrálódik a meglévő CI/CD munkafolyamatodba, automatikusan lefordítva a kódalapodat minden egyes push során. Amikor a kód módosul, elemezzük a megváltozott tartalmat, fenntartjuk a fordítási memóriádat, és pontos fordításokat generálunk, miközben megőrizzük a márkád hangzását és terminológiáját. A fordításokat ezután pull requestként nyújtjuk be, lehetővé téve a felülvizsgálatot, mielőtt beolvasztanánk őket a fő ágba és telepítenénk. Ez az automatizált munkafolyamat biztosítja, hogy a lokalizált tartalmad szinkronban maradjon a fejlesztéssel."
   },
   "settings": {
     "badRequest": "Érvénytelen kérés",
-    "badRequestDescription": "A szervezetnek legalább egy tulajdonossal kell rendelkeznie. A tulajdonjogot át kell adni egy másik tagnak, mielőtt eltávolítanád ezt a tulajdonost.",
+    "badRequestDescription": "A szervezetnek legalább egy tulajdonossal kell rendelkeznie. Át kell adnod a tulajdonjogot egy másik tagnak, mielőtt eltávolítanád ezt a tulajdonost.",
     "permissionDenied": "Hozzáférés megtagadva",
     "permissionDeniedDescription": "Tulajdonosnak kell lenned a csapatban, hogy ezt a műveletet végrehajthasd",
     "deleteTeamTitle": "Csapat törlése",
@@ -175,9 +175,9 @@
     "addTeam": "Csapat létrehozása",
     "apiKey": {
       "updated": "API kulcs frissítve",
-      "updatedDescription": "Az API kulcsod sikeresen frissítve lett és a vágólapodra másolva.",
+      "updatedDescription": "Az API kulcsod sikeresen frissítve lett és a vágólapodra másoltuk.",
       "title": "API Kulcs Frissítése",
-      "description": "Biztos vagy benne, hogy új API kulcsot szeretnél generálni? A régi kulcs azonnal leáll.",
+      "description": "Biztosan új API kulcsot szeretnél generálni? A régi kulcs azonnal leáll.",
       "cancel": "Mégse",
       "continue": "Folytatás"
     },
@@ -201,9 +201,9 @@
         "placeholder": "Projekt ID"
       },
       "delete": {
-        "title": "Projekt törlése",
-        "description": "A projekt és minden adatának véglegesen törlése",
-        "button": "Projekt törlése"
+        "title": "Projekt Törlése",
+        "description": "A projekt és az összes adatának végleges törlése",
+        "button": "Projekt Törlése"
       }
     },
     "save": "Mentés",
@@ -222,25 +222,25 @@
       },
       "apiKey": {
         "title": "Csapat API Kulcs",
-        "description": "API kulcs a csapat hozzáféréséhez, használd ezt a CI/CD munkafolyamatodból a Projekt ID-val együtt",
+        "description": "API kulcs a csapat hozzáféréséhez, használd ezt a CI/CD munkafolyamatodban a Projekt ID-val együtt",
         "placeholder": "Csapat API Kulcs"
       },
       "members": {
-        "leaveTeamConfirm": "Kilépés a csapatból",
-        "leaveTeamDescription": "Biztos vagy benne, hogy el szeretnél lépni erről a csapatról?",
+        "leaveTeamConfirm": "Elhagyod a csapatot",
+        "leaveTeamDescription": "Biztosan el akarod hagyni ezt a csapatot?",
         "cancel": "Mégse",
-        "leaveTeam": "Kilépés a csapatból",
+        "leaveTeam": "Csapat elhagyása",
         "invite": "Tag meghívása",
         "title": "Tagok",
-        "pendingInvitations": "Függő Meghívók",
+        "pendingInvitations": "Függőben lévő meghívók",
         "removeMember": "Tag eltávolítása",
         "removeMemberConfirm": "Tag eltávolítása",
-        "removeMemberDescription": "Biztos vagy benne, hogy el szeretnéd távolítani ezt a tagot?",
+        "removeMemberDescription": "Biztosan el akarod távolítani ezt a tagot?",
         "filterPlaceholder": "Tagok szűrése...",
-        "allRoles": "Minden Szerep",
+        "allRoles": "Minden szerep",
         "date": "Dátum",
         "selectAll": "{count} kiválasztva",
-        "noPendingInvitations": "Nincs függő meghívó",
+        "noPendingInvitations": "Nincs függőben lévő meghívó",
         "noResults": "Nincs találat",
         "tryDifferentSearch": "Próbálj meg egy másik keresést",
         "inviteMembers": "Tagok meghívása az együttműködéshez",
@@ -282,7 +282,7 @@
     "styleGuide": "Stílus útmutató",
     "lengthControl": {
       "title": "Hosszellenőrzés",
-      "description": "Szabályozza a lefordított szöveg hosszát",
+      "description": "Szabályozd a lefordított szöveg hosszát",
       "options": {
         "flexible": "Rugalmas",
         "strict": "Szigorú",
@@ -296,7 +296,7 @@
     },
     "formality": {
       "title": "Formalitás",
-      "description": "Szabályozza a fordítások formalitási szintjét",
+      "description": "Szabályozd a fordítások formalitási szintjét",
       "options": {
         "casual": "Könnyed",
         "formal": "Hivatalos",
@@ -306,7 +306,7 @@
     "brandName": {
       "title": "Márk Név",
       "description": "Állítsa be a márkanevét a következetes használathoz",
-      "placeholder": "Írja be a márkanevét"
+      "placeholder": "Adja meg a márkanevét"
     },
     "brandVoice": {
       "title": "Márka Hang",
@@ -343,8 +343,8 @@
       }
     },
     "domainExpertise": {
-      "title": "Szakmai Terület",
-      "description": "Adja meg a fordítások területi kontextusát",
+      "title": "Szakmai Tudás",
+      "description": "Határozza meg a fordítások területi kontextusát",
       "options": {
         "general": "Általános",
         "technical": "Műszaki",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Idiómák",
-      "description": "Kezelje az idiómikus kifejezéseket megfelelően"
+      "description": "Kezelje az idiómák kifejezéseit megfelelően"
     },
     "terminology": {
       "title": "Terminológia",
@@ -395,24 +395,24 @@
         "latest_features": "Korai hozzáférés a legújabb funkciókhoz",
         "priority_support": "Prioritásos támogatás",
         "priority_queues": "Prioritásos fordítási sorok",
-        "languages": "Korlátlan nyelv",
-        "keys_limit": "10 000 kulcstól",
-        "docs_limit": "50 dokumentumtól"
+        "languages": "Kezdve 8 nyelvtől",
+        "keys_limit": "Kezdve 10 000 kulcstól",
+        "docs_limit": "Kezdve 50 dokumentumtól"
       }
     },
     "cta": "Kezdje el az automatizálást",
-    "keys_limit_explanation": "Fordított kulcs: Ha 20 forráskulcsa van (mint például \"Jelentkezzen be\" vagy \"Üdvözöljük!\") és ezeket 5 nyelvre fordítja, az 100 fordított kulcsot jelent (20 kulcs x 5 nyelv)."
+    "keys_limit_explanation": "Fordított kulcs: Ha 20 forráskulcsa van (mint például \"Regisztrálj\" vagy \"Üdvözöljük!\") és ezeket 5 nyelvre fordítja, az 100 fordított kulcsot jelent (20 kulcs x 5 nyelv)."
   },
   "createTeam": {
     "teamName": "Csapat Név",
-    "teamNamePlaceholder": "Írja be a csapat nevét",
+    "teamNamePlaceholder": "Adja meg a csapat nevét",
     "createTeamButton": "Csapat létrehozása",
     "cancel": "Mégse",
-    "createTeamDescription": "Hozzon létre egy új csapatot a projektjei és együttműködői kezeléséhez."
+    "createTeamDescription": "Hozzon létre egy új csapatot a projektjei és együttműködői kezelésére."
   },
   "createProject": {
     "createProjectTitle": "Új projekt létrehozása",
-    "projectNamePlaceholder": "Írja be a projekt nevét",
+    "projectNamePlaceholder": "Adja meg a projekt nevét",
     "createProjectButton": "Projekt létrehozása",
     "cancel": "Mégse",
     "createProjectDescription": "Hozzon létre egy új projektet a lokalizáció automatizálásának megkezdéséhez."
@@ -421,12 +421,12 @@
     "inviteMember": "Tag meghívása",
     "inviteDescription": "Hívjon meg egy tagot a csapatába",
     "emailLabel": "E-mail",
-    "emailPlaceholder": "Írja be az e-mailt",
+    "emailPlaceholder": "Adja meg az e-mailt",
     "cancel": "Mégse",
     "submit": "Küldés",
     "success": {
       "title": "Meghívó elküldve",
-      "description": "Sikeresen elküldte a meghívót a(z) {email} címre"
+      "description": "Sikeresen elküldte a meghívót a következő címre: {email}"
     },
     "error": {
       "title": "Hiba",
@@ -498,11 +498,11 @@
     "cs": "Cseh",
     "el": "Görög",
     "et": "Észt",
-    "he": "Hebrew",
+    "he": "Héber",
     "hr": "Horvát",
     "hu": "Magyar",
     "id": "Indonéz",
-    "iw": "Hebrew",
+    "iw": "Héber",
     "km": "Khmer",
     "lv": "Lett",
     "pt-BR": "Portugál (Brazília)",
@@ -538,9 +538,9 @@
       "12": "Dec",
       "01": "Jan",
       "02": "Feb",
-      "03": "Mar",
-      "04": "Apr",
-      "05": "Maj",
+      "03": "Márc",
+      "04": "Ápr",
+      "05": "Máj",
       "06": "Jún",
       "07": "Júl",
       "08": "Aug",
@@ -551,7 +551,7 @@
     "title": "GYIK",
     "what_is_languine": {
       "question": "Mi az a Languine?",
-      "answer": "A Languine egy AI-alapú lokalizációs platform, amely segít automatizálni az alkalmazásai fordítását. Olyan funkciókat kínál, mint a finomhangolási lehetőségek, a fordítási felülírások, az elemzések és a kontextus memória, hogy biztosítsa a magas színvonalú fordításokat."
+      "answer": "A Languine egy AI-alapú lokalizációs platform, amely segít automatizálni az alkalmazásai fordítását. Olyan funkciókat kínál, mint a finomhangolási lehetőségek, fordítási felülírások, analitika és kontextus memória a magas színvonalú fordítások biztosítása érdekében."
     },
     "key_limit": {
       "question": "Hogyan működik a kulcslimit?",
@@ -559,39 +559,40 @@
     },
     "supported_languages": {
       "question": "Milyen nyelvek támogatottak?",
-      "answer": "A Languine több mint 100 nyelvet támogat minden csomagban. Bár az AI-alapú fordításaink a legjobban a főbb nyelvekkel működnek, arra törekszünk, hogy minőségi fordításokat nyújtsunk minden támogatott nyelven. Ha konkrét nyelvi követelményei vagy kérdései vannak a fordítás minőségével kapcsolatban, kérjük, lépjen kapcsolatba ügyfélszolgálatunkkal."
+      "answer": "A Languine több mint 100 nyelvet támogat minden tervben. Míg az AI-alapú fordításaink a legnagyobb nyelvekkel működnek a legjobban, arra törekszünk, hogy minőségi fordításokat nyújtsunk minden támogatott nyelven. Ha konkrét nyelvi követelményei vagy kérdései vannak a fordítás minőségéről bizonyos nyelveken, kérjük, lépjen kapcsolatba ügyfélszolgálatunkkal."
     },
     "github_action": {
       "question": "Hogyan működik a GitHub Action integráció?",
-      "answer": "A GitHub Action integráció (elérhető a Pro csomagokban) lehetővé teszi, hogy automatizálja a fordítási munkafolyamatát közvetlenül a CI/CD folyamatában. Amikor változtatásokat küld a tárolójába, a fordítások automatikusan frissülhetnek."
+      "answer": "A GitHub Action integráció (elérhető a Pro terveknél) lehetővé teszi, hogy automatizálja a fordítási munkafolyamatát közvetlenül a CI/CD folyamatában. Amikor változtatásokat küld a tárolójába, a fordítások automatikusan frissülhetnek."
     },
     "support": {
       "question": "Milyen támogatást kínálnak?",
-      "answer": "A ingyenes felhasználók közösségi támogatáshoz férnek hozzá, míg a Pro felhasználók prioritásos támogatást kapnak gyorsabb válaszidőkkel és dedikált segítséggel a fordítási igényeikhez."
+      "answer": "A ingyenes felhasználók közösségi támogatást kapnak, míg a Pro felhasználók prioritásos támogatást élveznek, gyorsabb válaszidőkkel és dedikált segítséggel a fordítási igényeikhez."
     },
     "open_source": {
       "question": "A Languine nyílt forráskódú?",
-      "answer": "Igen! A Languine teljesen nyílt forráskódú és elérhető a GitHubon. Ön hozzájárulhat a projekthez, jelenthet hibákat, javasolhat funkciókat és ellenőrizheti a kódot. Hiszünk a transzparenciában és a nyilvános építésben."
+      "answer": "Igen! A Languine teljesen nyílt forráskódú és elérhető a GitHubon. Ön hozzájárulhat a projekthez, jelenthet hibákat, javasolhat funkciókat és ellenőrizheti a kódot. Hiszünk a transzparenciában és a nyilvános építkezésben."
     },
     "open_source_pricing": {
       "question": "Kínálnak különleges árazást nyílt forráskódú projektek számára?",
-      "answer": "Igen! Szeretjük támogatni a nyílt forráskódú közösséget. Ha nyílt forráskódú projektet tart fenn, 30% kedvezménnyel férhet hozzá Pro funkcióinkhoz. Csak lépjen kapcsolatba csapatunkkal a projektjéről szóló részletekkel, és beállítunk egy kedvezményes Pro fiókot. Ez a mi módunk, hogy visszaadjuk a közösségnek, amely lehetővé teszi a munkánkat."
+      "answer": "Igen! Szeretjük támogatni a nyílt forráskódú közösséget. Ha Ön egy nyílt forráskódú projektet tart fenn, 30% kedvezménnyel hozzáférhet a Pro funkcióinkhoz. Csak lépjen kapcsolatba csapatunkkal a projektjéről szóló részletekkel, és beállítjuk Önnek a kedvezményes Pro fiókot. Ez a mi módunk, hogy visszaadjuk a közösségnek, amely lehetővé teszi számunkra a munkánkat."
     },
     "cancel_subscription": {
       "question": "Hogyan mondhatom le az előfizetésem?",
-      "answer": "Bármikor lemondhatja az előfizetését a fiókbeállításokból. Navigáljon a Számlázás > Csomag módosítása menüpontra. Az előfizetése aktív marad a jelenlegi számlázási időszak végéig, ezt követően a Ingyenes csomagra vált."
+      "answer": "Bármikor lemondhatja az előfizetését a fiókbeállításain keresztül. Navigáljon a Számlázás > Terv megváltoztatása menüpontra. Az előfizetése aktív marad a jelenlegi számlázási időszak végéig, amely után átkerül a Ingyenes tervre."
     }
   },
   "pricing_slider": {
-    "tier": "Csomag {tier}",
+    "tier": "Szint {tier}",
     "keys": "Fordított kulcsok",
     "documents": "Fordított dokumentumok",
     "period": "hó",
     "keys_suffix": " kulcs",
-    "docs_suffix": " dok"
+    "docs_suffix": " dok.",
+    "languages": "Nyelvek"
   },
   "docs": {
-    "getting-started": "Kezdő lépések",
+    "getting-started": "Kezdés",
     "workflow": "Munkafolyamat",
     "ci": "CI/CD",
     "presets": "Előbeállítások",

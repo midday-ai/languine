@@ -10,7 +10,7 @@
     "description": "Översätt innehållet i din app direkt i din utvecklingsarbetsflöde. Vår CLI integreras med GitHub Actions och andra CI/CD-verktyg för att automatisera översättningar medan du kodar."
   },
   "navigation": {
-    "dashboard": "Instrumentpanel",
+    "dashboard": "Instrumentbräda",
     "tuning": "Inställningar",
     "settings": "Inställningar",
     "pricing": "Prissättning",
@@ -54,30 +54,30 @@
     "presetForReactEmail": "React Email-bibliotek",
     "presetForReactEmailDescription": "Vi har skapat ett i18n-bibliotek för React Email.",
     "readyForI18nLibraries": "Redo för i18n-bibliotek",
-    "readyForI18nLibrariesDescription": "Vi stöder alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc)."
+    "readyForI18nLibrariesDescription": "Vi stödjer alla bibliotek inklusive de mest populära (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
     "title": "Hantera varje aspekt av att lokalisera din app inklusive",
     "smartTranslation": {
       "title": "Smart översättning",
       "intelligentTranslation": "Intelligent översättning med kontextmedvetenhet",
-      "brandVoice": "Varumärkesröst och tonkonsekvens",
+      "brandVoice": "Konsistens i varumärkesröst och ton",
       "terminology": "Terminologihantering",
       "linguisticFeatures": "Avancerade språkliga funktioner",
-      "realtimeUpdates": "Översättningsuppdateringar i realtid"
+      "realtimeUpdates": "Översättningar i realtid"
     },
     "implementation": {
       "title": "Implementering",
       "quickSetup": "Snabb installation och integration",
       "fileFormat": "Filformatshantering",
-      "contentStructure": "Innehållsstrukturorganisation",
-      "assetOrganization": "Tillgångsorganisation"
+      "contentStructure": "Organisering av innehållsstruktur",
+      "assetOrganization": "Organisering av tillgångar"
     },
     "developer": {
       "title": "Utvecklarupplevelse",
       "cli": "Kommandoradsgränssnitt",
       "cicd": "CI/CD-integration",
-      "versionControl": "Versionskontroll",
+      "versionControl": "Versionshantering",
       "workflow": "Utvecklararbetsflöde",
       "documentation": "Omfattande dokumentation"
     }
@@ -139,9 +139,9 @@
       "description": "Din personliga API-nyckel för att få åtkomst till Languine API och från CLI."
     },
     "deleteAccount": {
-      "title": "Radera konto",
-      "description": "Permanently delete your account and all associated data. This action cannot be undone.",
-      "button": "Radera konto"
+      "title": "Ta bort konto",
+      "description": "Permanent ta bort ditt konto och all associerad data. Denna åtgärd kan inte ångras.",
+      "button": "Ta bort konto"
     }
   },
   "copyInstall": {
@@ -202,7 +202,7 @@
       },
       "delete": {
         "title": "Ta bort projekt",
-        "description": "Permanent ta bort detta projekt och all dess data",
+        "description": "Permanently ta bort detta projekt och all dess data",
         "button": "Ta bort projekt"
       }
     },
@@ -276,8 +276,8 @@
       "description": "Aktivera automatiserade kvalitetskontroller för översättningar"
     },
     "contextDetection": {
-      "title": "Kontextdetektion",
-      "description": "Automatiskt upptäcka och bevara kontext i översättningar"
+      "title": "Kontextdetektering",
+      "description": "Automatiskt upptäck och bevara kontext i översättningar"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -331,7 +331,7 @@
     },
     "brand": "Varumärke",
     "emotiveIntent": {
-      "title": "Emotionell Avsikt",
+      "title": "Känslomässig Avsikt",
       "description": "Ställ in den känslomässiga tonen för översättningar",
       "options": {
         "neutral": "Neutral",
@@ -357,7 +357,7 @@
     },
     "idioms": {
       "title": "Idiom",
-      "description": "Hantera idiomatiska uttryck på rätt sätt"
+      "description": "Hantera idiomatiska uttryck på ett lämpligt sätt"
     },
     "terminology": {
       "title": "Terminologi",
@@ -395,7 +395,7 @@
         "latest_features": "Tidig åtkomst till de senaste funktionerna",
         "priority_support": "Prioriterat stöd",
         "priority_queues": "Prioriterade översättningsköer",
-        "languages": "Obegränsade språk",
+        "languages": "Från 8 språk",
         "keys_limit": "Från 10 000 nycklar",
         "docs_limit": "Från 50 dokument"
       }
@@ -408,7 +408,7 @@
     "teamNamePlaceholder": "Ange teamnamn",
     "createTeamButton": "Skapa team",
     "cancel": "Avbryt",
-    "createTeamDescription": "Skapa ett nytt team för att hantera dina projekt och samarbetspartners."
+    "createTeamDescription": "Skapa ett nytt team för att hantera dina projekt och samarbetspartner."
   },
   "createProject": {
     "createProjectTitle": "Skapa ett nytt projekt",
@@ -433,7 +433,7 @@
       "description": "Misslyckades med att skicka inbjudan. Försök igen."
     },
     "validation": {
-      "invalidEmail": "Ange en giltig e-postadress"
+      "invalidEmail": "Ange en giltig e-post"
     }
   },
   "onboarding": {
@@ -462,7 +462,7 @@
     "success": {
       "title": "Languine CLI Inloggning Lyckades",
       "description": "Languine CLI har autentiserats framgångsrikt som:",
-      "description_2": "Du kan nu stänga denna flik och återvända till CLI"
+      "description_2": "Du kan nu stänga den här fliken och återvända till CLI"
     }
   },
   "search": {
@@ -548,38 +548,38 @@
     }
   },
   "faq": {
-    "title": "Vanliga frågor",
+    "title": "Vanliga Frågor",
     "what_is_languine": {
       "question": "Vad är Languine?",
       "answer": "Languine är en AI-driven lokaliseringsplattform som hjälper dig att automatisera översättningen av dina applikationer. Den erbjuder funktioner som finjusteringsalternativ, översättningsöverskrivningar, analys och kontextminne för att säkerställa högkvalitativa översättningar."
     },
     "key_limit": {
       "question": "Hur fungerar nyckelgränsen?",
-      "answer": "En översatt nyckel räknas när du översätter en källnyckel till ett målspråk. Till exempel, om du har 20 källnycklar och översätter dem till 5 språk, motsvarar det 100 översatta nycklar (20 nycklar × 5 språk)."
+      "answer": "En översatt nyckel räknas när du översätter en källnyckel till ett målspråk. Till exempel, om du har 20 källnycklar och översätter dem till 5 språk, blir det 100 översatta nycklar (20 nycklar × 5 språk)."
     },
     "supported_languages": {
       "question": "Vilka språk stöds?",
-      "answer": "Languine stöder över 100 språk i alla planer. Medan våra AI-drivna översättningar fungerar bäst med större språk, strävar vi efter att tillhandahålla kvalitetsöversättningar över alla stödda språk. Om du har specifika språkliga krav eller frågor om översättningskvalitet för särskilda språk, vänligen kontakta vårt supportteam."
+      "answer": "Languine stöder över 100 språk i alla planer. Även om våra AI-drivna översättningar fungerar bäst med större språk, strävar vi efter att erbjuda kvalitetsöversättningar på alla stödda språk. Om du har specifika språkliga krav eller frågor om översättningskvalitet för särskilda språk, vänligen kontakta vårt supportteam."
     },
     "github_action": {
       "question": "Hur fungerar GitHub Action-integrationen?",
-      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) gör att du kan automatisera din översättningsarbetsflöde direkt i din CI/CD-pipeline. När du pushar ändringar till ditt repository kan översättningar automatiskt uppdateras."
+      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) gör att du kan automatisera din översättningsarbetsflöde direkt i din CI/CD-pipeline. När du pushar ändringar till ditt repository kan översättningar uppdateras automatiskt."
     },
     "support": {
       "question": "Vilken typ av support erbjuder ni?",
-      "answer": "Gratisanvändare får tillgång till supportsystemet, medan Pro-användare får prioriterad support med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
+      "answer": "Gratisanvändare får tillgång till communitysupport, medan Pro-användare får prioriterad support med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
     },
     "open_source": {
       "question": "Är Languine öppen källkod?",
       "answer": "Ja! Languine är helt öppen källkod och tillgänglig på GitHub. Du kan bidra till projektet, rapportera problem, föreslå funktioner och inspektera koden. Vi tror på transparens och att bygga offentligt."
     },
     "open_source_pricing": {
-      "question": "Erbjuder ni specialpriser för öppen källkodsprojekt?",
-      "answer": "Ja! Vi älskar att stödja öppen källkodscommunityn. Om du underhåller ett öppen källkodsprojekt kan du få tillgång till våra Pro-funktioner med 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så ordnar vi en rabatterad Pro-konto. Detta är vårt sätt att ge tillbaka till den community som gör vårt arbete möjligt."
+      "question": "Erbjuder ni särskild prissättning för öppna källkodsprojekt?",
+      "answer": "Ja! Vi älskar att stödja den öppna källkodscommunityn. Om du underhåller ett öppet källkodsprojekt kan du få tillgång till våra Pro-funktioner med 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så ordnar vi en rabatterad Pro-konto. Detta är vårt sätt att ge tillbaka till den community som gör vårt arbete möjligt."
     },
     "cancel_subscription": {
       "question": "Hur avbryter jag min prenumeration?",
-      "answer": "Du kan avbryta din prenumeration när som helst från dina kontoinställningar. Navigera till Fakturering > Ändra plan. Din prenumeration kommer att förbli aktiv till slutet av din nuvarande faktureringsperiod, efter vilket du flyttas till gratisplanen."
+      "answer": "Du kan avbryta din prenumeration när som helst från dina kontoinställningar. Navigera till Fakturering > Ändra plan. Din prenumeration kommer att förbli aktiv till slutet av din nuvarande faktureringsperiod, efter vilket du flyttas till Gratisplanen."
     }
   },
   "pricing_slider": {
@@ -588,7 +588,8 @@
     "documents": "Översatta dokument",
     "period": "mån",
     "keys_suffix": " nycklar",
-    "docs_suffix": " dokument"
+    "docs_suffix": " dokument",
+    "languages": "Språk"
   },
   "docs": {
     "getting-started": "Komma igång",

@@ -6,12 +6,12 @@
     "goToApp": "Đi đến ứng dụng"
   },
   "hero": {
-    "title": "Hệ thống hạ tầng địa phương hóa tự động",
+    "title": "Hệ thống địa phương hóa tự động",
     "description": "Dịch nội dung ứng dụng của bạn trực tiếp trong quy trình phát triển. CLI của chúng tôi tích hợp với GitHub Actions và các công cụ CI/CD khác để tự động hóa việc dịch khi bạn lập trình."
   },
   "navigation": {
     "dashboard": "Bảng điều khiển",
-    "tuning": "Điều chỉnh",
+    "tuning": "Tùy chỉnh",
     "settings": "Cài đặt",
     "pricing": "Giá cả",
     "docs": "Tài liệu",
@@ -19,7 +19,7 @@
   },
   "getStarted": {
     "heading": "Bắt đầu",
-    "title": "Hệ thống hạ tầng địa phương hóa tự động",
+    "title": "Hệ thống địa phương hóa tự động",
     "description": "Dịch nội dung ứng dụng của bạn trực tiếp trong quy trình phát triển. CLI của chúng tôi tích hợp với GitHub Actions và các công cụ CI/CD khác để tự động hóa việc dịch khi bạn lập trình.",
     "button": {
       "startAutomating": "Bắt đầu tự động hóa",
@@ -27,7 +27,7 @@
     }
   },
   "companies": {
-    "title": "Sử dụng bởi",
+    "title": "Được sử dụng bởi",
     "addYourCompany": "+ Thêm công ty của bạn"
   },
   "activity": {
@@ -35,7 +35,7 @@
     "loading": "Đang tải",
     "noResults": "Không có kết quả cho '{search}'",
     "clearSearch": "Xóa tìm kiếm",
-    "loadMore": "Hiện thêm",
+    "loadMore": "Hiển thị thêm",
     "type": {
       "key": "Khóa",
       "document": "Tài liệu"
@@ -46,22 +46,22 @@
     "fullyOpenSource": "Hoàn toàn mã nguồn mở",
     "fullyOpenSourceDescription": "Mã của chúng tôi có sẵn công khai trên GitHub, cho phép minh bạch và đóng góp từ cộng đồng.",
     "noVendorLockIn": "Không bị khóa vào nhà cung cấp",
-    "noVendorLockInDescription": "Chúng tôi không khóa bạn vào một dịch vụ cụ thể, hãy sử dụng các LLM của riêng bạn.",
-    "presetsForExpo": "Cài đặt trước cho Expo",
-    "presetsForExpoDescription": "Chúng tôi cung cấp cài đặt trước cho Expo, để bạn có thể bắt đầu nhanh chóng.",
-    "presetForReactNative": "Cài đặt trước cho React Native",
-    "presetForReactNativeDescription": "Chúng tôi cung cấp một cài đặt trước cho React Native, để bạn có thể bắt đầu nhanh chóng.",
+    "noVendorLockInDescription": "Chúng tôi không ràng buộc bạn vào một dịch vụ cụ thể, hãy sử dụng các LLM của riêng bạn.",
+    "presetsForExpo": "Cài đặt sẵn cho Expo",
+    "presetsForExpoDescription": "Chúng tôi cung cấp các cài đặt sẵn cho Expo, để bạn có thể bắt đầu nhanh chóng.",
+    "presetForReactNative": "Cài đặt sẵn cho React Native",
+    "presetForReactNativeDescription": "Chúng tôi cung cấp một cài đặt sẵn cho React Native, để bạn có thể bắt đầu nhanh chóng.",
     "presetForReactEmail": "Thư viện React Email",
     "presetForReactEmailDescription": "Chúng tôi đã tạo một thư viện i18n cho React Email.",
     "readyForI18nLibraries": "Sẵn sàng cho các thư viện i18n",
-    "readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm các thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
+    "readyForI18nLibrariesDescription": "Chúng tôi hỗ trợ tất cả các thư viện bao gồm những thư viện phổ biến nhất (next-intl, react-i18next, react-intl, v.v.)."
   },
   "info": {
     "title": "Xử lý mọi khía cạnh của việc địa phương hóa ứng dụng của bạn bao gồm",
     "smartTranslation": {
       "title": "Dịch thông minh",
-      "intelligentTranslation": "Dịch thông minh với nhận thức ngữ cảnh",
-      "brandVoice": "Giọng nói và tông màu thương hiệu nhất quán",
+      "intelligentTranslation": "Dịch thông minh với nhận thức về ngữ cảnh",
+      "brandVoice": "Giọng điệu và sự nhất quán của thương hiệu",
       "terminology": "Quản lý thuật ngữ",
       "linguisticFeatures": "Các tính năng ngôn ngữ nâng cao",
       "realtimeUpdates": "Cập nhật dịch thuật theo thời gian thực"
@@ -84,10 +84,10 @@
   },
   "login": {
     "title": "Đăng nhập",
-    "github": "Đăng nhập với GitHub",
-    "google": "Đăng nhập với Google",
+    "github": "Đăng nhập bằng GitHub",
+    "google": "Đăng nhập bằng Google",
     "footer": "Tự động hóa việc địa phương hóa của bạn.",
-    "description": "Đăng nhập để bắt đầu tự động hóa việc địa phương hóa của bạn trong vài giây.",
+    "description": "Đăng nhập để bắt đầu tự động hóa việc địa phương hóa trong vài giây.",
     "terms": {
       "text": "Bằng cách đăng nhập, bạn đồng ý với",
       "termsOfService": "Điều khoản dịch vụ",
@@ -101,9 +101,9 @@
   "userMenu": {
     "account": "Cài đặt tài khoản",
     "signOut": "Đăng xuất",
-    "createTeam": "Tạo đội",
+    "createTeam": "Tạo nhóm",
     "homepage": "Trang chủ",
-    "team": "Cài đặt đội"
+    "team": "Cài đặt nhóm"
   },
   "teamSelector": {
     "addProject": "Tạo dự án",
@@ -112,11 +112,11 @@
     "createProjectButton": "Tạo dự án",
     "pro": "Chuyên nghiệp",
     "project": "Dự án",
-    "teams": "Đội",
-    "createTeam": "Tạo đội",
-    "createTeamTitle": "Tạo một đội mới",
-    "teamNamePlaceholder": "Tên đội",
-    "createTeamButton": "Tạo đội"
+    "teams": "Nhóm",
+    "createTeam": "Tạo nhóm",
+    "createTeamTitle": "Tạo một nhóm mới",
+    "teamNamePlaceholder": "Tên nhóm",
+    "createTeamButton": "Tạo nhóm"
   },
   "coming_soon": {
     "title": "Languine đang trong giai đoạn truy cập sớm",
@@ -159,18 +159,18 @@
   "pipeline": {
     "title": "Quy trình làm việc (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào quy trình CI/CD hiện có của bạn, tự động dịch mã nguồn của bạn mỗi khi có đẩy. Khi có thay đổi mã được đẩy lên, chúng tôi phân tích nội dung đã chỉnh sửa, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn giữ giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng yêu cầu kéo, cho phép xem xét trước khi được hợp nhất vào nhánh chính của bạn và triển khai. Quy trình tự động này đảm bảo nội dung địa phương hóa của bạn luôn đồng bộ với phát triển."
+    "description": "Công cụ dịch thuật của chúng tôi tích hợp liền mạch vào quy trình CI/CD hiện có của bạn, tự động dịch mã nguồn của bạn mỗi khi có đẩy. Khi có thay đổi mã được đẩy lên, chúng tôi phân tích nội dung đã sửa đổi, duy trì bộ nhớ dịch thuật của bạn và tạo ra các bản dịch chính xác trong khi vẫn bảo tồn giọng điệu và thuật ngữ thương hiệu của bạn. Các bản dịch sau đó được gửi dưới dạng yêu cầu kéo, cho phép xem xét trước khi được hợp nhất vào nhánh chính của bạn và triển khai. Quy trình tự động này đảm bảo nội dung địa phương hóa của bạn luôn đồng bộ với phát triển."
   },
   "settings": {
     "badRequest": "Yêu cầu không hợp lệ",
-    "badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho một thành viên khác trước khi xóa chủ sở hữu này.",
+    "badRequestDescription": "Tổ chức phải có ít nhất một chủ sở hữu. Chuyển quyền sở hữu cho thành viên khác trước khi xóa chủ sở hữu này.",
     "permissionDenied": "Quyền truy cập bị từ chối",
     "permissionDeniedDescription": "Bạn cần là chủ sở hữu của nhóm để thực hiện hành động này",
     "deleteTeamTitle": "Xóa nhóm",
     "deleteTeamDescription": "Không thể xóa tổ chức khi bạn là thành viên duy nhất, thay vào đó hãy xóa tài khoản của bạn",
     "saved": "Cài đặt đã được lưu",
-    "savedDescription": "Các thay đổi của bạn đã được lưu thành công",
-    "error": "Có gì đó không ổn",
+    "savedDescription": "Thay đổi của bạn đã được lưu thành công",
+    "error": "Đã xảy ra lỗi",
     "errorDescription": "Vui lòng thử lại hoặc liên hệ với bộ phận hỗ trợ",
     "addTeam": "Tạo nhóm",
     "apiKey": {
@@ -287,12 +287,12 @@
         "flexible": "Linh hoạt",
         "strict": "Nghiêm ngặt",
         "exact": "Chính xác",
-        "loose": "Lỏng"
+        "loose": "Lỏng lẻo"
       }
     },
     "inclusiveLanguage": {
-      "title": "Ngôn ngữ Bao gồm",
-      "description": "Đảm bảo các bản dịch sử dụng ngôn ngữ bao gồm"
+      "title": "Ngôn ngữ Bao hàm",
+      "description": "Đảm bảo các bản dịch sử dụng ngôn ngữ bao hàm"
     },
     "formality": {
       "title": "Tính trang trọng",
@@ -310,12 +310,12 @@
     },
     "brandVoice": {
       "title": "Giọng điệu thương hiệu",
-      "description": "Định nghĩa giọng điệu và âm sắc của thương hiệu bạn",
+      "description": "Xác định giọng điệu và âm sắc của thương hiệu bạn",
       "placeholder": "Mô tả giọng điệu thương hiệu của bạn..."
     },
     "toneOfVoice": {
       "title": "Tông giọng",
-      "description": "Định nghĩa tông giọng được sử dụng trong các bản dịch",
+      "description": "Xác định tông giọng được sử dụng trong các bản dịch",
       "options": {
         "casual": "Thân mật",
         "formal": "Trang trọng",
@@ -336,10 +336,10 @@
       "options": {
         "neutral": "Trung lập",
         "positive": "Tích cực",
-        "empathetic": "Thấu cảm",
+        "empathetic": "Đồng cảm",
         "professional": "Chuyên nghiệp",
         "friendly": "Thân thiện",
-        "enthusiastic": "Nhiệt huyết"
+        "enthusiastic": "Nhiệt tình"
       }
     },
     "domainExpertise": {
@@ -395,13 +395,13 @@
         "latest_features": "Truy cập sớm vào các tính năng mới nhất",
         "priority_support": "Hỗ trợ ưu tiên",
         "priority_queues": "Hàng đợi dịch ưu tiên",
-        "languages": "Ngôn ngữ không giới hạn",
-        "keys_limit": "Bắt đầu từ 10 000 khóa",
+        "languages": "Bắt đầu từ 8 ngôn ngữ",
+        "keys_limit": "Bắt đầu từ 10.000 khóa",
         "docs_limit": "Bắt đầu từ 50 tài liệu"
       }
     },
     "cta": "Bắt đầu tự động hóa",
-    "keys_limit_explanation": "Khóa đã dịch: Nếu bạn có 20 khóa nguồn (như \"Đăng ký\" hoặc \"Chào mừng!\") và dịch chúng sang 5 ngôn ngữ, thì tổng cộng là 100 khóa đã dịch (20 khóa x 5 ngôn ngữ)."
+    "keys_limit_explanation": "Khóa đã dịch: Nếu bạn có 20 khóa nguồn (như \"Đăng ký\" hoặc \"Chào mừng!\") và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa x 5 ngôn ngữ)."
   },
   "createTeam": {
     "teamName": "Tên nhóm",
@@ -448,14 +448,14 @@
       },
       "3": {
         "title": "Tài liệu",
-        "description": "Xem tài liệu của chúng tôi để biết hướng dẫn chi tiết và các thực tiễn tốt nhất",
+        "description": "Xem tài liệu của chúng tôi để biết hướng dẫn chi tiết và các phương pháp tốt nhất",
         "link": "tài liệu"
       }
     },
     "info": {
       "description": "Cần giúp đỡ? Xem tài liệu của chúng tôi",
       "link": "tài liệu",
-      "description_2": "để có hướng dẫn chi tiết và các thực hành tốt nhất."
+      "description_2": "để có hướng dẫn chi tiết và các phương pháp tốt nhất."
     }
   },
   "cli": {
@@ -492,9 +492,9 @@
     "sv": "Tiếng Thụy Điển",
     "fi": "Tiếng Phần Lan",
     "vi": "Tiếng Việt",
-    "az": "Azerbaijani",
-    "bg": "Bulgaria",
-    "ca": "Catalan",
+    "az": "Tiếng Azerbaijan",
+    "bg": "Tiếng Bulgaria",
+    "ca": "Tiếng Catalan",
     "cs": "Tiếng Séc",
     "el": "Tiếng Hy Lạp",
     "et": "Tiếng Estonia",
@@ -519,7 +519,7 @@
   },
   "menu": {
     "dashboard": "Bảng điều khiển",
-    "tuning": "Điều chỉnh",
+    "tuning": "Tinh chỉnh",
     "settings": "Cài đặt",
     "pricing": "Giá cả",
     "docs": "Tài liệu",
@@ -555,7 +555,7 @@
     },
     "key_limit": {
       "question": "Giới hạn khóa hoạt động như thế nào?",
-      "answer": "Một khóa đã dịch được tính khi bạn dịch một khóa nguồn sang một ngôn ngữ mục tiêu. Ví dụ, nếu bạn có 20 khóa nguồn và dịch chúng sang 5 ngôn ngữ, thì tổng cộng sẽ là 100 khóa đã dịch (20 khóa × 5 ngôn ngữ)."
+      "answer": "Một khóa đã dịch được tính khi bạn dịch một khóa nguồn sang ngôn ngữ đích. Ví dụ, nếu bạn có 20 khóa nguồn và dịch chúng sang 5 ngôn ngữ, điều đó tương đương với 100 khóa đã dịch (20 khóa × 5 ngôn ngữ)."
     },
     "supported_languages": {
       "question": "Những ngôn ngữ nào được hỗ trợ?",
@@ -563,11 +563,11 @@
     },
     "github_action": {
       "question": "Tích hợp GitHub Action hoạt động như thế nào?",
-      "answer": "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình dịch thuật của mình trực tiếp trong pipeline CI/CD. Khi bạn đẩy các thay đổi lên kho lưu trữ của mình, các bản dịch có thể được cập nhật tự động."
+      "answer": "Tích hợp GitHub Action (có sẵn trong các gói Pro) cho phép bạn tự động hóa quy trình dịch thuật của mình trực tiếp trong pipeline CI/CD. Khi bạn đẩy thay đổi lên kho lưu trữ của mình, các bản dịch có thể được cập nhật tự động."
     },
     "support": {
       "question": "Bạn cung cấp loại hỗ trợ nào?",
-      "answer": "Người dùng miễn phí có quyền truy cập vào hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và sự trợ giúp tận tâm cho các nhu cầu dịch thuật của họ."
+      "answer": "Người dùng miễn phí có quyền truy cập vào hỗ trợ cộng đồng, trong khi người dùng Pro nhận được hỗ trợ ưu tiên với thời gian phản hồi nhanh hơn và sự trợ giúp tận tình cho nhu cầu dịch thuật của họ."
     },
     "open_source": {
       "question": "Languine có mã nguồn mở không?",
@@ -575,20 +575,21 @@
     },
     "open_source_pricing": {
       "question": "Bạn có cung cấp giá đặc biệt cho các dự án mã nguồn mở không?",
-      "answer": "Có! Chúng tôi rất thích hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể nhận được quyền truy cập vào các tính năng Pro của chúng tôi với mức giảm 30%. Chỉ cần liên hệ với đội ngũ của chúng tôi với thông tin về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro với mức giá ưu đãi. Đây là cách chúng tôi trả ơn cộng đồng đã làm cho công việc của chúng tôi trở nên khả thi."
+      "answer": "Có! Chúng tôi rất thích hỗ trợ cộng đồng mã nguồn mở. Nếu bạn duy trì một dự án mã nguồn mở, bạn có thể nhận được quyền truy cập vào các tính năng Pro của chúng tôi với mức giảm giá 30%. Chỉ cần liên hệ với đội ngũ của chúng tôi với thông tin về dự án của bạn, và chúng tôi sẽ thiết lập cho bạn một tài khoản Pro với mức giá ưu đãi. Đây là cách chúng tôi đóng góp lại cho cộng đồng đã làm cho công việc của chúng tôi trở nên khả thi."
     },
     "cancel_subscription": {
-      "question": "Tôi làm thế nào để hủy đăng ký của mình?",
-      "answer": "Bạn có thể hủy đăng ký của mình bất cứ lúc nào từ cài đặt tài khoản của bạn. Điều hướng đến Thanh toán > Thay đổi Gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến khi kết thúc kỳ thanh toán hiện tại của bạn, sau đó bạn sẽ được chuyển sang gói Miễn phí."
+      "question": "Làm thế nào để tôi hủy đăng ký của mình?",
+      "answer": "Bạn có thể hủy đăng ký của mình bất cứ lúc nào từ cài đặt tài khoản của bạn. Điều hướng đến Thanh toán > Thay đổi gói. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối kỳ thanh toán hiện tại của bạn, sau đó bạn sẽ được chuyển sang gói Miễn phí."
     }
   },
   "pricing_slider": {
-    "tier": "Cấp {tier}",
+    "tier": "Cấp độ {tier}",
     "keys": "Các khóa đã dịch",
     "documents": "Các tài liệu đã dịch",
     "period": "tháng",
     "keys_suffix": " khóa",
-    "docs_suffix": " tài liệu"
+    "docs_suffix": " tài liệu",
+    "languages": "Ngôn ngữ"
   },
   "docs": {
     "getting-started": "Bắt đầu",
@@ -598,12 +599,12 @@
     "formats": "Định dạng",
     "platform": "Nền tảng",
     "introduction": "Giới thiệu",
-    "quickstart": "Khởi động nhanh",
+    "quickstart": "Bắt đầu nhanh",
     "authentication": "Xác thực",
     "configuration": "Cấu hình",
     "cli": "CLI",
     "github-actions": "GitHub Actions",
-    "tuning": "Điều chỉnh",
+    "tuning": "Tinh chỉnh",
     "settings": "Cài đặt",
     "hooks": "Hooks",
     "examples": "Ví dụ",

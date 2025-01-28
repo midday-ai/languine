@@ -132,7 +132,11 @@ export async function translateCommand(args: string[] = []) {
             // Otherwise use normal diff detection
             try {
               const changes = await getDiff({ sourceFilePath, type });
-              keysToTranslate = [...changes.addedKeys, ...changes.changedKeys];
+              // Include both new keys and changed values
+              keysToTranslate = [
+                ...changes.addedKeys,
+                ...changes.valueChanges.map((change) => change.key),
+              ];
             } catch (error) {
               console.log();
               note(
@@ -205,6 +209,48 @@ export async function translateCommand(args: string[] = []) {
             commitLink: gitInfo?.commitLink,
           });
 
+          if (error?.code === "LANGUAGES_LIMIT_REACHED") {
+            s.stop();
+            note(
+              "Languages limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
+
+            const shouldUpgrade = await select({
+              message: "Would you like to upgrade your plan now?",
+              options: [
+                { label: "Upgrade plan", value: "upgrade" },
+                { label: "Cancel", value: "cancel" },
+              ],
+            });
+
+            if (shouldUpgrade === "upgrade") {
+              // Open upgrade URL in browser
+              if (meta?.plan === "free") {
+                await open(
+                  `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+                );
+              } else {
+                s.start("Upgrading plan...");
+
+                // Just upgrade the plan
+                await client.organization.updatePlan.mutate({
+                  organizationId: meta?.organizationId,
+                  tier: Number(meta?.tier) + 1,
+                });
+
+                s.stop(chalk.green("Plan upgraded successfully"));
+
+                note(
+                  "Run `languine translate` again to continue.",
+                  "What's next?",
+                );
+              }
+            }
+
+            process.exit(1);
+          }
+
           if (
             error?.code === "DOCUMENT_LIMIT_REACHED" ||
             error?.code === "KEY_LIMIT_REACHED"
@@ -267,10 +313,12 @@ export async function translateCommand(args: string[] = []) {
           // If in queue, show a pro tip
           if (!isSilent && meta?.plan === "free") {
             if (!checkOnly) {
+              console.log();
               note(
                 "Upgrade to Pro for faster translations https://languine.ai/pricing",
                 "Pro tip",
               );
+              console.log();
             }
           }
 
@@ -360,10 +408,7 @@ export async function translateCommand(args: string[] = []) {
                 translatedAnything = true;
               }
             } catch {
-              note(
-                chalk.red(`Translation failed for ${targetLocale}`),
-                "Error",
-              );
+              chalk.red(`Translation failed for ${targetLocale}`);
             }
           }
         }
@@ -387,11 +432,6 @@ export async function translateCommand(args: string[] = []) {
             chalk.green(
               `All translations completed in ${duration >= 60 ? `${Math.floor(duration / 60)}m ` : ""}${duration % 60}s`,
             ),
-          );
-          s.stop();
-          note(
-            "Visit https://languine.ai/login to add brand guidelines, fine-tune and more.",
-            "Tip",
           );
         }
       }

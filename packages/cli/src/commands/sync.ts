@@ -77,7 +77,7 @@ export async function syncCommand(args: string[] = []) {
             let shouldRemoveKeys = false;
             s.stop();
             note(
-              `Detected ${removedKeys.length} keys removed.\nThis will remove these keys from all target locale files and from the platform.`,
+              `Detected ${removedKeys.length} ${removedKeys.length === 1 ? "key" : "keys"} removed.\nThis will remove ${removedKeys.length === 1 ? "this key" : "these keys"} from all target locale files and from the platform.`,
               "Remove keys",
             );
 

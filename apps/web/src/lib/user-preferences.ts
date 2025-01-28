@@ -8,6 +8,10 @@ interface UserPreferences {
 const PREFERENCES_COOKIE_NAME = "user-preferences";
 const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
 
+export function deleteUserPreferences() {
+  document.cookie = `${PREFERENCES_COOKIE_NAME}=; path=/; max-age=0;`;
+}
+
 export function saveUserPreferences(preferences: Partial<UserPreferences>) {
   const existingPreferences = getUserPreferences();
   const newPreferences = {
