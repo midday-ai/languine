@@ -18,7 +18,7 @@
     "account": "Účet"
   },
   "getStarted": {
-    "heading": "Začnite 2",
+    "heading": "Začnite",
     "title": "Automatizovaná lokalizačná infraštruktúra",
     "description": "Prekladajte obsah vašej aplikácie priamo vo vašom vývojovom pracovnom postupe. Naša CLI sa integruje s GitHub Actions a inými CI/CD nástrojmi na automatizáciu prekladov počas kódovania.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limit dosiahnutý",
     "description": "Dosiahli ste limit pre váš plán. Prosím, aktualizujte svoj plán, aby ste mohli pokračovať."
-  },
-  "translate": {
-    "tip": "Navštívte https://languine.ai/login, aby ste pridali pokyny značky, doladili a viac."
   }
 }

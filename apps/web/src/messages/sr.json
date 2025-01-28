@@ -18,7 +18,7 @@
     "account": "Nalog"
   },
   "getStarted": {
-    "heading": "Počnite 2",
+    "heading": "Počnite",
     "title": "Automatizovana infrastruktura za lokalizaciju",
     "description": "Prevedite sadržaj vaše aplikacije direktno u vašem razvojnim toku. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodirate.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Dostignut limit",
     "description": "Dostigli ste limit za vaš plan. Molimo vas da nadogradite svoj plan kako biste nastavili."
-  },
-  "translate": {
-    "tip": "Posetite https://languine.ai/login da dodate smernice brenda, fino podesite i još mnogo toga."
   }
 }

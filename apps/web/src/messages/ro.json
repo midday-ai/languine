@@ -18,7 +18,7 @@
     "account": "Cont"
   },
   "getStarted": {
-    "heading": "Începeți 2",
+    "heading": "Începeți",
     "title": "Infrastructură de localizare automatizată",
     "description": "Traduceti conținutul aplicației dvs. direct în fluxul de lucru de dezvoltare. CLI-ul nostru se integrează cu GitHub Actions și alte instrumente CI/CD pentru a automatiza traducerile pe măsură ce codificați.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limită atinsă",
     "description": "Ați atins limita pentru planul dumneavoastră. Vă rugăm să vă actualizați planul pentru a continua."
-  },
-  "translate": {
-    "tip": "Vizitați https://languine.ai/login pentru a adăuga linii directoare de brand, a ajusta și multe altele."
   }
 }

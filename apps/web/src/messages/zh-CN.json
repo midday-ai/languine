@@ -18,7 +18,7 @@
     "account": "账户"
   },
   "getStarted": {
-    "heading": "开始使用 2",
+    "heading": "开始使用",
     "title": "自动化本地化基础设施",
     "description": "直接在您的开发工作流程中翻译应用内容。我们的 CLI 与 GitHub Actions 和其他 CI/CD 工具集成，以便在您编码时自动翻译。",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "达到限制",
     "description": "您已达到您计划的限制。请升级您的计划以继续。"
-  },
-  "translate": {
-    "tip": "访问 https://languine.ai/login 添加品牌指南、微调等。"
   }
 }

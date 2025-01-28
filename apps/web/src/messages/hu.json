@@ -18,7 +18,7 @@
     "account": "Fiók"
   },
   "getStarted": {
-    "heading": "Kezdj el 2",
+    "heading": "Kezdjük el",
     "title": "Automatizált lokalizációs infrastruktúra",
     "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. A CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limit elérve",
     "description": "Elérte a terve limitjét. Kérjük, frissítse a tervét a folytatáshoz."
-  },
-  "translate": {
-    "tip": "Látogass el a https://languine.ai/login oldalra, hogy hozzáadd a márkairányelveket, finomhangolj és még többet."
   }
 }

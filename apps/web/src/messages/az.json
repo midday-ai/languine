@@ -18,7 +18,7 @@
     "account": "Hesab"
   },
   "getStarted": {
-    "heading": "Başlayın 2",
+    "heading": "Başlayın",
     "title": "Avtomatlaşdırılmış lokalizasiya infrastrukturu",
     "description": "Tətbiqinizin məzmununu birbaşa inkişaf iş axınınızda tərcümə edin. Bizim CLI GitHub Actions və digər CI/CD alətləri ilə inteqrasiya olunur ki, kod yazarkən tərcümələri avtomatlaşdırsın.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limitə çatıldı",
     "description": "Sizin planınız üçün limitə çatmısınız. Davam etmək üçün planınızı yüksəldin."
-  },
-  "translate": {
-    "tip": "Marka qaydalarını əlavə etmək, incə tənzimləmək və daha çoxu üçün https://languine.ai/login saytını ziyarət edin."
   }
 }

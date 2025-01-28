@@ -18,7 +18,7 @@
     "account": "Akun"
   },
   "getStarted": {
-    "heading": "Mulai 2",
+    "heading": "Mulai",
     "title": "Infrastruktur lokalisasi otomatis",
     "description": "Terjemahkan konten aplikasi Anda langsung dalam alur kerja pengembangan Anda. CLI kami terintegrasi dengan GitHub Actions dan alat CI/CD lainnya untuk mengotomatiskan terjemahan saat Anda mengkode.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Batas tercapai",
     "description": "Anda telah mencapai batas untuk rencana Anda. Silakan tingkatkan rencana Anda untuk melanjutkan."
-  },
-  "translate": {
-    "tip": "Kunjungi https://languine.ai/login untuk menambahkan pedoman merek, menyempurnakan, dan lainnya."
   }
 }

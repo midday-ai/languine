@@ -18,7 +18,7 @@
     "account": "Konto"
   },
   "getStarted": {
-    "heading": "Alustamine 2",
+    "heading": "Alusta",
     "title": "Automatiseeritud lokaliseerimise infrastruktuur",
     "description": "Tõlgi oma rakenduse sisu otse oma arendusvoos. Meie CLI integreerub GitHub Actions'i ja teiste CI/CD tööriistadega, et automatiseerida tõlkeid, kui sa koodid.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Piirang saavutatud",
     "description": "Olete oma plaani piiranguni jõudnud. Palun uuendage oma plaani, et jätkata."
-  },
-  "translate": {
-    "tip": "Külastage https://languine.ai/login, et lisada brändi suunised, täpsustada ja palju muud."
   }
 }

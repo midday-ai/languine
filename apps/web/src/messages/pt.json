@@ -18,7 +18,7 @@
     "account": "Conta"
   },
   "getStarted": {
-    "heading": "Comece agora 2",
+    "heading": "Comece agora",
     "title": "Infraestrutura de localização automatizada",
     "description": "Traduza o conteúdo do seu aplicativo diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra ao GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limite atingido",
     "description": "Você atingiu o limite do seu plano. Por favor, faça upgrade para continuar."
-  },
-  "translate": {
-    "tip": "Visite https://languine.ai/login para adicionar diretrizes de marca, ajustar e mais."
   }
 }

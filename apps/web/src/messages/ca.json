@@ -18,7 +18,7 @@
     "account": "Compte"
   },
   "getStarted": {
-    "heading": "Començar 2",
+    "heading": "Començar",
     "title": "Infraestructura de localització automatitzada",
     "description": "Tradueix el contingut de la teva aplicació directament en el teu flux de treball de desenvolupament. La nostra CLI s'integra amb GitHub Actions i altres eines CI/CD per automatitzar les traduccions mentre codifiques.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Límit assolit",
     "description": "Has assolit el límit del teu pla. Si us plau, actualitza el teu pla per continuar."
-  },
-  "translate": {
-    "tip": "Visita https://languine.ai/login per afegir directrius de marca, ajustar i més."
   }
 }

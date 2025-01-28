@@ -18,7 +18,7 @@
     "account": "Account"
   },
   "getStarted": {
-    "heading": "Aan de slag 2",
+    "heading": "Aan de slag",
     "title": "Geautomatiseerde lokalisatie-infrastructuur",
     "description": "Vertaal de inhoud van je app direct in je ontwikkelworkflow. Onze CLI integreert met GitHub Actions en andere CI/CD-tools om vertalingen te automatiseren terwijl je codeert.",
     "button": {
@@ -616,8 +616,5 @@
   "limit_reached": {
     "title": "Limiet bereikt",
     "description": "U heeft de limiet voor uw plan bereikt. Upgrade alstublieft uw plan om door te gaan."
-  },
-  "translate": {
-    "tip": "Bezoek https://languine.ai/login om merkrichtlijnen toe te voegen, aanpassingen te maken en meer."
   }
 }
