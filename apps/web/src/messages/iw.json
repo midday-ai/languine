@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "מחירים",
+    "docs": "מסמכים",
+    "signIn": "התחבר",
+    "goToApp": "עבור לאפליקציה"
+  },
+  "hero": {
+    "title": "תשתית לוקליזציה אוטומטית",
+    "description": "תרגם את תוכן האפליקציה שלך ישירות במהלך תהליך הפיתוח שלך. ה-CLI שלנו משתלב עם GitHub Actions וכלים נוספים ל-CI/CD כדי לאוטומט תרגומים בזמן שאתה כותב קוד."
+  },
+  "navigation": {
+    "dashboard": "לוח מחוונים",
+    "tuning": "כיוונון",
+    "settings": "הגדרות",
+    "pricing": "מחירים",
+    "docs": "תיעוד",
+    "account": "חשבון"
+  },
+  "getStarted": {
+    "heading": "התחל",
+    "title": "תשתית לוקליזציה אוטומטית",
+    "description": "תרגם את תוכן האפליקציה שלך ישירות במהלך תהליך הפיתוח שלך. ה-CLI שלנו משתלב עם GitHub Actions וכלים נוספים ל-CI/CD כדי לאוטומט תרגומים בזמן שאתה כותב קוד.",
+    "button": {
+      "startAutomating": "התחל לאוטומט",
+      "readDocumentation": "קרא תיעוד"
+    }
+  },
+  "companies": {
+    "title": "בשימוש על ידי",
+    "addYourCompany": "+ הוסף את החברה שלך"
+  },
+  "activity": {
+    "title": "פעילות",
+    "loading": "טוען",
+    "noResults": "אין תוצאות עבור '{search}'",
+    "clearSearch": "נקה חיפוש",
+    "loadMore": "הצג עוד",
+    "type": {
+      "key": "מפתח",
+      "document": "מסמך"
+    }
+  },
+  "features": {
+    "title": "תכונות",
+    "fullyOpenSource": "קוד פתוח לחלוטין",
+    "fullyOpenSourceDescription": "הקוד שלנו זמין לציבור ב-GitHub, מה שמאפשר שקיפות ותרומות מהקהילה.",
+    "noVendorLockIn": "אין נעילה לספק",
+    "noVendorLockInDescription": "אנחנו לא נועלים אותך לשירות ספציפי, השתמש ב-LLMs שלך.",
+    "presetsForExpo": "הגדרות מראש עבור Expo",
+    "presetsForExpoDescription": "אנו מספקים הגדרות מראש עבור Expo, כך שתוכל להתחיל במהירות.",
+    "presetForReactNative": "הגדרה מראש עבור React Native",
+    "presetForReactNativeDescription": "אנו מספקים הגדרה מראש עבור React Native, כך שתוכל להתחיל במהירות.",
+    "presetForReactEmail": "ספריית React Email",
+    "presetForReactEmailDescription": "יצרנו ספריית i18n עבור React Email.",
+    "readyForI18nLibraries": "מוכן לספריות i18n",
+    "readyForI18nLibrariesDescription": "אנו תומכים בכל הספריות כולל הפופולריות ביותר (next-intl, react-i18next, react-intl וכו')."
+  },
+  "info": {
+    "title": "מטפל בכל היבט של לוקליזציה של האפליקציה שלך כולל",
+    "smartTranslation": {
+      "title": "תרגום חכם",
+      "intelligentTranslation": "תרגום אינטליגנטי עם מודעות להקשר",
+      "brandVoice": "עקביות בקול ובטון המותג",
+      "terminology": "ניהול מונחים",
+      "linguisticFeatures": "תכונות לשוניות מתקדמות",
+      "realtimeUpdates": "עדכוני תרגום בזמן אמת"
+    },
+    "implementation": {
+      "title": "יישום",
+      "quickSetup": "התקנה מהירה ואינטגרציה",
+      "fileFormat": "ניהול פורמטי קבצים",
+      "contentStructure": "ארגון מבנה תוכן",
+      "assetOrganization": "ארגון נכסים"
+    },
+    "developer": {
+      "title": "חוויית מפתח",
+      "cli": "ממשק שורת פקודה",
+      "cicd": "אינטגרציית CI/CD",
+      "versionControl": "בקרת גרסאות",
+      "workflow": "תהליך עבודה של מפתח",
+      "documentation": "תיעוד מקיף"
+    }
+  },
+  "login": {
+    "title": "התחבר",
+    "github": "התחבר עם GitHub",
+    "google": "התחבר עם Google",
+    "footer": "אוטומט את הלוקליזציה שלך.",
+    "description": "התחבר כדי להתחיל לאוטומט את הלוקליזציה שלך תוך שניות.",
+    "terms": {
+      "text": "על ידי התחברות, אתה מסכים ל",
+      "termsOfService": "תנאי השירות",
+      "and": "ו",
+      "privacyPolicy": "מדיניות פרטיות"
+    }
+  },
+  "translations": {
+    "header": "מפתחות מתורגמים"
+  },
+  "userMenu": {
+    "account": "הגדרות חשבון",
+    "signOut": "התנתק",
+    "createTeam": "צור צוות",
+    "homepage": "דף הבית",
+    "team": "הגדרות צוות"
+  },
+  "teamSelector": {
+    "addProject": "צור פרויקט",
+    "createProjectTitle": "צור פרויקט חדש",
+    "projectNamePlaceholder": "שם פרויקט",
+    "createProjectButton": "צור פרויקט",
+    "pro": "פרו",
+    "project": "פרויקט",
+    "teams": "צוותים",
+    "createTeam": "צור צוות",
+    "createTeamTitle": "צור צוות חדש",
+    "teamNamePlaceholder": "שם צוות",
+    "createTeamButton": "צור צוות"
+  },
+  "coming_soon": {
+    "title": "Languine נמצא בגישה מוקדמת",
+    "description": "אנחנו כרגע בגישה מוקדמת. פנה ל",
+    "cta": "ב-X כדי לקבל גישה מוקדמת."
+  },
+  "account": {
+    "fullName": {
+      "title": "שם מלא",
+      "description": "שמך המלא כפי שיופיע בפלטפורמה.",
+      "placeholder": "הזן את שמך המלא"
+    },
+    "email": {
+      "title": "כתובת דוא\"ל",
+      "description": "כתובת הדוא\"ל הקשורה לחשבונך.",
+      "placeholder": "הזן את כתובת הדוא\"ל שלך"
+    },
+    "apiKey": {
+      "title": "מפתח API",
+      "description": "מפתח ה-API האישי שלך לגישה ל-API של Languine ול-CLI."
+    },
+    "deleteAccount": {
+      "title": "מחק חשבון",
+      "description": "מחק לצמיתות את החשבון שלך ואת כל הנתונים הקשורים. פעולה זו אינה ניתנת לביטול.",
+      "button": "מחק חשבון"
+    }
+  },
+  "copyInstall": {
+    "copied": "הועתק ללוח"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "האם אתה בטוח לחלוטין?",
+      "description": "פעולה זו אינה ניתנת לביטול. אנא הקלד DELETE כדי לאשר.",
+      "placeholder": "הקלד DELETE כדי לאשר",
+      "confirm": "אשר מחיקה",
+      "cancel": "ביטול"
+    }
+  },
+  "pipeline": {
+    "title": "זרימת עבודה (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "מנוע התרגום שלנו משתלב בצורה חלקה בצינור CI/CD הקיים שלך, מתרגם אוטומטית את בסיס הקוד שלך בכל דחיפה. כאשר שינויים בקוד נדחפים, אנו מנתחים את התוכן המותאם, שומרים על זיכרון התרגום שלך, ומייצרים תרגומים מדויקים תוך שמירה על קול המותג והטרמינולוגיה שלך. התרגומים מוגשים אז כבקשות משיכה, המאפשרות סקירה לפני שהן מתמזגות לענף הראשי שלך ומופעלות. זרימת עבודה אוטומטית זו מבטיחה שהתוכן המקומי שלך יישאר מסונכרן עם הפיתוח."
+  },
+  "settings": {
+    "badRequest": "בקשה לא חוקית",
+    "badRequestDescription": "על הארגון להיות בעל לפחות בעל אחד. העבר בעלות לחבר אחר לפני הסרת בעל זה.",
+    "permissionDenied": "הרשאה נדחתה",
+    "permissionDeniedDescription": "אתה צריך להיות בעל צוות כדי לבצע פעולה זו",
+    "deleteTeamTitle": "מחק צוות",
+    "deleteTeamDescription": "לא ניתן למחוק ארגון כאשר אתה החבר היחיד, במקום זאת מחק את החשבון שלך",
+    "saved": "הגדרות נשמרו",
+    "savedDescription": "השינויים שלך נשמרו בהצלחה",
+    "error": "משהו השתבש",
+    "errorDescription": "אנא נסה שוב או פנה לתמיכה",
+    "addTeam": "צור צוות",
+    "apiKey": {
+      "updated": "מפתח API עודכן",
+      "updatedDescription": "מפתח ה-API שלך עודכן בהצלחה והועתק ללוח שלך.",
+      "title": "עדכן מפתח API",
+      "description": "האם אתה בטוח שברצונך ליצור מפתח API חדש? המפתח הישן יפסיק לפעול מיד.",
+      "cancel": "ביטול",
+      "continue": "המשך"
+    },
+    "tabs": {
+      "project": "פרויקט",
+      "account": "חשבון",
+      "team": "צוות",
+      "provider": "ספק",
+      "billing": "חיוב"
+    },
+    "addProject": "צור פרויקט",
+    "project": {
+      "name": {
+        "title": "שם פרויקט",
+        "description": "שם הפרויקט שלך",
+        "placeholder": "הזן שם פרויקט"
+      },
+      "id": {
+        "title": "מזהה פרויקט",
+        "description": "המזהה הייחודי של הפרויקט שלך",
+        "placeholder": "מזהה פרויקט"
+      },
+      "delete": {
+        "title": "מחק פרויקט",
+        "description": "מחק לצמיתות את הפרויקט הזה ואת כל הנתונים שלו",
+        "button": "מחק פרויקט"
+      }
+    },
+    "save": "שמור",
+    "team": {
+      "name": {
+        "title": "שם צוות",
+        "description": "שם הצוות שלך",
+        "placeholder": "הזן שם צוות"
+      },
+      "billing": {
+        "title": "תוכנית חיוב",
+        "description": "נהל את תוכנית החיוב של הצוות שלך",
+        "free": "חינם",
+        "pro": "פרו",
+        "unlimited": "בלתי מוגבל"
+      },
+      "apiKey": {
+        "title": "מפתח API של צוות",
+        "description": "מפתח API לגישה לצוות, השתמש בזה מה-CI/CD pipeline שלך יחד עם מזהה הפרויקט",
+        "placeholder": "מפתח API של צוות"
+      },
+      "members": {
+        "leaveTeamConfirm": "עזוב צוות",
+        "leaveTeamDescription": "האם אתה בטוח שברצונך לעזוב את הצוות הזה?",
+        "cancel": "ביטול",
+        "leaveTeam": "עזוב צוות",
+        "invite": "הזמן חבר",
+        "title": "חברים",
+        "pendingInvitations": "הזמנות ממתינות",
+        "removeMember": "הסר חבר",
+        "removeMemberConfirm": "הסר חבר",
+        "removeMemberDescription": "האם אתה בטוח שברצונך להסיר חבר זה?",
+        "filterPlaceholder": "סנן חברים...",
+        "allRoles": "כל התפקידים",
+        "date": "תאריך",
+        "selectAll": "{count} נבחרו",
+        "noPendingInvitations": "אין הזמנות ממתינות",
+        "noResults": "לא נמצאו חברים",
+        "tryDifferentSearch": "נסה חיפוש שונה",
+        "inviteMembers": "הזמן חברים לשתף פעולה",
+        "deleteInvite": "מחק הזמנה",
+        "deleteInviteDescription": "מחק את ההזמנה",
+        "invitedBy": "הוזמן על ידי {name}",
+        "deleteInviteSuccess": "ההזמנה נמחקה",
+        "deleteInviteError": "נכשל במחק ההזמנה",
+        "removeMemberSuccess": "החבר הוסר",
+        "removeMemberError": "נכשל בהסרת חבר",
+        "removeMemberSuccessDescription": "החבר הוסר בהצלחה",
+        "removeMemberErrorDescription": "נכשל בהסרת חבר",
+        "roles": {
+          "owner": "בעל",
+          "member": "חבר"
+        },
+        "dateSort": {
+          "newest": "החדש ביותר",
+          "oldest": "הישן ביותר"
+        },
+        "deleteInviteConfirm": "מחק הזמנה"
+      }
+    }
+  },
+  "tuning": {
+    "general": "כללי",
+    "translationMemory": {
+      "title": "זיכרון תרגום",
+      "description": "השתמש בזיכרון תרגום כדי לשפר עקביות ויעילות"
+    },
+    "qualityChecks": {
+      "title": "בדיקות איכות",
+      "description": "אפשר בדיקות איכות אוטומטיות לתרגומים"
+    },
+    "contextDetection": {
+      "title": "זיהוי הקשר",
+      "description": "גלה ושמור על הקשר בתרגומים באופן אוטומטי"
+    },
+    "styleGuide": "מדריך סגנון",
+    "lengthControl": {
+      "title": "בקרת אורך",
+      "description": "בקר את אורך הטקסט המתורגם",
+      "options": {
+        "flexible": "גמיש",
+        "strict": "מחמיר",
+        "exact": "מדויק",
+        "loose": "רפוי"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "שפה כוללת",
+      "description": "ודא שהתרגומים משתמשים בשפה כוללת"
+    },
+    "formality": {
+      "title": "פורמליות",
+      "description": "בקר את רמת הפורמליות של התרגומים",
+      "options": {
+        "casual": "לא פורמלי",
+        "formal": "פורמלי",
+        "neutral": "נייטרלי"
+      }
+    },
+    "brandName": {
+      "title": "שם מותג",
+      "description": "קבע את שם המותג שלך לשימוש עקבי",
+      "placeholder": "הזן את שם המותג שלך"
+    },
+    "brandVoice": {
+      "title": "קול המותג",
+      "description": "הגדר את קול המותג שלך וטון הדיבור",
+      "placeholder": "תאר את קול המותג שלך..."
+    },
+    "toneOfVoice": {
+      "title": "טון הדיבור",
+      "description": "הגדר את הטון בשימוש בתרגומים",
+      "options": {
+        "casual": "לא פורמלי",
+        "formal": "פורמלי",
+        "friendly": "ידידותי",
+        "professional": "מקצועי",
+        "playful": "משעשע",
+        "serious": "רציני",
+        "confident": "בוטח",
+        "humble": "צנוע",
+        "direct": "ישיר",
+        "diplomatic": "דיפלומטי"
+      }
+    },
+    "brand": "מותג",
+    "emotiveIntent": {
+      "title": "כוונה רגשית",
+      "description": "קבע את הטון הרגשי עבור התרגומים",
+      "options": {
+        "neutral": "נייטרלי",
+        "positive": "חיובי",
+        "empathetic": "אמפתי",
+        "professional": "מקצועי",
+        "friendly": "ידידותי",
+        "enthusiastic": "נלהב"
+      }
+    },
+    "domainExpertise": {
+      "title": "מומחיות בתחום",
+      "description": "ציין את ההקשר של התחום עבור התרגומים",
+      "options": {
+        "general": "כללי",
+        "technical": "טכני",
+        "medical": "רפואי",
+        "legal": "משפטי",
+        "financial": "פיננסי",
+        "marketing": "שיווק",
+        "academic": "אקדמי"
+      }
+    },
+    "idioms": {
+      "title": "ביטויים",
+      "description": "טפל בביטויים אידיומטיים בצורה מתאימה"
+    },
+    "terminology": {
+      "title": "מונחים",
+      "description": "נהל מונחים מיוחדים ומילונים"
+    },
+    "culturalAdaptation": {
+      "title": "התאמה תרבותית",
+      "description": "התאם תוכן להתאמה תרבותית"
+    }
+  },
+  "pricing": {
+    "title": "תמחור פשוט",
+    "free": {
+      "title": "חינם",
+      "price": "חינם",
+      "keys_limit": "עד 100 מפתחות",
+      "description": "מושלם כשאתה מנסה",
+      "features": {
+        "unlimited_projects": "פרויקטים ללא הגבלה",
+        "fine_tuning": "אפשרויות כוונון",
+        "overrides": "החלפות תרגום",
+        "analytics": "אנליטיקה",
+        "context_memory": "זיכרון הקשר",
+        "community_support": "תמיכה קהילתית",
+        "keys_limit": "עד 100 מפתחות",
+        "docs_limit": "עד 5 מסמכים",
+        "languages": "2 שפות"
+      }
+    },
+    "pro": {
+      "title": "פרו",
+      "includes_free": "הכול בחינם, בנוסף:",
+      "features": {
+        "github_action": "שילוב GitHub Action",
+        "latest_features": "גישה מוקדמת לתכונות האחרונות",
+        "priority_support": "תמיכה בעדיפות",
+        "priority_queues": "תור תרגום בעדיפות",
+        "languages": "שפות ללא הגבלה",
+        "keys_limit": "מתחיל מ-10,000 מפתחות",
+        "docs_limit": "מתחיל מ-50 מסמכים"
+      }
+    },
+    "cta": "התחל לאוטומט",
+    "keys_limit_explanation": "מפתח מתורגם: אם יש לך 20 מפתחות מקור (כמו \"הרשמה\" או \"ברוך הבא!\") ואתה מתרגם אותם ל-5 שפות, זה שווה 100 מפתחות מתורגמים (20 מפתחות x 5 שפות)."
+  },
+  "createTeam": {
+    "teamName": "שם צוות",
+    "teamNamePlaceholder": "הזן שם צוות",
+    "createTeamButton": "צור צוות",
+    "cancel": "ביטול",
+    "createTeamDescription": "צור צוות חדש כדי לנהל את הפרויקטים והשותפים שלך."
+  },
+  "createProject": {
+    "createProjectTitle": "צור פרויקט חדש",
+    "projectNamePlaceholder": "הזן שם פרויקט",
+    "createProjectButton": "צור פרויקט",
+    "cancel": "ביטול",
+    "createProjectDescription": "צור פרויקט חדש כדי להתחיל לאוטומט את הלוקליזציה שלך."
+  },
+  "invite": {
+    "inviteMember": "הזמן חבר",
+    "inviteDescription": "הזמן חבר לצוות שלך",
+    "emailLabel": "אימייל",
+    "emailPlaceholder": "הזן אימייל",
+    "cancel": "ביטול",
+    "submit": "שלח",
+    "success": {
+      "title": "הזמנה נשלחה",
+      "description": "ההזמנה נשלחה בהצלחה ל-{email}"
+    },
+    "error": {
+      "title": "שגיאה",
+      "description": "נכשל לשלוח הזמנה. אנא נסה שוב."
+    },
+    "validation": {
+      "invalidEmail": "אנא הזן אימייל תקף"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "התקנת Languine CLI",
+        "description": "התקן והגדר את Languine CLI כדי לנהל תרגומים"
+      },
+      "2": {
+        "title": "דחיפת תרגומים",
+        "description": "מחכה לדחיפת התרגומים"
+      },
+      "3": {
+        "title": "תיעוד",
+        "description": "בדוק את התיעוד שלנו למדריכים מפורטים ושיטות עבודה מומלצות",
+        "link": "תיעוד"
+      }
+    },
+    "info": {
+      "description": "צריך עזרה? בדוק את ה",
+      "link": "תיעוד",
+      "description_2": "למדריכים מפורטים ושיטות עבודה מומלצות."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "התחברות ל-Languine CLI הצליחה",
+      "description": "Languine CLI אושרה בהצלחה כ:",
+      "description_2": "כעת תוכל לסגור את הלשונית הזו ולחזור ל-CLI"
+    }
+  },
+  "search": {
+    "placeholder": "חפש"
+  },
+  "periods": {
+    "daily": "יומי",
+    "weekly": "שבועי",
+    "monthly": "חודשי",
+    "selectPeriod": "בחר תקופה"
+  },
+  "language": {
+    "en": "אנגלית",
+    "es": "ספרדית",
+    "fr": "צרפתית",
+    "de": "גרמנית",
+    "it": "איטלקית",
+    "pt": "פורטוגזית",
+    "ja": "יפנית",
+    "ko": "קוריאנית",
+    "ar": "ערבית",
+    "tr": "טורקית",
+    "nl": "הולנדית",
+    "pl": "פולנית",
+    "no": "נורווגית",
+    "da": "דנית",
+    "sv": "שבדית",
+    "fi": "פינית",
+    "vi": "ווייטנאמית",
+    "az": "אזרית",
+    "bg": "בולגרית",
+    "ca": "קטלאנית",
+    "cs": "צ'כית",
+    "el": "יוונית",
+    "et": "אסטונית",
+    "he": "עברית",
+    "hr": "קרואטית",
+    "hu": "הונגרית",
+    "id": "אינדונזית",
+    "iw": "עברית",
+    "km": "חמרית",
+    "lv": "לטבית",
+    "pt-BR": "פורטוגזית (ברזיל)",
+    "ro": "רומנית",
+    "ru": "רוסית",
+    "sk-SK": "סלובקית (סלובקיה)",
+    "sk": "סלובקית",
+    "sr": "סרבית",
+    "ta": "טמילית",
+    "th": "תאית",
+    "uk": "אוקראינית",
+    "zh-CN": "סינית (מפושטת)",
+    "zh-TW": "סינית (מסורתית)"
+  },
+  "menu": {
+    "dashboard": "לוח מחוונים",
+    "tuning": "כיוונון",
+    "settings": "הגדרות",
+    "pricing": "תמחור",
+    "docs": "תיעוד",
+    "account": "חשבון"
+  },
+  "billing": {
+    "title": "חיוב"
+  },
+  "analytics": {
+    "key": "מפתחות מתורגמים",
+    "document": "מסמכים מתורגמים",
+    "header": "תרגומים",
+    "months": {
+      "10": "אוק",
+      "11": "נוב",
+      "12": "דצמ",
+      "01": "ינו",
+      "02": "פבר",
+      "03": "מרץ",
+      "04": "אפר",
+      "05": "מאי",
+      "06": "יונ",
+      "07": "יול",
+      "08": "אוג",
+      "09": "ספט"
+    }
+  },
+  "faq": {
+    "title": "שאלות נפוצות",
+    "what_is_languine": {
+      "question": "מה זה Languine?",
+      "answer": "Languine היא פלטפורמת לוקליזציה המונעת על ידי AI, המסייעת לך לאוטומט את תהליך התרגום של היישומים שלך. היא מספקת תכונות כמו אפשרויות כיוונון, החלפות תרגום, ניתוחים וזיכרון הקשר כדי להבטיח תרגומים באיכות גבוהה."
+    },
+    "key_limit": {
+      "question": "איך עובד מגבלת המפתחות?",
+      "answer": "מפתח מתורגם נחשב כאשר אתה מתרגם מפתח מקור לשפה יעד. לדוגמה, אם יש לך 20 מפתחות מקור ואתה מתרגם אותם ל-5 שפות, זה שווה ל-100 מפתחות מתורגמים (20 מפתחות × 5 שפות)."
+    },
+    "supported_languages": {
+      "question": "אילו שפות נתמכות?",
+      "answer": "Languine תומכת ביותר מ-100 שפות בכל התוכניות. בעוד שהתירגומים המונעים על ידי AI שלנו עובדים הכי טוב עם שפות מרכזיות, אנו שואפים לספק תרגומים איכותיים בכל השפות הנתמכות. אם יש לך דרישות שפה ספציפיות או שאלות לגבי איכות התרגום לשפות מסוימות, אנא פנה לצוות התמיכה שלנו."
+    },
+    "github_action": {
+      "question": "איך עובד שילוב GitHub Action?",
+      "answer": "שילוב GitHub Action (זמין בתוכניות Pro) מאפשר לך לאוטומט את זרימת העבודה של התרגום שלך ישירות בצינור ה-CI/CD שלך. כאשר אתה דוחף שינויים למאגר שלך, התרגומים יכולים להתעדכן אוטומטית."
+    },
+    "support": {
+      "question": "איזה סוג תמיכה אתם מציעים?",
+      "answer": "משתמשים חינמיים מקבלים גישה לתמיכה קהילתית, בעוד שמשתמשי Pro מקבלים תמיכה עדיפות עם זמני תגובה מהירים יותר ועזרה ייעודית לצרכי התרגום שלהם."
+    },
+    "open_source": {
+      "question": "האם Languine קוד פתוח?",
+      "answer": "כן! Languine הוא קוד פתוח לחלוטין וזמין ב-GitHub. אתה יכול לתרום לפרויקט, לדווח על בעיות, להציע תכונות ולבדוק את הקוד. אנו מאמינים בשקיפות ובבניית ציבורית."
+    },
+    "open_source_pricing": {
+      "question": "האם אתם מציעים תמחור מיוחד לפרויקטים בקוד פתוח?",
+      "answer": "כן! אנו אוהבים לתמוך בקהילת הקוד הפתוח. אם אתה מנהל פרויקט קוד פתוח, תוכל לקבל גישה לתכונות Pro שלנו בהנחה של 30%. פשוט פנה לצוות שלנו עם פרטים על הפרויקט שלך, ואנחנו נארגן לך חשבון Pro בהנחה. זו הדרך שלנו להחזיר לקהילה שעושה את העבודה שלנו אפשרית."
+    },
+    "cancel_subscription": {
+      "question": "איך אני מבטל את המנוי שלי?",
+      "answer": "אתה יכול לבטל את המנוי שלך בכל עת מהגדרות החשבון שלך. עבור ל-חיוב > שינוי תוכנית. המנוי שלך יישאר פעיל עד סוף תקופת החיוב הנוכחית שלך, לאחר מכן תועבר לתוכנית חינמית."
+    }
+  },
+  "pricing_slider": {
+    "tier": "רמה {tier}",
+    "keys": "מפתחות מתורגמים",
+    "documents": "מסמכים מתורגמים",
+    "period": "חודש",
+    "keys_suffix": " מפתחות",
+    "docs_suffix": " מסמכים"
+  },
+  "docs": {
+    "getting-started": "התחלה",
+    "workflow": "זרימת עבודה",
+    "ci": "CI/CD",
+    "presets": "הגדרות מראש",
+    "formats": "פורמטים",
+    "platform": "פלטפורמה",
+    "introduction": "מבוא",
+    "quickstart": "התחלה מהירה",
+    "authentication": "אימות",
+    "configuration": "הגדרה",
+    "cli": "CLI",
+    "github-actions": "פעולות GitHub",
+    "tuning": "כיוונון",
+    "settings": "הגדרות",
+    "hooks": "הוקס",
+    "examples": "דוגמאות",
+    "team": "צוות"
+  },
+  "test": {
+    "title": "זהו מבחן",
+    "description": "וזהו תיאור המבחן",
+    "button": "לחץ עלי"
+  }
+}

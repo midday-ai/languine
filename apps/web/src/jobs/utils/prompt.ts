@@ -1,4 +1,5 @@
 import type { projectSettings } from "@/db/schema";
+import { getLanguageName } from "./locale";
 import type { PromptOptions } from "./types";
 
 const baseRequirements = `
@@ -39,13 +40,13 @@ console.log('Hello World');
 };
 
 export function createFinalPrompt(
-  text: string,
+  content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
   settings?: Partial<typeof projectSettings.$inferSelect>,
 ) {
   const basePrompt = `You are a professional translator working with ${mapFormatToPrompt(options.sourceFormat)} files.
 
-Task: Translate the content below from ${options.sourceLocale.toUpperCase()} to ${options.targetLocale.toUpperCase()}.
+Task: Translate the content below from ${getLanguageName(options.sourceLocale)} (${options.sourceLocale}) to ${getLanguageName(options.targetLocale)} (${options.targetLocale}).
 
 ${baseRequirements}
 ${fileSpecificInstructions(options.sourceFormat)}`;
@@ -92,5 +93,12 @@ ${fileSpecificInstructions(options.sourceFormat)}`;
     tuningInstructions
       ? `\nAdditional Requirements:\n${tuningInstructions}`
       : ""
-  }\n\n${text}`;
+  }\n\n${JSON.stringify(
+    content.reduce((acc: Record<string, string>, { key, sourceText }) => {
+      acc[key] = sourceText;
+      return acc;
+    }, {}),
+    null,
+    2,
+  )}`;
 }

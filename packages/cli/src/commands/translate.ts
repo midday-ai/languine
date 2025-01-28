@@ -125,7 +125,10 @@ export async function translateCommand(args: string[] = []) {
 
           if (forceTranslate) {
             // If force flag is used, translate all keys
-            keysToTranslate = Object.keys(parsedSourceFile);
+            // We don't want to translate empty strings
+            keysToTranslate = Object.keys(parsedSourceFile).filter(
+              (key) => parsedSourceFile[key] !== "",
+            );
           } else {
             // Otherwise use normal diff detection
             try {

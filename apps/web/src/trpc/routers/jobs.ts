@@ -40,7 +40,7 @@ export const jobsRouter = createTRPCRouter({
           commitLink: input.commitLink,
           userId: ctx.type === "user" ? ctx.authenticatedId : null,
         },
-        options,
+        // options,
       );
 
       return {

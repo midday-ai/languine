@@ -1,7 +1,6 @@
 import { validateJobPermissions } from "@/db/queries/permissions";
 import { schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
-import { calculateChunkSize } from "../utils/chunk";
 import { translateLocaleTask } from "./translate-locale";
 
 type TranslationOutput = {
@@ -44,8 +43,6 @@ export const startTranslationsTask = schemaTask({
       throw new Error("No project found");
     }
 
-    const chunkSize = calculateChunkSize(payload.content);
-
     // Create a batch of translation jobs for each target language
     const jobs = await translateLocaleTask.batchTriggerAndWait(
       payload.targetLanguages.map((targetLocale) => ({
@@ -63,7 +60,6 @@ export const startTranslationsTask = schemaTask({
           commitLink: payload.commitLink,
           userId: payload.userId,
           content: payload.content,
-          chunkSize,
         },
       })),
     );

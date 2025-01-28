@@ -1,6 +1,6 @@
 import { generateObject } from "ai";
 import { z } from "zod";
-import { chooseModel, getModels } from "./model";
+import { chooseModel } from "./model";
 import { createFinalPrompt } from "./prompt";
 import type { PromptOptions } from "./types";
 
@@ -8,52 +8,70 @@ function getPrompt(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
 ) {
-  const codeblocks = content
-    .map(({ sourceText }) => {
-      return `\`\`\`json
-${sourceText}
-\`\`\``;
-    })
-    .join("\n\n");
-
-  return createFinalPrompt(codeblocks, options);
+  return createFinalPrompt(content, options);
 }
 
 export async function translateKeys(
   content: Array<{ key: string; sourceText: string }>,
   options: PromptOptions,
-  totalItems: number,
+  attempt?: number,
 ) {
   const prompt = getPrompt(content, options);
+  const model = chooseModel(attempt);
+
+  console.log("prompt", prompt);
+
+  console.log("Using model", {
+    id: model?.model?.modelId,
+    provider: model?.model?.provider,
+  });
 
   const { object } = await generateObject({
-    ...chooseModel(totalItems),
+    ...model,
     prompt,
-    mode: "json",
+    temperature: 0.2,
     schema: z.object({
-      content: z.array(z.string()),
+      translatedKeys: z
+        .record(
+          z.string().describe("The original key from the source content"),
+          z.string().describe("The translated text for this key"),
+        )
+        .describe("The translated content"),
     }),
   });
 
-  return object.content;
+  return object.translatedKeys;
 }
 
 export async function translateDocument(
   content: string,
   options: PromptOptions,
+  attempt?: number,
 ) {
-  const { large } = getModels();
-  const prompt = createFinalPrompt(content, options);
+  const prompt = createFinalPrompt(
+    [{ key: "content", sourceText: content }],
+    options,
+  );
+  const model = chooseModel(attempt);
+
+  console.log("Using model", {
+    id: model?.model?.modelId,
+    provider: model?.model?.provider,
+  });
 
   const { object } = await generateObject({
-    model: large,
+    ...model,
     prompt,
-    maxTokens: 8000,
-    mode: "json",
+    temperature: 0.2,
     schema: z.object({
-      content: z.string(),
+      translatedKeys: z
+        .record(
+          z.string().describe("The original key from the source content"),
+          z.string().describe("The translated text for this key"),
+        )
+        .describe("The translated content"),
     }),
   });
 
-  return object.content;
+  return object.translatedKeys;
 }

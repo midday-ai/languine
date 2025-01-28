@@ -1,6 +1,8 @@
 import { createDocument, createTranslations } from "@/db/queries/translate";
 import { schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
+import { calculateChunkSize } from "../utils/chunk";
+import { chooseModel } from "../utils/model";
 import { translateDocument, translateKeys } from "../utils/translate";
 
 const translateLocaleSchema = z.object({
@@ -23,7 +25,6 @@ const translateLocaleSchema = z.object({
       sourceFile: z.string(),
     }),
   ),
-  chunkSize: z.number(),
 });
 
 export const translateLocaleTask = schemaTask({
@@ -31,11 +32,16 @@ export const translateLocaleTask = schemaTask({
   schema: translateLocaleSchema,
   maxDuration: 600,
   queue: {
-    // Global limit for all tasks we need 100 RPS
-    concurrencyLimit: 100,
+    // Global limit for all tasks we need 50 RPS
+    concurrencyLimit: 50,
   },
-  run: async (payload) => {
+  retry: {
+    maxAttempts: 4,
+  },
+  run: async (payload, { ctx }) => {
     const translations: Array<{ key: string; translatedText: string }> = [];
+    const model = chooseModel(ctx.attempt.number);
+    const chunkSize = calculateChunkSize(payload.content, model.model.modelId);
 
     // If the source format is markdown, we take the whole document and translate it
     if (payload.sourceFormat === "md" || payload.sourceFormat === "mdx") {
@@ -48,15 +54,19 @@ export const translateLocaleTask = schemaTask({
         };
       }
 
-      const translatedContent = await translateDocument(document.sourceText, {
-        sourceLocale: payload.sourceLanguage,
-        targetLocale: payload.targetLocale,
-        sourceFormat: payload.sourceFormat,
-      });
+      const translatedContent = await translateDocument(
+        document.sourceText,
+        {
+          sourceLocale: payload.sourceLanguage,
+          targetLocale: payload.targetLocale,
+          sourceFormat: payload.sourceFormat,
+        },
+        ctx.attempt.number,
+      );
 
       translations.push({
         key: "content",
-        translatedText: translatedContent,
+        translatedText: translatedContent.content,
       });
 
       if (document?.sourceText) {
@@ -66,7 +76,7 @@ export const translateLocaleTask = schemaTask({
           sourceText: document.sourceText,
           sourceLanguage: payload.sourceLanguage,
           targetLanguage: payload.targetLocale,
-          translatedText: translatedContent,
+          translatedText: translatedContent.content,
           sourceFile: document.sourceFile,
           sourceFormat: payload.sourceFormat,
           branch: payload.branch,
@@ -86,23 +96,39 @@ export const translateLocaleTask = schemaTask({
 
     // Split content into chunks
     const contentChunks = [];
-    for (let i = 0; i < payload.content.length; i += payload.chunkSize) {
-      contentChunks.push(payload.content.slice(i, i + payload.chunkSize));
+    for (let i = 0; i < payload.content.length; i += chunkSize) {
+      contentChunks.push(payload.content.slice(i, i + chunkSize));
     }
 
     let completedChunks = 0;
-    const totalChunks = contentChunks.length;
 
     // Process chunks sequentially
     for (const chunk of contentChunks) {
-      const translatedContent = await translateKeys(
+      let translatedContent = await translateKeys(
         chunk,
         {
           sourceLocale: payload.sourceLanguage,
           targetLocale: payload.targetLocale,
         },
-        totalChunks,
+        ctx.attempt.number,
       );
+
+      // Find keys with null values and retry once with remaining keys
+      const remainingKeys = chunk.filter(
+        (content) => !translatedContent[content.key],
+      );
+
+      if (remainingKeys.length > 0) {
+        const retryTranslations = await translateKeys(
+          remainingKeys,
+          {
+            sourceLocale: payload.sourceLanguage,
+            targetLocale: payload.targetLocale,
+          },
+          ctx.attempt.number,
+        );
+        translatedContent = { ...translatedContent, ...retryTranslations };
+      }
 
       await createTranslations({
         projectId: payload.projectId,
@@ -120,17 +146,17 @@ export const translateLocaleTask = schemaTask({
           targetLanguage: payload.targetLocale,
           sourceText: content.sourceText,
           sourceFile: content.sourceFile,
-          translatedText: translatedContent[i],
+          translatedText: translatedContent[content.key],
         })),
       });
 
       // Process translations for this chunk
-      chunk.forEach((content, i) => {
+      for (const content of chunk) {
         translations.push({
           key: content.key,
-          translatedText: translatedContent[i],
+          translatedText: translatedContent[content.key],
         });
-      });
+      }
 
       completedChunks++;
     }

@@ -384,7 +384,7 @@
         "community_support": "Community support",
         "keys_limit": "Up to 100 keys",
         "docs_limit": "Up to 5 documents",
-        "unlimited_languages": "Unlimited languages"
+        "languages": "2 languages"
       }
     },
     "pro": {
@@ -395,6 +395,7 @@
         "latest_features": "Early access to latest features",
         "priority_support": "Priority support",
         "priority_queues": "Priority translation queues",
+        "languages": "Unlimited languages",
         "keys_limit": "Starting from 10 000 keys",
         "docs_limit": "Starting from 50 documents"
       }
@@ -475,24 +476,46 @@
   },
   "language": {
     "en": "English",
-    "es": "Spanish",
-    "fr": "French",
     "de": "German",
-    "it": "Italian",
-    "pt": "Portuguese",
-    "zh": "Chinese",
-    "ja": "Japanese",
-    "ko": "Korean",
     "ar": "Arabic",
-    "hi": "Hindi",
-    "tr": "Turkish",
-    "nl": "Dutch",
-    "pl": "Polish",
-    "no": "Norwegian",
+    "az": "Azerbaijani",
+    "bg": "Bulgarian",
+    "ca": "Catalan",
+    "cs": "Czech",
     "da": "Danish",
-    "sv": "Swedish",
+    "el": "Greek",
+    "es": "Spanish",
+    "et": "Estonian",
     "fi": "Finnish",
-    "vi": "Vietnamese"
+    "fr": "French",
+    "he": "Hebrew",
+    "hr": "Croatian",
+    "hu": "Hungarian",
+    "id": "Indonesian",
+    "it": "Italian",
+    "iw": "Hebrew",
+    "ja": "Japanese",
+    "km": "Khmer",
+    "ko": "Korean",
+    "lv": "Latvian",
+    "nl": "Dutch",
+    "no": "Norwegian",
+    "pl": "Polish",
+    "pt-BR": "Portuguese (Brazil)",
+    "pt": "Portuguese",
+    "ro": "Romanian",
+    "ru": "Russian",
+    "sk-SK": "Slovak (Slovakia)",
+    "sk": "Slovak",
+    "sr": "Serbian",
+    "sv": "Swedish",
+    "ta": "Tamil",
+    "th": "Thai",
+    "tr": "Turkish",
+    "uk": "Ukrainian",
+    "vi": "Vietnamese",
+    "zh-CN": "Chinese (Simplified)",
+    "zh-TW": "Chinese (Traditional)"
   },
   "menu": {
     "dashboard": "Dashboard",
@@ -515,13 +538,13 @@
       "03": "Mar",
       "04": "Apr",
       "05": "May",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Aug",
-    "09": "Sep",
-    "10": "Oct",
-    "11": "Nov",
-    "12": "Dec"
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
   }
   },
   "faq": {
@@ -585,5 +608,10 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
+  },
+  "test": {
+    "title": "This is a test",
+    "description": "And this is a test description",
+    "button": "Click me"
   }
 }

@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "Ceny",
+    "docs": "Dokumentace",
+    "signIn": "Přihlásit se",
+    "goToApp": "Přejít na aplikaci"
+  },
+  "hero": {
+    "title": "Automatizovaná lokalizační infrastruktura",
+    "description": "Přeložte obsah vaší aplikace přímo ve vašem vývojovém pracovním postupu. Náš CLI se integruje s GitHub Actions a dalšími nástroji CI/CD pro automatizaci překladů při kódování."
+  },
+  "navigation": {
+    "dashboard": "Nástěnka",
+    "tuning": "Ladění",
+    "settings": "Nastavení",
+    "pricing": "Ceny",
+    "docs": "Dokumentace",
+    "account": "Účet"
+  },
+  "getStarted": {
+    "heading": "Začněte",
+    "title": "Automatizovaná lokalizační infrastruktura",
+    "description": "Přeložte obsah vaší aplikace přímo ve vašem vývojovém pracovním postupu. Náš CLI se integruje s GitHub Actions a dalšími nástroji CI/CD pro automatizaci překladů při kódování.",
+    "button": {
+      "startAutomating": "Začněte automatizovat",
+      "readDocumentation": "Přečtěte si dokumentaci"
+    }
+  },
+  "companies": {
+    "title": "Používáno",
+    "addYourCompany": "+ Přidat vaši společnost"
+  },
+  "activity": {
+    "title": "Aktivita",
+    "loading": "Načítání",
+    "noResults": "Žádné výsledky pro '{search}'",
+    "clearSearch": "Vymazat hledání",
+    "loadMore": "Zobrazit více",
+    "type": {
+      "key": "Klíč",
+      "document": "Dokument"
+    }
+  },
+  "features": {
+    "title": "Funkce",
+    "fullyOpenSource": "Úplně open source",
+    "fullyOpenSourceDescription": "Náš kód je veřejně dostupný na GitHubu, což umožňuje transparentnost a příspěvky od komunity.",
+    "noVendorLockIn": "Žádné uzamčení dodavatele",
+    "noVendorLockInDescription": "Nezavíráme vás do konkrétní služby, používejte své vlastní LLM.",
+    "presetsForExpo": "Předvolby pro Expo",
+    "presetsForExpoDescription": "Poskytujeme předvolby pro Expo, abyste mohli rychle začít.",
+    "presetForReactNative": "Předvolba pro React Native",
+    "presetForReactNativeDescription": "Poskytujeme předvolbu pro React Native, abyste mohli rychle začít.",
+    "presetForReactEmail": "Knihovna React Email",
+    "presetForReactEmailDescription": "Vytvořili jsme knihovnu i18n pro React Email.",
+    "readyForI18nLibraries": "Připraveno pro i18n knihovny",
+    "readyForI18nLibrariesDescription": "Podporujeme všechny knihovny včetně nejpopulárnějších (next-intl, react-i18next, react-intl, atd.)."
+  },
+  "info": {
+    "title": "Pokryje každý aspekt lokalizace vaší aplikace včetně",
+    "smartTranslation": {
+      "title": "Inteligentní překlad",
+      "intelligentTranslation": "Inteligentní překlad s povědomím o kontextu",
+      "brandVoice": "Konzistence značkového hlasu a tónu",
+      "terminology": "Správa terminologie",
+      "linguisticFeatures": "Pokročilé jazykové funkce",
+      "realtimeUpdates": "Aktualizace překladů v reálném čase"
+    },
+    "implementation": {
+      "title": "Implementace",
+      "quickSetup": "Rychlé nastavení a integrace",
+      "fileFormat": "Zpracování formátu souboru",
+      "contentStructure": "Organizace struktury obsahu",
+      "assetOrganization": "Organizace aktiv"
+    },
+    "developer": {
+      "title": "Zkušenosti vývojáře",
+      "cli": "Příkazový řádek",
+      "cicd": "Integrace CI/CD",
+      "versionControl": "Správa verzí",
+      "workflow": "Pracovní postup vývojáře",
+      "documentation": "Komplexní dokumentace"
+    }
+  },
+  "login": {
+    "title": "Přihlásit se",
+    "github": "Přihlásit se pomocí GitHubu",
+    "google": "Přihlásit se pomocí Google",
+    "footer": "Automatizujte svou lokalizaci.",
+    "description": "Přihlaste se a začněte automatizovat svou lokalizaci během několika sekund.",
+    "terms": {
+      "text": "Přihlášením souhlasíte s našimi",
+      "termsOfService": "Podmínkami služby",
+      "and": "a",
+      "privacyPolicy": "Zásadami ochrany osobních údajů"
+    }
+  },
+  "translations": {
+    "header": "Přeložené klíče"
+  },
+  "userMenu": {
+    "account": "Nastavení účtu",
+    "signOut": "Odhlásit se",
+    "createTeam": "Vytvořit tým",
+    "homepage": "Domovská stránka",
+    "team": "Nastavení týmu"
+  },
+  "teamSelector": {
+    "addProject": "Vytvořit projekt",
+    "createProjectTitle": "Vytvořit nový projekt",
+    "projectNamePlaceholder": "Název projektu",
+    "createProjectButton": "Vytvořit projekt",
+    "pro": "Pro",
+    "project": "Projekt",
+    "teams": "Týmy",
+    "createTeam": "Vytvořit tým",
+    "createTeamTitle": "Vytvořit nový tým",
+    "teamNamePlaceholder": "Název týmu",
+    "createTeamButton": "Vytvořit tým"
+  },
+  "coming_soon": {
+    "title": "Languine je v raném přístupu",
+    "description": "Aktuálně jsme v raném přístupu. Kontaktujte",
+    "cta": "na X pro získání raného přístupu."
+  },
+  "account": {
+    "fullName": {
+      "title": "Celé jméno",
+      "description": "Vaše celé jméno, jak se bude zobrazovat na platformě.",
+      "placeholder": "Zadejte své celé jméno"
+    },
+    "email": {
+      "title": "Emailová adresa",
+      "description": "Emailová adresa spojená s vaším účtem.",
+      "placeholder": "Zadejte svou emailovou adresu"
+    },
+    "apiKey": {
+      "title": "API klíč",
+      "description": "Váš osobní API klíč pro přístup k Languine API a z CLI."
+    },
+    "deleteAccount": {
+      "title": "Smazat účet",
+      "description": "Trvale smažte svůj účet a všechna související data. Tuto akci nelze vrátit zpět.",
+      "button": "Smazat účet"
+    }
+  },
+  "copyInstall": {
+    "copied": "Zkopírováno do schránky"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Jste si naprosto jisti?",
+      "description": "Tuto akci nelze vrátit zpět. Prosím, napište DELETE pro potvrzení.",
+      "placeholder": "Napište SMAZAT pro potvrzení",
+      "confirm": "Potvrdit smazání",
+      "cancel": "Zrušit"
+    }
+  },
+  "pipeline": {
+    "title": "Pracovní postup (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Náš překladový engine se bezproblémově integruje do vašeho stávajícího CI/CD pipeline, automaticky překládající váš kód při každém pushi. Když jsou provedeny změny v kódu, analyzujeme upravený obsah, udržujeme vaši překladovou paměť a generujeme přesné překlady, přičemž zachováváme hlas a terminologii vaší značky. Překlady jsou poté předloženy jako pull requesty, což umožňuje revizi před sloučením do vaší hlavní větve a nasazením. Tento automatizovaný pracovní postup zajišťuje, že váš lokalizovaný obsah zůstává v souladu s vývojem."
+  },
+  "settings": {
+    "badRequest": "Neplatný požadavek",
+    "badRequestDescription": "Organizace musí mít alespoň jednoho vlastníka. Před odstraněním tohoto vlastníka převeďte vlastnictví na jiného člena.",
+    "permissionDenied": "Přístup odepřen",
+    "permissionDeniedDescription": "Musíte být vlastníkem týmu, abyste mohli provést tuto akci",
+    "deleteTeamTitle": "Smazat tým",
+    "deleteTeamDescription": "Nelze smazat organizaci, když jste jediným členem, místo toho smažte svůj účet",
+    "saved": "Nastavení uložena",
+    "savedDescription": "Vaše změny byly úspěšně uloženy",
+    "error": "Něco se pokazilo",
+    "errorDescription": "Zkuste to prosím znovu nebo kontaktujte podporu",
+    "addTeam": "Vytvořit tým",
+    "apiKey": {
+      "updated": "API klíč aktualizován",
+      "updatedDescription": "Váš API klíč byl úspěšně aktualizován a zkopírován do schránky.",
+      "title": "Aktualizovat API klíč",
+      "description": "Opravdu chcete vygenerovat nový API klíč? Starý klíč přestane fungovat okamžitě.",
+      "cancel": "Zrušit",
+      "continue": "Pokračovat"
+    },
+    "tabs": {
+      "project": "Projekt",
+      "account": "Účet",
+      "team": "Tým",
+      "provider": "Poskytovatel",
+      "billing": "Fakturace"
+    },
+    "addProject": "Vytvořit projekt",
+    "project": {
+      "name": {
+        "title": "Název projektu",
+        "description": "Název vašeho projektu",
+        "placeholder": "Zadejte název projektu"
+      },
+      "id": {
+        "title": "ID projektu",
+        "description": "Váš jedinečný identifikátor projektu",
+        "placeholder": "ID projektu"
+      },
+      "delete": {
+        "title": "Smazat projekt",
+        "description": "Trvale smazat tento projekt a všechna jeho data",
+        "button": "Smazat projekt"
+      }
+    },
+    "save": "Uložit",
+    "team": {
+      "name": {
+        "title": "Název týmu",
+        "description": "Název vašeho týmu",
+        "placeholder": "Zadejte název týmu"
+      },
+      "billing": {
+        "title": "Fakturační plán",
+        "description": "Spravujte fakturační plán vašeho týmu",
+        "free": "Zdarma",
+        "pro": "Pro",
+        "unlimited": "Neomezeně"
+      },
+      "apiKey": {
+        "title": "API klíč týmu",
+        "description": "API klíč pro přístup k týmu, použijte jej z vašeho CI/CD pipeline spolu s ID projektu",
+        "placeholder": "API klíč týmu"
+      },
+      "members": {
+        "leaveTeamConfirm": "Opustit tým",
+        "leaveTeamDescription": "Opravdu chcete opustit tento tým?",
+        "cancel": "Zrušit",
+        "leaveTeam": "Opustit tým",
+        "invite": "Pozvat člena",
+        "title": "Členové",
+        "pendingInvitations": "Čekající pozvánky",
+        "removeMember": "Odstranit člena",
+        "removeMemberConfirm": "Odstranit člena",
+        "removeMemberDescription": "Opravdu chcete odstranit tohoto člena?",
+        "filterPlaceholder": "Filtrovat členy...",
+        "allRoles": "Všechny role",
+        "date": "Datum",
+        "selectAll": "{count} vybráno",
+        "noPendingInvitations": "Žádné čekající pozvánky",
+        "noResults": "Žádní členové nenalezeni",
+        "tryDifferentSearch": "Zkuste jiný vyhledávání",
+        "inviteMembers": "Pozvat členy ke spolupráci",
+        "deleteInvite": "Smazat pozvánku",
+        "deleteInviteDescription": "Smazat pozvánku",
+        "invitedBy": "Pozval {name}",
+        "deleteInviteSuccess": "Pozvánka smazána",
+        "deleteInviteError": "Nepodařilo se smazat pozvánku",
+        "removeMemberSuccess": "Člen odstraněn",
+        "removeMemberError": "Nepodařilo se odstranit člena",
+        "removeMemberSuccessDescription": "Člen byl úspěšně odstraněn",
+        "removeMemberErrorDescription": "Nepodařilo se odstranit člena",
+        "roles": {
+          "owner": "Vlastník",
+          "member": "Člen"
+        },
+        "dateSort": {
+          "newest": "Nejnovější",
+          "oldest": "Nejstarší"
+        },
+        "deleteInviteConfirm": "Smazat pozvánku"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Obecné",
+    "translationMemory": {
+      "title": "Překladová paměť",
+      "description": "Použijte překladovou paměť pro zlepšení konzistence a efektivity"
+    },
+    "qualityChecks": {
+      "title": "Kontroly kvality",
+      "description": "Povolit automatizované kontroly kvality pro překlady"
+    },
+    "contextDetection": {
+      "title": "Detekce kontextu",
+      "description": "Automaticky detekovat a zachovat kontext v překladech"
+    },
+    "styleGuide": "Stylistický průvodce",
+    "lengthControl": {
+      "title": "Kontrola délky",
+      "description": "Kontrolujte délku přeloženého textu",
+      "options": {
+        "flexible": "Flexibilní",
+        "strict": "Přísný",
+        "exact": "Přesný",
+        "loose": "Volný"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Inkluzivní jazyk",
+      "description": "Zajistěte, aby překlady používaly inkluzivní jazyk"
+    },
+    "formality": {
+      "title": "Formálnost",
+      "description": "Kontrolujte úroveň formálnosti překladů",
+      "options": {
+        "casual": "Neformální",
+        "formal": "Formální",
+        "neutral": "Neutrální"
+      }
+    },
+    "brandName": {
+      "title": "Název značky",
+      "description": "Nastavte název své značky pro konzistentní použití",
+      "placeholder": "Zadejte název své značky"
+    },
+    "brandVoice": {
+      "title": "Hlas značky",
+      "description": "Definujte hlas a tón své značky",
+      "placeholder": "Popište hlas své značky..."
+    },
+    "toneOfVoice": {
+      "title": "Tón hlasu",
+      "description": "Definujte tón používaný v překladech",
+      "options": {
+        "casual": "Neformální",
+        "formal": "Formální",
+        "friendly": "Přátelský",
+        "professional": "Profesionální",
+        "playful": "Hrací",
+        "serious": "Seriózní",
+        "confident": "Sebevědomý",
+        "humble": "Pokorný",
+        "direct": "Přímý",
+        "diplomatic": "Diplomatický"
+      }
+    },
+    "brand": "Značka",
+    "emotiveIntent": {
+      "title": "Emotivní záměr",
+      "description": "Nastavte emocionální tón pro překlady",
+      "options": {
+        "neutral": "Neutrální",
+        "positive": "Pozitivní",
+        "empathetic": "Empatický",
+        "professional": "Profesionální",
+        "friendly": "Přátelský",
+        "enthusiastic": "Nadšený"
+      }
+    },
+    "domainExpertise": {
+      "title": "Odborné znalosti",
+      "description": "Specifikujte kontext domény pro překlady",
+      "options": {
+        "general": "Obecné",
+        "technical": "Technické",
+        "medical": "Lékařské",
+        "legal": "Právní",
+        "financial": "Finanční",
+        "marketing": "Marketingové",
+        "academic": "Akademické"
+      }
+    },
+    "idioms": {
+      "title": "Idiom",
+      "description": "Správně zacházejte s idiomatickými výrazy"
+    },
+    "terminology": {
+      "title": "Terminologie",
+      "description": "Spravujte specializovanou terminologii a glosáře"
+    },
+    "culturalAdaptation": {
+      "title": "Kulturní adaptace",
+      "description": "Přizpůsobte obsah kulturní vhodnosti"
+    }
+  },
+  "pricing": {
+    "title": "Jednoduché ceny",
+    "free": {
+      "title": "Zdarma",
+      "price": "Zdarma",
+      "keys_limit": "Až 100 klíčů",
+      "description": "Ideální pro vyzkoušení",
+      "features": {
+        "unlimited_projects": "Neomezené projekty",
+        "fine_tuning": "Možnosti jemného ladění",
+        "overrides": "Překladové přepsání",
+        "analytics": "Analytika",
+        "context_memory": "Paměť kontextu",
+        "community_support": "Podpora komunity",
+        "keys_limit": "Až 100 klíčů",
+        "docs_limit": "Až 5 dokumentů",
+        "languages": "2 jazyky"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Vše zdarma, plus:",
+      "features": {
+        "github_action": "Integrace GitHub Action",
+        "latest_features": "Předběžný přístup k nejnovějším funkcím",
+        "priority_support": "Prioritní podpora",
+        "priority_queues": "Prioritní překladové fronty",
+        "languages": "Neomezené jazyky",
+        "keys_limit": "Od 10 000 klíčů",
+        "docs_limit": "Od 50 dokumentů"
+      }
+    },
+    "cta": "Začněte automatizovat",
+    "keys_limit_explanation": "Přeložený klíč: Pokud máte 20 zdrojových klíčů (jako \"Zaregistrujte se\" nebo \"Vítejte!\") a přeložíte je do 5 jazyků, to odpovídá 100 přeloženým klíčům (20 klíčů x 5 jazyků)."
+  },
+  "createTeam": {
+    "teamName": "Název týmu",
+    "teamNamePlaceholder": "Zadejte název týmu",
+    "createTeamButton": "Vytvořit tým",
+    "cancel": "Zrušit",
+    "createTeamDescription": "Vytvořte nový tým pro správu svých projektů a spolupracovníků."
+  },
+  "createProject": {
+    "createProjectTitle": "Vytvořit nový projekt",
+    "projectNamePlaceholder": "Zadejte název projektu",
+    "createProjectButton": "Vytvořit projekt",
+    "cancel": "Zrušit",
+    "createProjectDescription": "Vytvořte nový projekt pro zahájení automatizace vaší lokalizace."
+  },
+  "invite": {
+    "inviteMember": "Pozvat člena",
+    "inviteDescription": "Pozvěte člena do svého týmu",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Zadejte email",
+    "cancel": "Zrušit",
+    "submit": "Odeslat",
+    "success": {
+      "title": "Pozvánka odeslána",
+      "description": "Úspěšně odeslána pozvánka na {email}"
+    },
+    "error": {
+      "title": "Chyba",
+      "description": "Nepodařilo se odeslat pozvánku. Zkuste to prosím znovu."
+    },
+    "validation": {
+      "invalidEmail": "Zadejte prosím platný email"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Nastavení Languine CLI",
+        "description": "Nainstalujte a nakonfigurujte Languine CLI pro správu překladů"
+      },
+      "2": {
+        "title": "Odeslat překlady",
+        "description": "Čekání na odeslání překladů"
+      },
+      "3": {
+        "title": "Dokumentace",
+        "description": "Podívejte se na naši dokumentaci pro podrobné návody a osvědčené postupy",
+        "link": "dokumentace"
+      }
+    },
+    "info": {
+      "description": "Potřebujete pomoc? Podívejte se na naši",
+      "link": "dokumentaci",
+      "description_2": "pro podrobné příručky a nejlepší postupy."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Úspěšné přihlášení do Languine CLI",
+      "description": "Languine CLI bylo úspěšně ověřeno jako:",
+      "description_2": "Nyní můžete tuto kartu zavřít a vrátit se k CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Hledat"
+  },
+  "periods": {
+    "daily": "Denně",
+    "weekly": "Týdně",
+    "monthly": "Měsíčně",
+    "selectPeriod": "Vyberte období"
+  },
+  "language": {
+    "en": "Angličtina",
+    "es": "Španělština",
+    "fr": "Francouzština",
+    "de": "Němčina",
+    "it": "Italština",
+    "pt": "Portugalština",
+    "ja": "Japonština",
+    "ko": "Korejština",
+    "ar": "Arabština",
+    "tr": "Turečtina",
+    "nl": "Nizozemština",
+    "pl": "Polština",
+    "no": "Norština",
+    "da": "Dánština",
+    "sv": "Švédština",
+    "fi": "Finština",
+    "vi": "Vietnamština",
+    "az": "Ázerbájdžánština",
+    "bg": "Bulharština",
+    "ca": "Katalánština",
+    "cs": "Čeština",
+    "el": "Řečtina",
+    "et": "Estonština",
+    "he": "Hebrejština",
+    "hr": "Chorvatština",
+    "hu": "Maďarština",
+    "id": "Indonéština",
+    "iw": "Hebrejština",
+    "km": "Khmerština",
+    "lv": "Lotyština",
+    "pt-BR": "Portugalština (Brazílie)",
+    "ro": "Rumunština",
+    "ru": "Ruština",
+    "sk-SK": "Slovenština (Slovensko)",
+    "sk": "Slovenština",
+    "sr": "Srbština",
+    "ta": "Tamilština",
+    "th": "Thajština",
+    "uk": "Ukrajinština",
+    "zh-CN": "Čínština (zjednodušená)",
+    "zh-TW": "Čínština (tradiční)"
+  },
+  "menu": {
+    "dashboard": "Nástenka",
+    "tuning": "Ladění",
+    "settings": "Nastavení",
+    "pricing": "Ceny",
+    "docs": "Dokumentace",
+    "account": "Účet"
+  },
+  "billing": {
+    "title": "Fakturace"
+  },
+  "analytics": {
+    "key": "Přeložené klíče",
+    "document": "Přeložené dokumenty",
+    "header": "Překlady",
+    "months": {
+      "10": "Říj",
+      "11": "Lis",
+      "12": "Pro",
+      "01": "Led",
+      "02": "Úno",
+      "03": "Bře",
+      "04": "Dub",
+      "05": "Kvě",
+      "06": "Čvn",
+      "07": "Čvc",
+      "08": "Srp",
+      "09": "Zář"
+    }
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "what_is_languine": {
+      "question": "Co je Languine?",
+      "answer": "Languine je platforma pro lokalizaci poháněná AI, která vám pomáhá automatizovat překlad vašich aplikací. Nabízí funkce jako možnosti ladění, přepisování překladů, analytiku a kontextovou paměť, aby zajistila vysoce kvalitní překlady."
+    },
+    "key_limit": {
+      "question": "Jak funguje limit klíčů?",
+      "answer": "Přeložený klíč se počítá, když přeložíte zdrojový klíč do cílového jazyka. Například pokud máte 20 zdrojových klíčů a přeložíte je do 5 jazyků, to odpovídá 100 přeloženým klíčům (20 klíčů × 5 jazyků)."
+    },
+    "supported_languages": {
+      "question": "Jaké jazyky jsou podporovány?",
+      "answer": "Languine podporuje více než 100 jazyků ve všech plánech. I když naše překlady poháněné AI fungují nejlépe s hlavními jazyky, snažíme se poskytovat kvalitní překlady ve všech podporovaných jazycích. Pokud máte specifické jazykové požadavky nebo dotazy ohledně kvality překladů pro konkrétní jazyky, neváhejte kontaktovat náš tým podpory."
+    },
+    "github_action": {
+      "question": "Jak funguje integrace GitHub Action?",
+      "answer": "Integrace GitHub Action (dostupná v Pro plánech) vám umožňuje automatizovat váš překladový pracovní postup přímo ve vašem CI/CD pipeline. Když provedete změny ve vašem repozitáři, překlady mohou být automaticky aktualizovány."
+    },
+    "support": {
+      "question": "Jaký druh podpory nabízíte?",
+      "answer": "Uživatelé zdarma mají přístup k podpoře komunity, zatímco uživatelé Pro dostávají prioritní podporu s rychlejšími časy odezvy a specializovanou pomocí pro jejich překladové potřeby."
+    },
+    "open_source": {
+      "question": "Je Languine open source?",
+      "answer": "Ano! Languine je plně open source a dostupné na GitHubu. Můžete přispět k projektu, hlásit problémy, navrhovat funkce a prozkoumat kód. Věříme v transparentnost a budování na veřejnosti."
+    },
+    "open_source_pricing": {
+      "question": "Nabízíte speciální ceny pro open source projekty?",
+      "answer": "Ano! Rádi podporujeme komunitu open source. Pokud spravujete open source projekt, můžete získat přístup k našim Pro funkcím se slevou 30 %. Stačí kontaktovat náš tým s podrobnostmi o vašem projektu a my vám nastavíme zlevněný Pro účet. To je náš způsob, jak vrátit komunitě, která umožňuje naši práci."
+    },
+    "cancel_subscription": {
+      "question": "Jak zruším své předplatné?",
+      "answer": "Své předplatné můžete zrušit kdykoli z nastavení účtu. Přejděte na Fakturace > Změnit plán. Vaše předplatné zůstane aktivní do konce vašeho aktuálního fakturačního období, po kterém budete převedeni na bezplatný plán."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Úroveň {tier}",
+    "keys": "Přeložené klíče",
+    "documents": "Přeložené dokumenty",
+    "period": "měs",
+    "keys_suffix": " klíče",
+    "docs_suffix": " dokumenty"
+  },
+  "docs": {
+    "getting-started": "Začínáme",
+    "workflow": "Pracovní postup",
+    "ci": "CI/CD",
+    "presets": "Předvolby",
+    "formats": "Formáty",
+    "platform": "Platforma",
+    "introduction": "Úvod",
+    "quickstart": "Rychlý start",
+    "authentication": "Ověření",
+    "configuration": "Konfigurace",
+    "cli": "CLI",
+    "github-actions": "GitHub Actions",
+    "tuning": "Ladění",
+    "settings": "Nastavení",
+    "hooks": "Haky",
+    "examples": "Příklady",
+    "team": "Tým"
+  },
+  "test": {
+    "title": "Toto je test",
+    "description": "A toto je popis testu",
+    "button": "Klikni na mě"
+  }
+}

@@ -6,12 +6,12 @@
     "goToApp": "Przejdź do aplikacji"
   },
   "hero": {
-    "title": "Zautomatyzowana infrastruktura lokalizacji",
-    "description": "Tłumacz treści swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
+    "title": "Zautomatyzowana infrastruktura lokalizacyjna",
+    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby zautomatyzować tłumaczenia podczas kodowania."
   },
   "navigation": {
-    "dashboard": "Panel sterowania",
-    "tuning": "Dostrajanie",
+    "dashboard": "Panel",
+    "tuning": "Dostosowanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
     "docs": "Dokumentacja",
@@ -19,10 +19,10 @@
   },
   "getStarted": {
     "heading": "Rozpocznij",
-    "title": "Zautomatyzowana infrastruktura lokalizacji",
-    "description": "Tłumacz treści swojej aplikacji bezpośrednio w swoim przepływie pracy deweloperskiej. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
+    "title": "Zautomatyzowana infrastruktura lokalizacyjna",
+    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby zautomatyzować tłumaczenia podczas kodowania.",
     "button": {
-      "startAutomating": "Zacznij automatyzować",
+      "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"
     }
   },
@@ -43,32 +43,32 @@
   },
   "features": {
     "title": "Funkcje",
-    "fullyOpenSource": "W pełni open source",
-    "fullyOpenSourceDescription": "Nasz kod jest publicznie dostępny na GitHubie, umożliwiając przejrzystość i wkład społeczności.",
+    "fullyOpenSource": "W pełni otwarte źródło",
+    "fullyOpenSourceDescription": "Nasz kod jest publicznie dostępny na GitHubie, co umożliwia przejrzystość i wkład społeczności.",
     "noVendorLockIn": "Brak uzależnienia od dostawcy",
-    "noVendorLockInDescription": "Nie zamykamy cię w określonej usłudze, używaj własnych LLM.",
-    "presetsForExpo": "Presety dla Expo",
-    "presetsForExpoDescription": "Dostarczamy presety dla Expo, abyś mógł szybko zacząć.",
-    "presetForReactNative": "Preset dla React Native",
-    "presetForReactNativeDescription": "Dostarczamy preset dla React Native, abyś mógł szybko zacząć.",
+    "noVendorLockInDescription": "Nie uzależniamy Cię od konkretnej usługi, używaj własnych LLM.",
+    "presetsForExpo": "Ustawienia wstępne dla Expo",
+    "presetsForExpoDescription": "Oferujemy ustawienia wstępne dla Expo, abyś mógł szybko zacząć.",
+    "presetForReactNative": "Ustawienia wstępne dla React Native",
+    "presetForReactNativeDescription": "Oferujemy ustawienia wstępne dla React Native, abyś mógł szybko zacząć.",
     "presetForReactEmail": "Biblioteka React Email",
     "presetForReactEmailDescription": "Stworzyliśmy bibliotekę i18n dla React Email.",
     "readyForI18nLibraries": "Gotowe dla bibliotek i18n",
-    "readyForI18nLibrariesDescription": "Wspieramy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl, itp.)."
+    "readyForI18nLibrariesDescription": "Obsługujemy wszystkie biblioteki, w tym najpopularniejsze (next-intl, react-i18next, react-intl itd.)."
   },
   "info": {
-    "title": "Zarządza każdym aspektem lokalizacji twojej aplikacji, w tym",
+    "title": "Obsługuje każdy aspekt lokalizacji Twojej aplikacji, w tym",
     "smartTranslation": {
-      "title": "Inteligentne tłumaczenie",
+      "title": "Inteligentne Tłumaczenie",
       "intelligentTranslation": "Inteligentne tłumaczenie z uwzględnieniem kontekstu",
       "brandVoice": "Spójność głosu i tonu marki",
       "terminology": "Zarządzanie terminologią",
-      "linguisticFeatures": "Zaawansowane funkcje lingwistyczne",
+      "linguisticFeatures": "Zaawansowane funkcje językowe",
       "realtimeUpdates": "Aktualizacje tłumaczeń w czasie rzeczywistym"
     },
     "implementation": {
-      "title": "Implementacja",
-      "quickSetup": "Szybka konfiguracja i integracja",
+      "title": "Wdrożenie",
+      "quickSetup": "Szybkie ustawienie i integracja",
       "fileFormat": "Obsługa formatów plików",
       "contentStructure": "Organizacja struktury treści",
       "assetOrganization": "Organizacja zasobów"
@@ -78,19 +78,19 @@
       "cli": "Interfejs wiersza poleceń",
       "cicd": "Integracja CI/CD",
       "versionControl": "Kontrola wersji",
-      "workflow": "Przepływ pracy dewelopera",
-      "documentation": "Kompletna dokumentacja"
+      "workflow": "Proces dewelopera",
+      "documentation": "Kompleksowa dokumentacja"
     }
   },
   "login": {
     "title": "Zaloguj się",
     "github": "Zaloguj się przez GitHub",
     "google": "Zaloguj się przez Google",
-    "footer": "Automatyzuj swoją lokalizację.",
-    "description": "Zaloguj się, aby zacząć automatyzować swoją lokalizację w kilka sekund.",
+    "footer": "Zautomatyzuj swoją lokalizację.",
+    "description": "Zaloguj się, aby rozpocząć automatyzację swojej lokalizacji w kilka sekund.",
     "terms": {
-      "text": "Logując się, zgadzasz się na nasze",
-      "termsOfService": "Warunki świadczenia usług",
+      "text": "Logując się, akceptujesz nasze",
+      "termsOfService": "Warunki korzystania z usługi",
       "and": "i",
       "privacyPolicy": "Polityka prywatności"
     }
@@ -119,28 +119,28 @@
     "createTeamButton": "Utwórz zespół"
   },
   "coming_soon": {
-    "title": "Languine jest w fazie wczesnego dostępu",
-    "description": "Obecnie jesteśmy w fazie wczesnego dostępu. Skontaktuj się z",
+    "title": "Languine jest w Wczesnym Dostępie",
+    "description": "Obecnie jesteśmy w wczesnym dostępie. Skontaktuj się z",
     "cta": "na X, aby uzyskać wczesny dostęp."
   },
   "account": {
     "fullName": {
       "title": "Pełne imię i nazwisko",
-      "description": "Twoje pełne imię i nazwisko, jakie będzie widoczne na platformie.",
+      "description": "Twoje pełne imię i nazwisko, jak będzie się pojawiać na platformie.",
       "placeholder": "Wprowadź swoje pełne imię i nazwisko"
     },
     "email": {
       "title": "Adres e-mail",
-      "description": "Adres e-mail powiązany z twoim kontem.",
+      "description": "Adres e-mail powiązany z Twoim kontem.",
       "placeholder": "Wprowadź swój adres e-mail"
     },
     "apiKey": {
       "title": "Klucz API",
-      "description": "Twój osobisty klucz API do dostępu do API Languine i z CLI."
+      "description": "Twój osobisty klucz API do uzyskiwania dostępu do API Languine i z CLI."
     },
     "deleteAccount": {
       "title": "Usuń konto",
-      "description": "Trwale usuń swoje konto i wszystkie powiązane dane. Tej akcji nie można cofnąć.",
+      "description": "Na stałe usuń swoje konto i wszystkie powiązane dane. Ta akcja nie może być cofnięta.",
       "button": "Usuń konto"
     }
   },
@@ -149,17 +149,17 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Czy jesteś absolutnie pewien?",
-      "description": "Tej akcji nie można cofnąć. Wpisz DELETE, aby potwierdzić.",
+      "title": "Czy jesteś absolutnie pewny?",
+      "description": "Ta akcja nie może być cofnięta. Proszę wpisać DELETE, aby potwierdzić.",
       "placeholder": "Wpisz DELETE, aby potwierdzić",
       "confirm": "Potwierdź usunięcie",
       "cancel": "Anuluj"
     }
   },
   "pipeline": {
-    "title": "Przepływ pracy (CI/CD Pipeline)",
+    "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym potokiem CI/CD, automatycznie tłumacząc twoją bazę kodu przy każdym pushu. Gdy zmiany w kodzie są pushowane, analizujemy zmodyfikowaną zawartość, utrzymujemy twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, umożliwiając przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany przepływ pracy zapewnia, że twoje zlokalizowane treści pozostają zsynchronizowane z rozwojem."
+    "description": "Nasz silnik tłumaczeń bezproblemowo integruje się z istniejącym pipeline'em CI/CD, automatycznie tłumacząc Twój kod przy każdym pushu. Gdy zmiany w kodzie są przesyłane, analizujemy zmodyfikowaną treść, utrzymujemy Twoją pamięć tłumaczeń i generujemy dokładne tłumaczenia, zachowując głos i terminologię Twojej marki. Tłumaczenia są następnie przesyłane jako pull requesty, co umożliwia ich przegląd przed scaleniem z główną gałęzią i wdrożeniem. Ten zautomatyzowany workflow zapewnia, że Twoja zlokalizowana treść pozostaje w synchronizacji z rozwojem."
   },
   "settings": {
     "badRequest": "Nieprawidłowe żądanie",
@@ -186,18 +186,18 @@
       "account": "Konto",
       "team": "Zespół",
       "provider": "Dostawca",
-      "billing": "Rozliczenia"
+      "billing": "Fakturowanie"
     },
     "addProject": "Utwórz projekt",
     "project": {
       "name": {
         "title": "Nazwa projektu",
-        "description": "Nazwa twojego projektu",
+        "description": "Nazwa Twojego projektu",
         "placeholder": "Wprowadź nazwę projektu"
       },
       "id": {
         "title": "ID projektu",
-        "description": "Unikalny identyfikator twojego projektu",
+        "description": "Twój unikalny identyfikator projektu",
         "placeholder": "ID projektu"
       },
       "delete": {
@@ -210,19 +210,19 @@
     "team": {
       "name": {
         "title": "Nazwa zespołu",
-        "description": "Nazwa twojego zespołu",
+        "description": "Nazwa Twojego zespołu",
         "placeholder": "Wprowadź nazwę zespołu"
       },
       "billing": {
-        "title": "Plan rozliczeniowy",
-        "description": "Zarządzaj planem rozliczeniowym swojego zespołu",
+        "title": "Plan fakturowania",
+        "description": "Zarządzaj planem fakturowania swojego zespołu",
         "free": "Darmowy",
         "pro": "Pro",
         "unlimited": "Nieograniczony"
       },
       "apiKey": {
         "title": "Klucz API zespołu",
-        "description": "Klucz API dostępu do zespołu, używaj tego z potoku CI/CD razem z ID projektu",
+        "description": "Klucz API do dostępu zespołu, użyj go w swoim pipeline CI/CD razem z ID projektu",
         "placeholder": "Klucz API zespołu"
       },
       "members": {
@@ -246,7 +246,7 @@
         "inviteMembers": "Zaproś członków do współpracy",
         "deleteInvite": "Usuń zaproszenie",
         "deleteInviteDescription": "Usuń zaproszenie",
-        "invitedBy": "Zaproszony przez {name}",
+        "invitedBy": "Zaproś przez {name}",
         "deleteInviteSuccess": "Zaproszenie usunięte",
         "deleteInviteError": "Nie udało się usunąć zaproszenia",
         "removeMemberSuccess": "Członek usunięty",
@@ -269,11 +269,11 @@
     "general": "Ogólne",
     "translationMemory": {
       "title": "Pamięć tłumaczeń",
-      "description": "Używaj pamięci tłumaczeń, aby poprawić spójność i efektywność"
+      "description": "Użyj pamięci tłumaczeń, aby poprawić spójność i efektywność"
     },
     "qualityChecks": {
-      "title": "Kontrola jakości",
-      "description": "Włącz automatyczną kontrolę jakości tłumaczeń"
+      "title": "Kontrole jakości",
+      "description": "Włącz automatyczne kontrole jakości dla tłumaczeń"
     },
     "contextDetection": {
       "title": "Wykrywanie kontekstu",
@@ -284,10 +284,10 @@
       "title": "Kontrola długości",
       "description": "Kontroluj długość przetłumaczonego tekstu",
       "options": {
-        "flexible": "Elastyczny",
-        "strict": "Ścisły",
-        "exact": "Dokładny",
-        "loose": "Luźny"
+        "flexible": "Elastyczne",
+        "strict": "Ścisłe",
+        "exact": "Dokładne",
+        "loose": "Luźne"
       }
     },
     "inclusiveLanguage": {
@@ -298,40 +298,40 @@
       "title": "Formalność",
       "description": "Kontroluj poziom formalności tłumaczeń",
       "options": {
-        "casual": "Nieformalny",
+        "casual": "Casual",
         "formal": "Formalny",
         "neutral": "Neutralny"
       }
     },
     "brandName": {
-      "title": "Nazwa marki",
+      "title": "Nazwa Marki",
       "description": "Ustaw nazwę swojej marki dla spójnego użycia",
       "placeholder": "Wprowadź nazwę swojej marki"
     },
     "brandVoice": {
-      "title": "Głos marki",
+      "title": "Głos Marki",
       "description": "Zdefiniuj głos i ton swojej marki",
       "placeholder": "Opisz głos swojej marki..."
     },
     "toneOfVoice": {
-      "title": "Ton głosu",
+      "title": "Ton Głosu",
       "description": "Zdefiniuj ton używany w tłumaczeniach",
       "options": {
-        "casual": "Nieformalny",
+        "casual": "Casual",
         "formal": "Formalny",
         "friendly": "Przyjazny",
         "professional": "Profesjonalny",
-        "playful": "Zabawowy",
+        "playful": "Zabawny",
         "serious": "Poważny",
         "confident": "Pewny siebie",
-        "humble": "Skromny",
+        "humble": "Pokorny",
         "direct": "Bezpośredni",
         "diplomatic": "Dyplomatyczny"
       }
     },
     "brand": "Marka",
     "emotiveIntent": {
-      "title": "Intencja emocjonalna",
+      "title": "Emocjonalny Zamiar",
       "description": "Ustaw emocjonalny ton dla tłumaczeń",
       "options": {
         "neutral": "Neutralny",
@@ -343,67 +343,68 @@
       }
     },
     "domainExpertise": {
-      "title": "Ekspertyza domeny",
-      "description": "Określ kontekst domeny dla tłumaczeń",
+      "title": "Ekspertyza w Dziedzinie",
+      "description": "Określ kontekst dziedziny dla tłumaczeń",
       "options": {
-        "general": "Ogólne",
-        "technical": "Techniczne",
-        "medical": "Medyczne",
-        "legal": "Prawne",
-        "financial": "Finansowe",
-        "marketing": "Marketingowe",
-        "academic": "Akademickie"
+        "general": "Ogólny",
+        "technical": "Techniczny",
+        "medical": "Medyczny",
+        "legal": "Prawny",
+        "financial": "Finansowy",
+        "marketing": "Marketingowy",
+        "academic": "Akademicki"
       }
     },
     "idioms": {
-      "title": "Idiomy",
-      "description": "Odpowiednio obsługuj wyrażenia idiomatyczne"
+      "title": "Idiomaty",
+      "description": "Zarządzaj wyrażeniami idiomatycznymi odpowiednio"
     },
     "terminology": {
       "title": "Terminologia",
-      "description": "Zarządzaj specjalistyczną terminologią i glosariuszami"
+      "description": "Zarządzaj specjalistyczną terminologią i słownikami"
     },
     "culturalAdaptation": {
-      "title": "Adaptacja kulturowa",
+      "title": "Adaptacja Kulturowa",
       "description": "Dostosuj treści do odpowiedniości kulturowej"
     }
   },
   "pricing": {
-    "title": "Proste ceny",
+    "title": "Prosta wycena",
     "free": {
       "title": "Darmowy",
       "price": "Darmowy",
       "keys_limit": "Do 100 kluczy",
-      "description": "Idealne do wypróbowania",
+      "description": "Idealny do wypróbowania",
       "features": {
-        "unlimited_projects": "Nieograniczona liczba projektów",
-        "fine_tuning": "Opcje dostrajania",
+        "unlimited_projects": "Nieograniczone projekty",
+        "fine_tuning": "Opcje dostosowywania",
         "overrides": "Nadpisania tłumaczeń",
-        "analytics": "Analityka",
-        "context_memory": "Pamięć kontekstu",
+        "analytics": "Analizy",
+        "context_memory": "Pamięć kontekstowa",
         "community_support": "Wsparcie społeczności",
         "keys_limit": "Do 100 kluczy",
         "docs_limit": "Do 5 dokumentów",
-        "unlimited_languages": "Nieograniczona liczba języków"
+        "languages": "2 języki"
       }
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Wszystko z Darmowego, plus:",
+      "includes_free": "Wszystko w wersji Darmowej, plus:",
       "features": {
         "github_action": "Integracja z GitHub Action",
         "latest_features": "Wczesny dostęp do najnowszych funkcji",
         "priority_support": "Priorytetowe wsparcie",
         "priority_queues": "Priorytetowe kolejki tłumaczeń",
-        "keys_limit": "Począwszy od 10 000 kluczy",
-        "docs_limit": "Począwszy od 50 dokumentów"
+        "languages": "Nieograniczone języki",
+        "keys_limit": "Od 10 000 kluczy",
+        "docs_limit": "Od 50 dokumentów"
       }
     },
-    "cta": "Zacznij automatyzować",
-    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak \"Zarejestruj się\" lub \"Witaj!\") i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy x 5 języków)."
+    "cta": "Rozpocznij automatyzację",
+    "keys_limit_explanation": "Przetłumaczony klucz: Jeśli masz 20 kluczy źródłowych (jak \"Zarejestruj się\" lub \"Witaj!\") i przetłumaczysz je na 5 języków, to daje 100 przetłumaczonych kluczy (20 kluczy x 5 języków)."
   },
   "createTeam": {
-    "teamName": "Nazwa zespołu",
+    "teamName": "Nazwa Zespołu",
     "teamNamePlaceholder": "Wprowadź nazwę zespołu",
     "createTeamButton": "Utwórz zespół",
     "cancel": "Anuluj",
@@ -414,53 +415,53 @@
     "projectNamePlaceholder": "Wprowadź nazwę projektu",
     "createProjectButton": "Utwórz projekt",
     "cancel": "Anuluj",
-    "createProjectDescription": "Utwórz nowy projekt, aby zacząć automatyzować swoją lokalizację."
+    "createProjectDescription": "Utwórz nowy projekt, aby rozpocząć automatyzację lokalizacji."
   },
   "invite": {
     "inviteMember": "Zaproś członka",
     "inviteDescription": "Zaproś członka do swojego zespołu",
-    "emailLabel": "E-mail",
-    "emailPlaceholder": "Wprowadź e-mail",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Wprowadź email",
     "cancel": "Anuluj",
-    "submit": "Zatwierdź",
+    "submit": "Wyślij",
     "success": {
       "title": "Zaproszenie wysłane",
       "description": "Pomyślnie wysłano zaproszenie do {email}"
     },
     "error": {
       "title": "Błąd",
-      "description": "Nie udało się wysłać zaproszenia. Spróbuj ponownie."
+      "description": "Nie udało się wysłać zaproszenia. Proszę spróbować ponownie."
     },
     "validation": {
-      "invalidEmail": "Wprowadź poprawny adres e-mail"
+      "invalidEmail": "Proszę wprowadzić prawidłowy adres email"
     }
   },
   "onboarding": {
     "steps": {
       "1": {
         "title": "Skonfiguruj Languine CLI",
-        "description": "Zainstaluj i skonfiguruj Languine CLI do zarządzania tłumaczeniami"
+        "description": "Zainstaluj i skonfiguruj Languine CLI, aby zarządzać tłumaczeniami"
       },
       "2": {
-        "title": "Wypchnij tłumaczenia",
-        "description": "Oczekiwanie na wypchnięcie tłumaczeń"
+        "title": "Prześlij Tłumaczenia",
+        "description": "Czekam na przesłanie tłumaczeń"
       },
       "3": {
         "title": "Dokumentacja",
-        "description": "Sprawdź naszą dokumentację, aby uzyskać szczegółowe przewodniki i najlepsze praktyki",
+        "description": "Zapoznaj się z naszą dokumentacją, aby uzyskać szczegółowe przewodniki i najlepsze praktyki",
         "link": "dokumentacja"
       }
     },
     "info": {
       "description": "Potrzebujesz pomocy? Sprawdź naszą",
-      "link": "dokumentacja",
-      "description_2": "aby uzyskać szczegółowe przewodniki i najlepsze praktyki."
+      "link": "dokumentację",
+      "description_2": "dla szczegółowych przewodników i najlepszych praktyk."
     }
   },
   "cli": {
     "success": {
-      "title": "Languine CLI Logowanie Sukces",
-      "description": "Languine CLI zostało pomyślnie uwierzytelnione jako:",
+      "title": "Sukces logowania do Languine CLI",
+      "description": "Languine CLI został pomyślnie uwierzytelniony jako:",
       "description_2": "Możesz teraz zamknąć tę kartę i wrócić do CLI"
     }
   },
@@ -480,11 +481,9 @@
     "de": "Niemiecki",
     "it": "Włoski",
     "pt": "Portugalski",
-    "zh": "Chiński",
     "ja": "Japoński",
     "ko": "Koreański",
     "ar": "Arabski",
-    "hi": "Hindi",
     "tr": "Turecki",
     "nl": "Holenderski",
     "pl": "Polski",
@@ -492,18 +491,42 @@
     "da": "Duński",
     "sv": "Szwedzki",
     "fi": "Fiński",
-    "vi": "Wietnamski"
+    "vi": "Wietnamski",
+    "az": "Azerbejdżański",
+    "bg": "Bułgarski",
+    "ca": "Kataloński",
+    "cs": "Czeski",
+    "el": "Grecki",
+    "et": "Estoński",
+    "he": "Hebrajski",
+    "hr": "Chorwacki",
+    "hu": "Węgierski",
+    "id": "Indonezyjski",
+    "iw": "Hebrajski",
+    "km": "Khmer",
+    "lv": "Łotewski",
+    "pt-BR": "Portugalski (Brazylia)",
+    "ro": "Rumuński",
+    "ru": "Rosyjski",
+    "sk-SK": "Słowacki (Słowacja)",
+    "sk": "Słowacki",
+    "sr": "Serbski",
+    "ta": "Tamilski",
+    "th": "Tajski",
+    "uk": "Ukraiński",
+    "zh-CN": "Chiński (Uproszczony)",
+    "zh-TW": "Chiński (Tradycyjny)"
   },
   "menu": {
     "dashboard": "Panel sterowania",
-    "tuning": "Dostrajanie",
+    "tuning": "Dostosowanie",
     "settings": "Ustawienia",
     "pricing": "Cennik",
     "docs": "Dokumentacja",
     "account": "Konto"
   },
   "billing": {
-    "title": "Rozliczenia"
+    "title": "Fakturowanie"
   },
   "analytics": {
     "key": "Przetłumaczone klucze",
@@ -527,71 +550,62 @@
   "faq": {
     "title": "FAQ",
     "what_is_languine": {
-      "question": "Co to jest Languine?",
-      "answer": "Languine to platforma lokalizacji napędzana sztuczną inteligencją, która pomaga automatyzować tłumaczenie twoich aplikacji. Dostarcza funkcje takie jak opcje dostrajania, nadpisania tłumaczeń, analityka i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
+      "question": "Czym jest Languine?",
+      "answer": "Languine to platforma lokalizacyjna zasilana sztuczną inteligencją, która pomaga zautomatyzować tłumaczenie Twoich aplikacji. Oferuje funkcje takie jak opcje dostosowywania, nadpisywanie tłumaczeń, analityka i pamięć kontekstowa, aby zapewnić wysoką jakość tłumaczeń."
     },
     "key_limit": {
       "question": "Jak działa limit kluczy?",
-      "answer": "Przetłumaczony klucz jest liczony, gdy tłumaczysz klucz źródłowy na język docelowy. Na przykład, jeśli masz 20 kluczy źródłowych i przetłumaczysz je na 5 języków, to równa się 100 przetłumaczonym kluczom (20 kluczy × 5 języków)."
+      "answer": "Przetłumaczony klucz jest liczony, gdy tłumaczysz klucz źródłowy na język docelowy. Na przykład, jeśli masz 20 kluczy źródłowych i tłumaczysz je na 5 języków, to daje 100 przetłumaczonych kluczy (20 kluczy × 5 języków)."
     },
     "supported_languages": {
       "question": "Jakie języki są obsługiwane?",
-      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia napędzane sztuczną inteligencją działają najlepiej z głównymi językami, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz szczególne wymagania językowe lub pytania dotyczące jakości tłumaczeń dla konkretnych języków, skontaktuj się z naszym zespołem wsparcia."
+      "answer": "Languine obsługuje ponad 100 języków we wszystkich planach. Chociaż nasze tłumaczenia zasilane sztuczną inteligencją najlepiej działają z głównymi językami, staramy się zapewnić jakość tłumaczeń we wszystkich obsługiwanych językach. Jeśli masz konkretne wymagania językowe lub pytania dotyczące jakości tłumaczenia dla określonych języków, skontaktuj się z naszym zespołem wsparcia."
     },
     "github_action": {
       "question": "Jak działa integracja z GitHub Action?",
-      "answer": "Integracja z GitHub Action (dostępna w planach Pro) pozwala na automatyzację przepływu pracy tłumaczeń bezpośrednio w potoku CI/CD. Gdy pushujesz zmiany do swojego repozytorium, tłumaczenia mogą być automatycznie aktualizowane."
+      "answer": "Integracja z GitHub Action (dostępna w planach Pro) pozwala zautomatyzować Twój proces tłumaczenia bezpośrednio w Twoim pipeline CI/CD. Gdy wprowadzasz zmiany w swoim repozytorium, tłumaczenia mogą być automatycznie aktualizowane."
     },
     "support": {
       "question": "Jakiego rodzaju wsparcie oferujecie?",
-      "answer": "Użytkownicy Darmowego planu mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszym czasem odpowiedzi i dedykowaną pomocą w zakresie tłumaczeń."
+      "answer": "Użytkownicy darmowi mają dostęp do wsparcia społeczności, podczas gdy użytkownicy Pro otrzymują priorytetowe wsparcie z szybszymi czasami odpowiedzi i dedykowaną pomocą w zakresie ich potrzeb tłumaczeniowych."
     },
     "open_source": {
       "question": "Czy Languine jest open source?",
-      "answer": "Tak! Languine jest w pełni open source i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie publicznie."
+      "answer": "Tak! Languine jest w pełni open source i dostępne na GitHubie. Możesz przyczynić się do projektu, zgłaszać problemy, sugerować funkcje i przeglądać kod. Wierzymy w przejrzystość i budowanie w przestrzeni publicznej."
     },
     "open_source_pricing": {
       "question": "Czy oferujecie specjalne ceny dla projektów open source?",
-      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my skonfigurujemy dla ciebie konto Pro ze zniżką. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
+      "answer": "Tak! Uwielbiamy wspierać społeczność open source. Jeśli prowadzisz projekt open source, możesz uzyskać dostęp do naszych funkcji Pro z 30% zniżką. Po prostu skontaktuj się z naszym zespołem z informacjami o swoim projekcie, a my założymy Ci konto Pro z rabatem. To nasz sposób na oddanie społeczności, która umożliwia naszą pracę."
     },
     "cancel_subscription": {
-      "question": "Jak mogę anulować swoją subskrypcję?",
-      "answer": "Możesz anulować swoją subskrypcję w dowolnym momencie z ustawień konta. Przejdź do Rozliczenia > Zmień plan. Twoja subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego, po czym zostaniesz przeniesiony do planu Darmowego."
+      "question": "Jak mogę anulować subskrypcję?",
+      "answer": "Możesz anulować swoją subskrypcję w dowolnym momencie z ustawień swojego konta. Przejdź do Fakturowanie > Zmień plan. Twoja subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego, po czym zostaniesz przeniesiony na plan darmowy."
     }
   },
   "pricing_slider": {
     "tier": "Poziom {tier}",
     "keys": "Przetłumaczone klucze",
     "documents": "Przetłumaczone dokumenty",
-    "period": "pon",
-    "keys_suffix": " klucze",
-    "docs_suffix": " dokumenty"
+    "period": "mies.",
+    "keys_suffix": " kluczy",
+    "docs_suffix": " dokumentów"
   },
   "docs": {
     "getting-started": "Rozpoczęcie",
-    "introduction": "Wprowadzenie",
-    "installation": "Instalacja",
-    "quickstart": "Szybki start",
-    "guides": "Przewodniki",
-    "configuration": "Konfiguracja",
-    "cli": "CLI",
-    "api": "API",
-    "advanced": "Zaawansowane",
-    "custom-parsers": "Niestandardowe parsery",
-    "workflows": "Przepływy pracy",
-    "self-hosting": "Hostowanie własne",
-    "jobs": "Zawody",
-    "support": "Wsparcie",
     "workflow": "Przepływ pracy",
     "ci": "CI/CD",
-    "presets": "Presety",
+    "presets": "Ustawienia wstępne",
     "formats": "Formaty",
     "platform": "Platforma",
+    "introduction": "Wprowadzenie",
+    "quickstart": "Szybki start",
     "authentication": "Uwierzytelnianie",
+    "configuration": "Konfiguracja",
+    "cli": "CLI",
     "github-actions": "GitHub Actions",
-    "tuning": "Dostrajanie",
+    "tuning": "Dostosowanie",
     "settings": "Ustawienia",
-    "hooks": "Haki",
+    "hooks": "Hooki",
     "examples": "Przykłady",
     "team": "Zespół"
   },
@@ -599,9 +613,5 @@
     "title": "To jest test",
     "description": "A to jest opis testu",
     "button": "Kliknij mnie"
-  },
-  "welcome": {
-    "title": "Witamy w Languine",
-    "description": "Languine to platforma lokalizacyjna napędzana sztuczną inteligencją, która pomaga zautomatyzować tłumaczenie aplikacji. Oferuje funkcje takie jak opcje dostrajania, nadpisywanie tłumaczeń, analitykę i pamięć kontekstu, aby zapewnić wysoką jakość tłumaczeń."
   }
 }

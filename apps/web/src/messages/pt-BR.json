@@ -3,11 +3,11 @@
     "pricing": "Preços",
     "docs": "Documentos",
     "signIn": "Entrar",
-    "goToApp": "Ir para o aplicativo"
+    "goToApp": "Ir para o app"
   },
   "hero": {
     "title": "Infraestrutura de localização automatizada",
-    "description": "Traduza o conteúdo do seu aplicativo diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra ao GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica."
+    "description": "Traduza o conteúdo do seu app diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra com GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -20,10 +20,10 @@
   "getStarted": {
     "heading": "Comece",
     "title": "Infraestrutura de localização automatizada",
-    "description": "Traduza o conteúdo do seu aplicativo diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra ao GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica.",
+    "description": "Traduza o conteúdo do seu app diretamente no seu fluxo de trabalho de desenvolvimento. Nossa CLI se integra com GitHub Actions e outras ferramentas de CI/CD para automatizar traduções enquanto você codifica.",
     "button": {
-      "startAutomating": "Começar a automatizar",
-      "readDocumentation": "Ler documentação"
+      "startAutomating": "Comece a automatizar",
+      "readDocumentation": "Leia a documentação"
     }
   },
   "companies": {
@@ -57,7 +57,7 @@
     "readyForI18nLibrariesDescription": "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc)."
   },
   "info": {
-    "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
+    "title": "Cuida de todos os aspectos da localização do seu app, incluindo",
     "smartTranslation": {
       "title": "Tradução Inteligente",
       "intelligentTranslation": "Tradução inteligente com consciência de contexto",
@@ -69,7 +69,7 @@
     "implementation": {
       "title": "Implementação",
       "quickSetup": "Configuração e integração rápidas",
-      "fileFormat": "Manipulação de formato de arquivo",
+      "fileFormat": "Manipulação de formatos de arquivo",
       "contentStructure": "Organização da estrutura de conteúdo",
       "assetOrganization": "Organização de ativos"
     },
@@ -136,7 +136,7 @@
     },
     "apiKey": {
       "title": "Chave da API",
-      "description": "Sua chave pessoal da API para acessar a API Languine e a partir da CLI."
+      "description": "Sua chave pessoal da API para acessar a API do Languine e pela CLI."
     },
     "deleteAccount": {
       "title": "Excluir Conta",
@@ -215,7 +215,7 @@
       },
       "billing": {
         "title": "Plano de Cobrança",
-        "description": "Gerenciar o plano de cobrança da sua equipe",
+        "description": "Gerencie o plano de cobrança da sua equipe",
         "free": "Gratuito",
         "pro": "Pro",
         "unlimited": "Ilimitado"
@@ -277,7 +277,7 @@
     },
     "contextDetection": {
       "title": "Detecção de Contexto",
-      "description": "Detectar e preservar automaticamente o contexto nas traduções"
+      "description": "Detecte e preserve automaticamente o contexto nas traduções"
     },
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
@@ -285,7 +285,7 @@
       "description": "Controle o comprimento do texto traduzido",
       "options": {
         "flexible": "Flexível",
-        "strict": "Estrito",
+        "strict": "Rigoroso",
         "exact": "Exato",
         "loose": "Solto"
       }
@@ -339,7 +339,7 @@
         "empathetic": "Empático",
         "professional": "Profissional",
         "friendly": "Amigável",
-        "enthusiastic": "Entusiástico"
+        "enthusiastic": "Entusiasmado"
       }
     },
     "domainExpertise": {
@@ -369,7 +369,7 @@
     }
   },
   "pricing": {
-    "title": "Preços simples",
+    "title": "Preços Simples",
     "free": {
       "title": "Gratuito",
       "price": "Gratuito",
@@ -392,7 +392,7 @@
       "includes_free": "Tudo no Gratuito, além de:",
       "features": {
         "github_action": "Integração com GitHub Action",
-        "latest_features": "Acesso antecipado a novos recursos",
+        "latest_features": "Acesso antecipado às últimas funcionalidades",
         "priority_support": "Suporte prioritário",
         "priority_queues": "Filas de tradução prioritárias",
         "languages": "Idiomas ilimitados",
@@ -462,7 +462,7 @@
     "success": {
       "title": "Sucesso no Login do Languine CLI",
       "description": "Languine CLI foi autenticado com sucesso como:",
-      "description_2": "Você pode agora fechar esta aba e retornar ao CLI"
+      "description_2": "Você pode agora fechar esta aba e voltar ao CLI"
     }
   },
   "search": {
@@ -495,7 +495,7 @@
     "az": "Azerbaijano",
     "bg": "Búlgaro",
     "ca": "Catalão",
-    "cs": "Checo",
+    "cs": "Tcheco",
     "el": "Grego",
     "et": "Estoniano",
     "he": "Hebraico",
@@ -526,7 +526,7 @@
     "account": "Conta"
   },
   "billing": {
-    "title": "Faturamento"
+    "title": "Cobrança"
   },
   "analytics": {
     "key": "Chaves traduzidas",
@@ -555,7 +555,7 @@
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
-      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma de destino. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
+      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma-alvo. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
     },
     "supported_languages": {
       "question": "Quais idiomas são suportados?",
@@ -563,7 +563,7 @@
     },
     "github_action": {
       "question": "Como funciona a integração do GitHub Action?",
-      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline de CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
+      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
     },
     "support": {
       "question": "Que tipo de suporte vocês oferecem?",
@@ -571,15 +571,15 @@
     },
     "open_source": {
       "question": "O Languine é open source?",
-      "answer": "Sim! Languine é totalmente open source e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir recursos e inspecionar o código. Acreditamos na transparência e em construir em público."
+      "answer": "Sim! O Languine é totalmente open source e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir recursos e inspecionar o código. Acreditamos em transparência e em construir em público."
     },
     "open_source_pricing": {
       "question": "Vocês oferecem preços especiais para projetos open source?",
-      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o ajudaremos a obter uma conta Pro com desconto. Esta é a nossa forma de retribuir à comunidade que torna nosso trabalho possível."
+      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é a nossa maneira de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {
-      "question": "Como cancelo minha assinatura?",
-      "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Faturamento > Mudar Plano. Sua assinatura permanecerá ativa até o final do seu período de faturamento atual, após o qual você será movido para o plano Gratuito."
+      "question": "Como faço para cancelar minha assinatura?",
+      "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Cobrança > Mudar Plano. Sua assinatura permanecerá ativa até o final do seu período de cobrança atual, após o qual você será movido para o plano Gratuito."
     }
   },
   "pricing_slider": {

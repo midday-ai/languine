@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "定價",
+    "docs": "文件",
+    "signIn": "登入",
+    "goToApp": "前往應用程式"
+  },
+  "hero": {
+    "title": "自動化本地化基礎設施",
+    "description": "直接在開發工作流程中翻譯您的應用程式內容。我們的 CLI 與 GitHub Actions 和其他 CI/CD 工具集成，隨著您的編碼自動化翻譯。"
+  },
+  "navigation": {
+    "dashboard": "儀表板",
+    "tuning": "調整",
+    "settings": "設定",
+    "pricing": "定價",
+    "docs": "文檔",
+    "account": "帳戶"
+  },
+  "getStarted": {
+    "heading": "開始使用",
+    "title": "自動化本地化基礎設施",
+    "description": "直接在開發工作流程中翻譯您的應用程式內容。我們的 CLI 與 GitHub Actions 和其他 CI/CD 工具集成，隨著您的編碼自動化翻譯。",
+    "button": {
+      "startAutomating": "開始自動化",
+      "readDocumentation": "閱讀文檔"
+    }
+  },
+  "companies": {
+    "title": "使用者",
+    "addYourCompany": "+ 添加您的公司"
+  },
+  "activity": {
+    "title": "活動",
+    "loading": "加載中",
+    "noResults": "沒有找到 '{search}' 的結果",
+    "clearSearch": "清除搜索",
+    "loadMore": "顯示更多",
+    "type": {
+      "key": "鍵",
+      "document": "文檔"
+    }
+  },
+  "features": {
+    "title": "功能",
+    "fullyOpenSource": "完全開源",
+    "fullyOpenSourceDescription": "我們的代碼在 GitHub 上公開可用，實現透明性和社區貢獻。",
+    "noVendorLockIn": "無供應商鎖定",
+    "noVendorLockInDescription": "我們不會將您鎖定在特定服務中，使用您自己的 LLM。",
+    "presetsForExpo": "Expo 預設",
+    "presetsForExpoDescription": "我們提供 Expo 的預設，讓您可以快速開始。",
+    "presetForReactNative": "React Native 預設",
+    "presetForReactNativeDescription": "我們提供 React Native 的預設，讓您可以快速開始。",
+    "presetForReactEmail": "React Email 庫",
+    "presetForReactEmailDescription": "我們為 React Email 創建了一個 i18n 庫。",
+    "readyForI18nLibraries": "準備好 i18n 庫",
+    "readyForI18nLibrariesDescription": "我們支持所有庫，包括最受歡迎的庫（next-intl、react-i18next、react-intl 等）。"
+  },
+  "info": {
+    "title": "處理本地化應用程式的每個方面，包括",
+    "smartTranslation": {
+      "title": "智能翻譯",
+      "intelligentTranslation": "具上下文意識的智能翻譯",
+      "brandVoice": "品牌聲音和語調一致性",
+      "terminology": "術語管理",
+      "linguisticFeatures": "先進的語言特徵",
+      "realtimeUpdates": "實時翻譯更新"
+    },
+    "implementation": {
+      "title": "實施",
+      "quickSetup": "快速設置和集成",
+      "fileFormat": "文件格式處理",
+      "contentStructure": "內容結構組織",
+      "assetOrganization": "資產組織"
+    },
+    "developer": {
+      "title": "開發者體驗",
+      "cli": "命令行介面",
+      "cicd": "CI/CD 集成",
+      "versionControl": "版本控制",
+      "workflow": "開發者工作流程",
+      "documentation": "全面的文檔"
+    }
+  },
+  "login": {
+    "title": "登入",
+    "github": "使用 GitHub 登入",
+    "google": "使用 Google 登入",
+    "footer": "自動化您的本地化。",
+    "description": "登入以在幾秒鐘內開始自動化您的本地化。",
+    "terms": {
+      "text": "登入即表示您同意我們的",
+      "termsOfService": "服務條款",
+      "and": "和",
+      "privacyPolicy": "隱私政策"
+    }
+  },
+  "translations": {
+    "header": "翻譯的鍵"
+  },
+  "userMenu": {
+    "account": "帳戶設定",
+    "signOut": "登出",
+    "createTeam": "創建團隊",
+    "homepage": "首頁",
+    "team": "團隊設定"
+  },
+  "teamSelector": {
+    "addProject": "創建項目",
+    "createProjectTitle": "創建新項目",
+    "projectNamePlaceholder": "項目名稱",
+    "createProjectButton": "創建項目",
+    "pro": "專業版",
+    "project": "項目",
+    "teams": "團隊",
+    "createTeam": "創建團隊",
+    "createTeamTitle": "創建新團隊",
+    "teamNamePlaceholder": "團隊名稱",
+    "createTeamButton": "創建團隊"
+  },
+  "coming_soon": {
+    "title": "Languine 正在進行早期訪問",
+    "description": "我們目前正在進行早期訪問。請聯繫",
+    "cta": "在 X 上獲取早期訪問。"
+  },
+  "account": {
+    "fullName": {
+      "title": "全名",
+      "description": "您的全名將在整個平台上顯示。",
+      "placeholder": "輸入您的全名"
+    },
+    "email": {
+      "title": "電子郵件地址",
+      "description": "與您的帳戶相關聯的電子郵件地址。",
+      "placeholder": "輸入您的電子郵件地址"
+    },
+    "apiKey": {
+      "title": "API 金鑰",
+      "description": "您個人的 API 金鑰，用於訪問 Languine API 和 CLI。"
+    },
+    "deleteAccount": {
+      "title": "刪除帳戶",
+      "description": "永久刪除您的帳戶及所有相關數據。此操作無法撤消。",
+      "button": "刪除帳戶"
+    }
+  },
+  "copyInstall": {
+    "copied": "已複製到剪貼板"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "您確定嗎？",
+      "description": "此操作無法撤消。請輸入 DELETE 以確認。",
+      "placeholder": "輸入 DELETE 以確認",
+      "confirm": "確認刪除",
+      "cancel": "取消"
+    }
+  },
+  "pipeline": {
+    "title": "工作流程 (CI/CD 管道)",
+    "pro": "[專業版]",
+    "description": "我們的翻譯引擎無縫整合到您現有的 CI/CD 管道中，自動在每次推送時翻譯您的代碼庫。當代碼變更被推送時，我們分析修改的內容，維護您的翻譯記憶，並生成準確的翻譯，同時保留您的品牌聲音和術語。翻譯隨後作為拉取請求提交，允許在合併到主分支並部署之前進行審查。這個自動化工作流程確保您的本地化內容與開發保持同步。"
+  },
+  "settings": {
+    "badRequest": "無效的請求",
+    "badRequestDescription": "組織必須至少有一位擁有者。在移除此擁有者之前，請將擁有權轉移給其他成員。",
+    "permissionDenied": "權限被拒絕",
+    "permissionDeniedDescription": "您需要是團隊的擁有者才能執行此操作",
+    "deleteTeamTitle": "刪除團隊",
+    "deleteTeamDescription": "當您是唯一成員時，無法刪除組織，請刪除您的帳戶",
+    "saved": "設置已保存",
+    "savedDescription": "您的更改已成功保存",
+    "error": "發生錯誤",
+    "errorDescription": "請重試或聯繫支持",
+    "addTeam": "創建團隊",
+    "apiKey": {
+      "updated": "API 密鑰已更新",
+      "updatedDescription": "您的 API 密鑰已成功更新並複製到剪貼板。",
+      "title": "更新 API 密鑰",
+      "description": "您確定要生成新的 API 密鑰嗎？舊的密鑰將立即停止工作。",
+      "cancel": "取消",
+      "continue": "繼續"
+    },
+    "tabs": {
+      "project": "項目",
+      "account": "帳戶",
+      "team": "團隊",
+      "provider": "提供者",
+      "billing": "計費"
+    },
+    "addProject": "創建項目",
+    "project": {
+      "name": {
+        "title": "項目名稱",
+        "description": "您的項目名稱",
+        "placeholder": "輸入項目名稱"
+      },
+      "id": {
+        "title": "項目 ID",
+        "description": "您的唯一項目標識符",
+        "placeholder": "項目 ID"
+      },
+      "delete": {
+        "title": "刪除項目",
+        "description": "永久刪除此項目及其所有數據",
+        "button": "刪除項目"
+      }
+    },
+    "save": "保存",
+    "team": {
+      "name": {
+        "title": "團隊名稱",
+        "description": "您的團隊名稱",
+        "placeholder": "輸入團隊名稱"
+      },
+      "billing": {
+        "title": "計費計劃",
+        "description": "管理您的團隊計費計劃",
+        "free": "免費",
+        "pro": "專業版",
+        "unlimited": "無限"
+      },
+      "apiKey": {
+        "title": "團隊 API 密鑰",
+        "description": "團隊訪問的 API 密鑰，請與項目 ID 一起從您的 CI/CD 管道使用",
+        "placeholder": "團隊 API 密鑰"
+      },
+      "members": {
+        "leaveTeamConfirm": "離開團隊",
+        "leaveTeamDescription": "您確定要離開這個團隊嗎？",
+        "cancel": "取消",
+        "leaveTeam": "離開團隊",
+        "invite": "邀請成員",
+        "title": "成員",
+        "pendingInvitations": "待處理的邀請",
+        "removeMember": "移除成員",
+        "removeMemberConfirm": "移除成員",
+        "removeMemberDescription": "您確定要移除這位成員嗎？",
+        "filterPlaceholder": "篩選成員...",
+        "allRoles": "所有角色",
+        "date": "日期",
+        "selectAll": "{count} 已選擇",
+        "noPendingInvitations": "沒有待處理的邀請",
+        "noResults": "未找到成員",
+        "tryDifferentSearch": "嘗試不同的搜索",
+        "inviteMembers": "邀請成員合作",
+        "deleteInvite": "刪除邀請",
+        "deleteInviteDescription": "刪除邀請",
+        "invitedBy": "邀請者 {name}",
+        "deleteInviteSuccess": "邀請已刪除",
+        "deleteInviteError": "刪除邀請失敗",
+        "removeMemberSuccess": "成員已移除",
+        "removeMemberError": "移除成員失敗",
+        "removeMemberSuccessDescription": "成員已成功移除",
+        "removeMemberErrorDescription": "移除成員失敗",
+        "roles": {
+          "owner": "擁有者",
+          "member": "成員"
+        },
+        "dateSort": {
+          "newest": "最新",
+          "oldest": "最舊"
+        },
+        "deleteInviteConfirm": "刪除邀請"
+      }
+    }
+  },
+  "tuning": {
+    "general": "一般",
+    "translationMemory": {
+      "title": "翻譯記憶",
+      "description": "使用翻譯記憶提高一致性和效率"
+    },
+    "qualityChecks": {
+      "title": "質量檢查",
+      "description": "啟用自動質量檢查以進行翻譯"
+    },
+    "contextDetection": {
+      "title": "上下文檢測",
+      "description": "自動檢測並保留翻譯中的上下文"
+    },
+    "styleGuide": "風格指南",
+    "lengthControl": {
+      "title": "長度控制",
+      "description": "控制翻譯文本的長度",
+      "options": {
+        "flexible": "靈活",
+        "strict": "嚴格",
+        "exact": "精確",
+        "loose": "寬鬆"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "包容性語言",
+      "description": "確保翻譯使用包容性語言"
+    },
+    "formality": {
+      "title": "正式性",
+      "description": "控制翻譯的正式程度",
+      "options": {
+        "casual": "隨意",
+        "formal": "正式",
+        "neutral": "中立"
+      }
+    },
+    "brandName": {
+      "title": "品牌名稱",
+      "description": "設置您的品牌名稱以保持一致性",
+      "placeholder": "輸入您的品牌名稱"
+    },
+    "brandVoice": {
+      "title": "品牌聲音",
+      "description": "定義您的品牌聲音和語調",
+      "placeholder": "描述您的品牌聲音..."
+    },
+    "toneOfVoice": {
+      "title": "語調",
+      "description": "定義翻譯中使用的語調",
+      "options": {
+        "casual": "隨意",
+        "formal": "正式",
+        "friendly": "友好",
+        "professional": "專業",
+        "playful": "俏皮",
+        "serious": "嚴肅",
+        "confident": "自信",
+        "humble": "謙虛",
+        "direct": "直接",
+        "diplomatic": "外交"
+      }
+    },
+    "brand": "品牌",
+    "emotiveIntent": {
+      "title": "情感意圖",
+      "description": "設置翻譯的情感語調",
+      "options": {
+        "neutral": "中立",
+        "positive": "正面",
+        "empathetic": "同理心",
+        "professional": "專業",
+        "friendly": "友好",
+        "enthusiastic": "熱情"
+      }
+    },
+    "domainExpertise": {
+      "title": "領域專業知識",
+      "description": "指定翻譯的領域上下文",
+      "options": {
+        "general": "一般",
+        "technical": "技術",
+        "medical": "醫療",
+        "legal": "法律",
+        "financial": "金融",
+        "marketing": "市場營銷",
+        "academic": "學術"
+      }
+    },
+    "idioms": {
+      "title": "成語",
+      "description": "適當處理成語表達"
+    },
+    "terminology": {
+      "title": "術語",
+      "description": "管理專業術語和詞彙表"
+    },
+    "culturalAdaptation": {
+      "title": "文化適應",
+      "description": "調整內容以符合文化適宜性"
+    }
+  },
+  "pricing": {
+    "title": "簡單定價",
+    "free": {
+      "title": "免費",
+      "price": "免費",
+      "keys_limit": "最多 100 個鍵",
+      "description": "非常適合試用",
+      "features": {
+        "unlimited_projects": "無限制項目",
+        "fine_tuning": "微調選項",
+        "overrides": "翻譯覆蓋",
+        "analytics": "分析",
+        "context_memory": "上下文記憶",
+        "community_support": "社區支持",
+        "keys_limit": "最多 100 個鍵",
+        "docs_limit": "最多 5 個文檔",
+        "languages": "2 種語言"
+      }
+    },
+    "pro": {
+      "title": "專業版",
+      "includes_free": "包含免費版的所有內容，還有：",
+      "features": {
+        "github_action": "GitHub Action 集成",
+        "latest_features": "提前訪問最新功能",
+        "priority_support": "優先支持",
+        "priority_queues": "優先翻譯隊列",
+        "languages": "無限制語言",
+        "keys_limit": "起始於 10,000 個鍵",
+        "docs_limit": "起始於 50 個文檔"
+      }
+    },
+    "cta": "開始自動化",
+    "keys_limit_explanation": "翻譯鍵：如果您有 20 個源鍵（如 \"註冊\" 或 \"歡迎！\"）並將其翻譯成 5 種語言，那麼這等於 100 個翻譯鍵（20 鍵 x 5 語言）。"
+  },
+  "createTeam": {
+    "teamName": "團隊名稱",
+    "teamNamePlaceholder": "輸入團隊名稱",
+    "createTeamButton": "創建團隊",
+    "cancel": "取消",
+    "createTeamDescription": "創建一個新團隊以管理您的項目和合作者。"
+  },
+  "createProject": {
+    "createProjectTitle": "創建新項目",
+    "projectNamePlaceholder": "輸入項目名稱",
+    "createProjectButton": "創建項目",
+    "cancel": "取消",
+    "createProjectDescription": "創建一個新項目以開始自動化您的本地化。"
+  },
+  "invite": {
+    "inviteMember": "邀請成員",
+    "inviteDescription": "邀請一位成員加入您的團隊",
+    "emailLabel": "電子郵件",
+    "emailPlaceholder": "輸入電子郵件",
+    "cancel": "取消",
+    "submit": "提交",
+    "success": {
+      "title": "邀請已發送",
+      "description": "成功發送邀請至 {email}"
+    },
+    "error": {
+      "title": "錯誤",
+      "description": "發送邀請失敗。請再試一次。"
+    },
+    "validation": {
+      "invalidEmail": "請輸入有效的電子郵件"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "設置 Languine CLI",
+        "description": "安裝和配置 Languine CLI 以管理翻譯"
+      },
+      "2": {
+        "title": "推送翻譯",
+        "description": "等待翻譯被推送"
+      },
+      "3": {
+        "title": "文檔",
+        "description": "查看我們的文檔以獲取詳細指南和最佳實踐",
+        "link": "文檔"
+      }
+    },
+    "info": {
+      "description": "需要幫助嗎？查看我們的",
+      "link": "文檔",
+      "description_2": "以獲取詳細指南和最佳實踐。"
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Languine CLI 登入成功",
+      "description": "Languine CLI 已成功驗證為：",
+      "description_2": "您現在可以關閉此標籤頁並返回 CLI"
+    }
+  },
+  "search": {
+    "placeholder": "搜尋"
+  },
+  "periods": {
+    "daily": "每日",
+    "weekly": "每週",
+    "monthly": "每月",
+    "selectPeriod": "選擇期間"
+  },
+  "language": {
+    "en": "英語",
+    "es": "西班牙語",
+    "fr": "法語",
+    "de": "德語",
+    "it": "意大利語",
+    "pt": "葡萄牙語",
+    "ja": "日語",
+    "ko": "韓語",
+    "ar": "阿拉伯語",
+    "tr": "土耳其語",
+    "nl": "荷蘭語",
+    "pl": "波蘭語",
+    "no": "挪威語",
+    "da": "丹麥語",
+    "sv": "瑞典語",
+    "fi": "芬蘭語",
+    "vi": "越南語",
+    "az": "阿塞拜疆語",
+    "bg": "保加利亞語",
+    "ca": "加泰羅尼亞語",
+    "cs": "捷克語",
+    "el": "希臘語",
+    "et": "愛沙尼亞語",
+    "he": "希伯來語",
+    "hr": "克羅地亞語",
+    "hu": "匈牙利語",
+    "id": "印尼語",
+    "iw": "希伯來語",
+    "km": "高棉語",
+    "lv": "拉脫維亞語",
+    "pt-BR": "葡萄牙語（巴西）",
+    "ro": "羅馬尼亞語",
+    "ru": "俄語",
+    "sk-SK": "斯洛伐克語（斯洛伐克）",
+    "sk": "斯洛伐克語",
+    "sr": "塞爾維亞語",
+    "ta": "泰米爾語",
+    "th": "泰語",
+    "uk": "烏克蘭語",
+    "zh-CN": "中文（簡體）",
+    "zh-TW": "中文（繁體）"
+  },
+  "menu": {
+    "dashboard": "儀表板",
+    "tuning": "調整",
+    "settings": "設定",
+    "pricing": "定價",
+    "docs": "文件",
+    "account": "帳戶"
+  },
+  "billing": {
+    "title": "帳單"
+  },
+  "analytics": {
+    "key": "已翻譯的鍵",
+    "document": "已翻譯的文件",
+    "header": "翻譯",
+    "months": {
+      "10": "十月",
+      "11": "十一月",
+      "12": "十二月",
+      "01": "一月",
+      "02": "二月",
+      "03": "三月",
+      "04": "四月",
+      "05": "五月",
+      "06": "六月",
+      "07": "七月",
+      "08": "八月",
+      "09": "九月"
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "what_is_languine": {
+      "question": "什麼是 Languine？",
+      "answer": "Languine 是一個由 AI 驅動的本地化平台，幫助您自動化應用程式的翻譯。它提供精細調整選項、翻譯覆蓋、分析和上下文記憶等功能，以確保高品質的翻譯。"
+    },
+    "key_limit": {
+      "question": "鍵限制是如何運作的？",
+      "answer": "當您將源鍵翻譯成目標語言時，會計算一個已翻譯的鍵。例如，如果您有 20 個源鍵並將它們翻譯成 5 種語言，那麼這等於 100 個已翻譯的鍵（20 鍵 × 5 語言）。"
+    },
+    "supported_languages": {
+      "question": "支持哪些語言？",
+      "answer": "Languine 在所有計劃中支持超過 100 種語言。雖然我們的 AI 驅動翻譯在主要語言上效果最佳，但我們努力在所有支持的語言中提供高品質的翻譯。如果您有特定的語言需求或對某些語言的翻譯質量有疑問，請聯繫我們的支持團隊。"
+    },
+    "github_action": {
+      "question": "GitHub Action 整合是如何運作的？",
+      "answer": "GitHub Action 整合（在專業計劃中可用）允許您直接在 CI/CD 管道中自動化翻譯工作流程。當您將更改推送到您的存儲庫時，翻譯可以自動更新。"
+    },
+    "support": {
+      "question": "您提供什麼樣的支持？",
+      "answer": "免費用戶可以獲得社區支持，而專業用戶則享有優先支持，回應時間更快，並為他們的翻譯需求提供專門協助。"
+    },
+    "open_source": {
+      "question": "Languine 是開源的嗎？",
+      "answer": "是的！Languine 完全開源，並可在 GitHub 上獲得。您可以為該項目做出貢獻，報告問題，建議功能，並檢查代碼。我們相信透明度和公開建設。"
+    },
+    "open_source_pricing": {
+      "question": "您是否為開源項目提供特別定價？",
+      "answer": "是的！我們喜歡支持開源社區。如果您維護一個開源項目，您可以以 30% 的折扣獲得我們的專業功能。只需向我們的團隊提供有關您項目的詳細信息，我們將為您設置折扣的專業帳戶。這是我們回饋使我們的工作成為可能的社區的方式。"
+    },
+    "cancel_subscription": {
+      "question": "我如何取消訂閱？",
+      "answer": "您可以隨時從帳戶設定中取消訂閱。導航至帳單 > 更改計劃。您的訂閱將保持有效，直到當前計費週期結束，之後您將轉移到免費計劃。"
+    }
+  },
+  "pricing_slider": {
+    "tier": "層級 {tier}",
+    "keys": "已翻譯的鍵",
+    "documents": "已翻譯的文件",
+    "period": "月",
+    "keys_suffix": " 鍵",
+    "docs_suffix": " 文件"
+  },
+  "docs": {
+    "getting-started": "開始使用",
+    "workflow": "工作流程",
+    "ci": "CI/CD",
+    "presets": "預設",
+    "formats": "格式",
+    "platform": "平台",
+    "introduction": "介紹",
+    "quickstart": "快速入門",
+    "authentication": "身份驗證",
+    "configuration": "配置",
+    "cli": "CLI",
+    "github-actions": "GitHub Actions",
+    "tuning": "調整",
+    "settings": "設定",
+    "hooks": "鉤子",
+    "examples": "範例",
+    "team": "團隊"
+  },
+  "test": {
+    "title": "這是一個測試",
+    "description": "這是一個測試描述",
+    "button": "點擊我"
+  }
+}

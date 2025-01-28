@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "Harga",
+    "docs": "Dokumen",
+    "signIn": "Masuk",
+    "goToApp": "Buka aplikasi"
+  },
+  "hero": {
+    "title": "Infrastruktur lokalisasi otomatis",
+    "description": "Terjemahkan konten aplikasi Anda langsung dalam alur kerja pengembangan Anda. CLI kami terintegrasi dengan GitHub Actions dan alat CI/CD lainnya untuk mengotomatiskan terjemahan saat Anda mengkode."
+  },
+  "navigation": {
+    "dashboard": "Dasbor",
+    "tuning": "Penyetelan",
+    "settings": "Pengaturan",
+    "pricing": "Harga",
+    "docs": "Dokumentasi",
+    "account": "Akun"
+  },
+  "getStarted": {
+    "heading": "Mulai",
+    "title": "Infrastruktur lokalisasi otomatis",
+    "description": "Terjemahkan konten aplikasi Anda langsung dalam alur kerja pengembangan Anda. CLI kami terintegrasi dengan GitHub Actions dan alat CI/CD lainnya untuk mengotomatiskan terjemahan saat Anda mengkode.",
+    "button": {
+      "startAutomating": "Mulai mengotomatiskan",
+      "readDocumentation": "Baca dokumentasi"
+    }
+  },
+  "companies": {
+    "title": "Digunakan oleh",
+    "addYourCompany": "+ Tambahkan perusahaan Anda"
+  },
+  "activity": {
+    "title": "Aktivitas",
+    "loading": "Memuat",
+    "noResults": "Tidak ada hasil untuk '{search}'",
+    "clearSearch": "Bersihkan pencarian",
+    "loadMore": "Tampilkan lebih banyak",
+    "type": {
+      "key": "Kunci",
+      "document": "Dokumen"
+    }
+  },
+  "features": {
+    "title": "Fitur",
+    "fullyOpenSource": "Sepenuhnya sumber terbuka",
+    "fullyOpenSourceDescription": "Kode kami tersedia secara publik di GitHub, memungkinkan transparansi dan kontribusi komunitas.",
+    "noVendorLockIn": "Tidak ada kunci vendor",
+    "noVendorLockInDescription": "Kami tidak mengunci Anda ke layanan tertentu, gunakan LLM Anda sendiri.",
+    "presetsForExpo": "Preset untuk Expo",
+    "presetsForExpoDescription": "Kami menyediakan preset untuk Expo, sehingga Anda dapat memulai dengan cepat.",
+    "presetForReactNative": "Preset untuk React Native",
+    "presetForReactNativeDescription": "Kami menyediakan preset untuk React Native, sehingga Anda dapat memulai dengan cepat.",
+    "presetForReactEmail": "Perpustakaan Email React",
+    "presetForReactEmailDescription": "Kami telah membuat perpustakaan i18n untuk Email React.",
+    "readyForI18nLibraries": "Siap untuk perpustakaan i18n",
+    "readyForI18nLibrariesDescription": "Kami mendukung semua perpustakaan termasuk yang paling populer (next-intl, react-i18next, react-intl, dll)."
+  },
+  "info": {
+    "title": "Menangani setiap aspek lokalisasi aplikasi Anda termasuk",
+    "smartTranslation": {
+      "title": "Terjemahan Cerdas",
+      "intelligentTranslation": "Terjemahan cerdas dengan kesadaran konteks",
+      "brandVoice": "Konsistensi suara dan nada merek",
+      "terminology": "Manajemen terminologi",
+      "linguisticFeatures": "Fitur linguistik yang canggih",
+      "realtimeUpdates": "Pembaruan terjemahan waktu nyata"
+    },
+    "implementation": {
+      "title": "Implementasi",
+      "quickSetup": "Pengaturan dan integrasi cepat",
+      "fileFormat": "Penanganan format file",
+      "contentStructure": "Organisasi struktur konten",
+      "assetOrganization": "Organisasi aset"
+    },
+    "developer": {
+      "title": "Pengalaman Pengembang",
+      "cli": "Antarmuka baris perintah",
+      "cicd": "Integrasi CI/CD",
+      "versionControl": "Kontrol versi",
+      "workflow": "Alur kerja pengembang",
+      "documentation": "Dokumentasi komprehensif"
+    }
+  },
+  "login": {
+    "title": "Masuk",
+    "github": "Masuk dengan GitHub",
+    "google": "Masuk dengan Google",
+    "footer": "Otomatisasikan lokalisasi Anda.",
+    "description": "Masuk untuk mulai mengotomatiskan lokalisasi Anda dalam hitungan detik.",
+    "terms": {
+      "text": "Dengan masuk, Anda setuju dengan",
+      "termsOfService": "Syarat Layanan",
+      "and": "dan",
+      "privacyPolicy": "Kebijakan Privasi"
+    }
+  },
+  "translations": {
+    "header": "Kunci yang diterjemahkan"
+  },
+  "userMenu": {
+    "account": "Pengaturan Akun",
+    "signOut": "Keluar",
+    "createTeam": "Buat tim",
+    "homepage": "Beranda",
+    "team": "Pengaturan Tim"
+  },
+  "teamSelector": {
+    "addProject": "Buat proyek",
+    "createProjectTitle": "Buat proyek baru",
+    "projectNamePlaceholder": "Nama proyek",
+    "createProjectButton": "Buat proyek",
+    "pro": "Pro",
+    "project": "Proyek",
+    "teams": "Tim",
+    "createTeam": "Buat tim",
+    "createTeamTitle": "Buat tim baru",
+    "teamNamePlaceholder": "Nama tim",
+    "createTeamButton": "Buat tim"
+  },
+  "coming_soon": {
+    "title": "Languine sedang dalam Akses Awal",
+    "description": "Kami saat ini dalam akses awal. Hubungi",
+    "cta": "di X untuk mendapatkan akses awal."
+  },
+  "account": {
+    "fullName": {
+      "title": "Nama Lengkap",
+      "description": "Nama lengkap Anda seperti yang akan muncul di seluruh platform.",
+      "placeholder": "Masukkan nama lengkap Anda"
+    },
+    "email": {
+      "title": "Alamat Email",
+      "description": "Alamat email yang terkait dengan akun Anda.",
+      "placeholder": "Masukkan alamat email Anda"
+    },
+    "apiKey": {
+      "title": "Kunci API",
+      "description": "Kunci API pribadi Anda untuk mengakses API Languine dan dari CLI."
+    },
+    "deleteAccount": {
+      "title": "Hapus Akun",
+      "description": "Hapus akun Anda secara permanen dan semua data terkait. Tindakan ini tidak dapat dibatalkan.",
+      "button": "Hapus Akun"
+    }
+  },
+  "copyInstall": {
+    "copied": "Disalin ke clipboard"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Apakah Anda benar-benar yakin?",
+      "description": "Tindakan ini tidak dapat dibatalkan. Silakan ketik HAPUS untuk mengonfirmasi.",
+      "placeholder": "Ketik DELETE untuk mengonfirmasi",
+      "confirm": "Konfirmasi Hapus",
+      "cancel": "Batal"
+    }
+  },
+  "pipeline": {
+    "title": "Alur Kerja (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Mesin terjemahan kami terintegrasi dengan mulus ke dalam alur kerja CI/CD Anda yang ada, secara otomatis menerjemahkan basis kode Anda pada setiap dorongan. Ketika perubahan kode didorong, kami menganalisis konten yang dimodifikasi, mempertahankan memori terjemahan Anda, dan menghasilkan terjemahan yang akurat sambil mempertahankan suara dan terminologi merek Anda. Terjemahan kemudian diajukan sebagai permintaan tarik, memungkinkan untuk ditinjau sebelum digabungkan ke dalam cabang utama Anda dan diterapkan. Alur kerja otomatis ini memastikan konten lokal Anda tetap sinkron dengan pengembangan."
+  },
+  "settings": {
+    "badRequest": "Permintaan tidak valid",
+    "badRequestDescription": "Organisasi harus memiliki setidaknya satu pemilik. Alihkan kepemilikan kepada anggota lain sebelum menghapus pemilik ini.",
+    "permissionDenied": "Izin ditolak",
+    "permissionDeniedDescription": "Anda perlu menjadi pemilik tim untuk melakukan tindakan ini",
+    "deleteTeamTitle": "Hapus tim",
+    "deleteTeamDescription": "Tidak dapat menghapus organisasi ketika Anda adalah satu-satunya anggota, sebaliknya hapus akun Anda",
+    "saved": "Pengaturan disimpan",
+    "savedDescription": "Perubahan Anda telah disimpan dengan sukses",
+    "error": "Terjadi kesalahan",
+    "errorDescription": "Silakan coba lagi atau hubungi dukungan",
+    "addTeam": "Buat tim",
+    "apiKey": {
+      "updated": "Kunci API diperbarui",
+      "updatedDescription": "Kunci API Anda telah diperbarui dengan sukses dan disalin ke clipboard Anda.",
+      "title": "Perbarui Kunci API",
+      "description": "Apakah Anda yakin ingin menghasilkan kunci API baru? Kunci lama akan berhenti berfungsi segera.",
+      "cancel": "Batal",
+      "continue": "Lanjutkan"
+    },
+    "tabs": {
+      "project": "Proyek",
+      "account": "Akun",
+      "team": "Tim",
+      "provider": "Penyedia",
+      "billing": "Penagihan"
+    },
+    "addProject": "Buat proyek",
+    "project": {
+      "name": {
+        "title": "Nama Proyek",
+        "description": "Nama proyek Anda",
+        "placeholder": "Masukkan nama proyek"
+      },
+      "id": {
+        "title": "ID Proyek",
+        "description": "Pengidentifikasi proyek unik Anda",
+        "placeholder": "ID Proyek"
+      },
+      "delete": {
+        "title": "Hapus Proyek",
+        "description": "Hapus proyek ini secara permanen dan semua datanya",
+        "button": "Hapus Proyek"
+      }
+    },
+    "save": "Simpan",
+    "team": {
+      "name": {
+        "title": "Nama Tim",
+        "description": "Nama tim Anda",
+        "placeholder": "Masukkan nama tim"
+      },
+      "billing": {
+        "title": "Rencana Penagihan",
+        "description": "Kelola rencana penagihan tim Anda",
+        "free": "Gratis",
+        "pro": "Pro",
+        "unlimited": "Tidak Terbatas"
+      },
+      "apiKey": {
+        "title": "Kunci API Tim",
+        "description": "Kunci API untuk akses tim, gunakan ini dari CI/CD pipeline Anda bersama dengan ID Proyek",
+        "placeholder": "Kunci API Tim"
+      },
+      "members": {
+        "leaveTeamConfirm": "Tinggalkan tim",
+        "leaveTeamDescription": "Apakah Anda yakin ingin meninggalkan tim ini?",
+        "cancel": "Batal",
+        "leaveTeam": "Tinggalkan tim",
+        "invite": "Undang anggota",
+        "title": "Anggota",
+        "pendingInvitations": "Undangan Tertunda",
+        "removeMember": "Hapus anggota",
+        "removeMemberConfirm": "Hapus anggota",
+        "removeMemberDescription": "Apakah Anda yakin ingin menghapus anggota ini?",
+        "filterPlaceholder": "Filter anggota...",
+        "allRoles": "Semua Peran",
+        "date": "Tanggal",
+        "selectAll": "{count} terpilih",
+        "noPendingInvitations": "Tidak ada undangan tertunda",
+        "noResults": "Tidak ada anggota ditemukan",
+        "tryDifferentSearch": "Coba pencarian yang berbeda",
+        "inviteMembers": "Undang anggota untuk berkolaborasi",
+        "deleteInvite": "Hapus Undangan",
+        "deleteInviteDescription": "Hapus undangan",
+        "invitedBy": "Diundang oleh {name}",
+        "deleteInviteSuccess": "Undangan dihapus",
+        "deleteInviteError": "Gagal menghapus undangan",
+        "removeMemberSuccess": "Anggota dihapus",
+        "removeMemberError": "Gagal menghapus anggota",
+        "removeMemberSuccessDescription": "Anggota telah berhasil dihapus",
+        "removeMemberErrorDescription": "Gagal menghapus anggota",
+        "roles": {
+          "owner": "Pemilik",
+          "member": "Anggota"
+        },
+        "dateSort": {
+          "newest": "Terbaru",
+          "oldest": "Terlama"
+        },
+        "deleteInviteConfirm": "Hapus Undangan"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Umum",
+    "translationMemory": {
+      "title": "Memori Terjemahan",
+      "description": "Gunakan memori terjemahan untuk meningkatkan konsistensi dan efisiensi"
+    },
+    "qualityChecks": {
+      "title": "Pemeriksaan Kualitas",
+      "description": "Aktifkan pemeriksaan kualitas otomatis untuk terjemahan"
+    },
+    "contextDetection": {
+      "title": "Deteksi Konteks",
+      "description": "Secara otomatis mendeteksi dan mempertahankan konteks dalam terjemahan"
+    },
+    "styleGuide": "Panduan Gaya",
+    "lengthControl": {
+      "title": "Kontrol Panjang",
+      "description": "Kontrol panjang teks terjemahan",
+      "options": {
+        "flexible": "Fleksibel",
+        "strict": "Ketat",
+        "exact": "Tepat",
+        "loose": "Longgar"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Bahasa Inklusif",
+      "description": "Pastikan terjemahan menggunakan bahasa inklusif"
+    },
+    "formality": {
+      "title": "Formalitas",
+      "description": "Kontrol tingkat formalitas terjemahan",
+      "options": {
+        "casual": "Santai",
+        "formal": "Formal",
+        "neutral": "Netral"
+      }
+    },
+    "brandName": {
+      "title": "Nama Merek",
+      "description": "Tetapkan nama merek Anda untuk penggunaan yang konsisten",
+      "placeholder": "Masukkan nama merek Anda"
+    },
+    "brandVoice": {
+      "title": "Suara Merek",
+      "description": "Tentukan suara dan nada merek Anda",
+      "placeholder": "Deskripsikan suara merek Anda..."
+    },
+    "toneOfVoice": {
+      "title": "Nada Suara",
+      "description": "Tentukan nada yang digunakan dalam terjemahan",
+      "options": {
+        "casual": "Santai",
+        "formal": "Formal",
+        "friendly": "Ramah",
+        "professional": "Profesional",
+        "playful": "Bermain",
+        "serious": "Serius",
+        "confident": "Percaya Diri",
+        "humble": "Rendah Hati",
+        "direct": "Langsung",
+        "diplomatic": "Diplomatis"
+      }
+    },
+    "brand": "Merek",
+    "emotiveIntent": {
+      "title": "Niat Emotif",
+      "description": "Tetapkan nada emosional untuk terjemahan",
+      "options": {
+        "neutral": "Netral",
+        "positive": "Positif",
+        "empathetic": "Empatik",
+        "professional": "Profesional",
+        "friendly": "Ramah",
+        "enthusiastic": "Antusias"
+      }
+    },
+    "domainExpertise": {
+      "title": "Keahlian Domain",
+      "description": "Tentukan konteks domain untuk terjemahan",
+      "options": {
+        "general": "Umum",
+        "technical": "Teknis",
+        "medical": "Medis",
+        "legal": "Hukum",
+        "financial": "Keuangan",
+        "marketing": "Pemasaran",
+        "academic": "Akademis"
+      }
+    },
+    "idioms": {
+      "title": "Idioms",
+      "description": "Tangani ungkapan idiomatik dengan tepat"
+    },
+    "terminology": {
+      "title": "Terminologi",
+      "description": "Kelola terminologi dan glosarium khusus"
+    },
+    "culturalAdaptation": {
+      "title": "Adaptasi Budaya",
+      "description": "Sesuaikan konten untuk kesesuaian budaya"
+    }
+  },
+  "pricing": {
+    "title": "Harga Sederhana",
+    "free": {
+      "title": "Gratis",
+      "price": "Gratis",
+      "keys_limit": "Hingga 100 kunci",
+      "description": "Sempurna saat mencoba",
+      "features": {
+        "unlimited_projects": "Proyek tanpa batas",
+        "fine_tuning": "Opsi penyempurnaan",
+        "overrides": "Penggantian terjemahan",
+        "analytics": "Analitik",
+        "context_memory": "Memori konteks",
+        "community_support": "Dukungan komunitas",
+        "keys_limit": "Hingga 100 kunci",
+        "docs_limit": "Hingga 5 dokumen",
+        "languages": "2 bahasa"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Semua dalam Gratis, ditambah:",
+      "features": {
+        "github_action": "Integrasi GitHub Action",
+        "latest_features": "Akses awal ke fitur terbaru",
+        "priority_support": "Dukungan prioritas",
+        "priority_queues": "Antrian terjemahan prioritas",
+        "languages": "Bahasa tak terbatas",
+        "keys_limit": "Mulai dari 10.000 kunci",
+        "docs_limit": "Mulai dari 50 dokumen"
+      }
+    },
+    "cta": "Mulai otomatisasi",
+    "keys_limit_explanation": "Kunci terjemahan: Jika Anda memiliki 20 kunci sumber (seperti \"Daftar\" atau \"Selamat Datang!\") dan menerjemahkannya ke dalam 5 bahasa, itu sama dengan 100 kunci terjemahan (20 kunci x 5 bahasa)."
+  },
+  "createTeam": {
+    "teamName": "Nama Tim",
+    "teamNamePlaceholder": "Masukkan nama tim",
+    "createTeamButton": "Buat tim",
+    "cancel": "Batal",
+    "createTeamDescription": "Buat tim baru untuk mengelola proyek dan kolaborator Anda."
+  },
+  "createProject": {
+    "createProjectTitle": "Buat proyek baru",
+    "projectNamePlaceholder": "Masukkan nama proyek",
+    "createProjectButton": "Buat proyek",
+    "cancel": "Batal",
+    "createProjectDescription": "Buat proyek baru untuk mulai mengotomatisasi lokalisasi Anda."
+  },
+  "invite": {
+    "inviteMember": "Undang anggota",
+    "inviteDescription": "Undang anggota ke tim Anda",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Masukkan email",
+    "cancel": "Batal",
+    "submit": "Kirim",
+    "success": {
+      "title": "Undangan terkirim",
+      "description": "Berhasil mengirim undangan ke {email}"
+    },
+    "error": {
+      "title": "Kesalahan",
+      "description": "Gagal mengirim undangan. Silakan coba lagi."
+    },
+    "validation": {
+      "invalidEmail": "Silakan masukkan email yang valid"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Siapkan Languine CLI",
+        "description": "Instal dan konfigurasikan Languine CLI untuk mengelola terjemahan"
+      },
+      "2": {
+        "title": "Dorong Terjemahan",
+        "description": "Menunggu terjemahan untuk didorong"
+      },
+      "3": {
+        "title": "Dokumentasi",
+        "description": "Lihat dokumentasi kami untuk panduan terperinci dan praktik terbaik",
+        "link": "dokumentasi"
+      }
+    },
+    "info": {
+      "description": "Butuh bantuan? Lihat",
+      "link": "dokumentasi",
+      "description_2": "untuk panduan rinci dan praktik terbaik."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Keberhasilan Login Languine CLI",
+      "description": "Languine CLI berhasil diautentikasi sebagai:",
+      "description_2": "Anda sekarang dapat menutup tab ini dan kembali ke CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Cari"
+  },
+  "periods": {
+    "daily": "Harian",
+    "weekly": "Mingguan",
+    "monthly": "Bulanan",
+    "selectPeriod": "Pilih periode"
+  },
+  "language": {
+    "en": "Inggris",
+    "es": "Spanyol",
+    "fr": "Prancis",
+    "de": "Jerman",
+    "it": "Italia",
+    "pt": "Portugis",
+    "ja": "Jepang",
+    "ko": "Korea",
+    "ar": "Arab",
+    "tr": "Turki",
+    "nl": "Belanda",
+    "pl": "Polandia",
+    "no": "Norwegia",
+    "da": "Denmark",
+    "sv": "Swedia",
+    "fi": "Finlandia",
+    "vi": "Vietnam",
+    "az": "Azerbaijani",
+    "bg": "Bulgaria",
+    "ca": "Katalan",
+    "cs": "Ceko",
+    "el": "Yunani",
+    "et": "Estonia",
+    "he": "Ibrani",
+    "hr": "Kroasia",
+    "hu": "Hongaria",
+    "id": "Bahasa Indonesia",
+    "iw": "Ibrani",
+    "km": "Khmer",
+    "lv": "Latvia",
+    "pt-BR": "Portugis (Brasil)",
+    "ro": "Rumania",
+    "ru": "Rusia",
+    "sk-SK": "Slovak (Slovakia)",
+    "sk": "Slovak",
+    "sr": "Serbia",
+    "ta": "Tamil",
+    "th": "Thai",
+    "uk": "Ukraina",
+    "zh-CN": "Cina (Sederhana)",
+    "zh-TW": "Cina (Tradisional)"
+  },
+  "menu": {
+    "dashboard": "Dasbor",
+    "tuning": "Penyetelan",
+    "settings": "Pengaturan",
+    "pricing": "Harga",
+    "docs": "Dokumentasi",
+    "account": "Akun"
+  },
+  "billing": {
+    "title": "Penagihan"
+  },
+  "analytics": {
+    "key": "Kunci yang diterjemahkan",
+    "document": "Dokumen yang diterjemahkan",
+    "header": "Terjemahan",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Des",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Mei",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Agu",
+      "09": "Sep"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "what_is_languine": {
+      "question": "Apa itu Languine?",
+      "answer": "Languine adalah platform lokalisasi yang didukung AI yang membantu Anda mengotomatiskan terjemahan aplikasi Anda. Ini menyediakan fitur seperti opsi penyetelan, penggantian terjemahan, analitik, dan memori konteks untuk memastikan terjemahan berkualitas tinggi."
+    },
+    "key_limit": {
+      "question": "Bagaimana cara kerja batas kunci?",
+      "answer": "Sebuah kunci yang diterjemahkan dihitung ketika Anda menerjemahkan kunci sumber ke dalam bahasa target. Misalnya, jika Anda memiliki 20 kunci sumber dan menerjemahkannya ke dalam 5 bahasa, itu sama dengan 100 kunci yang diterjemahkan (20 kunci × 5 bahasa)."
+    },
+    "supported_languages": {
+      "question": "Bahasa apa yang didukung?",
+      "answer": "Languine mendukung lebih dari 100 bahasa di semua paket. Meskipun terjemahan yang didukung AI kami bekerja terbaik dengan bahasa utama, kami berusaha untuk memberikan terjemahan berkualitas di semua bahasa yang didukung. Jika Anda memiliki persyaratan bahasa tertentu atau pertanyaan tentang kualitas terjemahan untuk bahasa tertentu, silakan hubungi tim dukungan kami."
+    },
+    "github_action": {
+      "question": "Bagaimana cara kerja integrasi GitHub Action?",
+      "answer": "Integrasi GitHub Action (tersedia di paket Pro) memungkinkan Anda mengotomatiskan alur kerja terjemahan Anda langsung di pipeline CI/CD Anda. Ketika Anda mendorong perubahan ke repositori Anda, terjemahan dapat diperbarui secara otomatis."
+    },
+    "support": {
+      "question": "Dukungan seperti apa yang Anda tawarkan?",
+      "answer": "Pengguna gratis mendapatkan akses ke dukungan komunitas, sementara pengguna Pro menerima dukungan prioritas dengan waktu respons yang lebih cepat dan bantuan khusus untuk kebutuhan terjemahan mereka."
+    },
+    "open_source": {
+      "question": "Apakah Languine sumber terbuka?",
+      "answer": "Ya! Languine sepenuhnya sumber terbuka dan tersedia di GitHub. Anda dapat berkontribusi pada proyek, melaporkan masalah, menyarankan fitur, dan memeriksa kode. Kami percaya pada transparansi dan membangun di depan publik."
+    },
+    "open_source_pricing": {
+      "question": "Apakah Anda menawarkan harga khusus untuk proyek sumber terbuka?",
+      "answer": "Ya! Kami senang mendukung komunitas sumber terbuka. Jika Anda mengelola proyek sumber terbuka, Anda dapat mengakses fitur Pro kami dengan diskon 30%. Cukup hubungi tim kami dengan rincian tentang proyek Anda, dan kami akan mengatur akun Pro dengan diskon untuk Anda. Ini adalah cara kami untuk memberikan kembali kepada komunitas yang membuat pekerjaan kami mungkin."
+    },
+    "cancel_subscription": {
+      "question": "Bagaimana cara membatalkan langganan saya?",
+      "answer": "Anda dapat membatalkan langganan Anda kapan saja dari pengaturan akun Anda. Arahkan ke Penagihan > Ubah Paket. Langganan Anda akan tetap aktif hingga akhir periode penagihan Anda saat ini, setelah itu Anda akan dipindahkan ke paket Gratis."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Tingkat {tier}",
+    "keys": "Kunci yang diterjemahkan",
+    "documents": "Dokumen yang diterjemahkan",
+    "period": "bln",
+    "keys_suffix": " kunci",
+    "docs_suffix": " dokumen"
+  },
+  "docs": {
+    "getting-started": "Memulai",
+    "workflow": "Alur Kerja",
+    "ci": "CI/CD",
+    "presets": "Preset",
+    "formats": "Format",
+    "platform": "Platform",
+    "introduction": "Pengantar",
+    "quickstart": "Panduan Cepat",
+    "authentication": "Autentikasi",
+    "configuration": "Konfigurasi",
+    "cli": "CLI",
+    "github-actions": "GitHub Actions",
+    "tuning": "Penyetelan",
+    "settings": "Pengaturan",
+    "hooks": "Hooks",
+    "examples": "Contoh",
+    "team": "Tim"
+  },
+  "test": {
+    "title": "Ini adalah sebuah tes",
+    "description": "Dan ini adalah deskripsi tes",
+    "button": "Klik saya"
+  }
+}

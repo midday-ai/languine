@@ -3,37 +3,37 @@
     "pricing": "가격",
     "docs": "문서",
     "signIn": "로그인",
-    "goToApp": "앱으로 이동"
+    "goToApp": "앱으로 가기"
   },
   "hero": {
-    "title": "자동화된 현지화 인프라",
-    "description": "개발 워크플로우에서 직접 앱 콘텐츠를 번역하세요. 우리의 CLI는 GitHub Actions 및 기타 CI/CD 도구와 통합되어 코드를 작성하면서 번역을 자동화합니다."
+    "title": "자동화된 로컬라이제이션 인프라",
+    "description": "개발 워크플로우에서 직접 앱의 콘텐츠를 번역하세요. 우리의 CLI는 GitHub Actions 및 기타 CI/CD 도구와 통합되어 코딩하는 동안 번역을 자동화합니다."
   },
   "navigation": {
     "dashboard": "대시보드",
-    "tuning": "튜닝",
+    "tuning": "조정",
     "settings": "설정",
     "pricing": "가격",
-    "docs": "문서화",
+    "docs": "문서",
     "account": "계정"
   },
   "getStarted": {
     "heading": "시작하기",
-    "title": "자동화된 현지화 인프라",
-    "description": "개발 워크플로우에서 직접 앱 콘텐츠를 번역하세요. 우리의 CLI는 GitHub Actions 및 기타 CI/CD 도구와 통합되어 코드를 작성하면서 번역을 자동화합니다.",
+    "title": "자동화된 로컬라이제이션 인프라",
+    "description": "개발 워크플로우에서 직접 앱의 콘텐츠를 번역하세요. 우리의 CLI는 GitHub Actions 및 기타 CI/CD 도구와 통합되어 코딩하는 동안 번역을 자동화합니다.",
     "button": {
-      "startAutomating": "자동화 시작",
+      "startAutomating": "자동화 시작하기",
       "readDocumentation": "문서 읽기"
     }
   },
   "companies": {
-    "title": "사용자",
-    "addYourCompany": "+ 회사 추가"
+    "title": "사용 중인 기업",
+    "addYourCompany": "+ 귀하의 회사 추가"
   },
   "activity": {
     "title": "활동",
     "loading": "로딩 중",
-    "noResults": "'{search}'에 대한 결과가 없습니다",
+    "noResults": "'{search}'에 대한 결과가 없습니다.",
     "clearSearch": "검색 지우기",
     "loadMore": "더 보기",
     "type": {
@@ -44,23 +44,23 @@
   "features": {
     "title": "기능",
     "fullyOpenSource": "완전 오픈 소스",
-    "fullyOpenSourceDescription": "우리의 코드는 GitHub에서 공개적으로 이용 가능하며, 투명성과 커뮤니티 기여를 가능하게 합니다.",
-    "noVendorLockIn": "벤더 잠금 없음",
-    "noVendorLockInDescription": "특정 서비스에 잠기지 않습니다. 자신의 LLM을 사용하세요.",
-    "presetsForExpo": "Expo를 위한 사전 설정",
-    "presetsForExpoDescription": "Expo를 위한 사전 설정을 제공하여 빠르게 시작할 수 있습니다.",
-    "presetForReactNative": "React Native를 위한 사전 설정",
-    "presetForReactNativeDescription": "React Native를 위한 사전 설정을 제공하여 빠르게 시작할 수 있습니다.",
-    "presetForReactEmail": "React Email 라이브러리",
-    "presetForReactEmailDescription": "React Email을 위한 i18n 라이브러리를 만들었습니다.",
+    "fullyOpenSourceDescription": "우리의 코드는 GitHub에서 공개적으로 제공되어 투명성과 커뮤니티 기여를 가능하게 합니다.",
+    "noVendorLockIn": "공급업체 종속 없음",
+    "noVendorLockInDescription": "특정 서비스에 종속되지 않으며, 자신의 LLM을 사용할 수 있습니다.",
+    "presetsForExpo": "Expo용 프리셋",
+    "presetsForExpoDescription": "빠르게 시작할 수 있도록 Expo용 프리셋을 제공합니다.",
+    "presetForReactNative": "React Native용 프리셋",
+    "presetForReactNativeDescription": "빠르게 시작할 수 있도록 React Native용 프리셋을 제공합니다.",
+    "presetForReactEmail": "React 이메일 라이브러리",
+    "presetForReactEmailDescription": "React 이메일을 위한 i18n 라이브러리를 만들었습니다.",
     "readyForI18nLibraries": "i18n 라이브러리 준비 완료",
     "readyForI18nLibrariesDescription": "가장 인기 있는 라이브러리(next-intl, react-i18next, react-intl 등)를 포함한 모든 라이브러리를 지원합니다."
   },
   "info": {
-    "title": "앱 현지화의 모든 측면을 처리합니다",
+    "title": "앱 로컬라이제이션의 모든 측면 처리",
     "smartTranslation": {
       "title": "스마트 번역",
-      "intelligentTranslation": "컨텍스트 인식을 통한 지능형 번역",
+      "intelligentTranslation": "맥락 인식을 통한 지능형 번역",
       "brandVoice": "브랜드 음성과 톤 일관성",
       "terminology": "용어 관리",
       "linguisticFeatures": "고급 언어 기능",
@@ -79,59 +79,59 @@
       "cicd": "CI/CD 통합",
       "versionControl": "버전 관리",
       "workflow": "개발자 워크플로우",
-      "documentation": "포괄적인 문서화"
+      "documentation": "포괄적인 문서"
     }
   },
   "login": {
     "title": "로그인",
     "github": "GitHub로 로그인",
     "google": "Google로 로그인",
-    "footer": "현지화를 자동화하세요.",
-    "description": "몇 초 만에 현지화 자동화를 시작하려면 로그인하세요.",
+    "footer": "로컬라이제이션을 자동화하세요.",
+    "description": "몇 초 안에 로컬라이제이션 자동화를 시작하려면 로그인하세요.",
     "terms": {
-      "text": "로그인함으로써, 당신은 우리의",
+      "text": "로그인함으로써, 귀하는 우리의",
       "termsOfService": "서비스 약관",
       "and": "및",
       "privacyPolicy": "개인정보 보호정책"
     }
   },
   "translations": {
-    "header": "에 동의합니다."
+    "header": "번역된 키"
   },
   "userMenu": {
-    "account": "번역된 키",
-    "signOut": "계정 설정",
-    "createTeam": "로그아웃",
-    "homepage": "팀 생성",
-    "team": "홈페이지"
+    "account": "계정 설정",
+    "signOut": "로그아웃",
+    "createTeam": "팀 만들기",
+    "homepage": "홈페이지",
+    "team": "팀 설정"
   },
   "teamSelector": {
-    "addProject": "팀 설정",
-    "createProjectTitle": "프로젝트 생성",
-    "projectNamePlaceholder": "새 프로젝트 생성",
-    "createProjectButton": "프로젝트 이름",
-    "pro": "프로젝트 생성",
-    "project": "프로",
-    "teams": "프로젝트",
-    "createTeam": "팀",
-    "createTeamTitle": "팀 생성",
-    "teamNamePlaceholder": "새 팀 생성",
-    "createTeamButton": "팀 이름"
+    "addProject": "프로젝트 만들기",
+    "createProjectTitle": "새 프로젝트 만들기",
+    "projectNamePlaceholder": "프로젝트 이름",
+    "createProjectButton": "프로젝트 만들기",
+    "pro": "프로",
+    "project": "프로젝트",
+    "teams": "팀",
+    "createTeam": "팀 만들기",
+    "createTeamTitle": "새 팀 만들기",
+    "teamNamePlaceholder": "팀 이름",
+    "createTeamButton": "팀 만들기"
   },
   "coming_soon": {
-    "title": "팀 생성",
-    "description": "Languine은 초기 액세스 중입니다",
-    "cta": "우리는 현재 초기 액세스 중입니다. 초기 액세스를 받으려면 X로 연락하세요."
+    "title": "Languine은 초기 액세스 중입니다",
+    "description": "현재 초기 액세스 중입니다. 연락주세요",
+    "cta": "X에서 초기 액세스를 받으세요."
   },
   "account": {
     "fullName": {
       "title": "전체 이름",
-      "description": "플랫폼 전반에 걸쳐 표시될 전체 이름입니다.",
+      "description": "플랫폼 전반에 걸쳐 표시될 귀하의 전체 이름입니다.",
       "placeholder": "전체 이름 입력"
     },
     "email": {
       "title": "이메일 주소",
-      "description": "계정과 연결된 이메일 주소입니다.",
+      "description": "귀하의 계정과 연결된 이메일 주소입니다.",
       "placeholder": "이메일 주소 입력"
     },
     "apiKey": {
@@ -140,7 +140,7 @@
     },
     "deleteAccount": {
       "title": "계정 삭제",
-      "description": "계정 및 모든 관련 데이터를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
+      "description": "귀하의 계정과 모든 관련 데이터를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
       "button": "계정 삭제"
     }
   },
@@ -149,35 +149,35 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "정말로 진행하시겠습니까?",
-      "description": "이 작업은 취소할 수 없습니다. 확인을 위해 DELETE를 입력하세요.",
-      "placeholder": "확인을 위해 DELETE 입력",
+      "title": "정말 확실하신가요?",
+      "description": "이 작업은 취소할 수 없습니다. 확인하려면 DELETE를 입력하세요.",
+      "placeholder": "삭제를 확인하려면 DELETE를 입력하세요",
       "confirm": "삭제 확인",
       "cancel": "취소"
     }
   },
   "pipeline": {
-    "title": "워크플로우(CI/CD 파이프라인)",
-    "pro": "[pro]",
-    "description": "우리의 번역 엔진은 기존의 CI/CD 파이프라인에 원활하게 통합되어, 모든 푸시에서 코드베이스를 자동으로 번역합니다. 코드 변경이 푸시되면, 우리는 수정된 콘텐츠를 분석하고, 번역 메모리를 유지하며, 브랜드 음성과 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 병합 및 배포 전에 검토할 수 있습니다. 이 자동화된 워크플로우는 현지화된 콘텐츠가 개발과 동기화되도록 보장합니다."
+    "title": "워크플로우 (CI/CD 파이프라인)",
+    "pro": "[프로]",
+    "description": "우리의 번역 엔진은 기존 CI/CD 파이프라인에 원활하게 통합되어, 코드베이스를 매 푸시마다 자동으로 번역합니다. 코드 변경 사항이 푸시되면, 수정된 내용을 분석하고, 번역 메모리를 유지하며, 브랜드 음성과 용어를 보존하면서 정확한 번역을 생성합니다. 번역은 풀 리퀘스트로 제출되어, 메인 브랜치에 병합되고 배포되기 전에 검토할 수 있습니다. 이 자동화된 워크플로우는 로컬라이즈된 콘텐츠가 개발과 동기화되도록 보장합니다."
   },
   "settings": {
     "badRequest": "잘못된 요청",
-    "badRequestDescription": "조직에는 최소한 한 명의 소유자가 있어야 합니다. 이 소유자를 제거하기 전에 다른 멤버에게 소유권을 이전하세요.",
+    "badRequestDescription": "조직에는 최소한 한 명의 소유자가 있어야 합니다. 이 소유자를 제거하기 전에 다른 구성원에게 소유권을 이전하세요.",
     "permissionDenied": "권한 거부",
-    "permissionDeniedDescription": "이 작업을 수행하려면 팀의 소유자여야 합니다",
+    "permissionDeniedDescription": "이 작업을 수행하려면 팀의 소유자여야 합니다.",
     "deleteTeamTitle": "팀 삭제",
-    "deleteTeamDescription": "유일한 멤버일 때 조직을 삭제할 수 없습니다. 대신 계정을 삭제하세요",
-    "saved": "설정 저장됨",
+    "deleteTeamDescription": "유일한 구성원일 때 조직을 삭제할 수 없습니다. 대신 계정을 삭제하세요.",
+    "saved": "설정이 저장되었습니다",
     "savedDescription": "변경 사항이 성공적으로 저장되었습니다",
     "error": "문제가 발생했습니다",
     "errorDescription": "다시 시도하거나 지원팀에 문의하세요",
     "addTeam": "팀 생성",
     "apiKey": {
-      "updated": "API 키 업데이트됨",
+      "updated": "API 키가 업데이트되었습니다",
       "updatedDescription": "API 키가 성공적으로 업데이트되었으며 클립보드에 복사되었습니다.",
       "title": "API 키 업데이트",
-      "description": "새 API 키를 생성하시겠습니까? 이전 키는 즉시 작동을 멈춥니다.",
+      "description": "새 API 키를 생성하시겠습니까? 이전 키는 즉시 작동을 중지합니다.",
       "cancel": "취소",
       "continue": "계속"
     },
@@ -185,24 +185,24 @@
       "project": "프로젝트",
       "account": "계정",
       "team": "팀",
-      "provider": "공급자",
-      "billing": "결제"
+      "provider": "제공자",
+      "billing": "청구"
     },
     "addProject": "프로젝트 생성",
     "project": {
       "name": {
         "title": "프로젝트 이름",
-        "description": "프로젝트의 이름입니다.",
+        "description": "프로젝트의 이름",
         "placeholder": "프로젝트 이름 입력"
       },
       "id": {
         "title": "프로젝트 ID",
-        "description": "고유한 프로젝트 식별자입니다.",
+        "description": "고유한 프로젝트 식별자",
         "placeholder": "프로젝트 ID"
       },
       "delete": {
         "title": "프로젝트 삭제",
-        "description": "이 프로젝트와 모든 데이터를 영구적으로 삭제합니다.",
+        "description": "이 프로젝트와 모든 데이터를 영구적으로 삭제합니다",
         "button": "프로젝트 삭제"
       }
     },
@@ -210,56 +210,56 @@
     "team": {
       "name": {
         "title": "팀 이름",
-        "description": "팀의 이름입니다.",
+        "description": "팀의 이름",
         "placeholder": "팀 이름 입력"
       },
       "billing": {
-        "title": "결제 플랜",
-        "description": "팀의 결제 플랜을 관리하세요.",
+        "title": "청구 계획",
+        "description": "팀의 청구 계획을 관리합니다",
         "free": "무료",
         "pro": "프로",
         "unlimited": "무제한"
       },
       "apiKey": {
         "title": "팀 API 키",
-        "description": "팀 접근을 위한 API 키, 프로젝트 ID와 함께 CI/CD 파이프라인에서 사용하세요.",
+        "description": "팀 접근을 위한 API 키로, CI/CD 파이프라인에서 프로젝트 ID와 함께 사용하세요",
         "placeholder": "팀 API 키"
       },
       "members": {
-        "leaveTeamConfirm": "팀 떠나기",
+        "leaveTeamConfirm": "팀을 떠나기",
         "leaveTeamDescription": "이 팀을 떠나시겠습니까?",
         "cancel": "취소",
-        "leaveTeam": "팀 떠나기",
-        "invite": "멤버 초대",
-        "title": "멤버",
-        "pendingInvitations": "보류 중인 초대",
-        "removeMember": "멤버 제거",
-        "removeMemberConfirm": "멤버 제거",
-        "removeMemberDescription": "이 멤버를 제거하시겠습니까?",
-        "filterPlaceholder": "멤버 필터링...",
+        "leaveTeam": "팀을 떠나기",
+        "invite": "구성원 초대",
+        "title": "구성원",
+        "pendingInvitations": "대기 중인 초대",
+        "removeMember": "구성원 제거",
+        "removeMemberConfirm": "구성원 제거",
+        "removeMemberDescription": "이 구성원을 제거하시겠습니까?",
+        "filterPlaceholder": "구성원 필터링...",
         "allRoles": "모든 역할",
         "date": "날짜",
         "selectAll": "{count} 선택됨",
-        "noPendingInvitations": "보류 중인 초대 없음",
-        "noResults": "멤버를 찾을 수 없음",
-        "tryDifferentSearch": "다른 검색어를 시도해 보세요",
-        "inviteMembers": "협업을 위해 멤버 초대",
+        "noPendingInvitations": "대기 중인 초대가 없습니다",
+        "noResults": "구성원이 없습니다",
+        "tryDifferentSearch": "다른 검색 시도",
+        "inviteMembers": "구성원을 초대하여 협업하기",
         "deleteInvite": "초대 삭제",
-        "deleteInviteDescription": "초대를 삭제합니다.",
-        "invitedBy": "{name}에 의해 초대됨",
-        "deleteInviteSuccess": "초대 삭제됨",
-        "deleteInviteError": "초대 삭제 실패",
-        "removeMemberSuccess": "멤버 제거됨",
-        "removeMemberError": "멤버 제거 실패",
-        "removeMemberSuccessDescription": "멤버가 성공적으로 제거되었습니다.",
-        "removeMemberErrorDescription": "멤버 제거 실패",
+        "deleteInviteDescription": "초대를 삭제합니다",
+        "invitedBy": "{name}이 초대함",
+        "deleteInviteSuccess": "초대가 삭제되었습니다",
+        "deleteInviteError": "초대 삭제에 실패했습니다",
+        "removeMemberSuccess": "구성원이 제거되었습니다",
+        "removeMemberError": "구성원 제거에 실패했습니다",
+        "removeMemberSuccessDescription": "구성원이 성공적으로 제거되었습니다",
+        "removeMemberErrorDescription": "구성원 제거에 실패했습니다",
         "roles": {
           "owner": "소유자",
-          "member": "멤버"
+          "member": "구성원"
         },
         "dateSort": {
-          "newest": "최신순",
-          "oldest": "오래된순"
+          "newest": "최신",
+          "oldest": "오래된"
         },
         "deleteInviteConfirm": "초대 삭제"
       }
@@ -269,20 +269,20 @@
     "general": "일반",
     "translationMemory": {
       "title": "번역 메모리",
-      "description": "번역 메모리를 사용하여 일관성과 효율성을 개선하세요."
+      "description": "일관성과 효율성을 개선하기 위해 번역 메모리를 사용하세요"
     },
     "qualityChecks": {
       "title": "품질 검사",
-      "description": "번역에 대한 자동 품질 검사를 활성화하세요."
+      "description": "번역에 대한 자동 품질 검사를 활성화합니다"
     },
     "contextDetection": {
-      "title": "컨텍스트 감지",
-      "description": "번역에서 컨텍스트를 자동으로 감지하고 보존하세요."
+      "title": "맥락 감지",
+      "description": "번역에서 맥락을 자동으로 감지하고 보존합니다"
     },
     "styleGuide": "스타일 가이드",
     "lengthControl": {
       "title": "길이 제어",
-      "description": "번역된 텍스트의 길이를 제어하세요.",
+      "description": "번역된 텍스트의 길이를 제어합니다",
       "options": {
         "flexible": "유연함",
         "strict": "엄격함",
@@ -291,81 +291,81 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "포용적인 언어",
-      "description": "번역이 포용적인 언어를 사용하도록 보장하세요."
+      "title": "포괄적 언어",
+      "description": "번역이 포괄적 언어를 사용하도록 보장합니다"
     },
     "formality": {
-      "title": "격식",
-      "description": "번역의 격식 수준을 제어하세요.",
+      "title": "형식성",
+      "description": "번역의 형식성 수준을 제어합니다",
       "options": {
         "casual": "캐주얼",
-        "formal": "격식있음",
+        "formal": "정중한",
         "neutral": "중립"
       }
     },
     "brandName": {
       "title": "브랜드 이름",
-      "description": "일관된 사용을 위해 브랜드 이름을 설정하세요.",
-      "placeholder": "브랜드 이름 입력"
+      "description": "일관된 사용을 위해 브랜드 이름을 설정하세요",
+      "placeholder": "브랜드 이름을 입력하세요"
     },
     "brandVoice": {
-      "title": "브랜드 음성",
-      "description": "브랜드 음성과 톤을 정의하세요.",
-      "placeholder": "브랜드 음성 설명..."
+      "title": "브랜드 목소리",
+      "description": "브랜드의 목소리와 톤을 정의하세요",
+      "placeholder": "브랜드 목소리를 설명하세요..."
     },
     "toneOfVoice": {
-      "title": "톤",
-      "description": "번역에 사용될 톤을 정의하세요.",
+      "title": "목소리 톤",
+      "description": "번역에 사용되는 톤을 정의하세요",
       "options": {
         "casual": "캐주얼",
-        "formal": "격식있음",
-        "friendly": "친근함",
-        "professional": "전문적임",
-        "playful": "장난스러움",
-        "serious": "진지함",
-        "confident": "자신감 있음",
-        "humble": "겸손함",
-        "direct": "직설적임",
-        "diplomatic": "외교적임"
+        "formal": "정중한",
+        "friendly": "친근한",
+        "professional": "전문적인",
+        "playful": "장난스러운",
+        "serious": "진지한",
+        "confident": "자신감 있는",
+        "humble": "겸손한",
+        "direct": "직접적인",
+        "diplomatic": "외교적인"
       }
     },
     "brand": "브랜드",
     "emotiveIntent": {
-      "title": "감정 의도",
-      "description": "번역에 대한 감정적 톤을 설정하세요.",
+      "title": "감정적 의도",
+      "description": "번역을 위한 감정적 톤을 설정하세요",
       "options": {
         "neutral": "중립",
-        "positive": "긍정적",
-        "empathetic": "공감적",
-        "professional": "전문적임",
-        "friendly": "친근함",
-        "enthusiastic": "열정적임"
+        "positive": "긍정적인",
+        "empathetic": "공감하는",
+        "professional": "전문적인",
+        "friendly": "친근한",
+        "enthusiastic": "열정적인"
       }
     },
     "domainExpertise": {
       "title": "도메인 전문성",
-      "description": "번역을 위한 도메인 컨텍스트를 지정하세요.",
+      "description": "번역을 위한 도메인 맥락을 지정하세요",
       "options": {
         "general": "일반",
-        "technical": "기술적",
+        "technical": "기술적인",
         "medical": "의료",
         "legal": "법률",
-        "financial": "금융",
+        "financial": "재무",
         "marketing": "마케팅",
-        "academic": "학술"
+        "academic": "학문적인"
       }
     },
     "idioms": {
       "title": "관용구",
-      "description": "관용적 표현을 적절히 처리하세요."
+      "description": "관용 표현을 적절히 처리하세요"
     },
     "terminology": {
       "title": "용어",
-      "description": "전문 용어와 용어집을 관리하세요."
+      "description": "전문 용어 및 용어집을 관리하세요"
     },
     "culturalAdaptation": {
       "title": "문화적 적응",
-      "description": "문화적 적절성을 위해 콘텐츠를 적응시키세요."
+      "description": "문화적 적합성을 위해 콘텐츠를 조정하세요"
     }
   },
   "pricing": {
@@ -374,101 +374,102 @@
       "title": "무료",
       "price": "무료",
       "keys_limit": "최대 100개 키",
-      "description": "시도해 보기에 완벽함",
+      "description": "체험하기에 완벽합니다",
       "features": {
         "unlimited_projects": "무제한 프로젝트",
-        "fine_tuning": "튜닝 옵션",
-        "overrides": "번역 오버라이드",
+        "fine_tuning": "세부 조정 옵션",
+        "overrides": "번역 재정의",
         "analytics": "분석",
-        "context_memory": "컨텍스트 메모리",
+        "context_memory": "맥락 기억",
         "community_support": "커뮤니티 지원",
         "keys_limit": "최대 100개 키",
         "docs_limit": "최대 5개 문서",
-        "unlimited_languages": "무제한 언어"
+        "languages": "2개 언어"
       }
     },
     "pro": {
       "title": "프로",
-      "includes_free": "무료의 모든 것, 추가로:",
+      "includes_free": "무료의 모든 기능, 추가로:",
       "features": {
         "github_action": "GitHub Action 통합",
-        "latest_features": "최신 기능에 대한 초기 액세스",
+        "latest_features": "최신 기능에 대한 조기 접근",
         "priority_support": "우선 지원",
-        "priority_queues": "우선 번역 큐",
+        "priority_queues": "우선 번역 대기열",
+        "languages": "무제한 언어",
         "keys_limit": "10,000개 키부터 시작",
         "docs_limit": "50개 문서부터 시작"
       }
     },
-    "cta": "자동화 시작",
-    "keys_limit_explanation": "번역된 키: 20개의 소스 키(예: '가입하기' 또는 '환영합니다!')를 5개 언어로 번역하면 100개의 번역된 키(20개 키 × 5개 언어)가 됩니다."
+    "cta": "자동화 시작하기",
+    "keys_limit_explanation": "번역된 키: 20개의 소스 키(예: \"가입하기\" 또는 \"환영합니다!\")가 있고 이를 5개 언어로 번역하면, 총 100개의 번역된 키(20개 키 x 5개 언어)가 됩니다."
   },
   "createTeam": {
     "teamName": "팀 이름",
-    "teamNamePlaceholder": "팀 이름 입력",
-    "createTeamButton": "팀 생성",
+    "teamNamePlaceholder": "팀 이름을 입력하세요",
+    "createTeamButton": "팀 만들기",
     "cancel": "취소",
-    "createTeamDescription": "프로젝트와 협업자를 관리할 새 팀을 생성하세요."
+    "createTeamDescription": "프로젝트와 협업자를 관리하기 위해 새 팀을 만드세요."
   },
   "createProject": {
-    "createProjectTitle": "새 프로젝트 생성",
-    "projectNamePlaceholder": "프로젝트 이름 입력",
-    "createProjectButton": "프로젝트 생성",
+    "createProjectTitle": "새 프로젝트 만들기",
+    "projectNamePlaceholder": "프로젝트 이름을 입력하세요",
+    "createProjectButton": "프로젝트 만들기",
     "cancel": "취소",
-    "createProjectDescription": "현지화 자동화를 시작할 새 프로젝트를 생성하세요."
+    "createProjectDescription": "현지화를 자동화하기 위해 새 프로젝트를 만드세요."
   },
   "invite": {
     "inviteMember": "멤버 초대",
-    "inviteDescription": "팀에 멤버 초대",
+    "inviteDescription": "팀에 멤버를 초대하세요",
     "emailLabel": "이메일",
-    "emailPlaceholder": "이메일 입력",
+    "emailPlaceholder": "이메일을 입력하세요",
     "cancel": "취소",
     "submit": "제출",
     "success": {
-      "title": "초대 전송됨",
-      "description": "{email}로 초대를 성공적으로 전송했습니다."
+      "title": "초대가 전송되었습니다",
+      "description": "{email}에게 초대가 성공적으로 전송되었습니다"
     },
     "error": {
       "title": "오류",
-      "description": "초대 전송 실패. 다시 시도하세요."
+      "description": "초대 전송에 실패했습니다. 다시 시도하세요."
     },
     "validation": {
-      "invalidEmail": "유효한 이메일을 입력하세요."
+      "invalidEmail": "유효한 이메일을 입력하세요"
     }
   },
   "onboarding": {
     "steps": {
       "1": {
         "title": "Languine CLI 설정",
-        "description": "번역을 관리하기 위해 Languine CLI를 설치하고 구성하세요."
+        "description": "번역 관리를 위해 Languine CLI를 설치하고 구성하세요"
       },
       "2": {
         "title": "번역 푸시",
-        "description": "번역이 푸시되기를 기다리는 중"
+        "description": "번역이 푸시되기를 기다리고 있습니다"
       },
       "3": {
-        "title": "문서화",
-        "description": "자세한 가이드와 모범 사례를 위해 우리의 문서를 확인하세요.",
+        "title": "문서",
+        "description": "자세한 가이드와 모범 사례를 위해 문서를 확인하세요",
         "link": "문서"
       }
     },
     "info": {
-      "description": "도움이 필요하세요? 자세한 가이드와 모범 사례를 위해 우리의",
-      "link": "문서",
-      "description_2": "를 확인하세요."
+      "description": "도움이 필요하신가요? 저희의",
+      "link": "문서를 확인하세요",
+      "description_2": "자세한 가이드와 모범 사례를 위해."
     }
   },
   "cli": {
     "success": {
       "title": "Languine CLI 로그인 성공",
-      "description": "Languine CLI가 성공적으로 인증되었습니다:",
-      "description_2": "이제 이 탭을 닫고 CLI로 돌아갈 수 있습니다."
+      "description": "Languine CLI가 다음과 같이 성공적으로 인증되었습니다:",
+      "description_2": "이 탭을 닫고 CLI로 돌아갈 수 있습니다."
     }
   },
   "search": {
     "placeholder": "검색"
   },
   "periods": {
-    "daily": "일간",
+    "daily": "일일",
     "weekly": "주간",
     "monthly": "월간",
     "selectPeriod": "기간 선택"
@@ -480,11 +481,9 @@
     "de": "독일어",
     "it": "이탈리아어",
     "pt": "포르투갈어",
-    "zh": "중국어",
     "ja": "일본어",
     "ko": "한국어",
     "ar": "아랍어",
-    "hi": "힌디어",
     "tr": "터키어",
     "nl": "네덜란드어",
     "pl": "폴란드어",
@@ -492,18 +491,42 @@
     "da": "덴마크어",
     "sv": "스웨덴어",
     "fi": "핀란드어",
-    "vi": "베트남어"
+    "vi": "베트남어",
+    "az": "아제르바이잔어",
+    "bg": "불가리아어",
+    "ca": "카탈란어",
+    "cs": "체코어",
+    "el": "그리스어",
+    "et": "에스토니아어",
+    "he": "히브리어",
+    "hr": "크로아티아어",
+    "hu": "헝가리어",
+    "id": "인도네시아어",
+    "iw": "히브리어",
+    "km": "크메르어",
+    "lv": "라트비아어",
+    "pt-BR": "포르투갈어 (브라질)",
+    "ro": "루마니아어",
+    "ru": "러시아어",
+    "sk-SK": "슬로바키아어 (슬로바키아)",
+    "sk": "슬로바크어",
+    "sr": "세르비아어",
+    "ta": "타밀어",
+    "th": "태국어",
+    "uk": "우크라이나어",
+    "zh-CN": "중국어 (간체)",
+    "zh-TW": "중국어 (번체)"
   },
   "menu": {
     "dashboard": "대시보드",
     "tuning": "튜닝",
     "settings": "설정",
     "pricing": "가격",
-    "docs": "문서화",
+    "docs": "문서",
     "account": "계정"
   },
   "billing": {
-    "title": "결제"
+    "title": "청구"
   },
   "analytics": {
     "key": "번역된 키",
@@ -525,83 +548,70 @@
     }
   },
   "faq": {
-    "title": "FAQ",
+    "title": "자주 묻는 질문",
     "what_is_languine": {
       "question": "Languine이란 무엇인가요?",
-      "answer": "Languine은 애플리케이션의 번역을 자동화하는 데 도움을 주는 AI 기반 현지화 플랫폼입니다. 튜닝 옵션, 번역 오버라이드, 분석, 컨텍스트 메모리와 같은 기능을 제공하여 고품질 번역을 보장합니다."
+      "answer": "Languine은 애플리케이션 번역을 자동화하는 데 도움을 주는 AI 기반의 로컬라이제이션 플랫폼입니다. 고급 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같은 기능을 제공하여 고품질 번역을 보장합니다."
     },
     "key_limit": {
       "question": "키 제한은 어떻게 작동하나요?",
-      "answer": "번역된 키는 소스 키를 대상 언어로 번역할 때 계산됩니다. 예를 들어, 20개의 소스 키를 5개 언어로 번역하면 100개의 번역된 키(20개 키 × 5개 언어)가 됩니다."
+      "answer": "번역된 키는 소스 키를 대상 언어로 번역할 때 계산됩니다. 예를 들어, 20개의 소스 키가 있고 이를 5개 언어로 번역하면 총 100개의 번역된 키가 됩니다 (20 키 × 5 언어)."
     },
     "supported_languages": {
-      "question": "어떤 언어를 지원하나요?",
-      "answer": "Languine은 모든 플랜에서 100개 이상의 언어를 지원합니다. 우리의 AI 기반 번역은 주요 언어에서 가장 잘 작동하지만, 지원되는 모든 언어에서 품질 번역을 제공하기 위해 노력합니다. 특정 언어 요구 사항이나 특정 언어에 대한 번역 품질에 대한 질문이 있으면 지원팀에 문의하세요."
+      "question": "어떤 언어가 지원되나요?",
+      "answer": "Languine은 모든 요금제에서 100개 이상의 언어를 지원합니다. 우리의 AI 기반 번역은 주요 언어에서 가장 잘 작동하지만, 모든 지원 언어에서 품질 높은 번역을 제공하기 위해 노력하고 있습니다. 특정 언어 요구 사항이나 특정 언어의 번역 품질에 대한 질문이 있는 경우, 지원 팀에 문의해 주세요."
     },
     "github_action": {
       "question": "GitHub Action 통합은 어떻게 작동하나요?",
-      "answer": "GitHub Action 통합(Pro 플랜에서 사용 가능)은 CI/CD 파이프라인에서 직접 번역 워크플로우를 자동화할 수 있게 해줍니다. 저장소에 변경 사항을 푸시하면 번역이 자동으로 업데이트될 수 있습니다."
+      "answer": "GitHub Action 통합(프로 요금제에서 제공)은 CI/CD 파이프라인에서 번역 작업 흐름을 자동화할 수 있게 해줍니다. 저장소에 변경 사항을 푸시하면 번역이 자동으로 업데이트될 수 있습니다."
     },
     "support": {
       "question": "어떤 종류의 지원을 제공하나요?",
-      "answer": "무료 사용자는 커뮤니티 지원에 접근할 수 있으며, Pro 사용자는 더 빠른 응답 시간과 번역 요구에 대한 전담 지원을 받습니다."
+      "answer": "무료 사용자는 커뮤니티 지원에 접근할 수 있으며, 프로 사용자는 더 빠른 응답 시간과 번역 요구에 대한 전담 지원을 받습니다."
     },
     "open_source": {
       "question": "Languine은 오픈 소스인가요?",
-      "answer": "네! Languine은 완전히 오픈 소스이며 GitHub에서 이용 가능합니다. 프로젝트에 기여하거나, 문제를 보고하거나, 기능을 제안하고, 코드를 검사할 수 있습니다. 우리는 투명성과 공개적으로 구축하는 것을 믿습니다."
+      "answer": "네! Languine은 완전한 오픈 소스이며 GitHub에서 사용할 수 있습니다. 프로젝트에 기여하고, 문제를 보고하고, 기능을 제안하고, 코드를 검사할 수 있습니다. 우리는 투명성과 공개 개발을 믿습니다."
     },
     "open_source_pricing": {
-      "question": "오픈 소스 프로젝트를 위한 특별 가격을 제공하나요?",
-      "answer": "네! 우리는 오픈 소스 커뮤니티를 지원하는 것을 좋아합니다. 오픈 소스 프로젝트를 유지 관리하는 경우, Pro 기능을 30% 할인된 가격에 이용할 수 있습니다. 프로젝트에 대한 세부 정보와 함께 우리 팀에 연락하면, 할인된 Pro 계정을 설정해 드립니다. 이것은 우리의 작업을 가능하게 하는 커뮤니티에 보답하는 우리의 방법입니다."
+      "question": "오픈 소스 프로젝트에 대한 특별 가격을 제공하나요?",
+      "answer": "네! 우리는 오픈 소스 커뮤니티를 지원하는 것을 좋아합니다. 오픈 소스 프로젝트를 유지 관리하는 경우, 30% 할인된 가격으로 프로 기능에 접근할 수 있습니다. 프로젝트에 대한 세부 정보를 가지고 우리 팀에 문의해 주시면 할인된 프로 계정을 설정해 드리겠습니다. 이는 우리의 작업을 가능하게 해주는 커뮤니티에 대한 보답입니다."
     },
     "cancel_subscription": {
       "question": "구독을 어떻게 취소하나요?",
-      "answer": "계정 설정에서 언제든지 구독을 취소할 수 있습니다. 결제 > 플랜 변경으로 이동하세요. 현재 결제 기간이 끝날 때까지 구독은 활성 상태로 유지되며, 그 후 무료 플랜으로 이동됩니다."
+      "answer": "계정 설정에서 언제든지 구독을 취소할 수 있습니다. 청구 > 요금제 변경으로 이동하세요. 현재 청구 기간이 끝날 때까지 구독은 활성 상태로 유지되며, 이후 무료 요금제로 전환됩니다."
     }
   },
   "pricing_slider": {
     "tier": "티어 {tier}",
     "keys": "번역된 키",
     "documents": "번역된 문서",
-    "period": "월",
-    "keys_suffix": "키",
-    "docs_suffix": "문서"
+    "period": "개월",
+    "keys_suffix": " 키",
+    "docs_suffix": " 문서"
   },
   "docs": {
     "getting-started": "시작하기",
-    "introduction": "소개",
-    "installation": "설치",
-    "quickstart": "빠른 시작",
-    "guides": "가이드",
-    "configuration": "구성",
-    "cli": "CLI",
-    "api": "API",
-    "advanced": "고급",
-    "custom-parsers": "사용자 정의 파서",
-    "workflows": "워크플로우",
-    "self-hosting": "셀프 호스팅",
-    "jobs": "작업",
-    "support": "지원",
-    "workflow": "워크플로우",
+    "workflow": "작업 흐름",
     "ci": "CI/CD",
-    "presets": "사전 설정",
+    "presets": "프리셋",
     "formats": "형식",
     "platform": "플랫폼",
+    "introduction": "소개",
+    "quickstart": "빠른 시작",
     "authentication": "인증",
+    "configuration": "구성",
+    "cli": "CLI",
     "github-actions": "GitHub Actions",
     "tuning": "튜닝",
     "settings": "설정",
-    "hooks": "훅",
+    "hooks": "후크",
     "examples": "예제",
     "team": "팀"
   },
   "test": {
-    "title": "이것은 테스트입니다",
+    "title": "테스트입니다",
     "description": "그리고 이것은 테스트 설명입니다",
     "button": "클릭하세요"
-  },
-  "welcome": {
-    "title": "Languine에 오신 것을 환영합니다",
-    "description": "Languine은 애플리케이션 번역을 자동화하는 데 도움을 주는 AI 기반 현지화 플랫폼입니다. 고품질 번역을 보장하기 위해 미세 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같은 기능을 제공합니다."
   }
 }

@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "Cene",
+    "docs": "Dokumentacija",
+    "signIn": "Prijavi se",
+    "goToApp": "Idi na aplikaciju"
+  },
+  "hero": {
+    "title": "Automatizovana infrastruktura za lokalizaciju",
+    "description": "Prevedite sadržaj vaše aplikacije direktno u vašem razvojnim toku. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodirate."
+  },
+  "navigation": {
+    "dashboard": "Kontrolna tabla",
+    "tuning": "Podešavanje",
+    "settings": "Podešavanja",
+    "pricing": "Cene",
+    "docs": "Dokumentacija",
+    "account": "Nalog"
+  },
+  "getStarted": {
+    "heading": "Počnite",
+    "title": "Automatizovana infrastruktura za lokalizaciju",
+    "description": "Prevedite sadržaj vaše aplikacije direktno u vašem razvojnim toku. Naš CLI se integriše sa GitHub Actions i drugim CI/CD alatima kako bi automatizovao prevode dok kodirate.",
+    "button": {
+      "startAutomating": "Počnite sa automatizacijom",
+      "readDocumentation": "Pročitajte dokumentaciju"
+    }
+  },
+  "companies": {
+    "title": "Koriste",
+    "addYourCompany": "+ Dodajte svoju kompaniju"
+  },
+  "activity": {
+    "title": "Aktivnost",
+    "loading": "Učitavanje",
+    "noResults": "Nema rezultata za '{search}'",
+    "clearSearch": "Obriši pretragu",
+    "loadMore": "Prikaži više",
+    "type": {
+      "key": "Ključ",
+      "document": "Dokument"
+    }
+  },
+  "features": {
+    "title": "Karakteristike",
+    "fullyOpenSource": "Potpuno otvoren izvor",
+    "fullyOpenSourceDescription": "Naš kod je javno dostupan na GitHub-u, omogućavajući transparentnost i doprinos zajednice.",
+    "noVendorLockIn": "Bez zaključavanja dobavljača",
+    "noVendorLockInDescription": "Ne zaključavamo vas u specifičnu uslugu, koristite svoje LLM-ove.",
+    "presetsForExpo": "Predlošci za Expo",
+    "presetsForExpoDescription": "Pružamo predloške za Expo, tako da možete brzo početi.",
+    "presetForReactNative": "Predložak za React Native",
+    "presetForReactNativeDescription": "Pružamo predložak za React Native, tako da možete brzo početi.",
+    "presetForReactEmail": "React Email biblioteka",
+    "presetForReactEmailDescription": "Kreirali smo i18n biblioteku za React Email.",
+    "readyForI18nLibraries": "Spremno za i18n biblioteke",
+    "readyForI18nLibrariesDescription": "Podržavamo sve biblioteke uključujući najpopularnije (next-intl, react-i18next, react-intl, itd.)."
+  },
+  "info": {
+    "title": "Obuhvata svaki aspekt lokalizacije vaše aplikacije uključujući",
+    "smartTranslation": {
+      "title": "Pametan prevod",
+      "intelligentTranslation": "Inteligentan prevod sa svesti o kontekstu",
+      "brandVoice": "Doslednost brend glasa i tona",
+      "terminology": "Upravljanje terminologijom",
+      "linguisticFeatures": "Napredne lingvističke karakteristike",
+      "realtimeUpdates": "Ažuriranja prevoda u realnom vremenu"
+    },
+    "implementation": {
+      "title": "Implementacija",
+      "quickSetup": "Brza postavka i integracija",
+      "fileFormat": "Rukovanje formatima datoteka",
+      "contentStructure": "Organizacija strukture sadržaja",
+      "assetOrganization": "Organizacija sredstava"
+    },
+    "developer": {
+      "title": "Iskustvo programera",
+      "cli": "Interfejs komandne linije",
+      "cicd": "CI/CD integracija",
+      "versionControl": "Upravljanje verzijama",
+      "workflow": "Tok rada programera",
+      "documentation": "Sveobuhvatna dokumentacija"
+    }
+  },
+  "login": {
+    "title": "Prijavi se",
+    "github": "Prijavi se sa GitHub-om",
+    "google": "Prijavi se sa Google-om",
+    "footer": "Automatizujte svoju lokalizaciju.",
+    "description": "Prijavite se da biste počeli sa automatizacijom vaše lokalizacije za nekoliko sekundi.",
+    "terms": {
+      "text": "Prijavljivanjem se slažete sa našim",
+      "termsOfService": "Uslovima korišćenja",
+      "and": "i",
+      "privacyPolicy": "Politikom privatnosti"
+    }
+  },
+  "translations": {
+    "header": "Prevedeni ključevi"
+  },
+  "userMenu": {
+    "account": "Podešavanja naloga",
+    "signOut": "Odjavi se",
+    "createTeam": "Kreiraj tim",
+    "homepage": "Početna stranica",
+    "team": "Podešavanja tima"
+  },
+  "teamSelector": {
+    "addProject": "Kreiraj projekat",
+    "createProjectTitle": "Kreiraj novi projekat",
+    "projectNamePlaceholder": "Ime projekta",
+    "createProjectButton": "Kreiraj projekat",
+    "pro": "Pro",
+    "project": "Projekat",
+    "teams": "Timovi",
+    "createTeam": "Kreiraj tim",
+    "createTeamTitle": "Kreiraj novi tim",
+    "teamNamePlaceholder": "Ime tima",
+    "createTeamButton": "Kreiraj tim"
+  },
+  "coming_soon": {
+    "title": "Languine je u ranoj fazi pristupa",
+    "description": "Trenutno smo u ranoj fazi pristupa. Kontaktirajte",
+    "cta": "na X da biste dobili rani pristup."
+  },
+  "account": {
+    "fullName": {
+      "title": "Puno ime",
+      "description": "Vaše puno ime kako će se prikazivati na platformi.",
+      "placeholder": "Unesite svoje puno ime"
+    },
+    "email": {
+      "title": "Email adresa",
+      "description": "Email adresa povezana sa vašim nalogom.",
+      "placeholder": "Unesite svoju email adresu"
+    },
+    "apiKey": {
+      "title": "API ključ",
+      "description": "Vaš lični API ključ za pristup Languine API-ju i iz CLI-a."
+    },
+    "deleteAccount": {
+      "title": "Obriši nalog",
+      "description": "Trajno obrišite svoj nalog i sve povezane podatke. Ova akcija se ne može poništiti.",
+      "button": "Obriši nalog"
+    }
+  },
+  "copyInstall": {
+    "copied": "Kopirano u međuspremnik"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Da li ste potpuno sigurni?",
+      "description": "Ova akcija se ne može poništiti. Molimo vas da otkucate DELETE da biste potvrdili.",
+      "placeholder": "Otpišite DELETE da potvrdite",
+      "confirm": "Potvrdi brisanje",
+      "cancel": "Otkaži"
+    }
+  },
+  "pipeline": {
+    "title": "Tok rada (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Naš prevodilački sistem se besprekorno integriše u vaš postojeći CI/CD tok rada, automatski prevodeći vašu kodnu bazu pri svakom slanju. Kada se promene u kodu pošalju, analiziramo izmenjeni sadržaj, održavamo vašu memoriju prevoda i generišemo tačne prevode dok čuvamo vaš glas brenda i terminologiju. Prevodi se zatim šalju kao zahtevi za povlačenje, omogućavajući pregled pre nego što budu spojeni u vašu glavnu granu i implementirani. Ovaj automatizovani tok rada osigurava da vaš lokalizovani sadržaj ostane usklađen sa razvojem."
+  },
+  "settings": {
+    "badRequest": "Nevažeći zahtev",
+    "badRequestDescription": "Organizacija mora imati najmanje jednog vlasnika. Prenesite vlasništvo na drugog člana pre nego što uklonite ovog vlasnika.",
+    "permissionDenied": "Dozvola odbijena",
+    "permissionDeniedDescription": "Morate biti vlasnik tima da biste izvršili ovu radnju",
+    "deleteTeamTitle": "Obriši tim",
+    "deleteTeamDescription": "Ne možete obrisati organizaciju kada ste jedini član, umesto toga obrišite svoj nalog",
+    "saved": "Podešavanja sačuvana",
+    "savedDescription": "Vaše promene su uspešno sačuvane",
+    "error": "Nešto je pošlo po zlu",
+    "errorDescription": "Molimo pokušajte ponovo ili kontaktirajte podršku",
+    "addTeam": "Kreiraj tim",
+    "apiKey": {
+      "updated": "API ključ ažuriran",
+      "updatedDescription": "Vaš API ključ je uspešno ažuriran i kopiran u vaš međuspremnik.",
+      "title": "Ažuriraj API ključ",
+      "description": "Da li ste sigurni da želite da generišete novi API ključ? Stari ključ će odmah prestati da funkcioniše.",
+      "cancel": "Otkaži",
+      "continue": "Nastavi"
+    },
+    "tabs": {
+      "project": "Projekat",
+      "account": "Nalog",
+      "team": "Tim",
+      "provider": "Provajder",
+      "billing": "Fakturisanje"
+    },
+    "addProject": "Kreiraj projekat",
+    "project": {
+      "name": {
+        "title": "Ime projekta",
+        "description": "Ime vašeg projekta",
+        "placeholder": "Unesite ime projekta"
+      },
+      "id": {
+        "title": "ID projekta",
+        "description": "Vaš jedinstveni identifikator projekta",
+        "placeholder": "ID projekta"
+      },
+      "delete": {
+        "title": "Obriši projekat",
+        "description": "Trajno obrišite ovaj projekat i sve njegove podatke",
+        "button": "Obriši projekat"
+      }
+    },
+    "save": "Sačuvaj",
+    "team": {
+      "name": {
+        "title": "Ime tima",
+        "description": "Ime vašeg tima",
+        "placeholder": "Unesite ime tima"
+      },
+      "billing": {
+        "title": "Plan fakturisanja",
+        "description": "Upravljajte planom fakturisanja vašeg tima",
+        "free": "Besplatno",
+        "pro": "Pro",
+        "unlimited": "Neograničeno"
+      },
+      "apiKey": {
+        "title": "API ključ tima",
+        "description": "API ključ za pristup timu, koristite ovo iz vašeg CI/CD toka rada zajedno sa ID-jem projekta",
+        "placeholder": "API ključ tima"
+      },
+      "members": {
+        "leaveTeamConfirm": "Napusti tim",
+        "leaveTeamDescription": "Da li ste sigurni da želite da napustite ovaj tim?",
+        "cancel": "Otkaži",
+        "leaveTeam": "Napusti tim",
+        "invite": "Pozovi člana",
+        "title": "Članovi",
+        "pendingInvitations": "Na čekanju pozivnice",
+        "removeMember": "Ukloni člana",
+        "removeMemberConfirm": "Ukloni člana",
+        "removeMemberDescription": "Da li ste sigurni da želite da uklonite ovog člana?",
+        "filterPlaceholder": "Filtriraj članove...",
+        "allRoles": "Sve uloge",
+        "date": "Datum",
+        "selectAll": "{count} izabrano",
+        "noPendingInvitations": "Nema pozivnica na čekanju",
+        "noResults": "Nema pronađenih članova",
+        "tryDifferentSearch": "Pokušajte drugačije pretraživanje",
+        "inviteMembers": "Pozovite članove da sarađuju",
+        "deleteInvite": "Obriši pozivnicu",
+        "deleteInviteDescription": "Obrišite pozivnicu",
+        "invitedBy": "Pozvan od {name}",
+        "deleteInviteSuccess": "Pozivnica obrisana",
+        "deleteInviteError": "Nije uspelo brisanje pozivnice",
+        "removeMemberSuccess": "Član uklonjen",
+        "removeMemberError": "Nije uspelo uklanjanje člana",
+        "removeMemberSuccessDescription": "Član je uspešno uklonjen",
+        "removeMemberErrorDescription": "Nije uspelo uklanjanje člana",
+        "roles": {
+          "owner": "Vlasnik",
+          "member": "Član"
+        },
+        "dateSort": {
+          "newest": "Najnoviji",
+          "oldest": "Najstariji"
+        },
+        "deleteInviteConfirm": "Obriši pozivnicu"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Opšte",
+    "translationMemory": {
+      "title": "Memorija prevoda",
+      "description": "Koristite memoriju prevoda za poboljšanje doslednosti i efikasnosti"
+    },
+    "qualityChecks": {
+      "title": "Provere kvaliteta",
+      "description": "Omogućite automatske provere kvaliteta za prevode"
+    },
+    "contextDetection": {
+      "title": "Otkrivanje konteksta",
+      "description": "Automatski otkrivajte i čuvajte kontekst u prevodima"
+    },
+    "styleGuide": "Priručnik za stil",
+    "lengthControl": {
+      "title": "Kontrola dužine",
+      "description": "Kontrolišite dužinu prevedenog teksta",
+      "options": {
+        "flexible": "Fleksibilno",
+        "strict": "Strogo",
+        "exact": "Tačno",
+        "loose": "Labavo"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Uključiv jezik",
+      "description": "Osigurajte da prevodi koriste uključiv jezik"
+    },
+    "formality": {
+      "title": "Formalnost",
+      "description": "Kontrolišite nivo formalnosti prevoda",
+      "options": {
+        "casual": "Opusteno",
+        "formal": "Formalno",
+        "neutral": "Neutralno"
+      }
+    },
+    "brandName": {
+      "title": "Ime brenda",
+      "description": "Postavite ime svog brenda za doslednu upotrebu",
+      "placeholder": "Unesite ime svog brenda"
+    },
+    "brandVoice": {
+      "title": "Glas brenda",
+      "description": "Definišite glas i ton svog brenda",
+      "placeholder": "Opišite glas svog brenda..."
+    },
+    "toneOfVoice": {
+      "title": "Ton glasa",
+      "description": "Definišite ton koji se koristi u prevodima",
+      "options": {
+        "casual": "Opusteno",
+        "formal": "Formalno",
+        "friendly": "Prijateljski",
+        "professional": "Profesionalno",
+        "playful": "Igrački",
+        "serious": "Seriozno",
+        "confident": "Samouvereno",
+        "humble": "Skromno",
+        "direct": "Direktno",
+        "diplomatic": "Diplomatski"
+      }
+    },
+    "brand": "Brend",
+    "emotiveIntent": {
+      "title": "Emotivna namera",
+      "description": "Postavite emocionalni ton za prevode",
+      "options": {
+        "neutral": "Neutralno",
+        "positive": "Pozitivno",
+        "empathetic": "Empatično",
+        "professional": "Profesionalno",
+        "friendly": "Prijateljski",
+        "enthusiastic": "Entuzijastično"
+      }
+    },
+    "domainExpertise": {
+      "title": "Stručnost u oblasti",
+      "description": "Specifikujte kontekst oblasti za prevode",
+      "options": {
+        "general": "Opšte",
+        "technical": "Tehničko",
+        "medical": "Medicinsko",
+        "legal": "Pravno",
+        "financial": "Finansijsko",
+        "marketing": "Marketing",
+        "academic": "Akademsko"
+      }
+    },
+    "idioms": {
+      "title": "Idiom",
+      "description": "Pravilno rukujte idiomatskim izrazima"
+    },
+    "terminology": {
+      "title": "Terminologija",
+      "description": "Upravljajte specijalizovanom terminologijom i rečnicima"
+    },
+    "culturalAdaptation": {
+      "title": "Kulturna adaptacija",
+      "description": "Prilagodite sadržaj za kulturnu prikladnost"
+    }
+  },
+  "pricing": {
+    "title": "Jednostavne cene",
+    "free": {
+      "title": "Besplatno",
+      "price": "Besplatno",
+      "keys_limit": "Do 100 ključeva",
+      "description": "Savršeno za probu",
+      "features": {
+        "unlimited_projects": "Neograničeni projekti",
+        "fine_tuning": "Opcije podešavanja",
+        "overrides": "Prekoračenja prevoda",
+        "analytics": "Analitika",
+        "context_memory": "Memorija konteksta",
+        "community_support": "Podrška zajednice",
+        "keys_limit": "Do 100 ključeva",
+        "docs_limit": "Do 5 dokumenata",
+        "languages": "2 jezika"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Sve u besplatnoj verziji, plus:",
+      "features": {
+        "github_action": "Integracija GitHub akcije",
+        "latest_features": "Rani pristup najnovijim funkcijama",
+        "priority_support": "Prioritetna podrška",
+        "priority_queues": "Prioritetne redove prevoda",
+        "languages": "Neograničeni jezici",
+        "keys_limit": "Počinje od 10 000 ključeva",
+        "docs_limit": "Počinje od 50 dokumenata"
+      }
+    },
+    "cta": "Počnite sa automatizacijom",
+    "keys_limit_explanation": "Prevedeni ključ: Ako imate 20 izvora ključeva (kao što su \"Prijavite se\" ili \"Dobrodošli!\") i prevedete ih na 5 jezika, to je jednako 100 prevedenih ključeva (20 ključeva x 5 jezika)."
+  },
+  "createTeam": {
+    "teamName": "Ime tima",
+    "teamNamePlaceholder": "Unesite ime tima",
+    "createTeamButton": "Kreirajte tim",
+    "cancel": "Otkaži",
+    "createTeamDescription": "Kreirajte novi tim za upravljanje svojim projektima i saradnicima."
+  },
+  "createProject": {
+    "createProjectTitle": "Kreirajte novi projekat",
+    "projectNamePlaceholder": "Unesite ime projekta",
+    "createProjectButton": "Kreirajte projekat",
+    "cancel": "Otkaži",
+    "createProjectDescription": "Kreirajte novi projekat da biste započeli automatizaciju svoje lokalizacije."
+  },
+  "invite": {
+    "inviteMember": "Pozovite člana",
+    "inviteDescription": "Pozovite člana u svoj tim",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Unesite email",
+    "cancel": "Otkaži",
+    "submit": "Pošalji",
+    "success": {
+      "title": "Pozivnica poslata",
+      "description": "Uspešno poslata pozivnica na {email}"
+    },
+    "error": {
+      "title": "Greška",
+      "description": "Slanje pozivnice nije uspelo. Pokušajte ponovo."
+    },
+    "validation": {
+      "invalidEmail": "Molimo unesite važeći email"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Postavite Languine CLI",
+        "description": "Instalirajte i konfigurišite Languine CLI za upravljanje prevodima"
+      },
+      "2": {
+        "title": "Povežite prevode",
+        "description": "Čekanje na povezivanje prevoda"
+      },
+      "3": {
+        "title": "Dokumentacija",
+        "description": "Pogledajte našu dokumentaciju za detaljne vodiče i najbolje prakse",
+        "link": "dokumentacija"
+      }
+    },
+    "info": {
+      "description": "Trebate pomoć? Pogledajte našu",
+      "link": "dokumentaciju",
+      "description_2": "za detaljne vodiče i najbolje prakse."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Uspešna prijava na Languine CLI",
+      "description": "Languine CLI je uspešno autentifikovan kao:",
+      "description_2": "Sada možete zatvoriti ovu karticu i vratiti se na CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Pretraži"
+  },
+  "periods": {
+    "daily": "Dnevno",
+    "weekly": "Nedeljno",
+    "monthly": "Mesečno",
+    "selectPeriod": "Izaberi period"
+  },
+  "language": {
+    "en": "Engleski",
+    "es": "Španski",
+    "fr": "Francuski",
+    "de": "Nemački",
+    "it": "Italijanski",
+    "pt": "Portugalski",
+    "ja": "Japanski",
+    "ko": "Korejski",
+    "ar": "Arapski",
+    "tr": "Turski",
+    "nl": "Holandski",
+    "pl": "Poljski",
+    "no": "Norveški",
+    "da": "Danski",
+    "sv": "Švedski",
+    "fi": "Finski",
+    "vi": "Vijetnamski",
+    "az": "Azerbejdžanski",
+    "bg": "Bugarski",
+    "ca": "Katalonski",
+    "cs": "Češki",
+    "el": "Grčki",
+    "et": "Estonski",
+    "he": "Hebrejski",
+    "hr": "Hrvatski",
+    "hu": "Mađarski",
+    "id": "Indonežanski",
+    "iw": "Hebrejski",
+    "km": "Kmerski",
+    "lv": "Letonski",
+    "pt-BR": "Portugalski (Brazil)",
+    "ro": "Rumunski",
+    "ru": "Ruski",
+    "sk-SK": "Slovački (Slovačka)",
+    "sk": "Slovački",
+    "sr": "Srpski",
+    "ta": "Tamilski",
+    "th": "Tajlandski",
+    "uk": "Ukrajinski",
+    "zh-CN": "Kineski (Pojednostavljeni)",
+    "zh-TW": "Kineski (Tradicionalni)"
+  },
+  "menu": {
+    "dashboard": "Kontrolna tabla",
+    "tuning": "Podešavanje",
+    "settings": "Podešavanja",
+    "pricing": "Cene",
+    "docs": "Dokumentacija",
+    "account": "Nalog"
+  },
+  "billing": {
+    "title": "Fakturacija"
+  },
+  "analytics": {
+    "key": "Prevedeni ključevi",
+    "document": "Prevedeni dokumenti",
+    "header": "Prevod",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Dec",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Maj",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "what_is_languine": {
+      "question": "Šta je Languine?",
+      "answer": "Languine je platforma za lokalizaciju pokretana veštačkom inteligencijom koja vam pomaže da automatizujete prevođenje vaših aplikacija. Pruža funkcije kao što su opcije finog podešavanja, preklapanje prevoda, analitika i kontekstualna memorija kako bi se osigurao visok kvalitet prevoda."
+    },
+    "key_limit": {
+      "question": "Kako funkcioniše ograničenje ključeva?",
+      "answer": "Prevedeni ključ se broji kada prevedete izvorni ključ na ciljni jezik. Na primer, ako imate 20 izvora ključeva i prevedete ih na 5 jezika, to je jednako 100 prevedenih ključeva (20 ključeva × 5 jezika)."
+    },
+    "supported_languages": {
+      "question": "Koji jezici su podržani?",
+      "answer": "Languine podržava više od 100 jezika u svim planovima. Dok naši prevodi pokretani veštačkom inteligencijom najbolje funkcionišu sa glavnim jezicima, trudimo se da obezbedimo kvalitetne prevode na svim podržanim jezicima. Ako imate specifične zahteve za jezikom ili pitanja o kvalitetu prevoda za određene jezike, slobodno se obratite našem timu za podršku."
+    },
+    "github_action": {
+      "question": "Kako funkcioniše integracija GitHub Action?",
+      "answer": "Integracija GitHub Action (dostupna u Pro planovima) omogućava vam da automatizujete svoj radni tok prevođenja direktno u vašem CI/CD procesu. Kada izvršite promene u vašem repozitorijumu, prevodi se mogu automatski ažurirati."
+    },
+    "support": {
+      "question": "Kakvu podršku nudite?",
+      "answer": "Besplatni korisnici imaju pristup podršci zajednice, dok Pro korisnici dobijaju prioritetnu podršku sa bržim vremenima odgovora i posvećenom pomoći za njihove potrebe prevođenja."
+    },
+    "open_source": {
+      "question": "Da li je Languine otvoren izvor?",
+      "answer": "Da! Languine je potpuno otvoren izvor i dostupan na GitHub-u. Možete doprineti projektu, prijaviti probleme, predložiti funkcije i pregledati kod. Verujemo u transparentnost i rad u javnosti."
+    },
+    "open_source_pricing": {
+      "question": "Da li nudite posebne cene za projekte otvorenog koda?",
+      "answer": "Da! Volimo da podržavamo zajednicu otvorenog koda. Ako održavate projekat otvorenog koda, možete dobiti pristup našim Pro funkcijama uz 30% popusta. Samo se obratite našem timu sa detaljima o vašem projektu, i postavićemo vam račun sa popustom na Pro. Ovo je naš način da se zahvalimo zajednici koja omogućava naš rad."
+    },
+    "cancel_subscription": {
+      "question": "Kako da otkažem svoju pretplatu?",
+      "answer": "Možete otkazati svoju pretplatu u bilo kojem trenutku iz podešavanja vašeg naloga. Idite na Fakturacija > Promeni plan. Vaša pretplata će ostati aktivna do kraja trenutnog obračunskog perioda, nakon čega ćete biti prebačeni na besplatni plan."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Nivo {tier}",
+    "keys": "Prevedeni ključevi",
+    "documents": "Prevedeni dokumenti",
+    "period": "mes",
+    "keys_suffix": " ključeva",
+    "docs_suffix": " dokumenata"
+  },
+  "docs": {
+    "getting-started": "Uvod",
+    "workflow": "Radni tok",
+    "ci": "CI/CD",
+    "presets": "Predlošci",
+    "formats": "Formati",
+    "platform": "Platforma",
+    "introduction": "Uvod",
+    "quickstart": "Brzi početak",
+    "authentication": "Autentifikacija",
+    "configuration": "Konfiguracija",
+    "cli": "CLI",
+    "github-actions": "GitHub akcije",
+    "tuning": "Podešavanje",
+    "settings": "Podešavanja",
+    "hooks": "Hooks",
+    "examples": "Primeri",
+    "team": "Tim"
+  },
+  "test": {
+    "title": "Ovo je test",
+    "description": "I ovo je opis testa",
+    "button": "Klikni me"
+  }
+}

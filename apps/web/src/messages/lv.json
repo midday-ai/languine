@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "Cenu noteikumi",
+    "docs": "Dokumenti",
+    "signIn": "Pieteikties",
+    "goToApp": "Doties uz lietotni"
+  },
+  "hero": {
+    "title": "Automatizēta lokalizācijas infrastruktūra",
+    "description": "Tulkojiet sava lietotnes saturu tieši savā izstrādes darba plūsmā. Mūsu CLI integrējas ar GitHub Actions un citiem CI/CD rīkiem, lai automatizētu tulkojumus, kamēr jūs kodējat."
+  },
+  "navigation": {
+    "dashboard": "Vadības panelis",
+    "tuning": "Iestatījumi",
+    "settings": "Iestatījumi",
+    "pricing": "Cenu noteikumi",
+    "docs": "Dokumentācija",
+    "account": "Konts"
+  },
+  "getStarted": {
+    "heading": "Sākt",
+    "title": "Automatizēta lokalizācijas infrastruktūra",
+    "description": "Tulkojiet sava lietotnes saturu tieši savā izstrādes darba plūsmā. Mūsu CLI integrējas ar GitHub Actions un citiem CI/CD rīkiem, lai automatizētu tulkojumus, kamēr jūs kodējat.",
+    "button": {
+      "startAutomating": "Sākt automatizāciju",
+      "readDocumentation": "Lasīt dokumentāciju"
+    }
+  },
+  "companies": {
+    "title": "Izmanto",
+    "addYourCompany": "+ Pievienot savu uzņēmumu"
+  },
+  "activity": {
+    "title": "Aktivitāte",
+    "loading": "Ielādē",
+    "noResults": "Nav rezultātu '{search}'",
+    "clearSearch": "Notīrīt meklēšanu",
+    "loadMore": "Rādīt vairāk",
+    "type": {
+      "key": "Atslēga",
+      "document": "Dokuments"
+    }
+  },
+  "features": {
+    "title": "Iespējas",
+    "fullyOpenSource": "Pilnīgi atvērtā koda",
+    "fullyOpenSourceDescription": "Mūsu kods ir publiski pieejams GitHub, nodrošinot caurredzamību un kopienas ieguldījumus.",
+    "noVendorLockIn": "Nav piegādātāja piesaistes",
+    "noVendorLockInDescription": "Mēs jūs nepiespiežam izmantot konkrētu pakalpojumu, izmantojiet savus LLM.",
+    "presetsForExpo": "Iepriekš iestatījumi Expo",
+    "presetsForExpoDescription": "Mēs nodrošinām iepriekš iestatījumus Expo, lai jūs varētu ātri sākt.",
+    "presetForReactNative": "Iepriekš iestatījums React Native",
+    "presetForReactNativeDescription": "Mēs nodrošinām iepriekš iestatījumu React Native, lai jūs varētu ātri sākt.",
+    "presetForReactEmail": "React e-pasta bibliotēka",
+    "presetForReactEmailDescription": "Mēs esam izveidojuši i18n bibliotēku React e-pastam.",
+    "readyForI18nLibraries": "Gatavs i18n bibliotēkām",
+    "readyForI18nLibrariesDescription": "Mēs atbalstām visas bibliotēkas, tostarp populārākās (next-intl, react-i18next, react-intl utt.)."
+  },
+  "info": {
+    "title": "Rūpējas par katru lokalizācijas aspektu jūsu lietotnē, tostarp",
+    "smartTranslation": {
+      "title": "Viedā tulkošana",
+      "intelligentTranslation": "Inteliģenta tulkošana ar konteksta apziņu",
+      "brandVoice": "Zīmola balss un toni konsekvence",
+      "terminology": "Terminoloģijas pārvaldība",
+      "linguisticFeatures": "Uzlabotas lingvistiskās iezīmes",
+      "realtimeUpdates": "Reāllaika tulkošanas atjauninājumi"
+    },
+    "implementation": {
+      "title": "Ieviešana",
+      "quickSetup": "Ātra uzstādīšana un integrācija",
+      "fileFormat": "Failu formāta apstrāde",
+      "contentStructure": "Satura struktūras organizācija",
+      "assetOrganization": "Resursu organizācija"
+    },
+    "developer": {
+      "title": "Izstrādātāja pieredze",
+      "cli": "Komandrindas saskarne",
+      "cicd": "CI/CD integrācija",
+      "versionControl": "Versiju kontrole",
+      "workflow": "Izstrādātāja darba plūsma",
+      "documentation": "Visaptveroša dokumentācija"
+    }
+  },
+  "login": {
+    "title": "Pieteikties",
+    "github": "Pieteikties ar GitHub",
+    "google": "Pieteikties ar Google",
+    "footer": "Automatizējiet savu lokalizāciju.",
+    "description": "Pieteikties, lai sāktu automatizēt savu lokalizāciju dažu sekunžu laikā.",
+    "terms": {
+      "text": "Piesakoties, jūs piekrītat mūsu",
+      "termsOfService": "Lietošanas noteikumiem",
+      "and": "un",
+      "privacyPolicy": "Privātuma politikai"
+    }
+  },
+  "translations": {
+    "header": "Tulkotās atslēgas"
+  },
+  "userMenu": {
+    "account": "Konts",
+    "signOut": "Iziet",
+    "createTeam": "Izveidot komandu",
+    "homepage": "Sākumlapa",
+    "team": "Komandas iestatījumi"
+  },
+  "teamSelector": {
+    "addProject": "Izveidot projektu",
+    "createProjectTitle": "Izveidot jaunu projektu",
+    "projectNamePlaceholder": "Projekta nosaukums",
+    "createProjectButton": "Izveidot projektu",
+    "pro": "Pro",
+    "project": "Projekts",
+    "teams": "Komandas",
+    "createTeam": "Izveidot komandu",
+    "createTeamTitle": "Izveidot jaunu komandu",
+    "teamNamePlaceholder": "Komandas nosaukums",
+    "createTeamButton": "Izveidot komandu"
+  },
+  "coming_soon": {
+    "title": "Languine ir agrīnajā piekļuvē",
+    "description": "Mēs pašlaik esam agrīnajā piekļuvē. Sazinieties ar",
+    "cta": "X, lai iegūtu agrīnu piekļuvi."
+  },
+  "account": {
+    "fullName": {
+      "title": "Pilns vārds",
+      "description": "Jūsu pilns vārds, kā tas parādīsies visā platformā.",
+      "placeholder": "Ievadiet savu pilno vārdu"
+    },
+    "email": {
+      "title": "E-pasta adrese",
+      "description": "E-pasta adrese, kas saistīta ar jūsu kontu.",
+      "placeholder": "Ievadiet savu e-pasta adresi"
+    },
+    "apiKey": {
+      "title": "API atslēga",
+      "description": "Jūsu personīgā API atslēga, lai piekļūtu Languine API un no CLI."
+    },
+    "deleteAccount": {
+      "title": "Dzēst kontu",
+      "description": "Pastāvīgi dzēst savu kontu un visus saistītos datus. Šo darbību nevar atcelt.",
+      "button": "Dzēst kontu"
+    }
+  },
+  "copyInstall": {
+    "copied": "Kopēts starpliktuvē"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Vai jūs esat pilnīgi pārliecināts?",
+      "description": "Šo darbību nevar atcelt. Lūdzu, ierakstiet DZĒST, lai apstiprinātu.",
+      "placeholder": "Ievadiet DZĒST, lai apstiprinātu",
+      "confirm": "Apstiprināt dzēšanu",
+      "cancel": "Atcelt"
+    }
+  },
+  "pipeline": {
+    "title": "Darba plūsma (CI/CD cauruļvads)",
+    "pro": "[pro]",
+    "description": "Mūsu tulkošanas dzinējs nevainojami integrējas jūsu esošajā CI/CD cauruļvadā, automātiski tulkojot jūsu kodu katru reizi, kad tiek veikts push. Kad kods tiek mainīts, mēs analizējam modificēto saturu, uzturam jūsu tulkošanas atmiņu un ģenerējam precīzus tulkojumus, saglabājot jūsu zīmola balsi un terminoloģiju. Tulkojumi tiek iesniegti kā pull pieprasījumi, ļaujot tos pārskatīt pirms apvienošanas ar jūsu galveno zaru un izvietošanas. Šis automatizētais darba plūsmas process nodrošina, ka jūsu lokalizētais saturs paliek sinhronizēts ar izstrādi."
+  },
+  "settings": {
+    "badRequest": "Nederīgs pieprasījums",
+    "badRequestDescription": "Organizācijai jābūt vismaz vienam īpašniekam. Pārsūtiet īpašumtiesības citam dalībniekam, pirms noņemat šo īpašnieku.",
+    "permissionDenied": "Atļauja noraidīta",
+    "permissionDeniedDescription": "Lai veiktu šo darbību, jums jābūt komandas īpašniekam",
+    "deleteTeamTitle": "Dzēst komandu",
+    "deleteTeamDescription": "Nav iespējams dzēst organizāciju, ja esat vienīgais dalībnieks, vietā dzēsiet savu kontu",
+    "saved": "Iestatījumi saglabāti",
+    "savedDescription": "Jūsu izmaiņas ir veiksmīgi saglabātas",
+    "error": "Kaut kas nogāja greizi",
+    "errorDescription": "Lūdzu, mēģiniet vēlreiz vai sazinieties ar atbalstu",
+    "addTeam": "Izveidot komandu",
+    "apiKey": {
+      "updated": "API atslēga atjaunināta",
+      "updatedDescription": "Jūsu API atslēga ir veiksmīgi atjaunināta un kopēta jūsu starpliktuvē.",
+      "title": "Atjaunināt API atslēgu",
+      "description": "Vai tiešām vēlaties ģenerēt jaunu API atslēgu? Vecā atslēga nekavējoties pārstās darboties.",
+      "cancel": "Atcelt",
+      "continue": "Turpināt"
+    },
+    "tabs": {
+      "project": "Projekts",
+      "account": "Konts",
+      "team": "Komanda",
+      "provider": "Piegādātājs",
+      "billing": "Rēķināšana"
+    },
+    "addProject": "Izveidot projektu",
+    "project": {
+      "name": {
+        "title": "Projekta nosaukums",
+        "description": "Jūsu projekta nosaukums",
+        "placeholder": "Ievadiet projekta nosaukumu"
+      },
+      "id": {
+        "title": "Projekta ID",
+        "description": "Jūsu unikālais projekta identifikators",
+        "placeholder": "Projekta ID"
+      },
+      "delete": {
+        "title": "Dzēst projektu",
+        "description": "Pastāvīgi dzēst šo projektu un visus tā datus",
+        "button": "Dzēst projektu"
+      }
+    },
+    "save": "Saglabāt",
+    "team": {
+      "name": {
+        "title": "Komandas nosaukums",
+        "description": "Jūsu komandas nosaukums",
+        "placeholder": "Ievadiet komandas nosaukumu"
+      },
+      "billing": {
+        "title": "Rēķināšanas plāns",
+        "description": "Pārvaldiet savas komandas rēķināšanas plānu",
+        "free": "Bezmaksas",
+        "pro": "Pro",
+        "unlimited": "Neierobežots"
+      },
+      "apiKey": {
+        "title": "Komandas API atslēga",
+        "description": "API atslēga komandas piekļuvei, izmantojiet to no sava CI/CD cauruļvada kopā ar Projekta ID",
+        "placeholder": "Komandas API atslēga"
+      },
+      "members": {
+        "leaveTeamConfirm": "Atstāt komandu",
+        "leaveTeamDescription": "Vai tiešām vēlaties atstāt šo komandu?",
+        "cancel": "Atcelt",
+        "leaveTeam": "Atstāt komandu",
+        "invite": "Ielūgt dalībnieku",
+        "title": "Dalībnieki",
+        "pendingInvitations": "Gaidāmās ielūgumi",
+        "removeMember": "Noņemt dalībnieku",
+        "removeMemberConfirm": "Noņemt dalībnieku",
+        "removeMemberDescription": "Vai tiešām vēlaties noņemt šo dalībnieku?",
+        "filterPlaceholder": "Filtrēt dalībniekus...",
+        "allRoles": "Visas lomas",
+        "date": "Datums",
+        "selectAll": "{count} izvēlēti",
+        "noPendingInvitations": "Nav gaidošu ielūgumu",
+        "noResults": "Dalībnieki netika atrasti",
+        "tryDifferentSearch": "Mēģiniet citu meklēšanu",
+        "inviteMembers": "Ielūgt dalībniekus sadarbībai",
+        "deleteInvite": "Dzēst ielūgumu",
+        "deleteInviteDescription": "Dzēst ielūgumu",
+        "invitedBy": "Ielūdzis {name}",
+        "deleteInviteSuccess": "Ielūgums izdzēsts",
+        "deleteInviteError": "Neizdevās izdzēst ielūgumu",
+        "removeMemberSuccess": "Dalībnieks noņemts",
+        "removeMemberError": "Neizdevās noņemt dalībnieku",
+        "removeMemberSuccessDescription": "Dalībnieks ir veiksmīgi noņemts",
+        "removeMemberErrorDescription": "Neizdevās noņemt dalībnieku",
+        "roles": {
+          "owner": "Īpašnieks",
+          "member": "Dalībnieks"
+        },
+        "dateSort": {
+          "newest": "Jaunākais",
+          "oldest": "Vecākais"
+        },
+        "deleteInviteConfirm": "Dzēst ielūgumu"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Vispārīgi",
+    "translationMemory": {
+      "title": "Tulkošanas atmiņa",
+      "description": "Izmantojiet tulkošanas atmiņu, lai uzlabotu konsekvenci un efektivitāti"
+    },
+    "qualityChecks": {
+      "title": "Kvalitātes pārbaudes",
+      "description": "Iespējot automatizētas kvalitātes pārbaudes tulkojumiem"
+    },
+    "contextDetection": {
+      "title": "Konteksta noteikšana",
+      "description": "Automātiski noteikt un saglabāt kontekstu tulkojumos"
+    },
+    "styleGuide": "Stila ceļvedis",
+    "lengthControl": {
+      "title": "Garuma kontrole",
+      "description": "Kontrolējiet tulkotā teksta garumu",
+      "options": {
+        "flexible": "Elastīgs",
+        "strict": "Strikts",
+        "exact": "Precīzs",
+        "loose": "Brīvs"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Iekļaujoša valoda",
+      "description": "Nodrošiniet, ka tulkojumi izmanto iekļaujošu valodu"
+    },
+    "formality": {
+      "title": "Formalitāte",
+      "description": "Kontrolējiet tulkojumu formalitātes līmeni",
+      "options": {
+        "casual": "Ikdienišķs",
+        "formal": "Oficiāls",
+        "neutral": "Neitrāls"
+      }
+    },
+    "brandName": {
+      "title": "Zīmola nosaukums",
+      "description": "Iestatiet savu zīmola nosaukumu konsekventai lietošanai",
+      "placeholder": "Ievadiet savu zīmola nosaukumu"
+    },
+    "brandVoice": {
+      "title": "Zīmola balss",
+      "description": "Definējiet savu zīmola balsi un toni",
+      "placeholder": "Aprakstiet savu zīmola balsi..."
+    },
+    "toneOfVoice": {
+      "title": "Balss tonis",
+      "description": "Definējiet toni, kas tiek izmantots tulkojumos",
+      "options": {
+        "casual": "Ikdienišķs",
+        "formal": "Oficiāls",
+        "friendly": "Draudzīgs",
+        "professional": "Profesionāls",
+        "playful": "Spēlīgs",
+        "serious": "Skaidrs",
+        "confident": "Pašpārliecināts",
+        "humble": "Pazemīgs",
+        "direct": "Tiešs",
+        "diplomatic": "Diplomātisks"
+      }
+    },
+    "brand": "Zīmols",
+    "emotiveIntent": {
+      "title": "Emocionālais nodoms",
+      "description": "Iestatiet emocionālo toni tulkojumiem",
+      "options": {
+        "neutral": "Neitrāls",
+        "positive": "Pozitīvs",
+        "empathetic": "Empātisks",
+        "professional": "Profesionāls",
+        "friendly": "Draudzīgs",
+        "enthusiastic": "Entuziasma pilns"
+      }
+    },
+    "domainExpertise": {
+      "title": "Jomas ekspertīze",
+      "description": "Norādiet jomas kontekstu tulkojumiem",
+      "options": {
+        "general": "Vispārīgs",
+        "technical": "Tehnisks",
+        "medical": "Medicīnisks",
+        "legal": "Juridisks",
+        "financial": "Finanšu",
+        "marketing": "Mārketings",
+        "academic": "Akadēmisks"
+      }
+    },
+    "idioms": {
+      "title": "Idiomātiskās izteiksmes",
+      "description": "Pārvaldiet idiomātiskās izteiksmes atbilstoši"
+    },
+    "terminology": {
+      "title": "Terminoloģija",
+      "description": "Pārvaldiet specializēto terminoloģiju un vārdnīcas"
+    },
+    "culturalAdaptation": {
+      "title": "Kultūras pielāgošana",
+      "description": "Pielāgojiet saturu kultūras atbilstībai"
+    }
+  },
+  "pricing": {
+    "title": "Vienkārša cenu noteikšana",
+    "free": {
+      "title": "Bezmaksas",
+      "price": "Bezmaksas",
+      "keys_limit": "Līdz 100 atslēgām",
+      "description": "Ideāli, kad izmēģināt",
+      "features": {
+        "unlimited_projects": "Neierobežoti projekti",
+        "fine_tuning": "Smalkas regulēšanas iespējas",
+        "overrides": "Tulkojumu pārrakstīšana",
+        "analytics": "Analītika",
+        "context_memory": "Konteksta atmiņa",
+        "community_support": "Kopienas atbalsts",
+        "keys_limit": "Līdz 100 atslēgām",
+        "docs_limit": "Līdz 5 dokumentiem",
+        "languages": "2 valodas"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Viss Bezmaksas, plus:",
+      "features": {
+        "github_action": "GitHub Action integrācija",
+        "latest_features": "Agrīna piekļuve jaunākajām funkcijām",
+        "priority_support": "Prioritārais atbalsts",
+        "priority_queues": "Prioritārās tulkošanas rindas",
+        "languages": "Neierobežotas valodas",
+        "keys_limit": "Sākot no 10 000 atslēgām",
+        "docs_limit": "Sākot no 50 dokumentiem"
+      }
+    },
+    "cta": "Sāciet automatizēt",
+    "keys_limit_explanation": "Tulkojamā atslēga: Ja jums ir 20 avota atslēgas (piemēram, \"Pieteikties\" vai \"Laipni lūdzam!\") un tulkojat tās 5 valodās, tas ir 100 tulkotu atslēgu (20 atslēgas x 5 valodas)."
+  },
+  "createTeam": {
+    "teamName": "Komandas nosaukums",
+    "teamNamePlaceholder": "Ievadiet komandas nosaukumu",
+    "createTeamButton": "Izveidot komandu",
+    "cancel": "Atcelt",
+    "createTeamDescription": "Izveidojiet jaunu komandu, lai pārvaldītu savus projektus un sadarbības partnerus."
+  },
+  "createProject": {
+    "createProjectTitle": "Izveidot jaunu projektu",
+    "projectNamePlaceholder": "Ievadiet projekta nosaukumu",
+    "createProjectButton": "Izveidot projektu",
+    "cancel": "Atcelt",
+    "createProjectDescription": "Izveidojiet jaunu projektu, lai sāktu automatizēt savu lokalizāciju."
+  },
+  "invite": {
+    "inviteMember": "Ielūgt biedru",
+    "inviteDescription": "Ielūdziet biedru savā komandā",
+    "emailLabel": "E-pasts",
+    "emailPlaceholder": "Ievadiet e-pastu",
+    "cancel": "Atcelt",
+    "submit": "Iesniegt",
+    "success": {
+      "title": "Ielūgums nosūtīts",
+      "description": "Veiksmīgi nosūtīts ielūgums uz {email}"
+    },
+    "error": {
+      "title": "Kļūda",
+      "description": "Neizdevās nosūtīt ielūgumu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "validation": {
+      "invalidEmail": "Lūdzu, ievadiet derīgu e-pastu"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Iestatiet Languine CLI",
+        "description": "Instalējiet un konfigurējiet Languine CLI, lai pārvaldītu tulkojumus"
+      },
+      "2": {
+        "title": "Nosūtīt tulkojumus",
+        "description": "Gaidām, kad tulkojumi tiks nosūtīti"
+      },
+      "3": {
+        "title": "Dokumentācija",
+        "description": "Pārbaudiet mūsu dokumentāciju detalizētām vadlīnijām un labākajām praksēm",
+        "link": "dokumenti"
+      }
+    },
+    "info": {
+      "description": "Nepieciešama palīdzība? Pārbaudiet mūsu",
+      "link": "dokumenti",
+      "description_2": "detalizētām rokasgrāmatām un labākajām praksēm."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Languine CLI pieteikšanās veiksmīga",
+      "description": "Languine CLI tika veiksmīgi autentificēts kā:",
+      "description_2": "Tagad varat aizvērt šo cilni un atgriezties pie CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Meklēt"
+  },
+  "periods": {
+    "daily": "Dienā",
+    "weekly": "Nedēļā",
+    "monthly": "Mēnesī",
+    "selectPeriod": "Izvēlieties periodu"
+  },
+  "language": {
+    "en": "Angļu",
+    "es": "Spāņu",
+    "fr": "Franču",
+    "de": "Vācu",
+    "it": "Itāļu",
+    "pt": "Portugāļu",
+    "ja": "Japāņu",
+    "ko": "Korejiešu",
+    "ar": "Arābu",
+    "tr": "Turku",
+    "nl": "Nīderlandiešu",
+    "pl": "Poļu",
+    "no": "Norvēģu",
+    "da": "Dāņu",
+    "sv": "Zviedru",
+    "fi": "Somu",
+    "vi": "Vjetnamiešu",
+    "az": "Azerbaijaniešu",
+    "bg": "Bulgāru",
+    "ca": "Kataloniešu",
+    "cs": "Čehs",
+    "el": "Grieķu",
+    "et": "Igauņu",
+    "he": "Ebreju",
+    "hr": "Horvātu",
+    "hu": "Ungāru",
+    "id": "Indoniešu",
+    "iw": "Ebreju",
+    "km": "Khmers",
+    "lv": "Lietuviešu",
+    "pt-BR": "Portugāļu (Brazīlija)",
+    "ro": "Rumāņu",
+    "ru": "Krievu",
+    "sk-SK": "Slovāku (Slovākija)",
+    "sk": "Slovāku",
+    "sr": "Serbu",
+    "ta": "Tamils",
+    "th": "Taizemiešu",
+    "uk": "Ukrainiešu",
+    "zh-CN": "Ķīniešu (Vienkāršotā)",
+    "zh-TW": "Ķīniešu (Tradicionālā)"
+  },
+  "menu": {
+    "dashboard": "Vadības panelis",
+    "tuning": "Regulēšana",
+    "settings": "Iestatījumi",
+    "pricing": "Cenas",
+    "docs": "Dokumentācija",
+    "account": "Konts"
+  },
+  "billing": {
+    "title": "Rēķināšana"
+  },
+  "analytics": {
+    "key": "Tulkotie atslēgas",
+    "document": "Tulkotie dokumenti",
+    "header": "Tulkojumi",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Dec",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Mai",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
+  },
+  "faq": {
+    "title": "Biežāk uzdotie jautājumi",
+    "what_is_languine": {
+      "question": "Kas ir Languine?",
+      "answer": "Languine ir mākslīgā intelekta vadīta lokalizācijas platforma, kas palīdz automatizēt jūsu lietojumprogrammu tulkošanu. Tā piedāvā funkcijas, piemēram, precizēšanas iespējas, tulkošanas pārrakstīšanu, analītiku un konteksta atmiņu, lai nodrošinātu augstas kvalitātes tulkojumus."
+    },
+    "key_limit": {
+      "question": "Kā darbojas atslēgu limits?",
+      "answer": "Tulkota atslēga tiek skaitīta, kad jūs tulkojat avota atslēgu mērķa valodā. Piemēram, ja jums ir 20 avota atslēgas un jūs tās tulkojat 5 valodās, tas ir 100 tulkotu atslēgu (20 atslēgas × 5 valodas)."
+    },
+    "supported_languages": {
+      "question": "Kādas valodas tiek atbalstītas?",
+      "answer": "Languine atbalsta vairāk nekā 100 valodas visos plānos. Lai gan mūsu mākslīgā intelekta vadītie tulkojumi vislabāk darbojas ar galvenajām valodām, mēs cenšamies nodrošināt kvalitatīvus tulkojumus visās atbalstītajās valodās. Ja jums ir specifiskas valodu prasības vai jautājumi par tulkošanas kvalitāti konkrētām valodām, lūdzu, sazinieties ar mūsu atbalsta komandu."
+    },
+    "github_action": {
+      "question": "Kā darbojas GitHub Action integrācija?",
+      "answer": "GitHub Action integrācija (pieejama Pro plānos) ļauj automatizēt jūsu tulkošanas darba plūsmu tieši jūsu CI/CD cauruļvadā. Kad jūs veicat izmaiņas savā repozitorijā, tulkojumi var tikt automātiski atjaunināti."
+    },
+    "support": {
+      "question": "Kādu atbalstu jūs piedāvājat?",
+      "answer": "Bezmaksas lietotājiem ir pieejams kopienas atbalsts, savukārt Pro lietotāji saņem prioritāro atbalstu ar ātrākiem atbildes laikiem un veltītu palīdzību viņu tulkošanas vajadzībām."
+    },
+    "open_source": {
+      "question": "Vai Languine ir atvērtā koda?",
+      "answer": "Jā! Languine ir pilnībā atvērtā koda un pieejama GitHub. Jūs varat piedalīties projektā, ziņot par problēmām, ieteikt funkcijas un pārbaudīt kodu. Mēs ticam caurredzamībai un publiskai būvniecībai."
+    },
+    "open_source_pricing": {
+      "question": "Vai jūs piedāvājat īpašas cenas atvērtā koda projektiem?",
+      "answer": "Jā! Mēs mīlam atbalstīt atvērtā koda kopienu. Ja jūs uzturat atvērtā koda projektu, jūs varat saņemt piekļuvi mūsu Pro funkcijām ar 30% atlaidi. Vienkārši sazinieties ar mūsu komandu ar informāciju par jūsu projektu, un mēs jums izveidosim atlaidi Pro kontu. Tas ir mūsu veids, kā atdot kopienai, kas padara mūsu darbu iespējamu."
+    },
+    "cancel_subscription": {
+      "question": "Kā es varu atcelt savu abonementu?",
+      "answer": "Jūs varat atcelt savu abonementu jebkurā laikā no sava konta iestatījumiem. Dodieties uz Rēķināšana > Mainīt plānu. Jūsu abonements paliks aktīvs līdz jūsu pašreizējā rēķināšanas perioda beigām, pēc tam jūs tiksiet pārcelts uz Bezmaksas plānu."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Līmenis {tier}",
+    "keys": "Tulkotās atslēgas",
+    "documents": "Tulkotie dokumenti",
+    "period": "mēn",
+    "keys_suffix": " atslēgas",
+    "docs_suffix": " dokumenti"
+  },
+  "docs": {
+    "getting-started": "Sākt",
+    "workflow": "Darba plūsma",
+    "ci": "CI/CD",
+    "presets": "Iepriekš iestatījumi",
+    "formats": "Formāti",
+    "platform": "Platforma",
+    "introduction": "Ievads",
+    "quickstart": "Ātrā uzsākšana",
+    "authentication": "Autentifikācija",
+    "configuration": "Konfigurācija",
+    "cli": "CLI",
+    "github-actions": "GitHub darbības",
+    "tuning": "Regulēšana",
+    "settings": "Iestatījumi",
+    "hooks": "Pieslēgvietas",
+    "examples": "Piemēri",
+    "team": "Komanda"
+  },
+  "test": {
+    "title": "Tas ir tests",
+    "description": "Un tas ir testa apraksts",
+    "button": "Noklikšķiniet uz manis"
+  }
+}

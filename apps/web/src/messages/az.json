@@ -1,0 +1,617 @@
+{
+  "header": {
+    "pricing": "Qiymətləndirmə",
+    "docs": "Sənədlər",
+    "signIn": "Daxil olun",
+    "goToApp": "Tətbiqə keç"
+  },
+  "hero": {
+    "title": "Avtomatlaşdırılmış lokalizasiya infrastrukturu",
+    "description": "Tətbiqinizin məzmununu birbaşa inkişaf iş axınınızda tərcümə edin. Bizim CLI GitHub Actions və digər CI/CD alətləri ilə inteqrasiya olunur ki, kod yazarkən tərcümələri avtomatlaşdırsın."
+  },
+  "navigation": {
+    "dashboard": "İdarəetmə paneli",
+    "tuning": "Tənzimləmə",
+    "settings": "Ayarlar",
+    "pricing": "Qiymətləndirmə",
+    "docs": "Sənədləşmə",
+    "account": "Hesab"
+  },
+  "getStarted": {
+    "heading": "Başlayın",
+    "title": "Avtomatlaşdırılmış lokalizasiya infrastrukturu",
+    "description": "Tətbiqinizin məzmununu birbaşa inkişaf iş axınınızda tərcümə edin. Bizim CLI GitHub Actions və digər CI/CD alətləri ilə inteqrasiya olunur ki, kod yazarkən tərcümələri avtomatlaşdırsın.",
+    "button": {
+      "startAutomating": "Avtomatlaşdırmağa başlayın",
+      "readDocumentation": "Sənədləri oxuyun"
+    }
+  },
+  "companies": {
+    "title": "İstifadə edənlər",
+    "addYourCompany": "+ Şirkətinizi əlavə edin"
+  },
+  "activity": {
+    "title": "Fəaliyyət",
+    "loading": "Yüklənir",
+    "noResults": "'{search}' üçün heç bir nəticə yoxdur",
+    "clearSearch": "Axtarışı təmizlə",
+    "loadMore": "Daha çoxunu göstər",
+    "type": {
+      "key": "Açar",
+      "document": "Sənəd"
+    }
+  },
+  "features": {
+    "title": "Xüsusiyyətlər",
+    "fullyOpenSource": "Tam açıq mənbə",
+    "fullyOpenSourceDescription": "Kodumuz GitHub-da ictimaiyyətə açıqdır, şəffaflıq və icma töhfələrini təmin edir.",
+    "noVendorLockIn": "Heç bir satıcıya bağlılıq yoxdur",
+    "noVendorLockInDescription": "Sizi xüsusi bir xidmətə bağlamırıq, öz LLM-lərinizi istifadə edin.",
+    "presetsForExpo": "Expo üçün əvvəlcədən təyin edilmişlər",
+    "presetsForExpoDescription": "Sürətli başlamaq üçün Expo üçün əvvəlcədən təyin edilmişlər təqdim edirik.",
+    "presetForReactNative": "React Native üçün əvvəlcədən təyin edilmiş",
+    "presetForReactNativeDescription": "Sürətli başlamaq üçün React Native üçün əvvəlcədən təyin edilmiş təqdim edirik.",
+    "presetForReactEmail": "React Email Kitabı",
+    "presetForReactEmailDescription": "React Email üçün bir i18n kitabxanası yaratmışıq.",
+    "readyForI18nLibraries": "i18n kitabxanaları üçün hazır",
+    "readyForI18nLibrariesDescription": "Ən populyar olanlar da daxil olmaqla bütün kitabxanaları dəstəkləyirik (next-intl, react-i18next, react-intl və s.)."
+  },
+  "info": {
+    "title": "Tətbiqinizi lokalizasiya etmənin hər aspektini idarə edir",
+    "smartTranslation": {
+      "title": "Ağıllı Tərcümə",
+      "intelligentTranslation": "Kontekstə uyğun ağıllı tərcümə",
+      "brandVoice": "Brend səsi və tonunun ardıcıllığı",
+      "terminology": "Terminologiya idarəçiliyi",
+      "linguisticFeatures": "İrəliləmiş dil xüsusiyyətləri",
+      "realtimeUpdates": "Reallıqda tərcümə yeniləmələri"
+    },
+    "implementation": {
+      "title": "İcra",
+      "quickSetup": "Sürətli quraşdırma və inteqrasiya",
+      "fileFormat": "Fayl formatı idarəçiliyi",
+      "contentStructure": "Məzmun strukturu təşkilatı",
+      "assetOrganization": "Resursların təşkili"
+    },
+    "developer": {
+      "title": "İnkişaf etdirici Təcrübəsi",
+      "cli": "Komanda xətti interfeysi",
+      "cicd": "CI/CD inteqrasiyası",
+      "versionControl": "Versiya nəzarəti",
+      "workflow": "İnkişaf etdirici iş axını",
+      "documentation": "Ətraflı sənədləşmə"
+    }
+  },
+  "login": {
+    "title": "Daxil olun",
+    "github": "GitHub ilə daxil olun",
+    "google": "Google ilə daxil olun",
+    "footer": "Lokalizasiyanızı avtomatlaşdırın.",
+    "description": "Lokalizasiyanızı avtomatlaşdırmağa başlamaq üçün daxil olun.",
+    "terms": {
+      "text": "Daxil olmaqla, bizim",
+      "termsOfService": "Xidmət Şərtləri",
+      "and": "və",
+      "privacyPolicy": "Məxfilik Siyasəti"
+    }
+  },
+  "translations": {
+    "header": "Tərcümə edilmiş açarlar"
+  },
+  "userMenu": {
+    "account": "Hesab Ayarları",
+    "signOut": "Çıxış",
+    "createTeam": "Komanda yaradın",
+    "homepage": "Ana səhifə",
+    "team": "Komanda Ayarları"
+  },
+  "teamSelector": {
+    "addProject": "Layihə yaradın",
+    "createProjectTitle": "Yeni layihə yaradın",
+    "projectNamePlaceholder": "Layihə adı",
+    "createProjectButton": "Layihə yaradın",
+    "pro": "Peşəkar",
+    "project": "Layihə",
+    "teams": "Komandalar",
+    "createTeam": "Komanda yaradın",
+    "createTeamTitle": "Yeni komanda yaradın",
+    "teamNamePlaceholder": "Komanda adı",
+    "createTeamButton": "Komanda yaradın"
+  },
+  "coming_soon": {
+    "title": "Languine Erken Erişimdədir",
+    "description": "Hal-hazırda erkən erişimdəyik. Əlaqə saxlayın",
+    "cta": "erken erişim üçün X-də."
+  },
+  "account": {
+    "fullName": {
+      "title": "Tam Ad",
+      "description": "Platformada görünəcək tam adınız.",
+      "placeholder": "Tam adınızı daxil edin"
+    },
+    "email": {
+      "title": "E-poçt Ünvanı",
+      "description": "Hesabınızla bağlı e-poçt ünvanı.",
+      "placeholder": "E-poçt ünvanınızı daxil edin"
+    },
+    "apiKey": {
+      "title": "API Açarı",
+      "description": "Languine API-yə və CLI-dən daxil olmaq üçün şəxsi API açarınız."
+    },
+    "deleteAccount": {
+      "title": "Hesabı Sil",
+      "description": "Hesabınızı və bütün əlaqəli məlumatları daimi olaraq silin. Bu əməliyyat geri alına bilməz.",
+      "button": "Hesabı Sil"
+    }
+  },
+  "copyInstall": {
+    "copied": "Panoya kopyalandı"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Tam əminsiniz?",
+      "description": "Bu əməliyyat geri alına bilməz. Təsdiq etmək üçün DELETE yazın.",
+      "placeholder": "Təsdiqləmək üçün DELETE yazın",
+      "confirm": "Silinməni təsdiqləyin",
+      "cancel": "İmtina et"
+    }
+  },
+  "pipeline": {
+    "title": "İş Axını (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Tərcümə mühərrikimiz mövcud CI/CD pipeline'ınıza problemsiz inteqrasiya olunur, hər push zamanı kod bazanızı avtomatik olaraq tərcümə edir. Kod dəyişiklikləri göndərildikdə, dəyişdirilmiş məzmunu analiz edirik, tərcümə yaddaşınızı saxlayırıq və markanızın səsini və terminologiyasını qoruyaraq dəqiq tərcümələr yaradırıq. Tərcümələr daha sonra pull request olaraq təqdim edilir, bu da əsas branch'ınıza birləşdirilmədən əvvəl nəzərdən keçirilməyə imkan tanıyır. Bu avtomatlaşdırılmış iş axını, lokalizə edilmiş məzmununuzun inkişafla sinxron qalmasını təmin edir."
+  },
+  "settings": {
+    "badRequest": "Yanlış sorğu",
+    "badRequestDescription": "Təşkilatın ən azı bir sahibi olmalıdır. Bu sahibi silməzdən əvvəl mülkiyyəti başqa bir üzvə keçirin.",
+    "permissionDenied": "İcazə verilmədi",
+    "permissionDeniedDescription": "Bu əməliyyatı yerinə yetirmək üçün komandanın sahibi olmalısınız",
+    "deleteTeamTitle": "Komandanı sil",
+    "deleteTeamDescription": "Tək üzv olduğunuz zaman təşkilatı silmək mümkün deyil, əvəzinə hesabınızı silin",
+    "saved": "Ayarlar saxlanıldı",
+    "savedDescription": "Dəyişiklikləriniz uğurla saxlanıldı",
+    "error": "Nəsə səhv oldu",
+    "errorDescription": "Zəhmət olmasa yenidən cəhd edin və ya dəstək ilə əlaqə saxlayın",
+    "addTeam": "Komanda yaradın",
+    "apiKey": {
+      "updated": "API açarı yeniləndi",
+      "updatedDescription": "API açarınız uğurla yeniləndi və clipboard'a kopyalandı.",
+      "title": "API Açarını Yeniləyin",
+      "description": "Yeni API açarı yaratmaq istədiyinizə əminsiniz? Köhnə açar dərhal işini dayandıracaq.",
+      "cancel": "İmtina et",
+      "continue": "Davam et"
+    },
+    "tabs": {
+      "project": "Layihə",
+      "account": "Hesab",
+      "team": "Komanda",
+      "provider": "Təchizatçı",
+      "billing": "Ödəniş"
+    },
+    "addProject": "Layihə yaradın",
+    "project": {
+      "name": {
+        "title": "Layihə Adı",
+        "description": "Layihənizin adı",
+        "placeholder": "Layihə adını daxil edin"
+      },
+      "id": {
+        "title": "Layihə ID",
+        "description": "Sizin unikal layihə identifikatorunuz",
+        "placeholder": "Layihə ID"
+      },
+      "delete": {
+        "title": "Layihəni Sil",
+        "description": "Bu layihəni və onun bütün məlumatlarını daimi olaraq silin",
+        "button": "Layihəni Sil"
+      }
+    },
+    "save": "Saxla",
+    "team": {
+      "name": {
+        "title": "Komanda Adı",
+        "description": "Komandanızın adı",
+        "placeholder": "Komanda adını daxil edin"
+      },
+      "billing": {
+        "title": "Ödəniş Planı",
+        "description": "Komandanızın ödəniş planını idarə edin",
+        "free": "Pulsuz",
+        "pro": "Pro",
+        "unlimited": "Limitsiz"
+      },
+      "apiKey": {
+        "title": "Komanda API Açarı",
+        "description": "Komanda giriş üçün API açarı, bunu CI/CD pipeline'ınızdan Layihə ID ilə birlikdə istifadə edin",
+        "placeholder": "Komanda API Açarı"
+      },
+      "members": {
+        "leaveTeamConfirm": "Komandanı tərk et",
+        "leaveTeamDescription": "Bu komandadan ayrılmaq istədiyinizə əminsiniz?",
+        "cancel": "İmtina et",
+        "leaveTeam": "Komandanı tərk et",
+        "invite": "Üzv dəvət et",
+        "title": "Üzvlər",
+        "pendingInvitations": "Gözləyən Dəvətlər",
+        "removeMember": "Üzvü sil",
+        "removeMemberConfirm": "Üzvü sil",
+        "removeMemberDescription": "Bu üzvü silmək istədiyinizə əminsiniz?",
+        "filterPlaceholder": "Üzvləri filtr edin...",
+        "allRoles": "Bütün Rollar",
+        "date": "Tarix",
+        "selectAll": "{count} seçildi",
+        "noPendingInvitations": "Gözləyən dəvət yoxdur",
+        "noResults": "Heç bir üzv tapılmadı",
+        "tryDifferentSearch": "Fərqli bir axtarış edin",
+        "inviteMembers": "Üzvləri əməkdaşlığa dəvət edin",
+        "deleteInvite": "Dəvəti sil",
+        "deleteInviteDescription": "Dəvəti silin",
+        "invitedBy": "{name} tərəfindən dəvət olunub",
+        "deleteInviteSuccess": "Dəvət silindi",
+        "deleteInviteError": "Dəvəti silmək mümkün olmadı",
+        "removeMemberSuccess": "Üzv silindi",
+        "removeMemberError": "Üzvü silmək mümkün olmadı",
+        "removeMemberSuccessDescription": "Üzv uğurla silindi",
+        "removeMemberErrorDescription": "Üzvü silmək mümkün olmadı",
+        "roles": {
+          "owner": "Sahib",
+          "member": "Üzv"
+        },
+        "dateSort": {
+          "newest": "Ən Yeni",
+          "oldest": "Ən Köhnə"
+        },
+        "deleteInviteConfirm": "Dəvəti Sil"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Ümumi",
+    "translationMemory": {
+      "title": "Tərcümə Yaddaşı",
+      "description": "Müntəzəmliyi və səmərəliliyi artırmaq üçün tərcümə yaddaşından istifadə edin"
+    },
+    "qualityChecks": {
+      "title": "Keyfiyyət Yoxlamaları",
+      "description": "Tərcümələr üçün avtomatlaşdırılmış keyfiyyət yoxlamalarını aktiv edin"
+    },
+    "contextDetection": {
+      "title": "Kontekstin Aşkarlanması",
+      "description": "Tərcümələrdə konteksti avtomatik aşkarlayın və qoruyun"
+    },
+    "styleGuide": "Üslub Rehberi",
+    "lengthControl": {
+      "title": "Uzunluq İdarəsi",
+      "description": "Tərcümə edilmiş mətnin uzunluğunu idarə edin",
+      "options": {
+        "flexible": "Sərbəst",
+        "strict": "Sıx",
+        "exact": "Dəqiq",
+        "loose": "Sərt"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "İnklüziv Dil",
+      "description": "Tərcümələrin inklüziv dildən istifadə etməsini təmin edin"
+    },
+    "formality": {
+      "title": "Rəsmi",
+      "description": "Tərcümələrin rəsmi səviyyəsini idarə edin",
+      "options": {
+        "casual": "Rəsmi olmayan",
+        "formal": "Rəsmi",
+        "neutral": "Neytral"
+      }
+    },
+    "brandName": {
+      "title": "Marka Adı",
+      "description": "Davamlı istifadə üçün marka adınızı təyin edin",
+      "placeholder": "Marka adınızı daxil edin"
+    },
+    "brandVoice": {
+      "title": "Marka Səsi",
+      "description": "Marka səsinizi və tonunuzu müəyyən edin",
+      "placeholder": "Marka səsinizi təsvir edin..."
+    },
+    "toneOfVoice": {
+      "title": "Səs Tonu",
+      "description": "Tərcümələrdə istifadə olunan tonu müəyyən edin",
+      "options": {
+        "casual": "Rəsmi olmayan",
+        "formal": "Rəsmi",
+        "friendly": "Dostca",
+        "professional": "Peşəkar",
+        "playful": "Oyunbaz",
+        "serious": "Ciddi",
+        "confident": "Özünə inamlı",
+        "humble": "Təvazökar",
+        "direct": "Birbaşa",
+        "diplomatic": "Diplomatik"
+      }
+    },
+    "brand": "Marka",
+    "emotiveIntent": {
+      "title": "Emosional Niyyət",
+      "description": "Tərcümələr üçün emosional tonu təyin edin",
+      "options": {
+        "neutral": "Neytral",
+        "positive": "Müsbət",
+        "empathetic": "Empatik",
+        "professional": "Peşəkar",
+        "friendly": "Dostca",
+        "enthusiastic": "Həyəcanlı"
+      }
+    },
+    "domainExpertise": {
+      "title": "Sahə Mütəxəssisliyi",
+      "description": "Tərcümələr üçün sahə kontekstini müəyyən edin",
+      "options": {
+        "general": "Ümumi",
+        "technical": "Texniki",
+        "medical": "Tibbi",
+        "legal": "Hüquqi",
+        "financial": "Maliyyə",
+        "marketing": "Marketinq",
+        "academic": "Akademik"
+      }
+    },
+    "idioms": {
+      "title": "İfadələr",
+      "description": "İfadələri düzgün idarə edin"
+    },
+    "terminology": {
+      "title": "Terminologiya",
+      "description": "Xüsusi terminologiya və lüğətləri idarə edin"
+    },
+    "culturalAdaptation": {
+      "title": "Mədəni Uyğunlaşma",
+      "description": "Məzmunu mədəni uyğunluq üçün uyğunlaşdırın"
+    }
+  },
+  "pricing": {
+    "title": "Sadə qiymət",
+    "free": {
+      "title": "Pulsuz",
+      "price": "Pulsuz",
+      "keys_limit": "100 açara qədər",
+      "description": "Sınamaq üçün mükəmməl",
+      "features": {
+        "unlimited_projects": "Limitsiz layihələr",
+        "fine_tuning": "Dəqiqləşdirmə seçimləri",
+        "overrides": "Tərcümə üst-üstə düşmələri",
+        "analytics": "Analitika",
+        "context_memory": "Kontekst yaddaşı",
+        "community_support": "İcma dəstəyi",
+        "keys_limit": "100 açara qədər",
+        "docs_limit": "5 sənədə qədər",
+        "languages": "2 dil"
+      }
+    },
+    "pro": {
+      "title": "Peşəkar",
+      "includes_free": "Pulsuzdakı hər şey, əlavə olaraq:",
+      "features": {
+        "github_action": "GitHub Action inteqrasiyası",
+        "latest_features": "Son xüsusiyyətlərə erkən giriş",
+        "priority_support": "Prioritet dəstək",
+        "priority_queues": "Prioritet tərcümə növbələri",
+        "languages": "Limitsiz dillər",
+        "keys_limit": "10 000 açardan başlayaraq",
+        "docs_limit": "50 sənəddən başlayaraq"
+      }
+    },
+    "cta": "Avtomatlaşdırmaya başlayın",
+    "keys_limit_explanation": "Tərcümə edilmiş açar: Əgər 20 mənbə açarınız varsa (məsələn, \"Qeydiyyatdan keç\" və ya \"Xoş gəlmisiniz!\") və bunları 5 dilə tərcümə etsəniz, bu 100 tərcümə edilmiş açara bərabərdir (20 açar x 5 dil)."
+  },
+  "createTeam": {
+    "teamName": "Komanda Adı",
+    "teamNamePlaceholder": "Komanda adını daxil edin",
+    "createTeamButton": "Komanda yaradın",
+    "cancel": "İmtina et",
+    "createTeamDescription": "Layihələrinizi və əməkdaşlarınızı idarə etmək üçün yeni bir komanda yaradın."
+  },
+  "createProject": {
+    "createProjectTitle": "Yeni layihə yaradın",
+    "projectNamePlaceholder": "Layihə adını daxil edin",
+    "createProjectButton": "Layihə yaradın",
+    "cancel": "İmtina et",
+    "createProjectDescription": "Lokalizasiyanızı avtomatlaşdırmağa başlamaq üçün yeni bir layihə yaradın."
+  },
+  "invite": {
+    "inviteMember": "Üzv dəvət et",
+    "inviteDescription": "Komandanıza bir üzv dəvət edin",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Emaili daxil edin",
+    "cancel": "İmtina et",
+    "submit": "Təqdim et",
+    "success": {
+      "title": "Dəvət göndərildi",
+      "description": "{email} ünvanına dəvət uğurla göndərildi"
+    },
+    "error": {
+      "title": "Xəta",
+      "description": "Dəvət göndərmək mümkün olmadı. Zəhmət olmasa yenidən cəhd edin."
+    },
+    "validation": {
+      "invalidEmail": "Zəhmət olmasa düzgün email daxil edin"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Languine CLI-nı qurun",
+        "description": "Tərcümələri idarə etmək üçün Languine CLI-nı quraşdırın və konfiqurasiya edin"
+      },
+      "2": {
+        "title": "Tərcümələri göndərin",
+        "description": "Tərcümələrin göndərilməsini gözləyir"
+      },
+      "3": {
+        "title": "Sənədləşmə",
+        "description": "Ətraflı bələdçilər və ən yaxşı təcrübələr üçün sənədləşməmizə baxın",
+        "link": "sənədləşmə"
+      }
+    },
+    "info": {
+      "description": "Köməyə ehtiyacınız var? Bizim",
+      "link": "sənədləşməmizə baxın",
+      "description_2": "ətraflı bələdçilər və ən yaxşı təcrübələr üçün."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Languine CLI Giriş Uğurlu",
+      "description": "Languine CLI uğurla təsdiqləndi:",
+      "description_2": "İndi bu tabı bağlayıb CLI-yə qayıda bilərsiniz"
+    }
+  },
+  "search": {
+    "placeholder": "Axtar"
+  },
+  "periods": {
+    "daily": "Gündəlik",
+    "weekly": "Həftəlik",
+    "monthly": "Aylıq",
+    "selectPeriod": "Dövrü seçin"
+  },
+  "language": {
+    "en": "İngilis",
+    "es": "İspan",
+    "fr": "Fransız",
+    "de": "Alman",
+    "it": "İtalyan",
+    "pt": "Portuqal",
+    "ja": "Yapon",
+    "ko": "Koreya",
+    "ar": "Ərəb",
+    "tr": "Türk",
+    "nl": "Hollandiya",
+    "pl": "Polyak",
+    "no": "Norveç",
+    "da": "Danimarka",
+    "sv": "İsveç",
+    "fi": "Fin",
+    "vi": "Vyetnam",
+    "az": "Azərbaycan dili",
+    "bg": "Bolqar dili",
+    "ca": "Katalan dili",
+    "cs": "Çex dili",
+    "el": "Yunan dili",
+    "et": "Eston dili",
+    "he": "İvrit",
+    "hr": "Xorvat dili",
+    "hu": "Macar dili",
+    "id": "İndoneziya dili",
+    "iw": "İvrit",
+    "km": "Khmer dili",
+    "lv": "Latviya dili",
+    "pt-BR": "Portuqal dili (Braziliya)",
+    "ro": "Rumın dili",
+    "ru": "Rus dili",
+    "sk-SK": "Slovak dili (Slovakiya)",
+    "sk": "Slovak dili",
+    "sr": "Serb dili",
+    "ta": "Tamil dili",
+    "th": "Tay dili",
+    "uk": "Ukrayna dili",
+    "zh-CN": "Çin dili (Sadələşdirilmiş)",
+    "zh-TW": "Çin dili (Ənənəvi)"
+  },
+  "menu": {
+    "dashboard": "İdarəetmə Paneli",
+    "tuning": "Tənzimləmə",
+    "settings": "Ayarlar",
+    "pricing": "Qiymət",
+    "docs": "Sənədləşmə",
+    "account": "Hesab"
+  },
+  "billing": {
+    "title": "Ödəniş"
+  },
+  "analytics": {
+    "key": "Tərcümə edilmiş açarlar",
+    "document": "Tərcümə edilmiş sənədlər",
+    "header": "Tərcümələr",
+    "months": {
+      "10": "Okty",
+      "11": "Noy",
+      "12": "Dek",
+      "01": "Yan",
+      "02": "Fev",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "May",
+      "06": "İyun",
+      "07": "İyul",
+      "08": "Avq",
+      "09": "Sen"
+    }
+  },
+  "faq": {
+    "title": "Tez-tez verilən suallar",
+    "what_is_languine": {
+      "question": "Languine nədir?",
+      "answer": "Languine, tətbiqlərinizin tərcüməsini avtomatlaşdırmağa kömək edən AI güclü lokalizasiya platformasıdır. Yüksək keyfiyyətli tərcümələri təmin etmək üçün incə tənzimləmə seçimləri, tərcümə üst-üstə düşmələri, analitika və kontekst yaddaşı kimi xüsusiyyətlər təqdim edir."
+    },
+    "key_limit": {
+      "question": "Açar limiti necə işləyir?",
+      "answer": "Tərcümə edilmiş açar, bir mənbə açarını hədəf dilə tərcümə etdiyiniz zaman sayılır. Məsələn, əgər 20 mənbə açarınız varsa və bunları 5 dilə tərcümə etsəniz, bu 100 tərcümə edilmiş açar deməkdir (20 açar × 5 dil)."
+    },
+    "supported_languages": {
+      "question": "Hansılar dəstəklənir?",
+      "answer": "Languine, bütün planlarda 100-dən çox dili dəstəkləyir. AI güclü tərcümələrimiz əsas dillərlə ən yaxşı işləsə də, bütün dəstəklənən dillərdə keyfiyyətli tərcümələr təqdim etməyə çalışırıq. Xüsusi dil tələbləriniz və ya müəyyən dillərdə tərcümə keyfiyyəti ilə bağlı suallarınız varsa, zəhmət olmasa dəstək komandamızla əlaqə saxlayın."
+    },
+    "github_action": {
+      "question": "GitHub Action inteqrasiyası necə işləyir?",
+      "answer": "GitHub Action inteqrasiyası (Pro planlarda mövcuddur) tərcümə iş axınınızı birbaşa CI/CD boru kəmərinizdə avtomatlaşdırmağa imkan verir. Depozitinizə dəyişikliklər etdiyiniz zaman, tərcümələr avtomatik olaraq yenilənə bilər."
+    },
+    "support": {
+      "question": "Hansı dəstəyi təklif edirsiniz?",
+      "answer": "Pulsuz istifadəçilər icma dəstəyinə çıxış əldə edirlər, Pro istifadəçilər isə daha sürətli cavab müddətləri və tərcümə ehtiyacları üçün xüsusi kömək ilə prioritet dəstək alırlar."
+    },
+    "open_source": {
+      "question": "Languine açıq mənbədir?",
+      "answer": "Bəli! Languine tamamilə açıq mənbədir və GitHub-da mövcuddur. Siz layihəyə töhfə verə, məsələləri bildirə, xüsusiyyətlər təklif edə və kodu yoxlaya bilərsiniz. Biz şəffaflığa və ictimai şəkildə inkişaf etməyə inanırıq."
+    },
+    "open_source_pricing": {
+      "question": "Açıq mənbə layihələri üçün xüsusi qiymət təklif edirsiniz?",
+      "answer": "Bəli! Açıq mənbə icmasını dəstəkləməyi sevirik. Əgər açıq mənbə layihəsini idarə edirsinizsə, Pro xüsusiyyətlərimizə 30% endirimlə çıxış əldə edə bilərsiniz. Layihəniz haqqında məlumatlarla komandamızla əlaqə saxlayın, biz sizi endirimli Pro hesabı ilə təmin edəcəyik. Bu, işimizi mümkün edən icmaya geri vermək yolumuzdur."
+    },
+    "cancel_subscription": {
+      "question": "Abunəliyimi necə ləğv edə bilərəm?",
+      "answer": "Abunəliyinizi istənilən vaxt hesab ayarlarından ləğv edə bilərsiniz. Ödəniş > Planı Dəyişdirin bölməsinə keçin. Abunəliyiniz cari ödəniş dövrünün sonuna qədər aktiv qalacaq, bundan sonra Pulsuz plana keçəcəksiniz."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Səviyyə {tier}",
+    "keys": "Tərcümə edilmiş açarlar",
+    "documents": "Tərcümə edilmiş sənədlər",
+    "period": "ay",
+    "keys_suffix": " açar",
+    "docs_suffix": " sənəd"
+  },
+  "docs": {
+    "getting-started": "Başlanğıc",
+    "workflow": "İş Axını",
+    "ci": "CI/CD",
+    "presets": "Qabaqcadan Təyin Edilmişlər",
+    "formats": "Formatlar",
+    "platform": "Platforma",
+    "introduction": "Giriş",
+    "quickstart": "Tez Başlanğıc",
+    "authentication": "Təsdiqləmə",
+    "configuration": "Konfiqurasiya",
+    "cli": "CLI",
+    "github-actions": "GitHub Actions",
+    "tuning": "Tənzimləmə",
+    "settings": "Ayarlar",
+    "hooks": "Hooks",
+    "examples": "Nümunələr",
+    "team": "Komanda"
+  },
+  "test": {
+    "title": "Bu bir testdir",
+    "description": "Və bu bir test təsviridir",
+    "button": "Məni bas"
+  }
+}
