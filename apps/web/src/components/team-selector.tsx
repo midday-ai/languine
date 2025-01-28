@@ -61,13 +61,16 @@ export function TeamSelector() {
       <PopoverTrigger>
         <div className="flex items-center gap-3 uppercase text-xs font-medium">
           <div className="flex items-center gap-2">
-            <span>{currentTeam?.name}</span>
-            <div className="text-[11px] text-primary rounded-full border border-border px-2.5 py-0.5 capitalize">
-              {currentTeam?.plan}
+            <span className="md:hidden">{currentTeam?.name}</span>
+            <div className="hidden md:flex items-center gap-2">
+              <span>{currentTeam?.name}</span>
+              <div className="text-[11px] text-primary rounded-full border border-border px-2.5 py-0.5 capitalize">
+                {currentTeam?.plan}
+              </div>
             </div>
           </div>
-          <span className="text-border text-xl">/</span>
-          <span>{currentProject?.name}</span>
+          <span className="text-border text-xl hidden md:inline">/</span>
+          <span className="hidden md:inline">{currentProject?.name}</span>
         </div>
       </PopoverTrigger>
       <PopoverContent

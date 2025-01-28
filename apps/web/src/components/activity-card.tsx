@@ -37,7 +37,7 @@ export function ActivityCard({
       </div>
 
       <div className="text-secondary font-mono text-xs whitespace-nowrap overflow-hidden p-6 flex items-center justify-between">
-        <div className="flex items-center gap-2 overflow-hidden flex-1 max-w-[calc(100vw-400px)]">
+        <div className="flex items-center gap-2 overflow-hidden flex-1 w-[100px] md:w-full md:max-w-[calc(100vw-400px)]">
           <span className="text-primary truncate">{source} → </span>
           <span
             className="truncate flex-1"

@@ -59,10 +59,10 @@ export default async function Page({
 
       <div className="h-10 mt-10 w-full bg-dotted" />
 
-      <div className="p-8">
+      <div className="p-4 pt-8 md:p-8">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-normal">{t("activity.title")}</h2>
-          <div className="max-w-72 w-full">
+          <div className="max-w-72 w-full hidden md:block">
             <SearchInput />
           </div>
         </div>
