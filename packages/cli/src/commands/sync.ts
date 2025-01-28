@@ -120,14 +120,14 @@ export async function syncCommand(args: string[] = []) {
                   const existingFile = await readFile(targetPath, "utf-8");
                   const existingContent = await parser.parse(existingFile);
 
-                  // Remove deleted keys
-                  let hasRemovedKeys = false;
+                  // Remove deleted keys and track if any were removed
+                  const originalKeyCount = Object.keys(existingContent).length;
                   for (const key of removedKeys) {
-                    if (key in existingContent) {
-                      delete existingContent[key];
-                      hasRemovedKeys = true;
-                    }
+                    delete existingContent[key];
                   }
+
+                  const newKeyCount = Object.keys(existingContent).length;
+                  const hasRemovedKeys = originalKeyCount > newKeyCount;
 
                   if (hasRemovedKeys) {
                     const serialized = await parser.serialize(
