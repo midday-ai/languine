@@ -12,7 +12,6 @@ import { rm } from "node:fs/promises";
 import { join } from "node:path";
 import { localeCommand } from "../commands/locale.js";
 import type { Config } from "../types.js";
-import { configFile, loadConfig } from "../utils/config.js";
 
 // Mock interactive prompts
 mock.module("@clack/prompts", () => ({
@@ -26,7 +25,7 @@ mock.module("@clack/prompts", () => ({
 }));
 
 describe("locale command tests", () => {
-  const testDir = join(process.cwd(), "test-locale-files");
+  const testDir = join(process.cwd(), ".test-output");
   const configPath = join(testDir, "languine.config.json");
   let initialConfig: Config;
 

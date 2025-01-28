@@ -79,3 +79,4 @@ lerna-debug.log*
 .DS_Store
 
 .trigger
+.test-output
