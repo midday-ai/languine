@@ -66,7 +66,6 @@ export function CreateProjectModal() {
         organizationId,
       });
 
-      setOpen(false);
       form.reset();
     } catch (error) {
       console.error("Failed to create project:", error);

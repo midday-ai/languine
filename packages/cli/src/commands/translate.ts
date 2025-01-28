@@ -271,10 +271,12 @@ export async function translateCommand(args: string[] = []) {
           // If in queue, show a pro tip
           if (!isSilent && meta?.plan === "free") {
             if (!checkOnly) {
+              console.log();
               note(
                 "Upgrade to Pro for faster translations https://languine.ai/pricing",
                 "Pro tip",
               );
+              console.log();
             }
           }
 
@@ -364,10 +366,7 @@ export async function translateCommand(args: string[] = []) {
                 translatedAnything = true;
               }
             } catch {
-              note(
-                chalk.red(`Translation failed for ${targetLocale}`),
-                "Error",
-              );
+              chalk.red(`Translation failed for ${targetLocale}`);
             }
           }
         }

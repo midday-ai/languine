@@ -12,6 +12,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Spinner } from "@/components/ui/spinner";
+import { deleteUserPreferences } from "@/lib/user-preferences";
 import { trpc } from "@/trpc/client";
 import { useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
@@ -55,7 +56,8 @@ export function TeamSettings() {
 
   const deleteMutation = trpc.organization.delete.useMutation({
     onSuccess: () => {
-      router.replace("/");
+      deleteUserPreferences();
+      router.replace("/login");
     },
     onError: (error) => {
       if (error.data?.code === "BAD_REQUEST") {

@@ -91,7 +91,25 @@ export const getDefaultOrganization = async (userId: string) => {
   });
 };
 
-export const getAllOrganizationsWithProjects = async (userId: string) => {
+type OrganizationWithProjects = {
+  id: string;
+  name: string;
+  logo: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+  projects: Array<{
+    id: string;
+    name: string;
+    slug: string;
+    organizationId: string;
+    createdAt: Date;
+    updatedAt: Date;
+  }>;
+};
+
+export const getAllOrganizationsWithProjects = async (
+  userId: string,
+): Promise<OrganizationWithProjects[]> => {
   const db = await connectDb();
 
   const result = await db.query.members.findMany({
