@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limit erreicht",
     "description": "Sie haben das Limit für Ihren Plan erreicht. Bitte upgraden Sie Ihren Plan, um fortzufahren."
-  },
-  "cli2": {
-    "no_keys": "Keine Schlüssel zum Übersetzen. Verwenden Sie das --force-Flag, um alle Schlüssel zu übersetzen."
   }
 }

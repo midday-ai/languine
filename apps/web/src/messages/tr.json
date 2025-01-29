@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limit aşıldı",
     "description": "Planınız için limiti aştınız. Devam etmek için lütfen planınızı yükseltin."
-  },
-  "cli2": {
-    "no_keys": "Çevrilecek anahtar yok. Tüm anahtarları çevirmek için --force bayrağını kullanın."
   }
 }

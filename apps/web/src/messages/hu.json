@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limit elérve",
     "description": "Elérte a terve limitjét. Kérjük, frissítse a tervét a folytatáshoz."
-  },
-  "cli2": {
-    "no_keys": "Nincsenek fordítandó kulcsok. Használja a --force kapcsolót az összes kulcs fordításához."
   }
 }

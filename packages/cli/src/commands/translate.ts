@@ -271,7 +271,7 @@ export async function translateCommand(args: string[] = []) {
               tier: Number(meta?.tier) + 1,
             });
 
-            s.stop(chalk.green("Plan upgraded successfully"));
+            s.stop("Plan upgraded successfully");
 
             note("Run `languine translate` again to continue.", "What's next?");
           }
@@ -321,7 +321,7 @@ export async function translateCommand(args: string[] = []) {
               tier: Number(meta?.tier) + 1,
             });
 
-            s.stop(chalk.green("Plan upgraded successfully"));
+            s.stop("Plan upgraded successfully");
 
             note("Run `languine translate` again to continue.", "What's next?");
           }
@@ -453,9 +453,7 @@ export async function translateCommand(args: string[] = []) {
         s.stop();
         if (translatedAnything) {
           outro(
-            chalk.green(
-              `All translations completed in ${duration >= 60 ? `${Math.floor(duration / 60)}m ` : ""}${duration % 60}s`,
-            ),
+            `All translations completed in ${duration >= 60 ? `${Math.floor(duration / 60)}m ` : ""}${duration % 60}s`,
           );
         }
       }

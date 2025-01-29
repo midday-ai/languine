@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Batas tercapai",
     "description": "Anda telah mencapai batas untuk rencana Anda. Silakan tingkatkan rencana Anda untuk melanjutkan."
-  },
-  "cli2": {
-    "no_keys": "Tidak ada kunci untuk diterjemahkan. Gunakan flag --force untuk menerjemahkan semua kunci."
   }
 }

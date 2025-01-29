@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limită atinsă",
     "description": "Ați atins limita pentru planul dumneavoastră. Vă rugăm să vă actualizați planul pentru a continua."
-  },
-  "cli2": {
-    "no_keys": "Nu sunt chei de tradus. Folosiți flag-ul --force pentru a traduce toate cheile."
   }
 }

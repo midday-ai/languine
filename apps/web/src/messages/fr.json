@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limite atteinte",
     "description": "Vous avez atteint la limite de votre plan. Veuillez mettre à niveau votre plan pour continuer."
-  },
-  "cli2": {
-    "no_keys": "Aucune clé à traduire. Utilisez le drapeau --force pour traduire toutes les clés."
   }
 }

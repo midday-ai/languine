@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limits sasniegts",
     "description": "Jūs esat sasniedzis sava plāna limitu. Lūdzu, jauniniet savu plānu, lai turpinātu."
-  },
-  "cli2": {
-    "no_keys": "Nav atslēgu, ko tulkot. Izmantojiet --force karogu, lai tulkotu visas atslēgas."
   }
 }

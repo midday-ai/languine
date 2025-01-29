@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "达到限制",
     "description": "您已达到您计划的限制。请升级您的计划以继续。"
-  },
-  "cli2": {
-    "no_keys": "没有要翻译的键。使用 --force 标志翻译所有键。"
   }
 }

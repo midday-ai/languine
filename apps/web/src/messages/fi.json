@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Raja saavutettu",
     "description": "Olet saavuttanut suunnitelmasi rajan. Ole hyvä ja päivitä suunnitelmasi jatkaaksesi."
-  },
-  "cli2": {
-    "no_keys": "Ei käännettävää avainta. Käytä --force-lippua kääntääksesi kaikki avaimet."
   }
 }

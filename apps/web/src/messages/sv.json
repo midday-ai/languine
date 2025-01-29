@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Gräns nådd",
     "description": "Du har nått gränsen för din plan. Vänligen uppgradera din plan för att fortsätta."
-  },
-  "cli2": {
-    "no_keys": "Inga nycklar att översätta. Använd --force-flaggan för att översätta alla nycklar."
   }
 }

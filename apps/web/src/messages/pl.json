@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Osiągnięto limit",
     "description": "Osiągnąłeś limit swojego planu. Proszę zaktualizować plan, aby kontynuować."
-  },
-  "cli2": {
-    "no_keys": "Brak kluczy do przetłumaczenia. Użyj flagi --force, aby przetłumaczyć wszystkie klucze."
   }
 }

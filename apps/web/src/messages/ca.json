@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Límit assolit",
     "description": "Has assolit el límit del teu pla. Si us plau, actualitza el teu pla per continuar."
-  },
-  "cli2": {
-    "no_keys": "No hi ha claus per traduir. Utilitzeu la bandera --force per traduir totes les claus."
   }
 }

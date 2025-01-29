@@ -610,8 +610,5 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
-  },
-  "cli2": {
-    "no_keys": "No keys to translate. Use --force flag to translate all keys."
   }
 }

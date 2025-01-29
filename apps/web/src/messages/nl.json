@@ -618,8 +618,5 @@
   "limit_reached": {
     "title": "Limiet bereikt",
     "description": "U heeft de limiet voor uw plan bereikt. Upgrade alstublieft uw plan om door te gaan."
-  },
-  "cli2": {
-    "no_keys": "Geen sleutels om te vertalen. Gebruik de --force vlag om alle sleutels te vertalen."
   }
 }
