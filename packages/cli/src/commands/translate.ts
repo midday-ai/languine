@@ -21,11 +21,26 @@ const { BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
   const forceIndex = args.indexOf("--force");
+  const apiKeyIndex = args.indexOf("--api-key");
+  const projectIdIndex = args.indexOf("--project-id");
+  const baseIndex = args.indexOf("--base");
 
   return {
     forceTranslate: forceIndex !== -1,
     isSilent: args.includes("--silent"),
     checkOnly: args.includes("--check"),
+    apiKey:
+      apiKeyIndex !== -1 && args.length > apiKeyIndex + 1
+        ? args[apiKeyIndex + 1]
+        : undefined,
+    projectId:
+      projectIdIndex !== -1 && args.length > projectIdIndex + 1
+        ? args[projectIdIndex + 1]
+        : undefined,
+    base:
+      baseIndex !== -1 && args.length > baseIndex + 1
+        ? args[baseIndex + 1]
+        : undefined,
     forcedLocales:
       forceIndex !== -1 &&
       args.length > forceIndex + 1 &&
@@ -40,12 +55,19 @@ type TranslationResult = {
 };
 
 export async function translateCommand(args: string[] = []) {
-  const { forceTranslate, isSilent, checkOnly, forcedLocales } =
-    argsSchema.parse(args);
+  const {
+    forceTranslate,
+    isSilent,
+    checkOnly,
+    forcedLocales,
+    apiKey: overrideApiKey,
+    projectId: overrideProjectId,
+    base,
+  } = argsSchema.parse(args);
   const s = spinner();
   const startTime = Date.now();
 
-  const apiKey = getAPIKey();
+  const apiKey = overrideApiKey || getAPIKey();
   const gitInfo = await getGitInfo();
 
   if (!apiKey) {
@@ -68,7 +90,8 @@ export async function translateCommand(args: string[] = []) {
       process.exit(1);
     }
 
-    const projectId = config.projectId || process.env.LANGUINE_PROJECT_ID;
+    const projectId =
+      overrideProjectId || config.projectId || process.env.LANGUINE_PROJECT_ID;
     let translatedAnything = false;
     let needsUpdates = false;
     let totalKeysToTranslate = 0;
@@ -81,7 +104,7 @@ export async function translateCommand(args: string[] = []) {
 
     if (!projectId) {
       note(
-        "Project ID not found in configuration file or LANGUINE_PROJECT_ID environment variable. Please run `languine init` to create one, set the `projectId` in your configuration file, or set the LANGUINE_PROJECT_ID environment variable.",
+        "Project ID not found. Please provide it via --project-id flag, configuration file, or LANGUINE_PROJECT_ID environment variable.",
         "Error",
       );
 
@@ -152,7 +175,11 @@ export async function translateCommand(args: string[] = []) {
           } else {
             // Otherwise use normal diff detection
             try {
-              const changes = await getDiff({ sourceFilePath, type });
+              const changes = await getDiff({
+                sourceFilePath,
+                type,
+                base,
+              });
               // Include both new keys and changed values
               keysToTranslate = [
                 ...changes.addedKeys,
@@ -161,7 +188,9 @@ export async function translateCommand(args: string[] = []) {
             } catch (error) {
               console.log();
               note(
-                "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                base
+                  ? `Failed to compare against '${base}'. Make sure the branch/ref exists and contains the source files.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting`
+                  : "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
                 "Diffing",
               );
               console.log();
@@ -450,10 +479,16 @@ export async function translateCommand(args: string[] = []) {
       const duration = Math.round((Date.now() - startTime) / 1000);
       if (checkOnly) {
         if (needsUpdates) {
-          s.stop("Updates needed");
+          s.stop(chalk.red("Updates needed"));
+          if (totalKeysToTranslate > 0) {
+            note(
+              `Found ${totalKeysToTranslate} ${totalKeysToTranslate === 1 ? "key" : "keys"} that need translation.\nRun without --check to update translations.`,
+              "Translation Required",
+            );
+          }
           process.exit(1);
         } else {
-          s.stop("No updates needed");
+          s.stop(chalk.green("No updates needed"));
           process.exit(0);
         }
       } else {

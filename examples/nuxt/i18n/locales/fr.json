@@ -1,0 +1,27 @@
+{
+  "layouts": {
+    "title": "Page - {title}"
+  },
+  "pages": {
+    "title": {
+      "top": "Haut",
+      "about": "À propos de ce site"
+    }
+  },
+  "snakeCaseText": "@.snakeCase:{'pages.title.about'}",
+  "pascalCaseText": "@.pascalCase:{'pages.title.about'}",
+  "welcome": "Bienvenue",
+  "hello": "Bonjour {name} !",
+  "tag": "<p>Étiquette</p>",
+  "items": {
+    "0": {
+      "name": "pomme"
+    },
+    "1": {
+      "name": "banane"
+    },
+    "2": {
+      "name": "fraise"
+    }
+  }
+}

@@ -1,11 +1,12 @@
 {
   "name": "@languine/action",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "dependencies": {
+    "@languine/cli": "latest",
     "octokit": "^4.1.0",
-    "ora": "^8.1.1"
+    "ora": "^8.1.1",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "typescript": "^5.7.3"

@@ -1,0 +1,27 @@
+{
+  "layouts": {
+    "title": "Sida - {title}"
+  },
+  "pages": {
+    "title": {
+      "top": "Topp",
+      "about": "Om denna webbplats"
+    }
+  },
+  "snakeCaseText": "@.snakeCase:{'pages.title.about'}",
+  "pascalCaseText": "@.pascalCase:{'pages.title.about'}",
+  "welcome": "Välkommen",
+  "hello": "Hej {name} !",
+  "tag": "<p>Tagg</p>",
+  "items": {
+    "0": {
+      "name": "äpple"
+    },
+    "1": {
+      "name": "banan"
+    },
+    "2": {
+      "name": "jordgubbe"
+    }
+  }
+}

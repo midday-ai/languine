@@ -1,0 +1,27 @@
+{
+  "layouts": {
+    "title": "Seite - {title}"
+  },
+  "pages": {
+    "title": {
+      "top": "Oben",
+      "about": "Über diese Seite"
+    }
+  },
+  "snakeCaseText": "@.snakeCase:{'pages.title.about'}",
+  "pascalCaseText": "@.pascalCase:{'pages.title.about'}",
+  "welcome": "Willkommen",
+  "hello": "Hallo {name} !",
+  "tag": "<p>Tag</p>",
+  "items": {
+    "0": {
+      "name": "Apfel"
+    },
+    "1": {
+      "name": "Banane"
+    },
+    "2": {
+      "name": "Erdbeere"
+    }
+  }
+}

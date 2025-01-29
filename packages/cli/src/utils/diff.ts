@@ -16,7 +16,7 @@ interface DiffResult {
 }
 
 /**
- * Detects changes between the current state and HEAD.
+ * Detects changes between the current state and a specified git ref (defaults to HEAD).
  * For untracked files, treats all keys as additions.
  * Also detects when source values change without key changes.
  * Returns an object containing arrays of added, removed and changed keys,
@@ -25,9 +25,11 @@ interface DiffResult {
 export async function getDiff({
   sourceFilePath,
   type,
+  base,
 }: {
   sourceFilePath: string;
   type: string;
+  base?: string;
 }): Promise<DiffResult> {
   // Initialize git in the directory containing the source file
   const git = simpleGit(dirname(sourceFilePath));
@@ -56,10 +58,10 @@ export async function getDiff({
       };
     }
 
-    // Get and parse previous version from git HEAD
-    // Use relative path from git root
+    // Get and parse previous version from specified base or HEAD
     const relativePath = relative(dirname(sourceFilePath), sourceFilePath);
-    const content = await git.show([`HEAD:./${relativePath}`]);
+    const gitRef = base || "HEAD";
+    const content = await git.show([`${gitRef}:./${relativePath}`]);
     const previousJson = await parser.parse(content);
     const previousKeys = Object.keys(previousJson).sort();
 
