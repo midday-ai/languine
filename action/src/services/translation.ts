@@ -7,19 +7,13 @@ export class LanguineTranslationService implements TranslationService {
     return process.env.DEV_MODE === "true";
   }
 
-  private getCliCommand(cliVersion: string): string {
+  private getCliCommand(cliVersion = "latest"): string {
     if (this.isDevMode()) {
       console.log("Development mode: Using local CLI");
       return "languine";
     }
 
-    const command =
-      cliVersion === "latest"
-        ? "bunx @languine/cli"
-        : `bunx @languine/cli@${cliVersion}`;
-
-    console.log(`Production mode: Using CLI version ${cliVersion}`);
-    return command;
+    return `bunx languine@${cliVersion}`;
   }
 
   async runTranslation(config: Config): Promise<void> {
@@ -60,6 +54,7 @@ export class LanguineTranslationService implements TranslationService {
     if (this.isDevMode()) {
       console.log("Staging changes in development mode");
     }
+
     await execAsync("git add .");
   }
 }

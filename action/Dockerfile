@@ -9,20 +9,20 @@ COPY package.json tsconfig.json /action/
 # Install action dependencies
 RUN bun install
 
-# Set up dev mode if needed
-# RUN if [ "$DEV_MODE" = "true" ]; then \
-#     echo "Setting up development mode" && \
-#     cd "$GITHUB_WORKSPACE/packages/cli" && \
-#     bun link && \
-#     cd /action && \
-#     bun link languine; \
-#     fi
-
 # Copy action source code
 COPY src /action/src
 
-# Run action
+# Run action with environment detection
 CMD ["sh", "-c", "\
-    cd \"$GITHUB_WORKSPACE\" && \
-    bun /action/src/index.ts \
+    if [ \"$DEV_MODE\" = \"true\" ]; then \
+        echo \"Running in development mode\" && \
+        cd \"$GITHUB_WORKSPACE/packages/cli\" && \
+        bun install && \
+        bun link && \
+        cd /action && \
+        bun link languine; \
+    else \
+        cd \"$GITHUB_WORKSPACE\" && \
+        bun /action/src/index.ts; \
+    fi \
 "]

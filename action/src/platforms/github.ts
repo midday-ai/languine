@@ -16,6 +16,7 @@ export class GitHubPlatform implements GitPlatform {
         "GITHUB_TOKEN is missing, please set the GITHUB_TOKEN environment variable.",
         "Error",
       );
+
       process.exit(1);
     }
 
@@ -28,6 +29,7 @@ export class GitHubPlatform implements GitPlatform {
         "GITHUB_REPOSITORY is missing, please set the GITHUB_REPOSITORY environment variable.",
         "Error",
       );
+
       process.exit(1);
     }
 
