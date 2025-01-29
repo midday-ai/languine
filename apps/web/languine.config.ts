@@ -50,8 +50,8 @@ export default defineConfig({
     json: {
       include: ["src/messages/[locale].json"],
     },
-    // mdx: {
-    //   include: ["src/markdown/docs/en/*.mdx"],
-    // },
+    mdx: {
+      include: ["src/markdown/docs/en/*.mdx"],
+    },
   },
 });

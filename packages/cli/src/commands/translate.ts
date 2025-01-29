@@ -72,6 +72,12 @@ export async function translateCommand(args: string[] = []) {
     let translatedAnything = false;
     let needsUpdates = false;
     let totalKeysToTranslate = 0;
+    let hasShownEmptyDocMessage = false;
+    const allTranslationInputs: Array<{
+      type: string;
+      sourceFilePath: string;
+      input: Array<{ key: string; sourceText: string; sourceFile: string }>;
+    }> = [];
 
     if (!projectId) {
       note(
@@ -120,6 +126,21 @@ export async function translateCommand(args: string[] = []) {
           const sourceFileContent = await readFile(sourceFilePath, "utf-8");
           const parsedSourceFile = await parser.parse(sourceFileContent);
 
+          // Skip empty markdown documents
+          if (
+            (type === "mdx" || type === "md") &&
+            Object.keys(parsedSourceFile).length === 0
+          ) {
+            if (!isSilent && !hasShownEmptyDocMessage) {
+              s.stop();
+              const fileName = sourceFilePath.split("/").pop();
+              note(`Skipping ${fileName} - Empty document`, "Empty Document");
+              hasShownEmptyDocMessage = true;
+              s.start();
+            }
+            continue;
+          }
+
           let keysToTranslate: string[];
 
           if (forceTranslate) {
@@ -156,7 +177,7 @@ export async function translateCommand(args: string[] = []) {
               if (!isSilent) {
                 console.log(
                   chalk.yellow(
-                    `  ${keysToTranslate.length} ${keysToTranslate.length === 1 ? "key" : "keys"} to translate`,
+                    `  ${keysToTranslate.length} ${keysToTranslate.length === 1 ? "key" : "keys"} to translate in ${sourceFilePath.split("/").pop()}`,
                   ),
                 );
               }
@@ -176,241 +197,244 @@ export async function translateCommand(args: string[] = []) {
             }));
 
           if (translationInput.length > 0) {
-            if (!isSilent) {
-              s.message(
-                `Translating ${translationInput.length} keys to ${effectiveTargetLocales.length} languages...`,
-              );
-            }
-          } else {
-            if (!isSilent) {
-              s.stop("No keys to translate, skipping...");
-              console.log();
-              note(
-                "You can use the --force flag to translate all keys.",
-                "Force translation",
-              );
-            }
-            continue;
+            allTranslationInputs.push({
+              type,
+              sourceFilePath,
+              input: translationInput,
+            });
           }
+        }
+      }
+    }
 
-          let result: TranslationResult;
+    // Handle case when no changes are found across all files
+    if (allTranslationInputs.length === 0 && !isSilent) {
+      s.stop();
+      note(
+        "No keys to translate. Use --force flag to translate all keys.",
+        "No Changes",
+      );
+      process.exit(0);
+    }
 
-          const { error, run, meta } = await client.jobs.startJob.mutate({
-            apiKey: apiKey,
-            projectId,
-            sourceFormat: type,
-            sourceLanguage: sourceLocale,
-            targetLanguages: effectiveTargetLocales,
-            content: translationInput,
-            branch: gitInfo?.branchName,
-            commit: gitInfo?.commitHash,
-            sourceProvider: gitInfo?.provider,
-            commitMessage: gitInfo?.commitMessage,
-            commitLink: gitInfo?.commitLink,
-          });
+    // Process all translation inputs
+    for (const { type, sourceFilePath, input } of allTranslationInputs) {
+      if (!isSilent) {
+        s.message(
+          `Translating ${input.length} ${input.length === 1 ? "key" : "keys"} from ${sourceFilePath.split("/").pop()} to ${effectiveTargetLocales.length} ${effectiveTargetLocales.length === 1 ? "language" : "languages"}...`,
+        );
+      }
 
-          if (error?.code === "LANGUAGES_LIMIT_REACHED") {
-            s.stop();
-            note(
-              "Languages limit reached. Upgrade your plan to increase your limit.",
-              "Limit reached",
+      let result: TranslationResult;
+
+      const { error, run, meta } = await client.jobs.startJob.mutate({
+        apiKey: apiKey,
+        projectId,
+        sourceFormat: type,
+        sourceLanguage: sourceLocale,
+        targetLanguages: effectiveTargetLocales,
+        content: input,
+        branch: gitInfo?.branchName,
+        commit: gitInfo?.commitHash,
+        sourceProvider: gitInfo?.provider,
+        commitMessage: gitInfo?.commitMessage,
+        commitLink: gitInfo?.commitLink,
+      });
+
+      if (error?.code === "LANGUAGES_LIMIT_REACHED") {
+        s.stop();
+        note(
+          "Languages limit reached. Upgrade your plan to increase your limit.",
+          "Limit reached",
+        );
+
+        const shouldUpgrade = await select({
+          message: "Would you like to upgrade your plan now?",
+          options: [
+            { label: "Upgrade plan", value: "upgrade" },
+            { label: "Cancel", value: "cancel" },
+          ],
+        });
+
+        if (shouldUpgrade === "upgrade") {
+          // Open upgrade URL in browser
+          if (meta?.plan === "free") {
+            await open(
+              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
             );
+          } else {
+            s.start("Upgrading plan...");
 
-            const shouldUpgrade = await select({
-              message: "Would you like to upgrade your plan now?",
-              options: [
-                { label: "Upgrade plan", value: "upgrade" },
-                { label: "Cancel", value: "cancel" },
-              ],
+            // Just upgrade the plan
+            await client.organization.updatePlan.mutate({
+              organizationId: meta?.organizationId,
+              tier: Number(meta?.tier) + 1,
             });
 
-            if (shouldUpgrade === "upgrade") {
-              // Open upgrade URL in browser
-              if (meta?.plan === "free") {
-                await open(
-                  `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
-                );
-              } else {
-                s.start("Upgrading plan...");
+            s.stop(chalk.green("Plan upgraded successfully"));
 
-                // Just upgrade the plan
-                await client.organization.updatePlan.mutate({
-                  organizationId: meta?.organizationId,
-                  tier: Number(meta?.tier) + 1,
-                });
-
-                s.stop(chalk.green("Plan upgraded successfully"));
-
-                note(
-                  "Run `languine translate` again to continue.",
-                  "What's next?",
-                );
-              }
-            }
-
-            process.exit(1);
+            note("Run `languine translate` again to continue.", "What's next?");
           }
+        }
 
-          if (
-            error?.code === "DOCUMENT_LIMIT_REACHED" ||
-            error?.code === "KEY_LIMIT_REACHED"
-          ) {
-            s.stop();
+        process.exit(1);
+      }
 
-            if (error?.code === "DOCUMENT_LIMIT_REACHED") {
-              note(
-                "Document limit reached. Upgrade your plan to increase your limit.",
-                "Limit reached",
-              );
-            } else {
-              note(
-                "Translation keys limit reached. Upgrade your plan to increase your limit.",
-                "Limit reached",
-              );
-            }
+      if (
+        error?.code === "DOCUMENT_LIMIT_REACHED" ||
+        error?.code === "KEY_LIMIT_REACHED"
+      ) {
+        s.stop();
 
-            const shouldUpgrade = await select({
-              message: "Would you like to upgrade your plan now?",
-              options: [
-                { label: "Upgrade plan", value: "upgrade" },
-                { label: "Cancel", value: "cancel" },
-              ],
+        if (error?.code === "DOCUMENT_LIMIT_REACHED") {
+          note(
+            "Document limit reached. Upgrade your plan to increase your limit.",
+            "Limit reached",
+          );
+        } else {
+          note(
+            "Translation keys limit reached. Upgrade your plan to increase your limit.",
+            "Limit reached",
+          );
+        }
+
+        const shouldUpgrade = await select({
+          message: "Would you like to upgrade your plan now?",
+          options: [
+            { label: "Upgrade plan", value: "upgrade" },
+            { label: "Cancel", value: "cancel" },
+          ],
+        });
+
+        if (shouldUpgrade === "upgrade") {
+          // Open upgrade URL in browser
+          if (meta?.plan === "free") {
+            await open(
+              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+            );
+          } else {
+            s.start("Upgrading plan...");
+
+            // Just upgrade the plan
+            await client.organization.updatePlan.mutate({
+              organizationId: meta?.organizationId,
+              tier: Number(meta?.tier) + 1,
             });
 
-            if (shouldUpgrade === "upgrade") {
-              // Open upgrade URL in browser
-              if (meta?.plan === "free") {
-                await open(
-                  `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
-                );
-              } else {
-                s.start("Upgrading plan...");
+            s.stop(chalk.green("Plan upgraded successfully"));
 
-                // Just upgrade the plan
-                await client.organization.updatePlan.mutate({
-                  organizationId: meta?.organizationId,
-                  tier: Number(meta?.tier) + 1,
-                });
+            note("Run `languine translate` again to continue.", "What's next?");
+          }
+        }
 
-                s.stop(chalk.green("Plan upgraded successfully"));
+        process.exit(1);
+      }
 
-                note(
-                  "Run `languine translate` again to continue.",
-                  "What's next?",
-                );
-              }
-            }
+      if (!run) {
+        s.stop();
+        note("Translation job not found", "Error");
+        process.exit(1);
+      }
 
-            process.exit(1);
+      // If in queue, show a pro tip
+      if (!isSilent && meta?.plan === "free") {
+        if (!checkOnly) {
+          console.log();
+          note(
+            "Upgrade to Pro for faster translations https://languine.ai/pricing",
+            "Pro tip",
+          );
+          console.log();
+        }
+      }
+
+      await auth.withAuth({ accessToken: run.publicAccessToken }, async () => {
+        for await (const update of runs.subscribeToRun(run.id)) {
+          if (update.metadata?.progress && !isSilent) {
+            s.message(
+              `Translating: ${Math.round(Number(update.metadata.progress))}%`,
+            );
           }
 
-          if (!run) {
-            s.stop();
-            note("Translation job not found", "Error");
-            process.exit(1);
+          if (update.finishedAt) {
+            result = update.output;
+            break;
           }
+        }
+      });
 
-          // If in queue, show a pro tip
-          if (!isSilent && meta?.plan === "free") {
-            if (!checkOnly) {
-              console.log();
-              note(
-                "Upgrade to Pro for faster translations https://languine.ai/pricing",
-                "Pro tip",
-              );
-              console.log();
-            }
-          }
+      if (!isSilent) {
+        s.message("Processing translations...");
+      }
 
-          await auth.withAuth(
-            { accessToken: run.publicAccessToken },
-            async () => {
-              for await (const update of runs.subscribeToRun(run.id)) {
-                if (update.metadata?.progress && !isSilent) {
-                  s.message(
-                    `Translating: ${Math.round(
-                      Number(update.metadata.progress),
-                    )}%`,
-                  );
-                }
-
-                if (update.finishedAt) {
-                  result = update.output;
-                  break;
-                }
-              }
-            },
+      // Process results for each target locale
+      for (const targetLocale of effectiveTargetLocales) {
+        try {
+          const targetPath = transformLocalePath(
+            sourceFilePath,
+            sourceLocale,
+            targetLocale,
+            process.cwd(),
           );
 
-          if (!isSilent) {
-            s.message("Processing translations...");
+          // Create directory if it doesn't exist
+          await mkdir(dirname(targetPath), { recursive: true });
+
+          const parser = createParser({ type });
+
+          // Read existing target file if it exists
+          let existingContent: Record<string, string> = {};
+          let originalFileContent: string | undefined;
+          try {
+            const existingFile = await readFile(targetPath, "utf-8");
+            originalFileContent = existingFile;
+            existingContent = await parser.parse(existingFile);
+          } catch (error) {
+            // File doesn't exist yet, use empty object
           }
 
-          // Process results for each target locale
-          for (const targetLocale of effectiveTargetLocales) {
-            try {
-              const targetPath = transformLocalePath(
-                sourceFilePath,
-                sourceLocale,
-                targetLocale,
-                process.cwd(),
-              );
+          // Read source file for serialization context
+          const sourceFileContent = await readFile(sourceFilePath, "utf-8");
 
-              // Create directory if it doesn't exist
-              await mkdir(dirname(targetPath), { recursive: true });
+          // Convert the translations and merge with existing content
+          const translatedContent = Object.fromEntries(
+            input.map((item, index) => [
+              item.key,
+              result.translations[targetLocale][index].translatedText,
+            ]),
+          );
 
-              // Read existing target file if it exists
-              let existingContent: Record<string, string> = {};
-              let originalFileContent: string | undefined;
-              try {
-                const existingFile = await readFile(targetPath, "utf-8");
-                originalFileContent = existingFile;
-                existingContent = await parser.parse(existingFile);
-              } catch (error) {
-                // File doesn't exist yet, use empty object
-              }
+          const mergedContent = {
+            ...existingContent,
+            ...translatedContent,
+          };
 
-              // Convert the translations and merge with existing content
-              const translatedContent = Object.fromEntries(
-                translationInput.map((item, index) => [
-                  item.key,
-                  result.translations[targetLocale][index].translatedText,
-                ]),
-              );
+          // Pass the original file content as a string if it exists
+          const serialized = await parser.serialize(
+            targetLocale,
+            mergedContent,
+            originalFileContent,
+            sourceFileContent,
+          );
 
-              const mergedContent = {
-                ...existingContent,
-                ...translatedContent,
-              };
-
-              // Pass the original file content as a string if it exists
-              const serialized = await parser.serialize(
-                targetLocale,
-                mergedContent,
-                originalFileContent,
-                sourceFileContent,
-              );
-
-              // Run beforeSaving hook if configured
-              let finalContent = serialized;
-              if (config?.hooks?.beforeSaving) {
-                finalContent = await config.hooks.beforeSaving({
-                  content: serialized,
-                  filePath: targetPath,
-                  locale: targetLocale,
-                  format: type,
-                });
-              }
-
-              await writeFile(targetPath, finalContent, "utf-8");
-
-              if (translationInput.length > 0) {
-                translatedAnything = true;
-              }
-            } catch {
-              chalk.red(`Translation failed for ${targetLocale}`);
-            }
+          // Run beforeSaving hook if configured
+          let finalContent = serialized;
+          if (config?.hooks?.beforeSaving) {
+            finalContent = await config.hooks.beforeSaving({
+              content: serialized,
+              filePath: targetPath,
+              locale: targetLocale,
+              format: type,
+            });
           }
+
+          await writeFile(targetPath, finalContent, "utf-8");
+
+          if (input.length > 0) {
+            translatedAnything = true;
+          }
+        } catch {
+          chalk.red(`Translation failed for ${targetLocale}`);
         }
       }
     }

@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Grænse nået",
     "description": "Du har nået grænsen for din plan. Opgrader venligst din plan for at fortsætte."
+  },
+  "cli2": {
+    "no_keys": "Ingen nøgler at oversætte. Brug --force flaget for at oversætte alle nøgler."
   }
 }

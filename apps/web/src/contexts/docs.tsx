@@ -134,6 +134,7 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
       title: t("platform"),
       items: [
         { href: "/docs/tuning", label: t("tuning") },
+        { href: "/docs/overrides", label: t("overrides") },
         { href: "/docs/settings", label: t("settings") },
         { href: "/docs/team", label: t("team") },
       ],

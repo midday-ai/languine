@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Dosegnut limit",
     "description": "Dosegnuli ste limit za vaš plan. Molimo vas da nadogradite svoj plan kako biste nastavili."
+  },
+  "cli2": {
+    "no_keys": "Nema ključeva za prevođenje. Koristite --force opciju za prevođenje svih ključeva."
   }
 }

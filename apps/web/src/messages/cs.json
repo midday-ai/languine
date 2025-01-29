@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Limit dosažen",
     "description": "Dosáhli jste limitu svého plánu. Prosím, upgradujte svůj plán, abyste mohli pokračovat."
+  },
+  "cli2": {
+    "no_keys": "Žádné klíče k překladu. Použijte příznak --force pro překlad všech klíčů."
   }
 }

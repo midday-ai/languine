@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Limite atingido",
     "description": "Você atingiu o limite do seu plano. Por favor, faça upgrade para continuar."
+  },
+  "cli2": {
+    "no_keys": "Nenhuma chave para traduzir. Use a flag --force para traduzir todas as chaves."
   }
 }

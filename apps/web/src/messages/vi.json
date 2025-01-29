@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Đã đạt giới hạn",
     "description": "Bạn đã đạt giới hạn cho gói của mình. Vui lòng nâng cấp gói của bạn để tiếp tục."
+  },
+  "cli2": {
+    "no_keys": "Không có khóa nào để dịch. Sử dụng cờ --force để dịch tất cả các khóa."
   }
 }

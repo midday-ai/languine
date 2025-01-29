@@ -618,5 +618,8 @@
   "limit_reached": {
     "title": "Limitə çatıldı",
     "description": "Sizin planınız üçün limitə çatmısınız. Davam etmək üçün planınızı yüksəldin."
+  },
+  "cli2": {
+    "no_keys": "Tərcümə ediləcək açar yoxdur. Bütün açarları tərcümə etmək üçün --force bayrağından istifadə edin."
   }
 }
