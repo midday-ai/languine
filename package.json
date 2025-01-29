@@ -25,5 +25,8 @@
 >>>>>>> 4856007 (wip)
     "turbo": "2.3.4",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1"
   }
 }

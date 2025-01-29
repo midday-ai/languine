@@ -1,16 +1,28 @@
 FROM oven/bun:1
 
 # Create and set working directory
-WORKDIR /app
+WORKDIR /action
 
-# Copy package files
-COPY package.json bun.lockb /app/
+# Copy package files and config files for the action
+COPY package.json tsconfig.json /action/
 
-# Install dependencies
-RUN bun i
+# Install action dependencies
+RUN bun install
 
-# Copy source code
-COPY src /app/src
+# Set up dev mode if needed
+# RUN if [ "$DEV_MODE" = "true" ]; then \
+#     echo "Setting up development mode" && \
+#     cd "$GITHUB_WORKSPACE/packages/cli" && \
+#     bun link && \
+#     cd /action && \
+#     bun link languine; \
+#     fi
+
+# Copy action source code
+COPY src /action/src
 
 # Run action
-ENTRYPOINT ["bun", "src/index.ts"]
+CMD ["sh", "-c", "\
+    cd \"$GITHUB_WORKSPACE\" && \
+    bun /action/src/index.ts \
+"]

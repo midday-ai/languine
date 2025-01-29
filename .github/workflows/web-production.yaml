@@ -1,0 +1,28 @@
+name: Deploy Web - Production
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/web/**
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 🔄 Run Languine CLI
+        uses: ./action
+        env:
+          LANGUINE_API_KEY: ${{ secrets.LANGUINE_API_KEY }}
+          LANGUINE_PROJECT_ID: ${{ secrets.LANGUINE_PROJECT_ID }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          GITHUB_TOKEN: "test"
+          GITHUB_REPOSITORY: "languine-ai/languine"
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+          dev-mode: ${{ env.ACT == 'true' }}
+          cli-version: latest
+          commitMessage: ${{ secrets.LANGUINE_COMMIT_MESSAGE }}

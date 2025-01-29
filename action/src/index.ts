@@ -1,69 +1,47 @@
-import { execSync } from "node:child_process";
-import { Octokit } from "octokit";
-import createOra from "ora";
-import { CONFIG_SCHEMA } from "./config.js";
+import { GitHubPlatform } from "./platforms/github.ts";
+import { LanguineTranslationService } from "./services/translation.ts";
+import { parseConfig } from "./utils/config.ts";
 
 async function main() {
-  const spinner = createOra();
-
   try {
-    const config = CONFIG_SCHEMA.parse(process.env);
-    const octokit = new Octokit({ auth: config.GITHUB_TOKEN });
+    const config = parseConfig();
 
-    spinner.start("Checking for translation updates");
+    const gitPlatform = new GitHubPlatform();
+    const translationService = new LanguineTranslationService();
 
-    execSync(
-      `npx @languine/cli@${config.LANGUINE_VERSION} translate --api-key ${config.LANGUINE_API_KEY} --projectId ${config.LANGUINE_PROJECT_ID}`,
-      {
-        stdio: "inherit",
-      },
-    );
+    await translationService.runTranslation(config);
 
-    const hasChanges =
-      execSync("git status --porcelain").toString().trim().length > 0;
+    // Check for changes
+    const hasChanges = await translationService.hasChanges();
 
     if (!hasChanges) {
-      spinner.succeed("All translations are up to date");
+      console.log("No translation changes detected");
       return;
     }
 
-    // Commit changes
-    execSync("git config --global user.name 'Languine Bot'");
-    execSync("git config --global user.email 'bot@languine.ai'");
-    execSync("git add .");
-    execSync("git commit -m 'chore(i18n): update translations'");
+    // Stage changes
+    await translationService.stageChanges();
 
-    // Create or update PR
-    const branchName = "languine/translation-updates";
-    execSync(`git checkout -b ${branchName}`);
-    execSync(`git push -u origin ${branchName} --force`);
+    const currentBranch = await gitPlatform.getCurrentBranch();
 
-    // Check for existing PR
-    const { data: existingPRs } = await octokit.rest.pulls.list({
-      owner: config.GITHUB_REPOSITORY_OWNER,
-      repo: config.GITHUB_REPOSITORY.split("/")[1],
-      head: `${config.GITHUB_REPOSITORY_OWNER}:${branchName}`,
-      state: "open",
-    });
-
-    if (existingPRs.length === 0) {
-      await octokit.rest.pulls.create({
-        owner: config.GITHUB_REPOSITORY_OWNER,
-        repo: config.GITHUB_REPOSITORY.split("/")[1],
-        title: "chore(i18n): update translations",
-        head: branchName,
-        base: "main",
-        body: "This pull request updates translations via Languine. Please review the changes and merge if everything looks correct.",
+    if (config.createPullRequest) {
+      // Create or update pull request
+      await gitPlatform.createOrUpdatePullRequest({
+        title: config.prTitle,
+        body: config.prBody,
+        branch: currentBranch,
+        baseBranch: config.baseBranch,
       });
-
-      spinner.succeed("Created new pull request with translation updates");
     } else {
-      spinner.succeed("Updated existing translation pull request");
+      // Commit and push directly
+      await gitPlatform.pullAndRebase(config.baseBranch);
+      await gitPlatform.commitAndPush({
+        message: config.commitMessage,
+        branch: currentBranch,
+      });
     }
-  } catch (error: unknown) {
-    spinner.fail(
-      `Failed to process translations: ${error instanceof Error ? error.message : String(error)}`,
-    );
+  } catch (error) {
+    console.error("Error:", error);
     process.exit(1);
   }
 }

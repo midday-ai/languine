@@ -1,0 +1,52 @@
+name: 'Languine automated localization action'
+description: 'Automatically translate your application content into multiple languages using Languine. This action integrates with your CI/CD pipeline to keep translations in sync with your source content.'
+author: 'Languine'
+
+inputs:
+  api-key:
+    description: 'Languine API Key'
+    required: true
+  project-id:
+    description: 'Languine Project ID'
+    required: true
+  cli-version:
+    description: 'Version of Languine CLI to use'
+    required: false
+    default: 'latest'
+  dev-mode:
+    description: 'Run action in development mode (uses local CLI and enables additional logging)'
+    required: false
+    default: 'false'
+  create-pull-request:
+    description: 'Whether to create a pull request instead of pushing directly'
+    required: false
+    default: 'false'
+  base-branch:
+    description: 'Base branch for pull request or direct push'
+    required: false
+    default: 'main'
+  commit-message:
+    description: 'Commit message for translation updates'
+    required: false
+    default: 'chore: update translations'
+  pr-title:
+    description: 'Title for the pull request'
+    required: false
+    default: 'chore: update translations'
+  pr-body:
+    description: 'Body content for the pull request'
+    required: false
+    default: 'This PR contains updated translations from Languine.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    LANGUINE_API_KEY: ${{ inputs.api-key }}
+    LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
+    CLI_VERSION: ${{ inputs.cli-version }}
+    DEV_MODE: ${{ inputs.dev-mode }}
+
+branding:
+  icon: 'translate'
+  color: 'purple'
