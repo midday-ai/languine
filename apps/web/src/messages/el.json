@@ -608,7 +608,8 @@
     "settings": "Ρυθμίσεις",
     "hooks": "Hooks",
     "examples": "Παραδείγματα",
-    "team": "Ομάδα"
+    "team": "Ομάδα",
+    "overrides": "Αντικαταστάσεις"
   },
   "welcome": {
     "title": "Καλώς ήρθατε στο Languine",

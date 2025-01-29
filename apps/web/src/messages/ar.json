@@ -608,7 +608,8 @@
     "settings": "الإعدادات",
     "hooks": "الخطافات",
     "examples": "أمثلة",
-    "team": "الفريق"
+    "team": "الفريق",
+    "overrides": "تجاوزات"
   },
   "welcome": {
     "title": "مرحبًا بك في Languine",

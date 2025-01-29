@@ -608,7 +608,8 @@
     "settings": "Configuracions",
     "hooks": "Hooks",
     "examples": "Exemples",
-    "team": "Equip"
+    "team": "Equip",
+    "overrides": "Substitucions"
   },
   "welcome": {
     "title": "Benvingut a Languine",

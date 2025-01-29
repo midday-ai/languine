@@ -608,7 +608,8 @@
     "settings": "Seaded",
     "hooks": "Küljed",
     "examples": "Näited",
-    "team": "Meeskond"
+    "team": "Meeskond",
+    "overrides": "Ümberkirjutused"
   },
   "welcome": {
     "title": "Tere tulemast Languinesse",

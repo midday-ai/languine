@@ -608,7 +608,8 @@
     "settings": "Innstillinger",
     "hooks": "Kroker",
     "examples": "Eksempler",
-    "team": "Team"
+    "team": "Team",
+    "overrides": "Overstyringer"
   },
   "welcome": {
     "title": "Velkommen til Languine",

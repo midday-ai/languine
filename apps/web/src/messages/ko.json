@@ -608,7 +608,8 @@
     "settings": "설정",
     "hooks": "후크",
     "examples": "예제",
-    "team": "팀"
+    "team": "팀",
+    "overrides": "재정의"
   },
   "welcome": {
     "title": "Languine에 오신 것을 환영합니다",

@@ -608,7 +608,8 @@
     "settings": "Nastavenia",
     "hooks": "Haky",
     "examples": "Príklady",
-    "team": "Tím"
+    "team": "Tím",
+    "overrides": "Prekrytia"
   },
   "welcome": {
     "title": "Vitajte v Languine",

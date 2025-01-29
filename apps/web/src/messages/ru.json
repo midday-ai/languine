@@ -608,7 +608,8 @@
     "settings": "Настройки",
     "hooks": "Хуки",
     "examples": "Примеры",
-    "team": "Команда"
+    "team": "Команда",
+    "overrides": "Переопределения"
   },
   "welcome": {
     "title": "Добро пожаловать в Languine",

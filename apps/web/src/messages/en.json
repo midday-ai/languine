@@ -605,6 +605,7 @@
     "cli": "CLI",
     "github-actions": "GitHub Actions",
     "tuning": "Tuning",
+    "overrides": "Overrides",
     "settings": "Settings",
     "hooks": "Hooks",
     "examples": "Examples",

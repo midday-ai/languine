@@ -608,7 +608,8 @@
     "settings": "Beállítások",
     "hooks": "Hookok",
     "examples": "Példák",
-    "team": "Csapat"
+    "team": "Csapat",
+    "overrides": "Felülbírálatok"
   },
   "welcome": {
     "title": "Üdvözöljük a Languine-nál",

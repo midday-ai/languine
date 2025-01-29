@@ -608,7 +608,8 @@
     "settings": "Podešavanja",
     "hooks": "Hooks",
     "examples": "Primeri",
-    "team": "Tim"
+    "team": "Tim",
+    "overrides": "Zamene"
   },
   "welcome": {
     "title": "Dobrodošli u Languine",

@@ -608,7 +608,8 @@
     "settings": "Pengaturan",
     "hooks": "Hooks",
     "examples": "Contoh",
-    "team": "Tim"
+    "team": "Tim",
+    "overrides": "Penggantian"
   },
   "welcome": {
     "title": "Selamat Datang di Languine",

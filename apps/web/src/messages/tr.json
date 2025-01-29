@@ -608,7 +608,8 @@
     "settings": "Ayarlar",
     "hooks": "Kancalar",
     "examples": "Örnekler",
-    "team": "Ekip"
+    "team": "Ekip",
+    "overrides": "Aşmalar"
   },
   "welcome": {
     "title": "Languine'e Hoş Geldiniz",

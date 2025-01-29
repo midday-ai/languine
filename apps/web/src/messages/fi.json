@@ -608,7 +608,8 @@
     "settings": "Asetukset",
     "hooks": "Hookit",
     "examples": "Esimerkit",
-    "team": "Tiimi"
+    "team": "Tiimi",
+    "overrides": "Ylikirjoitukset"
   },
   "welcome": {
     "title": "Tervetuloa Languineen",

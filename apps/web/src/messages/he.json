@@ -608,7 +608,8 @@
     "settings": "הגדרות",
     "hooks": "עגינות",
     "examples": "דוגמאות",
-    "team": "צוות"
+    "team": "צוות",
+    "overrides": "החלפות"
   },
   "welcome": {
     "title": "ברוך הבא ללנגווין",

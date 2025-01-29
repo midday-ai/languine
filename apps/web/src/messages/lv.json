@@ -608,7 +608,8 @@
     "settings": "Iestatījumi",
     "hooks": "Atslēgas",
     "examples": "Piemēri",
-    "team": "Komanda"
+    "team": "Komanda",
+    "overrides": "Aizvietojumi"
   },
   "welcome": {
     "title": "Laipni lūdzam Languine",

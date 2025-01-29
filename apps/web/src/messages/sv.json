@@ -608,7 +608,8 @@
     "settings": "Inställningar",
     "hooks": "Hooks",
     "examples": "Exempel",
-    "team": "Team"
+    "team": "Team",
+    "overrides": "Överskrivningar"
   },
   "welcome": {
     "title": "Välkommen till Languine",

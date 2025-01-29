@@ -608,7 +608,8 @@
     "settings": "设置",
     "hooks": "钩子",
     "examples": "示例",
-    "team": "团队"
+    "team": "团队",
+    "overrides": "覆盖"
   },
   "welcome": {
     "title": "欢迎来到 Languine",

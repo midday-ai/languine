@@ -608,7 +608,8 @@
     "settings": "Cài đặt",
     "hooks": "Hooks",
     "examples": "Ví dụ",
-    "team": "Đội ngũ"
+    "team": "Đội ngũ",
+    "overrides": "Ghi đè"
   },
   "welcome": {
     "title": "Chào mừng đến với Languine",

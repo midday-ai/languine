@@ -608,7 +608,8 @@
     "settings": "Setări",
     "hooks": "Hooks",
     "examples": "Exemple",
-    "team": "Echipă"
+    "team": "Echipă",
+    "overrides": "Suprascrieri"
   },
   "welcome": {
     "title": "Bine ați venit la Languine",

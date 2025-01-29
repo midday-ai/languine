@@ -608,7 +608,8 @@
     "settings": "Configurações",
     "hooks": "Ganchos",
     "examples": "Exemplos",
-    "team": "Equipe"
+    "team": "Equipe",
+    "overrides": "Substituições"
   },
   "welcome": {
     "title": "Bem-vindo ao Languine",

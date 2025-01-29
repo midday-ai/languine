@@ -608,7 +608,8 @@
     "settings": "Ayarlar",
     "hooks": "Qarmaqlar",
     "examples": "Nümunələr",
-    "team": "Komanda"
+    "team": "Komanda",
+    "overrides": "Dəyişikliklər"
   },
   "welcome": {
     "title": "Languine-ə Xoş Gəlmisiniz",

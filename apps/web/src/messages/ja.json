@@ -608,7 +608,8 @@
     "settings": "設定",
     "hooks": "フック",
     "examples": "例",
-    "team": "チーム"
+    "team": "チーム",
+    "overrides": "オーバーライド"
   },
   "welcome": {
     "title": "Languineへようこそ",
