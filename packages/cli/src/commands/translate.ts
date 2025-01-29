@@ -220,9 +220,16 @@ export async function translateCommand(args: string[] = []) {
     // Process all translation inputs
     for (const { type, sourceFilePath, input } of allTranslationInputs) {
       if (!isSilent) {
-        s.message(
-          `Translating ${input.length} ${input.length === 1 ? "key" : "keys"} from ${sourceFilePath.split("/").pop()} to ${effectiveTargetLocales.length} ${effectiveTargetLocales.length === 1 ? "language" : "languages"}...`,
-        );
+        const fileName = sourceFilePath.split("/").pop();
+        if (type === "mdx" || type === "md") {
+          s.message(
+            `Translating ${fileName} to ${effectiveTargetLocales.length} ${effectiveTargetLocales.length === 1 ? "language" : "languages"}`,
+          );
+        } else {
+          s.message(
+            `Translating ${input.length} ${input.length === 1 ? "key" : "keys"} from ${fileName} to ${effectiveTargetLocales.length} ${effectiveTargetLocales.length === 1 ? "language" : "languages"}...`,
+          );
+        }
       }
 
       let result: TranslationResult;
