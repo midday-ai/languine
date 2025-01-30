@@ -1,28 +1,35 @@
 # Snabbstart
 
-Den här guiden hjälper dig att komma igång med Languine i ditt projekt.
-
-## Installation
-
-Först, installera Languine CLI globalt:
+Börja med att installera Languine.
 
 ```bash
-npm install -g @languine/cli@latest
+npm install -g @languine/cli
 ```
 
-## Initiera Languine
+Kör sedan följande kommando för att initiera Languine.
 
 ```bash
 languine init
 ```
 
-1. Autentisera med ditt Languine-konto
-2. Välj ditt projekt
-3. Välj dina filer
-4. Välj dina språkinställningar
-5. Välj ditt källspråk
-6. Välj dina målspråk
-7. Välj ditt filformat
-8. Välj din filtyp
-9. Välj din filkodning
-10. Välj din filsökväg
+Följ stegen för att ställa in ditt projekt.
+
+## Första Översättning
+
+Nu är du redo att översätta din kod.
+
+Börja med att lägga till en nyckel i din källfil, till exempel om du väljer att använda `en.json` som din källfil, lägg till en nyckel till den.
+
+```json
+{
+  "hello": "Hej"
+}
+```
+
+Kör sedan följande kommando för att översätta din kod.
+
+```bash
+languine translate
+```
+
+Vi kommer sedan att översätta den nyckel du lade till till dina målspråk.
