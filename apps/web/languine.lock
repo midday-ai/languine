@@ -415,7 +415,6 @@ files:
     docs.hooks: 35ad48797a780091740cbcf14ebc094d
     docs.examples: ff7c0fcd6a31e735a61c001f75426961
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
-    github.token: 835160ba45a23189b612a3a3d281daf4
   src/markdown/docs/en/biome.mdx:
     content: 3386c30ad3b9ba547f0ae70d6a6fd899
   src/markdown/docs/en/ci.mdx:
@@ -428,3 +427,53 @@ files:
     content: c896fe6c6fbf4a36f9e00a4f8f8fc30f
   src/markdown/docs/en/prettier.mdx:
     content: 0e33397a86212a3aaf1648690dfec0ae
+  src/markdown/docs/en/android.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/arb.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/authentication.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/configuration.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/csv.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/expo.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/github-actions.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/html.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/ios.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/js.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/json.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/md.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/mdx.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/po.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/properties.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/quickstart.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/react-email.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/settings.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/ts.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/tuning.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/xcode-stringsdict.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/xcode-xcstrings.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/xliff.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/xml.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e
+  src/markdown/docs/en/yaml.mdx:
+    content: d41d8cd98f00b204e9800998ecf8427e

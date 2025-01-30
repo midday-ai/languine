@@ -96,7 +96,10 @@ export class LockFileManager {
     const currentKeysSet = new Set(currentKeys);
     const previousKeysSet = new Set(previousKeys);
 
-    const valueChanges = currentKeys
+    const addedKeys = currentKeys.filter((key) => !previousKeysSet.has(key));
+    const removedKeys = previousKeys.filter((key) => !currentKeysSet.has(key));
+
+    const changedValues = currentKeys
       .filter((key) => {
         if (!previousKeysSet.has(key)) return false;
         const currentHash = this.hashValue(sourceData[key]);
@@ -108,11 +111,17 @@ export class LockFileManager {
         newValue: sourceData[key],
       }));
 
+    const addedValues = addedKeys.map((key) => ({
+      key,
+      oldValue: "",
+      newValue: sourceData[key],
+    }));
+
     const result = {
-      addedKeys: currentKeys.filter((key) => !previousKeysSet.has(key)),
-      removedKeys: previousKeys.filter((key) => !currentKeysSet.has(key)),
-      changedKeys: valueChanges.map((change) => change.key),
-      valueChanges,
+      addedKeys,
+      removedKeys,
+      changedKeys: changedValues.map((change) => change.key),
+      valueChanges: [...changedValues, ...addedValues],
     };
 
     this.registerSourceData(filePath, sourceData);

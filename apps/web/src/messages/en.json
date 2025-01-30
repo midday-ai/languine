@@ -610,8 +610,5 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
-  },
-  "github": {
-    "token": "GitHub Token"
   }
 }

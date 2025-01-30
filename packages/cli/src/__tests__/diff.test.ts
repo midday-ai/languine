@@ -9,34 +9,21 @@ import {
 import { mkdir, writeFile } from "node:fs/promises";
 import { rm } from "node:fs/promises";
 import { join } from "node:path";
-import { simpleGit } from "simple-git";
 import { getDiff } from "../utils/diff.js";
+import { LockFileManager } from "../utils/lock.js";
 
 describe("diff detection tests", () => {
   const testDir = join(process.cwd(), "test-diff-files");
-  let git: ReturnType<typeof simpleGit>;
+  let lockManager: LockFileManager;
 
   // Set up test environment
   beforeAll(async () => {
-    // Create test directory first
     await mkdir(testDir, { recursive: true });
   });
 
-  // Initialize a fresh git repo before each test
-  beforeEach(async () => {
-    // Remove any existing git directory
-    await rm(join(testDir, ".git"), { recursive: true, force: true });
-
-    // Initialize fresh git repo
-    git = simpleGit(testDir);
-    await git.init();
-    await git.addConfig("user.name", "Test User");
-    await git.addConfig("user.email", "test@example.com");
-
-    // Create initial commit to establish HEAD
-    await writeFile(join(testDir, ".gitkeep"), "");
-    await git.add(".gitkeep");
-    await git.commit("Initial commit");
+  beforeEach(() => {
+    lockManager = new LockFileManager(testDir);
+    lockManager.clearLockFile();
   });
 
   // Clean up test files
@@ -44,7 +31,7 @@ describe("diff detection tests", () => {
     await rm(testDir, { recursive: true, force: true });
   });
 
-  test("should detect all keys as additions for untracked files", async () => {
+  test("should detect all keys as additions for new files", async () => {
     const filePath = join(testDir, "en.json");
     const content = {
       hello: "Hello",
@@ -56,28 +43,33 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
+      workingDir: testDir,
     });
 
-    expect(changes.addedKeys).toEqual(["hello", "welcome"]);
+    expect(changes.addedKeys.sort()).toEqual(["hello", "welcome"].sort());
     expect(changes.removedKeys).toEqual([]);
     expect(changes.changedKeys).toEqual([]);
-    expect(changes.valueChanges).toEqual([
-      { key: "hello", oldValue: "", newValue: "Hello" },
-      { key: "welcome", oldValue: "", newValue: "Welcome" },
-    ]);
+    expect(changes.valueChanges.map((v) => v.key).sort()).toEqual(
+      ["hello", "welcome"].sort(),
+    );
+    expect(changes.valueChanges.find((v) => v.key === "hello")?.newValue).toBe(
+      "Hello",
+    );
+    expect(
+      changes.valueChanges.find((v) => v.key === "welcome")?.newValue,
+    ).toBe("Welcome");
   });
 
   test("should detect value changes in tracked files", async () => {
     const filePath = join(testDir, "tracked.json");
 
-    // Create and commit initial file
+    // Create and register initial file
     const initialContent = {
       greeting: "Hello world",
       farewell: "Goodbye",
     };
     await writeFile(filePath, JSON.stringify(initialContent, null, 2));
-    await git.add(filePath);
-    await git.commit("Add translation file");
+    lockManager.registerSourceData(filePath, initialContent);
 
     // Modify the file
     const updatedContent = {
@@ -90,28 +82,32 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
+      workingDir: testDir,
     });
 
     expect(changes.addedKeys).toEqual(["welcome"]);
     expect(changes.removedKeys).toEqual([]);
     expect(changes.changedKeys).toEqual(["greeting"]);
-    expect(changes.valueChanges).toEqual([
-      { key: "greeting", oldValue: "Hello world", newValue: "Hello there" },
-    ]);
+    expect(changes.valueChanges.length).toBe(2);
+    expect(
+      changes.valueChanges.find((v) => v.key === "greeting")?.newValue,
+    ).toBe("Hello there");
+    expect(
+      changes.valueChanges.find((v) => v.key === "welcome")?.newValue,
+    ).toBe("Welcome");
   });
 
   test("should detect removed keys in tracked files", async () => {
     const filePath = join(testDir, "with-removals.json");
 
-    // Create and commit initial file
+    // Create and register initial file
     const initialContent = {
       title: "Title",
       subtitle: "Subtitle",
       description: "Description",
     };
     await writeFile(filePath, JSON.stringify(initialContent, null, 2));
-    await git.add(filePath);
-    await git.commit("Add translation file with all keys");
+    lockManager.registerSourceData(filePath, initialContent);
 
     // Remove some keys and modify others
     const updatedContent = {
@@ -124,13 +120,14 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
+      workingDir: testDir,
     });
 
     expect(changes.addedKeys).toEqual([]);
     expect(changes.removedKeys).toEqual(["subtitle"]);
     expect(changes.changedKeys).toEqual(["title"]);
-    expect(changes.valueChanges).toEqual([
-      { key: "title", oldValue: "Title", newValue: "New Title" },
-    ]);
+    expect(changes.valueChanges.length).toBe(1);
+    expect(changes.valueChanges[0].key).toBe("title");
+    expect(changes.valueChanges[0].newValue).toBe("New Title");
   });
 });

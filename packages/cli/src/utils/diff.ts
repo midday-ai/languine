@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { dirname } from "node:path";
 import { createParser } from "@/parsers/index.ts";
 import { type FileChanges, LockFileManager } from "./lock.ts";
 
@@ -12,12 +13,16 @@ import { type FileChanges, LockFileManager } from "./lock.ts";
 export async function getDiff({
   sourceFilePath,
   type,
+  workingDir,
 }: {
   sourceFilePath: string;
   type: string;
+  workingDir?: string;
 }): Promise<FileChanges> {
   const parser = createParser({ type });
-  const lockManager = new LockFileManager();
+  const lockManager = new LockFileManager(
+    workingDir ?? dirname(sourceFilePath),
+  );
 
   // Parse current file content
   const currentContent = readFileSync(sourceFilePath, "utf-8");
