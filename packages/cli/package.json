@@ -36,6 +36,7 @@
     "gettext-parser": "^8.0.0",
     "jiti": "^2.4.2",
     "jsdom": "^26.0.0",
+    "json5": "^2.2.3",
     "jsonrepair": "^3.11.2",
     "node-html-parser": "^7.0.1",
     "open": "^10.1.0",

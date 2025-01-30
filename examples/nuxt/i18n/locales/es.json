@@ -1,0 +1,27 @@
+{
+  "layouts": {
+    "title": "Página - {title}"
+  },
+  "pages": {
+    "title": {
+      "top": "Superior",
+      "about": "Acerca de este sitio"
+    }
+  },
+  "snakeCaseText": "@.snakeCase:{'pages.title.about'}",
+  "pascalCaseText": "@.pascalCase:{'pages.title.about'}",
+  "welcome": "Bienvenido",
+  "hello": "¡Hola {name}!",
+  "tag": "<p>Etiqueta</p>",
+  "items": {
+    "0": {
+      "name": "manzana"
+    },
+    "1": {
+      "name": "plátano"
+    },
+    "2": {
+      "name": "fresa"
+    }
+  }
+}

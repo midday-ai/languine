@@ -20,18 +20,36 @@ import { z } from "zod";
 const { BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
-  const forceIndex = args.indexOf("--force");
+  // Helper function to find value for a flag
+  const getFlagValue = (flag: string) => {
+    for (let i = 0; i < args.length - 1; i++) {
+      if (args[i] === flag && !args[i + 1].startsWith("--")) {
+        return args[i + 1];
+      }
+    }
+    return undefined;
+  };
+
+  // Helper function to check if a flag exists
+  const hasFlag = (flag: string) => args.includes(flag);
 
   return {
-    forceTranslate: forceIndex !== -1,
-    isSilent: args.includes("--silent"),
-    checkOnly: args.includes("--check"),
-    forcedLocales:
-      forceIndex !== -1 &&
-      args.length > forceIndex + 1 &&
-      !args[forceIndex + 1].startsWith("--")
-        ? args[forceIndex + 1].split(",")
-        : [],
+    forceTranslate: hasFlag("--force"),
+    isSilent: hasFlag("--silent"),
+    checkOnly: hasFlag("--check"),
+    apiKey: getFlagValue("--api-key"),
+    projectId: getFlagValue("--project-id"),
+    forcedLocales: (() => {
+      const forceIndex = args.indexOf("--force");
+      if (
+        forceIndex !== -1 &&
+        args.length > forceIndex + 1 &&
+        !args[forceIndex + 1].startsWith("--")
+      ) {
+        return args[forceIndex + 1].split(",");
+      }
+      return [];
+    })(),
   };
 });
 
@@ -40,10 +58,21 @@ type TranslationResult = {
 };
 
 export async function translateCommand(args: string[] = []) {
-  const { forceTranslate, isSilent, checkOnly, forcedLocales } =
-    argsSchema.parse(args);
+  const {
+    forceTranslate,
+    isSilent,
+    checkOnly,
+    forcedLocales,
+    apiKey: overrideApiKey,
+    projectId: overrideProjectId,
+  } = argsSchema.parse(args);
+
   const s = spinner();
   const startTime = Date.now();
+
+  if (overrideApiKey) {
+    process.env.LANGUINE_API_KEY = overrideApiKey;
+  }
 
   const apiKey = getAPIKey();
   const gitInfo = await getGitInfo();
@@ -57,7 +86,7 @@ export async function translateCommand(args: string[] = []) {
   }
 
   try {
-    // Load config file
+    // Load config file from working directory
     const config = await loadConfig();
 
     if (!config) {
@@ -68,25 +97,26 @@ export async function translateCommand(args: string[] = []) {
       process.exit(1);
     }
 
-    const projectId = config.projectId || process.env.LANGUINE_PROJECT_ID;
-    let translatedAnything = false;
-    let needsUpdates = false;
-    let totalKeysToTranslate = 0;
-    let hasShownEmptyDocMessage = false;
-    const allTranslationInputs: Array<{
-      type: string;
-      sourceFilePath: string;
-      input: Array<{ key: string; sourceText: string; sourceFile: string }>;
-    }> = [];
+    const projectId =
+      overrideProjectId || config.projectId || process.env.LANGUINE_PROJECT_ID;
 
     if (!projectId) {
       note(
-        "Project ID not found in configuration file or LANGUINE_PROJECT_ID environment variable. Please run `languine init` to create one, set the `projectId` in your configuration file, or set the LANGUINE_PROJECT_ID environment variable.",
+        "Project ID not found. Please provide it via --project-id flag, configuration file, or LANGUINE_PROJECT_ID environment variable.",
         "Error",
       );
 
       process.exit(1);
     }
+
+    let translatedAnything = false;
+    let needsUpdates = false;
+    let totalKeysToTranslate = 0;
+    const allTranslationInputs: Array<{
+      type: string;
+      sourceFilePath: string;
+      input: Array<{ key: string; sourceText: string; sourceFile: string }>;
+    }> = [];
 
     const { source: sourceLocale, targets: targetLocales } = config.locale;
 
@@ -126,44 +156,46 @@ export async function translateCommand(args: string[] = []) {
           const sourceFileContent = await readFile(sourceFilePath, "utf-8");
           const parsedSourceFile = await parser.parse(sourceFileContent);
 
+          // Filter out empty strings first
+          const nonEmptySourceFile = Object.fromEntries(
+            Object.entries(parsedSourceFile).filter(
+              ([_, value]) => value !== "",
+            ),
+          );
+
           // Skip empty markdown documents
           if (
             (type === "mdx" || type === "md") &&
-            Object.keys(parsedSourceFile).length === 0
+            Object.keys(nonEmptySourceFile).length === 0
           ) {
-            if (!isSilent && !hasShownEmptyDocMessage) {
-              s.stop();
-              const fileName = sourceFilePath.split("/").pop();
-              note(`Skipping ${fileName} - Empty document`, "Empty Document");
-              hasShownEmptyDocMessage = true;
-              s.start();
-            }
+            // Don't show empty document message, just skip silently
             continue;
           }
 
           let keysToTranslate: string[];
 
           if (forceTranslate) {
-            // If force flag is used, translate all keys
-            // We don't want to translate empty strings
-            keysToTranslate = Object.keys(parsedSourceFile).filter(
-              (key) => parsedSourceFile[key] !== "",
-            );
+            // If force flag is used, translate all non-empty keys
+            keysToTranslate = Object.keys(nonEmptySourceFile);
           } else {
             // Otherwise use normal diff detection
             try {
-              const changes = await getDiff({ sourceFilePath, type });
+              const changes = await getDiff({
+                sourceFilePath,
+                type,
+              });
               // Include both new keys and changed values
               keysToTranslate = [
                 ...changes.addedKeys,
                 ...changes.valueChanges.map((change) => change.key),
-              ];
+              ].filter((key) => nonEmptySourceFile[key] !== undefined);
             } catch (error) {
               console.log();
               note(
-                "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
-                "Diffing",
+                "An error occurred while checking for translation changes. Please check the error message below.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                "Error",
               );
+              console.error(error);
               console.log();
               process.exit(1);
             }
@@ -188,7 +220,7 @@ export async function translateCommand(args: string[] = []) {
           if (checkOnly) continue;
 
           // Convert the content to the expected format
-          const translationInput = Object.entries(parsedSourceFile)
+          const translationInput = Object.entries(nonEmptySourceFile)
             .filter(([key]) => keysToTranslate.includes(key))
             .map(([key, sourceText]) => ({
               key,
@@ -450,10 +482,16 @@ export async function translateCommand(args: string[] = []) {
       const duration = Math.round((Date.now() - startTime) / 1000);
       if (checkOnly) {
         if (needsUpdates) {
-          s.stop("Updates needed");
+          s.stop(chalk.red("Updates needed"));
+          if (totalKeysToTranslate > 0) {
+            note(
+              `Found ${totalKeysToTranslate} ${totalKeysToTranslate === 1 ? "key" : "keys"} that need translation.\nRun without --check to update translations.`,
+              "Translation Required",
+            );
+          }
           process.exit(1);
         } else {
-          s.stop("No updates needed");
+          s.stop(chalk.green("No updates needed"));
           process.exit(0);
         }
       } else {

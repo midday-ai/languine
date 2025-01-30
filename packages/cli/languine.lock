@@ -1,0 +1,5 @@
+version: 1
+files:
+  test-diff-files/with-removals.json:
+    title: 743b9b4364a8145860c6ab8b25112950
+    description: b5a7adde1af5c87d7fd797b6245c2a39
