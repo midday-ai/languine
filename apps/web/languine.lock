@@ -415,6 +415,7 @@ files:
     docs.hooks: 35ad48797a780091740cbcf14ebc094d
     docs.examples: ff7c0fcd6a31e735a61c001f75426961
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    test: 0cbc6611f5540bd0809a388dc95a615b
   src/markdown/docs/en/biome.mdx:
     content: 3386c30ad3b9ba547f0ae70d6a6fd899
   src/markdown/docs/en/ci.mdx:

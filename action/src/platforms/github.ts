@@ -40,7 +40,6 @@ export class GitHubPlatform implements GitPlatform {
   }): Promise<void> {
     const { title, body, branch, baseBranch } = options;
 
-    // Check if PR already exists
     const { data: existingPRs } = await this.octokit.rest.pulls.list({
       owner: this.owner,
       repo: this.repo,
@@ -50,7 +49,6 @@ export class GitHubPlatform implements GitPlatform {
     });
 
     if (existingPRs.length > 0) {
-      // Update existing PR
       await this.octokit.rest.pulls.update({
         owner: this.owner,
         repo: this.repo,
@@ -59,7 +57,6 @@ export class GitHubPlatform implements GitPlatform {
         body,
       });
     } else {
-      // Create new PR
       await this.octokit.rest.pulls.create({
         owner: this.owner,
         repo: this.repo,
