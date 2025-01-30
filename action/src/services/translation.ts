@@ -14,23 +14,18 @@ export class LanguineTranslationService implements TranslationService {
   }
 
   async runTranslation(config: Config): Promise<void> {
-    const { apiKey, projectId, cliVersion, workingDirectory } = config;
+    const { apiKey, projectId, cliVersion } = config;
 
     // Get the appropriate CLI command
     const cliCommand = this.getCliCommand(cliVersion);
 
     logger.debug(`Project ID: ${projectId}`);
     logger.debug(`CLI Version: ${cliVersion}`);
-    if (workingDirectory) {
-      logger.debug(`Working Directory: ${workingDirectory}`);
-    }
 
     // Use the local base branch for comparison since we have it from checkout
     const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`;
 
-    await execAsync(command, {
-      cwd: workingDirectory,
-    });
+    await execAsync(command);
   }
 
   async hasChanges(): Promise<boolean> {
