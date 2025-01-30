@@ -119,8 +119,7 @@ This PR contains the latest translations processed by [Languine](https://languin
 
 **Action Required:**
 1. Please review the translation changes
-2. Test in your development environment
-3. Merge when ready
+2. Merge when ready
 
 Need help? Check our [documentation](https://languine.ai/docs) or contact support@languine.ai.
     `.trim();
