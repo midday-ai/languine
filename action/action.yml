@@ -42,8 +42,8 @@ inputs:
     required: false
 
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'docker'
+  image: 'Dockerfile'
   env:
     LANGUINE_API_KEY: ${{ inputs.api-key }}
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
