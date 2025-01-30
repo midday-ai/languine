@@ -1,15 +1,12 @@
 import type { TranslationService } from "../types.ts";
 import type { Config } from "../utils/config.ts";
 import { execAsync } from "../utils/exec.ts";
+import { logger } from "../utils/logger.ts";
 
 export class LanguineTranslationService implements TranslationService {
-  private isDevMode(): boolean {
-    return process.env.DEV_MODE === "true";
-  }
-
   private getCliCommand(cliVersion = "latest"): string {
-    if (this.isDevMode()) {
-      console.log("Development mode: Using local CLI");
+    if (process.env.DEV_MODE === "true") {
+      logger.debug("Using local CLI");
       return `bun ${process.env.LANGUINE_CLI || "languine"}`;
     }
 
@@ -17,43 +14,35 @@ export class LanguineTranslationService implements TranslationService {
   }
 
   async runTranslation(config: Config): Promise<void> {
-    const { apiKey, projectId, cliVersion, baseBranch = "main" } = config;
+    const { apiKey, projectId, cliVersion } = config;
 
     // Get the appropriate CLI command
     const cliCommand = this.getCliCommand(cliVersion);
 
-    if (this.isDevMode()) {
-      console.log("Running translation in development mode");
-      console.log("Project ID:", projectId);
-      console.log("CLI Version:", cliVersion);
-      console.log("Base Branch:", baseBranch);
-    }
+    logger.debug(`Project ID: ${projectId}`);
+    logger.debug(`CLI Version: ${cliVersion}`);
 
     // Use the local base branch for comparison since we have it from checkout
-    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey} --base ${baseBranch}`;
+    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`;
 
-    await execAsync(command);
+    const wef = await execAsync(command);
+    console.log(wef);
+    return;
   }
 
   async hasChanges(): Promise<boolean> {
     try {
       const { stdout } = await execAsync("git status --porcelain");
-      if (this.isDevMode()) {
-        console.log("Checking for changes in development mode");
-        console.log("Git status output:", stdout);
-      }
+      logger.debug(`Git status output: ${stdout}`);
+
       return stdout.trim().length > 0;
     } catch (error) {
-      console.error("Error checking git status:", error);
+      logger.error(error instanceof Error ? error : String(error));
       return false;
     }
   }
 
   async stageChanges(): Promise<void> {
-    if (this.isDevMode()) {
-      console.log("Staging changes in development mode");
-    }
-
     await execAsync("git add .");
   }
 }

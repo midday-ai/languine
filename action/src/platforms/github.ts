@@ -1,7 +1,7 @@
-import { note } from "@clack/prompts";
 import { Octokit } from "octokit";
 import type { GitPlatform } from "../types.ts";
 import { execAsync } from "../utils/exec.ts";
+import { logger } from "../utils/logger.ts";
 
 export class GitHubPlatform implements GitPlatform {
   private octokit: Octokit;
@@ -12,11 +12,9 @@ export class GitHubPlatform implements GitPlatform {
     const token = process.env.GITHUB_TOKEN;
 
     if (!token) {
-      note(
+      logger.error(
         "GITHUB_TOKEN is missing, please set the GITHUB_TOKEN environment variable.",
-        "Error",
       );
-
       process.exit(1);
     }
 
@@ -25,11 +23,9 @@ export class GitHubPlatform implements GitPlatform {
     const repository = process.env.GITHUB_REPOSITORY;
 
     if (!repository) {
-      note(
+      logger.error(
         "GITHUB_REPOSITORY is missing, please set the GITHUB_REPOSITORY environment variable.",
-        "Error",
       );
-
       process.exit(1);
     }
 
