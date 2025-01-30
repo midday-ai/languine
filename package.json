@@ -19,10 +19,6 @@
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.12",
     "@types/bun": "^1.2.1",
-<<<<<<< HEAD
-    "@types/node": "^22.12.0",
-=======
->>>>>>> 4856007 (wip)
     "turbo": "2.3.4",
     "typescript": "^5.7.3"
   },
