@@ -1,4 +1,4 @@
-import type { Config } from "./utils/config.js";
+import type { Config } from "./utils/config.ts";
 
 export interface GitPlatform {
   createOrUpdatePullRequest(options: {
@@ -18,5 +18,4 @@ export interface GitPlatform {
 export interface TranslationService {
   runTranslation(config: Config): Promise<void>;
   hasChanges(): Promise<boolean>;
-  stageChanges(): Promise<void>;
 }

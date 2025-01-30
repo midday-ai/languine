@@ -1,7 +1,21 @@
-import type { GitPlatform } from "../types.ts";
 import { GitHubPlatform } from "./github.ts";
 
-export class GitPlatformFacade {
+export interface GitPlatform {
+  configureGit(): Promise<void>;
+  createPullRequest(options: {
+    title: string;
+    body: string;
+    branch: string;
+    baseBranch: string;
+  }): Promise<void>;
+  getCurrentBranch(): Promise<string>;
+  pullAndRebase(baseBranch: string): Promise<void>;
+  commitAndPush(options: { message: string; branch: string }): Promise<void>;
+  createBranch(branchName: string): Promise<void>;
+  stageChanges(): Promise<void>;
+}
+
+export class GitPlatformFacade implements GitPlatform {
   private static instance: GitPlatformFacade;
   private platform: GitPlatform;
 
@@ -16,13 +30,17 @@ export class GitPlatformFacade {
     return GitPlatformFacade.instance;
   }
 
-  public async createOrUpdatePullRequest(options: {
+  public async configureGit(): Promise<void> {
+    await this.platform.configureGit();
+  }
+
+  public async createPullRequest(options: {
     title: string;
     body: string;
     branch: string;
     baseBranch: string;
   }): Promise<void> {
-    return this.platform.createOrUpdatePullRequest(options);
+    await this.platform.createPullRequest(options);
   }
 
   public async getCurrentBranch(): Promise<string> {
@@ -33,10 +51,18 @@ export class GitPlatformFacade {
     message: string;
     branch: string;
   }): Promise<void> {
-    return this.platform.commitAndPush(options);
+    await this.platform.commitAndPush(options);
   }
 
-  public async pullAndRebase(branch: string): Promise<void> {
-    return this.platform.pullAndRebase(branch);
+  public async pullAndRebase(baseBranch: string): Promise<void> {
+    await this.platform.pullAndRebase(baseBranch);
+  }
+
+  public async createBranch(branchName: string): Promise<void> {
+    await this.platform.createBranch(branchName);
+  }
+
+  public async stageChanges(): Promise<void> {
+    await this.platform.stageChanges();
   }
 }

@@ -1,32 +1,32 @@
-name: 'Languine automated localization action'
-description: 'Automatically translate your application content into multiple languages using Languine. This action integrates with your CI/CD pipeline to keep translations in sync with your source content.'
+name: 'Languine'
+description: 'Automate translations for your project'
 author: 'Languine'
 
 inputs:
   api-key:
-    description: 'Languine API Key'
+    description: 'Languine API key'
     required: true
   project-id:
-    description: 'Languine Project ID'
+    description: 'Languine project ID'
     required: true
   cli-version:
     description: 'Version of Languine CLI to use'
     required: false
     default: 'latest'
   dev-mode:
-    description: 'Run action in development mode (uses local CLI and enables additional logging)'
+    description: 'Enable development mode'
     required: false
     default: 'false'
   create-pull-request:
-    description: 'Whether to create a pull request instead of pushing directly'
+    description: 'Create a pull request instead of committing directly'
     required: false
     default: 'false'
   base-branch:
-    description: 'Base branch for pull request or direct push'
+    description: 'Base branch to create pull request against or commit to'
     required: false
     default: 'main'
   commit-message:
-    description: 'Commit message for translation updates'
+    description: 'Custom commit message'
     required: false
     default: 'chore: update translations'
   pr-title:
@@ -38,13 +38,12 @@ inputs:
     required: false
     default: 'This PR contains updated translations from Languine.'
   working-directory:
-    description: 'Working directory'
-    default: '.'
+    description: 'Working directory relative to repository root'
     required: false
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node20'
+  main: 'dist/index.js'
   env:
     LANGUINE_API_KEY: ${{ inputs.api-key }}
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
@@ -53,5 +52,5 @@ runs:
     WORKING_DIRECTORY: ${{ inputs.working-directory }}
 
 branding:
-  icon: 'translate'
-  color: 'purple'
+  icon: 'globe'
+  color: 'blue'

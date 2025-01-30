@@ -1,38 +1,16 @@
-import { Octokit } from "octokit";
-import type { GitPlatform } from "../types.ts";
 import { execAsync } from "../utils/exec.ts";
-import { logger } from "../utils/logger.ts";
+import type { GitPlatform } from "./git-platform-facade.ts";
 
 export class GitHubPlatform implements GitPlatform {
-  private octokit: Octokit;
-  private owner: string;
-  private repo: string;
-
-  constructor() {
-    const token = process.env.GITHUB_TOKEN;
-
-    if (!token) {
-      logger.error(
-        "GITHUB_TOKEN is missing, please set the GITHUB_TOKEN environment variable.",
-      );
-      process.exit(1);
+  async configureGit(): Promise<void> {
+    // GitHub Actions specific configuration
+    if (process.env.GITHUB_TOKEN) {
+      const remoteUrl = `https://x-access-token:${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
+      await execAsync(`git remote set-url origin ${remoteUrl}`);
     }
-
-    this.octokit = new Octokit({ auth: token });
-
-    const repository = process.env.GITHUB_REPOSITORY;
-
-    if (!repository) {
-      logger.error(
-        "GITHUB_REPOSITORY is missing, please set the GITHUB_REPOSITORY environment variable.",
-      );
-      process.exit(1);
-    }
-
-    [this.owner, this.repo] = repository.split("/");
   }
 
-  async createOrUpdatePullRequest(options: {
+  async createPullRequest(options: {
     title: string;
     body: string;
     branch: string;
@@ -40,31 +18,36 @@ export class GitHubPlatform implements GitPlatform {
   }): Promise<void> {
     const { title, body, branch, baseBranch } = options;
 
-    const { data: existingPRs } = await this.octokit.rest.pulls.list({
-      owner: this.owner,
-      repo: this.repo,
-      head: `${this.owner}:${branch}`,
-      base: baseBranch,
-      state: "open",
-    });
+    if (!process.env.GITHUB_TOKEN) {
+      throw new Error("GITHUB_TOKEN is required for creating pull requests");
+    }
 
-    if (existingPRs.length > 0) {
-      await this.octokit.rest.pulls.update({
-        owner: this.owner,
-        repo: this.repo,
-        pull_number: existingPRs[0].number,
-        title,
-        body,
-      });
-    } else {
-      await this.octokit.rest.pulls.create({
-        owner: this.owner,
-        repo: this.repo,
+    const repo = process.env.GITHUB_REPOSITORY;
+    if (!repo) {
+      throw new Error("GITHUB_REPOSITORY environment variable is not set");
+    }
+
+    const [owner, repoName] = repo.split("/");
+    const url = `https://api.github.com/repos/${owner}/${repoName}/pulls`;
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `token ${process.env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github.v3+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         title,
         body,
         head: branch,
         base: baseBranch,
-      });
+      }),
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      throw new Error(`Failed to create pull request: ${error}`);
     }
   }
 
@@ -73,19 +56,24 @@ export class GitHubPlatform implements GitPlatform {
     return stdout.trim();
   }
 
+  async pullAndRebase(baseBranch: string): Promise<void> {
+    await execAsync(`git pull origin ${baseBranch} --rebase`);
+  }
+
   async commitAndPush(options: {
     message: string;
     branch: string;
   }): Promise<void> {
     const { message, branch } = options;
-
-    await execAsync('git config --global user.email "bot@languine.ai"');
-    await execAsync('git config --global user.name "languine-bot"');
     await execAsync(`git commit -m "${message}"`);
     await execAsync(`git push origin ${branch}`);
   }
 
-  async pullAndRebase(branch: string): Promise<void> {
-    await execAsync(`git pull origin ${branch} --rebase`);
+  async createBranch(branchName: string): Promise<void> {
+    await execAsync(`git checkout -b ${branchName}`);
+  }
+
+  async stageChanges(): Promise<void> {
+    await execAsync("git add .");
   }
 }
