@@ -30,8 +30,8 @@ export async function getDiff({
   type: string;
   base?: string;
 }): Promise<DiffResult> {
-  // Initialize git in the directory containing the source file
-  const git = simpleGit(dirname(sourceFilePath));
+  // Initialize git in the repo root, not the file directory
+  const git = simpleGit(process.cwd());
   const parser = createParser({ type });
 
   // Parse current file content
@@ -57,10 +57,17 @@ export async function getDiff({
       };
     }
 
-    // Get and parse previous version from specified base or HEAD
-    const relativePath = relative(dirname(sourceFilePath), sourceFilePath);
+    // Get the path relative to the repo root, just like git diff uses
+    const relativePath = relative(process.cwd(), sourceFilePath);
     const gitRef = base || "HEAD";
-    const content = await git.show([`${gitRef}:./${relativePath}`]);
+
+    if (process.env.DEV_MODE === "true") {
+      console.log("Git ref:", gitRef);
+      console.log("File path:", relativePath);
+    }
+
+    // Use git show with the path from repo root, just like git diff
+    const content = await git.show([`${gitRef}:${relativePath}`]);
     const previousJson = await parser.parse(content);
     const previousKeys = Object.keys(previousJson).sort();
 
@@ -91,17 +98,10 @@ export async function getDiff({
       valueChanges,
     };
   } catch (error) {
-    // If we can't get the previous version (e.g., file not in git yet),
-    // treat all keys as additions
-    return {
-      addedKeys: currentKeys,
-      removedKeys: [],
-      changedKeys: [],
-      valueChanges: currentKeys.map((key) => ({
-        key,
-        oldValue: "",
-        newValue: currentJson[key],
-      })),
-    };
+    if (process.env.DEV_MODE === "true") {
+      console.error("Error getting diff:", error);
+    }
+    // If we can't get the previous version, throw the error
+    throw error;
   }
 }
