@@ -13,7 +13,9 @@ export const ConfigSchema = z.object({
   workingDirectory: z.string().optional(),
   createPullRequest: z.boolean().default(false),
   baseBranch: z.string().default("main"),
-  commitMessage: z.string().default("chore: update translations"),
+  commitMessage: z
+    .string()
+    .default("chore: (i18n) update translations via Languine"),
   prTitle: z.string().optional(),
   prBody: z.string().optional(),
 });
