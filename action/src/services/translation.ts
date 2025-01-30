@@ -16,6 +16,21 @@ export class LanguineTranslationService implements TranslationService {
     return `bunx languine@${cliVersion}`;
   }
 
+  private async fetchBaseBranch(baseBranch: string): Promise<void> {
+    try {
+      // Fetch the base branch
+      await execAsync(
+        `git fetch origin ${baseBranch}:refs/remotes/origin/${baseBranch}`,
+      );
+      if (this.isDevMode()) {
+        console.log(`Fetched base branch: ${baseBranch}`);
+      }
+    } catch (error) {
+      console.error("Error fetching base branch:", error);
+      throw error;
+    }
+  }
+
   async runTranslation(config: Config): Promise<void> {
     const { apiKey, projectId, cliVersion, baseBranch = "main" } = config;
 
@@ -29,8 +44,11 @@ export class LanguineTranslationService implements TranslationService {
       console.log("Base Branch:", baseBranch);
     }
 
-    // Always use --base to compare against base branch to detect new keys
-    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey} --base ${baseBranch}`;
+    // Fetch the base branch to ensure we can diff against it
+    await this.fetchBaseBranch(baseBranch);
+
+    // Use origin/base-branch for the diff to ensure we're comparing against the remote version
+    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey} --base origin/${baseBranch}`;
 
     await execAsync(command);
   }
