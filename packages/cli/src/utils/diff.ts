@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { createParser } from "@/parsers/index.ts";
-import { type FileChanges, createLockFileHelper } from "./lock.ts";
+import { type FileChanges, LockFileManager } from "./lock.ts";
 
 /**
  * Detects changes between the current state and the lock file.
@@ -17,12 +17,12 @@ export async function getDiff({
   type: string;
 }): Promise<FileChanges> {
   const parser = createParser({ type });
-  const lockHelper = createLockFileHelper();
+  const lockManager = new LockFileManager();
 
   // Parse current file content
   const currentContent = readFileSync(sourceFilePath, "utf-8");
   const currentJson = await parser.parse(currentContent);
 
-  // Get changes using the lock helper
-  return lockHelper.getChanges(sourceFilePath, currentJson);
+  // Get changes using the lock manager
+  return lockManager.getChanges(sourceFilePath, currentJson);
 }

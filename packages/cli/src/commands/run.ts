@@ -3,7 +3,6 @@ import { commands as initCommands } from "@/commands/init.ts";
 import { localeCommand } from "@/commands/locale.ts";
 import { syncCommand } from "@/commands/sync.ts";
 import { translateCommand } from "@/commands/translate.ts";
-import { isGitRepo } from "@/utils/git.ts";
 import { isCancel, select } from "@clack/prompts";
 import chalk from "chalk";
 
@@ -187,15 +186,6 @@ export async function runCommands() {
       return;
     }
 
-    if (!isGitRepo()) {
-      console.error(
-        chalk.red(
-          "This command must be run from within a git repository. Please initialize git first.",
-        ),
-      );
-      process.exit(1);
-    }
-
     switch (command) {
       case "auth":
         await authCommands();
@@ -219,15 +209,6 @@ export async function runCommands() {
   if (args.includes("--help") || args.includes("-h")) {
     showHelp(mainCommand as keyof typeof COMMANDS);
     return;
-  }
-
-  if (!isGitRepo()) {
-    console.error(
-      chalk.red(
-        "This command must be run from within a git repository. Please initialize git first.",
-      ),
-    );
-    process.exit(1);
   }
 
   if (mainCommand) {

@@ -112,7 +112,6 @@ export async function translateCommand(args: string[] = []) {
     let translatedAnything = false;
     let needsUpdates = false;
     let totalKeysToTranslate = 0;
-    let hasShownEmptyDocMessage = false;
     const allTranslationInputs: Array<{
       type: string;
       sourceFilePath: string;
@@ -157,29 +156,27 @@ export async function translateCommand(args: string[] = []) {
           const sourceFileContent = await readFile(sourceFilePath, "utf-8");
           const parsedSourceFile = await parser.parse(sourceFileContent);
 
+          // Filter out empty strings first
+          const nonEmptySourceFile = Object.fromEntries(
+            Object.entries(parsedSourceFile).filter(
+              ([_, value]) => value !== "",
+            ),
+          );
+
           // Skip empty markdown documents
           if (
             (type === "mdx" || type === "md") &&
-            Object.keys(parsedSourceFile).length === 0
+            Object.keys(nonEmptySourceFile).length === 0
           ) {
-            if (!isSilent && !hasShownEmptyDocMessage) {
-              s.stop();
-              const fileName = sourceFilePath.split("/").pop();
-              note(`Skipping ${fileName} - Empty document`, "Empty Document");
-              hasShownEmptyDocMessage = true;
-              s.start();
-            }
+            // Don't show empty document message, just skip silently
             continue;
           }
 
           let keysToTranslate: string[];
 
           if (forceTranslate) {
-            // If force flag is used, translate all keys
-            // We don't want to translate empty strings
-            keysToTranslate = Object.keys(parsedSourceFile).filter(
-              (key) => parsedSourceFile[key] !== "",
-            );
+            // If force flag is used, translate all non-empty keys
+            keysToTranslate = Object.keys(nonEmptySourceFile);
           } else {
             // Otherwise use normal diff detection
             try {
@@ -191,7 +188,7 @@ export async function translateCommand(args: string[] = []) {
               keysToTranslate = [
                 ...changes.addedKeys,
                 ...changes.valueChanges.map((change) => change.key),
-              ];
+              ].filter((key) => nonEmptySourceFile[key] !== undefined);
             } catch (error) {
               console.log();
               note(
@@ -223,7 +220,7 @@ export async function translateCommand(args: string[] = []) {
           if (checkOnly) continue;
 
           // Convert the content to the expected format
-          const translationInput = Object.entries(parsedSourceFile)
+          const translationInput = Object.entries(nonEmptySourceFile)
             .filter(([key]) => keysToTranslate.includes(key))
             .map(([key, sourceText]) => ({
               key,
