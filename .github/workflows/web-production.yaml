@@ -15,13 +15,9 @@ jobs:
       - name: 🔄 Run Languine CLI
         uses: ./action
         env:
-          LANGUINE_API_KEY: ${{ secrets.LANGUINE_API_KEY }}
-          LANGUINE_PROJECT_ID: ${{ secrets.LANGUINE_PROJECT_ID }}
           GITHUB_TOKEN: "test"
-          GITHUB_REPOSITORY: "midday-ai/languine"
         with:
           api-key: ${{ secrets.LANGUINE_API_KEY }}
           project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
           dev-mode: ${{ env.ACT == 'true' }}
-          cli-version: latest
-          commit-message: ${{ secrets.LANGUINE_COMMIT_MESSAGE }}
+          working-directory: apps/web
