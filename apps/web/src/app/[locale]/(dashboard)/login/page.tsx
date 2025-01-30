@@ -3,13 +3,9 @@ import Login from "@/components/login";
 import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
-import { getOrganizationByUserId } from "@/db/queries/organization";
-import { getSession } from "@languine/supabase/session";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { cookies } from "next/headers";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations();
@@ -22,37 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const t = await getTranslations();
-
-  const {
-    data: { session },
-  } = await getSession();
-
-  if (session) {
-    const cookieStore = await cookies();
-    const preferenceCookie = cookieStore.get("user-preferences");
-
-    let preferences = {};
-
-    if (preferenceCookie) {
-      try {
-        preferences = JSON.parse(preferenceCookie.value);
-        console.log(preferences);
-      } catch {}
-    }
-
-    const { lastOrganizationId, lastProjectSlug } = preferences as {
-      lastOrganizationId?: string;
-      lastProjectSlug?: string;
-    };
-
-    if (lastOrganizationId && lastProjectSlug) {
-      redirect(`/${lastOrganizationId}/${lastProjectSlug}`);
-    }
-
-    // Fallback to default organization if no preferences found
-    const organization = await getOrganizationByUserId(session?.user.id);
-    redirect(`/${organization?.organization.id}/default`);
-  }
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">

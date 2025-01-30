@@ -24,6 +24,22 @@ export async function middleware(request: NextRequest) {
     if (inviteId) {
       return NextResponse.redirect(new URL("/api/invite/accept", request.url));
     }
+
+    const preferenceCookie = request.cookies.get("user-preferences");
+
+    if (preferenceCookie) {
+      const preferences = JSON.parse(preferenceCookie.value);
+      const { lastOrganizationId, lastProjectSlug } = preferences as {
+        lastOrganizationId?: string;
+        lastProjectSlug?: string;
+      };
+
+      if (lastOrganizationId && lastProjectSlug) {
+        return NextResponse.redirect(
+          new URL(`/${lastOrganizationId}/${lastProjectSlug}`, request.url),
+        );
+      }
+    }
   }
 
   return response;

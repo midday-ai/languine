@@ -1,3 +1,4 @@
+import { getOrganizationByUserId } from "@/db/queries/organization";
 import WelcomeEmail from "@/emails/templates/welcome";
 import { resend } from "@/lib/resend";
 import { UTCDate } from "@date-fns/utc";
@@ -6,9 +7,12 @@ import { getSession } from "@languine/supabase/session";
 import { setSkipSessionRefreshCookie } from "@languine/supabase/utils";
 import { waitUntil } from "@vercel/functions";
 import { differenceInSeconds } from "date-fns";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
+  const cookieStore = await cookies();
+
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
   const next = searchParams.get("next") ?? "/login";
@@ -45,11 +49,30 @@ export async function GET(request: Request) {
         );
       }
 
+      const preferenceCookie = cookieStore.get("user-preferences");
+
+      let redirectUrl = `${origin}${next}`;
+
+      if (!preferenceCookie && session) {
+        const organization = await getOrganizationByUserId(session.user.id);
+
+        if (organization) {
+          redirectUrl = `${origin}/${organization.organization.id}/default`;
+
+          const preferences = {
+            lastOrganizationId: organization.organization.id,
+            lastProjectSlug: "default",
+          };
+
+          cookieStore.set("user-preferences", JSON.stringify(preferences));
+        }
+      }
+
       const response = isLocalEnv
-        ? NextResponse.redirect(`${origin}${next}`)
+        ? NextResponse.redirect(redirectUrl)
         : forwardedHost
           ? NextResponse.redirect(`https://${forwardedHost}${next}`)
-          : NextResponse.redirect(`${origin}${next}`);
+          : NextResponse.redirect(redirectUrl);
 
       // Set cookie to avoid checking remote session for 30 minutes
       setSkipSessionRefreshCookie(response, true);
