@@ -28,10 +28,8 @@ export class LockFileManager {
   private lockFile: LockFile;
   private readonly lockFilePath: string;
 
-  constructor(
-    workingDir: string = process.env.WORKING_DIRECTORY || process.cwd(),
-  ) {
-    this.lockFilePath = join(workingDir, "languine.lock");
+  constructor() {
+    this.lockFilePath = join(process.cwd(), "languine.lock");
     this.lockFile = this.loadLockFile();
   }
 

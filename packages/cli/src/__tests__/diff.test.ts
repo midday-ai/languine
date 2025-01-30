@@ -22,7 +22,7 @@ describe("diff detection tests", () => {
   });
 
   beforeEach(() => {
-    lockManager = new LockFileManager(testDir);
+    lockManager = new LockFileManager();
     lockManager.clearLockFile();
   });
 
@@ -43,7 +43,6 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
-      workingDir: testDir,
     });
 
     expect(changes.addedKeys.sort()).toEqual(["hello", "welcome"].sort());
@@ -82,7 +81,6 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
-      workingDir: testDir,
     });
 
     expect(changes.addedKeys).toEqual(["welcome"]);
@@ -120,7 +118,6 @@ describe("diff detection tests", () => {
     const changes = await getDiff({
       sourceFilePath: filePath,
       type: "json",
-      workingDir: testDir,
     });
 
     expect(changes.addedKeys).toEqual([]);
