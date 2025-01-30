@@ -4,10 +4,23 @@ import type { GitPlatform } from "./git-platform-facade.ts";
 export class GitHubPlatform implements GitPlatform {
   async configureGit(): Promise<void> {
     // GitHub Actions specific configuration
-    if (process.env.GITHUB_TOKEN) {
-      const remoteUrl = `https://x-access-token:${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
-      await execAsync(`git remote set-url origin ${remoteUrl}`);
+    if (!process.env.GITHUB_TOKEN) {
+      throw new Error("GITHUB_TOKEN is required for Git operations");
     }
+
+    if (!process.env.GITHUB_REPOSITORY) {
+      throw new Error("GITHUB_REPOSITORY environment variable is not set");
+    }
+
+    // Configure Git for HTTPS authentication
+    const remoteUrl = `https://x-access-token:${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
+    await execAsync(`git remote set-url origin ${remoteUrl}`);
+
+    // Ensure we have the full Git history
+    await execAsync("git fetch --unshallow || true");
+
+    // Configure Git to handle line endings
+    await execAsync("git config --global core.autocrlf false");
   }
 
   async createPullRequest(options: {

@@ -37,9 +37,21 @@ export class LanguineTranslationService implements TranslationService {
       // Allow platform-specific Git configuration
       await this.platform.configureGit();
 
-      // Set up Git repository
+      // Set up Git repository and fetch base branch
+      logger.debug(`Fetching and setting up base branch: ${config.baseBranch}`);
       await execAsync(`git fetch origin ${config.baseBranch}`);
-      await execAsync(`git checkout ${config.baseBranch} --`);
+
+      // Create local branch tracking remote if it doesn't exist
+      try {
+        await execAsync(`git checkout ${config.baseBranch}`);
+      } catch (error) {
+        logger.debug(
+          `Creating local branch tracking remote ${config.baseBranch}`,
+        );
+        await execAsync(
+          `git checkout -b ${config.baseBranch} origin/${config.baseBranch}`,
+        );
+      }
 
       // Check if last commit was from bot to prevent loops
       const currentAuthor = `${GIT_CONFIG.userName} <${GIT_CONFIG.userEmail}>`;

@@ -47,9 +47,14 @@ runs:
   env:
     LANGUINE_API_KEY: ${{ inputs.api-key }}
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
-    CLI_VERSION: ${{ inputs.cli-version }}
+    LANGUINE_CLI_VERSION: ${{ inputs.cli-version }}
     DEV_MODE: ${{ inputs.dev-mode }}
-    WORKING_DIRECTORY: ${{ inputs.working-directory }}
+    INPUT_WORKING_DIRECTORY: ${{ inputs.working-directory }}
+    INPUT_CREATE_PULL_REQUEST: ${{ inputs.create-pull-request }}
+    INPUT_BASE_BRANCH: ${{ inputs.base-branch }}
+    INPUT_COMMIT_MESSAGE: ${{ inputs.commit-message }}
+    INPUT_PR_TITLE: ${{ inputs.pr-title }}
+    INPUT_PR_BODY: ${{ inputs.pr-body }}
 
 branding:
   icon: 'globe'
