@@ -1,10 +1,10 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+GitHub Actionsを使用すると、リポジトリにコードをプッシュするだけで簡単にコードを翻訳できます。GitHub Actionsは新しいキーを翻訳し、プルリクエストを作成するか、変更をコミットします。
+これにより、高品質な翻訳を維持しながら、多くの時間と労力を節約できます。
 
 
-## Workflow
+## ワークフロー
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   アクション開始    │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git &           │
+│    認証情報        │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   変更を確認       │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [変更あり]      │ [変更なし]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   コミット & プッシュ │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    PRを作成        │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        完了         │◄──────┘
 └─────────────────────┘
 `}
         </pre>

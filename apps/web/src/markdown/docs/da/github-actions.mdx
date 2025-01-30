@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Med github-handlingen kan du nemt oversætte din kode ved blot at pushe din kode til repositoryet; github-handlingen vil derefter oversætte dine nye nøgler, enten oprette en pull-anmodning eller committe dine ændringer.
+Dette sparer dig for meget tid og kræfter, samtidig med at der opretholdes høj kvalitet i oversættelserne.
 
 
 ## Workflow
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Handlingen Starter │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Opsæt Git &      │
+│    Legitimation     │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Tjek Ændringer    │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Ændringer]      │ [Ingen Ændringer]
            │                  │
 ┌──────────▼──────────┐       │
 │   Commit & Push     │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│    Create PR        │       │
+│    Opret PR         │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│        Færdig       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

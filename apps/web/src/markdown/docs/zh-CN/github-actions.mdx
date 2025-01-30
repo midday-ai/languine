@@ -1,10 +1,10 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+通过 GitHub Action，您可以轻松地通过将代码推送到代码库来翻译您的代码，GitHub Action 将翻译您的新键，或者创建一个拉取请求或提交您的更改。
+这为您节省了大量时间和精力，同时保持高质量的翻译。
 
 
-## Workflow
+## 工作流程
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,36 +16,36 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   操作开始         │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    设置 Git &      │
+│    凭证           │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine 引擎 ░░░░░░░░░░░░░░░░░░░░│
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   检查更改         │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [有更改]        │ [无更改]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   提交 & 推送       │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    创建 PR         │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        完成         │◄──────┘
 └─────────────────────┘
 `}
         </pre>

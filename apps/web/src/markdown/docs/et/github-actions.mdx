@@ -1,10 +1,10 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+GitHub'i tegevuse abil saate oma koodi hõlpsasti tõlkida, lihtsalt lükates oma koodi hoidlasse. GitHub'i tegevus tõlgib seejärel teie uued võtmed, luues kas pull request'i või pannes teie muudatused toime.
+See säästab teile palju aega ja vaeva, säilitades samal ajal kõrge kvaliteediga tõlked.
 
 
-## Workflow
+## Töövoog
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,36 +16,36 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Tegevus Algab     │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Seadista Git &   │
+│    Volitused       │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine Mootor ░░░░░░░░░░░░░░░░░░░░│
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Kontrolli Muudatusi│───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Muudatused]     │ [Ei ole muudatusi]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Pane Tööle & Lükka │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Loo PR          │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Valmis       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

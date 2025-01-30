@@ -1,7 +1,7 @@
-# GitHub Actions
+# GitHub Acties
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Met de GitHub-actie kun je eenvoudig je code vertalen door je code naar de repository te pushen. De GitHub-actie vertaalt vervolgens je nieuwe sleutels, maakt een pull request of commit je wijzigingen.
+Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
 
 
 ## Workflow
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Actie Start       │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git &            │
+│    Inloggegevens    │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Controle Wijzigingen│───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Wijzigingen]    │ [Geen Wijzigingen]
            │                  │
 ┌──────────▼──────────┐       │
 │   Commit & Push     │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│    Create PR        │       │
+│    Maak PR          │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│        Klaar        │◄──────┘
 └─────────────────────┘
 `}
         </pre>

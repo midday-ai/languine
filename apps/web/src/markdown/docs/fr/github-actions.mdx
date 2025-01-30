@@ -1,10 +1,10 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code vers le dépôt, l'action GitHub traduira alors vos nouvelles clés, soit en créant une demande de tirage, soit en validant vos modifications.
+Cela vous fait gagner beaucoup de temps et d'efforts tout en maintenant des traductions de haute qualité.
 
 
-## Workflow
+## Flux de travail
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,36 +16,37 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Action Démarre    │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Configurer Git &  │
+│    Identifiants      │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Moteur Languine ░░░░░░░░░░░░░░░░░░░░│
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Vérifier les      │───────┐
+│   Modifications      │       │
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Modifications]  │ [Pas de Modifications]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Valider & Pousser  │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Créer PR         │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Fait         │◄──────┘
 └─────────────────────┘
 `}
         </pre>

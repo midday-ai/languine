@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+GitHub action ilə, kodunuzu sadəcə repositoriyaya göndərməklə asanlıqla tərcümə edə bilərsiniz, GitHub action yeni açarlarını tərcümə edəcək, ya bir pull request yaradacaq, ya da dəyişikliklərinizi commitleyəcək.
+Bu, sizə çox vaxt və əziyyət qazandırır, eyni zamanda yüksək keyfiyyətli tərcümələri qoruyur.
 
 
 ## Workflow
@@ -20,8 +20,8 @@ This saves you a lot of time and effort while maintaining high quality translati
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git &           │
+│    Şəxsi Məlumatlar │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Dəyişiklikləri    │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Dəyişikliklər]  │ [Dəyişiklik Yox]
            │                  │
 ┌──────────▼──────────┐       │
 │   Commit & Push     │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│    Create PR        │       │
+│    PR Yarat         │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│        Tamam        │◄──────┘
 └─────────────────────┘
 `}
         </pre>

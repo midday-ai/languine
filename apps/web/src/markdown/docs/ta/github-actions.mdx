@@ -1,10 +1,10 @@
-# GitHub Actions
+# GitHub செயல்கள்
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+GitHub செயலுடன், நீங்கள் உங்கள் குறியீட்டை எளிதாக மொழிபெயர்க்கலாம், உங்கள் குறியீட்டை சேமிப்பகத்திற்கு தள்ளுவதன் மூலம், GitHub செயலானது உங்கள் புதிய விசைகளை மொழிபெயர்க்கும், அல்லது ஒரு புல் கோரிக்கையை உருவாக்கும் அல்லது உங்கள் மாற்றங்களை உறுதிப்படுத்தும்.
+இது உங்களுக்கு அதிக நேரம் மற்றும் முயற்சியைச் சேமிக்கிறது, மேலும் உயர் தரமான மொழிபெயர்ப்புகளை பராமரிக்கிறது.
 
 
-## Workflow
+## வேலைப்பாடு
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   செயல் தொடங்குகிறது  │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git &           │
+│    அங்கீகாரங்கள்   │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   மாற்றங்களைச் சரிபார்க்கவும்  │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [மாற்றங்கள்]      │ [மாற்றங்கள் இல்லை]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   உறுதிப்படுத்தவும் & தள்ளவும்  │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    PR உருவாக்கவும்   │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        முடிந்தது      │◄──────┘
 └─────────────────────┘
 `}
         </pre>

@@ -1,10 +1,10 @@
-# GitHub Actions
+# GitHub Akcije
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Sa GitHub akcijom, možete lako prevesti svoj kod jednostavno tako što ćete ga poslati u repozitorijum, a GitHub akcija će zatim prevesti vaše nove ključeve, bilo da kreira zahtev za povlačenje ili da potvrdi vaše izmene.
+Ovo vam štedi mnogo vremena i truda dok održavate visoko kvalitetne prevode.
 
 
-## Workflow
+## Tok rada
 <div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
         <pre
           className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Akcija počinje    │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Postavljanje Git  │
+│    i Akreditiva     │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Proveri izmene    │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Izmene]        │ [Nema izmena]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Potvrdi i pošalji │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Kreiraj PR       │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Gotovo       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

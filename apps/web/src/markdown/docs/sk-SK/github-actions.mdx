@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+S pomocou github akcie môžete jednoducho preložiť svoj kód jednoducho tak, že ho nahráte do repozitára, github akcia potom preloží vaše nové kľúče, buď vytvorí pull request alebo uloží vaše zmeny.
+To vám ušetrí veľa času a námahy pri zachovaní vysokej kvality prekladov.
 
 
 ## Workflow
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Akcia začína      │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Nastavenie Git & │
+│    Prístupové údaje │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Skontrolovať zmeny│───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Zmeny]         │ [Žiadne zmeny]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Uložiť a odoslať  │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Vytvoriť PR      │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Hotovo       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

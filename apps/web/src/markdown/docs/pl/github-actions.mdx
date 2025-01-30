@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Dzięki akcji GitHub możesz łatwo przetłumaczyć swój kod, po prostu przesyłając go do repozytorium. Akcja GitHub przetłumaczy twoje nowe klucze, tworząc pull request lub zatwierdzając twoje zmiany.
+To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość tłumaczeń.
 
 
 ## Workflow
@@ -16,36 +16,36 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Rozpoczęcie Akcji │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Ustawienie Git &  │
+│    Poświadczenia    │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Silnik Languine ░░░░░░░░░░░░░░░░░░░░│
 │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Sprawdź Zmiany    │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Zmiany]        │ [Brak Zmian]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Zatwierdź & Wyślij│       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Utwórz PR        │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Gotowe       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Mit der GitHub-Aktion können Sie Ihren Code ganz einfach übersetzen, indem Sie Ihren Code einfach in das Repository pushen. Die GitHub-Aktion übersetzt dann Ihre neuen Schlüssel, erstellt entweder einen Pull-Request oder committet Ihre Änderungen.
+Das spart Ihnen viel Zeit und Mühe, während die Übersetzungen von hoher Qualität bleiben.
 
 
 ## Workflow
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Aktion beginnt     │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git &            │
+│    Anmeldeinformationen │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Änderungen prüfen  │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Änderungen]      │ [Keine Änderungen]
            │                  │
 ┌──────────▼──────────┐       │
 │   Commit & Push     │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│    Create PR        │       │
+│    PR erstellen      │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│        Fertig       │◄──────┘
 └─────────────────────┘
 `}
         </pre>

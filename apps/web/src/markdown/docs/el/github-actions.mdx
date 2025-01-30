@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+Με την ενέργεια github, μπορείτε εύκολα να μεταφράσετε τον κώδικά σας απλά σπρώχνοντας τον κώδικά σας στο αποθετήριο, η ενέργεια github θα μεταφράσει τα νέα σας κλειδιά, είτε θα δημιουργήσει ένα pull request είτε θα δεσμεύσει τις αλλαγές σας.
+Αυτό σας εξοικονομεί πολύ χρόνο και προσπάθεια ενώ διατηρεί υψηλής ποιότητας μεταφράσεις.
 
 
 ## Workflow
@@ -16,12 +16,12 @@ This saves you a lot of time and effort while maintaining high quality translati
         >
           {`
 ┌─────────────────────┐
-│   Action Starts     │
+│   Η Ενέργεια Ξεκινά │
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Ρύθμιση Git &    │
+│    Διαπιστευτήρια   │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   Έλεγχος Αλλαγών   │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [Αλλαγές]        │ [Καμία Αλλαγή]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   Δέσμευση & Σπρώξιμο│       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    Δημιουργία PR     │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        Έγινε         │◄──────┘
 └─────────────────────┘
 `}
         </pre>

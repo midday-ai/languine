@@ -1,7 +1,7 @@
 # GitHub Actions
 
-With the github action, you can easily translate your code by just pushing your code to the repository, the github action will then translate your new keys, either create a pull request or commit your changes.
-This saves you a lot of time and effort while maintaining high quality translations.
+github action을 사용하면 코드를 저장소에 푸시하기만 하면 쉽게 번역할 수 있습니다. 그러면 github action이 새로운 키를 번역하고, 풀 리퀘스트를 생성하거나 변경 사항을 커밋합니다.
+이것은 높은 품질의 번역을 유지하면서 많은 시간과 노력을 절약해 줍니다.
 
 
 ## Workflow
@@ -20,8 +20,8 @@ This saves you a lot of time and effort while maintaining high quality translati
 └──────────┬──────────┘
            │
 ┌──────────▼──────────┐
-│    Setup Git &      │
-│    Credentials      │
+│    Git 및          │
+│    자격 증명 설정  │
 └──────────┬──────────┘
            │
 ┌─────────────────────────────────────────────────────────┐
@@ -31,21 +31,21 @@ This saves you a lot of time and effort while maintaining high quality translati
 └─────────────────────────────────────────────────────────┘
            │
 ┌──────────▼──────────┐
-│   Check Changes     │───────┐
+│   변경 사항 확인   │───────┐
 └──────────┬──────────┘       │
            │                  │
-           │ [Changes]        │ [No Changes]
+           │ [변경 사항]      │ [변경 없음]
            │                  │
 ┌──────────▼──────────┐       │
-│   Commit & Push     │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Create PR        │       │
+│   커밋 및 푸시      │       │
 └──────────┬──────────┘       │
            │                  │
 ┌──────────▼──────────┐       │
-│        Done         │◄──────┘
+│    PR 생성          │       │
+└──────────┬──────────┘       │
+           │                  │
+┌──────────▼──────────┐       │
+│        완료         │◄──────┘
 └─────────────────────┘
 `}
         </pre>
