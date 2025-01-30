@@ -39,7 +39,6 @@ const argsSchema = z.array(z.string()).transform((args) => {
     checkOnly: hasFlag("--check"),
     apiKey: getFlagValue("--api-key"),
     projectId: getFlagValue("--project-id"),
-    base: getFlagValue("--base"),
     forcedLocales: (() => {
       const forceIndex = args.indexOf("--force");
       if (
@@ -66,7 +65,6 @@ export async function translateCommand(args: string[] = []) {
     forcedLocales,
     apiKey: overrideApiKey,
     projectId: overrideProjectId,
-    base,
   } = argsSchema.parse(args);
 
   const s = spinner();
@@ -188,7 +186,6 @@ export async function translateCommand(args: string[] = []) {
               const changes = await getDiff({
                 sourceFilePath,
                 type,
-                base,
               });
               // Include both new keys and changed values
               keysToTranslate = [
@@ -198,11 +195,10 @@ export async function translateCommand(args: string[] = []) {
             } catch (error) {
               console.log();
               note(
-                base
-                  ? `Failed to compare against '${base}'. Make sure the branch/ref exists and contains the source files.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting`
-                  : "Please commit your files before continuing. This command needs to compare against the previous version in git.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
-                "Diffing",
+                "An error occurred while checking for translation changes. Please check the error message below.\nNeed help? https://languine.ai/docs/getting-started/troubleshooting",
+                "Error",
               );
+              console.error(error);
               console.log();
               process.exit(1);
             }

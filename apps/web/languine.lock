@@ -1,0 +1,1568 @@
+version: 1
+files:
+  src/messages/en.json:
+    header.pricing:
+      hash: e22ac25b066b201473de7aa700ef5d92
+      value: Pricing
+    header.docs:
+      hash: a3907cd461d8739aa3266047bc4b8c0c
+      value: Docs
+    header.signIn:
+      hash: b6d4223e60986fa4c9af77ee5f7149c5
+      value: Sign in
+    header.goToApp:
+      hash: 90e5e76a965ecc3c844ae730d9f71b6b
+      value: Go to app
+    hero.title:
+      hash: f00286f7bf06669d3e05136dcbeda42b
+      value: Automated localization infrastructure
+    hero.description:
+      hash: 47bdfa703928ad3af9a4f811f3349c74
+      value: Translate your app's content directly in your development workflow. Our
+        CLI integrates with GitHub Actions and other CI/CD tools to automate
+        translations as you code.
+    navigation.dashboard:
+      hash: 2938c7f7e560ed972f8a4f68e80ff834
+      value: Dashboard
+    navigation.tuning:
+      hash: 89dd2948ecda7325c0001d8a0e51a2d8
+      value: Tuning
+    navigation.settings:
+      hash: f4f70727dc34561dfde1a3c529b6205c
+      value: Settings
+    navigation.pricing:
+      hash: e22ac25b066b201473de7aa700ef5d92
+      value: Pricing
+    navigation.docs:
+      hash: 5b6cf869265c13af8566f192b4ab3d2a
+      value: Documentation
+    navigation.account:
+      hash: 08bd40c7543007ad06e4fce31618f6ec
+      value: Account
+    getStarted.heading:
+      hash: be11c74c1dd7f307bb80183a90dc2067
+      value: Get started
+    getStarted.title:
+      hash: f00286f7bf06669d3e05136dcbeda42b
+      value: Automated localization infrastructure
+    getStarted.description:
+      hash: 47bdfa703928ad3af9a4f811f3349c74
+      value: Translate your app's content directly in your development workflow. Our
+        CLI integrates with GitHub Actions and other CI/CD tools to automate
+        translations as you code.
+    getStarted.button.startAutomating:
+      hash: a698f6a6e17c887e558c625a4e19800b
+      value: Start automating
+    getStarted.button.readDocumentation:
+      hash: 7a471cf15b5fc07ad6cda82a6f054b3b
+      value: Read documentation
+    companies.title:
+      hash: 11cd4b12c171c74f7146ba4e4ede2f62
+      value: Used by
+    companies.addYourCompany:
+      hash: c6eb0094edad581dd56a7186889c9eb6
+      value: + Add your company
+    activity.title:
+      hash: ecfc2dffe568c10a67dbc6d3724cfde2
+      value: Activity
+    activity.loading:
+      hash: 16bfbf9c462762cf1cba4134ec53c504
+      value: Loading
+    activity.noResults:
+      hash: fa9c0b1efecd50345edeb04a067263a1
+      value: No results for '{search}'
+    activity.clearSearch:
+      hash: 9983381c21069a3d6e4432e0aaea0079
+      value: Clear search
+    activity.loadMore:
+      hash: 146ffe2fd9fa5bec3b63b52543793ec7
+      value: Show more
+    activity.type.key:
+      hash: 897356954c2cd3d41b221e3f24f99bba
+      value: Key
+    activity.type.document:
+      hash: 0945359809dad1fbf3dea1c95a0da951
+      value: Document
+    features.title:
+      hash: 98f770b0af18ca763421bac22b4b6805
+      value: Features
+    features.fullyOpenSource:
+      hash: bdcd016117e119e7d42a35bd19bf0e02
+      value: Fully open source
+    features.fullyOpenSourceDescription:
+      hash: 8b874a3e1b96efe68617f967532bf9c9
+      value: Our code is publicly available on GitHub, enabling transparency and
+        community contributions.
+    features.noVendorLockIn:
+      hash: cc18e220a49143ae4425dfebfd856fbb
+      value: No vendor lock in
+    features.noVendorLockInDescription:
+      hash: 12e34dd117f9aa036ec0feb347d66ef1
+      value: We don't lock you into a specific service, use your own LLMs.
+    features.presetsForExpo:
+      hash: 35e2d5bfb5c3495057bb1642f174d95b
+      value: Presets for Expo
+    features.presetsForExpoDescription:
+      hash: 637d6e67a90fb92ae556db790f50302e
+      value: We provide presets for Expo, so you can get started quickly.
+    features.presetForReactNative:
+      hash: 80db9f5575a5e449e7c15c8346a56cdd
+      value: Preset for React Native
+    features.presetForReactNativeDescription:
+      hash: b899e57bfdd5b20bd3476a23abd6c1bf
+      value: We provide a preset for React Native, so you can get started quickly.
+    features.presetForReactEmail:
+      hash: ba2ac6fa0e81ed0fa5c7824088cbfc15
+      value: React Email Library
+    features.presetForReactEmailDescription:
+      hash: 1b98e511c66e4fd3244e9ab086943e73
+      value: We have created a i18n library for React Email.
+    features.readyForI18nLibraries:
+      hash: 9c20c495c1d74d53ccd6e41079dcdf33
+      value: Ready for i18n libraries
+    features.readyForI18nLibrariesDescription:
+      hash: 6aee7c8de5c37a8c912e3bcc2d4325ae
+      value: We support all libraries including the most popular ones (next-intl,
+        react-i18next, react-intl, etc).
+    info.title:
+      hash: 9a063327a73bebd07dd7dda5cf9d1fc4
+      value: Handles every aspect of localizing your app including
+    info.smartTranslation.title:
+      hash: 4c0613ac878e8255749c741b6cf2c72b
+      value: Smart Translation
+    info.smartTranslation.intelligentTranslation:
+      hash: d639c28970ad6c75b000b995e179b9d1
+      value: Intelligent translation with context awareness
+    info.smartTranslation.brandVoice:
+      hash: 4ec60e8be67bbe9b91a859ce9aae756e
+      value: Brand voice and tone consistency
+    info.smartTranslation.terminology:
+      hash: c5585a359d7424c399710b6c6f000843
+      value: Terminology management
+    info.smartTranslation.linguisticFeatures:
+      hash: 19131bf7d9e88b6f689734cd5c1b1a41
+      value: Advanced linguistic features
+    info.smartTranslation.realtimeUpdates:
+      hash: 3df0d87a12edf7d73971f3da5db4bb0d
+      value: Real-time translation updates
+    info.implementation.title:
+      hash: b672f52ade975e864ae6b58722c03689
+      value: Implementation
+    info.implementation.quickSetup:
+      hash: 3dab8cea497d11e65a53a1648fe9ec11
+      value: Quick setup and integration
+    info.implementation.fileFormat:
+      hash: b8c38c6813a37c1f65939757a4202238
+      value: File format handling
+    info.implementation.contentStructure:
+      hash: f642876f4bf9764b97474231f734e54b
+      value: Content structure organization
+    info.implementation.assetOrganization:
+      hash: 6adbea1e4a7f1730f5d15a7995067fdd
+      value: Asset organization
+    info.developer.title:
+      hash: a2b14f3cf7830e8c3341ff6b520ffbfb
+      value: Developer Experience
+    info.developer.cli:
+      hash: cc968553a80aacc0af10dd5e35251a75
+      value: Command-line interface
+    info.developer.cicd:
+      hash: b2638d45cabecd2238bd2642eafcb48e
+      value: CI/CD integration
+    info.developer.versionControl:
+      hash: 13a69c9e4eabce5f42dc90f8285cc16b
+      value: Version control
+    info.developer.workflow:
+      hash: 97583a85b86081e3d4a45cd9999aad32
+      value: Developer workflow
+    info.developer.documentation:
+      hash: 3247eda202c3edac94e030982f79406d
+      value: Comprehensive documentation
+    login.title:
+      hash: b6d4223e60986fa4c9af77ee5f7149c5
+      value: Sign in
+    login.github:
+      hash: 9906352b29a82243c688629fd911893e
+      value: Sign in with GitHub
+    login.google:
+      hash: 95aacd4d4ac87524cfc63d9cc94c008e
+      value: Sign in with Google
+    login.footer:
+      hash: e2a0e3eec3a510e1be84023389a98b2f
+      value: Automate your localization.
+    login.description:
+      hash: df22645ebc0fced2db911c73fe8b14f8
+      value: Sign in to start automating your localization in seconds.
+    login.terms.text:
+      hash: df98125e7f6e51ac02e2f7b88bc5126e
+      value: By signing in, you agree to our
+    login.terms.termsOfService:
+      hash: 3b6c2b4caaf4f14f8d7feeddc4ac3f4d
+      value: Terms of Service
+    login.terms.and:
+      hash: be5d5d37542d75f93a87094459f76678
+      value: and
+    login.terms.privacyPolicy:
+      hash: fa2ead697d9998cbc65c81384e6533d5
+      value: Privacy Policy
+    translations.header:
+      hash: 33ef94b2b7d40dcb8e665003477209e2
+      value: Translated keys
+    userMenu.account:
+      hash: ff73074ccafb0bcfc1c49a09ceb6532f
+      value: Account Settings
+    userMenu.signOut:
+      hash: c87aacf5673fada1108c9f809d354311
+      value: Sign out
+    userMenu.createTeam:
+      hash: 566b03c72e8a6206b2efc9e5fab5823c
+      value: Create team
+    userMenu.homepage:
+      hash: 339f7a2e087a159e6a31501649027a77
+      value: Homepage
+    userMenu.team:
+      hash: 2939479468e48cb20df8c9ae01d35f64
+      value: Team Settings
+    teamSelector.addProject:
+      hash: 7e94fd31ac489c6edc9b9ee8820b5500
+      value: Create project
+    teamSelector.createProjectTitle:
+      hash: 0b60e8fecbfed3cdc2b22bdd3db8a60e
+      value: Create a new project
+    teamSelector.projectNamePlaceholder:
+      hash: 7adea0d9c77aabccd8bb67ae0a832d59
+      value: Project name
+    teamSelector.createProjectButton:
+      hash: 7e94fd31ac489c6edc9b9ee8820b5500
+      value: Create project
+    teamSelector.pro:
+      hash: abd900517e55dce0437dac136a8568d7
+      value: Pro
+    teamSelector.project:
+      hash: 9e727fdd3aec8274f46685441900280d
+      value: Project
+    teamSelector.teams:
+      hash: 1fe1b6cf4f52930c301b03e5a69c42c2
+      value: Teams
+    teamSelector.createTeam:
+      hash: 566b03c72e8a6206b2efc9e5fab5823c
+      value: Create team
+    teamSelector.createTeamTitle:
+      hash: b2eefda1346095fafabe730ab022ab56
+      value: Create a new team
+    teamSelector.teamNamePlaceholder:
+      hash: dfdcb4a58db81e09ebccbdbfbb0a0da6
+      value: Team name
+    teamSelector.createTeamButton:
+      hash: 566b03c72e8a6206b2efc9e5fab5823c
+      value: Create team
+    coming_soon.title:
+      hash: d85a5982790da2dcf49f7f6f6f39bc94
+      value: Languine is in Early Access
+    coming_soon.description:
+      hash: 31b4dbba547e2844113c782df7a0dd7e
+      value: We're currently in early access. Reach out to
+    coming_soon.cta:
+      hash: 7af243e0268f98fbad9ca52dfcda2e93
+      value: on X to get early access.
+    account.fullName.title:
+      hash: 630058029627ce58e7571e7a5b6ec591
+      value: Full Name
+    account.fullName.description:
+      hash: 2bd0581df5ec5171d504295d4bc7f520
+      value: Your full name as it will appear across the platform.
+    account.fullName.placeholder:
+      hash: 387af98b1574a74e12eb99f3ed220831
+      value: Enter your full name
+    account.email.title:
+      hash: 643a860f992333b8600ea264aca7c4fc
+      value: Email Address
+    account.email.description:
+      hash: 964d297d88c52ab6de3eecc56ef717fe
+      value: The email address associated with your account.
+    account.email.placeholder:
+      hash: 6832ac593617c3e5f61c82a20b0d9a3a
+      value: Enter your email address
+    account.apiKey.title:
+      hash: d876ff8da67c3731ae25d8335a4168b4
+      value: API Key
+    account.apiKey.description:
+      hash: 9fc71a9bd92ecc0b12091476fc9f2c3f
+      value: Your personal API key for accessing the Languine API and from the CLI.
+    account.deleteAccount.title:
+      hash: bee04ef1315b3f9562be34e2e28a7831
+      value: Delete Account
+    account.deleteAccount.description:
+      hash: cd44f1827b32f439ff05c1be1419a9de
+      value: Permanently delete your account and all associated data. This action
+        cannot be undone.
+    account.deleteAccount.button:
+      hash: bee04ef1315b3f9562be34e2e28a7831
+      value: Delete Account
+    copyInstall.copied:
+      hash: efc1a46f7b47e4d3cf60f13b6c89069b
+      value: Copied to clipboard
+    dangerZone.dialog.title:
+      hash: 99b418f62bde2c0a85d1e388ac803677
+      value: Are you absolutely sure?
+    dangerZone.dialog.description:
+      hash: fb2e12b0848b72f3e7c21f55b0e6c3fa
+      value: This action cannot be undone. Please type DELETE to confirm.
+    dangerZone.dialog.placeholder:
+      hash: 7df3f792d2f290b4440feb6b71c6ed62
+      value: Type DELETE to confirm
+    dangerZone.dialog.confirm:
+      hash: 9e365dd1fae1b9ecae5a1d220a5fe86f
+      value: Confirm Delete
+    dangerZone.dialog.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    pipeline.title:
+      hash: e46151f900a88b101abc5c6dc63e56f7
+      value: Workflow (CI/CD Pipeline)
+    pipeline.pro:
+      hash: 930f8b73c81a6b880f2eec8693726bd6
+      value: "[pro]"
+    pipeline.description:
+      hash: b40fd73fd7cf0dacc627ce6ef384b128
+      value: Our translation engine seamlessly integrates into your existing CI/CD
+        pipeline, automatically translating your codebase on every push. When
+        code changes are pushed, we analyze the modified content, maintain your
+        translation memory, and generate accurate translations while preserving
+        your brand voice and terminology. The translations are then submitted as
+        pull requests, allowing for review before being merged into your main
+        branch and deployed. This automated workflow ensures your localized
+        content stays in sync with development.
+    settings.badRequest:
+      hash: 446b416d535ed3f547fcd653dc11d49c
+      value: Invalid request
+    settings.badRequestDescription:
+      hash: 5ddd415c6b48c294b9ae788e58d09511
+      value: Organization must have at least one owner. Transfer ownership to another
+        member before removing this owner.
+    settings.permissionDenied:
+      hash: c52a1454518514aae5d63f785cf50105
+      value: Permission denied
+    settings.permissionDeniedDescription:
+      hash: 743adc4681ee2d52916436709f5b7ad9
+      value: You need to be an owner of the team to make this action
+    settings.deleteTeamTitle:
+      hash: cc736640446e65ba975038d8a3a91a11
+      value: Delete team
+    settings.deleteTeamDescription:
+      hash: 41b47d6fe48e022c0d71b620ae8f7945
+      value: Cannot delete organization when you are the only member, instead delete
+        your account
+    settings.saved:
+      hash: 96d4dadd096605d5813d2c6bdf82e82c
+      value: Settings saved
+    settings.savedDescription:
+      hash: 5f5cdcb004646b1da96ed29222da6c4a
+      value: Your changes have been saved successfully
+    settings.error:
+      hash: 6609dd239e143d00002123326c5e4aad
+      value: Something went wrong
+    settings.errorDescription:
+      hash: 9c3aa67be8762e5bfd13be5de09086bf
+      value: Please try again or contact support
+    settings.addTeam:
+      hash: 566b03c72e8a6206b2efc9e5fab5823c
+      value: Create team
+    settings.apiKey.updated:
+      hash: f1142163044d1b8be28f108cff4d78fb
+      value: API key updated
+    settings.apiKey.updatedDescription:
+      hash: b40c07bff8b5a8dfa9388f3171c140f4
+      value: Your API key has been updated successfully and copied to your clipboard.
+    settings.apiKey.title:
+      hash: 05f5fbd7b091b00b5ecc2cdf7772a71b
+      value: Update API Key
+    settings.apiKey.description:
+      hash: dc75f12cbce8dd5759cd668dc65ecbf8
+      value: Are you sure you want to generate a new API key? The old key will stop
+        working immediately.
+    settings.apiKey.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    settings.apiKey.continue:
+      hash: a0bfb8e59e6c13fc8d990781f77694fe
+      value: Continue
+    settings.tabs.project:
+      hash: 9e727fdd3aec8274f46685441900280d
+      value: Project
+    settings.tabs.account:
+      hash: 08bd40c7543007ad06e4fce31618f6ec
+      value: Account
+    settings.tabs.team:
+      hash: ac848fa228f49ba2b8a5fbd76596817d
+      value: Team
+    settings.tabs.provider:
+      hash: 27703c8f150ac4bb0a3a83a7857353af
+      value: Provider
+    settings.tabs.billing:
+      hash: 780c462e85ba4399a5d42e88f69a15ca
+      value: Billing
+    settings.addProject:
+      hash: 7e94fd31ac489c6edc9b9ee8820b5500
+      value: Create project
+    settings.project.name.title:
+      hash: 8e3a42158ee70b67cf55b33e2789a9e5
+      value: Project Name
+    settings.project.name.description:
+      hash: 55257874f345827b9ffe31ea91e7e084
+      value: The name of your project
+    settings.project.name.placeholder:
+      hash: 2e8a21c53c67dfe59cf31e887903b505
+      value: Enter project name
+    settings.project.id.title:
+      hash: 6cb2830007af9ceb6ce55b4560dc650a
+      value: Project ID
+    settings.project.id.description:
+      hash: 8afa0ed0093af92bd230f690d425f934
+      value: Your unique project identifier
+    settings.project.id.placeholder:
+      hash: 6cb2830007af9ceb6ce55b4560dc650a
+      value: Project ID
+    settings.project.delete.title:
+      hash: f210dc350b5e5aed8e60de810eaa37d0
+      value: Delete Project
+    settings.project.delete.description:
+      hash: a2769f04b50c36b113aed6a845f6fa01
+      value: Permanently delete this project and all its data
+    settings.project.delete.button:
+      hash: f210dc350b5e5aed8e60de810eaa37d0
+      value: Delete Project
+    settings.save:
+      hash: c9cc8cce247e49bae79f15173ce97354
+      value: Save
+    settings.team.name.title:
+      hash: a415526ab37ab308188999eda9b481db
+      value: Team Name
+    settings.team.name.description:
+      hash: 1222c047a38ac77dbe78f345bd779c4d
+      value: The name of your team
+    settings.team.name.placeholder:
+      hash: 0c5521fcea9b8efdcae81b16ec0dcac8
+      value: Enter team name
+    settings.team.billing.title:
+      hash: 5f147a08d0b9fc2ef6cf4c71a893fdab
+      value: Billing Plan
+    settings.team.billing.description:
+      hash: 1665b620ac93f1d8fd0c25df5f0f01d2
+      value: Manage your team's billing plan
+    settings.team.billing.free:
+      hash: b24ce0cd392a5b0b8dedc66c25213594
+      value: Free
+    settings.team.billing.pro:
+      hash: abd900517e55dce0437dac136a8568d7
+      value: Pro
+    settings.team.billing.unlimited:
+      hash: 545f6c2f382c04810103b3e5e6f7d841
+      value: Unlimited
+    settings.team.apiKey.title:
+      hash: 97573f14d44c6288ad1b74a0418b1e26
+      value: Team API Key
+    settings.team.apiKey.description:
+      hash: 2de23378276325360c6211b81ddd89dd
+      value: API key for team access, use this from your CI/CD pipeline together with
+        the Project ID
+    settings.team.apiKey.placeholder:
+      hash: 97573f14d44c6288ad1b74a0418b1e26
+      value: Team API Key
+    settings.team.members.leaveTeamConfirm:
+      hash: 90758d6903b397413b00b16f21faeeb9
+      value: Leave team
+    settings.team.members.leaveTeamDescription:
+      hash: 2fad1468a204820c92518c8ccb0b58d1
+      value: Are you sure you want to leave this team?
+    settings.team.members.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    settings.team.members.leaveTeam:
+      hash: 90758d6903b397413b00b16f21faeeb9
+      value: Leave team
+    settings.team.members.invite:
+      hash: dad26214244beb2ccfaebfb37b47def1
+      value: Invite member
+    settings.team.members.title:
+      hash: ef53538ae41a651c7f72ab6cb1135d8c
+      value: Members
+    settings.team.members.pendingInvitations:
+      hash: cd5c1583e1cf121078bd6834b94c390b
+      value: Pending Invitations
+    settings.team.members.removeMember:
+      hash: 375396d6e5d566794f2191bf22a665d8
+      value: Remove member
+    settings.team.members.removeMemberConfirm:
+      hash: 375396d6e5d566794f2191bf22a665d8
+      value: Remove member
+    settings.team.members.removeMemberDescription:
+      hash: 3d253c4c8371469597db2798c85af926
+      value: Are you sure you want to remove this member?
+    settings.team.members.filterPlaceholder:
+      hash: 4805e85f9f76302e0a8ed7e56ffe275e
+      value: Filter members...
+    settings.team.members.allRoles:
+      hash: 8d5a0d3ed131668433e35626daf9b519
+      value: All Roles
+    settings.team.members.date:
+      hash: 44749712dbec183e983dcd78a7736c41
+      value: Date
+    settings.team.members.selectAll:
+      hash: ef1b031573031a3eca39e4b16e1eacec
+      value: "{count} selected"
+    settings.team.members.noPendingInvitations:
+      hash: 3051edbf4703b0624b41accadf094534
+      value: No pending invitations
+    settings.team.members.noResults:
+      hash: 4df7b707ba9cff3428799d7162702476
+      value: No members found
+    settings.team.members.tryDifferentSearch:
+      hash: 7884c4e7138c27a1ed485c9171fc081d
+      value: Try a different search
+    settings.team.members.inviteMembers:
+      hash: 3eb8888b0e8a1c22f1002e1219a38370
+      value: Invite members to collaborate
+    settings.team.members.deleteInvite:
+      hash: 397fd316cddb45a3c965938039b955f4
+      value: Delete Invite
+    settings.team.members.deleteInviteDescription:
+      hash: c186a61f8f2e6219b73954dfae512ae0
+      value: Delete the invitation
+    settings.team.members.invitedBy:
+      hash: 1f7b34991dd13019d3fc2e02ff7bccc9
+      value: Invited by {name}
+    settings.team.members.deleteInviteSuccess:
+      hash: 41f4c81ec79ac054d9658a872045a05a
+      value: Invitation deleted
+    settings.team.members.deleteInviteError:
+      hash: 43f2debe7c1ad9a3976dcc50a74c9e8c
+      value: Failed to delete invitation
+    settings.team.members.removeMemberSuccess:
+      hash: ceab49c1789aa0a0ca7abfc29eb9f59e
+      value: Member removed
+    settings.team.members.removeMemberError:
+      hash: 360f11df18adb84518a8283fd0063609
+      value: Failed to remove member
+    settings.team.members.removeMemberSuccessDescription:
+      hash: 7b79d9dc5a905806845cc85e5c39b9a2
+      value: Member has been removed successfully
+    settings.team.members.removeMemberErrorDescription:
+      hash: 360f11df18adb84518a8283fd0063609
+      value: Failed to remove member
+    settings.team.members.roles.owner:
+      hash: b6f4a2ec6356bbd56d49f2096bf9d3d3
+      value: Owner
+    settings.team.members.roles.member:
+      hash: 858ba4765e53c712ef672a9570474b1d
+      value: Member
+    settings.team.members.dateSort.newest:
+      hash: ac71d8452c267207bcf9f1c93c6419e8
+      value: Newest
+    settings.team.members.dateSort.oldest:
+      hash: 4df211924b23a31142bb7a6ac9a33832
+      value: Oldest
+    settings.team.members.deleteInviteConfirm:
+      hash: 120406beeda0c81cd3e125ce2d33c368
+      value: Delete Invitation
+    tuning.general:
+      hash: 0db377921f4ce762c62526131097968f
+      value: General
+    tuning.translationMemory.title:
+      hash: 134d4413abf1fb055d58e397f43a3109
+      value: Translation Memory
+    tuning.translationMemory.description:
+      hash: 8845f05905ef98ffd22565941e3f5352
+      value: Use translation memory to improve consistency and efficiency
+    tuning.qualityChecks.title:
+      hash: 14d5ce91a14c26eabfaeb880518dc8c0
+      value: Quality Checks
+    tuning.qualityChecks.description:
+      hash: c37ed745860b18b398cf29511925b122
+      value: Enable automated quality checks for translations
+    tuning.contextDetection.title:
+      hash: 0dbf9ba36a56d7305816e3272ce92bba
+      value: Context Detection
+    tuning.contextDetection.description:
+      hash: dbe9b43f9d4998b93afdd63d700fac84
+      value: Automatically detect and preserve context in translations
+    tuning.styleGuide:
+      hash: aec7b47248cf3bf1399703d0b547ea7a
+      value: Style Guide
+    tuning.lengthControl.title:
+      hash: 3f8d2493cb2a21eae8be7752281f3607
+      value: Length Control
+    tuning.lengthControl.description:
+      hash: efc01ed6cd8c4d6fab6ed5d5cd392f3c
+      value: Control the length of translated text
+    tuning.lengthControl.options.flexible:
+      hash: 13b303a6c0d90897b5375ce901acc445
+      value: Flexible
+    tuning.lengthControl.options.strict:
+      hash: 2e979835dd62324f5bfe217449ba4974
+      value: Strict
+    tuning.lengthControl.options.exact:
+      hash: 1649aed298f99d587e2eb30c1db5946b
+      value: Exact
+    tuning.lengthControl.options.loose:
+      hash: 08d78f099561104c2015d19ea7d9d41e
+      value: Loose
+    tuning.inclusiveLanguage.title:
+      hash: e6f50f9ac54591fb7e1a5d9aa1856791
+      value: Inclusive Language
+    tuning.inclusiveLanguage.description:
+      hash: bc5a5fe3acfd112049c058b3934d4736
+      value: Ensure translations use inclusive language
+    tuning.formality.title:
+      hash: 71024962edfa16cc65ab94395618dc08
+      value: Formality
+    tuning.formality.description:
+      hash: 88eac77a703cda629793e989e926fdd8
+      value: Control the formality level of translations
+    tuning.formality.options.casual:
+      hash: 28d5d53226be8aa8da42d9cbdd312e62
+      value: Casual
+    tuning.formality.options.formal:
+      hash: 557c6481538b93bfe0a10a1cbc11aa07
+      value: Formal
+    tuning.formality.options.neutral:
+      hash: e9bb5320b3890b6747c91b5a71ae5a01
+      value: Neutral
+    tuning.brandName.title:
+      hash: 3bca44e521736d1aab2b489ee96543dc
+      value: Brand Name
+    tuning.brandName.description:
+      hash: 5fa098ce3e6bbca57eff8ac95772e2ef
+      value: Set your brand name for consistent usage
+    tuning.brandName.placeholder:
+      hash: 9e9d4d08ec805171ae0ad76a53f530b8
+      value: Enter your brand name
+    tuning.brandVoice.title:
+      hash: 11e96380daf824c163ad55378f835ed0
+      value: Brand Voice
+    tuning.brandVoice.description:
+      hash: fc9502f2cb25d413f69f1ef589af64cc
+      value: Define your brand voice and tone
+    tuning.brandVoice.placeholder:
+      hash: 3a2ff09d5d836ee595758285346150ef
+      value: Describe your brand voice...
+    tuning.toneOfVoice.title:
+      hash: 7ad04961cb75a7dc6e2a250d952b3137
+      value: Tone of Voice
+    tuning.toneOfVoice.description:
+      hash: 5ecc1d3b5249e007f33e6a0e6a16592b
+      value: Define the tone used in translations
+    tuning.toneOfVoice.options.casual:
+      hash: 28d5d53226be8aa8da42d9cbdd312e62
+      value: Casual
+    tuning.toneOfVoice.options.formal:
+      hash: 557c6481538b93bfe0a10a1cbc11aa07
+      value: Formal
+    tuning.toneOfVoice.options.friendly:
+      hash: 03fdbf12e03a4cd1409b84abe2b631df
+      value: Friendly
+    tuning.toneOfVoice.options.professional:
+      hash: 9e8b160226c9fe22a910c782ce5076e2
+      value: Professional
+    tuning.toneOfVoice.options.playful:
+      hash: 7eaa58547a5f7ca615c75491124e8929
+      value: Playful
+    tuning.toneOfVoice.options.serious:
+      hash: 5ac37abb27822d9e97e825d6f026afbf
+      value: Serious
+    tuning.toneOfVoice.options.confident:
+      hash: 1b1f145b4bc9042f4287221bf465e9da
+      value: Confident
+    tuning.toneOfVoice.options.humble:
+      hash: a9d13af9ab68f8e72cd864d749bf30de
+      value: Humble
+    tuning.toneOfVoice.options.direct:
+      hash: fd1dd0c603be8170f9eae0be9f2f6afb
+      value: Direct
+    tuning.toneOfVoice.options.diplomatic:
+      hash: 8429152ff05835474c8becf02b9d7be9
+      value: Diplomatic
+    tuning.brand:
+      hash: 1be6f9eb563f3bf85c78b4219bf09de9
+      value: Brand
+    tuning.emotiveIntent.title:
+      hash: 87a6c086ad1862808b699921ab31681c
+      value: Emotive Intent
+    tuning.emotiveIntent.description:
+      hash: 31a3fb01ff14c606ac992bf5e1e47562
+      value: Set the emotional tone for translations
+    tuning.emotiveIntent.options.neutral:
+      hash: e9bb5320b3890b6747c91b5a71ae5a01
+      value: Neutral
+    tuning.emotiveIntent.options.positive:
+      hash: 3289297424e01eda5b788c083bbf3147
+      value: Positive
+    tuning.emotiveIntent.options.empathetic:
+      hash: 667a0fb3ffb9a3c216e9683cb0f56ddd
+      value: Empathetic
+    tuning.emotiveIntent.options.professional:
+      hash: 9e8b160226c9fe22a910c782ce5076e2
+      value: Professional
+    tuning.emotiveIntent.options.friendly:
+      hash: 03fdbf12e03a4cd1409b84abe2b631df
+      value: Friendly
+    tuning.emotiveIntent.options.enthusiastic:
+      hash: 8b0c0f27b0034472e15fb4a4a5d6feb5
+      value: Enthusiastic
+    tuning.domainExpertise.title:
+      hash: a731ba52c8dee70424e1fb848c2675e3
+      value: Domain Expertise
+    tuning.domainExpertise.description:
+      hash: 72a38518f53e14c11a1195c77d83c96a
+      value: Specify the domain context for translations
+    tuning.domainExpertise.options.general:
+      hash: 0db377921f4ce762c62526131097968f
+      value: General
+    tuning.domainExpertise.options.technical:
+      hash: ad1ec60c9e1f10f6a9f5d9f2c5254bc6
+      value: Technical
+    tuning.domainExpertise.options.medical:
+      hash: 077262cc53a1fb1b5f651d31b6bf81ba
+      value: Medical
+    tuning.domainExpertise.options.legal:
+      hash: a10a9bcd450087de1ce1f80b35f44883
+      value: Legal
+    tuning.domainExpertise.options.financial:
+      hash: 35f156073cb9314e5ddcabd2d16f443c
+      value: Financial
+    tuning.domainExpertise.options.marketing:
+      hash: 7cb15e416d62919b1b40298324fbe30b
+      value: Marketing
+    tuning.domainExpertise.options.academic:
+      hash: 9e1c63fe89fae4da8db2c9e550b3e6c1
+      value: Academic
+    tuning.idioms.title:
+      hash: 7cd9c7ed1208951909e37fb85dca6414
+      value: Idioms
+    tuning.idioms.description:
+      hash: 1d0099c10c13867de51b6d565a7cccf1
+      value: Handle idiomatic expressions appropriately
+    tuning.terminology.title:
+      hash: e182a8a3f2adf774fb1c959df71b8600
+      value: Terminology
+    tuning.terminology.description:
+      hash: de2f481655486c6713e14c5b5c0c0fa8
+      value: Manage specialized terminology and glossaries
+    tuning.culturalAdaptation.title:
+      hash: 824f0a2cc9dca77f01b97d8dd5a6d757
+      value: Cultural Adaptation
+    tuning.culturalAdaptation.description:
+      hash: 2998105ed538017749e29e597aba2db6
+      value: Adapt content for cultural appropriateness
+    pricing.title:
+      hash: 467c18a9436478b8db6c9f6124784d74
+      value: Simple pricing
+    pricing.free.title:
+      hash: b24ce0cd392a5b0b8dedc66c25213594
+      value: Free
+    pricing.free.price:
+      hash: b24ce0cd392a5b0b8dedc66c25213594
+      value: Free
+    pricing.free.keys_limit:
+      hash: 68ded5c952acf17cd71488921eb409fb
+      value: Up to 100 keys
+    pricing.free.description:
+      hash: beed456178e89c22031175a81ac64faf
+      value: Perfect when trying out
+    pricing.free.features.unlimited_projects:
+      hash: 29be4d95ae3d4131e1f3f2bf97d334dd
+      value: Unlimited projects
+    pricing.free.features.fine_tuning:
+      hash: dd4e28c05b95e8f69925f58a472c041a
+      value: Fine-tuning options
+    pricing.free.features.overrides:
+      hash: 877ea670329e5a2232734b18245a5c3d
+      value: Translation overrides
+    pricing.free.features.analytics:
+      hash: a768caa988605a2846599cf7e2d0c26a
+      value: Analytics
+    pricing.free.features.context_memory:
+      hash: f0ae622dd995d57acd0e697cb95c068e
+      value: Context memory
+    pricing.free.features.community_support:
+      hash: 1cf7168782187634fbc408c66b895dbc
+      value: Community support
+    pricing.free.features.keys_limit:
+      hash: 68ded5c952acf17cd71488921eb409fb
+      value: Up to 100 keys
+    pricing.free.features.docs_limit:
+      hash: 1778b411fe46f59bc4454d89b01bb122
+      value: Up to 5 documents
+    pricing.free.features.languages:
+      hash: 258b956ff3f1550eeeda8300ff9835a9
+      value: 2 languages
+    pricing.pro.title:
+      hash: abd900517e55dce0437dac136a8568d7
+      value: Pro
+    pricing.pro.includes_free:
+      hash: 048d1ba13c785db62638cfca520b0a5f
+      value: "Everything in Free, plus:"
+    pricing.pro.features.github_action:
+      hash: ba6fa6e325e04710d41ade5d4fc49717
+      value: GitHub Action integration
+    pricing.pro.features.latest_features:
+      hash: 9a484e3a0a97e92a9baa721048626455
+      value: Early access to latest features
+    pricing.pro.features.priority_support:
+      hash: d62f9dcbe63520f9fb0857b3c615b210
+      value: Priority support
+    pricing.pro.features.priority_queues:
+      hash: 7f8fc85a9455f20bc1ef7c0600a50c8a
+      value: Priority translation queues
+    pricing.pro.features.languages:
+      hash: d5dc1805a7498df788f270b4d9f892cc
+      value: Starting from 8 languages
+    pricing.pro.features.keys_limit:
+      hash: 07707a9c9d8c4b54e3a5b87fd4ba6be1
+      value: Starting from 10 000 keys
+    pricing.pro.features.docs_limit:
+      hash: ef93a24fb4f4ea5cb7e13f88868aeb1c
+      value: Starting from 50 documents
+    pricing.cta:
+      hash: a698f6a6e17c887e558c625a4e19800b
+      value: Start automating
+    pricing.keys_limit_explanation:
+      hash: d74aedb7dfbacb3a7cc87d387275543a
+      value: 'Translated key: If you have 20 source keys (like "Sign Up" or
+        "Welcome!") and translate them into 5 languages, that equals 100
+        translated keys (20 keys x 5 languages).'
+    createTeam.teamName:
+      hash: a415526ab37ab308188999eda9b481db
+      value: Team Name
+    createTeam.teamNamePlaceholder:
+      hash: 0c5521fcea9b8efdcae81b16ec0dcac8
+      value: Enter team name
+    createTeam.createTeamButton:
+      hash: 566b03c72e8a6206b2efc9e5fab5823c
+      value: Create team
+    createTeam.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    createTeam.createTeamDescription:
+      hash: 80c12ad8967e83b50b41154d80874667
+      value: Create a new team to manage your projects and collaborators.
+    createProject.createProjectTitle:
+      hash: 0b60e8fecbfed3cdc2b22bdd3db8a60e
+      value: Create a new project
+    createProject.projectNamePlaceholder:
+      hash: 2e8a21c53c67dfe59cf31e887903b505
+      value: Enter project name
+    createProject.createProjectButton:
+      hash: 7e94fd31ac489c6edc9b9ee8820b5500
+      value: Create project
+    createProject.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    createProject.createProjectDescription:
+      hash: 5f46bde8120bcdb78ef7339540c58bcd
+      value: Create a new project to start automating your localization.
+    invite.inviteMember:
+      hash: dad26214244beb2ccfaebfb37b47def1
+      value: Invite member
+    invite.inviteDescription:
+      hash: 6e4b3dc8f8bf5b5e350f2b36cda25d5d
+      value: Invite a member to your team
+    invite.emailLabel:
+      hash: ce8ae9da5b7cd6c3df2929543a9af92d
+      value: Email
+    invite.emailPlaceholder:
+      hash: c3d8baf1b9da3d6922aea0057717a0b7
+      value: Enter email
+    invite.cancel:
+      hash: ea4788705e6873b424c65e91c2846b19
+      value: Cancel
+    invite.submit:
+      hash: a4d3b161ce1309df1c4e25df28694b7b
+      value: Submit
+    invite.success.title:
+      hash: ed87c79081208632254766b0e2fa9cac
+      value: Invitation sent
+    invite.success.description:
+      hash: 0bdff00a96d8ccfab46d3dbe687713ac
+      value: Successfully sent invitation to {email}
+    invite.error.title:
+      hash: 902b0d55fddef6f8d651fe1035b7d4bd
+      value: Error
+    invite.error.description:
+      hash: b5f72115b32020c7b6e19251e5e80fb7
+      value: Failed to send invitation. Please try again.
+    invite.validation.invalidEmail:
+      hash: daa8d486c07ee522a91050732b89a06b
+      value: Please enter a valid email
+    onboarding.steps.1.title:
+      hash: 43e849e91e4068e288f50477a4dd91db
+      value: Setup Languine CLI
+    onboarding.steps.1.description:
+      hash: 7e09be5bbd5d54341ebc9178e540ded2
+      value: Install and configure the Languine CLI to manage translations
+    onboarding.steps.2.title:
+      hash: 09001a200e746fc9ba31b7f05511ee11
+      value: Push Translations
+    onboarding.steps.2.description:
+      hash: 0b5faababc2f615cfff6159fbc05e2c4
+      value: Waiting for the translations to be pushed
+    onboarding.steps.3.title:
+      hash: 5b6cf869265c13af8566f192b4ab3d2a
+      value: Documentation
+    onboarding.steps.3.description:
+      hash: 2b954d79b08785bedb943088bd53d32c
+      value: Check out our documentation for detailed guides and best practices
+    onboarding.steps.3.link:
+      hash: 55876228853abf632dec9346a4f372ec
+      value: documentation
+    onboarding.info.description:
+      hash: 2de352bdd7561cc524f343437fcc5bbf
+      value: Need help? Check out our
+    onboarding.info.link:
+      hash: 55876228853abf632dec9346a4f372ec
+      value: documentation
+    onboarding.info.description_2:
+      hash: a169225d82c270d118538f0e670188bb
+      value: for detailed guides and best practices.
+    cli.success.title:
+      hash: 8f2f7e3b30445b11d06f475c144e0c6e
+      value: Languine CLI Login Success
+    cli.success.description:
+      hash: 904ab4730c6872ceb93de989689350f4
+      value: "Languine CLI was successfully authenticated as:"
+    cli.success.description_2:
+      hash: f6849a58a8ab34415b50ee39eb464db2
+      value: You can now close this tab and return to the CLI
+    search.placeholder:
+      hash: 13348442cc6a27032d2b4aa28b75a5d3
+      value: Search
+    periods.daily:
+      hash: c512b685438f41daa7386329a3b8f8d3
+      value: Daily
+    periods.weekly:
+      hash: 6c25e6a6da95b3d583c6ec4c3f82ed4d
+      value: Weekly
+    periods.monthly:
+      hash: 9030e39f00132d583da4122532e509e9
+      value: Monthly
+    periods.selectPeriod:
+      hash: 4181c4164b19ba285be050d280a6102e
+      value: Select period
+    language.en:
+      hash: 78463a384a5aa4fad5fa73e2f506ecfc
+      value: English
+    language.de:
+      hash: 86bc3115eb4e9873ac96904a4a68e19e
+      value: German
+    language.ar:
+      hash: 272ccb8592bafde0baf1dedce0fd3ac2
+      value: Arabic
+    language.az:
+      hash: 9f3356b27d0a76cb5f0ceea9e80a6e72
+      value: Azerbaijani
+    language.bg:
+      hash: 60bb3bcc6ff535428a38f76f1059b2d2
+      value: Bulgarian
+    language.ca:
+      hash: 900a14b115614d9d4d1c47f1d3a3251b
+      value: Catalan
+    language.cs:
+      hash: 83ff4480cdf2900ae83bf30d95774d76
+      value: Czech
+    language.da:
+      hash: 7bc6f150ce738db3d21cbe0b75aea027
+      value: Danish
+    language.el:
+      hash: 0aafa497807d5ac9b509656bd13b5283
+      value: Greek
+    language.es:
+      hash: cb5480c32e71778852b08ae1e8712775
+      value: Spanish
+    language.et:
+      hash: 28916fc3da67a5190b2b98a7f309857f
+      value: Estonian
+    language.fi:
+      hash: 9ae099fd082267fa2f2f85664a4f74dc
+      value: Finnish
+    language.fr:
+      hash: ad225f707802ba118c22987186dd38e8
+      value: French
+    language.he:
+      hash: c6c1f81a46666385fa7d85df7eaf8763
+      value: Hebrew
+    language.hr:
+      hash: 0c1be09bad2acaa2fa315b88abda8a32
+      value: Croatian
+    language.hu:
+      hash: 7b86112ec6401fd8f06ab5251d1a68fe
+      value: Hungarian
+    language.id:
+      hash: cc1c9b57607b4439578b68074a5e2d80
+      value: Indonesian
+    language.it:
+      hash: 4be8e06d27bca7e1828f2fa9a49ca985
+      value: Italian
+    language.iw:
+      hash: c6c1f81a46666385fa7d85df7eaf8763
+      value: Hebrew
+    language.ja:
+      hash: f32ced6a9ba164c4b3c047fd1d7c882e
+      value: Japanese
+    language.km:
+      hash: 9f564ebabc9cf0b9589b4ecf6228379a
+      value: Khmer
+    language.ko:
+      hash: d0bdb3cde477d82e766da05ebda50ccb
+      value: Korean
+    language.lv:
+      hash: 76ad0358e45dd4087c0a26bbf4c160e3
+      value: Latvian
+    language.nl:
+      hash: 68bf367e228f45ba83cb8831a5ee6447
+      value: Dutch
+    language.no:
+      hash: da550ca06bcacbd30b7c6ed32c864c70
+      value: Norwegian
+    language.pl:
+      hash: c730389bc8d99e59c867766babdd48b5
+      value: Polish
+    language.pt-BR:
+      hash: 26d5352ead4a731f3d11eb2e85d0e297
+      value: Portuguese (Brazil)
+    language.pt:
+      hash: 30e32c7c4cf434e9c75e60c14c442541
+      value: Portuguese
+    language.ro:
+      hash: efa7394ecaa7fc7076a9da13a77236b8
+      value: Romanian
+    language.ru:
+      hash: deba6920e70615401385fe1fb5a379ec
+      value: Russian
+    language.sk-SK:
+      hash: 68056cf8d57f23d0b2c80e135cd5b358
+      value: Slovak (Slovakia)
+    language.sk:
+      hash: 9accc467b159e7ce158e53209c0cde2a
+      value: Slovak
+    language.sr:
+      hash: 055301c56abc82dd3a81ea3810ad0599
+      value: Serbian
+    language.sv:
+      hash: 41171a0fcd362ce98b5f0f11398713b6
+      value: Swedish
+    language.ta:
+      hash: f0670813020969b39ff8d85744b40400
+      value: Tamil
+    language.th:
+      hash: 43ddc789bcea4177a14791f6c9a03b28
+      value: Thai
+    language.tr:
+      hash: c1612bbdebfa45467e8ab814e08daff1
+      value: Turkish
+    language.uk:
+      hash: e78a6fc14ad64f7a78386b20568ce95b
+      value: Ukrainian
+    language.vi:
+      hash: 7b80fae85640c16cdb0261bef0c27636
+      value: Vietnamese
+    language.zh-CN:
+      hash: c6606fd0c7e63446a7839bd982c9ce7f
+      value: Chinese (Simplified)
+    language.zh-TW:
+      hash: 658edc15e33dabbc949c26031c154fe8
+      value: Chinese (Traditional)
+    menu.dashboard:
+      hash: 2938c7f7e560ed972f8a4f68e80ff834
+      value: Dashboard
+    menu.tuning:
+      hash: 89dd2948ecda7325c0001d8a0e51a2d8
+      value: Tuning
+    menu.settings:
+      hash: f4f70727dc34561dfde1a3c529b6205c
+      value: Settings
+    menu.pricing:
+      hash: e22ac25b066b201473de7aa700ef5d92
+      value: Pricing
+    menu.docs:
+      hash: 5b6cf869265c13af8566f192b4ab3d2a
+      value: Documentation
+    menu.account:
+      hash: 08bd40c7543007ad06e4fce31618f6ec
+      value: Account
+    billing.title:
+      hash: 780c462e85ba4399a5d42e88f69a15ca
+      value: Billing
+    analytics.key:
+      hash: 33ef94b2b7d40dcb8e665003477209e2
+      value: Translated keys
+    analytics.document:
+      hash: 45be27eb4df1df35ea3e46a62acfea3b
+      value: Translated documents
+    analytics.header:
+      hash: 0b8d92bc19b720bb1065649535463409
+      value: Translations
+    analytics.months.10:
+      hash: 594be08882c8e9d5efb9eeb62f303744
+      value: Oct
+    analytics.months.11:
+      hash: 343e6957be77c6247aa2b8d0deb68bd6
+      value: Nov
+    analytics.months.12:
+      hash: d207b4e0bce42a8f1555ce3a05e287f6
+      value: Dec
+    analytics.months.01:
+      hash: e68564f23e0e939acea76dc3d2bc01bf
+      value: Jan
+    analytics.months.02:
+      hash: ea171d540ccd5f0669171ef06d3cd848
+      value: Feb
+    analytics.months.03:
+      hash: 7ce6b2286a5396e614b8484105d277e0
+      value: Mar
+    analytics.months.04:
+      hash: 6d7215c4b3bc4716d026ac46c6d9ae64
+      value: Apr
+    analytics.months.05:
+      hash: 195fbb57ffe7449796d23466085ce6d8
+      value: May
+    analytics.months.06:
+      hash: eb4b40c1221dad5b23fe7ef84d292be1
+      value: Jun
+    analytics.months.07:
+      hash: a2866cd6efaa65c92278d4771a9eaec7
+      value: Jul
+    analytics.months.08:
+      hash: 22f1a4667604b8557c9b209c201b4bc6
+      value: Aug
+    analytics.months.09:
+      hash: f04aa7019c490474fa3ce16e93501b57
+      value: Sep
+    faq.title:
+      hash: 1fe917b01f9a3f87fa2d7d3b7643fac1
+      value: FAQ
+    faq.what_is_languine.question:
+      hash: 57f64f39cd8e0806ff58613aab5b682a
+      value: What is Languine?
+    faq.what_is_languine.answer:
+      hash: 7c3c03995075d69d8e137f5256a200ab
+      value: Languine is an AI-powered localization platform that helps you automate
+        the translation of your applications. It provides features like
+        fine-tuning options, translation overrides, analytics, and context
+        memory to ensure high-quality translations.
+    faq.key_limit.question:
+      hash: 729a32234ea79c9b978b219059f56b33
+      value: How does the key limit work?
+    faq.key_limit.answer:
+      hash: ec9132973926bdc0bf6f2c66e4c1c832
+      value: A translated key is counted when you translate a source key into a target
+        language. For example, if you have 20 source keys and translate them
+        into 5 languages, that equals 100 translated keys (20 keys × 5
+        languages).
+    faq.supported_languages.question:
+      hash: 1f912d405adb35fa5c2aa66dddb39b24
+      value: What languages are supported?
+    faq.supported_languages.answer:
+      hash: 03b44b7cf0fc3e1ab4302d06819dea1c
+      value: Languine supports over 100 languages in all plans. While our AI-powered
+        translations work best with major languages, we strive to provide
+        quality translations across all supported languages. If you have
+        specific language requirements or questions about translation quality
+        for particular languages, please reach out to our support team.
+    faq.github_action.question:
+      hash: b1a43c3aba255b27ce5420d8db3d8a93
+      value: How does the GitHub Action integration work?
+    faq.github_action.answer:
+      hash: b6574e355432629612a257e44bb700f6
+      value: The GitHub Action integration (available in Pro plans) allows you to
+        automate your translation workflow directly in your CI/CD pipeline. When
+        you push changes to your repository, translations can be automatically
+        updated.
+    faq.support.question:
+      hash: 142213be6eae02e401cb5af4ecbb7463
+      value: What kind of support do you offer?
+    faq.support.answer:
+      hash: 8f800f4c21d3c04b517765560d04bffb
+      value: Free users get access to community support, while Pro users receive
+        priority support with faster response times and dedicated assistance for
+        their translation needs.
+    faq.open_source.question:
+      hash: 557b7b3a5b94340c550a4faafc1f452c
+      value: Is Languine open source?
+    faq.open_source.answer:
+      hash: ff9d2ff640665a64c0fae03c3de034b8
+      value: Yes! Languine is fully open source and available on GitHub. You can
+        contribute to the project, report issues, suggest features, and inspect
+        the code. We believe in transparency and building in public.
+    faq.open_source_pricing.question:
+      hash: e3d735f7918f8effafb7fa2e6b2f1d5f
+      value: Do you offer special pricing for open source projects?
+    faq.open_source_pricing.answer:
+      hash: 4872860c8381731ba924dcdf21694eb3
+      value: Yes! We love supporting the open source community. If you maintain an
+        open source project, you can get access to our Pro features at 30% off.
+        Just reach out to our team with details about your project, and we'll
+        set you up with a discounted Pro account. This is our way of giving back
+        to the community that makes our work possible.
+    faq.cancel_subscription.question:
+      hash: 1b2b7bacd39b85e288d0c9f9ef269200
+      value: How do I cancel my subscription?
+    faq.cancel_subscription.answer:
+      hash: c52453604a8fc6dfe38a8e1a59cce311
+      value: You can cancel your subscription at any time from your account settings.
+        Navigate to Billing > Change Plan. Your subscription will remain active
+        until the end of your current billing period, after which you'll be
+        moved to the Free plan.
+    pricing_slider.tier:
+      hash: 4c7b8bb8b1156824e7ca9ff29443c958
+      value: Tier {tier}
+    pricing_slider.keys:
+      hash: 33ef94b2b7d40dcb8e665003477209e2
+      value: Translated keys
+    pricing_slider.documents:
+      hash: 45be27eb4df1df35ea3e46a62acfea3b
+      value: Translated documents
+    pricing_slider.period:
+      hash: 197639b278057c519189add5413712e3
+      value: mon
+    pricing_slider.keys_suffix:
+      hash: 7a9f34e20112d1849721321a7b068d2c
+      value: " keys"
+    pricing_slider.docs_suffix:
+      hash: 6a0355a7392122eb336841441cfa29ce
+      value: " docs"
+    pricing_slider.languages:
+      hash: 3a08e2e340ab29fd9263af48193cbf8e
+      value: Languages
+    docs.getting-started:
+      hash: bf647454e36069fd16f1a7a35cf6a865
+      value: Getting Started
+    docs.workflow:
+      hash: 24f47cdbe9ddba774a7cc53e51d9032e
+      value: Workflow
+    docs.ci:
+      hash: a91e4ff4bf49e8de7de911d95062662e
+      value: CI/CD
+    docs.presets:
+      hash: eb81441fe20963ff9e8e69c5b32fc625
+      value: Presets
+    docs.formats:
+      hash: 0615a38067b62382dc1667010669b238
+      value: Formats
+    docs.platform:
+      hash: 419f3742e6de8e0ec4b22cce005e7630
+      value: Platform
+    docs.introduction:
+      hash: 0b79795d3efc95b9976c7c5b933afce2
+      value: Introduction
+    docs.quickstart:
+      hash: daf9c900d52f8dc3a51bb68233076798
+      value: Quickstart
+    docs.authentication:
+      hash: c75f7811d70d17dbcd88e9d03752cbed
+      value: Authentication
+    docs.configuration:
+      hash: 254f642527b45bc260048e30704edb39
+      value: Configuration
+    docs.cli:
+      hash: 91af5705f16502125e8b2187e64202c0
+      value: CLI
+    docs.github-actions:
+      hash: f843be8508767777750802fb7782c74f
+      value: GitHub Actions
+    docs.tuning:
+      hash: 89dd2948ecda7325c0001d8a0e51a2d8
+      value: Tuning
+    docs.overrides:
+      hash: 0ca08f8f4a8a19f7f1ae87c119494327
+      value: Overrides
+    docs.settings:
+      hash: f4f70727dc34561dfde1a3c529b6205c
+      value: Settings
+    docs.hooks:
+      hash: 35ad48797a780091740cbcf14ebc094d
+      value: Hooks
+    docs.examples:
+      hash: ff7c0fcd6a31e735a61c001f75426961
+      value: Examples
+    docs.team:
+      hash: ac848fa228f49ba2b8a5fbd76596817d
+      value: Team
+    github.token:
+      hash: 835160ba45a23189b612a3a3d281daf4
+      value: GitHub Token
+  src/markdown/docs/en/android.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/arb.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/authentication.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/biome.mdx:
+    content:
+      hash: 3386c30ad3b9ba547f0ae70d6a6fd899
+      value: |-
+        # Biome
+
+        Formatted with Biome.
+  src/markdown/docs/en/ci.mdx:
+    content:
+      hash: 791a748e767ebdea6614cb1fb7f255ca
+      value: >
+        # CI/CD
+
+
+        Languine provides a CI/CD integration to help you translate your
+        application.
+  src/markdown/docs/en/cli.mdx:
+    content:
+      hash: 2369c5a605d2c11b83a352668cb96b41
+      value: |+
+        # CLI
+
+        Languine provides a CLI to help you translate your application.
+
+        ## translate
+
+        The `translate` command is used to translate your application.
+
+  src/markdown/docs/en/configuration.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/csv.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/expo.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/github-actions.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/html.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/introduction.mdx:
+    content:
+      hash: 543d3a7281b8d4683d18bd376e8f3d5d
+      value: >
+        # Introduction
+
+
+        Languine is an open-source localization platform that helps developers
+        translate their applications with AI-powered translations. It provides a
+        seamless workflow for managing translations across multiple languages
+        while maintaining high quality through machine learning.
+
+
+
+        <div className="flex flex-col items-center justify-center p-4 mt-10
+        h-[400px] sm:h-[500px] md:h-[650px]">
+                <pre
+                  className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+                  style={{
+                    fontFamily: "monospace",
+                    whiteSpace: "pre",
+                    textAlign: "left",
+                  }}
+                >
+                  {`
+                                          ┌───────────────┐
+                                          │   Git Push    │
+                                          └───────────────┘
+                                                  │
+                                                  ▼
+                     ┌─────────────────────────────────────────────────────────┐
+                     │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+                     │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+                     │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+                     └─────────────────────────────────────────────────────────┘
+                                                  │
+                                                  ▼
+                                                  │
+                    ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+                   │                              │                              │
+                   ▼                              ▼                              ▼
+         ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+         ║                   ║          ║                   ║          ║                   ║
+         ║      English      ║          ║      Spanish      ║          ║      Japanese     ║
+         ║    Translation    ║          ║    Translation    ║          ║     Translation   ║
+         ║                   ║          ║                   ║          ║                   ║
+         ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+                   │                              │                              │
+                   └──────────────────────────────┼──────────────────────────────┘
+                                                  ▼
+                                          ┌───────────────┐
+                                          │     Merge     │
+                                          │ Pull Request  │
+                                          └───────────────┘
+                                                  │
+                                                  ▼
+                                      ┌─────────────────────┐
+                                      │      Completed      │
+                                      │      (Deploy)       │
+                                      └─────────────────────┘
+        `}
+                </pre>
+              </div>
+
+        ## Key Features
+
+
+        - **AI-Powered Translations**: Leverage advanced machine learning models
+        to generate high-quality translations across 100+ languages
+
+        - **Git Integration**: Sync your translations directly with your Git
+        repositories and automate updates through CI/CD pipelines
+
+        - **Developer-First**: Built with developers in mind, featuring a
+        powerful CLI, API, and GitHub Action integration
+
+        - **Custom Parsers**: Support for various file formats and the ability
+        to create custom parsers for your specific needs
+
+        - **Version Control**: Track changes, manage branches, and maintain
+        translation history
+
+        - **Open Source**: Fully open source and available on GitHub, enabling
+        transparency and community contributions
+
+
+        ## How It Works
+
+
+        1. **Setup**: Install the Languine CLI and configure your project with a
+        simple initialization process
+
+        2. **Connect**: Link your repository and set up your preferred workflow
+        (CLI, API, or GitHub Action)
+
+        3. **Translate**: Push your source content and let Languine handle the
+        translations to your target languages
+
+        4. **Sync**: Automatically sync translated content back to your
+        repository and deploy with confidence
+
+
+        ## Getting Started
+
+
+        To begin using Languine, follow our [Installation](/docs/installation)
+        guide to set up the CLI and create your first project. Then, check out
+        the [Quickstart](/docs/quickstart) guide to learn the basics of managing
+        translations with Languine.
+
+
+        For detailed information about specific features and advanced usage,
+        explore our comprehensive documentation sections:
+
+
+        - [Configuration](/docs/configuration) - Learn how to configure Languine
+        for your project
+
+        - [CLI](/docs/cli) - Discover the full range of CLI commands
+
+        - [API](/docs/api) - Integrate Languine programmatically
+
+        - [Workflows](/docs/workflows) - Set up automated translation workflows
+  src/markdown/docs/en/ios.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/js.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/json.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/md.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/mdx.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/overrides.mdx:
+    content:
+      hash: c896fe6c6fbf4a36f9e00a4f8f8fc30f
+      value: >-
+        # Overrides
+
+
+        Languine allows you to override translations for specific keys. This is
+        useful when you want to ensure that a specific translation is used for a
+        particular key, regardless of the default translation.
+
+
+        ## How it works
+
+
+        In the dashboard, you can create overrides for specific keys. You can
+        also create overrides for specific languages.
+  src/markdown/docs/en/po.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/prettier.mdx:
+    content:
+      hash: 0e33397a86212a3aaf1648690dfec0ae
+      value: |
+        
+        # Prettier
+
+        Formatted with Prettier.
+  src/markdown/docs/en/properties.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/quickstart.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/react-email.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/settings.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/ts.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/tuning.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/xcode-stringsdict.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/xcode-xcstrings.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/xliff.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/xml.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
+  src/markdown/docs/en/yaml.mdx:
+    content:
+      hash: d41d8cd98f00b204e9800998ecf8427e
+      value: ""
