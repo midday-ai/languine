@@ -1,5 +1,8 @@
 FROM oven/bun:1
 
+# Install git
+RUN apt-get update && apt-get install -y git
+
 # Create and set working directory
 WORKDIR /action
 
@@ -18,9 +21,9 @@ CMD ["sh", "-c", "\
         echo \"Running in development mode\" && \
         cd \"$GITHUB_WORKSPACE/packages/cli\" && \
         bun install && \
-        bun link && \
-        cd /action && \
-        bun link languine; \
+        bun run build && \
+        cd \"$GITHUB_WORKSPACE\" && \
+        LANGUINE_CLI=\"$GITHUB_WORKSPACE/packages/cli/dist/index.js\" bun /action/src/index.ts; \
     else \
         cd \"$GITHUB_WORKSPACE\" && \
         bun /action/src/index.ts; \

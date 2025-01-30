@@ -1,4 +1,4 @@
-import { GitHubPlatform } from "./platforms/github.ts";
+import { GitPlatformFacade } from "./platforms/git-platform-facade.ts";
 import { LanguineTranslationService } from "./services/translation.ts";
 import { parseConfig } from "./utils/config.ts";
 
@@ -6,12 +6,11 @@ async function main() {
   try {
     const config = parseConfig();
 
-    const gitPlatform = new GitHubPlatform();
+    const gitPlatform = GitPlatformFacade.getInstance();
     const translationService = new LanguineTranslationService();
 
     await translationService.runTranslation(config);
 
-    // Check for changes
     const hasChanges = await translationService.hasChanges();
 
     if (!hasChanges) {
@@ -19,13 +18,11 @@ async function main() {
       return;
     }
 
-    // Stage changes
     await translationService.stageChanges();
 
     const currentBranch = await gitPlatform.getCurrentBranch();
 
     if (config.createPullRequest) {
-      // Create or update pull request
       await gitPlatform.createOrUpdatePullRequest({
         title: config.prTitle,
         body: config.prBody,
@@ -33,7 +30,6 @@ async function main() {
         baseBranch: config.baseBranch,
       });
     } else {
-      // Commit and push directly
       await gitPlatform.pullAndRebase(config.baseBranch);
       await gitPlatform.commitAndPush({
         message: config.commitMessage,

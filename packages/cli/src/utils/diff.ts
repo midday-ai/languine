@@ -1,6 +1,5 @@
 import { readFileSync } from "node:fs";
-import { existsSync } from "node:fs";
-import { dirname, join, relative, resolve } from "node:path";
+import { dirname, relative } from "node:path";
 import { createParser } from "@/parsers/index.ts";
 import { simpleGit } from "simple-git";
 

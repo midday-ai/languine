@@ -19,6 +19,7 @@ export const ConfigSchema = z.object({
   prBody: z
     .string()
     .default("This PR contains updated translations from Languine."),
+  workingDirectory: z.string().optional(),
 });
 
 export type Config = z.infer<typeof ConfigSchema>;
@@ -33,5 +34,6 @@ export function parseConfig(): Config {
     commitMessage: process.env.COMMIT_MESSAGE,
     prTitle: process.env.PR_TITLE,
     prBody: process.env.PR_BODY,
+    workingDirectory: process.env.INPUT_WORKING_DIRECTORY,
   });
 }

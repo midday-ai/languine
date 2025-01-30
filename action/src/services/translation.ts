@@ -10,7 +10,7 @@ export class LanguineTranslationService implements TranslationService {
   private getCliCommand(cliVersion = "latest"): string {
     if (this.isDevMode()) {
       console.log("Development mode: Using local CLI");
-      return "languine";
+      return `bun ${process.env.LANGUINE_CLI || "languine"}`;
     }
 
     return `bunx languine@${cliVersion}`;
@@ -19,21 +19,19 @@ export class LanguineTranslationService implements TranslationService {
   async runTranslation(config: Config): Promise<void> {
     const { apiKey, projectId, cliVersion } = config;
 
+    // Get the appropriate CLI command
+    const cliCommand = this.getCliCommand(cliVersion);
+
     if (this.isDevMode()) {
       console.log("Running translation in development mode");
       console.log("Project ID:", projectId);
       console.log("CLI Version:", cliVersion);
     }
 
-    // Set environment variables for the CLI
-    process.env.LANGUINE_API_KEY = apiKey;
-    process.env.LANGUINE_PROJECT_ID = projectId;
-
-    // Get the appropriate CLI command
-    const cliCommand = this.getCliCommand(cliVersion);
-
     // Run the translation command
-    await execAsync(`${cliCommand} sync`);
+    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`;
+
+    await execAsync(command);
   }
 
   async hasChanges(): Promise<boolean> {

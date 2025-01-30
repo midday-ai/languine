@@ -37,6 +37,10 @@ inputs:
     description: 'Body content for the pull request'
     required: false
     default: 'This PR contains updated translations from Languine.'
+  working-directory:
+    description: 'Working directory'
+    default: '.'
+    required: false
 
 runs:
   using: 'docker'
@@ -46,6 +50,7 @@ runs:
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
     CLI_VERSION: ${{ inputs.cli-version }}
     DEV_MODE: ${{ inputs.dev-mode }}
+    WORKING_DIRECTORY: ${{ inputs.working-directory }}
 
 branding:
   icon: 'translate'

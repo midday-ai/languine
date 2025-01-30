@@ -34,6 +34,10 @@ export function clearSession(): void {
 }
 
 export function getAPIKey(): string | null {
+  if (process.env.LANGUINE_API_KEY) {
+    return process.env.LANGUINE_API_KEY;
+  }
+
   const session = loadSession();
 
   if (!session) {

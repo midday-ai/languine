@@ -20,33 +20,37 @@ import { z } from "zod";
 const { BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
-  const forceIndex = args.indexOf("--force");
-  const apiKeyIndex = args.indexOf("--api-key");
-  const projectIdIndex = args.indexOf("--project-id");
-  const baseIndex = args.indexOf("--base");
+  // Helper function to find value for a flag
+  const getFlagValue = (flag: string) => {
+    for (let i = 0; i < args.length - 1; i++) {
+      if (args[i] === flag && !args[i + 1].startsWith("--")) {
+        return args[i + 1];
+      }
+    }
+    return undefined;
+  };
+
+  // Helper function to check if a flag exists
+  const hasFlag = (flag: string) => args.includes(flag);
 
   return {
-    forceTranslate: forceIndex !== -1,
-    isSilent: args.includes("--silent"),
-    checkOnly: args.includes("--check"),
-    apiKey:
-      apiKeyIndex !== -1 && args.length > apiKeyIndex + 1
-        ? args[apiKeyIndex + 1]
-        : undefined,
-    projectId:
-      projectIdIndex !== -1 && args.length > projectIdIndex + 1
-        ? args[projectIdIndex + 1]
-        : undefined,
-    base:
-      baseIndex !== -1 && args.length > baseIndex + 1
-        ? args[baseIndex + 1]
-        : undefined,
-    forcedLocales:
-      forceIndex !== -1 &&
-      args.length > forceIndex + 1 &&
-      !args[forceIndex + 1].startsWith("--")
-        ? args[forceIndex + 1].split(",")
-        : [],
+    forceTranslate: hasFlag("--force"),
+    isSilent: hasFlag("--silent"),
+    checkOnly: hasFlag("--check"),
+    apiKey: getFlagValue("--api-key"),
+    projectId: getFlagValue("--project-id"),
+    base: getFlagValue("--base"),
+    forcedLocales: (() => {
+      const forceIndex = args.indexOf("--force");
+      if (
+        forceIndex !== -1 &&
+        args.length > forceIndex + 1 &&
+        !args[forceIndex + 1].startsWith("--")
+      ) {
+        return args[forceIndex + 1].split(",");
+      }
+      return [];
+    })(),
   };
 });
 
@@ -64,10 +68,15 @@ export async function translateCommand(args: string[] = []) {
     projectId: overrideProjectId,
     base,
   } = argsSchema.parse(args);
+
   const s = spinner();
   const startTime = Date.now();
 
-  const apiKey = overrideApiKey || getAPIKey();
+  if (overrideApiKey) {
+    process.env.LANGUINE_API_KEY = overrideApiKey;
+  }
+
+  const apiKey = getAPIKey();
   const gitInfo = await getGitInfo();
 
   if (!apiKey) {
@@ -79,7 +88,7 @@ export async function translateCommand(args: string[] = []) {
   }
 
   try {
-    // Load config file
+    // Load config file from working directory
     const config = await loadConfig();
 
     if (!config) {
@@ -92,15 +101,6 @@ export async function translateCommand(args: string[] = []) {
 
     const projectId =
       overrideProjectId || config.projectId || process.env.LANGUINE_PROJECT_ID;
-    let translatedAnything = false;
-    let needsUpdates = false;
-    let totalKeysToTranslate = 0;
-    let hasShownEmptyDocMessage = false;
-    const allTranslationInputs: Array<{
-      type: string;
-      sourceFilePath: string;
-      input: Array<{ key: string; sourceText: string; sourceFile: string }>;
-    }> = [];
 
     if (!projectId) {
       note(
@@ -110,6 +110,16 @@ export async function translateCommand(args: string[] = []) {
 
       process.exit(1);
     }
+
+    let translatedAnything = false;
+    let needsUpdates = false;
+    let totalKeysToTranslate = 0;
+    let hasShownEmptyDocMessage = false;
+    const allTranslationInputs: Array<{
+      type: string;
+      sourceFilePath: string;
+      input: Array<{ key: string; sourceText: string; sourceFile: string }>;
+    }> = [];
 
     const { source: sourceLocale, targets: targetLocales } = config.locale;
 
