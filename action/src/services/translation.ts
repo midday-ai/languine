@@ -17,7 +17,7 @@ export class LanguineTranslationService implements TranslationService {
   }
 
   async runTranslation(config: Config): Promise<void> {
-    const { apiKey, projectId, cliVersion } = config;
+    const { apiKey, projectId, cliVersion, baseBranch = "main" } = config;
 
     // Get the appropriate CLI command
     const cliCommand = this.getCliCommand(cliVersion);
@@ -26,10 +26,11 @@ export class LanguineTranslationService implements TranslationService {
       console.log("Running translation in development mode");
       console.log("Project ID:", projectId);
       console.log("CLI Version:", cliVersion);
+      console.log("Base Branch:", baseBranch);
     }
 
-    // Run the translation command
-    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`;
+    // Always use --base to compare against base branch to detect new keys
+    const command = `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey} --base ${baseBranch}`;
 
     await execAsync(command);
   }

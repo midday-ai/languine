@@ -30,7 +30,7 @@ export function parseConfig(): Config {
     projectId: process.env.LANGUINE_PROJECT_ID,
     cliVersion: process.env.LANGUINE_CLI_VERSION,
     createPullRequest: process.env.CREATE_PULL_REQUEST,
-    baseBranch: process.env.BASE_BRANCH,
+    baseBranch: process.env.INPUT_BASE_BRANCH || process.env.BASE_BRANCH,
     commitMessage: process.env.COMMIT_MESSAGE,
     prTitle: process.env.PR_TITLE,
     prBody: process.env.PR_BODY,
