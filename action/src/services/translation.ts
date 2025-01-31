@@ -9,7 +9,7 @@ interface ExecError extends Error {
 
 export class TranslationService {
   #getCliCommand(cliVersion = "latest") {
-    return `bunx languine@${cliVersion}`;
+    return `npx languine@${cliVersion}`;
   }
 
   async runTranslation(config: Config) {
