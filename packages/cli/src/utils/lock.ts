@@ -33,10 +33,6 @@ export class LockFileManager {
     this.configDir = dirname(configPath);
     this.lockFilePath = join(this.configDir, "languine.lock");
     this.lockFile = this.loadLockFile();
-
-    console.log("\nLockFileManager paths:");
-    console.log("Config directory:", this.configDir);
-    console.log("Lock file path:", this.lockFilePath);
   }
 
   public isLockFileExists(): boolean {
@@ -48,9 +44,6 @@ export class LockFileManager {
     sourceData: Record<string, string>,
   ): void {
     const relativePath = relative(this.configDir, filePath);
-    console.log("\nRegisterSourceData paths:");
-    console.log("Source file path:", filePath);
-    console.log("Relative to config dir:", relativePath);
 
     this.lockFile.files[relativePath] = {};
 
@@ -83,13 +76,6 @@ export class LockFileManager {
     sourceData: Record<string, string>,
   ): FileChanges {
     const relativePath = relative(this.configDir, filePath);
-    console.log("\nGetChanges paths:");
-    console.log("Source file path:", filePath);
-    console.log("Relative to config dir:", relativePath);
-    console.log(
-      "Existing paths in lock file:",
-      Object.keys(this.lockFile.files),
-    );
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();

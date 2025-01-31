@@ -611,7 +611,8 @@
     "examples": "Examples",
     "team": "Team"
   },
-  "web": {
-    "readme": "Test example"
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis is a platform for competitive programming."
   }
 }

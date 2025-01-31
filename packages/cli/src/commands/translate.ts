@@ -90,10 +90,6 @@ export async function translateCommand(args: string[] = []) {
     const config = await loadConfig();
     const { path: configPath } = await configFile();
 
-    console.log("Debug paths:");
-    console.log("Current working directory:", process.cwd());
-    console.log("Config file path:", configPath);
-
     if (!config) {
       note(
         "Configuration file not found. Please run `languine init` to create one.",
@@ -154,11 +150,7 @@ export async function translateCommand(args: string[] = []) {
         // Find all matching source files
         const sourceFiles = await glob(sourcePattern, { absolute: true });
 
-        console.log("\nGlob pattern:", sourcePattern);
-        console.log("Found source files:", sourceFiles);
-
         for (const sourceFilePath of sourceFiles) {
-          console.log("\nProcessing source file:", sourceFilePath);
           const parser = createParser({ type });
 
           // Read and parse the source file
@@ -425,8 +417,6 @@ export async function translateCommand(args: string[] = []) {
             targetLocale,
             process.cwd(),
           );
-
-          console.log("Target path:", targetPath);
 
           // Create directory if it doesn't exist
           await mkdir(dirname(targetPath), { recursive: true });
