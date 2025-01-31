@@ -28,8 +28,6 @@ export class BranchWorkflow implements GitWorkflow {
     logger.info("Running branch workflow...");
     const { branch } = this.gitProvider.getPlatformConfig();
 
-    console.log(this.config);
-
     await this.translationService.runTranslation(this.config);
 
     const hasChanges = await this.gitProvider.hasChanges();
