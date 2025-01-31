@@ -15,11 +15,16 @@ RUN bun install
 # Copy action source code
 COPY src /action/src
 
+# Add bun's global bin directory to PATH
+ENV PATH="/root/.bun/bin:${PATH}"
+
 # Run action with environment detection
 CMD ["sh", "-c", "\
     if [ \"$DEV_MODE\" = \"true\" ]; then \
         echo \"Running in development mode\" && \
         cd \"$GITHUB_WORKSPACE/packages/cli\" && \
+        bun install && \
+        bun run build && \
         bun link && \
         cd \"$GITHUB_WORKSPACE\" && \
         bun /action/src/index.ts; \
