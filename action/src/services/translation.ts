@@ -17,12 +17,15 @@ export class TranslationService {
 
       const cliCommand = this.#getCliCommand(cliVersion);
 
+      logger.debug(`CLI Command: ${cliCommand}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
 
-      await execAsync(
+      const result = await execAsync(
         `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`,
       );
+
+      logger.info(result.stdout);
     } catch (error) {
       logger.error(`Translation process failed: ${error}`);
       throw error;
