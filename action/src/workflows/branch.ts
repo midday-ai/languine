@@ -28,6 +28,8 @@ export class BranchWorkflow implements GitWorkflow {
     logger.info("Running branch workflow...");
     const { branch } = this.gitProvider.getPlatformConfig();
 
+    console.log(this.config);
+
     await this.translationService.runTranslation(this.config);
 
     const hasChanges = await this.gitProvider.hasChanges();
@@ -62,7 +64,10 @@ export class BranchWorkflow implements GitWorkflow {
 
     await this.gitProvider.setupGit();
 
+    logger.info(`Fetching origin ${branch}`);
     await execAsync(`git fetch origin ${branch}`);
+
+    logger.info(`Checking out ${branch}`);
     await execAsync(`git checkout ${branch} --`);
 
     logger.info("Git configured");
