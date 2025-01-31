@@ -1,3 +1,4 @@
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import type { Config } from "../utils/config.ts";
 import { execAsync } from "../utils/exec.ts";
@@ -13,19 +14,25 @@ export class TranslationService {
       const cliPath = path.join(process.cwd(), "packages/cli");
 
       logger.debug("Using local CLI");
-      return `bun ${cliPath}/src/index.ts`;
+      return {
+        script: path.join(cliPath, "src/index.ts"),
+        args: [],
+      };
     }
 
-    return `bunx languine@${cliVersion}`;
+    return {
+      script: "bunx",
+      args: [`languine@${cliVersion}`],
+    };
   }
 
   async runTranslation(config: Config) {
     try {
       const { apiKey, projectId, cliVersion, workingDirectory } = config;
 
-      const cliCommand = this.#getCliCommand(cliVersion);
+      const command = this.#getCliCommand(cliVersion);
 
-      logger.debug(`CLI Command: ${cliCommand}`);
+      logger.debug(`CLI Command: bun run ${command.script}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
       logger.debug(`Working Directory: ${process.cwd()}`);
@@ -35,12 +42,26 @@ export class TranslationService {
         ? path.resolve(process.cwd(), workingDirectory)
         : process.cwd();
 
-      const result = await execAsync(
-        `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`,
-        { cwd },
-      );
+      const args = [
+        ...command.args,
+        "translate",
+        "--project-id",
+        projectId,
+        "--api-key",
+        apiKey,
+      ];
+      const result = spawnSync("bun", ["run", command.script, ...args], {
+        cwd,
+        stdio: "inherit",
+      });
 
-      logger.info(result.stdout);
+      if (result.error) {
+        throw result.error;
+      }
+
+      if (result.status !== 0) {
+        throw new Error(`Command failed with exit code ${result.status}`);
+      }
     } catch (error) {
       logger.error(`Translation process failed: ${error}`);
       throw error;
