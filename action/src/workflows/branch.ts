@@ -26,6 +26,7 @@ export class BranchWorkflow implements GitWorkflow {
 
   async run() {
     logger.info("Running branch workflow...");
+    const { branch } = this.gitProvider.getPlatformConfig();
 
     await this.translationService.runTranslation(this.config);
 
@@ -36,7 +37,7 @@ export class BranchWorkflow implements GitWorkflow {
       await this.gitProvider.addChanges();
       await this.gitProvider.commitAndPush({
         message: this.config.commitMessage,
-        branch: this.config.baseBranch,
+        branch,
       });
     }
 
@@ -47,11 +48,22 @@ export class BranchWorkflow implements GitWorkflow {
     logger.info("Running after hooks...");
   }
 
+  /**
+   * Sets up the Git environment before running the workflow:
+   * 1. Configures Git settings via the provider
+   * 2. Fetches and checks out the base branch
+   * 3. Checks if the last commit was made by the bot
+   * 4. Changes to the configured working directory if needed
+   *
+   * @returns true if setup completed successfully, undefined if skipped due to bot commit
+   */
   async #setupGit() {
+    const { branch } = this.gitProvider.getPlatformConfig();
+
     await this.gitProvider.setupGit();
 
-    await execAsync(`git fetch origin ${this.config.baseBranch}`);
-    await execAsync(`git checkout ${this.config.baseBranch} --`);
+    await execAsync(`git fetch origin ${branch}`);
+    await execAsync(`git checkout ${branch} --`);
 
     logger.info("Git configured");
 

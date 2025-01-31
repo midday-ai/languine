@@ -1,9 +1,9 @@
 import { type Config, ConfigSchema } from "../utils/config.ts";
 
-interface PlatformConfig {
-  baseBranch: string;
+export interface PlatformConfig {
+  branch: string;
   owner: string;
-  repo: string;
+  repository: string;
 }
 
 export abstract class PlatformProvider {

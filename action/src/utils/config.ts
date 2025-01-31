@@ -12,7 +12,7 @@ export const ConfigSchema = z.object({
   cliVersion: z.string().default("latest"),
   workingDirectory: z.string().default("."),
   createPullRequest: z.boolean().default(false),
-  baseBranch: z.string().default("main"),
+  baseBranch: z.string().optional(),
   commitMessage: z
     .string()
     .default("chore: (i18n) update translations via Languine"),

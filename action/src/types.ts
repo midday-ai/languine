@@ -1,8 +1,11 @@
+import type { PlatformConfig } from "./platforms/provider.ts";
+
 /**
  * Interface for Git platform operations.
  * Implemented by specific Git platforms (GitHub, GitLab, etc.)
  */
 export interface GitPlatform {
+  getPlatformConfig(): PlatformConfig;
   setupGit(): Promise<void>;
   createOrUpdatePullRequest(options: {
     title: string;

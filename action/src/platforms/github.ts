@@ -129,4 +129,23 @@ export class GitHubProvider implements GitPlatform {
 
     return data[0]?.number;
   }
+
+  public getPlatformConfig() {
+    const env = z
+      .object({
+        GITHUB_REPOSITORY: z.string(),
+        GITHUB_REPOSITORY_OWNER: z.string(),
+        GITHUB_REF_NAME: z.string(),
+        GITHUB_HEAD_REF: z.string(),
+        GH_TOKEN: z.string().optional(),
+      })
+      .parse(process.env);
+
+    return {
+      branch: env.GITHUB_REF_NAME,
+      owner: env.GITHUB_REPOSITORY_OWNER,
+      repository: env.GITHUB_REPOSITORY.split("/")[1],
+      token: env.GH_TOKEN,
+    };
+  }
 }
