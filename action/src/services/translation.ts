@@ -12,12 +12,23 @@ export class TranslationService {
     return `languine@${cliVersion}`;
   }
 
+  #findBunPath(): string {
+    const result = spawnSync("which", ["bun"], { encoding: "utf8" });
+    if (result.error || result.status !== 0) {
+      logger.error("Failed to find bun executable");
+      throw new Error("Could not find bun executable");
+    }
+    return result.stdout.trim();
+  }
+
   async runTranslation(config: Config) {
     try {
       const { apiKey, projectId, cliVersion, workingDirectory } = config;
 
       const cliCommand = this.#getCliCommand(cliVersion);
+      const bunPath = this.#findBunPath();
 
+      logger.debug(`Bun path: ${bunPath}`);
       logger.debug(`CLI Command: bun x ${cliCommand}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
@@ -29,7 +40,7 @@ export class TranslationService {
         : process.cwd();
 
       const result = spawnSync(
-        "/root/.bun/bin/bun",
+        bunPath,
         [
           "x",
           cliCommand,
