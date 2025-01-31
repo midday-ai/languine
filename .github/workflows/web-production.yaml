@@ -1,10 +1,10 @@
 name: Deploy Web - Production
 on:
   push:
-    # branches:
-    #   - main
-    paths:
-      - apps/web/**
+    branches:
+      - '*'
+    # paths:
+    #   - apps/web/**
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
