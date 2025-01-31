@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, relative } from "node:path";
 import YAML from "yaml";
 import { z } from "zod";
 
@@ -27,11 +27,11 @@ export interface FileChanges {
 export class LockFileManager {
   private lockFile: LockFile;
   private readonly lockFilePath: string;
-  private readonly workingDir: string;
+  private readonly configDir: string;
 
-  constructor() {
-    this.workingDir = process.cwd();
-    this.lockFilePath = join(this.workingDir, "languine.lock");
+  constructor(configPath: string) {
+    this.configDir = dirname(configPath);
+    this.lockFilePath = join(this.configDir, "languine.lock");
     this.lockFile = this.loadLockFile();
   }
 
@@ -43,7 +43,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(this.workingDir, filePath);
+    const relativePath = relative(this.configDir, filePath);
 
     this.lockFile.files[relativePath] = {};
 
@@ -58,7 +58,7 @@ export class LockFileManager {
     filePath: string,
     partialSourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(this.workingDir, filePath);
+    const relativePath = relative(this.configDir, filePath);
 
     if (!this.lockFile.files[relativePath]) {
       this.lockFile.files[relativePath] = {};
@@ -75,7 +75,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): FileChanges {
-    const relativePath = relative(this.workingDir, filePath);
+    const relativePath = relative(this.configDir, filePath);
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();

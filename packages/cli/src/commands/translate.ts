@@ -4,7 +4,7 @@ import { dirname } from "node:path";
 import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
-import { loadConfig } from "@/utils/config.ts";
+import { configFile, loadConfig } from "@/utils/config.ts";
 import { getDiff } from "@/utils/diff.ts";
 import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
@@ -88,6 +88,7 @@ export async function translateCommand(args: string[] = []) {
   try {
     // Load config file from working directory
     const config = await loadConfig();
+    const { path: configPath } = await configFile();
 
     if (!config) {
       note(
@@ -183,6 +184,7 @@ export async function translateCommand(args: string[] = []) {
               const changes = await getDiff({
                 sourceFilePath,
                 type,
+                configPath,
               });
               // Include both new keys and changed values
               keysToTranslate = [

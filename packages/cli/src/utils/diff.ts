@@ -13,12 +13,14 @@ import { type FileChanges, LockFileManager } from "./lock.ts";
 export async function getDiff({
   sourceFilePath,
   type,
+  configPath,
 }: {
   sourceFilePath: string;
   type: string;
+  configPath: string;
 }): Promise<FileChanges> {
   const parser = createParser({ type });
-  const lockManager = new LockFileManager();
+  const lockManager = new LockFileManager(configPath);
 
   // Parse current file content
   const currentContent = readFileSync(sourceFilePath, "utf-8");
