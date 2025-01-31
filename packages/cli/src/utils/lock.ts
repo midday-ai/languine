@@ -27,9 +27,11 @@ export interface FileChanges {
 export class LockFileManager {
   private lockFile: LockFile;
   private readonly lockFilePath: string;
+  private readonly workingDir: string;
 
   constructor() {
-    this.lockFilePath = join(process.cwd(), "languine.lock");
+    this.workingDir = process.cwd();
+    this.lockFilePath = join(this.workingDir, "languine.lock");
     this.lockFile = this.loadLockFile();
   }
 
@@ -41,7 +43,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.workingDir, filePath);
 
     this.lockFile.files[relativePath] = {};
 
@@ -56,7 +58,7 @@ export class LockFileManager {
     filePath: string,
     partialSourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.workingDir, filePath);
 
     if (!this.lockFile.files[relativePath]) {
       this.lockFile.files[relativePath] = {};
@@ -73,7 +75,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): FileChanges {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.workingDir, filePath);
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();
@@ -144,10 +146,6 @@ export class LockFileManager {
 
   private loadLockFile(): LockFile {
     if (!this.isLockFileExists()) {
-      console.log(
-        "Lock file not found, creating empty lock file",
-        this.lockFilePath,
-      );
       return LockFileSchema.parse({});
     }
 
