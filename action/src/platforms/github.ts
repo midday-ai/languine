@@ -18,13 +18,15 @@ export class GitHubProvider implements GitPlatform {
   #token?: string;
   #owner: string;
   #repo: string;
+  #branch: string;
 
   constructor() {
-    const env = GithubEnvSchema.parse(process.env);
+    const { branch, owner, repository, token } = this.getPlatformConfig();
 
-    this.#owner = env.GITHUB_REPOSITORY_OWNER;
-    this.#repo = env.GITHUB_REPOSITORY.split("/")[1];
-    this.#token = env.GITHUB_TOKEN;
+    this.#branch = branch;
+    this.#owner = owner;
+    this.#repo = repository;
+    this.#token = token;
   }
 
   get octokit(): Octokit {
@@ -46,12 +48,10 @@ export class GitHubProvider implements GitPlatform {
   async createOrUpdatePullRequest(options: {
     title: string;
     body: string;
-    branch: string;
-    baseBranch: string;
   }) {
-    const { title, body, branch, baseBranch } = options;
+    const { title, body } = options;
 
-    const existingPRNumber = await this.getOpenPullRequestNumber(branch);
+    const existingPRNumber = await this.getOpenPullRequestNumber(this.#branch);
 
     if (existingPRNumber) {
       logger.info(`Updating existing PR #${existingPRNumber}`);
@@ -68,8 +68,8 @@ export class GitHubProvider implements GitPlatform {
       await this.octokit.rest.pulls.create({
         owner: this.#owner,
         repo: this.#repo,
-        head: branch,
-        base: baseBranch,
+        head: this.#branch,
+        base: this.#branch,
         title,
         body,
       });
@@ -81,19 +81,18 @@ export class GitHubProvider implements GitPlatform {
     return stdout.trim();
   }
 
-  async pullAndRebase(branch: string) {
-    logger.info(`Pulling and rebasing on ${branch}...`);
-    await execAsync(`git pull origin ${branch} --rebase`);
+  async pullAndRebase() {
+    logger.info(`Pulling and rebasing on ${this.#branch}...`);
+    await execAsync(`git pull origin ${this.#branch} --rebase`);
   }
 
   async commitAndPush(options: {
     message: string;
-    branch: string;
   }) {
-    const { message, branch } = options;
-    logger.info(`Committing and pushing to ${branch}...`);
+    const { message } = options;
+    logger.info(`Committing and pushing to ${this.#branch}...`);
     await execAsync(`git commit -m "${message}"`);
-    await execAsync(`git push origin ${branch} --force`);
+    await execAsync(`git push origin ${this.#branch} --force`);
   }
 
   async createBranch(branchName: string) {
@@ -131,21 +130,13 @@ export class GitHubProvider implements GitPlatform {
   }
 
   public getPlatformConfig() {
-    const env = z
-      .object({
-        GITHUB_REPOSITORY: z.string(),
-        GITHUB_REPOSITORY_OWNER: z.string(),
-        GITHUB_REF_NAME: z.string(),
-        GITHUB_HEAD_REF: z.string(),
-        GH_TOKEN: z.string().optional(),
-      })
-      .parse(process.env);
+    const env = GithubEnvSchema.parse(process.env);
 
     return {
       branch: env.GITHUB_REF_NAME,
       owner: env.GITHUB_REPOSITORY_OWNER,
       repository: env.GITHUB_REPOSITORY.split("/")[1],
-      token: env.GH_TOKEN,
+      token: env.GITHUB_TOKEN,
     };
   }
 }
