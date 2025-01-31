@@ -150,12 +150,6 @@ export async function translateCommand(args: string[] = []) {
         // Find all matching source files
         const sourceFiles = await glob(sourcePattern, { absolute: true });
 
-        if (!isSilent) {
-          s.message(
-            `Found ${sourceFiles.length} source files matching ${sourcePattern}`,
-          );
-        }
-
         for (const sourceFilePath of sourceFiles) {
           const parser = createParser({ type });
 
@@ -169,12 +163,6 @@ export async function translateCommand(args: string[] = []) {
               ([_, value]) => value !== "",
             ),
           );
-
-          if (!isSilent) {
-            s.message(
-              `Found ${Object.keys(nonEmptySourceFile).length} non-empty keys in ${sourceFilePath}`,
-            );
-          }
 
           // Skip empty markdown documents
           if (
@@ -198,12 +186,6 @@ export async function translateCommand(args: string[] = []) {
                 type,
                 configPath,
               });
-
-              if (!isSilent) {
-                s.message(`Changes detected in ${sourceFilePath}:`);
-                s.message(`  Added keys: ${changes.addedKeys.length}`);
-                s.message(`  Changed values: ${changes.valueChanges.length}`);
-              }
 
               // Include both new keys and changed values
               keysToTranslate = [

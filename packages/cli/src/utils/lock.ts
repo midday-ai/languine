@@ -76,13 +76,16 @@ export class LockFileManager {
     sourceData: Record<string, string>,
   ): FileChanges {
     const relativePath = relative(this.configDir, filePath);
+    console.log("\nChecking changes for:", relativePath);
+    console.log("Lock file contains paths:", Object.keys(this.lockFile.files));
+
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();
     const previousKeys = Object.keys(previousState);
 
     if (!previousKeys.length) {
-      console.log("No previous state found for file:", relativePath);
+      console.log("No previous state found, treating all keys as new");
       this.registerSourceData(filePath, sourceData);
       return {
         addedKeys: currentKeys,
@@ -96,9 +99,8 @@ export class LockFileManager {
       };
     }
 
-    console.log("Comparing changes for file:", relativePath);
-    console.log("Current keys:", currentKeys.length);
-    console.log("Previous keys:", previousKeys.length);
+    console.log("Current keys:", currentKeys);
+    console.log("Previous keys:", previousKeys);
 
     const currentKeysSet = new Set(currentKeys);
     const previousKeysSet = new Set(previousKeys);
@@ -151,19 +153,12 @@ export class LockFileManager {
 
   private loadLockFile(): LockFile {
     if (!this.isLockFileExists()) {
-      console.log("No lock file found at:", this.lockFilePath);
       return LockFileSchema.parse({});
     }
 
     try {
       const content = readFileSync(this.lockFilePath, "utf-8");
-      const parsed = LockFileSchema.parse(YAML.parse(content));
-      console.log(
-        "Lock file loaded with",
-        Object.keys(parsed.files).length,
-        "tracked files",
-      );
-      return parsed;
+      return LockFileSchema.parse(YAML.parse(content));
     } catch (error) {
       if (process.env.DEV_MODE === "true") {
         console.error("Error reading lock file:", error);
