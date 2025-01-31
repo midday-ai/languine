@@ -82,6 +82,7 @@ export class LockFileManager {
     const previousKeys = Object.keys(previousState);
 
     if (!previousKeys.length) {
+      console.log("No previous state found for file:", relativePath);
       this.registerSourceData(filePath, sourceData);
       return {
         addedKeys: currentKeys,
@@ -94,6 +95,10 @@ export class LockFileManager {
         })),
       };
     }
+
+    console.log("Comparing changes for file:", relativePath);
+    console.log("Current keys:", currentKeys.length);
+    console.log("Previous keys:", previousKeys.length);
 
     const currentKeysSet = new Set(currentKeys);
     const previousKeysSet = new Set(previousKeys);
@@ -146,12 +151,19 @@ export class LockFileManager {
 
   private loadLockFile(): LockFile {
     if (!this.isLockFileExists()) {
+      console.log("No lock file found at:", this.lockFilePath);
       return LockFileSchema.parse({});
     }
 
     try {
       const content = readFileSync(this.lockFilePath, "utf-8");
-      return LockFileSchema.parse(YAML.parse(content));
+      const parsed = LockFileSchema.parse(YAML.parse(content));
+      console.log(
+        "Lock file loaded with",
+        Object.keys(parsed.files).length,
+        "tracked files",
+      );
+      return parsed;
     } catch (error) {
       if (process.env.DEV_MODE === "true") {
         console.error("Error reading lock file:", error);
