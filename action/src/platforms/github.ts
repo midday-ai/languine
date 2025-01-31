@@ -7,33 +7,33 @@ import { logger } from "../utils/logger.ts";
 const GithubEnvSchema = z.object({
   GITHUB_REPOSITORY: z.string(),
   GITHUB_REPOSITORY_OWNER: z.string(),
-  GITHUB_TOKEN: z.string(),
+  GH_TOKEN: z.string(),
   GITHUB_REF_NAME: z.string(),
   GITHUB_HEAD_REF: z.string(),
   GITHUB_BASE_REF: z.string().optional(),
 });
 
 export class GitHubProvider implements GitPlatform {
-  private _octokit?: Octokit;
-  private readonly owner: string;
-  private readonly repo: string;
-  private readonly token: string;
+  #octokit?: Octokit;
+  #owner: string;
+  #repo: string;
+  #token: string;
 
   constructor() {
     const env = GithubEnvSchema.parse(process.env);
-    this.owner = env.GITHUB_REPOSITORY_OWNER;
-    this.repo = env.GITHUB_REPOSITORY.split("/")[1];
-    this.token = env.GITHUB_TOKEN;
+    this.#owner = env.GITHUB_REPOSITORY_OWNER;
+    this.#repo = env.GITHUB_REPOSITORY.split("/")[1];
+    this.#token = env.GH_TOKEN;
   }
 
   private get octokit(): Octokit {
-    if (!this._octokit) {
-      this._octokit = new Octokit({ auth: this.token });
+    if (!this.#octokit) {
+      this.#octokit = new Octokit({ auth: this.#token });
     }
-    return this._octokit;
+    return this.#octokit;
   }
 
-  async configureGit(): Promise<void> {
+  async configureGit() {
     logger.info("Configuring Git for GitHub...");
 
     await execAsync('git config --global user.name "Languine Bot"');
@@ -45,26 +45,25 @@ export class GitHubProvider implements GitPlatform {
     body: string;
     branch: string;
     baseBranch: string;
-  }): Promise<void> {
+  }) {
     const { title, body, branch, baseBranch } = options;
 
-    // Check if PR already exists
     const existingPRNumber = await this.getOpenPullRequestNumber(branch);
 
     if (existingPRNumber) {
       logger.info(`Updating existing PR #${existingPRNumber}`);
       await this.octokit.rest.pulls.update({
         pull_number: existingPRNumber,
-        owner: this.owner,
-        repo: this.repo,
+        owner: this.#owner,
+        repo: this.#repo,
         title,
         body,
       });
     } else {
       logger.info("Creating new PR...");
       await this.octokit.rest.pulls.create({
-        owner: this.owner,
-        repo: this.repo,
+        owner: this.#owner,
+        repo: this.#repo,
         head: branch,
         base: baseBranch,
         title,
@@ -73,12 +72,12 @@ export class GitHubProvider implements GitPlatform {
     }
   }
 
-  async getCurrentBranch(): Promise<string> {
+  async getCurrentBranch() {
     const { stdout } = await execAsync("git rev-parse --abbrev-ref HEAD");
     return stdout.trim();
   }
 
-  async pullAndRebase(branch: string): Promise<void> {
+  async pullAndRebase(branch: string) {
     logger.info(`Pulling and rebasing on ${branch}...`);
     await execAsync(`git pull origin ${branch} --rebase`);
   }
@@ -86,39 +85,39 @@ export class GitHubProvider implements GitPlatform {
   async commitAndPush(options: {
     message: string;
     branch: string;
-  }): Promise<void> {
+  }) {
     const { message, branch } = options;
     logger.info(`Committing and pushing to ${branch}...`);
     await execAsync(`git commit -m "${message}"`);
     await execAsync(`git push origin ${branch} --force`);
   }
 
-  async createBranch(branchName: string): Promise<void> {
+  async createBranch(branchName: string) {
     logger.info(`Creating new branch: ${branchName}`);
     await execAsync(`git checkout -b ${branchName}`);
   }
 
-  async stageChanges(): Promise<void> {
+  async stageChanges() {
     logger.info("Staging changes...");
     await execAsync("git add .");
   }
 
-  async checkBotCommit(): Promise<boolean> {
+  async checkBotCommit() {
     const { stdout: lastCommitAuthor } = await execAsync(
       'git log -1 --pretty=format:"%an"',
     );
+
     return lastCommitAuthor.trim() === "Languine Bot";
   }
 
-  private async getOpenPullRequestNumber(
-    branch: string,
-  ): Promise<number | undefined> {
+  private async getOpenPullRequestNumber(branch: string) {
     const { data } = await this.octokit.rest.pulls.list({
-      owner: this.owner,
-      repo: this.repo,
-      head: `${this.owner}:${branch}`,
+      owner: this.#owner,
+      repo: this.#repo,
+      head: `${this.#owner}:${branch}`,
       state: "open",
     });
+
     return data[0]?.number;
   }
 }

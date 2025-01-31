@@ -3,7 +3,7 @@ import { execAsync } from "../utils/exec.ts";
 import { logger } from "../utils/logger.ts";
 
 export class TranslationService {
-  #getCliCommand(cliVersion = "latest"): string {
+  #getCliCommand(cliVersion = "latest") {
     if (process.env.DEV_MODE === "true") {
       logger.debug("Using local CLI");
       return `bun ${process.env.LANGUINE_CLI || "languine"}`;
@@ -11,11 +11,10 @@ export class TranslationService {
     return `bunx languine@${cliVersion}`;
   }
 
-  async runTranslation(config: Config): Promise<void> {
+  async runTranslation(config: Config) {
     try {
       const { apiKey, projectId, cliVersion } = config;
 
-      // Run translation
       const cliCommand = this.#getCliCommand(cliVersion);
 
       logger.debug(`Project ID: ${projectId}`);
