@@ -1,8 +1,8 @@
 name: Deploy Web - Production
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     paths:
       - apps/web/**
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: 🔄 Run Languine CLI
         uses: ./action
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           api-key: ${{ secrets.LANGUINE_API_KEY }}
           project-id: ${{ secrets.LANGUINE_PROJECT_ID }}

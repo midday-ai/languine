@@ -7,36 +7,36 @@ import { logger } from "../utils/logger.ts";
 const GithubEnvSchema = z.object({
   GITHUB_REPOSITORY: z.string(),
   GITHUB_REPOSITORY_OWNER: z.string(),
-  GH_TOKEN: z.string(),
+  GITHUB_TOKEN: z.string().optional(),
   GITHUB_REF_NAME: z.string(),
   GITHUB_HEAD_REF: z.string(),
   GITHUB_BASE_REF: z.string().optional(),
 });
 
 export class GitHubProvider implements GitPlatform {
-  #octokit?: Octokit;
+  #_octokit?: Octokit;
+  #token?: string;
   #owner: string;
   #repo: string;
-  #token: string;
 
   constructor() {
     const env = GithubEnvSchema.parse(process.env);
+
     this.#owner = env.GITHUB_REPOSITORY_OWNER;
     this.#repo = env.GITHUB_REPOSITORY.split("/")[1];
-    this.#token = env.GH_TOKEN;
-
-    console.log(this.#owner, this.#repo, this.#token);
+    this.#token = env.GITHUB_TOKEN;
   }
 
-  private get octokit(): Octokit {
-    if (!this.#octokit) {
-      this.#octokit = new Octokit({ auth: this.#token });
+  get octokit(): Octokit {
+    if (!this.#_octokit) {
+      this.#_octokit = new Octokit({ auth: this.#token });
     }
-    return this.#octokit;
+
+    return this.#_octokit;
   }
 
-  async configureGit() {
-    logger.info("Configuring Git for GitHub...");
+  async setupGit() {
+    logger.info("Setting up Git for GitHub...");
 
     await execAsync('git config --global user.name "Languine Bot"');
     await execAsync('git config --global user.email "bot@languine.ai"');
@@ -54,6 +54,7 @@ export class GitHubProvider implements GitPlatform {
 
     if (existingPRNumber) {
       logger.info(`Updating existing PR #${existingPRNumber}`);
+
       await this.octokit.rest.pulls.update({
         pull_number: existingPRNumber,
         owner: this.#owner,
@@ -99,8 +100,8 @@ export class GitHubProvider implements GitPlatform {
     await execAsync(`git checkout -b ${branchName}`);
   }
 
-  async stageChanges() {
-    logger.info("Staging changes...");
+  async addChanges() {
+    logger.info("Adding changes...");
     await execAsync("git add .");
   }
 
@@ -110,6 +111,11 @@ export class GitHubProvider implements GitPlatform {
     );
 
     return lastCommitAuthor.trim() === "Languine Bot";
+  }
+
+  async hasChanges() {
+    const { stdout } = await execAsync("git status --porcelain");
+    return stdout.trim() !== "";
   }
 
   private async getOpenPullRequestNumber(branch: string) {

@@ -3,12 +3,11 @@
  * Implemented by specific Git platforms (GitHub, GitLab, etc.)
  */
 export interface GitPlatform {
-  configureGit(): Promise<void>;
+  setupGit(): Promise<void>;
   createOrUpdatePullRequest(options: {
     title: string;
     body: string;
     branch: string;
-    baseBranch: string;
   }): Promise<void>;
   getCurrentBranch(): Promise<string>;
   pullAndRebase(branch: string): Promise<void>;
@@ -17,7 +16,8 @@ export interface GitPlatform {
     branch: string;
   }): Promise<void>;
   createBranch(branchName: string): Promise<void>;
-  stageChanges(): Promise<void>;
+  addChanges(): Promise<void>;
+  hasChanges(): Promise<boolean>;
   checkBotCommit(): Promise<boolean>;
 }
 
@@ -27,25 +27,6 @@ export interface GitPlatform {
  */
 export interface GitWorkflow {
   preRun(): Promise<void>;
+  run(): Promise<boolean>;
   postRun(): Promise<void>;
-  setupGitConfig(): Promise<boolean>;
-  checkBotCommit(): Promise<boolean>;
-  setupBaseBranch(): Promise<boolean>;
-  hasChanges(): Promise<boolean>;
-}
-
-/**
- * Branch workflow interface.
- * Handles direct commits to branches without pull requests.
- */
-export interface BranchWorkflow extends GitWorkflow {
-  commitAndPush(branch: string): Promise<boolean>;
-}
-
-/**
- * Pull request workflow interface.
- * Handles creating and updating pull requests.
- */
-export interface PullRequestWorkflow extends GitWorkflow {
-  createPullRequest(): Promise<boolean>;
 }

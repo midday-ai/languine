@@ -10,7 +10,7 @@ export const ConfigSchema = z.object({
     invalid_type_error: "LANGUINE_PROJECT_ID must be a string",
   }),
   cliVersion: z.string().default("latest"),
-  workingDirectory: z.string().optional(),
+  workingDirectory: z.string().default("."),
   createPullRequest: z.boolean().default(false),
   baseBranch: z.string().default("main"),
   commitMessage: z

@@ -21,6 +21,7 @@ export class GitProviderFactory {
     if (!GitProviderFactory.instance) {
       GitProviderFactory.instance = new GitProviderFactory();
     }
+
     return GitProviderFactory.instance;
   }
 

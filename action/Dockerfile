@@ -18,6 +18,7 @@ COPY src /action/src
 # Run action with environment detection
 CMD ["sh", "-c", "\
     if [ \"$DEV_MODE\" = \"true\" ]; then \
+        mkdir -p ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts && \
         echo \"Running in development mode\" && \
         cd \"$GITHUB_WORKSPACE/packages/cli\" && \
         bun install && \

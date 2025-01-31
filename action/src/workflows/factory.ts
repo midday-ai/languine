@@ -1,5 +1,5 @@
 import type { TranslationService } from "../services/translation.ts";
-import type { GitPlatform, GitWorkflow } from "../types.ts";
+import type { GitPlatform } from "../types.ts";
 import type { Config } from "../utils/config.ts";
 import { logger } from "../utils/logger.ts";
 import { BranchWorkflow } from "./branch.ts";
@@ -17,55 +17,35 @@ export class WorkflowFactory {
     private readonly config: Config,
   ) {}
 
-  createWorkflow(): GitWorkflow {
+  createWorkflow() {
     return this.config.createPullRequest
-      ? new PullRequestWorkflow(this.gitProvider, this.config)
-      : new BranchWorkflow(this.gitProvider, this.config);
+      ? new PullRequestWorkflow(
+          this.gitProvider,
+          this.config,
+          this.translationService,
+        )
+      : new BranchWorkflow(
+          this.gitProvider,
+          this.config,
+          this.translationService,
+        );
   }
 
-  async run(): Promise<void> {
+  async run() {
     const workflow = this.createWorkflow();
 
+    // Run before hooks
+    logger.info("Running before hooks...");
     await workflow.preRun();
 
-    logger.info("Setting up Git configuration...");
-    if (!(await workflow.setupGitConfig())) {
-      throw new Error("Failed to setup Git configuration");
-    }
+    // Run workflow
+    logger.info("Running workflow...");
+    await workflow.run();
 
-    logger.info("Checking for bot commit...");
-    if (await workflow.checkBotCommit()) {
-      logger.info("Skipping workflow as last commit was from bot");
-      return;
-    }
-
-    logger.info("Setting up base branch...");
-    if (!(await workflow.setupBaseBranch())) {
-      throw new Error("Failed to setup base branch");
-    }
-
-    await this.translationService.runTranslation(this.config);
-
-    logger.info("Checking for changes...");
-    if (!(await workflow.hasChanges())) {
-      logger.info("No changes detected, skipping workflow");
-      return;
-    }
-
-    if (this.config.createPullRequest) {
-      logger.info("Creating pull request...");
-      if (!(await (workflow as PullRequestWorkflow).createPullRequest())) {
-        throw new Error("Failed to create pull request");
-      }
-    } else {
-      logger.info("Committing changes to branch...");
-      const branchName = `languine/translations-${Date.now()}`;
-      if (!(await (workflow as BranchWorkflow).commitAndPush(branchName))) {
-        throw new Error("Failed to commit and push changes");
-      }
-    }
-
+    // Run after hooks
+    logger.info("Running after hooks...");
     await workflow.postRun();
+
     logger.info("Workflow completed successfully");
   }
 }

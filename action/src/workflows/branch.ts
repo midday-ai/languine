@@ -1,76 +1,75 @@
-import type {
-  GitPlatform,
-  BranchWorkflow as IBranchWorkflow,
-} from "../types.ts";
+import path from "node:path";
+import type { TranslationService } from "../services/translation.ts";
+import type { GitPlatform, GitWorkflow } from "../types.ts";
 import type { Config } from "../utils/config.ts";
+import { execAsync } from "../utils/exec.ts";
 import { logger } from "../utils/logger.ts";
 
-export class BranchWorkflow implements IBranchWorkflow {
+export class BranchWorkflow implements GitWorkflow {
   constructor(
     private readonly gitProvider: GitPlatform,
     private readonly config: Config,
+    private readonly translationService: TranslationService,
   ) {}
 
   async preRun() {
     logger.info("Running before hooks...");
+
+    try {
+      await this.#setupGit();
+      logger.info("Successfully configured Git");
+    } catch (error) {
+      logger.error(error instanceof Error ? error.message : "Unknown error");
+      throw new Error("Failed to configure Git");
+    }
+  }
+
+  async run() {
+    logger.info("Running branch workflow...");
+
+    await this.translationService.runTranslation(this.config);
+
+    const hasChanges = await this.gitProvider.hasChanges();
+
+    if (hasChanges) {
+      logger.info("Changes detected, committing and pushing...");
+      await this.gitProvider.addChanges();
+      await this.gitProvider.commitAndPush({
+        message: this.config.commitMessage,
+        branch: this.config.baseBranch,
+      });
+    }
+
+    return hasChanges;
   }
 
   async postRun() {
     logger.info("Running after hooks...");
   }
 
-  async setupGitConfig() {
-    try {
-      await this.gitProvider.configureGit();
-      return true;
-    } catch (error) {
-      logger.error(`Failed to configure Git: ${error}`);
-      return false;
-    }
-  }
+  async #setupGit() {
+    await this.gitProvider.setupGit();
 
-  async checkBotCommit() {
-    try {
-      return await this.gitProvider.checkBotCommit();
-    } catch (error) {
-      logger.error(`Failed to check bot commit: ${error}`);
-      return false;
-    }
-  }
+    await execAsync(`git fetch origin ${this.config.baseBranch}`);
+    await execAsync(`git checkout ${this.config.baseBranch} --`);
 
-  async setupBaseBranch() {
-    try {
-      await this.gitProvider.pullAndRebase(this.config.baseBranch);
-      return true;
-    } catch (error) {
-      logger.error(`Failed to setup base branch: ${error}`);
-      return false;
-    }
-  }
+    logger.info("Git configured");
 
-  async hasChanges() {
-    try {
-      await this.gitProvider.stageChanges();
-      // We'll need to implement a way to check if there are staged changes
-      // For now, we'll assume there are changes if we get here
-      return true;
-    } catch (error) {
-      logger.error(`Failed to check for changes: ${error}`);
-      return false;
+    if (await this.gitProvider.checkBotCommit()) {
+      logger.info("Bot commit detected, skipping...");
+      return;
     }
-  }
 
-  async commitAndPush(branch: string) {
-    try {
-      await this.gitProvider.createBranch(branch);
-      await this.gitProvider.commitAndPush({
-        message: this.config.commitMessage,
-        branch,
-      });
-      return true;
-    } catch (error) {
-      logger.error(`Failed to commit and push changes: ${error}`);
-      return false;
+    const workingDir = path.resolve(
+      process.cwd(),
+      this.config?.workingDirectory,
+    );
+
+    if (workingDir !== process.cwd()) {
+      logger.info(`Changing working directory to: ${workingDir}`);
+      process.chdir(workingDir);
     }
+
+    return true;
   }
 }
