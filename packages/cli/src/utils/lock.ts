@@ -76,16 +76,12 @@ export class LockFileManager {
     sourceData: Record<string, string>,
   ): FileChanges {
     const relativePath = relative(this.configDir, filePath);
-    console.log("\nChecking changes for:", relativePath);
-    console.log("Lock file contains paths:", Object.keys(this.lockFile.files));
-
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();
     const previousKeys = Object.keys(previousState);
 
     if (!previousKeys.length) {
-      console.log("No previous state found, treating all keys as new");
       this.registerSourceData(filePath, sourceData);
       return {
         addedKeys: currentKeys,
@@ -98,9 +94,6 @@ export class LockFileManager {
         })),
       };
     }
-
-    console.log("Current keys:", currentKeys);
-    console.log("Previous keys:", previousKeys);
 
     const currentKeysSet = new Set(currentKeys);
     const previousKeysSet = new Set(previousKeys);
