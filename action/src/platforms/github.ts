@@ -24,6 +24,8 @@ export class GitHubProvider implements GitPlatform {
     this.#owner = env.GITHUB_REPOSITORY_OWNER;
     this.#repo = env.GITHUB_REPOSITORY.split("/")[1];
     this.#token = env.GH_TOKEN;
+
+    console.log(this.#owner, this.#repo, this.#token);
   }
 
   private get octokit(): Octokit {
