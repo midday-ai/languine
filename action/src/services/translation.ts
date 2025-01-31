@@ -8,26 +8,12 @@ interface ExecError extends Error {
 }
 
 export class TranslationService {
-  async #setupDevCli() {
-    logger.info("Setting up CLI in dev mode...");
-    const cliPath = path.join(process.cwd(), "packages/cli");
-    const bunPath = "/usr/local/bin/bun";
-
-    logger.info("Installing CLI dependencies...");
-    await execAsync(`${bunPath} install`, { cwd: cliPath });
-
-    logger.info("Building CLI...");
-    await execAsync(`${bunPath} run build`, { cwd: cliPath });
-
-    logger.info("Linking CLI...");
-    await execAsync(`${bunPath} link`, { cwd: cliPath });
-  }
-
   #getCliCommand(cliVersion = "latest") {
     if (process.env.DEV_MODE === "true") {
+      const cliPath = path.join(process.cwd(), "packages/cli");
+
       logger.debug("Using local CLI");
-      const bunPath = "/usr/local/bin/bun";
-      return `${bunPath} ${process.env.LANGUINE_CLI || "/github/workspace/packages/cli/dist/index.js"}`;
+      return `bun ${cliPath}/src/index.ts`;
     }
 
     return `bunx languine@${cliVersion}`;
@@ -36,10 +22,6 @@ export class TranslationService {
   async runTranslation(config: Config) {
     try {
       const { apiKey, projectId, cliVersion, workingDirectory } = config;
-
-      if (process.env.DEV_MODE === "true") {
-        await this.#setupDevCli();
-      }
 
       const cliCommand = this.#getCliCommand(cliVersion);
 
