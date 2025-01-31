@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - '*'
-    # paths:
-    #   - apps/web/**
+    paths:
+      - apps/web/**
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
