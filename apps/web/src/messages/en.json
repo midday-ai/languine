@@ -614,5 +614,9 @@
   "kattis": {
     "title": "Kattis",
     "description": "Kattis is a platform for competitive programming."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis is a platform for competitive programming."
   }
 }
