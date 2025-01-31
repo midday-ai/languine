@@ -18,7 +18,7 @@ export class TranslationService {
 
       const cliCommand = this.#getCliCommand(cliVersion);
 
-      logger.debug(`CLI Command: bunx ${cliCommand}`);
+      logger.debug(`CLI Command: bun x ${cliCommand}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
       logger.debug(`Working Directory: ${process.cwd()}`);
@@ -29,8 +29,9 @@ export class TranslationService {
         : process.cwd();
 
       const result = spawnSync(
-        "bunx",
+        "/usr/local/bin/bun",
         [
+          "x",
           cliCommand,
           "translate",
           "--project-id",
