@@ -29,7 +29,7 @@ export class TranslationService {
         : process.cwd();
 
       const result = spawnSync(
-        "/usr/local/bin/bun",
+        "/root/.bun/bin/bun",
         [
           "x",
           cliCommand,
