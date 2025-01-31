@@ -143,9 +143,14 @@ export class LockFileManager {
   }
 
   private loadLockFile(): LockFile {
-    if (!existsSync(this.lockFilePath)) {
+    if (!this.isLockFileExists()) {
+      console.log(
+        "Lock file not found, creating empty lock file",
+        this.lockFilePath,
+      );
       return LockFileSchema.parse({});
     }
+
     try {
       const content = readFileSync(this.lockFilePath, "utf-8");
       return LockFileSchema.parse(YAML.parse(content));
