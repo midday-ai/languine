@@ -610,5 +610,8 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
+  },
+  "web": {
+    "readme": "Test example"
   }
 }
