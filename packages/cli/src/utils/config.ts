@@ -10,7 +10,7 @@ import { loadEnv } from "./env.js";
 const CONFIG_NAME = "languine.config";
 
 export async function configFile(configType?: string) {
-  const workingDir = process.env.WORKING_DIRECTORY || process.cwd();
+  const workingDir = process.cwd();
   const files = await readdir(workingDir);
   const configFile = files.find(
     (file: string) =>
@@ -33,12 +33,12 @@ export async function configFile(configType?: string) {
 }
 
 /**
- * Load the configuration file from the working directory specified by WORKING_DIRECTORY env var.
+ * Load the configuration file from the current working directory.
  * Supports both TypeScript (languine.config.ts) and JSON (languine.config.json) formats.
  */
 export async function loadConfig(): Promise<Config> {
   let jiti: Jiti | undefined;
-  const workingDir = process.env.WORKING_DIRECTORY || process.cwd();
+  const workingDir = process.cwd();
 
   const { path: filePath, format } = await configFile();
   const env = loadEnv(workingDir);
