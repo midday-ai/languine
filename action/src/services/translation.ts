@@ -11,21 +11,23 @@ export class TranslationService {
   async #setupDevCli() {
     logger.info("Setting up CLI in dev mode...");
     const cliPath = path.join(process.cwd(), "packages/cli");
+    const bunPath = "/usr/local/bin/bun";
 
     logger.info("Installing CLI dependencies...");
-    await execAsync("bun install", { cwd: cliPath });
+    await execAsync(`${bunPath} install`, { cwd: cliPath });
 
     logger.info("Building CLI...");
-    await execAsync("bun run build", { cwd: cliPath });
+    await execAsync(`${bunPath} run build`, { cwd: cliPath });
 
     logger.info("Linking CLI...");
-    await execAsync("bun link", { cwd: cliPath });
+    await execAsync(`${bunPath} link`, { cwd: cliPath });
   }
 
   #getCliCommand(cliVersion = "latest") {
     if (process.env.DEV_MODE === "true") {
       logger.debug("Using local CLI");
-      return "languine";
+      const bunPath = "/usr/local/bin/bun";
+      return `${bunPath} ${process.env.LANGUINE_CLI || "/github/workspace/packages/cli/dist/index.js"}`;
     }
 
     return `bunx languine@${cliVersion}`;
