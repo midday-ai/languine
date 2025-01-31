@@ -1,3 +1,4 @@
+import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
 import type { Config } from "../utils/config.ts";
 import { logger } from "../utils/logger.ts";
@@ -12,6 +13,7 @@ import { PullRequestWorkflow } from "./pull-request.ts";
 export class WorkflowFactory {
   constructor(
     private readonly gitProvider: GitPlatform,
+    private readonly translationService: TranslationService,
     private readonly config: Config,
   ) {}
 
@@ -41,6 +43,8 @@ export class WorkflowFactory {
     if (!(await workflow.setupBaseBranch())) {
       throw new Error("Failed to setup base branch");
     }
+
+    await this.translationService.runTranslation(this.config);
 
     logger.info("Checking for changes...");
     if (!(await workflow.hasChanges())) {
