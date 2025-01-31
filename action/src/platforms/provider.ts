@@ -1,26 +1,44 @@
 import { type Config, ConfigSchema } from "../utils/config.ts";
 
-/**
- * Base class for Git providers with common functionality
- */
-export abstract class Provider {
+interface PlatformConfig {
+  baseBranch: string;
+  owner: string;
+  repo: string;
+}
+
+export abstract class PlatformProvider {
   constructor(protected readonly config: Config) {
-    this.validateConfig();
+    this.validateAndThrowIfInvalid();
   }
 
-  // Git operations
-  abstract configureGit(): Promise<void>;
-  abstract createBranch(name: string): Promise<void>;
-  abstract stageChanges(): Promise<void>;
-  abstract commitChanges(message: string): Promise<void>;
-  abstract pushChanges(): Promise<void>;
-  abstract hasChanges(): Promise<boolean>;
-  abstract createPullRequest(title: string, body: string): Promise<void>;
-  abstract getCurrentBranch(): Promise<string>;
-  abstract pullAndRebase(): Promise<void>;
+  abstract doesBranchExist(params: { branch: string }): Promise<boolean>;
 
-  protected validateConfig(): void {
+  abstract fetchOpenPullRequestNumber(params: { branch: string }): Promise<
+    number | undefined
+  >;
+
+  abstract closeOpenPullRequest(params: {
+    pullRequestNumber: number;
+  }): Promise<void>;
+
+  abstract createPullRequest(params: {
+    head: string;
+    title: string;
+    body?: string;
+  }): Promise<number>;
+
+  abstract addCommentToPullRequest(params: {
+    pullRequestNumber: number;
+    body: string;
+  }): Promise<void>;
+
+  abstract get platformConfig(): PlatformConfig;
+
+  abstract buildPullRequestUrl(pullRequestNumber: number): string;
+
+  private validateAndThrowIfInvalid(): void {
     const result = ConfigSchema.safeParse(this.config);
+
     if (!result.success) {
       throw new Error(`Invalid config: ${result.error.message}`);
     }
