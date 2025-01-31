@@ -40,6 +40,7 @@ export class GitHubProvider implements GitPlatform {
 
     await execAsync('git config --global user.name "Languine Bot"');
     await execAsync('git config --global user.email "bot@languine.ai"');
+    await execAsync(`git config --global safe.directory ${process.cwd()}`);
   }
 
   async createOrUpdatePullRequest(options: {
