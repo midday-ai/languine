@@ -12,7 +12,6 @@ export const ConfigSchema = z.object({
   cliVersion: z.string().default("latest"),
   workingDirectory: z.string().default("."),
   createPullRequest: z.boolean().default(false),
-  baseBranch: z.string().optional(),
   commitMessage: z
     .string()
     .default("chore: (i18n) update translations via Languine"),
@@ -29,7 +28,6 @@ export function parseConfig(): Config {
     cliVersion: process.env.LANGUINE_CLI_VERSION,
     workingDirectory: process.env.LANGUINE_WORKING_DIRECTORY,
     createPullRequest: process.env.LANGUINE_CREATE_PULL_REQUEST === "true",
-    baseBranch: process.env.LANGUINE_BASE_BRANCH || process.env.BASE_BRANCH,
     commitMessage:
       process.env.LANGUINE_COMMIT_MESSAGE || process.env.COMMIT_MESSAGE,
     prTitle: process.env.LANGUINE_PR_TITLE,

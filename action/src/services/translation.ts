@@ -6,8 +6,10 @@ export class TranslationService {
   #getCliCommand(cliVersion = "latest") {
     if (process.env.DEV_MODE === "true") {
       logger.debug("Using local CLI");
-      return `bun ${process.env.LANGUINE_CLI || "languine"}`;
+      // Linked CLI
+      return "languine";
     }
+
     return `bunx languine@${cliVersion}`;
   }
 
