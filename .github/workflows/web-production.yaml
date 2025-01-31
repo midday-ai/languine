@@ -21,4 +21,5 @@ jobs:
           project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
           dev-mode: true
           working-directory: apps/web
+          cli-version: canary
           # create-pull-request: true

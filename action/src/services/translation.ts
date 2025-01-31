@@ -1,4 +1,3 @@
-import { spawnSync } from "node:child_process";
 import path from "node:path";
 import type { Config } from "../utils/config.ts";
 import { execAsync } from "../utils/exec.ts";
@@ -10,29 +9,16 @@ interface ExecError extends Error {
 
 export class TranslationService {
   #getCliCommand(cliVersion = "latest") {
-    if (process.env.DEV_MODE === "true") {
-      const cliPath = path.join(process.cwd(), "packages/cli");
-
-      logger.debug("Using local CLI");
-      return {
-        script: path.join(cliPath, "src/index.ts"),
-        args: [],
-      };
-    }
-
-    return {
-      script: "bunx",
-      args: [`languine@${cliVersion}`],
-    };
+    return `bunx languine@${cliVersion}`;
   }
 
   async runTranslation(config: Config) {
     try {
       const { apiKey, projectId, cliVersion, workingDirectory } = config;
 
-      const command = this.#getCliCommand(cliVersion);
+      const cliCommand = this.#getCliCommand(cliVersion);
 
-      logger.debug(`CLI Command: bun run ${command.script}`);
+      logger.debug(`CLI Command: ${cliCommand}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
       logger.debug(`Working Directory: ${process.cwd()}`);
@@ -42,26 +28,12 @@ export class TranslationService {
         ? path.resolve(process.cwd(), workingDirectory)
         : process.cwd();
 
-      const args = [
-        ...command.args,
-        "translate",
-        "--project-id",
-        projectId,
-        "--api-key",
-        apiKey,
-      ];
-      const result = spawnSync("bun", ["run", command.script, ...args], {
-        cwd,
-        stdio: "inherit",
-      });
+      const result = await execAsync(
+        `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`,
+        { cwd },
+      );
 
-      if (result.error) {
-        throw result.error;
-      }
-
-      if (result.status !== 0) {
-        throw new Error(`Command failed with exit code ${result.status}`);
-      }
+      logger.info(result.stdout);
     } catch (error) {
       logger.error(`Translation process failed: ${error}`);
       throw error;

@@ -1,6 +1,6 @@
 {
   "name": "languine",
-  "version": "1.0.2",
+  "version": "1.0.3-canary.1",
   "type": "module",
   "bin": "dist/index.js",
   "main": "dist/config.js",
@@ -14,7 +14,8 @@
     "build": "tsup --clean",
     "dev": "tsup --watch --clean",
     "start": "node dist/index.js",
-    "test": "bun test"
+    "test": "bun test",
+    "publish:canary": "npm version --prerelease --preid=canary && npm publish --prerelease --preid=canary --tag=canary"
   },
   "files": [
     "dist",
