@@ -20,6 +20,7 @@ export class TranslationService {
       logger.debug(`CLI Command: ${cliCommand}`);
       logger.debug(`Project ID: ${projectId}`);
       logger.debug(`CLI Version: ${cliVersion}`);
+      logger.debug(`Working Directory: ${process.cwd()}`);
 
       const result = await execAsync(
         `${cliCommand} translate --project-id ${projectId} --api-key ${apiKey}`,
