@@ -610,10 +610,5 @@
     "examples": "Esimerkit",
     "team": "Tiimi",
     "overrides": "Ylikirjoitukset"
-  },
-  "welcome": {
-    "title": "Tervetuloa Languineen",
-    "description": "Languine on tekoälypohjainen lokalisointialusta, joka auttaa sinua automatisoimaan sovellustesi käännöksiä. Se tarjoaa ominaisuuksia, kuten hienosäätömahdollisuuksia, käännösohjauksia, analytiikkaa ja kontekstimuistia varmistaakseen korkealaatuiset käännökset.",
-    "button": "Aloita"
   }
 }

@@ -610,10 +610,5 @@
     "examples": "Exempel",
     "team": "Team",
     "overrides": "Överskrivningar"
-  },
-  "welcome": {
-    "title": "Välkommen till Languine",
-    "description": "Languine är en AI-driven lokaliseringsplattform som hjälper dig att automatisera översättningen av dina applikationer. Den erbjuder funktioner som finjusteringsalternativ, översättningsöverskrivningar, analys och kontextminne för att säkerställa högkvalitativa översättningar.",
-    "button": "Kom igång"
   }
 }

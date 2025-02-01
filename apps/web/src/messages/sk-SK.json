@@ -610,10 +610,5 @@
     "examples": "Príklady",
     "team": "Tím",
     "overrides": "Nahradenia"
-  },
-  "welcome": {
-    "title": "Vitajte v Languine",
-    "description": "Languine je platforma na lokalizáciu poháňaná umelou inteligenciou, ktorá vám pomáha automatizovať preklad vašich aplikácií. Poskytuje funkcie ako možnosti jemného doladenia, prepisovanie prekladov, analytiku a pamäť kontextu, aby zabezpečila vysokokvalitné preklady.",
-    "button": "Začať"
   }
 }

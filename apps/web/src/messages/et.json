@@ -610,10 +610,5 @@
     "examples": "Näited",
     "team": "Meeskond",
     "overrides": "Ümberkirjutused"
-  },
-  "welcome": {
-    "title": "Tere tulemast Languinesse",
-    "description": "Languine on tehisintellekti toetatud lokaliseerimisplatvorm, mis aitab teil automatiseerida oma rakenduste tõlkimist. See pakub funktsioone nagu täiendavad seadistamisvõimalused, tõlkeülekatted, analüütika ja konteksti mälu, et tagada kvaliteetsed tõlked.",
-    "button": "Alustamiseks"
   }
 }

@@ -610,10 +610,5 @@
     "examples": "Przykłady",
     "team": "Zespół",
     "overrides": "Nadpisy"
-  },
-  "welcome": {
-    "title": "Witamy w Languine",
-    "description": "Languine to platforma lokalizacyjna wspierana przez sztuczną inteligencję, która pomaga w automatyzacji tłumaczenia Twoich aplikacji. Oferuje funkcje takie jak opcje dostosowywania, nadpisywanie tłumaczeń, analityka oraz pamięć kontekstowa, aby zapewnić wysoką jakość tłumaczeń.",
-    "button": "Rozpocznij"
   }
 }

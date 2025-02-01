@@ -610,10 +610,5 @@
     "examples": "示例",
     "team": "团队",
     "overrides": "覆盖"
-  },
-  "welcome": {
-    "title": "欢迎来到Languine",
-    "description": "Languine是一个由人工智能驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。",
-    "button": "开始使用"
   }
 }

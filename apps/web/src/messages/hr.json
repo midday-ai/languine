@@ -610,10 +610,5 @@
     "examples": "Primjeri",
     "team": "Tim",
     "overrides": "Zamjene"
-  },
-  "welcome": {
-    "title": "Dobrodošli u Languine",
-    "description": "Languine je platforma za lokalizaciju pokretana umjetnom inteligencijom koja vam pomaže automatizirati prijevod vaših aplikacija. Pruža značajke poput opcija za fino podešavanje, zamjene prijevoda, analitike i memorije konteksta kako bi osigurala visokokvalitetne prijevode.",
-    "button": "Započni"
   }
 }

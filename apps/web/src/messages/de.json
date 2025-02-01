@@ -610,10 +610,5 @@
     "examples": "Beispiele",
     "team": "Team",
     "overrides": "Überschreibungen"
-  },
-  "welcome": {
-    "title": "Willkommen bei Languine",
-    "description": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Feinabstimmungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextspeicher, um qualitativ hochwertige Übersetzungen sicherzustellen.",
-    "button": "Loslegen"
   }
 }
