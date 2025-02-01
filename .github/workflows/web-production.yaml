@@ -4,7 +4,7 @@ on:
     branches:
       - '**'
     paths:
-      - apps/web/**
+      - action/**
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
