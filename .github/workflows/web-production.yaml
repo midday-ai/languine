@@ -2,7 +2,7 @@ name: Deploy Web - Production
 on:
   push:
     branches:
-      - '*'
+      - '**'
     paths:
       - apps/web/**
 jobs:
