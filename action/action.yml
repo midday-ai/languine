@@ -24,11 +24,9 @@ inputs:
   commit-message:
     description: 'Custom commit message'
     required: false
-    default: 'chore: update translations'
   pr-title:
     description: 'Title for the pull request'
     required: false
-    default: 'chore: update translations'
   pr-body:
     description: 'Body content for the pull request'
     required: false
