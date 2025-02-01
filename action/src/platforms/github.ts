@@ -19,61 +19,70 @@ export class GitHubProvider implements GitPlatform {
   #owner: string;
   #repo: string;
   #branch: string;
+  #baseBranch: string;
 
   constructor() {
-    const { branch, owner, repository, token } = this.getPlatformConfig();
+    const { branch, owner, repository, token, baseBranch } =
+      this.getPlatformConfig();
 
     this.#branch = branch;
     this.#owner = owner;
     this.#repo = repository;
     this.#token = token;
+    this.#baseBranch = baseBranch;
   }
 
   get octokit(): Octokit {
     if (!this.#_octokit) {
       this.#_octokit = new Octokit({ auth: this.#token });
     }
-
     return this.#_octokit;
   }
 
   async setupGit() {
     logger.info("Setting up Git for GitHub...");
-
     await execAsync('git config --global user.name "Languine Bot"');
     await execAsync('git config --global user.email "bot@languine.ai"');
+    await execAsync('git config --global user.username "languinebot"');
     await execAsync(`git config --global safe.directory ${process.cwd()}`);
   }
 
   async createOrUpdatePullRequest(options: {
     title: string;
     body: string;
+    branch: string;
   }) {
-    const { title, body } = options;
+    const { title, body, branch } = options;
 
-    const existingPRNumber = await this.getOpenPullRequestNumber(this.#branch);
+    // Ensure branch exists on remote
+    logger.info("Ensuring branch exists on remote...");
+    await execAsync(`git push -u origin ${branch}`).catch((error) => {
+      logger.warn(`Failed to push branch: ${error}`);
+    });
 
+    // First close any existing PR
+    const existingPRNumber = await this.getOpenPullRequestNumber(branch);
     if (existingPRNumber) {
-      logger.info(`Updating existing PR #${existingPRNumber}`);
+      logger.info(`Closing existing PR #${existingPRNumber}`);
+      await this.closeOpenPullRequest({ pullRequestNumber: existingPRNumber });
 
-      await this.octokit.rest.pulls.update({
-        pull_number: existingPRNumber,
-        owner: this.#owner,
-        repo: this.#repo,
-        title,
-        body,
-      });
-    } else {
-      logger.info("Creating new PR...");
-      await this.octokit.rest.pulls.create({
-        owner: this.#owner,
-        repo: this.#repo,
-        head: this.#branch,
-        base: this.#branch,
-        title,
-        body,
+      // Add comment about the new PR
+      await this.addCommentToPullRequest({
+        pullRequestNumber: existingPRNumber,
+        body: "This PR is now outdated. A new version has been created.",
       });
     }
+
+    // Create new PR
+    logger.info("Creating new PR...");
+    await this.octokit.rest.pulls.create({
+      owner: this.#owner,
+      repo: this.#repo,
+      head: `${this.#owner}:${branch}`,
+      base: this.#baseBranch,
+      title,
+      body,
+    });
   }
 
   async getCurrentBranch() {
@@ -82,21 +91,45 @@ export class GitHubProvider implements GitPlatform {
   }
 
   async pullAndRebase() {
-    logger.info(`Pulling and rebasing on ${this.#branch}...`);
-    await execAsync(`git pull origin ${this.#branch} --rebase`);
+    logger.info(`Syncing with ${this.#baseBranch}`);
+
+    // First get current branch
+    const currentBranch = await this.getCurrentBranch();
+
+    // Fetch and reset base branch
+    await execAsync(`git fetch origin ${this.#baseBranch}`);
+    await execAsync(`git checkout -f ${this.#baseBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
+    await execAsync("git clean -fd"); // Clean untracked files
+
+    // Go back to our branch and reset to base
+    await execAsync(`git checkout -f ${currentBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
   }
 
   async commitAndPush(options: {
     message: string;
+    branch: string;
   }) {
-    const { message } = options;
-    logger.info(`Committing and pushing to ${this.#branch}...`);
+    const { message, branch } = options;
+    logger.info(`Committing and pushing to ${branch}...`);
+    await execAsync("git add .");
     await execAsync(`git commit -m "${message}"`);
-    await execAsync(`git push origin ${this.#branch} --force`);
+    await execAsync(`git push -f origin ${branch}`);
   }
 
   async createBranch(branchName: string) {
     logger.info(`Creating new branch: ${branchName}`);
+
+    // First ensure we have the latest base branch
+    logger.info(`Fetching and checking out ${this.#baseBranch}`);
+    await execAsync(`git fetch origin ${this.#baseBranch}`);
+    await execAsync(`git checkout -f ${this.#baseBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
+    await execAsync("git clean -fd"); // Clean untracked files
+
+    // Create new branch from here
+    logger.info(`Creating branch ${branchName} from ${this.#baseBranch}`);
     await execAsync(`git checkout -b ${branchName}`);
   }
 
@@ -109,7 +142,6 @@ export class GitHubProvider implements GitPlatform {
     const { stdout: lastCommitAuthor } = await execAsync(
       'git log -1 --pretty=format:"%an"',
     );
-
     return lastCommitAuthor.trim() === "Languine Bot";
   }
 
@@ -118,15 +150,37 @@ export class GitHubProvider implements GitPlatform {
     return stdout.trim() !== "";
   }
 
-  private async getOpenPullRequestNumber(branch: string) {
+  async getOpenPullRequestNumber(branch: string) {
     const { data } = await this.octokit.rest.pulls.list({
       owner: this.#owner,
       repo: this.#repo,
       head: `${this.#owner}:${branch}`,
       state: "open",
     });
-
     return data[0]?.number;
+  }
+
+  async closeOpenPullRequest(options: { pullRequestNumber: number }) {
+    const { pullRequestNumber } = options;
+    await this.octokit.rest.pulls.update({
+      owner: this.#owner,
+      repo: this.#repo,
+      pull_number: pullRequestNumber,
+      state: "closed",
+    });
+  }
+
+  async addCommentToPullRequest(options: {
+    pullRequestNumber: number;
+    body: string;
+  }) {
+    const { pullRequestNumber, body } = options;
+    await this.octokit.rest.issues.createComment({
+      owner: this.#owner,
+      repo: this.#repo,
+      issue_number: pullRequestNumber,
+      body,
+    });
   }
 
   public getPlatformConfig() {
@@ -137,6 +191,7 @@ export class GitHubProvider implements GitPlatform {
       owner: env.GITHUB_REPOSITORY_OWNER,
       repository: env.GITHUB_REPOSITORY.split("/")[1],
       token: env.GITHUB_TOKEN,
+      baseBranch: env.GITHUB_BASE_REF || "main",
     };
   }
 }

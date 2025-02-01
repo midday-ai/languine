@@ -13,8 +13,6 @@ export class BranchWorkflow implements GitWorkflow {
   ) {}
 
   async preRun() {
-    logger.info("Running before hooks...");
-
     try {
       await this.#setupGit();
       logger.info("Successfully configured Git");
@@ -44,19 +42,6 @@ export class BranchWorkflow implements GitWorkflow {
     return hasChanges;
   }
 
-  async postRun() {
-    logger.info("Running after hooks...");
-  }
-
-  /**
-   * Sets up the Git environment before running the workflow:
-   * 1. Configures Git settings via the provider
-   * 2. Fetches and checks out the base branch
-   * 3. Checks if the last commit was made by the bot
-   * 4. Changes to the configured working directory if needed
-   *
-   * @returns true if setup completed successfully, undefined if skipped due to bot commit
-   */
   async #setupGit() {
     const { branch } = this.gitProvider.getPlatformConfig();
 
@@ -87,4 +72,6 @@ export class BranchWorkflow implements GitWorkflow {
 
     return true;
   }
+
+  async postRun() {}
 }

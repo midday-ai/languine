@@ -24,11 +24,9 @@ inputs:
   commit-message:
     description: 'Custom commit message'
     required: false
-    default: 'chore: update translations'
   pr-title:
     description: 'Title for the pull request'
     required: false
-    default: 'chore: update translations'
   pr-body:
     description: 'Body content for the pull request'
     required: false
@@ -43,6 +41,7 @@ runs:
   env:
     LANGUINE_API_KEY: ${{ inputs.api-key }}
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
+    LANGUINE_CLI_VERSION: ${{ inputs.cli-version }}
     LANGUINE_WORKING_DIRECTORY: ${{ inputs.working-directory }}
     LANGUINE_CREATE_PULL_REQUEST: ${{ inputs.create-pull-request }}
     LANGUINE_COMMIT_MESSAGE: ${{ inputs.commit-message }}

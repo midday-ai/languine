@@ -5,11 +5,6 @@ import { logger } from "../utils/logger.ts";
 import { BranchWorkflow } from "./branch.ts";
 import { PullRequestWorkflow } from "./pull-request.ts";
 
-/**
- * Factory class for creating Git workflows.
- * Handles creation and execution of both branch and pull request workflows.
- */
-
 export class WorkflowFactory {
   constructor(
     private readonly gitProvider: GitPlatform,

@@ -4,6 +4,7 @@ export interface PlatformConfig {
   branch: string;
   owner: string;
   repository: string;
+  baseBranch: string;
 }
 
 export abstract class PlatformProvider {

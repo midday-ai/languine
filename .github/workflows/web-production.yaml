@@ -2,12 +2,15 @@ name: Deploy Web - Production
 on:
   push:
     branches:
-      - 'feature/gh-v1'
+      - '**'
     paths:
       - apps/web/**
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,4 +25,4 @@ jobs:
           dev-mode: true
           working-directory: apps/web
           cli-version: canary
-          # create-pull-request: true
+          create-pull-request: true

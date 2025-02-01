@@ -14,8 +14,11 @@ export const ConfigSchema = z.object({
   createPullRequest: z.boolean().default(false),
   commitMessage: z
     .string()
-    .default("chore: (i18n) update translations via Languine"),
-  prTitle: z.string().optional(),
+    .default("chore: (i18n) update translations using Languine.ai"),
+  prTitle: z
+    .string()
+    .optional()
+    .default("chore: (i18n) update translations using Languine.ai"),
   prBody: z.string().optional(),
 });
 

@@ -1,9 +1,5 @@
 import type { PlatformConfig } from "./platforms/provider.ts";
 
-/**
- * Interface for Git platform operations.
- * Implemented by specific Git platforms (GitHub, GitLab, etc.)
- */
 export interface GitPlatform {
   getPlatformConfig(): PlatformConfig;
   setupGit(): Promise<void>;
@@ -22,12 +18,14 @@ export interface GitPlatform {
   addChanges(): Promise<void>;
   hasChanges(): Promise<boolean>;
   checkBotCommit(): Promise<boolean>;
+  getOpenPullRequestNumber(branch: string): Promise<number | undefined>;
+  closeOpenPullRequest(options: { pullRequestNumber: number }): Promise<void>;
+  addCommentToPullRequest(options: {
+    pullRequestNumber: number;
+    body: string;
+  }): Promise<void>;
 }
 
-/**
- * Base interface for Git workflows.
- * Common functionality shared between branch and PR workflows.
- */
 export interface GitWorkflow {
   preRun(): Promise<void>;
   run(): Promise<boolean>;
