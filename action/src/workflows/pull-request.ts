@@ -2,6 +2,7 @@ import path from "node:path";
 import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
 import type { Config } from "../utils/config.ts";
+import { execAsync } from "../utils/exec.ts";
 import { logger } from "../utils/logger.ts";
 
 export class PullRequestWorkflow implements GitWorkflow {
@@ -25,7 +26,14 @@ export class PullRequestWorkflow implements GitWorkflow {
       throw new Error("Failed to configure Git");
     }
 
-    logger.info("Checking if branch exists");
+    // First ensure we're on the base branch
+    const { baseBranch } = this.gitProvider.getPlatformConfig();
+    logger.info(`Ensuring we're on base branch ${baseBranch}`);
+    await execAsync(`git fetch origin ${baseBranch}`);
+    await execAsync(`git checkout ${baseBranch}`);
+    await execAsync(`git pull origin ${baseBranch}`);
+
+    logger.info("Checking if translation branch exists");
     const currentBranch = await this.gitProvider.getCurrentBranch();
     const branchExists = currentBranch === this.branchName;
     logger.info(branchExists ? "Branch exists" : "Branch does not exist");
@@ -46,20 +54,28 @@ export class PullRequestWorkflow implements GitWorkflow {
     await this.translationService.runTranslation(this.config);
 
     const hasChanges = await this.gitProvider.hasChanges();
-
-    if (hasChanges) {
-      logger.info("Changes detected, committing and pushing...");
-      await this.gitProvider.addChanges();
-      await this.gitProvider.commitAndPush({
-        message: this.config.commitMessage,
-        branch: this.branchName,
-      });
+    if (!hasChanges) {
+      logger.info("No translation changes detected, skipping PR creation");
+      return false;
     }
 
-    return hasChanges;
+    logger.info("Changes detected, committing and pushing...");
+    await this.gitProvider.addChanges();
+    await this.gitProvider.commitAndPush({
+      message: this.config.commitMessage,
+      branch: this.branchName,
+    });
+
+    return true;
   }
 
   async postRun() {
+    // Only create PR if we had changes in the run step
+    if (!(await this.gitProvider.hasChanges())) {
+      logger.info("No changes to create PR for");
+      return;
+    }
+
     logger.info("Creating or updating pull request");
     await this.gitProvider.createOrUpdatePullRequest({
       title:
