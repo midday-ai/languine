@@ -1,4 +1,3 @@
-import { execSync } from "node:child_process";
 import path from "node:path";
 import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
@@ -18,100 +17,16 @@ export class PullRequestWorkflow implements GitWorkflow {
   }
 
   async preRun(): Promise<void> {
-    try {
-      await this.#setupGit();
-      logger.info("Successfully configured Git");
-
-      // Get base branch from config and ensure we're on it
-      const { baseBranch } = this.gitProvider.getPlatformConfig();
-      logger.info(`Ensuring we're on base branch ${baseBranch}`);
-      await this.#fetchAndCheckoutBaseBranch(baseBranch);
-
-      // Now handle the feature branch
-      const branchExists = await this.#checkBranchExists(this.branchName);
-      logger.info(branchExists ? "Branch exists" : "Branch does not exist");
-
-      if (branchExists) {
-        logger.info(`Checking out branch ${this.branchName}`);
-        await this.#checkoutExistingBranch(this.branchName);
-        logger.info(`Syncing with ${baseBranch}`);
-        await this.#syncBranch(baseBranch);
-      } else {
-        logger.info(
-          `Creating new branch ${this.branchName} from ${baseBranch}`,
-        );
-        await this.#createNewBranch(this.branchName, baseBranch);
-      }
-    } catch (error) {
-      logger.error(error instanceof Error ? error.message : "Unknown error");
-      throw error;
-    }
+    await this.#setupGit();
+    logger.info("Successfully configured Git");
   }
 
-  async run(): Promise<boolean> {
+  async run() {
     logger.info("Running pull request workflow...");
-
-    try {
-      // Run translation service to generate changes
-      logger.info("Running translation service...");
-      await this.translationService.runTranslation(this.config);
-
-      // Check if we have any changes to commit
-      const hasChanges = await this.gitProvider.hasChanges();
-
-      if (hasChanges) {
-        logger.info("Changes detected, committing and pushing...");
-        await this.gitProvider.addChanges();
-        await this.gitProvider.commitAndPush({
-          message: this.config.commitMessage,
-          branch: this.branchName,
-        });
-      } else {
-        logger.info("No changes to commit");
-      }
-
-      return hasChanges;
-    } catch (error) {
-      logger.error(error instanceof Error ? error.message : "Unknown error");
-      return false;
-    }
+    return true;
   }
 
-  async postRun(): Promise<void> {
-    try {
-      // Only create PR if we have changes
-      const hasChanges = await this.gitProvider.hasChanges();
-      if (!hasChanges) {
-        logger.info("No changes detected, skipping PR creation");
-        return;
-      }
-
-      // Check for existing PR again (in case it was created during our run)
-      const existingPRNumber = await this.gitProvider.getOpenPullRequestNumber(
-        this.branchName,
-      );
-
-      // Create new PR
-      logger.info("Creating new pull request...");
-      await this.gitProvider.createOrUpdatePullRequest({
-        title: this.config.prTitle || "chore: update translations",
-        body: this.config.prBody || this.#getPrBodyContent(),
-        branch: this.branchName,
-      });
-
-      // If there was an existing PR, add a comment about the new one
-      if (existingPRNumber) {
-        logger.info(`Adding comment to old PR #${existingPRNumber}`);
-        await this.gitProvider.addCommentToPullRequest({
-          pullRequestNumber: existingPRNumber,
-          body: "This PR is now outdated. A new version has been created.",
-        });
-      }
-    } catch (error) {
-      logger.error(error instanceof Error ? error.message : "Unknown error");
-      throw error;
-    }
-  }
+  async postRun(): Promise<void> {}
 
   async #setupGit() {
     await this.gitProvider.setupGit();
@@ -124,68 +39,6 @@ export class PullRequestWorkflow implements GitWorkflow {
     if (workingDir !== process.cwd()) {
       logger.info(`Changing working directory to: ${workingDir}`);
       process.chdir(workingDir);
-    }
-  }
-
-  async #checkBranchExists(branch: string): Promise<boolean> {
-    try {
-      execSync(`git fetch origin ${branch}`, { stdio: "pipe" });
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
-  async #fetchAndCheckoutBaseBranch(baseBranch: string) {
-    logger.info(`Fetching and checking out ${baseBranch}`);
-    execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
-    execSync(`git checkout -f ${baseBranch}`, { stdio: "inherit" });
-    execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
-    execSync("git clean -fd", { stdio: "inherit" }); // Clean untracked files
-  }
-
-  async #checkoutExistingBranch(branch: string) {
-    execSync(`git fetch origin ${branch}`, { stdio: "inherit" });
-    execSync(`git checkout -B ${branch} origin/${branch}`, {
-      stdio: "inherit",
-    });
-  }
-
-  async #createNewBranch(branch: string, baseBranch: string) {
-    execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
-    execSync(`git checkout -b ${branch} origin/${baseBranch}`, {
-      stdio: "inherit",
-    });
-  }
-
-  async #syncBranch(baseBranch: string) {
-    try {
-      logger.info("Attempting to rebase branch");
-      execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
-      execSync(`git rebase origin/${baseBranch}`, { stdio: "inherit" });
-      logger.info("Successfully rebased branch");
-    } catch (error) {
-      logger.warn("Rebase failed, falling back to alternative sync method");
-
-      logger.info("Aborting failed rebase");
-      execSync("git rebase --abort", { stdio: "inherit" });
-
-      logger.info(`Resetting to ${baseBranch}`);
-      execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
-
-      logger.info("Restoring target files");
-      const targetFiles = ["languine.lock"];
-      execSync(`git fetch origin ${this.branchName}`, { stdio: "inherit" });
-
-      // Restore each file from the feature branch
-      for (const file of targetFiles) {
-        try {
-          execSync(`git checkout FETCH_HEAD -- ${file}`, { stdio: "inherit" });
-        } catch (error) {
-          logger.warn(`Skipping non-existent file: ${file}`);
-        }
-      }
-      logger.info("Restored target files");
     }
   }
 
