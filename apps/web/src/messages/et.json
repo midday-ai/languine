@@ -610,5 +610,6 @@
     "examples": "Näited",
     "team": "Meeskond",
     "overrides": "Ümberkirjutused"
-  }
+  },
+  "test_key": "See on testvõti"
 }

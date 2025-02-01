@@ -610,5 +610,6 @@
     "examples": "Contoh",
     "team": "Tim",
     "overrides": "Penggantian"
-  }
+  },
+  "test_key": "Ini adalah kunci uji"
 }

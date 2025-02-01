@@ -610,5 +610,6 @@
     "examples": "示例",
     "team": "团队",
     "overrides": "覆盖"
-  }
+  },
+  "test_key": "这是一个测试键"
 }

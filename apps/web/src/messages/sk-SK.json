@@ -610,5 +610,6 @@
     "examples": "Príklady",
     "team": "Tím",
     "overrides": "Nahradenia"
-  }
+  },
+  "test_key": "Toto je testovací kľúč"
 }

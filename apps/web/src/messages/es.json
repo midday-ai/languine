@@ -610,5 +610,6 @@
     "examples": "Ejemplos",
     "team": "Equipo",
     "overrides": "Sobrescribir"
-  }
+  },
+  "test_key": "Esta es una clave de prueba"
 }

@@ -610,5 +610,6 @@
     "examples": "Primeri",
     "team": "Tim",
     "overrides": "Zamene"
-  }
+  },
+  "test_key": "Ovo je test ključ"
 }

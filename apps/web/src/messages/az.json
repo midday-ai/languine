@@ -610,5 +610,6 @@
     "examples": "Nümunələr",
     "team": "Komanda",
     "overrides": "Dəyişikliklər"
-  }
+  },
+  "test_key": "Bu bir test açarıdır"
 }

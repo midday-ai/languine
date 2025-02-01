@@ -610,5 +610,6 @@
     "examples": "Esimerkit",
     "team": "Tiimi",
     "overrides": "Ylikirjoitukset"
-  }
+  },
+  "test_key": "Tämä on testiavain"
 }

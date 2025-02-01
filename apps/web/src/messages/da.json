@@ -610,5 +610,6 @@
     "examples": "Eksempler",
     "team": "Team",
     "overrides": "Overskrivninger"
-  }
+  },
+  "test_key": "Dette er en testnøgle"
 }

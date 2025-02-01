@@ -610,5 +610,6 @@
     "examples": "Przykłady",
     "team": "Zespół",
     "overrides": "Nadpisy"
-  }
+  },
+  "test_key": "To jest klucz testowy"
 }

@@ -610,5 +610,6 @@
     "examples": "Primjeri",
     "team": "Tim",
     "overrides": "Zamjene"
-  }
+  },
+  "test_key": "Ovo je testna ključna riječ"
 }

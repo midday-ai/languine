@@ -610,5 +610,6 @@
     "examples": "Piemēri",
     "team": "Komanda",
     "overrides": "Aizvietojumi"
-  }
+  },
+  "test_key": "Šis ir testa atslēga"
 }

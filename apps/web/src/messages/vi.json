@@ -610,5 +610,6 @@
     "examples": "Ví dụ",
     "team": "Đội ngũ",
     "overrides": "Ghi đè"
-  }
+  },
+  "test_key": "Đây là một khóa kiểm tra"
 }

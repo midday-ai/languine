@@ -610,5 +610,6 @@
     "examples": "Példák",
     "team": "Csapat",
     "overrides": "Felülbírálatok"
-  }
+  },
+  "test_key": "Ez egy teszt kulcs"
 }

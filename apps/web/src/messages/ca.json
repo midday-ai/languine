@@ -610,5 +610,6 @@
     "examples": "Exemples",
     "team": "Equip",
     "overrides": "Substitucions"
-  }
+  },
+  "test_key": "Aquesta és una clau de prova"
 }

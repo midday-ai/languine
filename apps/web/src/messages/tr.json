@@ -610,5 +610,6 @@
     "examples": "Örnekler",
     "team": "Ekip",
     "overrides": "Aşmalar"
-  }
+  },
+  "test_key": "Bu bir test anahtarı"
 }

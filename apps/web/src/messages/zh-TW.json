@@ -610,5 +610,6 @@
     "examples": "範例",
     "team": "團隊",
     "overrides": "覆蓋"
-  }
+  },
+  "test_key": "這是一個測試鍵"
 }

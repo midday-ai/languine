@@ -610,5 +610,6 @@
     "examples": "Voorbeelden",
     "team": "Team",
     "overrides": "Overschrijvingen"
-  }
+  },
+  "test_key": "Dit is een test sleutel"
 }
