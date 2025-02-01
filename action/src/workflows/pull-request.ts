@@ -27,32 +27,27 @@ export class PullRequestWorkflow implements GitWorkflow {
       throw new Error("Failed to configure Git");
     }
 
-    // First ensure we're on the base branch
+    // First ensure we're on the base branch and it's up to date
     const { baseBranch } = this.gitProvider.getPlatformConfig();
     logger.info(`Ensuring we're on base branch ${baseBranch}`);
     await execAsync(`git fetch origin ${baseBranch}`);
-    await execAsync(`git checkout ${baseBranch}`);
-    await execAsync(`git pull origin ${baseBranch}`);
+    await execAsync(`git checkout -f ${baseBranch}`);
+    await execAsync(`git reset --hard origin/${baseBranch}`);
+    await execAsync("git clean -fd");
 
-    logger.info("Checking if translation branch exists");
-    const currentBranch = await this.gitProvider.getCurrentBranch();
-    const branchExists = currentBranch === this.branchName;
-    logger.info(branchExists ? "Branch exists" : "Branch does not exist");
+    // Run translation service while on base branch to detect changes
+    logger.info(
+      "Running translation service on base branch to detect changes...",
+    );
+    await this.translationService.runTranslation(this.config);
 
-    if (branchExists) {
-      logger.info(`Branch ${this.branchName} already checked out`);
-      await this.gitProvider.pullAndRebase(this.branchName);
-      logger.info(`Synced branch ${this.branchName}`);
-    } else {
-      logger.info(`Creating branch ${this.branchName}`);
-      await this.gitProvider.createBranch(this.branchName);
-      logger.info(`Created branch ${this.branchName}`);
-    }
+    // Now create/switch to our PR branch
+    logger.info(`Creating/switching to PR branch ${this.branchName}`);
+    await this.gitProvider.createBranch(this.branchName);
   }
 
   async run() {
     logger.info("Running pull request workflow...");
-    await this.translationService.runTranslation(this.config);
 
     const hasChanges = await this.gitProvider.hasChanges();
     if (!hasChanges) {
