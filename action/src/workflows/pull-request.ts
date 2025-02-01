@@ -12,7 +12,8 @@ export class PullRequestWorkflow implements GitWorkflow {
     private readonly config: Config,
     private readonly translationService: TranslationService,
   ) {
-    this.branchName = `languine/translations-${Date.now()}`;
+    const { baseBranch } = this.gitProvider.getPlatformConfig();
+    this.branchName = `languine/${baseBranch}`;
   }
 
   async preRun() {
@@ -26,16 +27,12 @@ export class PullRequestWorkflow implements GitWorkflow {
 
     logger.info("Checking if branch exists");
     const currentBranch = await this.gitProvider.getCurrentBranch();
-    logger.info(
-      currentBranch === this.branchName
-        ? "Branch exists"
-        : "Branch does not exist",
-    );
+    const branchExists = currentBranch === this.branchName;
+    logger.info(branchExists ? "Branch exists" : "Branch does not exist");
 
-    if (currentBranch === this.branchName) {
+    if (branchExists) {
       logger.info(`Branch ${this.branchName} already checked out`);
-      logger.info("Syncing with base branch");
-      await this.#syncBranch();
+      await this.gitProvider.pullAndRebase(this.branchName);
       logger.info(`Synced branch ${this.branchName}`);
     } else {
       logger.info(`Creating branch ${this.branchName}`);
@@ -54,9 +51,7 @@ export class PullRequestWorkflow implements GitWorkflow {
       logger.info("Changes detected, committing and pushing...");
       await this.gitProvider.addChanges();
       await this.gitProvider.commitAndPush({
-        message:
-          this.config.commitMessage ||
-          "chore: (i18n) update translations using Languine.ai",
+        message: this.config.commitMessage,
         branch: this.branchName,
       });
     }
@@ -86,19 +81,6 @@ export class PullRequestWorkflow implements GitWorkflow {
     if (workingDir !== process.cwd()) {
       logger.info(`Changing working directory to: ${workingDir}`);
       process.chdir(workingDir);
-    }
-  }
-
-  async #syncBranch() {
-    const { branch } = this.gitProvider.getPlatformConfig();
-
-    try {
-      logger.info("Attempting to sync with base branch");
-      await this.gitProvider.pullAndRebase(branch);
-      logger.info("Successfully synced with base branch");
-    } catch (error) {
-      logger.warn("Failed to sync with base branch, changes may be lost");
-      throw error;
     }
   }
 

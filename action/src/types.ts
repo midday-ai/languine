@@ -18,6 +18,12 @@ export interface GitPlatform {
   addChanges(): Promise<void>;
   hasChanges(): Promise<boolean>;
   checkBotCommit(): Promise<boolean>;
+  getOpenPullRequestNumber(branch: string): Promise<number | undefined>;
+  closeOpenPullRequest(options: { pullRequestNumber: number }): Promise<void>;
+  addCommentToPullRequest(options: {
+    pullRequestNumber: number;
+    body: string;
+  }): Promise<void>;
 }
 
 export interface GitWorkflow {
