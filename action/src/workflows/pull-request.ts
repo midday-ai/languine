@@ -31,22 +31,24 @@ export class PullRequestWorkflow implements GitWorkflow {
     const { baseBranch } = this.gitProvider.getPlatformConfig();
     logger.info(`Ensuring we're on base branch ${baseBranch}`);
 
-    // Fetch all branches and tags
-    await execAsync("git fetch --all --tags --prune");
+    // Fetch and checkout base branch exactly like in branch flow
+    await execAsync(`git fetch origin ${baseBranch}`);
+    await execAsync(`git checkout ${baseBranch}`);
+    await execAsync(`git reset --hard origin/${baseBranch}`);
 
-    // Make sure we're on the base branch with latest content
-    await execAsync(`git checkout -f ${baseBranch}`);
-    await execAsync(`git pull origin ${baseBranch}`);
+    // Run translation detection on base branch first
+    logger.info("Detecting translations on base branch");
+    await this.translationService.runTranslation(this.config);
 
-    // Create our PR branch from this point
+    // Now create our PR branch, preserving the detection state
     logger.info(`Creating PR branch ${this.branchName}`);
-    await execAsync(`git checkout -b ${this.branchName} ${baseBranch}`);
+    await execAsync(`git checkout -b ${this.branchName}`);
   }
 
   async run() {
     logger.info("Running pull request workflow...");
 
-    // Run translations on our new branch
+    // Run translations again to apply changes
     await this.translationService.runTranslation(this.config);
 
     const hasChanges = await this.gitProvider.hasChanges();
