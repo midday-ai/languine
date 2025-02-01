@@ -610,21 +610,5 @@
     "examples": "Näited",
     "team": "Meeskond",
     "overrides": "Ümberkirjutused"
-  },
-  "welcome": {
-    "title": "Tere tulemast Languinesse",
-    "description": "Languine on tehisintellektil põhinev lokaliseerimise platvorm, mis aitab teil automatiseerida oma rakenduste tõlkimist. See pakub funktsioone nagu täiendavad seadistamisvõimalused, tõlke ülekirjutamine, analüütika ja konteksti mälu, et tagada kvaliteetsed tõlked."
-  },
-  "limit_reached": {
-    "title": "Piirang saavutatud",
-    "description": "Olete oma plaani piiranguni jõudnud. Palun uuendage oma plaani, et jätkata."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis on konkurentsivõimekuse platvorm."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis on konkurentsivõimekuse platvorm."
   }
 }

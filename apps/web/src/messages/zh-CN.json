@@ -610,21 +610,5 @@
     "examples": "示例",
     "team": "团队",
     "overrides": "覆盖"
-  },
-  "welcome": {
-    "title": "欢迎来到 Languine",
-    "description": "Languine 是一个由 AI 驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
-  },
-  "limit_reached": {
-    "title": "达到限制",
-    "description": "您已达到您计划的限制。请升级您的计划以继续。"
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis 是一个用于竞争编程的平台。"
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis 是一个用于竞争编程的平台。"
   }
 }

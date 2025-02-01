@@ -610,21 +610,5 @@
     "examples": "Nümunələr",
     "team": "Komanda",
     "overrides": "Dəyişikliklər"
-  },
-  "welcome": {
-    "title": "Languine-ə Xoş Gəlmisiniz",
-    "description": "Languine, tətbiqlərinizin tərcüməsini avtomatlaşdırmağa kömək edən AI güclü lokalizasiya platformasıdır. Yüksək keyfiyyətli tərcümələri təmin etmək üçün incə tənzimləmə seçimləri, tərcümə üst-üstə düşmələri, analitika və kontekst yaddaşı kimi xüsusiyyətlər təqdim edir."
-  },
-  "limit_reached": {
-    "title": "Limitə çatıldı",
-    "description": "Sizin planınız üçün limitə çatmısınız. Davam etmək üçün planınızı yüksəldin."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis, yarışma proqramlaşdırması üçün bir platformadır."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis, yarışma proqramlaşdırması üçün bir platformadır."
   }
 }

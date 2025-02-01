@@ -610,21 +610,5 @@
     "examples": "Przykłady",
     "team": "Zespół",
     "overrides": "Nadpisy"
-  },
-  "welcome": {
-    "title": "Witamy w Languine",
-    "description": "Languine to platforma lokalizacyjna zasilana sztuczną inteligencją, która pomaga w automatyzacji tłumaczenia Twoich aplikacji. Oferuje funkcje takie jak opcje dostosowywania, nadpisywanie tłumaczeń, analityka i pamięć kontekstowa, aby zapewnić wysoką jakość tłumaczeń."
-  },
-  "limit_reached": {
-    "title": "Osiągnięto limit",
-    "description": "Osiągnąłeś limit swojego planu. Proszę zaktualizować plan, aby kontynuować."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis to platforma do programowania konkurencyjnego."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis to platforma do programowania konkurencyjnego."
   }
 }

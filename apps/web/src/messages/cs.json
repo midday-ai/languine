@@ -610,21 +610,5 @@
     "examples": "Příklady",
     "team": "Tým",
     "overrides": "Přepsání"
-  },
-  "welcome": {
-    "title": "Vítejte v Languine",
-    "description": "Languine je platforma pro lokalizaci poháněná AI, která vám pomáhá automatizovat překlad vašich aplikací. Nabízí funkce jako možnosti jemného ladění, přepsání překladů, analytiku a paměť kontextu, aby zajistila vysokou kvalitu překladů."
-  },
-  "limit_reached": {
-    "title": "Limit dosažen",
-    "description": "Dosáhli jste limitu svého plánu. Prosím, upgradujte svůj plán, abyste mohli pokračovat."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis je platforma pro soutěžní programování."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis je platforma pro soutěžní programování."
   }
 }

@@ -610,21 +610,5 @@
     "examples": "Primjeri",
     "team": "Tim",
     "overrides": "Zamjene"
-  },
-  "welcome": {
-    "title": "Dobrodošli u Languine",
-    "description": "Languine je platforma za lokalizaciju pokretana AI-jem koja vam pomaže automatizirati prevođenje vaših aplikacija. Pruža značajke poput opcija za fino podešavanje, zamjene prijevoda, analitiku i memoriju konteksta kako bi osigurala visokokvalitetne prijevode."
-  },
-  "limit_reached": {
-    "title": "Dosegnut limit",
-    "description": "Dosegnuli ste limit za vaš plan. Molimo vas da nadogradite svoj plan kako biste nastavili."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis je platforma za natjecateljsko programiranje."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis je platforma za natjecateljsko programiranje."
   }
 }

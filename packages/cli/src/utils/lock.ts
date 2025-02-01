@@ -138,6 +138,31 @@ export class LockFileManager {
     this.lockFile = this.loadLockFile();
   }
 
+  /**
+   * Sync the lock file with the current state of source files.
+   * This will clear any files/keys that no longer exist in the source.
+   */
+  public syncSourceFiles(
+    sourceFiles: Map<string, Record<string, string>>,
+  ): void {
+    // Create new lock file with just the current source files
+    const newLockFile = LockFileSchema.parse({});
+
+    // Add each source file to the new lock file
+    for (const [filePath, sourceData] of sourceFiles) {
+      const relativePath = relative(this.configDir, filePath);
+      newLockFile.files[relativePath] = {};
+
+      for (const [key, value] of Object.entries(sourceData)) {
+        newLockFile.files[relativePath][key] = this.hashValue(value);
+      }
+    }
+
+    // Replace the current lock file with the new one
+    this.lockFile = newLockFile;
+    this.saveLockFile();
+  }
+
   private hashValue(value: string): string {
     return createHash("md5").update(value).digest("hex");
   }

@@ -42,7 +42,6 @@ export const hasProjectAccess = t.middleware(async ({ ctx, next, input }) => {
             where: eq(members.userId, ctx.authenticatedId),
           },
         },
-        where: eq(organizations.id, ctx.authenticatedId),
       },
     },
   });

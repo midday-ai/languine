@@ -610,21 +610,5 @@
     "examples": "Piemēri",
     "team": "Komanda",
     "overrides": "Aizvietojumi"
-  },
-  "welcome": {
-    "title": "Laipni lūdzam Languine",
-    "description": "Languine ir mākslīgā intelekta vadīta lokalizācijas platforma, kas palīdz automatizēt jūsu lietotņu tulkošanu. Tā piedāvā tādas funkcijas kā precizēšanas iespējas, tulkošanas pārrakstīšana, analītika un konteksta atmiņa, lai nodrošinātu augstas kvalitātes tulkojumus."
-  },
-  "limit_reached": {
-    "title": "Limits sasniegts",
-    "description": "Jūs esat sasniedzis sava plāna limitu. Lūdzu, jauniniet savu plānu, lai turpinātu."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis ir platforma konkurētspējīgai programmēšanai."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis ir platforma konkurētspējīgai programmēšanai."
   }
 }

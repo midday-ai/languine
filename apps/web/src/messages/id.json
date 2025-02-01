@@ -610,21 +610,5 @@
     "examples": "Contoh",
     "team": "Tim",
     "overrides": "Penggantian"
-  },
-  "welcome": {
-    "title": "Selamat Datang di Languine",
-    "description": "Languine adalah platform lokalisasi yang didukung AI yang membantu Anda mengotomatiskan terjemahan aplikasi Anda. Ini menyediakan fitur seperti opsi penyesuaian, penggantian terjemahan, analitik, dan memori konteks untuk memastikan terjemahan berkualitas tinggi."
-  },
-  "limit_reached": {
-    "title": "Batas tercapai",
-    "description": "Anda telah mencapai batas untuk rencana Anda. Silakan tingkatkan rencana Anda untuk melanjutkan."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis adalah platform untuk pemrograman kompetitif."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis adalah platform untuk pemrograman kompetitif."
   }
 }

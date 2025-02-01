@@ -42,14 +42,18 @@ export async function syncCommand(args: string[] = []) {
     const { source: sourceLocale, targets: targetLocales } = config.locale;
     let needsUpdates = false;
     let syncedAnything = false;
+    let shouldRemoveKeys = false;
+
+    // Get config file path and initialize lock file manager
+    const { path: configPath } = await configFile();
+    const lockManager = new LockFileManager(configPath);
+
+    // Keep track of all source files and their content
+    const allSourceFiles = new Map<string, Record<string, string>>();
 
     // Process each file configuration
     for (const [type, fileConfig] of Object.entries(config.files)) {
       const { include } = fileConfig as Config["files"][string];
-
-      // Get config file path and initialize lock file manager
-      const { path: configPath } = await configFile();
-      const lockManager = new LockFileManager(configPath);
 
       // Process each file pattern
       for (const pattern of include) {
@@ -65,124 +69,135 @@ export async function syncCommand(args: string[] = []) {
 
           // Read source file content
           const sourceContent = await readFile(sourceFilePath, "utf-8");
-          const parsedContent = await parser.parse(sourceContent);
+          const parsedSourceContent = await parser.parse(sourceContent);
 
-          // Get changes using lock file manager
-          const changes = lockManager.getChanges(sourceFilePath, parsedContent);
-          const removedKeys = changes.removedKeys;
+          // Store source content for later
+          allSourceFiles.set(sourceFilePath, parsedSourceContent);
 
-          if (removedKeys.length > 0) {
-            needsUpdates = true;
-            if (checkOnly) {
-              console.log(
-                chalk.yellow(
-                  `Found ${removedKeys.length} deleted keys in ${sourceFilePath}`,
-                ),
+          // Process each target locale
+          for (const targetLocale of targetLocales) {
+            try {
+              const targetPath = sourceFilePath.replace(
+                sourceLocale,
+                targetLocale,
               );
-              continue;
-            }
 
-            let shouldRemoveKeys = false;
-            s.stop();
-            note(
-              `Detected ${removedKeys.length} ${removedKeys.length === 1 ? "key" : "keys"} removed.\nThis will remove ${removedKeys.length === 1 ? "this key" : "these keys"} from all target locale files and from the platform.`,
-              "Remove keys",
-            );
-
-            shouldRemoveKeys = (await confirm({
-              message: "Do you want to continue?",
-            })) as boolean;
-            s.start();
-
-            if (!shouldRemoveKeys) {
-              s.message("Skipping deletion of keys...");
-              continue;
-            }
-
-            // Remove keys from platform
-            s.message("Deleting keys from platform...");
-
-            const data = await client.translate.deleteKeys.mutate({
-              projectId: config.projectId,
-              keys: removedKeys,
-            });
-
-            if (data) {
-              s.stop();
-              s.message(chalk.green("Keys deleted from platform"));
-            } else {
-              s.stop();
-              s.message(chalk.red("Failed to delete keys from platform"));
-            }
-
-            // Process each target locale
-            for (const targetLocale of targetLocales) {
+              // Read existing target file
               try {
-                const targetPath = sourceFilePath.replace(
-                  sourceLocale,
-                  targetLocale,
+                const existingFile = await readFile(targetPath, "utf-8");
+                const existingContent = await parser.parse(existingFile);
+
+                // Find keys that exist in target but not in source
+                const removedKeys = Object.keys(existingContent).filter(
+                  (key) => !(key in parsedSourceContent),
                 );
 
-                // Read existing target file
-                try {
-                  const existingFile = await readFile(targetPath, "utf-8");
-                  const existingContent = await parser.parse(existingFile);
-
-                  // Remove deleted keys and track if any were removed
-                  const originalKeyCount = Object.keys(existingContent).length;
-                  for (const key of removedKeys) {
-                    delete existingContent[key];
+                if (removedKeys.length > 0) {
+                  needsUpdates = true;
+                  if (checkOnly) {
+                    console.log(
+                      chalk.yellow(
+                        `Found ${removedKeys.length} deleted keys in ${targetPath}`,
+                      ),
+                    );
+                    continue;
                   }
 
-                  const newKeyCount = Object.keys(existingContent).length;
-                  const hasRemovedKeys = originalKeyCount > newKeyCount;
-
-                  if (hasRemovedKeys) {
-                    const serialized = await parser.serialize(
-                      targetLocale,
-                      existingContent,
-                      existingContent,
+                  // Ask for confirmation only once
+                  if (!shouldRemoveKeys) {
+                    s.stop();
+                    note(
+                      "Detected keys that have been removed from source files.\nThis will remove these keys from all target locale files and from Languine.",
+                      "Remove keys",
                     );
 
-                    // Run beforeSaving hook if configured
-                    let finalContent = serialized;
-                    if (config?.hooks?.beforeSaving) {
-                      finalContent = await config.hooks.beforeSaving({
-                        content: serialized,
-                        filePath: targetPath,
-                        locale: targetLocale,
-                        format: type,
-                      });
+                    shouldRemoveKeys = (await confirm({
+                      message: "Do you want to continue?",
+                    })) as boolean;
+                    s.start();
+
+                    if (!shouldRemoveKeys) {
+                      s.message("Skipping deletion of keys...");
+                      return;
                     }
 
-                    await writeFile(targetPath, finalContent, "utf-8");
-                    syncedAnything = true;
-                  }
-                } catch (error) {
-                  // Target file doesn't exist, skip it
-                  console.log(
-                    chalk.yellow(
-                      `Target file ${targetPath} does not exist, skipping...`,
-                    ),
-                  );
-                }
+                    // Delete keys from platform after confirmation
+                    s.message("Deleting keys from Languine...");
+                    const data = await client.translate.deleteKeys.mutate({
+                      projectId: config.projectId,
+                      keys: removedKeys,
+                    });
 
-                // After successful deletion, update the lock file
-                lockManager.registerSourceData(sourceFilePath, parsedContent);
-              } catch (error) {
-                const syncError = error as Error;
-                console.error(
-                  chalk.red(
-                    `Sync failed for ${chalk.bold(
-                      targetLocale,
-                    )}: ${syncError.message}`,
-                  ),
-                );
-              }
+                    if (!data) {
+                      s.stop();
+                      console.error(
+                        chalk.red("Failed to delete keys from Languine"),
+                      );
+                      return;
+                    }
+                    s.message(chalk.green("Keys deleted from Languine"));
+                  }
+
+                  // Remove keys from target file
+                  const updatedContent = { ...existingContent };
+                  let hasRemovedKeys = false;
+
+                  for (const key of removedKeys) {
+                    if (key in updatedContent) {
+                      delete updatedContent[key];
+                      hasRemovedKeys = true;
+                    }
+                  }
+
+                  if (hasRemovedKeys) {
+                    try {
+                      const serialized = await parser.serialize(
+                        targetLocale,
+                        updatedContent,
+                        existingFile,
+                      );
+
+                      // Run beforeSaving hook if configured
+                      let finalContent = serialized;
+                      if (config?.hooks?.beforeSaving) {
+                        finalContent = await config.hooks.beforeSaving({
+                          content: serialized,
+                          filePath: targetPath,
+                          locale: targetLocale,
+                          format: type,
+                        });
+                      }
+
+                      await writeFile(targetPath, finalContent, "utf-8");
+                      syncedAnything = true;
+                    } catch (serializeError) {
+                      console.error(
+                        chalk.red(
+                          `Failed to serialize ${targetPath}: ${serializeError instanceof Error ? serializeError.message : String(serializeError)}`,
+                        ),
+                      );
+                    }
+                  }
+                }
+              } catch {}
+            } catch (error) {
+              const syncError = error as Error;
+              console.error(
+                chalk.red(
+                  `Sync failed for ${chalk.bold(
+                    targetLocale,
+                  )}: ${syncError.message}`,
+                ),
+              );
             }
           }
         }
       }
+    }
+
+    // Update lock file with all source content after processing everything
+    if (syncedAnything) {
+      lockManager.syncSourceFiles(allSourceFiles);
     }
 
     if (checkOnly) {
@@ -204,7 +219,7 @@ export async function syncCommand(args: string[] = []) {
     process.exit(checkOnly && needsUpdates ? 1 : 0);
   } catch (error) {
     const syncError = error as Error;
-    console.log(chalk.red(`Sync process failed: ${syncError.message}`));
+    console.error(chalk.red(`Sync process failed: ${syncError.message}`));
     process.exit(1);
   }
 }

@@ -610,21 +610,5 @@
     "examples": "예제",
     "team": "팀",
     "overrides": "재정의"
-  },
-  "welcome": {
-    "title": "Languine에 오신 것을 환영합니다",
-    "description": "Languine은 애플리케이션 번역을 자동화하는 데 도움을 주는 AI 기반 로컬라이제이션 플랫폼입니다. 고품질 번역을 보장하기 위해 세부 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같은 기능을 제공합니다."
-  },
-  "limit_reached": {
-    "title": "한도 초과",
-    "description": "귀하의 요금제 한도에 도달했습니다. 계속하려면 요금제를 업그레이드하십시오."
-  },
-  "kattis": {
-    "title": "카티스",
-    "description": "카티스는 경쟁 프로그래밍을 위한 플랫폼입니다."
-  },
-  "kattis_2": {
-    "title": "카티스 2",
-    "description": "카티스는 경쟁 프로그래밍을 위한 플랫폼입니다."
   }
 }

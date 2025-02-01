@@ -610,21 +610,5 @@
     "examples": "Esimerkit",
     "team": "Tiimi",
     "overrides": "Ylikirjoitukset"
-  },
-  "welcome": {
-    "title": "Tervetuloa Languineen",
-    "description": "Languine on tekoälypohjainen lokalisointialusta, joka auttaa sinua automatisoimaan sovellustesi käännöksiä. Se tarjoaa ominaisuuksia, kuten hienosäätömahdollisuuksia, käännösohjauksia, analytiikkaa ja kontekstimuistia varmistaakseen korkealaatuiset käännökset."
-  },
-  "limit_reached": {
-    "title": "Raja saavutettu",
-    "description": "Olet saavuttanut suunnitelmasi rajan. Ole hyvä ja päivitä suunnitelmasi jatkaaksesi."
-  },
-  "kattis": {
-    "title": "Kattis",
-    "description": "Kattis on kilpailulliseen ohjelmointiin tarkoitettu alusta."
-  },
-  "kattis_2": {
-    "title": "Kattis 2",
-    "description": "Kattis on kilpailulliseen ohjelmointiin tarkoitettu alusta."
   }
 }
