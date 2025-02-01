@@ -610,5 +610,9 @@
     "examples": "Örnekler",
     "team": "Ekip",
     "overrides": "Aşmalar"
+  },
+  "welcome": {
+    "title": "Languine'e Hoş Geldiniz",
+    "description": "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan AI destekli bir yerelleştirme platformudur. Yüksek kaliteli çeviriler sağlamak için ince ayar seçenekleri, çeviri geçersiz kılmaları, analizler ve bağlam hafızası gibi özellikler sunar."
   }
 }

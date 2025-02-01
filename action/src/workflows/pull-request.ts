@@ -2,12 +2,10 @@ import path from "node:path";
 import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
 import type { Config } from "../utils/config.ts";
-import { execAsync } from "../utils/exec.ts";
 import { logger } from "../utils/logger.ts";
 
 export class PullRequestWorkflow implements GitWorkflow {
   private readonly branchName: string;
-  private hadTranslationChanges = false;
 
   constructor(
     private readonly gitProvider: GitPlatform,
@@ -18,76 +16,17 @@ export class PullRequestWorkflow implements GitWorkflow {
     this.branchName = `languine/${baseBranch}`;
   }
 
-  async preRun() {
-    try {
-      await this.#setupGit();
-      logger.info("Successfully configured Git");
-    } catch (error) {
-      logger.error(error instanceof Error ? error.message : "Unknown error");
-      throw new Error("Failed to configure Git");
-    }
-
-    // First ensure we're on the base branch
-    const { baseBranch } = this.gitProvider.getPlatformConfig();
-    logger.info(`Ensuring we're on base branch ${baseBranch}`);
-    await execAsync(`git fetch origin ${baseBranch}`);
-    await execAsync(`git checkout ${baseBranch}`);
-    await execAsync(`git pull origin ${baseBranch}`);
-
-    logger.info("Checking if translation branch exists");
-    const currentBranch = await this.gitProvider.getCurrentBranch();
-    const branchExists = currentBranch === this.branchName;
-    logger.info(branchExists ? "Branch exists" : "Branch does not exist");
-
-    if (branchExists) {
-      logger.info(`Branch ${this.branchName} already checked out`);
-      await this.gitProvider.pullAndRebase(this.branchName);
-      logger.info(`Synced branch ${this.branchName}`);
-    } else {
-      logger.info(`Creating branch ${this.branchName}`);
-      await this.gitProvider.createBranch(this.branchName);
-      logger.info(`Created branch ${this.branchName}`);
-    }
+  async preRun(): Promise<void> {
+    await this.#setupGit();
+    logger.info("Successfully configured Git");
   }
 
   async run() {
     logger.info("Running pull request workflow...");
-    await this.translationService.runTranslation(this.config);
-
-    const hasChanges = await this.gitProvider.hasChanges();
-    if (!hasChanges) {
-      logger.info("No translation changes detected, skipping PR creation");
-      this.hadTranslationChanges = false;
-      return false;
-    }
-
-    logger.info("Changes detected, committing and pushing...");
-    await this.gitProvider.addChanges();
-    await this.gitProvider.commitAndPush({
-      message: this.config.commitMessage,
-      branch: this.branchName,
-    });
-
-    this.hadTranslationChanges = true;
     return true;
   }
 
-  async postRun() {
-    // Only create PR if we had changes in the run step
-    if (!this.hadTranslationChanges) {
-      logger.info("No translation changes to create PR for");
-      return;
-    }
-
-    logger.info("Creating or updating pull request");
-    await this.gitProvider.createOrUpdatePullRequest({
-      title:
-        this.config.prTitle ||
-        "chore: (i18n) update translations using Languine.ai",
-      body: this.#getPrBodyContent(),
-      branch: this.branchName,
-    });
-  }
+  async postRun(): Promise<void> {}
 
   async #setupGit() {
     await this.gitProvider.setupGit();

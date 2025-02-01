@@ -415,6 +415,8 @@ files:
     docs.hooks: 35ad48797a780091740cbcf14ebc094d
     docs.examples: ff7c0fcd6a31e735a61c001f75426961
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    welcome.title: 8b1bdd16cc609323fb4221b8d78b5243
+    welcome.description: 7c3c03995075d69d8e137f5256a200ab
   src/markdown/docs/en/android.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/arb.mdx:
