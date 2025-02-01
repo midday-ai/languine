@@ -610,9 +610,5 @@
     "examples": "Exemple",
     "team": "Echipă",
     "overrides": "Suprascrieri"
-  },
-  "test_key": "Aceasta este o cheie de test",
-  "welcome": {
-    "hero": "Bine ai venit la Languine! Suntem încântați să te avem alături."
   }
 }

@@ -610,9 +610,5 @@
     "examples": "Eksempler",
     "team": "Team",
     "overrides": "Overstyringer"
-  },
-  "test_key": "Dette er en testnøkkel",
-  "welcome": {
-    "hero": "Velkommen til Languine! Vi er glade for å ha deg med om bord."
   }
 }

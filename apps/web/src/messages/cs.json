@@ -610,9 +610,5 @@
     "examples": "Příklady",
     "team": "Tým",
     "overrides": "Přepsání"
-  },
-  "test_key": "Toto je testovací klíč",
-  "welcome": {
-    "hero": "Vítejte v Languine! Jsme rádi, že vás máme na palubě."
   }
 }

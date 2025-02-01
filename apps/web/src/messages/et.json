@@ -610,9 +610,5 @@
     "examples": "Näited",
     "team": "Meeskond",
     "overrides": "Ümberkirjutused"
-  },
-  "test_key": "See on testvõti",
-  "welcome": {
-    "hero": "Tere tulemast Languine'i! Meil on hea meel, et olete meiega."
   }
 }

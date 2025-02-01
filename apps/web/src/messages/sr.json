@@ -610,9 +610,5 @@
     "examples": "Primeri",
     "team": "Tim",
     "overrides": "Zamene"
-  },
-  "test_key": "Ovo je test ključ",
-  "welcome": {
-    "hero": "Dobrodošli u Languine! Drago nam je što ste s nama."
   }
 }

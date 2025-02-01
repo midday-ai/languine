@@ -610,9 +610,5 @@
     "examples": "Voorbeelden",
     "team": "Team",
     "overrides": "Overschrijvingen"
-  },
-  "test_key": "Dit is een test sleutel",
-  "welcome": {
-    "hero": "Welkom bij Languine! We zijn blij dat je aan boord bent."
   }
 }

@@ -610,9 +610,5 @@
     "examples": "Ví dụ",
     "team": "Đội ngũ",
     "overrides": "Ghi đè"
-  },
-  "test_key": "Đây là một khóa kiểm tra",
-  "welcome": {
-    "hero": "Chào mừng bạn đến với Languine! Chúng tôi rất vui mừng khi có bạn tham gia."
   }
 }

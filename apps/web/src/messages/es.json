@@ -610,9 +610,5 @@
     "examples": "Ejemplos",
     "team": "Equipo",
     "overrides": "Sobrescribir"
-  },
-  "test_key": "Esta es una clave de prueba",
-  "welcome": {
-    "hero": "¡Bienvenido a Languine! Estamos emocionados de tenerte a bordo."
   }
 }

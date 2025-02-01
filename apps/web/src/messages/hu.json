@@ -610,9 +610,5 @@
     "examples": "Példák",
     "team": "Csapat",
     "overrides": "Felülbírálatok"
-  },
-  "test_key": "Ez egy teszt kulcs",
-  "welcome": {
-    "hero": "Üdvözöljük a Languine-nál! Örömmel üdvözöljük Önt a csapatunkban."
   }
 }

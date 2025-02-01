@@ -610,7 +610,5 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
-  },
-  "test_key": "This is a test key",
-  "welcome.hero": "Welcome to Languine! We're excited to have you on board."
+  }
 }

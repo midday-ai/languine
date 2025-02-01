@@ -610,9 +610,5 @@
     "examples": "Exemples",
     "team": "Equip",
     "overrides": "Substitucions"
-  },
-  "test_key": "Aquesta és una clau de prova",
-  "welcome": {
-    "hero": "Benvingut a Languine! Estem emocionats de tenir-te a bord."
   }
 }

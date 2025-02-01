@@ -610,9 +610,5 @@
     "examples": "Nümunələr",
     "team": "Komanda",
     "overrides": "Dəyişikliklər"
-  },
-  "test_key": "Bu bir test açarıdır",
-  "welcome": {
-    "hero": "Languine-ə xoş gəlmisiniz! Sizi aramızda görməkdən məmnunuq."
   }
 }

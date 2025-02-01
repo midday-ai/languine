@@ -610,9 +610,5 @@
     "examples": "Exempel",
     "team": "Team",
     "overrides": "Överskrivningar"
-  },
-  "test_key": "Detta är en testnyckel",
-  "welcome": {
-    "hero": "Välkommen till Languine! Vi är glada att ha dig med oss."
   }
 }

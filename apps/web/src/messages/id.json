@@ -610,9 +610,5 @@
     "examples": "Contoh",
     "team": "Tim",
     "overrides": "Penggantian"
-  },
-  "test_key": "Ini adalah kunci uji",
-  "welcome": {
-    "hero": "Selamat datang di Languine! Kami senang Anda bergabung dengan kami."
   }
 }

@@ -610,9 +610,5 @@
     "examples": "例",
     "team": "チーム",
     "overrides": "オーバーライド"
-  },
-  "test_key": "これはテストキーです",
-  "welcome": {
-    "hero": "Languineへようこそ！あなたをお迎えできて嬉しいです。"
   }
 }

@@ -610,9 +610,5 @@
     "examples": "範例",
     "team": "團隊",
     "overrides": "覆蓋"
-  },
-  "test_key": "這是一個測試鍵",
-  "welcome": {
-    "hero": "歡迎來到 Languine！我們很高興您能加入我們。"
   }
 }
