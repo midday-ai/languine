@@ -16,7 +16,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     this.branchName = `languine/${baseBranch}`;
   }
 
-  async preRun(): Promise<void> {
+  async preRun() {
     await this.#setupGit();
     logger.info("Successfully configured Git");
   }
@@ -26,7 +26,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     return true;
   }
 
-  async postRun(): Promise<void> {}
+  async postRun() {}
 
   async #setupGit() {
     await this.gitProvider.setupGit();
@@ -42,7 +42,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     }
   }
 
-  #getPrBodyContent(): string {
+  #getPrBodyContent() {
     return `
 🌐 Translation Updates
 
