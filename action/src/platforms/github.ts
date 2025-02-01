@@ -72,7 +72,7 @@ export class GitHubProvider implements GitPlatform {
     await this.octokit.rest.pulls.create({
       owner: this.#owner,
       repo: this.#repo,
-      head: branch,
+      head: `${this.#owner}:${branch}`,
       base: this.#baseBranch,
       title,
       body,
