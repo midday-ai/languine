@@ -2,7 +2,7 @@ name: Deploy Web - Production
 on:
   push:
     branches:
-      - 'feature/gh-v1'
+      - '*'
     paths:
       - apps/web/**
 jobs:
