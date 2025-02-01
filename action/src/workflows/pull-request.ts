@@ -14,9 +14,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     this.branchName = `languine/translations-${Date.now()}`;
   }
 
-  async preRun() {
-    logger.info("Running before hooks...");
-  }
+  async preRun() {}
 
   async run() {
     logger.info("Running pull request workflow...");
@@ -24,7 +22,5 @@ export class PullRequestWorkflow implements GitWorkflow {
     return true;
   }
 
-  async postRun() {
-    logger.info("Running after hooks...");
-  }
+  async postRun() {}
 }
