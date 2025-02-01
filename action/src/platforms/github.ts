@@ -54,6 +54,12 @@ export class GitHubProvider implements GitPlatform {
   }) {
     const { title, body, branch } = options;
 
+    // Ensure branch exists on remote
+    logger.info("Ensuring branch exists on remote...");
+    await execAsync(`git push -u origin ${branch}`).catch((error) => {
+      logger.warn(`Failed to push branch: ${error}`);
+    });
+
     // First close any existing PR
     const existingPRNumber = await this.getOpenPullRequestNumber(branch);
     if (existingPRNumber) {
@@ -123,7 +129,7 @@ export class GitHubProvider implements GitPlatform {
     const { message, branch } = options;
     logger.info(`Committing and pushing to ${branch}...`);
     await execAsync(`git commit -m "${message}"`);
-    await execAsync(`git push origin ${branch} --force`);
+    await execAsync(`git push -u origin ${branch}`);
   }
 
   async createBranch(branchName: string) {
