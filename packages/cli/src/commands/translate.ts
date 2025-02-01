@@ -1,13 +1,14 @@
+import { readFileSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.js";
-import { loadConfig } from "@/utils/config.ts";
-import { getDiff } from "@/utils/diff.ts";
+import { configFile, loadConfig } from "@/utils/config.ts";
 import { loadEnv } from "@/utils/env.ts";
 import { getGitInfo } from "@/utils/git.ts";
+import { LockFileManager } from "@/utils/lock.ts";
 import { transformLocalePath } from "@/utils/path.js";
 import { getAPIKey } from "@/utils/session.ts";
 import { note, outro, select, spinner } from "@clack/prompts";
@@ -88,6 +89,9 @@ export async function translateCommand(args: string[] = []) {
   try {
     // Load config file from working directory
     const config = await loadConfig();
+    const { path: configPath } = await configFile();
+
+    const lockManager = new LockFileManager(configPath);
 
     if (!config) {
       note(
@@ -180,10 +184,15 @@ export async function translateCommand(args: string[] = []) {
           } else {
             // Otherwise use normal diff detection
             try {
-              const changes = await getDiff({
+              const currentContent = readFileSync(sourceFilePath, "utf-8");
+              const currentJson = await parser.parse(currentContent);
+
+              // Get changes using the lock manager
+              const changes = await lockManager.getChanges(
                 sourceFilePath,
-                type,
-              });
+                currentJson,
+              );
+
               // Include both new keys and changed values
               keysToTranslate = [
                 ...changes.addedKeys,
@@ -468,6 +477,8 @@ export async function translateCommand(args: string[] = []) {
           }
 
           await writeFile(targetPath, finalContent, "utf-8");
+
+          lockManager.registerSourceData(targetPath, mergedContent);
 
           if (input.length > 0) {
             translatedAnything = true;

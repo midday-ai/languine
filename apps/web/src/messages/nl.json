@@ -610,13 +610,5 @@
     "examples": "Voorbeelden",
     "team": "Team",
     "overrides": "Overschrijvingen"
-  },
-  "welcome": {
-    "title": "Welkom bij Languine",
-    "description": "Languine is een door AI aangedreven lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals opties voor verfijning, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te waarborgen."
-  },
-  "limit_reached": {
-    "title": "Limiet bereikt",
-    "description": "U heeft de limiet voor uw plan bereikt. Upgrade alstublieft uw plan om door te gaan."
   }
 }

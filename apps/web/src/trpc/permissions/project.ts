@@ -1,5 +1,5 @@
 import { connectDb } from "@/db";
-import { members, projects } from "@/db/schema";
+import { members, organizations, projects } from "@/db/schema";
 import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
 import { t } from "../init";
@@ -21,6 +21,17 @@ export const hasProjectAccess = t.middleware(async ({ ctx, next, input }) => {
 
   const db = await connectDb();
 
+  if (ctx.type === "organization") {
+    const result = await db.query.organizations.findFirst({
+      where: eq(organizations.id, ctx.authenticatedId),
+    });
+
+    // Allow access if using organization's API key
+    if (ctx.type === "organization" && ctx.authenticatedId === result.id) {
+      return next();
+    }
+  }
+
   // Get project and its organization
   const result = await db.query.projects.findFirst({
     where: eq(projects.id, typedInput.projectId),
@@ -40,14 +51,6 @@ export const hasProjectAccess = t.middleware(async ({ ctx, next, input }) => {
       code: "NOT_FOUND",
       message: "Project not found",
     });
-  }
-
-  // Allow access if using organization's API key
-  if (
-    ctx.type === "organization" &&
-    ctx.authenticatedId === result.organization.id
-  ) {
-    return next();
   }
 
   // Block access if not a member and not using org API key

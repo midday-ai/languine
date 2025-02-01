@@ -610,13 +610,5 @@
     "examples": "Példák",
     "team": "Csapat",
     "overrides": "Felülbírálatok"
-  },
-  "welcome": {
-    "title": "Üdvözöljük a Languine-nál",
-    "description": "A Languine egy AI-alapú lokalizációs platform, amely segít automatizálni az alkalmazásai fordítását. Olyan funkciókat kínál, mint a finomhangolási lehetőségek, a fordítási felülírások, az elemzések és a kontextus memória, hogy biztosítsa a magas színvonalú fordításokat."
-  },
-  "limit_reached": {
-    "title": "Limit elérve",
-    "description": "Elérte a terve limitjét. Kérjük, frissítse a tervét a folytatáshoz."
   }
 }

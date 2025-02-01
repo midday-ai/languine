@@ -1,5 +1,5 @@
-import { GitHubProvider } from "./github-provider.ts";
-import type { Provider } from "./provider.ts";
+import type { GitPlatform } from "../types.ts";
+import { GitHubProvider } from "./github.ts";
 
 /**
  * Factory class for creating Git provider instances.
@@ -7,10 +7,10 @@ import type { Provider } from "./provider.ts";
  */
 export class GitProviderFactory {
   private static instance: GitProviderFactory;
-  private provider: Provider;
+  private provider: GitPlatform;
 
   private constructor() {
-    // Currently only supporting GitHub, but this can be extended
+    // For now, we only support GitHub
     this.provider = new GitHubProvider();
   }
 
@@ -21,13 +21,14 @@ export class GitProviderFactory {
     if (!GitProviderFactory.instance) {
       GitProviderFactory.instance = new GitProviderFactory();
     }
+
     return GitProviderFactory.instance;
   }
 
   /**
    * Get the Git provider instance
    */
-  public getProvider(): Provider {
+  public getProvider(): GitPlatform {
     return this.provider;
   }
 }

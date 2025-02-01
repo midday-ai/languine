@@ -610,13 +610,5 @@
     "examples": "Exemplos",
     "team": "Equipe",
     "overrides": "Substituições"
-  },
-  "welcome": {
-    "title": "Bem-vindo ao Languine",
-    "description": "Languine é uma plataforma de localização impulsionada por IA que ajuda você a automatizar a tradução de suas aplicações. Ela oferece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
-  },
-  "limit_reached": {
-    "title": "Limite atingido",
-    "description": "Você atingiu o limite do seu plano. Por favor, faça upgrade para continuar."
   }
 }

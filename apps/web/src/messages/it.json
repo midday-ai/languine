@@ -610,13 +610,5 @@
     "examples": "Esempi",
     "team": "Team",
     "overrides": "Sovrascritture"
-  },
-  "welcome": {
-    "title": "Benvenuto in Languine",
-    "description": "Languine è una piattaforma di localizzazione alimentata da intelligenza artificiale che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Offre funzionalità come opzioni di affinamento, sovrascritture di traduzione, analisi e memoria contestuale per garantire traduzioni di alta qualità."
-  },
-  "limit_reached": {
-    "title": "Limite raggiunto",
-    "description": "Hai raggiunto il limite del tuo piano. Per favore, aggiorna il tuo piano per continuare."
   }
 }

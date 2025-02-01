@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, relative } from "node:path";
 import YAML from "yaml";
 import { z } from "zod";
 
@@ -27,9 +27,11 @@ export interface FileChanges {
 export class LockFileManager {
   private lockFile: LockFile;
   private readonly lockFilePath: string;
+  private readonly configDir: string;
 
-  constructor() {
-    this.lockFilePath = join(process.cwd(), "languine.lock");
+  constructor(configPath: string) {
+    this.configDir = dirname(configPath);
+    this.lockFilePath = join(this.configDir, "languine.lock");
     this.lockFile = this.loadLockFile();
   }
 
@@ -41,7 +43,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.configDir, filePath);
 
     this.lockFile.files[relativePath] = {};
 
@@ -56,7 +58,7 @@ export class LockFileManager {
     filePath: string,
     partialSourceData: Record<string, string>,
   ): void {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.configDir, filePath);
 
     if (!this.lockFile.files[relativePath]) {
       this.lockFile.files[relativePath] = {};
@@ -73,7 +75,7 @@ export class LockFileManager {
     filePath: string,
     sourceData: Record<string, string>,
   ): FileChanges {
-    const relativePath = relative(process.cwd(), filePath);
+    const relativePath = relative(this.configDir, filePath);
     const previousState = this.lockFile.files[relativePath] || {};
 
     const currentKeys = Object.keys(sourceData).sort();
@@ -124,8 +126,6 @@ export class LockFileManager {
       valueChanges: [...changedValues, ...addedValues],
     };
 
-    this.registerSourceData(filePath, sourceData);
-
     return result;
   }
 
@@ -138,14 +138,40 @@ export class LockFileManager {
     this.lockFile = this.loadLockFile();
   }
 
+  /**
+   * Sync the lock file with the current state of source files.
+   * This will clear any files/keys that no longer exist in the source.
+   */
+  public syncSourceFiles(
+    sourceFiles: Map<string, Record<string, string>>,
+  ): void {
+    // Create new lock file with just the current source files
+    const newLockFile = LockFileSchema.parse({});
+
+    // Add each source file to the new lock file
+    for (const [filePath, sourceData] of sourceFiles) {
+      const relativePath = relative(this.configDir, filePath);
+      newLockFile.files[relativePath] = {};
+
+      for (const [key, value] of Object.entries(sourceData)) {
+        newLockFile.files[relativePath][key] = this.hashValue(value);
+      }
+    }
+
+    // Replace the current lock file with the new one
+    this.lockFile = newLockFile;
+    this.saveLockFile();
+  }
+
   private hashValue(value: string): string {
     return createHash("md5").update(value).digest("hex");
   }
 
   private loadLockFile(): LockFile {
-    if (!existsSync(this.lockFilePath)) {
+    if (!this.isLockFileExists()) {
       return LockFileSchema.parse({});
     }
+
     try {
       const content = readFileSync(this.lockFilePath, "utf-8");
       return LockFileSchema.parse(YAML.parse(content));
