@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import path from "node:path";
 import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
@@ -26,7 +27,7 @@ export class PullRequestWorkflow implements GitWorkflow {
 
       // Make sure we're on the base branch first
       logger.info(`Checking out base branch ${baseBranch}`);
-      await this.gitProvider.createBranch(baseBranch);
+      await this.#fetchAndCheckoutBaseBranch(baseBranch);
 
       // Run translation service on base branch to detect changes
       logger.info("Running translation service to detect changes...");
@@ -40,26 +41,17 @@ export class PullRequestWorkflow implements GitWorkflow {
       }
 
       // Now handle the feature branch
-      const currentBranch = await this.gitProvider.getCurrentBranch();
-      const existingPRNumber = await this.gitProvider.getOpenPullRequestNumber(
-        this.branchName,
-      );
+      const branchExists = await this.#checkBranchExists(this.branchName);
+      logger.info(branchExists ? "Branch exists" : "Branch does not exist");
 
-      // If there's an existing PR, close it now
-      if (existingPRNumber) {
-        logger.info(`Closing existing PR #${existingPRNumber}`);
-        await this.gitProvider.closeOpenPullRequest({
-          pullRequestNumber: existingPRNumber,
-        });
-      }
-
-      // Create or switch to our branch
-      if (currentBranch === this.branchName) {
-        logger.info(`Already on branch ${this.branchName}`);
-        await this.gitProvider.pullAndRebase(baseBranch);
+      if (branchExists) {
+        logger.info(`Checking out branch ${this.branchName}`);
+        await this.#checkoutExistingBranch(this.branchName);
+        logger.info(`Syncing with ${baseBranch}`);
+        await this.#syncBranch(baseBranch);
       } else {
         logger.info(`Creating new branch ${this.branchName}`);
-        await this.gitProvider.createBranch(this.branchName);
+        await this.#createNewBranch(this.branchName, baseBranch);
       }
 
       // Stage the changes we detected
@@ -141,6 +133,66 @@ export class PullRequestWorkflow implements GitWorkflow {
     if (workingDir !== process.cwd()) {
       logger.info(`Changing working directory to: ${workingDir}`);
       process.chdir(workingDir);
+    }
+  }
+
+  async #checkBranchExists(branch: string): Promise<boolean> {
+    try {
+      execSync(`git fetch origin ${branch}`, { stdio: "pipe" });
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  async #fetchAndCheckoutBaseBranch(baseBranch: string) {
+    execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
+    execSync(`git checkout ${baseBranch}`, { stdio: "inherit" });
+    execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
+  }
+
+  async #checkoutExistingBranch(branch: string) {
+    execSync(`git fetch origin ${branch}`, { stdio: "inherit" });
+    execSync(`git checkout -B ${branch} origin/${branch}`, {
+      stdio: "inherit",
+    });
+  }
+
+  async #createNewBranch(branch: string, baseBranch: string) {
+    execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
+    execSync(`git checkout -b ${branch} origin/${baseBranch}`, {
+      stdio: "inherit",
+    });
+  }
+
+  async #syncBranch(baseBranch: string) {
+    try {
+      logger.info("Attempting to rebase branch");
+      execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
+      execSync(`git rebase origin/${baseBranch}`, { stdio: "inherit" });
+      logger.info("Successfully rebased branch");
+    } catch (error) {
+      logger.warn("Rebase failed, falling back to alternative sync method");
+
+      logger.info("Aborting failed rebase");
+      execSync("git rebase --abort", { stdio: "inherit" });
+
+      logger.info(`Resetting to ${baseBranch}`);
+      execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
+
+      logger.info("Restoring target files");
+      const targetFiles = ["i18n.lock"];
+      execSync(`git fetch origin ${this.branchName}`, { stdio: "inherit" });
+
+      // Restore each file from the feature branch
+      for (const file of targetFiles) {
+        try {
+          execSync(`git checkout FETCH_HEAD -- ${file}`, { stdio: "inherit" });
+        } catch (error) {
+          logger.warn(`Skipping non-existent file: ${file}`);
+        }
+      }
+      logger.info("Restored target files");
     }
   }
 
