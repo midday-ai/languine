@@ -22,8 +22,10 @@ export class PullRequestWorkflow implements GitWorkflow {
       await this.#setupGit();
       logger.info("Successfully configured Git");
 
-      // Get base branch from config
+      // Get base branch from config and ensure we're on it
       const { baseBranch } = this.gitProvider.getPlatformConfig();
+      logger.info(`Ensuring we're on base branch ${baseBranch}`);
+      await this.#fetchAndCheckoutBaseBranch(baseBranch);
 
       // Now handle the feature branch
       const branchExists = await this.#checkBranchExists(this.branchName);
@@ -35,7 +37,9 @@ export class PullRequestWorkflow implements GitWorkflow {
         logger.info(`Syncing with ${baseBranch}`);
         await this.#syncBranch(baseBranch);
       } else {
-        logger.info(`Creating new branch ${this.branchName}`);
+        logger.info(
+          `Creating new branch ${this.branchName} from ${baseBranch}`,
+        );
         await this.#createNewBranch(this.branchName, baseBranch);
       }
     } catch (error) {
@@ -133,9 +137,11 @@ export class PullRequestWorkflow implements GitWorkflow {
   }
 
   async #fetchAndCheckoutBaseBranch(baseBranch: string) {
+    logger.info(`Fetching and checking out ${baseBranch}`);
     execSync(`git fetch origin ${baseBranch}`, { stdio: "inherit" });
-    execSync(`git checkout ${baseBranch}`, { stdio: "inherit" });
+    execSync(`git checkout -f ${baseBranch}`, { stdio: "inherit" });
     execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
+    execSync("git clean -fd", { stdio: "inherit" }); // Clean untracked files
   }
 
   async #checkoutExistingBranch(branch: string) {
