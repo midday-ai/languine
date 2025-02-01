@@ -92,14 +92,19 @@ export class GitHubProvider implements GitPlatform {
 
   async pullAndRebase() {
     logger.info(`Syncing with ${this.#baseBranch}`);
-    await execAsync(`git fetch origin ${this.#baseBranch}`);
-    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
 
-    // Get current branch name for restoring
+    // First get current branch
     const currentBranch = await this.getCurrentBranch();
 
-    // Create fresh branch from updated base
-    await execAsync(`git checkout -B ${currentBranch}`);
+    // Fetch and reset base branch
+    await execAsync(`git fetch origin ${this.#baseBranch}`);
+    await execAsync(`git checkout -f ${this.#baseBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
+    await execAsync("git clean -fd"); // Clean untracked files
+
+    // Go back to our branch and reset to base
+    await execAsync(`git checkout -f ${currentBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
   }
 
   async commitAndPush(options: {
@@ -116,16 +121,16 @@ export class GitHubProvider implements GitPlatform {
   async createBranch(branchName: string) {
     logger.info(`Creating new branch: ${branchName}`);
 
-    // Always start clean from base branch
+    // First ensure we have the latest base branch
     logger.info(`Fetching and checking out ${this.#baseBranch}`);
     await execAsync(`git fetch origin ${this.#baseBranch}`);
-    await execAsync(
-      `git checkout -B ${this.#baseBranch} origin/${this.#baseBranch}`,
-    );
+    await execAsync(`git checkout -f ${this.#baseBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
+    await execAsync("git clean -fd"); // Clean untracked files
 
     // Create new branch from here
     logger.info(`Creating branch ${branchName} from ${this.#baseBranch}`);
-    await execAsync(`git checkout -B ${branchName}`);
+    await execAsync(`git checkout -b ${branchName}`);
   }
 
   async addChanges() {
