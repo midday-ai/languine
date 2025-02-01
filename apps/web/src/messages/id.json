@@ -610,5 +610,9 @@
     "examples": "Contoh",
     "team": "Tim",
     "overrides": "Penggantian"
+  },
+  "welcome": {
+    "title": "Selamat datang di Languine",
+    "description": "Languine adalah platform lokalisasi yang didukung oleh AI yang membantu Anda mengotomatiskan terjemahan aplikasi Anda. Ini menyediakan fitur seperti opsi penyesuaian, penggantian terjemahan, analitik, dan memori konteks untuk memastikan terjemahan berkualitas tinggi."
   }
 }
