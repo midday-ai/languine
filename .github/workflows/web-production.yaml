@@ -25,4 +25,4 @@ jobs:
           dev-mode: true
           working-directory: apps/web
           cli-version: canary
-          create-pull-request: true
+          # create-pull-request: true
