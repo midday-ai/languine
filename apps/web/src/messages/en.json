@@ -611,5 +611,6 @@
     "examples": "Examples",
     "team": "Team"
   },
-  "test_key": "This is a test key"
+  "test_key": "This is a test key",
+  "welcome.hero": "Welcome to Languine"
 }
