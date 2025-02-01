@@ -25,21 +25,6 @@ export class PullRequestWorkflow implements GitWorkflow {
       // Get base branch from config
       const { baseBranch } = this.gitProvider.getPlatformConfig();
 
-      // Make sure we're on the base branch first
-      logger.info(`Checking out base branch ${baseBranch}`);
-      await this.#fetchAndCheckoutBaseBranch(baseBranch);
-
-      // Run translation service on base branch to detect changes
-      logger.info("Running translation service to detect changes...");
-      await this.translationService.runTranslation(this.config);
-
-      // Check if we have any changes before proceeding
-      const hasChanges = await this.gitProvider.hasChanges();
-      if (!hasChanges) {
-        logger.info("No translation changes detected, skipping PR creation");
-        return;
-      }
-
       // Now handle the feature branch
       const branchExists = await this.#checkBranchExists(this.branchName);
       logger.info(branchExists ? "Branch exists" : "Branch does not exist");
@@ -53,9 +38,6 @@ export class PullRequestWorkflow implements GitWorkflow {
         logger.info(`Creating new branch ${this.branchName}`);
         await this.#createNewBranch(this.branchName, baseBranch);
       }
-
-      // Stage the changes we detected
-      await this.gitProvider.addChanges();
     } catch (error) {
       logger.error(error instanceof Error ? error.message : "Unknown error");
       throw error;
@@ -66,11 +48,16 @@ export class PullRequestWorkflow implements GitWorkflow {
     logger.info("Running pull request workflow...");
 
     try {
+      // Run translation service to generate changes
+      logger.info("Running translation service...");
+      await this.translationService.runTranslation(this.config);
+
       // Check if we have any changes to commit
       const hasChanges = await this.gitProvider.hasChanges();
 
       if (hasChanges) {
         logger.info("Changes detected, committing and pushing...");
+        await this.gitProvider.addChanges();
         await this.gitProvider.commitAndPush({
           message: this.config.commitMessage,
           branch: this.branchName,
@@ -181,7 +168,7 @@ export class PullRequestWorkflow implements GitWorkflow {
       execSync(`git reset --hard origin/${baseBranch}`, { stdio: "inherit" });
 
       logger.info("Restoring target files");
-      const targetFiles = ["i18n.lock"];
+      const targetFiles = ["languine.lock"];
       execSync(`git fetch origin ${this.branchName}`, { stdio: "inherit" });
 
       // Restore each file from the feature branch
