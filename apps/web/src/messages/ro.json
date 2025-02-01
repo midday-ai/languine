@@ -610,5 +610,10 @@
     "examples": "Exemple",
     "team": "Echipă",
     "overrides": "Suprascrieri"
+  },
+  "welcome": {
+    "title": "Bine ați venit la Languine",
+    "description": "Languine este o platformă de localizare alimentată de AI care vă ajută să automatizați traducerea aplicațiilor dumneavoastră. Oferă funcții precum opțiuni de ajustare fină, suprascrierea traducerilor, analize și memorie de context pentru a asigura traduceri de înaltă calitate.",
+    "button": "Începeți"
   }
 }

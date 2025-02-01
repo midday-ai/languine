@@ -610,5 +610,10 @@
     "examples": "Exemplos",
     "team": "Equipe",
     "overrides": "Substituições"
+  },
+  "welcome": {
+    "title": "Bem-vindo ao Languine",
+    "description": "O Languine é uma plataforma de localização impulsionada por IA que ajuda a automatizar a tradução de suas aplicações. Ele oferece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade.",
+    "button": "Começar"
   }
 }

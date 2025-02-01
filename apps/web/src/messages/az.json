@@ -610,5 +610,10 @@
     "examples": "Nümunələr",
     "team": "Komanda",
     "overrides": "Dəyişikliklər"
+  },
+  "welcome": {
+    "title": "Languine-ə Xoş Gəlmisiniz",
+    "description": "Languine, tətbiqlərinizin tərcüməsini avtomatlaşdırmağa kömək edən AI güclü lokalizasiya platformasıdır. O, yüksək keyfiyyətli tərcümələri təmin etmək üçün incə tənzimləmə seçimləri, tərcümə üst-üstə düşmələri, analitika və kontekst yaddaşı kimi xüsusiyyətlər təqdim edir.",
+    "button": "Başlayın"
   }
 }

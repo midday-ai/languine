@@ -610,5 +610,10 @@
     "examples": "Piemēri",
     "team": "Komanda",
     "overrides": "Aizvietojumi"
+  },
+  "welcome": {
+    "title": "Laipni lūdzam Languine",
+    "description": "Languine ir mākslīgā intelekta vadīta lokalizācijas platforma, kas palīdz automatizēt jūsu lietojumprogrammu tulkošanu. Tā piedāvā tādas funkcijas kā precizēšanas iespējas, tulkošanas pārrakstīšana, analītika un konteksta atmiņa, lai nodrošinātu augstas kvalitātes tulkojumus.",
+    "button": "Sākt"
   }
 }

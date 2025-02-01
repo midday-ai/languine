@@ -610,5 +610,10 @@
     "examples": "Ví dụ",
     "team": "Đội ngũ",
     "overrides": "Ghi đè"
+  },
+  "welcome": {
+    "title": "Chào mừng đến với Languine",
+    "description": "Languine là một nền tảng địa phương hóa được hỗ trợ bởi AI, giúp bạn tự động hóa việc dịch thuật các ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn tinh chỉnh, ghi đè dịch thuật, phân tích và bộ nhớ ngữ cảnh để đảm bảo chất lượng dịch thuật cao.",
+    "button": "Bắt đầu"
   }
 }
