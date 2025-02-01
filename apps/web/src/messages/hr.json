@@ -611,5 +611,8 @@
     "team": "Tim",
     "overrides": "Zamjene"
   },
-  "test_key": "Ovo je testna ključna riječ"
+  "test_key": "Ovo je testna ključna riječ",
+  "welcome": {
+    "hero": "Dobrodošli u Languine! Uzbuđeni smo što ste s nama."
+  }
 }

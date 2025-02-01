@@ -611,5 +611,8 @@
     "team": "Équipe",
     "overrides": "Remplacements"
   },
-  "test_key": "Ceci est une clé de test"
+  "test_key": "Ceci est une clé de test",
+  "welcome": {
+    "hero": "Bienvenue chez Languine ! Nous sommes ravis de vous accueillir."
+  }
 }

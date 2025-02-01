@@ -611,5 +611,8 @@
     "team": "Tiimi",
     "overrides": "Ylikirjoitukset"
   },
-  "test_key": "Tämä on testiavain"
+  "test_key": "Tämä on testiavain",
+  "welcome": {
+    "hero": "Tervetuloa Languineen! Olemme innoissamme siitä, että olet mukana."
+  }
 }

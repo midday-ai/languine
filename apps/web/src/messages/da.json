@@ -611,5 +611,8 @@
     "team": "Team",
     "overrides": "Overskrivninger"
   },
-  "test_key": "Dette er en testnøgle"
+  "test_key": "Dette er en testnøgle",
+  "welcome": {
+    "hero": "Velkommen til Languine! Vi er glade for at have dig med om bord."
+  }
 }

@@ -611,5 +611,8 @@
     "team": "Zespół",
     "overrides": "Nadpisy"
   },
-  "test_key": "To jest klucz testowy"
+  "test_key": "To jest klucz testowy",
+  "welcome": {
+    "hero": "Witamy w Languine! Cieszymy się, że jesteś z nami."
+  }
 }

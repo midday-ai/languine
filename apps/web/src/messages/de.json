@@ -611,5 +611,8 @@
     "team": "Team",
     "overrides": "Überschreibungen"
   },
-  "test_key": "Dies ist ein Testschlüssel"
+  "test_key": "Dies ist ein Testschlüssel",
+  "welcome": {
+    "hero": "Willkommen bei Languine! Wir freuen uns, Sie an Bord zu haben."
+  }
 }

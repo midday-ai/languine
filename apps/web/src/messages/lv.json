@@ -611,5 +611,8 @@
     "team": "Komanda",
     "overrides": "Aizvietojumi"
   },
-  "test_key": "Šis ir testa atslēga"
+  "test_key": "Šis ir testa atslēga",
+  "welcome": {
+    "hero": "Laipni lūdzam Languine! Mēs esam priecīgi, ka esat pievienojušies."
+  }
 }

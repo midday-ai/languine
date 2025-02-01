@@ -611,5 +611,8 @@
     "team": "Ekip",
     "overrides": "Aşmalar"
   },
-  "test_key": "Bu bir test anahtarı"
+  "test_key": "Bu bir test anahtarı",
+  "welcome": {
+    "hero": "Languine'e hoş geldiniz! Sizi aramızda görmekten mutluluk duyuyoruz."
+  }
 }
