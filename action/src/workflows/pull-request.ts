@@ -2,12 +2,10 @@ import path from "node:path";
 import type { TranslationService } from "../services/translation.ts";
 import type { GitPlatform, GitWorkflow } from "../types.ts";
 import type { Config } from "../utils/config.ts";
-import { execAsync } from "../utils/exec.ts";
 import { logger } from "../utils/logger.ts";
 
 export class PullRequestWorkflow implements GitWorkflow {
   private readonly branchName: string;
-  private hadTranslationChanges = false;
 
   constructor(
     private readonly gitProvider: GitPlatform,
@@ -22,68 +20,87 @@ export class PullRequestWorkflow implements GitWorkflow {
     try {
       await this.#setupGit();
       logger.info("Successfully configured Git");
+
+      // Check if branch exists
+      const currentBranch = await this.gitProvider.getCurrentBranch();
+      const existingPRNumber = await this.gitProvider.getOpenPullRequestNumber(
+        this.branchName,
+      );
+
+      if (currentBranch === this.branchName) {
+        logger.info(`Already on branch ${this.branchName}`);
+        const { baseBranch } = this.gitProvider.getPlatformConfig();
+        await this.gitProvider.pullAndRebase(baseBranch);
+      } else {
+        logger.info(`Creating new branch ${this.branchName}`);
+        await this.gitProvider.createBranch(this.branchName);
+      }
+
+      // If there's an existing PR, close it now
+      if (existingPRNumber) {
+        logger.info(`Closing existing PR #${existingPRNumber}`);
+        await this.gitProvider.closeOpenPullRequest({
+          pullRequestNumber: existingPRNumber,
+        });
+      }
     } catch (error) {
       logger.error(error instanceof Error ? error.message : "Unknown error");
-      throw new Error("Failed to configure Git");
+      throw error;
     }
-
-    // First ensure we're on the base branch and it's up to date
-    const { baseBranch } = this.gitProvider.getPlatformConfig();
-    logger.info(`Ensuring we're on base branch ${baseBranch}`);
-
-    // Fetch and checkout base branch exactly like in branch flow
-    await execAsync(`git fetch origin ${baseBranch}`);
-    await execAsync(`git checkout ${baseBranch}`);
-    await execAsync(`git reset --hard origin/${baseBranch}`);
-
-    // Run translation detection on base branch first
-    logger.info("Detecting translations on base branch");
-    await this.translationService.runTranslation(this.config);
-
-    // Now create our PR branch, preserving the detection state
-    logger.info(`Creating PR branch ${this.branchName}`);
-    await execAsync(`git checkout -b ${this.branchName}`);
   }
 
   async run() {
     logger.info("Running pull request workflow...");
 
-    // Run translations again to apply changes
-    await this.translationService.runTranslation(this.config);
+    try {
+      // Run translation service
+      await this.translationService.runTranslation(this.config);
 
-    const hasChanges = await this.gitProvider.hasChanges();
-    if (!hasChanges) {
-      logger.info("No translation changes detected, skipping PR creation");
-      this.hadTranslationChanges = false;
+      // Check if we have any changes
+      const hasChanges = await this.gitProvider.hasChanges();
+
+      if (hasChanges) {
+        logger.info("Changes detected, committing and pushing...");
+        await this.gitProvider.commitAndPush({
+          message: this.config.commitMessage,
+          branch: this.branchName,
+        });
+      }
+
+      return hasChanges;
+    } catch (error) {
+      logger.error(error instanceof Error ? error.message : "Unknown error");
       return false;
     }
-
-    logger.info("Changes detected, committing and pushing...");
-    await this.gitProvider.addChanges();
-    await this.gitProvider.commitAndPush({
-      message: this.config.commitMessage,
-      branch: this.branchName,
-    });
-
-    this.hadTranslationChanges = true;
-    return true;
   }
 
   async postRun() {
-    // Only create PR if we had changes in the run step
-    if (!this.hadTranslationChanges) {
-      logger.info("No translation changes to create PR for");
-      return;
-    }
+    try {
+      // Check for existing PR again (in case it was created during our run)
+      const existingPRNumber = await this.gitProvider.getOpenPullRequestNumber(
+        this.branchName,
+      );
 
-    logger.info("Creating or updating pull request");
-    await this.gitProvider.createOrUpdatePullRequest({
-      title:
-        this.config.prTitle ||
-        "chore: (i18n) update translations using Languine.ai",
-      body: this.#getPrBodyContent(),
-      branch: this.branchName,
-    });
+      // Create new PR
+      logger.info("Creating new pull request...");
+      await this.gitProvider.createOrUpdatePullRequest({
+        title: this.config.prTitle || "chore: update translations",
+        body: this.config.prBody || this.#getPrBodyContent(),
+        branch: this.branchName,
+      });
+
+      // If there was an existing PR, add a comment about the new one
+      if (existingPRNumber) {
+        logger.info(`Adding comment to old PR #${existingPRNumber}`);
+        await this.gitProvider.addCommentToPullRequest({
+          pullRequestNumber: existingPRNumber,
+          body: "This PR is now outdated. A new version has been created.",
+        });
+      }
+    } catch (error) {
+      logger.error(error instanceof Error ? error.message : "Unknown error");
+      throw error;
+    }
   }
 
   async #setupGit() {
@@ -100,7 +117,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     }
   }
 
-  #getPrBodyContent(): string {
+  #getPrBodyContent() {
     return `
 🌐 Translation Updates
 
