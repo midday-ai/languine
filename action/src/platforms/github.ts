@@ -91,35 +91,15 @@ export class GitHubProvider implements GitPlatform {
   }
 
   async pullAndRebase() {
-    logger.info(`Fetching latest changes from ${this.#baseBranch}`);
+    logger.info(`Syncing with ${this.#baseBranch}`);
     await execAsync(`git fetch origin ${this.#baseBranch}`);
+    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
 
-    try {
-      logger.info("Attempting to rebase branch");
-      await execAsync(`git rebase origin/${this.#baseBranch}`);
-      logger.info("Successfully rebased branch");
-    } catch (error) {
-      logger.warn("Rebase failed, falling back to alternative sync method");
+    // Get current branch name for restoring
+    const currentBranch = await this.getCurrentBranch();
 
-      logger.info("Aborting failed rebase");
-      await execAsync("git rebase --abort");
-
-      logger.info(`Resetting to ${this.#baseBranch}`);
-      await execAsync(`git reset --hard origin/${this.#baseBranch}`);
-
-      // Restore translation files and lock file
-      logger.info("Restoring translation files");
-      const currentBranch = await this.getCurrentBranch();
-      await execAsync(`git fetch origin ${currentBranch}`);
-      await execAsync("git checkout FETCH_HEAD -- languine.lock || true");
-
-      // Check and commit any changes
-      const hasChanges = await this.hasChanges();
-      if (hasChanges) {
-        await this.addChanges();
-        await execAsync(`git commit -m "chore: sync with ${this.#baseBranch}"`);
-      }
-    }
+    // Create fresh branch from updated base
+    await execAsync(`git checkout -B ${currentBranch}`);
   }
 
   async commitAndPush(options: {
@@ -128,21 +108,24 @@ export class GitHubProvider implements GitPlatform {
   }) {
     const { message, branch } = options;
     logger.info(`Committing and pushing to ${branch}...`);
+    await execAsync("git add .");
     await execAsync(`git commit -m "${message}"`);
-    await execAsync(`git push -u origin ${branch}`);
+    await execAsync(`git push -f origin ${branch}`);
   }
 
   async createBranch(branchName: string) {
     logger.info(`Creating new branch: ${branchName}`);
 
-    // First sync with base branch to get latest content
-    logger.info(`Fetching latest content from ${this.#baseBranch}`);
+    // Always start clean from base branch
+    logger.info(`Fetching and checking out ${this.#baseBranch}`);
     await execAsync(`git fetch origin ${this.#baseBranch}`);
-    await execAsync(`git checkout ${this.#baseBranch} --`);
-    await execAsync(`git reset --hard origin/${this.#baseBranch}`);
+    await execAsync(
+      `git checkout -B ${this.#baseBranch} origin/${this.#baseBranch}`,
+    );
 
-    // Now create our new branch from this point
-    await execAsync(`git checkout -b ${branchName}`);
+    // Create new branch from here
+    logger.info(`Creating branch ${branchName} from ${this.#baseBranch}`);
+    await execAsync(`git checkout -B ${branchName}`);
   }
 
   async addChanges() {

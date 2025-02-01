@@ -7,6 +7,7 @@ import { logger } from "../utils/logger.ts";
 
 export class PullRequestWorkflow implements GitWorkflow {
   private readonly branchName: string;
+  private hadTranslationChanges = false;
 
   constructor(
     private readonly gitProvider: GitPlatform,
@@ -56,6 +57,7 @@ export class PullRequestWorkflow implements GitWorkflow {
     const hasChanges = await this.gitProvider.hasChanges();
     if (!hasChanges) {
       logger.info("No translation changes detected, skipping PR creation");
+      this.hadTranslationChanges = false;
       return false;
     }
 
@@ -66,13 +68,14 @@ export class PullRequestWorkflow implements GitWorkflow {
       branch: this.branchName,
     });
 
+    this.hadTranslationChanges = true;
     return true;
   }
 
   async postRun() {
     // Only create PR if we had changes in the run step
-    if (!(await this.gitProvider.hasChanges())) {
-      logger.info("No changes to create PR for");
+    if (!this.hadTranslationChanges) {
+      logger.info("No translation changes to create PR for");
       return;
     }
 

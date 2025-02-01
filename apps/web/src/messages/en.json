@@ -614,6 +614,7 @@
   "welcome": {
     "title": "Welcome to Languine",
     "description": "Languine is an AI-powered localization platform that helps you automate the translation of your applications. It provides features like fine-tuning options, translation overrides, analytics, and context memory to ensure high-quality translations.",
-    "button": "Get started"
+    "button": "Get started",
+    "hello": "Hello {name}"
   }
 }
