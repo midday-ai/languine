@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limit elérve",
     "description": "Elérte a terve limitjét. Kérjük, frissítse a tervét a folytatáshoz."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "A Kattis egy versenykódolási platform."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "A Kattis egy versenykódolási platform."
   }
 }

@@ -126,8 +126,6 @@ export class LockFileManager {
       valueChanges: [...changedValues, ...addedValues],
     };
 
-    this.registerSourceData(filePath, sourceData);
-
     return result;
   }
 

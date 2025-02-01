@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Piirang saavutatud",
     "description": "Olete oma plaani piiranguni jõudnud. Palun uuendage oma plaani, et jätkata."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis on konkurentsivõimekuse platvorm."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis on konkurentsivõimekuse platvorm."
   }
 }

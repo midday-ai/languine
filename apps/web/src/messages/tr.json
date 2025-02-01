@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limit aşıldı",
     "description": "Planınız için limiti aştınız. Devam etmek için lütfen planınızı yükseltin."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis, rekabetçi programlama için bir platformdur."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis, rekabetçi programlama için bir platformdur."
   }
 }

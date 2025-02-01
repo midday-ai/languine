@@ -2,8 +2,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createParser } from "@/parsers/index.ts";
 import type { Config } from "@/types.js";
 import { client } from "@/utils/api.ts";
-import { loadConfig } from "@/utils/config.ts";
-import { getDiff } from "@/utils/diff.js";
+import { configFile, loadConfig } from "@/utils/config.ts";
+import { LockFileManager } from "@/utils/lock.ts";
 import { confirm, note, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import glob from "fast-glob";
@@ -47,6 +47,10 @@ export async function syncCommand(args: string[] = []) {
     for (const [type, fileConfig] of Object.entries(config.files)) {
       const { include } = fileConfig as Config["files"][string];
 
+      // Get config file path and initialize lock file manager
+      const { path: configPath } = await configFile();
+      const lockManager = new LockFileManager(configPath);
+
       // Process each file pattern
       for (const pattern of include) {
         const globPattern =
@@ -59,8 +63,12 @@ export async function syncCommand(args: string[] = []) {
         for (const sourceFilePath of sourceFiles) {
           const parser = createParser({ type });
 
-          // Get diff to find deleted keys
-          const changes = await getDiff({ sourceFilePath, type });
+          // Read source file content
+          const sourceContent = await readFile(sourceFilePath, "utf-8");
+          const parsedContent = await parser.parse(sourceContent);
+
+          // Get changes using lock file manager
+          const changes = lockManager.getChanges(sourceFilePath, parsedContent);
           const removedKeys = changes.removedKeys;
 
           if (removedKeys.length > 0) {
@@ -158,6 +166,9 @@ export async function syncCommand(args: string[] = []) {
                     ),
                   );
                 }
+
+                // After successful deletion, update the lock file
+                lockManager.registerSourceData(sourceFilePath, parsedContent);
               } catch (error) {
                 const syncError = error as Error;
                 console.error(

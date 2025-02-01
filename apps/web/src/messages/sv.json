@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Gräns nådd",
     "description": "Du har nått gränsen för din plan. Vänligen uppgradera din plan för att fortsätta."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis är en plattform för tävlingsprogrammering."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis är en plattform för tävlingsprogrammering."
   }
 }

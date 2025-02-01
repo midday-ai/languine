@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limit dosiahnutý",
     "description": "Dosiahli ste limit pre váš plán. Prosím, aktualizujte svoj plán, aby ste mohli pokračovať."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis je platforma pre súťažné programovanie."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis je platforma pre súťažné programovanie."
   }
 }

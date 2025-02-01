@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limite atingido",
     "description": "Você atingiu o limite do seu plano. Por favor, faça upgrade para continuar."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis é uma plataforma para programação competitiva."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis é uma plataforma para programação competitiva."
   }
 }

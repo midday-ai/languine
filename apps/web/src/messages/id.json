@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Batas tercapai",
     "description": "Anda telah mencapai batas untuk rencana Anda. Silakan tingkatkan rencana Anda untuk melanjutkan."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis adalah platform untuk pemrograman kompetitif."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis adalah platform untuk pemrograman kompetitif."
   }
 }

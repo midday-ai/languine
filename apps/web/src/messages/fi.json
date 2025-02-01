@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Raja saavutettu",
     "description": "Olet saavuttanut suunnitelmasi rajan. Ole hyvä ja päivitä suunnitelmasi jatkaaksesi."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis on kilpailulliseen ohjelmointiin tarkoitettu alusta."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis on kilpailulliseen ohjelmointiin tarkoitettu alusta."
   }
 }

@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Đã đạt giới hạn",
     "description": "Bạn đã đạt giới hạn cho gói của mình. Vui lòng nâng cấp gói của bạn để tiếp tục."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis là một nền tảng cho lập trình cạnh tranh."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis là một nền tảng cho lập trình cạnh tranh."
   }
 }

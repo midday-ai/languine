@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limitə çatıldı",
     "description": "Sizin planınız üçün limitə çatmısınız. Davam etmək üçün planınızı yüksəldin."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis, yarışma proqramlaşdırması üçün bir platformadır."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis, yarışma proqramlaşdırması üçün bir platformadır."
   }
 }

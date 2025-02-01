@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "Limits sasniegts",
     "description": "Jūs esat sasniedzis sava plāna limitu. Lūdzu, jauniniet savu plānu, lai turpinātu."
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis ir platforma konkurētspējīgai programmēšanai."
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis ir platforma konkurētspējīgai programmēšanai."
   }
 }

@@ -618,5 +618,13 @@
   "limit_reached": {
     "title": "達到限制",
     "description": "您已達到您的計劃限制。請升級您的計劃以繼續。"
+  },
+  "kattis": {
+    "title": "Kattis",
+    "description": "Kattis 是一個競賽編程的平台。"
+  },
+  "kattis_2": {
+    "title": "Kattis 2",
+    "description": "Kattis 是一個競賽編程的平台。"
   }
 }
