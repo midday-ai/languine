@@ -1,6 +1,9 @@
 import { connectDb, primaryDb } from "@/db";
 import { projects, translations } from "@/db/schema";
-import type { DeleteKeysSchema } from "@/trpc/routers/schema";
+import type {
+  DeleteKeysSchema,
+  ProjectLocalesSchema,
+} from "@/trpc/routers/schema";
 import { UTCDate } from "@date-fns/utc";
 import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
 
@@ -142,11 +145,13 @@ export const getTranslationsBySlug = async ({
   cursor,
   search,
   organizationId,
+  locales,
 }: {
   slug: string;
   search?: string | null;
   cursor?: string | null;
   organizationId: string;
+  locales?: string[] | null;
   limit?: number;
 }) => {
   const db = await connectDb();
@@ -159,6 +164,7 @@ export const getTranslationsBySlug = async ({
       and(
         eq(projects.slug, slug),
         eq(projects.organizationId, organizationId),
+        locales ? inArray(translations.targetLanguage, locales) : undefined,
         cursor ? gt(translations.id, cursor) : undefined,
         search
           ? or(
@@ -190,4 +196,43 @@ export const deleteKeys = async ({ projectId, keys }: DeleteKeysSchema) => {
       ),
     )
     .returning();
+};
+
+export const getProjectLocales = async ({
+  slug,
+  organizationId,
+}: ProjectLocalesSchema) => {
+  const db = await connectDb();
+
+  return db
+    .selectDistinct({
+      targetLanguage: translations.targetLanguage,
+    })
+    .from(translations)
+    .innerJoin(projects, eq(translations.projectId, projects.id))
+    .where(
+      and(eq(projects.slug, slug), eq(projects.organizationId, organizationId)),
+    )
+    .orderBy(asc(translations.targetLanguage));
+};
+
+export const getTranslationsByKey = async ({
+  projectId,
+  translationKey,
+}: {
+  projectId: string;
+  translationKey: string;
+}) => {
+  const db = await connectDb();
+
+  return db
+    .select()
+    .from(translations)
+    .where(
+      and(
+        eq(translations.projectId, projectId),
+        eq(translations.translationKey, translationKey),
+      ),
+    )
+    .orderBy(asc(translations.targetLanguage));
 };

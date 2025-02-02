@@ -1,13 +1,16 @@
 import { parseAsString, useQueryStates } from "nuqs";
 
 export function useOverridesSheet() {
-  const [{ translationId, locale }, setQueryStates] = useQueryStates({
-    translationId: parseAsString.withDefault(""),
-    locale: parseAsString.withDefault(""),
-  });
+  const [{ translationKey, projectId, locale }, setQueryStates] =
+    useQueryStates({
+      translationKey: parseAsString.withDefault(""),
+      projectId: parseAsString.withDefault(""),
+      locale: parseAsString.withDefault(""),
+    });
 
   return {
-    translationId,
+    translationKey,
+    projectId,
     locale,
     setQueryStates,
   };

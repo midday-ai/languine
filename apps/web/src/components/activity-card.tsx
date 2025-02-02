@@ -16,6 +16,8 @@ type Props = {
   sourceProvider?: string | null;
   targetLanguage: string;
   sourceType: "key" | "document";
+  translationKey: string;
+  projectId: string;
 };
 
 export function ActivityCard({
@@ -28,6 +30,8 @@ export function ActivityCard({
   sourceProvider,
   targetLanguage,
   sourceType,
+  translationKey,
+  projectId,
 }: Props) {
   const t = useTranslations("activity");
   const { setQueryStates } = useOverridesSheet();
@@ -36,7 +40,11 @@ export function ActivityCard({
     <button
       type="button"
       onClick={() =>
-        setQueryStates({ translationId: id, locale: targetLanguage })
+        setQueryStates({
+          translationKey,
+          projectId,
+          locale: targetLanguage,
+        })
       }
       className="border border-border relative w-full flex"
     >

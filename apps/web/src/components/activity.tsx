@@ -3,15 +3,17 @@
 import { ActivityCard, ActivityCardSkeleton } from "@/components/activity-card";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/ui/loader";
+import { useFilters } from "@/hooks/use-filters";
 import { useSearch } from "@/hooks/use-search";
 import { trpc } from "@/trpc/client";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useDeferredValue, useEffect, useRef } from "react";
 
-export function Activity() {
+export function Activity({ limit }: { limit?: number }) {
   const { organization, project } = useParams();
   const { search, setSearch } = useSearch();
+  const { selectedLocales } = useFilters();
   const deferredSearch = useDeferredValue(search);
 
   const t = useTranslations("activity");
@@ -23,6 +25,8 @@ export function Activity() {
         slug: project as string,
         organizationId: organization as string,
         search: deferredSearch,
+        locales: selectedLocales.length > 0 ? selectedLocales : null,
+        limit,
       },
       {
         getNextPageParam: (lastPage) => {
@@ -83,6 +87,7 @@ export function Activity() {
           <div key={item.id}>
             <ActivityCard
               id={item.id}
+              translationKey={item.translationKey}
               source={item.sourceText}
               content={item.translatedText}
               updatedAt={item.updatedAt}
@@ -90,6 +95,7 @@ export function Activity() {
               targetLanguage={item.targetLanguage}
               commitLink={item.commitLink}
               sourceProvider={item.sourceProvider}
+              projectId={item.projectId}
               sourceType={item.sourceType as "key" | "document"}
             />
           </div>
@@ -121,10 +127,10 @@ export function Activity() {
   );
 }
 
-export function ActivitySkeleton() {
+export function ActivitySkeleton({ limit = 10 }: { limit?: number }) {
   return (
     <div className="flex flex-col gap-4 mt-6">
-      {Array.from({ length: 10 }).map((_, i) => (
+      {Array.from({ length: limit }).map((_, i) => (
         <ActivityCardSkeleton key={i.toString()} />
       ))}
     </div>
