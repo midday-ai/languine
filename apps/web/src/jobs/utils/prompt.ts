@@ -14,6 +14,7 @@ Translation Requirements:
 const mapFormatToPrompt = (format?: string) => {
   switch (format) {
     case "md":
+    case "mdx":
       return "Markdown";
     default:
       return "JSON";
@@ -22,6 +23,7 @@ const mapFormatToPrompt = (format?: string) => {
 
 const fileSpecificInstructions = (format?: string) => {
   switch (format) {
+    case "mdx":
     case "md":
       return `
 Markdown Specific Instructions:
