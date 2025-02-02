@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: 🔄 Run Languine CLI
-        uses: ./action
+        uses: ./
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

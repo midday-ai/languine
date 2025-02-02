@@ -33,7 +33,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'packages/action/Dockerfile'
   env:
     LANGUINE_API_KEY: ${{ inputs.api-key }}
     LANGUINE_PROJECT_ID: ${{ inputs.project-id }}
