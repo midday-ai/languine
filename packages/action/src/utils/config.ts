@@ -19,7 +19,6 @@ export const ConfigSchema = z.object({
     .string()
     .optional()
     .default("chore: (i18n) update translations using Languine.ai"),
-  prBody: z.string().optional(),
 });
 
 export type Config = z.infer<typeof ConfigSchema>;
@@ -34,6 +33,5 @@ export function parseConfig(): Config {
     commitMessage:
       process.env.LANGUINE_COMMIT_MESSAGE || process.env.COMMIT_MESSAGE,
     prTitle: process.env.LANGUINE_PR_TITLE,
-    prBody: process.env.LANGUINE_PR_BODY,
   });
 }
