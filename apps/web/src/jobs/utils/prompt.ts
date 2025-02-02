@@ -34,6 +34,11 @@ Markdown Specific Instructions:
 - Keep any content between these ignore tags exactly as-is in the original language
 - Preserve the ignore tags themselves without modification
 
+Here is an example of content that should not be translated:
+
+<!-- languine-ignore-start -->
+This is an example of content that will remain in the original language.
+<!-- languine-ignore-end -->
 
 Here is one example of a markdown file with code blocks to keep:
 \`\`\`js

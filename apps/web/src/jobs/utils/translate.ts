@@ -59,6 +59,8 @@ export async function translateDocument(
     provider: model?.model?.provider,
   });
 
+  console.log("prompt", prompt);
+
   const { object } = await generateObject({
     ...model,
     prompt,
