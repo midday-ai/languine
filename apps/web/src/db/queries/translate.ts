@@ -5,7 +5,7 @@ import type {
   ProjectLocalesSchema,
 } from "@/trpc/routers/schema";
 import { UTCDate } from "@date-fns/utc";
-import { and, asc, desc, eq, gt, inArray, like, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, inArray, or, sql } from "drizzle-orm";
 
 export const createTranslations = async ({
   projectId,
