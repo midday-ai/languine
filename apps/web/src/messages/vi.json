@@ -33,7 +33,7 @@
   "activity": {
     "title": "Hoạt động",
     "loading": "Đang tải",
-    "noResults": "Không có kết quả cho '{search}'",
+    "noResults": "Không có kết quả cho ”{search}”",
     "clearSearch": "Xóa tìm kiếm",
     "loadMore": "Hiển thị thêm",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Chào mừng đến với Languine",
     "description": "Languine là một nền tảng địa phương hóa được hỗ trợ bởi AI, giúp bạn tự động hóa việc dịch thuật các ứng dụng của mình. Nó cung cấp các tính năng như tùy chọn tinh chỉnh, ghi đè dịch thuật, phân tích và bộ nhớ ngữ cảnh để đảm bảo chất lượng dịch thuật cao."
+  },
+  "overrides": {
+    "title": "Thay thế"
+  },
+  "overrides_sheet": {
+    "title": "Chỉnh sửa bản dịch",
+    "description": "Chỉnh sửa bản dịch cho khóa này",
+    "save": "Lưu"
+  },
+  "filter_locales": {
+    "languages": "Ngôn ngữ"
   }
 }

@@ -33,7 +33,7 @@
   "activity": {
     "title": "Activitate",
     "loading": "Se încarcă",
-    "noResults": "Nu există rezultate pentru '{search}'",
+    "noResults": "Niciun rezultat pentru „{search}”",
     "clearSearch": "Ștergeți căutarea",
     "loadMore": "Arată mai multe",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Bun venit la Languine",
     "description": "Languine este o platformă de localizare alimentată de AI care te ajută să automatizezi traducerea aplicațiilor tale. Oferă funcții precum opțiuni de ajustare fină, suprascrierea traducerilor, analize și memorie de context pentru a asigura traduceri de înaltă calitate."
+  },
+  "overrides": {
+    "title": "Suprascrieri"
+  },
+  "overrides_sheet": {
+    "title": "Editează traducerea",
+    "description": "Editează traducerea pentru această cheie",
+    "save": "Salvează"
+  },
+  "filter_locales": {
+    "languages": "Limbi"
   }
 }

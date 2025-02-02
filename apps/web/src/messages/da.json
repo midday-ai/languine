@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivitet",
     "loading": "Indlæser",
-    "noResults": "Ingen resultater for '{search}'",
+    "noResults": "Ingen resultater for ”{search}”",
     "clearSearch": "Ryd søgning",
     "loadMore": "Vis mere",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Velkommen til Languine",
     "description": "Languine er en AI-drevet lokaliseringsplatform, der hjælper dig med at automatisere oversættelsen af dine applikationer. Den tilbyder funktioner som finjusteringsmuligheder, oversættelsesoverstyringer, analyser og konteksthukommelse for at sikre oversættelser af høj kvalitet."
+  },
+  "overrides": {
+    "title": "Overskrivninger"
+  },
+  "overrides_sheet": {
+    "title": "Rediger oversættelse",
+    "description": "Rediger oversættelsen for denne nøgle",
+    "save": "Gem"
+  },
+  "filter_locales": {
+    "languages": "Sprog"
   }
 }

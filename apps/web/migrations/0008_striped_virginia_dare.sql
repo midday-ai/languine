@@ -1,0 +1,1 @@
+ALTER TABLE "translations" ADD COLUMN "overridden" boolean DEFAULT false NOT NULL;

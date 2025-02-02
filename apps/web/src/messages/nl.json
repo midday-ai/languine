@@ -33,7 +33,7 @@
   "activity": {
     "title": "Activiteit",
     "loading": "Laden",
-    "noResults": "Geen resultaten voor '{search}'",
+    "noResults": "Geen resultaten voor ”{search}”",
     "clearSearch": "Wis zoekopdracht",
     "loadMore": "Toon meer",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Welkom bij Languine",
     "description": "Languine is een door AI aangedreven lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals opties voor fijn afstemmen, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te waarborgen."
+  },
+  "overrides": {
+    "title": "Overschrijvingen"
+  },
+  "overrides_sheet": {
+    "title": "Vertaling bewerken",
+    "description": "Bewerk de vertaling voor deze sleutel",
+    "save": "Opslaan"
+  },
+  "filter_locales": {
+    "languages": "Talen"
   }
 }

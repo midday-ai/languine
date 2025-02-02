@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: 🔄 Run Languine CLI
-        uses: ./action
+        uses: ./
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -24,6 +24,6 @@ jobs:
           project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
           working-directory: apps/web
           cli-version: canary
-          create-pull-request: true
+          # create-pull-request: true
           dev-mode: true
 

@@ -33,7 +33,7 @@
   "activity": {
     "title": "Activitat",
     "loading": "Carregant",
-    "noResults": "Sense resultats per '{search}'",
+    "noResults": "No hi ha resultats per a ”{search}”",
     "clearSearch": "Esborrar cerca",
     "loadMore": "Mostrar més",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Benvingut a Languine",
     "description": "Languine és una plataforma de localització impulsada per IA que t'ajuda a automatitzar la traducció de les teves aplicacions. Ofereix funcions com opcions de personalització, substitucions de traducció, analítiques i memòria de context per garantir traduccions d'alta qualitat."
+  },
+  "overrides": {
+    "title": "Substitucions"
+  },
+  "overrides_sheet": {
+    "title": "Edita la traducció",
+    "description": "Edita la traducció d'aquesta clau",
+    "save": "Desa"
+  },
+  "filter_locales": {
+    "languages": "Idiomes"
   }
 }

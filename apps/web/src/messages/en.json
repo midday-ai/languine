@@ -33,7 +33,7 @@
   "activity": {
     "title": "Activity",
     "loading": "Loading",
-    "noResults": "No results for '{search}'",
+    "noResults": "No results for ”{search}”",
     "clearSearch": "Clear search", 
     "loadMore": "Show more",
     "type": {
@@ -610,5 +610,16 @@
     "hooks": "Hooks",
     "examples": "Examples",
     "team": "Team"
+  },
+  "overrides": {
+    "title": "Overrides"
+  },
+  "overrides_sheet": {
+    "title": "Edit translation",
+    "description": "Edit the translation for this key",
+    "save": "Save"
+  },
+  "filter_locales": {
+     "languages": "Languages"
   }
 }

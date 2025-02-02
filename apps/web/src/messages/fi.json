@@ -33,7 +33,7 @@
   "activity": {
     "title": "Toiminta",
     "loading": "Ladataan",
-    "noResults": "Ei tuloksia hakusanalle '{search}'",
+    "noResults": "Ei tuloksia haulle ”{search}”",
     "clearSearch": "Tyhjennä haku",
     "loadMore": "Näytä lisää",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Tervetuloa Languineen",
     "description": "Languine on tekoälypohjainen lokalisointialusta, joka auttaa sinua automatisoimaan sovellustesi käännöksiä. Se tarjoaa ominaisuuksia, kuten hienosäätömahdollisuuksia, käännösohjauksia, analytiikkaa ja kontekstimuistia varmistaakseen korkealaatuiset käännökset."
+  },
+  "overrides": {
+    "title": "Ylikirjoitukset"
+  },
+  "overrides_sheet": {
+    "title": "Muokkaa käännöstä",
+    "description": "Muokkaa tämän avaimen käännöstä",
+    "save": "Tallenna"
+  },
+  "filter_locales": {
+    "languages": "Kielet"
   }
 }

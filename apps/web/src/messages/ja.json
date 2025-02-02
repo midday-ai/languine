@@ -33,7 +33,7 @@
   "activity": {
     "title": "アクティビティ",
     "loading": "読み込み中",
-    "noResults": "'{search}'の結果はありません",
+    "noResults": "「{search}」に対する結果はありません",
     "clearSearch": "検索をクリア",
     "loadMore": "もっと表示",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Languineへようこそ",
     "description": "Languineは、アプリケーションの翻訳を自動化するためのAI駆動のローカリゼーションプラットフォームです。高品質な翻訳を確保するために、微調整オプション、翻訳の上書き、分析、コンテキストメモリなどの機能を提供します。"
+  },
+  "overrides": {
+    "title": "オーバーライド"
+  },
+  "overrides_sheet": {
+    "title": "翻訳の編集",
+    "description": "このキーの翻訳を編集します",
+    "save": "保存"
+  },
+  "filter_locales": {
+    "languages": "言語"
   }
 }

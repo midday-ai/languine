@@ -219,6 +219,7 @@ export const translations = pgTable(
     commitLink: text("commit_link"),
     sourceProvider: text("source_provider"),
     commitMessage: text("commit_message"),
+    overridden: boolean("overridden").notNull().default(false),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },

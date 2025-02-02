@@ -33,7 +33,7 @@
   "activity": {
     "title": "Tevékenység",
     "loading": "Betöltés",
-    "noResults": "Nincsenek eredmények a '{search}' keresésre",
+    "noResults": "Nincsenek eredmények a(z) „{search}” kifejezésre",
     "clearSearch": "Keresés törlése",
     "loadMore": "Továbbiak megjelenítése",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Üdvözöljük a Languine-nál",
     "description": "A Languine egy mesterséges intelligenciával működő lokalizációs platform, amely segít automatizálni alkalmazásai fordítását. Olyan funkciókat kínál, mint a finomhangolási lehetőségek, a fordítási felülírások, az analitika és a kontextus memória, hogy biztosítsa a magas színvonalú fordításokat."
+  },
+  "overrides": {
+    "title": "Felülírások"
+  },
+  "overrides_sheet": {
+    "title": "Fordítás szerkesztése",
+    "description": "A fordítás szerkesztése ehhez a kulcshoz",
+    "save": "Mentés"
+  },
+  "filter_locales": {
+    "languages": "Nyelvek"
   }
 }

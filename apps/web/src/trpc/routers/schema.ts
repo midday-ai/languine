@@ -132,6 +132,7 @@ export const translateSchema = z.object({
   slug: z.string(),
   limit: z.number().optional(),
   search: z.string().nullish().optional(),
+  locales: z.array(z.string()).nullish().optional(),
 });
 
 export type TranslateSchema = z.infer<typeof translateSchema>;
@@ -156,3 +157,29 @@ export const acceptInvitationSchema = z.object({
 });
 
 export type AcceptInvitationSchema = z.infer<typeof acceptInvitationSchema>;
+
+export const projectLocalesSchema = z.object({
+  slug: z.string(),
+  organizationId: z.string(),
+});
+
+export type ProjectLocalesSchema = z.infer<typeof projectLocalesSchema>;
+
+export const translationsByKeySchema = z.object({
+  projectId: z.string(),
+  translationKey: z.string(),
+});
+
+export type TranslationsByKeySchema = z.infer<typeof translationsByKeySchema>;
+
+export const updateTranslationsSchema = z.object({
+  translations: z.array(
+    z.object({
+      id: z.string(),
+      translatedText: z.string(),
+      overridden: z.boolean(),
+    }),
+  ),
+});
+
+export type UpdateTranslationsSchema = z.infer<typeof updateTranslationsSchema>;

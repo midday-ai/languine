@@ -1,9 +1,26 @@
-import { createDocument, createTranslations } from "@/db/queries/translate";
+import {
+  createDocument,
+  createTranslations,
+  getOverridesForLocale,
+} from "@/db/queries/translate";
 import { schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
 import { chooseModel } from "../utils/model";
 import { translateDocument, translateKeys } from "../utils/translate";
+
+interface TranslationResult {
+  key: string;
+  translatedText: string;
+}
+
+interface Translation {
+  projectId: string;
+  translationKey: string;
+  targetLanguage: string;
+  translatedText: string;
+  overridden: boolean;
+}
 
 const translateLocaleSchema = z.object({
   projectId: z.string(),
@@ -39,7 +56,7 @@ export const translateLocaleTask = schemaTask({
     maxAttempts: 4,
   },
   run: async (payload, { ctx }) => {
-    const translations: Array<{ key: string; translatedText: string }> = [];
+    const translations: TranslationResult[] = [];
     const model = chooseModel(ctx.attempt.number);
     const chunkSize = calculateChunkSize(payload.content, model.model.modelId);
 
@@ -94,10 +111,29 @@ export const translateLocaleTask = schemaTask({
       };
     }
 
-    // Split content into chunks
+    // Get all overrides for this locale upfront
+    const overrides = await getOverridesForLocale({
+      projectId: payload.projectId,
+      targetLanguage: payload.targetLocale,
+    });
+
+    // Add overrides to translations result
+    for (const override of overrides) {
+      translations.push({
+        key: override.translationKey,
+        translatedText: override.translatedText,
+      });
+    }
+
+    // Filter out overridden keys from content
+    const nonOverriddenContent = payload.content.filter(
+      (content) => !overrides.some((o) => o.translationKey === content.key),
+    );
+
+    // Split remaining content into chunks
     const contentChunks = [];
-    for (let i = 0; i < payload.content.length; i += chunkSize) {
-      contentChunks.push(payload.content.slice(i, i + chunkSize));
+    for (let i = 0; i < nonOverriddenContent.length; i += chunkSize) {
+      contentChunks.push(nonOverriddenContent.slice(i, i + chunkSize));
     }
 
     let completedChunks = 0;
@@ -140,7 +176,7 @@ export const translateLocaleTask = schemaTask({
         commitMessage: payload.commitMessage,
         commitLink: payload.commitLink,
         userId: payload.userId,
-        translations: chunk.map((content, i) => ({
+        translations: chunk.map((content) => ({
           translationKey: content.key,
           sourceLanguage: payload.sourceLanguage,
           targetLanguage: payload.targetLocale,
