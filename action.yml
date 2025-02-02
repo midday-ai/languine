@@ -1,5 +1,5 @@
-name: 'Languine'
-description: 'Automate translations for your project'
+name: 'Languine.ai'
+description: 'Automated localization infrastructure'
 author: 'languine'
 
 inputs:
@@ -45,5 +45,5 @@ runs:
     DEV_MODE: ${{ inputs.dev-mode }}
 
 branding:
-  icon: 'globe'
-  color: 'blue'
+  icon: 'git-merge'
+  color: 'black'
