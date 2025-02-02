@@ -15,7 +15,8 @@
     "settings": "Seaded",
     "pricing": "Hinnakujundus",
     "docs": "Dokumentatsioon",
-    "account": "Konto"
+    "account": "Konto",
+    "overrides": "Ülekirjutused"
   },
   "getStarted": {
     "heading": "Alusta",

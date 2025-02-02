@@ -15,7 +15,8 @@
     "settings": "Paramètres",
     "pricing": "Tarification",
     "docs": "Documentation",
-    "account": "Compte"
+    "account": "Compte",
+    "overrides": "Remplacements"
   },
   "getStarted": {
     "heading": "Commencer",

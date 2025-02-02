@@ -15,7 +15,8 @@
     "settings": "設定",
     "pricing": "価格",
     "docs": "ドキュメント",
-    "account": "アカウント"
+    "account": "アカウント",
+    "overrides": "オーバーライド"
   },
   "getStarted": {
     "heading": "始める",

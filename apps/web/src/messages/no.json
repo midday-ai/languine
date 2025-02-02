@@ -15,7 +15,8 @@
     "settings": "Innstillinger",
     "pricing": "Priser",
     "docs": "Dokumentasjon",
-    "account": "Konto"
+    "account": "Konto",
+    "overrides": "Overstyringer"
   },
   "getStarted": {
     "heading": "Kom i gang",

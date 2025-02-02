@@ -9,6 +9,7 @@ files:
     hero.description: 47bdfa703928ad3af9a4f811f3349c74
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
+    navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
     navigation.settings: f4f70727dc34561dfde1a3c529b6205c
     navigation.pricing: e22ac25b066b201473de7aa700ef5d92
     navigation.docs: 5b6cf869265c13af8566f192b4ab3d2a

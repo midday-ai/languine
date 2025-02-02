@@ -15,7 +15,8 @@
     "settings": "الإعدادات",
     "pricing": "التسعير",
     "docs": "التوثيق",
-    "account": "الحساب"
+    "account": "الحساب",
+    "overrides": "تجاوزات"
   },
   "getStarted": {
     "heading": "ابدأ الآن",

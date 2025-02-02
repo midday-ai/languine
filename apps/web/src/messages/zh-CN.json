@@ -15,7 +15,8 @@
     "settings": "设置",
     "pricing": "定价",
     "docs": "文档",
-    "account": "账户"
+    "account": "账户",
+    "overrides": "覆盖"
   },
   "getStarted": {
     "heading": "开始使用",

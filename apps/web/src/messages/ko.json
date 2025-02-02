@@ -15,7 +15,8 @@
     "settings": "설정",
     "pricing": "가격",
     "docs": "문서",
-    "account": "계정"
+    "account": "계정",
+    "overrides": "재정의"
   },
   "getStarted": {
     "heading": "시작하기",

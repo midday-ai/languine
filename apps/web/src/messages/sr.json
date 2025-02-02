@@ -15,7 +15,8 @@
     "settings": "Podešavanja",
     "pricing": "Cene",
     "docs": "Dokumentacija",
-    "account": "Nalog"
+    "account": "Nalog",
+    "overrides": "Zamene"
   },
   "getStarted": {
     "heading": "Započni",

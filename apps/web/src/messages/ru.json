@@ -15,7 +15,8 @@
     "settings": "Настройки",
     "pricing": "Цены",
     "docs": "Документация",
-    "account": "Учетная запись"
+    "account": "Учетная запись",
+    "overrides": "Переопределения"
   },
   "getStarted": {
     "heading": "Начать",

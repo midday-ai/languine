@@ -15,7 +15,8 @@
     "settings": "Ρυθμίσεις",
     "pricing": "Τιμολόγηση",
     "docs": "Τεκμηρίωση",
-    "account": "Λογαριασμός"
+    "account": "Λογαριασμός",
+    "overrides": "Ανατροπές"
   },
   "getStarted": {
     "heading": "Ξεκινήστε",

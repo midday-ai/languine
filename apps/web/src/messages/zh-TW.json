@@ -15,7 +15,8 @@
     "settings": "設定",
     "pricing": "定價",
     "docs": "文件",
-    "account": "帳戶"
+    "account": "帳戶",
+    "overrides": "覆蓋"
   },
   "getStarted": {
     "heading": "開始使用",
