@@ -28,6 +28,10 @@ Markdown Specific Instructions:
 - Preserve all Markdown formatting and syntax
 - Keep code blocks, links, and other Markdown elements intact
 - Maintain heading levels and list structures
+- Do not translate content between <!-- languine-ignore-start --> and <!-- languine-ignore-end --> HTML comments
+- Keep any content between these ignore tags exactly as-is in the original language
+- Preserve the ignore tags themselves without modification
+
 
 Here is one example of a markdown file with code blocks to keep:
 \`\`\`js
