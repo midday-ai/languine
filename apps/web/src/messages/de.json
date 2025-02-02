@@ -15,7 +15,8 @@
     "settings": "Einstellungen",
     "pricing": "Preise",
     "docs": "Dokumentation",
-    "account": "Konto"
+    "account": "Konto",
+    "overrides": "Überschreibungen"
   },
   "getStarted": {
     "heading": "Loslegen",

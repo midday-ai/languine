@@ -15,7 +15,8 @@
     "settings": "Nastavení",
     "pricing": "Ceny",
     "docs": "Dokumentace",
-    "account": "Účet"
+    "account": "Účet",
+    "overrides": "Přepsání"
   },
   "getStarted": {
     "heading": "Začněte",

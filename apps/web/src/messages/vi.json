@@ -15,7 +15,8 @@
     "settings": "Cài đặt",
     "pricing": "Giá cả",
     "docs": "Tài liệu",
-    "account": "Tài khoản"
+    "account": "Tài khoản",
+    "overrides": "Ghi đè"
   },
   "getStarted": {
     "heading": "Bắt đầu",

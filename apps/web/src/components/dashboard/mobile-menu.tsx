@@ -12,6 +12,7 @@ import {
   MdGraphicEq,
   MdMenu,
   MdOutlineBook,
+  MdOutlineFilterCenterFocus,
   MdOutlineSettings,
   MdOutlineStackedBarChart,
 } from "react-icons/md";
@@ -34,6 +35,12 @@ export function MobileMenu() {
       path: "/tuning",
       isActive: pathname.endsWith("/tuning"),
       label: t("tuning"),
+    },
+    {
+      icon: MdOutlineFilterCenterFocus,
+      path: "/overrides",
+      isActive: pathname.endsWith("/overrides"),
+      label: t("overrides"),
     },
     {
       icon: MdOutlineSettings,

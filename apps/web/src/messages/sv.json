@@ -15,7 +15,8 @@
     "settings": "Inställningar",
     "pricing": "Pris",
     "docs": "Dokumentation",
-    "account": "Konto"
+    "account": "Konto",
+    "overrides": "Pris"
   },
   "getStarted": {
     "heading": "Kom igång",

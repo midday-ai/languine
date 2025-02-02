@@ -15,7 +15,8 @@
     "settings": "Налаштування",
     "pricing": "Ціни",
     "docs": "Документація",
-    "account": "Обліковий запис"
+    "account": "Обліковий запис",
+    "overrides": "Перекриття"
   },
   "getStarted": {
     "heading": "Почати",

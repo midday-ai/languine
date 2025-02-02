@@ -15,7 +15,8 @@
     "settings": "Configurações",
     "pricing": "Preços",
     "docs": "Documentação",
-    "account": "Conta"
+    "account": "Conta",
+    "overrides": "Substituições"
   },
   "getStarted": {
     "heading": "Comece agora",

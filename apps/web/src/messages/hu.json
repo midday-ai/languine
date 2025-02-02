@@ -15,7 +15,8 @@
     "settings": "Beállítások",
     "pricing": "Árazás",
     "docs": "Dokumentáció",
-    "account": "Fiók"
+    "account": "Fiók",
+    "overrides": "Felülbírálatok"
   },
   "getStarted": {
     "heading": "Kezdj el",

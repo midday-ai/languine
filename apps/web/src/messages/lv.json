@@ -15,7 +15,8 @@
     "settings": "Iestatījumi",
     "pricing": "Cenas",
     "docs": "Dokumentācija",
-    "account": "Konts"
+    "account": "Konts",
+    "overrides": "Aizvietojumi"
   },
   "getStarted": {
     "heading": "Sākt",

@@ -15,7 +15,8 @@
     "settings": "Ayarlar",
     "pricing": "Fiyatlandırma",
     "docs": "Dokümantasyon",
-    "account": "Hesap"
+    "account": "Hesap",
+    "overrides": "Aşmalar"
   },
   "getStarted": {
     "heading": "Başlayın",
