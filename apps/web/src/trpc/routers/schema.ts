@@ -171,3 +171,15 @@ export const translationsByKeySchema = z.object({
 });
 
 export type TranslationsByKeySchema = z.infer<typeof translationsByKeySchema>;
+
+export const updateTranslationsSchema = z.object({
+  translations: z.array(
+    z.object({
+      id: z.string(),
+      translatedText: z.string(),
+      overridden: z.boolean(),
+    }),
+  ),
+});
+
+export type UpdateTranslationsSchema = z.infer<typeof updateTranslationsSchema>;

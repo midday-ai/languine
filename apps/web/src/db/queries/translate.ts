@@ -155,7 +155,6 @@ export const getTranslationsBySlug = async ({
   limit?: number;
 }) => {
   const db = await connectDb();
-
   return db
     .select()
     .from(translations)
@@ -168,14 +167,9 @@ export const getTranslationsBySlug = async ({
         cursor ? gt(translations.id, cursor) : undefined,
         search
           ? or(
-              like(
-                sql`LOWER(${translations.translationKey})`,
-                `%${search.toLowerCase()}%`,
-              ),
-              like(
-                sql`LOWER(${translations.sourceText})`,
-                `%${search.toLowerCase()}%`,
-              ),
+              sql`to_tsvector('simple', ${translations.translationKey}) @@ to_tsquery('simple', ${`${search.toLowerCase().split(" ").join(" & ")}:*`})`,
+              sql`to_tsvector('simple', ${translations.sourceText}) @@ to_tsquery('simple', ${`${search.toLowerCase().split(" ").join(" & ")}:*`})`,
+              sql`to_tsvector('simple', ${translations.translatedText}) @@ to_tsquery('simple', ${`${search.toLowerCase().split(" ").join(" & ")}:*`})`,
             )
           : undefined,
       ),
@@ -235,4 +229,31 @@ export const getTranslationsByKey = async ({
       ),
     )
     .orderBy(asc(translations.targetLanguage));
+};
+
+export const getOverridesForLocale = async ({
+  projectId,
+  targetLanguage,
+  translationKeys,
+}: {
+  projectId: string;
+  targetLanguage: string;
+  translationKeys: string[];
+}) => {
+  const db = await connectDb();
+
+  return db
+    .select({
+      translationKey: translations.translationKey,
+      translatedText: translations.translatedText,
+    })
+    .from(translations)
+    .where(
+      and(
+        eq(translations.projectId, projectId),
+        eq(translations.targetLanguage, targetLanguage),
+        eq(translations.overridden, true),
+        inArray(translations.translationKey, translationKeys),
+      ),
+    );
 };

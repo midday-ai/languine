@@ -57,6 +57,13 @@
       "when": 1737798915222,
       "tag": "0007_condemned_landau",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1738509259342,
+      "tag": "0008_striped_virginia_dare",
+      "breakpoints": true
     }
   ]
 }
