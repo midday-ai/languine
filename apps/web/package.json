@@ -24,6 +24,8 @@
     "@number-flow/react": "0.5.5",
     "@openpanel/nextjs": "1.0.7",
     "@paralleldrive/cuid2": "2.2.2",
+    "@polar-sh/nextjs": "^0.3.15",
+    "@polar-sh/sdk": "^0.22.2",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.5",
     "@radix-ui/react-avatar": "1.1.2",
