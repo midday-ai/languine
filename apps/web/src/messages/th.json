@@ -15,7 +15,8 @@
     "settings": "การตั้งค่า",
     "pricing": "ราคา",
     "docs": "เอกสาร",
-    "account": "บัญชี"
+    "account": "บัญชี",
+    "overrides": "การแทนที่"
   },
   "getStarted": {
     "heading": "เริ่มต้น",

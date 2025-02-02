@@ -15,7 +15,8 @@
     "settings": "Postavke",
     "pricing": "Cijene",
     "docs": "Dokumentacija",
-    "account": "Račun"
+    "account": "Račun",
+    "overrides": "Zamjene"
   },
   "getStarted": {
     "heading": "Započnite",

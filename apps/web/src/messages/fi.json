@@ -15,7 +15,8 @@
     "settings": "Asetukset",
     "pricing": "Hinnoittelu",
     "docs": "Dokumentaatio",
-    "account": "Tili"
+    "account": "Tili",
+    "overrides": "Ohitukset"
   },
   "getStarted": {
     "heading": "Aloita",

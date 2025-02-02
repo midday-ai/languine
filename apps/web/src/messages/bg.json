@@ -15,7 +15,8 @@
     "settings": "Настройки",
     "pricing": "Цени",
     "docs": "Документация",
-    "account": "Акаунт"
+    "account": "Акаунт",
+    "overrides": "Заменяния"
   },
   "getStarted": {
     "heading": "Започнете",

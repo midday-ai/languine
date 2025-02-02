@@ -15,7 +15,8 @@
     "settings": "Ustawienia",
     "pricing": "Cennik",
     "docs": "Dokumentacja",
-    "account": "Konto"
+    "account": "Konto",
+    "overrides": "Nadpisy"
   },
   "getStarted": {
     "heading": "Rozpocznij",

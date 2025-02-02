@@ -15,7 +15,8 @@
     "settings": "Pengaturan",
     "pricing": "Harga",
     "docs": "Dokumentasi",
-    "account": "Akun"
+    "account": "Akun",
+    "overrides": "Penggantian"
   },
   "getStarted": {
     "heading": "Mulai",

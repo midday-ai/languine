@@ -15,7 +15,8 @@
     "settings": "Instellingen",
     "pricing": "Prijzen",
     "docs": "Documentatie",
-    "account": "Account"
+    "account": "Account",
+    "overrides": "Overschrijvingen"
   },
   "getStarted": {
     "heading": "Aan de slag",
