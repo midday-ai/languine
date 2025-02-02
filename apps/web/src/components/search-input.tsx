@@ -11,7 +11,7 @@ export function SearchInput() {
   const { search, setSearch } = useSearch();
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <MdSearch className="absolute left-3 top-1/2 size-4.5 -translate-y-1/2 text-muted-foreground" />
       <Input
         placeholder={t("placeholder")}

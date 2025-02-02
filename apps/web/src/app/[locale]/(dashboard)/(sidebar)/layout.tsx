@@ -1,6 +1,7 @@
 import { ComingSoon } from "@/components/coming-soon";
 import { Header } from "@/components/dashboard/header";
 import { GlobalModals } from "@/components/modals";
+import { GlobalSheets } from "@/components/sheets";
 import { Sidebar } from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
@@ -48,6 +49,7 @@ export default async function Layout({
             </div>
           </SidebarProvider>
           <GlobalModals />
+          <GlobalSheets />
         </NuqsAdapter>
       </TRPCProvider>
     </SessionProvider>

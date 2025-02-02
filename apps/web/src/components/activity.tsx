@@ -33,13 +33,8 @@ export function Activity() {
       },
     );
 
-  const {
-    isFetching,
-    isFetchingNextPage,
-    fetchNextPage,
-    hasNextPage,
-    refetch,
-  } = allTranslationsQuery;
+  const { isFetching, isFetchingNextPage, fetchNextPage, hasNextPage } =
+    allTranslationsQuery;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -87,6 +82,7 @@ export function Activity() {
         page.map((item) => (
           <div key={item.id}>
             <ActivityCard
+              id={item.id}
               source={item.sourceText}
               content={item.translatedText}
               updatedAt={item.updatedAt}
