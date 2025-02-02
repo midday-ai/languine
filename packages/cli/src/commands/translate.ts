@@ -446,9 +446,9 @@ export async function translateCommand(args: string[] = []) {
 
           // Convert the translations and merge with existing content
           const translatedContent = Object.fromEntries(
-            input.map((item, index) => [
-              item.key,
-              result.translations[targetLocale][index].translatedText,
+            result.translations[targetLocale].map((translation) => [
+              translation.key,
+              translation.translatedText ?? "",
             ]),
           );
 

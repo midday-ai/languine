@@ -1,12 +1,9 @@
-import { primaryDb } from "@/db";
 import {
   createDocument,
   createTranslations,
   getOverridesForLocale,
 } from "@/db/queries/translate";
-import { translations as translationsTable } from "@/db/schema";
 import { schemaTask } from "@trigger.dev/sdk/v3";
-import { and, eq, inArray } from "drizzle-orm";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
 import { chooseModel } from "../utils/model";
@@ -118,7 +115,6 @@ export const translateLocaleTask = schemaTask({
     const overrides = await getOverridesForLocale({
       projectId: payload.projectId,
       targetLanguage: payload.targetLocale,
-      translationKeys: payload.content.map((c) => c.key),
     });
 
     // Add overrides to translations result

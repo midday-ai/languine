@@ -42,7 +42,7 @@ export const translateRouter = createTRPCRouter({
 
   getTranslationsByKey: protectedProcedure
     .input(translationsByKeySchema)
-    // .use(hasProjectAccess)
+    .use(hasProjectAccess)
     .query(async ({ input }) => {
       const translations = await getTranslationsByKey(input);
 

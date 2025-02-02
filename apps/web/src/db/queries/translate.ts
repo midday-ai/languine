@@ -155,6 +155,7 @@ export const getTranslationsBySlug = async ({
   limit?: number;
 }) => {
   const db = await connectDb();
+
   return db
     .select()
     .from(translations)
@@ -234,15 +235,11 @@ export const getTranslationsByKey = async ({
 export const getOverridesForLocale = async ({
   projectId,
   targetLanguage,
-  translationKeys,
 }: {
   projectId: string;
   targetLanguage: string;
-  translationKeys: string[];
 }) => {
-  const db = await connectDb();
-
-  return db
+  return primaryDb
     .select({
       translationKey: translations.translationKey,
       translatedText: translations.translatedText,
@@ -253,7 +250,6 @@ export const getOverridesForLocale = async ({
         eq(translations.projectId, projectId),
         eq(translations.targetLanguage, targetLanguage),
         eq(translations.overridden, true),
-        inArray(translations.translationKey, translationKeys),
       ),
     );
 };
