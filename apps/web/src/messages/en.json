@@ -12,6 +12,7 @@
   "navigation": {
     "dashboard": "Dashboard",
     "tuning": "Tuning",
+    "overrides": "Overrides",
     "settings": "Settings",
     "pricing": "Pricing",
     "docs": "Documentation",
