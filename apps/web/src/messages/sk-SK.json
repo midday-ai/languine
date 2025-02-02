@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivita",
     "loading": "Načítava sa",
-    "noResults": "Žiadne výsledky pre '{search}'",
+    "noResults": "Žiadne výsledky pre „{search}“",
     "clearSearch": "Vymazať vyhľadávanie",
     "loadMore": "Zobraziť viac",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Vitajte v Languine",
     "description": "Languine je platforma pre lokalizáciu poháňaná umelou inteligenciou, ktorá vám pomáha automatizovať preklad vašich aplikácií. Ponúka funkcie ako možnosti jemného doladenia, prepisovanie prekladov, analytiku a pamäť kontextu, aby zabezpečila vysokokvalitné preklady."
+  },
+  "overrides": {
+    "title": "Nahradenia"
+  },
+  "overrides_sheet": {
+    "title": "Upraviť preklad",
+    "description": "Upravte preklad pre tento kľúč",
+    "save": "Uložiť"
+  },
+  "filter_locales": {
+    "languages": "Jazyky"
   }
 }

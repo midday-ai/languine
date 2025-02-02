@@ -33,7 +33,7 @@
   "activity": {
     "title": "活動",
     "loading": "加載中",
-    "noResults": "找不到 '{search}' 的結果",
+    "noResults": "沒有找到 ”{search}” 的結果",
     "clearSearch": "清除搜尋",
     "loadMore": "顯示更多",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "歡迎來到 Languine",
     "description": "Languine 是一個由 AI 驅動的本地化平台，幫助您自動化應用程式的翻譯。它提供了微調選項、翻譯覆蓋、分析和上下文記憶等功能，以確保高品質的翻譯。"
+  },
+  "overrides": {
+    "title": "覆蓋"
+  },
+  "overrides_sheet": {
+    "title": "編輯翻譯",
+    "description": "編輯此鍵的翻譯",
+    "save": "保存"
+  },
+  "filter_locales": {
+    "languages": "語言"
   }
 }

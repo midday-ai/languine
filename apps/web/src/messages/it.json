@@ -33,7 +33,7 @@
   "activity": {
     "title": "Attività",
     "loading": "Caricamento",
-    "noResults": "Nessun risultato per '{search}'",
+    "noResults": "Nessun risultato per ”{search}”",
     "clearSearch": "Cancella ricerca",
     "loadMore": "Mostra di più",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Benvenuto in Languine",
     "description": "Languine è una piattaforma di localizzazione alimentata dall'IA che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Offre funzionalità come opzioni di affinamento, sovrascritture di traduzione, analisi e memoria contestuale per garantire traduzioni di alta qualità."
+  },
+  "overrides": {
+    "title": "Sovrascritture"
+  },
+  "overrides_sheet": {
+    "title": "Modifica traduzione",
+    "description": "Modifica la traduzione per questa chiave",
+    "save": "Salva"
+  },
+  "filter_locales": {
+    "languages": "Lingue"
   }
 }

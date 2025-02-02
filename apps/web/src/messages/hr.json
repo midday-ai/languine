@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivnost",
     "loading": "Učitavanje",
-    "noResults": "Nema rezultata za '{search}'",
+    "noResults": "Nema rezultata za ”{search}”",
     "clearSearch": "Očisti pretraživanje",
     "loadMore": "Prikaži više",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Dobrodošli u Languine",
     "description": "Languine je platforma za lokalizaciju pokretana umjetnom inteligencijom koja vam pomaže automatizirati prijevod vaših aplikacija. Pruža značajke poput opcija za fino podešavanje, zamjene prijevoda, analitike i memorije konteksta kako bi osigurala visokokvalitetne prijevode."
+  },
+  "overrides": {
+    "title": "Zamjene"
+  },
+  "overrides_sheet": {
+    "title": "Uredi prijevod",
+    "description": "Uredi prijevod za ovu ključnu riječ",
+    "save": "Spremi"
+  },
+  "filter_locales": {
+    "languages": "Jezici"
   }
 }

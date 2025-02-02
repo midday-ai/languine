@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivitāte",
     "loading": "Ielādēšana",
-    "noResults": "Nav rezultātu '{search}'",
+    "noResults": "Nav rezultātu meklēšanai ”{search}”",
     "clearSearch": "Notīrīt meklēšanu",
     "loadMore": "Rādīt vairāk",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Laipni lūdzam Languine",
     "description": "Languine ir mākslīgā intelekta vadīta lokalizācijas platforma, kas palīdz automatizēt jūsu lietojumprogrammu tulkošanu. Tā piedāvā tādas funkcijas kā precizēšanas iespējas, tulkošanas pārrakstīšana, analītika un konteksta atmiņa, lai nodrošinātu augstas kvalitātes tulkojumus."
+  },
+  "overrides": {
+    "title": "Aizvietojumi"
+  },
+  "overrides_sheet": {
+    "title": "Rediģēt tulkojumu",
+    "description": "Rediģējiet tulkojumu šai atslēgai",
+    "save": "Saglabāt"
+  },
+  "filter_locales": {
+    "languages": "Valodas"
   }
 }

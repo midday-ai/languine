@@ -33,7 +33,7 @@
   "activity": {
     "title": "Tegevus",
     "loading": "Laadimine",
-    "noResults": "Ei leitud tulemusi '{search}' jaoks",
+    "noResults": "Tulemusi ei leitud ”{search}”",
     "clearSearch": "Tühjenda otsing",
     "loadMore": "Näita rohkem",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Tere tulemast Languinesse",
     "description": "Languine on tehisintellektil põhinev lokaliseerimise platvorm, mis aitab teil automatiseerida oma rakenduste tõlkimist. See pakub funktsioone nagu täiendavad seadistamisvõimalused, tõlke ülekirjutamine, analüütika ja konteksti mälu, et tagada kõrge kvaliteediga tõlked."
+  },
+  "overrides": {
+    "title": "Ülekirjutused"
+  },
+  "overrides_sheet": {
+    "title": "Tõlke redigeerimine",
+    "description": "Redigeeri selle võtme tõlget",
+    "save": "Salvesta"
+  },
+  "filter_locales": {
+    "languages": "Keeled"
   }
 }

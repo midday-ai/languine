@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivita",
     "loading": "Načítání",
-    "noResults": "Žádné výsledky pro '{search}'",
+    "noResults": "Žádné výsledky pro „{search}“",
     "clearSearch": "Vymazat hledání",
     "loadMore": "Zobrazit více",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Vítejte v Languine",
     "description": "Languine je platforma pro lokalizaci poháněná AI, která vám pomáhá automatizovat překlad vašich aplikací. Nabízí funkce jako možnosti jemného ladění, přepsání překladů, analýzy a paměť kontextu, aby zajistila vysokou kvalitu překladů."
+  },
+  "overrides": {
+    "title": "Přepsání"
+  },
+  "overrides_sheet": {
+    "title": "Upravit překlad",
+    "description": "Upravit překlad pro tento klíč",
+    "save": "Uložit"
+  },
+  "filter_locales": {
+    "languages": "Jazyky"
   }
 }

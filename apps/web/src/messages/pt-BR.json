@@ -33,7 +33,7 @@
   "activity": {
     "title": "Atividade",
     "loading": "Carregando",
-    "noResults": "Nenhum resultado para '{search}'",
+    "noResults": "Nenhum resultado para ”{search}”",
     "clearSearch": "Limpar busca",
     "loadMore": "Mostrar mais",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Bem-vindo ao Languine",
     "description": "O Languine é uma plataforma de localização impulsionada por IA que ajuda a automatizar a tradução de suas aplicações. Ele oferece recursos como opções de ajuste fino, substituições de tradução, análises e memória de contexto para garantir traduções de alta qualidade."
+  },
+  "overrides": {
+    "title": "Substituições"
+  },
+  "overrides_sheet": {
+    "title": "Editar tradução",
+    "description": "Edite a tradução para esta chave",
+    "save": "Salvar"
+  },
+  "filter_locales": {
+    "languages": "Idiomas"
   }
 }

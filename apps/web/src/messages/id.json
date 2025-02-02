@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivitas",
     "loading": "Memuat",
-    "noResults": "Tidak ada hasil untuk '{search}'",
+    "noResults": "Tidak ada hasil untuk ”{search}”",
     "clearSearch": "Bersihkan pencarian",
     "loadMore": "Tampilkan lebih banyak",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Selamat datang di Languine",
     "description": "Languine adalah platform lokalisasi yang didukung oleh AI yang membantu Anda mengotomatiskan terjemahan aplikasi Anda. Ini menyediakan fitur seperti opsi penyesuaian, penggantian terjemahan, analitik, dan memori konteks untuk memastikan terjemahan berkualitas tinggi."
+  },
+  "overrides": {
+    "title": "Penggantian"
+  },
+  "overrides_sheet": {
+    "title": "Edit terjemahan",
+    "description": "Edit terjemahan untuk kunci ini",
+    "save": "Simpan"
+  },
+  "filter_locales": {
+    "languages": "Bahasa"
   }
 }

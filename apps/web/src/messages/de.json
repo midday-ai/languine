@@ -33,7 +33,7 @@
   "activity": {
     "title": "Aktivität",
     "loading": "Lädt",
-    "noResults": "Keine Ergebnisse für '{search}'",
+    "noResults": "Keine Ergebnisse für „{search}“",
     "clearSearch": "Suche löschen",
     "loadMore": "Mehr anzeigen",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Willkommen bei Languine",
     "description": "Languine ist eine KI-gestützte Lokalisierungsplattform, die Ihnen hilft, die Übersetzung Ihrer Anwendungen zu automatisieren. Sie bietet Funktionen wie Anpassungsoptionen, Übersetzungsüberschreibungen, Analysen und Kontextspeicher, um qualitativ hochwertige Übersetzungen sicherzustellen."
+  },
+  "overrides": {
+    "title": "Überschreibungen"
+  },
+  "overrides_sheet": {
+    "title": "Übersetzung bearbeiten",
+    "description": "Bearbeiten Sie die Übersetzung für diesen Schlüssel",
+    "save": "Speichern"
+  },
+  "filter_locales": {
+    "languages": "Sprachen"
   }
 }

@@ -33,7 +33,7 @@
   "activity": {
     "title": "Etkinlik",
     "loading": "Yükleniyor",
-    "noResults": "'{search}' için sonuç yok",
+    "noResults": "”{search}” için sonuç yok",
     "clearSearch": "Aramayı temizle",
     "loadMore": "Daha fazla göster",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Languine'e Hoş Geldiniz",
     "description": "Languine, uygulamalarınızın çevirisini otomatikleştirmenize yardımcı olan AI destekli bir yerelleştirme platformudur. Yüksek kaliteli çeviriler sağlamak için ince ayar seçenekleri, çeviri geçersiz kılmaları, analizler ve bağlam hafızası gibi özellikler sunar."
+  },
+  "overrides": {
+    "title": "Üstü kapalı ayarlar"
+  },
+  "overrides_sheet": {
+    "title": "Çeviriyi düzenle",
+    "description": "Bu anahtar için çeviriyi düzenleyin",
+    "save": "Kaydet"
+  },
+  "filter_locales": {
+    "languages": "Diller"
   }
 }

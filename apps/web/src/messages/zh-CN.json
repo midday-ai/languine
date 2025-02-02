@@ -33,7 +33,7 @@
   "activity": {
     "title": "活动",
     "loading": "加载中",
-    "noResults": "没有找到与 '{search}' 相关的结果",
+    "noResults": "没有找到与“{search}”相关的结果",
     "clearSearch": "清除搜索",
     "loadMore": "显示更多",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "欢迎来到 Languine",
     "description": "Languine 是一个由人工智能驱动的本地化平台，帮助您自动化应用程序的翻译。它提供了微调选项、翻译覆盖、分析和上下文记忆等功能，以确保高质量的翻译。"
+  },
+  "overrides": {
+    "title": "覆盖"
+  },
+  "overrides_sheet": {
+    "title": "编辑翻译",
+    "description": "编辑此键的翻译",
+    "save": "保存"
+  },
+  "filter_locales": {
+    "languages": "语言"
   }
 }

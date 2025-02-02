@@ -33,7 +33,7 @@
   "activity": {
     "title": "Fəaliyyət",
     "loading": "Yüklənir",
-    "noResults": "'{search}' üçün nəticə yoxdur",
+    "noResults": "”{search}” üçün heç bir nəticə tapılmadı",
     "clearSearch": "Axtarışı təmizlə",
     "loadMore": "Daha çox göstər",
     "type": {
@@ -614,5 +614,16 @@
   "welcome": {
     "title": "Languine-ə Xoş Gəlmisiniz",
     "description": "Languine, tətbiqlərinizin tərcüməsini avtomatlaşdırmağa kömək edən AI güclü lokalizasiya platformasıdır. O, yüksək keyfiyyətli tərcümələri təmin etmək üçün incə tənzimləmə seçimləri, tərcümə üst-üstə düşmələri, analitika və kontekst yaddaşı kimi xüsusiyyətlər təqdim edir."
+  },
+  "overrides": {
+    "title": "Dəyişikliklər"
+  },
+  "overrides_sheet": {
+    "title": "Tərcüməni redaktə et",
+    "description": "Bu açar üçün tərcüməni redaktə et",
+    "save": "Saxla"
+  },
+  "filter_locales": {
+    "languages": "Dillər"
   }
 }
