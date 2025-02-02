@@ -1,6 +1,6 @@
 name: 'Languine'
 description: 'Automate translations for your project'
-author: 'Languine'
+author: 'languine'
 
 inputs:
   api-key:
