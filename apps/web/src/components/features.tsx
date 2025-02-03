@@ -12,8 +12,8 @@ export function Features() {
       description: t("fullyOpenSourceDescription"),
     },
     {
-      title: t("noVendorLockIn"),
-      description: t("noVendorLockInDescription"),
+      title: t("markdownSupport"),
+      description: t("markdownSupportDescription"),
     },
     {
       title: t("presetsForExpo"),

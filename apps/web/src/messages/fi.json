@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Kehittäjille suunniteltu lokalisointirakenne",
-    "description": "Languine automatisoi lokalisoinnin kehitysprosessissasi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua."
+    "description": "Languine automatisoi lokalisoinnin kehitystyöskentelyssäsi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aloita",
     "title": "Kehittäjille suunniteltu lokalisointirakenne",
-    "description": "Languine automatisoi lokalisoinnin kehitysprosessissasi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua.",
+    "description": "Languine automatisoi lokalisoinnin kehitystyöskentelyssäsi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automatisointi",
       "readDocumentation": "Lue dokumentaatio"
@@ -55,7 +55,9 @@
     "presetForReactEmail": "React Email -kirjasto",
     "presetForReactEmailDescription": "Olemme luoneet i18n-kirjaston React Emailille.",
     "readyForI18nLibraries": "Valmis i18n-kirjastoille",
-    "readyForI18nLibrariesDescription": "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl jne.)."
+    "readyForI18nLibrariesDescription": "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl jne.).",
+    "markdownSupport": "Markdown/Dokumenttituen",
+    "markdownSupportDescription": "Languine kääntää saumattomasti markdown-sisältösi, pitäen dokumentaation ja muut tiedostot synkronoituna työskentelytapasi kanssa."
   },
   "info": {
     "title": "Kattaa kaikki sovelluksesi lokalisoinnin osa-alueet, mukaan lukien",
