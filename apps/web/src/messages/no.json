@@ -1,0 +1,626 @@
+{
+  "header": {
+    "pricing": "Priser",
+    "docs": "Dokumentasjon",
+    "signIn": "Logg inn",
+    "goToApp": "Gå til app"
+  },
+  "hero": {
+    "title": "Lokalisering infrastruktur laget for utviklere",
+    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake."
+  },
+  "navigation": {
+    "dashboard": "Dashbord",
+    "tuning": "Justering",
+    "overrides": "Overstyringer",
+    "settings": "Innstillinger",
+    "pricing": "Priser",
+    "docs": "Dokumentasjon",
+    "account": "Konto"
+  },
+  "getStarted": {
+    "heading": "Kom i gang",
+    "title": "Lokalisering infrastruktur laget for utviklere",
+    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake.",
+    "button": {
+      "startAutomating": "Start automatisering",
+      "readDocumentation": "Les dokumentasjon"
+    }
+  },
+  "companies": {
+    "title": "Brukt av",
+    "addYourCompany": "+ Legg til ditt selskap"
+  },
+  "activity": {
+    "title": "Aktivitet",
+    "loading": "Laster",
+    "noResults": "Ingen resultater for ”{search}”",
+    "clearSearch": "Fjern søk",
+    "loadMore": "Vis mer",
+    "type": {
+      "key": "Nøkkel",
+      "document": "Dokument"
+    }
+  },
+  "features": {
+    "title": "Funksjoner",
+    "fullyOpenSource": "Helt åpen kildekode",
+    "fullyOpenSourceDescription": "Koden vår er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
+    "noVendorLockIn": "Ingen leverandørbinding",
+    "noVendorLockInDescription": "Vi binder deg ikke til en spesifikk tjeneste, bruk dine egne LLM-er.",
+    "presetsForExpo": "Forhåndsinnstillinger for Expo",
+    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
+    "presetForReactNative": "Forhåndsinnstilling for React Native",
+    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
+    "presetForReactEmail": "React Email-bibliotek",
+    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
+    "readyForI18nLibraries": "Klar for i18n-biblioteker",
+    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker, inkludert de mest populære (next-intl, react-i18next, react-intl, osv.)."
+  },
+  "info": {
+    "title": "Håndterer alle aspekter av lokaliseringen av appen din, inkludert",
+    "smartTranslation": {
+      "title": "Smart oversettelse",
+      "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
+      "brandVoice": "Konsistens i merkevarestemmen og tonen",
+      "terminology": "Terminologihåndtering",
+      "linguisticFeatures": "Avanserte språklige funksjoner",
+      "realtimeUpdates": "Sanntids oversettelsesoppdateringer"
+    },
+    "implementation": {
+      "title": "Implementering",
+      "quickSetup": "Rask oppsett og integrasjon",
+      "fileFormat": "Håndtering av filformat",
+      "contentStructure": "Organisering av innholdsstruktur",
+      "assetOrganization": "Organisering av eiendeler"
+    },
+    "developer": {
+      "title": "Utvikleropplevelse",
+      "cli": "Kommandolinjegrensesnitt",
+      "cicd": "CI/CD-integrasjon",
+      "versionControl": "Versjonskontroll",
+      "workflow": "Utviklerens arbeidsflyt",
+      "documentation": "Omfattende dokumentasjon"
+    }
+  },
+  "login": {
+    "title": "Logg inn",
+    "github": "Logg inn med GitHub",
+    "google": "Logg inn med Google",
+    "footer": "Automatiser lokaliseringen din.",
+    "description": "Logg inn for å begynne å automatisere lokaliseringen din på sekunder.",
+    "terms": {
+      "text": "Ved å logge inn, godtar du våre",
+      "termsOfService": "Vilkår for bruk",
+      "and": "og",
+      "privacyPolicy": "Personvernerklæring"
+    }
+  },
+  "translations": {
+    "header": "Oversatte nøkler"
+  },
+  "userMenu": {
+    "account": "Kontoinnstillinger",
+    "signOut": "Logg ut",
+    "createTeam": "Opprett team",
+    "homepage": "Hjemmeside",
+    "team": "Teaminnstillinger"
+  },
+  "teamSelector": {
+    "addProject": "Opprett prosjekt",
+    "createProjectTitle": "Opprett et nytt prosjekt",
+    "projectNamePlaceholder": "Prosjektnavn",
+    "createProjectButton": "Opprett prosjekt",
+    "pro": "Pro",
+    "project": "Prosjekt",
+    "teams": "Team",
+    "createTeam": "Opprett team",
+    "createTeamTitle": "Opprett et nytt team",
+    "teamNamePlaceholder": "Teamnavn",
+    "createTeamButton": "Opprett team"
+  },
+  "coming_soon": {
+    "title": "Languine er i tidlig tilgang",
+    "description": "Vi er for øyeblikket i tidlig tilgang. Ta kontakt med",
+    "cta": "på X for å få tidlig tilgang."
+  },
+  "account": {
+    "fullName": {
+      "title": "Fullt navn",
+      "description": "Ditt fulle navn som det vil vises på plattformen.",
+      "placeholder": "Skriv inn ditt fulle navn"
+    },
+    "email": {
+      "title": "E-postadresse",
+      "description": "E-postadressen knyttet til kontoen din.",
+      "placeholder": "Skriv inn din e-postadresse"
+    },
+    "apiKey": {
+      "title": "API-nøkkel",
+      "description": "Din personlige API-nøkkel for tilgang til Languine API og fra CLI."
+    },
+    "deleteAccount": {
+      "title": "Slett konto",
+      "description": "Slett kontoen din permanent og all tilknyttede data. Denne handlingen kan ikke angres.",
+      "button": "Slett konto"
+    }
+  },
+  "copyInstall": {
+    "copied": "Kopiert til utklippstavlen"
+  },
+  "dangerZone": {
+    "dialog": {
+      "title": "Er du helt sikker?",
+      "description": "Denne handlingen kan ikke angres. Vennligst skriv DELETE for å bekrefte.",
+      "placeholder": "Skriv DELETE for å bekrefte",
+      "confirm": "Bekreft sletting",
+      "cancel": "Avbryt"
+    }
+  },
+  "pipeline": {
+    "title": "Arbeidsflyt (CI/CD Pipeline)",
+    "pro": "[pro]",
+    "description": "Vår oversettelsesmotor integreres sømløst i din eksisterende CI/CD-pipeline, og oversetter automatisk kodebasen din ved hver push. Når kodeendringer blir pushet, analyserer vi det endrede innholdet, opprettholder oversettelsesminnet ditt, og genererer nøyaktige oversettelser samtidig som vi bevarer merkevarens stemme og terminologi. Oversettelsene blir deretter sendt inn som pull-forespørsel, noe som gir mulighet for gjennomgang før de blir slått sammen med hovedgrenen din og distribuert. Denne automatiserte arbeidsflyten sikrer at ditt lokaliserte innhold forblir synkronisert med utviklingen."
+  },
+  "settings": {
+    "badRequest": "Ugyldig forespørsel",
+    "badRequestDescription": "Organisasjonen må ha minst én eier. Overfør eierskap til et annet medlem før du fjerner denne eieren.",
+    "permissionDenied": "Tillatelse nektet",
+    "permissionDeniedDescription": "Du må være eier av teamet for å utføre denne handlingen",
+    "deleteTeamTitle": "Slett team",
+    "deleteTeamDescription": "Kan ikke slette organisasjonen når du er det eneste medlemmet, slett i stedet kontoen din",
+    "saved": "Innstillinger lagret",
+    "savedDescription": "Endringene dine har blitt lagret vellykket",
+    "error": "Noe gikk galt",
+    "errorDescription": "Vennligst prøv igjen eller kontakt support",
+    "addTeam": "Opprett team",
+    "apiKey": {
+      "updated": "API-nøkkel oppdatert",
+      "updatedDescription": "API-nøkkelen din har blitt oppdatert vellykket og kopiert til utklippstavlen.",
+      "title": "Oppdater API-nøkkel",
+      "description": "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
+      "cancel": "Avbryt",
+      "continue": "Fortsett"
+    },
+    "tabs": {
+      "project": "Prosjekt",
+      "account": "Konto",
+      "team": "Team",
+      "provider": "Leverandør",
+      "billing": "Fakturering"
+    },
+    "addProject": "Opprett prosjekt",
+    "project": {
+      "name": {
+        "title": "Prosjektnavn",
+        "description": "Navnet på prosjektet ditt",
+        "placeholder": "Skriv inn prosjektnavn"
+      },
+      "id": {
+        "title": "Prosjekt-ID",
+        "description": "Din unike prosjektidentifikator",
+        "placeholder": "Prosjekt-ID"
+      },
+      "delete": {
+        "title": "Slett prosjekt",
+        "description": "Slett dette prosjektet permanent og all data tilknyttet det",
+        "button": "Slett prosjekt"
+      }
+    },
+    "save": "Lagre",
+    "team": {
+      "name": {
+        "title": "Teamnavn",
+        "description": "Navnet på teamet ditt",
+        "placeholder": "Skriv inn teamnavn"
+      },
+      "billing": {
+        "title": "Faktureringsplan",
+        "description": "Administrer teamets faktureringsplan",
+        "free": "Gratis",
+        "pro": "Pro",
+        "unlimited": "Ubegrenset"
+      },
+      "apiKey": {
+        "title": "Team API-nøkkel",
+        "description": "API-nøkkel for teamtilgang, bruk dette fra CI/CD-pipelinen din sammen med Prosjekt-ID",
+        "placeholder": "Team API-nøkkel"
+      },
+      "members": {
+        "leaveTeamConfirm": "Forlat team",
+        "leaveTeamDescription": "Er du sikker på at du vil forlate dette teamet?",
+        "cancel": "Avbryt",
+        "leaveTeam": "Forlat team",
+        "invite": "Inviter medlem",
+        "title": "Medlemmer",
+        "pendingInvitations": "Venter på invitasjoner",
+        "removeMember": "Fjern medlem",
+        "removeMemberConfirm": "Fjern medlem",
+        "removeMemberDescription": "Er du sikker på at du vil fjerne dette medlemmet?",
+        "filterPlaceholder": "Filtrer medlemmer...",
+        "allRoles": "Alle roller",
+        "date": "Dato",
+        "selectAll": "{count} valgt",
+        "noPendingInvitations": "Ingen ventende invitasjoner",
+        "noResults": "Ingen medlemmer funnet",
+        "tryDifferentSearch": "Prøv et annet søk",
+        "inviteMembers": "Inviter medlemmer til å samarbeide",
+        "deleteInvite": "Slett invitasjon",
+        "deleteInviteDescription": "Slett invitasjonen",
+        "invitedBy": "Invitert av {name}",
+        "deleteInviteSuccess": "Invitasjon slettet",
+        "deleteInviteError": "Kunne ikke slette invitasjon",
+        "removeMemberSuccess": "Medlem fjernet",
+        "removeMemberError": "Kunne ikke fjerne medlem",
+        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet vellykket",
+        "removeMemberErrorDescription": "Kunne ikke fjerne medlem",
+        "roles": {
+          "owner": "Eier",
+          "member": "Medlem"
+        },
+        "dateSort": {
+          "newest": "Nyeste",
+          "oldest": "Eldste"
+        },
+        "deleteInviteConfirm": "Slett invitasjon"
+      }
+    }
+  },
+  "tuning": {
+    "general": "Generelt",
+    "translationMemory": {
+      "title": "Oversettelsesminne",
+      "description": "Bruk oversettelsesminne for å forbedre konsistens og effektivitet"
+    },
+    "qualityChecks": {
+      "title": "Kvalitetskontroller",
+      "description": "Aktiver automatiserte kvalitetskontroller for oversettelser"
+    },
+    "contextDetection": {
+      "title": "Kontekstdeteksjon",
+      "description": "Automatisk oppdage og bevare kontekst i oversettelser"
+    },
+    "styleGuide": "Stilguide",
+    "lengthControl": {
+      "title": "Lengdekontroll",
+      "description": "Kontroller lengden på oversatt tekst",
+      "options": {
+        "flexible": "Fleksibel",
+        "strict": "Streng",
+        "exact": "Nøyaktig",
+        "loose": "Løs"
+      }
+    },
+    "inclusiveLanguage": {
+      "title": "Inkluderende språk",
+      "description": "Sørg for at oversettelsene bruker inkluderende språk"
+    },
+    "formality": {
+      "title": "Formellhet",
+      "description": "Kontroller formalitetsnivået for oversettelser",
+      "options": {
+        "casual": "Uformell",
+        "formal": "Formell",
+        "neutral": "Nøytral"
+      }
+    },
+    "brandName": {
+      "title": "Merkenavn",
+      "description": "Sett ditt merkenavn for konsekvent bruk",
+      "placeholder": "Skriv inn ditt merkenavn"
+    },
+    "brandVoice": {
+      "title": "Merke Stemning",
+      "description": "Definer din merke stemning og tone",
+      "placeholder": "Beskriv din merke stemning..."
+    },
+    "toneOfVoice": {
+      "title": "Tone of Voice",
+      "description": "Definer tonen som brukes i oversettelser",
+      "options": {
+        "casual": "Uformell",
+        "formal": "Formell",
+        "friendly": "Vennlig",
+        "professional": "Profesjonell",
+        "playful": "Lekende",
+        "serious": "Alvorlig",
+        "confident": "Selvsikker",
+        "humble": "Ydmyk",
+        "direct": "Direkte",
+        "diplomatic": "Diplomatisk"
+      }
+    },
+    "brand": "Merke",
+    "emotiveIntent": {
+      "title": "Emosjonell Intensjon",
+      "description": "Sett den emosjonelle tonen for oversettelser",
+      "options": {
+        "neutral": "Nøytral",
+        "positive": "Positiv",
+        "empathetic": "Empatisk",
+        "professional": "Profesjonell",
+        "friendly": "Vennlig",
+        "enthusiastic": "Entusiastisk"
+      }
+    },
+    "domainExpertise": {
+      "title": "Domeneekspertise",
+      "description": "Spesifiser domene konteksten for oversettelser",
+      "options": {
+        "general": "Generell",
+        "technical": "Teknisk",
+        "medical": "Medisinsk",
+        "legal": "Juridisk",
+        "financial": "Finansiell",
+        "marketing": "Markedsføring",
+        "academic": "Akademisk"
+      }
+    },
+    "idioms": {
+      "title": "Idiom",
+      "description": "Håndter idiomatiske uttrykk på en passende måte"
+    },
+    "terminology": {
+      "title": "Terminologi",
+      "description": "Håndter spesialisert terminologi og ordlister"
+    },
+    "culturalAdaptation": {
+      "title": "Kulturell Tilpasning",
+      "description": "Tilpass innhold for kulturell hensiktsmessighet"
+    }
+  },
+  "pricing": {
+    "title": "Enkel prising",
+    "free": {
+      "title": "Gratis",
+      "price": "Gratis",
+      "keys_limit": "Opp til 100 nøkler",
+      "description": "Perfekt når du prøver ut",
+      "features": {
+        "unlimited_projects": "Ubegrensede prosjekter",
+        "fine_tuning": "Finjusteringsalternativer",
+        "overrides": "Oversettelsesoverstyringer",
+        "analytics": "Analyse",
+        "context_memory": "Kontekstmemo",
+        "community_support": "Fellesskapsstøtte",
+        "keys_limit": "Opp til 100 nøkler",
+        "docs_limit": "Opp til 5 dokumenter",
+        "languages": "2 språk"
+      }
+    },
+    "pro": {
+      "title": "Pro",
+      "includes_free": "Alt i Gratis, pluss:",
+      "features": {
+        "github_action": "GitHub Action-integrasjon",
+        "latest_features": "Tidlig tilgang til de nyeste funksjonene",
+        "priority_support": "Prioritert støtte",
+        "priority_queues": "Prioriterte oversettelseskøer",
+        "languages": "Fra 8 språk",
+        "keys_limit": "Fra 10 000 nøkler",
+        "docs_limit": "Fra 50 dokumenter"
+      }
+    },
+    "cta": "Begynn å automatisere",
+    "keys_limit_explanation": "Oversatt nøkkel: Hvis du har 20 kilde nøkler (som \"Registrer deg\" eller \"Velkommen!\") og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler x 5 språk)."
+  },
+  "createTeam": {
+    "teamName": "Teamnavn",
+    "teamNamePlaceholder": "Skriv inn teamnavn",
+    "createTeamButton": "Opprett team",
+    "cancel": "Avbryt",
+    "createTeamDescription": "Opprett et nytt team for å administrere prosjektene dine og samarbeidspartnerne."
+  },
+  "createProject": {
+    "createProjectTitle": "Opprett et nytt prosjekt",
+    "projectNamePlaceholder": "Skriv inn prosjektnavn",
+    "createProjectButton": "Opprett prosjekt",
+    "cancel": "Avbryt",
+    "createProjectDescription": "Opprett et nytt prosjekt for å begynne å automatisere lokaliseringsarbeidet ditt."
+  },
+  "invite": {
+    "inviteMember": "Inviter medlem",
+    "inviteDescription": "Inviter et medlem til teamet ditt",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Skriv inn e-post",
+    "cancel": "Avbryt",
+    "submit": "Send",
+    "success": {
+      "title": "Invitasjon sendt",
+      "description": "Invitasjon sendt til {email} med suksess"
+    },
+    "error": {
+      "title": "Feil",
+      "description": "Kunne ikke sende invitasjon. Vennligst prøv igjen."
+    },
+    "validation": {
+      "invalidEmail": "Vennligst skriv inn en gyldig e-post"
+    }
+  },
+  "onboarding": {
+    "steps": {
+      "1": {
+        "title": "Sett opp Languine CLI",
+        "description": "Installer og konfigurer Languine CLI for å administrere oversettelser"
+      },
+      "2": {
+        "title": "Push Oversettelser",
+        "description": "Venter på at oversettelsene skal bli sendt"
+      },
+      "3": {
+        "title": "Dokumentasjon",
+        "description": "Sjekk ut dokumentasjonen vår for detaljerte guider og beste praksiser",
+        "link": "dokumentasjon"
+      }
+    },
+    "info": {
+      "description": "Trenger du hjelp? Sjekk ut vår",
+      "link": "dokumentasjon",
+      "description_2": "for detaljerte guider og beste praksiser."
+    }
+  },
+  "cli": {
+    "success": {
+      "title": "Languine CLI Innlogging Succes",
+      "description": "Languine CLI ble autentisert som:",
+      "description_2": "Du kan nå lukke denne fanen og gå tilbake til CLI"
+    }
+  },
+  "search": {
+    "placeholder": "Søk"
+  },
+  "periods": {
+    "daily": "Daglig",
+    "weekly": "Ukentlig",
+    "monthly": "Månedlig",
+    "selectPeriod": "Velg periode"
+  },
+  "language": {
+    "en": "Engelsk",
+    "de": "Tysk",
+    "ar": "Arabisk",
+    "az": "Aserbajdsjansk",
+    "bg": "Bulgarsk",
+    "ca": "Katalansk",
+    "cs": "Tsjekkisk",
+    "da": "Dansk",
+    "el": "Gresk",
+    "es": "Spansk",
+    "et": "Estisk",
+    "fi": "Finsk",
+    "fr": "Fransk",
+    "he": "Hebraisk",
+    "hr": "Kroatisk",
+    "hu": "Ungarsk",
+    "id": "Indonesisk",
+    "it": "Italiensk",
+    "iw": "Hebraisk",
+    "ja": "Japansk",
+    "km": "Khmer",
+    "ko": "Koreansk",
+    "lv": "Latvisk",
+    "nl": "Nederlandsk",
+    "no": "Norsk",
+    "pl": "Polsk",
+    "pt-BR": "Portugisisk (Brasil)",
+    "pt": "Portugisisk",
+    "ro": "Rumensk",
+    "ru": "Russisk",
+    "sk-SK": "Slovakisk (Slovakia)",
+    "sk": "Slovakisk",
+    "sr": "Serbisk",
+    "sv": "Svensk",
+    "ta": "Tamil",
+    "th": "Thai",
+    "tr": "Tyrkisk",
+    "uk": "Ukrainsk",
+    "vi": "Vietnamesisk",
+    "zh-CN": "Kinesisk (Forenklet)",
+    "zh-TW": "Kinesisk (Tradisjonell)"
+  },
+  "menu": {
+    "dashboard": "Dashbord",
+    "tuning": "Justering",
+    "settings": "Innstillinger",
+    "pricing": "Priser",
+    "docs": "Dokumentasjon",
+    "account": "Konto"
+  },
+  "billing": {
+    "title": "Fakturering"
+  },
+  "analytics": {
+    "key": "Oversatte nøkler",
+    "document": "Oversatte dokumenter",
+    "header": "Oversettelser",
+    "months": {
+      "10": "Okt",
+      "11": "Nov",
+      "12": "Des",
+      "01": "Jan",
+      "02": "Feb",
+      "03": "Mar",
+      "04": "Apr",
+      "05": "Mai",
+      "06": "Jun",
+      "07": "Jul",
+      "08": "Aug",
+      "09": "Sep"
+    }
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "what_is_languine": {
+      "question": "Hva er Languine?",
+      "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av applikasjonene dine. Den tilbyr funksjoner som finjusteringsalternativer, oversettelsesoverstyringer, analyser og kontekstmemo for å sikre høy kvalitet på oversettelsene."
+    },
+    "key_limit": {
+      "question": "Hvordan fungerer nøkkelgrensen?",
+      "answer": "En oversatt nøkkel telles når du oversetter en kilde nøkkel til et målspråk. For eksempel, hvis du har 20 kilde nøkler og oversetter dem til 5 språk, tilsvarer det 100 oversatte nøkler (20 nøkler × 5 språk)."
+    },
+    "supported_languages": {
+      "question": "Hvilke språk støttes?",
+      "answer": "Languine støtter over 100 språk i alle planer. Mens våre AI-drevne oversettelser fungerer best med større språk, streber vi etter å gi kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst ta kontakt med vårt supportteam."
+    },
+    "github_action": {
+      "question": "Hvordan fungerer GitHub Action-integrasjonen?",
+      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere oversettelsesarbeidsflyten din direkte i CI/CD-pipelinen din. Når du presser endringer til depotet ditt, kan oversettelser automatisk oppdateres."
+    },
+    "support": {
+      "question": "Hvilken type støtte tilbyr dere?",
+      "answer": "Gratisbrukere får tilgang til fellesskapsstøtte, mens Pro-brukere får prioritert støtte med raskere responstider og dedikert hjelp til deres oversettelsesbehov."
+    },
+    "open_source": {
+      "question": "Er Languine åpen kildekode?",
+      "answer": "Ja! Languine er helt åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge i offentligheten."
+    },
+    "open_source_pricing": {
+      "question": "Tilbyr dere spesielle priser for åpne kildeprosjekter?",
+      "answer": "Ja! Vi elsker å støtte fellesskapet for åpen kildekode. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare ta kontakt med teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør arbeidet vårt mulig."
+    },
+    "cancel_subscription": {
+      "question": "Hvordan kansellerer jeg abonnementet mitt?",
+      "answer": "Du kan kansellere abonnementet ditt når som helst fra kontoinnstillingene dine. Naviger til Fakturering > Endre plan. Abonnementet ditt vil forbli aktivt til slutten av den nåværende faktureringsperioden, hvoretter du vil bli flyttet til gratisplanen."
+    }
+  },
+  "pricing_slider": {
+    "tier": "Nivå {tier}",
+    "keys": "Oversatte nøkler",
+    "documents": "Oversatte dokumenter",
+    "period": "mnd",
+    "keys_suffix": " nøkler",
+    "docs_suffix": " dokumenter",
+    "languages": "Språk"
+  },
+  "docs": {
+    "getting-started": "Kom i gang",
+    "workflow": "Arbeidsflyt",
+    "ci": "CI/CD",
+    "presets": "Forhåndsinnstillinger",
+    "formats": "Formater",
+    "platform": "Plattform",
+    "introduction": "Introduksjon",
+    "quickstart": "Hurtigstart",
+    "authentication": "Autentisering",
+    "configuration": "Konfigurasjon",
+    "cli": "CLI",
+    "github-actions": "GitHub Actions",
+    "tuning": "Justering",
+    "overrides": "Overstyringer",
+    "settings": "Innstillinger",
+    "hooks": "Hooks",
+    "examples": "Eksempler",
+    "team": "Team"
+  },
+  "overrides": {
+    "title": "Overstyringer"
+  },
+  "overrides_sheet": {
+    "title": "Rediger oversettelse",
+    "description": "Rediger oversettelsen for denne nøkkelen",
+    "save": "Lagre"
+  },
+  "filter_locales": {
+    "languages": "Språk"
+  }
+}

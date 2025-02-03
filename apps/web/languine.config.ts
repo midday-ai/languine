@@ -3,20 +3,7 @@ import { defineConfig } from "languine";
 export default defineConfig({
   locale: {
     source: "en",
-    targets: [
-      "da",
-      "de",
-      "es",
-      "fi",
-      "fr",
-      "it",
-      "ko",
-      "nl",
-      "no",
-      "pl",
-      "pt",
-      "sv",
-    ],
+    targets: ["de", "es", "fi", "fr", "it", "ko", "nl", "no", "pl", "pt", "sv"],
   },
   files: {
     json: {
