@@ -9,11 +9,6 @@ import { usePathname } from "next/navigation";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import {
-  MdGraphicEq,
-  MdOutlineSettings,
-  MdOutlineStackedBarChart,
-} from "react-icons/md";
 import { ChangeLanguage } from "./change-language";
 import { GithubStars } from "./github-stars";
 
@@ -25,7 +20,7 @@ export function MobileMenu() {
 
   const links = [
     { href: "/pricing", label: t("pricing") },
-    { href: "https://git.new/languine", label: t("docs") },
+    { href: "/docs", label: t("docs") },
     { href: "https://github.com/midday-ai/languine", label: <GithubStars /> },
   ];
 

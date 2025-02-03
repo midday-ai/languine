@@ -5,8 +5,8 @@ files:
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
     header.signIn: b6d4223e60986fa4c9af77ee5f7149c5
     header.goToApp: 90e5e76a965ecc3c844ae730d9f71b6b
-    hero.title: f00286f7bf06669d3e05136dcbeda42b
-    hero.description: 47bdfa703928ad3af9a4f811f3349c74
+    hero.title: 8e755aadf246fe39a1542a787e00124c
+    hero.description: 2dbb42937aa275ddef8a920e007d3c74
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
     navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
@@ -15,8 +15,8 @@ files:
     navigation.docs: 5b6cf869265c13af8566f192b4ab3d2a
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: be11c74c1dd7f307bb80183a90dc2067
-    getStarted.title: f00286f7bf06669d3e05136dcbeda42b
-    getStarted.description: 47bdfa703928ad3af9a4f811f3349c74
+    getStarted.title: 8e755aadf246fe39a1542a787e00124c
+    getStarted.description: 2dbb42937aa275ddef8a920e007d3c74
     getStarted.button.startAutomating: a698f6a6e17c887e558c625a4e19800b
     getStarted.button.readDocumentation: 7a471cf15b5fc07ad6cda82a6f054b3b
     companies.title: 11cd4b12c171c74f7146ba4e4ede2f62
@@ -426,21 +426,21 @@ files:
   src/markdown/docs/en/arb.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/authentication.mdx:
-    content: d41d8cd98f00b204e9800998ecf8427e
+    content: d31cd0b0d6cad7765f5ef7c46872c4c9
   src/markdown/docs/en/biome.mdx:
     content: 3386c30ad3b9ba547f0ae70d6a6fd899
   src/markdown/docs/en/ci.mdx:
-    content: 791a748e767ebdea6614cb1fb7f255ca
+    content: 23beaf231e960eb9245c5bff8eed3466
   src/markdown/docs/en/cli.mdx:
-    content: 2369c5a605d2c11b83a352668cb96b41
+    content: a03bc123ebf693c2422d8ab00936fde0
   src/markdown/docs/en/configuration.mdx:
-    content: d41d8cd98f00b204e9800998ecf8427e
+    content: c02c60182f5d3723d6631dab07f51f25
   src/markdown/docs/en/csv.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/expo.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/github-actions.mdx:
-    content: 9fbdb5cda9464db2252f174698cdd59b
+    content: e3c877ffc37a1372fd57cfac8346814d
   src/markdown/docs/en/html.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/introduction.mdx:
@@ -450,7 +450,7 @@ files:
   src/markdown/docs/en/js.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/json.mdx:
-    content: b867074f7de5b77389dbbff97a5d3630
+    content: 28c9cbb6af34b38006db285cd12469a3
   src/markdown/docs/en/md.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/mdx.mdx:
@@ -464,7 +464,7 @@ files:
   src/markdown/docs/en/properties.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/quickstart.mdx:
-    content: 2f5b31ab731f7a84d766173227b27b1a
+    content: 043cd9defc6e6033e29470d1e64e9cf6
   src/markdown/docs/en/react-email.mdx:
     content: d41d8cd98f00b204e9800998ecf8427e
   src/markdown/docs/en/settings.mdx:

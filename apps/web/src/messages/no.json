@@ -6,8 +6,8 @@
     "goToApp": "Gå til app"
   },
   "hero": {
-    "title": "Automatisert lokaliseringsinfrastruktur",
-    "description": "Oversett innholdet i appen din direkte i utviklingsflyten din. Vårt CLI integreres med GitHub Actions og andre CI/CD-verktøy for å automatisere oversettelser mens du koder."
+    "title": "Lokaliseringinfrastruktur laget for utviklere",
+    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Automatisert lokaliseringsinfrastruktur",
-    "description": "Oversett innholdet i appen din direkte i utviklingsflyten din. Vårt CLI integreres med GitHub Actions og andre CI/CD-verktøy for å automatisere oversettelser mens du koder.",
+    "title": "Lokaliseringinfrastruktur laget for utviklere",
+    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"

@@ -6,8 +6,8 @@
     "goToApp": "Doties uz lietotni"
   },
   "hero": {
-    "title": "Automatizēta lokalizācijas infrastruktūra",
-    "description": "Tulkot jūsu lietotnes saturu tieši jūsu izstrādes darba plūsmā. Mūsu CLI integrējas ar GitHub Actions un citiem CI/CD rīkiem, lai automatizētu tulkošanu, kamēr jūs kodējat."
+    "title": "Lokalizācijas infrastruktūra izstrādātājiem",
+    "description": "Iespējams, jūs esat domājis par sava lietotnes lokalizāciju, bet atturējies, zinot, ka tas samazinās jūsu ātrumu. Vairs nē. Languine automatizē lokalizāciju jūsu izstrādātāja darba plūsmā un cauruļvadā, tāpēc tulkojumi nekad jūs neapturēs."
   },
   "navigation": {
     "dashboard": "Vadības panelis",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Sākt",
-    "title": "Automatizēta lokalizācijas infrastruktūra",
-    "description": "Tulkot jūsu lietotnes saturu tieši jūsu izstrādes darba plūsmā. Mūsu CLI integrējas ar GitHub Actions un citiem CI/CD rīkiem, lai automatizētu tulkošanu, kamēr jūs kodējat.",
+    "title": "Lokalizācijas infrastruktūra izstrādātājiem",
+    "description": "Iespējams, jūs esat domājis par sava lietotnes lokalizāciju, bet atturējies, zinot, ka tas samazinās jūsu ātrumu. Vairs nē. Languine automatizē lokalizāciju jūsu izstrādātāja darba plūsmā un cauruļvadā, tāpēc tulkojumi nekad jūs neapturēs.",
     "button": {
       "startAutomating": "Sākt automatizāciju",
       "readDocumentation": "Lasīt dokumentāciju"

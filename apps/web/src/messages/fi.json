@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Automaattinen lokalisointirakenne",
-    "description": "Käännä sovelluksesi sisältö suoraan kehitysprosessissasi. CLI:mme integroituu GitHub Actionsin ja muiden CI/CD-työkalujen kanssa käännösten automatisoimiseksi koodatessasi."
+    "title": "Kehittäjille suunniteltu lokalisointirakenne",
+    "description": "On todennäköistä, että olet miettinyt sovelluksesi lokalisointia, mutta epäröinyt, koska tiesit sen hidastavan vauhtiasi. Ei enää. Languine automatisoi lokalisoinnin kehittäjätyöskentelyssäsi ja putkessasi, joten käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjauspaneeli",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Automaattinen lokalisointirakenne",
-    "description": "Käännä sovelluksesi sisältö suoraan kehitysprosessissasi. CLI:mme integroituu GitHub Actionsin ja muiden CI/CD-työkalujen kanssa käännösten automatisoimiseksi koodatessasi.",
+    "title": "Kehittäjille suunniteltu lokalisointirakenne",
+    "description": "On todennäköistä, että olet miettinyt sovelluksesi lokalisointia, mutta epäröinyt, koska tiesit sen hidastavan vauhtiasi. Ei enää. Languine automatisoi lokalisoinnin kehittäjätyöskentelyssäsi ja putkessasi, joten käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automatisointi",
       "readDocumentation": "Lue dokumentaatio"

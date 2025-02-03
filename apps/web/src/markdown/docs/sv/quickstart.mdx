@@ -2,34 +2,59 @@
 
 Börja med att installera Languine.
 
-```bash
-npm install -g @languine/cli
-```
-
 Kör sedan följande kommando för att initiera Languine.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Följ stegen för att ställa in ditt projekt.
 
-## Första Översättning
+## Första översättningen
 
 Nu är du redo att översätta din kod.
 
-Börja med att lägga till en nyckel i din källfil, till exempel om du väljer att använda `en.json` som din källfil, lägg till en nyckel till den.
+Börja med att lägga till en nyckel i din källfil, till exempel om du väljer att använda `en.json` som din källfil, lägg till en nyckel i den.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Hej"
+  "welcome": "Välkommen till vår applikation!",
+  "user": {
+    "greeting": "Hej, {{name}}!",
+    "profile": {
+      "title": "Din profil",
+      "edit": "Redigera profil"
+    }
+  },
+  "notifications": {
+    "messages": "Du har {{count}} ny meddelande(n).",
+    "empty": "Inga nya meddelanden."
+  }
 }
+
 ```
 
-Kör sedan följande kommando för att översätta din kod.
 
-```bash
-languine translate
+## Översätt
+
+Kör följande kommando för att översätta ditt innehåll:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Vi kommer sedan att översätta den nyckel du lade till till dina målspråk.
+## Detta kommer att:
+1. Skapa översättningsfiler för varje målspråk
+2. Generera högkvalitativa översättningar med Languine Engine
+3. Skapa en `languine.lock`-fil för att spåra översättningsstatusar
+
+Låsfilerna hjälper Languine att identifiera vilka översättningar som behöver uppdateras när ditt källinnehåll ändras. Se till att commita denna fil till ditt repository.
+
+## Nästa steg
+
+Nu när du har ställt in Languine kan du:
+- Lägga till fler språk i din `languine.json`-fil
+- Integrera Languine i din CI/CD-pipeline
+- Använda vårt API för programmatisk översättning
+
+Kolla in våra andra guider för att lära dig mer om Languines avancerade funktioner.

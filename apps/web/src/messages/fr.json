@@ -6,8 +6,8 @@
     "goToApp": "Aller à l'application"
   },
   "hero": {
-    "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez."
+    "title": "Infrastructure de localisation conçue pour les développeurs",
+    "description": "Il est probable que vous ayez pensé à localiser votre application mais que vous ayez hésité, sachant que cela réduirait votre vitesse. Plus maintenant. Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, de sorte que les traductions ne vous ralentissent jamais."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Commencer",
-    "title": "Infrastructure de localisation automatisée",
-    "description": "Traduisez le contenu de votre application directement dans votre flux de travail de développement. Notre CLI s'intègre à GitHub Actions et à d'autres outils CI/CD pour automatiser les traductions pendant que vous codez.",
+    "title": "Infrastructure de localisation conçue pour les développeurs",
+    "description": "Il est probable que vous ayez pensé à localiser votre application mais que vous ayez hésité, sachant que cela réduirait votre vitesse. Plus maintenant. Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, de sorte que les traductions ne vous ralentissent jamais.",
     "button": {
       "startAutomating": "Commencer à automatiser",
       "readDocumentation": "Lire la documentation"

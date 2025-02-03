@@ -1,3 +1,41 @@
 # JSON
 
-Languine atbalsta JSON failus.
+Languine atbalsta JSON failus kā avota formātu ar kopīgajām prasībām pluralizācijai un interpolācijai. Šis formāts tiek izmantots daudzās ietvaros, piemēram, React, Vue, Ruby on Rails un citos.
+
+
+---
+
+
+## Iestatīšana
+
+Vispirms pārliecinieties, ka jūsu projektā ir languine.json vai languine.ts konfigurācijas fails. Šeit ir piemērs:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Tulkošana
+
+Kad jūsu konfigurācija ir iestatīta, izpildiet:
+
+```bash
+npx languine@latest translate
+```
+
+Kad jūs izpildāt šo komandu, Languine:
+
+- Ielādēs jūsu avota JSON failu (piemēram, locales/en.json)
+- Atklās jebkuras jaunas vai modificētas tulkošanas virknes
+- Ģenerēs tulkojumus jūsu mērķa valodām
+- Izveidos vai atjauninās mērķa valodas JSON failus (piemēram, locales/sv.json, locales/de.json, locales/fr.json)

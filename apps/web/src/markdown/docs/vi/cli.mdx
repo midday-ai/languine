@@ -2,7 +2,92 @@
 
 Languine cung cấp một CLI để giúp bạn dịch ứng dụng của mình.
 
-## translate
+## Tổng quan về các lệnh
+
+### translate
 
 Lệnh `translate` được sử dụng để dịch ứng dụng của bạn.
+
+```bash title="Terminal"
+# Bắt đầu dịch ứng dụng của bạn
+languine translate
+
+# Tùy chọn:
+#   --source-locale    Chỉ định ngôn ngữ nguồn (mặc định: en)
+#   --target-locale    Chỉ định ngôn ngữ đích để dịch tới
+#   --config          Đường dẫn đến tệp languine.config.js của bạn
+```
+
+### init
+
+```bash title="Terminal"
+# Khởi tạo một dự án Languine mới
+languine init
+
+# Điều này sẽ:
+# - Tạo một tệp languine.config.js
+# - Thiết lập cấu trúc dự án của bạn
+# - Khởi tạo các thư mục cần thiết
+```
+
+### status
+
+```bash title="Terminal"
+# Kiểm tra trạng thái của các bản dịch của bạn
+languine status
+
+# Hiển thị:
+# - Tiến độ dịch hiện tại
+# - Các bản dịch còn thiếu
+# - Thống kê dịch thuật
+```
+
+### validate
+
+```bash title="Terminal"
+# Xác thực các tệp dịch của bạn
+languine validate
+
+# Kiểm tra:
+# - Cấu trúc tệp
+# - Các khóa còn thiếu
+# - Tính nhất quán của định dạng
+```
+
+### export
+
+```bash title="Terminal"
+# Xuất các bản dịch của bạn
+languine export
+
+# Tùy chọn:
+#   --format          Định dạng xuất (json, yaml, v.v.)
+#   --output         Thư mục đầu ra
+```
+
+### import
+
+```bash title="Terminal"
+# Nhập các bản dịch từ các tệp bên ngoài
+languine import
+
+# Tùy chọn:
+#   --source         Tệp hoặc thư mục nguồn
+#   --format         Định dạng nhập (json, yaml, v.v.)
+```
+
+## Tùy chọn toàn cục
+
+Tất cả các lệnh đều hỗ trợ các tùy chọn toàn cục sau:
+
+```bash title="Terminal"
+# Tùy chọn toàn cục có sẵn cho tất cả các lệnh
+languine [command] [options]
+
+# Các tùy chọn chung:
+#   --help, -h       Hiển thị thông tin trợ giúp
+#   --version, -v    Hiển thị thông tin phiên bản
+#   --verbose        Bật ghi log chi tiết
+#   --config         Chỉ định đường dẫn tệp cấu hình
+```
 

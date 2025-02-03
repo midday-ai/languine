@@ -1,3 +1,96 @@
 # CI/CD
 
 Languine cung cấp tích hợp CI/CD để giúp bạn dịch ứng dụng của mình.
+
+---
+
+## Cách Hoạt Động
+
+Quy trình CI/CD trong Languine tuân theo một quy trình có cấu trúc để tự động hóa các cập nhật dịch thuật trong ứng dụng của bạn:
+
+### 1. Khởi Tạo Hành Động
+- Quy trình bắt đầu khi hành động được kích hoạt
+- Thiết lập cấu hình Git và thông tin xác thực cần thiết
+
+### 2. Xử Lý Bởi Languine Engine
+- Languine engine xử lý nội dung của ứng dụng của bạn
+- Thực hiện các nhiệm vụ dịch thuật theo cài đặt đã cấu hình
+
+### 3. Phát Hiện Thay Đổi
+Hệ thống kiểm tra bất kỳ thay đổi dịch thuật nào và theo một trong hai hướng:
+
+**Khi Có Thay Đổi:**
+- Thay đổi được cam kết vào kho lưu trữ
+- Thay đổi được đẩy lên nhánh đã chỉ định
+- Một Pull Request (PR) được tạo ra
+
+**Khi Không Có Thay Đổi:**
+- Quy trình hoàn tất mà không tạo PR
+
+### 4. Tạo Pull Request
+Khi phát hiện có thay đổi, một Pull Request được tạo ra với:
+
+**Nội Dung PR:**
+- Tiêu đề rõ ràng chỉ ra các cập nhật dịch thuật
+- Mô tả chi tiết về các thay đổi
+- Xác nhận kiểm tra chất lượng
+- Hướng dẫn cho việc xem xét
+- Liên kết đến tài liệu và hỗ trợ
+
+**Mô Tả PR Bao Gồm:**
+- Tóm tắt các cập nhật dịch thuật
+- Danh sách những gì đã thay đổi (các bản dịch đã cập nhật, sự nhất quán về thuật ngữ)
+- Các bước tiếp theo cho người xem xét
+- Liên kết đến tài liệu và tài nguyên hỗ trợ
+
+---
+
+## Sơ Đồ Quy Trình
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Hành Động Bắt Đầu │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Thiết Lập Git &  │
+                    │    Thông Tin Xác Thực │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Kiểm Tra Thay Đổi │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Có Thay Đổi]    │ [Không Có Thay Đổi]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Cam Kết & Đẩy     │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Tạo PR          │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Hoàn Tất     │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Quy trình được thiết kế để tự động hóa trong khi vẫn cho phép xem xét và kiểm soát chất lượng của con người trước khi các thay đổi được hợp nhất vào mã nguồn của bạn. Nó duy trì các thực tiễn tốt nhất về kiểm soát phiên bản và đảm bảo rằng các bản dịch được theo dõi và tài liệu đúng cách thông qua lịch sử Git.

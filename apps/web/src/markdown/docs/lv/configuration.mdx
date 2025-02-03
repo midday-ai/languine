@@ -1,0 +1,198 @@
+# Konfigurācija
+
+Languine atbalsta gan TypeScript, gan JSON konfigurācijas failus, lai pārvaldītu jūsu tulkošanas iestatījumus. Jūs varat izvēlēties vai nu languine.config.ts TypeScript formātā, vai languine.json JSON formātā. Abi faili nosaka jūsu avota un mērķa valodas, kā arī failus, kas jāiztulko.
+
+---
+
+## Pamata konfigurācija
+
+Šeit ir pamata piemērs abos formātos:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Abi formāti atbalsta tās pašas konfigurācijas iespējas. Izvēlieties TypeScript labākai tipa pārbaudei un IDE atbalstam, vai JSON vienkāršībai un plašākai rīku saderībai.
+
+Apskatīsim dažādās šo failu sadaļas.
+
+---
+
+## Lokalizācijas konfigurācija
+
+Lokalizācijas sadaļa nosaka jūsu tulkošanas valodas:
+
+- source: Jūsu galvenā valoda satura izveidei (piemēram, "en" angļu valodai)
+- targets: Valodu masīvs, uz kurām vēlaties tulkot (piemēram, ["es", "fr", "de"] spāņu, franču un vācu valodai)
+
+Languine atbalsta plašu valodu kodu klāstu, tostarp:
+- Vienkārši kodi: en, es, fr, de
+- Reģionālie kodi: pt-BR, zh-CN, zh-TW
+
+## Failu konfigurācija
+
+Failu sadaļa nosaka, kuri faili Languine jāiztulko. Jūs varat konfigurēt vairākus failu tipus un paraugus:
+
+---
+
+### JSON faili
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX faili
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobilās platformas faili
+
+IOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Vai tradicionālajiem .strings failiem
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Citi formāti
+
+Šeit ir pilns failu formātu saraksts, ko atbalsta Languine:
+
+- [JSON](/docs/json) - Standarta JSON tulkošanas faili
+- [YAML](/docs/yaml) - YAML tulkošanas faili
+- [Properties](/docs/properties) - Java properties faili
+- [Android](/docs/android) - Android XML resursu faili
+- [iOS](/docs/ios) - iOS lokalizācijas faili
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS pluralizācijas faili
+- [iOS XCStrings](/docs/xcode-xcstrings) - Modernie Xcode teksta katalogi
+- [Markdown](/docs/md) - Dokumentācijas faili
+- [MDX](/docs/mdx) - Dokumentācija ar JSX
+- [HTML](/docs/html) - HTML faili
+- [JavaScript](/docs/js) - JavaScript faili
+- [TypeScript](/docs/ts) - TypeScript faili
+- [Gettext PO](/docs/po) - GetText tulkošanas faili
+- [XLIFF](/docs/xliff) - XML lokalizācijas apmaiņas failu formāts
+- [CSV](/docs/csv) - Izklājlapu balstītas tulkošanas
+- [XML](/docs/xml) - XML resursu faili
+- [Flutter ARB](/docs/arb) - Lietojumprogrammas resursu pakotnes faili
+
+---
+
+## Failu paraugi
+
+[locale] vietturis failu paraugos automātiski tiek aizvietots ar atbilstošo valodas kodu tulkošanas laikā. Piemēram:
+
+- locales/[locale].json kļūst:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Jūs varat iekļaut vairākus paraugus katram faila tipam un izmantot glob paraugus:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Projekta ID (pēc izvēles)
+
+Ja jūs izmantojat Languine mākoņu pakalpojumus, varat iekļaut savu projekta ID konfigurācijā:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... lokalizācijas konfigurācija
+  },
+  files: {
+    // ... failu konfigurācija
+  },
+});
+```
+
+---
+
+## Tulkošanas stāvokļa izsekošana
+
+Languine automātiski izveido un uztur languine.lock failu, lai izsekotu jūsu tulkojumu stāvokli. Šis fails:
+
+- Izseko, kurš saturs ir tulkots
+- Palīdz identificēt, kas jāatjaunina, kad avota saturs mainās
+- Jāiekļauj jūsu versiju kontroles sistēmā
+
+Jums nav nepieciešams manuāli rediģēt bloķēšanas failu - Languine to pārvalda automātiski, kad jūs izpildāt tulkošanas komandas.
+
+## Labākās prakses
+
+1. **Versiju kontrole**: Vienmēr iekļaujiet gan languine.config.ts, gan languine.lock savā repozitorijā
+2. **Failu organizācija**: Saglabājiet savus tulkošanas failus organizētus konsekventā direktoriju struktūrā
+3. **Valodu kodi**: Izmantojiet standarta valodu kodus, lai nodrošinātu saderību
+4. **Paraugi**: Izmantojiet specifiskus iekļaušanas paraugus, lai izvairītos no nevajadzīgu failu tulkošanas
+5. **Projekta ID**: Saglabājiet savu projekta ID drošu un nesniedziet to publiski, ja izmantojat mākoņu pakalpojumus

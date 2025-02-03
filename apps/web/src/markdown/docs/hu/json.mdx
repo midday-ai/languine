@@ -1,3 +1,41 @@
 # JSON
 
-A Languine támogatja a JSON fájlokat.
+A Languine támogatja a JSON fájlokat forrásformátumként, a megszokott követelményekkel a többes számú alakításra és interpolációra. Ezt a formátumot számos keretrendszer használja, mint például a React, Vue, Ruby on Rails és mások.
+
+
+---
+
+
+## Beállítás
+
+Először győződj meg róla, hogy van egy languine.json vagy languine.ts konfigurációs fájl a projekt gyökerében. Íme egy példa:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Fordítás
+
+A konfigurációd beállítása után futtasd:
+
+```bash
+npx languine@latest translate
+```
+
+Amikor ezt a parancsot futtatod, a Languine:
+
+- Betölti a forrás JSON fájlodat (pl. locales/en.json)
+- Észleli az új vagy módosított fordítási szövegeket
+- Generálja a fordításokat a cél nyelveidre
+- Létrehozza vagy frissíti a cél nyelvű JSON fájlokat (pl. locales/sv.json, locales/de.json, locales/fr.json)

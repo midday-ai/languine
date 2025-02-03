@@ -1,0 +1,198 @@
+# ការកំណត់
+
+Languine គាំទ្រការប្រើប្រាស់ឯកសារ TypeScript និង JSON ដើម្បីគ្រប់គ្រងការកំណត់ការប្រែសម្រួលរបស់អ្នក។ អ្នកអាចជ្រើសរើស languine.config.ts សម្រាប់ TypeScript ឬ languine.json សម្រាប់ទ្រង់ទ្រាយ JSON។ ឯកសារទាំងពីរនេះកំណត់ភាសាដើម និងភាសាគោលដៅរបស់អ្នក និងឯកសារដែលត្រូវបានប្រែសម្រួល។
+
+---
+
+## ការកំណត់មូលដ្ឋាន
+
+នេះគឺជាឧទាហរណ៍មូលដ្ឋានក្នុងទ្រង់ទ្រាយទាំងពីរ៖
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+ទ្រង់ទ្រាយទាំងពីរគាំទ្រការកំណត់ជម្រើសដូចគ្នា។ ជ្រើសរើស TypeScript សម្រាប់ការត្រួតពិនិត្យប្រភេទល្អប្រសើរ និងការគាំទ្រពី IDE ឬ JSON សម្រាប់ភាពសាមញ្ញ និងការគាំទ្រឧបករណ៍ទូលំទូលាយ។
+
+អនុញ្ញាតឱ្យយើងបំបែកផ្នែកផ្សេងៗនៃឯកសារទាំងនេះ។
+
+---
+
+## ការកំណត់ភាសា
+
+ផ្នែកភាសាកំណត់ភាសាប្រែសម្រួលរបស់អ្នក៖
+
+- source: ភាសាចម្បងរបស់អ្នកសម្រាប់ការបង្កើតមាតិកា (ឧ. "en" សម្រាប់ភាសាអង់គ្លេស)
+- targets: បញ្ជីនៃភាសាដែលអ្នកចង់ប្រែសម្រួល (ឧ. ["es", "fr", "de"] សម្រាប់ភាសាស្ប៉ាញ ភាសាបារាំង និងភាសាអាល្លឺម៉ង់)
+
+Languine គាំទ្រកូដភាសាជាច្រើន រួមមាន៖
+- កូដសាមញ្ញ: en, es, fr, de
+- កូដពិសេសតំបន់: pt-BR, zh-CN, zh-TW
+
+## ការកំណត់ឯកសារ
+
+ផ្នែកឯកសារកំណត់ថាតើឯកសារណាដែល Languine គួរប្រែសម្រួល។ អ្នកអាចកំណត់ប្រភេទឯកសារនិងលំនាំជាច្រើន៖
+
+---
+
+### ឯកសារ JSON
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### ឯកសារ Markdown/MDX
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### ឯកសារប្រព័ន្ធចល័ត
+
+សម្រាប់ iOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // ឬសម្រាប់ឯកសារ .strings ប្រពៃណី
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+សម្រាប់ Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### ទ្រង់ទ្រាយផ្សេងទៀត
+
+នេះគឺជាបញ្ជីពេញលេញនៃទ្រង់ទ្រាយឯកសារដែល Languine គាំទ្រ៖
+
+- [JSON](/docs/json) - ឯកសារប្រែសម្រួល JSON ស្តង់ដា
+- [YAML](/docs/yaml) - ឯកសារប្រែសម្រួល YAML
+- [Properties](/docs/properties) - ឯកសារប្រែសម្រួល Java
+- [Android](/docs/android) - ឯកសារប្រភេទ XML សម្រាប់ Android
+- [iOS](/docs/ios) - ឯកសារប្រែសម្រួល iOS
+- [iOS Stringsdict](/docs/xcode-stringsdict) - ឯកសារប្រែសម្រួល iOS pluralization
+- [iOS XCStrings](/docs/xcode-xcstrings) - កាតាឡុកខ្សែអក្សរ Xcode សម័យ
+- [Markdown](/docs/md) - ឯកសារបញ្ជាក់
+- [MDX](/docs/mdx) - ឯកសារបញ្ជាក់ជាមួយ JSX
+- [HTML](/docs/html) - ឯកសារ HTML
+- [JavaScript](/docs/js) - ឯកសារ JavaScript
+- [TypeScript](/docs/ts) - ឯកសារ TypeScript
+- [Gettext PO](/docs/po) - ឯកសារប្រែសម្រួល GetText
+- [XLIFF](/docs/xliff) - ទ្រង់ទ្រាយឯកសារបញ្ជូនសម្រាប់ការប Localization
+- [CSV](/docs/csv) - ការប្រែសម្រួលដែលមានមូលដ្ឋានស្ព្រេដស៊ីត
+- [XML](/docs/xml) - ឯកសារប្រភេទ XML
+- [Flutter ARB](/docs/arb) - ឯកសារប្រភេទ Application Resource Bundle
+
+---
+
+## លំនាំឯកសារ
+
+កន្លែងបញ្ចូល [locale] ក្នុងលំនាំឯកសារត្រូវបានជំនួសដោយកូដភាសាដែលសមស្របក្នុងពេលប្រែសម្រួល។ ឧ.៖
+
+- locales/[locale].json ក្លាយទៅជា:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+អ្នកអាចបញ្ចូលលំនាំច្រើនសម្រាប់ប្រភេទឯកសារទាំងអស់ និងប្រើលំនាំ glob៖
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## លេខសម្គាល់គម្រោង (ជាជម្រើស)
+
+ប្រសិនបើអ្នកកំពុងប្រើសេវាកម្មពពករបស់ Languine អ្នកអាចបញ្ចូលលេខសម្គាល់គម្រោងរបស់អ្នកក្នុងការកំណត់៖
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... ការកំណត់ភាសា
+  },
+  files: {
+    // ... ការកំណត់ឯកសារ
+  },
+});
+```
+
+---
+
+## ការតាមដានស្ថានភាពការប្រែសម្រួល
+
+Languine បង្កើតនិងថែរក្សាឯកសារ languine.lock ដោយស្វ័យប្រវត្តិដើម្បីតាមដានស្ថានភាពនៃការប្រែសម្រួលរបស់អ្នក។ ឯកសារនេះ៖
+
+- តាមដានមាតិកាដែលត្រូវបានប្រែសម្រួល
+- ជួយកំណត់អ្វីដែលត្រូវបានអាប់ដេតនៅពេលមាតិកាដើមផ្លាស់ប្តូរ
+- គួរត្រូវបានបញ្ជូនទៅប្រព័ន្ធគ្រប់គ្រងកំណែរបស់អ្នក
+
+អ្នកមិនចាំបាច់កែប្រែឯកសារលុកដោយដៃទេ - Languine គ្រប់គ្រងវាដោយស្វ័យប្រវត្តិពេលអ្នករត់ការបញ្ជា​ប្រែសម្រួល។
+
+## អនុសាសន៍ល្អបំផុត
+
+1. **ការគ្រប់គ្រងកំណែ**: តែងតែបញ្ជូន languine.config.ts និង languine.lock ទៅឃ្លាំងរបស់អ្នក
+2. **ការរៀបចំឯកសារ**: រក្សាឯកសារប្រែសម្រួលរបស់អ្នកឱ្យមានរៀបចំក្នុងរចនាសម្ព័ន្ធថតដែលមានសុពលភាព
+3. **កូដភាសា**: ប្រើកូដភាសាស្តង់ដាដើម្បីធានាថាមានភាពសមស្រប
+4. **លំនាំ**: ប្រើលំនាំបញ្ចូលជាក់លាក់ដើម្បីជៀសវាងការប្រែសម្រួលឯកសារដែលមិនចាំបាច់
+5. **លេខសម្គាល់គម្រោង**: រក្សាលេខសម្គាល់គម្រោងរបស់អ្នកឱ្យមានសុវត្ថិភាព ហើយកុំចែករំលែកវ publicly ប្រសិនបើអ្នកកំពុងប្រើសេវាកម្មពពក

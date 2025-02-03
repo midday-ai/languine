@@ -6,8 +6,8 @@
     "goToApp": "Mine rakendusse"
   },
   "hero": {
-    "title": "Automatiseeritud lokaliseerimise infrastruktuur",
-    "description": "Tõlgi oma rakenduse sisu otse oma arendusvoos. Meie CLI integreerub GitHub Actions'i ja teiste CI/CD tööriistadega, et automatiseerida tõlkeid, kui sa kodeerid."
+    "title": "Arendajatele mõeldud lokaliseerimise infrastruktuur",
+    "description": "Tõenäoliselt olete mõelnud oma rakenduse lokaliseerimisele, kuid kõhelnud, teades, et see vähendab teie töökiirus. Mitte enam. Languine automatiseerib lokaliseerimise teie arendaja töövoos ja torustikus, nii et tõlked ei takista teid kunagi."
   },
   "navigation": {
     "dashboard": "Armatuurlaud",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Alusta",
-    "title": "Automatiseeritud lokaliseerimise infrastruktuur",
-    "description": "Tõlgi oma rakenduse sisu otse oma arendusvoos. Meie CLI integreerub GitHub Actions'i ja teiste CI/CD tööriistadega, et automatiseerida tõlkeid, kui sa kodeerid.",
+    "title": "Arendajatele mõeldud lokaliseerimise infrastruktuur",
+    "description": "Tõenäoliselt olete mõelnud oma rakenduse lokaliseerimisele, kuid kõhelnud, teades, et see vähendab teie töökiirus. Mitte enam. Languine automatiseerib lokaliseerimise teie arendaja töövoos ja torustikus, nii et tõlked ei takista teid kunagi.",
     "button": {
       "startAutomating": "Alusta automatiseerimist",
       "readDocumentation": "Loe dokumentatsiooni"

@@ -2,14 +2,10 @@
 
 Započnite instalacijom Languine-a.
 
-```bash
-npm install -g @languine/cli
-```
+Zatim, pokrenite sledeću komandu da inicijalizujete Languine.
 
-Zatim pokrenite sledeću komandu da inicijalizujete Languine.
-
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Pratite korake da postavite svoj projekat.
@@ -20,16 +16,45 @@ Sada ste spremni da prevedete svoj kod.
 
 Započnite dodavanjem ključa u svoj izvorni fajl, na primer, ako odlučite da koristite `en.json` kao svoj izvorni fajl, dodajte ključ u njega.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Zdravo"
+  "welcome": "Dobrodošli u našu aplikaciju!",
+  "user": {
+    "greeting": "Zdravo, {{name}}!",
+    "profile": {
+      "title": "Vaš profil",
+      "edit": "Izmeni profil"
+    }
+  },
+  "notifications": {
+    "messages": "Imate {{count}} novu poruku/e.",
+    "empty": "Nema novih obaveštenja."
+  }
 }
+
 ```
 
-Zatim pokrenite sledeću komandu da prevedete svoj kod.
 
-```bash
-languine translate
+## Prevedi
+
+Pokrenite sledeću komandu da prevedete svoj sadržaj:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Tada ćemo prevesti ključ koji ste dodali na vaše ciljne jezike.
+## Ovo će:
+1. Kreirati prevodilačke fajlove za svaki ciljni jezik
+2. Generisati visokokvalitetne prevode Languine Engine-a
+3. Kreirati `languine.lock` fajl za praćenje stanja prevoda
+
+Lock fajl pomaže Languine-u da identifikuje koji prevodi trebaju ažuriranje kada se vaš izvorni sadržaj promeni. Uverite se da ste ovaj fajl dodali u svoj repozitorijum.
+
+## Sledeći koraci
+
+Sada kada ste postavili Languine, možete:
+- Dodati više jezika u svoj `languine.json` fajl
+- Integrisati Languine u svoj CI/CD proces
+- Koristiti naš API za programatske prevode
+
+Pogledajte naše druge vodiče da saznate više o naprednim funkcijama Languine-a.

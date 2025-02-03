@@ -6,8 +6,8 @@
     "goToApp": "Accesează aplicația"
   },
   "hero": {
-    "title": "Infrastructură de localizare automatizată",
-    "description": "Traduceti conținutul aplicației dvs. direct în fluxul de lucru de dezvoltare. CLI-ul nostru se integrează cu GitHub Actions și alte instrumente CI/CD pentru a automatiza traducerile pe măsură ce codificați."
+    "title": "Infrastructură de localizare creată pentru dezvoltatori",
+    "description": "Probabil te-ai gândit să localizezi aplicația ta, dar ai ezitat, știind că ar reduce viteza de dezvoltare. Nu mai este cazul. Languine automatizează localizarea în fluxul tău de lucru și în pipeline-ul de dezvoltare, astfel încât traducerile să nu te întârzie niciodată."
   },
   "navigation": {
     "dashboard": "Tabloul de bord",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Începeți",
-    "title": "Infrastructură de localizare automatizată",
-    "description": "Traduceti conținutul aplicației dvs. direct în fluxul de lucru de dezvoltare. CLI-ul nostru se integrează cu GitHub Actions și alte instrumente CI/CD pentru a automatiza traducerile pe măsură ce codificați.",
+    "title": "Infrastructură de localizare creată pentru dezvoltatori",
+    "description": "Probabil te-ai gândit să localizezi aplicația ta, dar ai ezitat, știind că ar reduce viteza de dezvoltare. Nu mai este cazul. Languine automatizează localizarea în fluxul tău de lucru și în pipeline-ul de dezvoltare, astfel încât traducerile să nu te întârzie niciodată.",
     "button": {
       "startAutomating": "Începeți automatizarea",
       "readDocumentation": "Citiți documentația"

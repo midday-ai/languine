@@ -1,15 +1,11 @@
 # Brzi početak
 
-Započnite instalacijom Languine-a.
+Započnite instalacijom Languine.
 
-```bash
-npm install -g @languine/cli
-```
+Zatim, pokrenite sljedeću naredbu za inicijalizaciju Languine.
 
-Zatim pokrenite sljedeću naredbu za inicijalizaciju Languine-a.
-
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Slijedite korake za postavljanje vašeg projekta.
@@ -18,18 +14,47 @@ Slijedite korake za postavljanje vašeg projekta.
 
 Sada ste spremni za prevođenje vašeg koda.
 
-Započnite dodavanjem ključa u vaš izvorni datoteku, na primjer, ako odaberete koristiti `en.json` kao vašu izvorni datoteku, dodajte ključ u nju.
+Započnite dodavanjem ključa u vaš izvorni datoteku, na primjer, ako odlučite koristiti `en.json` kao vašu izvorni datoteku, dodajte ključ u nju.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Zdravo"
+  "welcome": "Dobrodošli u našu aplikaciju!",
+  "user": {
+    "greeting": "Bok, {{name}}!",
+    "profile": {
+      "title": "Vaš profil",
+      "edit": "Uredi profil"
+    }
+  },
+  "notifications": {
+    "messages": "Imate {{count}} novu poruku/e.",
+    "empty": "Nema novih obavijesti."
+  }
 }
+
 ```
 
-Zatim pokrenite sljedeću naredbu za prevođenje vašeg koda.
 
-```bash
-languine translate
+## Prevedi
+
+Pokrenite sljedeću naredbu za prevođenje vašeg sadržaja:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Tada ćemo prevesti ključ koji ste dodali na vaše ciljne jezike.
+## Ovo će:
+1. Stvoriti datoteke s prijevodima za svaki ciljni jezik
+2. Generirati visokokvalitetne prijevode Languine Engine
+3. Stvoriti `languine.lock` datoteku za praćenje stanja prijevoda
+
+Datoteka za zaključavanje pomaže Languineu da identificira koji prijevodi trebaju ažuriranja kada se vaš izvorni sadržaj promijeni. Pobrinite se da ovu datoteku pohranite u svoj repozitorij.
+
+## Sljedeći koraci
+
+Sada kada ste postavili Languine, možete:
+- Dodati više jezika u vašu `languine.json` datoteku
+- Integrirati Languine u vaš CI/CD pipeline
+- Koristiti naš API za programske prijevode
+
+Pogledajte naše druge vodiče kako biste saznali više o naprednim značajkama Languinea.

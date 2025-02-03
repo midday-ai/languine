@@ -1,3 +1,96 @@
 # CI/CD
 
-Languine tətbiqinizi tərcümə etməyə kömək etmək üçün CI/CD inteqrasiyası təqdim edir.
+Languine, tətbiqinizi tərcümə etməyə kömək etmək üçün CI/CD inteqrasiyası təqdim edir.
+
+---
+
+## Necə İşləyir
+
+Languine-dəki CI/CD iş axını, tətbiqinizdəki tərcümə yeniləmələrini avtomatlaşdırmaq üçün strukturlaşdırılmış bir prosesi izləyir:
+
+### 1. Fəaliyyətin Başlanması
+- İş axını, fəaliyyət tetiklənəndə başlayır
+- Lazımi Git konfiqurasiyasını və etimadnamələri qurur
+
+### 2. Languine Mühərrikinin Emalı
+- Languine mühərriki, tətbiqinizin məzmununu emal edir
+- Konfiqurasiya edilmiş parametrləri istifadə edərək tərcümə tapşırıqlarını yerinə yetirir
+
+### 3. Dəyişikliklərin Aşkarlanması
+Sistem, hər hansı bir tərcümə dəyişikliyini yoxlayır və iki yoldan birini izləyir:
+
+**Dəyişikliklər Aşkarlananda:**
+- Dəyişikliklər depozitə göndərilir
+- Dəyişikliklər müəyyən edilmiş budağa itələnir
+- Bir Pull Request (PR) yaradılır
+
+**Dəyişikliklər Aşkarlanmadıqda:**
+- İş axını PR yaratmadan tamamlanır
+
+### 4. Pull Request Yaradılması
+Dəyişikliklər aşkarlandıqda, aşağıdakı ilə bir Pull Request yaradılır:
+
+**PR Məzmunu:**
+- Tərcümə yeniləmələrini göstərən aydın başlıq
+- Dəyişikliklərin ətraflı təsviri
+- Keyfiyyət yoxlama təsdiqləri
+- İcmal üçün təlimatlar
+- Sənəd və dəstək üçün bağlantılar
+
+**PR Təsviri Aşağıdakılardan İbarətdir:**
+- Tərcümə yeniləmələrinin xülasəsi
+- Nələrin dəyişdiyinin siyahısı (yenilənmiş tərcümələr, terminologiya uyğunluğu)
+- İcmalçılar üçün növbəti addımlar
+- Sənəd və dəstək resurslarına bağlantılar
+
+---
+
+## İş Axını Diaqramı
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Fəaliyyət Başlayır │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Git &            │
+                    │    Etimadnamələr     │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine Mühərriki ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Dəyişiklikləri Yoxla│───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Dəyişikliklər]  │ [Dəyişiklik Yox]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Göndər & İtələmək │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    PR Yarat         │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Tamam        │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+İş axını, avtomatlaşdırılmış şəkildə dizayn edilib, eyni zamanda dəyişikliklər kod bazanıza birləşdirilmədən əvvəl insan icmalı və keyfiyyət nəzarətinə imkan tanıyır. Versiya nəzarəti ən yaxşı təcrübələrini qoruyur və tərcümələrin Git tarixçəsi vasitəsilə düzgün şəkildə izlənməsini və sənədləşdirilməsini təmin edir.

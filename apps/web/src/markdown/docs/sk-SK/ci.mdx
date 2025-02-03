@@ -1,3 +1,96 @@
 # CI/CD
 
-Languine poskytuje integráciu CI/CD, ktorá vám pomôže preložiť vašu aplikáciu.
+Languine poskytuje integráciu CI/CD, aby vám pomohol preložiť vašu aplikáciu.
+
+---
+
+## Ako to funguje
+
+CI/CD pracovný postup v Languine sleduje štruktúrovaný proces na automatizáciu aktualizácií prekladu vo vašej aplikácii:
+
+### 1. Inicializácia akcie
+- Pracovný postup začína, keď je akcia spustená
+- Nastaví potrebnú Git konfiguráciu a poverenia
+
+### 2. Spracovanie Languine Engine
+- Languine engine spracováva obsah vašej aplikácie
+- Rieši úlohy prekladu pomocou nakonfigurovaných nastavení
+
+### 3. Detekcia zmien
+Systém kontroluje akékoľvek zmeny v preklade a nasleduje jednou z dvoch ciest:
+
+**Keď sú nájdené zmeny:**
+- Zmeny sú potvrdené do repozitára
+- Zmeny sú odoslané na určenú vetvu
+- Vytvorí sa Pull Request (PR)
+
+**Keď nie sú nájdené zmeny:**
+- Pracovný postup sa dokončí bez vytvorenia PR
+
+### 4. Vytvorenie Pull Requestu
+Keď sú zmeny detekované, vytvorí sa Pull Request s:
+
+**Obsah PR:**
+- Jasný názov indikujúci aktualizácie prekladu
+- Podrobný popis zmien
+- Potvrdenia o kontrole kvality
+- Pokyny na revíziu
+- Odkazy na dokumentáciu a podporu
+
+**Popis PR obsahuje:**
+- Zhrnutie aktualizácií prekladu
+- Zoznam toho, čo sa zmenilo (aktualizované preklady, konzistencia terminológie)
+- Ďalšie kroky pre recenzentov
+- Odkazy na dokumentáciu a zdroje podpory
+
+---
+
+## Diagram pracovného postupu
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Akcia začína      │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Nastaviť Git &   │
+                    │    Poverenia        │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Skontrolovať zmeny│───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Zmeny]          │ [Žiadne zmeny]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Potvrdiť & Odoslať│       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Vytvoriť PR      │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Hotovo       │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Pracovný postup je navrhnutý tak, aby bol automatizovaný, pričom stále umožňuje ľudskú revíziu a kontrolu kvality pred zlúčením zmien do vášho kódu. Udržuje najlepšie praktiky správy verzií a zabezpečuje, že preklady sú riadne sledované a zdokumentované prostredníctvom histórie Git.

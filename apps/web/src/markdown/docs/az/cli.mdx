@@ -2,7 +2,92 @@
 
 Languine tətbiqinizi tərcümə etməyə kömək etmək üçün CLI təqdim edir.
 
-## translate
+## Əmr Xülasəsi
+
+### translate
 
 `translate` əmri tətbiqinizi tərcümə etmək üçün istifadə olunur.
+
+```bash title="Terminal"
+# Tətbiqinizin tərcüməsinə başlayın
+languine translate
+
+# Seçimlər:
+#   --source-locale    Mənbə bölgəsini göstərin (default: en)
+#   --target-locale    Tərcümə ediləcək hədəf bölgəsini(lərini) göstərin
+#   --config          languine.config.js faylınızın yolunu göstərin
+```
+
+### init
+
+```bash title="Terminal"
+# Yeni Languine layihəsi yaradın
+languine init
+
+# Bu, aşağıdakılara səbəb olacaq:
+# - languine.config.js faylı yaradacaq
+# - Layihə strukturunuzu quracaq
+# - Lazımi qovluqları yaradacaq
+```
+
+### status
+
+```bash title="Terminal"
+# Tərcümələrinizin vəziyyətini yoxlayın
+languine status
+
+# Aşağıdakılar göstərilir:
+# - Cari tərcümə irəliləyişi
+# - İtkin tərcümələr
+# - Tərcümə statistikası
+```
+
+### validate
+
+```bash title="Terminal"
+# Tərcümə fayllarınızı təsdiqləyin
+languine validate
+
+# Yoxlayır:
+# - Fayl strukturu
+# - İtkin açarlar
+# - Format uyğunsuzluğu
+```
+
+### export
+
+```bash title="Terminal"
+# Tərcümələrinizi ixrac edin
+languine export
+
+# Seçimlər:
+#   --format          İxrac formatı (json, yaml və s.)
+#   --output         Çıxış qovluğu
+```
+
+### import
+
+```bash title="Terminal"
+# Xarici fayllardan tərcümələri idxal edin
+languine import
+
+# Seçimlər:
+#   --source         Mənbə faylı və ya qovluğu
+#   --format         İdxal formatı (json, yaml və s.)
+```
+
+## Qlobal Seçimlər
+
+Bütün əmrlər aşağıdakı qlobal seçimləri dəstəkləyir:
+
+```bash title="Terminal"
+# Bütün əmrlər üçün mövcud qlobal seçimlər
+languine [əmr] [seçimlər]
+
+# Ümumi seçimlər:
+#   --help, -h       Kömək məlumatını göstərin
+#   --version, -v    Versiya məlumatını göstərin
+#   --verbose        Ətraflı qeyd etməni aktiv edin
+#   --config         Konfiqurasiya faylının yolunu göstərin
+```
 

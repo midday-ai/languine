@@ -1,3 +1,96 @@
 # CI/CD
 
-Languine oferă o integrare CI/CD pentru a te ajuta să traduci aplicația ta.
+Languine oferă o integrare CI/CD pentru a vă ajuta să traduceți aplicația dvs.
+
+---
+
+## Cum Funcționează
+
+Fluxul de lucru CI/CD în Languine urmează un proces structurat pentru a automatiza actualizările de traducere în aplicația dvs.:
+
+### 1. Inițializarea Acțiunii
+- Fluxul de lucru începe atunci când acțiunea este declanșată
+- Configurează setările necesare Git și acreditivele
+
+### 2. Procesarea Motorului Languine
+- Motorul Languine procesează conținutul aplicației dvs.
+- Gestionează sarcinile de traducere folosind setările configurate
+
+### 3. Detectarea Schimbărilor
+Sistemul verifică dacă există modificări ale traducerii și urmează unul dintre cele două trasee:
+
+**Când se Găsesc Schimbări:**
+- Schimbările sunt comise în depozit
+- Schimbările sunt trimise către ramura specificată
+- Se creează o Cerere de Pull (PR)
+
+**Când Nu se Găsesc Schimbări:**
+- Fluxul de lucru se finalizează fără a crea un PR
+
+### 4. Crearea Cererii de Pull
+Când se detectează schimbări, se creează o Cerere de Pull cu:
+
+**Conținutul PR:**
+- Titlu clar care indică actualizările de traducere
+- Descriere detaliată a schimbărilor
+- Confirmări de verificare a calității
+- Instrucțiuni pentru revizuire
+- Linkuri către documentație și suport
+
+**Descrierea PR Include:**
+- Rezumat al actualizărilor de traducere
+- Listă cu ceea ce s-a schimbat (traduceri actualizate, consistența terminologiei)
+- Pașii următori pentru recenzori
+- Linkuri către documentație și resurse de suport
+
+---
+
+## Diagrama Fluxului de Lucru
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Acțiunea Începe   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Configurare Git   │
+                    │    și Acreditive     │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Motorul Languine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Verificare Schimbări│───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Schimbări]      │ [Fără Schimbări]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Comitează & Trimite│       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Creează PR       │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Finalizat     │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Fluxul de lucru este conceput pentru a fi automatizat, permițând în același timp revizuirea umană și controlul calității înainte ca schimbările să fie integrate în baza de cod. Menține cele mai bune practici de control al versiunilor și asigură că traducerile sunt corect urmărite și documentate prin istoricul Git.

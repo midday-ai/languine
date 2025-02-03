@@ -1,53 +1,92 @@
 # GitHub Actions
 
-Ar github darbību jūs varat viegli tulkot savu kodu, vienkārši nospiežot savu kodu uz krātuves, github darbība pēc tam tulkos jūsu jaunās atslēgas, izveidos pull pieprasījumu vai apstiprinās jūsu izmaiņas.
-Tas ietaupa jums daudz laika un pūļu, saglabājot augstas kvalitātes tulkojumus.
+Ar GitHub darbību jūs varat viegli tulkot savu kodu, vienkārši nospiežot to uz krātuves, GitHub darbība pēc tam tulkos jūsu jaunās atslēgas, izveidos pull pieprasījumu vai apstiprinās jūsu izmaiņas.
+Tas ietaupa jums daudz laika un pūļu, vienlaikus saglabājot augstas kvalitātes tulkojumus.
+
+---
+
+## Instalācija
+
+Lai izmantotu Languine GitHub darbību savā krātuvē, jums būs nepieciešams:
+
+1. Iestatīt savas krātuves slepenos datus ar saviem Languine akreditīviem
+2. Izveidot darba plūsmas failu savā krātuvē
+
+### Krātuves slepeno datu iestatīšana
+
+Pievienojiet šādus slepenos datus savās krātuves iestatījumos (Iestatījumi > Slepenie dati un mainīgie > Darbības):
+
+- `LANGUINE_API_KEY`: Jūsu Languine API atslēga
+- `LANGUINE_PROJECT_ID`: Jūsu Languine projekta ID
+
+Šīs vērtības varat atrast savā Languine informācijas panelī sadaļā Projekta iestatījumi.
 
 
-## Darba plūsma
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Darbība sākas     │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Iestatīt Git &   │
-│    Akreditācijas    │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Pārbaudīt izmaiņas │───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Izmaiņas]       │ [Nav izmaiņu]
-           │                  │
-┌──────────▼──────────┐       │
-│   Apstiprināt &     │       │
-│   Nosūtīt           │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Izveidot PR      │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Gatavs       │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+
+### Vides mainīgie
+
+GitHub darbība izmanto šādus vides mainīgos:
+- `LANGUINE_API_KEY` (Nepieciešams): Jūsu Languine API atslēga autentifikācijai
+- `LANGUINE_PROJECT_ID` (Nepieciešams): Jūsu Languine projekta ID 
+- `GITHUB_TOKEN` (Nepieciešams): Automātiski nodrošināts no GitHub, tiek izmantots pull pieprasījumu izveidei
+
+### Piemēra darba plūsma
+
+Izveidojiet jaunu failu .github/workflows/languine.yml savā krātuvē ar sekojošo saturu:
+
+```ts title=".github/workflows/release.yml"
+name: Izvietot vietni
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine darbība
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Šī darba plūsma:
+- Tiks izpildīta, kad tiks veikti nospiešanas uz galveno zaru
+- Tiks izpildīta pull pieprasījumiem uz galveno zaru
+- Var tikt aktivizēta manuāli no Darbību cilnes
+- Pārbaudīs jūsu kodu un izpildīs Languine tulkošanas procesu
+- Izveidos pull pieprasījumu ar jebkuriem jaunajiem tulkojumiem (konfigurējams)
+
+#### Darba direktorija opcija
+
+`working-directory` opcija ļauj jums norādīt, kur atrodas jūsu tulkošanas faili. Tas ir īpaši noderīgi monorepo, kur jūsu tulkojumi var būt konkrētā pakotnē vai lietotnes direktorijā. Piemēram:
+
+#### Pull pieprasījuma opcija
+
+`create-pull-request` opcija kontrolē, vai darbība izveido pull pieprasījumu ar izmaiņām vai apstiprina tās tieši zarā:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # izveidot pull pieprasījumu ar izmaiņām
+```
+
+Kad iestatīts uz `true`, darbība:
+- Izveidos jaunu zaru ar izmaiņām
+- Izveidos pull pieprasījumu pārskatīšanai
+- Pievienos atbilstošas etiķetes un aprakstu
+
+Kad iestatīts uz `false` (noklusējums), darbība:
+- Apstiprinās izmaiņas tieši pašreizējā zarā
+- Nosūtīs izmaiņas bez pull pieprasījuma izveides

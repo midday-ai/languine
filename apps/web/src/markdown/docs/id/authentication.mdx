@@ -1,0 +1,48 @@
+# Autentikasi
+
+Untuk menggunakan Languine, Anda perlu melakukan autentikasi dengan Engine kami, ini hanya memerlukan beberapa detik untuk memulai.
+
+---
+
+## Masuk
+
+Anda dapat masuk langsung di [Languine Dashboard](https://languine.ai/login) atau menjalankan perintah berikut:
+
+```bash title="Terminal"
+npx languine@latest auth login
+```
+
+
+Jika Anda sudah memiliki akun, Anda akan secara otomatis masuk dan sesi akan disimpan di mesin Anda.
+
+---
+
+## Keluar
+
+Anda dapat keluar dengan menjalankan perintah berikut:
+
+```bash title="Terminal"
+npx languine@latest auth logout
+```
+
+---
+
+## Sesi pengguna
+
+Anda dapat memeriksa apakah Anda sudah masuk dengan menjalankan perintah berikut:
+
+```bash title="Terminal"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# Variabel Lingkungan
+
+Anda dapat mengatur variabel lingkungan berikut untuk mengonfigurasi Languine:
+
+- `LANGUINE_API_KEY`: Kunci API yang digunakan untuk autentikasi.
+- `LANGUINE_PROJECT_ID`: ID proyek yang digunakan untuk proyek.
+
+Anda dapat menemukannya di [Languine Dashboard](https://languine.ai/login).

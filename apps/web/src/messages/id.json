@@ -6,8 +6,8 @@
     "goToApp": "Buka aplikasi"
   },
   "hero": {
-    "title": "Infrastruktur lokalisasi otomatis",
-    "description": "Terjemahkan konten aplikasi Anda langsung dalam alur kerja pengembangan Anda. CLI kami terintegrasi dengan GitHub Actions dan alat CI/CD lainnya untuk mengotomatiskan terjemahan saat Anda mengkode."
+    "title": "Infrastruktur lokalisasi yang dibuat untuk pengembang",
+    "description": "Kemungkinan besar Anda telah memikirkan untuk melokalisasi aplikasi Anda tetapi ragu, mengetahui bahwa itu akan mengurangi kecepatan Anda. Tidak lagi. Languine mengotomatiskan lokalisasi dalam alur kerja dan jalur pengembang Anda, sehingga terjemahan tidak akan menghambat Anda."
   },
   "navigation": {
     "dashboard": "Dasbor",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Mulai",
-    "title": "Infrastruktur lokalisasi otomatis",
-    "description": "Terjemahkan konten aplikasi Anda langsung dalam alur kerja pengembangan Anda. CLI kami terintegrasi dengan GitHub Actions dan alat CI/CD lainnya untuk mengotomatiskan terjemahan saat Anda mengkode.",
+    "title": "Infrastruktur lokalisasi yang dibuat untuk pengembang",
+    "description": "Kemungkinan besar Anda telah memikirkan untuk melokalisasi aplikasi Anda tetapi ragu, mengetahui bahwa itu akan mengurangi kecepatan Anda. Tidak lagi. Languine mengotomatiskan lokalisasi dalam alur kerja dan jalur pengembang Anda, sehingga terjemahan tidak akan menghambat Anda.",
     "button": {
       "startAutomating": "Mulai otomatisasi",
       "readDocumentation": "Baca dokumentasi"

@@ -1,52 +1,92 @@
 # GitHub Actions
 
-S github akciou môžete jednoducho preložiť svoj kód len tým, že ho nahrajete do repozitára, github akcia potom preloží vaše nové kľúče, buď vytvorí pull request alebo uloží vaše zmeny.
-To vám ušetrí veľa času a námahy, pričom zachová vysokú kvalitu prekladov.
+S github akciou môžete jednoducho preložiť svoj kód jednoducho tým, že ho nahrajete do repozitára, github akcia potom preloží vaše nové kľúče, buď vytvorí pull request alebo uloží vaše zmeny.
+To vám ušetrí veľa času a námahy pri zachovaní vysokokvalitných prekladov.
+
+---
+
+## Inštalácia
+
+Aby ste mohli použiť Languine GitHub Action vo svojom repozitári, musíte:
+
+1. Nastaviť tajomstvá repozitára so svojimi povereniami Languine
+2. Vytvoriť súbor pracovného postupu vo svojom repozitári
+
+### Nastavenie tajomstiev repozitára
+
+Pridajte nasledujúce tajomstvá do nastavení vášho repozitára (Nastavenia > Tajomstvá a premenné > Akcie):
+
+- `LANGUINE_API_KEY`: Váš Languine API kľúč
+- `LANGUINE_PROJECT_ID`: Váš Languine projekt ID
+
+Tieto hodnoty nájdete vo svojom Languine ovládacom paneli pod Nastavenia projektu.
 
 
-## Workflow
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Akcia začína      │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Nastavenie Git & │
-│    Účtov           │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Skontrolovať zmeny│───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Zmeny]         │ [Žiadne zmeny]
-           │                  │
-┌──────────▼──────────┐       │
-│   Uložiť & Nahrať   │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Vytvoriť PR      │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Hotovo       │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+
+### Premenné prostredia
+
+GitHub Action používa nasledujúce premenné prostredia:
+- `LANGUINE_API_KEY` (Povinné): Váš Languine API kľúč na autentifikáciu
+- `LANGUINE_PROJECT_ID` (Povinné): Váš Languine projekt ID 
+- `GITHUB_TOKEN` (Povinné): Automaticky poskytované GitHubom, používa sa na vytváranie PR
+
+### Príklad pracovného postupu
+
+Vytvorte nový súbor .github/workflows/languine.yml vo svojom repozitári s nasledujúcim obsahom:
+
+```ts title=".github/workflows/release.yml"
+name: Nasadiť webovú stránku
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Action
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Tento pracovný postup bude:
+- Spúšťať sa pri nahrávaní do hlavnej vetvy
+- Spúšťať sa pri pull requestoch do hlavnej vetvy
+- Môže byť spustený manuálne z karty Akcie
+- Skontrolovať váš kód a spustiť proces prekladu Languine
+- Vytvoriť pull request s akýmikoľvek novými prekladmi (konfigurovateľné)
+
+#### Možnosť pracovného adresára
+
+Možnosť `working-directory` vám umožňuje špecifikovať, kde sa nachádzajú vaše prekladové súbory. To je obzvlášť užitočné v monorepozitároch, kde môžu byť vaše preklady v konkrétnom balíku alebo adresári aplikácie. Napríklad:
+
+#### Možnosť pull requestu
+
+Možnosť `create-pull-request` ovláda, či akcia vytvorí pull request so zmenami alebo ich priamo uloží do vetvy:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # vytvoriť pull request so zmenami
+```
+
+Keď je nastavené na `true`, akcia:
+- Vytvorí novú vetvu so zmenami
+- Vytvorí pull request na revíziu
+- Pridá vhodné štítky a popis
+
+Keď je nastavené na `false` (predvolené), akcia:
+- Uloží zmeny priamo do aktuálnej vetvy
+- Nahraje zmeny bez vytvorenia pull requestu

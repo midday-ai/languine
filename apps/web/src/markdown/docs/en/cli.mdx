@@ -2,7 +2,92 @@
 
 Languine provides a CLI to help you translate your application.
 
-## translate
+## Commands Overview
+
+### translate
 
 The `translate` command is used to translate your application.
+
+```bash title="Terminal"
+# Start translation of your application
+languine translate
+
+# Options:
+#   --source-locale    Specify the source locale (default: en)
+#   --target-locale    Specify the target locale(s) to translate to
+#   --config          Path to your languine.config.js file
+```
+
+### init
+
+```bash title="Terminal"
+# Initialize a new Languine project
+languine init
+
+# This will:
+# - Create a languine.config.js file
+# - Set up your project structure
+# - Initialize necessary directories
+```
+
+### status
+
+```bash title="Terminal"
+# Check the status of your translations
+languine status
+
+# Shows:
+# - Current translation progress
+# - Missing translations
+# - Translation statistics
+```
+
+### validate
+
+```bash title="Terminal"
+# Validate your translation files
+languine validate
+
+# Checks:
+# - File structure
+# - Missing keys
+# - Format consistency
+```
+
+### export
+
+```bash title="Terminal"
+# Export your translations
+languine export
+
+# Options:
+#   --format          Export format (json, yaml, etc.)
+#   --output         Output directory
+```
+
+### import
+
+```bash title="Terminal"
+# Import translations from external files
+languine import
+
+# Options:
+#   --source         Source file or directory
+#   --format         Import format (json, yaml, etc.)
+```
+
+## Global Options
+
+All commands support the following global options:
+
+```bash title="Terminal"
+# Global options available for all commands
+languine [command] [options]
+
+# Common options:
+#   --help, -h       Show help information
+#   --version, -v    Show version information
+#   --verbose        Enable verbose logging
+#   --config         Specify config file path
+```
 

@@ -1,8 +1,93 @@
 # CLI
 
-Languine, uygulamanızı çevirmek için bir CLI sağlar.
+Languine, uygulamanızı çevirmeye yardımcı olmak için bir CLI sağlar.
 
-## translate
+## Komutlar Genel Görünümü
+
+### translate
 
 `translate` komutu, uygulamanızı çevirmek için kullanılır.
+
+```bash title="Terminal"
+# Uygulamanızın çevirisine başlayın
+languine translate
+
+# Seçenekler:
+#   --source-locale    Kaynak yerel ayarını belirtin (varsayılan: en)
+#   --target-locale    Çevrilecek hedef yerel ayar(lar)ını belirtin
+#   --config          languine.config.js dosyanızın yolu
+```
+
+### init
+
+```bash title="Terminal"
+# Yeni bir Languine projesi başlatın
+languine init
+
+# Bu, şunları yapar:
+# - bir languine.config.js dosyası oluşturur
+# - proje yapınızı ayarlar
+# - gerekli dizinleri başlatır
+```
+
+### status
+
+```bash title="Terminal"
+# Çevirilerinizin durumunu kontrol edin
+languine status
+
+# Gösterir:
+# - Mevcut çeviri ilerlemesi
+# - Eksik çeviriler
+# - Çeviri istatistikleri
+```
+
+### validate
+
+```bash title="Terminal"
+# Çeviri dosyalarınızı doğrulayın
+languine validate
+
+# Kontrol eder:
+# - Dosya yapısı
+# - Eksik anahtarlar
+# - Format tutarlılığı
+```
+
+### export
+
+```bash title="Terminal"
+# Çevirilerinizi dışa aktarın
+languine export
+
+# Seçenekler:
+#   --format          Dışa aktarma formatı (json, yaml, vb.)
+#   --output         Çıktı dizini
+```
+
+### import
+
+```bash title="Terminal"
+# Harici dosyalardan çevirileri içe aktarın
+languine import
+
+# Seçenekler:
+#   --source         Kaynak dosya veya dizin
+#   --format         İçe aktarma formatı (json, yaml, vb.)
+```
+
+## Global Seçenekler
+
+Tüm komutlar aşağıdaki global seçenekleri destekler:
+
+```bash title="Terminal"
+# Tüm komutlar için mevcut global seçenekler
+languine [komut] [seçenekler]
+
+# Ortak seçenekler:
+#   --help, -h       Yardım bilgilerini göster
+#   --version, -v    Sürüm bilgilerini göster
+#   --verbose        Ayrıntılı günlüğü etkinleştir
+#   --config         Yapılandırma dosyası yolunu belirtin
+```
 

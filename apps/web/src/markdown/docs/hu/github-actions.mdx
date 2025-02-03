@@ -1,52 +1,92 @@
 # GitHub Actions
 
-A GitHub akcióval könnyedén lefordíthatja a kódját, csak annyit kell tennie, hogy feltölti a kódját a tárolóba, a GitHub akció ezután lefordítja az új kulcsait, létrehoz egy pull requestet vagy elkötelezi a változtatásait.
+A GitHub Action segítségével könnyedén lefordíthatja a kódját, csak annyit kell tennie, hogy feltölti a kódját a tárolóba, a GitHub Action pedig lefordítja az új kulcsokat, létrehoz egy pull requestet vagy elkötelezi a változtatásait.
 Ez rengeteg időt és energiát takarít meg, miközben magas színvonalú fordításokat biztosít.
 
+---
 
-## Munkafolyamat
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Akció Indul      │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Git &           │
-│    Hitelesítések   │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Változások Ellenőrzése │───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Változások]     │ [Nincs Változás]
-           │                  │
-┌──────────▼──────────┐       │
-│   Elkötelezés & Feltöltés │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    PR Létrehozása   │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Kész         │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+## Telepítés
+
+A Languine GitHub Action használatához a tárolójában a következőket kell tennie:
+
+1. Állítsa be a tároló titkait a Languine hitelesítő adataival
+2. Hozzon létre egy munkafolyamat fájlt a tárolójában
+
+### A tároló titkainak beállítása
+
+Adja hozzá a következő titkokat a tároló beállításaiban (Beállítások > Titkok és változók > Akciók):
+
+- `LANGUINE_API_KEY`: A Languine API kulcsa
+- `LANGUINE_PROJECT_ID`: A Languine projekt azonosítója
+
+Ezeket az értékeket a Languine irányítópultján találja a Projekt beállításai alatt.
+
+
+
+### Környezeti változók
+
+A GitHub Action a következő környezeti változókat használja:
+- `LANGUINE_API_KEY` (Kötelező): A Languine API kulcsa a hitelesítéshez
+- `LANGUINE_PROJECT_ID` (Kötelező): A Languine projekt azonosítója
+- `GITHUB_TOKEN` (Kötelező): Automatikusan biztosítja a GitHub, a PR-ek létrehozásához használják
+
+### Példa munkafolyamat
+
+Hozzon létre egy új fájlt .github/workflows/languine.yml a tárolójában a következő tartalommal:
+
+```ts title=".github/workflows/release.yml"
+name: Weboldal telepítése
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Action
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Ez a munkafolyamat a következőket fogja tenni:
+- Futtatódik a fő ágra történő feltöltések esetén
+- Futtatódik a fő ágra történő pull requestek esetén
+- Kézzel is aktiválható az Akciók fülről
+- Ellenőrzi a kódját és végrehajtja a Languine fordítási folyamatot
+- Létrehoz egy pull requestet az új fordításokkal (konfigurálható)
+
+#### Munkakönyvtár opció
+
+A `working-directory` opció lehetővé teszi, hogy megadja, hol találhatók a fordítási fájljai. Ez különösen hasznos monorepo-k esetén, ahol a fordításai egy adott csomagban vagy alkalmazás könyvtárban lehetnek. Például:
+
+#### Pull Request opció
+
+A `create-pull-request` opció szabályozza, hogy az akció létrehoz-e egy pull requestet a változtatásokkal, vagy közvetlenül elkötelezi azokat az ágra:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # hozzon létre egy pull requestet a változtatásokkal
+```
+
+Ha `true` értékre van állítva, az akció a következőket fogja tenni:
+- Létrehoz egy új ágat a változtatásokkal
+- Létrehoz egy pull requestet az áttekintéshez
+- Hozzáadja a megfelelő címkéket és leírást
+
+Ha `false`-ra (alapértelmezett) van állítva, az akció a következőket fogja tenni:
+- Közvetlenül elkötelezi a változtatásokat a jelenlegi ágon
+- Feltölti a változtatásokat anélkül, hogy pull requestet hozna létre

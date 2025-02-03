@@ -6,8 +6,8 @@
     "goToApp": "Przejdź do aplikacji"
   },
   "hero": {
-    "title": "Zautomatyzowana infrastruktura lokalizacyjna",
-    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania."
+    "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
+    "description": "Prawdopodobnie myślałeś o lokalizacji swojej aplikacji, ale wahałeś się, wiedząc, że wpłynie to na Twoją wydajność. Już nie. Languine automatyzuje lokalizację w ramach Twojego przepływu pracy i pipeline'u dewelopera, dzięki czemu tłumaczenia nigdy nie będą Cię spowalniać."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Rozpocznij",
-    "title": "Zautomatyzowana infrastruktura lokalizacyjna",
-    "description": "Tłumacz zawartość swojej aplikacji bezpośrednio w swoim procesie deweloperskim. Nasze CLI integruje się z GitHub Actions i innymi narzędziami CI/CD, aby automatyzować tłumaczenia podczas kodowania.",
+    "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
+    "description": "Prawdopodobnie myślałeś o lokalizacji swojej aplikacji, ale wahałeś się, wiedząc, że wpłynie to na Twoją wydajność. Już nie. Languine automatyzuje lokalizację w ramach Twojego przepływu pracy i pipeline'u dewelopera, dzięki czemu tłumaczenia nigdy nie będą Cię spowalniać.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"

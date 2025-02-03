@@ -6,8 +6,8 @@
     "goToApp": "Ugrás az alkalmazásra"
   },
   "hero": {
-    "title": "Automatizált lokalizációs infrastruktúra",
-    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz."
+    "title": "Fejlesztők számára készült lokalizációs infrastruktúra",
+    "description": "Valószínű, hogy már gondoltál az alkalmazásod lokalizálására, de haboztál, tudva, hogy ez csökkenti a sebességedet. De most már nem. A Languine automatizálja a lokalizációt a fejlesztői munkafolyamatodban és pipeline-odban, így a fordítások soha nem akadályoznak meg."
   },
   "navigation": {
     "dashboard": "Irányítópult",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Kezdj el",
-    "title": "Automatizált lokalizációs infrastruktúra",
-    "description": "Fordítsd le az alkalmazásod tartalmát közvetlenül a fejlesztési munkafolyamatodban. CLI-nk integrálódik a GitHub Actions-szal és más CI/CD eszközökkel, hogy automatizálja a fordításokat, miközben kódolsz.",
+    "title": "Fejlesztők számára készült lokalizációs infrastruktúra",
+    "description": "Valószínű, hogy már gondoltál az alkalmazásod lokalizálására, de haboztál, tudva, hogy ez csökkenti a sebességedet. De most már nem. A Languine automatizálja a lokalizációt a fejlesztői munkafolyamatodban és pipeline-odban, így a fordítások soha nem akadályoznak meg.",
     "button": {
       "startAutomating": "Automatizálás megkezdése",
       "readDocumentation": "Dokumentáció olvasása"

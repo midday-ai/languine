@@ -6,8 +6,8 @@
     "goToApp": "Tətbiqə keç"
   },
   "hero": {
-    "title": "Avtomatlaşdırılmış yerləşdirmə infrastrukturu",
-    "description": "Tətbiqinizin məzmununu inkişaf axınında birbaşa tərcümə edin. Bizim CLI GitHub Actions və digər CI/CD vasitələri ilə inteqrasiya olunur ki, kod yazarkən tərcümələri avtomatlaşdırsın."
+    "title": "Tərtibatçılar üçün hazırlanmış lokalizasiya infrastrukturu",
+    "description": "Ehtimal ki, tətbiqinizi lokalizasiya etməyi düşünmüsünüz, amma bunun sürətinizi azaldacağını bildiyiniz üçün tərəddüd etmisiniz. Artıq yox. Languine, tərtibatçı iş axınınız və pipeline'ınız daxilində lokalizasiyanı avtomatlaşdırır, beləliklə tərcümələr sizi saxlamır."
   },
   "navigation": {
     "dashboard": "İdarə paneli",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Başlamaq",
-    "title": "Avtomatlaşdırılmış yerləşdirmə infrastrukturu",
-    "description": "Tətbiqinizin məzmununu inkişaf axınında birbaşa tərcümə edin. Bizim CLI GitHub Actions və digər CI/CD vasitələri ilə inteqrasiya olunur ki, kod yazarkən tərcümələri avtomatlaşdırsın.",
+    "title": "Tərtibatçılar üçün hazırlanmış lokalizasiya infrastrukturu",
+    "description": "Ehtimal ki, tətbiqinizi lokalizasiya etməyi düşünmüsünüz, amma bunun sürətinizi azaldacağını bildiyiniz üçün tərəddüd etmisiniz. Artıq yox. Languine, tərtibatçı iş axınınız və pipeline'ınız daxilində lokalizasiyanı avtomatlaşdırır, beləliklə tərcümələr sizi saxlamır.",
     "button": {
       "startAutomating": "Avtomatlaşdırmaya başla",
       "readDocumentation": "Sənədləri oxu"
