@@ -1,80 +1,34 @@
 # Johdanto
 
-Languine on avoimen lähdekoodin lokalisointialusta, joka auttaa kehittäjiä kääntämään sovelluksiaan tekoälypohjaisten käännösten avulla. Se tarjoaa saumattoman työnkulun käännösten hallintaan useilla kielillä samalla, kun se ylläpitää korkeaa laatua koneoppimisen avulla.
+Languine automatisoi lokalisoinnin kehitysprosesseissasi ja putkistoissasi, varmistaen, että käännökset eivät koskaan hidasta sinua.
 
+Muuta sovelluksesi monikieliseksi kokemukseksi minuuteissa. Kun keskityt ominaisuuksien rakentamiseen, Languine hoitaa kaikki käännöksiin liittyvät asiat tarkkuudella ja luotettavuudella.
 
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-                                  ┌───────────────┐
-                                  │   Git Push    │
-                                  └───────────────┘
-                                          │
-                                          ▼
-             ┌─────────────────────────────────────────────────────────┐
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             └─────────────────────────────────────────────────────────┘
-                                          │
-                                          ▼
-                                          │
-            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-           │                              │                              │
-           ▼                              ▼                              ▼
- ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
- ║                   ║          ║                   ║          ║                   ║
- ║      Englanti     ║          ║      Espanja      ║          ║      Japani      ║
- ║    Käännös       ║          ║    Käännös       ║          ║     Käännös      ║
- ║                   ║          ║                   ║          ║                   ║
- ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
-           │                              │                              │
-           └──────────────────────────────┼──────────────────────────────┘
-                                          ▼
-                                  ┌───────────────┐
-                                  │     Yhdistä    │
-                                  �� Pull Request  │
-                                  └───────────────┘
-                                          │
-                                          ▼
-                              ┌─────────────────────┐
-                              │      Valmis         │
-                              │      (Käyttöön)     │
-                              └─────────────────────┘
-`}
-        </pre>
-      </div>
+---
 
-## Avainominaisuudet
+## Keskeiset Ominaisuudet
 
-- **Tekoälypohjaiset käännökset**: Hyödynnä edistyneitä koneoppimismalleja tuottamaan korkealaatuisia käännöksiä yli 100 kielellä
-- **Git-integraatio**: Synkronoi käännöksesi suoraan Git-repositorioidesi kanssa ja automatisoi päivitykset CI/CD-putkien kautta
-- **Kehittäjäystävällinen**: Rakennettu kehittäjät mielessä, sisältäen tehokkaan CLI:n, API:n ja GitHub Action -integraation
-- **Mukautetut jäsentäjät**: Tuki erilaisille tiedostomuodoille ja mahdollisuus luoda mukautettuja jäsentäjiä erityistarpeitasi varten
-- **Versionhallinta**: Seuraa muutoksia, hallitse haaroja ja ylläpidä käännöshistoriaa
-- **Avoin lähdekoodi**: Täysin avoin lähdekoodi ja saatavilla GitHubissa, mikä mahdollistaa läpinäkyvyyden ja yhteisön panostukset
+- **Käännösmootori**: Hyödynnä kontekstiin perustuvia, korkealaatuisia käännöksiä, jotka säilyttävät brändisi äänen
+- **CI/CD Integraatio**: Automatisoi käännöspäivitykset olemassa olevien työnkulkujesi kautta
+- **Muodot**: Käsittele mitä tahansa tiedostomuotoa laajennettavan jäsentäjämme avulla
+- **Avoin Lähdekoodi**: Pääsy, tarkastelu ja osallistuminen koodipohjaamme GitHubissa - ei mustia laatikoita, täydellinen läpinäkyvyys
 
-## Kuinka se toimii
+---
 
-1. **Asennus**: Asenna Languine CLI ja määritä projektisi yksinkertaisella aloitusprosessilla
-2. **Yhdistä**: Liitä repositoriosi ja määritä haluamasi työnkulku (CLI, API tai GitHub Action)
-3. **Käännä**: Puske lähdesisältösi ja anna Languinen hoitaa käännökset kohdekielillesi
-4. **Synkronoi**: Synkronoi automaattisesti käännetty sisältö takaisin repositoriosi ja julkaise luottavaisin mielin
+## Kuinka Se Toimii
+
+1. **Nopea Asetus**: Aloita minuuteissa intuitiivisen CLI:n ja ohjatun aloituksen avulla
+2. **Yksinkertainen Konfigurointi**: Määritä käännöstarpeesi selkeällä ja suoraviivaisella konfigurointitiedostolla
+3. **Automaattinen Käännös**: Puske sisältösi kerran ja anna Languinen hoitaa käännös automaattisesti kaikkiin kohdekieliin
+
+---
 
 ## Aloittaminen
 
-Aloittaaksesi Languinen käytön, seuraa [Asennus](/docs/installation) opasta asentaaksesi CLI:n ja luodaksesi ensimmäisen projektisi. Tarkista sitten [Nopea aloitus](/docs/quickstart) opas oppiaksesi käännösten hallinnan perusteet Languinella.
+Aloita lokalisointimatkasi [Nopea Aloitus](/docs/quickstart) -oppaamme avulla - saat ensimmäiset käännöksesi toimimaan minuuteissa.
 
-Yksityiskohtaisempaa tietoa erityisominaisuuksista ja edistyneestä käytöstä löydät kattavista dokumentaatio-osioistamme:
+Tutustu kattavaan dokumentaatioomme hallitaksesi Languinen ominaisuuksia:
 
-- [Määritykset](/docs/configuration) - Opi, kuinka määrittää Languine projektiisi
-- [CLI](/docs/cli) - Tutustu CLI-komentojen koko valikoimaan
-- [API](/docs/api) - Integroi Languine ohjelmallisesti
-- [Työnkulut](/docs/workflows) - Määritä automatisoidut käännöstyönkulut
+- [Konfigurointi](/docs/configuration) - Määritä Languine projektisi tarpeiden mukaan
+- [CLI](/docs/cli) - Hallitse tehokasta komentorivikäyttöliittymäämme
+- [Github Toiminnot](/docs/github-actions) - Automatisoi käännökset GitHub-toimintomme avulla

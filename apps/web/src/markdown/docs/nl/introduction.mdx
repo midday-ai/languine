@@ -1,80 +1,34 @@
-# Inleiding
+# Introductie
 
-Languine is een open-source lokalisatieplatform dat ontwikkelaars helpt hun applicaties te vertalen met AI-gestuurde vertalingen. Het biedt een naadloze workflow voor het beheren van vertalingen in meerdere talen, terwijl het hoge kwaliteit behoudt door middel van machine learning.
+Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en -pipeline, zodat vertalingen u nooit ophouden.
 
+Transformeer uw applicatie in enkele minuten in een meertalige ervaring. Terwijl u zich richt op het bouwen van functies, zorgt Languine voor alle aspecten van vertaling met precisie en betrouwbaarheid.
 
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-                                  ┌───────────────┐
-                                  │   Git Push    │
-                                  └───────────────┘
-                                          │
-                                          ▼
-             ┌─────────────────────────────────────────────────────────┐
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             └─────────────────────────────────────────────────────────┘
-                                          │
-                                          ▼
-                                          │
-            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-           │                              │                              │
-           ▼                              ▼                              ▼
- ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
- ║                   ║          ║                   ║          ║                   ║
- ║      Engels       ║          ║      Spaans      ║          ║      Japans      ║
- ║    Vertaling      ║          ║    Vertaling     ║          ║     Vertaling    ║
- ║                   ║          ║                   ║          ║                   ║
- ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
-           │                              │                              │
-           └──────────────────────────────┼──────────────────────────────┘
-                                          ▼
-                                  ┌───────────────┐
-                                  │     Samenvoegen│
-                                  │ Pull Request  ��
-                                  └───────────────┘
-                                          │
-                                          ▼
-                              ┌─────────────────────┐
-                              │      Voltooid       │
-                              │      (Implementeren) │
-                              └─────────────────────┘
-`}
-        </pre>
-      </div>
+---
 
 ## Belangrijkste Kenmerken
 
-- **AI-gestuurde Vertalingen**: Maak gebruik van geavanceerde machine learning-modellen om hoogwaardige vertalingen te genereren in meer dan 100 talen
-- **Git-integratie**: Synchroniseer uw vertalingen direct met uw Git-repositories en automatiseer updates via CI/CD-pijplijnen
-- **Ontwikkelaar-gericht**: Gebouwd met ontwikkelaars in gedachten, met een krachtige CLI, API en GitHub Action-integratie
-- **Aangepaste Parsers**: Ondersteuning voor verschillende bestandsformaten en de mogelijkheid om aangepaste parsers te maken voor uw specifieke behoeften
-- **Versiebeheer**: Volg wijzigingen, beheer takken en behoud de vertaalgeschiedenis
-- **Open Source**: Volledig open source en beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt
+- **Vertaalmachine**: Maak gebruik van contextbewuste, hoogwaardige vertalingen die uw merksfeer behouden
+- **CI/CD Integratie**: Automatiseer vertaalupdates via uw bestaande workflows
+- **Bestanden**: Verwerk elk bestandsformaat met ons uitbreidbare parser-systeem
+- **Open Source**: Toegang tot, inspectie van en bijdragen aan onze codebase op GitHub - geen zwarte dozen, volledige transparantie
+
+---
 
 ## Hoe Het Werkt
 
-1. **Instellen**: Installeer de Languine CLI en configureer uw project met een eenvoudig initialisatieproces
-2. **Verbinden**: Koppel uw repository en stel uw voorkeursworkflow in (CLI, API of GitHub Action)
-3. **Vertalen**: Push uw brontekst en laat Languine de vertalingen naar uw doeltalen afhandelen
-4. **Synchroniseren**: Synchroniseer automatisch de vertaalde inhoud terug naar uw repository en implementeer met vertrouwen
+1. **Snelle Setup**: Begin in enkele minuten met onze intuïtieve CLI en begeleide initialisatie
+2. **Eenvoudige Configuratie**: Definieer uw vertaalbehoeften met een duidelijk, eenvoudig configuratiebestand
+3. **Geautomatiseerde Vertaling**: Duw uw inhoud eenmaal en laat Languine automatisch de vertaling naar alle doeltalen afhandelen
+
+---
 
 ## Aan de Slag
 
-Om te beginnen met het gebruik van Languine, volg onze [Installatie](/docs/installation) gids om de CLI in te stellen en uw eerste project te maken. Bekijk vervolgens de [Quickstart](/docs/quickstart) gids om de basisprincipes van het beheren van vertalingen met Languine te leren.
+Begin uw lokalisatie-reis met onze [Quickstart](/docs/quickstart) gids - u heeft uw eerste vertalingen binnen enkele minuten draaien.
 
-Voor gedetailleerde informatie over specifieke functies en geavanceerd gebruik, verken onze uitgebreide documentatie:
+Verken onze uitgebreide documentatie om de mogelijkheden van Languine te beheersen:
 
-- [Configuratie](/docs/configuration) - Leer hoe u Languine voor uw project configureert
-- [CLI](/docs/cli) - Ontdek het volledige scala aan CLI-opdrachten
-- [API](/docs/api) - Integreer Languine programmatisch
-- [Workflows](/docs/workflows) - Stel geautomatiseerde vertaalworkflows in
+- [Configuratie](/docs/configuration) - Configureer Languine naar de behoeften van uw project
+- [CLI](/docs/cli) - Beheers onze krachtige commandoregelinterface
+- [Github Acties](/docs/github-actions) - Automatiseer vertalingen met onze Github Actie

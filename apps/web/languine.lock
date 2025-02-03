@@ -482,27 +482,27 @@ files:
   src/markdown/docs/da/introduction.mdx:
     content: a82f9713a16caf17bdd3339e4caa3156
   src/markdown/docs/de/introduction.mdx:
-    content: e2931d8a07a15aacf3bcd7e46e14a799
+    content: cc44de6c6ed3dad2491639ee5e335203
   src/markdown/docs/es/introduction.mdx:
-    content: c7901a38fc8010edc622c7a2c044b1d9
+    content: bb44a6ebb47f742230582a314252c9b0
   src/markdown/docs/fi/introduction.mdx:
-    content: 41b8dfd50f0406a4cb004e8268ce1360
+    content: 736af131e83cd1414244f0c984766c1f
   src/markdown/docs/fr/introduction.mdx:
-    content: fccf518989a3b335d3342879bef79aa6
+    content: 26b7bda9a544082fd158d8a935e53a5c
   src/markdown/docs/it/introduction.mdx:
-    content: 7a0ae3a60347c243744dace4c18d1e86
+    content: db838e29f417c45a298b1c55322e385b
   src/markdown/docs/ko/introduction.mdx:
-    content: 78bb5bb04d273043235f9a8d00cbe014
+    content: 092b6b2f35c590143bd12356e4705440
   src/markdown/docs/nl/introduction.mdx:
-    content: ba80072e9e99b5d0a301a1f2f7875b92
+    content: 1df94096aeedb263648c037532ae24ff
   src/markdown/docs/no/introduction.mdx:
-    content: 21cd641bd0dd9e6309dc9e49ab4f4962
+    content: d15b6092057070e5217cc5d71d052454
   src/markdown/docs/pl/introduction.mdx:
-    content: 8a99c10a5e00efae926643e77111c198
+    content: 773ecc1d90695a54c232b2257771e074
   src/markdown/docs/pt/introduction.mdx:
-    content: f6c38f3a89d056b06c9a6809bb5aad11
+    content: ffa4db9960608a5629fd5e23c752cfc7
   src/markdown/docs/sv/introduction.mdx:
-    content: b8ee7099b9be6988e3f2b570c7e1382a
+    content: 255b66d08d6b79284507f7e113074383
   src/markdown/docs/da/properties.mdx:
     content: b7a42ac4284a2455ebc60d81ededbe3f
   src/markdown/docs/de/properties.mdx:

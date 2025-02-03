@@ -1,80 +1,34 @@
 # Introduzione
 
-Languine è una piattaforma di localizzazione open-source che aiuta gli sviluppatori a tradurre le loro applicazioni con traduzioni supportate dall'IA. Fornisce un flusso di lavoro senza soluzione di continuità per gestire le traduzioni in più lingue mantenendo alta qualità attraverso l'apprendimento automatico.
+Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai.
 
+Trasforma la tua applicazione in un'esperienza multilingue in pochi minuti. Mentre ti concentri sulla creazione di funzionalità, Languine gestisce tutti gli aspetti della traduzione con precisione e affidabilità.
 
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-                                  ┌───────────────┐
-                                  │   Git Push    │
-                                  └───────────────┘
-                                          │
-                                          ▼
-             ┌─────────────────────────────────────────────────────────┐
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-             └─────────────────────────────────────────────────────────┘
-                                          │
-                                          ▼
-                                          │
-            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-           │                              │                              │
-           ▼                              ▼                              ▼
- ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
- ║                   ║          ║                   ║          ║                   ║
- ║      Inglese     ║          ║      Spagnolo     ║          ║      Giapponese   ║
- ║    Traduzione     ║          ║    Traduzione     ║          ║     Traduzione    ║
- ║                   ║          ║                   ║          ║                   ║
- ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
-           │                              │                              │
-           └──────────────────────────────┼──────────────────────────────┘
-                                          ▼
-                                  ┌───────────────┐
-                                  │     Unisci    │
-                                  │ Richiesta Pull│
-                                  └───────────────┘
-                                          │
-                                          ▼
-                              ┌─────────────────────┐
-                              │      Completato     │
-                              │      (Distribuisci)  │
-                              └─────────────────────┘
-`}
-        </pre>
-      </div>
+---
 
 ## Caratteristiche Principali
 
-- **Traduzioni Supportate dall'IA**: Sfrutta modelli avanzati di apprendimento automatico per generare traduzioni di alta qualità in oltre 100 lingue
-- **Integrazione con Git**: Sincronizza le tue traduzioni direttamente con i tuoi repository Git e automatizza gli aggiornamenti attraverso pipeline CI/CD
-- **Sviluppatore-First**: Costruito pensando agli sviluppatori, con un potente CLI, API e integrazione con GitHub Action
-- **Parser Personalizzati**: Supporto per vari formati di file e la possibilità di creare parser personalizzati per le tue esigenze specifiche
-- **Controllo Versioni**: Tieni traccia delle modifiche, gestisci i rami e mantieni la cronologia delle traduzioni
-- **Open Source**: Completamente open source e disponibile su GitHub, consentendo trasparenza e contributi della comunità
+- **Motore di Traduzione**: Sfrutta traduzioni di alta qualità e consapevoli del contesto che mantengono la voce del tuo marchio
+- **Integrazione CI/CD**: Automatizza gli aggiornamenti delle traduzioni attraverso i tuoi flussi di lavoro esistenti
+- **Formati**: Gestisci qualsiasi formato di file con il nostro sistema di parser estensibile
+- **Open Source**: Accedi, ispeziona e contribuisci al nostro codice su GitHub - niente scatole nere, completa trasparenza
+
+---
 
 ## Come Funziona
 
-1. **Impostazione**: Installa il CLI di Languine e configura il tuo progetto con un semplice processo di inizializzazione
-2. **Collegati**: Collega il tuo repository e imposta il tuo flusso di lavoro preferito (CLI, API o GitHub Action)
-3. **Traduci**: Invia il tuo contenuto sorgente e lascia che Languine gestisca le traduzioni nelle tue lingue target
-4. **Sincronizza**: Sincronizza automaticamente il contenuto tradotto nel tuo repository e distribuisci con fiducia
+1. **Impostazione Veloce**: Inizia in pochi minuti con il nostro CLI intuitivo e l'inizializzazione guidata
+2. **Configurazione Semplice**: Definisci le tue esigenze di traduzione con un file di configurazione chiaro e diretto
+3. **Traduzione Automatica**: Invia il tuo contenuto una sola volta e lascia che Languine gestisca automaticamente la traduzione in tutte le lingue target
+
+---
 
 ## Iniziare
 
-Per iniziare a utilizzare Languine, segui la nostra guida [Installazione](/docs/installation) per impostare il CLI e creare il tuo primo progetto. Poi, dai un'occhiata alla guida [Quickstart](/docs/quickstart) per imparare le basi della gestione delle traduzioni con Languine.
+Inizia il tuo viaggio di localizzazione con la nostra guida [Quickstart](/docs/quickstart) - avrai le tue prime traduzioni in funzione in pochi minuti.
 
-Per informazioni dettagliate su funzionalità specifiche e utilizzo avanzato, esplora le nostre sezioni di documentazione complete:
+Esplora la nostra documentazione completa per padroneggiare le capacità di Languine:
 
-- [Configurazione](/docs/configuration) - Scopri come configurare Languine per il tuo progetto
-- [CLI](/docs/cli) - Scopri l'intera gamma di comandi CLI
-- [API](/docs/api) - Integra Languine in modo programmatico
-- [Flussi di lavoro](/docs/workflows) - Imposta flussi di lavoro di traduzione automatizzati
+- [Configurazione](/docs/configuration) - Configura Languine secondo le esigenze del tuo progetto
+- [CLI](/docs/cli) - Padroneggia la nostra potente interfaccia a riga di comando
+- [Github Actions](/docs/github-actions) - Automatizza le traduzioni con la nostra Azione Github
