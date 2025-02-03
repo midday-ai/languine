@@ -1,0 +1,198 @@
+# 配置
+
+Languine 支持 TypeScript 和 JSON 配置文件来管理您的翻译设置。您可以选择 languine.config.ts 用于 TypeScript，或选择 languine.json 用于 JSON 格式。这两个文件定义了您的源语言和目标语言，以及需要翻译的文件。
+
+---
+
+## 基本配置
+
+以下是两种格式的基本示例：
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+这两种格式支持相同的配置选项。选择 TypeScript 以获得更好的类型检查和 IDE 支持，或选择 JSON 以获得简单性和更广泛的工具兼容性。
+
+让我们分解这些文件的不同部分。
+
+---
+
+## 语言环境配置
+
+语言环境部分定义了您的翻译语言：
+
+- source: 您的内容创作的主要语言（例如，"en" 表示英语）
+- targets: 您希望翻译成的语言数组（例如， ["es", "fr", "de"] 表示西班牙语、法语和德语）
+
+Languine 支持多种语言代码，包括：
+- 简单代码：en, es, fr, de
+- 区域特定代码：pt-BR, zh-CN, zh-TW
+
+## 文件配置
+
+文件部分定义了 Languine 应该翻译哪些文件。您可以配置多种文件类型和模式：
+
+---
+
+### JSON 文件
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX 文件
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### 移动平台文件
+
+对于 iOS (Xcode)：
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // 或用于传统的 .strings 文件
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+对于 Android：
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### 其他格式
+
+以下是 Languine 支持的文件格式的完整列表：
+
+- [JSON](/docs/json) - 标准 JSON 翻译文件
+- [YAML](/docs/yaml) - YAML 翻译文件
+- [Properties](/docs/properties) - Java 属性文件
+- [Android](/docs/android) - Android XML 资源文件
+- [iOS](/docs/ios) - iOS 本地化文件
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS 复数化文件
+- [iOS XCStrings](/docs/xcode-xcstrings) - 现代 Xcode 字符串目录
+- [Markdown](/docs/md) - 文档文件
+- [MDX](/docs/mdx) - 带 JSX 的文档
+- [HTML](/docs/html) - HTML 文件
+- [JavaScript](/docs/js) - JavaScript 文件
+- [TypeScript](/docs/ts) - TypeScript 文件
+- [Gettext PO](/docs/po) - GetText 翻译文件
+- [XLIFF](/docs/xliff) - XML 本地化交换文件格式
+- [CSV](/docs/csv) - 基于电子表格的翻译
+- [XML](/docs/xml) - XML 资源文件
+- [Flutter ARB](/docs/arb) - 应用程序资源包文件
+
+---
+
+## 文件模式
+
+文件模式中的 [locale] 占位符在翻译过程中会自动替换为适当的语言代码。例如：
+
+- locales/[locale].json 变为：
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+您可以为每种文件类型包含多个模式，并使用 glob 模式：
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## 项目 ID（可选）
+
+如果您使用 Languine 的云服务，您可以在配置中包含您的项目 ID：
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... 语言环境配置
+  },
+  files: {
+    // ... 文件配置
+  },
+});
+```
+
+---
+
+## 翻译状态跟踪
+
+Languine 会自动创建并维护一个 languine.lock 文件，以跟踪您的翻译状态。该文件：
+
+- 跟踪哪些内容已被翻译
+- 帮助识别源内容更改时需要更新的内容
+- 应提交到您的版本控制系统
+
+您无需手动编辑锁定文件 - Languine 会在您运行翻译命令时自动管理它。
+
+## 最佳实践
+
+1. **版本控制**：始终将 languine.config.ts 和 languine.lock 都提交到您的代码库
+2. **文件组织**：保持您的翻译文件在一致的目录结构中有序
+3. **语言代码**：使用标准语言代码以确保兼容性
+4. **模式**：使用特定的包含模式以避免翻译不必要的文件
+5. **项目 ID**：确保您的项目 ID 安全，如果您使用云服务，请不要公开分享

@@ -1,52 +1,92 @@
 # GitHub Actions
 
-Con l'azione di GitHub, puoi facilmente tradurre il tuo codice semplicemente inviando il tuo codice al repository; l'azione di GitHub tradurrà quindi le tue nuove chiavi, creando una pull request o impegnando le tue modifiche.
-Questo ti fa risparmiare molto tempo e fatica, mantenendo traduzioni di alta qualità.
+Con l'azione GitHub, puoi facilmente tradurre il tuo codice semplicemente inviando il tuo codice al repository; l'azione GitHub tradurrà quindi le tue nuove chiavi, creando una pull request o impegnando le tue modifiche.
+Questo ti fa risparmiare molto tempo e fatica mantenendo traduzioni di alta qualità.
+
+---
+
+## Installazione
+
+Per utilizzare l'azione GitHub Languine nel tuo repository, dovrai:
+
+1. Configurare i segreti del tuo repository con le tue credenziali Languine
+2. Creare un file di workflow nel tuo repository
+
+### Configurazione dei Segreti del Repository
+
+Aggiungi i seguenti segreti nelle impostazioni del tuo repository (Impostazioni > Segreti e variabili > Azioni):
+
+- `LANGUINE_API_KEY`: La tua chiave API Languine
+- `LANGUINE_PROJECT_ID`: Il tuo ID progetto Languine
+
+Puoi trovare questi valori nella tua dashboard Languine sotto Impostazioni del Progetto.
 
 
-## Workflow
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Inizio Azione     │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Configura Git &  │
-│    Credenziali      │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Controlla Modifiche│───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Modifiche]      │ [Nessuna Modifica]
-           │                  │
-┌──────────▼──────────┐       │
-│   Impegnare & Inviare│       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Crea PR          │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Fatto        │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+
+### Variabili d'Ambiente
+
+L'azione GitHub utilizza le seguenti variabili d'ambiente:
+- `LANGUINE_API_KEY` (Obbligatoria): La tua chiave API Languine per l'autenticazione
+- `LANGUINE_PROJECT_ID` (Obbligatoria): Il tuo ID progetto Languine 
+- `GITHUB_TOKEN` (Obbligatoria): Fornito automaticamente da GitHub, utilizzato per creare PR
+
+### Esempio di Workflow
+
+Crea un nuovo file .github/workflows/languine.yml nel tuo repository con il seguente contenuto:
+
+```ts title=".github/workflows/release.yml"
+name: Distribuisci Sito Web
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Azione Languine
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Questo workflow:
+- Verrà eseguito su push al ramo principale
+- Verrà eseguito su pull request al ramo principale
+- Può essere attivato manualmente dalla scheda Azioni
+- Controlla il tuo codice ed esegue il processo di traduzione Languine
+- Crea una pull request con eventuali nuove traduzioni (configurabile)
+
+#### Opzione Directory di Lavoro
+
+L'opzione `working-directory` consente di specificare dove si trovano i tuoi file di traduzione. Questo è particolarmente utile nei monorepo dove le tue traduzioni possono trovarsi in un pacchetto o in una directory specifica dell'app. Ad esempio:
+
+#### Opzione Pull Request
+
+L'opzione `create-pull-request` controlla se l'azione crea una pull request con le modifiche o le impegna direttamente nel ramo:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # crea una pull request con le modifiche
+```
+
+Quando impostato su `true`, l'azione:
+- Crea un nuovo ramo con le modifiche
+- Crea una pull request per la revisione
+- Aggiunge etichette e descrizioni appropriate
+
+Quando impostato su `false` (predefinito), l'azione:
+- Impegna le modifiche direttamente nel ramo corrente
+- Spinge le modifiche senza creare una pull request

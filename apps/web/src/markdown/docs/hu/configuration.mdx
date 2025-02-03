@@ -1,0 +1,198 @@
+# Konfiguráció
+
+A Languine támogatja a TypeScript és JSON konfigurációs fájlokat a fordítási beállítások kezelésére. Választhatja a languine.config.ts fájlt TypeScript-hez vagy a languine.json fájlt JSON formátumban. Mindkét fájl meghatározza a forrás- és célnyelvét, valamint azokat a fájlokat, amelyeket le kell fordítani.
+
+---
+
+## Alap Konfiguráció
+
+Itt van egy alap példa mindkét formátumban:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Mindkét formátum ugyanazokat a konfigurációs lehetőségeket támogatja. Válassza a TypeScript-et a jobb típusellenőrzés és IDE támogatás érdekében, vagy a JSON-t az egyszerűség és a szélesebb eszközkompatibilitás miatt.
+
+Nézzük meg a fájlok különböző szekcióit.
+
+---
+
+## Helyi Beállítások
+
+A helyi szekció meghatározza a fordítási nyelveket:
+
+- source: Az Ön elsődleges nyelve a tartalom létrehozásához (pl. "en" az angolhoz)
+- targets: A nyelvek tömbje, amelyekre le szeretné fordítani (pl. ["es", "fr", "de"] a spanyol, francia és német nyelvekhez)
+
+A Languine széles választékát támogatja a nyelvkódoknak, beleértve:
+- Egyszerű kódok: en, es, fr, de
+- Régióspecifikus kódok: pt-BR, zh-CN, zh-TW
+
+## Fájlbeállítások
+
+A fájlok szekció meghatározza, hogy mely fájlokat kell lefordítania a Languine-nak. Több fájltípus és minta konfigurálható:
+
+---
+
+### JSON Fájlok
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX Fájlok
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobil Platform Fájlok
+
+iOS (Xcode) esetén:
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Vagy a hagyományos .strings fájlokhoz
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Android esetén:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Egyéb Formátumok
+
+Itt van a Languine által támogatott fájlformátumok teljes listája:
+
+- [JSON](/docs/json) - Standard JSON fordító fájlok
+- [YAML](/docs/yaml) - YAML fordító fájlok
+- [Properties](/docs/properties) - Java properties fájlok
+- [Android](/docs/android) - Android XML erőforrás fájlok
+- [iOS](/docs/ios) - iOS lokalizációs fájlok
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS pluralizációs fájlok
+- [iOS XCStrings](/docs/xcode-xcstrings) - Modern Xcode string katalógusok
+- [Markdown](/docs/md) - Dokumentációs fájlok
+- [MDX](/docs/mdx) - Dokumentáció JSX-szel
+- [HTML](/docs/html) - HTML fájlok
+- [JavaScript](/docs/js) - JavaScript fájlok
+- [TypeScript](/docs/ts) - TypeScript fájlok
+- [Gettext PO](/docs/po) - GetText fordító fájlok
+- [XLIFF](/docs/xliff) - XML Lokalizációs Csereformátum
+- [CSV](/docs/csv) - Táblázat alapú fordítások
+- [XML](/docs/xml) - XML erőforrás fájlok
+- [Flutter ARB](/docs/arb) - Alkalmazás Erőforrás Csomag fájlok
+
+---
+
+## Fájl Minták
+
+A [locale] helyettesítő a fájl mintákban automatikusan a megfelelő nyelvkódra cserélődik a fordítás során. Például:
+
+- locales/[locale].json válik:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Több mintát is be lehet vonni minden fájltípushoz, és glob mintákat használhat:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Projekt ID (Opcionális)
+
+Ha a Languine felhőszolgáltatásait használja, beillesztheti a projekt ID-ját a konfigurációba:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... helyi beállítások
+  },
+  files: {
+    // ... fájlbeállítások
+  },
+});
+```
+
+---
+
+## Fordítási Állapot Nyomon Követése
+
+A Languine automatikusan létrehoz és karbantart egy languine.lock fájlt a fordítások állapotának nyomon követésére. Ez a fájl:
+
+- Nyomon követi, hogy mely tartalmak lettek lefordítva
+- Segít azonosítani, mi igényel frissítést, amikor a forrástartalom változik
+- El kell kötelezni a verziókezelő rendszeréhez
+
+Nincs szüksége a lock fájl manuális szerkesztésére - a Languine automatikusan kezeli, amikor fordítási parancsokat futtat.
+
+## Legjobb Gyakorlatok
+
+1. **Verziókezelés**: Mindig kötelezze el a languine.config.ts és languine.lock fájlokat a tárolójába
+2. **Fájl Szervezés**: Tartsa a fordító fájlokat rendezett módon, következetes könyvtárstruktúrában
+3. **Nyelvkódok**: Használjon standard nyelvkódokat a kompatibilitás biztosítása érdekében
+4. **Minták**: Használjon specifikus beillesztési mintákat, hogy elkerülje a szükségtelen fájlok fordítását
+5. **Projekt ID**: Tartsa biztonságban a projekt ID-ját, és ne ossza meg nyilvánosan, ha felhőszolgáltatásokat használ

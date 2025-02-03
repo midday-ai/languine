@@ -1,8 +1,93 @@
 # CLI
 
-לנגווין מספקת CLI כדי לעזור לך לתרגם את היישום שלך.
+Languine מספקת CLI כדי לעזור לך לתרגם את היישום שלך.
 
-## תרגם
+## סקירה כללית של הפקודות
 
-הפקודה `תרגם` משמשת לתרגום היישום שלך.
+### translate
+
+הפקודה `translate` משמשת לתרגום היישום שלך.
+
+```bash title="Terminal"
+# התחל לתרגם את היישום שלך
+languine translate
+
+# אפשרויות:
+#   --source-locale    ציין את השפה המקורית (ברירת מחדל: en)
+#   --target-locale    ציין את השפה(ות) היעד לתרגום
+#   --config          נתיב לקובץ languine.config.js שלך
+```
+
+### init
+
+```bash title="Terminal"
+# אתחל פרויקט חדש של Languine
+languine init
+
+# זה י:
+# - ליצור קובץ languine.config.js
+# - להקים את מבנה הפרויקט שלך
+# - לאתחל ספריות נחוצות
+```
+
+### status
+
+```bash title="Terminal"
+# בדוק את מצב התרגומים שלך
+languine status
+
+# מציג:
+# - את התקדמות התרגום הנוכחית
+# - תרגומים חסרים
+# - סטטיסטיקות תרגום
+```
+
+### validate
+
+```bash title="Terminal"
+# אמת את קבצי התרגום שלך
+languine validate
+
+# בודק:
+# - מבנה הקובץ
+# - מפתחות חסרים
+# - עקביות בפורמט
+```
+
+### export
+
+```bash title="Terminal"
+# ייצא את התרגומים שלך
+languine export
+
+# אפשרויות:
+#   --format          פורמט הייצוא (json, yaml, וכו')
+#   --output         תיקיית הפלט
+```
+
+### import
+
+```bash title="Terminal"
+# ייבא תרגומים מקבצים חיצוניים
+languine import
+
+# אפשרויות:
+#   --source         קובץ או תיקייה מקורית
+#   --format         פורמט הייבוא (json, yaml, וכו')
+```
+
+## אפשרויות גלובליות
+
+כל הפקודות תומכות באפשרויות הגלובליות הבאות:
+
+```bash title="Terminal"
+# אפשרויות גלובליות זמינות לכל הפקודות
+languine [command] [options]
+
+# אפשרויות נפוצות:
+#   --help, -h       הצג מידע עזרה
+#   --version, -v    הצג מידע על גרסה
+#   --verbose        אפשר רישום מפורט
+#   --config         ציין את נתיב קובץ ההגדרות
+```
 

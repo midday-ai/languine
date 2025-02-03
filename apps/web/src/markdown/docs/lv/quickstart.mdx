@@ -2,34 +2,59 @@
 
 Sāciet, instalējot Languine.
 
-```bash
-npm install -g @languine/cli
-```
+Pēc tam izpildiet šādu komandu, lai inicializētu Languine.
 
-Pēc tam izpildiet sekojošo komandu, lai inicializētu Languine.
-
-```bash
-languine init
+```bash title="Termināls"
+npx languine@latest init
 ```
 
 Izpildiet soļus, lai iestatītu savu projektu.
 
-## Pirmais tulkojums
+## Pirmā tulkošana
 
 Tagad esat gatavs tulkot savu kodu.
 
 Sāciet, pievienojot atslēgu savam avota failam, piemēram, ja izvēlaties izmantot `en.json` kā savu avota failu, pievienojiet tam atslēgu.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Sveiki"
+  "welcome": "Laipni lūdzam mūsu lietotnē!",
+  "user": {
+    "greeting": "Sveiki, {{name}}!",
+    "profile": {
+      "title": "Jūsu profils",
+      "edit": "Rediģēt profilu"
+    }
+  },
+  "notifications": {
+    "messages": "Jums ir {{count}} jauna(-o) ziņojums(-i).",
+    "empty": "Nav jaunu paziņojumu."
+  }
 }
+
 ```
 
-Pēc tam izpildiet sekojošo komandu, lai tulkotu savu kodu.
 
-```bash
-languine translate
+## Tulkošana
+
+Izpildiet šādu komandu, lai tulkotu savu saturu:
+
+```bash title="Termināls"
+npx languine@latest translate
 ```
 
-Mēs pēc tam tulkosim atslēgu, ko pievienojāt savām mērķa valodām.
+## Tas izdarīs:
+1. Izveidos tulkošanas failus katrai mērķa valodai
+2. Ģenerēs augstas kvalitātes tulkojumus Languine Engine
+3. Izveidos `languine.lock` failu, lai izsekotu tulkošanas stāvokļus
+
+Bloķēšanas fails palīdz Languine identificēt, kuras tulkošanas nepieciešamas atjaunināšanai, kad jūsu avota saturs mainās. Pārliecinieties, ka pievienojat šo failu savam repozitorijam.
+
+## Nākamie soļi
+
+Tagad, kad esat iestatījis Languine, jūs varat:
+- Pievienot vairāk valodu savā `languine.json` failā
+- Integrēt Languine savā CI/CD darbplūsmā
+- Izmantot mūsu API programmatiskām tulkošanām
+
+Pārbaudiet mūsu citus ceļvežus, lai uzzinātu vairāk par Languine uzlabotajām funkcijām.

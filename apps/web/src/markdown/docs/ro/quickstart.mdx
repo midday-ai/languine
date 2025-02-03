@@ -2,34 +2,59 @@
 
 Începeți prin a instala Languine.
 
-```bash
-npm install -g @languine/cli
-```
-
 Apoi, rulați următoarea comandă pentru a inițializa Languine.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Urmați pașii pentru a configura proiectul dvs.
 
 ## Prima traducere
 
-Acum sunteți gata să traduceți codul dvs.
+Acum sunteți pregătit să traduceți codul dvs.
 
 Începeți prin a adăuga o cheie în fișierul sursă, de exemplu, dacă alegeți să folosiți `en.json` ca fișier sursă, adăugați o cheie în acesta.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Bună"
+  "welcome": "Bine ați venit în aplicația noastră!",
+  "user": {
+    "greeting": "Salut, {{name}}!",
+    "profile": {
+      "title": "Profilul tău",
+      "edit": "Editează profilul"
+    }
+  },
+  "notifications": {
+    "messages": "Ai {{count}} mesaj(e) nou(e).",
+    "empty": "Nu sunt notificări noi."
+  }
 }
+
 ```
 
-Apoi rulați următoarea comandă pentru a traduce codul dvs.
 
-```bash
-languine translate
+## Traduceți
+
+Rulați următoarea comandă pentru a traduce conținutul dvs.: 
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Apoi vom traduce cheia pe care ați adăugat-o în limbile țintă.
+## Aceasta va:
+1. Crea fișiere de traducere pentru fiecare limbă țintă
+2. Genera traduceri de înaltă calitate cu Languine Engine
+3. Crea un fișier `languine.lock` pentru a urmări stările traducerii
+
+Fișierul de blocare ajută Languine să identifice ce traduceri necesită actualizări atunci când conținutul sursă se schimbă. Asigurați-vă că angajați acest fișier în depozitul dvs.
+
+## Pașii următori
+
+Acum că ați configurat Languine, puteți:
+- Adăuga mai multe limbi în fișierul dvs. `languine.json`
+- Integrați Languine în pipeline-ul dvs. CI/CD
+- Folosiți API-ul nostru pentru traduceri programatice
+
+Verificați celelalte ghiduri pentru a învăța mai multe despre caracteristicile avansate ale Languine.

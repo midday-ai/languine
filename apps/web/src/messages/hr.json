@@ -6,8 +6,8 @@
     "goToApp": "Idi na aplikaciju"
   },
   "hero": {
-    "title": "Automatizirana infrastruktura lokalizacije",
-    "description": "Prevedite sadržaj svoje aplikacije izravno u svom razvojnog tijeku. Naš CLI se integrira s GitHub Actions i drugim CI/CD alatima za automatizaciju prijevoda dok kodirate."
+    "title": "Infrastruktura lokalizacije stvorena za programere",
+    "description": "Vjerojatno ste razmišljali o lokalizaciji svoje aplikacije, ali ste oklijevali, znajući da bi to smanjilo vašu brzinu. Više ne. Languine automatizira lokalizaciju unutar vašeg radnog toka i cjevovoda programera, tako da vas prijevodi nikada ne usporavaju."
   },
   "navigation": {
     "dashboard": "Nadzorna ploča",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Započnite",
-    "title": "Automatizirana infrastruktura lokalizacije",
-    "description": "Prevedite sadržaj svoje aplikacije izravno u svom razvojnog tijeku. Naš CLI se integrira s GitHub Actions i drugim CI/CD alatima za automatizaciju prijevoda dok kodirate.",
+    "title": "Infrastruktura lokalizacije stvorena za programere",
+    "description": "Vjerojatno ste razmišljali o lokalizaciji svoje aplikacije, ali ste oklijevali, znajući da bi to smanjilo vašu brzinu. Više ne. Languine automatizira lokalizaciju unutar vašeg radnog toka i cjevovoda programera, tako da vas prijevodi nikada ne usporavaju.",
     "button": {
       "startAutomating": "Započnite automatizaciju",
       "readDocumentation": "Pročitajte dokumentaciju"

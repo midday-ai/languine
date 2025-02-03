@@ -6,8 +6,8 @@
     "goToApp": "Đi đến ứng dụng"
   },
   "hero": {
-    "title": "Hệ thống địa phương hóa tự động",
-    "description": "Dịch nội dung ứng dụng của bạn trực tiếp trong quy trình phát triển. CLI của chúng tôi tích hợp với GitHub Actions và các công cụ CI/CD khác để tự động hóa việc dịch khi bạn lập trình."
+    "title": "Hạ tầng địa phương hóa dành cho các nhà phát triển",
+    "description": "Có thể bạn đã nghĩ đến việc địa phương hóa ứng dụng của mình nhưng đã do dự, biết rằng điều đó sẽ làm giảm tốc độ của bạn. Không còn nữa. Languine tự động hóa việc địa phương hóa trong quy trình làm việc và quy trình của bạn, vì vậy các bản dịch sẽ không làm bạn chậm lại."
   },
   "navigation": {
     "dashboard": "Bảng điều khiển",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Bắt đầu",
-    "title": "Hệ thống địa phương hóa tự động",
-    "description": "Dịch nội dung ứng dụng của bạn trực tiếp trong quy trình phát triển. CLI của chúng tôi tích hợp với GitHub Actions và các công cụ CI/CD khác để tự động hóa việc dịch khi bạn lập trình.",
+    "title": "Hạ tầng địa phương hóa dành cho các nhà phát triển",
+    "description": "Có thể bạn đã nghĩ đến việc địa phương hóa ứng dụng của mình nhưng đã do dự, biết rằng điều đó sẽ làm giảm tốc độ của bạn. Không còn nữa. Languine tự động hóa việc địa phương hóa trong quy trình làm việc và quy trình của bạn, vì vậy các bản dịch sẽ không làm bạn chậm lại.",
     "button": {
       "startAutomating": "Bắt đầu tự động hóa",
       "readDocumentation": "Đọc tài liệu"

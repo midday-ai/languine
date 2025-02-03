@@ -1,3 +1,97 @@
 # CI/CD
 
 Languine nodrošina CI/CD integrāciju, lai palīdzētu jums tulkot jūsu lietojumprogrammu.
+
+---
+
+## Kā tas darbojas
+
+CI/CD darba plūsma Languine seko strukturētam procesam, lai automatizētu tulkojumu atjauninājumus jūsu lietojumprogrammā:
+
+### 1. Darbības inicializācija
+- Darba plūsma sākas, kad tiek aktivizēta darbība
+- Iestata nepieciešamo Git konfigurāciju un akreditācijas datus
+
+### 2. Languine dzinēja apstrāde
+- Languine dzinējs apstrādā jūsu lietojumprogrammas saturu
+- Veic tulkojumu uzdevumus, izmantojot konfigurētās iestatījumus
+
+### 3. Izmaiņu noteikšana
+Sistēma pārbauda, vai ir kādas tulkojumu izmaiņas, un seko vienai no divām ceļiem:
+
+**Kad tiek atrastas izmaiņas:**
+- Izmaiņas tiek apstiprinātas repozitorijā
+- Izmaiņas tiek nosūtītas uz norādīto zaru
+- Tiek izveidots Pull Request (PR)
+
+**Kad nav atrastas izmaiņas:**
+- Darba plūsma pabeidzas, neveidojot PR
+
+### 4. Pull Request izveide
+Kad tiek noteiktas izmaiņas, tiek izveidots Pull Request ar:
+
+**PR saturs:**
+- Skaidrs nosaukums, kas norāda uz tulkojumu atjauninājumiem
+- Detalizēts izmaiņu apraksts
+- Kvalitātes pārbaudes apstiprinājumi
+- Norādījumi pārskatīšanai
+- Saites uz dokumentāciju un atbalstu
+
+**PR apraksts ietver:**
+- Tulkojumu atjauninājumu kopsavilkums
+- Izmaiņu saraksts (atjauninātie tulkojumi, terminoloģijas konsekvence)
+- Nākamie soļi pārskatītājiem
+- Saites uz dokumentāciju un atbalsta resursiem
+
+---
+
+## Darba plūsmas diagramma
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Darbība sākas     │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Iestatīt Git &   │
+                    │    Akreditācijas    │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine dzinējs ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Pārbaudīt izmaiņas │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Izmaiņas]        │ [Nav izmaiņu]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Apstiprināt &     │       │
+                    │       Nosūtīt      │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Izveidot PR      │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Pabeigts     │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Darba plūsma ir izstrādāta, lai būtu automatizēta, vienlaikus ļaujot cilvēku pārskatīšanai un kvalitātes kontrolei pirms izmaiņu apvienošanas jūsu kodu bāzē. Tā saglabā versiju kontroles labākās prakses un nodrošina, ka tulkojumi tiek pareizi izsekoti un dokumentēti caur Git vēsturi.

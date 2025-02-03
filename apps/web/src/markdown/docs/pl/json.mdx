@@ -1,3 +1,41 @@
 # JSON
 
-Languine obsługuje pliki JSON.
+Languine obsługuje pliki JSON jako format źródłowy z powszechnymi wymaganiami dotyczącymi pluralizacji i interpolacji. Format ten jest używany w wielu frameworkach, takich jak React, Vue, Ruby on Rails i innych.
+
+
+---
+
+
+## Konfiguracja
+
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json lub languine.ts w głównym katalogu projektu. Oto przykład:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Tłumaczenie
+
+Po ustawieniu konfiguracji uruchom:
+
+```bash
+npx languine@latest translate
+```
+
+Kiedy uruchomisz to polecenie, Languine:
+
+- Załaduje twój źródłowy plik JSON (np. locales/en.json)
+- Wykryje nowe lub zmodyfikowane ciągi tłumaczeń
+- Wygeneruje tłumaczenia dla twoich docelowych języków
+- Utworzy lub zaktualizuje pliki JSON dla języków docelowych (np. locales/sv.json, locales/de.json, locales/fr.json)

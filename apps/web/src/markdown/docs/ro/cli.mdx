@@ -2,7 +2,92 @@
 
 Languine oferă un CLI pentru a te ajuta să traduci aplicația ta.
 
-## translate
+## Prezentare generală a comenzilor
+
+### translate
 
 Comanda `translate` este utilizată pentru a traduce aplicația ta.
+
+```bash title="Terminal"
+# Începe traducerea aplicației tale
+languine translate
+
+# Opțiuni:
+#   --source-locale    Specifică limba sursă (implicit: en)
+#   --target-locale    Specifică limba(e) țintă pentru traducere
+#   --config          Calea către fișierul tău languine.config.js
+```
+
+### init
+
+```bash title="Terminal"
+# Inițiază un nou proiect Languine
+languine init
+
+# Aceasta va:
+# - Crea un fișier languine.config.js
+# - Configura structura proiectului tău
+# - Inițiază directoarele necesare
+```
+
+### status
+
+```bash title="Terminal"
+# Verifică starea traducerilor tale
+languine status
+
+# Afișează:
+# - Progresul actual al traducerii
+# - Traduceri lipsă
+# - Statistici despre traduceri
+```
+
+### validate
+
+```bash title="Terminal"
+# Validare fișierele tale de traducere
+languine validate
+
+# Verifică:
+# - Structura fișierului
+# - Chei lipsă
+# - Consistența formatului
+```
+
+### export
+
+```bash title="Terminal"
+# Exportă traducerile tale
+languine export
+
+# Opțiuni:
+#   --format          Format de export (json, yaml, etc.)
+#   --output         Director de ieșire
+```
+
+### import
+
+```bash title="Terminal"
+# Importă traduceri din fișiere externe
+languine import
+
+# Opțiuni:
+#   --source         Fișier sau director sursă
+#   --format         Format de import (json, yaml, etc.)
+```
+
+## Opțiuni globale
+
+Toate comenzile suportă următoarele opțiuni globale:
+
+```bash title="Terminal"
+# Opțiuni globale disponibile pentru toate comenzile
+languine [comandă] [opțiuni]
+
+# Opțiuni comune:
+#   --help, -h       Afișează informații de ajutor
+#   --version, -v    Afișează informații despre versiune
+#   --verbose        Activează logarea detaliată
+#   --config         Specifică calea fișierului de configurare
+```
 

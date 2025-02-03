@@ -6,8 +6,8 @@
     "goToApp": "前往應用程式"
   },
   "hero": {
-    "title": "自動化本地化基礎設施",
-    "description": "直接在開發工作流程中翻譯您的應用內容。我們的 CLI 與 GitHub Actions 和其他 CI/CD 工具集成，隨著您的編碼自動化翻譯。"
+    "title": "為開發者打造的本地化基礎設施",
+    "description": "您可能曾考慮過本地化您的應用程式，但因為知道這會降低您的開發速度而猶豫不決。現在不必再擔心了。Languine 在您的開發工作流程和管道中自動化本地化，讓翻譯不再成為您的障礙。"
   },
   "navigation": {
     "dashboard": "儀表板",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "開始使用",
-    "title": "自動化本地化基礎設施",
-    "description": "直接在開發工作流程中翻譯您的應用內容。我們的 CLI 與 GitHub Actions 和其他 CI/CD 工具集成，隨著您的編碼自動化翻譯。",
+    "title": "為開發者打造的本地化基礎設施",
+    "description": "您可能曾考慮過本地化您的應用程式，但因為知道這會降低您的開發速度而猶豫不決。現在不必再擔心了。Languine 在您的開發工作流程和管道中自動化本地化，讓翻譯不再成為您的障礙。",
     "button": {
       "startAutomating": "開始自動化",
       "readDocumentation": "閱讀文件"

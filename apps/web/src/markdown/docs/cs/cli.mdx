@@ -2,7 +2,92 @@
 
 Languine poskytuje CLI, které vám pomůže přeložit vaši aplikaci.
 
-## translate
+## Přehled příkazů
+
+### translate
 
 Příkaz `translate` se používá k překladu vaší aplikace.
+
+```bash title="Terminál"
+# Spustit překlad vaší aplikace
+languine translate
+
+# Možnosti:
+#   --source-locale    Určete zdrojovou lokalitu (výchozí: en)
+#   --target-locale    Určete cílovou lokalitu(y), do které chcete překládat
+#   --config          Cesta k vašemu souboru languine.config.js
+```
+
+### init
+
+```bash title="Terminál"
+# Inicializovat nový projekt Languine
+languine init
+
+# To provede:
+# - Vytvoří soubor languine.config.js
+# - Nastaví strukturu vašeho projektu
+# - Inicializuje potřebné adresáře
+```
+
+### status
+
+```bash title="Terminál"
+# Zkontrolovat stav vašich překladů
+languine status
+
+# Zobrazuje:
+# - Aktuální pokrok v překladu
+# - Chybějící překlady
+# - Statistika překladu
+```
+
+### validate
+
+```bash title="Terminál"
+# Ověřit vaše překladové soubory
+languine validate
+
+# Kontroluje:
+# - Strukturu souboru
+# - Chybějící klíče
+# - Konzistenci formátu
+```
+
+### export
+
+```bash title="Terminál"
+# Exportovat vaše překlady
+languine export
+
+# Možnosti:
+#   --format          Formát exportu (json, yaml, atd.)
+#   --output         Výstupní adresář
+```
+
+### import
+
+```bash title="Terminál"
+# Importovat překlady z externích souborů
+languine import
+
+# Možnosti:
+#   --source         Zdrojový soubor nebo adresář
+#   --format         Formát importu (json, yaml, atd.)
+```
+
+## Globální možnosti
+
+Všechny příkazy podporují následující globální možnosti:
+
+```bash title="Terminál"
+# Globální možnosti dostupné pro všechny příkazy
+languine [příkaz] [možnosti]
+
+# Běžné možnosti:
+#   --help, -h       Zobrazit informace o nápovědě
+#   --version, -v    Zobrazit informace o verzi
+#   --verbose        Povolit podrobné protokolování
+#   --config         Určete cestu k souboru s konfigurací
+```
 

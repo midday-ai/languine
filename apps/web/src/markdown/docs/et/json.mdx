@@ -1,3 +1,41 @@
 # JSON
 
-Languine toetab JSON-faile.
+Languine toetab JSON-faile allika formaadina, millel on tavalised nõuded pluraliseerimise ja interpolatsiooni jaoks. Seda formaati kasutatakse paljudes raamistikedes, nagu React, Vue, Ruby on Rails ja muudes.
+
+
+---
+
+
+## Seadistamine
+
+Esiteks veenduge, et teie projekti juurkataloogis on languine.json või languine.ts konfiguratsioonifail. Siin on näide:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Tõlkimine
+
+Kui teie konfiguratsioon on seadistatud, käivitage:
+
+```bash
+npx languine@latest translate
+```
+
+Kui käivitate selle käsu, teeb Languine järgmist:
+
+- Laadib teie allika JSON-faili (nt locales/en.json)
+- Tuvastab kõik uued või muudetud tõlke stringid
+- Genereerib tõlked teie sihtkeeltele
+- Loob või uuendab sihtkeele JSON-faile (nt locales/sv.json, locales/de.json, locales/fr.json)

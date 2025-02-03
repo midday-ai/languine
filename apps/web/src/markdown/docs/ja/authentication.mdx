@@ -1,0 +1,48 @@
+# 認証
+
+Languineを使用するには、私たちのエンジンで認証する必要があります。始めるのに数秒しかかかりません。
+
+---
+
+## サインイン
+
+[Languineダッシュボード](https://languine.ai/login)で直接サインインするか、次のコマンドを実行できます:
+
+```bash title="ターミナル"
+npx languine@latest auth login
+```
+
+
+すでにアカウントをお持ちの場合は、自動的にサインインされ、セッションがあなたのマシンに保存されます。
+
+---
+
+## サインアウト
+
+次のコマンドを実行することでサインアウトできます:
+
+```bash title="ターミナル"
+npx languine@latest auth logout
+```
+
+---
+
+## ユーザーセッション
+
+次のコマンドを実行することでサインインしているか確認できます:
+
+```bash title="ターミナル"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# 環境変数
+
+Languineを設定するために、次の環境変数を設定できます:
+
+- `LANGUINE_API_KEY`: 認証に使用するAPIキー。
+- `LANGUINE_PROJECT_ID`: プロジェクトに使用するプロジェクトID。
+
+これらは[Languineダッシュボード](https://languine.ai/login)で見つけることができます。

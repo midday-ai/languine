@@ -6,8 +6,8 @@
     "goToApp": "Zur App gehen"
   },
   "hero": {
-    "title": "Automatisierte Lokalisierungsinfrastruktur",
-    "description": "Übersetzen Sie den Inhalt Ihrer App direkt in Ihrem Entwicklungsworkflow. Unser CLI integriert sich mit GitHub Actions und anderen CI/CD-Tools, um Übersetzungen während des Codierens zu automatisieren."
+    "title": "Lokalisierungsinfrastruktur für Entwickler",
+    "description": "Wahrscheinlich haben Sie darüber nachgedacht, Ihre App zu lokalisieren, aber gezögert, da Sie wussten, dass dies Ihre Geschwindigkeit verringern würde. Nicht mehr. Languine automatisiert die Lokalisierung in Ihrem Entwickler-Workflow und Ihrer Pipeline, sodass Übersetzungen Sie nie aufhalten."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Loslegen",
-    "title": "Automatisierte Lokalisierungsinfrastruktur",
-    "description": "Übersetzen Sie den Inhalt Ihrer App direkt in Ihrem Entwicklungsworkflow. Unser CLI integriert sich mit GitHub Actions und anderen CI/CD-Tools, um Übersetzungen während des Codierens zu automatisieren.",
+    "title": "Lokalisierungsinfrastruktur für Entwickler",
+    "description": "Wahrscheinlich haben Sie darüber nachgedacht, Ihre App zu lokalisieren, aber gezögert, da Sie wussten, dass dies Ihre Geschwindigkeit verringern würde. Nicht mehr. Languine automatisiert die Lokalisierung in Ihrem Entwickler-Workflow und Ihrer Pipeline, sodass Übersetzungen Sie nie aufhalten.",
     "button": {
       "startAutomating": "Automatisierung starten",
       "readDocumentation": "Dokumentation lesen"

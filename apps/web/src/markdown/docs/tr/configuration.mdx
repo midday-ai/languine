@@ -1,0 +1,198 @@
+# Yapılandırma
+
+Languine, çeviri ayarlarınızı yönetmek için hem TypeScript hem de JSON yapılandırma dosyalarını destekler. TypeScript için languine.config.ts veya JSON formatı için languine.json dosyasını seçebilirsiniz. Her iki dosya da kaynak ve hedef dillerinizi, ayrıca çevrilmesi gereken dosyaları tanımlar.
+
+---
+
+## Temel Yapılandırma
+
+Her iki formatta da temel bir örnek:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Her iki format da aynı yapılandırma seçeneklerini destekler. Daha iyi tür kontrolü ve IDE desteği için TypeScript'i, basitlik ve daha geniş araç uyumluluğu için JSON'u seçin.
+
+Bu dosyaların farklı bölümlerini inceleyelim.
+
+---
+
+## Yerel Ayar Yapılandırması
+
+Yerel ayar bölümü, çeviri dillerinizi tanımlar:
+
+- source: İçerik oluşturma için birincil diliniz (örneğin, "en" İngilizce için)
+- targets: Çevirmek istediğiniz dillerin bir dizisi (örneğin, ["es", "fr", "de"] İspanyolca, Fransızca ve Almanca için)
+
+Languine, aşağıdakiler de dahil olmak üzere geniş bir dil kodu yelpazesini destekler:
+- Basit kodlar: en, es, fr, de
+- Bölgeye özgü kodlar: pt-BR, zh-CN, zh-TW
+
+## Dosya Yapılandırması
+
+Dosyalar bölümü, Languine'in hangi dosyaları çevirmesi gerektiğini tanımlar. Birden fazla dosya türü ve deseni yapılandırabilirsiniz:
+
+---
+
+### JSON Dosyaları
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX Dosyaları
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobil Platform Dosyaları
+
+iOS (Xcode) için:
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Geleneksel .strings dosyaları için
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Android için:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Diğer Formatlar
+
+Languine tarafından desteklenen dosya formatlarının tam listesi:
+
+- [JSON](/docs/json) - Standart JSON çeviri dosyaları
+- [YAML](/docs/yaml) - YAML çeviri dosyaları
+- [Properties](/docs/properties) - Java özellik dosyaları
+- [Android](/docs/android) - Android XML kaynak dosyaları
+- [iOS](/docs/ios) - iOS yerelleştirme dosyaları
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS çoğullama dosyaları
+- [iOS XCStrings](/docs/xcode-xcstrings) - Modern Xcode dize katalogları
+- [Markdown](/docs/md) - Dokümantasyon dosyaları
+- [MDX](/docs/mdx) - JSX ile dokümantasyon
+- [HTML](/docs/html) - HTML dosyaları
+- [JavaScript](/docs/js) - JavaScript dosyaları
+- [TypeScript](/docs/ts) - TypeScript dosyaları
+- [Gettext PO](/docs/po) - GetText çeviri dosyaları
+- [XLIFF](/docs/xliff) - XML Yerelleştirme Değişim Dosya Formatı
+- [CSV](/docs/csv) - Elektronik tablo tabanlı çeviriler
+- [XML](/docs/xml) - XML kaynak dosyaları
+- [Flutter ARB](/docs/arb) - Uygulama Kaynak Paketi dosyaları
+
+---
+
+## Dosya Desenleri
+
+Dosya desenlerindeki [locale] yer tutucu, çeviri sırasında uygun dil kodu ile otomatik olarak değiştirilir. Örneğin:
+
+- locales/[locale].json şu hale gelir:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Her dosya türü için birden fazla deseni dahil edebilir ve glob desenlerini kullanabilirsiniz:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Proje Kimliği (Opsiyonel)
+
+Eğer Languine'in bulut hizmetlerini kullanıyorsanız, yapılandırmaya proje kimliğinizi ekleyebilirsiniz:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... yerel ayar yapılandırması
+  },
+  files: {
+    // ... dosya yapılandırması
+  },
+});
+```
+
+---
+
+## Çeviri Durum Takibi
+
+Languine, çevirilerinizin durumunu takip etmek için otomatik olarak bir languine.lock dosyası oluşturur ve sürdürür. Bu dosya:
+
+- Hangi içeriğin çevrildiğini takip eder
+- Kaynak içerik değiştiğinde güncellenmesi gerekenleri belirlemeye yardımcı olur
+- Sürüm kontrol sisteminize eklenmelidir
+
+Kilitleme dosyasını manuel olarak düzenlemenize gerek yoktur - Languine, çeviri komutlarını çalıştırdığınızda bunu otomatik olarak yönetir.
+
+## En İyi Uygulamalar
+
+1. **Sürüm Kontrolü**: Hem languine.config.ts hem de languine.lock dosyalarını her zaman deposuna ekleyin
+2. **Dosya Organizasyonu**: Çeviri dosyalarınızı tutarlı bir dizin yapısında düzenli tutun
+3. **Dil Kodları**: Uyumluluğu sağlamak için standart dil kodları kullanın
+4. **Desenler**: Gereksiz dosyaların çevrilmesini önlemek için belirli dahil etme desenleri kullanın
+5. **Proje Kimliği**: Proje kimliğinizi güvende tutun ve bulut hizmetlerini kullanıyorsanız bunu halka açık olarak paylaşmayın

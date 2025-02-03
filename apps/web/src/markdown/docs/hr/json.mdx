@@ -1,3 +1,41 @@
 # JSON
 
-Languine podržava JSON datoteke.
+Languine podržava JSON datoteke kao izvorni format s uobičajenim zahtjevima za pluralizaciju i interpolaciju. Ovaj format se koristi u mnogim okvirima poput Reacta, Vuea, Ruby on Railsa i drugih.
+
+
+---
+
+
+## Postavljanje
+
+Prvo, pobrinite se da imate languine.json ili languine.ts konfiguracijsku datoteku u korijenu vašeg projekta. Evo primjera:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Prevođenje
+
+S vašom konfiguracijom postavljenom, pokrenite:
+
+```bash
+npx languine@latest translate
+```
+
+Kada pokrenete ovu naredbu, Languine će:
+
+- Učitati vašu izvorno JSON datoteku (npr., locales/en.json)
+- Otkrivati nove ili izmijenjene prijevode
+- Generirati prijevode za vaše ciljne jezike
+- Kreirati ili ažurirati JSON datoteke za ciljne jezike (npr., locales/sv.json, locales/de.json, locales/fr.json)

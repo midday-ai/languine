@@ -12,10 +12,13 @@ export function Hero() {
 
   return (
     <div className="py-12 md:py-28 flex flex-col lg:flex-row gap-12 justify-between items-center">
-      <div className="lg:max-w-lg space-y-8 w-full">
+      <div className="lg:max-w-[590px] space-y-8 w-full">
         <h1 className="xl:text-4xl text-3xl">{t("title")}</h1>
         <p className="text-secondary text-sm">{t("description")}</p>
-        <CopyInstall />
+
+        <div className="lg:max-w-[480px]">
+          <CopyInstall />
+        </div>
 
         <div className="flex items-center gap-8">
           <Link href="/login" className="text-sm text-secondary underline">
@@ -23,7 +26,7 @@ export function Hero() {
           </Link>
 
           <Link
-            href="https://git.new/languine"
+            href="/docs"
             className="hidden md:block text-sm text-secondary underline"
           >
             <OutlinedButton variant="secondary">

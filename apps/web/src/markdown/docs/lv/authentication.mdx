@@ -1,0 +1,48 @@
+# Autentifikācija
+
+Lai izmantotu Languine, jums jāautentificējas ar mūsu dzinēju, tas aizņem tikai dažas sekundes, lai sāktu.
+
+---
+
+## Pieteikties
+
+Jūs varat pieteikties tieši [Languine informācijas panelī](https://languine.ai/login) vai izpildīt sekojošo komandu:
+
+```bash title="Termināls"
+npx languine@latest auth login
+```
+
+
+Ja jums jau ir konts, jūs automātiski pieteiksieties, un sesija tiks saglabāta jūsu ierīcē.
+
+---
+
+## Iziet
+
+Jūs varat iziet, izpildot sekojošo komandu:
+
+```bash title="Termināls"
+npx languine@latest auth logout
+```
+
+---
+
+## Lietotāja sesija
+
+Jūs varat pārbaudīt, vai esat pieteicies, izpildot sekojošo komandu:
+
+```bash title="Termināls"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# Vides mainīgie
+
+Jūs varat iestatīt sekojošos vides mainīgos, lai konfigurētu Languine:
+
+- `LANGUINE_API_KEY`: API atslēga, ko izmantot autentifikācijai.
+- `LANGUINE_PROJECT_ID`: projekta ID, ko izmantot projektam.
+
+Jūs tos atradīsiet [Languine informācijas panelī](https://languine.ai/login).

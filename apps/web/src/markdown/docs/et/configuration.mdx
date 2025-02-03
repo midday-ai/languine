@@ -1,0 +1,198 @@
+# Konfiguratsioon
+
+Languine toetab nii TypeScripti kui ka JSON konfiguratsioonifaile, et hallata teie tõlke seadistust. Saate valida kas languine.config.ts TypeScripti jaoks või languine.json JSON formaadi jaoks. Mõlemad failid määratlevad teie lähte- ja sihtkeeled ning failid, mis tuleb tõlkida.
+
+---
+
+## Põhik konfiguratsioon
+
+Siin on põhi näide mõlemas formaadis:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Mõlemad formaadid toetavad samu konfiguratsiooni valikuid. Valige TypeScript parema tüübikontrolli ja IDE toe jaoks või JSON lihtsuse ja laiemate tööriistade ühilduvuse jaoks.
+
+Lähme läbi nende failide erinevad osad.
+
+---
+
+## Kohalik konfiguratsioon
+
+Kohaliku osa määratleb teie tõlke keeled:
+
+- source: Teie peamine keel sisu loomisel (nt "en" inglise keeles)
+- targets: Keelede massiiv, kuhu soovite tõlkida (nt ["es", "fr", "de"] hispaania, prantsuse ja saksa keeles)
+
+Languine toetab laia valikut keelekoode, sealhulgas:
+- Lihtsad koodid: en, es, fr, de
+- Piirkondlikud koodid: pt-BR, zh-CN, zh-TW
+
+## Faili konfiguratsioon
+
+Failide osa määratleb, milliseid faile Languine peaks tõlkima. Saate konfigureerida mitmeid failitüüpe ja mustreid:
+
+---
+
+### JSON failid
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX failid
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobiiliplatvormi failid
+
+iOS (Xcode) jaoks:
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Või traditsiooniliste .strings failide jaoks
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Androidi jaoks:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Muud formaadid
+
+Siin on täielik nimekiri Languine toetatud failiformaatidest:
+
+- [JSON](/docs/json) - Standard JSON tõlke failid
+- [YAML](/docs/yaml) - YAML tõlke failid
+- [Properties](/docs/properties) - Java omaduste failid
+- [Android](/docs/android) - Android XML ressursifailid
+- [iOS](/docs/ios) - iOS lokaliseerimisfailid
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS pluraliseerimise failid
+- [iOS XCStrings](/docs/xcode-xcstrings) - Kaasaegsed Xcode string kataloogid
+- [Markdown](/docs/md) - Dokumentatsioonifailid
+- [MDX](/docs/mdx) - Dokumentatsioon JSX-iga
+- [HTML](/docs/html) - HTML failid
+- [JavaScript](/docs/js) - JavaScript failid
+- [TypeScript](/docs/ts) - TypeScript failid
+- [Gettext PO](/docs/po) - GetText tõlke failid
+- [XLIFF](/docs/xliff) - XML lokaliseerimise vahetusfaili formaat
+- [CSV](/docs/csv) - Tabelipõhised tõlked
+- [XML](/docs/xml) - XML ressursifailid
+- [Flutter ARB](/docs/arb) - Rakenduse ressursipaketi failid
+
+---
+
+## Faili mustrid
+
+[locale] kohandaja failimustrites asendatakse automaatselt sobiva keelekoodiga tõlke ajal. Näiteks:
+
+- locales/[locale].json muutub:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Saate lisada mitmeid mustreid iga failitüübi jaoks ja kasutada glob mustreid:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Projekti ID (valikuline)
+
+Kui kasutate Languine'i pilveteenuseid, saate oma projekti ID lisada konfiguratsiooni:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... kohaliku konfiguratsioon
+  },
+  files: {
+    // ... failide konfiguratsioon
+  },
+});
+```
+
+---
+
+## Tõlke oleku jälgimine
+
+Languine loob ja haldab automaatselt languine.lock faili, et jälgida teie tõlgete olekut. See fail:
+
+- Jälgib, milline sisu on tõlgitud
+- Aitab tuvastada, mida tuleb uuendada, kui lähte sisu muutub
+- Tuleb salvestada teie versioonihaldussüsteemi
+
+Te ei pea lukufaili käsitsi redigeerima - Languine haldab seda automaatselt, kui käitate tõlke käske.
+
+## Parimad praktikad
+
+1. **Versioonihaldus**: Alati salvestage nii languine.config.ts kui ka languine.lock oma hoidlasse
+2. **Failide korraldus**: Hoidke oma tõlke failid korraldatud ühtses kaustastruktuuris
+3. **Keelekoodid**: Kasutage standardseid keelekoode, et tagada ühilduvus
+4. **Mustrid**: Kasutage spetsiifilisi kaasamustreid, et vältida mittevajalike failide tõlkimist
+5. **Projekti ID**: Hoidke oma projekti ID turvaliselt ja ärge jagage seda avalikult, kui kasutate pilveteenuseid

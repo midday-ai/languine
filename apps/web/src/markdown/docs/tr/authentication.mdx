@@ -1,0 +1,48 @@
+# Kimlik Doğrulama
+
+Languine'i kullanmak için, Motorumuzla kimlik doğrulamanız gerekiyor, başlaması sadece birkaç saniye alır.
+
+---
+
+## Giriş Yap
+
+Doğrudan [Languine Kontrol Paneli](https://languine.ai/login) üzerinden giriş yapabilir veya aşağıdaki komutu çalıştırabilirsiniz:
+
+```bash title="Terminal"
+npx languine@latest auth login
+```
+
+
+Eğer zaten bir hesabınız varsa, otomatik olarak giriş yapacak ve makinenizde bir oturum kaydedilecektir.
+
+---
+
+## Çıkış Yap
+
+Aşağıdaki komutu çalıştırarak çıkış yapabilirsiniz:
+
+```bash title="Terminal"
+npx languine@latest auth logout
+```
+
+---
+
+## Kullanıcı Oturumu
+
+Giriş yapıp yapmadığınızı kontrol etmek için aşağıdaki komutu çalıştırabilirsiniz:
+
+```bash title="Terminal"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# Ortam Değişkenleri
+
+Languine'i yapılandırmak için aşağıdaki ortam değişkenlerini ayarlayabilirsiniz:
+
+- `LANGUINE_API_KEY`: Kimlik doğrulama için kullanılacak API anahtarı.
+- `LANGUINE_PROJECT_ID`: Proje için kullanılacak proje kimliği.
+
+Bunları [Languine Kontrol Paneli](https://languine.ai/login) içinde bulabilirsiniz.

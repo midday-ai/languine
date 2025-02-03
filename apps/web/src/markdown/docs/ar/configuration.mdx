@@ -1,0 +1,198 @@
+# التكوين
+
+يدعم Languine كل من ملفات تكوين TypeScript و JSON لإدارة إعدادات الترجمة الخاصة بك. يمكنك اختيار إما languine.config.ts لـ TypeScript أو languine.json لتنسيق JSON. كلا الملفين يحدد لغات المصدر والهدف، بالإضافة إلى الملفات التي تحتاج إلى ترجمة.
+
+---
+
+## التكوين الأساسي
+
+إليك مثال أساسي في كلا التنسيقين:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+يدعم كلا التنسيقين نفس خيارات التكوين. اختر TypeScript للحصول على فحص نوع أفضل ودعم IDE، أو JSON للبساطة وتوافق أدوات أوسع.
+
+دعنا نفصل الأقسام المختلفة لهذه الملفات.
+
+---
+
+## تكوين اللغة
+
+يحدد قسم اللغة لغات الترجمة الخاصة بك:
+
+- source: لغتك الأساسية لإنشاء المحتوى (على سبيل المثال، "en" للإنجليزية)
+- targets: مصفوفة من اللغات التي تريد الترجمة إليها (على سبيل المثال، ["es", "fr", "de"] للإسبانية، الفرنسية، والألمانية)
+
+يدعم Languine مجموعة واسعة من رموز اللغات، بما في ذلك:
+- رموز بسيطة: en، es، fr، de
+- رموز محددة بالمنطقة: pt-BR، zh-CN، zh-TW
+
+## تكوين الملفات
+
+يحدد قسم الملفات الملفات التي يجب على Languine ترجمتها. يمكنك تكوين أنواع وأنماط ملفات متعددة:
+
+---
+
+### ملفات JSON
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### ملفات Markdown/MDX
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### ملفات منصة الهاتف المحمول
+
+لنظام iOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // أو لملفات .strings التقليدية
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+لنظام Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### تنسيقات أخرى
+
+إليك قائمة كاملة بتنسيقات الملفات المدعومة من قبل Languine:
+
+- [JSON](/docs/json) - ملفات ترجمة JSON القياسية
+- [YAML](/docs/yaml) - ملفات ترجمة YAML
+- [Properties](/docs/properties) - ملفات خصائص Java
+- [Android](/docs/android) - ملفات موارد XML لنظام Android
+- [iOS](/docs/ios) - ملفات التوطين لنظام iOS
+- [iOS Stringsdict](/docs/xcode-stringsdict) - ملفات التعددية لنظام iOS
+- [iOS XCStrings](/docs/xcode-xcstrings) - كتالوجات السلاسل الحديثة لنظام Xcode
+- [Markdown](/docs/md) - ملفات الوثائق
+- [MDX](/docs/mdx) - وثائق مع JSX
+- [HTML](/docs/html) - ملفات HTML
+- [JavaScript](/docs/js) - ملفات JavaScript
+- [TypeScript](/docs/ts) - ملفات TypeScript
+- [Gettext PO](/docs/po) - ملفات ترجمة GetText
+- [XLIFF](/docs/xliff) - تنسيق ملف تبادل التوطين XML
+- [CSV](/docs/csv) - ترجمات قائمة على جداول البيانات
+- [XML](/docs/xml) - ملفات موارد XML
+- [Flutter ARB](/docs/arb) - ملفات حزمة موارد التطبيق
+
+---
+
+## أنماط الملفات
+
+يتم استبدال عنصر [locale] النائب في أنماط الملفات تلقائيًا برمز اللغة المناسب أثناء الترجمة. على سبيل المثال:
+
+- locales/[locale].json يصبح:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+يمكنك تضمين أنماط متعددة لكل نوع ملف واستخدام أنماط glob:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## معرف المشروع (اختياري)
+
+إذا كنت تستخدم خدمات السحابة من Languine، يمكنك تضمين معرف المشروع الخاص بك في التكوين:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... تكوين اللغة
+  },
+  files: {
+    // ... تكوين الملفات
+  },
+});
+```
+
+---
+
+## تتبع حالة الترجمة
+
+ينشئ Languine تلقائيًا ويحافظ على ملف languine.lock لتتبع حالة ترجماتك. هذا الملف:
+
+- يتتبع المحتوى الذي تم ترجمته
+- يساعد في تحديد ما يحتاج إلى تحديث عندما يتغير المحتوى المصدر
+- يجب أن يتم الالتزام به في نظام التحكم في الإصدارات الخاص بك
+
+لا تحتاج إلى تعديل ملف القفل يدويًا - يديره Languine تلقائيًا عند تشغيل أوامر الترجمة.
+
+## أفضل الممارسات
+
+1. **التحكم في الإصدارات**: التزم دائمًا بكل من languine.config.ts و languine.lock في مستودعك
+2. **تنظيم الملفات**: احتفظ بملفات الترجمة الخاصة بك منظمة في هيكل دليل متسق
+3. **رموز اللغات**: استخدم رموز اللغات القياسية لضمان التوافق
+4. **الأنماط**: استخدم أنماط تضمين محددة لتجنب ترجمة الملفات غير الضرورية
+5. **معرف المشروع**: احتفظ بمعرف مشروعك آمنًا ولا تشاركه علنًا إذا كنت تستخدم خدمات السحابة

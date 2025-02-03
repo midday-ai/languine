@@ -1,52 +1,92 @@
 # GitHub Akcije
 
-Sa GitHub akcijom, možete lako prevesti svoj kod jednostavno tako što ćete ga poslati u repozitorijum, a GitHub akcija će zatim prevesti vaše nove ključeve, bilo da kreira zahtev za povlačenje ili da potvrdi vaše izmene.
-Ovo vam štedi mnogo vremena i truda dok održavate visoko kvalitetne prevode.
+Sa GitHub akcijom, možete lako prevesti svoj kod jednostavno tako što ćete ga poslati u repozitorijum, a GitHub akcija će zatim prevesti vaše nove ključeve, bilo da kreira zahtev za povlačenje ili da izvrši promene.
+Ovo vam štedi mnogo vremena i truda dok održavate visoki kvalitet prevoda.
+
+---
+
+## Instalacija
+
+Da biste koristili Languine GitHub Akciju u svom repozitorijumu, potrebno je da:
+
+1. Postavite tajne svog repozitorijuma sa svojim Languine akreditivima
+2. Kreirate datoteku radnog toka u svom repozitorijumu
+
+### Postavljanje Tajni Repozitorijuma
+
+Dodajte sledeće tajne u podešavanjima vašeg repozitorijuma (Podešavanja > Tajne i promenljive > Akcije):
+
+- `LANGUINE_API_KEY`: Vaš Languine API ključ
+- `LANGUINE_PROJECT_ID`: Vaš Languine ID projekta
+
+Ove vrednosti možete pronaći na vašem Languine kontrolnom panelu pod Podešavanjima projekta.
 
 
-## Tok rada
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Akcija počinje    │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Postavljanje Git  │
-│    i Akreditiva     │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Proveri izmene    │───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Izmene]        │ [Nema izmena]
-           │                  │
-┌──────────▼──────────┐       │
-│   Potvrdi i pošalji │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Kreiraj PR       │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Gotovo       │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+
+### Promenljive Okruženja
+
+GitHub Akcija koristi sledeće promenljive okruženja:
+- `LANGUINE_API_KEY` (Obavezno): Vaš Languine API ključ za autentifikaciju
+- `LANGUINE_PROJECT_ID` (Obavezno): Vaš Languine ID projekta 
+- `GITHUB_TOKEN` (Obavezno): Automatski obezbeđen od strane GitHub-a, koristi se za kreiranje PR-ova
+
+### Primer Radnog Toka
+
+Kreirajte novu datoteku .github/workflows/languine.yml u svom repozitorijumu sa sledećim sadržajem:
+
+```ts title=".github/workflows/release.yml"
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Akcija
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Ovaj radni tok će:
+- Raditi na slanju na glavnu granu
+- Raditi na zahtevima za povlačenje na glavnu granu
+- Može se pokrenuti ručno sa taba Akcije
+- Preuzeti vaš kod i pokrenuti Languine proces prevođenja
+- Kreirati zahtev za povlačenje sa svim novim prevodima (konfigurisano)
+
+#### Opcija Radnog Direktorijuma
+
+Opcija `working-directory` vam omogućava da odredite gde se nalaze vaši prevodilački fajlovi. Ovo je posebno korisno u monorepozitorijumima gde vaši prevodi mogu biti u određenom paketu ili direktorijumu aplikacije. Na primer:
+
+#### Opcija Zahteva za Povlačenje
+
+Opcija `create-pull-request` kontroliše da li akcija kreira zahtev za povlačenje sa izmenama ili ih direktno izvršava na grani:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # kreirati zahtev za povlačenje sa izmenama
+```
+
+Kada je postavljeno na `true`, akcija će:
+- Kreirati novu granu sa izmenama
+- Kreirati zahtev za povlačenje na pregled
+- Dodati odgovarajuće oznake i opis
+
+Kada je postavljeno na `false` (podrazumevano), akcija će:
+- Izvršiti promene direktno na trenutnoj grani
+- Pomeriti promene bez kreiranja zahteva za povlačenje

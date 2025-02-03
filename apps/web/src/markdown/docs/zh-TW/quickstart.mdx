@@ -2,14 +2,10 @@
 
 首先安裝 Languine。
 
-```bash
-npm install -g @languine/cli
-```
-
 然後，運行以下命令來初始化 Languine。
 
-```bash
-languine init
+```bash title="終端機"
+npx languine@latest init
 ```
 
 按照步驟設置您的項目。
@@ -18,18 +14,47 @@ languine init
 
 現在您已準備好翻譯您的代碼。
 
-首先在您的源文件中添加一個鍵，例如如果您選擇使用 `en.json` 作為源文件，則向其添加一個鍵。
+首先在您的源文件中添加一個鍵，例如如果您選擇使用 `en.json` 作為源文件，則在其中添加一個鍵。
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "你好"
+  "welcome": "歡迎使用我們的應用程式！",
+  "user": {
+    "greeting": "嗨，{{name}}！",
+    "profile": {
+      "title": "您的個人資料",
+      "edit": "編輯個人資料"
+    }
+  },
+  "notifications": {
+    "messages": "您有 {{count}} 梙新消息。",
+    "empty": "沒有新的通知。"
+  }
 }
+
 ```
 
-然後運行以下命令來翻譯您的代碼。
 
-```bash
-languine translate
+## 翻譯
+
+運行以下命令來翻譯您的內容：
+
+```bash title="終端機"
+npx languine@latest translate
 ```
 
-我們將翻譯您添加到目標語言的鍵。
+## 這將：
+1. 為每個目標語言創建翻譯文件
+2. 生成高質量的翻譯 Languine 引擎
+3. 創建一個 `languine.lock` 文件來跟踪翻譯狀態
+
+鎖定文件幫助 Languine 確定當您的源內容更改時哪些翻譯需要更新。請確保將此文件提交到您的代碼庫。
+
+## 下一步
+
+現在您已經設置了 Languine，您可以：
+- 在您的 `languine.json` 文件中添加更多語言
+- 將 Languine 集成到您的 CI/CD 流程中
+- 使用我們的 API 進行程式化翻譯
+
+查看我們的其他指南以了解更多有關 Languine 的高級功能。

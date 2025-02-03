@@ -1,8 +1,93 @@
 # CLI
 
-Languine fornisce un'interfaccia a riga di comando (CLI) per aiutarti a tradurre la tua applicazione.
+Languine fornisce una CLI per aiutarti a tradurre la tua applicazione.
 
-## traduci
+## Panoramica dei Comandi
 
-Il comando `traduci` viene utilizzato per tradurre la tua applicazione.
+### translate
+
+Il comando `translate` viene utilizzato per tradurre la tua applicazione.
+
+```bash title="Terminal"
+# Inizia la traduzione della tua applicazione
+languine translate
+
+# Opzioni:
+#   --source-locale    Specifica la lingua di origine (predefinito: en)
+#   --target-locale    Specifica la lingua di destinazione in cui tradurre
+#   --config          Percorso del tuo file languine.config.js
+```
+
+### init
+
+```bash title="Terminal"
+# Inizializza un nuovo progetto Languine
+languine init
+
+# Questo farà:
+# - Creare un file languine.config.js
+# - Impostare la struttura del tuo progetto
+# - Inizializzare le directory necessarie
+```
+
+### status
+
+```bash title="Terminal"
+# Controlla lo stato delle tue traduzioni
+languine status
+
+# Mostra:
+# - Progresso attuale della traduzione
+# - Traduzioni mancanti
+# - Statistiche di traduzione
+```
+
+### validate
+
+```bash title="Terminal"
+# Valida i tuoi file di traduzione
+languine validate
+
+# Controlla:
+# - Struttura del file
+# - Chiavi mancanti
+# - Coerenza del formato
+```
+
+### export
+
+```bash title="Terminal"
+# Esporta le tue traduzioni
+languine export
+
+# Opzioni:
+#   --format          Formato di esportazione (json, yaml, ecc.)
+#   --output         Directory di output
+```
+
+### import
+
+```bash title="Terminal"
+# Importa traduzioni da file esterni
+languine import
+
+# Opzioni:
+#   --source         File o directory di origine
+#   --format         Formato di importazione (json, yaml, ecc.)
+```
+
+## Opzioni Globali
+
+Tutti i comandi supportano le seguenti opzioni globali:
+
+```bash title="Terminal"
+# Opzioni globali disponibili per tutti i comandi
+languine [command] [options]
+
+# Opzioni comuni:
+#   --help, -h       Mostra informazioni di aiuto
+#   --version, -v    Mostra informazioni sulla versione
+#   --verbose        Abilita il logging dettagliato
+#   --config         Specifica il percorso del file di configurazione
+```
 
