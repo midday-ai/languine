@@ -622,5 +622,6 @@
   },
   "filter_locales": {
     "languages": "Talen"
-  }
+  },
+  "test": "Hallo van Viktor in Malmö"
 }

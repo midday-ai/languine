@@ -622,5 +622,6 @@
   },
   "filter_locales": {
     "languages": "Idiomas"
-  }
+  },
+  "test": "Hola de Viktor en Malmö"
 }

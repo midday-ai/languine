@@ -622,5 +622,6 @@
   },
   "filter_locales": {
     "languages": "Kielet"
-  }
+  },
+  "test": "Tervehdys Viktorilta Malmöstä"
 }

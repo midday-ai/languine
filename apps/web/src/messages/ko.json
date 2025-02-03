@@ -622,5 +622,6 @@
   },
   "filter_locales": {
     "languages": "언어"
-  }
+  },
+  "test": "말뫼의 빅토르가 인사합니다"
 }

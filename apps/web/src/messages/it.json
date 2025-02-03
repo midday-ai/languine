@@ -622,5 +622,6 @@
   },
   "filter_locales": {
     "languages": "Lingue"
-  }
+  },
+  "test": "Ciao da Viktor a Malmö"
 }
