@@ -54,13 +54,13 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
       title: t("ci"),
       items: [{ href: "/docs/github-actions", label: t("github-actions") }],
     },
-    {
-      title: t("presets"),
-      items: [
-        { href: "/docs/expo", label: "Expo" },
-        { href: "/docs/react-email", label: "React Email" },
-      ],
-    },
+    // {
+    //   title: t("presets"),
+    //   items: [
+    //     { href: "/docs/expo", label: "Expo" },
+    //     { href: "/docs/react-email", label: "React Email" },
+    //   ],
+    // },
     {
       title: t("formats"),
       items: [
@@ -131,15 +131,15 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
         },
       ],
     },
-    {
-      title: t("platform"),
-      items: [
-        { href: "/docs/tuning", label: t("tuning") },
-        { href: "/docs/overrides", label: t("overrides") },
-        { href: "/docs/settings", label: t("settings") },
-        { href: "/docs/team", label: t("team") },
-      ],
-    },
+    // {
+    //   title: t("platform"),
+    //   items: [
+    //     { href: "/docs/tuning", label: t("tuning") },
+    //     { href: "/docs/overrides", label: t("overrides") },
+    //     { href: "/docs/settings", label: t("settings") },
+    //     { href: "/docs/team", label: t("team") },
+    //   ],
+    // },
   ];
 
   const value = useMemo(() => {
