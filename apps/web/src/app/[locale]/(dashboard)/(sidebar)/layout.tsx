@@ -27,8 +27,6 @@ export default async function Layout({
 
   const invited = (await get("invited")) as string[];
 
-  console.log(invited);
-
   return (
     <SessionProvider session={session}>
       <TRPCProvider>
