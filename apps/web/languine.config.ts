@@ -18,8 +18,6 @@ export default defineConfig({
       "pt-BR",
       "pt",
       "sv",
-      "zh-CN",
-      "zh-TW",
     ],
   },
   files: {
