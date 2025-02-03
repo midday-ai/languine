@@ -46,8 +46,6 @@
     "title": "Características",
     "fullyOpenSource": "Totalmente de código abierto",
     "fullyOpenSourceDescription": "Nuestro código está disponible públicamente en GitHub, lo que permite transparencia y contribuciones de la comunidad.",
-    "noVendorLockIn": "Sin bloqueo de proveedor",
-    "noVendorLockInDescription": "No te obligamos a usar un servicio específico, utiliza tus propios LLMs.",
     "presetsForExpo": "Ajustes predefinidos para Expo",
     "presetsForExpoDescription": "Proporcionamos ajustes predefinidos para Expo, para que puedas comenzar rápidamente.",
     "presetForReactNative": "Ajuste predefinido para React Native",

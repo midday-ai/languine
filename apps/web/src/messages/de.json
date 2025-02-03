@@ -46,8 +46,6 @@
     "title": "Funktionen",
     "fullyOpenSource": "Vollständig Open Source",
     "fullyOpenSourceDescription": "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Beiträge der Community ermöglicht.",
-    "noVendorLockIn": "Kein Anbieter-Lock-in",
-    "noVendorLockInDescription": "Wir binden Sie nicht an einen bestimmten Dienst, verwenden Sie Ihre eigenen LLMs.",
     "presetsForExpo": "Voreinstellungen für Expo",
     "presetsForExpoDescription": "Wir bieten Voreinstellungen für Expo an, damit Sie schnell starten können.",
     "presetForReactNative": "Voreinstellung für React Native",
