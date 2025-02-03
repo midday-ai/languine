@@ -6,8 +6,8 @@
     "goToApp": "Go to app"
   },
   "hero": {
-    "title": "Automated localization infrastructure",
-    "description": "Translate your app's content directly in your development workflow. Our CLI integrates with GitHub Actions and other CI/CD tools to automate translations as you code."
+    "title": "Localization infrastructure made for developers",
+    "description": "Chances are you’ve thought about localizing your app but hesitated, knowing it would reduce your velocity. Not anymore. Languine automates localization within your developer workflow and pipeline, so translations never hold you up."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Get started",
-    "title": "Automated localization infrastructure",
-    "description": "Translate your app's content directly in your development workflow. Our CLI integrates with GitHub Actions and other CI/CD tools to automate translations as you code.",
+    "title": "Localization infrastructure made for developers",
+    "description": "Chances are you’ve thought about localizing your app but hesitated, knowing it would reduce your velocity. Not anymore. Languine automates localization within your developer workflow and pipeline, so translations never hold you up.",
     "button": {
       "startAutomating": "Start automating",
       "readDocumentation": "Read documentation"

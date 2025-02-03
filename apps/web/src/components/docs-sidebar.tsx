@@ -27,7 +27,7 @@ export function DocsSidebar() {
     <>
       <div className="md:hidden w-full mb-6">
         <Select
-          value={pathname}
+          value={currentPage?.href}
           onValueChange={(value) => router.push(value)}
           defaultValue={pathname}
         >

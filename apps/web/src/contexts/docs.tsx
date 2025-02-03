@@ -1,5 +1,6 @@
 "use client";
 
+import { PackageManagerProvider } from "@/components/package-manager-context";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { createContext, useContext, useMemo } from "react";
@@ -173,7 +174,11 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
     };
   }, [sections, pathname]);
 
-  return <DocsContext.Provider value={value}>{children}</DocsContext.Provider>;
+  return (
+    <DocsContext.Provider value={value}>
+      <PackageManagerProvider>{children}</PackageManagerProvider>
+    </DocsContext.Provider>
+  );
 }
 
 export function useDocs() {
