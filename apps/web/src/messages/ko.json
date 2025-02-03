@@ -622,5 +622,13 @@
   },
   "filter_locales": {
     "languages": "언어"
+  },
+  "plan_settings": {
+    "translationKeys": "번역 키",
+    "documents": "문서",
+    "languages": "언어",
+    "keysUsed": "사용된 키",
+    "documentsUsed": "사용된 문서",
+    "languagesUsed": "사용된 언어"
   }
 }

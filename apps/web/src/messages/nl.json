@@ -622,5 +622,13 @@
   },
   "filter_locales": {
     "languages": "Talen"
+  },
+  "plan_settings": {
+    "translationKeys": "Vertaal Sleutels",
+    "documents": "Documenten",
+    "languages": "Talen",
+    "keysUsed": "gebruikte sleutels",
+    "documentsUsed": "gebruikte documenten",
+    "languagesUsed": "gebruikte talen"
   }
 }

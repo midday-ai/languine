@@ -622,5 +622,13 @@
   },
   "filter_locales": {
     "languages": "Kielet"
+  },
+  "plan_settings": {
+    "translationKeys": "Käännöksen avaimet",
+    "documents": "Asiakirjat",
+    "languages": "Kielet",
+    "keysUsed": "käytetyt avaimet",
+    "documentsUsed": "käytetyt asiakirjat",
+    "languagesUsed": "käytetyt kielet"
   }
 }

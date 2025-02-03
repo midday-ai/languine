@@ -622,5 +622,13 @@
   },
   "filter_locales": {
     "languages": "Idiomas"
+  },
+  "plan_settings": {
+    "translationKeys": "Chaves de Tradução",
+    "documents": "Documentos",
+    "languages": "Idiomas",
+    "keysUsed": "chaves usadas",
+    "documentsUsed": "documentos usados",
+    "languagesUsed": "idiomas usados"
   }
 }

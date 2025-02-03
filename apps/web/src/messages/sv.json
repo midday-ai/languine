@@ -622,5 +622,13 @@
   },
   "filter_locales": {
     "languages": "Språk"
+  },
+  "plan_settings": {
+    "translationKeys": "Översättningsnycklar",
+    "documents": "Dokument",
+    "languages": "Språk",
+    "keysUsed": "använda nycklar",
+    "documentsUsed": "använda dokument",
+    "languagesUsed": "använda språk"
   }
 }
