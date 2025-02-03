@@ -1,0 +1,39 @@
+# iOS
+
+Languine은 iOS 애플리케이션을 위한 표준 로컬라이제이션 형식인 Localizable.strings 파일을 지원합니다. 이 형식은 기본 키-값 문자열 쌍을 처리하며 번역가에게 맥락을 제공하기 위한 주석을 지원합니다.
+
+---
+
+## 설정하기
+
+먼저, 프로젝트 루트에 languine.config.json 또는 languine.config.ts 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "ios": {
+      "include": ["[locale].lproj/Localizable.strings"]
+    }
+  }
+}
+```
+
+## 번역하기
+
+구성이 완료되면 다음을 실행하세요:
+
+```bash
+npx languine@latest translate
+```
+
+이 명령을 실행하면 Languine은:
+
+- 소스 Localizable.strings 파일(예: en.lproj/Localizable.strings)을 로드합니다.
+- 새로운 또는 수정된 번역 문자열을 감지합니다.
+- 대상 언어에 대한 번역을 생성합니다.
+- 대상 언어 파일(예: sv.lproj/Localizable.strings)을 생성하거나 업데이트합니다.
+- 기존의 주석 및 형식을 보존합니다.

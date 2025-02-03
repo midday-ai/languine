@@ -1,0 +1,40 @@
+# CSV
+
+Languineは、シンプルな翻訳管理のためにCSV（カンマ区切り値）ファイルをサポートしています。このフォーマットは、スプレッドシートベースのワークフローに最適で、外部翻訳ツールとの簡単な統合が可能です。
+
+---
+
+## セットアップ
+
+まず、プロジェクトのルートにlanguine.config.jsonまたはlanguine.config.tsの設定ファイルがあることを確認してください。以下はその例です：
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "csv": {
+      "include": ["translations/[locale].csv"]
+    }
+  }
+}
+```
+
+## 翻訳
+
+設定が完了したら、次のコマンドを実行します：
+
+```bash
+npx languine@latest translate
+```
+
+このコマンドを実行すると、Languineは以下の処理を行います：
+
+- ソースCSVファイル（例：translations/en.csv）を読み込む
+- 新しいまたは変更された翻訳文字列を検出する
+- 対象言語の翻訳を生成する
+- 対象言語のCSVファイルを作成または更新する（例：translations/sv.csv）
+- 列の構造とフォーマットを維持する
+- 追加のメタデータ列を保持する
