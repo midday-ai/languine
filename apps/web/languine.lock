@@ -1221,6 +1221,8 @@ files:
     features.presetForReactEmailDescription: a6412b4370e2b873db10faf3a8c78dfb
     features.readyForI18nLibraries: e00b28ce153cb2c7a3bc5feb6b2db05e
     features.readyForI18nLibrariesDescription: d3f5b5c305acdabfdfef0a5bb775a201
+    features.markdownSupport: 387cb5725d1ffd4f75d4e4a1af944160
+    features.markdownSupportDescription: 67a1402c75ab705da0b85df4062f906b
     info.title: 0f00b24ae9ada9f6bf585a075f180355
     info.smartTranslation.title: 4c68c8c2d0fc6037190496d102e07415
     info.smartTranslation.intelligentTranslation: 21dc169d49ca1ea65bbea3eb96ec2edb
@@ -1594,8 +1596,6 @@ files:
     overrides_sheet.description: 8c0efd42d2544deebf3a6fb342aea8db
     overrides_sheet.save: b8628398f7246a51de498212e8c3570d
     filter_locales.languages: c2bd871e40a477404d746ca7b6e5a377
-    features.markdownSupport: 387cb5725d1ffd4f75d4e4a1af944160
-    features.markdownSupportDescription: 67a1402c75ab705da0b85df4062f906b
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -1637,6 +1637,8 @@ files:
     features.presetForReactEmailDescription: 07e90c5bc18c6ab8203fc5e26d39e344
     features.readyForI18nLibraries: 4d2775ca0dce1e6881f4b2be8d277cef
     features.readyForI18nLibrariesDescription: d080e78b89978103574db038f0d47df9
+    features.markdownSupport: d9cec93a73b9cd69c6e10d2be0590942
+    features.markdownSupportDescription: c0fb8016f2448dd9d4270089e4154e83
     info.title: e3fb3aeb9a8aba08db7a9f7ff7d1b6cf
     info.smartTranslation.title: 1cb5ed7043d2d8b13b7b0dcd26e1edc3
     info.smartTranslation.intelligentTranslation: 543fc04874cbe1138282e398ef5b0864
@@ -2017,8 +2019,6 @@ files:
     overrides_sheet.description: 5f3a084e6c2b1fbca0bda42530f481b5
     overrides_sheet.save: fe9e85aad2e6e67bf18e246f33f176b5
     filter_locales.languages: c2bd871e40a477404d746ca7b6e5a377
-    features.markdownSupport: d9cec93a73b9cd69c6e10d2be0590942
-    features.markdownSupportDescription: c0fb8016f2448dd9d4270089e4154e83
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -2060,6 +2060,8 @@ files:
     features.presetForReactEmailDescription: 6401e17d45ffb70365491f31c5f67af2
     features.readyForI18nLibraries: d5dbb8d8457909e4f8f2ac9810f76bb2
     features.readyForI18nLibrariesDescription: 2c1497e4e5ed4f0a4fcbe936770ab124
+    features.markdownSupport: 79762d503205f46bb709873925dfe79a
+    features.markdownSupportDescription: 71e26ab0fee1779e70a885d952773abf
     info.title: 4d0c6cbb39f8c0987bf57776eebb362e
     info.smartTranslation.title: 56fa4136d07b8f3df354668fffd0af95
     info.smartTranslation.intelligentTranslation: f53126c2ddcb04397ca3af80787fc19f
@@ -2440,8 +2442,6 @@ files:
     overrides_sheet.description: 957edde764451c846a062e3c4f7be14c
     overrides_sheet.save: eefd425221c5c9e9d0d8b6e8bb7a90c4
     filter_locales.languages: f6bd86458350c2fca88dbef078183e2b
-    features.markdownSupport: 79762d503205f46bb709873925dfe79a
-    features.markdownSupportDescription: 71e26ab0fee1779e70a885d952773abf
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -2483,6 +2483,8 @@ files:
     features.presetForReactEmailDescription: 06095927d72f79c838ab052863b5cfa3
     features.readyForI18nLibraries: 38b2d004f1207b366c6a4c3b4b2bba8d
     features.readyForI18nLibrariesDescription: 2ef257fabb25a46becd68af6157d3faf
+    features.markdownSupport: dcbca19b08815f6f00ce1f3551850903
+    features.markdownSupportDescription: 1b12a9550a1ec1c9119d65c173c106a0
     info.title: 08cceaea719818507b5de06124260136
     info.smartTranslation.title: 30e30b8719c3d5c59bfe2c671daf873c
     info.smartTranslation.intelligentTranslation: d21ce9c8e78d32864b962a742c62c74a
@@ -2863,8 +2865,6 @@ files:
     overrides_sheet.description: b3eb2c2f7b8b47e6b4a1dae75ff4f9af
     overrides_sheet.save: eb7a0fed691fc71db1ac92407ca5430a
     filter_locales.languages: c88b33a3250b4e28f34e1ececba69206
-    features.markdownSupport: dcbca19b08815f6f00ce1f3551850903
-    features.markdownSupportDescription: 1b12a9550a1ec1c9119d65c173c106a0
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2906,6 +2906,8 @@ files:
     features.presetForReactEmailDescription: ba02d536a5a05f8348f428b8c95a6d6d
     features.readyForI18nLibraries: a00d5735775c8556ab2ad83b45dcf7a7
     features.readyForI18nLibrariesDescription: 692442d964cecf7b07d7797d480208b2
+    features.markdownSupport: 53ca0967047fabdf6911b430b2723a44
+    features.markdownSupportDescription: e465bfc713dd40ca47fd67b6c0138cb2
     info.title: 995d5de075d6afedb04d316a4141498f
     info.smartTranslation.title: 2639671f3d2b4906741909758e1241bb
     info.smartTranslation.intelligentTranslation: 17df274c1e945459e997950c53eb85f4
@@ -3286,8 +3288,6 @@ files:
     overrides_sheet.description: 3c2fe90c4db348d6cd2606e7f15015d3
     overrides_sheet.save: 9ae9144b28c324685ebe1ea4bb0c4c6a
     filter_locales.languages: 5e854e9d31f5afc6b6d2662618923200
-    features.markdownSupport: 53ca0967047fabdf6911b430b2723a44
-    features.markdownSupportDescription: e465bfc713dd40ca47fd67b6c0138cb2
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3329,6 +3329,8 @@ files:
     features.presetForReactEmailDescription: d7bec17a189ea6afe0a10ab7ad949dc2
     features.readyForI18nLibraries: 08a1aa5bb780a754a36b4eb4d56a31b3
     features.readyForI18nLibrariesDescription: 5184bd692341940d01470bf6fa26baf0
+    features.markdownSupport: f9ca3f744864493820f7a76a76c4d927
+    features.markdownSupportDescription: 58ef837de7ff78b39f223d2b1b82347c
     info.title: b56617085317ccaafc001a3742064e31
     info.smartTranslation.title: f6e7486d909896b4e71ad7bcf084dbb7
     info.smartTranslation.intelligentTranslation: c15cf7bc164552d7d21ec5604c028357
@@ -3709,8 +3711,6 @@ files:
     overrides_sheet.description: 39e3f294b6b200f5fa512cff42092e3f
     overrides_sheet.save: 9d0a47e6954f2c74180029bf9a70aeae
     filter_locales.languages: 23eb275e790bc10df537ea59a22a2fdb
-    features.markdownSupport: f9ca3f744864493820f7a76a76c4d927
-    features.markdownSupportDescription: 58ef837de7ff78b39f223d2b1b82347c
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3752,6 +3752,8 @@ files:
     features.presetForReactEmailDescription: e1b84ba84926969e15851e1656873c38
     features.readyForI18nLibraries: bd5d9e8a5bbf741e6d8e3cb5a3266c8a
     features.readyForI18nLibrariesDescription: 5bf99d10febe612dcbcd4782e914493b
+    features.markdownSupport: f2bf559f00c90d54998ea20cbf53fbe9
+    features.markdownSupportDescription: 745788cfdd66309d0792e11ac4a979f5
     info.title: 588482af8879721eeccebfa3eb9ac6e4
     info.smartTranslation.title: 4be7cb054483376fb48dee56978682ac
     info.smartTranslation.intelligentTranslation: dbda3fee7d5dc2efb117bfcb8236aec7
@@ -4132,8 +4134,6 @@ files:
     overrides_sheet.description: 2755805ce04208a1bf48872bf92cd130
     overrides_sheet.save: b9f2dc439b43cd0f3b0a84dea1ed84ba
     filter_locales.languages: 614bf8df7b3b40ce32990fe7d0b9fd35
-    features.markdownSupport: f2bf559f00c90d54998ea20cbf53fbe9
-    features.markdownSupportDescription: 745788cfdd66309d0792e11ac4a979f5
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: a1420688c629cb4bac7dfbe1b180fb42
@@ -4175,6 +4175,8 @@ files:
     features.presetForReactEmailDescription: 41b1037d72a5845247363a75bff190a8
     features.readyForI18nLibraries: e7779a7a4c9ddc9ac2c7a5a7e408da8f
     features.readyForI18nLibrariesDescription: c86298290f274a895f3a73e3efdbbd7b
+    features.markdownSupport: db8d91dbbf4606f8b8e880be1d64bec6
+    features.markdownSupportDescription: be9a5a805e18cde1f3876fc39cafa2d4
     info.title: f4c18026b20825816b2b15febcfe00de
     info.smartTranslation.title: f5db92f44b40fccbbf510fd1d2a6b394
     info.smartTranslation.intelligentTranslation: f667c736902a838bf6631681dc0f943c
@@ -4555,8 +4557,6 @@ files:
     overrides_sheet.description: a55394b33c7c1781e1182fea84241cc5
     overrides_sheet.save: d3270bdb8d2c1caaca4178dbe19be03a
     filter_locales.languages: c88b33a3250b4e28f34e1ececba69206
-    features.markdownSupport: db8d91dbbf4606f8b8e880be1d64bec6
-    features.markdownSupportDescription: be9a5a805e18cde1f3876fc39cafa2d4
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
@@ -4598,6 +4598,8 @@ files:
     features.presetForReactEmailDescription: 28640bb97cd2fa96344e8898a3332b19
     features.readyForI18nLibraries: 0882b42b104c5c2d2e3ed91309492263
     features.readyForI18nLibrariesDescription: a6b8d6d3276a3a04293ae9b2d18b63b1
+    features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
+    features.markdownSupportDescription: 573262a18350c5498e36605de812a39a
     info.title: 5da3bc7164c1291caefd83c740d5e6e0
     info.smartTranslation.title: df9e934a3002eef9b578e78ba6301c17
     info.smartTranslation.intelligentTranslation: 479605dad82a178176f7f4b3ca431304
@@ -4978,8 +4980,6 @@ files:
     overrides_sheet.description: 28ce74ee8afa1c0e02147232d446f544
     overrides_sheet.save: 07f2f895f32e9e4987005e255475b9c2
     filter_locales.languages: 23c2f99f5c2b88fcf1b9d7542dc69432
-    features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
-    features.markdownSupportDescription: 573262a18350c5498e36605de812a39a
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -5021,6 +5021,8 @@ files:
     features.presetForReactEmailDescription: ba1617a233d81b16634c0d5c4952ecde
     features.readyForI18nLibraries: 21d64436a500b4ece5fac9004d9b4b74
     features.readyForI18nLibrariesDescription: 4746698a6b7124af91769ff4259c131a
+    features.markdownSupport: 125b1708b299be10fd5513374ee6e6b3
+    features.markdownSupportDescription: cd13cccf87c334fc581b57d3544c575a
     info.title: 048e5d4ccb8f96d1212774e321b17825
     info.smartTranslation.title: c26d5c71c9e3d122583ce188e11d147f
     info.smartTranslation.intelligentTranslation: 5d91b7f639680347cef1c62913bdbcd8
@@ -5401,8 +5403,6 @@ files:
     overrides_sheet.description: 4a1d5e03f4821ae92e02f8854da62cea
     overrides_sheet.save: aed88202e2432ee2a613f9120ef7486b
     filter_locales.languages: 1ea21417b4fc870a18d6a244983be72b
-    features.markdownSupport: 125b1708b299be10fd5513374ee6e6b3
-    features.markdownSupportDescription: cd13cccf87c334fc581b57d3544c575a
   src/messages/de.json:
     header.pricing: 3f483a0cfa282cdcce304abf9f3dabe3
     header.docs: 43c592501e0d37c63bc038fa182b2ddf
@@ -5444,6 +5444,8 @@ files:
     features.presetForReactEmailDescription: ef698d76c6f145efd17a1171c440ad22
     features.readyForI18nLibraries: 7391c5ac7068d301326bc7b71c47f8c9
     features.readyForI18nLibrariesDescription: 492769b13bacf4b8d1ea42bd4b245982
+    features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
+    features.markdownSupportDescription: af81f1ad6552a4b816c99b91c12b9d34
     info.title: 50e6ab156a500697a64c3caa457cebc7
     info.smartTranslation.title: cb2537225777cfde54b6defb7f9dfddb
     info.smartTranslation.intelligentTranslation: 67270a3a27f073428d17f1539a0d5673
@@ -5824,5 +5826,3 @@ files:
     overrides_sheet.description: 900357047fe0a2ba2a863875e11f486c
     overrides_sheet.save: b97d23bf800ff592f7afe97a29921271
     filter_locales.languages: bf6c56085d5ba147fe0860211f201685
-    features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
-    features.markdownSupportDescription: af81f1ad6552a4b816c99b91c12b9d34
