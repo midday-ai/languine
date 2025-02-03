@@ -1,0 +1,80 @@
+# Introduktion
+
+Languine är en öppen källkodsplattform för lokalisering som hjälper utvecklare att översätta sina applikationer med AI-drivna översättningar. Den erbjuder ett sömlöst arbetsflöde för att hantera översättningar över flera språk samtidigt som hög kvalitet upprätthålls genom maskininlärning.
+
+
+<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═════════════��═════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Engelska     ║          ║      Spanska      ║          ║      Japanska     ║
+ ║    Översättning    ║          ║    Översättning    ║          ║     Översättning   ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Sammanfoga │
+                                  ��� Pull Request  │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Slutförd       │
+                              │      (Distribuera)  │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
+
+## Nyckelfunktioner
+
+- **AI-drivna översättningar**: Utnyttja avancerade maskininlärningsmodeller för att generera högkvalitativa översättningar på över 100 språk
+- **Git-integration**: Synkronisera dina översättningar direkt med dina Git-repositorier och automatisera uppdateringar genom CI/CD-pipelines
+- **Utvecklarfokus**: Byggd med utvecklare i åtanke, med en kraftfull CLI, API och GitHub Action-integration
+- **Anpassade parser**: Stöd för olika filformat och möjlighet att skapa anpassade parser för dina specifika behov
+- **Versionskontroll**: Spåra ändringar, hantera grenar och upprätthålla översättningshistorik
+- **Öppen källkod**: Helt öppen källkod och tillgänglig på GitHub, vilket möjliggör transparens och bidrag från gemenskapen
+
+## Hur det fungerar
+
+1. **Installation**: Installera Languine CLI och konfigurera ditt projekt med en enkel initieringsprocess
+2. **Anslut**: Koppla ditt repository och ställ in ditt föredragna arbetsflöde (CLI, API eller GitHub Action)
+3. **Översätt**: Skicka ditt källinnehåll och låt Languine hantera översättningarna till dina målspråk
+4. **Synkronisera**: Automatisk synkronisering av översatt innehåll tillbaka till ditt repository och distribuera med förtroende
+
+## Komma igång
+
+För att börja använda Languine, följ vår [Installations](/docs/installation) guide för att ställa in CLI och skapa ditt första projekt. Kolla sedan in vår [Snabbstart](/docs/quickstart) guide för att lära dig grunderna i att hantera översättningar med Languine.
+
+För detaljerad information om specifika funktioner och avancerad användning, utforska våra omfattande dokumentationsavsnitt:
+
+- [Konfiguration](/docs/configuration) - Lär dig hur du konfigurerar Languine för ditt projekt
+- [CLI](/docs/cli) - Upptäck hela utbudet av CLI-kommandon
+- [API](/docs/api) - Integrera Languine programmässigt
+- [Arbetsflöden](/docs/workflows) - Ställ in automatiserade översättningsarbetsflöden

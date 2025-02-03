@@ -1,0 +1,80 @@
+# Introduzione
+
+Languine è una piattaforma di localizzazione open-source che aiuta gli sviluppatori a tradurre le loro applicazioni con traduzioni supportate dall'IA. Fornisce un flusso di lavoro senza soluzione di continuità per gestire le traduzioni in più lingue mantenendo alta qualità attraverso l'apprendimento automatico.
+
+
+<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Inglese     ║          ║      Spagnolo     ║          ║      Giapponese   ║
+ ║    Traduzione     ║          ║    Traduzione     ║          ║     Traduzione    ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Unisci    │
+                                  │ Richiesta Pull│
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Completato     │
+                              │      (Distribuisci)  │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
+
+## Caratteristiche Principali
+
+- **Traduzioni Supportate dall'IA**: Sfrutta modelli avanzati di apprendimento automatico per generare traduzioni di alta qualità in oltre 100 lingue
+- **Integrazione con Git**: Sincronizza le tue traduzioni direttamente con i tuoi repository Git e automatizza gli aggiornamenti attraverso pipeline CI/CD
+- **Sviluppatore-First**: Costruito pensando agli sviluppatori, con un potente CLI, API e integrazione con GitHub Action
+- **Parser Personalizzati**: Supporto per vari formati di file e la possibilità di creare parser personalizzati per le tue esigenze specifiche
+- **Controllo Versioni**: Tieni traccia delle modifiche, gestisci i rami e mantieni la cronologia delle traduzioni
+- **Open Source**: Completamente open source e disponibile su GitHub, consentendo trasparenza e contributi della comunità
+
+## Come Funziona
+
+1. **Impostazione**: Installa il CLI di Languine e configura il tuo progetto con un semplice processo di inizializzazione
+2. **Collegati**: Collega il tuo repository e imposta il tuo flusso di lavoro preferito (CLI, API o GitHub Action)
+3. **Traduci**: Invia il tuo contenuto sorgente e lascia che Languine gestisca le traduzioni nelle tue lingue target
+4. **Sincronizza**: Sincronizza automaticamente il contenuto tradotto nel tuo repository e distribuisci con fiducia
+
+## Iniziare
+
+Per iniziare a utilizzare Languine, segui la nostra guida [Installazione](/docs/installation) per impostare il CLI e creare il tuo primo progetto. Poi, dai un'occhiata alla guida [Quickstart](/docs/quickstart) per imparare le basi della gestione delle traduzioni con Languine.
+
+Per informazioni dettagliate su funzionalità specifiche e utilizzo avanzato, esplora le nostre sezioni di documentazione complete:
+
+- [Configurazione](/docs/configuration) - Scopri come configurare Languine per il tuo progetto
+- [CLI](/docs/cli) - Scopri l'intera gamma di comandi CLI
+- [API](/docs/api) - Integra Languine in modo programmatico
+- [Flussi di lavoro](/docs/workflows) - Imposta flussi di lavoro di traduzione automatizzati

@@ -1,0 +1,92 @@
+# GitHub Actions
+
+Med GitHub-handlingen kan du nemt oversætte din kode ved blot at skubbe din kode til repositoryet; GitHub-handlingen vil derefter oversætte dine nye nøgler, enten oprette en pull-anmodning eller forpligte dine ændringer.
+Dette sparer dig for meget tid og kræfter, samtidig med at der opretholdes høj kvalitet i oversættelserne.
+
+---
+
+## Installation
+
+For at bruge Languine GitHub-handlingen i dit repository skal du:
+
+1. Opsætte dine repository-hemmeligheder med dine Languine-legitimationsoplysninger
+2. Oprette en workflow-fil i dit repository
+
+### Opsætning af Repository-hemmeligheder
+
+Tilføj følgende hemmeligheder i dine repository-indstillinger (Indstillinger > Hemmeligheder og variabler > Handlinger):
+
+- `LANGUINE_API_KEY`: Din Languine API-nøgle
+- `LANGUINE_PROJECT_ID`: Dit Languine projekt-ID
+
+Du kan finde disse værdier i dit Languine-dashboard under Projektindstillinger.
+
+
+
+### Miljøvariabler
+
+GitHub-handlingen bruger følgende miljøvariabler:
+- `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nøgle til autentificering
+- `LANGUINE_PROJECT_ID` (Obligatorisk): Dit Languine projekt-ID 
+- `GITHUB_TOKEN` (Obligatorisk): Automatisk leveret af GitHub, bruges til at oprette PR'er
+
+### Eksempel på Workflow
+
+Opret en ny fil .github/workflows/languine.yml i dit repository med følgende indhold:
+
+```ts title=".github/workflows/release.yml"
+name: Udrulning af hjemmeside
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Action
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Denne workflow vil:
+- Køre ved skub til hovedgrenen
+- Køre ved pull-anmodninger til hovedgrenen
+- Kan udløses manuelt fra fanen Handlinger
+- Tjekke din kode og køre Languine oversættelsesprocessen
+- Oprette en pull-anmodning med eventuelle nye oversættelser (konfigurerbar)
+
+#### Arbejdsmappeindstilling
+
+`working-directory`-indstillingen giver dig mulighed for at specificere, hvor dine oversættelsesfiler er placeret. Dette er s��rligt nyttigt i monorepos, hvor dine oversættelser kan være i et specifikt pakke- eller app-mappe. For eksempel:
+
+#### Pull-anmodningsindstilling
+
+`create-pull-request`-indstillingen styrer, om handlingen opretter en pull-anmodning med ændringerne eller forpligter dem direkte til grenen:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # opret en pull-anmodning med ændringerne
+```
+
+Når den er indstillet til `true`, vil handlingen:
+- Oprette en ny gren med ændringerne
+- Oprette en pull-anmodning til gennemgang
+- Tilføje passende etiketter og beskrivelse
+
+Når den er indstillet til `false` (standard), vil handlingen:
+- Forpligte ændringerne direkte til den nuværende gren
+- Skubbe ændringerne uden at oprette en pull-anmodning

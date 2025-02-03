@@ -1,0 +1,41 @@
+# HTML
+
+Languine ondersteunt de lokalisatie van HTML-bestanden en behandelt zowel tekstinhoud als attributen. Dit formaat is ideaal voor statische websites en HTML-sjablonen, met ondersteuning voor het behouden van de HTML-structuur en opmaak.
+
+---
+
+## Instellen
+
+Zorg er eerst voor dat je een languine.config.json of languine.config.ts configuratiebestand in de hoofdmap van je project hebt. Hier is een voorbeeld:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "html": {
+      "include": ["pages/[locale]/*.html"]
+    }
+  }
+}
+```
+
+## Vertalen
+
+Met je configuratie ingesteld, voer je uit:
+
+```bash
+npx languine@latest translate
+```
+
+Wanneer je dit commando uitvoert, zal Languine:
+
+- Je bron HTML-bestanden laden (bijv. pages/en/*.html)
+- Nieuwe of gewijzigde vertaalstrings detecteren
+- Vertalingen genereren voor je doeltalen
+- De HTML-bestanden voor de doeltaal aanmaken of bijwerken (bijv. pages/sv/*.html)
+- De HTML-structuur en opmaak behouden
+- Gespecificeerde attribuutvertalingen verwerken
+- Opmerkingen en speciale tags behouden

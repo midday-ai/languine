@@ -1,0 +1,45 @@
+# Markdown
+
+Languine tukee Markdown-tiedostojen lokalisointia, mikä on täydellinen dokumentaatioon, blogikirjoituksiin ja sisältöpainotteisiin sivustoihin. Tämä formaatti säilyttää Markdown-syntaksin samalla kun se kääntää sisältöä, mukaan lukien front matter -tuki.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "md": {
+      "include": ["content/[locale]/**/*.md"],
+      "frontMatter": true,  // Valinnainen: oletusarvo on true
+      "translateFrontMatterFields": ["title", "description"]  // Valinnainen: määritä, mitkä front matter -kentät käännetään
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun konfiguraatiosi on asetettu, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde Markdown-tiedostosi (esim. content/en/*.md)
+- Havaitsee kaikki uudet tai muokatut sisällöt
+- Generoi käännökset kohdekielillesi
+- Luo tai päivittää kohdekielitiedostot (esim. content/sv/*.md)
+- Säilyttää Markdown-muotoilun ja rakenteen
+- Käsittelee front matter -käännöksiä
+- Säilyttää linkit ja viittaukset
+- Pitää koodilohkot kääntämättöminä
+- Säilyttää HTML:n Markdownin sisällä

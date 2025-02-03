@@ -1,0 +1,42 @@
+# JavaScript
+
+Languine suporta arquivos de localização JavaScript/TypeScript, perfeitos para aplicações web modernas. Este formato lida tanto com literais de objeto quanto com exportações de módulo, suportando estruturas aninhadas e conteúdo dinâmico.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "js": {
+      "include": ["src/locales/[locale].js"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seus arquivos JavaScript de origem (por exemplo, src/locales/en.js)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos de idioma-alvo (por exemplo, src/locales/sv.js)
+- Preservar a estrutura do módulo e as exportações
+- Lidar com objetos e arrays aninhados
+- Manter a formatação do código e os comentários
+- Gerar tipos TypeScript se habilitado

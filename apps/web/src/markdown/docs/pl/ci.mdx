@@ -1,0 +1,96 @@
+# CI/CD
+
+Languine zapewnia integrację CI/CD, aby pomóc Ci w tłumaczeniu aplikacji.
+
+---
+
+## Jak to działa
+
+Workflow CI/CD w Languine podąża za uporządkowanym procesem, aby zautomatyzować aktualizacje tłumaczeń w Twojej aplikacji:
+
+### 1. Inicjalizacja akcji
+- Workflow rozpoczyna się, gdy akcja jest wyzwalana
+- Ustawia niezbędną konfigurację Git i dane uwierzytelniające
+
+### 2. Przetwarzanie silnika Languine
+- Silnik Languine przetwarza zawartość Twojej aplikacji
+- Obsługuje zadania tłumaczeniowe przy użyciu skonfigurowanych ustawień
+
+### 3. Wykrywanie zmian
+System sprawdza, czy wystąpiły jakiekolwiek zmiany w tłumaczeniu i podąża jedną z dwóch ścieżek:
+
+**Gdy znaleziono zmiany:**
+- Zmiany są zatwierdzane w repozytorium
+- Zmiany są przesyłane do określonej gałęzi
+- Tworzony jest Pull Request (PR)
+
+**Gdy nie znaleziono zmian:**
+- Workflow kończy się bez tworzenia PR
+
+### 4. Tworzenie Pull Request
+Gdy wykryto zmiany, tworzony jest Pull Request z:
+
+**Zawartość PR:**
+- Jasny tytuł wskazujący na aktualizacje tłumaczeń
+- Szczegółowy opis zmian
+- Potwierdzenia kontroli jakości
+- Instrukcje do przeglądu
+- Linki do dokumentacji i wsparcia
+
+**Opis PR zawiera:**
+- Podsumowanie aktualizacji tłumaczeń
+- Listę zmian (zaktualizowane tłumaczenia, spójność terminologii)
+- Następne kroki dla recenzentów
+- Linki do dokumentacji i zasobów wsparcia
+
+---
+
+## Diagram workflow
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Akcja Rozpoczyna   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Ustawienie Git &  │
+                    │    Dane Uwierzyteln. │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Silnik Languine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Sprawdź Zmiany     │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Zmiany]        │ [Brak Zmian]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Zatwierdź & Wyślij │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Utwórz PR        │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Gotowe       │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Workflow został zaprojektowany tak, aby był zautomatyzowany, jednocześnie umożliwiając przegląd i kontrolę jakości przed scaleniem zmian do Twojej bazy kodu. Utrzymuje najlepsze praktyki kontroli wersji i zapewnia, że tłumaczenia są odpowiednio śledzone i dokumentowane w historii Git.

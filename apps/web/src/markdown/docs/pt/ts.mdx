@@ -1,0 +1,43 @@
+# TypeScript
+
+Languine suporta arquivos de localização TypeScript com total segurança de tipo. Este formato estende o suporte ao JavaScript com recursos adicionais específicos do TypeScript e capacidades de geração de tipos.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "ts": {
+      "include": ["src/locales/[locale].ts"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seus arquivos TypeScript de origem (por exemplo, src/locales/en.ts)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos de idioma-alvo (por exemplo, src/locales/sv.ts)
+- Gerar definições de tipo TypeScript
+- Preservar anotações de tipo e interfaces
+- Lidar com objetos aninhados com tipagem adequada
+- Manter a formatação do código e comentários de documentação
+- Suportar tipos literais e tipos de união

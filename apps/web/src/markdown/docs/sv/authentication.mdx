@@ -1,0 +1,48 @@
+# Autentisering
+
+För att använda Languine behöver du autentisera dig med vår motor, det tar bara några sekunder att komma igång.
+
+---
+
+## Logga in
+
+Du kan logga in direkt på [Languine Dashboard](https://languine.ai/login) eller köra följande kommando:
+
+```bash title="Terminal"
+npx languine@latest auth login
+```
+
+
+Om du redan har ett konto kommer du automatiskt att loggas in och en session kommer att sparas på din maskin.
+
+---
+
+## Logga ut
+
+Du kan logga ut genom att köra följande kommando:
+
+```bash title="Terminal"
+npx languine@latest auth logout
+```
+
+---
+
+## Användarsession
+
+Du kan kontrollera om du är inloggad genom att köra följande kommando:
+
+```bash title="Terminal"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# Miljövariabler
+
+Du kan ställa in följande miljövariabler för att konfigurera Languine:
+
+- `LANGUINE_API_KEY`: API-nyckeln som används för autentisering.
+- `LANGUINE_PROJECT_ID`: Projekt-ID:t som används för projektet.
+
+Du hittar dem i [Languine Dashboard](https://languine.ai/login).

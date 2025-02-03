@@ -1,0 +1,41 @@
+# React Email
+
+Languine obsługuje szablony e-maili w React, umożliwiając zarządzanie tłumaczeniami dla szablonów e-maili stworzonych za pomocą React Email. Ta integracja obsługuje zarówno treść tekstową, jak i atrybuty HTML, zachowując strukturę komponentów React.
+
+---
+
+## Konfiguracja
+
+Najpierw upewnij się, że masz plik konfiguracyjny `languine.config.json` lub `languine.config.ts` w głównym katalogu projektu. Oto przykład:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "react-email": {
+      "include": ["emails/[locale]/*.tsx"]
+    }
+  }
+}
+```
+
+## Tłumaczenie
+
+Gdy masz ustawioną konfigurację, uruchom:
+
+```bash
+npx languine@latest translate
+```
+
+Kiedy uruchomisz to polecenie, Languine:
+
+- Załaduje Twoje źródłowe szablony e-maili w React (np. emails/en/*.tsx)
+- Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
+- Wygeneruje tłumaczenia dla Twoich docelowych języków
+- Utworzy lub zaktualizuje szablony e-maili w docelowym języku (np. emails/sv/*.tsx)
+- Zachowa strukturę komponentów React i właściwości
+- Utrzyma formatowanie i styl HTML
+- Obsłuży interpolację i dynamiczną treść

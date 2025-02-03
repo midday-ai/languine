@@ -1,0 +1,41 @@
+# HTML
+
+Languine stödjer lokalisering av HTML-filer och hanterar både textinnehåll och attribut. Detta format är idealiskt för statiska webbplatser och HTML-mallar, med stöd för att bevara HTML-struktur och formatering.
+
+---
+
+## Installera
+
+Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i rotmappen av ditt projekt. Här är ett exempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "html": {
+      "include": ["pages/[locale]/*.html"]
+    }
+  }
+}
+```
+
+## Översättning
+
+Med din konfiguration inställd, kör:
+
+```bash
+npx languine@latest translate
+```
+
+När du kör det här kommandot kommer Languine att:
+
+- Ladda dina käll-HTML-filer (t.ex. pages/en/*.html)
+- Upptäcka eventuella nya eller ändrade översättningssträngar
+- Generera översättningar för dina målspråk
+- Skapa eller uppdatera målspråkets HTML-filer (t.ex. pages/sv/*.html)
+- Bevara HTML-struktur och formatering
+- Hantera specificerade attributöversättningar
+- Bevara kommentarer och specialtaggar

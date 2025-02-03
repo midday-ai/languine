@@ -1,0 +1,44 @@
+# Xcode Strings (XCStrings)
+
+Languine tukee Xcoden XCStrings-muotoa, joka on moderni lokalisointimuoto iOS- ja macOS-sovelluksille. Tämä muoto käsittelee merkkijonokatalogeja, joissa on tuki variaatioille, monikolle ja kehittäjäkommenteille.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xcstrings": {
+      "include": ["MyApp/Localizable.xcstrings"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun konfiguraatiosi on asetettu, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa XCStrings-katalogisi
+- Havaitsee kaikki uudet tai muokatut merkkijonot
+- Tuottaa käännöksiä kohdekielillesi
+- Päivittää merkkijonokatalogin uusilla käännöksillä
+- Säilyttää merkkijonovariaatiot ja monikkosäännöt
+- Säilyttää kehittäjäkommentit ja kontekstin
+- Käsittelee muuttujan korvauksia
+- Tukee mukautuvia merkkijonoja
+- Säilyttää muotoilun erottimet
+- Vahvistaa merkkijonokatalogin rakennetta

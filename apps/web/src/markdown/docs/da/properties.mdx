@@ -1,0 +1,40 @@
+# Egenskaber
+
+Languine understøtter Java Properties-filer, den standard lokaliseringsformat for Java-applikationer. Dette format håndterer Unicode-escapning og understøtter både nøgle-værdi-par og kommentarer.
+
+---
+
+## Opsætning
+
+Først skal du sikre dig, at du har en languine.config.json eller languine.config.ts konfigurationsfil i rodmappen af dit projekt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "properties": {
+      "include": ["src/main/resources/messages_[locale].properties"]
+    }
+  }
+}
+```
+
+## Oversættelse
+
+Når din konfiguration er sat op, skal du køre:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kører denne kommando, vil Languine:
+
+- Indlæse din kilde properties-fil (f.eks. messages_en.properties)
+- Registrere eventuelle nye eller ændrede oversættelsesstrenge
+- Generere oversættelser til dine målsprog
+- Oprette eller opdatere målsprog properties-filer (f.eks. messages_sv.properties)
+- Håndtere Unicode-escapning automatisk
+- Bevare kommentarer og formatering

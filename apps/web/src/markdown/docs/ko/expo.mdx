@@ -1,0 +1,41 @@
+# 엑스포
+
+Languine은 Expo 로컬라이제이션을 지원하며, Expo의 i18n 시스템과 원활하게 통합됩니다. 이 형식은 JavaScript 및 TypeScript 프로젝트 모두에서 작동하며, 중첩 구조와 복수형을 지원합니다.
+
+---
+
+## 설정하기
+
+먼저, 프로젝트 루트에 languine.config.json 또는 languine.config.ts 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "expo": {
+      "include": ["assets/locales/[locale].json"]
+    }
+  }
+}
+```
+
+## 번역하기
+
+구성이 완료되면 다음을 실행하세요:
+
+```bash
+npx languine@latest translate
+```
+
+이 명령을 실행하면 Languine은:
+
+- 소스 번역 파일(예: assets/locales/en.json)을 로드합니다.
+- 새로 추가되거나 수정된 번역 문자열을 감지합니다.
+- 대상 언어에 대한 번역을 생성합니다.
+- 대상 언어 파일을 생성하거나 업데이트합니다(예: assets/locales/sv.json).
+- 중첩 구조와 복수형 규칙을 유지합니다.
+- TypeScript 유형을 생성합니다(사용하도록 설정된 경우).
+- expo-localization과의 호환성을 유지합니다.

@@ -1,0 +1,45 @@
+# Markdown (MDX)
+
+Languine stöder lokalisering av Markdown (MDX) filer, perfekt för dokumentation, blogginlägg och innehållstunga webbplatser. Detta format bevarar Markdown-syntaxen samtidigt som innehållet översätts, inklusive stöd för front matter.
+
+---
+
+## Installera
+
+Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i din projektrot. Här är ett exempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "mdx": {
+      "include": ["content/[locale]/**/*.mdx"],
+      "frontMatter": true,  // Valfritt: standard är true
+      "translateFrontMatterFields": ["title", "description"]  // Valfritt: specificera vilka front matter-fält som ska översättas
+    }
+  }
+}
+```
+
+## Översättning
+
+Med din konfiguration inställd, kör:
+
+```bash
+npx languine@latest translate
+```
+
+När du kör det här kommandot kommer Languine att:
+
+- Ladda dina käll Markdown-filer (t.ex. content/en/*.mdx)
+- Upptäcka nytt eller ändrat innehåll
+- Generera översättningar för dina målspråk
+- Skapa eller uppdatera målspråksfiler (t.ex. content/sv/*.mdx)
+- Bevara Markdown-format och struktur
+- Hantera översättningar av front matter
+- Bevara länkar och referenser
+- Hålla kodblock oöversatta
+- Bevara HTML inom Markdown

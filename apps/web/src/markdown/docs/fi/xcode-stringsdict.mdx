@@ -1,0 +1,44 @@
+# Xcode Stringsdict
+
+Languine tukee Xcoden Stringsdict-muotoa, jota käytetään monimutkaisissa monikkomuotojen säännöissä iOS- ja macOS-sovelluksissa. Tämä muoto käsittelee monikkomuotoja, muuttujan korvauksia ja kielikohtaisia monikkomuotojen sääntöjä.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "stringsdict": {
+      "include": ["MyApp/Localizable.stringsdict"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun asetuksesi on määritetty, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa Stringsdict-tiedostosi
+- Havaitsee kaikki uudet tai muokatut monikkomuotojen säännöt
+- Tuottaa käännöksiä kohdekielillesi
+- Päivittää Stringsdict-tiedostot uusilla käännöksillä
+- Käsittelee monimutkaisia monikkomuotojen sääntöjä jokaiselle kielelle
+- Säilyttää muuttujan korvaukset
+- Säilyttää sanakirjan rakenteen
+- Tukee kielikohtaisia monikkomuotoja
+- Vahvistaa monikkomuotojen sääntöjen johdonmukaisuuden
+- Säilyttää muotoilun erikoismerkinnät

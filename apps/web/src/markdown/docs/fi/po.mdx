@@ -1,0 +1,40 @@
+# PO (Gettext)
+
+Languine tukee PO-tiedostoja, laajasti käytettyä Gettext-lokalisointimuotoa. Tämä muoto on suosittu monissa ohjelmointiympäristöissä, erityisesti Linux-sovelluksissa ja PHP-kehyksissä, tarjoten tukea konteksteille, monikolle ja kääntäjäkommenteille.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "po": {
+      "include": ["locales/[locale]/LC_MESSAGES/messages.po"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun asetukset on määritetty, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde PO-tiedostosi (esim. locales/en/LC_MESSAGES/messages.po)
+- Havaitsee kaikki uudet tai muokatut käännöstekstit
+- Tuottaa käännöksiä kohdekielillesi
+- Luo tai päivittää kohdekielen PO-tiedostoja (esim. locales/sv/LC_MESSAGES/messages.po)
+- Säilyttää metatiedot, kontekstit ja monikkomuodot
+- Ylläpitää kääntäjäkommentteja ja viitetietoja

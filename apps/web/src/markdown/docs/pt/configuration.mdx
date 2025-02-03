@@ -1,0 +1,198 @@
+# Configuração
+
+Languine suporta arquivos de configuração tanto em TypeScript quanto em JSON para gerenciar sua configuração de tradução. Você pode escolher entre languine.config.ts para TypeScript ou languine.config.json para o formato JSON. Ambos os arquivos definem seus idiomas de origem e destino, bem como os arquivos que precisam ser traduzidos.
+
+---
+
+## Configuração Básica
+
+Aqui está um exemplo básico em ambos os formatos:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.config.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Ambos os formatos suportam as mesmas opções de configuração. Escolha TypeScript para melhor verificação de tipos e suporte a IDE, ou JSON para simplicidade e compatibilidade mais ampla com ferramentas.
+
+Vamos detalhar as diferentes seções desses arquivos.
+
+---
+
+## Configuração de Localidade
+
+A seção de localidade define seus idiomas de tradução:
+
+- source: Seu idioma principal para criação de conteúdo (por exemplo, "en" para inglês)
+- targets: Um array de idiomas para os quais você deseja traduzir (por exemplo, ["es", "fr", "de"] para espanhol, francês e alemão)
+
+Languine suporta uma ampla gama de códigos de idiomas, incluindo:
+- Códigos simples: en, es, fr, de
+- Códigos específicos de região: pt-BR, zh-CN, zh-TW
+
+## Configuração de Arquivos
+
+A seção de arquivos define quais arquivos o Languine deve traduzir. Você pode configurar múltiplos tipos e padrões de arquivos:
+
+---
+
+### Arquivos JSON
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Arquivos Markdown/MDX
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Arquivos de Plataforma Móvel
+
+Para iOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Ou para arquivos .strings tradicionais
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Para Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Outros Formatos
+
+Aqui está uma lista completa dos formatos de arquivo suportados pelo Languine:
+
+- [JSON](/docs/json) - Arquivos de tradução JSON padrão
+- [YAML](/docs/yaml) - Arquivos de tradução YAML
+- [Properties](/docs/properties) - Arquivos de propriedades Java
+- [Android](/docs/android) - Arquivos de recursos XML do Android
+- [iOS](/docs/ios) - Arquivos de localização do iOS
+- [iOS Stringsdict](/docs/xcode-stringsdict) - Arquivos de pluralização do iOS
+- [iOS XCStrings](/docs/xcode-xcstrings) - Catálogos de strings modernos do Xcode
+- [Markdown](/docs/md) - Arquivos de documentação
+- [MDX](/docs/mdx) - Documentação com JSX
+- [HTML](/docs/html) - Arquivos HTML
+- [JavaScript](/docs/js) - Arquivos JavaScript
+- [TypeScript](/docs/ts) - Arquivos TypeScript
+- [Gettext PO](/docs/po) - Arquivos de tradução GetText
+- [XLIFF](/docs/xliff) - Formato de Arquivo de Intercâmbio de Localização XML
+- [CSV](/docs/csv) - Traduções baseadas em planilhas
+- [XML](/docs/xml) - Arquivos de recursos XML
+- [Flutter ARB](/docs/arb) - Arquivos de Pacote de Recursos de Aplicação
+
+---
+
+## Padrões de Arquivo
+
+O placeholder [locale] nos padrões de arquivo é automaticamente substituído pelo código de idioma apropriado durante a tradução. Por exemplo:
+
+- locales/[locale].json se torna:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Você pode incluir múltiplos padrões para cada tipo de arquivo e usar padrões glob:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## ID do Projeto (Opcional)
+
+Se você estiver usando os serviços em nuvem do Languine, pode incluir seu ID de projeto na configuração:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... configuração de localidade
+  },
+  files: {
+    // ... configuração de arquivos
+  },
+});
+```
+
+---
+
+## Rastreamento do Estado da Tradução
+
+O Languine cria e mantém automaticamente um arquivo languine.lock para rastrear o estado de suas traduções. Este arquivo:
+
+- Rastreia qual conteúdo foi traduzido
+- Ajuda a identificar o que precisa ser atualizado quando o conteúdo de origem muda
+- Deve ser comprometido ao seu sistema de controle de versão
+
+Você não precisa editar manualmente o arquivo de bloqueio - o Languine o gerencia automaticamente quando você executa comandos de tradução.
+
+## Melhores Práticas
+
+1. **Controle de Versão**: Sempre comprometa tanto languine.config.ts quanto languine.lock em seu repositório
+2. **Organização de Arquivos**: Mantenha seus arquivos de tradução organizados em uma estrutura de diretório consistente
+3. **Códigos de Idioma**: Use códigos de idioma padrão para garantir compatibilidade
+4. **Padrões**: Use padrões de inclusão específicos para evitar traduzir arquivos desnecessários
+5. **ID do Projeto**: Mantenha seu ID de projeto seguro e não o compartilhe publicamente se estiver usando serviços em nuvem, use a variável de ambiente `LANGUINE_PROJECT_ID` em vez disso.

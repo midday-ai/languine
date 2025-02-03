@@ -1,0 +1,45 @@
+# Markdown (MDX)
+
+Languine prend en charge la localisation des fichiers Markdown (MDX), parfait pour la documentation, les articles de blog et les sites riches en contenu. Ce format préserve la syntaxe Markdown tout en traduisant le contenu, y compris le support des métadonnées.
+
+---
+
+## Configuration
+
+Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.json ou languine.config.ts à la racine de votre projet. Voici un exemple :
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "mdx": {
+      "include": ["content/[locale]/**/*.mdx"],
+      "frontMatter": true,  // Optionnel : par défaut à true
+      "translateFrontMatterFields": ["title", "description"]  // Optionnel : spécifiez quels champs de métadonnées traduire
+    }
+  }
+}
+```
+
+## Traduction
+
+Avec votre configuration en place, exécutez :
+
+```bash
+npx languine@latest translate
+```
+
+Lorsque vous exécutez cette commande, Languine va :
+
+- Charger vos fichiers Markdown source (par exemple, content/en/*.mdx)
+- Détecter tout nouveau contenu ou contenu modifié
+- Générer des traductions pour vos langues cibles
+- Créer ou mettre à jour les fichiers de langue cible (par exemple, content/sv/*.mdx)
+- Préserver le formatage et la structure Markdown
+- Gérer les traductions des métadonnées
+- Maintenir les liens et références
+- Garder les blocs de code non traduits
+- Préserver le HTML dans Markdown

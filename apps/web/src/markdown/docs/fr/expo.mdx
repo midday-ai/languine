@@ -1,0 +1,41 @@
+# Expo
+
+Languine prend en charge la localisation Expo, s'intégrant parfaitement au système i18n d'Expo. Ce format fonctionne avec les projets JavaScript et TypeScript, prenant en charge les structures imbriquées et la pluralisation.
+
+---
+
+## Configuration
+
+Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.json ou languine.config.ts à la racine de votre projet. Voici un exemple :
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "expo": {
+      "include": ["assets/locales/[locale].json"]
+    }
+  }
+}
+```
+
+## Traduction
+
+Avec votre configuration en place, exécutez :
+
+```bash
+npx languine@latest translate
+```
+
+Lorsque vous exécutez cette commande, Languine va :
+
+- Charger votre fichier de traduction source (par exemple, assets/locales/en.json)
+- Détecter toute nouvelle chaîne de traduction ou toute chaîne modifiée
+- Générer des traductions pour vos langues cibles
+- Créer ou mettre à jour les fichiers de langue cible (par exemple, assets/locales/sv.json)
+- Préserver la structure imbriquée et les règles de pluralisation
+- Générer des types TypeScript si activé
+- Maintenir la compatibilité avec expo-localization

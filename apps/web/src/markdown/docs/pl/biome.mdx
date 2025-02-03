@@ -1,0 +1,34 @@
+# Biome
+
+Languine obsługuje formatowanie za pomocą [Biome](https://biomejs.dev/) poprzez hooki. Możesz skonfigurować Biome, aby automatycznie formatował Twoje pliki tłumaczeń po ich wygenerowaniu.
+
+Oto przykład konfiguracji:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+  hooks: {
+    // Formatuj wygenerowane pliki za pomocą Biome
+    afterTranslate: async (files) => {
+      const { check } = await import("@biomejs/biome");
+      
+      for (const file of files) {
+        await check({
+          files: [file],
+          apply: true,
+        });
+      }
+    },
+  },
+});
+```

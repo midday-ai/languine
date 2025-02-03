@@ -1,0 +1,41 @@
+# React Email
+
+Languine tukee React Email -malleja, mikä mahdollistaa sähköpostimalliesi käännösten hallinnan, jotka on rakennettu React Emailin avulla. Tämä integraatio käsittelee sekä tekstisisältöä että HTML-attribuutteja säilyttäen React-komponenttien rakenteen.
+
+---
+
+## Asetusten määrittäminen
+
+Varmista ensin, että sinulla on `languine.config.json` tai `languine.config.ts` -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "react-email": {
+      "include": ["emails/[locale]/*.tsx"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun konfiguraatiosi on asetettu, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde React Email -mallisi (esim. emails/en/*.tsx)
+- Tunnistaa kaikki uudet tai muokatut käännöstekstit
+- Luo käännökset kohdekielillesi
+- Luo tai päivittää kohdekieliset sähköpostimallit (esim. emails/sv/*.tsx)
+- Säilyttää React-komponenttien rakenteen ja propsit
+- Säilyttää HTML-muotoilun ja tyylit
+- Käsittelee interpolointia ja dynaamista sisältöä

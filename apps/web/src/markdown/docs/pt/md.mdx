@@ -1,0 +1,45 @@
+# Markdown
+
+O Languine suporta a localização de arquivos Markdown, perfeito para documentação, postagens de blog e sites com muito conteúdo. Este formato preserva a sintaxe Markdown enquanto traduz o conteúdo, incluindo suporte para front matter.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "md": {
+      "include": ["content/[locale]/**/*.md"],
+      "frontMatter": true,  // Opcional: padrão é true
+      "translateFrontMatterFields": ["title", "description"]  // Opcional: especifique quais campos de front matter traduzir
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, o Languine irá:
+
+- Carregar seus arquivos Markdown de origem (por exemplo, content/en/*.md)
+- Detectar qualquer conteúdo novo ou modificado
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos de idioma-alvo (por exemplo, content/sv/*.md)
+- Preservar a formatação e estrutura do Markdown
+- Lidar com traduções de front matter
+- Manter links e referências
+- Manter blocos de código não traduzidos
+- Preservar HTML dentro do Markdown

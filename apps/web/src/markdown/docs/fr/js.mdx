@@ -1,0 +1,42 @@
+# JavaScript
+
+Languine prend en charge les fichiers de localisation JavaScript/TypeScript, parfaits pour les applications web modernes. Ce format gère à la fois les littéraux d'objet et les exports de module, prenant en charge les structures imbriquées et le contenu dynamique.
+
+---
+
+## Configuration
+
+Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.json ou languine.config.ts à la racine de votre projet. Voici un exemple :
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "js": {
+      "include": ["src/locales/[locale].js"]
+    }
+  }
+}
+```
+
+## Traduction
+
+Avec votre configuration en place, exécutez :
+
+```bash
+npx languine@latest translate
+```
+
+Lorsque vous exécutez cette commande, Languine va :
+
+- Charger vos fichiers JavaScript source (par exemple, src/locales/en.js)
+- Détecter toute nouvelle chaîne de traduction ou toute chaîne modifiée
+- Générer des traductions pour vos langues cibles
+- Créer ou mettre à jour les fichiers de langue cible (par exemple, src/locales/sv.js)
+- Préserver la structure des modules et les exports
+- Gérer les objets et tableaux imbriqués
+- Maintenir le formatage du code et les commentaires
+- Générer des types TypeScript si activé

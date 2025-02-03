@@ -1,0 +1,44 @@
+# Xcode Stringsdict
+
+Languine obsługuje format Stringsdict Xcode, używany do skomplikowanych reguł pluralizacji w aplikacjach iOS i macOS. Ten format obsługuje formy mnogie, podstawienia zmiennych oraz reguły pluralizacji specyficzne dla języka.
+
+---
+
+## Konfiguracja
+
+Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w katalogu głównym projektu. Oto przykład:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "stringsdict": {
+      "include": ["MyApp/Localizable.stringsdict"]
+    }
+  }
+}
+```
+
+## Tłumaczenie
+
+Po ustawieniu konfiguracji uruchom:
+
+```bash
+npx languine@latest translate
+```
+
+Kiedy uruchomisz to polecenie, Languine:
+
+- Załaduje twoje pliki Stringsdict
+- Wykryje wszelkie nowe lub zmodyfikowane reguły pluralizacji
+- Wygeneruje tłumaczenia dla twoich docelowych języków
+- Zaktualizuje pliki Stringsdict o nowe tłumaczenia
+- Obsłuży skomplikowane reguły pluralizacji dla każdego języka
+- Utrzyma podstawienia zmiennych
+- Zachowa strukturę słownika
+- Wspiera formy mnogie specyficzne dla języka
+- Zweryfikuje spójność reguł pluralizacji
+- Zachowa specyfikatory formatowania

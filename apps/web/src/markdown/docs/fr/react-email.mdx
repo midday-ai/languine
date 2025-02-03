@@ -1,0 +1,41 @@
+# Email React
+
+Languine prend en charge les modèles d'Email React, vous permettant de gérer les traductions pour vos modèles d'email construits avec Email React. Cette intégration gère à la fois le contenu textuel et les attributs HTML tout en préservant la structure des composants React.
+
+---
+
+## Configuration
+
+Tout d'abord, assurez-vous d'avoir un fichier de configuration `languine.config.json` ou `languine.config.ts` à la racine de votre projet. Voici un exemple :
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "react-email": {
+      "include": ["emails/[locale]/*.tsx"]
+    }
+  }
+}
+```
+
+## Traduction
+
+Avec votre configuration en place, exécutez :
+
+```bash
+npx languine@latest translate
+```
+
+Lorsque vous exécutez cette commande, Languine va :
+
+- Charger vos modèles d'Email React source (par exemple, emails/en/*.tsx)
+- Détecter toute nouvelle chaîne de traduction ou toute chaîne modifiée
+- Générer des traductions pour vos langues cibles
+- Créer ou mettre à jour les modèles d'email dans la langue cible (par exemple, emails/sv/*.tsx)
+- Préserver la structure des composants React et les props
+- Maintenir le formatage et le style HTML
+- Gérer l'interpolation et le contenu dynamique

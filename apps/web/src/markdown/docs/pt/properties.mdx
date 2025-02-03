@@ -1,0 +1,40 @@
+# Propriedades
+
+Languine suporta arquivos de Propriedades Java, o formato padrão de localização para aplicações Java. Este formato lida com escape de Unicode e suporta tanto pares chave-valor quanto comentários.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "properties": {
+      "include": ["src/main/resources/messages_[locale].properties"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, o Languine irá:
+
+- Carregar seu arquivo de propriedades de origem (por exemplo, messages_en.properties)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos de propriedades do idioma-alvo (por exemplo, messages_sv.properties)
+- Lidar automaticamente com escape de Unicode
+- Preservar comentários e formatação

@@ -1,0 +1,39 @@
+# YAML
+
+Languine suporta arquivos YAML como um formato de origem, que é comumente usado em Ruby on Rails, Laravel e outros frameworks. Este formato suporta estruturas aninhadas, arrays e tipos de dados complexos.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "yaml": {
+      "include": ["config/locales/[locale].yml"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seu arquivo YAML de origem (por exemplo, config/locales/en.yml)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos YAML do idioma-alvo (por exemplo, config/locales/sv.yml)
+- Preservar estruturas aninhadas e formatação

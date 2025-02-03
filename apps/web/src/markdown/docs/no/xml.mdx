@@ -1,0 +1,44 @@
+# XML
+
+Languine støtter lokalisering av XML-filer, egnet for ulike XML-baserte konfigurasjons- og innholdsfilformater. Dette formatet håndterer komplekse XML-strukturer samtidig som det bevarer formatering og attributter.
+
+---
+
+## Oppsett
+
+Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xml": {
+      "include": ["resources/[locale]/*.xml"]
+    }
+  }
+}
+```
+
+## Oversettelse
+
+Når konfigurasjonen din er satt opp, kjør:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kjører denne kommandoen, vil Languine:
+
+- Laste inn dine kilde-XML-filer (f.eks. resources/en/*.xml)
+- Oppdage eventuelt nytt eller endret innhold
+- Generere oversettelser for dine målspråk
+- Opprette eller oppdatere målspråksfilene (f.eks. resources/sv/*.xml)
+- Bevare XML-struktur og formatering
+- Håndtere oversettelser av attributter
+- Opprettholde CDATA-seksjoner
+- Beholde XML-kommentarer
+- Støtte XML-navnerom
+- Validere XML-struktur

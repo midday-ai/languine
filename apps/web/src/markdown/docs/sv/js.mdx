@@ -1,0 +1,42 @@
+# JavaScript
+
+Languine stöder JavaScript/TypeScript lokaliseringsfiler, perfekt för moderna webbapplikationer. Detta format hanterar både objektliteraler och modulexporter, och stöder nästlade strukturer och dynamiskt innehåll.
+
+---
+
+## Installera
+
+Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "js": {
+      "include": ["src/locales/[locale].js"]
+    }
+  }
+}
+```
+
+## Översättning
+
+Med din konfiguration inställd, kör:
+
+```bash
+npx languine@latest translate
+```
+
+När du kör detta kommando kommer Languine att:
+
+- Ladda dina käll-JavaScript-filer (t.ex. src/locales/en.js)
+- Upptäcka eventuella nya eller ändrade översättningssträngar
+- Generera översättningar för dina målspråk
+- Skapa eller uppdatera målspråksfiler (t.ex. src/locales/sv.js)
+- Bevara modulstruktur och exporter
+- Hantera nästlade objekt och arrayer
+- Upprätthålla kodformatering och kommentarer
+- Generera TypeScript-typer om det är aktiverat

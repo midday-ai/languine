@@ -1,0 +1,44 @@
+# XML
+
+Languine tukee XML-tiedostojen lokalisointia, joka soveltuu erilaisille XML-pohjaisille konfiguraatio- ja sisältötiedostoille. Tämä formaatti käsittelee monimutkaisia XML-rakenteita säilyttäen muotoilun ja attribuutit.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xml": {
+      "include": ["resources/[locale]/*.xml"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun konfiguraatiosi on asetettu, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde XML-tiedostosi (esim. resources/en/*.xml)
+- Havaitsee kaikki uudet tai muokatut sisällöt
+- Tuottaa käännöksiä kohdekielillesi
+- Luo tai päivittää kohdekielitiedostot (esim. resources/sv/*.xml)
+- Säilyttää XML-rakenteen ja muotoilun
+- Käsittelee attribuuttikäännöksiä
+- Säilyttää CDATA-osuudet
+- Pitää XML-kommentit
+- Tukee XML-nimiavaruuksia
+- Vahvistaa XML-rakenteen
