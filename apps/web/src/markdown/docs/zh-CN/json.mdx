@@ -1,3 +1,41 @@
 # JSON
 
-Languine 支持 JSON 文件。
+Languine 支持 JSON 文件作为源格式，满足常见的复数化和插值要求。此格式在许多框架中使用，如 React、Vue、Ruby on Rails 等。
+
+
+---
+
+
+## 设置
+
+首先，确保在项目根目录中有一个 languine.json 或 languine.ts 配置文件。以下是一个示例：
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## 翻译
+
+配置完成后，运行：
+
+```bash
+npx languine@latest translate
+```
+
+当您运行此命令时，Languine 将：
+
+- 加载您的源 JSON 文件（例如，locales/en.json）
+- 检测任何新的或修改过的翻译字符串
+- 为您的目标语言生成翻译
+- 创建或更新目标语言的 JSON 文件（例如，locales/sv.json、locales/de.json、locales/fr.json）

@@ -1,0 +1,48 @@
+# 認證
+
+要使用 Languine，您需要通過我們的引擎進行認證，這只需幾秒鐘即可開始。
+
+---
+
+## 登入
+
+您可以直接在 [Languine 儀表板](https://languine.ai/login) 上登入，或運行以下命令：
+
+```bash title="終端"
+npx languine@latest auth login
+```
+
+
+如果您已經有帳戶，您將自動登入，並且會在您的機器上保存一個會話。
+
+---
+
+## 登出
+
+您可以通過運行以下命令來登出：
+
+```bash title="終端"
+npx languine@latest auth logout
+```
+
+---
+
+## 用戶會話
+
+您可以通過運行以下命令來檢查您是否已登入：
+
+```bash title="終端"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# 環境變數
+
+您可以設置以下環境變數來配置 Languine：
+
+- `LANGUINE_API_KEY`: 用於認證的 API 金鑰。
+- `LANGUINE_PROJECT_ID`: 用於項目的項目 ID。
+
+您可以在 [Languine 儀表板](https://languine.ai/login) 中找到它們。

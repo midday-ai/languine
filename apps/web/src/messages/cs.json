@@ -6,8 +6,8 @@
     "goToApp": "Přejít na aplikaci"
   },
   "hero": {
-    "title": "Automatizovaná lokalizační infrastruktura",
-    "description": "Přeložte obsah vaší aplikace přímo ve vašem vývojovém pracovním postupu. Naše CLI se integruje s GitHub Actions a dalšími nástroji CI/CD pro automatizaci překladů během kódování."
+    "title": "Infrastruktura lokalizace vytvořená pro vývojáře",
+    "description": "Pravděpodobně jste přemýšleli o lokalizaci vaší aplikace, ale váhali jste, protože jste věděli, že by to snížilo vaši rychlost. Už ne. Languine automatizuje lokalizaci ve vašem pracovním postupu a pipeline vývojáře, takže vás překlady nikdy nezpomalí."
   },
   "navigation": {
     "dashboard": "Nástěnka",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Začněte",
-    "title": "Automatizovaná lokalizační infrastruktura",
-    "description": "Přeložte obsah vaší aplikace přímo ve vašem vývojovém pracovním postupu. Naše CLI se integruje s GitHub Actions a dalšími nástroji CI/CD pro automatizaci překladů během kódování.",
+    "title": "Infrastruktura lokalizace vytvořená pro vývojáře",
+    "description": "Pravděpodobně jste přemýšleli o lokalizaci vaší aplikace, ale váhali jste, protože jste věděli, že by to snížilo vaši rychlost. Už ne. Languine automatizuje lokalizaci ve vašem pracovním postupu a pipeline vývojáře, takže vás překlady nikdy nezpomalí.",
     "button": {
       "startAutomating": "Začněte automatizovat",
       "readDocumentation": "Přečtěte si dokumentaci"

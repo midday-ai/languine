@@ -1,3 +1,41 @@
 # JSON
 
-Languine mendukung file JSON.
+Languine mendukung file JSON sebagai format sumber dengan persyaratan umum untuk pluralisasi dan interpolasi. Format ini digunakan di banyak kerangka kerja seperti React, Vue, Ruby on Rails, dan lainnya.
+
+
+---
+
+
+## Menyiapkan
+
+Pertama, pastikan Anda memiliki file konfigurasi languine.json atau languine.ts di root proyek Anda. Berikut adalah contohnya:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Menerjemahkan
+
+Dengan konfigurasi Anda sudah diatur, jalankan:
+
+```bash
+npx languine@latest translate
+```
+
+Ketika Anda menjalankan perintah ini, Languine akan:
+
+- Memuat file JSON sumber Anda (misalnya, locales/en.json)
+- Mendeteksi string terjemahan baru atau yang dimodifikasi
+- Menghasilkan terjemahan untuk bahasa target Anda
+- Membuat atau memperbarui file JSON bahasa target (misalnya, locales/sv.json, locales/de.json, locales/fr.json)

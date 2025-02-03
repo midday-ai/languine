@@ -1,8 +1,93 @@
 # CLI
 
-Languine oferuje interfejs wiersza poleceń (CLI), aby pomóc Ci w tłumaczeniu aplikacji.
+Languine zapewnia interfejs wiersza poleceń (CLI), który pomoże Ci przetłumaczyć Twoją aplikację.
 
-## tłumaczenie
+## Przegląd poleceń
 
-Polecenie `tłumaczenie` służy do tłumaczenia Twojej aplikacji.
+### translate
+
+Polecenie `translate` służy do tłumaczenia Twojej aplikacji.
+
+```bash title="Terminal"
+# Rozpocznij tłumaczenie swojej aplikacji
+languine translate
+
+# Opcje:
+#   --source-locale    Określ źródłowy język (domyślnie: en)
+#   --target-locale    Określ docelowy język(języki) do przetłumaczenia
+#   --config          Ścieżka do pliku languine.config.js
+```
+
+### init
+
+```bash title="Terminal"
+# Zainicjuj nowy projekt Languine
+languine init
+
+# To spowoduje:
+# - Utworzenie pliku languine.config.js
+# - Ustawienie struktury projektu
+# - Inicjalizację niezbędnych katalogów
+```
+
+### status
+
+```bash title="Terminal"
+# Sprawdź status swoich tłumaczeń
+languine status
+
+# Pokazuje:
+# - Aktualny postęp tłumaczenia
+# - Brakujące tłumaczenia
+# - Statystyki tłumaczeń
+```
+
+### validate
+
+```bash title="Terminal"
+# Waliduj swoje pliki tłumaczeń
+languine validate
+
+# Sprawdza:
+# - Strukturę pliku
+# - Brakujące klucze
+# - Spójność formatu
+```
+
+### export
+
+```bash title="Terminal"
+# Eksportuj swoje tłumaczenia
+languine export
+
+# Opcje:
+#   --format          Format eksportu (json, yaml, itp.)
+#   --output         Katalog wyjściowy
+```
+
+### import
+
+```bash title="Terminal"
+# Importuj tłumaczenia z zewnętrznych plików
+languine import
+
+# Opcje:
+#   --source         Plik lub katalog źródłowy
+#   --format         Format importu (json, yaml, itp.)
+```
+
+## Opcje globalne
+
+Wszystkie polecenia obsługują następujące opcje globalne:
+
+```bash title="Terminal"
+# Opcje globalne dostępne dla wszystkich poleceń
+languine [polecenie] [opcje]
+
+# Wspólne opcje:
+#   --help, -h       Pokaż informacje pomocy
+#   --version, -v    Pokaż informacje o wersji
+#   --verbose        Włącz szczegółowe logowanie
+#   --config         Określ ścieżkę do pliku konfiguracyjnego
+```
 

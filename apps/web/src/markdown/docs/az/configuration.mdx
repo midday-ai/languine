@@ -1,0 +1,198 @@
+# Konfiqurasiya
+
+Languine, tərcümə tənzimləmələrinizi idarə etmək üçün həm TypeScript, həm də JSON konfiqurasiya fayllarını dəstəkləyir. Siz ya languine.config.ts faylını TypeScript üçün, ya da languine.json faylını JSON formatında seçə bilərsiniz. Hər iki fayl, mənbə və hədəf dillərinizi, eləcə də tərcümə olunması lazım olan faylları müəyyən edir.
+
+---
+
+## Əsas Konfiqurasiya
+
+Hər iki formatda sadə bir nümunə:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Hər iki format eyni konfiqurasiya seçimlərini dəstəkləyir. Daha yaxşı tip yoxlaması və IDE dəstəyi üçün TypeScript-i seçin, ya da sadəlik və daha geniş alət uyğunluğu üçün JSON-u seçin.
+
+Gəlin bu faylların müxtəlif bölmələrini araşdıraq.
+
+---
+
+## Locale Konfiqurasiyası
+
+Locale bölməsi, tərcümə dillərinizi müəyyən edir:
+
+- source: Məzmun yaradılması üçün əsas diliniz (məsələn, "en" İngilis dili üçün)
+- targets: Tərcümə etmək istədiyiniz dillərin massivi (məsələn, ["es", "fr", "de"] İspan, Fransız və Alman dili üçün)
+
+Languine geniş dil kodları spektrini dəstəkləyir, o cümlədən:
+- Sadə kodlar: en, es, fr, de
+- Regiona xas kodlar: pt-BR, zh-CN, zh-TW
+
+## Fayl Konfiqurasiyası
+
+Fayllar bölməsi, Languine-in tərcümə etməli olduğu faylları müəyyən edir. Siz bir neçə fayl növü və nümunələrini konfiqurasiya edə bilərsiniz:
+
+---
+
+### JSON Faylları
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX Faylları
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobil Platform Faylları
+
+iOS (Xcode) üçün:
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Yaxud ənənəvi .strings faylları üçün
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Android üçün:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Digər Formatlar
+
+Languine tərəfindən dəstəklənən fayl formatlarının tam siyahısı:
+
+- [JSON](/docs/json) - Standart JSON tərcümə faylları
+- [YAML](/docs/yaml) - YAML tərcümə faylları
+- [Properties](/docs/properties) - Java properties faylları
+- [Android](/docs/android) - Android XML resurs faylları
+- [iOS](/docs/ios) - iOS lokalizasiya faylları
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS çoxluq faylları
+- [iOS XCStrings](/docs/xcode-xcstrings) - Müasir Xcode string kataloqları
+- [Markdown](/docs/md) - Sənəd faylları
+- [MDX](/docs/mdx) - JSX ilə sənəd
+- [HTML](/docs/html) - HTML faylları
+- [JavaScript](/docs/js) - JavaScript faylları
+- [TypeScript](/docs/ts) - TypeScript faylları
+- [Gettext PO](/docs/po) - GetText tərcümə faylları
+- [XLIFF](/docs/xliff) - XML Lokalizasiya Mübadilə Fayl Formatı
+- [CSV](/docs/csv) - Cədvəl əsaslı tərcümələr
+- [XML](/docs/xml) - XML resurs faylları
+- [Flutter ARB](/docs/arb) - Tətbiq Resurs Paketi faylları
+
+---
+
+## Fayl Nümunələri
+
+Fayl nümunələrindəki [locale] yer tutucu, tərcümə zamanı müvafiq dil kodu ilə avtomatik olaraq əvəz olunur. Məsələn:
+
+- locales/[locale].json olur:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Hər fayl növü üçün bir neçə nümunəni daxil edə bilərsiniz və glob nümunələrindən istifadə edə bilərsiniz:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Layihə ID (İstəyə bağlı)
+
+Əgər Languine-in bulud xidmətlərindən istifadə edirsinizsə, konfiqurasiyaya layihə ID-nizi daxil edə bilərsiniz:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... locale konfiqurasiyası
+  },
+  files: {
+    // ... fayl konfiqurasiyası
+  },
+});
+```
+
+---
+
+## Tərcümə Vəziyyətinin İzlənməsi
+
+Languine avtomatik olaraq tərcümələrinizin vəziyyətini izləmək üçün languine.lock faylını yaradır və saxlayır. Bu fayl:
+
+- Hansı məzmunun tərcümə olunduğunu izləyir
+- Mənbə məzmunu dəyişdikdə nələrin yenilənməli olduğunu müəyyən etməyə kömək edir
+- Versiya nəzarət sisteminizə daxil edilməlidir
+
+Siz lock faylını əl ilə redaktə etməyə ehtiyac yoxdur - Languine onu avtomatik olaraq tərcümə əmrlərini icra edərkən idarə edir.
+
+## Ən Yaxşı Təcrübələr
+
+1. **Versiya Nəzarəti**: Həmişə həm languine.config.ts, həm də languine.lock faylını deposuna daxil edin
+2. **Fayl Təşkili**: Tərcümə fayllarınızı ardıcıl bir direktoriyaya yerləşdirin
+3. **Dil Kodları**: Uyğunluğu təmin etmək üçün standart dil kodlarından istifadə edin
+4. **Nümunələr**: Lazımsız faylların tərcümə edilməməsi üçün spesifik daxil etmə nümunələrindən istifadə edin
+5. **Layihə ID**: Layihə ID-nizi təhlükəsiz saxlayın və bulud xidmətlərindən istifadə edirsinizsə, onu ictimai şəkildə paylaşmayın

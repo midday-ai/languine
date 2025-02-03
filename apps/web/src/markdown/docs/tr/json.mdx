@@ -1,3 +1,41 @@
 # JSON
 
-Languine JSON dosyalarını destekler.
+Languine, çoğul ve yerleştirme için yaygın gereksinimlerle birlikte bir kaynak formatı olarak JSON dosyalarını destekler. Bu format, React, Vue, Ruby on Rails ve daha fazlası gibi birçok çerçevede kullanılmaktadır.
+
+
+---
+
+
+## Kurulum
+
+Öncelikle, projenizin kök dizininde bir languine.json veya languine.ts yapılandırma dosyanızın olduğundan emin olun. İşte bir örnek:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## Çeviri
+
+Yapılandırmanızı ayarladıktan sonra, çalıştırın:
+
+```bash
+npx languine@latest translate
+```
+
+Bu komutu çalıştırdığınızda, Languine:
+
+- Kaynak JSON dosyanızı yükleyecek (örneğin, locales/en.json)
+- Yeni veya değiştirilmiş çeviri dizelerini tespit edecek
+- Hedef dilleriniz için çeviriler oluşturacak
+- Hedef dil JSON dosyalarını oluşturacak veya güncelleyecek (örneğin, locales/sv.json, locales/de.json, locales/fr.json)

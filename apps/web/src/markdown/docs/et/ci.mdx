@@ -1,3 +1,97 @@
 # CI/CD
 
-Languine pakub CI/CD integreerimist, et aidata teil oma rakendust tõlkida.
+Languine pakub CI/CD integreerimist, et aidata teil tõlkida oma rakendust.
+
+---
+
+## Kuidas see töötab
+
+Languine'i CI/CD töövoog järgib struktureeritud protsessi, et automatiseerida tõlkeuuendusi teie rakenduses:
+
+### 1. Tegevuse algatamine
+- Töövoog algab, kui tegevus käivitatakse
+- Seab üles vajalikud Git konfiguratsioonid ja volitused
+
+### 2. Languine'i mootori töötlemine
+- Languine'i mootor töötleb teie rakenduse sisu
+- Teeb tõlketöid konfigureeritud seadete abil
+
+### 3. Muudatuste tuvastamine
+Süsteem kontrollib tõlke muudatusi ja järgib ühte kahest teest:
+
+**Kui muudatused on leitud:**
+- Muudatused salvestatakse hoidlasse
+- Muudatused edastatakse määratud harule
+- Koostatakse Pull Request (PR)
+
+**Kui muudatusi ei leita:**
+- Töövoog lõpeb ilma PR-i loomata
+
+### 4. Pull Requesti loomine
+Kui muudatused on tuvastatud, luuakse Pull Request koos:
+
+**PR sisu:**
+- Selge pealkiri, mis näitab tõlkeuuendusi
+- Üksikasjalik muudatuste kirjeldus
+- Kvaliteedikontrolli kinnitused
+- Ülevaatamise juhised
+- Lingid dokumentatsiooni ja toe juurde
+
+**PR kirjeldus sisaldab:**
+- Tõlkeuuenduste kokkuvõte
+- Loetelu muudatustest (uuendatud tõlked, terminoloogia järjepidevus)
+- Järgmised sammud ülevaatajate jaoks
+- Lingid dokumentatsiooni ja toe ressursside juurde
+
+---
+
+## Töövoo diagramm
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Tegevus algab     │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Seadista Git &   │
+                    │    Volitused       │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine'i mootor ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Kontrolli muudatusi│───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Muudatused]     │ [Ei muudatusi]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Salvestamine &     │       │
+                    │   Edastamine        │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Loo PR           │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Valmis        │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Töövoog on loodud olema automatiseeritud, samas võimaldades inimülevaatust ja kvaliteedikontrolli enne muudatuste liitmist teie koodibaasi. See järgib versioonihalduse parimaid tavasid ja tagab, et tõlked on korralikult jälgitud ja dokumenteeritud läbi Git ajaloo.

@@ -1,0 +1,198 @@
+# Konfiguracija
+
+Languine podržava i TypeScript i JSON konfiguracijske datoteke za upravljanje vašim postavkama prijevoda. Možete odabrati languine.config.ts za TypeScript ili languine.json za JSON format. Obje datoteke definiraju vaše izvorne i ciljne jezike, kao i datoteke koje treba prevesti.
+
+---
+
+## Osnovna konfiguracija
+
+Evo osnovnog primjera u oba formata:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Oba formata podržavaju iste opcije konfiguracije. Odaberite TypeScript za bolju provjeru tipova i podršku IDE-u, ili JSON za jednostavnost i širu kompatibilnost alata.
+
+Razložimo različite dijelove ovih datoteka.
+
+---
+
+## Konfiguracija jezika
+
+Odjeljak jezika definira vaše jezike za prijevod:
+
+- source: Vaš primarni jezik za stvaranje sadržaja (npr., "en" za engleski)
+- targets: Niz jezika u koje želite prevesti (npr., ["es", "fr", "de"] za španjolski, francuski i njemački)
+
+Languine podržava širok spektar jezičnih kodova, uključujući:
+- Jednostavni kodovi: en, es, fr, de
+- Kodovi specifični za regiju: pt-BR, zh-CN, zh-TW
+
+## Konfiguracija datoteka
+
+Odjeljak datoteka definira koje datoteke Languine treba prevesti. Možete konfigurirati više vrsta i obrazaca datoteka:
+
+---
+
+### JSON datoteke
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX datoteke
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Datoteke za mobilne platforme
+
+Za iOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Ili za tradicionalne .strings datoteke
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Za Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Ostali formati
+
+Evo potpunog popisa formata datoteka koje podržava Languine:
+
+- [JSON](/docs/json) - Standardne JSON datoteke za prijevod
+- [YAML](/docs/yaml) - YAML datoteke za prijevod
+- [Properties](/docs/properties) - Java properties datoteke
+- [Android](/docs/android) - Android XML resursne datoteke
+- [iOS](/docs/ios) - iOS lokalizacijske datoteke
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS datoteke za pluralizaciju
+- [iOS XCStrings](/docs/xcode-xcstrings) - Moderni Xcode katalog stringova
+- [Markdown](/docs/md) - Datoteke dokumentacije
+- [MDX](/docs/mdx) - Dokumentacija s JSX-om
+- [HTML](/docs/html) - HTML datoteke
+- [JavaScript](/docs/js) - JavaScript datoteke
+- [TypeScript](/docs/ts) - TypeScript datoteke
+- [Gettext PO](/docs/po) - GetText datoteke za prijevod
+- [XLIFF](/docs/xliff) - XML format za razmjenu lokalizacije
+- [CSV](/docs/csv) - Prijevodi temeljeni na proračunskim tablicama
+- [XML](/docs/xml) - XML resursne datoteke
+- [Flutter ARB](/docs/arb) - Datoteke aplikacijskog resursnog paketa
+
+---
+
+## Obrasci datoteka
+
+Zamjena [locale] u obrascima datoteka automatski se zamjenjuje odgovarajućim jezičnim kodom tijekom prijevoda. Na primjer:
+
+- locales/[locale].json postaje:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Možete uključiti više obrazaca za svaku vrstu datoteke i koristiti glob obrasce:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## ID projekta (opcionalno)
+
+Ako koristite Languineove usluge u oblaku, možete uključiti svoj ID projekta u konfiguraciju:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... konfiguracija jezika
+  },
+  files: {
+    // ... konfiguracija datoteka
+  },
+});
+```
+
+---
+
+## Praćenje stanja prijevoda
+
+Languine automatski stvara i održava languine.lock datoteku za praćenje stanja vaših prijevoda. Ova datoteka:
+
+- Prati koji je sadržaj preveden
+- Pomaže identificirati što treba ažurirati kada se izvorni sadržaj promijeni
+- Treba biti uključena u vaš sustav kontrole verzija
+
+Ne trebate ručno uređivati datoteku zaključavanja - Languine njome upravlja automatski kada pokrenete naredbe za prijevod.
+
+## Najbolje prakse
+
+1. **Kontrola verzija**: Uvijek uključite i languine.config.ts i languine.lock u svoju repozitorij
+2. **Organizacija datoteka**: Držite svoje datoteke za prijevod organizirane u dosljednoj strukturi direktorija
+3. **Jezični kodovi**: Koristite standardne jezične kodove kako biste osigurali kompatibilnost
+4. **Obrasci**: Koristite specifične obrasce uključivanja kako biste izbjegli prevođenje nepotrebnih datoteka
+5. **ID projekta**: Držite svoj ID projekta sigurnim i ne dijelite ga javno ako koristite usluge u oblaku

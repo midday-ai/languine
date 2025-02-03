@@ -2,7 +2,92 @@
 
 Languine fournit une interface en ligne de commande (CLI) pour vous aider à traduire votre application.
 
-## traduire
+## Vue d'ensemble des commandes
 
-La commande `traduire` est utilisée pour traduire votre application.
+### translate
+
+La commande `translate` est utilisée pour traduire votre application.
+
+```bash title="Terminal"
+# Démarrer la traduction de votre application
+languine translate
+
+# Options :
+#   --source-locale    Spécifiez la langue source (par défaut : en)
+#   --target-locale    Spécifiez la ou les langues cibles pour la traduction
+#   --config          Chemin vers votre fichier languine.config.js
+```
+
+### init
+
+```bash title="Terminal"
+# Initialiser un nouveau projet Languine
+languine init
+
+# Cela va :
+# - Créer un fichier languine.config.js
+# - Configurer la structure de votre projet
+# - Initialiser les répertoires nécessaires
+```
+
+### status
+
+```bash title="Terminal"
+# Vérifier l'état de vos traductions
+languine status
+
+# Affiche :
+# - Progression actuelle de la traduction
+# - Traductions manquantes
+# - Statistiques de traduction
+```
+
+### validate
+
+```bash title="Terminal"
+# Valider vos fichiers de traduction
+languine validate
+
+# Vérifie :
+# - Structure de fichier
+# - Clés manquantes
+# - Cohérence du format
+```
+
+### export
+
+```bash title="Terminal"
+# Exporter vos traductions
+languine export
+
+# Options :
+#   --format          Format d'exportation (json, yaml, etc.)
+#   --output         Répertoire de sortie
+```
+
+### import
+
+```bash title="Terminal"
+# Importer des traductions depuis des fichiers externes
+languine import
+
+# Options :
+#   --source         Fichier ou répertoire source
+#   --format         Format d'importation (json, yaml, etc.)
+```
+
+## Options globales
+
+Toutes les commandes prennent en charge les options globales suivantes :
+
+```bash title="Terminal"
+# Options globales disponibles pour toutes les commandes
+languine [command] [options]
+
+# Options courantes :
+#   --help, -h       Afficher les informations d'aide
+#   --version, -v    Afficher les informations de version
+#   --verbose        Activer la journalisation détaillée
+#   --config         Spécifier le chemin du fichier de configuration
+```
 

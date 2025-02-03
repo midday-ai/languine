@@ -2,17 +2,13 @@
 
 Languine'i kurarak başlayın.
 
-```bash
-npm install -g @languine/cli
+Sonra, Languine'i başlatmak için aşağıdaki komutu çalıştırın.
+
+```bash title="Terminal"
+npx languine@latest init
 ```
 
-Ardından, Languine'i başlatmak için aşağıdaki komutu çalıştırın.
-
-```bash
-languine init
-```
-
-Projenizi kurmak için adımları izleyin.
+Projenizi ayarlamak için adımları takip edin.
 
 ## İlk Çeviri
 
@@ -20,16 +16,45 @@ Artık kodunuzu çevirmeye hazırsınız.
 
 Kaynak dosyanıza bir anahtar ekleyerek başlayın, örneğin `en.json` dosyasını kaynak dosya olarak kullanmayı seçerseniz, ona bir anahtar ekleyin.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Merhaba"
+  "welcome": "Uygulamamıza hoş geldiniz!",
+  "user": {
+    "greeting": "Merhaba, {{name}}!",
+    "profile": {
+      "title": "Profiliniz",
+      "edit": "Profili düzenle"
+    }
+  },
+  "notifications": {
+    "messages": "{{count}} yeni mesajınız var.",
+    "empty": "Yeni bildirim yok."
+  }
 }
+
 ```
 
-Sonra kodunuzu çevirmek için aşağıdaki komutu çalıştırın.
 
-```bash
-languine translate
+## Çeviri
+
+İçeriğinizi çevirmek için aşağıdaki komutu çalıştırın:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Eklediğiniz anahtarı hedef dillerinize çevireceğiz.
+## Bu şunları yapacak:
+1. Her hedef dil için çeviri dosyaları oluşturacak
+2. Languine Motoru ile yüksek kaliteli çeviriler üretecek
+3. Çeviri durumlarını takip etmek için bir `languine.lock` dosyası oluşturacak
+
+Lock dosyası, kaynak içeriğiniz değiştiğinde Languine'in hangi çevirilerin güncellenmesi gerektiğini belirlemesine yardımcı olur. Bu dosyayı depolanmanıza eklemeyi unutmayın.
+
+## Sonraki Adımlar
+
+Artık Languine'i kurduğunuza göre, şunları yapabilirsiniz:
+- `languine.json` dosyanıza daha fazla dil ekleyin
+- Languine'i CI/CD hattınıza entegre edin
+- Programatik çeviriler için API'mizi kullanın
+
+Languine'in gelişmiş özellikleri hakkında daha fazla bilgi edinmek için diğer kılavuzlarımıza göz atın.

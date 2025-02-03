@@ -1,53 +1,92 @@
 # GitHub Actions
 
-Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code vers le dépôt, l'action GitHub traduira alors vos nouvelles clés, soit en créant une demande de tirage, soit en validant vos modifications.
+Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code dans le dépôt, l'action GitHub traduira alors vos nouvelles clés, créera soit une demande de tirage, soit validera vos modifications.
 Cela vous fait gagner beaucoup de temps et d'efforts tout en maintenant des traductions de haute qualité.
 
+---
 
-## Flux de travail
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Action Démarre    │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Configurer Git &  │
-│    Identifiants      │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Moteur Languine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Vérifier les      │───────┐
-│   Modifications      │       │
-└──────────┬──────────┘       │
-           │                  │
-           │ [Modifications]  │ [Pas de Modifications]
-           │                  │
-┌──────────▼──────────┐       │
-│   Valider & Pousser  │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Créer PR         │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Fait         │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+## Installation
+
+Pour utiliser l'action GitHub Languine dans votre dépôt, vous devez :
+
+1. Configurer les secrets de votre dépôt avec vos identifiants Languine
+2. Créer un fichier de workflow dans votre dépôt
+
+### Configuration des Secrets du Dépôt
+
+Ajoutez les secrets suivants dans les paramètres de votre dépôt (Paramètres > Secrets et variables > Actions) :
+
+- `LANGUINE_API_KEY` : Votre clé API Languine
+- `LANGUINE_PROJECT_ID` : Votre ID de projet Languine
+
+Vous pouvez trouver ces valeurs dans votre tableau de bord Languine sous Paramètres du projet.
+
+
+
+### Variables d'Environnement
+
+L'action GitHub utilise les variables d'environnement suivantes :
+- `LANGUINE_API_KEY` (Requis) : Votre clé API Languine pour l'authentification
+- `LANGUINE_PROJECT_ID` (Requis) : Votre ID de projet Languine 
+- `GITHUB_TOKEN` (Requis) : Fournie automatiquement par GitHub, utilisée pour créer des PRs
+
+### Exemple de Workflow
+
+Créez un nouveau fichier .github/workflows/languine.yml dans votre dépôt avec le contenu suivant :
+
+```ts title=".github/workflows/release.yml"
+name: Déployer le Site Web
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Action Languine
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Ce workflow va :
+- S'exécuter lors des poussées vers la branche principale
+- S'exécuter lors des demandes de tirage vers la branche principale
+- Peut être déclenché manuellement depuis l'onglet Actions
+- Vérifier votre code et exécuter le processus de traduction Languine
+- Créer une demande de tirage avec toutes nouvelles traductions (configurable)
+
+#### Option de Répertoire de Travail
+
+L'option `working-directory` vous permet de spécifier où se trouvent vos fichiers de traduction. Cela est particulièrement utile dans les monorepos où vos traductions peuvent se trouver dans un package ou un répertoire d'application spécifique. Par exemple :
+
+#### Option de Demande de Tirage
+
+L'option `create-pull-request` contrôle si l'action crée une demande de tirage avec les modifications ou les valide directement dans la branche :
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # créer une demande de tirage avec les modifications
+```
+
+Lorsqu'elle est définie sur `true`, l'action va :
+- Créer une nouvelle branche avec les modifications
+- Créer une demande de tirage pour révision
+- Ajouter des étiquettes et une description appropriées
+
+Lorsqu'elle est définie sur `false` (par défaut), l'action va :
+- Valider les modifications directement dans la branche actuelle
+- Pousser les modifications sans créer de demande de tirage

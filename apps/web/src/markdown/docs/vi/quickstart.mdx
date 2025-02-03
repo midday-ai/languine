@@ -2,34 +2,59 @@
 
 Bắt đầu bằng cách cài đặt Languine.
 
-```bash
-npm install -g @languine/cli
-```
-
 Sau đó, chạy lệnh sau để khởi tạo Languine.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
-Thực hiện theo các bước để thiết lập dự án của bạn.
+Thực hiện các bước để thiết lập dự án của bạn.
 
 ## Dịch thuật đầu tiên
 
 Bây giờ bạn đã sẵn sàng để dịch mã của mình.
 
-Bắt đầu bằng cách thêm một khóa vào tệp nguồn của bạn, ví dụ nếu bạn chọn sử dụng `en.json` làm tệp nguồn, hãy thêm một khóa vào nó.
+Bắt đầu bằng cách thêm một khóa vào tệp nguồn của bạn, ví dụ nếu bạn chọn sử dụng `en.json` làm tệp nguồn, hãy thêm một khóa vào đó.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Xin chào"
+  "welcome": "Chào mừng bạn đến với ứng dụng của chúng tôi!",
+  "user": {
+    "greeting": "Xin chào, {{name}}!",
+    "profile": {
+      "title": "Hồ sơ của bạn",
+      "edit": "Chỉnh sửa hồ sơ"
+    }
+  },
+  "notifications": {
+    "messages": "Bạn có {{count}} tin nhắn mới.",
+    "empty": "Không có thông báo mới."
+  }
 }
+
 ```
 
-Sau đó, chạy lệnh sau để dịch mã của bạn.
 
-```bash
-languine translate
+## Dịch
+
+Chạy lệnh sau để dịch nội dung của bạn:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Chúng tôi sẽ dịch khóa mà bạn đã thêm sang các ngôn ngữ mục tiêu.
+## Điều này sẽ:
+1. Tạo các tệp dịch cho mỗi ngôn ngữ mục tiêu
+2. Tạo ra các bản dịch chất lượng cao từ Languine Engine
+3. Tạo một tệp `languine.lock` để theo dõi trạng thái dịch
+
+Tệp khóa giúp Languine xác định các bản dịch nào cần cập nhật khi nội dung nguồn của bạn thay đổi. Hãy chắc chắn cam kết tệp này vào kho lưu trữ của bạn.
+
+## Các bước tiếp theo
+
+Bây giờ bạn đã thiết lập Languine, bạn có thể:
+- Thêm nhiều ngôn ngữ hơn vào tệp `languine.json` của bạn
+- Tích hợp Languine vào quy trình CI/CD của bạn
+- Sử dụng API của chúng tôi để dịch thuật theo chương trình
+
+Hãy xem các hướng dẫn khác của chúng tôi để tìm hiểu thêm về các tính năng nâng cao của Languine.

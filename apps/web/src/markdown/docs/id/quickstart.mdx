@@ -2,34 +2,59 @@
 
 Mulailah dengan menginstal Languine.
 
-```bash
-npm install -g @languine/cli
-```
-
 Kemudian, jalankan perintah berikut untuk menginisialisasi Languine.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
-Ikuti langkah-langkah untuk menyiapkan proyek Anda.
+Ikuti langkah-langkah untuk mengatur proyek Anda.
 
 ## Terjemahan Pertama
 
 Sekarang Anda siap untuk menerjemahkan kode Anda.
 
-Mulailah dengan menambahkan sebuah kunci ke file sumber Anda, misalnya jika Anda memilih untuk menggunakan `en.json` sebagai file sumber Anda, tambahkan sebuah kunci ke dalamnya.
+Mulailah dengan menambahkan kunci ke file sumber Anda, misalnya jika Anda memilih untuk menggunakan `en.json` sebagai file sumber Anda, tambahkan kunci ke dalamnya.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Halo"
+  "welcome": "Selamat datang di aplikasi kami!",
+  "user": {
+    "greeting": "Hai, {{name}}!",
+    "profile": {
+      "title": "Profil Anda",
+      "edit": "Edit profil"
+    }
+  },
+  "notifications": {
+    "messages": "Anda memiliki {{count}} pesan baru.",
+    "empty": "Tidak ada notifikasi baru."
+  }
 }
+
 ```
 
-Kemudian jalankan perintah berikut untuk menerjemahkan kode Anda.
 
-```bash
-languine translate
+## Terjemahkan
+
+Jalankan perintah berikut untuk menerjemahkan konten Anda:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Kami kemudian akan menerjemahkan kunci yang Anda tambahkan ke dalam bahasa target Anda.
+## Ini akan:
+1. Membuat file terjemahan untuk setiap bahasa target
+2. Menghasilkan terjemahan berkualitas tinggi dengan Languine Engine
+3. Membuat file `languine.lock` untuk melacak status terjemahan
+
+File kunci membantu Languine mengidentifikasi terjemahan mana yang perlu diperbarui ketika konten sumber Anda berubah. Pastikan untuk mengkomit file ini ke repositori Anda.
+
+## Langkah Selanjutnya
+
+Sekarang Anda telah mengatur Languine, Anda dapat:
+- Menambahkan lebih banyak bahasa di file `languine.json` Anda
+- Mengintegrasikan Languine ke dalam pipeline CI/CD Anda
+- Menggunakan API kami untuk terjemahan secara programatik
+
+Lihat panduan kami yang lain untuk mempelajari lebih lanjut tentang fitur-fitur canggih Languine.

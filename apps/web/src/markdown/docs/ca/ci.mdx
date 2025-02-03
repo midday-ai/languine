@@ -1,3 +1,96 @@
 # CI/CD
 
 Languine proporciona una integració CI/CD per ajudar-te a traduir la teva aplicació.
+
+---
+
+## Com Funciona
+
+El flux de treball CI/CD a Languine segueix un procés estructurat per automatitzar les actualitzacions de traducció a la teva aplicació:
+
+### 1. Inicialització de l'Acció
+- El flux de treball comença quan s'activa l'acció
+- Configura la configuració i les credencials de Git necessàries
+
+### 2. Processament del Motor Languine
+- El motor Languine processa el contingut de la teva aplicació
+- Gestiona les tasques de traducció utilitzant la configuració configurada
+
+### 3. Detecció de Canvis
+El sistema comprova si hi ha canvis en les traduccions i segueix un dels dos camins:
+
+**Quan es Troben Canvis:**
+- Els canvis es comprometen al repositori
+- Els canvis es publiquen a la branca especificada
+- Es crea una Sol·licitud de Tirada (PR)
+
+**Quan No es Troben Canvis:**
+- El flux de treball es completa sense crear un PR
+
+### 4. Creació de la Sol·licitud de Tirada
+Quan es detecten canvis, es crea una Sol·licitud de Tirada amb:
+
+**Contingut del PR:**
+- Títol clar que indica les actualitzacions de traducció
+- Descripció detallada dels canvis
+- Confirmacions de control de qualitat
+- Instruccions per a la revisió
+- Enllaços a la documentació i suport
+
+**La Descripció del PR Inclou:**
+- Resum de les actualitzacions de traducció
+- Llista del que ha canviat (traduccions actualitzades, consistència terminològica)
+- Properes passes per als revisors
+- Enllaços a la documentació i recursos de suport
+
+---
+
+## Diagrama del Flux de Treball
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   L'Acció Comença   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Configura Git &   │
+                    │    Credencials       │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Motor Languine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Comprova Canvis    │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Canvis]         │ [Sense Canvis]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Compromet i Publica │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Crea PR          │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Fet          │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+El flux de treball està dissenyat per ser automatitzat mentre que encara permet la revisió humana i el control de qualitat abans que els canvis es fusionin al teu codi. Manté les millors pràctiques de control de versions i assegura que les traduccions es rastregin i documentin adequadament a través de la història de Git.

@@ -2,34 +2,59 @@
 
 Languine-i quraşdırmağa başlayın.
 
-```bash
-npm install -g @languine/cli
-```
-
 Sonra, Languine-i başlatmaq üçün aşağıdakı əmri icra edin.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
-Projenizi qurmaq üçün addımları izləyin.
+Layihənizi qurmaq üçün addımları izləyin.
 
 ## İlk Tərcümə
 
 İndi kodunuzu tərcümə etməyə hazırsınız.
 
-Mənbə faylınıza bir açar əlavə etməyə başlayın, məsələn, əgər `en.json`-u mənbə faylınız kimi istifadə etməyə qərar versəniz, ona bir açar əlavə edin.
+Mənbə faylınıza bir açar əlavə etməyə başlayın, məsələn, `en.json`-u mənbə faylınız kimi istifadə etməyi seçsəniz, ona bir açar əlavə edin.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Salam"
+  "welcome": "Tətbiqimizə xoş gəlmisiniz!",
+  "user": {
+    "greeting": "Salam, {{name}}!",
+    "profile": {
+      "title": "Sizin profiliniz",
+      "edit": "Profili redaktə et"
+    }
+  },
+  "notifications": {
+    "messages": "Sizdə {{count}} yeni mesaj(lar) var.",
+    "empty": "Yeni bildiriş yoxdur."
+  }
 }
+
 ```
 
-Sonra kodunuzu tərcümə etmək üçün aşağıdakı əmri icra edin.
 
-```bash
-languine translate
+## Tərcümə Et
+
+Məzmununuzu tərcümə etmək üçün aşağıdakı əmri icra edin:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Sonra əlavə etdiyiniz açarı hədəf dillərinizə tərcümə edəcəyik.
+## Bu, aşağıdakılara səbəb olacaq:
+1. Hər bir hədəf dil üçün tərcümə faylları yaradacaq
+2. Languine Mühərriki ilə yüksək keyfiyyətli tərcümələr yaradacaq
+3. Tərcümə vəziyyətlərini izləmək üçün `languine.lock` faylı yaradacaq
+
+Lock faylı, Languine-in mənbə məzmununuz dəyişdikdə hansı tərcümələrin yenilənməsinə ehtiyac olduğunu müəyyən etməyə kömək edir. Bu faylı deposunuza əlavə etməyi unutmayın.
+
+## Növbəti Addımlar
+
+İndi Languine-i quraşdırdığınız üçün, siz:
+- `languine.json` faylınıza daha çox dil əlavə edə bilərsiniz
+- Languine-i CI/CD boru xəttinizə inteqrasiya edə bilərsiniz
+- Proqramatik tərcümələr üçün API-mizdən istifadə edə bilərsiniz
+
+Languine-in inkişaf etmiş xüsusiyyətləri haqqında daha çox öyrənmək üçün digər bələdçilərimizə baxın.

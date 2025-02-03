@@ -2,7 +2,92 @@
 
 Languine proporciona una CLI para ayudarte a traducir tu aplicación.
 
-## traducir
+## Resumen de Comandos
 
-El comando `traducir` se utiliza para traducir tu aplicación.
+### translate
+
+El comando `translate` se utiliza para traducir tu aplicación.
+
+```bash title="Terminal"
+# Iniciar la traducción de tu aplicación
+languine translate
+
+# Opciones:
+#   --source-locale    Especificar la configuración regional de origen (predeterminado: en)
+#   --target-locale    Especificar la(s) configuración(es) regional(es) a las que traducir
+#   --config          Ruta a tu archivo languine.config.js
+```
+
+### init
+
+```bash title="Terminal"
+# Inicializar un nuevo proyecto Languine
+languine init
+
+# Esto hará:
+# - Crear un archivo languine.config.js
+# - Configurar la estructura de tu proyecto
+# - Inicializar los directorios necesarios
+```
+
+### status
+
+```bash title="Terminal"
+# Verificar el estado de tus traducciones
+languine status
+
+# Muestra:
+# - Progreso actual de la traducción
+# - Traducciones faltantes
+# - Estadísticas de traducción
+```
+
+### validate
+
+```bash title="Terminal"
+# Validar tus archivos de traducción
+languine validate
+
+# Verifica:
+# - Estructura de archivos
+# - Claves faltantes
+# - Consistencia de formato
+```
+
+### export
+
+```bash title="Terminal"
+# Exportar tus traducciones
+languine export
+
+# Opciones:
+#   --format          Formato de exportación (json, yaml, etc.)
+#   --output         Directorio de salida
+```
+
+### import
+
+```bash title="Terminal"
+# Importar traducciones desde archivos externos
+languine import
+
+# Opciones:
+#   --source         Archivo o directorio de origen
+#   --format         Formato de importación (json, yaml, etc.)
+```
+
+## Opciones Globales
+
+Todos los comandos admiten las siguientes opciones globales:
+
+```bash title="Terminal"
+# Opciones globales disponibles para todos los comandos
+languine [comando] [opciones]
+
+# Opciones comunes:
+#   --help, -h       Mostrar información de ayuda
+#   --version, -v    Mostrar información de versión
+#   --verbose        Habilitar registro detallado
+#   --config         Especificar la ruta del archivo de configuración
+```
 

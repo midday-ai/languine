@@ -1,8 +1,93 @@
 # CLI
 
-A Languine egy CLI-t biztosít, amely segít az alkalmazásod lefordításában.
+A Languine CLI-t biztosít, hogy segítsen lefordítani az alkalmazását.
 
-## translate
+## Parancsok Áttekintése
 
-A `translate` parancsot az alkalmazásod lefordítására használják.
+### translate
+
+A `translate` parancsot az alkalmazásának lefordítására használják.
+
+```bash title="Terminál"
+# Az alkalmazásának fordításának megkezdése
+languine translate
+
+# Opciók:
+#   --source-locale    Adja meg a forrás nyelvet (alapértelmezett: en)
+#   --target-locale    Adja meg a célnyelvet(eket), amelyre le szeretné fordítani
+#   --config          A languine.config.js fájl elérési útja
+```
+
+### init
+
+```bash title="Terminál"
+# Új Languine projekt inicializálása
+languine init
+
+# Ez a következőket fogja tenni:
+# - Létrehoz egy languine.config.js fájlt
+# - Beállítja a projekt struktúráját
+# - Inicializálja a szükséges könyvtárakat
+```
+
+### status
+
+```bash title="Terminál"
+# Ellenőrizze a fordításai állapotát
+languine status
+
+# Megjeleníti:
+# - Jelenlegi fordítási előrehaladás
+# - Hiányzó fordítások
+# - Fordítási statisztikák
+```
+
+### validate
+
+```bash title="Terminál"
+# Ellenőrizze a fordítási fájljait
+languine validate
+
+# Ellenőrzi:
+# - Fájlstruktúra
+# - Hiányzó kulcsok
+# - Formátum konzisztencia
+```
+
+### export
+
+```bash title="Terminál"
+# Exportálja a fordításait
+languine export
+
+# Opciók:
+#   --format          Exportálási formátum (json, yaml, stb.)
+#   --output         Kimeneti könyvtár
+```
+
+### import
+
+```bash title="Terminál"
+# Fordítások importálása külső fájlokból
+languine import
+
+# Opciók:
+#   --source         Forrás fájl vagy könyvtár
+#   --format         Importálási formátum (json, yaml, stb.)
+```
+
+## Globális Opciók
+
+Minden parancs támogatja a következő globális opciókat:
+
+```bash title="Terminál"
+# Globális opciók, amelyek minden parancsra elérhetők
+languine [parancs] [opciók]
+
+# Általános opciók:
+#   --help, -h       Segítséginformációk megjelenítése
+#   --version, -v    Verzióinformációk megjelenítése
+#   --verbose        Verbózus naplózás engedélyezése
+#   --config         A konfigurációs fájl elérési útjának megadása
+```
 

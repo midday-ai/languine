@@ -6,8 +6,8 @@
     "goToApp": "Gå till appen"
   },
   "hero": {
-    "title": "Automatiserad lokaliseringsinfrastruktur",
-    "description": "Översätt innehållet i din app direkt i din utvecklingsarbetsflöde. Vår CLI integreras med GitHub Actions och andra CI/CD-verktyg för att automatisera översättningar medan du kodar."
+    "title": "Pris",
+    "description": "Överskrivningar"
   },
   "navigation": {
     "dashboard": "Instrumentbräda",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Automatiserad lokaliseringsinfrastruktur",
-    "description": "Översätt innehållet i din app direkt i din utvecklingsarbetsflöde. Vår CLI integreras med GitHub Actions och andra CI/CD-verktyg för att automatisera översättningar medan du kodar.",
+    "title": "Pris",
+    "description": "Pris",
     "button": {
       "startAutomating": "Börja automatisera",
       "readDocumentation": "Läs dokumentation"

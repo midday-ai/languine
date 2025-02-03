@@ -2,14 +2,10 @@
 
 Comienza instalando Languine.
 
-```bash
-npm install -g @languine/cli
-```
-
 Luego, ejecuta el siguiente comando para inicializar Languine.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Sigue los pasos para configurar tu proyecto.
@@ -20,16 +16,45 @@ Ahora estás listo para traducir tu código.
 
 Comienza agregando una clave a tu archivo fuente, por ejemplo, si eliges usar `en.json` como tu archivo fuente, agrega una clave a él.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Hola"
+  "welcome": "¡Bienvenido a nuestra aplicación!",
+  "user": {
+    "greeting": "¡Hola, {{name}}!",
+    "profile": {
+      "title": "Tu perfil",
+      "edit": "Editar perfil"
+    }
+  },
+  "notifications": {
+    "messages": "Tienes {{count}} nuevo(s) mensaje(s).",
+    "empty": "No hay nuevas notificaciones."
+  }
 }
+
 ```
 
-Luego ejecuta el siguiente comando para traducir tu código.
 
-```bash
-languine translate
+## Traducir
+
+Ejecuta el siguiente comando para traducir tu contenido:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Luego traduciremos la clave que agregaste a tus idiomas de destino.
+## Esto hará:
+1. Crear archivos de traducción para cada idioma objetivo
+2. Generar traducciones de alta calidad con el Motor Languine
+3. Crear un archivo `languine.lock` para rastrear los estados de traducción
+
+El archivo de bloqueo ayuda a Languine a identificar qué traducciones necesitan actualizaciones cuando tu contenido fuente cambia. Asegúrate de comprometer este archivo en tu repositorio.
+
+## Próximos Pasos
+
+Ahora que tienes Languine configurado, puedes:
+- Agregar más idiomas en tu archivo `languine.json`
+- Integrar Languine en tu pipeline de CI/CD
+- Usar nuestra API para traducciones programáticas
+
+Consulta nuestras otras guías para aprender más sobre las características avanzadas de Languine.

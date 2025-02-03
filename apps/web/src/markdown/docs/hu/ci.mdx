@@ -1,3 +1,96 @@
 # CI/CD
 
-A Languine CI/CD integrációt kínál, hogy segítsen az alkalmazásod lefordításában.
+A Languine CI/CD integrációt biztosít, hogy segítsen az alkalmazásod fordításában.
+
+---
+
+## Hogyan Működik
+
+A Languine CI/CD munkafolyamata egy strukturált folyamatot követ, hogy automatizálja a fordítási frissítéseket az alkalmazásodban:
+
+### 1. Akció Inicializálása
+- A munkafolyamat akkor kezdődik, amikor az akciót aktiválják
+- Beállítja a szükséges Git konfigurációt és hitelesítő adatokat
+
+### 2. Languine Motor Feldolgozása
+- A Languine motor feldolgozza az alkalmazásod tartalmát
+- Kezeli a fordítási feladatokat a beállított paraméterek szerint
+
+### 3. Változás Észlelés
+A rendszer ellenőrzi a fordítási változásokat, és az alábbi két út egyikét követi:
+
+**Ha Változások Találhatók:**
+- A változások elköteleződnek a tárolóban
+- A változások a megadott ágra kerülnek
+- Pull Request (PR) jön létre
+
+**Ha Nincs Változás:**
+- A munkafolyamat PR létrehozása nélkül befejeződik
+
+### 4. Pull Request Létrehozása
+Amikor változásokat észlelnek, egy Pull Request jön létre a következőkkel:
+
+**PR Tartalom:**
+- Világos cím, amely a fordítási frissítéseket jelzi
+- Részletes leírás a változásokról
+- Minőségellenőrzési megerősítések
+- Útmutatók a felülvizsgálathoz
+- Hivatkozások a dokumentációra és támogatásra
+
+**PR Leírás Tartalmazza:**
+- A fordítási frissítések összefoglalója
+- A változások listája (frissített fordítások, terminológiai következetesség)
+- Következő lépések a felülvizsgálók számára
+- Hivatkozások a dokumentációra és támogatási forrásokra
+
+---
+
+## Munkafolyamat Diagram
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Akció Kezdődik    │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Git &           │
+                    │    Hitelesítők      │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine Motor ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Változások Ellenőrzése │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Változások]        │ [Nincs Változás]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Elkötelezés & Push │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    PR Létrehozása   │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Kész         │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+A munkafolyamat célja, hogy automatizált legyen, miközben lehetőséget biztosít az emberi felülvizsgálatra és a minőségellenőrzésre, mielőtt a változások beolvadnának a kódalapodba. Fenntartja a verziókezelési legjobb gyakorlatokat, és biztosítja, hogy a fordítások megfelelően nyomon követhetők és dokumentálhatók legyenek a Git történelem során.

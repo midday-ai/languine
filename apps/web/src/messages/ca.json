@@ -6,8 +6,8 @@
     "goToApp": "Anar a l'aplicació"
   },
   "hero": {
-    "title": "Infraestructura de localització automatitzada",
-    "description": "Tradueix el contingut de la teva aplicació directament en el teu flux de treball de desenvolupament. La nostra CLI s'integra amb GitHub Actions i altres eines CI/CD per automatitzar les traduccions mentre codifiques."
+    "title": "Infraestructura de localització feta per a desenvolupadors",
+    "description": "És probable que hagis pensat a localitzar la teva aplicació però has dubtat, sabent que reduiria la teva velocitat. Ja no més. Languine automatitza la localització dins del teu flux de treball i canal de desenvolupador, de manera que les traduccions mai et frenen."
   },
   "navigation": {
     "dashboard": "Tauler de control",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Començar",
-    "title": "Infraestructura de localització automatitzada",
-    "description": "Tradueix el contingut de la teva aplicació directament en el teu flux de treball de desenvolupament. La nostra CLI s'integra amb GitHub Actions i altres eines CI/CD per automatitzar les traduccions mentre codifiques.",
+    "title": "Infraestructura de localització feta per a desenvolupadors",
+    "description": "És probable que hagis pensat a localitzar la teva aplicació però has dubtat, sabent que reduiria la teva velocitat. Ja no més. Languine automatitza la localització dins del teu flux de treball i canal de desenvolupador, de manera que les traduccions mai et frenen.",
     "button": {
       "startAutomating": "Comença a automatitzar",
       "readDocumentation": "Llegir la documentació"

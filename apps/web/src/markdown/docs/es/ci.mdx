@@ -1,3 +1,96 @@
 # CI/CD
 
-Languine ofrece una integración de CI/CD para ayudarte a traducir tu aplicación.
+Languine proporciona una integración de CI/CD para ayudarte a traducir tu aplicación.
+
+---
+
+## Cómo Funciona
+
+El flujo de trabajo de CI/CD en Languine sigue un proceso estructurado para automatizar las actualizaciones de traducción en tu aplicación:
+
+### 1. Inicialización de la Acción
+- El flujo de trabajo comienza cuando se activa la acción
+- Configura la configuración de Git y las credenciales necesarias
+
+### 2. Procesamiento del Motor de Languine
+- El motor de Languine procesa el contenido de tu aplicación
+- Maneja las tareas de traducción utilizando la configuración configurada
+
+### 3. Detección de Cambios
+El sistema verifica si hay cambios en la traducción y sigue uno de dos caminos:
+
+**Cuando se Encuentran Cambios:**
+- Los cambios se confirman en el repositorio
+- Los cambios se envían a la rama especificada
+- Se crea una Solicitud de Extracción (PR)
+
+**Cuando No se Encuentran Cambios:**
+- El flujo de trabajo se completa sin crear un PR
+
+### 4. Creación de la Solicitud de Extracción
+Cuando se detectan cambios, se crea una Solicitud de Extracción con:
+
+**Contenido del PR:**
+- Título claro que indica actualizaciones de traducción
+- Descripción detallada de los cambios
+- Confirmaciones de control de calidad
+- Instrucciones para la revisión
+- Enlaces a documentación y soporte
+
+**La Descripción del PR Incluye:**
+- Resumen de las actualizaciones de traducción
+- Lista de lo que cambió (traducciones actualizadas, consistencia de terminología)
+- Próximos pasos para los revisores
+- Enlaces a documentación y recursos de soporte
+
+---
+
+## Diagrama del Flujo de Trabajo
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   La Acción Comienza │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Configurar Git   │
+                    │    y Credenciales    │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Motor de Languine ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Verificar Cambios │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Cambios]        │ [No Cambios]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Confirmar y Enviar │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Crear PR         │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Listo        │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+El flujo de trabajo está diseñado para ser automatizado, mientras que aún permite la revisión humana y el control de calidad antes de que los cambios se fusionen en tu base de código. Mantiene las mejores prácticas de control de versiones y asegura que las traducciones se rastreen y documenten adecuadamente a través del historial de Git.

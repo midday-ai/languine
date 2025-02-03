@@ -2,14 +2,10 @@
 
 Alustage Languine'i installimisega.
 
-```bash
-npm install -g @languine/cli
-```
-
 Seejärel käivitage järgmine käsk Languine'i initsialiseerimiseks.
 
-```bash
-languine init
+```bash title="Terminal"
+npx languine@latest init
 ```
 
 Järgige samme oma projekti seadistamiseks.
@@ -20,16 +16,45 @@ Nüüd olete valmis oma koodi tõlkima.
 
 Alustage, lisades oma lähtefaili võtme, näiteks kui valite `en.json` oma lähtefailiks, lisage sellele võtme.
 
-```json
+```json title="src/locales/en.json"
 {
-  "hello": "Tere"
+  "welcome": "Tere tulemast meie rakendusse!",
+  "user": {
+    "greeting": "Tere, {{name}}!",
+    "profile": {
+      "title": "Teie profiil",
+      "edit": "Muuda profiili"
+    }
+  },
+  "notifications": {
+    "messages": "Teil on {{count}} uut sõnumit.",
+    "empty": "Uute teatiste puudumine."
+  }
 }
+
 ```
 
-Seejärel käivitage järgmine käsk oma koodi tõlkimiseks.
 
-```bash
-languine translate
+## Tõlgi
+
+Käivitage järgmine käsk oma sisu tõlkimiseks:
+
+```bash title="Terminal"
+npx languine@latest translate
 ```
 
-Me tõlgime seejärel võtme, mille lisasite oma sihtkeeltesse.
+## See teeb:
+1. Loob tõlkefailid iga sihtkeele jaoks
+2. Genereerib kvaliteetseid tõlkeid Languine'i mootori abil
+3. Loob `languine.lock` faili tõlke olekute jälgimiseks
+
+Lukustusfail aitab Languine'il tuvastada, millised tõlked vajavad uuendamist, kui teie lähte sisu muutub. Veenduge, et see fail oleks teie hoidlas.
+
+## Järgmised sammud
+
+Nüüd, kui olete Languine'i seadistanud, saate:
+- Lisada oma `languine.json` faili rohkem keeli
+- Integreerida Languine oma CI/CD torustikku
+- Kasutada meie API-d programmiliste tõlgete jaoks
+
+Vaadake meie teisi juhendeid, et rohkem teada saada Languine'i edasistest funktsioonidest.

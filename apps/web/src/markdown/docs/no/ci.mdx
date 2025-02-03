@@ -1,3 +1,96 @@
 # CI/CD
 
 Languine tilbyr en CI/CD-integrasjon for å hjelpe deg med å oversette applikasjonen din.
+
+---
+
+## Hvordan det fungerer
+
+CI/CD-arbeidsflyten i Languine følger en strukturert prosess for å automatisere oversettelsesoppdateringer i applikasjonen din:
+
+### 1. Handlingsinitialisering
+- Arbeidsflyten begynner når handlingen utløses
+- Setter opp nødvendig Git-konfigurasjon og legitimasjon
+
+### 2. Languine-motorbehandling
+- Languine-motoren behandler innholdet i applikasjonen din
+- Håndterer oversettelsesoppgavene ved hjelp av de konfigurerte innstillingene
+
+### 3. Endringsdeteksjon
+Systemet sjekker etter eventuelle oversettelsesendringer og følger en av to veier:
+
+**Når endringer finnes:**
+- Endringer blir forpliktet til depotet
+- Endringer blir dyttet til den spesifiserte grenen
+- En Pull Request (PR) blir opprettet
+
+**Når ingen endringer finnes:**
+- Arbeidsflyten fullføres uten å opprette en PR
+
+### 4. Oppretting av Pull Request
+Når endringer oppdages, opprettes en Pull Request med:
+
+**PR-innhold:**
+- Klar tittel som indikerer oversettelsesoppdateringer
+- Detaljert beskrivelse av endringer
+- Bekreftelser på kvalitetskontroll
+- Instruksjoner for gjennomgang
+- Lenker til dokumentasjon og støtte
+
+**PR-beskrivelsen inkluderer:**
+- Sammendrag av oversettelsesoppdateringer
+- Liste over hva som har endret seg (oppdaterte oversettelser, terminologikonsistens)
+- Neste steg for anmeldere
+- Lenker til dokumentasjons- og støtteressurser
+
+---
+
+## Arbeidsflytdiagram
+
+<div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
+  <pre
+    className="p-4 text-sm leading-5 mb-4 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+    style={{
+      fontFamily: "monospace",
+      whiteSpace: "pre",
+      textAlign: "left",
+    }}
+  >
+    {`
+                    ┌─────────────────────┐
+                    │   Handlingen starter  │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │    Sett opp Git &    │
+                    │    Legitimasjon      │
+                    └──────────┬──────────┘
+                               │
+┌─────────────────────────────────────────────────────────┐
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░ Languine-motor ░░░░░░░░░░░░░░░░░░░░│
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+└─────────────────────────────────────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Sjekk endringer    │───────┐
+                    └──────────┬──────────┘       │
+                               │                  │
+                               │ [Endringer]      │ [Ingen endringer]
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │   Forplikt & dytt    │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │    Opprett PR        │       │
+                    └──────────┬──────────┘       │
+                               │                  │
+                    ┌──────────▼──────────┐       │
+                    │        Ferdig        │◄──────┘
+                    └─────────────────────┘
+`}
+  </pre>
+</div>
+
+Arbeidsflyten er designet for å være automatisert samtidig som den tillater menneskelig gjennomgang og kvalitetskontroll før endringer blir slått sammen i kodebasen din. Den opprettholder beste praksis for versjonskontroll og sikrer at oversettelser blir riktig sporet og dokumentert gjennom Git-historikken.

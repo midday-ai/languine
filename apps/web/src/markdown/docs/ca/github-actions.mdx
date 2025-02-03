@@ -1,52 +1,92 @@
 # Accions de GitHub
 
-Amb l'acció de github, pots traduir fàcilment el teu codi només pujant-lo al repositori, l'acció de github traduirà les teves noves claus, ja sigui creant una sol·licitud de tirada o comprometent els teus canvis.
-Això et fa estalviar molt de temps i esforç mentre mantens traduccions de gran qualitat.
+Amb l'acció de GitHub, pots traduir fàcilment el teu codi només pujant-lo al repositori; l'acció de GitHub traduirà les teves noves claus, ja sigui creant una sol·licitud de tirada o comprometent els teus canvis.
+Això et permet estalviar molt de temps i esforç mentre mantens traduccions de alta qualitat.
+
+---
+
+## Instal·lació
+
+Per utilitzar l'Acció de GitHub de Languine al teu repositori, necessitaràs:
+
+1. Configurar els secrets del teu repositori amb les teves credencials de Languine
+2. Crear un fitxer de flux de treball al teu repositori
+
+### Configuració dels Secrets del Repositori
+
+Afegeix els següents secrets a la configuració del teu repositori (Configuració > Secrets i variables > Accions):
+
+- `LANGUINE_API_KEY`: La teva clau API de Languine
+- `LANGUINE_PROJECT_ID`: La teva ID de projecte de Languine
+
+Pots trobar aquests valors al teu tauler de Languine sota Configuració del Projecte.
 
 
-## Flux de treball
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   L'acció comença   │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Configura Git &  │
-│    Credencials      │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Motor Languine ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Comprova canvis   │───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Canvis]        │ [Sense canvis]
-           │                  │
-┌──────────▼──────────┐       │
-│   Compromet i puja   │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Crea PR          │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Fet          │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+
+### Variables d'Entorn
+
+L'Acció de GitHub utilitza les següents variables d'entorn:
+- `LANGUINE_API_KEY` (Requerit): La teva clau API de Languine per a l'autenticació
+- `LANGUINE_PROJECT_ID` (Requerit): La teva ID de projecte de Languine 
+- `GITHUB_TOKEN` (Requerit): Proporcionat automàticament per GitHub, utilitzat per crear PRs
+
+### Exemple de Flux de Treball
+
+Crea un nou fitxer .github/workflows/languine.yml al teu repositori amb el següent contingut:
+
+```ts title=".github/workflows/release.yml"
+name: Desplegar el lloc web
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Acció de Languine
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Aquest flux de treball:
+- S'executarà en pujades a la branca principal
+- S'executarà en sol·licituds de tirada a la branca principal
+- Pot ser activat manualment des de la pestanya d'Accions
+- Comprovarà el teu codi i executarà el procés de traducció de Languine
+- Crearà una sol·licitud de tirada amb qualsevol nova traducció (configurable)
+
+#### Opció de Directori de Treball
+
+L'opció `working-directory` et permet especificar on es troben els teus fitxers de traducció. Això és particularment útil en monorepos on les teves traduccions poden estar en un paquet o directori d'aplicació específic. Per exemple:
+
+#### Opció de Sol·licitud de Tirada
+
+L'opció `create-pull-request` controla si l'acció crea una sol·licitud de tirada amb els canvis o els compromet directament a la branca:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # crea una sol·licitud de tirada amb els canvis
+```
+
+Quan es configura a `true`, l'acció:
+- Crearà una nova branca amb els canvis
+- Crearà una sol·licitud de tirada per a revisió
+- Afegirà etiquetes i descripcions adequades
+
+Quan es configura a `false` (per defecte), l'acció:
+- Comprometrà els canvis directament a la branca actual
+- Pujarà els canvis sense crear una sol·licitud de tirada

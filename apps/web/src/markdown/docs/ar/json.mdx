@@ -1,3 +1,41 @@
 # JSON
 
-تدعم Languine ملفات JSON.
+يدعم Languine ملفات JSON كتنسيق مصدر مع المتطلبات الشائعة للتعدد والتداخل. يُستخدم هذا التنسيق في العديد من الأطر مثل React و Vue و Ruby on Rails وغيرها.
+
+
+---
+
+
+## الإعداد
+
+أولاً، تأكد من أنك تمتلك ملف إعداد languine.json أو languine.ts في جذر مشروعك. إليك مثال:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+
+```
+
+## الترجمة
+
+مع إعداد التكوين الخاص بك، قم بتشغيل:
+
+```bash
+npx languine@latest translate
+```
+
+عند تشغيل هذا الأمر، سيقوم Languine بـ:
+
+- تحميل ملف JSON المصدر الخاص بك (على سبيل المثال، locales/en.json)
+- اكتشاف أي سلاسل ترجمة جديدة أو معدلة
+- توليد ترجمات للغات الهدف الخاصة بك
+- إنشاء أو تحديث ملفات JSON للغة الهدف (على سبيل المثال، locales/sv.json، locales/de.json، locales/fr.json)

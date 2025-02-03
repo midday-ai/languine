@@ -6,8 +6,8 @@
     "goToApp": "Ga naar app"
   },
   "hero": {
-    "title": "Geautomatiseerde lokalisatie-infrastructuur",
-    "description": "Vertaal de inhoud van je app direct in je ontwikkelworkflow. Onze CLI integreert met GitHub Actions en andere CI/CD-tools om vertalingen te automatiseren terwijl je codeert."
+    "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
+    "description": "De kans is groot dat je hebt nagedacht over het lokaliseren van je app, maar hebt aarzeld, wetende dat het je snelheid zou verminderen. Niet meer. Languine automatiseert lokalisatie binnen je ontwikkelaarsworkflow en pipeline, zodat vertalingen je nooit ophouden."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Aan de slag",
-    "title": "Geautomatiseerde lokalisatie-infrastructuur",
-    "description": "Vertaal de inhoud van je app direct in je ontwikkelworkflow. Onze CLI integreert met GitHub Actions en andere CI/CD-tools om vertalingen te automatiseren terwijl je codeert.",
+    "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
+    "description": "De kans is groot dat je hebt nagedacht over het lokaliseren van je app, maar hebt aarzeld, wetende dat het je snelheid zou verminderen. Niet meer. Languine automatiseert lokalisatie binnen je ontwikkelaarsworkflow en pipeline, zodat vertalingen je nooit ophouden.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"

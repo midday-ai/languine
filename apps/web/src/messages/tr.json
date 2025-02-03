@@ -6,8 +6,8 @@
     "goToApp": "Uygulamaya git"
   },
   "hero": {
-    "title": "Otomatik yerelleştirme altyapısı",
-    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'miz, çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur."
+    "title": "Geliştiriciler için oluşturulmuş yerelleştirme altyapısı",
+    "description": "Uygulamanızı yerelleştirmeyi düşündüğünüzü ama hızınızı azaltacağını bildiğiniz için tereddüt ettiğinizi düşünüyoruz. Artık değil. Languine, yerelleştirmeyi geliştirici iş akışınız ve pipeline'ınız içinde otomatikleştirir, böylece çeviriler sizi asla durdurmaz."
   },
   "navigation": {
     "dashboard": "Gösterge Paneli",
@@ -19,8 +19,8 @@
   },
   "getStarted": {
     "heading": "Başlayın",
-    "title": "Otomatik yerelleştirme altyapısı",
-    "description": "Uygulamanızın içeriğini doğrudan geliştirme iş akışınızda çevirin. CLI'miz, çevirileri otomatikleştirmek için GitHub Actions ve diğer CI/CD araçlarıyla entegre olur.",
+    "title": "Geliştiriciler için oluşturulmuş yerelleştirme altyapısı",
+    "description": "Uygulamanızı yerelleştirmeyi düşündüğünüzü ama hızınızı azaltacağını bildiğiniz için tereddüt ettiğinizi düşünüyoruz. Artık değil. Languine, yerelleştirmeyi geliştirici iş akışınız ve pipeline'ınız içinde otomatikleştirir, böylece çeviriler sizi asla durdurmaz.",
     "button": {
       "startAutomating": "Otomatikleştirmeye başlayın",
       "readDocumentation": "Dokümantasyonu okuyun"

@@ -2,7 +2,92 @@
 
 Languine proporciona una CLI per ajudar-te a traduir la teva aplicació.
 
-## translate
+## Visió General dels Comandaments
 
-El comandament `translate` s'utilitza per traduir la teva aplicació.
+### traduir
+
+El comandament `traduir` s'utilitza per traduir la teva aplicació.
+
+```bash title="Terminal"
+# Comença la traducció de la teva aplicació
+languine traduir
+
+# Opcions:
+#   --source-locale    Especifica la localització d'origen (per defecte: en)
+#   --target-locale    Especifica la(s) localització(s) de destinació a les quals traduir
+#   --config          Ruta al teu fitxer languine.config.js
+```
+
+### inicialitzar
+
+```bash title="Terminal"
+# Inicialitza un nou projecte Languine
+languine inicialitzar
+
+# Això farà:
+# - Crear un fitxer languine.config.js
+# - Configurar l'estructura del teu projecte
+# - Inicialitzar directoris necessaris
+```
+
+### estat
+
+```bash title="Terminal"
+# Comprova l'estat de les teves traduccions
+languine estat
+
+# Mostra:
+# - Progrés actual de la traducció
+# - Traducions mancants
+# - Estadístiques de traducció
+```
+
+### validar
+
+```bash title="Terminal"
+# Valida els teus fitxers de traducció
+languine validar
+
+# Comprova:
+# - Estructura del fitxer
+# - Clau mancants
+# - Consistència de format
+```
+
+### exportar
+
+```bash title="Terminal"
+# Exporta les teves traduccions
+languine exportar
+
+# Opcions:
+#   --format          Format d'exportació (json, yaml, etc.)
+#   --output         Directori de sortida
+```
+
+### importar
+
+```bash title="Terminal"
+# Importa traduccions de fitxers externs
+languine importar
+
+# Opcions:
+#   --source         Fitxer o directori d'origen
+#   --format         Format d'importació (json, yaml, etc.)
+```
+
+## Opcions Globals
+
+Tots els comandaments suporten les següents opcions globals:
+
+```bash title="Terminal"
+# Opcions globals disponibles per a tots els comandaments
+languine [comandament] [opcions]
+
+# Opcions comunes:
+#   --help, -h       Mostra informació d'ajuda
+#   --version, -v    Mostra informació de la versió
+#   --verbose        Activa el registre detallat
+#   --config         Especifica la ruta del fitxer de configuració
+```
 

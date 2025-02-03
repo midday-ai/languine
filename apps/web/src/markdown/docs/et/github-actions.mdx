@@ -1,52 +1,92 @@
 # GitHub Actions
 
-GitHub'i tegevuse abil saate oma koodi hõlpsasti tõlkida, lihtsalt lükates oma koodi hoidlasse. GitHub'i tegevus tõlgib seejärel teie uued võtmed, luues kas pull request'i või pannes teie muudatused toime.
+GitHub Action'i abil saate oma koodi hõlpsasti tõlkida, lihtsalt lükates oma koodi hoidlasse. GitHub Action tõlgib seejärel teie uued võtmed, luues kas pull request'i või pannes teie muudatused toime.
 See säästab teile palju aega ja vaeva, säilitades samal ajal kõrge kvaliteediga tõlked.
 
+---
 
-## Töövoog
-<div className="flex flex-col items-center justify-center p-4 mt-10 h-[400px] sm:h-[500px] md:h-[650px]">
-        <pre
-          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
-          style={{
-            fontFamily: "monospace",
-            whiteSpace: "pre",
-            textAlign: "left",
-          }}
-        >
-          {`
-┌─────────────────────┐
-│   Tegevus Algab     │
-└──────────┬──────────┘
-           │
-┌──────────▼──────────┐
-│    Seadista Git &   │
-│    Volitused       │
-└──────────┬──────────┘
-           │
-┌─────────────────────────────────────────────────────────┐
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░ Languine Mootor ░░░░░░░░░░░░░░░░░░░░│
-│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-└─────────────────────────────────────────────────────────┘
-           │
-┌──────────▼──────────┐
-│   Kontrolli Muudatusi│───────┐
-└──────────┬──────────┘       │
-           │                  │
-           │ [Muudatused]     │ [Ei ole muudatusi]
-           │                  │
-┌──────────▼──────────┐       │
-│   Pane Tööle & Lükka │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│    Loo PR          │       │
-└──────────┬──────────┘       │
-           │                  │
-┌──────────▼──────────┐       │
-│        Valmis       │◄──────┘
-└─────────────────────┘
-`}
-        </pre>
-      </div>
+## Paigaldamine
+
+Languine GitHub Action'i kasutamiseks oma hoidlas peate:
+
+1. Seadistama oma hoidla saladused oma Languine'i mandaadiga
+2. Looma oma hoidlas töövoo faili
+
+### Hoidla Saladuste Seadistamine
+
+Lisage järgmised saladused oma hoidla seadetes (Seaded > Saladused ja muutujad > Toimingud):
+
+- `LANGUINE_API_KEY`: Teie Languine API võti
+- `LANGUINE_PROJECT_ID`: Teie Languine projekti ID
+
+Need väärtused leiate oma Languine'i juhtpaneelilt Projekti seadete alt.
+
+
+
+### Keskkonnamuutujad
+
+GitHub Action kasutab järgmisi keskkonnamuutujad:
+- `LANGUINE_API_KEY` (Nõutav): Teie Languine API võti autentimiseks
+- `LANGUINE_PROJECT_ID` (Nõutav): Teie Languine projekti ID 
+- `GITHUB_TOKEN` (Nõutav): GitHub'i poolt automaatselt antud, kasutatakse PR-de loomiseks
+
+### Näidis Töövoog
+
+Looge uus fail .github/workflows/languine.yml oma hoidlas järgmise sisuga:
+
+```ts title=".github/workflows/release.yml"
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Action
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ See töövoog:
+- Käivitub peamise haru push'ide korral
+- Käivitub peamise haru pull request'ide korral
+- Saab käsitsi käivitada Toimingute vahekaartilt
+- Kontrollib teie koodi ja käivitab Languine'i tõlkeprotsessi
+- Loob pull request'i kõigi uute tõlgete jaoks (konfigureeritav)
+
+#### Töökausta Valik
+
+`working-directory` valik võimaldab teil määrata, kus teie tõlkefailid asuvad. See on eriti kasulik monorepos, kus teie tõlked võivad olla konkreetses pakendis või rakenduse kaustas. Näiteks:
+
+#### Pull Request'i Valik
+
+`create-pull-request` valik kontrollib, kas tegevus loob pull request'i muudatustega või paneb need otse harule:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # loo pull request muudatustega
+```
+
+Kui see on seadistatud `true`, siis tegevus:
+- Loob uue haru muudatustega
+- Loob pull request'i ülevaatamiseks
+- Lisab sobivad sildid ja kirjelduse
+
+Kui see on seadistatud `false` (vaikimisi), siis tegevus:
+- Paneb muudatused otse praegusele harule
+- Pushib muudatused ilma pull request'i loomata
