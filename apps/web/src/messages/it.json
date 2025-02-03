@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruttura di localizzazione realizzata per sviluppatori",
-    "description": "È probabile che tu abbia pensato di localizzare la tua app ma hai esitato, sapendo che avrebbe ridotto la tua velocità. Non più. Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline di sviluppo, quindi le traduzioni non ti rallentano mai."
+    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e della tua pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Inizia",
     "title": "Infrastruttura di localizzazione realizzata per sviluppatori",
-    "description": "È probabile che tu abbia pensato di localizzare la tua app ma hai esitato, sapendo che avrebbe ridotto la tua velocità. Non più. Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline di sviluppo, quindi le traduzioni non ti rallentano mai.",
+    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e della tua pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
       "readDocumentation": "Leggi la documentazione"

@@ -1175,23 +1175,28 @@ files:
     content: dc32b5e28ff094eb6d601c0e56dcda53
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
-    overrides.title: f0bb8c458dbdf9d56039d465e7b18229
-    header.pricing: 62f53655259ed2a25e90a5f021757950
-    menu.pricing: 62f53655259ed2a25e90a5f021757950
-    header.docs: 43c592501e0d37c63bc038fa182b2ddf
-    header.signIn: 80acd27ebea1d1727f33923ab4b44901
-    header.goToApp: d47ab5843bf48f0247a904efec4d4ed9
-    hero.title: 9a7164f0cd4144911ebfcef911ae89d1
-    hero.description: 7ef969f54fcf7408b053a5bdf53ac542
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
     navigation.tuning: 04700bee0cd7b00165f310460332b2f8
     navigation.overrides: f0bb8c458dbdf9d56039d465e7b18229
     navigation.settings: 04700bee0cd7b00165f310460332b2f8
     navigation.docs: 43c592501e0d37c63bc038fa182b2ddf
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
+    overrides.title: f0bb8c458dbdf9d56039d465e7b18229
+    header.pricing: 62f53655259ed2a25e90a5f021757950
+    header.docs: 43c592501e0d37c63bc038fa182b2ddf
+    header.signIn: 80acd27ebea1d1727f33923ab4b44901
+    header.goToApp: d47ab5843bf48f0247a904efec4d4ed9
+    menu.pricing: 62f53655259ed2a25e90a5f021757950
+    menu.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
+    menu.tuning: bf7f60209cc14b4b4f002b4b197de4ae
+    menu.settings: 04700bee0cd7b00165f310460332b2f8
+    menu.docs: 43c592501e0d37c63bc038fa182b2ddf
+    menu.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
+    hero.title: 9a7164f0cd4144911ebfcef911ae89d1
+    hero.description: 175bd501f97b120dfc152c0699fe2eb9
     getStarted.heading: 95a8292476e692ab92aa6dcd57518b18
     getStarted.title: 9a7164f0cd4144911ebfcef911ae89d1
-    getStarted.description: 7ef969f54fcf7408b053a5bdf53ac542
+    getStarted.description: 175bd501f97b120dfc152c0699fe2eb9
     getStarted.button.startAutomating: a04ca6d92fe1c2970e655d82bf36583c
     getStarted.button.readDocumentation: 30b7e90a20189fa21f646422ffee79eb
     companies.title: 1d972c940221026305ecd77c17a64655
@@ -1527,11 +1532,6 @@ files:
     language.vi: f2394d77dda177397059b17831657a39
     language.zh-CN: a47662b2874baf615724d612a056e098
     language.zh-TW: eb225278f0df32171fb55eee80625310
-    menu.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
-    menu.tuning: bf7f60209cc14b4b4f002b4b197de4ae
-    menu.settings: 04700bee0cd7b00165f310460332b2f8
-    menu.docs: 43c592501e0d37c63bc038fa182b2ddf
-    menu.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     billing.title: 809c896e05a39d3b9df97b6e5d66ffa7
     analytics.key: bbcb3aa3d49390e0a33c7a09312325ab
     analytics.document: a206f404bed82cf3ffb127b6fcba77f0
@@ -1600,7 +1600,7 @@ files:
     header.signIn: 80ffad7566d7473a4310841269527e84
     header.goToApp: 8318493edce0ef3e26daeb28ad15e01a
     hero.title: 008853059684d79b700c38a07e13e3fa
-    hero.description: 790fc55c9da53a458dacdc2a12f7e90e
+    hero.description: 705cd10c2c9077114fb7c31ac4622b5f
     navigation.dashboard: 5967ab15ec405a77b8db5dcdb885d6c6
     navigation.tuning: bf7f60209cc14b4b4f002b4b197de4ae
     navigation.overrides: 9ea0a9b7f1f3c8259e051144b7bf169b
@@ -1610,7 +1610,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0b0fe8d91cc4d7be7a41bb108117fb72
     getStarted.title: 008853059684d79b700c38a07e13e3fa
-    getStarted.description: 790fc55c9da53a458dacdc2a12f7e90e
+    getStarted.description: 705cd10c2c9077114fb7c31ac4622b5f
     getStarted.button.startAutomating: c9bb305f055f2beac4298ac1a5d90ad0
     getStarted.button.readDocumentation: c998b1d71e37e80efb656882678602cb
     companies.title: 7a5e9e96648ef44cdd14be531f061d59
@@ -2021,7 +2021,7 @@ files:
     header.signIn: a61d196e6576a0a91ac6aab9034d5535
     header.goToApp: 51801703f2d37a0f7a6c332992b5a5a8
     hero.title: 74d081e34e2c42ce6301b46850b75dc5
-    hero.description: ee603b69e9c712a6c27b464d4a49fe0a
+    hero.description: 70441d5bc195de399d1ad7fab15695f4
     navigation.dashboard: b8da6df14bf06283cbf588df6998722e
     navigation.tuning: ae7d36ca44e270b02649c5f5a97c0262
     navigation.overrides: 3c1cc27fb6ee71e73df1e12bf61ea9ff
@@ -2031,7 +2031,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0fcb84e5416c73280dac88079172aeb8
     getStarted.title: 74d081e34e2c42ce6301b46850b75dc5
-    getStarted.description: ee603b69e9c712a6c27b464d4a49fe0a
+    getStarted.description: 70441d5bc195de399d1ad7fab15695f4
     getStarted.button.startAutomating: c889b3d6e75a2777e3de3695394fde29
     getStarted.button.readDocumentation: 343964f780f3098d5e49aee852912fd8
     companies.title: f81625b19eb538f093e5f9e676b00f47
@@ -2442,7 +2442,7 @@ files:
     header.signIn: b687c67a2bfd3c4c97d9eb37450909e5
     header.goToApp: 8575ae96fc03c7fac71de84dc0cc695e
     hero.title: db8901072eb1bab68634dbeee9fc113f
-    hero.description: fd2bb8d62a4542ee9a64095caaa68155
+    hero.description: f967fc7165f5e1d13f23b5d4b4fd7290
     navigation.dashboard: 96a7b5490bcd3652a0c2bf36c1ffce2b
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 72ea96873387ebb56925d2fb2b8debf2
@@ -2452,7 +2452,7 @@ files:
     navigation.account: 8192dbe80e3401ebe872e0aed980daa1
     getStarted.heading: 45b9954f468ac044238ce013e9cd7a69
     getStarted.title: db8901072eb1bab68634dbeee9fc113f
-    getStarted.description: fd2bb8d62a4542ee9a64095caaa68155
+    getStarted.description: f967fc7165f5e1d13f23b5d4b4fd7290
     getStarted.button.startAutomating: 2cacaa39f025b53800c7c12a96405c6f
     getStarted.button.readDocumentation: 0ed36fcc448c60432dfa9ba1a1c596e6
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -2863,7 +2863,7 @@ files:
     header.signIn: bd6b12decc2abf95959b791a3578e091
     header.goToApp: 8383c069a4b8e009aa2079632d5e2a7a
     hero.title: f36cdb5c329213aa9dcb955710227fdc
-    hero.description: 4fc6efa8b68866f83246071ed4fade9d
+    hero.description: 89d3f75b04654bc5144fd1c15ba02ab3
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
     navigation.overrides: 0e770b80d21f0a0d6098c1f766da3a67
@@ -2873,7 +2873,7 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: b09f65d94eb0f9d925129e39c1daa45f
     getStarted.title: f36cdb5c329213aa9dcb955710227fdc
-    getStarted.description: 4fc6efa8b68866f83246071ed4fade9d
+    getStarted.description: 89d3f75b04654bc5144fd1c15ba02ab3
     getStarted.button.startAutomating: 32d4eff0d7584664a169dd5912e79cfb
     getStarted.button.readDocumentation: dd2b0a6d72a676f48319fa75ac8035ce
     companies.title: 6a35fcfe67ba9ca78f296f482dd1a8ad
@@ -3284,7 +3284,7 @@ files:
     header.signIn: 2228c5945cd5fa864a1a3b067fd95eeb
     header.goToApp: 8af70210bbd12fc6d1fed34223da85a7
     hero.title: 666c9b0fb4ec2feb59ef069645d64136
-    hero.description: 02c2b924999d31c85c379ad83be6525b
+    hero.description: 0ab524a2d3564705fd561dafdc1a48e5
     navigation.dashboard: 29cba505cdc4b85b5d40903a19f38e95
     navigation.tuning: 27507514401e9dbec9ccd502d315e814
     navigation.overrides: 06f6d6983ebdee06aa08f8b73c2f4df3
@@ -3294,7 +3294,7 @@ files:
     navigation.account: a456fb71437a11fe0d625e38c2e30e1a
     getStarted.heading: d3118865aadfde18e6968340f43f5798
     getStarted.title: 666c9b0fb4ec2feb59ef069645d64136
-    getStarted.description: 02c2b924999d31c85c379ad83be6525b
+    getStarted.description: 0ab524a2d3564705fd561dafdc1a48e5
     getStarted.button.startAutomating: c82a48615ec01323deb6871399d75423
     getStarted.button.readDocumentation: 751eabec2bd379500e0060e3afcf5c2a
     companies.title: 274d0139f3f89f1ca4fbacaa1044909d
@@ -3705,7 +3705,7 @@ files:
     header.signIn: e2bdb51e902de10274b096b9aa1c6956
     header.goToApp: d55df6ea362cafad9022c7e7289a1c04
     hero.title: 2f26b3c3cb90aff2034fa37446775cb9
-    hero.description: e6255ba8c0a1917fcd0fd7797927d711
+    hero.description: aa44314b62e0e65573c45dbec746a03a
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 64361509f1002e3e9d660b1bbd5d2759
     navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
@@ -3715,7 +3715,7 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: 73c3e754b4ec0f307311dcd984c70c8d
     getStarted.title: 2f26b3c3cb90aff2034fa37446775cb9
-    getStarted.description: e6255ba8c0a1917fcd0fd7797927d711
+    getStarted.description: aa44314b62e0e65573c45dbec746a03a
     getStarted.button.startAutomating: 515330f0439f11877c669b98d24c1177
     getStarted.button.readDocumentation: 3de1c7fff574c4ee2cf9c867e4959fdd
     companies.title: 6954d41e0ce7db476c4d7223c44edda2
@@ -4126,7 +4126,7 @@ files:
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
     hero.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    hero.description: 8111b94a13dfd703c03020e1eea35e43
+    hero.description: dc9e6e4d8370d037ae3e7bd9f1397987
     navigation.dashboard: 629e199d421911b329a2909925beeb50
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 3db0abab2211e2f98a5b3304b6c5c049
@@ -4136,7 +4136,7 @@ files:
     navigation.account: d1ef184f21c6a19615f873478fe03462
     getStarted.heading: 2788dc861f0cd8b423653c0b6fe4195b
     getStarted.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    getStarted.description: 8111b94a13dfd703c03020e1eea35e43
+    getStarted.description: dc9e6e4d8370d037ae3e7bd9f1397987
     getStarted.button.startAutomating: 9b0a69239ff144486dff4e740b4c7329
     getStarted.button.readDocumentation: bf1998ea274fe0873d2ac78fcb0e1006
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -4547,7 +4547,7 @@ files:
     header.signIn: 634983f425e586cdfe14c715fabae635
     header.goToApp: 02a199e2306dd194a6a4c43741c7b8a7
     hero.title: 64175976b8f9e613d3ef170143b69571
-    hero.description: af21c55f353179b805dbf1559bd58f31
+    hero.description: 6470ea5897ded2e5e993b03a32766558
     navigation.dashboard: 820c7142370ede086c0f3db8aad1aeef
     navigation.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
     navigation.overrides: fd019a65932fdc66ddd8600b01516aea
@@ -4557,7 +4557,7 @@ files:
     navigation.account: 884a1de4d3195f10985afac09db0aa6d
     getStarted.heading: 66963d16bba8c9087c0570d1d875781f
     getStarted.title: 64175976b8f9e613d3ef170143b69571
-    getStarted.description: af21c55f353179b805dbf1559bd58f31
+    getStarted.description: 6470ea5897ded2e5e993b03a32766558
     getStarted.button.startAutomating: ae58199f13a3ff0b38af4ee61530b291
     getStarted.button.readDocumentation: e60a4af5dc2d2917776dc426ac102d17
     companies.title: 366f89f81e17fefc585f1a06ef9b3b78
@@ -4968,7 +4968,7 @@ files:
     header.signIn: 04fc0f6ce574d7aab7b0157bcdc846f8
     header.goToApp: 55679098d9426cb73408ac67e1042eb8
     hero.title: dfe602cecf5856e3e71d84e52dbbfe3b
-    hero.description: e61d078abd4fd01a9545b60c2d0eaa2c
+    hero.description: 96fc1af46987551ffd3cf18593956800
     navigation.dashboard: 4a37efc27391cc18714c72981d59c072
     navigation.tuning: 066a51dca72463379796270bbd033415
     navigation.overrides: a3fb4ce65bc3d9f383ec312dc51c8fa4
@@ -4978,7 +4978,7 @@ files:
     navigation.account: 4cd05effefac83d92a4cbd939beac4ef
     getStarted.heading: 62c3f6afd773369cfc24fe9e38c2d9a7
     getStarted.title: dfe602cecf5856e3e71d84e52dbbfe3b
-    getStarted.description: e61d078abd4fd01a9545b60c2d0eaa2c
+    getStarted.description: 96fc1af46987551ffd3cf18593956800
     getStarted.button.startAutomating: 749f5c4dd3dcb4e77467f42ee5db6431
     getStarted.button.readDocumentation: 3c0b6b5b54ff6e54844e90d5eb38e4df
     companies.title: 7bf52c8c512c2cd7f72776df4a78e859
@@ -5389,7 +5389,7 @@ files:
     header.signIn: ecff6ecb514e3e1b66f8b07d8b78bafe
     header.goToApp: 06bdc247034142d7386dc009310a009d
     hero.title: 8e7b32a7645be2a53c1bef60bb957cf6
-    hero.description: f0ae6ec66896ac26dc76f096157a3c25
+    hero.description: 9b53705d1bdcf8e5d297c82140b05443
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: d1010bff5c3a43dc0623b7b3e87f174a
     navigation.overrides: b871acfcee7082fe5315174298b6659b
@@ -5399,7 +5399,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 5b29aee5dab4cfb08ca8bd42b06836d6
     getStarted.title: 8e7b32a7645be2a53c1bef60bb957cf6
-    getStarted.description: f0ae6ec66896ac26dc76f096157a3c25
+    getStarted.description: 9b53705d1bdcf8e5d297c82140b05443
     getStarted.button.startAutomating: 59cd3d6f036c298b544bf40f2a9e0b1b
     getStarted.button.readDocumentation: 79e079ea3ad15aec762f5bc740d05d46
     companies.title: 6b3eb08c2d6186d90ac20aca3f745c18

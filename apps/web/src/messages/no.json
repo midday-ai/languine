@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake."
+    "description": "Languine automatiserer lokalisering innenfor din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Kom i gang",
     "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Sjansene er store for at du har tenkt på å lokalisere appen din, men nølt, vel vitende om at det ville redusere hastigheten din. Ikke lenger. Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, slik at oversettelser aldri holder deg tilbake.",
+    "description": "Languine automatiserer lokalisering innenfor din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"

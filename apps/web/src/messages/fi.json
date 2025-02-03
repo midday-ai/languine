@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Kehittäjille suunniteltu lokalisointirakenne",
-    "description": "On todennäköistä, että olet miettinyt sovelluksesi lokalisointia, mutta epäröinyt, koska tiesit sen hidastavan työskentelyäsi. Ei enää. Languine automatisoi lokalisoinnin kehittäjän työnkulussa ja putkistossa, joten käännökset eivät enää hidasta sinua."
+    "description": "Languine automatisoi lokalisoinnin kehitysprosessissasi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aloita",
     "title": "Kehittäjille suunniteltu lokalisointirakenne",
-    "description": "On todennäköistä, että olet miettinyt sovelluksesi lokalisointia, mutta epäröinyt, koska tiesit sen hidastavan työskentelyäsi. Ei enää. Languine automatisoi lokalisoinnin kehittäjän työnkulussa ja putkistossa, joten käännökset eivät enää hidasta sinua.",
+    "description": "Languine automatisoi lokalisoinnin kehitysprosessissasi ja putkistossasi, varmistaen että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automatisointi",
       "readDocumentation": "Lue dokumentaatio"
