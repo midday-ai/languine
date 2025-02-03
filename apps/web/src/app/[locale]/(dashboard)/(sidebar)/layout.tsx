@@ -8,10 +8,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { SessionProvider } from "@/contexts/session";
 import { TRPCProvider } from "@/trpc/client";
 import { getSession } from "@languine/supabase/session";
+import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
-
-const admins = ["pontus@lostisland.co", "viktor@midday.ai", "pontus@midday.ai"];
 
 export default async function Layout({
   children,
@@ -25,6 +24,8 @@ export default async function Layout({
   if (!session) {
     return redirect("/login");
   }
+
+  const invited = (await get("invited")) as string[];
 
   return (
     <SessionProvider session={session}>
@@ -40,7 +41,7 @@ export default async function Layout({
                 <main className="pt-4">
                   {children}
 
-                  {!admins.includes(session?.user.email ?? "") && (
+                  {!invited?.includes(session?.user.email ?? "") && (
                     <ComingSoon />
                   )}
                   <Toaster />
