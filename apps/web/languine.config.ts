@@ -10,7 +10,6 @@ export default defineConfig({
       "fi",
       "fr",
       "it",
-      "ja",
       "ko",
       "nl",
       "no",
