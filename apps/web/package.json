@@ -51,6 +51,7 @@
     "@trpc/server": "11.0.0-rc.700",
     "@types/mdx": "2.0.13",
     "@upstash/redis": "1.34.3",
+    "@vercel/edge-config": "^1.4.0",
     "@vercel/functions": "1.6.0",
     "ai": "4.1.8",
     "class-variance-authority": "0.7.1",
