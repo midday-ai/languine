@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestructura de localización hecha para desarrolladores",
-    "description": "Languine automatiza la localización dentro de su flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca lo detengan."
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan."
   },
   "navigation": {
     "dashboard": "Tablero",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comenzar",
     "title": "Infraestructura de localización hecha para desarrolladores",
-    "description": "Languine automatiza la localización dentro de su flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca lo detengan.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan.",
     "button": {
       "startAutomating": "Comenzar a automatizar",
       "readDocumentation": "Leer documentación"
@@ -57,7 +57,7 @@
     "readyForI18nLibraries": "Listo para bibliotecas i18n",
     "readyForI18nLibrariesDescription": "Soportamos todas las bibliotecas, incluidas las más populares (next-intl, react-i18next, react-intl, etc.).",
     "markdownSupport": "Soporte para Markdown/Documentos",
-    "markdownSupportDescription": "Languine traduce sin problemas su contenido en markdown, manteniendo la documentación y otros archivos sincronizados con su flujo de trabajo."
+    "markdownSupportDescription": "Languine traduce sin problemas tu contenido en markdown, manteniendo la documentación y otros archivos sincronizados con tu flujo de trabajo."
   },
   "info": {
     "title": "Maneja cada aspecto de la localización de tu aplicación, incluyendo",

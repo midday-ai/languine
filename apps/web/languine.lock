@@ -700,7 +700,7 @@ files:
   src/markdown/docs/de/github-actions.mdx:
     content: fdfb6e796e65b45edd03493bb7780976
   src/markdown/docs/es/github-actions.mdx:
-    content: 0981d32fdcebf9c87ad2960edd5c4a77
+    content: 6df876814bb44ef6d4429861b8895d03
   src/markdown/docs/fi/github-actions.mdx:
     content: 45cadf7fd2014ee919afddbba435c8ce
   src/markdown/docs/fr/github-actions.mdx:
@@ -708,7 +708,7 @@ files:
   src/markdown/docs/it/github-actions.mdx:
     content: 4f7d92ffe83fb659470df73e89f37ace
   src/markdown/docs/ko/github-actions.mdx:
-    content: 484a485cf6a909f9d8cf65348cd3be31
+    content: cf7463509d251c49ac972b7cfad01a30
   src/markdown/docs/nl/github-actions.mdx:
     content: 30ac6d972708d201e99a560051994a20
   src/markdown/docs/no/github-actions.mdx:
@@ -2871,7 +2871,7 @@ files:
     header.signIn: bd6b12decc2abf95959b791a3578e091
     header.goToApp: 8383c069a4b8e009aa2079632d5e2a7a
     hero.title: f36cdb5c329213aa9dcb955710227fdc
-    hero.description: c45d6a7b08b9c46130416f18af320892
+    hero.description: b838ded4ec8b56b9a8ecda67b72a6ec8
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
     navigation.overrides: 0e770b80d21f0a0d6098c1f766da3a67
@@ -2881,7 +2881,7 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: b09f65d94eb0f9d925129e39c1daa45f
     getStarted.title: f36cdb5c329213aa9dcb955710227fdc
-    getStarted.description: c45d6a7b08b9c46130416f18af320892
+    getStarted.description: b838ded4ec8b56b9a8ecda67b72a6ec8
     getStarted.button.startAutomating: 32d4eff0d7584664a169dd5912e79cfb
     getStarted.button.readDocumentation: dd2b0a6d72a676f48319fa75ac8035ce
     companies.title: 6a35fcfe67ba9ca78f296f482dd1a8ad
@@ -3329,8 +3329,8 @@ files:
     features.presetForReactEmailDescription: d7bec17a189ea6afe0a10ab7ad949dc2
     features.readyForI18nLibraries: 08a1aa5bb780a754a36b4eb4d56a31b3
     features.readyForI18nLibrariesDescription: 5184bd692341940d01470bf6fa26baf0
-    features.markdownSupport: f9ca3f744864493820f7a76a76c4d927
-    features.markdownSupportDescription: 58ef837de7ff78b39f223d2b1b82347c
+    features.markdownSupport: bc650b9750edf6b7712f78b830504355
+    features.markdownSupportDescription: 45db1c8627684f159cb20e96eff58891
     info.title: b56617085317ccaafc001a3742064e31
     info.smartTranslation.title: f6e7486d909896b4e71ad7bcf084dbb7
     info.smartTranslation.intelligentTranslation: c15cf7bc164552d7d21ec5604c028357
@@ -4140,7 +4140,7 @@ files:
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
     hero.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    hero.description: 5c049112f8f6a22d9534831293ab6442
+    hero.description: 25301996343e55017b1b00a1defe65d9
     navigation.dashboard: 629e199d421911b329a2909925beeb50
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 3db0abab2211e2f98a5b3304b6c5c049
@@ -4150,7 +4150,7 @@ files:
     navigation.account: d1ef184f21c6a19615f873478fe03462
     getStarted.heading: 2788dc861f0cd8b423653c0b6fe4195b
     getStarted.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    getStarted.description: 5c049112f8f6a22d9534831293ab6442
+    getStarted.description: 25301996343e55017b1b00a1defe65d9
     getStarted.button.startAutomating: 9b0a69239ff144486dff4e740b4c7329
     getStarted.button.readDocumentation: bf1998ea274fe0873d2ac78fcb0e1006
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -4176,7 +4176,7 @@ files:
     features.readyForI18nLibraries: e7779a7a4c9ddc9ac2c7a5a7e408da8f
     features.readyForI18nLibrariesDescription: c86298290f274a895f3a73e3efdbbd7b
     features.markdownSupport: db8d91dbbf4606f8b8e880be1d64bec6
-    features.markdownSupportDescription: be9a5a805e18cde1f3876fc39cafa2d4
+    features.markdownSupportDescription: c3eeec67565fdff232aa60617db51c33
     info.title: f4c18026b20825816b2b15febcfe00de
     info.smartTranslation.title: f5db92f44b40fccbbf510fd1d2a6b394
     info.smartTranslation.intelligentTranslation: f667c736902a838bf6631681dc0f943c
@@ -4563,7 +4563,7 @@ files:
     header.signIn: 634983f425e586cdfe14c715fabae635
     header.goToApp: 02a199e2306dd194a6a4c43741c7b8a7
     hero.title: 64175976b8f9e613d3ef170143b69571
-    hero.description: a267edd7dc5967f38f46d379d1aab2a3
+    hero.description: 2bf6b0180b7d9382c6425daa42ffade6
     navigation.dashboard: 820c7142370ede086c0f3db8aad1aeef
     navigation.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
     navigation.overrides: fd019a65932fdc66ddd8600b01516aea
@@ -4573,7 +4573,7 @@ files:
     navigation.account: 884a1de4d3195f10985afac09db0aa6d
     getStarted.heading: 66963d16bba8c9087c0570d1d875781f
     getStarted.title: 64175976b8f9e613d3ef170143b69571
-    getStarted.description: a267edd7dc5967f38f46d379d1aab2a3
+    getStarted.description: 2bf6b0180b7d9382c6425daa42ffade6
     getStarted.button.startAutomating: ae58199f13a3ff0b38af4ee61530b291
     getStarted.button.readDocumentation: e60a4af5dc2d2917776dc426ac102d17
     companies.title: 366f89f81e17fefc585f1a06ef9b3b78
@@ -4599,7 +4599,7 @@ files:
     features.readyForI18nLibraries: 0882b42b104c5c2d2e3ed91309492263
     features.readyForI18nLibrariesDescription: a6b8d6d3276a3a04293ae9b2d18b63b1
     features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
-    features.markdownSupportDescription: 573262a18350c5498e36605de812a39a
+    features.markdownSupportDescription: 60e0b2052b8ed0bd965343cd06c06e44
     info.title: 5da3bc7164c1291caefd83c740d5e6e0
     info.smartTranslation.title: df9e934a3002eef9b578e78ba6301c17
     info.smartTranslation.intelligentTranslation: 479605dad82a178176f7f4b3ca431304
@@ -5445,7 +5445,7 @@ files:
     features.readyForI18nLibraries: 7391c5ac7068d301326bc7b71c47f8c9
     features.readyForI18nLibrariesDescription: 492769b13bacf4b8d1ea42bd4b245982
     features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
-    features.markdownSupportDescription: af81f1ad6552a4b816c99b91c12b9d34
+    features.markdownSupportDescription: 9d44fa22248c645e8d233e8e18e56f15
     info.title: 50e6ab156a500697a64c3caa457cebc7
     info.smartTranslation.title: cb2537225777cfde54b6defb7f9dfddb
     info.smartTranslation.intelligentTranslation: 67270a3a27f073428d17f1539a0d5673
