@@ -530,7 +530,13 @@
     "zh-TW": "Kinesiska (Traditionell)"
   },
   "billing": {
-    "title": "Fakturering"
+    "title": "Fakturering",
+    "translationKeys": "Översättningsnycklar",
+    "documents": "Dokument",
+    "languages": "Språk",
+    "keysUsed": "använda nycklar",
+    "documentsUsed": "använda dokument",
+    "languagesUsed": "använda språk"
   },
   "analytics": {
     "key": "Översatta nycklar",

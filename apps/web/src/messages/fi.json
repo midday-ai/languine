@@ -527,7 +527,13 @@
     "account": "Tili"
   },
   "billing": {
-    "title": "Laskutus"
+    "title": "Laskutus",
+    "translationKeys": "Käännöksen avaimet",
+    "documents": "Asiakirjat",
+    "languages": "Kielet",
+    "keysUsed": "käytetyt avaimet",
+    "documentsUsed": "käytetyt asiakirjat",
+    "languagesUsed": "käytetyt kielet"
   },
   "analytics": {
     "key": "Käännetyt avaimet",

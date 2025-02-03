@@ -527,7 +527,13 @@
     "account": "계정"
   },
   "billing": {
-    "title": "청구"
+    "title": "청구",
+    "translationKeys": "번역 키",
+    "documents": "문서",
+    "languages": "언어",
+    "keysUsed": "사용된 키",
+    "documentsUsed": "사용된 문서",
+    "languagesUsed": "사용된 언어"
   },
   "analytics": {
     "key": "번역된 키",

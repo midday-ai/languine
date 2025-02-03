@@ -527,7 +527,13 @@
     "account": "Konto"
   },
   "billing": {
-    "title": "Abrechnung"
+    "title": "Abrechnung",
+    "translationKeys": "Übersetzungsschlüssel",
+    "documents": "Dokumente",
+    "languages": "Sprachen",
+    "keysUsed": "verwendete Schlüssel",
+    "documentsUsed": "verwendete Dokumente",
+    "languagesUsed": "verwendete Sprachen"
   },
   "analytics": {
     "key": "Übersetzte Schlüssel",

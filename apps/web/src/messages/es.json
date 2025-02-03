@@ -527,7 +527,13 @@
     "account": "Cuenta"
   },
   "billing": {
-    "title": "Facturación"
+    "title": "Facturación",
+    "translationKeys": "Claves de Traducción",
+    "documents": "Documentos",
+    "languages": "Idiomas",
+    "keysUsed": "claves utilizadas",
+    "documentsUsed": "documentos utilizados",
+    "languagesUsed": "idiomas utilizados"
   },
   "analytics": {
     "key": "Claves traducidas",

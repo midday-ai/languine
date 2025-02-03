@@ -527,7 +527,13 @@
     "account": "Konto"
   },
   "billing": {
-    "title": "Fakturering"
+    "title": "Fakturering",
+    "translationKeys": "Oversettelsesnøkler",
+    "documents": "Dokumenter",
+    "languages": "Språk",
+    "keysUsed": "brukte nøkler",
+    "documentsUsed": "brukte dokumenter",
+    "languagesUsed": "brukte språk"
   },
   "analytics": {
     "key": "Oversatte nøkler",

@@ -527,7 +527,13 @@
     "account": "Account"
   },
   "billing": {
-    "title": "Facturering"
+    "title": "Facturering",
+    "translationKeys": "Vertaal Sleutels",
+    "documents": "Documenten",
+    "languages": "Talen",
+    "keysUsed": "gebruikte sleutels",
+    "documentsUsed": "gebruikte documenten",
+    "languagesUsed": "gebruikte talen"
   },
   "analytics": {
     "key": "Vertaald sleutels",
