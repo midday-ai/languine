@@ -36,7 +36,7 @@ export function Settings() {
 
   return (
     <Tabs value={tab} onValueChange={setTab} className="w-full px-4 md:px-8">
-      <div className="flex items-center justify-between mb-4 mt-5 max-w-screen-xl">
+      <div className="flex items-center justify-between mb-8 mt-5 max-w-screen-xl">
         <TabsList className="justify-start rounded-none h-auto p-0 bg-transparent space-x-6">
           {tabs.map((tab) => (
             <TabsTrigger

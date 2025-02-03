@@ -622,5 +622,13 @@
   },
   "filter_locales": {
      "languages": "Languages"
+  },
+  "billing": {
+    "translationKeys": "Translation Keys",
+    "documents": "Documents",
+    "languages": "Languages",
+    "keysUsed": "keys used",
+    "documentsUsed": "documents used",
+    "languagesUsed": "languages used"
   }
 }
