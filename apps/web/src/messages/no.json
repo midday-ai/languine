@@ -55,7 +55,9 @@
     "presetForReactEmail": "React Email-bibliotek",
     "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
     "readyForI18nLibraries": "Klar for i18n-biblioteker",
-    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker, inkludert de mest populære (next-intl, react-i18next, react-intl, osv.)."
+    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker, inkludert de mest populære (next-intl, react-i18next, react-intl, osv.).",
+    "markdownSupport": "Markdown/Dokumentstøtte",
+    "markdownSupportDescription": "Languine oversetter sømløst innholdet ditt i markdown, og holder dokumentasjon og andre filer synkronisert med arbeidsflyten din."
   },
   "info": {
     "title": "Håndterer alle aspekter av lokaliseringen av appen din, inkludert",
