@@ -1,0 +1,40 @@
+# CSV
+
+Languine obsługuje pliki CSV (Wartości Oddzielone Przecinkami) do prostego zarządzania tłumaczeniami. Ten format jest idealny do pracy w arkuszach kalkulacyjnych i łatwej integracji z zewnętrznymi narzędziami tłumaczeniowymi.
+
+---
+
+## Konfiguracja
+
+Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w głównym katalogu projektu. Oto przykład:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "csv": {
+      "include": ["translations/[locale].csv"]
+    }
+  }
+}
+```
+
+## Tłumaczenie
+
+Po ustawieniu konfiguracji uruchom:
+
+```bash
+npx languine@latest translate
+```
+
+Kiedy uruchomisz to polecenie, Languine:
+
+- Załaduje twój źródłowy plik CSV (np. translations/en.csv)
+- Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
+- Wygeneruje tłumaczenia dla twoich docelowych języków
+- Utworzy lub zaktualizuje pliki CSV dla języków docelowych (np. translations/sv.csv)
+- Zachowa strukturę kolumn i formatowanie
+- Zachowa wszelkie dodatkowe kolumny metadanych

@@ -1,0 +1,39 @@
+# iOS
+
+Languine tukee iOS Localizable.strings -tiedostoja, joka on iOS-sovellusten standardi lokalisointimuoto. Tämä muoto käsittelee perus avain-arvo merkkijonoja ja tukee kommentteja, jotka tarjoavat kontekstia kääntäjille.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "ios": {
+      "include": ["[locale].lproj/Localizable.strings"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun konfiguraatiosi on asetettu, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde Localizable.strings -tiedostosi (esim. en.lproj/Localizable.strings)
+- Havaitsee kaikki uudet tai muokatut käännösmerkkijonot
+- Luo käännöksiä kohdekielillesi
+- Luo tai päivittää kohdekielitiedostot (esim. sv.lproj/Localizable.strings)
+- Säilyttää kaikki olemassa olevat kommentit ja muotoilut

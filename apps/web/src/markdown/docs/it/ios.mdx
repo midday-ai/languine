@@ -1,0 +1,39 @@
+# iOS
+
+Languine supporta i file Localizable.strings di iOS, il formato standard di localizzazione per le applicazioni iOS. Questo formato gestisce coppie di stringhe chiave-valore di base e supporta commenti per fornire contesto ai traduttori.
+
+---
+
+## Configurazione
+
+Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "ios": {
+      "include": ["[locale].lproj/Localizable.strings"]
+    }
+  }
+}
+```
+
+## Traduzione
+
+Con la tua configurazione impostata, esegui:
+
+```bash
+npx languine@latest translate
+```
+
+Quando esegui questo comando, Languine:
+
+- Caricherà il tuo file Localizable.strings sorgente (ad esempio, en.lproj/Localizable.strings)
+- Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
+- Genererà traduzioni per le tue lingue target
+- Creerà o aggiornerà i file delle lingue target (ad esempio, sv.lproj/Localizable.strings)
+- Preserverà eventuali commenti e formattazioni esistenti

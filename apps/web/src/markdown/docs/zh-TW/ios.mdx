@@ -1,0 +1,39 @@
+# iOS
+
+Languine 支援 iOS Localizable.strings 檔案，這是 iOS 應用程式的標準本地化格式。此格式處理基本的鍵值字串對，並支援提供上下文的註解，以便翻譯者理解。
+
+---
+
+## 設定
+
+首先，請確保您的專案根目錄中有一個 languine.config.json 或 languine.config.ts 配置檔。以下是一個範例：
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "ios": {
+      "include": ["[locale].lproj/Localizable.strings"]
+    }
+  }
+}
+```
+
+## 翻譯
+
+配置完成後，執行：
+
+```bash
+npx languine@latest translate
+```
+
+當您執行此命令時，Languine 將：
+
+- 載入您的來源 Localizable.strings 檔案（例如，en.lproj/Localizable.strings）
+- 偵測任何新的或已修改的翻譯字串
+- 為您的目標語言生成翻譯
+- 創建或更新目標語言檔案（例如，sv.lproj/Localizable.strings）
+- 保留任何現有的註解和格式

@@ -1,0 +1,40 @@
+# CSV
+
+Languine støtter CSV (Comma-Separated Values) filer for enkel oversettelsesadministrasjon. Dette formatet er ideelt for regnearkbaserte arbeidsflyter og enkel integrasjon med eksterne oversettelsesverktøy.
+
+---
+
+## Oppsett
+
+Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "csv": {
+      "include": ["translations/[locale].csv"]
+    }
+  }
+}
+```
+
+## Oversettelse
+
+Når konfigurasjonen din er satt opp, kjør:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kjører denne kommandoen, vil Languine:
+
+- Laste inn kilde CSV-filen din (f.eks. translations/en.csv)
+- Oppdage eventuelle nye eller endrede oversettelsesstrenger
+- Generere oversettelser for målspråkene dine
+- Opprette eller oppdatere CSV-filer for målspråkene (f.eks. translations/sv.csv)
+- Opprettholde kolonneoppsett og formatering
+- Bevare eventuelle ekstra metadatakolonner
