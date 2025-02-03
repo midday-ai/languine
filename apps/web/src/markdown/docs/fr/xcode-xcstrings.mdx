@@ -1,0 +1,44 @@
+# Xcode Strings (XCStrings)
+
+Languine prend en charge le format XCStrings d'Xcode, le format de localisation moderne pour les applications iOS et macOS. Ce format gère les catalogues de chaînes avec prise en charge des variations, de la pluralisation et des commentaires des développeurs.
+
+---
+
+## Configuration
+
+Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.json ou languine.config.ts à la racine de votre projet. Voici un exemple :
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xcstrings": {
+      "include": ["MyApp/Localizable.xcstrings"]
+    }
+  }
+}
+```
+
+## Traduction
+
+Avec votre configuration en place, exécutez :
+
+```bash
+npx languine@latest translate
+```
+
+Lorsque vous exécutez cette commande, Languine va :
+
+- Charger votre catalogue XCStrings
+- Détecter toutes les chaînes nouvelles ou modifiées
+- Générer des traductions pour vos langues cibles
+- Mettre à jour le catalogue de chaînes avec les nouvelles traductions
+- Préserver les variations de chaînes et les règles de pluralisation
+- Maintenir les commentaires et le contexte des développeurs
+- Gérer les substitutions de variables
+- Prendre en charge les chaînes adaptatives
+- Conserver les spécificateurs de formatage
+- Valider la structure du catalogue de chaînes

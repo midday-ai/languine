@@ -1,0 +1,41 @@
+# React E-post
+
+Languine støtter React E-postmaler, som lar deg håndtere oversettelser for e-postmalene dine bygget med React E-post. Denne integrasjonen håndterer både tekstinnhold og HTML-attributter samtidig som den bevarer React-komponentstrukturen.
+
+---
+
+## Oppsett
+
+Først, sørg for at du har en `languine.config.json` eller `languine.config.ts` konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "react-email": {
+      "include": ["emails/[locale]/*.tsx"]
+    }
+  }
+}
+```
+
+## Oversettelse
+
+Når konfigurasjonen din er satt opp, kjør:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kjører denne kommandoen, vil Languine:
+
+- Laste inn dine kilde React E-postmaler (f.eks., emails/en/*.tsx)
+- Oppdage eventuelle nye eller endrede oversettelsesstrenger
+- Generere oversettelser for målspråkene dine
+- Opprette eller oppdatere e-postmalene for målspråkene (f.eks., emails/sv/*.tsx)
+- Bevare React-komponentstrukturen og props
+- Opprettholde HTML-format og styling
+- Håndtere interpolering og dynamisk innhold

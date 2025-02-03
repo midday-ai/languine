@@ -1,0 +1,40 @@
+# PO (Gettext)
+
+Languine admite archivos PO, el formato de localización Gettext ampliamente utilizado. Este formato es popular en muchos entornos de programación, particularmente en aplicaciones de Linux y frameworks de PHP, ofreciendo soporte para contexto, plurales y comentarios de traductores.
+
+---
+
+## Configuración
+
+Primero, asegúrate de tener un archivo de configuración languine.config.json o languine.config.ts en la raíz de tu proyecto. Aquí tienes un ejemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "po": {
+      "include": ["locales/[locale]/LC_MESSAGES/messages.po"]
+    }
+  }
+}
+```
+
+## Traducción
+
+Con tu configuración lista, ejecuta:
+
+```bash
+npx languine@latest translate
+```
+
+Cuando ejecutes este comando, Languine:
+
+- Cargará tu archivo PO fuente (por ejemplo, locales/en/LC_MESSAGES/messages.po)
+- Detectará cualquier cadena de traducción nueva o modificada
+- Generará traducciones para tus idiomas de destino
+- Creará o actualizará los archivos PO del idioma de destino (por ejemplo, locales/sv/LC_MESSAGES/messages.po)
+- Preservará metadatos, contextos y formas plurales
+- Mantendrá comentarios de traductores e información de referencia

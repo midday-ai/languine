@@ -1,0 +1,92 @@
+# GitHub Actions
+
+Dzięki akcji GitHub możesz łatwo przetłumaczyć swój kod, po prostu przesyłając go do repozytorium, a akcja GitHub przetłumaczy twoje nowe klucze, tworząc pull request lub zatwierdzając twoje zmiany.
+To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość tłumaczeń.
+
+---
+
+## Instalacja
+
+Aby użyć akcji Languine GitHub w swoim repozytorium, musisz:
+
+1. Skonfigurować sekrety repozytorium z danymi uwierzytelniającymi Languine
+2. Utworzyć plik roboczy w swoim repozytorium
+
+### Konfigurowanie sekretów repozytorium
+
+Dodaj następujące sekrety w ustawieniach swojego repozytorium (Ustawienia > Sekrety i zmienne > Akcje):
+
+- `LANGUINE_API_KEY`: Twój klucz API Languine
+- `LANGUINE_PROJECT_ID`: Twój identyfikator projektu Languine
+
+Możesz znaleźć te wartości w swoim panelu Languine w sekcji Ustawienia projektu.
+
+
+
+### Zmienne środowiskowe
+
+Akcja GitHub używa następujących zmiennych środowiskowych:
+- `LANGUINE_API_KEY` (Wymagane): Twój klucz API Languine do uwierzytelniania
+- `LANGUINE_PROJECT_ID` (Wymagane): Twój identyfikator projektu Languine 
+- `GITHUB_TOKEN` (Wymagane): Automatycznie dostarczany przez GitHub, używany do tworzenia PR-ów
+
+### Przykład roboczego przepływu
+
+Utwórz nowy plik .github/workflows/languine.yml w swoim repozytorium z następującą zawartością:
+
+```ts title=".github/workflows/release.yml"
+name: Wdróż stronę internetową
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Akcja Languine
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Ten przepływ roboczy:
+- Będzie działał przy przesyłaniu do głównej gałęzi
+- Będzie działał przy pull requestach do głównej gałęzi
+- Może być uruchamiany ręcznie z zakładki Akcje
+- Sprawdzi twój kod i uruchomi proces tłumaczenia Languine
+- Utworzy pull request z nowymi tłumaczeniami (możliwe do skonfigurowania)
+
+#### Opcja katalogu roboczego
+
+Opcja `working-directory` pozwala określić, gdzie znajdują się twoje pliki tłumaczeń. Jest to szczególnie przydatne w monorepo, gdzie twoje tłumaczenia mogą znajdować się w określonym pakiecie lub katalogu aplikacji. Na przykład:
+
+#### Opcja pull request
+
+Opcja `create-pull-request` kontroluje, czy akcja tworzy pull request ze zmianami, czy zatwierdza je bezpośrednio do gałęzi:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # utwórz pull request ze zmianami
+```
+
+Gdy jest ustawiona na `true`, akcja:
+- Utworzy nową gałąź ze zmianami
+- Utworzy pull request do przeglądu
+- Doda odpowiednie etykiety i opis
+
+Gdy jest ustawiona na `false` (domyślnie), akcja:
+- Zatwierdzi zmiany bezpośrednio do bieżącej gałęzi
+- Wypycha zmiany bez tworzenia pull requesta

@@ -1,0 +1,198 @@
+# Konfiguration
+
+Languine unterstützt sowohl TypeScript- als auch JSON-Konfigurationsdateien zur Verwaltung Ihrer Übersetzungsanpassung. Sie können entweder languine.config.ts für TypeScript oder languine.config.json im JSON-Format wählen. Beide Dateien definieren Ihre Quell- und Zielsprache sowie die Dateien, die übersetzt werden müssen.
+
+---
+
+## Grundkonfiguration
+
+Hier ist ein einfaches Beispiel in beiden Formaten:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr", "de"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+});
+```
+
+```json title="languine.config.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de"]
+  },
+  "files": {
+    "json": {
+      "include": ["locales/[locale].json"]
+    }
+  }
+}
+```
+
+Beide Formate unterstützen die gleichen Konfigurationsoptionen. Wählen Sie TypeScript für eine bessere Typprüfung und IDE-Unterstützung oder JSON für Einfachheit und breitere Tool-Kompatibilität.
+
+Lassen Sie uns die verschiedenen Abschnitte dieser Dateien aufschlüsseln.
+
+---
+
+## Locale-Konfiguration
+
+Der Abschnitt Locale definiert Ihre Übersetzungssprachen:
+
+- source: Ihre primäre Sprache für die Inhaltserstellung (z. B. "en" für Englisch)
+- targets: Ein Array von Sprachen, in die Sie übersetzen möchten (z. B. ["es", "fr", "de"] für Spanisch, Französisch und Deutsch)
+
+Languine unterstützt eine Vielzahl von Sprachcodes, einschließlich:
+- Einfache Codes: en, es, fr, de
+- Regionsspezifische Codes: pt-BR, zh-CN, zh-TW
+
+## Dateikonfiguration
+
+Der Abschnitt Dateien definiert, welche Dateien Languine übersetzen soll. Sie können mehrere Dateitypen und Muster konfigurieren:
+
+---
+
+### JSON-Dateien
+```typescript
+files: {
+  json: {
+    include: ["locales/[locale].json"],
+  },
+}
+```
+
+---
+
+### Markdown/MDX-Dateien
+```typescript
+files: {
+  md: {
+    include: ["docs/[locale]/*.md"],
+  },
+  mdx: {
+    include: ["blog/[locale]/*.mdx"],
+  },
+}
+```
+
+---
+
+### Mobile Plattformdateien
+
+Für iOS (Xcode):
+```typescript
+files: {
+  "xcode-xcstrings": {
+    include: ["Example/Localizable.xcstrings"],
+  },
+  // Oder für traditionelle .strings-Dateien
+  "xcode-strings": {
+    include: ["Example/[locale].lproj/Localizable.strings"],
+  },
+}
+```
+
+---
+
+Für Android:
+```typescript
+files: {
+  android: {
+    include: ["locales/[locale].xml"],
+  },
+}
+```
+
+---
+
+### Andere Formate
+
+Hier ist eine vollständige Liste der von Languine unterstützten Dateiformate:
+
+- [JSON](/docs/json) - Standard-JSON-Übersetzungsdateien
+- [YAML](/docs/yaml) - YAML-Übersetzungsdateien
+- [Properties](/docs/properties) - Java-Properties-Dateien
+- [Android](/docs/android) - Android-XML-Ressourcendateien
+- [iOS](/docs/ios) - iOS-Lokalisierungsdateien
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS-Pluralisierungsdateien
+- [iOS XCStrings](/docs/xcode-xcstrings) - Moderne Xcode-String-Kataloge
+- [Markdown](/docs/md) - Dokumentationsdateien
+- [MDX](/docs/mdx) - Dokumentation mit JSX
+- [HTML](/docs/html) - HTML-Dateien
+- [JavaScript](/docs/js) - JavaScript-Dateien
+- [TypeScript](/docs/ts) - TypeScript-Dateien
+- [Gettext PO](/docs/po) - GetText-Übersetzungsdateien
+- [XLIFF](/docs/xliff) - XML-Lokalisierungs-Austauschformat
+- [CSV](/docs/csv) - Tabellenkalkulationsbasierte Übersetzungen
+- [XML](/docs/xml) - XML-Ressourcendateien
+- [Flutter ARB](/docs/arb) - Anwendungsressourcensammlungsdateien
+
+---
+
+## Dateimuster
+
+Der Platzhalter [locale] in Dateimustern wird während der Übersetzung automatisch durch den entsprechenden Sprachcode ersetzt. Zum Beispiel:
+
+- locales/[locale].json wird zu:
+  - locales/en.json
+  - locales/es.json
+  - locales/fr.json
+
+Sie können mehrere Muster für jeden Dateityp einfügen und Glob-Muster verwenden:
+```typescript
+files: {
+  json: {
+    include: [
+      "src/locales/[locale].json",
+      "src/components/[locale]/*.json"
+    ],
+  },
+}
+```
+
+---
+
+## Projekt-ID (Optional)
+
+Wenn Sie die Cloud-Dienste von Languine nutzen, können Sie Ihre Projekt-ID in der Konfiguration einfügen:
+
+```typescript
+export default defineConfig({
+  projectId: "prj_your_project_id",
+  locale: {
+    // ... locale config
+  },
+  files: {
+    // ... files config
+  },
+});
+```
+
+---
+
+## Verfolgung des Übersetzungsstatus
+
+Languine erstellt und verwaltet automatisch eine languine.lock-Datei, um den Status Ihrer Übersetzungen zu verfolgen. Diese Datei:
+
+- Verfolgt, welcher Inhalt übersetzt wurde
+- Hilft zu identifizieren, was aktualisiert werden muss, wenn sich der Quellinhalt ändert
+- Sollte in Ihr Versionskontrollsystem eingecheckt werden
+
+Sie müssen die Lock-Datei nicht manuell bearbeiten - Languine verwaltet sie automatisch, wenn Sie Übersetzungsbefehle ausführen.
+
+## Beste Praktiken
+
+1. **Versionskontrolle**: Immer sowohl languine.config.ts als auch languine.lock in Ihr Repository einpflegen
+2. **Dateiorganisation**: Halten Sie Ihre Übersetzungsdateien in einer konsistenten Verzeichnisstruktur organisiert
+3. **Sprachcodes**: Verwenden Sie standardisierte Sprachcodes, um die Kompatibilität sicherzustellen
+4. **Muster**: Verwenden Sie spezifische Einschlussmuster, um zu vermeiden, dass unnötige Dateien übersetzt werden
+5. **Projekt-ID**: Halten Sie Ihre Projekt-ID sicher und teilen Sie sie nicht öffentlich, wenn Sie Cloud-Dienste nutzen, verwenden Sie stattdessen die Umgebungsvariable `LANGUINE_PROJECT_ID`.

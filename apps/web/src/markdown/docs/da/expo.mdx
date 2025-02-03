@@ -1,0 +1,41 @@
+# Expo
+
+Languine understøtter Expo-lokalisering og integreres problemfrit med Expos i18n-system. Dette format fungerer med både JavaScript- og TypeScript-projekter og understøtter indlejrede strukturer og pluralisering.
+
+---
+
+## Opsætning
+
+Først skal du sikre dig, at du har en languine.config.json eller languine.config.ts konfigurationsfil i rodmappen af dit projekt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "expo": {
+      "include": ["assets/locales/[locale].json"]
+    }
+  }
+}
+```
+
+## Oversættelse
+
+Når din konfiguration er sat op, skal du køre:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kører denne kommando, vil Languine:
+
+- Indlæse din kildeoversættelsesfil (f.eks. assets/locales/en.json)
+- Registrere eventuelle nye eller ændrede oversættelsesstrenge
+- Generere oversættelser til dine målsprog
+- Oprette eller opdatere målsprogfilene (f.eks. assets/locales/sv.json)
+- Bevare indlejret struktur og pluraliseringsregler
+- Generere TypeScript-typer, hvis det er aktiveret
+- Opretholde kompatibilitet med expo-localization

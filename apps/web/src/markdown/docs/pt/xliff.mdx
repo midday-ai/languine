@@ -1,0 +1,40 @@
+# XLIFF
+
+Languine suporta XLIFF (Formato de Intercâmbio de Localização em XML), um formato baseado em XML projetado para trocar dados de localização. Este formato é amplamente utilizado em fluxos de trabalho de tradução profissional e suporta as versões XLIFF 1.2 e 2.0.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xliff": {
+      "include": ["locales/[locale].xlf"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seu arquivo XLIFF de origem (por exemplo, locales/en.xlf)
+- Detectar quaisquer unidades de tradução novas ou modificadas
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos XLIFF do idioma-alvo (por exemplo, locales/sv.xlf)
+- Preservar notas, informações de contexto e atributos de estado
+- Manter compatibilidade com ferramentas de CAT (Tradução Assistida por Computador)

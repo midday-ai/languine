@@ -1,0 +1,26 @@
+# Prettier
+
+Languine ondersteunt opmaak met [Prettier](https://prettier.io/) via hooks. Je kunt Prettier configureren om je vertalingsbestanden automatisch op te maken nadat ze zijn gegenereerd.
+
+Hier is een voorbeeldconfiguratie:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+  hooks: {
+    afterTranslate: async (files) => {
+      await prettier.format(files, { parser: "json" });
+    },
+  },
+});
+```

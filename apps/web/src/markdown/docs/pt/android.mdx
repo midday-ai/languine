@@ -1,0 +1,39 @@
+# Android
+
+Languine suporta recursos de string do Android (strings.xml) como um formato de origem, lidando com plurais, arrays de strings e strings formatadas. Este formato é a maneira padrão de gerenciar traduções em aplicativos Android.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "android": {
+      "include": ["app/src/main/res/values-[locale]/strings.xml"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seu arquivo strings.xml de origem (por exemplo, values/strings.xml)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos XML do idioma-alvo (por exemplo, values-sv/strings.xml, values-de/strings.xml, values-fr/strings.xml)
+- Preservar qualquer formatação existente de arrays de strings e plurais

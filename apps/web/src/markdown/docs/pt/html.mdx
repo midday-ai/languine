@@ -1,0 +1,41 @@
+# HTML
+
+Languine suporta a localização de arquivos HTML, lidando tanto com o conteúdo de texto quanto com atributos. Este formato é ideal para sites estáticos e templates HTML, com suporte para preservar a estrutura e formatação HTML.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "html": {
+      "include": ["pages/[locale]/*.html"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seus arquivos HTML de origem (por exemplo, pages/en/*.html)
+- Detectar quaisquer novas ou modificadas strings de tradução
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos HTML do idioma-alvo (por exemplo, pages/sv/*.html)
+- Preservar a estrutura e formatação HTML
+- Lidar com traduções de atributos especificados
+- Manter comentários e tags especiais

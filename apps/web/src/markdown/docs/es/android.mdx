@@ -1,0 +1,39 @@
+# Android
+
+Languine admite recursos de cadena de Android (strings.xml) como formato de origen, manejando plurales, arreglos de cadenas y cadenas formateadas. Este formato es la forma estándar de gestionar traducciones en aplicaciones de Android.
+
+---
+
+## Configuración
+
+Primero, asegúrate de tener un archivo de configuración languine.config.json o languine.config.ts en la raíz de tu proyecto. Aquí tienes un ejemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "android": {
+      "include": ["app/src/main/res/values-[locale]/strings.xml"]
+    }
+  }
+}
+```
+
+## Traducción
+
+Con tu configuración lista, ejecuta:
+
+```bash
+npx languine@latest translate
+```
+
+Cuando ejecutes este comando, Languine:
+
+- Cargará tu archivo strings.xml de origen (por ejemplo, values/strings.xml)
+- Detectará cualquier cadena de traducción nueva o modificada
+- Generará traducciones para tus idiomas de destino
+- Creará o actualizará los archivos XML del idioma de destino (por ejemplo, values-sv/strings.xml, values-de/strings.xml, values-fr/strings.xml)
+- Preservará cualquier formato existente de arreglos de cadenas y plurales

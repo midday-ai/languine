@@ -1,0 +1,92 @@
+# GitHub Actions
+
+Med GitHub-åtgärden kan du enkelt översätta din kod genom att bara trycka på din kod till lagret, så kommer GitHub-åtgärden att översätta dina nya nycklar, antingen skapa en pull-begäran eller begå dina ändringar.
+Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
+
+---
+
+## Installation
+
+För att använda Languine GitHub Action i ditt lager behöver du:
+
+1. Ställa in dina lagers hemligheter med dina Languine-uppgifter
+2. Skapa en arbetsflödesfil i ditt lager
+
+### Ställa in Lagers Hemligheter
+
+Lägg till följande hemligheter i dina lagers inställningar (Inställningar > Hemligheter och variabler > Åtgärder):
+
+- `LANGUINE_API_KEY`: Din Languine API-nyckel
+- `LANGUINE_PROJECT_ID`: Ditt Languine projekt-ID
+
+Du kan hitta dessa värden i din Languine-instrumentpanel under Projektinställningar.
+
+
+
+### Miljövariabler
+
+GitHub-åtgärden använder följande miljövariabler:
+- `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nyckel för autentisering
+- `LANGUINE_PROJECT_ID` (Obligatorisk): Ditt Languine projekt-ID 
+- `GITHUB_TOKEN` (Obligatorisk): Tillhandahålls automatiskt av GitHub, används för att skapa PR:er
+
+### Exempel på Arbetsflöde
+
+Skapa en ny fil .github/workflows/languine.yml i ditt lager med följande innehåll:
+
+```ts title=".github/workflows/release.yml"
+name: Distribuera Webbplats
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Languine Action
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Detta arbetsflöde kommer att:
+- Köras vid tryck på huvudgrenen
+- Köras vid pull-begärningar till huvudgrenen
+- Kan utlösas manuellt från Åtgärdstabben
+- Checka ut din kod och köra Languine översättningsprocess
+- Skapa en pull-begäran med eventuella nya översättningar (konfigurerbar)
+
+#### Arbetskatalogalternativ
+
+Alternativet `working-directory` gör att du kan specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i ett specifikt paket eller appkatalog. Till exempel:
+
+#### Pull-begäran Alternativ
+
+Alternativet `create-pull-request` styr om åtgärden skapar en pull-begäran med ändringarna eller begår dem direkt till grenen:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # skapa en pull-begäran med ändringarna
+```
+
+När det är inställt på `true`, kommer åtgärden att:
+- Skapa en ny gren med ändringarna
+- Skapa en pull-begäran för granskning
+- Lägga till lämpliga etiketter och beskrivning
+
+När det är inställt på `false` (standard), kommer åtgärden att:
+- Begå ändringarna direkt till den aktuella grenen
+- Trycka ändringarna utan att skapa en pull-begäran

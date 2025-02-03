@@ -1,0 +1,40 @@
+# XLIFF
+
+Languine stöder XLIFF (XML Localization Interchange File Format), ett XML-baserat format som är utformat för att utbyta lokaliseringsdata. Detta format används i stor utsträckning inom professionella översättningsarbetsflöden och stöder både XLIFF 1.2 och 2.0 versioner.
+
+---
+
+## Installera
+
+Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i rotmappen för ditt projekt. Här är ett exempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xliff": {
+      "include": ["locales/[locale].xlf"]
+    }
+  }
+}
+```
+
+## Översätta
+
+Med din konfiguration inställd, kör:
+
+```bash
+npx languine@latest translate
+```
+
+När du kör det här kommandot kommer Languine att:
+
+- Ladda din käll XLIFF-fil (t.ex. locales/en.xlf)
+- Detektera eventuella nya eller ändrade översättningsenheter
+- Generera översättningar för dina målspråk
+- Skapa eller uppdatera målspråkets XLIFF-filer (t.ex. locales/sv.xlf)
+- Bevara anteckningar, kontextinformation och tillståndsattribut
+- Upprätthålla kompatibilitet med CAT (Computer-Aided Translation) verktyg

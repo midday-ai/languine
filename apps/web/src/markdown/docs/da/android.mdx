@@ -1,0 +1,39 @@
+# Android
+
+Languine understøtter Android-strengressourcer (strings.xml) som kildeformat, der håndterer pluraler, strengarrays og formaterede strenge. Dette format er den standard måde at administrere oversættelser i Android-applikationer.
+
+---
+
+## Opsætning
+
+Først skal du sikre dig, at du har en languine.config.json eller languine.config.ts konfigurationsfil i rodmappen af dit projekt. Her er et eksempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "android": {
+      "include": ["app/src/main/res/values-[locale]/strings.xml"]
+    }
+  }
+}
+```
+
+## Oversættelse
+
+Når din konfiguration er sat op, skal du køre:
+
+```bash
+npx languine@latest translate
+```
+
+Når du kører denne kommando, vil Languine:
+
+- Indlæse din kilde strings.xml-fil (f.eks. values/strings.xml)
+- Registrere eventuelle nye eller ændrede oversættelsesstrenge
+- Generere oversættelser til dine målsprog
+- Oprette eller opdatere XML-filerne for målsproget (f.eks. values-sv/strings.xml, values-de/strings.xml, values-fr/strings.xml)
+- Bevare eventuelle eksisterende strengarrays og pluralformater

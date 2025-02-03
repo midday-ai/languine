@@ -1,0 +1,44 @@
+# Cadenas de Xcode (XCStrings)
+
+Languine admite el formato XCStrings de Xcode, el formato de localización moderno para aplicaciones de iOS y macOS. Este formato maneja catálogos de cadenas con soporte para variaciones, pluralización y comentarios de desarrolladores.
+
+---
+
+## Configuración
+
+Primero, asegúrate de tener un archivo de configuración languine.config.json o languine.config.ts en la raíz de tu proyecto. Aquí tienes un ejemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xcstrings": {
+      "include": ["MyApp/Localizable.xcstrings"]
+    }
+  }
+}
+```
+
+## Traducción
+
+Con tu configuración lista, ejecuta:
+
+```bash
+npx languine@latest translate
+```
+
+Cuando ejecutes este comando, Languine:
+
+- Cargará tu catálogo de XCStrings
+- Detectará cualquier cadena nueva o modificada
+- Generará traducciones para tus idiomas de destino
+- Actualizará el catálogo de cadenas con nuevas traducciones
+- Preservará las variaciones de cadenas y las reglas de pluralización
+- Mantendrá los comentarios y el contexto del desarrollador
+- Manejará las sustituciones de variables
+- Admitirá cadenas adaptativas
+- Mantendrá los especificadores de formato
+- Validará la estructura del catálogo de cadenas

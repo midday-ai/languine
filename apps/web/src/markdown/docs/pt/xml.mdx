@@ -1,0 +1,44 @@
+# XML
+
+Languine suporta a localização de arquivos XML, adequada para vários arquivos de configuração e conteúdo baseados em XML. Este formato lida com estruturas XML complexas enquanto preserva a formatação e os atributos.
+
+---
+
+## Configurando
+
+Primeiro, certifique-se de que você possui um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xml": {
+      "include": ["resources/[locale]/*.xml"]
+    }
+  }
+}
+```
+
+## Traduzindo
+
+Com sua configuração definida, execute:
+
+```bash
+npx languine@latest translate
+```
+
+Quando você executar este comando, Languine irá:
+
+- Carregar seus arquivos XML de origem (por exemplo, resources/en/*.xml)
+- Detectar qualquer conteúdo novo ou modificado
+- Gerar traduções para seus idiomas-alvo
+- Criar ou atualizar os arquivos de idioma-alvo (por exemplo, resources/sv/*.xml)
+- Preservar a estrutura e a formatação do XML
+- Lidar com traduções de atributos
+- Manter seções CDATA
+- Manter comentários XML
+- Suportar namespaces XML
+- Validar a estrutura XML

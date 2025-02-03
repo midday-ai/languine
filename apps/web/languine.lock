@@ -1,0 +1,1175 @@
+version: 1
+files:
+  src/messages/en.json:
+    header.pricing: e22ac25b066b201473de7aa700ef5d92
+    header.docs: a3907cd461d8739aa3266047bc4b8c0c
+    header.signIn: b6d4223e60986fa4c9af77ee5f7149c5
+    header.goToApp: 90e5e76a965ecc3c844ae730d9f71b6b
+    hero.title: 8e755aadf246fe39a1542a787e00124c
+    hero.description: 2dbb42937aa275ddef8a920e007d3c74
+    navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
+    navigation.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
+    navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
+    navigation.settings: f4f70727dc34561dfde1a3c529b6205c
+    navigation.pricing: e22ac25b066b201473de7aa700ef5d92
+    navigation.docs: 5b6cf869265c13af8566f192b4ab3d2a
+    navigation.account: 08bd40c7543007ad06e4fce31618f6ec
+    getStarted.heading: be11c74c1dd7f307bb80183a90dc2067
+    getStarted.title: 8e755aadf246fe39a1542a787e00124c
+    getStarted.description: 2dbb42937aa275ddef8a920e007d3c74
+    getStarted.button.startAutomating: a698f6a6e17c887e558c625a4e19800b
+    getStarted.button.readDocumentation: 7a471cf15b5fc07ad6cda82a6f054b3b
+    companies.title: 11cd4b12c171c74f7146ba4e4ede2f62
+    companies.addYourCompany: c6eb0094edad581dd56a7186889c9eb6
+    activity.title: ecfc2dffe568c10a67dbc6d3724cfde2
+    activity.loading: 16bfbf9c462762cf1cba4134ec53c504
+    activity.noResults: 8610d87cf20fead9d881ea663a31f01d
+    activity.clearSearch: 9983381c21069a3d6e4432e0aaea0079
+    activity.loadMore: 146ffe2fd9fa5bec3b63b52543793ec7
+    activity.type.key: 897356954c2cd3d41b221e3f24f99bba
+    activity.type.document: 0945359809dad1fbf3dea1c95a0da951
+    features.title: 98f770b0af18ca763421bac22b4b6805
+    features.fullyOpenSource: bdcd016117e119e7d42a35bd19bf0e02
+    features.fullyOpenSourceDescription: 8b874a3e1b96efe68617f967532bf9c9
+    features.noVendorLockIn: cc18e220a49143ae4425dfebfd856fbb
+    features.noVendorLockInDescription: 12e34dd117f9aa036ec0feb347d66ef1
+    features.presetsForExpo: 35e2d5bfb5c3495057bb1642f174d95b
+    features.presetsForExpoDescription: 637d6e67a90fb92ae556db790f50302e
+    features.presetForReactNative: 80db9f5575a5e449e7c15c8346a56cdd
+    features.presetForReactNativeDescription: b899e57bfdd5b20bd3476a23abd6c1bf
+    features.presetForReactEmail: ba2ac6fa0e81ed0fa5c7824088cbfc15
+    features.presetForReactEmailDescription: 1b98e511c66e4fd3244e9ab086943e73
+    features.readyForI18nLibraries: 9c20c495c1d74d53ccd6e41079dcdf33
+    features.readyForI18nLibrariesDescription: 6aee7c8de5c37a8c912e3bcc2d4325ae
+    info.title: 9a063327a73bebd07dd7dda5cf9d1fc4
+    info.smartTranslation.title: 4c0613ac878e8255749c741b6cf2c72b
+    info.smartTranslation.intelligentTranslation: d639c28970ad6c75b000b995e179b9d1
+    info.smartTranslation.brandVoice: 4ec60e8be67bbe9b91a859ce9aae756e
+    info.smartTranslation.terminology: c5585a359d7424c399710b6c6f000843
+    info.smartTranslation.linguisticFeatures: 19131bf7d9e88b6f689734cd5c1b1a41
+    info.smartTranslation.realtimeUpdates: 3df0d87a12edf7d73971f3da5db4bb0d
+    info.implementation.title: b672f52ade975e864ae6b58722c03689
+    info.implementation.quickSetup: 3dab8cea497d11e65a53a1648fe9ec11
+    info.implementation.fileFormat: b8c38c6813a37c1f65939757a4202238
+    info.implementation.contentStructure: f642876f4bf9764b97474231f734e54b
+    info.implementation.assetOrganization: 6adbea1e4a7f1730f5d15a7995067fdd
+    info.developer.title: a2b14f3cf7830e8c3341ff6b520ffbfb
+    info.developer.cli: cc968553a80aacc0af10dd5e35251a75
+    info.developer.cicd: b2638d45cabecd2238bd2642eafcb48e
+    info.developer.versionControl: 13a69c9e4eabce5f42dc90f8285cc16b
+    info.developer.workflow: 97583a85b86081e3d4a45cd9999aad32
+    info.developer.documentation: 3247eda202c3edac94e030982f79406d
+    login.title: b6d4223e60986fa4c9af77ee5f7149c5
+    login.github: 9906352b29a82243c688629fd911893e
+    login.google: 95aacd4d4ac87524cfc63d9cc94c008e
+    login.footer: e2a0e3eec3a510e1be84023389a98b2f
+    login.description: df22645ebc0fced2db911c73fe8b14f8
+    login.terms.text: df98125e7f6e51ac02e2f7b88bc5126e
+    login.terms.termsOfService: 3b6c2b4caaf4f14f8d7feeddc4ac3f4d
+    login.terms.and: be5d5d37542d75f93a87094459f76678
+    login.terms.privacyPolicy: fa2ead697d9998cbc65c81384e6533d5
+    translations.header: 33ef94b2b7d40dcb8e665003477209e2
+    userMenu.account: ff73074ccafb0bcfc1c49a09ceb6532f
+    userMenu.signOut: c87aacf5673fada1108c9f809d354311
+    userMenu.createTeam: 566b03c72e8a6206b2efc9e5fab5823c
+    userMenu.homepage: 339f7a2e087a159e6a31501649027a77
+    userMenu.team: 2939479468e48cb20df8c9ae01d35f64
+    teamSelector.addProject: 7e94fd31ac489c6edc9b9ee8820b5500
+    teamSelector.createProjectTitle: 0b60e8fecbfed3cdc2b22bdd3db8a60e
+    teamSelector.projectNamePlaceholder: 7adea0d9c77aabccd8bb67ae0a832d59
+    teamSelector.createProjectButton: 7e94fd31ac489c6edc9b9ee8820b5500
+    teamSelector.pro: abd900517e55dce0437dac136a8568d7
+    teamSelector.project: 9e727fdd3aec8274f46685441900280d
+    teamSelector.teams: 1fe1b6cf4f52930c301b03e5a69c42c2
+    teamSelector.createTeam: 566b03c72e8a6206b2efc9e5fab5823c
+    teamSelector.createTeamTitle: b2eefda1346095fafabe730ab022ab56
+    teamSelector.teamNamePlaceholder: dfdcb4a58db81e09ebccbdbfbb0a0da6
+    teamSelector.createTeamButton: 566b03c72e8a6206b2efc9e5fab5823c
+    coming_soon.title: d85a5982790da2dcf49f7f6f6f39bc94
+    coming_soon.description: 31b4dbba547e2844113c782df7a0dd7e
+    coming_soon.cta: 7af243e0268f98fbad9ca52dfcda2e93
+    account.fullName.title: 630058029627ce58e7571e7a5b6ec591
+    account.fullName.description: 2bd0581df5ec5171d504295d4bc7f520
+    account.fullName.placeholder: 387af98b1574a74e12eb99f3ed220831
+    account.email.title: 643a860f992333b8600ea264aca7c4fc
+    account.email.description: 964d297d88c52ab6de3eecc56ef717fe
+    account.email.placeholder: 6832ac593617c3e5f61c82a20b0d9a3a
+    account.apiKey.title: d876ff8da67c3731ae25d8335a4168b4
+    account.apiKey.description: 9fc71a9bd92ecc0b12091476fc9f2c3f
+    account.deleteAccount.title: bee04ef1315b3f9562be34e2e28a7831
+    account.deleteAccount.description: cd44f1827b32f439ff05c1be1419a9de
+    account.deleteAccount.button: bee04ef1315b3f9562be34e2e28a7831
+    copyInstall.copied: efc1a46f7b47e4d3cf60f13b6c89069b
+    dangerZone.dialog.title: 99b418f62bde2c0a85d1e388ac803677
+    dangerZone.dialog.description: fb2e12b0848b72f3e7c21f55b0e6c3fa
+    dangerZone.dialog.placeholder: 7df3f792d2f290b4440feb6b71c6ed62
+    dangerZone.dialog.confirm: 9e365dd1fae1b9ecae5a1d220a5fe86f
+    dangerZone.dialog.cancel: ea4788705e6873b424c65e91c2846b19
+    pipeline.title: e46151f900a88b101abc5c6dc63e56f7
+    pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
+    pipeline.description: b40fd73fd7cf0dacc627ce6ef384b128
+    settings.badRequest: 446b416d535ed3f547fcd653dc11d49c
+    settings.badRequestDescription: 5ddd415c6b48c294b9ae788e58d09511
+    settings.permissionDenied: c52a1454518514aae5d63f785cf50105
+    settings.permissionDeniedDescription: 743adc4681ee2d52916436709f5b7ad9
+    settings.deleteTeamTitle: cc736640446e65ba975038d8a3a91a11
+    settings.deleteTeamDescription: 41b47d6fe48e022c0d71b620ae8f7945
+    settings.saved: 96d4dadd096605d5813d2c6bdf82e82c
+    settings.savedDescription: 5f5cdcb004646b1da96ed29222da6c4a
+    settings.error: 6609dd239e143d00002123326c5e4aad
+    settings.errorDescription: 9c3aa67be8762e5bfd13be5de09086bf
+    settings.addTeam: 566b03c72e8a6206b2efc9e5fab5823c
+    settings.apiKey.updated: f1142163044d1b8be28f108cff4d78fb
+    settings.apiKey.updatedDescription: b40c07bff8b5a8dfa9388f3171c140f4
+    settings.apiKey.title: 05f5fbd7b091b00b5ecc2cdf7772a71b
+    settings.apiKey.description: dc75f12cbce8dd5759cd668dc65ecbf8
+    settings.apiKey.cancel: ea4788705e6873b424c65e91c2846b19
+    settings.apiKey.continue: a0bfb8e59e6c13fc8d990781f77694fe
+    settings.tabs.project: 9e727fdd3aec8274f46685441900280d
+    settings.tabs.account: 08bd40c7543007ad06e4fce31618f6ec
+    settings.tabs.team: ac848fa228f49ba2b8a5fbd76596817d
+    settings.tabs.provider: 27703c8f150ac4bb0a3a83a7857353af
+    settings.tabs.billing: 780c462e85ba4399a5d42e88f69a15ca
+    settings.addProject: 7e94fd31ac489c6edc9b9ee8820b5500
+    settings.project.name.title: 8e3a42158ee70b67cf55b33e2789a9e5
+    settings.project.name.description: 55257874f345827b9ffe31ea91e7e084
+    settings.project.name.placeholder: 2e8a21c53c67dfe59cf31e887903b505
+    settings.project.id.title: 6cb2830007af9ceb6ce55b4560dc650a
+    settings.project.id.description: 8afa0ed0093af92bd230f690d425f934
+    settings.project.id.placeholder: 6cb2830007af9ceb6ce55b4560dc650a
+    settings.project.delete.title: f210dc350b5e5aed8e60de810eaa37d0
+    settings.project.delete.description: a2769f04b50c36b113aed6a845f6fa01
+    settings.project.delete.button: f210dc350b5e5aed8e60de810eaa37d0
+    settings.save: c9cc8cce247e49bae79f15173ce97354
+    settings.team.name.title: a415526ab37ab308188999eda9b481db
+    settings.team.name.description: 1222c047a38ac77dbe78f345bd779c4d
+    settings.team.name.placeholder: 0c5521fcea9b8efdcae81b16ec0dcac8
+    settings.team.billing.title: 5f147a08d0b9fc2ef6cf4c71a893fdab
+    settings.team.billing.description: 1665b620ac93f1d8fd0c25df5f0f01d2
+    settings.team.billing.free: b24ce0cd392a5b0b8dedc66c25213594
+    settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
+    settings.team.billing.unlimited: 545f6c2f382c04810103b3e5e6f7d841
+    settings.team.apiKey.title: 97573f14d44c6288ad1b74a0418b1e26
+    settings.team.apiKey.description: 2de23378276325360c6211b81ddd89dd
+    settings.team.apiKey.placeholder: 97573f14d44c6288ad1b74a0418b1e26
+    settings.team.members.leaveTeamConfirm: 90758d6903b397413b00b16f21faeeb9
+    settings.team.members.leaveTeamDescription: 2fad1468a204820c92518c8ccb0b58d1
+    settings.team.members.cancel: ea4788705e6873b424c65e91c2846b19
+    settings.team.members.leaveTeam: 90758d6903b397413b00b16f21faeeb9
+    settings.team.members.invite: dad26214244beb2ccfaebfb37b47def1
+    settings.team.members.title: ef53538ae41a651c7f72ab6cb1135d8c
+    settings.team.members.pendingInvitations: cd5c1583e1cf121078bd6834b94c390b
+    settings.team.members.removeMember: 375396d6e5d566794f2191bf22a665d8
+    settings.team.members.removeMemberConfirm: 375396d6e5d566794f2191bf22a665d8
+    settings.team.members.removeMemberDescription: 3d253c4c8371469597db2798c85af926
+    settings.team.members.filterPlaceholder: 4805e85f9f76302e0a8ed7e56ffe275e
+    settings.team.members.allRoles: 8d5a0d3ed131668433e35626daf9b519
+    settings.team.members.date: 44749712dbec183e983dcd78a7736c41
+    settings.team.members.selectAll: ef1b031573031a3eca39e4b16e1eacec
+    settings.team.members.noPendingInvitations: 3051edbf4703b0624b41accadf094534
+    settings.team.members.noResults: 4df7b707ba9cff3428799d7162702476
+    settings.team.members.tryDifferentSearch: 7884c4e7138c27a1ed485c9171fc081d
+    settings.team.members.inviteMembers: 3eb8888b0e8a1c22f1002e1219a38370
+    settings.team.members.deleteInvite: 397fd316cddb45a3c965938039b955f4
+    settings.team.members.deleteInviteDescription: c186a61f8f2e6219b73954dfae512ae0
+    settings.team.members.invitedBy: 1f7b34991dd13019d3fc2e02ff7bccc9
+    settings.team.members.deleteInviteSuccess: 41f4c81ec79ac054d9658a872045a05a
+    settings.team.members.deleteInviteError: 43f2debe7c1ad9a3976dcc50a74c9e8c
+    settings.team.members.removeMemberSuccess: ceab49c1789aa0a0ca7abfc29eb9f59e
+    settings.team.members.removeMemberError: 360f11df18adb84518a8283fd0063609
+    settings.team.members.removeMemberSuccessDescription: 7b79d9dc5a905806845cc85e5c39b9a2
+    settings.team.members.removeMemberErrorDescription: 360f11df18adb84518a8283fd0063609
+    settings.team.members.roles.owner: b6f4a2ec6356bbd56d49f2096bf9d3d3
+    settings.team.members.roles.member: 858ba4765e53c712ef672a9570474b1d
+    settings.team.members.dateSort.newest: ac71d8452c267207bcf9f1c93c6419e8
+    settings.team.members.dateSort.oldest: 4df211924b23a31142bb7a6ac9a33832
+    settings.team.members.deleteInviteConfirm: 120406beeda0c81cd3e125ce2d33c368
+    tuning.general: 0db377921f4ce762c62526131097968f
+    tuning.translationMemory.title: 134d4413abf1fb055d58e397f43a3109
+    tuning.translationMemory.description: 8845f05905ef98ffd22565941e3f5352
+    tuning.qualityChecks.title: 14d5ce91a14c26eabfaeb880518dc8c0
+    tuning.qualityChecks.description: c37ed745860b18b398cf29511925b122
+    tuning.contextDetection.title: 0dbf9ba36a56d7305816e3272ce92bba
+    tuning.contextDetection.description: dbe9b43f9d4998b93afdd63d700fac84
+    tuning.styleGuide: aec7b47248cf3bf1399703d0b547ea7a
+    tuning.lengthControl.title: 3f8d2493cb2a21eae8be7752281f3607
+    tuning.lengthControl.description: efc01ed6cd8c4d6fab6ed5d5cd392f3c
+    tuning.lengthControl.options.flexible: 13b303a6c0d90897b5375ce901acc445
+    tuning.lengthControl.options.strict: 2e979835dd62324f5bfe217449ba4974
+    tuning.lengthControl.options.exact: 1649aed298f99d587e2eb30c1db5946b
+    tuning.lengthControl.options.loose: 08d78f099561104c2015d19ea7d9d41e
+    tuning.inclusiveLanguage.title: e6f50f9ac54591fb7e1a5d9aa1856791
+    tuning.inclusiveLanguage.description: bc5a5fe3acfd112049c058b3934d4736
+    tuning.formality.title: 71024962edfa16cc65ab94395618dc08
+    tuning.formality.description: 88eac77a703cda629793e989e926fdd8
+    tuning.formality.options.casual: 28d5d53226be8aa8da42d9cbdd312e62
+    tuning.formality.options.formal: 557c6481538b93bfe0a10a1cbc11aa07
+    tuning.formality.options.neutral: e9bb5320b3890b6747c91b5a71ae5a01
+    tuning.brandName.title: 3bca44e521736d1aab2b489ee96543dc
+    tuning.brandName.description: 5fa098ce3e6bbca57eff8ac95772e2ef
+    tuning.brandName.placeholder: 9e9d4d08ec805171ae0ad76a53f530b8
+    tuning.brandVoice.title: 11e96380daf824c163ad55378f835ed0
+    tuning.brandVoice.description: fc9502f2cb25d413f69f1ef589af64cc
+    tuning.brandVoice.placeholder: 3a2ff09d5d836ee595758285346150ef
+    tuning.toneOfVoice.title: 7ad04961cb75a7dc6e2a250d952b3137
+    tuning.toneOfVoice.description: 5ecc1d3b5249e007f33e6a0e6a16592b
+    tuning.toneOfVoice.options.casual: 28d5d53226be8aa8da42d9cbdd312e62
+    tuning.toneOfVoice.options.formal: 557c6481538b93bfe0a10a1cbc11aa07
+    tuning.toneOfVoice.options.friendly: 03fdbf12e03a4cd1409b84abe2b631df
+    tuning.toneOfVoice.options.professional: 9e8b160226c9fe22a910c782ce5076e2
+    tuning.toneOfVoice.options.playful: 7eaa58547a5f7ca615c75491124e8929
+    tuning.toneOfVoice.options.serious: 5ac37abb27822d9e97e825d6f026afbf
+    tuning.toneOfVoice.options.confident: 1b1f145b4bc9042f4287221bf465e9da
+    tuning.toneOfVoice.options.humble: a9d13af9ab68f8e72cd864d749bf30de
+    tuning.toneOfVoice.options.direct: fd1dd0c603be8170f9eae0be9f2f6afb
+    tuning.toneOfVoice.options.diplomatic: 8429152ff05835474c8becf02b9d7be9
+    tuning.brand: 1be6f9eb563f3bf85c78b4219bf09de9
+    tuning.emotiveIntent.title: 87a6c086ad1862808b699921ab31681c
+    tuning.emotiveIntent.description: 31a3fb01ff14c606ac992bf5e1e47562
+    tuning.emotiveIntent.options.neutral: e9bb5320b3890b6747c91b5a71ae5a01
+    tuning.emotiveIntent.options.positive: 3289297424e01eda5b788c083bbf3147
+    tuning.emotiveIntent.options.empathetic: 667a0fb3ffb9a3c216e9683cb0f56ddd
+    tuning.emotiveIntent.options.professional: 9e8b160226c9fe22a910c782ce5076e2
+    tuning.emotiveIntent.options.friendly: 03fdbf12e03a4cd1409b84abe2b631df
+    tuning.emotiveIntent.options.enthusiastic: 8b0c0f27b0034472e15fb4a4a5d6feb5
+    tuning.domainExpertise.title: a731ba52c8dee70424e1fb848c2675e3
+    tuning.domainExpertise.description: 72a38518f53e14c11a1195c77d83c96a
+    tuning.domainExpertise.options.general: 0db377921f4ce762c62526131097968f
+    tuning.domainExpertise.options.technical: ad1ec60c9e1f10f6a9f5d9f2c5254bc6
+    tuning.domainExpertise.options.medical: 077262cc53a1fb1b5f651d31b6bf81ba
+    tuning.domainExpertise.options.legal: a10a9bcd450087de1ce1f80b35f44883
+    tuning.domainExpertise.options.financial: 35f156073cb9314e5ddcabd2d16f443c
+    tuning.domainExpertise.options.marketing: 7cb15e416d62919b1b40298324fbe30b
+    tuning.domainExpertise.options.academic: 9e1c63fe89fae4da8db2c9e550b3e6c1
+    tuning.idioms.title: 7cd9c7ed1208951909e37fb85dca6414
+    tuning.idioms.description: 1d0099c10c13867de51b6d565a7cccf1
+    tuning.terminology.title: e182a8a3f2adf774fb1c959df71b8600
+    tuning.terminology.description: de2f481655486c6713e14c5b5c0c0fa8
+    tuning.culturalAdaptation.title: 824f0a2cc9dca77f01b97d8dd5a6d757
+    tuning.culturalAdaptation.description: 2998105ed538017749e29e597aba2db6
+    pricing.title: 467c18a9436478b8db6c9f6124784d74
+    pricing.free.title: b24ce0cd392a5b0b8dedc66c25213594
+    pricing.free.price: b24ce0cd392a5b0b8dedc66c25213594
+    pricing.free.keys_limit: 68ded5c952acf17cd71488921eb409fb
+    pricing.free.description: beed456178e89c22031175a81ac64faf
+    pricing.free.features.unlimited_projects: 29be4d95ae3d4131e1f3f2bf97d334dd
+    pricing.free.features.fine_tuning: dd4e28c05b95e8f69925f58a472c041a
+    pricing.free.features.overrides: 877ea670329e5a2232734b18245a5c3d
+    pricing.free.features.analytics: a768caa988605a2846599cf7e2d0c26a
+    pricing.free.features.context_memory: f0ae622dd995d57acd0e697cb95c068e
+    pricing.free.features.community_support: 1cf7168782187634fbc408c66b895dbc
+    pricing.free.features.keys_limit: 68ded5c952acf17cd71488921eb409fb
+    pricing.free.features.docs_limit: 1778b411fe46f59bc4454d89b01bb122
+    pricing.free.features.languages: 258b956ff3f1550eeeda8300ff9835a9
+    pricing.pro.title: abd900517e55dce0437dac136a8568d7
+    pricing.pro.includes_free: 048d1ba13c785db62638cfca520b0a5f
+    pricing.pro.features.github_action: ba6fa6e325e04710d41ade5d4fc49717
+    pricing.pro.features.latest_features: 9a484e3a0a97e92a9baa721048626455
+    pricing.pro.features.priority_support: d62f9dcbe63520f9fb0857b3c615b210
+    pricing.pro.features.priority_queues: 7f8fc85a9455f20bc1ef7c0600a50c8a
+    pricing.pro.features.languages: d5dc1805a7498df788f270b4d9f892cc
+    pricing.pro.features.keys_limit: 07707a9c9d8c4b54e3a5b87fd4ba6be1
+    pricing.pro.features.docs_limit: ef93a24fb4f4ea5cb7e13f88868aeb1c
+    pricing.cta: a698f6a6e17c887e558c625a4e19800b
+    pricing.keys_limit_explanation: d74aedb7dfbacb3a7cc87d387275543a
+    createTeam.teamName: a415526ab37ab308188999eda9b481db
+    createTeam.teamNamePlaceholder: 0c5521fcea9b8efdcae81b16ec0dcac8
+    createTeam.createTeamButton: 566b03c72e8a6206b2efc9e5fab5823c
+    createTeam.cancel: ea4788705e6873b424c65e91c2846b19
+    createTeam.createTeamDescription: 80c12ad8967e83b50b41154d80874667
+    createProject.createProjectTitle: 0b60e8fecbfed3cdc2b22bdd3db8a60e
+    createProject.projectNamePlaceholder: 2e8a21c53c67dfe59cf31e887903b505
+    createProject.createProjectButton: 7e94fd31ac489c6edc9b9ee8820b5500
+    createProject.cancel: ea4788705e6873b424c65e91c2846b19
+    createProject.createProjectDescription: 5f46bde8120bcdb78ef7339540c58bcd
+    invite.inviteMember: dad26214244beb2ccfaebfb37b47def1
+    invite.inviteDescription: 6e4b3dc8f8bf5b5e350f2b36cda25d5d
+    invite.emailLabel: ce8ae9da5b7cd6c3df2929543a9af92d
+    invite.emailPlaceholder: c3d8baf1b9da3d6922aea0057717a0b7
+    invite.cancel: ea4788705e6873b424c65e91c2846b19
+    invite.submit: a4d3b161ce1309df1c4e25df28694b7b
+    invite.success.title: ed87c79081208632254766b0e2fa9cac
+    invite.success.description: 0bdff00a96d8ccfab46d3dbe687713ac
+    invite.error.title: 902b0d55fddef6f8d651fe1035b7d4bd
+    invite.error.description: b5f72115b32020c7b6e19251e5e80fb7
+    invite.validation.invalidEmail: daa8d486c07ee522a91050732b89a06b
+    onboarding.steps.1.title: 43e849e91e4068e288f50477a4dd91db
+    onboarding.steps.1.description: 7e09be5bbd5d54341ebc9178e540ded2
+    onboarding.steps.2.title: 09001a200e746fc9ba31b7f05511ee11
+    onboarding.steps.2.description: 0b5faababc2f615cfff6159fbc05e2c4
+    onboarding.steps.3.title: 5b6cf869265c13af8566f192b4ab3d2a
+    onboarding.steps.3.description: 2b954d79b08785bedb943088bd53d32c
+    onboarding.steps.3.link: 55876228853abf632dec9346a4f372ec
+    onboarding.info.description: 2de352bdd7561cc524f343437fcc5bbf
+    onboarding.info.link: 55876228853abf632dec9346a4f372ec
+    onboarding.info.description_2: a169225d82c270d118538f0e670188bb
+    cli.success.title: 8f2f7e3b30445b11d06f475c144e0c6e
+    cli.success.description: 904ab4730c6872ceb93de989689350f4
+    cli.success.description_2: f6849a58a8ab34415b50ee39eb464db2
+    search.placeholder: 13348442cc6a27032d2b4aa28b75a5d3
+    periods.daily: c512b685438f41daa7386329a3b8f8d3
+    periods.weekly: 6c25e6a6da95b3d583c6ec4c3f82ed4d
+    periods.monthly: 9030e39f00132d583da4122532e509e9
+    periods.selectPeriod: 4181c4164b19ba285be050d280a6102e
+    language.en: 78463a384a5aa4fad5fa73e2f506ecfc
+    language.de: 86bc3115eb4e9873ac96904a4a68e19e
+    language.ar: 272ccb8592bafde0baf1dedce0fd3ac2
+    language.az: 9f3356b27d0a76cb5f0ceea9e80a6e72
+    language.bg: 60bb3bcc6ff535428a38f76f1059b2d2
+    language.ca: 900a14b115614d9d4d1c47f1d3a3251b
+    language.cs: 83ff4480cdf2900ae83bf30d95774d76
+    language.da: 7bc6f150ce738db3d21cbe0b75aea027
+    language.el: 0aafa497807d5ac9b509656bd13b5283
+    language.es: cb5480c32e71778852b08ae1e8712775
+    language.et: 28916fc3da67a5190b2b98a7f309857f
+    language.fi: 9ae099fd082267fa2f2f85664a4f74dc
+    language.fr: ad225f707802ba118c22987186dd38e8
+    language.he: c6c1f81a46666385fa7d85df7eaf8763
+    language.hr: 0c1be09bad2acaa2fa315b88abda8a32
+    language.hu: 7b86112ec6401fd8f06ab5251d1a68fe
+    language.id: cc1c9b57607b4439578b68074a5e2d80
+    language.it: 4be8e06d27bca7e1828f2fa9a49ca985
+    language.iw: c6c1f81a46666385fa7d85df7eaf8763
+    language.ja: f32ced6a9ba164c4b3c047fd1d7c882e
+    language.km: 9f564ebabc9cf0b9589b4ecf6228379a
+    language.ko: d0bdb3cde477d82e766da05ebda50ccb
+    language.lv: 76ad0358e45dd4087c0a26bbf4c160e3
+    language.nl: 68bf367e228f45ba83cb8831a5ee6447
+    language.no: da550ca06bcacbd30b7c6ed32c864c70
+    language.pl: c730389bc8d99e59c867766babdd48b5
+    language.pt-BR: 26d5352ead4a731f3d11eb2e85d0e297
+    language.pt: 30e32c7c4cf434e9c75e60c14c442541
+    language.ro: efa7394ecaa7fc7076a9da13a77236b8
+    language.ru: deba6920e70615401385fe1fb5a379ec
+    language.sk-SK: 68056cf8d57f23d0b2c80e135cd5b358
+    language.sk: 9accc467b159e7ce158e53209c0cde2a
+    language.sr: 055301c56abc82dd3a81ea3810ad0599
+    language.sv: 41171a0fcd362ce98b5f0f11398713b6
+    language.ta: f0670813020969b39ff8d85744b40400
+    language.th: 43ddc789bcea4177a14791f6c9a03b28
+    language.tr: c1612bbdebfa45467e8ab814e08daff1
+    language.uk: e78a6fc14ad64f7a78386b20568ce95b
+    language.vi: 7b80fae85640c16cdb0261bef0c27636
+    language.zh-CN: c6606fd0c7e63446a7839bd982c9ce7f
+    language.zh-TW: 658edc15e33dabbc949c26031c154fe8
+    menu.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
+    menu.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
+    menu.settings: f4f70727dc34561dfde1a3c529b6205c
+    menu.pricing: e22ac25b066b201473de7aa700ef5d92
+    menu.docs: 5b6cf869265c13af8566f192b4ab3d2a
+    menu.account: 08bd40c7543007ad06e4fce31618f6ec
+    billing.title: 780c462e85ba4399a5d42e88f69a15ca
+    analytics.key: 33ef94b2b7d40dcb8e665003477209e2
+    analytics.document: 45be27eb4df1df35ea3e46a62acfea3b
+    analytics.header: 0b8d92bc19b720bb1065649535463409
+    analytics.months.10: 594be08882c8e9d5efb9eeb62f303744
+    analytics.months.11: 343e6957be77c6247aa2b8d0deb68bd6
+    analytics.months.12: d207b4e0bce42a8f1555ce3a05e287f6
+    analytics.months.01: e68564f23e0e939acea76dc3d2bc01bf
+    analytics.months.02: ea171d540ccd5f0669171ef06d3cd848
+    analytics.months.03: 7ce6b2286a5396e614b8484105d277e0
+    analytics.months.04: 6d7215c4b3bc4716d026ac46c6d9ae64
+    analytics.months.05: 195fbb57ffe7449796d23466085ce6d8
+    analytics.months.06: eb4b40c1221dad5b23fe7ef84d292be1
+    analytics.months.07: a2866cd6efaa65c92278d4771a9eaec7
+    analytics.months.08: 22f1a4667604b8557c9b209c201b4bc6
+    analytics.months.09: f04aa7019c490474fa3ce16e93501b57
+    faq.title: 1fe917b01f9a3f87fa2d7d3b7643fac1
+    faq.what_is_languine.question: 57f64f39cd8e0806ff58613aab5b682a
+    faq.what_is_languine.answer: 7c3c03995075d69d8e137f5256a200ab
+    faq.key_limit.question: 729a32234ea79c9b978b219059f56b33
+    faq.key_limit.answer: ec9132973926bdc0bf6f2c66e4c1c832
+    faq.supported_languages.question: 1f912d405adb35fa5c2aa66dddb39b24
+    faq.supported_languages.answer: 03b44b7cf0fc3e1ab4302d06819dea1c
+    faq.github_action.question: b1a43c3aba255b27ce5420d8db3d8a93
+    faq.github_action.answer: b6574e355432629612a257e44bb700f6
+    faq.support.question: 142213be6eae02e401cb5af4ecbb7463
+    faq.support.answer: 8f800f4c21d3c04b517765560d04bffb
+    faq.open_source.question: 557b7b3a5b94340c550a4faafc1f452c
+    faq.open_source.answer: ff9d2ff640665a64c0fae03c3de034b8
+    faq.open_source_pricing.question: e3d735f7918f8effafb7fa2e6b2f1d5f
+    faq.open_source_pricing.answer: 4872860c8381731ba924dcdf21694eb3
+    faq.cancel_subscription.question: 1b2b7bacd39b85e288d0c9f9ef269200
+    faq.cancel_subscription.answer: c52453604a8fc6dfe38a8e1a59cce311
+    pricing_slider.tier: 4c7b8bb8b1156824e7ca9ff29443c958
+    pricing_slider.keys: 33ef94b2b7d40dcb8e665003477209e2
+    pricing_slider.documents: 45be27eb4df1df35ea3e46a62acfea3b
+    pricing_slider.period: 197639b278057c519189add5413712e3
+    pricing_slider.keys_suffix: 7a9f34e20112d1849721321a7b068d2c
+    pricing_slider.docs_suffix: 6a0355a7392122eb336841441cfa29ce
+    pricing_slider.languages: 3a08e2e340ab29fd9263af48193cbf8e
+    docs.getting-started: bf647454e36069fd16f1a7a35cf6a865
+    docs.workflow: 24f47cdbe9ddba774a7cc53e51d9032e
+    docs.ci: a91e4ff4bf49e8de7de911d95062662e
+    docs.presets: eb81441fe20963ff9e8e69c5b32fc625
+    docs.formats: 0615a38067b62382dc1667010669b238
+    docs.platform: 419f3742e6de8e0ec4b22cce005e7630
+    docs.introduction: 0b79795d3efc95b9976c7c5b933afce2
+    docs.quickstart: daf9c900d52f8dc3a51bb68233076798
+    docs.authentication: c75f7811d70d17dbcd88e9d03752cbed
+    docs.configuration: 254f642527b45bc260048e30704edb39
+    docs.cli: 91af5705f16502125e8b2187e64202c0
+    docs.github-actions: f843be8508767777750802fb7782c74f
+    docs.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
+    docs.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
+    docs.settings: f4f70727dc34561dfde1a3c529b6205c
+    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.examples: ff7c0fcd6a31e735a61c001f75426961
+    docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    overrides.title: 0ca08f8f4a8a19f7f1ae87c119494327
+    overrides_sheet.title: a7f6326fc128712ffaee83351ea67525
+    overrides_sheet.description: 3d58d20c3e5e349d630b1bee63f04063
+    overrides_sheet.save: c9cc8cce247e49bae79f15173ce97354
+    filter_locales.languages: 3a08e2e340ab29fd9263af48193cbf8e
+  src/markdown/docs/en/introduction.mdx:
+    content: 543d3a7281b8d4683d18bd376e8f3d5d
+  src/markdown/docs/en/properties.mdx:
+    content: 456f6c095ecb5c2869ab4e889d77ffa2
+  src/markdown/docs/en/json.mdx:
+    content: 3915fe925176302682dd78413f4f50a5
+  src/markdown/docs/en/md.mdx:
+    content: 954950af9e0d5d07c8a4f4cb99f19fd3
+  src/markdown/docs/en/arb.mdx:
+    content: bc5b02f13cc4544690e1242a5cdcf0cf
+  src/markdown/docs/en/xcode-stringsdict.mdx:
+    content: 8b9ba8c1cf2a5c79a8c56f64515341dc
+  src/markdown/docs/en/po.mdx:
+    content: 0ab8c3e7cc76ee475c22a18561c9fbdc
+  src/markdown/docs/en/overrides.mdx:
+    content: c896fe6c6fbf4a36f9e00a4f8f8fc30f
+  src/markdown/docs/en/prettier.mdx:
+    content: 3eb957402850814a4d00c903fadd43f6
+  src/markdown/docs/en/github-actions.mdx:
+    content: e3c877ffc37a1372fd57cfac8346814d
+  src/markdown/docs/en/xcode-xcstrings.mdx:
+    content: 7a0698fd569c46a89174de8f0015c7e8
+  src/markdown/docs/en/ts.mdx:
+    content: c3a8bf819b4558065b069aca1604fabb
+  src/markdown/docs/en/expo.mdx:
+    content: 7a539a38e9ff853c809cd19c3c823036
+  src/markdown/docs/en/android.mdx:
+    content: 9d76ec2170ec2313a06cff56711577ad
+  src/markdown/docs/en/ci.mdx:
+    content: 23beaf231e960eb9245c5bff8eed3466
+  src/markdown/docs/en/configuration.mdx:
+    content: 4c5cccb7094fef0f7d7b6eea75b35bc9
+  src/markdown/docs/en/js.mdx:
+    content: 22b5d88779283177bd3e09e9945ce164
+  src/markdown/docs/en/xliff.mdx:
+    content: 51648eaf53dcf32d4fdf0c5bce3b1df3
+  src/markdown/docs/en/ios.mdx:
+    content: 31a7aae9c32516ee4847d70707fa9a6e
+  src/markdown/docs/en/quickstart.mdx:
+    content: 4f5d95cdd6fcb58120215601abb76faf
+  src/markdown/docs/en/csv.mdx:
+    content: bcc32f8bd3580a0b57d7f4c5cda7b069
+  src/markdown/docs/en/biome.mdx:
+    content: 8f164a833f5476fcf5da488a968c0aa8
+  src/markdown/docs/en/authentication.mdx:
+    content: d31cd0b0d6cad7765f5ef7c46872c4c9
+  src/markdown/docs/en/cli.mdx:
+    content: 59d2b88ff908621deadbd2be3f8ccd52
+  src/markdown/docs/en/react-email.mdx:
+    content: 0b104ae93d015d09d6756aaa86c785f2
+  src/markdown/docs/en/html.mdx:
+    content: 9e0e6f5acb1ef53b0bacbce6edc2db8c
+  src/markdown/docs/en/yaml.mdx:
+    content: 31d91f16764394e05c4b1e2178b90f91
+  src/markdown/docs/en/mdx.mdx:
+    content: 4551a627a349bed7b3dc28c35b18dac4
+  src/markdown/docs/en/xml.mdx:
+    content: 8ce6f18a230c961f392f1dc3207ba14d
+  src/markdown/docs/da/introduction.mdx:
+    content: a82f9713a16caf17bdd3339e4caa3156
+  src/markdown/docs/de/introduction.mdx:
+    content: e2931d8a07a15aacf3bcd7e46e14a799
+  src/markdown/docs/es/introduction.mdx:
+    content: c7901a38fc8010edc622c7a2c044b1d9
+  src/markdown/docs/fi/introduction.mdx:
+    content: 41b8dfd50f0406a4cb004e8268ce1360
+  src/markdown/docs/fr/introduction.mdx:
+    content: fccf518989a3b335d3342879bef79aa6
+  src/markdown/docs/it/introduction.mdx:
+    content: 7a0ae3a60347c243744dace4c18d1e86
+  src/markdown/docs/ko/introduction.mdx:
+    content: 78bb5bb04d273043235f9a8d00cbe014
+  src/markdown/docs/nl/introduction.mdx:
+    content: ba80072e9e99b5d0a301a1f2f7875b92
+  src/markdown/docs/no/introduction.mdx:
+    content: 21cd641bd0dd9e6309dc9e49ab4f4962
+  src/markdown/docs/pl/introduction.mdx:
+    content: 8a99c10a5e00efae926643e77111c198
+  src/markdown/docs/pt/introduction.mdx:
+    content: f6c38f3a89d056b06c9a6809bb5aad11
+  src/markdown/docs/sv/introduction.mdx:
+    content: b8ee7099b9be6988e3f2b570c7e1382a
+  src/markdown/docs/da/properties.mdx:
+    content: b7a42ac4284a2455ebc60d81ededbe3f
+  src/markdown/docs/de/properties.mdx:
+    content: 4fb5e4c3d80107258ab7ba84f4f13fb2
+  src/markdown/docs/es/properties.mdx:
+    content: 621094b2bedaa8eee6fd7afaa50addda
+  src/markdown/docs/fi/properties.mdx:
+    content: e4408e9f2f6c5a60abf9acba1750bd6d
+  src/markdown/docs/fr/properties.mdx:
+    content: 3f3dd85bb6dd2d02a9a44eca93c5f4de
+  src/markdown/docs/it/properties.mdx:
+    content: db8f4a548746d9847ff2aa5df2f9a3b2
+  src/markdown/docs/ko/properties.mdx:
+    content: e5d29dab18beb2801de63db69b5fba7a
+  src/markdown/docs/nl/properties.mdx:
+    content: 4507c7ef6fa3609789edad12a364e8af
+  src/markdown/docs/no/properties.mdx:
+    content: 2d20853e9d5f8df2603368ce43fa1105
+  src/markdown/docs/pl/properties.mdx:
+    content: 02ac40efe03db30f0df89ce240b382c4
+  src/markdown/docs/pt/properties.mdx:
+    content: ed1601a0975b8111dca117d097627aaf
+  src/markdown/docs/sv/properties.mdx:
+    content: cf2a1b925cf20917fad7ec5d10c687a4
+  src/markdown/docs/da/json.mdx:
+    content: 59d73c6fe20b7b8d2209f4bcb1491575
+  src/markdown/docs/de/json.mdx:
+    content: f44fc9220c18d1e240db1cf7e261d5ca
+  src/markdown/docs/es/json.mdx:
+    content: 70bf734fc3ebc60a00761942c003b745
+  src/markdown/docs/fi/json.mdx:
+    content: 04dc84a5ba65fa102faa99ef1c1fb0ae
+  src/markdown/docs/fr/json.mdx:
+    content: 40448112a206039604cc4f8caa3dd52c
+  src/markdown/docs/it/json.mdx:
+    content: 649231920dc6c60bf4b76698fe80a10c
+  src/markdown/docs/ko/json.mdx:
+    content: 6453cbcd1d0da79fbf4d933f10a36676
+  src/markdown/docs/nl/json.mdx:
+    content: 30b13a51891883de1ad7aac897136c42
+  src/markdown/docs/no/json.mdx:
+    content: fc4e4426aff379be591f0ea743a81e0f
+  src/markdown/docs/pl/json.mdx:
+    content: a5a9598a17edaf471807741021085d81
+  src/markdown/docs/pt/json.mdx:
+    content: 05a515113a844736102aea0db3334057
+  src/markdown/docs/sv/json.mdx:
+    content: 954d4f8552f910b0530b8318d1aad2a4
+  src/markdown/docs/da/md.mdx:
+    content: afe124093dcbcf01534ebf94770f9a0c
+  src/markdown/docs/de/md.mdx:
+    content: 1b31bedfa6b7b1a98c2388878820ef49
+  src/markdown/docs/es/md.mdx:
+    content: f2a4968453bc12452f111cf068e9ee2c
+  src/markdown/docs/fi/md.mdx:
+    content: 94839083f73dee137bfab4bbdd4d6683
+  src/markdown/docs/fr/md.mdx:
+    content: f4d7b0862accd245bd083aab4342e969
+  src/markdown/docs/it/md.mdx:
+    content: 340dc2fd0feb71eb6765cd1e45008e20
+  src/markdown/docs/ko/md.mdx:
+    content: ad56b469c1e9017f574cb081eaa1eaf6
+  src/markdown/docs/nl/md.mdx:
+    content: f98d9f5d5226e0cc1b5b6afeeb7d734f
+  src/markdown/docs/no/md.mdx:
+    content: f582a07af2cfad08252675bfdd603421
+  src/markdown/docs/pl/md.mdx:
+    content: f7078e2d1658dc78970fda5ceeea5e02
+  src/markdown/docs/pt/md.mdx:
+    content: 3a72b38623fd508f7d312ed3603bb911
+  src/markdown/docs/sv/md.mdx:
+    content: 34194644b9358df5ab8708644450595d
+  src/markdown/docs/da/arb.mdx:
+    content: 77945d964f379418455f9e4998573464
+  src/markdown/docs/de/arb.mdx:
+    content: 6cce6aed8a7997a514a5d6793eff52df
+  src/markdown/docs/es/arb.mdx:
+    content: f928743732fa0436f216d84f61287846
+  src/markdown/docs/fi/arb.mdx:
+    content: 3ceff26efd9783aa47268983bf661c7f
+  src/markdown/docs/fr/arb.mdx:
+    content: cf1eedefcbab1ee5d03c669d65e08188
+  src/markdown/docs/it/arb.mdx:
+    content: 40b4e80c60d24f99e0323da0d9f223c4
+  src/markdown/docs/ko/arb.mdx:
+    content: 3c6f68a6461a7d8058abbde11a26f112
+  src/markdown/docs/nl/arb.mdx:
+    content: 4864eed6529cdfaf5d67b676b7c5b4db
+  src/markdown/docs/no/arb.mdx:
+    content: 554b4899bc052e5cd08f09660d79a70e
+  src/markdown/docs/pl/arb.mdx:
+    content: 3b073bdc5b29b89701fe49ba25728f4a
+  src/markdown/docs/pt/arb.mdx:
+    content: 4e555333fbb17d339368853ea4314944
+  src/markdown/docs/sv/arb.mdx:
+    content: 192b296b768234da4b598e76c977fe7b
+  src/markdown/docs/da/xcode-stringsdict.mdx:
+    content: bb5ca24278212efa790ce416b25b9424
+  src/markdown/docs/de/xcode-stringsdict.mdx:
+    content: 93364b89ff7f098c863e21146a01f724
+  src/markdown/docs/es/xcode-stringsdict.mdx:
+    content: 7ac542d9dd95990e15c5995d9f3b4486
+  src/markdown/docs/fi/xcode-stringsdict.mdx:
+    content: 81ca1d5462401523f0bd22a60b50ec10
+  src/markdown/docs/fr/xcode-stringsdict.mdx:
+    content: 9e131a66bd8a5e448bd959d1207f3b7d
+  src/markdown/docs/it/xcode-stringsdict.mdx:
+    content: 7cf6b79905c246ea77c9fd8937e026fb
+  src/markdown/docs/ko/xcode-stringsdict.mdx:
+    content: 74334267f46e8146cfbc3e43abf53b84
+  src/markdown/docs/nl/xcode-stringsdict.mdx:
+    content: a05cecc23ca6194c8a17be059ac033d2
+  src/markdown/docs/no/xcode-stringsdict.mdx:
+    content: 18deb3e9cf12415f249a6c98d9f6cf93
+  src/markdown/docs/pl/xcode-stringsdict.mdx:
+    content: b61c82eb21de93b63ece3335236635a1
+  src/markdown/docs/pt/xcode-stringsdict.mdx:
+    content: 6f2bfebbe0c87bee3f1a7d512c196d8c
+  src/markdown/docs/sv/xcode-stringsdict.mdx:
+    content: d19f877e86be215c84248b8c91dbe1ab
+  src/markdown/docs/da/po.mdx:
+    content: 2d1abeb6757a81cdc843378454843cf2
+  src/markdown/docs/de/po.mdx:
+    content: 400c15f8b30780a03fb3ef8bf9df7466
+  src/markdown/docs/es/po.mdx:
+    content: 1ba862a984e5b24f6c28883f1bff827e
+  src/markdown/docs/fi/po.mdx:
+    content: 3312a53c8cdcd7e70bd4ade078d56582
+  src/markdown/docs/fr/po.mdx:
+    content: 644da7cc06fcf18d9f194917e7074749
+  src/markdown/docs/it/po.mdx:
+    content: 5875d343780627989991f660b5fd3860
+  src/markdown/docs/ko/po.mdx:
+    content: b705580c26daa0b9268aa06e5afe8683
+  src/markdown/docs/nl/po.mdx:
+    content: 0fe8b70e46f26e76a46250a8ceee6c4f
+  src/markdown/docs/no/po.mdx:
+    content: 0eb474df3d9a6f2f53d36e38cfe0a744
+  src/markdown/docs/pl/po.mdx:
+    content: 7e19b0a75eec1de3b0120fe89b7402af
+  src/markdown/docs/pt/po.mdx:
+    content: a1399c9ee1479e77e9161d246fa909f1
+  src/markdown/docs/sv/po.mdx:
+    content: ad2d9caa59c86a7588fa1c826fede635
+  src/markdown/docs/da/overrides.mdx:
+    content: c5bb34000b2e2a4e40916ca723803804
+  src/markdown/docs/de/overrides.mdx:
+    content: 868bcf82a2428edd746287de1bc21a53
+  src/markdown/docs/es/overrides.mdx:
+    content: 2a20ec6acc40b0531e3cbd4f3b7a9115
+  src/markdown/docs/fi/overrides.mdx:
+    content: 96aced6a69beae9e300eb00317f2747a
+  src/markdown/docs/fr/overrides.mdx:
+    content: b6df4c6fe2b5228c3b0141d87ba55f40
+  src/markdown/docs/it/overrides.mdx:
+    content: 2875b47bde7522ae74fe3dddb1371c5d
+  src/markdown/docs/ko/overrides.mdx:
+    content: b5796a42e16a89f159121a30a6486169
+  src/markdown/docs/nl/overrides.mdx:
+    content: d3c867df0fd55ab0dc74fba98ab5fa4d
+  src/markdown/docs/no/overrides.mdx:
+    content: b031c3ca6bb4930bfbf2503f91795c8e
+  src/markdown/docs/pl/overrides.mdx:
+    content: 176d0da1a999d759b0c710041cf2d620
+  src/markdown/docs/pt/overrides.mdx:
+    content: 545bc92efacb3f26f8c13c9a53140059
+  src/markdown/docs/sv/overrides.mdx:
+    content: fc570cf68842e960ee0727ca7f30c223
+  src/markdown/docs/da/prettier.mdx:
+    content: f17b00fc2f6d65fb7f50868f533dd58e
+  src/markdown/docs/de/prettier.mdx:
+    content: 92b042cb0e93abd70f253ad0c7bc5cd2
+  src/markdown/docs/es/prettier.mdx:
+    content: f19b667add542ed00ae9e7a4e11a2d57
+  src/markdown/docs/fi/prettier.mdx:
+    content: d72e28662b9a34649be7a25635a2a8ec
+  src/markdown/docs/fr/prettier.mdx:
+    content: 3c42ab1869ddff86553184d25b21d6ea
+  src/markdown/docs/it/prettier.mdx:
+    content: 49c3b0a00edc679b2514e2021a10acbd
+  src/markdown/docs/ko/prettier.mdx:
+    content: 191e6ff54eb19583c434ab643fabf074
+  src/markdown/docs/nl/prettier.mdx:
+    content: 443c177a7f9ffb449ad9f2069d548679
+  src/markdown/docs/no/prettier.mdx:
+    content: adb13696dbfdfe470742921a7d61c78d
+  src/markdown/docs/pl/prettier.mdx:
+    content: c5002174a9b7f9106adf8bf59bb981f9
+  src/markdown/docs/pt/prettier.mdx:
+    content: 04bd7b0bf37b3498ad35bad7eac7f28f
+  src/markdown/docs/sv/prettier.mdx:
+    content: 324d6176ed38fd17965c4907b463ef22
+  src/markdown/docs/da/github-actions.mdx:
+    content: 7b305e2cb89831faf6789ee5e3e24b37
+  src/markdown/docs/de/github-actions.mdx:
+    content: 5be14565b3440ee7f8432e3d29469a04
+  src/markdown/docs/es/github-actions.mdx:
+    content: b808c8b8ace0fdd6c587988b694ba68b
+  src/markdown/docs/fi/github-actions.mdx:
+    content: 1c0a635a70d62b2a3a5ea905f5bb1112
+  src/markdown/docs/fr/github-actions.mdx:
+    content: 15d09fdec1cf687f1eef9189677a6f1f
+  src/markdown/docs/it/github-actions.mdx:
+    content: e4d53a7effcb88c8ffe32de55f84f0ec
+  src/markdown/docs/ko/github-actions.mdx:
+    content: 78c356fdafc6b7a85df8bf8ea3b1deb1
+  src/markdown/docs/nl/github-actions.mdx:
+    content: 26cdfbd9fc9426cf92798f213f5afba1
+  src/markdown/docs/no/github-actions.mdx:
+    content: 06c8ade177fcb3243fde4b476bd904c3
+  src/markdown/docs/pl/github-actions.mdx:
+    content: d72490129a2cec3d7ed0ab1936f9fd8d
+  src/markdown/docs/pt/github-actions.mdx:
+    content: 0ec17d29a024c5d35a533523c35e6abc
+  src/markdown/docs/sv/github-actions.mdx:
+    content: 93db15f54e118cc0712f7f89196e43df
+  src/markdown/docs/da/xcode-xcstrings.mdx:
+    content: eb7299b1dd91eb1e8c61ea3bac3a1ff2
+  src/markdown/docs/de/xcode-xcstrings.mdx:
+    content: 0827222089f064d495c14dc5c10ab3c6
+  src/markdown/docs/es/xcode-xcstrings.mdx:
+    content: f49f7b5a14d3b84c99173ef9e04c404c
+  src/markdown/docs/fi/xcode-xcstrings.mdx:
+    content: c0ead1b94abd811a4f96c7f5322c4964
+  src/markdown/docs/fr/xcode-xcstrings.mdx:
+    content: a245b4843a58b6ed595d7adf5dae8808
+  src/markdown/docs/it/xcode-xcstrings.mdx:
+    content: eab35a8a89d53e2d429846a2dc77e0fd
+  src/markdown/docs/ko/xcode-xcstrings.mdx:
+    content: 458b21542c2870e691f9382daf1123a5
+  src/markdown/docs/nl/xcode-xcstrings.mdx:
+    content: 068310edf452954fe2822b11764a2c08
+  src/markdown/docs/no/xcode-xcstrings.mdx:
+    content: 919dd937b6c67a0e0de0af820b1ef402
+  src/markdown/docs/pl/xcode-xcstrings.mdx:
+    content: 094c89bbc596cb4ef296ab7a87c13aee
+  src/markdown/docs/pt/xcode-xcstrings.mdx:
+    content: 55171260527fc4519086c5ce3b5683a2
+  src/markdown/docs/sv/xcode-xcstrings.mdx:
+    content: f017bddf60a3a28e61d35060078b2333
+  src/markdown/docs/da/ts.mdx:
+    content: 4c46881e680d63b23b505dc2887bf20f
+  src/markdown/docs/de/ts.mdx:
+    content: 569d4a801a0a17aa2f0cc9411ba33ac7
+  src/markdown/docs/es/ts.mdx:
+    content: 61198ce8eb4512e22c2dfdf0ec212234
+  src/markdown/docs/fi/ts.mdx:
+    content: 0e46ce4e899c9ed56721345e2e9edd2b
+  src/markdown/docs/fr/ts.mdx:
+    content: 17ef65c33dd041b7467702dc8d122248
+  src/markdown/docs/it/ts.mdx:
+    content: 41bc5d1181ba163215d66ebc7e7e8222
+  src/markdown/docs/ko/ts.mdx:
+    content: 52a294295e2af0c3dcf2c54c6fe4bafa
+  src/markdown/docs/nl/ts.mdx:
+    content: 75f6ab1246241108f0fffbd106d11405
+  src/markdown/docs/no/ts.mdx:
+    content: bd930b2101da481903431dbd16495b57
+  src/markdown/docs/pl/ts.mdx:
+    content: ab3b4580adb4cf9700832718e459a14b
+  src/markdown/docs/pt/ts.mdx:
+    content: b763283b824d9eb41eb86164173e6e9b
+  src/markdown/docs/sv/ts.mdx:
+    content: 4fee409d7df2f5db099523704d5ad797
+  src/markdown/docs/da/expo.mdx:
+    content: c4c99f1339d48611879aff7040d17e03
+  src/markdown/docs/de/expo.mdx:
+    content: 4d45527f899ad9cf2944c8e182be7b33
+  src/markdown/docs/es/expo.mdx:
+    content: f8fd06f9f25bae82f862278c6273da8c
+  src/markdown/docs/fi/expo.mdx:
+    content: 6fb609108d5d71d2e84d19543a2cf82d
+  src/markdown/docs/fr/expo.mdx:
+    content: 4a8d36c40a4b435b49d87b6809497a27
+  src/markdown/docs/it/expo.mdx:
+    content: bd71e8faf025502a0b1cc27f4ab5acb8
+  src/markdown/docs/ko/expo.mdx:
+    content: b722850f93958346678bea4ef8400c5f
+  src/markdown/docs/nl/expo.mdx:
+    content: 31cd0096b4f29b00e0dcd77b5b308b87
+  src/markdown/docs/no/expo.mdx:
+    content: 8230443da29a5af7f00ed2f775db1663
+  src/markdown/docs/pl/expo.mdx:
+    content: c4001c14d6196a76c211137a37dc4b60
+  src/markdown/docs/pt/expo.mdx:
+    content: be5b2cce69f7da2414f150f4ae0dfd39
+  src/markdown/docs/sv/expo.mdx:
+    content: 65d942afafc866e5dfe7afc625db483f
+  src/markdown/docs/da/android.mdx:
+    content: f4204463c24f78255d20ce6602d7f260
+  src/markdown/docs/de/android.mdx:
+    content: 8793d62ba57a5fd62aaf04c922e14dae
+  src/markdown/docs/es/android.mdx:
+    content: 18c27d38fc50c1e28e8bce1fbda47c83
+  src/markdown/docs/fi/android.mdx:
+    content: 9e879a5afdf13cabf0a71ac4abd296b6
+  src/markdown/docs/fr/android.mdx:
+    content: 831cd1af282178569e8f52a0d1c50e55
+  src/markdown/docs/it/android.mdx:
+    content: 537d8a098f63f51fe4bc7860d1bbfb96
+  src/markdown/docs/ko/android.mdx:
+    content: c02a73461f433cdc557455959dfe7337
+  src/markdown/docs/nl/android.mdx:
+    content: 5319321b304b42585e5243ab751295d6
+  src/markdown/docs/no/android.mdx:
+    content: 16947118be2b13ee3da9483e0657d060
+  src/markdown/docs/pl/android.mdx:
+    content: 773dae6773fc8c18d5033a8da5725d13
+  src/markdown/docs/pt/android.mdx:
+    content: b99cfab21e42ed1eb47346bd04115411
+  src/markdown/docs/sv/android.mdx:
+    content: b9d3e223344b98331534a2c46234d508
+  src/markdown/docs/da/ci.mdx:
+    content: 0cdfc905c5998434a99a8752b0c4c2dc
+  src/markdown/docs/de/ci.mdx:
+    content: 11e1446c345d7cc121e2ea2cf6d4117a
+  src/markdown/docs/es/ci.mdx:
+    content: f440406e38a27ba3e071f7b88be71f0c
+  src/markdown/docs/fi/ci.mdx:
+    content: 12d186e305166c5133d11ad64796bec4
+  src/markdown/docs/fr/ci.mdx:
+    content: b32605b53b3139e6c6d3f45053defda2
+  src/markdown/docs/it/ci.mdx:
+    content: 888cd26d36847879903878bf7b6c4ebe
+  src/markdown/docs/ko/ci.mdx:
+    content: 9ed410f30a2a21a4296ce1239f5d4ea2
+  src/markdown/docs/nl/ci.mdx:
+    content: 832f6c2ab1735d23a0a13794b5e345c4
+  src/markdown/docs/no/ci.mdx:
+    content: f01fe12380d273af487eef56447777c7
+  src/markdown/docs/pl/ci.mdx:
+    content: 7e8fcf71a28b55aad2ad30bd85b29971
+  src/markdown/docs/pt/ci.mdx:
+    content: 7364f08ff9b1f52561184edc21ce8820
+  src/markdown/docs/sv/ci.mdx:
+    content: 208efc90b8c8303cc321b0a2cd1d1e8c
+  src/markdown/docs/da/configuration.mdx:
+    content: 84769b1df024154b0d69ff276c5931e2
+  src/markdown/docs/de/configuration.mdx:
+    content: a63fc784228e18704f82d79ce958cf35
+  src/markdown/docs/es/configuration.mdx:
+    content: 9625fc48b5ba7e4652856d0b7dd0087e
+  src/markdown/docs/fi/configuration.mdx:
+    content: c617a89f7811d9dbb8f0c3198fe2fa49
+  src/markdown/docs/fr/configuration.mdx:
+    content: 3120b6edac4fc865d6c5738c8f874653
+  src/markdown/docs/it/configuration.mdx:
+    content: 3c8da5c642368c993a32cd8bde22327d
+  src/markdown/docs/ko/configuration.mdx:
+    content: 0bce58fd700f53f7a84848f3263f9aac
+  src/markdown/docs/nl/configuration.mdx:
+    content: 4b55e220651fa8b65bfc9be0cc1a42e9
+  src/markdown/docs/no/configuration.mdx:
+    content: 06d2e1efd35b231a21a2290252f282f4
+  src/markdown/docs/pl/configuration.mdx:
+    content: 02d8cb2382bd08b03fedc43e60fc8cd9
+  src/markdown/docs/pt/configuration.mdx:
+    content: 193b31189e38e01a18a5961a55e2f689
+  src/markdown/docs/sv/configuration.mdx:
+    content: ec0e5f010837934bd6fe8d0affe224cd
+  src/markdown/docs/da/js.mdx:
+    content: 80b3fdfad5ddf9c22de27316c29eb549
+  src/markdown/docs/de/js.mdx:
+    content: ceb16e93f7f10cc870eed390c64fd915
+  src/markdown/docs/es/js.mdx:
+    content: 289928d41153e033ab9f6a7f8353340f
+  src/markdown/docs/fi/js.mdx:
+    content: d1c752e2ba31bd14893471a244a26aa3
+  src/markdown/docs/fr/js.mdx:
+    content: 1cc735c125c335ed1f768229015a2486
+  src/markdown/docs/it/js.mdx:
+    content: 9ff58b6a7a154673a80cceb8bd13492c
+  src/markdown/docs/ko/js.mdx:
+    content: 31277073fe5b6d9b73ddeb0bca4e10c5
+  src/markdown/docs/nl/js.mdx:
+    content: e614fce488c7af32d8976e3738a66c9c
+  src/markdown/docs/no/js.mdx:
+    content: 59f8882853b10cb5d679f9ee5aeea2c9
+  src/markdown/docs/pl/js.mdx:
+    content: c2d9f516a38cde076256356e264a1ace
+  src/markdown/docs/pt/js.mdx:
+    content: a3d1fafd35dd76985c81de1003e0eba1
+  src/markdown/docs/sv/js.mdx:
+    content: 2ecf328fab31c6c29add43633a4d8088
+  src/markdown/docs/da/xliff.mdx:
+    content: 77a9dac3874899faf82e8e002d122ac9
+  src/markdown/docs/de/xliff.mdx:
+    content: f238c4a1640c93bcb4b8477e71efb7a6
+  src/markdown/docs/es/xliff.mdx:
+    content: 3e755bffe0a5e3f4d8d1030495fde0b1
+  src/markdown/docs/fi/xliff.mdx:
+    content: 9ed220a75bb3a8c3f69b27c2fd624efc
+  src/markdown/docs/fr/xliff.mdx:
+    content: d27c904249bdccd12ed95dab40bb6e90
+  src/markdown/docs/ko/xliff.mdx:
+    content: 457e947c4997cd4a911a2ada2f24f6f6
+  src/markdown/docs/nl/xliff.mdx:
+    content: cc3b9caf37fbad1d12d0c892344b79e1
+  src/markdown/docs/no/xliff.mdx:
+    content: 0ac10e80b9d1695425a1ed3112921a4d
+  src/markdown/docs/pl/xliff.mdx:
+    content: 50386b715facf6570973a1aa73b4ad4c
+  src/markdown/docs/pt/xliff.mdx:
+    content: 460368ac923051d4902a0842ac649706
+  src/markdown/docs/sv/xliff.mdx:
+    content: 16c99863f6bbd1f5d4d2d6da7d9ccb86
+  src/markdown/docs/da/ios.mdx:
+    content: bb3d256d3f8f0a6b94b7daada8aa3073
+  src/markdown/docs/de/ios.mdx:
+    content: c420e1bcea8e64d0df6308f1a1990778
+  src/markdown/docs/es/ios.mdx:
+    content: 444ae3de7d984847122fc70b9d8d92a0
+  src/markdown/docs/fi/ios.mdx:
+    content: a85d90e7bede5f6734fe31344879e9c8
+  src/markdown/docs/fr/ios.mdx:
+    content: 1cfbe2a75e5e29c8e04c4e7d08437a99
+  src/markdown/docs/it/ios.mdx:
+    content: 73e43a620fd9552b8a24d4904f5c1da8
+  src/markdown/docs/ko/ios.mdx:
+    content: 21a23a15bcdef123daea96d928eaf7ba
+  src/markdown/docs/nl/ios.mdx:
+    content: 04c0bd73af4b0ae0c299513aa04bfefa
+  src/markdown/docs/no/ios.mdx:
+    content: 5be30703623ec390623cfa54d50fe438
+  src/markdown/docs/pl/ios.mdx:
+    content: c4ff3325a2ef779ed731c6d5413b82f2
+  src/markdown/docs/pt/ios.mdx:
+    content: 294af64f4cd7c3b9ea0b5ccb1f95c7b8
+  src/markdown/docs/sv/ios.mdx:
+    content: cfbbf6b413dc8dc259249d3d83b8e49c
+  src/markdown/docs/da/quickstart.mdx:
+    content: d9a2622ccaaaf2748eefa068a826a6e7
+  src/markdown/docs/de/quickstart.mdx:
+    content: 315125cb60853c590ada12f21ef25e3d
+  src/markdown/docs/es/quickstart.mdx:
+    content: 81c3f0b0036d2d5ca6a854881b7b74c7
+  src/markdown/docs/fi/quickstart.mdx:
+    content: 27e09df809dc682a942c49428a2de0f6
+  src/markdown/docs/fr/quickstart.mdx:
+    content: 77bc7b0233ed6192fc81d7893529aead
+  src/markdown/docs/it/quickstart.mdx:
+    content: 25c5fdaf8fc13a172fc5eb0ecb259a70
+  src/markdown/docs/ko/quickstart.mdx:
+    content: ab0dc6681eb24708ef65f0131db8a353
+  src/markdown/docs/nl/quickstart.mdx:
+    content: 279e216653f1d04117ad0f8621f6edc4
+  src/markdown/docs/no/quickstart.mdx:
+    content: ae289d2c3b0aa1c6fc05d7341b6d0140
+  src/markdown/docs/pl/quickstart.mdx:
+    content: 72b70709351c582bac389a9dd4a62b05
+  src/markdown/docs/pt/quickstart.mdx:
+    content: 493d0606172b4ce12e58aa466547fae4
+  src/markdown/docs/sv/quickstart.mdx:
+    content: af1bcad193515f0b145702c720741d29
+  src/markdown/docs/da/csv.mdx:
+    content: acf1d844f45893ce38ca2dfff6132fb5
+  src/markdown/docs/de/csv.mdx:
+    content: 696f4ecf1cb19eb96f71a237171a6d47
+  src/markdown/docs/es/csv.mdx:
+    content: dd5a5214fc60f16bd523c467b98681e5
+  src/markdown/docs/fi/csv.mdx:
+    content: d9f0a4263cb64bb07131899beafd2c3c
+  src/markdown/docs/fr/csv.mdx:
+    content: 7d84fb8494edeb3dc84ff8548025881d
+  src/markdown/docs/it/csv.mdx:
+    content: 5182d240543aa42efc5a7e713f4888a5
+  src/markdown/docs/ko/csv.mdx:
+    content: bcda6154d0b9b45c7dedafb04984a765
+  src/markdown/docs/nl/csv.mdx:
+    content: 78ae1af0273f172e52280e757955645d
+  src/markdown/docs/no/csv.mdx:
+    content: 28c6620c38dc16a92f72c2daffcf740c
+  src/markdown/docs/pl/csv.mdx:
+    content: 958f8752fc2e386bf0007507fa0730f2
+  src/markdown/docs/pt/csv.mdx:
+    content: 7e31981cabf8a4a7606297d71e8d0b6e
+  src/markdown/docs/sv/csv.mdx:
+    content: f6c3a87927b5dbe0e20eedf0804bd888
+  src/markdown/docs/da/biome.mdx:
+    content: 61cde7cb4b7c2ffeb6edd4e717095276
+  src/markdown/docs/de/biome.mdx:
+    content: 2faf7acd1a9a436a3093762a273bb68f
+  src/markdown/docs/es/biome.mdx:
+    content: 9c35a0225df4f09c14104f88d63831d9
+  src/markdown/docs/fi/biome.mdx:
+    content: 554f52c15ace626e2bb604bd9e9ef10b
+  src/markdown/docs/fr/biome.mdx:
+    content: 585a2568ff8732f58ec49c8b79d4f972
+  src/markdown/docs/it/biome.mdx:
+    content: 0326ecf235566627a2a21006cfece50a
+  src/markdown/docs/ko/biome.mdx:
+    content: 5fbb15e6b1b9e7d9fa9c4b761cd3078e
+  src/markdown/docs/nl/biome.mdx:
+    content: 79720635bec8415eb429747c9ed7f57e
+  src/markdown/docs/no/biome.mdx:
+    content: 78baf6d35e285a057bd68f181e40d7ba
+  src/markdown/docs/pl/biome.mdx:
+    content: 00fd2ddd6c2526165c0e44877b45be10
+  src/markdown/docs/pt/biome.mdx:
+    content: c657414efa7d3511800713d8a5e747b2
+  src/markdown/docs/sv/biome.mdx:
+    content: d53b50b76b17a0fa2b1214551726eb34
+  src/markdown/docs/da/authentication.mdx:
+    content: 352d9cf56e8df1347e649d9a7ebace80
+  src/markdown/docs/de/authentication.mdx:
+    content: 36b44674c3ffceb64cdd52b073c5465e
+  src/markdown/docs/es/authentication.mdx:
+    content: 091342866f569abf9990eb5c20015687
+  src/markdown/docs/fi/authentication.mdx:
+    content: a2b02ba3973496fc6b3f2cee56917ced
+  src/markdown/docs/fr/authentication.mdx:
+    content: 9885ca0740b9b38b1c291327c78c6c44
+  src/markdown/docs/it/authentication.mdx:
+    content: 9f9fdf1214687e6879152ebc5d658b35
+  src/markdown/docs/ko/authentication.mdx:
+    content: 6a4e0966da515cc4e76d4f7ed92d3d20
+  src/markdown/docs/nl/authentication.mdx:
+    content: 8f44966bdc605cd1351a2263e5d6b748
+  src/markdown/docs/no/authentication.mdx:
+    content: 4d0ee420323e962156f1ab0c3c3d9c52
+  src/markdown/docs/pl/authentication.mdx:
+    content: 13df9e46156de25369867f8f86f11533
+  src/markdown/docs/pt/authentication.mdx:
+    content: 9ffa30065b584b5e9d562e11277f92e1
+  src/markdown/docs/sv/authentication.mdx:
+    content: 19bbc1fb526b5baeaf75331049f1087c
+  src/markdown/docs/da/cli.mdx:
+    content: e968295b356858f0d59a2718f634b52b
+  src/markdown/docs/de/cli.mdx:
+    content: 038bd97fb43ac6afec1fdc2a11603ce4
+  src/markdown/docs/es/cli.mdx:
+    content: 099152c0ed2609895c05a863e51b1234
+  src/markdown/docs/fi/cli.mdx:
+    content: 4f3d9a8b5c0dd9b3aefca8df04479bb6
+  src/markdown/docs/fr/cli.mdx:
+    content: 17c0f25fce4ffd46f03d51baf59d2fd7
+  src/markdown/docs/it/cli.mdx:
+    content: d876a2165bfe4cf5f222f09f0c65ab8c
+  src/markdown/docs/ko/cli.mdx:
+    content: 4324f1956ee03dcfe7025654d9b1c28e
+  src/markdown/docs/nl/cli.mdx:
+    content: e91b9680b4e07f89e821962cf6889245
+  src/markdown/docs/no/cli.mdx:
+    content: 9cb4fced41fe9ca0acca6deb34f31b37
+  src/markdown/docs/pl/cli.mdx:
+    content: efa45e87298e01a31287056a5d9b1724
+  src/markdown/docs/pt/cli.mdx:
+    content: 204d4eaa9a0339124fd348c1794cd25b
+  src/markdown/docs/sv/cli.mdx:
+    content: 5e5ba3852b1d79bf4152047c5e4e64b7
+  src/markdown/docs/da/react-email.mdx:
+    content: db501d9741b854f13150375fe8d0fb87
+  src/markdown/docs/de/react-email.mdx:
+    content: 07e001e85323ac4114e9e68ad5bf3eee
+  src/markdown/docs/es/react-email.mdx:
+    content: ed5dd2bf1c42ced0723bcf1943b9c496
+  src/markdown/docs/fi/react-email.mdx:
+    content: 26ade640b73b0959f125ca7f357b3326
+  src/markdown/docs/fr/react-email.mdx:
+    content: 0a555a93ff8103a2fcb6c528d66a8d4e
+  src/markdown/docs/it/react-email.mdx:
+    content: c20c5751d56d651117b26ac34b99c59e
+  src/markdown/docs/ko/react-email.mdx:
+    content: 33494907b67c7be3d43a819857290821
+  src/markdown/docs/nl/react-email.mdx:
+    content: 15e5dc99a4ca90a09d968f0aecb5529b
+  src/markdown/docs/no/react-email.mdx:
+    content: 5c6c4fe9084099db40591b1d3ec4d50b
+  src/markdown/docs/pl/react-email.mdx:
+    content: 439d65145a5d7a1aaf92dbc08499ecef
+  src/markdown/docs/pt/react-email.mdx:
+    content: 71803d9ce3520883b43cbeb888cc6544
+  src/markdown/docs/sv/react-email.mdx:
+    content: 26f68d31225fe5e1e5b5d9bf5f11b158
+  src/markdown/docs/da/html.mdx:
+    content: 7a3ddd2951f5442bfaa1e680ed30cf44
+  src/markdown/docs/de/html.mdx:
+    content: f069cb9c2bc47a6bee3784a9600dc092
+  src/markdown/docs/es/html.mdx:
+    content: 2bdd8965a02758f36c85da5ed64bea3b
+  src/markdown/docs/fi/html.mdx:
+    content: a0a5e4694f51fccdf6235311fc5d376e
+  src/markdown/docs/fr/html.mdx:
+    content: a763d87a6e7b8de9a1317104a22f4ae7
+  src/markdown/docs/it/html.mdx:
+    content: 30ac19a3351f3301eb5bf0165a4abc26
+  src/markdown/docs/ko/html.mdx:
+    content: 9fdd4ce944e559e086281d1a5f33da36
+  src/markdown/docs/nl/html.mdx:
+    content: f7162fe23acab8207706d1f2b7b24e8c
+  src/markdown/docs/no/html.mdx:
+    content: cd6a40605e14aced9b0f0d643de381a7
+  src/markdown/docs/pl/html.mdx:
+    content: b8e9b8d50270d56fca9163d5138c3901
+  src/markdown/docs/pt/html.mdx:
+    content: 1020334751a33c690474bb767ff8e224
+  src/markdown/docs/sv/html.mdx:
+    content: 846375de5f761dd9af794121be396dca
+  src/markdown/docs/da/yaml.mdx:
+    content: ff8b0664443d4c9604cfdae5aa8791b5
+  src/markdown/docs/de/yaml.mdx:
+    content: 7ecee1fad86bf59f25c792e29c76d715
+  src/markdown/docs/es/yaml.mdx:
+    content: ab4812834010c34ae093e57261536b0d
+  src/markdown/docs/fi/yaml.mdx:
+    content: 1d075b0a2fa5d267ae793e66ab0e0578
+  src/markdown/docs/fr/yaml.mdx:
+    content: 9e88859f53cdcad193db57bc168b6750
+  src/markdown/docs/it/yaml.mdx:
+    content: 29a980c8b763300dc426595aaee095e6
+  src/markdown/docs/ko/yaml.mdx:
+    content: 81a34a326320d5f16b90b2a0a8fd8f2a
+  src/markdown/docs/nl/yaml.mdx:
+    content: 65f2724fde8fc973348264348fffda56
+  src/markdown/docs/no/yaml.mdx:
+    content: a58150134f1dcf936c6e33ab072c8e78
+  src/markdown/docs/pl/yaml.mdx:
+    content: cebb7d29476edd0a401ba720c35caabe
+  src/markdown/docs/pt/yaml.mdx:
+    content: 3ab130f0559f6dff997d26950698d210
+  src/markdown/docs/sv/yaml.mdx:
+    content: 3b56aa3180482c587633a3427f1154f8
+  src/markdown/docs/da/mdx.mdx:
+    content: 7e6290579bbb49d9b0814963bac5299d
+  src/markdown/docs/de/mdx.mdx:
+    content: 6b3e08f7546ed36bf6f422cbbdb6a275
+  src/markdown/docs/es/mdx.mdx:
+    content: 8acbebbab5ac15fd4a89a038752e5f8f
+  src/markdown/docs/fi/mdx.mdx:
+    content: c314c7bc37496d6eb57f6501d121b90b
+  src/markdown/docs/fr/mdx.mdx:
+    content: a520bf4f04fd98f088763a452ed51e81
+  src/markdown/docs/it/mdx.mdx:
+    content: 3d862c773fc35db978723b3549d5577b
+  src/markdown/docs/ko/mdx.mdx:
+    content: 4b0c2c52102bc1deb8671a7a5ddff270
+  src/markdown/docs/nl/mdx.mdx:
+    content: bb19fb9251bfdf2a060aa77b1f41128c
+  src/markdown/docs/no/mdx.mdx:
+    content: e3e2a9006b3e8e243661fb0358066a54
+  src/markdown/docs/pl/mdx.mdx:
+    content: 1ab09351009c933efca4c91459cfae41
+  src/markdown/docs/pt/mdx.mdx:
+    content: 75212b3c0f37cf7b39e97b3f9c9fe07d
+  src/markdown/docs/sv/mdx.mdx:
+    content: f6ef8c7a512cbf494dd1353e4fe920f0
+  src/markdown/docs/da/xml.mdx:
+    content: aff4f755d0fbac5a467b5fada1f39245
+  src/markdown/docs/de/xml.mdx:
+    content: 021d89eecf48960dfc9eac9989e3efcb
+  src/markdown/docs/es/xml.mdx:
+    content: d3aa9ee26d48fd776a896f955b2b36d9
+  src/markdown/docs/fi/xml.mdx:
+    content: 80e1934b72a2d549fe5ede5a76d49f0b
+  src/markdown/docs/fr/xml.mdx:
+    content: dd965927653b46bbafdea55985fc2b93
+  src/markdown/docs/it/xml.mdx:
+    content: 537e3da15232e9ea7350676c87e93109
+  src/markdown/docs/ko/xml.mdx:
+    content: 9e256ee001014e0fd37beeb39419cdf2
+  src/markdown/docs/nl/xml.mdx:
+    content: 1a7a7a327670ebb33bea61c91e88a7b4
+  src/markdown/docs/no/xml.mdx:
+    content: 6a93def4e18c55409f009493f6acda65
+  src/markdown/docs/pl/xml.mdx:
+    content: c4e759a1aa1131b1920256ab95af0c13
+  src/markdown/docs/pt/xml.mdx:
+    content: 66e8846732a52550841eb0669e984e2e
+  src/markdown/docs/sv/xml.mdx:
+    content: dc32b5e28ff094eb6d601c0e56dcda53

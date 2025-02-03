@@ -1,0 +1,44 @@
+# Xcode-strängar (XCStrings)
+
+Languine stöder Xcodes XCStrings-format, det moderna lokaliseringsformatet för iOS- och macOS-applikationer. Detta format hanterar strängkataloger med stöd för variationer, pluralisering och utvecklarkommentarer.
+
+---
+
+## Installation
+
+Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xcstrings": {
+      "include": ["MyApp/Localizable.xcstrings"]
+    }
+  }
+}
+```
+
+## Översättning
+
+Med din konfiguration inställd, kör:
+
+```bash
+npx languine@latest translate
+```
+
+När du kör detta kommando kommer Languine att:
+
+- Ladda din XCStrings-katalog
+- Upptäcka eventuella nya eller modifierade strängar
+- Generera översättningar för dina målspråk
+- Uppdatera strängkatalogen med nya översättningar
+- Bevara strängvariationer och pluraliseringsregler
+- Upprätthålla utvecklarkommentarer och kontext
+- Hantera variabelsubstitutioner
+- Stötta adaptiva strängar
+- Bevara formateringsspecifikationer
+- Validera strängkatalogens struktur

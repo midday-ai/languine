@@ -1,0 +1,92 @@
+# GitHub Actions
+
+Con la acción de GitHub, puedes traducir tu código fácilmente simplemente al subirlo al repositorio; la acción de GitHub traducirá tus nuevas claves, ya sea creando una solicitud de extracción o confirmando tus cambios.
+Esto te ahorra mucho tiempo y esfuerzo mientras mantienes traducciones de alta calidad.
+
+---
+
+## Instalación
+
+Para usar la acción de GitHub Languine en tu repositorio, necesitarás:
+
+1. Configurar los secretos de tu repositorio con tus credenciales de Languine
+2. Crear un archivo de flujo de trabajo en tu repositorio
+
+### Configuración de Secretos del Repositorio
+
+Agrega los siguientes secretos en la configuración de tu repositorio (Configuración > Secretos y variables > Acciones):
+
+- `LANGUINE_API_KEY`: Tu clave API de Languine
+- `LANGUINE_PROJECT_ID`: Tu ID de proyecto de Languine
+
+Puedes encontrar estos valores en tu panel de Languine bajo Configuración del Proyecto.
+
+
+
+### Variables de Entorno
+
+La acción de GitHub utiliza las siguientes variables de entorno:
+- `LANGUINE_API_KEY` (Requerido): Tu clave API de Languine para autenticación
+- `LANGUINE_PROJECT_ID` (Requerido): Tu ID de proyecto de Languine 
+- `GITHUB_TOKEN` (Requerido): Proporcionado automáticamente por GitHub, utilizado para crear solicitudes de extracción
+
+### Ejemplo de Flujo de Trabajo
+
+Crea un nuevo archivo .github/workflows/languine.yml en tu repositorio con el siguiente contenido:
+
+```ts title=".github/workflows/release.yml"
+name: Desplegar Sitio Web
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Acción de Languine
+        uses: languine/languine-action@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+```
+ 
+ Este flujo de trabajo:
+- Se ejecutará en los envíos a la rama principal
+- Se ejecutará en solicitudes de extracción a la rama principal
+- Puede ser activado manualmente desde la pestaña de Acciones
+- Revisará tu código y ejecutará el proceso de traducción de Languine
+- Creará una solicitud de extracción con cualquier nueva traducción (configurable)
+
+#### Opción de Directorio de Trabajo
+
+La opción `working-directory` te permite especificar dónde se encuentran tus archivos de traducción. Esto es particularmente útil en monorepos donde tus traducciones pueden estar en un paquete o directorio de aplicación específico. Por ejemplo:
+
+#### Opción de Solicitud de Extracción
+
+La opción `create-pull-request` controla si la acción crea una solicitud de extracción con los cambios o los confirma directamente en la rama:
+
+```typescript title=".github/workflows/languine.yml"
+with:
+  create-pull-request: true # crear una solicitud de extracción con los cambios
+```
+
+Cuando se establece en `true`, la acción:
+- Creará una nueva rama con los cambios
+- Creará una solicitud de extracción para revisión
+- Agregará etiquetas y descripción apropiadas
+
+Cuando se establece en `false` (predeterminado), la acción:
+- Confirmará los cambios directamente en la rama actual
+- Subirá los cambios sin crear una solicitud de extracción

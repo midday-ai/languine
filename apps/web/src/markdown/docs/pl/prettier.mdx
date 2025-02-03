@@ -1,0 +1,26 @@
+# Prettier
+
+Languine wspiera formatowanie za pomocą [Prettier](https://prettier.io/) poprzez hooki. Możesz skonfigurować Prettier, aby automatycznie formatował twoje pliki tłumaczeń po ich wygenerowaniu.
+
+Oto przykład konfiguracji:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+  hooks: {
+    afterTranslate: async (files) => {
+      await prettier.format(files, { parser: "json" });
+    },
+  },
+});
+```

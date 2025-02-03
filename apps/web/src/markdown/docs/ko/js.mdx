@@ -1,0 +1,42 @@
+# 자바스크립트
+
+Languine은 현대 웹 애플리케이션에 적합한 JavaScript/TypeScript 지역화 파일을 지원합니다. 이 형식은 객체 리터럴과 모듈 내보내기를 모두 처리하며, 중첩 구조와 동적 콘텐츠를 지원합니다.
+
+---
+
+## 설정하기
+
+먼저, 프로젝트 루트에 languine.config.json 또는 languine.config.ts 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "js": {
+      "include": ["src/locales/[locale].js"]
+    }
+  }
+}
+```
+
+## 번역하기
+
+구성이 완료되면, 다음 명령어를 실행하세요:
+
+```bash
+npx languine@latest translate
+```
+
+이 명령어를 실행하면, Languine은:
+
+- 소스 JavaScript 파일을 로드합니다 (예: src/locales/en.js)
+- 새로운 또는 수정된 번역 문자열을 감지합니다
+- 대상 언어에 대한 번역을 생성합니다
+- 대상 언어 파일을 생성하거나 업데이트합니다 (예: src/locales/sv.js)
+- 모듈 구조와 내보내기를 유지합니다
+- 중첩된 객체와 배열을 처리합니다
+- 코드 형식과 주석을 유지합니다
+- 활성화된 경우 TypeScript 유형을 생성합니다

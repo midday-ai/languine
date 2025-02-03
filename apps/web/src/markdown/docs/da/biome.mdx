@@ -1,0 +1,34 @@
+# Biome
+
+Languine understøtter formatering med [Biome](https://biomejs.dev/) gennem hooks. Du kan konfigurere Biome til automatisk at formatere dine oversættelsesfiler, efter de er blevet genereret.
+
+Her er et eksempel på konfiguration:
+
+```typescript title="languine.config.ts"
+import { defineConfig } from "languine";
+
+export default defineConfig({
+  locale: {
+    source: "en",
+    targets: ["es", "fr"],
+  },
+  files: {
+    json: {
+      include: ["locales/[locale].json"],
+    },
+  },
+  hooks: {
+    // Formater genererede filer med Biome
+    afterTranslate: async (files) => {
+      const { check } = await import("@biomejs/biome");
+      
+      for (const file of files) {
+        await check({
+          files: [file],
+          apply: true,
+        });
+      }
+    },
+  },
+});
+```

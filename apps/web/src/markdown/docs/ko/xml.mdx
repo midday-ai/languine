@@ -1,0 +1,44 @@
+# XML
+
+Languine은 다양한 XML 기반 구성 및 콘텐츠 파일에 적합한 XML 파일 로컬라이제이션을 지원합니다. 이 형식은 복잡한 XML 구조를 처리하면서 형식과 속성을 유지합니다.
+
+---
+
+## 설정하기
+
+먼저, 프로젝트 루트에 languine.config.json 또는 languine.config.ts 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "xml": {
+      "include": ["resources/[locale]/*.xml"]
+    }
+  }
+}
+```
+
+## 번역하기
+
+구성이 완료되면 다음을 실행하세요:
+
+```bash
+npx languine@latest translate
+```
+
+이 명령을 실행하면 Languine이:
+
+- 소스 XML 파일을 로드합니다 (예: resources/en/*.xml)
+- 새로운 또는 수정된 콘텐츠를 감지합니다
+- 대상 언어에 대한 번역을 생성합니다
+- 대상 언어 파일을 생성하거나 업데이트합니다 (예: resources/sv/*.xml)
+- XML 구조와 형식을 유지합니다
+- 속성 번역을 처리합니다
+- CDATA 섹션을 유지합니다
+- XML 주석을 보존합니다
+- XML 네임스페이스를 지원합니다
+- XML 구조를 검증합니다

@@ -1,0 +1,48 @@
+# Varmennus
+
+Languinen käyttämiseksi sinun on varmennettava itsesi meidän moottorimme kanssa, aloittaminen vie vain muutaman sekunnin.
+
+---
+
+## Kirjaudu sisään
+
+Voit kirjautua suoraan [Languine Dashboard](https://languine.ai/login) -sivustolle tai suorittaa seuraavan komennon:
+
+```bash title="Terminal"
+npx languine@latest auth login
+```
+
+
+Jos sinulla on jo tili, sinut kirjataan automaattisesti sisään ja istunto tallennetaan koneellesi.
+
+---
+
+## Kirjaudu ulos
+
+Voit kirjautua ulos suorittamalla seuraavan komennon:
+
+```bash title="Terminal"
+npx languine@latest auth logout
+```
+
+---
+
+## Käyttäjäistunto
+
+Voit tarkistaa, oletko kirjautunut sisään suorittamalla seuraavan komennon:
+
+```bash title="Terminal"
+npx languine@latest auth whoami
+```
+
+---
+
+
+# Ympäristömuuttujat
+
+Voit asettaa seuraavat ympäristömuuttujat Languinen konfiguroimiseksi:
+
+- `LANGUINE_API_KEY`: API-avain, jota käytetään varmennukseen.
+- `LANGUINE_PROJECT_ID`: Projektin ID, jota käytetään projektille.
+
+Löydät ne [Languine Dashboard](https://languine.ai/login) -sivustolta.

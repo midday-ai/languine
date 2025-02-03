@@ -1,0 +1,42 @@
+# JavaScript
+
+Languine tukee JavaScript/TypeScript-lokalisointitiedostoja, jotka ovat täydellisiä moderneille verkkosovelluksille. Tämä formaatti käsittelee sekä objektikirjallisuutta että moduulivientiä, tukien sisäkkäisiä rakenteita ja dynaamista sisältöä.
+
+---
+
+## Asetusten määrittäminen
+
+Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektin juurihakemistossa. Tässä on esimerkki:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["sv", "de", "fr"]
+  },
+  "files": {
+    "js": {
+      "include": ["src/locales/[locale].js"]
+    }
+  }
+}
+```
+
+## Kääntäminen
+
+Kun asetukset on määritetty, suorita:
+
+```bash
+npx languine@latest translate
+```
+
+Kun suoritat tämän komennon, Languine:
+
+- Lataa lähde JavaScript-tiedostosi (esim. src/locales/en.js)
+- Havaitsee kaikki uudet tai muokatut käännöstekstit
+- Luo käännökset kohdekielille
+- Luo tai päivittää kohdekielitiedostot (esim. src/locales/sv.js)
+- Säilyttää moduulirakenteen ja viennit
+- Käsittelee sisäkkäisiä objekteja ja taulukoita
+- Säilyttää koodin muotoilun ja kommentit
+- Luo TypeScript-tyyppejä, jos se on käytössä
