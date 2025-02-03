@@ -702,13 +702,13 @@ files:
   src/markdown/docs/es/github-actions.mdx:
     content: 010d801d29bfaab16cbc71de5d2ff4cd
   src/markdown/docs/fi/github-actions.mdx:
-    content: db5e29acb6d8d7b0e94bc28f245c7ca4
+    content: 648d1cac9270c63405d7525c12fb3168
   src/markdown/docs/fr/github-actions.mdx:
     content: 86c32c8a545c0393709f15695e928740
   src/markdown/docs/it/github-actions.mdx:
     content: 6cbe157fd8e222ca1c8ec06257fb87e9
   src/markdown/docs/ko/github-actions.mdx:
-    content: a3781f4dc82d79ac14ac947d806062ba
+    content: b0eab61425596f998c542106a529102a
   src/markdown/docs/nl/github-actions.mdx:
     content: 9914f72a4c939fddb281e3a217c04246
   src/markdown/docs/no/github-actions.mdx:
