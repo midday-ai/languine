@@ -330,20 +330,30 @@ export async function translateCommand(args: string[] = []) {
 
       if (
         error?.code === "DOCUMENT_LIMIT_REACHED" ||
-        error?.code === "KEY_LIMIT_REACHED"
+        error?.code === "KEY_LIMIT_REACHED" ||
+        error?.code === "LANGUAGES_LIMIT_REACHED"
       ) {
         s.stop();
 
-        if (error?.code === "DOCUMENT_LIMIT_REACHED") {
-          note(
-            "Document limit reached. Upgrade your plan to increase your limit.",
-            "Limit reached",
-          );
-        } else {
-          note(
-            "Translation keys limit reached. Upgrade your plan to increase your limit.",
-            "Limit reached",
-          );
+        switch (error?.code) {
+          case "DOCUMENT_LIMIT_REACHED":
+            note(
+              "Document limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
+            break;
+          case "KEY_LIMIT_REACHED":
+            note(
+              "Translation keys limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
+            break;
+          case "LANGUAGES_LIMIT_REACHED":
+            note(
+              "Languages limit reached. Upgrade your plan to increase your limit.",
+              "Limit reached",
+            );
+            break;
         }
 
         const shouldUpgrade = await select({

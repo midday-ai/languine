@@ -34,7 +34,7 @@ export const TIER_PRICES = {
 };
 
 export const TIER_MAX_LANGUAGES = {
-  0: 2,
+  0: 4,
   1: 8,
   2: 16,
   3: 24,
