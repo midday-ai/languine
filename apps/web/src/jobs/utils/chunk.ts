@@ -1,8 +1,10 @@
 import { estimateTokensForContent } from "./tokeniser";
+import type { PromptOptions } from "./types";
 
 export function calculateChunkSize(
   content: Array<{ key: string; sourceText: string }>,
   model: string,
+  options?: PromptOptions,
 ) {
   const MAX_INPUT_TOKENS = 128000;
   const MIN_CHUNK_SIZE = 1;
@@ -12,7 +14,7 @@ export function calculateChunkSize(
     return MIN_CHUNK_SIZE;
   }
 
-  const estimatedTokens = estimateTokensForContent(content, model);
+  const estimatedTokens = estimateTokensForContent(content, model, options);
 
   // Calculate how many items we can fit in a chunk based on input token limit
   const itemsPerChunk = Math.min(
