@@ -55,7 +55,9 @@
     "presetForReactEmail": "React 이메일 라이브러리",
     "presetForReactEmailDescription": "React 이메일을 위한 i18n 라이브러리를 만들었습니다.",
     "readyForI18nLibraries": "i18n 라이브러리 준비 완료",
-    "readyForI18nLibrariesDescription": "가장 인기 있는 라이브러리(next-intl, react-i18next, react-intl 등)를 포함한 모든 라이브러리를 지원합니다."
+    "readyForI18nLibrariesDescription": "가장 인기 있는 라이브러리(next-intl, react-i18next, react-intl 등)를 포함한 모든 라이브러리를 지원합니다.",
+    "markdownSupport": "마크다운/문서 지원",
+    "markdownSupportDescription": "Languine은 마크다운 콘텐츠를 원활하게 번역하여 문서 및 기타 파일이 워크플로우와 동기화되도록 유지합니다."
   },
   "info": {
     "title": "앱 로컬라이징의 모든 측면 처리",

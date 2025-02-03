@@ -700,7 +700,7 @@ files:
   src/markdown/docs/de/github-actions.mdx:
     content: b7fe49995a19b3ae0fd0b93f243cc0be
   src/markdown/docs/es/github-actions.mdx:
-    content: e04d3f2ad8fbf82a52cf7d5c3ce648ca
+    content: fd0c78c7e1b0bf05a4ac9f695b22a951
   src/markdown/docs/fi/github-actions.mdx:
     content: ce01b4615a2108ecc937f15d496b0eae
   src/markdown/docs/fr/github-actions.mdx:
@@ -1594,6 +1594,8 @@ files:
     overrides_sheet.description: 8c0efd42d2544deebf3a6fb342aea8db
     overrides_sheet.save: b8628398f7246a51de498212e8c3570d
     filter_locales.languages: c2bd871e40a477404d746ca7b6e5a377
+    features.markdownSupport: 387cb5725d1ffd4f75d4e4a1af944160
+    features.markdownSupportDescription: 67a1402c75ab705da0b85df4062f906b
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -2015,6 +2017,8 @@ files:
     overrides_sheet.description: 5f3a084e6c2b1fbca0bda42530f481b5
     overrides_sheet.save: fe9e85aad2e6e67bf18e246f33f176b5
     filter_locales.languages: c2bd871e40a477404d746ca7b6e5a377
+    features.markdownSupport: d9cec93a73b9cd69c6e10d2be0590942
+    features.markdownSupportDescription: c0fb8016f2448dd9d4270089e4154e83
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -2436,13 +2440,15 @@ files:
     overrides_sheet.description: 957edde764451c846a062e3c4f7be14c
     overrides_sheet.save: eefd425221c5c9e9d0d8b6e8bb7a90c4
     filter_locales.languages: f6bd86458350c2fca88dbef078183e2b
+    features.markdownSupport: 79762d503205f46bb709873925dfe79a
+    features.markdownSupportDescription: 71e26ab0fee1779e70a885d952773abf
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
     header.signIn: b687c67a2bfd3c4c97d9eb37450909e5
     header.goToApp: 8575ae96fc03c7fac71de84dc0cc695e
     hero.title: db8901072eb1bab68634dbeee9fc113f
-    hero.description: 9f83f8904778292c3b3d8508f0fc3391
+    hero.description: f967fc7165f5e1d13f23b5d4b4fd7290
     navigation.dashboard: 96a7b5490bcd3652a0c2bf36c1ffce2b
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 72ea96873387ebb56925d2fb2b8debf2
@@ -2452,7 +2458,7 @@ files:
     navigation.account: 8192dbe80e3401ebe872e0aed980daa1
     getStarted.heading: 45b9954f468ac044238ce013e9cd7a69
     getStarted.title: db8901072eb1bab68634dbeee9fc113f
-    getStarted.description: 9f83f8904778292c3b3d8508f0fc3391
+    getStarted.description: f967fc7165f5e1d13f23b5d4b4fd7290
     getStarted.button.startAutomating: 2cacaa39f025b53800c7c12a96405c6f
     getStarted.button.readDocumentation: 0ed36fcc448c60432dfa9ba1a1c596e6
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -2857,6 +2863,8 @@ files:
     overrides_sheet.description: b3eb2c2f7b8b47e6b4a1dae75ff4f9af
     overrides_sheet.save: eb7a0fed691fc71db1ac92407ca5430a
     filter_locales.languages: c88b33a3250b4e28f34e1ececba69206
+    features.markdownSupport: dcbca19b08815f6f00ce1f3551850903
+    features.markdownSupportDescription: 1b12a9550a1ec1c9119d65c173c106a0
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -3278,6 +3286,8 @@ files:
     overrides_sheet.description: 3c2fe90c4db348d6cd2606e7f15015d3
     overrides_sheet.save: 9ae9144b28c324685ebe1ea4bb0c4c6a
     filter_locales.languages: 5e854e9d31f5afc6b6d2662618923200
+    features.markdownSupport: 53ca0967047fabdf6911b430b2723a44
+    features.markdownSupportDescription: e465bfc713dd40ca47fd67b6c0138cb2
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3699,6 +3709,8 @@ files:
     overrides_sheet.description: 39e3f294b6b200f5fa512cff42092e3f
     overrides_sheet.save: 9d0a47e6954f2c74180029bf9a70aeae
     filter_locales.languages: 23eb275e790bc10df537ea59a22a2fdb
+    features.markdownSupport: f9ca3f744864493820f7a76a76c4d927
+    features.markdownSupportDescription: 58ef837de7ff78b39f223d2b1b82347c
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -4120,13 +4132,15 @@ files:
     overrides_sheet.description: 2755805ce04208a1bf48872bf92cd130
     overrides_sheet.save: b9f2dc439b43cd0f3b0a84dea1ed84ba
     filter_locales.languages: 614bf8df7b3b40ce32990fe7d0b9fd35
+    features.markdownSupport: f2bf559f00c90d54998ea20cbf53fbe9
+    features.markdownSupportDescription: 745788cfdd66309d0792e11ac4a979f5
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: a1420688c629cb4bac7dfbe1b180fb42
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
     hero.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    hero.description: bc8e47f4cb6958b16ea82136cd8fc450
+    hero.description: 5c049112f8f6a22d9534831293ab6442
     navigation.dashboard: 629e199d421911b329a2909925beeb50
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 3db0abab2211e2f98a5b3304b6c5c049
@@ -4136,7 +4150,7 @@ files:
     navigation.account: d1ef184f21c6a19615f873478fe03462
     getStarted.heading: 2788dc861f0cd8b423653c0b6fe4195b
     getStarted.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    getStarted.description: bc8e47f4cb6958b16ea82136cd8fc450
+    getStarted.description: 5c049112f8f6a22d9534831293ab6442
     getStarted.button.startAutomating: 9b0a69239ff144486dff4e740b4c7329
     getStarted.button.readDocumentation: bf1998ea274fe0873d2ac78fcb0e1006
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -4541,13 +4555,15 @@ files:
     overrides_sheet.description: a55394b33c7c1781e1182fea84241cc5
     overrides_sheet.save: d3270bdb8d2c1caaca4178dbe19be03a
     filter_locales.languages: c88b33a3250b4e28f34e1ececba69206
+    features.markdownSupport: db8d91dbbf4606f8b8e880be1d64bec6
+    features.markdownSupportDescription: be9a5a805e18cde1f3876fc39cafa2d4
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
     header.signIn: 634983f425e586cdfe14c715fabae635
     header.goToApp: 02a199e2306dd194a6a4c43741c7b8a7
     hero.title: 64175976b8f9e613d3ef170143b69571
-    hero.description: 6470ea5897ded2e5e993b03a32766558
+    hero.description: a267edd7dc5967f38f46d379d1aab2a3
     navigation.dashboard: 820c7142370ede086c0f3db8aad1aeef
     navigation.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
     navigation.overrides: fd019a65932fdc66ddd8600b01516aea
@@ -4557,7 +4573,7 @@ files:
     navigation.account: 884a1de4d3195f10985afac09db0aa6d
     getStarted.heading: 66963d16bba8c9087c0570d1d875781f
     getStarted.title: 64175976b8f9e613d3ef170143b69571
-    getStarted.description: 6470ea5897ded2e5e993b03a32766558
+    getStarted.description: a267edd7dc5967f38f46d379d1aab2a3
     getStarted.button.startAutomating: ae58199f13a3ff0b38af4ee61530b291
     getStarted.button.readDocumentation: e60a4af5dc2d2917776dc426ac102d17
     companies.title: 366f89f81e17fefc585f1a06ef9b3b78
@@ -4962,6 +4978,8 @@ files:
     overrides_sheet.description: 28ce74ee8afa1c0e02147232d446f544
     overrides_sheet.save: 07f2f895f32e9e4987005e255475b9c2
     filter_locales.languages: 23c2f99f5c2b88fcf1b9d7542dc69432
+    features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
+    features.markdownSupportDescription: 573262a18350c5498e36605de812a39a
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -5383,6 +5401,8 @@ files:
     overrides_sheet.description: 4a1d5e03f4821ae92e02f8854da62cea
     overrides_sheet.save: aed88202e2432ee2a613f9120ef7486b
     filter_locales.languages: 1ea21417b4fc870a18d6a244983be72b
+    features.markdownSupport: 125b1708b299be10fd5513374ee6e6b3
+    features.markdownSupportDescription: cd13cccf87c334fc581b57d3544c575a
   src/messages/de.json:
     header.pricing: 3f483a0cfa282cdcce304abf9f3dabe3
     header.docs: 43c592501e0d37c63bc038fa182b2ddf
@@ -5804,3 +5824,5 @@ files:
     overrides_sheet.description: 900357047fe0a2ba2a863875e11f486c
     overrides_sheet.save: b97d23bf800ff592f7afe97a29921271
     filter_locales.languages: bf6c56085d5ba147fe0860211f201685
+    features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
+    features.markdownSupportDescription: af81f1ad6552a4b816c99b91c12b9d34
