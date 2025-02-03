@@ -15,7 +15,6 @@ export default defineConfig({
       "nl",
       "no",
       "pl",
-      "pt-BR",
       "pt",
       "sv",
     ],
