@@ -27,12 +27,12 @@
   },
   "hero": {
     "title": "Lokalisering infrastruktur skapad för utvecklare",
-    "description": "Chansen är stor att du har tänkt på att lokalisera din app men tvekat, med vetskap om att det skulle minska din hastighet. Inte längre. Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, så översättningar aldrig sätter stopp för dig."
+    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig."
   },
   "getStarted": {
     "heading": "Kom igång",
     "title": "Lokalisering infrastruktur skapad för utvecklare",
-    "description": "Chansen är stor att du har tänkt på att lokalisera din app men tvekat, med vetskap om att det skulle minska din hastighet. Inte längre. Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, så översättningar aldrig sätter stopp för dig.",
+    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig.",
     "button": {
       "startAutomating": "Börja automatisera",
       "readDocumentation": "Läs dokumentation"

@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Prawdopodobnie myślałeś o lokalizacji swojej aplikacji, ale wahałeś się, wiedząc, że wpłynie to na Twoją wydajność. Już nie. Languine automatyzuje lokalizację w Twoim procesie pracy i pipeline, dzięki czemu tłumaczenia nigdy Cię nie zatrzymają."
+    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Rozpocznij",
     "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Prawdopodobnie myślałeś o lokalizacji swojej aplikacji, ale wahałeś się, wiedząc, że wpłynie to na Twoją wydajność. Już nie. Languine automatyzuje lokalizację w Twoim procesie pracy i pipeline, dzięki czemu tłumaczenia nigdy Cię nie zatrzymają.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"
