@@ -1,7 +1,7 @@
 # GitHub Actions
 
-Con l'azione GitHub, puoi facilmente tradurre il tuo codice semplicemente inviando il tuo codice al repository; l'azione GitHub tradurrà quindi le tue nuove chiavi, creando una pull request o impegnando le tue modifiche.
-Questo ti fa risparmiare molto tempo e sforzo mantenendo traduzioni di alta qualità.
+Con l'azione di GitHub, puoi facilmente tradurre il tuo codice semplicemente caricando il tuo codice nel repository; l'azione di GitHub tradurrà quindi le tue nuove chiavi, creando una pull request o impegnando le tue modifiche.
+Questo ti fa risparmiare molto tempo e fatica mantenendo traduzioni di alta qualità.
 
 ---
 
@@ -52,7 +52,7 @@ Questo ti fa risparmiare molto tempo e sforzo mantenendo traduzioni di alta qual
                                           ▼
                               ┌─────────────────────┐
                               │      Completato     │
-                              │      (Distribuisci) │
+                              │      (Distribuisci)  │
                               └─────────────────────┘
 `}
         </pre>
@@ -62,7 +62,7 @@ Questo ti fa risparmiare molto tempo e sforzo mantenendo traduzioni di alta qual
 
 ## Installazione
 
-Per utilizzare l'azione GitHub Languine nel tuo repository, dovrai:
+Per utilizzare l'azione Languine di GitHub nel tuo repository, dovrai:
 
 1. Configurare i segreti del tuo repository con le tue credenziali Languine
 2. Creare un file di workflow nel tuo repository
@@ -74,13 +74,13 @@ Aggiungi i seguenti segreti nelle impostazioni del tuo repository (Impostazioni 
 - `LANGUINE_API_KEY`: La tua chiave API Languine
 - `LANGUINE_PROJECT_ID`: Il tuo ID progetto Languine
 
-Puoi trovare questi valori nella tua dashboard Languine sotto Impostazioni Progetto.
+Puoi trovare questi valori nel tuo cruscotto Languine sotto Impostazioni Progetto.
 
 
 
 ### Variabili d'Ambiente
 
-L'azione GitHub utilizza le seguenti variabili d'ambiente:
+L'azione di GitHub utilizza le seguenti variabili d'ambiente:
 - `LANGUINE_API_KEY` (Obbligatoria): La tua chiave API Languine per l'autenticazione
 - `LANGUINE_PROJECT_ID` (Obbligatoria): Il tuo ID progetto Languine 
 - `GITHUB_TOKEN` (Obbligatoria): Fornita automaticamente da GitHub, utilizzata per creare PR
@@ -118,15 +118,15 @@ jobs:
 ```
  
  Questo workflow:
-- Verrà eseguito su push al ramo principale
-- Verrà eseguito su pull request al ramo principale
+- Eseguirà su push al ramo principale
+- Eseguirà su pull request al ramo principale
 - Può essere attivato manualmente dalla scheda Azioni
-- Controlla il tuo codice ed esegue il processo di traduzione Languine
+- Controlla il tuo codice e avvia il processo di traduzione Languine
 - Crea una pull request con eventuali nuove traduzioni (configurabile)
 
 #### Opzione Directory di Lavoro
 
-L'opzione `working-directory` consente di specificare dove si trovano i tuoi file di traduzione. Questo è particolarmente utile nei monorepo dove le tue traduzioni possono trovarsi in un pacchetto o in una directory di app specifica. Ad esempio:
+L'opzione `working-directory` ti consente di specificare dove si trovano i tuoi file di traduzione. Questo è particolarmente utile nei monorepo dove le tue traduzioni possono trovarsi in un pacchetto o in una directory di app specifica. Ad esempio:
 
 #### Opzione Pull Request
 

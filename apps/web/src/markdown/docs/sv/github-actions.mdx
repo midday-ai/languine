@@ -1,7 +1,7 @@
 # GitHub Actions
 
-Med GitHub Action kan du enkelt översätta din kod genom att bara trycka på din kod till repositoryt, GitHub Action kommer sedan att översätta dina nya nycklar, antingen skapa en pull request eller begå dina ändringar.
-Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
+Med GitHub-actionen kan du enkelt översätta din kod genom att bara trycka på din kod till lagret, så kommer GitHub-actionen att översätta dina nya nycklar, antingen skapa en pull-begäran eller begå dina ändringar.
+Detta sparar mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
 
 ---
 
@@ -45,13 +45,13 @@ Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa öve
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Sammanfoga  │
-                                  │ Pull Request  │
+                                  │     Sammanfoga │
+                                  │ Pull-begäran   │
                                   └───────────────┘
                                           │
                                           ▼
                               ┌─────────────────────┐
-                              │      Slutförd       │
+                              │      Avslutad       │
                               │      (Distribuera)  │
                               └─────────────────────┘
 `}
@@ -62,14 +62,14 @@ Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa öve
 
 ## Installation
 
-För att använda Languine GitHub Action i ditt repository, behöver du:
+För att använda Languine GitHub Action i ditt lager, behöver du:
 
-1. Ställa in dina repository-hemligheter med dina Languine-uppgifter
-2. Skapa en arbetsflödesfil i ditt repository
+1. Ställa in dina lagers hemligheter med dina Languine-uppgifter
+2. Skapa en arbetsflödesfil i ditt lager
 
-### Ställa in Repository-hemligheter
+### Ställa in Lagers Hemligheter
 
-Lägg till följande hemligheter i dina repository-inställningar (Inställningar > Hemligheter och variabler > Åtgärder):
+Lägg till följande hemligheter i dina lagers inställningar (Inställningar > Hemligheter och variabler > Åtgärder):
 
 - `LANGUINE_API_KEY`: Din Languine API-nyckel
 - `LANGUINE_PROJECT_ID`: Ditt Languine projekt-ID
@@ -83,14 +83,14 @@ Du kan hitta dessa värden i din Languine-instrumentpanel under Projektinställn
 GitHub Action använder följande miljövariabler:
 - `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nyckel för autentisering
 - `LANGUINE_PROJECT_ID` (Obligatorisk): Ditt Languine projekt-ID 
-- `GITHUB_TOKEN` (Obligatorisk): Automatiskt tillhandahållen av GitHub, används för att skapa PRs
+- `GITHUB_TOKEN` (Obligatorisk): Automatiskt tillhandahållen av GitHub, används för att skapa PR:er
 
-### Exempel på arbetsflöde
+### Exempel på Arbetsflöde
 
-Skapa en ny fil .github/workflows/languine.yml i ditt repository med följande innehåll:
+Skapa en ny fil .github/workflows/languine.yml i ditt lager med följande innehåll:
 
 ```ts title=".github/workflows/release.yml"
-name: Distribuera webbplats
+name: Distribuera Webbplats
 
 on:
   push:
@@ -119,29 +119,29 @@ jobs:
  
  Detta arbetsflöde kommer att:
 - Körs vid tryck på huvudgrenen
-- Körs vid pull requests till huvudgrenen
+- Körs vid pull-begärningar till huvudgrenen
 - Kan utlösas manuellt från Åtgärder-fliken
-- Checkout din kod och köra Languine översättningsprocess
-- Skapa en pull request med eventuella nya översättningar (konfigurerbar)
+- Hämta din kod och köra Languine översättningsprocess
+- Skapa en pull-begäran med eventuella nya översättningar (konfigurerbar)
 
 #### Arbetskatalogalternativ
 
-Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan vara i en specifik paket- eller appkatalog. Till exempel:
+Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i ett specifikt paket eller app-katalog. Till exempel:
 
-#### Pull Request-alternativ
+#### Pull-begäran Alternativ
 
-Alternativet `create-pull-request` styr huruvida åtgärden skapar en pull request med ändringarna eller begår dem direkt till grenen:
+Alternativet `create-pull-request` styr om åtgärden skapar en pull-begäran med ändringarna eller begår dem direkt till grenen:
 
 ```typescript title=".github/workflows/languine.yml"
 with:
-  create-pull-request: true # skapa en pull request med ändringarna
+  create-pull-request: true # skapa en pull-begäran med ändringarna
 ```
 
 När det är inställt på `true`, kommer åtgärden att:
 - Skapa en ny gren med ändringarna
-- Skapa en pull request för granskning
+- Skapa en pull-begäran för granskning
 - Lägga till lämpliga etiketter och beskrivning
 
 När det är inställt på `false` (standard), kommer åtgärden att:
 - Begå ändringarna direkt till den aktuella grenen
-- Trycka ändringarna utan att skapa en pull request
+- Trycka ändringarna utan att skapa en pull-begäran

@@ -45,7 +45,7 @@ Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Samenvoegen │
+                                  │     Samenvoegen│
                                   │ Pull Request  │
                                   └───────────────┘
                                           │
@@ -65,7 +65,7 @@ Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
 Om de Languine GitHub-actie in je repository te gebruiken, moet je:
 
 1. Je repository-secrets instellen met je Languine-inloggegevens
-2. Een workflow-bestand in je repository maken
+2. Een workflow-bestand in je repository aanmaken
 
 ### Instellen van Repository Secrets
 
@@ -81,9 +81,9 @@ Je kunt deze waarden vinden in je Languine-dashboard onder Projectinstellingen.
 ### Omgevingsvariabelen
 
 De GitHub-actie gebruikt de volgende omgevingsvariabelen:
-- `LANGUINE_API_KEY` (Vereist): Je Languine API-sleutel voor authenticatie
-- `LANGUINE_PROJECT_ID` (Vereist): Je Languine project-ID 
-- `GITHUB_TOKEN` (Vereist): Automatisch geleverd door GitHub, gebruikt voor het maken van PR's
+- `LANGUINE_API_KEY` (Verplicht): Je Languine API-sleutel voor authenticatie
+- `LANGUINE_PROJECT_ID` (Verplicht): Je Languine project-ID 
+- `GITHUB_TOKEN` (Verplicht): Automatisch geleverd door GitHub, gebruikt voor het maken van PR's
 
 ### Voorbeeld Workflow
 
@@ -121,16 +121,16 @@ jobs:
 - Uitvoeren bij pushes naar de hoofdbranch
 - Uitvoeren bij pull requests naar de hoofdbranch
 - Handmatig worden geactiveerd vanuit het tabblad Acties
-- Je code uitchecken en het Languine-vertalingsproces uitvoeren
-- Een pull request maken met eventuele nieuwe vertalingen (configureerbaar)
+- Je code uitchecken en het Languine vertaalproces uitvoeren
+- Een pull request aanmaken met eventuele nieuwe vertalingen (configureerbaar)
 
 #### Werkdirectory Optie
 
-De `working-directory` optie stelt je in staat om op te geven waar je vertalingsbestanden zich bevinden. Dit is bijzonder nuttig in monorepos waar je vertalingen zich in een specifieke package of app-directory kunnen bevinden. Bijvoorbeeld:
+De `working-directory` optie stelt je in staat om op te geven waar je vertaalbestanden zich bevinden. Dit is bijzonder nuttig in monorepos waar je vertalingen zich in een specifieke package of app-directory kunnen bevinden. Bijvoorbeeld:
 
 #### Pull Request Optie
 
-De `create-pull-request` optie bepaalt of de actie een pull request aanmaakt met de wijzigingen of deze rechtstreeks naar de branch commit:
+De `create-pull-request` optie bepaalt of de actie een pull request aanmaakt met de wijzigingen of deze direct naar de branch commit:
 
 ```typescript title=".github/workflows/languine.yml"
 with:
@@ -143,5 +143,5 @@ Wanneer ingesteld op `true`, zal de actie:
 - Geschikte labels en beschrijving toevoegen
 
 Wanneer ingesteld op `false` (standaard), zal de actie:
-- De wijzigingen rechtstreeks naar de huidige branch committen
+- De wijzigingen direct naar de huidige branch committen
 - De wijzigingen pushen zonder een pull request aan te maken

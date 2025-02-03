@@ -1,7 +1,7 @@
 # GitHub Actions
 
 Med GitHub-handlingen kan du enkelt oversette koden din ved bare å pushe koden til depotet. GitHub-handlingen vil deretter oversette de nye nøklene dine, enten opprette en pull request eller commite endringene dine.
-Dette sparer deg for mye tid og innsats samtidig som det opprettholder høy kvalitet på oversettelsene.
+Dette sparer deg for mye tid og arbeid samtidig som det opprettholder høy kvalitet på oversettelsene.
 
 ---
 
@@ -62,19 +62,19 @@ Dette sparer deg for mye tid og innsats samtidig som det opprettholder høy kval
 
 ## Installasjon
 
-For å bruke Languine GitHub-handlingen i depotet ditt, må du:
+For å bruke Languine GitHub Action i depotet ditt, må du:
 
 1. Sette opp hemmelighetene i depotet ditt med Languine-legitimasjonen din
 2. Opprette en arbeidsflytfil i depotet ditt
 
-### Sette opp depothemmeligheter
+### Sette opp Depothemmeligheter
 
 Legg til følgende hemmeligheter i innstillingene for depotet ditt (Innstillinger > Hemmeligheter og variabler > Handlinger):
 
 - `LANGUINE_API_KEY`: Din Languine API-nøkkel
 - `LANGUINE_PROJECT_ID`: Din Languine prosjekt-ID
 
-Du kan finne disse verdiene i Languine-dashbordet under Prosjektinnstillinger.
+Du kan finne disse verdiene i Languine-dashbordet ditt under Prosjektinnstillinger.
 
 
 
@@ -85,7 +85,7 @@ GitHub-handlingen bruker følgende miljøvariabler:
 - `LANGUINE_PROJECT_ID` (Obligatorisk): Din Languine prosjekt-ID 
 - `GITHUB_TOKEN` (Obligatorisk): Automatisk gitt av GitHub, brukt til å opprette PR-er
 
-### Eksempel på arbeidsflyt
+### Eksempel på Arbeidsflyt
 
 Opprett en ny fil .github/workflows/languine.yml i depotet ditt med følgende innhold:
 
@@ -108,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Languine-handling
+      - name: Languine Action
         uses: languine/languine-action@v1
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -118,15 +118,15 @@ jobs:
 ```
  
  Denne arbeidsflyten vil:
-- Kjøres ved pushing til hovedgrenen
-- Kjøres ved pull-forespørsel til hovedgrenen
+- Kjøres ved pushes til hovedgrenen
+- Kjøres ved pull requests til hovedgrenen
 - Kan utløses manuelt fra Handlinger-fanen
 - Sjekke ut koden din og kjøre Languine oversettelsesprosessen
 - Opprette en pull request med eventuelle nye oversettelser (konfigurerbar)
 
 #### Arbeidskatalogalternativ
 
-Alternativet `working-directory` lar deg spesifisere hvor oversettelsesfilene dine er plassert. Dette er spesielt nyttig i monorepos der oversettelsene dine kan være i en spesifikk pakke eller app-katalog. For eksempel:
+Alternativet `working-directory` lar deg spesifisere hvor oversettelsesfilene dine ligger. Dette er spesielt nyttig i monorepos der oversettelsene dine kan være i en spesifikk pakke eller app-katalog. For eksempel:
 
 #### Pull Request-alternativ
 
@@ -143,5 +143,5 @@ Når det er satt til `true`, vil handlingen:
 - Legge til passende etiketter og beskrivelse
 
 Når det er satt til `false` (standard), vil handlingen:
-- Committe endringene direkte til den nåværende grenen
+- Commite endringene direkte til den nåværende grenen
 - Pushe endringene uten å opprette en pull request

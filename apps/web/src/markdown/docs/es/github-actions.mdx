@@ -1,6 +1,6 @@
 # GitHub Actions
 
-Con la acción de GitHub, puedes traducir tu código fácilmente simplemente al subirlo al repositorio; la acción de GitHub traducirá tus nuevas claves, ya sea creando una solicitud de extracción o confirmando tus cambios.
+Con la acción de GitHub, puedes traducir fácilmente tu código simplemente subiendo tu código al repositorio; la acción de GitHub traducirá tus nuevas claves, ya sea creando una solicitud de extracción o confirmando tus cambios.
 Esto te ahorra mucho tiempo y esfuerzo mientras mantienes traducciones de alta calidad.
 
 ---
@@ -35,10 +35,10 @@ Esto te ahorra mucho tiempo y esfuerzo mientras mantienes traducciones de alta c
             ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
            │                              │                              │
            ▼                              ▼                              ▼
- ��═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
- ║      Inglés      ║          ║      Español      ║          ║      Japonés      ║
- ║    Traducción    ║          ║    Traducción    ║          ║     Traducción    ║
+ ║      Inglés       ║          ║      Español      ║          ║      Japonés      ║
+ ║    Traducción     ║          ║    Traducción     ║          ║     Traducción    ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
@@ -47,7 +47,7 @@ Esto te ahorra mucho tiempo y esfuerzo mientras mantienes traducciones de alta c
                                   ┌───────────────┐
                                   │     Fusionar   │
                                   │ Solicitud de   │
-                                  │   Extracción    │
+                                  │    Extracción   │
                                   └───────────────┘
                                           │
                                           ▼
@@ -119,8 +119,8 @@ jobs:
 ```
  
  Este flujo de trabajo:
-- Se ejecutará en los envíos a la rama principal
-- Se ejecutará en solicitudes de extracción a la rama principal
+- Se ejecutará en los pushes a la rama principal
+- Se ejecutará en las solicitudes de extracción a la rama principal
 - Puede ser activado manualmente desde la pestaña de Acciones
 - Revisará tu código y ejecutará el proceso de traducción de Languine
 - Creará una solicitud de extracción con cualquier nueva traducción (configurable)
