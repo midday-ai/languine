@@ -16,9 +16,7 @@ Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub lan
   },
   "files": {
     "mdx": {
-      "include": ["content/[locale]/**/*.mdx"],
-      "frontMatter": true,  // Opcjonalne: domyślnie ustawione na true
-      "translateFrontMatterFields": ["title", "description"]  // Opcjonalne: określ, które pola front matter mają być tłumaczone
+      "include": ["content/[locale]/**/*.mdx"]
     }
   }
 }
@@ -26,7 +24,7 @@ Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub lan
 
 ## Tłumaczenie
 
-Po ustawieniu konfiguracji uruchom:
+Gdy masz ustawioną konfigurację, uruchom:
 
 ```bash
 npx languine@latest translate
@@ -34,10 +32,10 @@ npx languine@latest translate
 
 Kiedy uruchomisz to polecenie, Languine:
 
-- Załaduje twoje źródłowe pliki Markdown (np. content/en/*.mdx)
+- Załaduje Twoje źródłowe pliki Markdown (np. content/en/*.mdx)
 - Wykryje wszelkie nowe lub zmodyfikowane treści
-- Wygeneruje tłumaczenia dla twoich docelowych języków
-- Utworzy lub zaktualizuje pliki językowe docelowe (np. content/sv/*.mdx)
+- Wygeneruje tłumaczenia dla Twoich docelowych języków
+- Utworzy lub zaktualizuje pliki w języku docelowym (np. content/sv/*.mdx)
 - Zachowa formatowanie i strukturę Markdown
 - Obsłuży tłumaczenia front matter
 - Utrzyma linki i odniesienia

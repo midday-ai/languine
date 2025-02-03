@@ -1,6 +1,6 @@
 # Markdown (MDX)
 
-Languine unterstützt die Lokalisierung von Markdown (MDX)-Dateien, ideal für Dokumentationen, Blogbeiträge und inhaltsreiche Websites. Dieses Format bewahrt die Markdown-Syntax während der Übersetzung des Inhalts, einschließlich Unterstützung für Front Matter.
+Languine unterstützt die Lokalisierung von Markdown (MDX)-Dateien, ideal für Dokumentationen, Blogbeiträge und inhaltsreiche Websites. Dieses Format bewahrt die Markdown-Syntax während der Übersetzung des Inhalts, einschließlich der Unterstützung von Front Matter.
 
 ---
 
@@ -16,9 +16,7 @@ Zuerst stellen Sie sicher, dass Sie eine languine.config.json oder languine.conf
   },
   "files": {
     "mdx": {
-      "include": ["content/[locale]/**/*.mdx"],
-      "frontMatter": true,  // Optional: Standardmäßig auf true
-      "translateFrontMatterFields": ["title", "description"]  // Optional: geben Sie an, welche Front Matter-Felder übersetzt werden sollen
+      "include": ["content/[locale]/**/*.mdx"]
     }
   }
 }
@@ -26,7 +24,7 @@ Zuerst stellen Sie sicher, dass Sie eine languine.config.json oder languine.conf
 
 ## Übersetzung
 
-Mit Ihrer Konfiguration ausgeführt, führen Sie:
+Mit Ihrer Konfiguration ausgeführt, führen Sie aus:
 
 ```bash
 npx languine@latest translate
@@ -35,11 +33,11 @@ npx languine@latest translate
 Wenn Sie diesen Befehl ausführen, wird Languine:
 
 - Ihre Quell-Markdown-Dateien laden (z. B. content/en/*.mdx)
-- Neue oder geänderte Inhalte erkennen
+- Alle neuen oder geänderten Inhalte erkennen
 - Übersetzungen für Ihre Zielsprache generieren
 - Die Zielsprachendateien erstellen oder aktualisieren (z. B. content/sv/*.mdx)
 - Die Markdown-Formatierung und -struktur bewahren
-- Front Matter-Übersetzungen behandeln
-- Links und Verweise beibehalten
+- Die Übersetzungen des Front Matter verwalten
+- Links und Referenzen beibehalten
 - Codeblöcke unverändert lassen
 - HTML innerhalb von Markdown bewahren

@@ -1,18 +1,73 @@
 # GitHub Actions
 
-Med GitHub-handlingen kan du enkelt oversette koden din ved bare å pushe koden din til depotet. GitHub-handlingen vil deretter oversette de nye nøklene dine, enten opprette en pull request eller commite endringene dine.
+Med GitHub-handlingen kan du enkelt oversette koden din ved bare å pushe koden til depotet. GitHub-handlingen vil deretter oversette de nye nøklene dine, enten opprette en pull request eller commite endringene dine.
 Dette sparer deg for mye tid og arbeid samtidig som det opprettholder høy kvalitet på oversettelsene.
+
+---
+
+## Hvordan det fungerer
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Engelsk      ║          ║      Spansk       ║          ║      Japansk      ║
+ ║    Oversettelse   ║          ║    Oversettelse   ║          ║     Oversettelse  ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Slå sammen  │
+                                  │ Pull Request  │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Fullført       │
+                              │      (Distribuer)   │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
 
 ---
 
 ## Installasjon
 
-For å bruke Languine GitHub Action i depotet ditt, må du:
+For å bruke Languine GitHub-handlingen i depotet ditt, må du:
 
-1. Sette opp depothemmelighetene dine med Languine-legitimasjonen din
+1. Sette opp hemmelighetene i depotet ditt med Languine-legitimasjonen din
 2. Opprette en arbeidsflytfil i depotet ditt
 
-### Sette opp Depothemmeligheter
+### Sette opp depothemmeligheter
 
 Legg til følgende hemmeligheter i innstillingene for depotet ditt (Innstillinger > Hemmeligheter og variabler > Handlinger):
 
@@ -28,14 +83,14 @@ Du kan finne disse verdiene i Languine-dashbordet under Prosjektinnstillinger.
 GitHub-handlingen bruker følgende miljøvariabler:
 - `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nøkkel for autentisering
 - `LANGUINE_PROJECT_ID` (Obligatorisk): Din Languine prosjekt-ID 
-- `GITHUB_TOKEN` (Obligatorisk): Automatisk levert av GitHub, brukt til å opprette PR-er
+- `GITHUB_TOKEN` (Obligatorisk): Automatisk gitt av GitHub, brukt til å opprette PR-er
 
-### Eksempel på Arbeidsflyt
+### Eksempel på arbeidsflyt
 
 Opprett en ny fil .github/workflows/languine.yml i depotet ditt med følgende innhold:
 
 ```ts title=".github/workflows/release.yml"
-name: Distribuer nettside
+name: Distribuer nettsted
 
 on:
   push:
@@ -66,16 +121,16 @@ jobs:
 - Kjøres ved push til hovedgrenen
 - Kjøres ved pull requests til hovedgrenen
 - Kan utløses manuelt fra Handlinger-fanen
-- Sjekke ut koden din og kjøre Languine oversettelsesprosessen
+- Sjekke ut koden din og kjøre Languine-oversettelsesprosessen
 - Opprette en pull request med eventuelle nye oversettelser (konfigurerbar)
 
 #### Arbeidskatalogalternativ
 
-`working-directory`-alternativet lar deg spesifisere hvor oversettelsesfilene dine ligger. Dette er spesielt nyttig i monorepos hvor oversettelsene dine kan være i en spesifikk pakke eller app-katalog. For eksempel:
+`working-directory`-alternativet lar deg spesifisere hvor oversettelsesfilene dine ligger. Dette er spesielt nyttig i monorepos der oversettelsene dine kan være i en spesifikk pakke eller app-katalog. For eksempel:
 
 #### Pull Request-alternativ
 
-`create-pull-request`-alternativet kontrollerer om handlingen oppretter en pull request med endringene eller commiter dem direkte til grenen:
+`create-pull-request`-alternativet styrer om handlingen oppretter en pull request med endringene eller commiter dem direkte til grenen:
 
 ```typescript title=".github/workflows/languine.yml"
 with:

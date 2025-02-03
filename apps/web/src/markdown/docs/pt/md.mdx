@@ -1,6 +1,6 @@
 # Markdown
 
-O Languine suporta a localização de arquivos Markdown, perfeito para documentação, postagens de blog e sites com muito conteúdo. Este formato preserva a sintaxe Markdown enquanto traduz o conteúdo, incluindo suporte para front matter.
+Languine suporta a localização de arquivos Markdown, perfeito para documentação, postagens de blog e sites com muito conteúdo. Este formato preserva a sintaxe Markdown enquanto traduz o conteúdo, incluindo suporte a front matter.
 
 ---
 
@@ -16,9 +16,7 @@ Primeiro, certifique-se de que você tem um arquivo de configuração languine.c
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Opcional: padrão é true
-      "translateFrontMatterFields": ["title", "description"]  // Opcional: especifique quais campos de front matter traduzir
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }

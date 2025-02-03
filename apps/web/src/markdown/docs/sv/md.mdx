@@ -1,6 +1,6 @@
 # Markdown
 
-Languine stödjer lokalisering av Markdown-filer, perfekt för dokumentation, blogginlägg och innehållsrika webbplatser. Detta format bevarar Markdown-syntaxen medan innehållet översätts, inklusive stöd för front matter.
+Languine stödjer lokalisering av Markdown-filer, perfekt för dokumentation, blogginlägg och innehållstunga webbplatser. Detta format bevarar Markdown-syntaxen samtidigt som innehållet översätts, inklusive stöd för front matter.
 
 ---
 
@@ -16,9 +16,7 @@ Först, se till att du har en languine.config.json eller languine.config.ts konf
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Valfritt: standard är true
-      "translateFrontMatterFields": ["title", "description"]  // Valfritt: specificera vilka front matter-fält som ska översättas
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }
@@ -32,7 +30,7 @@ Med din konfiguration inställd, kör:
 npx languine@latest translate
 ```
 
-När du kör det här kommandot kommer Languine att:
+När du kör detta kommando kommer Languine att:
 
 - Ladda dina käll-Mardown-filer (t.ex. content/en/*.md)
 - Upptäcka nytt eller ändrat innehåll
@@ -40,6 +38,6 @@ När du kör det här kommandot kommer Languine att:
 - Skapa eller uppdatera målspråksfiler (t.ex. content/sv/*.md)
 - Bevara Markdown-format och struktur
 - Hantera översättningar av front matter
-- Upprätthålla länkar och referenser
-- Hålla kodblock oöversatta
+- Bevara länkar och referenser
+- Hålla kodblock oförändrade
 - Bevara HTML inom Markdown

@@ -16,9 +16,7 @@ Primero, asegúrate de tener un archivo de configuración languine.config.json o
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Opcional: por defecto es true
-      "translateFrontMatterFields": ["title", "description"]  // Opcional: especifica qué campos de front matter traducir
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }
@@ -41,5 +39,5 @@ Cuando ejecutes este comando, Languine:
 - Preservará el formato y la estructura de Markdown
 - Manejará las traducciones de front matter
 - Mantendrá enlaces y referencias
-- Mantendrá los bloques de código sin traducir
+- Mantendrá bloques de código sin traducir
 - Preservará HTML dentro de Markdown

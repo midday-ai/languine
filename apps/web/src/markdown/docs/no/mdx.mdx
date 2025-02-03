@@ -16,9 +16,7 @@ Først, sørg for at du har en languine.config.json eller languine.config.ts kon
   },
   "files": {
     "mdx": {
-      "include": ["content/[locale]/**/*.mdx"],
-      "frontMatter": true,  // Valgfritt: standardverdi er true
-      "translateFrontMatterFields": ["title", "description"]  // Valgfritt: spesifiser hvilke front matter-felt som skal oversettes
+      "include": ["content/[locale]/**/*.mdx"]
     }
   }
 }
@@ -34,10 +32,10 @@ npx languine@latest translate
 
 Når du kjører denne kommandoen, vil Languine:
 
-- Laste inn dine kilde Markdown-filer (f.eks. content/en/*.mdx)
+- Laste inn dine kilde Markdown-filer (f.eks., content/en/*.mdx)
 - Oppdage nytt eller endret innhold
-- Generere oversettelser for dine målspråk
-- Opprette eller oppdatere målspråksfilene (f.eks. content/sv/*.mdx)
+- Generere oversettelser for dine målrettede språk
+- Opprette eller oppdatere målspråkfilene (f.eks., content/sv/*.mdx)
 - Bevare Markdown-format og struktur
 - Håndtere oversettelser av front matter
 - Opprettholde lenker og referanser

@@ -16,9 +16,7 @@ Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.j
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Optionnel : par défaut à true
-      "translateFrontMatterFields": ["title", "description"]  // Optionnel : spécifiez quels champs de métadonnées traduire
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }
@@ -35,11 +33,11 @@ npx languine@latest translate
 Lorsque vous exécutez cette commande, Languine va :
 
 - Charger vos fichiers Markdown source (par exemple, content/en/*.md)
-- Détecter tout contenu nouveau ou modifié
+- Détecter tout nouveau contenu ou contenu modifié
 - Générer des traductions pour vos langues cibles
 - Créer ou mettre à jour les fichiers de langue cible (par exemple, content/sv/*.md)
 - Préserver le formatage et la structure Markdown
 - Gérer les traductions des métadonnées
 - Maintenir les liens et références
 - Garder les blocs de code non traduits
-- Préserver le HTML dans Markdown
+- Préserver le HTML au sein du Markdown
