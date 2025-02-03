@@ -1,6 +1,6 @@
 # Configuration
 
-Languine supports both TypeScript and JSON configuration files to manage your translation setup. You can choose either languine.config.ts for TypeScript or languine.json for JSON format. Both files define your source and target languages, as well as the files that need to be translated.
+Languine supports both TypeScript and JSON configuration files to manage your translation setup. You can choose either languine.config.ts for TypeScript or languine.config.json for JSON format. Both files define your source and target languages, as well as the files that need to be translated.
 
 ---
 
@@ -24,7 +24,7 @@ export default defineConfig({
 });
 ```
 
-```json title="languine.json"
+```json title="languine.config.json"
 {
   "locale": {
     "source": "en",
@@ -195,4 +195,4 @@ You don't need to manually edit the lock file - Languine manages it automaticall
 2. **File Organization**: Keep your translation files organized in a consistent directory structure
 3. **Language Codes**: Use standard language codes to ensure compatibility
 4. **Patterns**: Use specific include patterns to avoid translating unnecessary files
-5. **Project ID**: Keep your project ID secure and don't share it publicly if you're using cloud services
+5. **Project ID**: Keep your project ID secure and don't share it publicly if you're using cloud services, use the `LANGUINE_PROJECT_ID` environment variable instead.
