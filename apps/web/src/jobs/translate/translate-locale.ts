@@ -58,7 +58,12 @@ export const translateLocaleTask = schemaTask({
   run: async (payload, { ctx }) => {
     const translations: TranslationResult[] = [];
     const model = chooseModel(ctx.attempt.number);
-    const chunkSize = calculateChunkSize(payload.content, model.model.modelId);
+
+    const chunkSize = calculateChunkSize(payload.content, model.model.modelId, {
+      sourceLocale: payload.sourceLanguage,
+      targetLocale: payload.targetLocale,
+      sourceFormat: payload.sourceFormat,
+    });
 
     // If the source format is markdown, we take the whole document and translate it
     if (payload.sourceFormat === "md" || payload.sourceFormat === "mdx") {
