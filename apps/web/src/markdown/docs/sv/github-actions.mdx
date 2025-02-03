@@ -1,7 +1,62 @@
 # GitHub Actions
 
-Med GitHub-åtgärden kan du enkelt översätta din kod genom att bara trycka på din kod till lagret, så kommer GitHub-åtgärden att översätta dina nya nycklar, antingen skapa en pull-begäran eller begå dina ändringar.
+Med GitHub-actionen kan du enkelt översätta din kod genom att bara trycka på din kod till lagret, så kommer GitHub-actionen att översätta dina nya nycklar, antingen skapa en pull-begäran eller begå dina ändringar.
 Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
+
+---
+
+## Hur det fungerar
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Engelska     ║          ║      Spanska      ║          ║      Japanska     ║
+ ║    Översättning    ║          ║    Översättning    ║          ║     Översättning   ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Sammanfoga  │
+                                  │ Pull-begäran    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Avslutad       │
+                              │      (Distribuera)  │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
 
 ---
 
@@ -25,7 +80,7 @@ Du kan hitta dessa värden i din Languine-instrumentpanel under Projektinställn
 
 ### Miljövariabler
 
-GitHub-åtgärden använder följande miljövariabler:
+GitHub-actionen använder följande miljövariabler:
 - `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nyckel för autentisering
 - `LANGUINE_PROJECT_ID` (Obligatorisk): Ditt Languine projekt-ID 
 - `GITHUB_TOKEN` (Obligatorisk): Tillhandahålls automatiskt av GitHub, används för att skapa PR:er
@@ -63,15 +118,15 @@ jobs:
 ```
  
  Detta arbetsflöde kommer att:
-- Köras vid tryck på huvudgrenen
-- Köras vid pull-begärningar till huvudgrenen
-- Kan utlösas manuellt från Åtgärdstabben
-- Checka ut din kod och köra Languine översättningsprocess
+- Körs vid tryck på huvudgrenen
+- Körs vid pull-begärningar till huvudgrenen
+- Kan utlösas manuellt från Åtgärder-fliken
+- Checkout din kod och köra Languine-översättningsprocessen
 - Skapa en pull-begäran med eventuella nya översättningar (konfigurerbar)
 
 #### Arbetskatalogalternativ
 
-Alternativet `working-directory` gör att du kan specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i ett specifikt paket eller appkatalog. Till exempel:
+Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i ett specifikt paket eller app-katalog. Till exempel:
 
 #### Pull-begäran Alternativ
 

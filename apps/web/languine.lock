@@ -554,27 +554,27 @@ files:
   src/markdown/docs/da/md.mdx:
     content: afe124093dcbcf01534ebf94770f9a0c
   src/markdown/docs/de/md.mdx:
-    content: 1b31bedfa6b7b1a98c2388878820ef49
+    content: 2e008e05c194fd77df6fc3dc0ad1d576
   src/markdown/docs/es/md.mdx:
-    content: f2a4968453bc12452f111cf068e9ee2c
+    content: 139cef255ba300bc5f4d3cf020e8f6f8
   src/markdown/docs/fi/md.mdx:
-    content: 94839083f73dee137bfab4bbdd4d6683
+    content: 529dbb9da0914115df2179e5d615876e
   src/markdown/docs/fr/md.mdx:
-    content: f4d7b0862accd245bd083aab4342e969
+    content: bef9ed4148734d57a7de5f641f2f7587
   src/markdown/docs/it/md.mdx:
-    content: 340dc2fd0feb71eb6765cd1e45008e20
+    content: aea61870b8824dbc25ed8f387881422b
   src/markdown/docs/ko/md.mdx:
-    content: ad56b469c1e9017f574cb081eaa1eaf6
+    content: baf6adbe26d6bea4ea888c2fd20954e4
   src/markdown/docs/nl/md.mdx:
-    content: f98d9f5d5226e0cc1b5b6afeeb7d734f
+    content: 3b2e8c6f5a2a4e53aa8ec7a4172662f4
   src/markdown/docs/no/md.mdx:
-    content: f582a07af2cfad08252675bfdd603421
+    content: 91325bd08c0f3d16a48174dc3f6339b2
   src/markdown/docs/pl/md.mdx:
-    content: f7078e2d1658dc78970fda5ceeea5e02
+    content: 73eefed7ba98873bf775537583c4e0d8
   src/markdown/docs/pt/md.mdx:
-    content: 3a72b38623fd508f7d312ed3603bb911
+    content: 431c6917fd1d9915a348f78ffb5b2068
   src/markdown/docs/sv/md.mdx:
-    content: 34194644b9358df5ab8708644450595d
+    content: 40d20cec3b00e8c2333a3b3bd3d32096
   src/markdown/docs/da/arb.mdx:
     content: 77945d964f379418455f9e4998573464
   src/markdown/docs/de/arb.mdx:
@@ -698,27 +698,27 @@ files:
   src/markdown/docs/da/github-actions.mdx:
     content: 7b305e2cb89831faf6789ee5e3e24b37
   src/markdown/docs/de/github-actions.mdx:
-    content: 5be14565b3440ee7f8432e3d29469a04
+    content: b7fe49995a19b3ae0fd0b93f243cc0be
   src/markdown/docs/es/github-actions.mdx:
-    content: b808c8b8ace0fdd6c587988b694ba68b
+    content: 010d801d29bfaab16cbc71de5d2ff4cd
   src/markdown/docs/fi/github-actions.mdx:
-    content: 1c0a635a70d62b2a3a5ea905f5bb1112
+    content: db5e29acb6d8d7b0e94bc28f245c7ca4
   src/markdown/docs/fr/github-actions.mdx:
-    content: 15d09fdec1cf687f1eef9189677a6f1f
+    content: 86c32c8a545c0393709f15695e928740
   src/markdown/docs/it/github-actions.mdx:
-    content: e4d53a7effcb88c8ffe32de55f84f0ec
+    content: 6cbe157fd8e222ca1c8ec06257fb87e9
   src/markdown/docs/ko/github-actions.mdx:
-    content: 78c356fdafc6b7a85df8bf8ea3b1deb1
+    content: a3781f4dc82d79ac14ac947d806062ba
   src/markdown/docs/nl/github-actions.mdx:
-    content: 26cdfbd9fc9426cf92798f213f5afba1
+    content: 9914f72a4c939fddb281e3a217c04246
   src/markdown/docs/no/github-actions.mdx:
-    content: 06c8ade177fcb3243fde4b476bd904c3
+    content: dd7193d82df23e0f005a6bc5d231afaa
   src/markdown/docs/pl/github-actions.mdx:
-    content: d72490129a2cec3d7ed0ab1936f9fd8d
+    content: f2a318cdb300a1d00aaf167554b5eda4
   src/markdown/docs/pt/github-actions.mdx:
-    content: 0ec17d29a024c5d35a533523c35e6abc
+    content: f200290e4622a759a540c059aadea4e0
   src/markdown/docs/sv/github-actions.mdx:
-    content: 93db15f54e118cc0712f7f89196e43df
+    content: 241936a6c15be62fdf82d68625729d39
   src/markdown/docs/da/xcode-xcstrings.mdx:
     content: eb7299b1dd91eb1e8c61ea3bac3a1ff2
   src/markdown/docs/de/xcode-xcstrings.mdx:
@@ -936,27 +936,27 @@ files:
   src/markdown/docs/da/quickstart.mdx:
     content: d9a2622ccaaaf2748eefa068a826a6e7
   src/markdown/docs/de/quickstart.mdx:
-    content: 315125cb60853c590ada12f21ef25e3d
+    content: 9f29378bdfef7df128e88df69bd15e12
   src/markdown/docs/es/quickstart.mdx:
-    content: 81c3f0b0036d2d5ca6a854881b7b74c7
+    content: 2a44faa978b60adb97222df4ff7ea326
   src/markdown/docs/fi/quickstart.mdx:
-    content: 27e09df809dc682a942c49428a2de0f6
+    content: 4b12997c93505937ee74acc09ac25d30
   src/markdown/docs/fr/quickstart.mdx:
-    content: 77bc7b0233ed6192fc81d7893529aead
+    content: 9b63b56b72c7749457f5472b2589b802
   src/markdown/docs/it/quickstart.mdx:
-    content: 25c5fdaf8fc13a172fc5eb0ecb259a70
+    content: b50791bbd0b92edd12f707f5a8f83c78
   src/markdown/docs/ko/quickstart.mdx:
-    content: ab0dc6681eb24708ef65f0131db8a353
+    content: 0c9ca18ba3606eac16e09a9cc69d7dfe
   src/markdown/docs/nl/quickstart.mdx:
-    content: 279e216653f1d04117ad0f8621f6edc4
+    content: cc0c7605d12cfc685c2be7669de54e69
   src/markdown/docs/no/quickstart.mdx:
-    content: ae289d2c3b0aa1c6fc05d7341b6d0140
+    content: d8142aa838f3fc57dce0abdf2bd8e123
   src/markdown/docs/pl/quickstart.mdx:
-    content: 72b70709351c582bac389a9dd4a62b05
+    content: bf886b8925066a3eb64e9cd97c0a8e39
   src/markdown/docs/pt/quickstart.mdx:
-    content: 493d0606172b4ce12e58aa466547fae4
+    content: 96e1c508aae98cdd8219451ae531d988
   src/markdown/docs/sv/quickstart.mdx:
-    content: af1bcad193515f0b145702c720741d29
+    content: d9021fc405204f4d377138d001408621
   src/markdown/docs/da/csv.mdx:
     content: acf1d844f45893ce38ca2dfff6132fb5
   src/markdown/docs/de/csv.mdx:
@@ -1128,27 +1128,27 @@ files:
   src/markdown/docs/da/mdx.mdx:
     content: 7e6290579bbb49d9b0814963bac5299d
   src/markdown/docs/de/mdx.mdx:
-    content: 6b3e08f7546ed36bf6f422cbbdb6a275
+    content: fd6c240b77eb79488837204cd112a3af
   src/markdown/docs/es/mdx.mdx:
-    content: 8acbebbab5ac15fd4a89a038752e5f8f
+    content: 5321f6b56c9e61065b82fbbfc3955222
   src/markdown/docs/fi/mdx.mdx:
-    content: c314c7bc37496d6eb57f6501d121b90b
+    content: 75ff35280f7d2bb98393159bc59dedf0
   src/markdown/docs/fr/mdx.mdx:
-    content: a520bf4f04fd98f088763a452ed51e81
+    content: 4d7e4b6d7b7726b923ae2405a34b7ece
   src/markdown/docs/it/mdx.mdx:
-    content: 3d862c773fc35db978723b3549d5577b
+    content: 30d7e623f66d485a373e1f0e3c4a9855
   src/markdown/docs/ko/mdx.mdx:
-    content: 4b0c2c52102bc1deb8671a7a5ddff270
+    content: b5b7e4cc2a3a820f798f6524fbac5dec
   src/markdown/docs/nl/mdx.mdx:
-    content: bb19fb9251bfdf2a060aa77b1f41128c
+    content: bed8a7e7e5a3462c60f5803193e1cbbc
   src/markdown/docs/no/mdx.mdx:
-    content: e3e2a9006b3e8e243661fb0358066a54
+    content: 9ca46bc89a4e42ad2a0c0bdeea0fa3c5
   src/markdown/docs/pl/mdx.mdx:
-    content: 1ab09351009c933efca4c91459cfae41
+    content: e6aba149b6f8b439b5a1872b30aaeca0
   src/markdown/docs/pt/mdx.mdx:
-    content: 75212b3c0f37cf7b39e97b3f9c9fe07d
+    content: b7118edcb1d35f4bbc59eb0e4dfa17ea
   src/markdown/docs/sv/mdx.mdx:
-    content: f6ef8c7a512cbf494dd1353e4fe920f0
+    content: 7f235b0293253d96b4fd7ba09f1c5066
   src/markdown/docs/da/xml.mdx:
     content: aff4f755d0fbac5a467b5fada1f39245
   src/markdown/docs/de/xml.mdx:

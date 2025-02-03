@@ -1,23 +1,78 @@
 # GitHub Actions
 
-Com a ação do GitHub, você pode facilmente traduzir seu código apenas enviando-o para o repositório; a ação do GitHub então traduzirá suas novas chaves, criando um pull request ou confirmando suas alterações.
-Isso economiza muito tempo e esforço, mantendo traduções de alta qualidade.
+Com a ação do GitHub, você pode traduzir seu código facilmente apenas enviando seu código para o repositório; a ação do GitHub então traduzirá suas novas chaves, criando um pull request ou confirmando suas alterações.
+Isso economiza muito tempo e esforço enquanto mantém traduções de alta qualidade.
+
+---
+
+## Como funciona
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Inglês      ║          ║      Espanhol     ║          ║      Japonês      ║
+ ║    Tradução      ║          ║    Tradução      ║          ║     Tradução      ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Mesclar    │
+                                  │ Pull Request  │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Concluído      │
+                              │      (Implantar)    │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
 
 ---
 
 ## Instalação
 
-Para usar a Ação do Languine em seu repositório, você precisará:
+Para usar a Ação do GitHub Languine em seu repositório, você precisará:
 
 1. Configurar os segredos do seu repositório com suas credenciais do Languine
-2. Criar um arquivo de workflow em seu repositório
+2. Criar um arquivo de fluxo de trabalho em seu repositório
 
 ### Configurando Segredos do Repositório
 
 Adicione os seguintes segredos nas configurações do seu repositório (Configurações > Segredos e variáveis > Ações):
 
 - `LANGUINE_API_KEY`: Sua chave de API do Languine
-- `LANGUINE_PROJECT_ID`: Seu ID do projeto Languine
+- `LANGUINE_PROJECT_ID`: Seu ID de projeto do Languine
 
 Você pode encontrar esses valores no seu painel do Languine em Configurações do Projeto.
 
@@ -27,17 +82,17 @@ Você pode encontrar esses valores no seu painel do Languine em Configurações 
 
 A Ação do GitHub usa as seguintes variáveis de ambiente:
 - `LANGUINE_API_KEY` (Obrigatório): Sua chave de API do Languine para autenticação
-- `LANGUINE_PROJECT_ID` (Obrigatório): Seu ID do projeto Languine 
+- `LANGUINE_PROJECT_ID` (Obrigatório): Seu ID de projeto do Languine 
 - `GITHUB_TOKEN` (Obrigatório): Fornecido automaticamente pelo GitHub, usado para criar PRs
 
-### Exemplo de Workflow
+### Exemplo de Fluxo de Trabalho
 
 Crie um novo arquivo .github/workflows/languine.yml em seu repositório com o seguinte conteúdo:
 
 ```ts title=".github/workflows/release.yml"
-nome: Implantar Site
+name: Implantar Website
 
-em:
+on:
   push:
     branches:
       - '**'
@@ -62,7 +117,7 @@ jobs:
           project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
 ```
  
- Este workflow irá:
+ Este fluxo de trabalho irá:
 - Executar em envios para a branch principal
 - Executar em pull requests para a branch principal
 - Pode ser acionado manualmente na aba Ações
@@ -71,7 +126,7 @@ jobs:
 
 #### Opção de Diretório de Trabalho
 
-A opção `working-directory` permite que você especifique onde seus arquivos de tradução estão localizados. Isso é particularmente útil em monorepos, onde suas traduções podem estar em um pacote ou diretório de aplicativo específico. Por exemplo:
+A opção `working-directory` permite que você especifique onde seus arquivos de tradução estão localizados. Isso é particularmente útil em monorepos onde suas traduções podem estar em um pacote ou diretório de aplicativo específico. Por exemplo:
 
 #### Opção de Pull Request
 
@@ -79,7 +134,7 @@ A opção `create-pull-request` controla se a ação cria um pull request com as
 
 ```typescript title=".github/workflows/languine.yml"
 with:
-  create-pull-request: true # criar um pull request com as alterações
+  create-pull-request: true # cria um pull request com as alterações
 ```
 
 Quando definido como `true`, a ação irá:

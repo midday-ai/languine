@@ -1,7 +1,62 @@
 # GitHub Actions
 
-GitHub-toiminnolla voit helposti kääntää koodiasi yksinkertaisesti työntämällä koodisi repositorioon, jolloin GitHub-toiminto kääntää uudet avaimet, luo pull-pyynnön tai sitoo muutoksesi.
+GitHub-toiminnon avulla voit helposti kääntää koodiasi yksinkertaisesti työntämällä koodisi repositorioon, jolloin GitHub-toiminto kääntää uudet avaimet, luo pull-pyynnön tai sitoo muutoksesi.
 Tämä säästää sinulta paljon aikaa ja vaivannäköä samalla kun säilyttää korkealaatuiset käännökset.
+
+---
+
+## Kuinka se toimii
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Englanti     ║          ║      Espanja      ║          ║      Japani      ║
+ ║    Käännös        ║          ║    Käännös        ║          ║     Käännös      ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Yhdistä    │
+                                  │ Pull-pyyntö    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Valmis         │
+                              │      (Julkaise)     │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
 
 ---
 
@@ -16,18 +71,18 @@ Käyttääksesi Languine GitHub-toimintoa repositoriossasi, sinun on:
 
 Lisää seuraavat salaisuudet repositoriosi asetuksiin (Asetukset > Salaisuudet ja muuttujat > Toiminnot):
 
-- `LANGUINE_API_KEY`: Languine API -avain
-- `LANGUINE_PROJECT_ID`: Languine projektin ID
+- `LANGUINE_API_KEY`: Languine API-avaimesi
+- `LANGUINE_PROJECT_ID`: Languine projektitunnuksesi
 
-Voit löytää nämä arvot Languine-hallintapaneelista Projektin asetukset -kohdasta.
+Voit löytää nämä arvot Languine-hallintapaneelista Projektin asetuksista.
 
 
 
 ### Ympäristömuuttujat
 
 GitHub-toiminto käyttää seuraavia ympäristömuuttujia:
-- `LANGUINE_API_KEY` (Pakollinen): Languine API -avain todennusta varten
-- `LANGUINE_PROJECT_ID` (Pakollinen): Languine projektin ID 
+- `LANGUINE_API_KEY` (Pakollinen): Languine API-avaimesi todennusta varten
+- `LANGUINE_PROJECT_ID` (Pakollinen): Languine projektitunnuksesi 
 - `GITHUB_TOKEN` (Pakollinen): GitHubin automaattisesti tarjoama, käytetään PR:ien luomiseen
 
 ### Esimerkki työnkulusta
@@ -63,15 +118,15 @@ jobs:
 ```
  
  Tämä työnkulku:
-- Suoritetaan päähaaraan tehtävien työntämisen yhteydessä
-- Suoritetaan pull-pyynnöissä päähaaraan
+- Suoritetaan päähaaraan tehtyjen työntöjen yhteydessä
+- Suoritetaan pull-pyyntöjen yhteydessä päähaaraan
 - Voidaan laukaista manuaalisesti Toiminnot-välilehdeltä
 - Tarkistaa koodisi ja suorittaa Languine-käännösprosessin
 - Luo pull-pyynnön kaikista uusista käännöksistä (konfiguroitavissa)
 
 #### Työhakemiston vaihtoehto
 
-`working-directory`-vaihtoehto mahdollistaa sen, että voit määrittää, missä käännöstiedostosi sijaitsevat. Tämä on erityisen hyödyllistä monorepoissa, joissa käännöksesi voivat olla tietyssä paketti- tai sovellushakemistossa. Esimerkiksi:
+`working-directory`-vaihtoehto mahdollistaa sen määrittämisen, missä käännöstiedostosi sijaitsevat. Tämä on erityisen hyödyllistä monorepoissa, joissa käännöksesi voivat olla tietyssä paketti- tai sovellushakemistossa. Esimerkiksi:
 
 #### Pull-pyyntö -vaihtoehto
 
@@ -83,10 +138,10 @@ with:
 ```
 
 Kun se on asetettu `true`, toiminto:
-- Luo uuden haara muutoksilla
+- Luo uuden haaran muutoksista
 - Luo pull-pyynnön tarkistettavaksi
 - Lisää asianmukaiset tarrat ja kuvauksen
 
-Kun se on asetettu `false` (oletusarvo), toiminto:
+Kun se on asetettu `false` (oletus), toiminto:
 - Sitoo muutokset suoraan nykyiseen haaraan
 - Työntää muutokset ilman pull-pyynnön luomista

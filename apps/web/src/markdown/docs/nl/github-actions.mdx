@@ -1,7 +1,62 @@
 # GitHub Acties
 
-Met de GitHub-actie kun je eenvoudig je code vertalen door je code naar de repository te pushen; de GitHub-actie vertaalt vervolgens je nieuwe sleutels, maakt een pull request of commit je wijzigingen.
+Met de GitHub-actie kun je eenvoudig je code vertalen door je code naar de repository te pushen. De GitHub-actie vertaalt vervolgens je nieuwe sleutels, maakt een pull request of commit je wijzigingen.
 Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
+
+---
+
+## Hoe het werkt
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Engels       ║          ║      Spaans       ║          ║      Japans      ║
+ ║    Vertaling      ║          ║    Vertaling      ║          ║     Vertaling    ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Samenvoegen│
+                                  │ Pull Request  │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Voltooid       │
+                              │      (Implementeren) │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
 
 ---
 
@@ -9,8 +64,8 @@ Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
 
 Om de Languine GitHub-actie in je repository te gebruiken, moet je:
 
-1. Je repository-secrets instellen met je Languine-inloggegevens
-2. Een workflowbestand in je repository maken
+1. Je repository-secrets instellen met je Languine-gegevens
+2. Een workflow-bestand in je repository maken
 
 ### Instellen van Repository Secrets
 
@@ -28,7 +83,7 @@ Je kunt deze waarden vinden in je Languine-dashboard onder Projectinstellingen.
 De GitHub-actie gebruikt de volgende omgevingsvariabelen:
 - `LANGUINE_API_KEY` (Vereist): Je Languine API-sleutel voor authenticatie
 - `LANGUINE_PROJECT_ID` (Vereist): Je Languine project-ID 
-- `GITHUB_TOKEN` (Vereist): Automatisch verstrekt door GitHub, gebruikt voor het maken van PR's
+- `GITHUB_TOKEN` (Vereist): Automatisch geleverd door GitHub, gebruikt voor het maken van PR's
 
 ### Voorbeeld Workflow
 
@@ -65,7 +120,7 @@ jobs:
  Deze workflow zal:
 - Uitvoeren bij pushes naar de hoofdbranch
 - Uitvoeren bij pull requests naar de hoofdbranch
-- Handmatig worden geactiveerd vanuit het tabblad Acties
+- Handmatig geactiveerd worden vanuit het tabblad Acties
 - Je code uitchecken en het Languine-vertalingsproces uitvoeren
 - Een pull request maken met eventuele nieuwe vertalingen (configureerbaar)
 
@@ -75,7 +130,7 @@ De `working-directory` optie stelt je in staat om op te geven waar je vertaalbes
 
 #### Pull Request Optie
 
-De `create-pull-request` optie bepaalt of de actie een pull request met de wijzigingen aanmaakt of deze direct naar de branch commit:
+De `create-pull-request` optie bepaalt of de actie een pull request aanmaakt met de wijzigingen of deze direct naar de branch commit:
 
 ```typescript title=".github/workflows/languine.yml"
 with:
@@ -83,7 +138,7 @@ with:
 ```
 
 Wanneer ingesteld op `true`, zal de actie:
-- Een nieuwe branch met de wijzigingen aanmaken
+- Een nieuwe branch aanmaken met de wijzigingen
 - Een pull request voor beoordeling aanmaken
 - Geschikte labels en beschrijving toevoegen
 

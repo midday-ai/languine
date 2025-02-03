@@ -16,9 +16,7 @@ Zorg er eerst voor dat je een languine.config.json of languine.config.ts configu
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Optioneel: standaard op true
-      "translateFrontMatterFields": ["title", "description"]  // Optioneel: specificeer welke front matter-velden vertaald moeten worden
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }
@@ -37,9 +35,9 @@ Wanneer je dit commando uitvoert, zal Languine:
 - Je bron Markdown-bestanden laden (bijv. content/en/*.md)
 - Nieuwe of gewijzigde inhoud detecteren
 - Vertalingen genereren voor je doeltalen
-- De doeltaalbestanden maken of bijwerken (bijv. content/sv/*.md)
+- De doeltaalbestanden aanmaken of bijwerken (bijv. content/sv/*.md)
 - De Markdown-opmaak en -structuur behouden
 - Vertalingen van front matter afhandelen
 - Links en verwijzingen behouden
-- Codeblokken onvertaald houden
+- Codeblokken onvertaald laten
 - HTML binnen Markdown behouden

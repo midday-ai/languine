@@ -5,6 +5,61 @@ Das spart Ihnen viel Zeit und Mühe, während die Übersetzungen von hoher Quali
 
 ---
 
+## So funktioniert es
+
+
+
+<div className="flex flex-col items-center justify-center p-4 mb-8 h-[400px] sm:h-[500px] md:h-[650px]">
+        <pre
+          className="p-4 text-sm leading-5 scale-[0.5] sm:scale-[0.65] md:scale-90 transform-gpu"
+          style={{
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            textAlign: "left",
+          }}
+        >
+          {`
+                                  ┌───────────────┐
+                                  │   Git Push    │
+                                  └───────────────┘
+                                          │
+                                          ▼
+             ┌─────────────────────────────────────────────────────────┐
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░ Languine Engine ░░░░░░░░░░░░░░░░░░░░│
+             │░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+             └─────────────────────────────────────────────────────────┘
+                                          │
+                                          ▼
+                                          │
+            ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+           │                              │                              │
+           ▼                              ▼                              ▼
+ ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
+ ║                   ║          ║                   ║          ║                   ║
+ ║      Englisch     ║          ║      Spanisch     ║          ║      Japanisch    ║
+ ║    Übersetzung    ║          ║    Übersetzung    ║          ║     Übersetzung    ║
+ ║                   ║          ║                   ║          ║                   ║
+ ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
+           │                              │                              │
+           └──────────────────────────────┼──────────────────────────────┘
+                                          ▼
+                                  ┌───────────────┐
+                                  │     Zusammenf. │
+                                  │ Pull Request  │
+                                  └───────────────┘
+                                          │
+                                          ▼
+                              ┌─────────────────────┐
+                              │      Abgeschlossen    │
+                              │      (Deploy)       │
+                              └─────────────────────┘
+`}
+        </pre>
+      </div>
+
+---
+
 ## Installation
 
 Um die Languine GitHub-Aktion in Ihrem Repository zu verwenden, müssen Sie:
@@ -12,7 +67,7 @@ Um die Languine GitHub-Aktion in Ihrem Repository zu verwenden, müssen Sie:
 1. Ihre Repository-Geheimnisse mit Ihren Languine-Anmeldeinformationen einrichten
 2. Eine Workflow-Datei in Ihrem Repository erstellen
 
-### Einrichten von Repository-Geheimnissen
+### Einrichten der Repository-Geheimnisse
 
 Fügen Sie die folgenden Geheimnisse in den Repository-Einstellungen hinzu (Einstellungen > Geheimnisse und Variablen > Aktionen):
 
@@ -53,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Languine-Aktion
+      - name: Languine Aktion
         uses: languine/languine-action@v1
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,15 +118,15 @@ jobs:
 ```
  
  Dieser Workflow wird:
-- Bei Pushes auf den Hauptbranch ausgeführt
-- Bei Pull-Requests auf den Hauptbranch ausgeführt
-- Manuell über den Tab Aktionen ausgelöst werden können
+- Bei Pushes zum Hauptbranch ausgeführt
+- Bei Pull-Requests zum Hauptbranch ausgeführt
+- Kann manuell über den Aktionen-Tab ausgelöst werden
 - Ihren Code auschecken und den Languine-Übersetzungsprozess ausführen
-- Einen Pull-Request mit allen neuen Übersetzungen erstellen (konfigurierbar)
+- Einen Pull-Request mit neuen Übersetzungen erstellen (konfigurierbar)
 
 #### Arbeitsverzeichnis-Option
 
-Die Option `working-directory` ermöglicht es Ihnen, anzugeben, wo sich Ihre Übersetzungsdateien befinden. Dies ist besonders nützlich in Monorepos, in denen sich Ihre Übersetzungen möglicherweise in einem bestimmten Paket- oder Anwendungsverzeichnis befinden. Zum Beispiel:
+Die Option `working-directory` ermöglicht es Ihnen, anzugeben, wo sich Ihre Übersetzungsdateien befinden. Dies ist besonders nützlich in Monorepos, in denen sich Ihre Übersetzungen möglicherweise in einem bestimmten Paket oder Anwendungsverzeichnis befinden. Zum Beispiel:
 
 #### Pull-Request-Option
 

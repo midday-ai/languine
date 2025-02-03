@@ -1,12 +1,12 @@
 # Markdown
 
-Languine unterstützt die Lokalisierung von Markdown-Dateien, ideal für Dokumentationen, Blogbeiträge und inhaltsreiche Websites. Dieses Format bewahrt die Markdown-Syntax während der Übersetzung des Inhalts, einschließlich der Unterstützung von Front Matter.
+Languine unterstützt die Lokalisierung von Markdown-Dateien, ideal für Dokumentationen, Blogbeiträge und inhaltsreiche Websites. Dieses Format bewahrt die Markdown-Syntax während der Übersetzung des Inhalts, einschließlich Unterstützung für Front Matter.
 
 ---
 
 ## Einrichtung
 
-Stellen Sie zunächst sicher, dass Sie eine languine.config.json oder languine.config.ts Konfigurationsdatei im Stammverzeichnis Ihres Projekts haben. Hier ist ein Beispiel:
+Zuerst stellen Sie sicher, dass Sie eine languine.config.json oder languine.config.ts Konfigurationsdatei im Stammverzeichnis Ihres Projekts haben. Hier ist ein Beispiel:
 
 ```json
 {
@@ -16,9 +16,7 @@ Stellen Sie zunächst sicher, dass Sie eine languine.config.json oder languine.c
   },
   "files": {
     "md": {
-      "include": ["content/[locale]/**/*.md"],
-      "frontMatter": true,  // Optional: Standardmäßig auf true
-      "translateFrontMatterFields": ["title", "description"]  // Optional: geben Sie an, welche Front Matter-Felder übersetzt werden sollen
+      "include": ["content/[locale]/**/*.md"]
     }
   }
 }
@@ -26,7 +24,7 @@ Stellen Sie zunächst sicher, dass Sie eine languine.config.json oder languine.c
 
 ## Übersetzung
 
-Mit Ihrer Konfiguration können Sie Folgendes ausführen:
+Mit Ihrer Konfiguration ausgeführt, führen Sie aus:
 
 ```bash
 npx languine@latest translate
@@ -37,9 +35,9 @@ Wenn Sie diesen Befehl ausführen, wird Languine:
 - Ihre Quell-Markdown-Dateien laden (z. B. content/en/*.md)
 - Alle neuen oder geänderten Inhalte erkennen
 - Übersetzungen für Ihre Zielsprache generieren
-- Die Dateien der Zielsprache erstellen oder aktualisieren (z. B. content/sv/*.md)
-- Die Markdown-Formatierung und -Struktur beibehalten
-- Die Übersetzungen des Front Matter verwalten
-- Links und Verweise beibehalten
+- Die Zielsprachendateien erstellen oder aktualisieren (z. B. content/sv/*.md)
+- Die Markdown-Formatierung und -struktur bewahren
+- Übersetzungen für Front Matter behandeln
+- Links und Referenzen beibehalten
 - Codeblöcke unverändert lassen
 - HTML innerhalb von Markdown bewahren
