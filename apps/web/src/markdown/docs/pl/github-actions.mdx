@@ -1,6 +1,6 @@
 # GitHub Actions
 
-Dzięki akcji GitHub możesz łatwo tłumaczyć swój kod, po prostu przesyłając go do repozytorium. Akcja GitHub przetłumaczy nowe klucze, utworzy pull request lub zatwierdzi zmiany.
+Dzięki akcji GitHub możesz łatwo przetłumaczyć swój kod, po prostu przesyłając go do repozytorium. Akcja GitHub przetłumaczy nowe klucze, tworząc pull request lub zatwierdzając zmiany.
 To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość tłumaczeń.
 
 ---
@@ -52,7 +52,7 @@ To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość
                                           ▼
                               ┌─────────────────────┐
                               │      Zakończono     │
-                              │      (Wdróż)       │
+                              │      (Wdrożenie)    │
                               └─────────────────────┘
 `}
         </pre>
@@ -64,7 +64,7 @@ To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość
 
 Aby użyć akcji Languine GitHub w swoim repozytorium, musisz:
 
-1. Ustawić sekrety repozytorium z danymi uwierzytelniającymi Languine
+1. Ustawić sekrety repozytorium z danymi logowania do Languine
 2. Utworzyć plik roboczy w swoim repozytorium
 
 ### Ustawianie sekretów repozytorium
@@ -81,16 +81,16 @@ Możesz znaleźć te wartości w swoim panelu Languine w sekcji Ustawienia proje
 ### Zmienne środowiskowe
 
 Akcja GitHub używa następujących zmiennych środowiskowych:
-- `LANGUINE_API_KEY` (Wymagana): Twój klucz API Languine do uwierzytelniania
-- `LANGUINE_PROJECT_ID` (Wymagana): Twój identyfikator projektu Languine 
-- `GITHUB_TOKEN` (Wymagana): Automatycznie dostarczany przez GitHub, używany do tworzenia PR-ów
+- `LANGUINE_API_KEY` (Wymagane): Twój klucz API Languine do autoryzacji
+- `LANGUINE_PROJECT_ID` (Wymagane): Twój identyfikator projektu Languine 
+- `GITHUB_TOKEN` (Wymagane): Automatycznie dostarczany przez GitHub, używany do tworzenia PR-ów
 
 ### Przykład roboczego pliku
 
 Utwórz nowy plik .github/workflows/languine.yml w swoim repozytorium z następującą zawartością:
 
 ```ts title=".github/workflows/release.yml"
-name: Wdróż stronę
+name: Wdrożenie strony
 
 on:
   push:
@@ -118,15 +118,15 @@ jobs:
 ```
  
  Ten plik roboczy:
-- Uruchomi się przy przesyłaniu do głównej gałęzi
-- Uruchomi się przy pull requestach do głównej gałęzi
+- Będzie uruchamiany przy przesyłaniu do głównej gałęzi
+- Będzie uruchamiany przy pull requestach do głównej gałęzi
 - Może być uruchamiany ręcznie z zakładki Akcje
-- Sprawdzi Twój kod i uruchomi proces tłumaczenia Languine
-- Utworzy pull request z nowymi tłumaczeniami (konfigurowalne)
+- Sprawdzi twój kod i uruchomi proces tłumaczenia Languine
+- Utworzy pull request z nowymi tłumaczeniami (można skonfigurować)
 
 #### Opcja katalogu roboczego
 
-Opcja `working-directory` pozwala określić, gdzie znajdują się Twoje pliki tłumaczeń. Jest to szczególnie przydatne w monorepo, gdzie Twoje tłumaczenia mogą znajdować się w określonym pakiecie lub katalogu aplikacji. Na przykład:
+Opcja `working-directory` pozwala określić, gdzie znajdują się twoje pliki tłumaczeń. Jest to szczególnie przydatne w monorepo, gdzie twoje tłumaczenia mogą znajdować się w określonym pakiecie lub katalogu aplikacji. Na przykład:
 
 #### Opcja Pull Request
 
