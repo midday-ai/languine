@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem."
+    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comece",
     "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem.",
+    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem.",
     "button": {
       "startAutomating": "Comece a automatizar",
       "readDocumentation": "Leia a documentação"
@@ -385,7 +385,7 @@
         "community_support": "Suporte da comunidade",
         "keys_limit": "Até 100 chaves",
         "docs_limit": "Até 5 documentos",
-        "languages": "2 idiomas"
+        "languages": "4 idiomas"
       }
     },
     "pro": {

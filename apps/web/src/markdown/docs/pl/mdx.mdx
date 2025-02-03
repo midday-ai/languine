@@ -1,6 +1,6 @@
 # Markdown (MDX)
 
-Languine wspiera lokalizację plików Markdown (MDX), idealnych do dokumentacji, postów na blogu i stron bogatych w treść. Ten format zachowuje składnię Markdown podczas tłumaczenia treści, w tym wsparcie dla front matter.
+Languine wspiera lokalizację plików Markdown (MDX), idealnych do dokumentacji, postów na blogach i stron z dużą ilością treści. Ten format zachowuje składnię Markdown podczas tłumaczenia treści, w tym wsparcie dla front matter.
 
 ---
 
@@ -24,18 +24,18 @@ Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub lan
 
 ## Tłumaczenie
 
-Gdy masz ustawioną konfigurację, uruchom:
+Po ustawieniu konfiguracji uruchom:
 
 ```bash
 npx languine@latest translate
 ```
 
-Kiedy uruchomisz to polecenie, Languine:
+Gdy uruchomisz to polecenie, Languine:
 
-- Załaduje Twoje źródłowe pliki Markdown (np. content/en/*.mdx)
+- Załaduje twoje źródłowe pliki Markdown (np. content/en/*.mdx)
 - Wykryje wszelkie nowe lub zmodyfikowane treści
-- Wygeneruje tłumaczenia dla Twoich docelowych języków
-- Utworzy lub zaktualizuje pliki w języku docelowym (np. content/sv/*.mdx)
+- Wygeneruje tłumaczenia dla twoich docelowych języków
+- Utworzy lub zaktualizuje pliki w docelowym języku (np. content/sv/*.mdx)
 - Zachowa formatowanie i strukturę Markdown
 - Obsłuży tłumaczenia front matter
 - Utrzyma linki i odniesienia
