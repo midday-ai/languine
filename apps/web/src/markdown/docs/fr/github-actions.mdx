@@ -1,6 +1,6 @@
 # GitHub Actions
 
-Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code dans le dépôt, l'action GitHub traduira alors vos nouvelles clés, créera soit une demande de tirage, soit validera vos modifications.
+Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code vers le dépôt, l'action GitHub traduira ensuite vos nouvelles clés, créera soit une demande de tirage, soit validera vos modifications.
 Cela vous fait gagner beaucoup de temps et d'efforts tout en maintenant des traductions de haute qualité.
 
 ---
@@ -45,7 +45,7 @@ Cela vous fait gagner beaucoup de temps et d'efforts tout en maintenant des trad
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Fusionner  │
+                                  │     Fusionner   │
                                   │ Demande de tirage │
                                   └───────────────┘
                                           │
@@ -83,7 +83,7 @@ Vous pouvez trouver ces valeurs dans votre tableau de bord Languine sous Paramè
 L'action GitHub utilise les variables d'environnement suivantes :
 - `LANGUINE_API_KEY` (Requis) : Votre clé API Languine pour l'authentification
 - `LANGUINE_PROJECT_ID` (Requis) : Votre ID de projet Languine 
-- `GITHUB_TOKEN` (Requis) : Fournie automatiquement par GitHub, utilisée pour créer des PR
+- `GITHUB_TOKEN` (Requis) : Fournie automatiquement par GitHub, utilisée pour créer des PRs
 
 ### Exemple de Workflow
 

@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać."
+    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię opóźniać."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Rozpocznij",
     "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię opóźniać.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"
@@ -385,7 +385,7 @@
         "community_support": "Wsparcie społeczności",
         "keys_limit": "Do 100 kluczy",
         "docs_limit": "Do 5 dokumentów",
-        "languages": "2 języki"
+        "languages": "4 języki"
       }
     },
     "pro": {

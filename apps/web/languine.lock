@@ -482,27 +482,27 @@ files:
   src/markdown/docs/da/introduction.mdx:
     content: a82f9713a16caf17bdd3339e4caa3156
   src/markdown/docs/de/introduction.mdx:
-    content: cc44de6c6ed3dad2491639ee5e335203
+    content: e4cd20dfa3775f7cc64e1478fffe084e
   src/markdown/docs/es/introduction.mdx:
-    content: bb44a6ebb47f742230582a314252c9b0
+    content: f9e38655084739b5a5ac1557ebbffff7
   src/markdown/docs/fi/introduction.mdx:
-    content: 736af131e83cd1414244f0c984766c1f
+    content: 17eecac3d019d997a318f63279d7a98a
   src/markdown/docs/fr/introduction.mdx:
-    content: 26b7bda9a544082fd158d8a935e53a5c
+    content: b0458cf971aae103bd9b476d6f7510a8
   src/markdown/docs/it/introduction.mdx:
-    content: db838e29f417c45a298b1c55322e385b
+    content: 142e93cd157057bad76bfb622aed3ad8
   src/markdown/docs/ko/introduction.mdx:
-    content: 092b6b2f35c590143bd12356e4705440
+    content: dabc20891b057bf609dd7762b9a60972
   src/markdown/docs/nl/introduction.mdx:
-    content: 1df94096aeedb263648c037532ae24ff
+    content: 31e4d243f5bd6938c673fcfec3d48492
   src/markdown/docs/no/introduction.mdx:
-    content: d15b6092057070e5217cc5d71d052454
+    content: a5767b790b4965b1244e01669f92d25b
   src/markdown/docs/pl/introduction.mdx:
-    content: 773ecc1d90695a54c232b2257771e074
+    content: 147ffa2cca0931b2af2e9f4b36b8d82b
   src/markdown/docs/pt/introduction.mdx:
-    content: ffa4db9960608a5629fd5e23c752cfc7
+    content: a166fbbe9c1e822656c3210f1c851197
   src/markdown/docs/sv/introduction.mdx:
-    content: 255b66d08d6b79284507f7e113074383
+    content: 2a129287b29dea557017de2115357647
   src/markdown/docs/da/properties.mdx:
     content: b7a42ac4284a2455ebc60d81ededbe3f
   src/markdown/docs/de/properties.mdx:
@@ -554,27 +554,27 @@ files:
   src/markdown/docs/da/md.mdx:
     content: afe124093dcbcf01534ebf94770f9a0c
   src/markdown/docs/de/md.mdx:
-    content: 2e008e05c194fd77df6fc3dc0ad1d576
+    content: 150007c25945c7bd2d69b74ed695c7f1
   src/markdown/docs/es/md.mdx:
-    content: 139cef255ba300bc5f4d3cf020e8f6f8
+    content: d84275bca089a1a94190b464d1fcfad4
   src/markdown/docs/fi/md.mdx:
-    content: 529dbb9da0914115df2179e5d615876e
+    content: efe53721c804092a2bc3b038bb1316be
   src/markdown/docs/fr/md.mdx:
-    content: bef9ed4148734d57a7de5f641f2f7587
+    content: a4ff73e88e1fc3c2f57df37496e5606f
   src/markdown/docs/it/md.mdx:
-    content: aea61870b8824dbc25ed8f387881422b
+    content: 1a9da193963158d26593cbbb4ab8b31d
   src/markdown/docs/ko/md.mdx:
-    content: baf6adbe26d6bea4ea888c2fd20954e4
+    content: e17f285c80c0ffce6450c37ae0c4bd5c
   src/markdown/docs/nl/md.mdx:
     content: 3b2e8c6f5a2a4e53aa8ec7a4172662f4
   src/markdown/docs/no/md.mdx:
-    content: 91325bd08c0f3d16a48174dc3f6339b2
+    content: c3431cf96afed1beb785ca5cff4752ba
   src/markdown/docs/pl/md.mdx:
-    content: 73eefed7ba98873bf775537583c4e0d8
+    content: 987ea9d1473f758c4366b103bace7e33
   src/markdown/docs/pt/md.mdx:
-    content: 431c6917fd1d9915a348f78ffb5b2068
+    content: baf307d624e1e9bdd3d4f8bbe384b642
   src/markdown/docs/sv/md.mdx:
-    content: 40d20cec3b00e8c2333a3b3bd3d32096
+    content: b0b2ebd0b149599d8d7f392d6d5a97ae
   src/markdown/docs/da/arb.mdx:
     content: 77945d964f379418455f9e4998573464
   src/markdown/docs/de/arb.mdx:
@@ -700,25 +700,25 @@ files:
   src/markdown/docs/de/github-actions.mdx:
     content: b7fe49995a19b3ae0fd0b93f243cc0be
   src/markdown/docs/es/github-actions.mdx:
-    content: 010d801d29bfaab16cbc71de5d2ff4cd
+    content: e04d3f2ad8fbf82a52cf7d5c3ce648ca
   src/markdown/docs/fi/github-actions.mdx:
-    content: 648d1cac9270c63405d7525c12fb3168
+    content: ce01b4615a2108ecc937f15d496b0eae
   src/markdown/docs/fr/github-actions.mdx:
-    content: 86c32c8a545c0393709f15695e928740
+    content: 3c4f0569a3e388b5a64ec10a4d5b95bf
   src/markdown/docs/it/github-actions.mdx:
-    content: 6cbe157fd8e222ca1c8ec06257fb87e9
+    content: 1d167926965f69bd7f4e1cbb9dfc50c4
   src/markdown/docs/ko/github-actions.mdx:
-    content: b0eab61425596f998c542106a529102a
+    content: b3673ebb0624fcac87ff6e54b2050851
   src/markdown/docs/nl/github-actions.mdx:
-    content: 9914f72a4c939fddb281e3a217c04246
+    content: 22e946a01e21037380358d5e35267ac7
   src/markdown/docs/no/github-actions.mdx:
-    content: dd7193d82df23e0f005a6bc5d231afaa
+    content: 87a9362492902ee55ed10460fa62d076
   src/markdown/docs/pl/github-actions.mdx:
-    content: f2a318cdb300a1d00aaf167554b5eda4
+    content: d3eeea8887bcda4808024ea5259b2e88
   src/markdown/docs/pt/github-actions.mdx:
-    content: f200290e4622a759a540c059aadea4e0
+    content: 5e7e393dc899d32da9c42d4153fd6438
   src/markdown/docs/sv/github-actions.mdx:
-    content: 241936a6c15be62fdf82d68625729d39
+    content: ff14a398dbc4f5faf59348251d2dfac6
   src/markdown/docs/da/xcode-xcstrings.mdx:
     content: eb7299b1dd91eb1e8c61ea3bac3a1ff2
   src/markdown/docs/de/xcode-xcstrings.mdx:
@@ -936,27 +936,27 @@ files:
   src/markdown/docs/da/quickstart.mdx:
     content: d9a2622ccaaaf2748eefa068a826a6e7
   src/markdown/docs/de/quickstart.mdx:
-    content: 9f29378bdfef7df128e88df69bd15e12
+    content: 7e9b82fbddeec28d1c6b86b401bc2fc7
   src/markdown/docs/es/quickstart.mdx:
-    content: 2a44faa978b60adb97222df4ff7ea326
+    content: ab87d21084a5237689b369ee922cda0a
   src/markdown/docs/fi/quickstart.mdx:
-    content: 4b12997c93505937ee74acc09ac25d30
+    content: c6397f73cf02be6dece969f3a80a3e38
   src/markdown/docs/fr/quickstart.mdx:
-    content: 9b63b56b72c7749457f5472b2589b802
+    content: cfa21c666fe0b6af76603acf6b608023
   src/markdown/docs/it/quickstart.mdx:
-    content: b50791bbd0b92edd12f707f5a8f83c78
+    content: 9093389824d181cc0132812e061d0979
   src/markdown/docs/ko/quickstart.mdx:
-    content: 0c9ca18ba3606eac16e09a9cc69d7dfe
+    content: 89ba031aaf8c6a51a62845723dbe149c
   src/markdown/docs/nl/quickstart.mdx:
-    content: cc0c7605d12cfc685c2be7669de54e69
+    content: 0321d8c1f3013f124e71b3e8ea16f88b
   src/markdown/docs/no/quickstart.mdx:
-    content: d8142aa838f3fc57dce0abdf2bd8e123
+    content: fa0dcc1c7e723b44bf0e4287688590eb
   src/markdown/docs/pl/quickstart.mdx:
-    content: bf886b8925066a3eb64e9cd97c0a8e39
+    content: 9037ef60c8131e17ef4551280126edc4
   src/markdown/docs/pt/quickstart.mdx:
-    content: 96e1c508aae98cdd8219451ae531d988
+    content: 3d0f027a7e340f936f05b7d05c956b4e
   src/markdown/docs/sv/quickstart.mdx:
-    content: d9021fc405204f4d377138d001408621
+    content: 6b686cf4dddb6f812b1507f2dca48a70
   src/markdown/docs/da/csv.mdx:
     content: acf1d844f45893ce38ca2dfff6132fb5
   src/markdown/docs/de/csv.mdx:
@@ -1128,27 +1128,27 @@ files:
   src/markdown/docs/da/mdx.mdx:
     content: 7e6290579bbb49d9b0814963bac5299d
   src/markdown/docs/de/mdx.mdx:
-    content: fd6c240b77eb79488837204cd112a3af
+    content: 418ee4a9469ed0eb533235ce3303b38c
   src/markdown/docs/es/mdx.mdx:
     content: 5321f6b56c9e61065b82fbbfc3955222
   src/markdown/docs/fi/mdx.mdx:
-    content: 75ff35280f7d2bb98393159bc59dedf0
+    content: 97d09730de31b896c309b700124e5498
   src/markdown/docs/fr/mdx.mdx:
-    content: 4d7e4b6d7b7726b923ae2405a34b7ece
+    content: 01cbde912f69133dac56e82aba0dd7db
   src/markdown/docs/it/mdx.mdx:
-    content: 30d7e623f66d485a373e1f0e3c4a9855
+    content: 173cd9dce3d242157af9bca78d5b475f
   src/markdown/docs/ko/mdx.mdx:
-    content: b5b7e4cc2a3a820f798f6524fbac5dec
+    content: 75db232222731a1e82ccab4084f390dc
   src/markdown/docs/nl/mdx.mdx:
-    content: bed8a7e7e5a3462c60f5803193e1cbbc
+    content: 2e73059d2eb311c69045ec10981832e4
   src/markdown/docs/no/mdx.mdx:
-    content: 9ca46bc89a4e42ad2a0c0bdeea0fa3c5
+    content: 34801dc0fe6fb52efdb40312f30f275b
   src/markdown/docs/pl/mdx.mdx:
-    content: e6aba149b6f8b439b5a1872b30aaeca0
+    content: 421b543f048d90b56a4ebcd7ddb94296
   src/markdown/docs/pt/mdx.mdx:
-    content: b7118edcb1d35f4bbc59eb0e4dfa17ea
+    content: b9633f114b5706af15b0f587c80724e1
   src/markdown/docs/sv/mdx.mdx:
-    content: 7f235b0293253d96b4fd7ba09f1c5066
+    content: e99de7300f3bb015f6ee908efff477db
   src/markdown/docs/da/xml.mdx:
     content: aff4f755d0fbac5a467b5fada1f39245
   src/markdown/docs/de/xml.mdx:
@@ -1440,7 +1440,7 @@ files:
     pricing.free.features.community_support: 48e6f0069f951a2b5b969bbfdce37616
     pricing.free.features.keys_limit: e93f558268430151211a76f36e7a7dc9
     pricing.free.features.docs_limit: 4ccf4eefe7edc6584436d818a3047952
-    pricing.free.features.languages: 6171708fd1f76800642d13762d05364f
+    pricing.free.features.languages: e55db3761f5708b4348dcdd35602f266
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 8c4d1724482580bea397c88ee8bdf610
     pricing.pro.features.github_action: a37bea737bcd238034d6acee5497ba1d
@@ -1854,7 +1854,7 @@ files:
     pricing.free.features.community_support: ff4203dbd8bf0415135cf22c5ca8a737
     pricing.free.features.keys_limit: 5df5e722d34e6ce6784c0778fa651f4c
     pricing.free.features.docs_limit: 457e6d74d00da5798d90ed1ded29a2a1
-    pricing.free.features.languages: 6171708fd1f76800642d13762d05364f
+    pricing.free.features.languages: e55db3761f5708b4348dcdd35602f266
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: d197d6b350c155f52d33a6ce81e7de84
     pricing.pro.features.github_action: c38c6c03d0b29b8f9899fcfce7454852
@@ -2021,7 +2021,7 @@ files:
     header.signIn: a61d196e6576a0a91ac6aab9034d5535
     header.goToApp: 51801703f2d37a0f7a6c332992b5a5a8
     hero.title: 74d081e34e2c42ce6301b46850b75dc5
-    hero.description: 70441d5bc195de399d1ad7fab15695f4
+    hero.description: ef483ed2a9112d3c66074f121a2f0b62
     navigation.dashboard: b8da6df14bf06283cbf588df6998722e
     navigation.tuning: ae7d36ca44e270b02649c5f5a97c0262
     navigation.overrides: 3c1cc27fb6ee71e73df1e12bf61ea9ff
@@ -2031,7 +2031,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0fcb84e5416c73280dac88079172aeb8
     getStarted.title: 74d081e34e2c42ce6301b46850b75dc5
-    getStarted.description: 70441d5bc195de399d1ad7fab15695f4
+    getStarted.description: ef483ed2a9112d3c66074f121a2f0b62
     getStarted.button.startAutomating: c889b3d6e75a2777e3de3695394fde29
     getStarted.button.readDocumentation: 343964f780f3098d5e49aee852912fd8
     companies.title: f81625b19eb538f093e5f9e676b00f47
@@ -2275,7 +2275,7 @@ files:
     pricing.free.features.community_support: 2fd33ed1af02d6c1d53923039b19b91c
     pricing.free.features.keys_limit: dc62c0e8d1766a56148e1cc0045a193d
     pricing.free.features.docs_limit: 74c6bd1511f61d6796d975dc197b25b2
-    pricing.free.features.languages: 94fabea65487f3b095cdceb90418bf1e
+    pricing.free.features.languages: b5c156736d7925b6081dcdbd9f142430
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: a57b20f8e56601811267eab717671926
     pricing.pro.features.github_action: a6080e0fe641deac573d43ba2a4c820b
@@ -2442,7 +2442,7 @@ files:
     header.signIn: b687c67a2bfd3c4c97d9eb37450909e5
     header.goToApp: 8575ae96fc03c7fac71de84dc0cc695e
     hero.title: db8901072eb1bab68634dbeee9fc113f
-    hero.description: f967fc7165f5e1d13f23b5d4b4fd7290
+    hero.description: 9f83f8904778292c3b3d8508f0fc3391
     navigation.dashboard: 96a7b5490bcd3652a0c2bf36c1ffce2b
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 72ea96873387ebb56925d2fb2b8debf2
@@ -2452,7 +2452,7 @@ files:
     navigation.account: 8192dbe80e3401ebe872e0aed980daa1
     getStarted.heading: 45b9954f468ac044238ce013e9cd7a69
     getStarted.title: db8901072eb1bab68634dbeee9fc113f
-    getStarted.description: f967fc7165f5e1d13f23b5d4b4fd7290
+    getStarted.description: 9f83f8904778292c3b3d8508f0fc3391
     getStarted.button.startAutomating: 2cacaa39f025b53800c7c12a96405c6f
     getStarted.button.readDocumentation: 0ed36fcc448c60432dfa9ba1a1c596e6
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -2696,7 +2696,7 @@ files:
     pricing.free.features.community_support: cce165248dba9f7702429a26f8d0f096
     pricing.free.features.keys_limit: 74cc202c2c43499c90c45d712f43c920
     pricing.free.features.docs_limit: 440b80595b0c61484860604a02558f44
-    pricing.free.features.languages: c6d96d6010211ee263872837531b0e3b
+    pricing.free.features.languages: e101dff9e0ee14f23cb6f0d516b7b6b6
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: d11d05b74aae63b1ad86c668536abd04
     pricing.pro.features.github_action: cc77acbf5ba95612636fda7020b56500
@@ -2863,7 +2863,7 @@ files:
     header.signIn: bd6b12decc2abf95959b791a3578e091
     header.goToApp: 8383c069a4b8e009aa2079632d5e2a7a
     hero.title: f36cdb5c329213aa9dcb955710227fdc
-    hero.description: 89d3f75b04654bc5144fd1c15ba02ab3
+    hero.description: c45d6a7b08b9c46130416f18af320892
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
     navigation.overrides: 0e770b80d21f0a0d6098c1f766da3a67
@@ -2873,7 +2873,7 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: b09f65d94eb0f9d925129e39c1daa45f
     getStarted.title: f36cdb5c329213aa9dcb955710227fdc
-    getStarted.description: 89d3f75b04654bc5144fd1c15ba02ab3
+    getStarted.description: c45d6a7b08b9c46130416f18af320892
     getStarted.button.startAutomating: 32d4eff0d7584664a169dd5912e79cfb
     getStarted.button.readDocumentation: dd2b0a6d72a676f48319fa75ac8035ce
     companies.title: 6a35fcfe67ba9ca78f296f482dd1a8ad
@@ -3117,7 +3117,7 @@ files:
     pricing.free.features.community_support: d02ee19d8461636be8076ecddeb5dc63
     pricing.free.features.keys_limit: 47d0f7de1ce83e055064f6e4fe9b0d72
     pricing.free.features.docs_limit: 938ec83dfaaa417acdd56b05338f3110
-    pricing.free.features.languages: 308bdd0b08e9bf73128651cc84c96531
+    pricing.free.features.languages: 21ff5ae195ef6816684e46678b32e82f
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 93f9a016036121946f23a2418295ddff
     pricing.pro.features.github_action: f946b2163dffb9cea4d2a88a6e8a9f71
@@ -3538,7 +3538,7 @@ files:
     pricing.free.features.community_support: 4f2e0d4e1f897f23775f1bd4d4bf929d
     pricing.free.features.keys_limit: d56c705a0e94106ba5a4ff3f57729dcf
     pricing.free.features.docs_limit: b99c52699af29324cac4e62602bd642b
-    pricing.free.features.languages: 0ae018380bf93b36332bac5df8fbee1d
+    pricing.free.features.languages: 2264ed2bcbb8151ef8c0662ecb7742c3
     pricing.pro.title: 56fcec23dc7d12875ddcec2bb59f01ef
     pricing.pro.includes_free: 553223b150aec4eea55164334968c48e
     pricing.pro.features.github_action: a4a7aaa30652258f3bd0546c73227a78
@@ -3959,7 +3959,7 @@ files:
     pricing.free.features.community_support: 2f5cf4d94cecb32d0bf5cf6a4c0f21c0
     pricing.free.features.keys_limit: f57378695d02bb0e42ef2108bc1a8001
     pricing.free.features.docs_limit: 31fe7b79ea97e15627afce9fac9de3d6
-    pricing.free.features.languages: e18f079fc5239b2c17250cb7a28d5088
+    pricing.free.features.languages: 46991a4a29776d34bddf3ce9164d7d47
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: a227bf3e63d031f8fc3b31a0cde23899
     pricing.pro.features.github_action: 303dd94fe07c339deaf518c80af412a8
@@ -4126,7 +4126,7 @@ files:
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
     hero.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    hero.description: dc9e6e4d8370d037ae3e7bd9f1397987
+    hero.description: bc8e47f4cb6958b16ea82136cd8fc450
     navigation.dashboard: 629e199d421911b329a2909925beeb50
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 3db0abab2211e2f98a5b3304b6c5c049
@@ -4136,7 +4136,7 @@ files:
     navigation.account: d1ef184f21c6a19615f873478fe03462
     getStarted.heading: 2788dc861f0cd8b423653c0b6fe4195b
     getStarted.title: 9242ff4e74ba3dd7e1e482b03d608c31
-    getStarted.description: dc9e6e4d8370d037ae3e7bd9f1397987
+    getStarted.description: bc8e47f4cb6958b16ea82136cd8fc450
     getStarted.button.startAutomating: 9b0a69239ff144486dff4e740b4c7329
     getStarted.button.readDocumentation: bf1998ea274fe0873d2ac78fcb0e1006
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -4380,7 +4380,7 @@ files:
     pricing.free.features.community_support: 7a104841c6f5378a56bb614670a110ba
     pricing.free.features.keys_limit: dc3c73f2714e4062461cefc87c075825
     pricing.free.features.docs_limit: fe79b35dc6789a3d85e5e9dd9629d9f5
-    pricing.free.features.languages: c6d96d6010211ee263872837531b0e3b
+    pricing.free.features.languages: e101dff9e0ee14f23cb6f0d516b7b6b6
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 07c56d1ab51b57a34fb2f60806470ba9
     pricing.pro.features.github_action: b3c369c0ffcabedf42c0fdfd858b8bc7
@@ -4801,7 +4801,7 @@ files:
     pricing.free.features.community_support: 458d5bc5a6fb62c773f2a9c0405f6383
     pricing.free.features.keys_limit: 229d3dba571a14051c16f0d8f5551c72
     pricing.free.features.docs_limit: 30f8e2d0c0fb2a3cbf2744963c64ea08
-    pricing.free.features.languages: 30f09e6a4e57cde35f0abf2113218e6e
+    pricing.free.features.languages: 2910fad29bb5324f399bf6e147604a51
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 8b3433f260ae0f9fa234cf81abf4f2ab
     pricing.pro.features.github_action: 122c8bb5a9f4defba57a9a070203fda3
@@ -5222,7 +5222,7 @@ files:
     pricing.free.features.community_support: b1406142cc148eefdd1d791596bce2ac
     pricing.free.features.keys_limit: b5e27d41bfcfbdf2660668c399f1608a
     pricing.free.features.docs_limit: 707a4832182f4436d66129b2dd65e931
-    pricing.free.features.languages: 2eb7c9563051ceb2ad00dc95435530bf
+    pricing.free.features.languages: e05208e345aa66d136cf68cb443d14cd
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 617bbedba860774e1714ed26fbf9325f
     pricing.pro.features.github_action: cce421e5e75d34f5fce1f2d290f8fe88
@@ -5643,7 +5643,7 @@ files:
     pricing.free.features.community_support: 945f9f94f40004c3c452b370d8161f93
     pricing.free.features.keys_limit: d9f74a8b7abe09c6339b70639c3ac22f
     pricing.free.features.docs_limit: e1ef1175e2dfb0f5aef51e0faf168f30
-    pricing.free.features.languages: 4b51ce331eb6bc68ba6f5d05590d7109
+    pricing.free.features.languages: f1c625fe6e39860a4dcdff064921f252
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: aa9a28d106b84576dd74b2df5a256588
     pricing.pro.features.github_action: 6684469676bb6e503fe80e19de5ed61e

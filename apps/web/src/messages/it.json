@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastruttura di localizzazione realizzata per sviluppatori",
-    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e della tua pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai."
+    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Inizia",
     "title": "Infrastruttura di localizzazione realizzata per sviluppatori",
-    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e della tua pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai.",
+    "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline di sviluppo, garantendo che le traduzioni non ti rallentino mai.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
       "readDocumentation": "Leggi la documentazione"
@@ -385,7 +385,7 @@
         "community_support": "Supporto della comunità",
         "keys_limit": "Fino a 100 chiavi",
         "docs_limit": "Fino a 5 documenti",
-        "languages": "2 lingue"
+        "languages": "4 lingue"
       }
     },
     "pro": {
