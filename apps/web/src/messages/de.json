@@ -57,7 +57,7 @@
     "readyForI18nLibraries": "Bereit für i18n-Bibliotheken",
     "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl usw.).",
     "markdownSupport": "Markdown/Dokumentenunterstützung",
-    "markdownSupportDescription": "Languine übersetzt nahtlos Ihren Markdown-Inhalt und hält Dokumentation sowie andere Dateien synchron mit Ihrem Workflow."
+    "markdownSupportDescription": "Languine übersetzt Ihre Markdown-Inhalte nahtlos und hält Dokumentation sowie andere Dateien synchron mit Ihrem Workflow."
   },
   "info": {
     "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
