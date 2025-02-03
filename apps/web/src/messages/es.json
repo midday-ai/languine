@@ -528,7 +528,7 @@
   },
   "billing": {
     "title": "Facturación",
-    "translationKeys": "Claves de Traducción",
+    "translationKeys": "Claves de traducción",
     "documents": "Documentos",
     "languages": "Idiomas",
     "keysUsed": "claves utilizadas",
