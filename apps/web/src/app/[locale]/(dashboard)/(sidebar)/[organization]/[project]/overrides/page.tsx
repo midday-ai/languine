@@ -1,6 +1,7 @@
 import { Activity } from "@/components/activity";
 import { ActivitySkeleton } from "@/components/activity";
 import { FilterLocales } from "@/components/filter-locales";
+import { OnboardingSteps } from "@/components/onboarding-steps";
 import { SearchInput } from "@/components/search-input";
 import { HydrateClient, trpc } from "@/trpc/server";
 import { getTranslations } from "next-intl/server";
@@ -39,6 +40,22 @@ export default async function Page({
     locales: locales?.split(",") ?? null,
     limit: PAGE_LIMIT,
   });
+
+  const translations = await trpc.translate.getTranslationsBySlug({
+    slug: project,
+    organizationId: organization,
+    search: q ?? null,
+    locales: locales?.split(",") ?? null,
+  });
+
+  if (!translations.length && !q) {
+    const data = await trpc.project.getBySlug({
+      slug: project,
+      organizationId: organization,
+    });
+
+    return <OnboardingSteps projectId={data?.id} />;
+  }
 
   return (
     <HydrateClient>
