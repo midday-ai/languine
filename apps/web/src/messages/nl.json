@@ -46,8 +46,6 @@
     "title": "Kenmerken",
     "fullyOpenSource": "Volledig open source",
     "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
-    "noVendorLockIn": "Geen vendor lock-in",
-    "noVendorLockInDescription": "We dwingen je niet tot een specifieke service, gebruik je eigen LLM's.",
     "presetsForExpo": "Voorinstellingen voor Expo",
     "presetsForExpoDescription": "We bieden voorinstellingen voor Expo, zodat je snel aan de slag kunt.",
     "presetForReactNative": "Voorinstelling voor React Native",

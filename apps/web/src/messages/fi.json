@@ -46,8 +46,6 @@
     "title": "Ominaisuudet",
     "fullyOpenSource": "Täysin avoin lähdekoodi",
     "fullyOpenSourceDescription": "Koodimme on julkisesti saatavilla GitHubissa, mikä mahdollistaa läpinäkyvyyden ja yhteisön panostukset.",
-    "noVendorLockIn": "Ei myyjäriippuvuutta",
-    "noVendorLockInDescription": "Emme sitouta sinua tiettyyn palveluun, käytä omia LLM:si.",
     "presetsForExpo": "Esiasetukset Expo:lle",
     "presetsForExpoDescription": "Tarjoamme esiasetuksia Expo:lle, jotta voit aloittaa nopeasti.",
     "presetForReactNative": "Esiasetus React Nativen varten",

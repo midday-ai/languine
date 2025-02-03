@@ -46,8 +46,6 @@
     "title": "Recursos",
     "fullyOpenSource": "Totalmente de código aberto",
     "fullyOpenSourceDescription": "Nosso código está disponível publicamente no GitHub, permitindo transparência e contribuições da comunidade.",
-    "noVendorLockIn": "Sem bloqueio de fornecedor",
-    "noVendorLockInDescription": "Não o bloqueamos em um serviço específico, use seus próprios LLMs.",
     "presetsForExpo": "Predefinições para Expo",
     "presetsForExpoDescription": "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
     "presetForReactNative": "Predefinição para React Native",
