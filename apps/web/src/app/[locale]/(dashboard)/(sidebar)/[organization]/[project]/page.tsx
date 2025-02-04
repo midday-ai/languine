@@ -8,6 +8,7 @@ import { OnboardingSteps } from "@/components/onboarding-steps";
 import { SearchInput } from "@/components/search-input";
 import { HydrateClient, trpc } from "@/trpc/server";
 import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 export default async function Page({
@@ -38,21 +39,25 @@ export default async function Page({
     locales: locales?.split(",") ?? null,
   });
 
-  const translations = await trpc.translate.getTranslationsBySlug({
-    slug: project,
-    organizationId: organization,
-    search: q ?? null,
-    locales: locales?.split(",") ?? null,
-  });
-
-  // If there are no translations, show the onboarding
-  if (!translations.length && !q) {
-    const data = await trpc.project.getBySlug({
+  try {
+    const translations = await trpc.translate.getTranslationsBySlug({
       slug: project,
       organizationId: organization,
+      search: q ?? null,
+      locales: locales?.split(",") ?? null,
     });
 
-    return <OnboardingSteps projectId={data?.id} />;
+    // If there are no translations, show the onboarding
+    if (!translations.length && !q) {
+      const data = await trpc.project.getBySlug({
+        slug: project,
+        organizationId: organization,
+      });
+
+      return <OnboardingSteps projectId={data?.id} />;
+    }
+  } catch (error) {
+    return notFound();
   }
 
   return (
