@@ -30,6 +30,25 @@ export const POST = Webhooks({
         break;
       }
 
+      case "subscription.updated": {
+        const tier = getTierFromProductId(payload.data.productId);
+
+        if (!tier) {
+          console.error("Invalid product ID", payload.data.productId);
+          break;
+        }
+
+        await updateOrganization({
+          id: payload.data.metadata.organizationId as string,
+          polarCustomerId: payload.data.customerId!,
+          email: payload.data.customer.email ?? undefined,
+          tier,
+          plan: "pro",
+        });
+
+        break;
+      }
+
       // Subscription has been revoked/peroid has ended with no renewal
       case "subscription.revoked": {
         if (!payload.data.customerId || !payload.data.customer.email) {
