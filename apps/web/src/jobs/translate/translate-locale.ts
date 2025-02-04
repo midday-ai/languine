@@ -47,10 +47,10 @@ const translateLocaleSchema = z.object({
 export const translateLocaleTask = schemaTask({
   id: "translate-locale",
   schema: translateLocaleSchema,
-  maxDuration: 600,
+  maxDuration: 1800, // 30 minutes
   queue: {
-    // Global limit for all tasks we need 20 RPS
-    concurrencyLimit: 20,
+    // Global limit for all tasks we need 40 RPS
+    concurrencyLimit: 40,
   },
   retry: {
     maxAttempts: 4,
