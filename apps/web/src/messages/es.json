@@ -656,7 +656,7 @@
   },
   "manage_subscription": {
     "title": "Gestionar Suscripción",
-    "manage_description": "Gestiona tu suscripción, detalles de facturación y descarga de facturas.",
+    "manage_description": "Gestiona tu suscripción, detalles de facturación y descarga facturas.",
     "manage_button": "Gestionar Suscripción"
   }
 }

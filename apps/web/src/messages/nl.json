@@ -645,11 +645,11 @@
     "translationKeys": "Vertaal Sleutels",
     "documents": "Documenten",
     "languages": "Talen",
-    "changePlan": "Plan Upgraden",
+    "changePlan": "Upgrade Plan",
     "free": "Gratis"
   },
   "changePlan": {
-    "title": "Plan Upgraden",
+    "title": "Upgrade Plan",
     "upgrade_to_tier": "Upgrade naar laag {tier}",
     "cancel": "Annuleren",
     "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaal sleutels, documenten, talen en prioritaire ondersteuning."
@@ -657,6 +657,6 @@
   "manage_subscription": {
     "title": "Beheer Abonnement",
     "manage_description": "Beheer uw abonnement, factuurgegevens en download facturen.",
-    "manage_button": "Abonnement Beheren"
+    "manage_button": "Beheer Abonnement"
   }
 }
