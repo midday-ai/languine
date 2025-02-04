@@ -77,7 +77,7 @@ export function CurrentTier({
             <Button
               variant="outline"
               onClick={() =>
-                setQueryStates({ modal: "plan", tier: Math.min(tier + 1, 8) })
+                setQueryStates({ modal: "plan", tier: Math.min(tier + 1, 9) })
               }
             >
               {t("changePlan")}

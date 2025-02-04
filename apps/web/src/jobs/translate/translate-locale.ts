@@ -49,8 +49,8 @@ export const translateLocaleTask = schemaTask({
   schema: translateLocaleSchema,
   maxDuration: 600,
   queue: {
-    // Global limit for all tasks we need 50 RPS
-    concurrencyLimit: 50,
+    // Global limit for all tasks we need 20 RPS
+    concurrencyLimit: 20,
   },
   retry: {
     maxAttempts: 4,

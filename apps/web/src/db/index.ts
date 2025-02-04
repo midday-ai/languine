@@ -21,7 +21,7 @@ const auPool = postgres(process.env.DATABASE_AU_URL!, {
   prepare: false,
 });
 
-const primaryDb = drizzle(primaryPool, { schema });
+export const primaryDb = drizzle(primaryPool, { schema });
 const usReplica = drizzle(usPool, { schema });
 const euReplica = drizzle(euPool, { schema });
 const auReplica = drizzle(auPool, { schema });
