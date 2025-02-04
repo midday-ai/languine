@@ -663,6 +663,9 @@ files:
     settings.team.members.dateSort.newest: a131e842b2bac1c54ab2d93015431a30
     settings.team.members.dateSort.oldest: ca4b4021466a7737e27971c036f52c2a
     settings.team.members.deleteInviteConfirm: 86bfb72423807c7187a22b3a385e6cab
+    settings.team.email.title: 325304f79f68a72764caee2b4650b069
+    settings.team.email.description: 89b2fc84782396d939bdbd66869ace99
+    settings.team.email.placeholder: 8a84959df62fdc04bdd900624ac26a86
     tuning.general: 0a6892b9c620daf64f6cac8931ecef06
     tuning.translationMemory.title: 6f314b0bc1a109e0e090db52b40117e5
     tuning.translationMemory.description: c45cab8df493e3f1fd290d09cd453151
@@ -906,21 +909,18 @@ files:
     plan_settings.keysUsed: 1bf71938e57cd79569a64b1e7b56d492
     plan_settings.documentsUsed: bd0bc99a9b782b37bac48e77c9538650
     plan_settings.languagesUsed: 92065c36db3bbc6c9cb9dbc7720cf3b2
-    settings.team.email.title: 325304f79f68a72764caee2b4650b069
-    settings.team.email.description: 2878d2b3abcc39912da1b88cfb7a014d
-    settings.team.email.placeholder: 8a84959df62fdc04bdd900624ac26a86
-    plan_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
-    current_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
-    current_tier.tier: d11a28580e943fe9eefe3481b224b314
+    plan_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
+    current_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
+    current_tier.tier: 884ba3386547c7dd63c0179da6c107ab
     current_tier.translationKeys: 70cd2f99392575c8bc14d4cf46d9ef9a
     current_tier.documents: ad89b7b8b181f445551fe1bc5c7abe61
     current_tier.languages: bf6c56085d5ba147fe0860211f201685
-    current_tier.changePlan: 1fe3efee27c4f7aee02d69f92d768c74
+    current_tier.changePlan: 4383ed143e94237bef3101836bde8a02
     current_tier.free: 2496721b8d95ee9876c6d33574604250
-    changePlan.title: 1fe3efee27c4f7aee02d69f92d768c74
-    changePlan.upgrade_to_tier: c95bae317d66ade5d62031cec5d66641
+    changePlan.title: 4383ed143e94237bef3101836bde8a02
+    changePlan.upgrade_to_tier: 4624f5b8d82955e16094f27259a3ffad
     changePlan.cancel: 4b97278b444c0203fc17d7b93a39f5c7
-    changePlan.description: f627a33ea5bf188ccb7026cac68dde9b
+    changePlan.description: cceedc240317fd3d9f0c7c80af37e55b
     manage_subscription.title: c3c8a3d84c4a262161cc54b70bcfcfce
     manage_subscription.manage_description: b697a62fa779c6575c0ebfbec9c47114
     manage_subscription.manage_button: c3c8a3d84c4a262161cc54b70bcfcfce
@@ -1108,6 +1108,9 @@ files:
     settings.team.members.dateSort.newest: 48dd58c8d08274eadbdcc58d2975c9e3
     settings.team.members.dateSort.oldest: 237bf8c7c412697d6da6d82555e73865
     settings.team.members.deleteInviteConfirm: aa5f8bc480983b8f12fe6a44ff6f034f
+    settings.team.email.title: 6a1c42501ef3ae2ce60a459b25354e69
+    settings.team.email.description: 27856e0519fb8d92d73bec4c0db9a25c
+    settings.team.email.placeholder: 36ddf7ef0f2ac4650171b01e0d204e1f
     tuning.general: 0db377921f4ce762c62526131097968f
     tuning.translationMemory.title: 68ded507100ca4a5eb5a83ed2c217b64
     tuning.translationMemory.description: c7a1b9dfadf3900da85584bd02b98718
@@ -1351,9 +1354,6 @@ files:
     plan_settings.keysUsed: 541d17eb14bd47d1d2bce722d91e88b6
     plan_settings.documentsUsed: 8e613ad96491e77955928689b4eb2daa
     plan_settings.languagesUsed: 1ba9a9ff27bcc697e181dfcb9487dba9
-    settings.team.email.title: 6a1c42501ef3ae2ce60a459b25354e69
-    settings.team.email.description: 27856e0519fb8d92d73bec4c0db9a25c
-    settings.team.email.placeholder: 36ddf7ef0f2ac4650171b01e0d204e1f
     plan_tier.currentTier: 8aa1f0c5284734d75e82976a00cd11bf
     current_tier.currentTier: 8aa1f0c5284734d75e82976a00cd11bf
     current_tier.tier: 48281f892129153b9a8eb1aa6c7b4def
@@ -1553,6 +1553,9 @@ files:
     settings.team.members.dateSort.newest: 7b4677a49a5e6abc0b306e0c641e1e76
     settings.team.members.dateSort.oldest: ec57e93d57c629f13fa309ba603055b3
     settings.team.members.deleteInviteConfirm: c2eb36830c8fc14befdff7010c092035
+    settings.team.email.title: 39920f019b41ac04bb1e872d5366dad3
+    settings.team.email.description: 43d1dc52b4819d9a1d9c44666268c9ee
+    settings.team.email.placeholder: 97215d402226e5af48c3386a1c0812e5
     tuning.general: 019659385112972f45a3b22f83ba71b5
     tuning.translationMemory.title: a17db8b300c4b8f8cb2a213be08efa87
     tuning.translationMemory.description: db367543285b5e45948c9e574509a8e0
@@ -1796,9 +1799,6 @@ files:
     plan_settings.keysUsed: f26e18859b04c739e77760486b0b2963
     plan_settings.documentsUsed: 4bc1cf41edba6b195e056a5b466f5c39
     plan_settings.languagesUsed: 9960ffcdd37e2834a2b7520704c92476
-    settings.team.email.title: 39920f019b41ac04bb1e872d5366dad3
-    settings.team.email.description: 43d1dc52b4819d9a1d9c44666268c9ee
-    settings.team.email.placeholder: 97215d402226e5af48c3386a1c0812e5
     plan_tier.currentTier: b6697487e2f7b7d59c6d6dd59f3ecd1a
     current_tier.currentTier: b6697487e2f7b7d59c6d6dd59f3ecd1a
     current_tier.tier: 5893543f1e918e09376aa0dbaf5dfc08
@@ -1810,7 +1810,7 @@ files:
     changePlan.title: fb44b49ed5687e3983afc7581f0fbafc
     changePlan.upgrade_to_tier: ca60b245c2f71ea9a056f060d82a0e1a
     changePlan.cancel: 54847413938d69ec23f3f7fe3b409708
-    changePlan.description: 18cf4db2c46b7c264fceff9c55e5c693
+    changePlan.description: 6a1f8a483d6058daad86c2566c920df1
     manage_subscription.title: f6569b91557960a7ccba47f9b214170e
     manage_subscription.manage_description: b4f20c67136f51396ace3f4c300a076d
     manage_subscription.manage_button: f6569b91557960a7ccba47f9b214170e
@@ -1998,6 +1998,9 @@ files:
     settings.team.members.dateSort.newest: 0d3b0f2c4bd6a95da81c9987ad158535
     settings.team.members.dateSort.oldest: a15df2a503ca0ced8535ab6c7ce1af19
     settings.team.members.deleteInviteConfirm: 85021f1d2f9955f028ba3e98c73d1127
+    settings.team.email.title: ac18ca5c15ac6b42fa9dca9c59d78cdb
+    settings.team.email.description: 7c714f1d5b4d91f9fad3d92a507e5f8a
+    settings.team.email.placeholder: 1bda2bf15693f1f103c000931dbbfd0e
     tuning.general: cbf5d231135412fb14429e086c09a722
     tuning.translationMemory.title: 2e976836729392a2b2dde849cb290318
     tuning.translationMemory.description: 80b837d48edcb66539d44cea6fe8d94d
@@ -2241,9 +2244,6 @@ files:
     plan_settings.keysUsed: 4bedaceab4d282aa0dda1d96ee87bd1b
     plan_settings.documentsUsed: a78dec1f490902db94f007c9c42cba83
     plan_settings.languagesUsed: b379bd4eb00ef08dc98988ebe30bc633
-    settings.team.email.title: ac18ca5c15ac6b42fa9dca9c59d78cdb
-    settings.team.email.description: 7c714f1d5b4d91f9fad3d92a507e5f8a
-    settings.team.email.placeholder: 1bda2bf15693f1f103c000931dbbfd0e
     plan_tier.currentTier: caf2b96e55d913aea18f58cea447d1e0
     current_tier.currentTier: caf2b96e55d913aea18f58cea447d1e0
     current_tier.tier: b0767596359183594f95ab4558737883
@@ -2253,7 +2253,7 @@ files:
     current_tier.changePlan: 1dcff973a4c45d81eda1b78aeabedd9a
     current_tier.free: 1740c5dd83622f31962f17c52a598f7b
     changePlan.title: 1dcff973a4c45d81eda1b78aeabedd9a
-    changePlan.upgrade_to_tier: 58f84c85207fc315e14192223ec16949
+    changePlan.upgrade_to_tier: cf2a3bc8979f1b70baa234892fec3eca
     changePlan.cancel: d12c3b0dcf75614dafb2ac6bdaa77a26
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
     manage_subscription.title: 2ad1f4a0b21411b82f26261630d0fe36
@@ -2443,6 +2443,9 @@ files:
     settings.team.members.dateSort.newest: b9c5f04e55d2b0c76a4819dfa7e5a7c5
     settings.team.members.dateSort.oldest: 876fb15c9cb586dc81e41fe3e3c9bc95
     settings.team.members.deleteInviteConfirm: 9f53992af68e993ebec30043d7469a95
+    settings.team.email.title: d2bf695a08e3cbcbe0ba5feb6d431b5f
+    settings.team.email.description: b138229a6852f87741fea3c873f9e114
+    settings.team.email.placeholder: bcff5cfa88f480144a0f259ba58d6f0f
     tuning.general: 32f6595236b90375199bf78f73144d1d
     tuning.translationMemory.title: 0bf9f940b6c29da44a3472d2bc956163
     tuning.translationMemory.description: f0e4efd5fe7b7b8dc63c3ff6d21f99f0
@@ -2686,9 +2689,6 @@ files:
     plan_settings.keysUsed: 2b7c770e4f1deb8c70ed888f7fc56162
     plan_settings.documentsUsed: 5c6b4a44a0b065a0fba8fca50f29142b
     plan_settings.languagesUsed: dbebf6bb60a94cc38e7c29162b7085a1
-    settings.team.email.title: d2bf695a08e3cbcbe0ba5feb6d431b5f
-    settings.team.email.description: b138229a6852f87741fea3c873f9e114
-    settings.team.email.placeholder: bcff5cfa88f480144a0f259ba58d6f0f
     plan_tier.currentTier: f02fb8b44ecd85615e9e6ef0803bbcff
     current_tier.currentTier: f02fb8b44ecd85615e9e6ef0803bbcff
     current_tier.tier: aa879ff6df72bd5dba36501f8c07eee3
@@ -2698,7 +2698,7 @@ files:
     current_tier.changePlan: 04ce0ddc35a37784973c0e9023244a09
     current_tier.free: b461d3afae10775fb16718aeee6baf44
     changePlan.title: 04ce0ddc35a37784973c0e9023244a09
-    changePlan.upgrade_to_tier: d3b071b01d1530971e899a54141eec64
+    changePlan.upgrade_to_tier: f2d422d23dbcee9843b471f3cb056edd
     changePlan.cancel: 160009a89ee5a2603a26c2bcd824de7a
     changePlan.description: 39483fb3489541d7f50b3052b400da63
     manage_subscription.title: 2c802c8240d9e142582aceb1bbe872fd
@@ -2888,6 +2888,9 @@ files:
     settings.team.members.dateSort.newest: acc401c4b596e05374cd1ad32d47a89d
     settings.team.members.dateSort.oldest: 8a451ddeb8346a2be81ead201133da6e
     settings.team.members.deleteInviteConfirm: 731fc84592bd22552a568e8777c4028e
+    settings.team.email.title: 801599565450ed41fbfed0c9e0f2373e
+    settings.team.email.description: 62177f00654c1e1acc96f430d52fbf82
+    settings.team.email.placeholder: 2af2815eb0f649e599ac12ac33ff5bd3
     tuning.general: 8209e50851590f2c7af374c8d8966e2a
     tuning.translationMemory.title: 9b5db588d5f06b73adb0c5c529a902cc
     tuning.translationMemory.description: b3a572f80f539347651a8af52100062e
@@ -3131,9 +3134,6 @@ files:
     plan_settings.keysUsed: 409688152ca19d5ffe797502881a3bb2
     plan_settings.documentsUsed: 8a53131e5b6b827479f5a2f6a43f0309
     plan_settings.languagesUsed: f0b6bbae72c897f547f95d6d7a4e90ce
-    settings.team.email.title: 801599565450ed41fbfed0c9e0f2373e
-    settings.team.email.description: 62177f00654c1e1acc96f430d52fbf82
-    settings.team.email.placeholder: 2af2815eb0f649e599ac12ac33ff5bd3
     plan_tier.currentTier: 391ea5b14ae8a5b41574c2f59fb895e6
     current_tier.currentTier: 391ea5b14ae8a5b41574c2f59fb895e6
     current_tier.tier: b91bb6e55abf69ee65e4dd584488684e
@@ -3333,6 +3333,9 @@ files:
     settings.team.members.dateSort.newest: 81e4dc5780288484ca4c37bcf94925d4
     settings.team.members.dateSort.oldest: c17a86056a59d9c58e5affb4cbd34ab7
     settings.team.members.deleteInviteConfirm: 1205bd74ecf2d2daba7f66b0fb64cc78
+    settings.team.email.title: 0137062863344f265d1005793e1cafa2
+    settings.team.email.description: 1ec5f099dfa170429f1a600e10c63e22
+    settings.team.email.placeholder: b7fc8f5299141b8b5d11315d7a70323b
     tuning.general: c132c7ff0ed860eb896099bc0099c87e
     tuning.translationMemory.title: 6f8fc796f667262e01795885d8e9a798
     tuning.translationMemory.description: 43144155bb7bd4f81e0391331e09c28e
@@ -3576,24 +3579,21 @@ files:
     plan_settings.keysUsed: 07295986bb08838ae88abb74805f3282
     plan_settings.documentsUsed: 9f772db97a14c74ac067d4f23e8eb945
     plan_settings.languagesUsed: c85022cb94002cfe92ead132a30551dc
-    settings.team.email.title: 0137062863344f265d1005793e1cafa2
-    settings.team.email.description: 1ec5f099dfa170429f1a600e10c63e22
-    settings.team.email.placeholder: b7fc8f5299141b8b5d11315d7a70323b
     plan_tier.currentTier: fd031aafb1a74a1b437a20689d881020
     current_tier.currentTier: fd031aafb1a74a1b437a20689d881020
     current_tier.tier: 979d19622442649809f690f18db38df8
     current_tier.translationKeys: 480463195eaa62f8996307be15bfb69e
     current_tier.documents: ade6564f28e4e8b57d19be9f2828c4f5
     current_tier.languages: 614bf8df7b3b40ce32990fe7d0b9fd35
-    current_tier.changePlan: 549d3825c76e99eac69b1b4a884de629
+    current_tier.changePlan: 9622c46ac664d07f743905654edd5f26
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
-    changePlan.title: 549d3825c76e99eac69b1b4a884de629
+    changePlan.title: 9622c46ac664d07f743905654edd5f26
     changePlan.upgrade_to_tier: 6782f9820b6da6ade7e37ff849c2b609
     changePlan.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
     changePlan.description: 03355e328aaa02a245fe2030d2c3012e
     manage_subscription.title: 668c8a84f946e1504bef3ae71bc384d0
     manage_subscription.manage_description: 232b3efca7344ba246ed0baeb600c23e
-    manage_subscription.manage_button: d06a1b3ed323994f6b28c45fed3e7b62
+    manage_subscription.manage_button: 668c8a84f946e1504bef3ae71bc384d0
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -3778,6 +3778,9 @@ files:
     settings.team.members.dateSort.newest: ba201087fe6aababde75aaf9d974f1c1
     settings.team.members.dateSort.oldest: 311c7724e741557983fcebfa8ba69f41
     settings.team.members.deleteInviteConfirm: 9d655fcdbad47ba5eb37e8d26e64d14a
+    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
+    settings.team.email.description: ae1623c633ea4b0ac1880e99b06f63c6
+    settings.team.email.placeholder: 050367ce6d59ae6b9b35b8024f676d6b
     tuning.general: a3f43d574940dccc8643842769e48fd4
     tuning.translationMemory.title: abcc84df4eb6d086b4ed6e27092de085
     tuning.translationMemory.description: d861a66ec71c2b4ef22826b94c0e1805
@@ -4021,9 +4024,6 @@ files:
     plan_settings.keysUsed: 2d3aab2c459c8b0b5fbae7cc1414c963
     plan_settings.documentsUsed: eec549510a37d75785ff8d98a955ba0f
     plan_settings.languagesUsed: 68f9b6288b3c2120e771f70045b324e1
-    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
-    settings.team.email.description: ae1623c633ea4b0ac1880e99b06f63c6
-    settings.team.email.placeholder: 050367ce6d59ae6b9b35b8024f676d6b
     plan_tier.currentTier: 63da2088cb72cc3d3e1588bb351377a2
     current_tier.currentTier: 63da2088cb72cc3d3e1588bb351377a2
     current_tier.tier: d44fe719c1353ca5a8fc8e1efb0de722
@@ -4037,7 +4037,7 @@ files:
     changePlan.cancel: edfc4be89515f79e98fcb523d67c0513
     changePlan.description: 6ef4728452123b3534f9b827531283e4
     manage_subscription.title: d693c3b6db989935a1cfecadd869639b
-    manage_subscription.manage_description: 3d1324cb0146efc7d611efbf240d1957
+    manage_subscription.manage_description: 850fbd6191f231430c8436ecc8904752
     manage_subscription.manage_button: d693c3b6db989935a1cfecadd869639b
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
@@ -4223,6 +4223,9 @@ files:
     settings.team.members.dateSort.newest: ec86ce2121b81bbfb032633c71ec5c42
     settings.team.members.dateSort.oldest: ee8f3570c4091c2761823d518cd9386e
     settings.team.members.deleteInviteConfirm: 497c114c0895993ef454bee0c69f050d
+    settings.team.email.title: c3eb9ca29c39da11f6d705f3e674c31e
+    settings.team.email.description: cf895f4e57e1db6fdb016192c6ee6779
+    settings.team.email.placeholder: 631c7e2a950f887bccc82e6c40cb0d05
     tuning.general: 761f5c32978f9f9cbb1deacea4db0ea5
     tuning.translationMemory.title: 1d3bfce7196aa74b22aeb6b8d308707e
     tuning.translationMemory.description: b234b23fc93ef7fb54db9154f9f0f841
@@ -4466,9 +4469,6 @@ files:
     plan_settings.keysUsed: 90b0c2f4e189f8004fe4c265554e4e49
     plan_settings.documentsUsed: 02ccf5bcb225662e23dafea7575e8f3e
     plan_settings.languagesUsed: 821c707b392e53d2d7f08e01f64542b4
-    settings.team.email.title: c3eb9ca29c39da11f6d705f3e674c31e
-    settings.team.email.description: cf895f4e57e1db6fdb016192c6ee6779
-    settings.team.email.placeholder: 631c7e2a950f887bccc82e6c40cb0d05
     plan_tier.currentTier: 194d40c5edc1379f5789869075374940
     current_tier.currentTier: 194d40c5edc1379f5789869075374940
     current_tier.tier: 91e17f6f135289069b0c4911e5a3d6a8
@@ -4482,7 +4482,7 @@ files:
     changePlan.cancel: 327901a406600dcd9ec58eba06e8ec8c
     changePlan.description: 4e9e3c5815afc1d03b2b67cad15ee14f
     manage_subscription.title: c69b0081675be62799f53fb7afee9882
-    manage_subscription.manage_description: 0e3e60f7e805e9a20a753b72d7ed1c86
+    manage_subscription.manage_description: d59ec70728c2337e005baea1cd76726c
     manage_subscription.manage_button: c69b0081675be62799f53fb7afee9882
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
@@ -4668,6 +4668,9 @@ files:
     settings.team.members.dateSort.newest: 59bdd9caac0bfe16d0be1f49830b58c5
     settings.team.members.dateSort.oldest: 940d1363ba208670ab479302e849b9d1
     settings.team.members.deleteInviteConfirm: 0b5b763e98d3bdf4dbfed3fdff8f2678
+    settings.team.email.title: 79e7bee1bc752904574eb1ee0f94d87a
+    settings.team.email.description: 612d19b676008640bdce17a2848c80a0
+    settings.team.email.placeholder: df87b3754eb8b1d9f3037538a8c4721d
     tuning.general: 42238015090fc2146650bd7f9d58906b
     tuning.translationMemory.title: 5827e4a95c9732d6ea416cb9c362f265
     tuning.translationMemory.description: 3815ea18ecf6b34aedcca3c359d7b83b
@@ -4911,9 +4914,6 @@ files:
     plan_settings.keysUsed: 5a8fe4f0232e9aa172f06255b230741f
     plan_settings.documentsUsed: 9d018bdfd7109af73c0adf581318187b
     plan_settings.languagesUsed: edddb651be270fe2b11095b1566a796d
-    settings.team.email.title: 79e7bee1bc752904574eb1ee0f94d87a
-    settings.team.email.description: 612d19b676008640bdce17a2848c80a0
-    settings.team.email.placeholder: df87b3754eb8b1d9f3037538a8c4721d
     plan_tier.currentTier: 2412ae436b627e07d1515d9f0801d5fc
     current_tier.currentTier: 2412ae436b627e07d1515d9f0801d5fc
     current_tier.tier: c7b3574abd1ae7e3bbaab514f723ec86
@@ -5120,6 +5120,9 @@ files:
     settings.team.members.dateSort.newest: 9902c441d0817b8c76cc2990467d3882
     settings.team.members.dateSort.oldest: cb22c6f528fef915d79065f7e0c67428
     settings.team.members.deleteInviteConfirm: 73f97d60bf25ff024d38a6317a10351c
+    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
+    settings.team.email.description: 57ff1e8dfc4f6117fd8dcc16f4a5947e
+    settings.team.email.placeholder: e2fe491f9be5c9389563c90b2072fd19
     tuning.general: a1335e66b286b5753b14edc5ff88e767
     tuning.translationMemory.title: 15fd658e69bdff7f79a7ca7337f54b41
     tuning.translationMemory.description: f51b1f5c2f7b4624d88d976452defa97
@@ -5356,9 +5359,6 @@ files:
     plan_settings.keysUsed: 7ea13cd5959da3d8fad9fb22a1fc8bf0
     plan_settings.documentsUsed: dc1019871c18ae8a9ca22cf9b01b51c9
     plan_settings.languagesUsed: 696909100824bef17f0289ee7512761c
-    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
-    settings.team.email.description: 57ff1e8dfc4f6117fd8dcc16f4a5947e
-    settings.team.email.placeholder: e2fe491f9be5c9389563c90b2072fd19
     plan_tier.currentTier: 80e5306abcb38d6de0713428be0fa4dd
     current_tier.currentTier: 80e5306abcb38d6de0713428be0fa4dd
     current_tier.tier: d44fe719c1353ca5a8fc8e1efb0de722

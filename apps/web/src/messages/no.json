@@ -656,7 +656,7 @@
   },
   "manage_subscription": {
     "title": "Administrer abonnement",
-    "manage_description": "Administrer abonnementet ditt, fakturadetaljer og last ned fakturaer.",
+    "manage_description": "Administrer abonnementet ditt, faktureringsdetaljer og last ned fakturaer.",
     "manage_button": "Administrer abonnement"
   }
 }
