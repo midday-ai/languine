@@ -68,7 +68,7 @@ export const PRODUCT_ID_MAP_SANDBOX = {
 };
 
 export const PRODUCT_ID_MAP =
-  process.env.POLAR_ENVIRONMENT === "sandbox"
+  process.env.NEXT_PUBLIC_POLAR_ENVIRONMENT === "sandbox"
     ? PRODUCT_ID_MAP_SANDBOX
     : PRODUCT_ID_MAP_PRODUCTION;
 

@@ -10,6 +10,7 @@ type Props = {
   documentsUsed: number;
   languagesUsed: number;
   polarCustomerId?: string;
+  canceledAt?: string | null;
 };
 
 export function BillingPlan({
@@ -18,6 +19,7 @@ export function BillingPlan({
   documentsUsed,
   languagesUsed,
   polarCustomerId,
+  canceledAt,
 }: Props) {
   return (
     <div className="space-y-10">
@@ -28,10 +30,11 @@ export function BillingPlan({
         languagesUsed={languagesUsed}
       />
 
-      {!polarCustomerId && <CurrentTier tier={tier} />}
-      {polarCustomerId && (
-        <ManageSubscription polarCustomerId={polarCustomerId} />
-      )}
+      <CurrentTier
+        tier={tier}
+        polarCustomerId={polarCustomerId}
+        canceledAt={canceledAt}
+      />
     </div>
   );
 }

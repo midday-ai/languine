@@ -40,6 +40,7 @@ export const organizations = pgTable(
     name: text("name").notNull(),
     logo: text("logo"),
     email: text("email"),
+    canceledAt: timestamp("canceled_at"),
     plan: text("plan", { enum: ["free", "pro"] })
       .notNull()
       .default("free"),

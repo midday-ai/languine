@@ -641,17 +641,14 @@
     "documents": "Documents",
     "languages": "Languages",
     "changePlan": "Upgrade Plan",
-    "free": "Free"
+    "free": "Free",
+    "manage_button": "Manage Subscription",
+    "canceled": "To be cancelled"
   },
   "changePlan": {
     "title": "Upgrade Plan",
     "upgrade_to_tier": "Upgrade to tier {tier}",
     "cancel": "Cancel",
     "description": "Upgrade your plan to increase your limits. You'll get access to more translation keys, documents, languages, and priority support."
-  },
-  "manage_subscription": {
-    "title": "Manage Subscription",
-    "manage_description": "Manage your subscription, billing details and download invoices.",
-    "manage_button": "Manage Subscription"
-   }
+  }
 }

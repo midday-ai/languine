@@ -24,6 +24,7 @@ export const POST = Webhooks({
           polarCustomerId: payload.data.customerId!,
           email: payload.data.customerEmail ?? undefined,
           tier,
+          canceledAt: null,
           plan: "pro",
         });
 
@@ -43,7 +44,24 @@ export const POST = Webhooks({
           polarCustomerId: payload.data.customerId!,
           email: payload.data.customer.email ?? undefined,
           tier,
+          canceledAt: null,
           plan: "pro",
+        });
+
+        break;
+      }
+
+      // Subscription has been explicitly canceled by the user
+      case "subscription.canceled": {
+        console.log("subscription.canceled", payload);
+        console.log("canceledAt", {
+          id: payload.data.metadata.organizationId as string,
+          canceledAt: new Date(),
+        });
+
+        await updateOrganization({
+          id: payload.data.metadata.organizationId as string,
+          canceledAt: new Date(),
         });
 
         break;
@@ -60,6 +78,7 @@ export const POST = Webhooks({
           id: payload.data.metadata.organizationId as string,
           tier: 0,
           plan: "free",
+          canceledAt: null,
         });
 
         break;

@@ -26,7 +26,7 @@ export const buildCheckoutURL = ({
   if (
     // Only set customerId if we're in production and the customer has a polarCustomerId
     customerData?.polarCustomerId &&
-    process.env.POLAR_ENVIRONMENT === "production"
+    process.env.NEXT_PUBLIC_POLAR_ENVIRONMENT === "production"
   ) {
     params.append("customerId", customerData.polarCustomerId);
   }

@@ -20,6 +20,7 @@ export function BillingSettings() {
       keysUsed={data.totalKeys}
       documentsUsed={data.totalDocuments}
       languagesUsed={data.totalLanguages}
+      canceledAt={data.canceledAt}
     />
   );
 }

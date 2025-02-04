@@ -14,9 +14,12 @@ import { trpc } from "@/trpc/client";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
+import { useState } from "react";
 import { PricingSlider } from "../pricing-slider";
+import { SubmitButton } from "../ui/submit-button";
 
 export function ChangePlanModal() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const t = useTranslations("changePlan");
   const { organization } = useParams();
   const pathname = usePathname();
@@ -64,7 +67,13 @@ export function ChangePlanModal() {
               customerData: data,
             })}
           >
-            <Button>{t("upgrade_to_tier", { tier: tier })}</Button>
+            <SubmitButton
+              isSubmitting={isSubmitting}
+              variant="default"
+              onClick={() => setIsSubmitting(true)}
+            >
+              {t("upgrade_to_tier", { tier: tier })}
+            </SubmitButton>
           </Link>
         </DialogFooter>
       </DialogContent>

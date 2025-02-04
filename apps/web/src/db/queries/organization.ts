@@ -154,6 +154,7 @@ export const updateOrganization = async ({
   tier,
   plan,
   polarCustomerId,
+  canceledAt,
 }: {
   id: string;
   name?: string;
@@ -162,6 +163,7 @@ export const updateOrganization = async ({
   tier?: number;
   plan?: "free" | "pro";
   polarCustomerId?: string;
+  canceledAt?: Date | null;
 }) => {
   const db = await connectDb();
 
@@ -174,6 +176,7 @@ export const updateOrganization = async ({
       tier,
       plan,
       polarCustomerId,
+      canceledAt,
     })
     .where(eq(organizations.id, id))
     .returning();
@@ -448,6 +451,7 @@ export const getOrganizationStats = async (organizationId: string) => {
     tier: organization.tier,
     plan: organization.plan,
     polarCustomerId: organization.polarCustomerId,
+    canceledAt: organization.canceledAt,
   };
 };
 
