@@ -39,6 +39,7 @@ export const organizations = pgTable(
       .$defaultFn(() => createId()),
     name: text("name").notNull(),
     logo: text("logo"),
+    email: text("email"),
     plan: text("plan", { enum: ["free", "pro"] })
       .notNull()
       .default("free"),
@@ -47,6 +48,7 @@ export const organizations = pgTable(
       .unique()
       .$defaultFn(() => `org_${createId()}`),
     tier: integer("tier").notNull().default(0),
+    polarCustomerId: text("polar_customer_id"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     metadata: text("metadata"),
   },

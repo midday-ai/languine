@@ -1,21 +1,50 @@
+import { updateOrganization } from "@/db/queries/organization";
+import { getTierFromProductId } from "@/lib/tiers";
 import { Webhooks } from "@polar-sh/nextjs";
 
 export const POST = Webhooks({
   webhookSecret: process.env.POLAR_WEBHOOK_SECRET!,
   onPayload: async (payload) => {
     switch (payload.type) {
-      case "subscription.created":
-        // Handle the subscription created event
+      case "checkout.updated": {
+        if (!payload.data.metadata.organizationId) {
+          console.error("Organization ID is missing");
+          break;
+        }
+
+        const tier = getTierFromProductId(payload.data.productId);
+
+        if (!tier) {
+          console.error("Invalid product ID", payload.data.productId);
+          break;
+        }
+
+        await updateOrganization({
+          id: payload.data.metadata.organizationId as string,
+          polarCustomerId: payload.data.customerId!,
+          email: payload.data.customerEmail ?? undefined,
+          tier,
+          plan: "pro",
+        });
+
         break;
-      case "subscription.updated":
-        // Handle the subscription updated event
+      }
+
+      // Subscription has been revoked/peroid has ended with no renewal
+      case "subscription.revoked": {
+        if (!payload.data.customerId || !payload.data.customer.email) {
+          console.error("Customer ID or email is missing");
+          break;
+        }
+
+        await updateOrganization({
+          id: payload.data.metadata.organizationId as string,
+          tier: 0,
+          plan: "free",
+        });
+
         break;
-      case "subscription.active":
-        // Handle the subscription active event
-        break;
-      case "subscription.canceled":
-        // Handle the subscription canceled event
-        break;
+      }
       default:
         console.log("Unknown event", payload.type);
         break;

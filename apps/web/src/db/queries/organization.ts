@@ -150,10 +150,18 @@ export const updateOrganization = async ({
   id,
   name,
   logo,
+  email,
+  tier,
+  plan,
+  polarCustomerId,
 }: {
   id: string;
-  name: string;
+  name?: string;
   logo?: string;
+  email?: string;
+  tier?: number;
+  plan?: "free" | "pro";
+  polarCustomerId?: string;
 }) => {
   const db = await connectDb();
 
@@ -162,6 +170,10 @@ export const updateOrganization = async ({
     .set({
       name,
       logo,
+      email,
+      tier,
+      plan,
+      polarCustomerId,
     })
     .where(eq(organizations.id, id))
     .returning();
@@ -401,4 +413,56 @@ export const acceptInvitation = async (invitationId: string) => {
     .where(eq(invitations.id, invitationId));
 
   return { member, invitation };
+};
+
+export const getOrganizationStats = async (organizationId: string) => {
+  const db = await connectDb();
+
+  // Get organization details including tier
+  const organization = await db.query.organizations.findFirst({
+    where: eq(organizations.id, organizationId),
+  });
+
+  if (!organization) {
+    throw new Error("Organization not found");
+  }
+
+  // Get total keys and documents
+  const { totalKeys, totalDocuments } =
+    await getOrganizationLimits(organizationId);
+
+  // Get total languages by counting distinct target languages
+  const languages = await db
+    .selectDistinct({
+      targetLanguage: translations.targetLanguage,
+    })
+    .from(translations)
+    .where(eq(translations.organizationId, organizationId));
+
+  const totalLanguages = languages.length;
+
+  return {
+    totalKeys,
+    totalDocuments,
+    totalLanguages,
+    tier: organization.tier,
+    plan: organization.plan,
+    polarCustomerId: organization.polarCustomerId,
+  };
+};
+
+export const isUserOrganizationMember = async (
+  userId: string,
+  organizationId: string,
+) => {
+  const db = await connectDb();
+
+  const member = await db.query.members.findFirst({
+    where: and(
+      eq(members.userId, userId),
+      eq(members.organizationId, organizationId),
+    ),
+  });
+
+  return !!member;
 };

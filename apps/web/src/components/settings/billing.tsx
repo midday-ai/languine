@@ -1,21 +1,25 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { PlanSettings } from "../plan-settings";
+import { trpc } from "@/trpc/client";
+import { useParams } from "next/navigation";
+import { BillingPlan, BillingPlanSkeleton } from "../billing-plan";
 
 export function BillingSettings() {
-  const t = useTranslations("billing");
+  const { organization } = useParams();
+
+  const [data, { isPending }] = trpc.organization.getStats.useSuspenseQuery({
+    organizationId: organization as string,
+  });
+
+  if (isPending) {
+    return <BillingPlanSkeleton />;
+  }
 
   return (
-    <div>
-      <div>
-        <PlanSettings
-          tier={1}
-          keysUsed={1000}
-          documentsUsed={10}
-          languagesUsed={10}
-        />
-      </div>
-    </div>
+    <BillingPlan
+      tier={data.tier}
+      polarCustomerId={data.polarCustomerId}
+      keysUsed={data.totalKeys}
+      documentsUsed={data.totalDocuments}
+      languagesUsed={data.totalLanguages}
+    />
   );
 }

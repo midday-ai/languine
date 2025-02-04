@@ -19,6 +19,10 @@ export default async function Page({
     organizationId: organization,
   });
 
+  trpc.organization.getStats.prefetch({
+    organizationId: organization,
+  });
+
   return (
     <HydrateClient>
       <Settings />

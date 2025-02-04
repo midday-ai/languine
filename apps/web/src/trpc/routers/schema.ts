@@ -93,8 +93,9 @@ export type CreateOrganizationSchema = z.infer<typeof createOrganizationSchema>;
 
 export const updateOrganizationSchema = z.object({
   organizationId: z.string(),
-  name: z.string().min(1),
+  name: z.string().min(1).optional(),
   logo: z.string().optional(),
+  email: z.string().email().optional(),
 });
 
 export type UpdateOrganizationSchema = z.infer<typeof updateOrganizationSchema>;
@@ -183,3 +184,9 @@ export const updateTranslationsSchema = z.object({
 });
 
 export type UpdateTranslationsSchema = z.infer<typeof updateTranslationsSchema>;
+
+export const organizationStatsSchema = z.object({
+  organizationId: z.string(),
+});
+
+export type OrganizationStatsSchema = z.infer<typeof organizationStatsSchema>;

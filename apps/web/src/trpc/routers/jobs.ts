@@ -14,9 +14,12 @@ export const jobsRouter = createTRPCRouter({
     .input(jobsSchema)
     .use(hasProjectAccess)
     .mutation(async ({ input, ctx }) => {
-      const org = await getProjectOrganization(input.projectId);
+      const organization = await getProjectOrganization(input.projectId);
 
-      const limitCheckResult = await checkTranslationLimits(org, input);
+      const limitCheckResult = await checkTranslationLimits(
+        organization,
+        input,
+      );
 
       if (limitCheckResult?.error) {
         return {
@@ -25,12 +28,13 @@ export const jobsRouter = createTRPCRouter({
           meta: {
             plan: limitCheckResult.meta.plan,
             tier: limitCheckResult.meta.tier,
-            organizationId: org.id,
+            organizationId: organization.id,
+            polarCustomerId: organization.polarCustomerId,
           },
         };
       }
 
-      const { options, isFreeUser } = getTranslationTaskOptions(org);
+      const { options, isFreeUser } = getTranslationTaskOptions(organization);
 
       const run = await tasks.trigger<typeof startTranslationsTask>(
         "start-translations",
@@ -55,8 +59,9 @@ export const jobsRouter = createTRPCRouter({
         run,
         meta: {
           plan: isFreeUser ? "free" : "pro",
-          tier: org.tier,
-          organizationId: org.id,
+          tier: organization.tier,
+          organizationId: organization.id,
+          polarCustomerId: organization.polarCustomerId,
         },
       };
     }),
