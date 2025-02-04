@@ -263,6 +263,11 @@
           "oldest": "Oudste"
         },
         "deleteInviteConfirm": "Verwijder Uitnodiging"
+      },
+      "email": {
+        "title": "Team E-mail",
+        "description": "Het e-mailadres dat aan uw team is gekoppeld",
+        "placeholder": "Voer team e-mail in"
       }
     }
   },
@@ -630,5 +635,28 @@
     "keysUsed": "gebruikte sleutels",
     "documentsUsed": "gebruikte documenten",
     "languagesUsed": "gebruikte talen"
+  },
+  "plan_tier": {
+    "currentTier": "Huidige Laag"
+  },
+  "current_tier": {
+    "currentTier": "Huidige Laag",
+    "tier": "Laag",
+    "translationKeys": "Vertaal Sleutels",
+    "documents": "Documenten",
+    "languages": "Talen",
+    "changePlan": "Plan Upgraden",
+    "free": "Gratis"
+  },
+  "changePlan": {
+    "title": "Plan Upgraden",
+    "upgrade_to_tier": "Upgrade naar laag {tier}",
+    "cancel": "Annuleren",
+    "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaal sleutels, documenten, talen en prioritaire ondersteuning."
+  },
+  "manage_subscription": {
+    "title": "Beheer Abonnement",
+    "manage_description": "Beheer uw abonnement, factuurgegevens en download facturen.",
+    "manage_button": "Abonnement Beheren"
   }
 }

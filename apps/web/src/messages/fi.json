@@ -263,6 +263,11 @@
           "oldest": "Vanhimmat"
         },
         "deleteInviteConfirm": "Poista kutsu"
+      },
+      "email": {
+        "title": "Tiimin sähköposti",
+        "description": "Sähköpostiosoite, joka liittyy tiimiisi",
+        "placeholder": "Syötä tiimin sähköposti"
       }
     }
   },
@@ -624,11 +629,34 @@
     "languages": "Kielet"
   },
   "plan_settings": {
-    "translationKeys": "Käännöksen avaimet",
+    "translationKeys": "Käännösohjeet",
     "documents": "Asiakirjat",
     "languages": "Kielet",
     "keysUsed": "käytetyt avaimet",
     "documentsUsed": "käytetyt asiakirjat",
     "languagesUsed": "käytetyt kielet"
+  },
+  "plan_tier": {
+    "currentTier": "Nykyinen taso"
+  },
+  "current_tier": {
+    "currentTier": "Nykyinen taso",
+    "tier": "Taso",
+    "translationKeys": "Käännösohjeet",
+    "documents": "Asiakirjat",
+    "languages": "Kielet",
+    "changePlan": "Päivitä suunnitelma",
+    "free": "Ilmainen"
+  },
+  "changePlan": {
+    "title": "Päivitä suunnitelma",
+    "upgrade_to_tier": "Päivitä tasolle {tier}",
+    "cancel": "Peruuta",
+    "description": "Päivitä suunnitelmasi lisätäksesi rajoja. Saat pääsyn useampiin käännösohjeisiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
+  },
+  "manage_subscription": {
+    "title": "Hallitse tilausta",
+    "manage_description": "Hallitse tilaustasi, laskutustietojasi ja lataa laskuja.",
+    "manage_button": "Hallitse tilausta"
   }
 }

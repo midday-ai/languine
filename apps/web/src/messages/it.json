@@ -263,6 +263,11 @@
           "oldest": "Più vecchio"
         },
         "deleteInviteConfirm": "Elimina Invito"
+      },
+      "email": {
+        "title": "Email del Team",
+        "description": "L'indirizzo email associato al tuo team",
+        "placeholder": "Inserisci l'email del team"
       }
     }
   },
@@ -630,5 +635,28 @@
     "keysUsed": "chiavi utilizzate",
     "documentsUsed": "documenti utilizzati",
     "languagesUsed": "lingue utilizzate"
+  },
+  "plan_tier": {
+    "currentTier": "Livello Attuale"
+  },
+  "current_tier": {
+    "currentTier": "Livello Attuale",
+    "tier": "Livello",
+    "translationKeys": "Chiavi di Traduzione",
+    "documents": "Documenti",
+    "languages": "Lingue",
+    "changePlan": "Aggiorna Piano",
+    "free": "Gratuito"
+  },
+  "changePlan": {
+    "title": "Aggiorna Piano",
+    "upgrade_to_tier": "Aggiorna al livello {tier}",
+    "cancel": "Annulla",
+    "description": "Aggiorna il tuo piano per aumentare i tuoi limiti. Avrai accesso a più chiavi di traduzione, documenti, lingue e supporto prioritario."
+  },
+  "manage_subscription": {
+    "title": "Gestisci Abbonamento",
+    "manage_description": "Gestisci il tuo abbonamento, i dettagli di fatturazione e scarica le fatture.",
+    "manage_button": "Gestisci Abbonamento"
   }
 }

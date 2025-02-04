@@ -263,6 +263,11 @@
           "oldest": "Eldste"
         },
         "deleteInviteConfirm": "Slett invitasjon"
+      },
+      "email": {
+        "title": "Team E-post",
+        "description": "E-postadressen knyttet til teamet ditt",
+        "placeholder": "Skriv inn team e-post"
       }
     }
   },
@@ -627,8 +632,31 @@
     "translationKeys": "Oversettelsesnøkler",
     "documents": "Dokumenter",
     "languages": "Språk",
-    "keysUsed": "brukte nøkler",
-    "documentsUsed": "brukte dokumenter",
-    "languagesUsed": "brukte språk"
+    "keysUsed": "nøkler brukt",
+    "documentsUsed": "dokumenter brukt",
+    "languagesUsed": "språk brukt"
+  },
+  "plan_tier": {
+    "currentTier": "Nåværende nivå"
+  },
+  "current_tier": {
+    "currentTier": "Nåværende nivå",
+    "tier": "Nivå",
+    "translationKeys": "Oversettelsesnøkler",
+    "documents": "Dokumenter",
+    "languages": "Språk",
+    "changePlan": "Oppgrader plan",
+    "free": "Gratis"
+  },
+  "changePlan": {
+    "title": "Oppgrader plan",
+    "upgrade_to_tier": "Oppgrader til nivå {tier}",
+    "cancel": "Avbryt",
+    "description": "Oppgrader planen din for å øke grensene dine. Du får tilgang til flere oversettelsesnøkler, dokumenter, språk og prioritert støtte."
+  },
+  "manage_subscription": {
+    "title": "Administrer abonnement",
+    "manage_description": "Administrer abonnementet ditt, fakturadetaljer og last ned fakturaer.",
+    "manage_button": "Administrer abonnement"
   }
 }

@@ -263,6 +263,11 @@
           "oldest": "Najstarsze"
         },
         "deleteInviteConfirm": "Usuń zaproszenie"
+      },
+      "email": {
+        "title": "Email zespołu",
+        "description": "Adres e-mail powiązany z Twoim zespołem",
+        "placeholder": "Wprowadź e-mail zespołu"
       }
     }
   },
@@ -630,5 +635,28 @@
     "keysUsed": "użyte klucze",
     "documentsUsed": "użyte dokumenty",
     "languagesUsed": "użyte języki"
+  },
+  "plan_tier": {
+    "currentTier": "Bieżący poziom"
+  },
+  "current_tier": {
+    "currentTier": "Bieżący poziom",
+    "tier": "Poziom",
+    "translationKeys": "Klucze tłumaczeń",
+    "documents": "Dokumenty",
+    "languages": "Języki",
+    "changePlan": "Zmień plan",
+    "free": "Darmowy"
+  },
+  "changePlan": {
+    "title": "Zmień plan",
+    "upgrade_to_tier": "Ulepsz do poziomu {tier}",
+    "cancel": "Anuluj",
+    "description": "Ulepsz swój plan, aby zwiększyć limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
+  },
+  "manage_subscription": {
+    "title": "Zarządzaj subskrypcją",
+    "manage_description": "Zarządzaj swoją subskrypcją, danymi rozliczeniowymi i pobieraj faktury.",
+    "manage_button": "Zarządzaj subskrypcją"
   }
 }

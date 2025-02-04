@@ -274,6 +274,11 @@
           "oldest": "Äldst"
         },
         "deleteInviteConfirm": "Ta bort inbjudan"
+      },
+      "email": {
+        "title": "Team E-post",
+        "description": "E-postadressen kopplad till ditt team",
+        "placeholder": "Ange teamets e-post"
       }
     }
   },
@@ -630,5 +635,28 @@
     "keysUsed": "använda nycklar",
     "documentsUsed": "använda dokument",
     "languagesUsed": "använda språk"
+  },
+  "plan_tier": {
+    "currentTier": "Aktuell nivå"
+  },
+  "current_tier": {
+    "currentTier": "Aktuell nivå",
+    "tier": "Nivå",
+    "translationKeys": "Översättningsnycklar",
+    "documents": "Dokument",
+    "languages": "Språk",
+    "changePlan": "Uppgradera plan",
+    "free": "Gratis"
+  },
+  "changePlan": {
+    "title": "Uppgradera plan",
+    "upgrade_to_tier": "Uppgradera till nivå {tier}",
+    "cancel": "Avbryt",
+    "description": "Uppgradera din plan för att öka dina gränser. Du får tillgång till fler översättningsnycklar, dokument, språk och prioriterad support."
+  },
+  "manage_subscription": {
+    "title": "Hantera prenumeration",
+    "manage_description": "Hantera din prenumeration, faktureringsuppgifter och ladda ner fakturor.",
+    "manage_button": "Hantera prenumeration"
   }
 }
