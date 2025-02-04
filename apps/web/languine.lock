@@ -920,7 +920,7 @@ files:
     changePlan.title: 4383ed143e94237bef3101836bde8a02
     changePlan.upgrade_to_tier: 4624f5b8d82955e16094f27259a3ffad
     changePlan.cancel: 4b97278b444c0203fc17d7b93a39f5c7
-    changePlan.description: 6ddb7386d5e1c638df4069df72b315da
+    changePlan.description: cceedc240317fd3d9f0c7c80af37e55b
     manage_subscription.title: c3c8a3d84c4a262161cc54b70bcfcfce
     manage_subscription.manage_description: b697a62fa779c6575c0ebfbec9c47114
     manage_subscription.manage_button: c3c8a3d84c4a262161cc54b70bcfcfce
@@ -1367,7 +1367,7 @@ files:
     changePlan.cancel: 847607d75e504090b5aff16a6e6c8351
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
     manage_subscription.title: b246caab3afb655a552c596396fe0c1e
-    manage_subscription.manage_description: 930b2b95eca2549b339a56a4078966a7
+    manage_subscription.manage_description: dfa0fd1916ac2571bbb89886f4a0eeb6
     manage_subscription.manage_button: b246caab3afb655a552c596396fe0c1e
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
@@ -1810,7 +1810,7 @@ files:
     changePlan.title: fb44b49ed5687e3983afc7581f0fbafc
     changePlan.upgrade_to_tier: ca60b245c2f71ea9a056f060d82a0e1a
     changePlan.cancel: 54847413938d69ec23f3f7fe3b409708
-    changePlan.description: 4f8c03a26b8994b7c09d4ee2d85a5a37
+    changePlan.description: 6a1f8a483d6058daad86c2566c920df1
     manage_subscription.title: f6569b91557960a7ccba47f9b214170e
     manage_subscription.manage_description: b4f20c67136f51396ace3f4c300a076d
     manage_subscription.manage_button: f6569b91557960a7ccba47f9b214170e
@@ -2889,7 +2889,7 @@ files:
     settings.team.members.dateSort.oldest: 8a451ddeb8346a2be81ead201133da6e
     settings.team.members.deleteInviteConfirm: 731fc84592bd22552a568e8777c4028e
     settings.team.email.title: 801599565450ed41fbfed0c9e0f2373e
-    settings.team.email.description: 61f92b21ee7673e8aebe70f727c65c9c
+    settings.team.email.description: 62177f00654c1e1acc96f430d52fbf82
     settings.team.email.placeholder: 2af2815eb0f649e599ac12ac33ff5bd3
     tuning.general: 8209e50851590f2c7af374c8d8966e2a
     tuning.translationMemory.title: 9b5db588d5f06b73adb0c5c529a902cc
@@ -4482,7 +4482,7 @@ files:
     changePlan.cancel: 327901a406600dcd9ec58eba06e8ec8c
     changePlan.description: 4e9e3c5815afc1d03b2b67cad15ee14f
     manage_subscription.title: c69b0081675be62799f53fb7afee9882
-    manage_subscription.manage_description: 0e3e60f7e805e9a20a753b72d7ed1c86
+    manage_subscription.manage_description: d59ec70728c2337e005baea1cd76726c
     manage_subscription.manage_button: c69b0081675be62799f53fb7afee9882
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34

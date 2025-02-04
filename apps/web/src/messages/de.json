@@ -652,7 +652,7 @@
     "title": "Tarif upgraden",
     "upgrade_to_tier": "Upgrade auf Tarif {tier}",
     "cancel": "Abbrechen",
-    "description": "Upgrade Ihren Tarif, um Ihre Grenzen zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierten Support."
+    "description": "Upgrade Ihren Tarif, um Ihre Limits zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
   },
   "manage_subscription": {
     "title": "Abonnement verwalten",
