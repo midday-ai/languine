@@ -297,21 +297,6 @@ export const getOrganizationLimits = async (organizationId: string) => {
   };
 };
 
-export const updateOrganizationTier = async (
-  organizationId: string,
-  tier: number,
-) => {
-  const plan = tier === 0 ? "free" : "pro";
-
-  const db = await connectDb();
-
-  return db
-    .update(organizations)
-    .set({ tier, plan })
-    .where(eq(organizations.id, organizationId))
-    .returning();
-};
-
 export const getOrganizationByUserId = async (userId: string) => {
   const db = await connectDb();
 

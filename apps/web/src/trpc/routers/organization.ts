@@ -13,7 +13,6 @@ import {
   leaveOrganization,
   updateOrganization,
   updateOrganizationApiKey,
-  updateOrganizationTier,
 } from "@/db/queries/organization";
 import { members } from "@/db/schema";
 import InviteEmail from "@/emails/templates/invite";
@@ -38,7 +37,6 @@ import {
   organizationSchema,
   organizationStatsSchema,
   updateOrganizationSchema,
-  updateOrganizationTierSchema,
 } from "./schema";
 
 export const organizationRouter = createTRPCRouter({
@@ -248,13 +246,6 @@ export const organizationRouter = createTRPCRouter({
     .use(isOrganizationOwner)
     .mutation(async ({ input }) => {
       return updateOrganizationApiKey(input.organizationId);
-    }),
-
-  updatePlan: protectedProcedure
-    .input(updateOrganizationTierSchema)
-    .use(isOrganizationOwner)
-    .mutation(async ({ input }) => {
-      return updateOrganizationTier(input.organizationId, input.tier);
     }),
 
   inviteMember: protectedProcedure

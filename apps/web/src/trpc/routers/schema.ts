@@ -118,15 +118,6 @@ export type DeleteOrganizationMemberSchema = z.infer<
   typeof deleteOrganizationMemberSchema
 >;
 
-export const updateOrganizationTierSchema = z.object({
-  organizationId: z.string(),
-  tier: z.number().min(0).max(8),
-});
-
-export type UpdateOrganizationTierSchema = z.infer<
-  typeof updateOrganizationTierSchema
->;
-
 export const translateSchema = z.object({
   organizationId: z.string(),
   cursor: z.string().nullish(),

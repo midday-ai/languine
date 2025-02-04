@@ -32,24 +32,16 @@ export const isOrganizationMember = t.middleware(
 
     // Check if user is a member of the organization
     const result = await db.query.members.findFirst({
-      where: (members) => eq(members.organizationId, typedInput.organizationId),
+      where: and(
+        eq(members.organizationId, typedInput.organizationId),
+        eq(members.userId, ctx.authenticatedId),
+      ),
       with: {
         organization: true,
       },
     });
 
     if (!result) {
-      throw new TRPCError({
-        code: "NOT_FOUND",
-        message: "Organization not found",
-      });
-    }
-
-    // Block access if not a member and not using org API key
-    if (
-      result.organizationId !== typedInput.organizationId &&
-      ctx.type !== "organization"
-    ) {
       throw new TRPCError({
         code: "FORBIDDEN",
         message: "You are not a member of this organization",
