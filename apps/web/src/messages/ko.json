@@ -266,7 +266,7 @@
       },
       "email": {
         "title": "팀 이메일",
-        "description": "귀하의 팀과 연결된 이메일 주소",
+        "description": "팀과 연결된 이메일 주소",
         "placeholder": "팀 이메일 입력"
       }
     }

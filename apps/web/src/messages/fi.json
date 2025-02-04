@@ -629,7 +629,7 @@
     "languages": "Kielet"
   },
   "plan_settings": {
-    "translationKeys": "Käännösohjeet",
+    "translationKeys": "Käännöksen avaimet",
     "documents": "Asiakirjat",
     "languages": "Kielet",
     "keysUsed": "käytetyt avaimet",
@@ -642,7 +642,7 @@
   "current_tier": {
     "currentTier": "Nykyinen taso",
     "tier": "Taso",
-    "translationKeys": "Käännösohjeet",
+    "translationKeys": "Käännöksen avaimet",
     "documents": "Asiakirjat",
     "languages": "Kielet",
     "changePlan": "Päivitä suunnitelma",
@@ -652,7 +652,7 @@
     "title": "Päivitä suunnitelma",
     "upgrade_to_tier": "Päivitä tasolle {tier}",
     "cancel": "Peruuta",
-    "description": "Päivitä suunnitelmasi kasvattaaksesi rajoja. Saat pääsyn useampiin käännösohjeisiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
+    "description": "Päivitä suunnitelmasi kasvattaaksesi rajoja. Saat pääsyn useampiin käännöksen avaimiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
   },
   "manage_subscription": {
     "title": "Hallitse tilausta",

@@ -266,7 +266,7 @@
       },
       "email": {
         "title": "Team-E-Mail",
-        "description": "Die mit Ihrem Team verbundene E-Mail-Adresse",
+        "description": "Die E-Mail-Adresse, die mit Ihrem Team verbunden ist",
         "placeholder": "Team-E-Mail eingeben"
       }
     }
@@ -637,22 +637,22 @@
     "languagesUsed": "verwendete Sprachen"
   },
   "plan_tier": {
-    "currentTier": "Aktueller Tarif"
+    "currentTier": "Aktuelle Stufe"
   },
   "current_tier": {
-    "currentTier": "Aktueller Tarif",
-    "tier": "Tarif",
+    "currentTier": "Aktuelle Stufe",
+    "tier": "Stufe",
     "translationKeys": "Übersetzungsschlüssel",
     "documents": "Dokumente",
     "languages": "Sprachen",
-    "changePlan": "Tarif upgraden",
+    "changePlan": "Plan upgraden",
     "free": "Kostenlos"
   },
   "changePlan": {
-    "title": "Tarif upgraden",
-    "upgrade_to_tier": "Upgrade auf Tarif {tier}",
+    "title": "Plan upgraden",
+    "upgrade_to_tier": "Upgrade auf Stufe {tier}",
     "cancel": "Abbrechen",
-    "description": "Upgrade Ihren Tarif, um Ihre Limits zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
+    "description": "Upgrade Ihren Plan, um Ihre Limits zu erhöhen. Sie erhalten Zugang zu mehr Übersetzungsschlüsseln, Dokumenten, Sprachen und priorisiertem Support."
   },
   "manage_subscription": {
     "title": "Abonnement verwalten",

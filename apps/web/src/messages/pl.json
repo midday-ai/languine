@@ -656,7 +656,7 @@
   },
   "manage_subscription": {
     "title": "Zarządzaj subskrypcją",
-    "manage_description": "Zarządzaj swoją subskrypcją, szczegółami płatności i pobieraj faktury.",
+    "manage_description": "Zarządzaj swoją subskrypcją, danymi rozliczeniowymi i pobieraj faktury.",
     "manage_button": "Zarządzaj subskrypcją"
   }
 }
