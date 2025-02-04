@@ -1,4 +1,3 @@
-import { ComingSoon } from "@/components/coming-soon";
 import { Header } from "@/components/dashboard/header";
 import { GlobalModals } from "@/components/modals";
 import { GlobalSheets } from "@/components/sheets";
@@ -8,7 +7,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { SessionProvider } from "@/contexts/session";
 import { TRPCProvider } from "@/trpc/client";
 import { getSession } from "@languine/supabase/session";
-import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
@@ -25,8 +23,6 @@ export default async function Layout({
     return redirect("/login");
   }
 
-  const invited = (await get("invited")) as string[];
-
   return (
     <SessionProvider session={session}>
       <TRPCProvider>
@@ -41,9 +37,6 @@ export default async function Layout({
                 <main className="pt-4">
                   {children}
 
-                  {!invited?.includes(session?.user.email ?? "") && (
-                    <ComingSoon />
-                  )}
                   <Toaster />
                 </main>
               </SidebarInset>

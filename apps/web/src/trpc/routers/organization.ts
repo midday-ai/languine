@@ -1,6 +1,5 @@
 import { connectDb } from "@/db";
 import {
-  acceptInvitation,
   createOrganization,
   deleteOrganization,
   deleteOrganizationInvite,
@@ -9,6 +8,7 @@ import {
   getOrganization,
   getOrganizationInvites,
   getOrganizationMembers,
+  getOrganizationStats,
   inviteMember,
   leaveOrganization,
   updateOrganization,
@@ -36,6 +36,7 @@ import {
   deleteOrganizationMemberSchema,
   inviteMemberSchema,
   organizationSchema,
+  organizationStatsSchema,
   updateOrganizationSchema,
   updateOrganizationTierSchema,
 } from "./schema";
@@ -101,6 +102,7 @@ export const organizationRouter = createTRPCRouter({
         id: input.organizationId,
         name: input.name,
         logo: input.logo,
+        email: input.email,
       });
 
       if (!org) {
@@ -316,5 +318,12 @@ export const organizationRouter = createTRPCRouter({
           message: "Failed to invite member",
         });
       }
+    }),
+
+  getStats: protectedProcedure
+    .input(organizationStatsSchema)
+    .use(isOrganizationMember)
+    .query(async ({ input }) => {
+      return getOrganizationStats(input.organizationId);
     }),
 });

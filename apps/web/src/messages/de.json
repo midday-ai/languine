@@ -263,6 +263,11 @@
           "oldest": "Älteste"
         },
         "deleteInviteConfirm": "Einladung löschen"
+      },
+      "email": {
+        "title": "Team-E-Mail",
+        "description": "Die E-Mail-Adresse, die mit Ihrem Team verbunden ist",
+        "placeholder": "Team-E-Mail eingeben"
       }
     }
   },
@@ -622,5 +627,36 @@
   },
   "filter_locales": {
     "languages": "Sprachen"
+  },
+  "plan_settings": {
+    "translationKeys": "Übersetzungsschlüssel",
+    "documents": "Dokumente",
+    "languages": "Sprachen",
+    "keysUsed": "verwendete Schlüssel",
+    "documentsUsed": "verwendete Dokumente",
+    "languagesUsed": "verwendete Sprachen"
+  },
+  "plan_tier": {
+    "currentTier": "Aktuelle Stufe"
+  },
+  "current_tier": {
+    "currentTier": "Aktuelle Stufe",
+    "tier": "Stufe",
+    "translationKeys": "Übersetzungsschlüssel",
+    "documents": "Dokumente",
+    "languages": "Sprachen",
+    "changePlan": "Plan upgraden",
+    "free": "Kostenlos"
+  },
+  "changePlan": {
+    "title": "Plan upgraden",
+    "upgrade_to_tier": "Upgrade auf Stufe {tier}",
+    "cancel": "Abbrechen",
+    "description": "Upgrade Ihren Plan, um Ihre Grenzen zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
+  },
+  "manage_subscription": {
+    "title": "Abonnement verwalten",
+    "manage_description": "Verwalten Sie Ihr Abonnement, Ihre Rechnungsdetails und laden Sie Rechnungen herunter.",
+    "manage_button": "Abonnement verwalten"
   }
 }

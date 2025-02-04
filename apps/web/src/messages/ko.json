@@ -263,6 +263,11 @@
           "oldest": "오래된"
         },
         "deleteInviteConfirm": "초대 삭제"
+      },
+      "email": {
+        "title": "팀 이메일",
+        "description": "귀하의 팀과 연결된 이메일 주소",
+        "placeholder": "팀 이메일 입력"
       }
     }
   },
@@ -622,5 +627,36 @@
   },
   "filter_locales": {
     "languages": "언어"
+  },
+  "plan_settings": {
+    "translationKeys": "번역 키",
+    "documents": "문서",
+    "languages": "언어",
+    "keysUsed": "사용된 키",
+    "documentsUsed": "사용된 문서",
+    "languagesUsed": "사용된 언어"
+  },
+  "plan_tier": {
+    "currentTier": "현재 티어"
+  },
+  "current_tier": {
+    "currentTier": "현재 티어",
+    "tier": "티어",
+    "translationKeys": "번역 키",
+    "documents": "문서",
+    "languages": "언어",
+    "changePlan": "플랜 업그레이드",
+    "free": "무료"
+  },
+  "changePlan": {
+    "title": "플랜 업그레이드",
+    "upgrade_to_tier": "티어 {tier}로 업그레이드",
+    "cancel": "취소",
+    "description": "제한을 늘리기 위해 플랜을 업그레이드하세요. 더 많은 번역 키, 문서, 언어 및 우선 지원에 접근할 수 있습니다."
+  },
+  "manage_subscription": {
+    "title": "구독 관리",
+    "manage_description": "구독, 청구 세부정보 및 인보이스 다운로드를 관리하세요.",
+    "manage_button": "구독 관리"
   }
 }

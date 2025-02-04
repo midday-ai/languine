@@ -305,24 +305,15 @@ export async function translateCommand(args: string[] = []) {
         });
 
         if (shouldUpgrade === "upgrade") {
-          // Open upgrade URL in browser
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            s.start("Upgrading plan...");
-
-            // Just upgrade the plan
-            await client.organization.updatePlan.mutate({
-              organizationId: meta?.organizationId,
-              tier: Number(meta?.tier) + 1,
-            });
-
-            s.stop("Plan upgraded successfully");
-
-            note("Run `languine translate` again to continue.", "What's next?");
+            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
           }
+
+          note("Run `languine translate` again to continue.", "What's next?");
         }
 
         process.exit(1);
@@ -365,24 +356,15 @@ export async function translateCommand(args: string[] = []) {
         });
 
         if (shouldUpgrade === "upgrade") {
-          // Open upgrade URL in browser
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&referrer=cli`,
+              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            s.start("Upgrading plan...");
-
-            // Just upgrade the plan
-            await client.organization.updatePlan.mutate({
-              organizationId: meta?.organizationId,
-              tier: Number(meta?.tier) + 1,
-            });
-
-            s.stop("Plan upgraded successfully");
-
-            note("Run `languine translate` again to continue.", "What's next?");
+            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
           }
+
+          note("Run `languine translate` again to continue.", "What's next?");
         }
 
         process.exit(1);

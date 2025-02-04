@@ -263,6 +263,11 @@
           "oldest": "Más antiguo"
         },
         "deleteInviteConfirm": "Eliminar Invitación"
+      },
+      "email": {
+        "title": "Correo Electrónico del Equipo",
+        "description": "La dirección de correo electrónico asociada con tu equipo",
+        "placeholder": "Ingresa el correo electrónico del equipo"
       }
     }
   },
@@ -622,5 +627,36 @@
   },
   "filter_locales": {
     "languages": "Idiomas"
+  },
+  "plan_settings": {
+    "translationKeys": "Claves de Traducción",
+    "documents": "Documentos",
+    "languages": "Idiomas",
+    "keysUsed": "claves utilizadas",
+    "documentsUsed": "documentos utilizados",
+    "languagesUsed": "idiomas utilizados"
+  },
+  "plan_tier": {
+    "currentTier": "Nivel Actual"
+  },
+  "current_tier": {
+    "currentTier": "Nivel Actual",
+    "tier": "Nivel",
+    "translationKeys": "Claves de Traducción",
+    "documents": "Documentos",
+    "languages": "Idiomas",
+    "changePlan": "Actualizar Plan",
+    "free": "Gratis"
+  },
+  "changePlan": {
+    "title": "Actualizar Plan",
+    "upgrade_to_tier": "Actualizar a nivel {tier}",
+    "cancel": "Cancelar",
+    "description": "Actualiza tu plan para aumentar tus límites. Obtendrás acceso a más claves de traducción, documentos, idiomas y soporte prioritario."
+  },
+  "manage_subscription": {
+    "title": "Gestionar Suscripción",
+    "manage_description": "Gestiona tu suscripción, detalles de facturación y descarga de facturas.",
+    "manage_button": "Gestionar Suscripción"
   }
 }

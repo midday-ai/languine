@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Team name",
     "createTeamButton": "Create team"
   },
-  "coming_soon": {
-    "title": "Languine is in Early Access",
-    "description": "We're currently in early access. Reach out to",
-    "cta": "on X to get early access."
-  },
   "account": {
     "fullName": {
       "title": "Full Name",
@@ -220,6 +215,11 @@
         "free": "Free",
         "pro": "Pro",
         "unlimited": "Unlimited"
+      },
+      "email": {
+        "title": "Team Email",
+        "description": "The email address associated with your team",
+        "placeholder": "Enter team email"
       },
       "apiKey": {
         "title": "Team API Key",
@@ -622,5 +622,36 @@
   },
   "filter_locales": {
      "languages": "Languages"
-  }
+  },
+  "plan_settings": {
+    "translationKeys": "Translation Keys",
+    "documents": "Documents",
+    "languages": "Languages",
+    "keysUsed": "keys used",
+    "documentsUsed": "documents used",
+    "languagesUsed": "languages used"
+  },
+  "plan_tier": {
+    "currentTier": "Current Tier"
+  },
+  "current_tier": {
+    "currentTier": "Current Tier",
+    "tier": "Tier",
+    "translationKeys": "Translation Keys",
+    "documents": "Documents",
+    "languages": "Languages",
+    "changePlan": "Upgrade Plan",
+    "free": "Free"
+  },
+  "changePlan": {
+    "title": "Upgrade Plan",
+    "upgrade_to_tier": "Upgrade to tier {tier}",
+    "cancel": "Cancel",
+    "description": "Upgrade your plan to increase your limits. You'll get access to more translation keys, documents, languages, and priority support."
+  },
+  "manage_subscription": {
+    "title": "Manage Subscription",
+    "manage_description": "Manage your subscription, billing details and download invoices.",
+    "manage_button": "Manage Subscription"
+   }
 }

@@ -9,7 +9,7 @@ import { OutlinedButton } from "./ui/outlined-button";
 
 export function Pricing() {
   const t = useTranslations("pricing");
-  const [value, setValue] = useState([49]);
+  const [value, setValue] = useState(1);
 
   return (
     <div className="pt-14 md:pt-28">

@@ -89,6 +89,20 @@ export function TeamSettings() {
       />
 
       <SettingsCard
+        title={t("team.email.title")}
+        description={t("team.email.description")}
+        type="input"
+        placeholder={t("team.email.placeholder")}
+        value={data?.email}
+        onSave={async (value) => {
+          await updateMutation.mutateAsync({
+            organizationId: organization as string,
+            email: value,
+          });
+        }}
+      />
+
+      <SettingsCard
         title={t("team.apiKey.title")}
         description={t("team.apiKey.description")}
         type="copy-input"

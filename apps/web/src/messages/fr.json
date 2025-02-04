@@ -263,6 +263,11 @@
           "oldest": "Le plus ancien"
         },
         "deleteInviteConfirm": "Supprimer l'invitation"
+      },
+      "email": {
+        "title": "Email de l'équipe",
+        "description": "L'adresse e-mail associée à votre équipe",
+        "placeholder": "Entrez l'email de l'équipe"
       }
     }
   },
@@ -622,5 +627,36 @@
   },
   "filter_locales": {
     "languages": "Langues"
+  },
+  "plan_settings": {
+    "translationKeys": "Clés de traduction",
+    "documents": "Documents",
+    "languages": "Langues",
+    "keysUsed": "clés utilisées",
+    "documentsUsed": "documents utilisés",
+    "languagesUsed": "langues utilisées"
+  },
+  "plan_tier": {
+    "currentTier": "Niveau actuel"
+  },
+  "current_tier": {
+    "currentTier": "Niveau actuel",
+    "tier": "Niveau",
+    "translationKeys": "Clés de traduction",
+    "documents": "Documents",
+    "languages": "Langues",
+    "changePlan": "Mettre à niveau le plan",
+    "free": "Gratuit"
+  },
+  "changePlan": {
+    "title": "Mettre à niveau le plan",
+    "upgrade_to_tier": "Passer au niveau {tier}",
+    "cancel": "Annuler",
+    "description": "Mettez à niveau votre plan pour augmenter vos limites. Vous aurez accès à plus de clés de traduction, de documents, de langues et à un support prioritaire."
+  },
+  "manage_subscription": {
+    "title": "Gérer l'abonnement",
+    "manage_description": "Gérez votre abonnement, vos détails de facturation et téléchargez des factures.",
+    "manage_button": "Gérer l'abonnement"
   }
 }
