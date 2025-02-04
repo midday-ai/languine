@@ -68,9 +68,9 @@ export const PRODUCT_ID_MAP_SANDBOX = {
 };
 
 export const PRODUCT_ID_MAP =
-  process.env.POLAR_ENVIRONMENT === "production"
-    ? PRODUCT_ID_MAP_PRODUCTION
-    : PRODUCT_ID_MAP_SANDBOX;
+  process.env.POLAR_ENVIRONMENT === "sandbox"
+    ? PRODUCT_ID_MAP_SANDBOX
+    : PRODUCT_ID_MAP_PRODUCTION;
 
 export function getTierFromProductId(productId: string) {
   const tier = Object.entries(PRODUCT_ID_MAP).find(
