@@ -27,7 +27,12 @@
         "DATABASE_PRIMARY_URL",
         "DATABASE_US_URL",
         "DATABASE_EU_URL",
-        "DATABASE_AU_URL"
+        "DATABASE_AU_URL",
+        "POLAR_ENVIRONMENT",
+        "POLAR_ACCESS_TOKEN",
+        "POLAR_ORGANIZATION_ID",
+        "POLAR_WEBHOOK_SECRET",
+        "NEXT_PUBLIC_APP_URL"
       ],
       "outputs": [
         ".next/**",
