@@ -944,6 +944,7 @@ files:
     changePlan.upgrade_to_tier: 4624f5b8d82955e16094f27259a3ffad
     changePlan.cancel: 6cc04dc1f419c8b2f1b28303ab0bec49
     changePlan.description: 3df1e231233b20d95032dd0f59885c59
+    test: 4d27c8d64246d3e1cb4215bdbae0e2c5
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: a1420688c629cb4bac7dfbe1b180fb42
@@ -1385,6 +1386,7 @@ files:
     changePlan.upgrade_to_tier: 4ecb4c268a15d1d606863cb03265f3c5
     changePlan.cancel: 847607d75e504090b5aff16a6e6c8351
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
+    test: 3423a403a232ceae323c29a866c52b4d
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
@@ -1826,6 +1828,7 @@ files:
     changePlan.upgrade_to_tier: ca60b245c2f71ea9a056f060d82a0e1a
     changePlan.cancel: 54847413938d69ec23f3f7fe3b409708
     changePlan.description: b1ced793d9af7f2f26d2830691abe361
+    test: 4c99c6491f11892ed59d6c599e2ffd78
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -2267,6 +2270,7 @@ files:
     changePlan.upgrade_to_tier: cf2a3bc8979f1b70baa234892fec3eca
     changePlan.cancel: d12c3b0dcf75614dafb2ac6bdaa77a26
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
+    test: 884ce940e1226181c56b8495cbc7c58f
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2708,6 +2712,7 @@ files:
     changePlan.upgrade_to_tier: f2d422d23dbcee9843b471f3cb056edd
     changePlan.cancel: 160009a89ee5a2603a26c2bcd824de7a
     changePlan.description: 39483fb3489541d7f50b3052b400da63
+    test: 629bd4b5d5e2e977de736cee5b32ed82
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3149,6 +3154,7 @@ files:
     changePlan.upgrade_to_tier: 28c5bcef3ec5e8f66f7e6429d50c419c
     changePlan.cancel: d9de218e1afd89a568a70872f8add6a5
     changePlan.description: fdeb43876f9ddb74005617cdb2623a37
+    test: 25a9926430168638aa0b15d085219a72
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3590,6 +3596,7 @@ files:
     changePlan.upgrade_to_tier: 6782f9820b6da6ade7e37ff849c2b609
     changePlan.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
     changePlan.description: a9bef1963dfb9b0a1cf87b6f5d958c1c
+    test: a8f4d5696aaa1a839e56803417fcd1c3
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -4031,6 +4038,7 @@ files:
     changePlan.upgrade_to_tier: 84c6baadce623249508f6d4a7e0eaed3
     changePlan.cancel: 10729f6701ebe4cc20e1dede64e23ffc
     changePlan.description: 6ef4728452123b3534f9b827531283e4
+    test: 612fc7cb29596b205eabb077931466bd
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -4472,6 +4480,7 @@ files:
     changePlan.upgrade_to_tier: e8b7c85c9c06196a006471b9c912abe3
     changePlan.cancel: 327901a406600dcd9ec58eba06e8ec8c
     changePlan.description: 6f8b4b8a09249505d46d8497b9661951
+    test: a2d29c0c42446a918e8fe605c17d6f0c
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -4913,6 +4922,7 @@ files:
     changePlan.upgrade_to_tier: f07b0b61fa26359b683ad0d800a3b39f
     changePlan.cancel: 847607d75e504090b5aff16a6e6c8351
     changePlan.description: 4c23214dac77429a57c41781e1bf735a
+    test: e4b5f552d8509b9c5b3a893989799500
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
@@ -5354,3 +5364,4 @@ files:
     changePlan.upgrade_to_tier: 8fcc0a769e884bcc0c3b408c990a2674
     changePlan.cancel: edfc4be89515f79e98fcb523d67c0513
     changePlan.description: 5cb8cd5303b6c8d3d853351e79766b6b
+    test: 7fa49adc5b7d63a72ce153575406003e

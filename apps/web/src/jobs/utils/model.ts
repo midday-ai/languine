@@ -12,8 +12,8 @@ export function getModels() {
   });
 
   return {
-    primary: createPrimaryModel(process.env.AI_PRIMARY_MODEL!),
-    secondary: createSecondaryModel(process.env.AI_SECONDARY_MODEL!),
+    primary: createSecondaryModel(process.env.AI_SECONDARY_MODEL!),
+    secondary: createPrimaryModel(process.env.AI_SECONDARY_MODEL!),
   };
 }
 
@@ -29,6 +29,7 @@ export function chooseModel(attempt?: number) {
         maxTokens: 8000,
       };
     case 2:
+    case 3:
       return {
         model: models.secondary,
         mode: "json",

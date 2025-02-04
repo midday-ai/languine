@@ -650,5 +650,6 @@
     "upgrade_to_tier": "Uppgradera till nivå {tier}",
     "cancel": "Avbryt",
     "description": "Uppgradera din plan för att öka dina gränser. Du får tillgång till fler översättningsnycklar, dokument, språk och prioriterad support."
-  }
+  },
+  "test": "Det här är ett bra exempel på ett test"
 }
