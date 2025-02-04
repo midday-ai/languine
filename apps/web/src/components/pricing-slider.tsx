@@ -99,7 +99,7 @@ export function PricingSlider({
               onValueChange={handleValueChange}
               step={1}
               min={1}
-              max={8}
+              max={9}
               className="w-full"
             />
           </div>
@@ -107,7 +107,7 @@ export function PricingSlider({
 
         <NumberFlow
           value={currentPrice}
-          defaultValue={49}
+          defaultValue={29}
           className="font-mono text-2xl -ml-[100px] mt-2"
           locales="en-US"
           format={{
