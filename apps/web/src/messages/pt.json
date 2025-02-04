@@ -646,7 +646,9 @@
     "documents": "Documentos",
     "languages": "Idiomas",
     "changePlan": "Atualizar Plano",
-    "free": "Gratuito"
+    "free": "Gratuito",
+    "manage_button": "Gerenciar Assinatura",
+    "canceled": "A ser cancelado"
   },
   "changePlan": {
     "title": "Atualizar Plano",

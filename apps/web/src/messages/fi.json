@@ -646,7 +646,9 @@
     "documents": "Asiakirjat",
     "languages": "Kielet",
     "changePlan": "Päivitä suunnitelma",
-    "free": "Ilmainen"
+    "free": "Ilmainen",
+    "manage_button": "Hallitse tilausta",
+    "canceled": "Peruutettavissa"
   },
   "changePlan": {
     "title": "Päivitä suunnitelma",

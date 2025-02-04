@@ -909,21 +909,23 @@ files:
     plan_settings.keysUsed: 1bf71938e57cd79569a64b1e7b56d492
     plan_settings.documentsUsed: bd0bc99a9b782b37bac48e77c9538650
     plan_settings.languagesUsed: 92065c36db3bbc6c9cb9dbc7720cf3b2
-    plan_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
-    current_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
-    current_tier.tier: d11a28580e943fe9eefe3481b224b314
+    plan_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
+    current_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
+    current_tier.tier: 884ba3386547c7dd63c0179da6c107ab
     current_tier.translationKeys: 70cd2f99392575c8bc14d4cf46d9ef9a
     current_tier.documents: ad89b7b8b181f445551fe1bc5c7abe61
     current_tier.languages: bf6c56085d5ba147fe0860211f201685
-    current_tier.changePlan: 1fe3efee27c4f7aee02d69f92d768c74
+    current_tier.changePlan: 4383ed143e94237bef3101836bde8a02
     current_tier.free: 2496721b8d95ee9876c6d33574604250
-    changePlan.title: 1fe3efee27c4f7aee02d69f92d768c74
-    changePlan.upgrade_to_tier: c95bae317d66ade5d62031cec5d66641
-    changePlan.cancel: 4b97278b444c0203fc17d7b93a39f5c7
-    changePlan.description: c950f9f654d18c8734071f519a02d076
+    changePlan.title: 4383ed143e94237bef3101836bde8a02
+    changePlan.upgrade_to_tier: 4624f5b8d82955e16094f27259a3ffad
+    changePlan.cancel: 6cc04dc1f419c8b2f1b28303ab0bec49
+    changePlan.description: 3df1e231233b20d95032dd0f59885c59
     manage_subscription.title: c3c8a3d84c4a262161cc54b70bcfcfce
     manage_subscription.manage_description: b697a62fa779c6575c0ebfbec9c47114
     manage_subscription.manage_button: c3c8a3d84c4a262161cc54b70bcfcfce
+    current_tier.manage_button: c3c8a3d84c4a262161cc54b70bcfcfce
+    current_tier.canceled: a6a7d155d8d49155e43f53e1d85749e9
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: a1420688c629cb4bac7dfbe1b180fb42
@@ -1369,6 +1371,8 @@ files:
     manage_subscription.title: b246caab3afb655a552c596396fe0c1e
     manage_subscription.manage_description: dfa0fd1916ac2571bbb89886f4a0eeb6
     manage_subscription.manage_button: b246caab3afb655a552c596396fe0c1e
+    current_tier.manage_button: b246caab3afb655a552c596396fe0c1e
+    current_tier.canceled: 3b855c464bd404b3dee66a4849335150
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
@@ -1814,6 +1818,8 @@ files:
     manage_subscription.title: f6569b91557960a7ccba47f9b214170e
     manage_subscription.manage_description: b4f20c67136f51396ace3f4c300a076d
     manage_subscription.manage_button: f6569b91557960a7ccba47f9b214170e
+    current_tier.manage_button: f6569b91557960a7ccba47f9b214170e
+    current_tier.canceled: 361b3d52dfb95bad0e4aa3817cdc7b4d
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -2253,12 +2259,14 @@ files:
     current_tier.changePlan: 1dcff973a4c45d81eda1b78aeabedd9a
     current_tier.free: 1740c5dd83622f31962f17c52a598f7b
     changePlan.title: 1dcff973a4c45d81eda1b78aeabedd9a
-    changePlan.upgrade_to_tier: 58f84c85207fc315e14192223ec16949
+    changePlan.upgrade_to_tier: cf2a3bc8979f1b70baa234892fec3eca
     changePlan.cancel: d12c3b0dcf75614dafb2ac6bdaa77a26
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
     manage_subscription.title: 2ad1f4a0b21411b82f26261630d0fe36
     manage_subscription.manage_description: e85de165093eedf65cd198ffdb8e1e32
     manage_subscription.manage_button: 2ad1f4a0b21411b82f26261630d0fe36
+    current_tier.manage_button: 2ad1f4a0b21411b82f26261630d0fe36
+    current_tier.canceled: c1acbf85f458c82f0dd07030c2683aaa
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2704,6 +2712,8 @@ files:
     manage_subscription.title: 2c802c8240d9e142582aceb1bbe872fd
     manage_subscription.manage_description: a295ef420aa442812652a5ffcd138e9f
     manage_subscription.manage_button: 2c802c8240d9e142582aceb1bbe872fd
+    current_tier.manage_button: 2c802c8240d9e142582aceb1bbe872fd
+    current_tier.canceled: 98600a91cde6e98b9b3f8d1abf77c31c
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -2889,7 +2899,7 @@ files:
     settings.team.members.dateSort.oldest: 8a451ddeb8346a2be81ead201133da6e
     settings.team.members.deleteInviteConfirm: 731fc84592bd22552a568e8777c4028e
     settings.team.email.title: 801599565450ed41fbfed0c9e0f2373e
-    settings.team.email.description: 61f92b21ee7673e8aebe70f727c65c9c
+    settings.team.email.description: 62177f00654c1e1acc96f430d52fbf82
     settings.team.email.placeholder: 2af2815eb0f649e599ac12ac33ff5bd3
     tuning.general: 8209e50851590f2c7af374c8d8966e2a
     tuning.translationMemory.title: 9b5db588d5f06b73adb0c5c529a902cc
@@ -3149,6 +3159,8 @@ files:
     manage_subscription.title: 9a3a1afc84e0a8e5154e269e6fdadca9
     manage_subscription.manage_description: 47709957958e46a6cf74bde5305087cc
     manage_subscription.manage_button: 9a3a1afc84e0a8e5154e269e6fdadca9
+    current_tier.manage_button: 9a3a1afc84e0a8e5154e269e6fdadca9
+    current_tier.canceled: 135f1a1a0482497c70dc7cf53e148e00
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3590,10 +3602,12 @@ files:
     changePlan.title: 549d3825c76e99eac69b1b4a884de629
     changePlan.upgrade_to_tier: 6782f9820b6da6ade7e37ff849c2b609
     changePlan.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
-    changePlan.description: 03355e328aaa02a245fe2030d2c3012e
+    changePlan.description: a9bef1963dfb9b0a1cf87b6f5d958c1c
     manage_subscription.title: 668c8a84f946e1504bef3ae71bc384d0
     manage_subscription.manage_description: 232b3efca7344ba246ed0baeb600c23e
     manage_subscription.manage_button: d06a1b3ed323994f6b28c45fed3e7b62
+    current_tier.manage_button: 668c8a84f946e1504bef3ae71bc384d0
+    current_tier.canceled: 6112f702dd351e55cd41f8e96948c65c
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -4034,11 +4048,13 @@ files:
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
     changePlan.title: 4a7adb62ba600378c0c9c6e6c146016f
     changePlan.upgrade_to_tier: 84c6baadce623249508f6d4a7e0eaed3
-    changePlan.cancel: edfc4be89515f79e98fcb523d67c0513
+    changePlan.cancel: 10729f6701ebe4cc20e1dede64e23ffc
     changePlan.description: 6ef4728452123b3534f9b827531283e4
     manage_subscription.title: d693c3b6db989935a1cfecadd869639b
     manage_subscription.manage_description: 850fbd6191f231430c8436ecc8904752
     manage_subscription.manage_button: d693c3b6db989935a1cfecadd869639b
+    current_tier.manage_button: d693c3b6db989935a1cfecadd869639b
+    current_tier.canceled: 5d1d9c524674ec6e0e761db311aeaa65
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -4480,10 +4496,12 @@ files:
     changePlan.title: 8376069b9c875191af0dc1f9627216ce
     changePlan.upgrade_to_tier: e8b7c85c9c06196a006471b9c912abe3
     changePlan.cancel: 327901a406600dcd9ec58eba06e8ec8c
-    changePlan.description: 4e9e3c5815afc1d03b2b67cad15ee14f
+    changePlan.description: 6f8b4b8a09249505d46d8497b9661951
     manage_subscription.title: c69b0081675be62799f53fb7afee9882
     manage_subscription.manage_description: 0e3e60f7e805e9a20a753b72d7ed1c86
     manage_subscription.manage_button: c69b0081675be62799f53fb7afee9882
+    current_tier.manage_button: c69b0081675be62799f53fb7afee9882
+    current_tier.canceled: 5dfff9fd734b344665ea8725bc3d8260
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -4929,6 +4947,8 @@ files:
     manage_subscription.title: f6055a966756324a7bf29e5037b17cf0
     manage_subscription.manage_description: 151d3aa57dc936ec1c577a440d0213ba
     manage_subscription.manage_button: f6055a966756324a7bf29e5037b17cf0
+    current_tier.manage_button: f6055a966756324a7bf29e5037b17cf0
+    current_tier.canceled: 8d1d7e3de5518cab9a254598dbe5a2bb
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
@@ -5374,3 +5394,5 @@ files:
     manage_subscription.title: 663737228743be88a2de513e5091adac
     manage_subscription.manage_description: bad26f7d4a657299c73ed68db07c07bc
     manage_subscription.manage_button: 663737228743be88a2de513e5091adac
+    current_tier.manage_button: 663737228743be88a2de513e5091adac
+    current_tier.canceled: db62ccb8cd299a260565eb48184f709f

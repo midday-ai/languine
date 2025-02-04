@@ -646,7 +646,9 @@
     "documents": "Documenti",
     "languages": "Lingue",
     "changePlan": "Aggiorna Piano",
-    "free": "Gratuito"
+    "free": "Gratuito",
+    "manage_button": "Gestisci Abbonamento",
+    "canceled": "Da annullare"
   },
   "changePlan": {
     "title": "Aggiorna Piano",

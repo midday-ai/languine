@@ -646,12 +646,14 @@
     "documents": "Dokumenter",
     "languages": "Språk",
     "changePlan": "Oppgrader plan",
-    "free": "Gratis"
+    "free": "Gratis",
+    "manage_button": "Administrer abonnement",
+    "canceled": "Skal avbestilles"
   },
   "changePlan": {
     "title": "Oppgrader plan",
     "upgrade_to_tier": "Oppgrader til nivå {tier}",
-    "cancel": "Avbryt",
+    "cancel": "Avbestill",
     "description": "Oppgrader planen din for å øke grensene dine. Du får tilgang til flere oversettelsesnøkler, dokumenter, språk og prioritert støtte."
   },
   "manage_subscription": {

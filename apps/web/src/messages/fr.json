@@ -646,11 +646,13 @@
     "documents": "Documents",
     "languages": "Langues",
     "changePlan": "Mettre à niveau le plan",
-    "free": "Gratuit"
+    "free": "Gratuit",
+    "manage_button": "Gérer l'abonnement",
+    "canceled": "À annuler"
   },
   "changePlan": {
     "title": "Mettre à niveau le plan",
-    "upgrade_to_tier": "Passer au niveau {tier}",
+    "upgrade_to_tier": "Mettre à niveau vers le niveau {tier}",
     "cancel": "Annuler",
     "description": "Mettez à niveau votre plan pour augmenter vos limites. Vous aurez accès à plus de clés de traduction, de documents, de langues et à un support prioritaire."
   },

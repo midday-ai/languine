@@ -646,7 +646,9 @@
     "documents": "Dokument",
     "languages": "Språk",
     "changePlan": "Uppgradera plan",
-    "free": "Gratis"
+    "free": "Gratis",
+    "manage_button": "Hantera prenumeration",
+    "canceled": "Att avbryta"
   },
   "changePlan": {
     "title": "Uppgradera plan",

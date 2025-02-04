@@ -637,22 +637,24 @@
     "languagesUsed": "verwendete Sprachen"
   },
   "plan_tier": {
-    "currentTier": "Aktuelle Stufe"
+    "currentTier": "Aktueller Tarif"
   },
   "current_tier": {
-    "currentTier": "Aktuelle Stufe",
-    "tier": "Stufe",
+    "currentTier": "Aktueller Tarif",
+    "tier": "Tarif",
     "translationKeys": "Übersetzungsschlüssel",
     "documents": "Dokumente",
     "languages": "Sprachen",
-    "changePlan": "Plan upgraden",
-    "free": "Kostenlos"
+    "changePlan": "Tarif upgraden",
+    "free": "Kostenlos",
+    "manage_button": "Abonnement verwalten",
+    "canceled": "Wird storniert"
   },
   "changePlan": {
-    "title": "Plan upgraden",
-    "upgrade_to_tier": "Upgrade auf Stufe {tier}",
-    "cancel": "Abbrechen",
-    "description": "Upgrade Ihren Plan, um Ihre Limits zu erhöhen. Sie erhalten Zugang zu mehr Übersetzungsschlüsseln, Dokumenten, Sprachen und priorisiertem Support."
+    "title": "Tarif upgraden",
+    "upgrade_to_tier": "Upgrade auf Tarif {tier}",
+    "cancel": "Stornieren",
+    "description": "Upgrade Ihren Tarif, um Ihre Grenzen zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
   },
   "manage_subscription": {
     "title": "Abonnement verwalten",

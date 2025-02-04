@@ -646,13 +646,15 @@
     "documents": "Dokumenty",
     "languages": "Języki",
     "changePlan": "Zmień plan",
-    "free": "Darmowy"
+    "free": "Darmowy",
+    "manage_button": "Zarządzaj subskrypcją",
+    "canceled": "Do anulowania"
   },
   "changePlan": {
     "title": "Zmień plan",
     "upgrade_to_tier": "Ulepsz do poziomu {tier}",
     "cancel": "Anuluj",
-    "description": "Ulepsz swój plan, aby zwiększyć limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
+    "description": "Ulepsz swój plan, aby zwiększyć swoje limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
   },
   "manage_subscription": {
     "title": "Zarządzaj subskrypcją",

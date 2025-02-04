@@ -266,7 +266,7 @@
       },
       "email": {
         "title": "팀 이메일",
-        "description": "팀과 연결된 이메일 주소",
+        "description": "귀하의 팀과 연결된 이메일 주소",
         "placeholder": "팀 이메일 입력"
       }
     }
@@ -646,7 +646,9 @@
     "documents": "문서",
     "languages": "언어",
     "changePlan": "플랜 업그레이드",
-    "free": "무료"
+    "free": "무료",
+    "manage_button": "구독 관리",
+    "canceled": "취소 예정"
   },
   "changePlan": {
     "title": "플랜 업그레이드",

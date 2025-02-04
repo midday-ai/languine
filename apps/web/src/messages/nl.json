@@ -646,13 +646,15 @@
     "documents": "Documenten",
     "languages": "Talen",
     "changePlan": "Plan Upgraden",
-    "free": "Gratis"
+    "free": "Gratis",
+    "manage_button": "Beheer Abonnement",
+    "canceled": "Te annuleren"
   },
   "changePlan": {
     "title": "Plan Upgraden",
     "upgrade_to_tier": "Upgrade naar laag {tier}",
     "cancel": "Annuleren",
-    "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaal sleutels, documenten, talen en prioritaire ondersteuning."
+    "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaalsleutels, documenten, talen en prioritaire ondersteuning."
   },
   "manage_subscription": {
     "title": "Beheer Abonnement",
