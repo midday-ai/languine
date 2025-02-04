@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Teamname",
     "createTeamButton": "Team erstellen"
   },
-  "coming_soon": {
-    "title": "Languine ist im Early Access",
-    "description": "Wir befinden uns derzeit im Early Access. Kontaktieren Sie",
-    "cta": "auf X, um frühzeitigen Zugang zu erhalten."
-  },
   "account": {
     "fullName": {
       "title": "Vollständiger Name",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Upgrade auf Tarif {tier}",
     "cancel": "Stornieren",
     "description": "Upgrade Ihren Tarif, um Ihre Grenzen zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
-  },
-  "manage_subscription": {
-    "title": "Abonnement verwalten",
-    "manage_description": "Verwalten Sie Ihr Abonnement, Ihre Rechnungsdetails und laden Sie Rechnungen herunter.",
-    "manage_button": "Abonnement verwalten"
   }
 }

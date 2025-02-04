@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Teamnaam",
     "createTeamButton": "Team aanmaken"
   },
-  "coming_soon": {
-    "title": "Languine is in Vroegtoegang",
-    "description": "We zijn momenteel in vroege toegang. Neem contact op met",
-    "cta": "op X voor vroege toegang."
-  },
   "account": {
     "fullName": {
       "title": "Volledige naam",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Upgrade naar laag {tier}",
     "cancel": "Annuleren",
     "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaalsleutels, documenten, talen en prioritaire ondersteuning."
-  },
-  "manage_subscription": {
-    "title": "Beheer Abonnement",
-    "manage_description": "Beheer uw abonnement, factuurgegevens en download facturen.",
-    "manage_button": "Abonnement Beheren"
   }
 }

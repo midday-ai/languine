@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Teamnavn",
     "createTeamButton": "Opprett team"
   },
-  "coming_soon": {
-    "title": "Languine er i tidlig tilgang",
-    "description": "Vi er for øyeblikket i tidlig tilgang. Ta kontakt med",
-    "cta": "på X for å få tidlig tilgang."
-  },
   "account": {
     "fullName": {
       "title": "Fullt navn",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Oppgrader til nivå {tier}",
     "cancel": "Avbestill",
     "description": "Oppgrader planen din for å øke grensene dine. Du får tilgang til flere oversettelsesnøkler, dokumenter, språk og prioritert støtte."
-  },
-  "manage_subscription": {
-    "title": "Administrer abonnement",
-    "manage_description": "Administrer abonnementet ditt, faktureringsdetaljer og last ned fakturaer.",
-    "manage_button": "Administrer abonnement"
   }
 }

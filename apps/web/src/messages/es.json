@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Nombre del equipo",
     "createTeamButton": "Crear equipo"
   },
-  "coming_soon": {
-    "title": "Languine está en Acceso Anticipado",
-    "description": "Actualmente estamos en acceso anticipado. Contacta a",
-    "cta": "en X para obtener acceso anticipado."
-  },
   "account": {
     "fullName": {
       "title": "Nombre Completo",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Actualizar a nivel {tier}",
     "cancel": "Cancelar",
     "description": "Actualiza tu plan para aumentar tus límites. Obtendrás acceso a más claves de traducción, documentos, idiomas y soporte prioritario."
-  },
-  "manage_subscription": {
-    "title": "Gestionar Suscripción",
-    "manage_description": "Gestiona tu suscripción, detalles de facturación y descarga de facturas.",
-    "manage_button": "Gestionar Suscripción"
   }
 }

@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "팀 이름",
     "createTeamButton": "팀 만들기"
   },
-  "coming_soon": {
-    "title": "Languine은 초기 접근 중입니다",
-    "description": "현재 초기 접근 중입니다. 다음에 문의하세요",
-    "cta": "X에서 초기 접근을 받으세요."
-  },
   "account": {
     "fullName": {
       "title": "전체 이름",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "티어 {tier}로 업그레이드",
     "cancel": "취소",
     "description": "제한을 늘리기 위해 플랜을 업그레이드하세요. 더 많은 번역 키, 문서, 언어 및 우선 지원에 접근할 수 있습니다."
-  },
-  "manage_subscription": {
-    "title": "구독 관리",
-    "manage_description": "구독, 청구 세부정보 및 인보이스 다운로드를 관리하세요.",
-    "manage_button": "구독 관리"
   }
 }

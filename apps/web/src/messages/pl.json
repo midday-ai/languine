@@ -119,11 +119,6 @@
     "teamNamePlaceholder": "Nazwa zespołu",
     "createTeamButton": "Utwórz zespół"
   },
-  "coming_soon": {
-    "title": "Languine jest w Wczesnym Dostępie",
-    "description": "Obecnie jesteśmy w wczesnym dostępie. Skontaktuj się z",
-    "cta": "na X, aby uzyskać wczesny dostęp."
-  },
   "account": {
     "fullName": {
       "title": "Pełne imię i nazwisko",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Ulepsz do poziomu {tier}",
     "cancel": "Anuluj",
     "description": "Ulepsz swój plan, aby zwiększyć swoje limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
-  },
-  "manage_subscription": {
-    "title": "Zarządzaj subskrypcją",
-    "manage_description": "Zarządzaj swoją subskrypcją, danymi rozliczeniowymi i pobieraj faktury.",
-    "manage_button": "Zarządzaj subskrypcją"
   }
 }

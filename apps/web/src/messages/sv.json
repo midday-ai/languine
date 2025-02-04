@@ -130,11 +130,6 @@
     "teamNamePlaceholder": "Teamnamn",
     "createTeamButton": "Skapa team"
   },
-  "coming_soon": {
-    "title": "Languine är i tidig åtkomst",
-    "description": "Vi är för närvarande i tidig åtkomst. Kontakta",
-    "cta": "på X för att få tidig åtkomst."
-  },
   "account": {
     "fullName": {
       "title": "Fullständigt namn",
@@ -655,10 +650,5 @@
     "upgrade_to_tier": "Uppgradera till nivå {tier}",
     "cancel": "Avbryt",
     "description": "Uppgradera din plan för att öka dina gränser. Du får tillgång till fler översättningsnycklar, dokument, språk och prioriterad support."
-  },
-  "manage_subscription": {
-    "title": "Hantera prenumeration",
-    "manage_description": "Hantera din prenumeration, faktureringsuppgifter och ladda ner fakturor.",
-    "manage_button": "Hantera prenumeration"
   }
 }
