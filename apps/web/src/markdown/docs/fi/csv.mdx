@@ -1,12 +1,12 @@
 # CSV
 
-Languine tukee CSV (Comma-Separated Values) -tiedostoja yksinkertaista käännöshallintoa varten. Tämä formaatti on ihanteellinen taulukkolaskentapohjaisille työnkuluilla ja helppoon integrointiin ulkoisten käännöstyökalujen kanssa.
+Languine tukee CSV (Comma-Separated Values) -tiedostoja yksinkertaista käännöksen hallintaa varten. Tämä formaatti on ihanteellinen taulukkolaskentapohjaisille työnkuluilla ja helppoon integrointiin ulkoisten käännöstyökalujen kanssa.
 
 ---
 
-## Asetukset
+## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Ensinnäkin varmista, että sinulla on languine.json -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -24,7 +24,7 @@ Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.
 
 ## Kääntäminen
 
-Kun asetukset on määritetty, suorita:
+Kun konfiguraatiosi on asetettu, suorita:
 
 ```bash
 npx languine@latest translate
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Kun suoritat tämän komennon, Languine:
 
-- Lataa lähde-CSV-tiedostosi (esim. translations/en.csv)
-- Havaitsee kaikki uudet tai muokatut käännöstekstit
-- Tuottaa käännökset kohdekielillesi
-- Luo tai päivittää kohdekielen CSV-tiedostot (esim. translations/sv.csv)
+- Lataa lähde CSV -tiedostosi (esim. translations/en.csv)
+- Tunnistaa kaikki uudet tai muokatut käännöstekstit
+- Generoi käännöksiä kohdekielillesi
+- Luo tai päivittää kohdekielen CSV -tiedostot (esim. translations/sv.csv)
 - Säilyttää sarake-rakenteen ja muotoilun
 - Säilyttää kaikki lisämetatietosarakkeet

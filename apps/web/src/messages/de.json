@@ -608,7 +608,7 @@
     "tuning": "Feinabstimmung",
     "overrides": "Überschreibungen",
     "settings": "Einstellungen",
-    "hooks": "Hooks",
+    "hooks": "Code-Formatter",
     "examples": "Beispiele",
     "team": "Team"
   },

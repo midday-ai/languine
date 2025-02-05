@@ -1,6 +1,6 @@
 # Konfiguracja
 
-Languine obsługuje zarówno pliki konfiguracyjne TypeScript, jak i JSON, aby zarządzać ustawieniami tłumaczeń. Możesz wybrać albo languine.config.ts dla TypeScript, albo languine.config.json dla formatu JSON. Oba pliki definiują Twoje źródłowe i docelowe języki, a także pliki, które muszą być przetłumaczone.
+Languine używa pliku konfiguracyjnego JSON (languine.json) do zarządzania ustawieniami tłumaczenia. Plik ten definiuje Twoje języki źródłowe i docelowe, a także pliki, które należy przetłumaczyć.
 
 ---
 
@@ -8,23 +8,7 @@ Languine obsługuje zarówno pliki konfiguracyjne TypeScript, jak i JSON, aby za
 
 Oto podstawowy przykład w obu formatach:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,18 +22,16 @@ export default defineConfig({
 }
 ```
 
-Oba formaty obsługują te same opcje konfiguracyjne. Wybierz TypeScript dla lepszej kontroli typów i wsparcia IDE, lub JSON dla prostoty i szerszej kompatybilności narzędzi.
-
-Rozłóżmy różne sekcje tych plików.
+Rozłóżmy różne sekcje w pliku konfiguracyjnym.
 
 ---
 
 ## Konfiguracja lokalizacji
 
-Sekcja lokalizacji definiuje Twoje języki tłumaczeń:
+Sekcja lokalizacji definiuje Twoje języki tłumaczenia:
 
 - source: Twój główny język do tworzenia treści (np. "en" dla angielskiego)
-- targets: Tablica języków, na które chcesz tłumaczyć (np. ["es", "fr", "de"] dla hiszpańskiego, francuskiego i niemieckiego)
+- targets: Tablica języków, na które chcesz przetłumaczyć (np. ["es", "fr", "de"] dla hiszpańskiego, francuskiego i niemieckiego)
 
 Languine obsługuje szeroki zakres kodów językowych, w tym:
 - Proste kody: en, es, fr, de
@@ -57,12 +39,12 @@ Languine obsługuje szeroki zakres kodów językowych, w tym:
 
 ## Konfiguracja plików
 
-Sekcja plików definiuje, które pliki Languine powinien tłumaczyć. Możesz skonfigurować wiele typów plików i wzorców:
+Sekcja plików definiuje, które pliki Languine powinien przetłumaczyć. Możesz skonfigurować wiele typów plików i wzorców:
 
 ---
 
 ### Pliki JSON
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Pliki Markdown/MDX
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Pliki platform mobilnych
 
 Dla iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 Dla Androida:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -134,7 +116,7 @@ Oto pełna lista formatów plików obsługiwanych przez Languine:
 - [XLIFF](/docs/xliff) - Format wymiany lokalizacji XML
 - [CSV](/docs/csv) - Tłumaczenia oparte na arkuszach kalkulacyjnych
 - [XML](/docs/xml) - Pliki zasobów XML
-- [Flutter ARB](/docs/arb) - Pliki pakietów zasobów aplikacji
+- [Flutter ARB](/docs/arb) - Pliki Application Resource Bundle
 
 ---
 
@@ -148,7 +130,7 @@ Zmienna [locale] w wzorcach plików jest automatycznie zastępowana odpowiednim 
   - locales/fr.json
 
 Możesz uwzględnić wiele wzorców dla każdego typu pliku i używać wzorców glob:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,23 +147,23 @@ files: {
 
 Jeśli korzystasz z usług chmurowych Languine, możesz uwzględnić swoje ID projektu w konfiguracji:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
     // ... konfiguracja lokalizacji
   },
   files: {
     // ... konfiguracja plików
   },
-});
+}
 ```
 
 ---
 
-## Śledzenie stanu tłumaczeń
+## Śledzenie stanu tłumaczenia
 
-Languine automatycznie tworzy i utrzymuje plik languine.lock, aby śledzić stan Twoich tłumaczeń. Ten plik:
+Languine automatycznie tworzy i utrzymuje plik languine.lock, aby śledzić stan Twoich tłumaczeń. Plik ten:
 
 - Śledzi, która treść została przetłumaczona
 - Pomaga zidentyfikować, co należy zaktualizować, gdy zmienia się treść źródłowa
@@ -191,8 +173,8 @@ Nie musisz ręcznie edytować pliku blokady - Languine zarządza nim automatyczn
 
 ## Najlepsze praktyki
 
-1. **Kontrola wersji**: Zawsze zatwierdzaj zarówno languine.config.ts, jak i languine.lock w swoim repozytorium
+1. **Kontrola wersji**: Zawsze zatwierdzaj zarówno languine.json, jak i languine.lock w swoim repozytorium
 2. **Organizacja plików**: Utrzymuj swoje pliki tłumaczeń w zorganizowanej i spójnej strukturze katalogów
 3. **Kody językowe**: Używaj standardowych kodów językowych, aby zapewnić kompatybilność
-4. **Wzorce**: Używaj specyficznych wzorców dołączania, aby uniknąć tłumaczenia zbędnych plików
+4. **Wzorce**: Używaj specyficznych wzorców dołączania, aby uniknąć tłumaczenia niepotrzebnych plików
 5. **ID projektu**: Zachowaj swoje ID projektu w bezpiecznym miejscu i nie udostępniaj go publicznie, jeśli korzystasz z usług chmurowych, zamiast tego użyj zmiennej środowiskowej `LANGUINE_PROJECT_ID`.

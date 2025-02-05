@@ -6,7 +6,7 @@ Languine suporta arquivos de Propriedades Java, o formato padrão de localizaç�
 
 ## Configurando
 
-Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.json na raiz do seu projeto. Aqui está um exemplo:
 
 ```json
 {
@@ -30,11 +30,11 @@ Com sua configuração definida, execute:
 npx languine@latest translate
 ```
 
-Quando você executar este comando, o Languine irá:
+Quando você executar este comando, Languine irá:
 
 - Carregar seu arquivo de propriedades de origem (por exemplo, messages_en.properties)
 - Detectar quaisquer novas ou modificadas strings de tradução
 - Gerar traduções para seus idiomas-alvo
 - Criar ou atualizar os arquivos de propriedades do idioma-alvo (por exemplo, messages_sv.properties)
-- Lidar automaticamente com escape de Unicode
+- Lidar com escape de Unicode automaticamente
 - Preservar comentários e formatação

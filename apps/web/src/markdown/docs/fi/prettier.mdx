@@ -1,26 +1,22 @@
 # Prettier
 
-Languine tukee muotoilua [Prettierin](https://prettier.io/) kautta koukkujen avulla. Voit määrittää Prettierin automaattisesti muotoilemaan käännöstiedostosi niiden luomisen jälkeen.
+Languine voi toimia yhdessä [Prettierin](https://prettier.io/) kanssa varmistaakseen, että käännöstiedostosi ovat johdonmukaisesti muotoiltuja. Tämä on erityisen hyödyllistä työskenneltäessä JSON-käännöstiedostojen kanssa, jotka tarvitsevat johdonmukaisen tyylin koko projektin ajan.
 
-Tässä on esimerkkikonfiguraatio:
+## Käyttö Languinen kanssa
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+Suositeltu tapa käyttää Prettieriä Languinen kanssa on muotoilla käännöstiedostosi niiden luomisen jälkeen. Voit asettaa tämän `package.json`-tiedostossasi:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    afterTranslate: async (files) => {
-      await prettier.format(files, { parser: "json" });
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "prettier --write \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Nyt voit:
+- Suorittaa `npm run translate` vain käännösten luomiseksi
+- Suorittaa `npm run format` vain olemassa olevien käännöstiedostojen muotoilemiseksi
+- Suorittaa `npm run translate:format` luodaksesi käännökset ja muotoillaksesi ne peräkkäin

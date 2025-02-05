@@ -1,12 +1,12 @@
 # Proprietà
 
-Languine supporta i file Java Properties, il formato standard di localizzazione per le applicazioni Java. Questo formato gestisce l'escape Unicode e supporta sia coppie chiave-valore che commenti.
+Languine supporta i file di proprietà Java, il formato standard di localizzazione per le applicazioni Java. Questo formato gestisce l'escaping Unicode e supporta sia coppie chiave-valore che commenti.
 
 ---
 
 ## Configurazione
 
-Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+Per prima cosa, assicurati di avere un file di configurazione languine.json nella radice del tuo progetto. Ecco un esempio:
 
 ```json
 {
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Quando esegui questo comando, Languine:
 
-- Caricherà il tuo file di proprietà sorgente (ad es., messages_en.properties)
-- Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
-- Genererà traduzioni per le tue lingue di destinazione
-- Creerà o aggiornerà i file di proprietà delle lingue di destinazione (ad es., messages_sv.properties)
-- Gestirà automaticamente l'escape Unicode
+- Caricherà il tuo file di proprietà sorgente (ad esempio, messages_en.properties)
+- Rileverà eventuali nuove stringhe di traduzione o modifiche
+- Genererà traduzioni per le lingue target
+- Creerà o aggiornerà i file di proprietà delle lingue target (ad esempio, messages_sv.properties)
+- Gestirà automaticamente l'escaping Unicode
 - Preserverà commenti e formattazione

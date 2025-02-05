@@ -6,7 +6,7 @@ Languine obsługuje pliki YAML jako format źródłowy, który jest powszechnie 
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w głównym katalogu projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w głównym katalogu projektu. Oto przykład:
 
 ```json
 {
@@ -30,10 +30,10 @@ Po ustawieniu konfiguracji uruchom:
 npx languine@latest translate
 ```
 
-Gdy uruchomisz to polecenie, Languine:
+Kiedy uruchomisz to polecenie, Languine:
 
 - Załaduje twój źródłowy plik YAML (np. config/locales/en.yml)
-- Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
+- Wykryje nowe lub zmodyfikowane ciągi tłumaczeń
 - Wygeneruje tłumaczenia dla twoich docelowych języków
 - Utworzy lub zaktualizuje pliki YAML dla języków docelowych (np. config/locales/sv.yml)
 - Zachowa zagnieżdżone struktury i formatowanie

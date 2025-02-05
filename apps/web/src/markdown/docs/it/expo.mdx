@@ -6,7 +6,7 @@ Languine supporta la localizzazione di Expo, integrandosi perfettamente con il s
 
 ## Configurazione
 
-Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+Per prima cosa, assicurati di avere un file di configurazione languine.json nella radice del tuo progetto. Ecco un esempio:
 
 ```json
 {
@@ -32,10 +32,9 @@ npx languine@latest translate
 
 Quando esegui questo comando, Languine:
 
-- Caricherà il tuo file di traduzione sorgente (ad esempio, assets/locales/en.json)
+- Caricherà il tuo file di traduzione sorgente (ad es., assets/locales/en.json)
 - Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
 - Genererà traduzioni per le tue lingue target
-- Creerà o aggiornerà i file delle lingue target (ad esempio, assets/locales/sv.json)
+- Creerà o aggiornerà i file delle lingue target (ad es., assets/locales/sv.json)
 - Preserverà la struttura annidata e le regole di pluralizzazione
-- Genererà tipi TypeScript se abilitati
 - Mantenere la compatibilità con expo-localization

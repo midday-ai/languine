@@ -51,7 +51,7 @@ Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa öve
                                           │
                                           ▼
                               ┌─────────────────────┐
-                              │      Slutförd       │
+                              │      Avslutad       │
                               │      (Distribuera)  │
                               └─────────────────────┘
 `}
@@ -80,10 +80,10 @@ Du kan hitta dessa värden i din Languine-instrumentpanel under Projektinställn
 
 ### Miljövariabler
 
-GitHub Action använder följande miljövariabler:
+GitHub-actionen använder följande miljövariabler:
 - `LANGUINE_API_KEY` (Obligatorisk): Din Languine API-nyckel för autentisering
 - `LANGUINE_PROJECT_ID` (Obligatorisk): Ditt Languine projekt-ID 
-- `GITHUB_TOKEN` (Obligatorisk): Automatiskt tillhandahållen av GitHub, används för att skapa PR:er
+- `GITHUB_TOKEN` (Obligatorisk): Tillhandahålls automatiskt av GitHub, används för att skapa PR:er
 
 ### Exempel på Arbetsflöde
 
@@ -121,16 +121,16 @@ jobs:
 - Körs vid tryck på huvudgrenen
 - Körs vid pull-begärningar till huvudgrenen
 - Kan utlösas manuellt från Åtgärder-fliken
-- Hämta din kod och köra Languine-översättningsprocessen
+- Hämta din kod och köra Languine översättningsprocess
 - Skapa en pull-begäran med eventuella nya översättningar (konfigurerbar)
 
 #### Arbetskatalogalternativ
 
-Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan vara i en specifik paket- eller appkatalog. Till exempel:
+Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i en specifik paket- eller appkatalog. Till exempel:
 
 #### Pull-begäran alternativ (kommer snart)
 
-Alternativet `create-pull-request` styr om åtgärden skapar en pull-begäran med ändringarna eller begår dem direkt till grenen:
+Alternativet `create-pull-request` styr huruvida åtgärden skapar en pull-begäran med ändringarna eller begår dem direkt till grenen:
 
 ```typescript title=".github/workflows/languine.yml"
 with:

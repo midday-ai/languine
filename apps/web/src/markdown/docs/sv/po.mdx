@@ -1,12 +1,12 @@
 # PO (Gettext)
 
-Languine stödjer PO-filer, det allmänt använda Gettext-lokaliseringsformatet. Detta format är populärt i många programmeringsmiljöer, särskilt i Linux-applikationer och PHP-ramverk, och erbjuder stöd för kontext, pluralformer och översättarkommentarer.
+Languine stöder PO-filer, det allmänt använda Gettext-lokaliseringsformatet. Detta format är populärt i många programmeringsmiljöer, särskilt i Linux-applikationer och PHP-ramverk, och erbjuder stöd för kontext, pluralformer och översättarkommentarer.
 
 ---
 
-## Installation
+## Installera
 
-Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+Först, se till att du har en languine.json-konfigurationsfil i projektets rot. Här är ett exempel:
 
 ```json
 {
@@ -22,9 +22,9 @@ Först, se till att du har en languine.config.json eller languine.config.ts konf
 }
 ```
 
-## Översättning
+## Översätta
 
-Med din konfiguration inställd, kör:
+När din konfiguration är inställd, kör:
 
 ```bash
 npx languine@latest translate
@@ -33,7 +33,7 @@ npx languine@latest translate
 När du kör detta kommando kommer Languine att:
 
 - Ladda din käll-PO-fil (t.ex. locales/en/LC_MESSAGES/messages.po)
-- Upptäcka eventuella nya eller modifierade översättningssträngar
+- Upptäcka eventuella nya eller ändrade översättningssträngar
 - Generera översättningar för dina målspråk
 - Skapa eller uppdatera målspråkets PO-filer (t.ex. locales/sv/LC_MESSAGES/messages.po)
 - Bevara metadata, kontexter och pluralformer

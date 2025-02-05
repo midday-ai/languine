@@ -1,34 +1,24 @@
 # Biomi
 
-Languine tukee muotoilua [Biomilla](https://biomejs.dev/) koukkujen avulla. Voit määrittää Biomin automaattisesti muotoilemaan käännöstiedostosi niiden luomisen jälkeen.
+Languine voi työskennellä yhdessä [Biomen](https://biomejs.dev/) kanssa varmistaakseen, että käännöstiedostosi ovat johdonmukaisesti muotoiltuja. Tämä on erityisen hyödyllistä työskennellessäsi JSON-käännöstiedostojen kanssa, jotka tarvitsevat johdonmukaisen tyylin koko projektisi ajan.
 
-Tässä on esimerkkikonfiguraatio:
+## Käyttö Languinen kanssa
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+Suositeltu tapa käyttää Biomea Languinen kanssa on muotoilla käännöstiedostosi niiden luomisen jälkeen. Voit asettaa tämän `package.json`-tiedostossasi:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    // Muotoile luodut tiedostot Biomin avulla
-    afterTranslate: async (files) => {
-      const { check } = await import("@biomejs/biome");
-      
-      for (const file of files) {
-        await check({
-          files: [file],
-          apply: true,
-        });
-      }
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "biome format \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Nyt voit:
+- Suorittaa `npm run translate` vain käännösten luomiseksi
+- Suorittaa `npm run format` vain olemassa olevien käännöstiedostojen muotoilemiseksi
+- Suorittaa `npm run translate:format` luodaksesi käännökset ja muotoillaksesi ne peräkkäin
+
+Tämä kokoonpano varmistaa, että käännöstiedostosi on muotoiltu johdonmukaisesti 2-välin sisennykseen ja enintään 80 merkin rivileveyteen.

@@ -1,34 +1,24 @@
 # Biome
 
-Languine stöder formatering med [Biome](https://biomejs.dev/) genom hooks. Du kan konfigurera Biome för att automatiskt formatera dina översättningsfiler efter att de har genererats.
+Languine kan samarbeta med [Biome](https://biomejs.dev/) för att säkerställa att dina översättningsfiler är konsekvent formaterade. Detta är särskilt användbart när du arbetar med JSON-översättningsfiler som behöver upprätthålla en konsekvent stil i hela ditt projekt.
 
-Här är ett exempel på konfiguration:
+## Använda med Languine
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+Det rekommenderade sättet att använda Biome med Languine är att formatera dina översättningsfiler efter att de har genererats. Du kan ställa in detta i din `package.json`:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    // Formatera genererade filer med Biome
-    afterTranslate: async (files) => {
-      const { check } = await import("@biomejs/biome");
-      
-      for (const file of files) {
-        await check({
-          files: [file],
-          apply: true,
-        });
-      }
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "biome format \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Nu kan du:
+- Köra `npm run translate` för att endast generera översättningar
+- Köra `npm run format` för att endast formatera befintliga översättningsfiler
+- Köra `npm run translate:format` för att generera översättningar och formatera dem i följd
+
+Denna konfiguration kommer att säkerställa att dina översättningsfiler är formaterade konsekvent med 2-blankstegs indragning och en maximal radbredd på 80 tecken.

@@ -6,7 +6,7 @@ Languine admite la localización de archivos Markdown, perfecto para documentaci
 
 ## Configuración
 
-Primero, asegúrate de tener un archivo de configuración languine.config.json o languine.config.ts en la raíz de tu proyecto. Aquí tienes un ejemplo:
+Primero, asegúrate de tener un archivo de configuración languine.json en la raíz de tu proyecto. Aquí tienes un ejemplo:
 
 ```json
 {
@@ -32,12 +32,12 @@ npx languine@latest translate
 
 Cuando ejecutes este comando, Languine:
 
-- Cargará tus archivos Markdown de origen (por ejemplo, content/en/*.md)
+- Cargará tus archivos Markdown fuente (por ejemplo, content/en/*.md)
 - Detectará cualquier contenido nuevo o modificado
 - Generará traducciones para tus idiomas de destino
 - Creará o actualizará los archivos de idioma de destino (por ejemplo, content/sv/*.md)
 - Preservará el formato y la estructura de Markdown
 - Manejará las traducciones de front matter
 - Mantendrá enlaces y referencias
-- Mantendrá los bloques de código sin traducir
+- Mantendrá bloques de código sin traducir
 - Preservará HTML dentro de Markdown

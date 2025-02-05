@@ -6,7 +6,7 @@ Languine støtter Java Properties-filer, den standardiserte lokaliseringsformate
 
 ## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -22,7 +22,7 @@ Først, sørg for at du har en languine.config.json eller languine.config.ts kon
 }
 ```
 
-## Oversettelse
+## Oversetting
 
 Når konfigurasjonen din er satt opp, kjør:
 
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Når du kjører denne kommandoen, vil Languine:
 
-- Laste inn kildeproperties-filen din (f.eks. messages_en.properties)
+- Laste inn kilde properties-filen din (f.eks. messages_en.properties)
 - Oppdage eventuelle nye eller endrede oversettelsesstrenger
-- Generere oversettelser for målrettede språk
-- Opprette eller oppdatere målrettede språkproperties-filer (f.eks. messages_sv.properties)
+- Generere oversettelser for målspråkene dine
+- Opprette eller oppdatere målspråkets properties-filer (f.eks. messages_sv.properties)
 - Håndtere Unicode-escaping automatisk
 - Bevare kommentarer og formatering

@@ -608,7 +608,7 @@
     "tuning": "Ottimizzazione",
     "overrides": "Sovrascritture",
     "settings": "Impostazioni",
-    "hooks": "Hook",
+    "hooks": "Formattatori di codice",
     "examples": "Esempi",
     "team": "Team"
   },
@@ -656,7 +656,7 @@
     "description": "Traduci il tuo progetto"
   },
   "test_translation": {
-    "title": "Traduzione di Prova",
-    "description": "Verifica la traduzione del tuo progetto"
+    "title": "Traduzione di prova",
+    "description": "Prova la traduzione del tuo progetto"
   }
 }

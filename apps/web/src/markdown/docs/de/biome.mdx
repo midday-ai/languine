@@ -1,34 +1,24 @@
 # Biome
 
-Languine unterstützt die Formatierung mit [Biome](https://biomejs.dev/) über Hooks. Sie können Biome so konfigurieren, dass Ihre Übersetzungsdateien automatisch formatiert werden, nachdem sie generiert wurden.
+Languine kann zusammen mit [Biome](https://biomejs.dev/) arbeiten, um sicherzustellen, dass Ihre Übersetzungsdateien konsistent formatiert sind. Dies ist besonders nützlich, wenn Sie mit JSON-Übersetzungsdateien arbeiten, die einen einheitlichen Stil in Ihrem Projekt beibehalten müssen.
 
-Hier ist ein Beispiel für eine Konfiguration:
+## Verwendung mit Languine
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+Die empfohlene Methode, Biome mit Languine zu verwenden, besteht darin, Ihre Übersetzungsdateien nach deren Erstellung zu formatieren. Sie können dies in Ihrer `package.json` einrichten:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    // Generierte Dateien mit Biome formatieren
-    afterTranslate: async (files) => {
-      const { check } = await import("@biomejs/biome");
-      
-      for (const file of files) {
-        await check({
-          files: [file],
-          apply: true,
-        });
-      }
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "biome format \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Jetzt können Sie:
+- `npm run translate` ausführen, um nur Übersetzungen zu generieren
+- `npm run format` ausführen, um nur bestehende Übersetzungsdateien zu formatieren
+- `npm run translate:format` ausführen, um Übersetzungen zu generieren und sie in der Reihenfolge zu formatieren
+
+Diese Konfiguration stellt sicher, dass Ihre Übersetzungsdateien konsistent mit einer Einrückung von 2 Leerzeichen und einer maximalen Zeilenbreite von 80 Zeichen formatiert sind.

@@ -1,7 +1,7 @@
 # GitHub Actions
 
-Dzięki akcji GitHub możesz łatwo przetłumaczyć swój kod, po prostu przesyłając go do repozytorium, a akcja GitHub przetłumaczy nowe klucze, tworząc pull request lub zatwierdzając zmiany.
-To oszczędza dużo czasu i wysiłku, zachowując jednocześnie wysoką jakość tłumaczeń.
+Dzięki akcji GitHub możesz łatwo przetłumaczyć swój kod, po prostu przesyłając go do repozytorium. Akcja GitHub przetłumaczy nowe klucze, tworząc pull request lub zatwierdzając zmiany.
+To oszczędza dużo czasu i wysiłku, jednocześnie utrzymując wysoką jakość tłumaczeń.
 
 ---
 
@@ -37,22 +37,22 @@ To oszczędza dużo czasu i wysiłku, zachowując jednocześnie wysoką jakość
            ▼                              ▼                              ▼
  ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
- ║      Angielski    ║          ║      Hiszpański   ║          ║      Japoński    ║
- ║    Tłumaczenie    ║          ║    Tłumaczenie    ║          ║     Tłumaczenie   ║
+ ║      English      ║          ║      Spanish      ║          ║      Japanese     ║
+ ║    Translation    ║          ║    Translation    ║          ║     Translation   ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Scal      │
+                                  │     Merge     │
                                   │ Pull Request  │
                                   └───────────────┘
                                           │
                                           ▼
                               ┌─────────────────────┐
-                              │      Zakończono     │
-                              │      (Wdrożenie)    │
+                              │      Completed      │
+                              │      (Deploy)       │
                               └─────────────────────┘
 `}
         </pre>
@@ -69,7 +69,7 @@ Aby użyć akcji Languine GitHub w swoim repozytorium, musisz:
 
 ### Ustawianie sekretów repozytorium
 
-Dodaj następujące sekrety w ustawieniach repozytorium (Ustawienia > Sekrety i zmienne > Akcje):
+Dodaj następujące sekrety w ustawieniach swojego repozytorium (Ustawienia > Sekrety i zmienne > Akcje):
 
 - `LANGUINE_API_KEY`: Twój klucz API Languine
 - `LANGUINE_PROJECT_ID`: Twój identyfikator projektu Languine
@@ -83,14 +83,14 @@ Możesz znaleźć te wartości w swoim panelu Languine w sekcji Ustawienia proje
 Akcja GitHub używa następujących zmiennych środowiskowych:
 - `LANGUINE_API_KEY` (Wymagane): Twój klucz API Languine do uwierzytelniania
 - `LANGUINE_PROJECT_ID` (Wymagane): Twój identyfikator projektu Languine 
-- `GITHUB_TOKEN` (Wymagane): Automatycznie dostarczany przez GitHub, używany do tworzenia PR
+- `GITHUB_TOKEN` (Wymagane): Automatycznie dostarczane przez GitHub, używane do tworzenia PR-ów
 
-### Przykładowy plik roboczy
+### Przykład roboczego pliku
 
 Utwórz nowy plik .github/workflows/languine.yml w swoim repozytorium z następującą zawartością:
 
 ```ts title=".github/workflows/release.yml"
-name: Wdrożenie strony
+name: Wdróż stronę
 
 on:
   push:
@@ -118,9 +118,9 @@ jobs:
 ```
  
  Ten plik roboczy:
-- Będzie uruchamiany przy przesyłaniu do głównej gałęzi
-- Będzie uruchamiany przy pull requestach do głównej gałęzi
-- Może być wyzwalany ręcznie z zakładki Akcje
+- Uruchomi się przy przesyłaniu do głównej gałęzi
+- Uruchomi się przy pull requestach do głównej gałęzi
+- Może być uruchamiany ręcznie z zakładki Akcje
 - Sprawdzi Twój kod i uruchomi proces tłumaczenia Languine
 - Utworzy pull request z nowymi tłumaczeniami (możliwe do skonfigurowania)
 
@@ -130,18 +130,18 @@ Opcja `working-directory` pozwala określić, gdzie znajdują się Twoje pliki t
 
 #### Opcja Pull Request (wkrótce)
 
-Opcja `create-pull-request` kontroluje, czy akcja tworzy pull request z zmianami, czy zatwierdza je bezpośrednio do gałęzi:
+Opcja `create-pull-request` kontroluje, czy akcja tworzy pull request ze zmianami, czy zatwierdza je bezpośrednio do gałęzi:
 
 ```typescript title=".github/workflows/languine.yml"
 with:
-  create-pull-request: true # utwórz pull request z zmianami
+  create-pull-request: true # utwórz pull request ze zmianami
 ```
 
-Gdy jest ustawiona na `true`, akcja:
-- Utworzy nową gałąź z zmianami
+Gdy ustawione na `true`, akcja:
+- Utworzy nową gałąź ze zmianami
 - Utworzy pull request do przeglądu
 - Doda odpowiednie etykiety i opis
 
-Gdy jest ustawiona na `false` (domyślnie), akcja:
+Gdy ustawione na `false` (domyślnie), akcja:
 - Zatwierdzi zmiany bezpośrednio do bieżącej gałęzi
-- Wypycha zmiany bez tworzenia pull requesta
+- Przesyła zmiany bez tworzenia pull requesta

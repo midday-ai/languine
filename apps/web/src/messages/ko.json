@@ -608,7 +608,7 @@
     "tuning": "조정",
     "overrides": "재정의",
     "settings": "설정",
-    "hooks": "후크",
+    "hooks": "코드 포매터",
     "examples": "예제",
     "team": "팀"
   },
@@ -657,6 +657,6 @@
   },
   "test_translation": {
     "title": "테스트 번역",
-    "description": "프로젝트의 번역을 테스트하세요"
+    "description": "프로젝트의 번역을 테스트합니다"
   }
 }

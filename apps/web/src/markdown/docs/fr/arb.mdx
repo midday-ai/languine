@@ -6,7 +6,7 @@ Languine prend en charge les fichiers ARB, le format de localisation standard po
 
 ## Configuration
 
-Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.config.json ou languine.config.ts à la racine de votre projet. Voici un exemple :
+Tout d'abord, assurez-vous d'avoir un fichier de configuration languine.json à la racine de votre projet. Voici un exemple :
 
 ```json
 {
@@ -33,8 +33,8 @@ npx languine@latest translate
 Lorsque vous exécutez cette commande, Languine va :
 
 - Charger votre fichier ARB source (par exemple, lib/l10n/intl_en.arb)
-- Détecter toutes les chaînes de traduction nouvelles ou modifiées
+- Détecter toute nouvelle chaîne de traduction ou toute chaîne modifiée
 - Générer des traductions pour vos langues cibles
-- Créer ou mettre à jour les fichiers ARB des langues cibles (par exemple, lib/l10n/intl_sv.arb)
+- Créer ou mettre à jour les fichiers ARB de la langue cible (par exemple, lib/l10n/intl_sv.arb)
 - Préserver les métadonnées, les espaces réservés et les expressions de pluriel/sélection
 

@@ -6,7 +6,7 @@ Languine stöder YAML-filer som ett källformat, vilket är vanligt förekommand
 
 ## Installera
 
-Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i din projektrot. Här är ett exempel:
+Först, se till att du har en languine.json-konfigurationsfil i projektets rot. Här är ett exempel:
 
 ```json
 {
@@ -22,7 +22,7 @@ Först, se till att du har en languine.config.json eller languine.config.ts konf
 }
 ```
 
-## Översätta
+## Översättning
 
 Med din konfiguration inställd, kör:
 
@@ -30,10 +30,10 @@ Med din konfiguration inställd, kör:
 npx languine@latest translate
 ```
 
-När du kör det här kommandot kommer Languine att:
+När du kör detta kommando kommer Languine att:
 
 - Ladda din käll-YAML-fil (t.ex. config/locales/en.yml)
 - Upptäcka eventuella nya eller ändrade översättningssträngar
 - Generera översättningar för dina målspråk
-- Skapa eller uppdatera målspråkets YAML-filer (t.ex. config/locales/sv.yml)
+- Skapa eller uppdatera målspråkens YAML-filer (t.ex. config/locales/sv.yml)
 - Bevara nästlade strukturer och formatering

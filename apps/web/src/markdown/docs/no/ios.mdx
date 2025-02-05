@@ -1,12 +1,12 @@
 # iOS
 
-Languine støtter iOS Localizable.strings-filer, det standard lokaliseringsformatet for iOS-applikasjoner. Dette formatet håndterer grunnleggende nøkkel-verdi tekstpar og støtter kommentarer for å gi kontekst til oversettere.
+Languine støtter iOS Localizable.strings-filer, den standardiserte lokaliseringsformatet for iOS-applikasjoner. Dette formatet håndterer grunnleggende nøkkel-verdi tekstpar og støtter kommentarer for å gi kontekst til oversettere.
 
 ---
 
-## Sette opp
+## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -22,9 +22,9 @@ Først, sørg for at du har en languine.config.json eller languine.config.ts kon
 }
 ```
 
-## Oversette
+## Oversetting
 
-Med konfigurasjonen din satt opp, kjør:
+Når konfigurasjonen din er satt opp, kjør:
 
 ```bash
 npx languine@latest translate
@@ -36,4 +36,4 @@ Når du kjører denne kommandoen, vil Languine:
 - Oppdage eventuelle nye eller endrede oversettelsesstrenger
 - Generere oversettelser for målspråkene dine
 - Opprette eller oppdatere målspråkfilene (f.eks. sv.lproj/Localizable.strings)
-- Beholde eventuelle eksisterende kommentarer og formatering
+- Bevare eventuelle eksisterende kommentarer og formatering

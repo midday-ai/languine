@@ -1,30 +1,14 @@
 # Configuración
 
-Languine admite tanto archivos de configuración TypeScript como JSON para gestionar tu configuración de traducción. Puedes elegir languine.config.ts para TypeScript o languine.config.json para el formato JSON. Ambos archivos definen tus idiomas de origen y destino, así como los archivos que necesitan ser traducidos.
+Languine utiliza un archivo de configuración JSON (languine.json) para gestionar tu configuración de traducción. Este archivo define tus idiomas de origen y destino, así como los archivos que necesitan ser traducidos.
 
 ---
 
 ## Configuración Básica
 
-Aquí tienes un ejemplo básico en ambos formatos:
+Aquí hay un ejemplo básico en ambos formatos:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,20 +22,18 @@ export default defineConfig({
 }
 ```
 
-Ambos formatos admiten las mismas opciones de configuración. Elige TypeScript para una mejor verificación de tipos y soporte de IDE, o JSON para simplicidad y mayor compatibilidad con herramientas.
-
-Desglosemos las diferentes secciones de estos archivos.
+Desglosemos las diferentes secciones en el archivo de configuración.
 
 ---
 
 ## Configuración Regional
 
-La sección de configuración regional define tus idiomas de traducción:
+La sección de locale define tus idiomas de traducción:
 
 - source: Tu idioma principal para la creación de contenido (por ejemplo, "en" para inglés)
 - targets: Un array de idiomas a los que deseas traducir (por ejemplo, ["es", "fr", "de"] para español, francés y alemán)
 
-Languine admite una amplia gama de códigos de idioma, incluidos:
+Languine soporta una amplia gama de códigos de idioma, incluyendo:
 - Códigos simples: en, es, fr, de
 - Códigos específicos de región: pt-BR, zh-CN, zh-TW
 
@@ -62,7 +44,7 @@ La sección de archivos define qué archivos debe traducir Languine. Puedes conf
 ---
 
 ### Archivos JSON
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Archivos Markdown/MDX
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Archivos de Plataforma Móvil
 
 Para iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 Para Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -116,7 +98,7 @@ files: {
 
 ### Otros Formatos
 
-Aquí tienes una lista completa de los formatos de archivo admitidos por Languine:
+Aquí tienes una lista completa de formatos de archivo soportados por Languine:
 
 - [JSON](/docs/json) - Archivos de traducción JSON estándar
 - [YAML](/docs/yaml) - Archivos de traducción YAML
@@ -134,7 +116,7 @@ Aquí tienes una lista completa de los formatos de archivo admitidos por Languin
 - [XLIFF](/docs/xliff) - Formato de archivo de intercambio de localización XML
 - [CSV](/docs/csv) - Traducciones basadas en hojas de cálculo
 - [XML](/docs/xml) - Archivos de recursos XML
-- [Flutter ARB](/docs/arb) - Archivos de Application Resource Bundle
+- [Flutter ARB](/docs/arb) - Archivos de paquete de recursos de aplicación
 
 ---
 
@@ -148,7 +130,7 @@ El marcador de posición [locale] en los patrones de archivo se reemplaza autom�
   - locales/fr.json
 
 Puedes incluir múltiples patrones para cada tipo de archivo y usar patrones glob:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 Si estás utilizando los servicios en la nube de Languine, puedes incluir tu ID de proyecto en la configuración:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... configuración regional
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... configuración de locale
   },
   files: {
     // ... configuración de archivos
   },
-});
+}
 ```
 
 ---
@@ -191,7 +173,7 @@ No necesitas editar manualmente el archivo de bloqueo; Languine lo gestiona auto
 
 ## Mejores Prácticas
 
-1. **Control de Versiones**: Siempre compromete tanto languine.config.ts como languine.lock en tu repositorio
+1. **Control de Versiones**: Siempre compromete tanto languine.json como languine.lock en tu repositorio
 2. **Organización de Archivos**: Mantén tus archivos de traducción organizados en una estructura de directorios consistente
 3. **Códigos de Idioma**: Usa códigos de idioma estándar para asegurar compatibilidad
 4. **Patrones**: Usa patrones de inclusión específicos para evitar traducir archivos innecesarios

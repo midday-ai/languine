@@ -6,7 +6,7 @@ Languine støtter CSV (Comma-Separated Values) filer for enkel oversettelsesadmi
 
 ## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Når du kjører denne kommandoen, vil Languine:
 
-- Laste inn kilde CSV-filen din (f.eks. translations/en.csv)
+- Laste inn din kilde CSV-fil (f.eks., translations/en.csv)
 - Oppdage eventuelle nye eller endrede oversettelsesstrenger
 - Generere oversettelser for målspråkene dine
-- Opprette eller oppdatere CSV-filer for målspråkene (f.eks. translations/sv.csv)
-- Opprettholde kolonneoppsett og formatering
-- Bevare eventuelle ekstra metadatakolonner
+- Opprette eller oppdatere målspråk CSV-filene (f.eks., translations/sv.csv)
+- Opprettholde kolonne-struktur og formatering
+- Bevare eventuelle ekstra metadata-kolonner

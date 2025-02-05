@@ -1,7 +1,7 @@
 # GitHub Actions
 
 Com a ação do GitHub, você pode traduzir seu código facilmente apenas enviando seu código para o repositório; a ação do GitHub então traduz suas novas chaves, criando um pull request ou confirmando suas alterações.
-Isso economiza muito tempo e esforço enquanto mantém traduções de alta qualidade.
+Isso economiza muito tempo e esforço, mantendo traduções de alta qualidade.
 
 ---
 
@@ -38,7 +38,7 @@ Isso economiza muito tempo e esforço enquanto mantém traduções de alta quali
  ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
  ║      Inglês      ║          ║      Espanhol     ║          ║      Japonês      ║
- ║    Tradução      ║          ║    Tradução       ║          ║     Tradução      ║
+ ║    Tradução      ║          ║    Tradução      ║          ║     Tradução      ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
@@ -62,32 +62,32 @@ Isso economiza muito tempo e esforço enquanto mantém traduções de alta quali
 
 ## Instalação
 
-Para usar a Ação do Languine no seu repositório, você precisará:
+Para usar a Ação do GitHub Languine em seu repositório, você precisará:
 
-1. Configurar os segredos do seu repositório com suas credenciais do Languine
-2. Criar um arquivo de fluxo de trabalho no seu repositório
+1. Configurar os segredos do seu repositório com suas credenciais Languine
+2. Criar um arquivo de fluxo de trabalho em seu repositório
 
 ### Configurando Segredos do Repositório
 
 Adicione os seguintes segredos nas configurações do seu repositório (Configurações > Segredos e variáveis > Ações):
 
-- `LANGUINE_API_KEY`: Sua chave de API do Languine
-- `LANGUINE_PROJECT_ID`: Seu ID de projeto do Languine
+- `LANGUINE_API_KEY`: Sua chave de API Languine
+- `LANGUINE_PROJECT_ID`: Seu ID de projeto Languine
 
-Você pode encontrar esses valores no seu painel do Languine em Configurações do Projeto.
+Você pode encontrar esses valores no seu painel Languine em Configurações do Projeto.
 
 
 
 ### Variáveis de Ambiente
 
 A Ação do GitHub usa as seguintes variáveis de ambiente:
-- `LANGUINE_API_KEY` (Obrigatório): Sua chave de API do Languine para autenticação
-- `LANGUINE_PROJECT_ID` (Obrigatório): Seu ID de projeto do Languine 
+- `LANGUINE_API_KEY` (Obrigatório): Sua chave de API Languine para autenticação
+- `LANGUINE_PROJECT_ID` (Obrigatório): Seu ID de projeto Languine 
 - `GITHUB_TOKEN` (Obrigatório): Fornecido automaticamente pelo GitHub, usado para criar PRs
 
 ### Exemplo de Fluxo de Trabalho
 
-Crie um novo arquivo .github/workflows/languine.yml no seu repositório com o seguinte conteúdo:
+Crie um novo arquivo .github/workflows/languine.yml em seu repositório com o seguinte conteúdo:
 
 ```ts title=".github/workflows/release.yml"
 name: Implantar Website
@@ -121,12 +121,12 @@ jobs:
 - Executar em envios para a branch principal
 - Executar em pull requests para a branch principal
 - Pode ser acionado manualmente na aba Ações
-- Fazer checkout do seu código e executar o processo de tradução do Languine
+- Fazer checkout do seu código e executar o processo de tradução Languine
 - Criar um pull request com quaisquer novas traduções (configurável)
 
 #### Opção de Diretório de Trabalho
 
-A opção `working-directory` permite especificar onde seus arquivos de tradução estão localizados. Isso é particularmente útil em monorepos onde suas traduções podem estar em um pacote ou diretório de aplicativo específico. Por exemplo:
+A opção `working-directory` permite que você especifique onde seus arquivos de tradução estão localizados. Isso é particularmente útil em monorepos onde suas traduções podem estar em um pacote ou diretório de aplicativo específico. Por exemplo:
 
 #### Opção de Pull Request (em breve)
 

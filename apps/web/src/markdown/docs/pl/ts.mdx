@@ -1,12 +1,12 @@
 # TypeScript
 
-Languine wspiera pliki lokalizacyjne TypeScript z pełnym bezpieczeństwem typów. Ten format rozszerza wsparcie dla JavaScript o dodatkowe funkcje specyficzne dla TypeScript oraz możliwości generowania typów.
+Languine obsługuje pliki lokalizacyjne TypeScript z pełnym bezpieczeństwem typów. Ten format rozszerza wsparcie dla JavaScript o dodatkowe funkcje specyficzne dla TypeScript oraz możliwości generowania typów.
 
 ---
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w głównym katalogu projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w głównym katalogu projektu. Oto przykład:
 
 ```json
 {
@@ -33,11 +33,10 @@ npx languine@latest translate
 Kiedy uruchomisz to polecenie, Languine:
 
 - Załaduje Twoje źródłowe pliki TypeScript (np. src/locales/en.ts)
-- Wykryje nowe lub zmodyfikowane ciągi tłumaczeń
+- Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
 - Wygeneruje tłumaczenia dla Twoich docelowych języków
-- Utworzy lub zaktualizuje pliki językowe docelowe (np. src/locales/sv.ts)
-- Wygeneruje definicje typów TypeScript
+- Utworzy lub zaktualizuje pliki języków docelowych (np. src/locales/sv.ts)
 - Zachowa adnotacje typów i interfejsy
 - Obsłuży zagnieżdżone obiekty z odpowiednim typowaniem
 - Utrzyma formatowanie kodu i komentarze dokumentacyjne
-- Wspiera typy dosłowne i typy unii
+- Wspiera typy dosłowne i typy unijne
