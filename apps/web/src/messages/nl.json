@@ -651,10 +651,6 @@
     "cancel": "Annuleren",
     "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaalsleutels, documenten, talen en prioritaire ondersteuning."
   },
-  "translate": {
-    "title": "Vertalen",
-    "description": "Vertaal uw project"
-  },
   "test_translation": {
     "title": "Testvertaling",
     "description": "Test de vertaling van uw project"

@@ -651,10 +651,6 @@
     "cancel": "Avbestill",
     "description": "Oppgrader planen din for å øke grensene dine. Du får tilgang til flere oversettelsesnøkler, dokumenter, språk og prioritert støtte."
   },
-  "translate": {
-    "title": "Oversett",
-    "description": "Oversett prosjektet ditt"
-  },
   "test_translation": {
     "title": "Testoversettelse",
     "description": "Test oversettelsen av prosjektet ditt"

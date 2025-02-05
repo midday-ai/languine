@@ -651,10 +651,6 @@
     "cancel": "Annuler",
     "description": "Mettez à niveau votre plan pour augmenter vos limites. Vous aurez accès à plus de clés de traduction, de documents, de langues et à un support prioritaire."
   },
-  "translate": {
-    "title": "Traduire",
-    "description": "Traduisez votre projet"
-  },
   "test_translation": {
     "title": "Test de traduction",
     "description": "Tester la traduction de votre projet"

@@ -651,10 +651,6 @@
     "cancel": "Avbryt",
     "description": "Uppgradera din plan för att öka dina gränser. Du får tillgång till fler översättningsnycklar, dokument, språk och prioriterad support."
   },
-  "translate": {
-    "title": "Översätt",
-    "description": "Översätt ditt projekt"
-  },
   "test_translation": {
     "title": "Testöversättning",
     "description": "Testa översättningen av ditt projekt"

@@ -651,10 +651,6 @@
     "cancel": "Anuluj",
     "description": "Ulepsz swój plan, aby zwiększyć swoje limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
   },
-  "translate": {
-    "title": "Tłumacz",
-    "description": "Przetłumacz swój projekt"
-  },
   "test_translation": {
     "title": "Test tłumaczenia",
     "description": "Przetestuj tłumaczenie swojego projektu"

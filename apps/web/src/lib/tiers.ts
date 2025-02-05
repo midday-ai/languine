@@ -6,9 +6,9 @@ export const TIERS_MAX_KEYS = {
   4: 30000,
   5: 50000,
   6: 100000,
-  7: 200000,
-  8: 500000,
-  9: 1000000,
+  // 7: 200000,
+  // 8: 500000,
+  // 9: 1000000,
 };
 
 export const TIERS_MAX_DOCUMENTS = {
@@ -17,11 +17,11 @@ export const TIERS_MAX_DOCUMENTS = {
   2: 50,
   3: 100,
   4: 200,
-  5: 500,
-  6: 1000,
-  7: 2000,
-  8: 5000,
-  9: 10000,
+  5: 300,
+  6: 500,
+  // 7: 2000,
+  // 8: 5000,
+  // 9: 10000,
 };
 
 export const TIER_PRICES = {
@@ -31,9 +31,9 @@ export const TIER_PRICES = {
   4: 299,
   5: 499,
   6: 999,
-  7: 1999,
-  8: 4999,
-  9: 9999,
+  // 7: 1999,
+  // 8: 4999,
+  // 9: 9999,
 };
 
 export const TIER_MAX_LANGUAGES = {
@@ -44,9 +44,9 @@ export const TIER_MAX_LANGUAGES = {
   4: 24,
   5: 32,
   6: 40,
-  7: 48,
-  8: 56,
-  9: 64,
+  // 7: 48,
+  // 8: 56,
+  // 9: 64,
 };
 
 export const PRODUCT_ID_MAP_PRODUCTION = {
@@ -56,9 +56,9 @@ export const PRODUCT_ID_MAP_PRODUCTION = {
   4: "be20ddfe-dee7-49ea-9008-3934b01dcb8a",
   5: "6c2929f7-8941-47da-8f45-bd2fe304e384",
   6: "b893ae5d-ae55-42fc-a919-8b7c142cf6be",
-  7: "44278d04-34a5-4ad8-9a8d-91b3b90c0b42",
-  8: "c7f4e979-6a90-427d-bb5c-3b4dcaa1d5f2",
-  9: "70076651-2079-4ecf-ad3a-73294e2a715c",
+  // 7: "44278d04-34a5-4ad8-9a8d-91b3b90c0b42",
+  // 8: "c7f4e979-6a90-427d-bb5c-3b4dcaa1d5f2",
+  // 9: "70076651-2079-4ecf-ad3a-73294e2a715c",
 };
 
 export const PRODUCT_ID_MAP_SANDBOX = {
@@ -68,9 +68,9 @@ export const PRODUCT_ID_MAP_SANDBOX = {
   4: "cf48e7c3-7ac6-4553-a92e-1054ffb63c27",
   5: "b53ff0db-0a16-4e33-9f98-7c7397fa5048",
   6: "b0350cb1-2304-4a3e-940b-195a2b4a8d4c",
-  7: "8e53c58c-1062-47a8-9492-9e29d71acfe4",
-  8: "f2875dd4-a214-402c-9c0e-94d0ee25d184",
-  9: "23627b2c-70bd-48a4-956c-0306336dbba1",
+  // 7: "8e53c58c-1062-47a8-9492-9e29d71acfe4",
+  // 8: "f2875dd4-a214-402c-9c0e-94d0ee25d184",
+  // 9: "23627b2c-70bd-48a4-956c-0306336dbba1",
 };
 
 export const PRODUCT_ID_MAP =

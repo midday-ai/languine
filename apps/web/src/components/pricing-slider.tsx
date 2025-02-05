@@ -99,7 +99,7 @@ export function PricingSlider({
               onValueChange={handleValueChange}
               step={1}
               min={1}
-              max={9}
+              max={Object.keys(TIER_PRICES).length}
               className="w-full"
             />
           </div>

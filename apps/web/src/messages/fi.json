@@ -651,10 +651,6 @@
     "cancel": "Peruuta",
     "description": "Päivitä suunnitelmasi kasvattaaksesi rajoja. Saat pääsyn useampiin käännöksen avaimiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
   },
-  "translate": {
-    "title": "Käännä",
-    "description": "Käännä projektisi"
-  },
   "test_translation": {
     "title": "Testikäännös",
     "description": "Testaa projektisi käännöstä"
