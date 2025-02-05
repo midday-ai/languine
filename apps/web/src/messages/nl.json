@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelaarsworkflow en -pipeline, zodat vertalingen u nooit vertragen."
+    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aan de slag",
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelaarsworkflow en -pipeline, zodat vertalingen u nooit vertragen.",
+    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"
@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Kenmerken",
-    "fullyOpenSource": "Volledig open source",
-    "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
-    "presetsForExpo": "Voorinstellingen voor Expo",
-    "presetsForExpoDescription": "We bieden voorinstellingen voor Expo, zodat u snel aan de slag kunt.",
-    "presetForReactNative": "Voorinstelling voor React Native",
-    "presetForReactNativeDescription": "We bieden een voorinstelling voor React Native, zodat u snel aan de slag kunt.",
-    "presetForReactEmail": "React Email-bibliotheek",
-    "presetForReactEmailDescription": "We hebben een i18n-bibliotheek voor React Email gemaakt.",
-    "readyForI18nLibraries": "Klaar voor i18n-bibliotheken",
-    "readyForI18nLibrariesDescription": "We ondersteunen alle bibliotheken, inclusief de meest populaire (next-intl, react-i18next, react-intl, enz.).",
-    "markdownSupport": "Markdown/Documentondersteuning",
-    "markdownSupportDescription": "Languine vertaalt uw markdown-inhoud naadloos, zodat documentatie en andere bestanden in sync blijven met uw workflow."
+    "fullyOpenSource": "Geautomatiseerde Vertalingen",
+    "fullyOpenSourceDescription": "Zeg vaarwel tegen handmatig vertaalwerk. Languine automatiseert het hele proces, zodat je app meertalig blijft zonder je te vertragen.",
+    "presetsForExpo": "Markdown & Documentondersteuning",
+    "presetsForExpoDescription": "Houd je documentatie en inhoud up-to-date in verschillende talen. Languine vertaalt markdown-bestanden moeiteloos en behoudt consistentie in je workflow.",
+    "presetForReactNative": "Fijnstemming voor Merksstem",
+    "presetForReactNativeDescription": "Pas vertalingen aan om de toon en stem van je merk te matchen. Languine geeft je volledige controle over nuances, zodat je boodschap op punt blijft.",
+    "presetForReactEmail": "GitHub Actie",
+    "presetForReactEmailDescription": "Automatiseer lokalisatie direct binnen GitHub. Onze GitHub Actie zorgt ervoor dat je vertalingen in sync blijven met elke commit en implementatie.",
+    "readyForI18nLibraries": "Taal- en Frameworkonafhankelijk",
+    "readyForI18nLibrariesDescription": "Werkt met elke i18n-bibliotheek. Behoud je bestaande setup en voeg eenvoudig Languine toe voor geautomatiseerde vertalingen zonder je workflow te verstoren.",
+    "markdownSupport": "CLI & CI/CD Integratie",
+    "markdownSupportDescription": "Gebruik onze krachtige CLI om vertalingen direct te beheren of integreer Languine naadloos in je bestaande CI/CD-pipeline voor een volledig geautomatiseerde workflow."
   },
   "info": {
     "title": "Behandelt elk aspect van het lokaliseren van uw app, inclusief",
@@ -65,23 +65,25 @@
       "brandVoice": "Consistentie in merkstem en toon",
       "terminology": "Terminologiebeheer",
       "linguisticFeatures": "Geavanceerde linguïstische functies",
-      "realtimeUpdates": "Realtime vertaalupdates"
+      "realtimeUpdates": "Realtime vertaalupdates",
+      "overrides": "Vertaaloverriding"
     },
     "implementation": {
       "title": "Implementatie",
       "quickSetup": "Snelle installatie en integratie",
-      "fileFormat": "Bestandsformaatverwerking",
-      "contentStructure": "Organisatie van de inhoudsstructuur",
-      "assetOrganization": "Organisatie van activa"
+      "fileFormat": "Nodig teamleden uit",
+      "contentStructure": "Fijnstem instellingen",
+      "assetOrganization": "Kies talen"
     },
     "developer": {
       "title": "Ontwikkelaarservaring",
       "cli": "Opdrachtregelinterface",
       "cicd": "CI/CD-integratie",
-      "versionControl": "Versiebeheer",
+      "versionControl": "Github Acties",
       "workflow": "Ontwikkelaarsworkflow",
-      "documentation": "Uitgebreide documentatie"
-    }
+      "documentation": "Uitstekende documentatie"
+    },
+    "get_started": "Begin met automatiseren"
   },
   "login": {
     "title": "Aanmelden",

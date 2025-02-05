@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Funktionen",
-    "fullyOpenSource": "Vollständig Open Source",
-    "fullyOpenSourceDescription": "Unser Code ist öffentlich auf GitHub verfügbar, was Transparenz und Beiträge der Community ermöglicht.",
-    "presetsForExpo": "Voreinstellungen für Expo",
-    "presetsForExpoDescription": "Wir bieten Voreinstellungen für Expo an, damit Sie schnell starten können.",
-    "presetForReactNative": "Voreinstellung für React Native",
-    "presetForReactNativeDescription": "Wir bieten eine Voreinstellung für React Native an, damit Sie schnell starten können.",
-    "presetForReactEmail": "React E-Mail-Bibliothek",
-    "presetForReactEmailDescription": "Wir haben eine i18n-Bibliothek für React E-Mail erstellt.",
-    "readyForI18nLibraries": "Bereit für i18n-Bibliotheken",
-    "readyForI18nLibrariesDescription": "Wir unterstützen alle Bibliotheken, einschließlich der beliebtesten (next-intl, react-i18next, react-intl usw.).",
-    "markdownSupport": "Markdown/Dokumentenunterstützung",
-    "markdownSupportDescription": "Languine übersetzt nahtlos Ihren Markdown-Inhalt und hält Dokumentation und andere Dateien synchron mit Ihrem Workflow."
+    "fullyOpenSource": "Automatisierte Übersetzungen",
+    "fullyOpenSourceDescription": "Verabschieden Sie sich von manueller Übersetzungsarbeit. Languine automatisiert den gesamten Prozess und sorgt dafür, dass Ihre App mehrsprachig bleibt, ohne Sie zu bremsen.",
+    "presetsForExpo": "Markdown- & Dokumentenunterstützung",
+    "presetsForExpoDescription": "Halten Sie Ihre Dokumentation und Inhalte in allen Sprachen aktuell. Languine übersetzt Markdown-Dateien mühelos und sorgt für Konsistenz in Ihrem Workflow.",
+    "presetForReactNative": "Feinabstimmung für Markenstimme",
+    "presetForReactNativeDescription": "Passen Sie Übersetzungen an den Ton und die Stimme Ihrer Marke an. Languine gibt Ihnen die volle Kontrolle über Nuancen, damit Ihre Botschaft präzise bleibt.",
+    "presetForReactEmail": "GitHub-Aktion",
+    "presetForReactEmailDescription": "Automatisieren Sie die Lokalisierung direkt in GitHub. Unsere GitHub-Aktion sorgt dafür, dass Ihre Übersetzungen mit jedem Commit und Deployment synchron bleiben.",
+    "readyForI18nLibraries": "Sprache- & Framework-unabhängig",
+    "readyForI18nLibrariesDescription": "Funktioniert mit jeder i18n-Bibliothek. Behalten Sie Ihr bestehendes Setup bei und fügen Sie einfach Languine für automatisierte Übersetzungen hinzu, ohne Ihren Workflow zu stören.",
+    "markdownSupport": "CLI- & CI/CD-Integration",
+    "markdownSupportDescription": "Nutzen Sie unser leistungsstarkes CLI, um Übersetzungen direkt zu verwalten oder integrieren Sie Languine nahtlos in Ihre bestehende CI/CD-Pipeline für einen vollständig automatisierten Workflow."
   },
   "info": {
     "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
@@ -65,23 +65,25 @@
       "brandVoice": "Konsistenz der Markenstimme und des Tons",
       "terminology": "Terminologiemanagement",
       "linguisticFeatures": "Erweiterte linguistische Funktionen",
-      "realtimeUpdates": "Echtzeit-Übersetzungsupdates"
+      "realtimeUpdates": "Echtzeit-Übersetzungsupdates",
+      "overrides": "Übersetzungsüberschreibungen"
     },
     "implementation": {
       "title": "Implementierung",
       "quickSetup": "Schnelle Einrichtung und Integration",
-      "fileFormat": "Dateiformatverarbeitung",
-      "contentStructure": "Inhaltsstrukturorganisation",
-      "assetOrganization": "Asset-Organisation"
+      "fileFormat": "Teammitglieder einladen",
+      "contentStructure": "Einstellungen feinabstimmen",
+      "assetOrganization": "Sprachen auswählen"
     },
     "developer": {
       "title": "Entwicklererfahrung",
       "cli": "Befehlszeilenschnittstelle",
       "cicd": "CI/CD-Integration",
-      "versionControl": "Versionskontrolle",
+      "versionControl": "GitHub-Aktionen",
       "workflow": "Entwickler-Workflow",
-      "documentation": "Umfassende Dokumentation"
-    }
+      "documentation": "Ausgezeichnete Dokumentation"
+    },
+    "get_started": "Automatisierung starten"
   },
   "login": {
     "title": "Anmelden",

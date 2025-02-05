@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestrutura de localização feita para startups ágeis.",
-    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca atrasem você."
+    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comece agora",
     "title": "Infraestrutura de localização feita para startups ágeis.",
-    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca atrasem você.",
+    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem.",
     "button": {
       "startAutomating": "Começar a automatizar",
       "readDocumentation": "Ler documentação"
@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Recursos",
-    "fullyOpenSource": "Totalmente open source",
-    "fullyOpenSourceDescription": "Nosso código está disponível publicamente no GitHub, permitindo transparência e contribuições da comunidade.",
-    "presetsForExpo": "Predefinições para Expo",
-    "presetsForExpoDescription": "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
-    "presetForReactNative": "Predefinição para React Native",
-    "presetForReactNativeDescription": "Fornecemos uma predefinição para React Native, para que você possa começar rapidamente.",
-    "presetForReactEmail": "Biblioteca de Email React",
-    "presetForReactEmailDescription": "Criamos uma biblioteca i18n para React Email.",
-    "readyForI18nLibraries": "Pronto para bibliotecas i18n",
-    "readyForI18nLibrariesDescription": "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc).",
-    "markdownSupport": "Suporte a Markdown/Documentos",
-    "markdownSupportDescription": "O Languine traduz seu conteúdo markdown de forma contínua, mantendo a documentação e outros arquivos em sincronia com seu fluxo de trabalho."
+    "fullyOpenSource": "Traduções Automatizadas",
+    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerá-lo.",
+    "presetsForExpo": "Suporte a Markdown & Documentos",
+    "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em diferentes idiomas. Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
+    "presetForReactNative": "Ajuste Fino para a Voz da Marca",
+    "presetForReactNativeDescription": "Personalize traduções para combinar com o tom e a voz da sua marca. Languine oferece total controle sobre nuances, garantindo que sua mensagem permaneça clara.",
+    "presetForReactEmail": "Ação do GitHub",
+    "presetForReactEmailDescription": "Automatize a localização diretamente no GitHub. Nossa Ação do GitHub garante que suas traduções permaneçam sincronizadas com cada commit e implantação.",
+    "readyForI18nLibraries": "Independente de Idioma & Framework",
+    "readyForI18nLibrariesDescription": "Funciona com qualquer biblioteca i18n. Mantenha sua configuração existente e simplesmente adicione Languine para traduções automatizadas sem interromper seu fluxo de trabalho.",
+    "markdownSupport": "Integração CLI & CI/CD",
+    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre Languine ao seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
   },
   "info": {
     "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
@@ -65,23 +65,25 @@
       "brandVoice": "Consistência na voz e tom da marca",
       "terminology": "Gerenciamento de terminologia",
       "linguisticFeatures": "Recursos linguísticos avançados",
-      "realtimeUpdates": "Atualizações de tradução em tempo real"
+      "realtimeUpdates": "Atualizações de tradução em tempo real",
+      "overrides": "Substituições de tradução"
     },
     "implementation": {
       "title": "Implementação",
       "quickSetup": "Configuração e integração rápidas",
-      "fileFormat": "Manipulação de formatos de arquivo",
-      "contentStructure": "Organização da estrutura de conteúdo",
-      "assetOrganization": "Organização de ativos"
+      "fileFormat": "Convide membros da equipe",
+      "contentStructure": "Ajuste as configurações",
+      "assetOrganization": "Escolha idiomas"
     },
     "developer": {
       "title": "Experiência do Desenvolvedor",
       "cli": "Interface de linha de comando",
       "cicd": "Integração CI/CD",
-      "versionControl": "Controle de versão",
+      "versionControl": "Ações do Github",
       "workflow": "Fluxo de trabalho do desenvolvedor",
-      "documentation": "Documentação abrangente"
-    }
+      "documentation": "Ótima documentação"
+    },
+    "get_started": "Comece a automatizar"
   },
   "login": {
     "title": "Entrar",

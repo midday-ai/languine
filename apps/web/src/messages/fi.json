@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja prosessissasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkistossasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aloita",
     "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja prosessissasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkistossasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automaatio",
       "readDocumentation": "Lue dokumentaatio"
@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Ominaisuudet",
-    "fullyOpenSource": "Täysin avoimen lähdekoodin",
-    "fullyOpenSourceDescription": "Koodimme on julkisesti saatavilla GitHubissa, mahdollistaen läpinäkyvyyden ja yhteisön panostukset.",
-    "presetsForExpo": "Esiasetukset Expo:lle",
-    "presetsForExpoDescription": "Tarjoamme esiasetuksia Expo:lle, jotta voit aloittaa nopeasti.",
-    "presetForReactNative": "Esiasetus React Nativelle",
-    "presetForReactNativeDescription": "Tarjoamme esiasetuksen React Nativelle, jotta voit aloittaa nopeasti.",
-    "presetForReactEmail": "React Email -kirjasto",
-    "presetForReactEmailDescription": "Olemme luoneet i18n-kirjaston React Emailille.",
-    "readyForI18nLibraries": "Valmis i18n-kirjastoille",
-    "readyForI18nLibrariesDescription": "Tuemme kaikkia kirjastoja, mukaan lukien suosituimmat (next-intl, react-i18next, react-intl jne.).",
-    "markdownSupport": "Markdown/Dokumenttituen",
-    "markdownSupportDescription": "Languine kääntää saumattomasti markdown-sisältösi, pitäen dokumentaation ja muut tiedostot synkronoituna työnkulkuusi."
+    "fullyOpenSource": "Automaattiset käännökset",
+    "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastumista.",
+    "presetsForExpo": "Markdown & Asiakirjatuki",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyprosessissasi.",
+    "presetForReactNative": "Brändin äänen hienosäätö",
+    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täydellisen hallinnan vivahteista, varmistaen, että viestisi pysyy ytimekkäänä.",
+    "presetForReactEmail": "GitHub-toiminto",
+    "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
+    "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä olemassa oleva asetuksesi ja lisää vain Languine automaattisia käännöksiä varten ilman työskentelyprosessisi häiritsemistä.",
+    "markdownSupport": "CLI & CI/CD Integraatio",
+    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täydellistä automaatiota varten."
   },
   "info": {
     "title": "Käsittelee kaikki sovelluksesi lokalisaation osa-alueet, mukaan lukien",
@@ -65,23 +65,25 @@
       "brandVoice": "Brändin ääni ja sävyn johdonmukaisuus",
       "terminology": "Terminologian hallinta",
       "linguisticFeatures": "Edistyneet kielitieteelliset ominaisuudet",
-      "realtimeUpdates": "Reaaliaikaiset käännöspäivitykset"
+      "realtimeUpdates": "Reaaliaikaiset käännöspäivitykset",
+      "overrides": "Käännösohjaukset"
     },
     "implementation": {
       "title": "Toteutus",
       "quickSetup": "Nopea asennus ja integrointi",
-      "fileFormat": "Tiedostomuotojen käsittely",
-      "contentStructure": "Sisältörakenteen organisointi",
-      "assetOrganization": "Aineistojen organisointi"
+      "fileFormat": "Kutsu tiimin jäseniä",
+      "contentStructure": "Hienosäädä asetuksia",
+      "assetOrganization": "Valitse kielet"
     },
     "developer": {
       "title": "Kehittäjäkokemus",
       "cli": "Komentoriviliittymä",
       "cicd": "CI/CD-integraatio",
-      "versionControl": "Versionhallinta",
+      "versionControl": "Github-toiminnot",
       "workflow": "Kehittäjän työnkulku",
-      "documentation": "Kattava dokumentaatio"
-    }
+      "documentation": "Erinomainen dokumentaatio"
+    },
+    "get_started": "Aloita automaatio"
   },
   "login": {
     "title": "Kirjaudu sisään",

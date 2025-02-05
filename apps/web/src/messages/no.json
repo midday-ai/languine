@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
-    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri forsinker deg."
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri holder deg tilbake."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Kom i gang",
     "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
-    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri forsinker deg.",
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri holder deg tilbake.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"
@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Funksjoner",
-    "fullyOpenSource": "Helt åpen kildekode",
-    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
-    "presetsForExpo": "Forhåndsinnstillinger for Expo",
-    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme raskt i gang.",
-    "presetForReactNative": "Forhåndsinnstilling for React Native",
-    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme raskt i gang.",
-    "presetForReactEmail": "React E-postbibliotek",
-    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React E-post.",
-    "readyForI18nLibraries": "Klar for i18n-biblioteker",
-    "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker, inkludert de mest populære (next-intl, react-i18next, react-intl, osv.).",
-    "markdownSupport": "Markdown/Dokumentstøtte",
-    "markdownSupportDescription": "Languine oversetter sømløst innholdet ditt i markdown, og holder dokumentasjon og andre filer synkronisert med arbeidsflyten din."
+    "fullyOpenSource": "Automatiserte oversettelser",
+    "fullyOpenSourceDescription": "Si farvel til manuelt oversettelsesarbeid. Languine automatiserer hele prosessen, og sikrer at appen din forblir flerspråklig uten å bremse deg.",
+    "presetsForExpo": "Markdown- og dokumentstøtte",
+    "presetsForExpoDescription": "Hold dokumentasjonen og innholdet ditt oppdatert på tvers av språk. Languine oversetter markdown-filer uten anstrengelse, og opprettholder konsistens i arbeidsflyten din.",
+    "presetForReactNative": "Finjustering for merkevarestemme",
+    "presetForReactNativeDescription": "Tilpass oversettelser for å matche merkevarens tone og stemme. Languine gir deg full kontroll over nyansene, og sikrer at budskapet ditt forblir presist.",
+    "presetForReactEmail": "GitHub Action",
+    "presetForReactEmailDescription": "Automatiser lokalisering direkte innenfor GitHub. Vår GitHub Action sikrer at oversettelsene dine forblir synkronisert med hver commit og distribusjon.",
+    "readyForI18nLibraries": "Språk- og rammeverksagnostisk",
+    "readyForI18nLibrariesDescription": "Fungerer med hvilken som helst i18n-bibliotek. Behold den eksisterende oppsettet ditt og legg enkelt til Languine for automatiserte oversettelser uten å forstyrre arbeidsflyten din.",
+    "markdownSupport": "CLI & CI/CD-integrasjon",
+    "markdownSupportDescription": "Bruk vår kraftige CLI for å administrere oversettelser direkte eller sømløst integrere Languine i din eksisterende CI/CD-pipeline for en helt automatisert arbeidsflyt."
   },
   "info": {
     "title": "Håndterer alle aspekter av lokalisering av appen din, inkludert",
@@ -65,23 +65,25 @@
       "brandVoice": "Konsistens i merkevarestemme og tone",
       "terminology": "Terminologihåndtering",
       "linguisticFeatures": "Avanserte språklige funksjoner",
-      "realtimeUpdates": "Sanntids oversettelsesoppdateringer"
+      "realtimeUpdates": "Sanntids oversettelsesoppdateringer",
+      "overrides": "Oversettelsesoverstyringer"
     },
     "implementation": {
       "title": "Implementering",
       "quickSetup": "Rask oppsett og integrasjon",
-      "fileFormat": "Håndtering av filformat",
-      "contentStructure": "Organisering av innholdsstruktur",
-      "assetOrganization": "Organisering av ressurser"
+      "fileFormat": "Inviter teammedlemmer",
+      "contentStructure": "Finjuster innstillinger",
+      "assetOrganization": "Velg språk"
     },
     "developer": {
       "title": "Utvikleropplevelse",
       "cli": "Kommandolinjegrensesnitt",
       "cicd": "CI/CD-integrasjon",
-      "versionControl": "Versjonskontroll",
+      "versionControl": "Github Actions",
       "workflow": "Utviklerarbeidsflyt",
-      "documentation": "Omfattende dokumentasjon"
-    }
+      "documentation": "Flott dokumentasjon"
+    },
+    "get_started": "Begynn å automatisere"
   },
   "login": {
     "title": "Logg inn",
