@@ -157,18 +157,7 @@ export async function syncCommand(args: string[] = []) {
                         existingFile,
                       );
 
-                      // Run beforeSaving hook if configured
-                      let finalContent = serialized;
-                      if (config?.hooks?.beforeSaving) {
-                        finalContent = await config.hooks.beforeSaving({
-                          content: serialized,
-                          filePath: targetPath,
-                          locale: targetLocale,
-                          format: type,
-                        });
-                      }
-
-                      await writeFile(targetPath, finalContent, "utf-8");
+                      await writeFile(targetPath, serialized, "utf-8");
                       syncedAnything = true;
                     } catch (serializeError) {
                       console.error(

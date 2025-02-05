@@ -457,18 +457,7 @@ export async function translateCommand(args: string[] = []) {
             sourceFileContent,
           );
 
-          // Run beforeSaving hook if configured
-          let finalContent = serialized;
-          if (config?.hooks?.beforeSaving) {
-            finalContent = await config.hooks.beforeSaving({
-              content: serialized,
-              filePath: targetPath,
-              locale: targetLocale,
-              format: type,
-            });
-          }
-
-          await writeFile(targetPath, finalContent, "utf-8");
+          await writeFile(targetPath, serialized, "utf-8");
 
           lockManager.registerSourceData(targetPath, mergedContent);
 
