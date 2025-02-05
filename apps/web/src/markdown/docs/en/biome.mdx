@@ -1,34 +1,24 @@
 # Biome
 
-Languine supports formatting with [Biome](https://biomejs.dev/) through hooks. You can configure Biome to automatically format your translation files after they are generated.
+Languine can work together with [Biome](https://biomejs.dev/) to ensure your translation files are consistently formatted. This is particularly useful when working with JSON translation files that need to maintain a consistent style across your project.
 
-Here's an example configuration:
+## Using with Languine
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+The recommended way to use Biome with Languine is to format your translation files after they're generated. You can set this up in your `package.json`:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    // Format generated files with Biome
-    afterTranslate: async (files) => {
-      const { check } = await import("@biomejs/biome");
-      
-      for (const file of files) {
-        await check({
-          files: [file],
-          apply: true,
-        });
-      }
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "biome format \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Now you can:
+- Run `npm run translate` to only generate translations
+- Run `npm run format` to only format existing translation files
+- Run `npm run translate:format` to generate translations and format them in sequence
+
+This configuration will ensure your translation files are formatted consistently with 2-space indentation and a maximum line width of 80 characters.

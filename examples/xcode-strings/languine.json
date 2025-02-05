@@ -1,0 +1,11 @@
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es"]
+  },
+  "files": {
+    "xcode-strings": {
+      "include": ["Example/[locale].lproj/Localizable.strings"]
+    }
+  }
+}

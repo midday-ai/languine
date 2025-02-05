@@ -608,7 +608,7 @@
     "tuning": "Tuning",
     "overrides": "Overrides",
     "settings": "Settings",
-    "hooks": "Hooks",
+    "hooks": "Code Formatters",
     "examples": "Examples",
     "team": "Team"
   },

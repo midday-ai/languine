@@ -1,0 +1,11 @@
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es"]
+  },
+  "files": {
+    "po": {
+      "include": ["locales/[locale].po"]
+    }
+  }
+}
