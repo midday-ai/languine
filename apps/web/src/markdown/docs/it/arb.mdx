@@ -6,7 +6,7 @@ Languine supporta i file ARB, il formato standard di localizzazione per le appli
 
 ## Configurazione
 
-Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+Per prima cosa, assicurati di avere un file di configurazione languine.json nella radice del tuo progetto. Ecco un esempio:
 
 ```json
 {
@@ -33,8 +33,8 @@ npx languine@latest translate
 Quando esegui questo comando, Languine:
 
 - Caricherà il tuo file ARB sorgente (ad esempio, lib/l10n/intl_en.arb)
-- Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
-- Genererà traduzioni per le tue lingue target
+- Rileverà eventuali nuove o modificate stringhe di traduzione
+- Genererà traduzioni per le lingue target
 - Creerà o aggiornerà i file ARB delle lingue target (ad esempio, lib/l10n/intl_sv.arb)
 - Preserverà i metadati, i segnaposto e le espressioni plurali/selettive
 

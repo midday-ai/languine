@@ -1,12 +1,12 @@
 # Expo
 
-Languine tukee Expo-lokalisointia, ja se integroituu saumattomasti Expon i18n-järjestelmään. Tämä muoto toimii sekä JavaScript- että TypeScript-projekteissa, ja se tukee sisäkkäisiä rakenteita ja monikkomuotoja.
+Languine tukee Expo-lokalisointia, integroituen saumattomasti Expon i18n-järjestelmään. Tämä formaatti toimii sekä JavaScript- että TypeScript-projekteissa, tukien sisäkkäisiä rakenteita ja monikkomuotoja.
 
 ---
 
 ## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Ensinnäkin varmista, että sinulla on languine.json -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -33,9 +33,8 @@ npx languine@latest translate
 Kun suoritat tämän komennon, Languine:
 
 - Lataa lähdekäännöstiedostosi (esim. assets/locales/en.json)
-- Havaitsee kaikki uudet tai muokatut käännösmerkkijonot
-- Luo käännöksiä kohdekielillesi
+- Havaitsee kaikki uudet tai muokatut käännöstekstit
+- Generoi käännökset kohdekielillesi
 - Luo tai päivittää kohdekielitiedostot (esim. assets/locales/sv.json)
 - Säilyttää sisäkkäisen rakenteen ja monikkomuotojen säännöt
-- Luo TypeScript-tyyppejä, jos se on käytössä
-- Säilyttää yhteensopivuuden expo-localizationin kanssa
+- Ylläpitää yhteensopivuutta expo-localizationin kanssa

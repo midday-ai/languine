@@ -611,7 +611,7 @@
     "tuning": "Justering",
     "overrides": "Överskrivningar",
     "settings": "Inställningar",
-    "hooks": "Hooks",
+    "hooks": "Kodformatters",
     "examples": "Exempel",
     "team": "Team"
   },

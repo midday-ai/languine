@@ -1,4 +1,3 @@
-import { installDependencies } from "@/utils/install.ts";
 import { intro, isCancel, note, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
 import { z } from "zod";
@@ -146,20 +145,6 @@ export async function commands(args: string[] = []) {
     include: [pattern],
   };
 
-  // Select config format
-  const configFormat = await select({
-    message: "Select configuration format",
-    options: [
-      { value: "typescript", label: "TypeScript (languine.config.ts)" },
-      { value: "json", label: "JSON (languine.config.json)" },
-    ],
-  });
-
-  if (isCancel(configFormat)) {
-    outro("Configuration cancelled");
-    process.exit(0);
-  }
-
   // Create config file
   const config: Config = {
     projectId: projectId || "",
@@ -173,42 +158,11 @@ export async function commands(args: string[] = []) {
   try {
     const fs = await import("node:fs/promises");
 
-    if (configFormat === "typescript") {
-      try {
-        await installDependencies();
-      } catch {
-        note(
-          "Failed to install Languine, please install manually using your package manager of choice and add languine as a dev dependency.",
-          "Install Languine Dev Dependency",
-        );
-      }
-
-      const tsConfig = `import { defineConfig } from "languine";
-
-export default defineConfig({
-  projectId: ${JSON.stringify(projectId || "")},
-  locale: {
-    source: "${sourceLanguage}",
-    targets: ["${targetLanguages
-      .split(",")
-      .map((lang) => lang.trim())
-      .join('", "')}"],
-  },
-  files: {
-    ${format}: {
-      include: [${JSON.stringify(pattern)}],
-    },
-  },
-});
-`;
-      await fs.writeFile("languine.config.ts", tsConfig, "utf-8");
-    } else {
-      await fs.writeFile(
-        "languine.config.json",
-        JSON.stringify(config, null, 2),
-        "utf-8",
-      );
-    }
+    await fs.writeFile(
+      "languine.config.json",
+      JSON.stringify(config, null, 2),
+      "utf-8",
+    );
 
     outro(chalk.green("Configuration file created successfully!"));
     console.log();

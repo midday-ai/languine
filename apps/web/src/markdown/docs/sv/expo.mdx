@@ -4,9 +4,9 @@ Languine stöder Expo-lokalisering och integreras sömlöst med Expos i18n-syste
 
 ---
 
-## Installation
+## Installera
 
-Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+Först, se till att du har en languine.json-konfigurationsfil i projektets rot. Här är ett exempel:
 
 ```json
 {
@@ -30,12 +30,11 @@ Med din konfiguration inställd, kör:
 npx languine@latest translate
 ```
 
-När du kör detta kommando kommer Languine att:
+När du kör det här kommandot kommer Languine att:
 
 - Ladda din källöversättningsfil (t.ex. assets/locales/en.json)
-- Upptäcka eventuella nya eller modifierade översättningssträngar
+- Upptäcka eventuella nya eller ändrade översättningssträngar
 - Generera översättningar för dina målspråk
-- Skapa eller uppdatera målspråksfiler (t.ex. assets/locales/sv.json)
+- Skapa eller uppdatera målspråksfilerna (t.ex. assets/locales/sv.json)
 - Bevara nästlad struktur och pluraliseringsregler
-- Generera TypeScript-typer om det är aktiverat
 - Upprätthålla kompatibilitet med expo-localization

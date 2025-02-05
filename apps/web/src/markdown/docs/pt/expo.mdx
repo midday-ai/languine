@@ -1,12 +1,12 @@
 # Expo
 
-Languine suporta a localização do Expo, integrando-se perfeitamente ao sistema i18n do Expo. Este formato funciona com projetos em JavaScript e TypeScript, suportando estruturas aninhadas e pluralização.
+Languine suporta a localização do Expo, integrando-se perfeitamente ao sistema i18n do Expo. Este formato funciona tanto com projetos JavaScript quanto TypeScript, suportando estruturas aninhadas e pluralização.
 
 ---
 
 ## Configurando
 
-Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.json na raiz do seu projeto. Aqui está um exemplo:
 
 ```json
 {
@@ -35,7 +35,6 @@ Quando você executar este comando, Languine irá:
 - Carregar seu arquivo de tradução fonte (por exemplo, assets/locales/en.json)
 - Detectar quaisquer novas ou modificadas strings de tradução
 - Gerar traduções para seus idiomas-alvo
-- Criar ou atualizar os arquivos de idiomas-alvo (por exemplo, assets/locales/sv.json)
+- Criar ou atualizar os arquivos de idioma-alvo (por exemplo, assets/locales/sv.json)
 - Preservar a estrutura aninhada e as regras de pluralização
-- Gerar tipos TypeScript se habilitado
-- Manter compatibilidade com expo-localization
+- Manter a compatibilidade com expo-localization

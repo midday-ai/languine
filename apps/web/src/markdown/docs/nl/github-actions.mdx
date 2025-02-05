@@ -1,6 +1,6 @@
 # GitHub Acties
 
-Met de GitHub-actie kun je eenvoudig je code vertalen door je code naar de repository te pushen. De GitHub-actie vertaalt vervolgens je nieuwe sleutels, maakt ofwel een pull request aan of commit je wijzigingen.
+Met de GitHub-actie kun je eenvoudig je code vertalen door je code naar de repository te pushen; de GitHub-actie vertaalt vervolgens je nieuwe sleutels, maakt een pull request of commit je wijzigingen.
 Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
 
 ---
@@ -64,7 +64,7 @@ Dit bespaart je veel tijd en moeite terwijl je hoogwaardige vertalingen behoudt.
 
 Om de Languine GitHub-actie in je repository te gebruiken, moet je:
 
-1. Je repository-secrets instellen met je Languine-inloggegevens
+1. Je repository-secrets instellen met je Languine-gegevens
 2. Een workflow-bestand in je repository maken
 
 ### Instellen van Repository Secrets
@@ -83,7 +83,7 @@ Je kunt deze waarden vinden in je Languine-dashboard onder Projectinstellingen.
 De GitHub-actie gebruikt de volgende omgevingsvariabelen:
 - `LANGUINE_API_KEY` (Vereist): Je Languine API-sleutel voor authenticatie
 - `LANGUINE_PROJECT_ID` (Vereist): Je Languine project-ID 
-- `GITHUB_TOKEN` (Vereist): Automatisch verstrekt door GitHub, gebruikt voor het maken van PR's
+- `GITHUB_TOKEN` (Vereist): Automatisch geleverd door GitHub, gebruikt voor het maken van PR's
 
 ### Voorbeeld Workflow
 
@@ -120,28 +120,28 @@ jobs:
  Deze workflow zal:
 - Uitvoeren bij pushes naar de hoofdbranch
 - Uitvoeren bij pull requests naar de hoofdbranch
-- Handmatig worden geactiveerd vanuit het tabblad Acties
+- Handmatig geactiveerd kunnen worden vanuit het tabblad Acties
 - Je code uitchecken en het Languine-vertalingsproces uitvoeren
-- Een pull request aanmaken met eventuele nieuwe vertalingen (configureerbaar)
+- Een pull request maken met eventuele nieuwe vertalingen (configureerbaar)
 
-#### Werkomgeving Optie
+#### Werkdirectory Optie
 
-De optie `working-directory` stelt je in staat om op te geven waar je vertaalbestanden zich bevinden. Dit is bijzonder nuttig in monorepos waar je vertalingen zich in een specifieke package of app-directory kunnen bevinden. Bijvoorbeeld:
+De optie `working-directory` stelt je in staat om op te geven waar je vertaalbestanden zich bevinden. Dit is bijzonder nuttig in monorepos waar je vertalingen zich in een specifieke pakket- of app-directory kunnen bevinden. Bijvoorbeeld:
 
-#### Pull Request Optie (komt binnenkort)
+#### Pull Request Optie (binnenkort beschikbaar)
 
-De optie `create-pull-request` bepaalt of de actie een pull request aanmaakt met de wijzigingen of deze direct naar de branch commit:
+De optie `create-pull-request` bepaalt of de actie een pull request maakt met de wijzigingen of deze rechtstreeks naar de branch commit:
 
 ```typescript title=".github/workflows/languine.yml"
 with:
-  create-pull-request: true # maak een pull request aan met de wijzigingen
+  create-pull-request: true # maak een pull request met de wijzigingen
 ```
 
 Wanneer ingesteld op `true`, zal de actie:
-- Een nieuwe branch aanmaken met de wijzigingen
-- Een pull request voor beoordeling aanmaken
+- Een nieuwe branch maken met de wijzigingen
+- Een pull request voor beoordeling maken
 - Geschikte labels en beschrijving toevoegen
 
 Wanneer ingesteld op `false` (standaard), zal de actie:
-- De wijzigingen direct naar de huidige branch committen
-- De wijzigingen pushen zonder een pull request aan te maken
+- De wijzigingen rechtstreeks naar de huidige branch committen
+- De wijzigingen pushen zonder een pull request te maken

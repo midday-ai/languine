@@ -6,7 +6,7 @@ Languine obsługuje pliki Java Properties, standardowy format lokalizacji dla ap
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w głównym katalogu projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w głównym katalogu projektu. Oto przykład:
 
 ```json
 {
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Kiedy uruchomisz to polecenie, Languine:
 
-- Załaduje twój źródłowy plik właściwości (np. messages_en.properties)
+- Załaduje twój plik źródłowy properties (np. messages_en.properties)
 - Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
 - Wygeneruje tłumaczenia dla twoich docelowych języków
-- Utworzy lub zaktualizuje pliki właściwości dla języków docelowych (np. messages_sv.properties)
+- Utworzy lub zaktualizuje pliki properties dla języków docelowych (np. messages_sv.properties)
 - Automatycznie obsłuży ucieczkę Unicode
 - Zachowa komentarze i formatowanie

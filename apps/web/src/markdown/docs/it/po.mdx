@@ -6,7 +6,7 @@ Languine supporta i file PO, il formato di localizzazione Gettext ampiamente uti
 
 ## Configurazione
 
-Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+Per prima cosa, assicurati di avere un file di configurazione languine.json nella radice del tuo progetto. Ecco un esempio:
 
 ```json
 {
@@ -32,9 +32,9 @@ npx languine@latest translate
 
 Quando esegui questo comando, Languine:
 
-- Caricherà il tuo file PO sorgente (ad es., locales/en/LC_MESSAGES/messages.po)
+- Caricherà il tuo file PO sorgente (ad esempio, locales/en/LC_MESSAGES/messages.po)
 - Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
-- Genererà traduzioni per le tue lingue target
-- Creerà o aggiornerà i file PO delle lingue target (ad es., locales/sv/LC_MESSAGES/messages.po)
+- Genererà traduzioni per le lingue di destinazione
+- Creerà o aggiornerà i file PO delle lingue di destinazione (ad esempio, locales/sv/LC_MESSAGES/messages.po)
 - Preserverà i metadati, i contesti e le forme plurali
 - Mantenere i commenti dei traduttori e le informazioni di riferimento

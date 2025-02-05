@@ -1,6 +1,6 @@
 # Configurazione
 
-Languine supporta sia file di configurazione TypeScript che JSON per gestire la tua impostazione di traduzione. Puoi scegliere tra languine.config.ts per TypeScript o languine.config.json per il formato JSON. Entrambi i file definiscono le tue lingue di origine e di destinazione, così come i file che devono essere tradotti.
+Languine utilizza un file di configurazione JSON (languine.json) per gestire la tua impostazione di traduzione. Questo file definisce le tue lingue di origine e di destinazione, così come i file che devono essere tradotti.
 
 ---
 
@@ -8,23 +8,7 @@ Languine supporta sia file di configurazione TypeScript che JSON per gestire la 
 
 Ecco un esempio di base in entrambi i formati:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,15 +22,13 @@ export default defineConfig({
 }
 ```
 
-Entrambi i formati supportano le stesse opzioni di configurazione. Scegli TypeScript per un migliore controllo dei tipi e supporto IDE, o JSON per semplicità e compatibilità con strumenti più ampi.
-
-Analizziamo le diverse sezioni di questi file.
+Analizziamo le diverse sezioni nel file di configurazione.
 
 ---
 
 ## Configurazione della Lingua
 
-La sezione locale definisce le tue lingue di traduzione:
+La sezione lingua definisce le tue lingue di traduzione:
 
 - source: La tua lingua principale per la creazione di contenuti (ad es., "en" per l'inglese)
 - targets: Un array di lingue in cui desideri tradurre (ad es., ["es", "fr", "de"] per spagnolo, francese e tedesco)
@@ -62,7 +44,7 @@ La sezione file definisce quali file Languine dovrebbe tradurre. Puoi configurar
 ---
 
 ### File JSON
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### File Markdown/MDX
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,12 +71,12 @@ files: {
 ### File per Piattaforme Mobili
 
 Per iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
   },
-  // Oppure per file .strings tradizionali
+  // O per file .strings tradizionali
   "xcode-strings": {
     include: ["Example/[locale].lproj/Localizable.strings"],
   },
@@ -104,7 +86,7 @@ files: {
 ---
 
 Per Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -148,7 +130,7 @@ Il segnaposto [locale] nei modelli di file viene automaticamente sostituito con 
   - locales/fr.json
 
 Puoi includere più modelli per ciascun tipo di file e utilizzare modelli glob:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 Se stai utilizzando i servizi cloud di Languine, puoi includere il tuo ID progetto nella configurazione:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... configurazione locale
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... configurazione lingua
   },
   files: {
     // ... configurazione file
   },
-});
+}
 ```
 
 ---
@@ -183,16 +165,16 @@ export default defineConfig({
 
 Languine crea e mantiene automaticamente un file languine.lock per monitorare lo stato delle tue traduzioni. Questo file:
 
-- Monitora quali contenuti sono stati tradotti
-- Aiuta a identificare cosa deve essere aggiornato quando i contenuti sorgente cambiano
+- Tiene traccia di quali contenuti sono stati tradotti
+- Aiuta a identificare cosa deve essere aggiornato quando il contenuto sorgente cambia
 - Dovrebbe essere impegnato nel tuo sistema di controllo versione
 
 Non è necessario modificare manualmente il file di blocco - Languine lo gestisce automaticamente quando esegui i comandi di traduzione.
 
 ## Migliori Pratiche
 
-1. **Controllo Versione**: Impegnati sempre sia languine.config.ts che languine.lock nel tuo repository
-2. **Organizzazione dei File**: Tieni i tuoi file di traduzione organizzati in una struttura di directory coerente
+1. **Controllo Versione**: Impegnati sempre sia con languine.json che con languine.lock nel tuo repository
+2. **Organizzazione dei File**: Mantieni i tuoi file di traduzione organizzati in una struttura di directory coerente
 3. **Codici Lingua**: Usa codici lingua standard per garantire compatibilità
 4. **Modelli**: Usa modelli di inclusione specifici per evitare di tradurre file non necessari
-5. **ID Progetto**: Tieni il tuo ID progetto al sicuro e non condividerlo pubblicamente se stai utilizzando servizi cloud, usa invece la variabile d'ambiente `LANGUINE_PROJECT_ID`.
+5. **ID Progetto**: Mantieni sicuro il tuo ID progetto e non condividerlo pubblicamente se stai utilizzando servizi cloud, utilizza invece la variabile di ambiente `LANGUINE_PROJECT_ID`.

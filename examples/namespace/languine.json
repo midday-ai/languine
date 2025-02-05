@@ -1,0 +1,12 @@
+{
+  "projectId": "",
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr", "de", "sv"]
+  },
+  "files": {
+    "md": {
+      "include": ["docs/[locale]/*.md"]
+    }
+  }
+}

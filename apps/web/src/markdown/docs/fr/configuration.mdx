@@ -1,6 +1,6 @@
 # Configuration
 
-Languine prend en charge à la fois les fichiers de configuration TypeScript et JSON pour gérer votre configuration de traduction. Vous pouvez choisir soit languine.config.ts pour TypeScript, soit languine.config.json pour le format JSON. Les deux fichiers définissent vos langues source et cible, ainsi que les fichiers à traduire.
+Languine utilise un fichier de configuration JSON (languine.json) pour gérer votre configuration de traduction. Ce fichier définit vos langues source et cible, ainsi que les fichiers à traduire.
 
 ---
 
@@ -8,23 +8,7 @@ Languine prend en charge à la fois les fichiers de configuration TypeScript et 
 
 Voici un exemple de base dans les deux formats :
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,31 +22,29 @@ export default defineConfig({
 }
 ```
 
-Les deux formats prennent en charge les mêmes options de configuration. Choisissez TypeScript pour une meilleure vérification des types et un support IDE, ou JSON pour la simplicité et une compatibilité plus large avec les outils.
-
-Décomposons les différentes sections de ces fichiers.
+Décomposons les différentes sections du fichier de configuration.
 
 ---
 
-## Configuration de la langue
+## Configuration de la locale
 
 La section locale définit vos langues de traduction :
 
 - source : Votre langue principale pour la création de contenu (par exemple, "en" pour l'anglais)
-- targets : Un tableau des langues dans lesquelles vous souhaitez traduire (par exemple, ["es", "fr", "de"] pour l'espagnol, le français et l'allemand)
+- targets : Un tableau de langues dans lesquelles vous souhaitez traduire (par exemple, ["es", "fr", "de"] pour l'espagnol, le français et l'allemand)
 
-Languine prend en charge une large gamme de codes de langue, y compris :
+Languine prend en charge un large éventail de codes de langue, y compris :
 - Codes simples : en, es, fr, de
-- Codes spécifiques à la région : pt-BR, zh-CN, zh-TW
+- Codes spécifiques à une région : pt-BR, zh-CN, zh-TW
 
 ## Configuration des fichiers
 
-La section des fichiers définit quels fichiers Languine doit traduire. Vous pouvez configurer plusieurs types de fichiers et motifs :
+La section des fichiers définit quels fichiers Languine doit traduire. Vous pouvez configurer plusieurs types et modèles de fichiers :
 
 ---
 
 ### Fichiers JSON
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Fichiers Markdown/MDX
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Fichiers de plateforme mobile
 
 Pour iOS (Xcode) :
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 Pour Android :
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -138,17 +120,17 @@ Voici une liste complète des formats de fichiers pris en charge par Languine :
 
 ---
 
-## Motifs de fichiers
+## Modèles de fichiers
 
-Le placeholder [locale] dans les motifs de fichiers est automatiquement remplacé par le code de langue approprié lors de la traduction. Par exemple :
+Le placeholder [locale] dans les modèles de fichiers est automatiquement remplacé par le code de langue approprié lors de la traduction. Par exemple :
 
 - locales/[locale].json devient :
   - locales/en.json
   - locales/es.json
   - locales/fr.json
 
-Vous pouvez inclure plusieurs motifs pour chaque type de fichier et utiliser des motifs globaux :
-```typescript
+Vous pouvez inclure plusieurs modèles pour chaque type de fichier et utiliser des modèles glob :
+```json
 files: {
   json: {
     include: [
@@ -161,25 +143,25 @@ files: {
 
 ---
 
-## ID de projet (optionnel)
+## ID de projet (facultatif)
 
 Si vous utilisez les services cloud de Languine, vous pouvez inclure votre ID de projet dans la configuration :
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... configuration de la langue
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... configuration de la locale
   },
   files: {
     // ... configuration des fichiers
   },
-});
+}
 ```
 
 ---
 
-## Suivi de l'état de traduction
+## Suivi de l'état de la traduction
 
 Languine crée et maintient automatiquement un fichier languine.lock pour suivre l'état de vos traductions. Ce fichier :
 
@@ -191,8 +173,8 @@ Vous n'avez pas besoin de modifier manuellement le fichier de verrouillage - Lan
 
 ## Meilleures pratiques
 
-1. **Contrôle de version** : Engagez toujours à la fois languine.config.ts et languine.lock dans votre dépôt
+1. **Contrôle de version** : Engagez toujours à la fois languine.json et languine.lock dans votre dépôt
 2. **Organisation des fichiers** : Gardez vos fichiers de traduction organisés dans une structure de répertoire cohérente
 3. **Codes de langue** : Utilisez des codes de langue standard pour garantir la compatibilité
-4. **Motifs** : Utilisez des motifs d'inclusion spécifiques pour éviter de traduire des fichiers inutiles
+4. **Modèles** : Utilisez des modèles d'inclusion spécifiques pour éviter de traduire des fichiers inutiles
 5. **ID de projet** : Gardez votre ID de projet sécurisé et ne le partagez pas publiquement si vous utilisez des services cloud, utilisez plutôt la variable d'environnement `LANGUINE_PROJECT_ID`.

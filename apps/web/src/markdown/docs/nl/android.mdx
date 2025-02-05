@@ -1,12 +1,12 @@
 # Android
 
-Languine ondersteunt Android string resources (strings.xml) als een bronformaat, waarbij meervouden, stringarrays en opgemaakte strings worden verwerkt. Dit formaat is de standaard manier om vertalingen te beheren in Android-toepassingen.
+Languine ondersteunt Android string resources (strings.xml) als een bronformaat, en verwerkt meervouden, stringarrays en geformatteerde strings. Dit formaat is de standaard manier om vertalingen te beheren in Android-applicaties.
 
 ---
 
 ## Instellen
 
-Zorg er eerst voor dat je een languine.config.json of languine.config.ts configuratiebestand in de hoofdmap van je project hebt. Hier is een voorbeeld:
+Zorg er eerst voor dat je een languine.json-configuratiebestand in de hoofdmap van je project hebt. Hier is een voorbeeld:
 
 ```json
 {
@@ -32,7 +32,7 @@ npx languine@latest translate
 
 Wanneer je dit commando uitvoert, zal Languine:
 
-- Je bron strings.xml bestand laden (bijv. values/strings.xml)
+- Je bron strings.xml-bestand laden (bijv. values/strings.xml)
 - Nieuwe of gewijzigde vertaalstrings detecteren
 - Vertalingen genereren voor je doeltalen
 - De XML-bestanden voor de doeltaal aanmaken of bijwerken (bijv. values-sv/strings.xml, values-de/strings.xml, values-fr/strings.xml)

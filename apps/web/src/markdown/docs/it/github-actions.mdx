@@ -37,22 +37,22 @@ Questo ti fa risparmiare molto tempo e fatica mantenendo traduzioni di alta qual
            ▼                              ▼                              ▼
  ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
- ║      Inglese     ║          ║      Spagnolo     ║          ║      Giapponese   ║
- ║    Traduzione     ║          ║    Traduzione     ║          ║     Traduzione    ║
+ ║      English      ║          ║      Spanish      ║          ║      Japanese     ║
+ ║    Translation    ║          ║    Translation    ║          ║     Translation   ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Unisci     │
+                                  │     Merge     │
                                   │ Pull Request  │
                                   └───────────────┘
                                           │
                                           ▼
                               ┌─────────────────────┐
-                              │      Completato     │
-                              │      (Distribuisci)  │
+                              │      Completed      │
+                              │      (Deploy)       │
                               └─────────────────────┘
 `}
         </pre>
@@ -62,7 +62,7 @@ Questo ti fa risparmiare molto tempo e fatica mantenendo traduzioni di alta qual
 
 ## Installazione
 
-Per utilizzare l'azione GitHub Languine nel tuo repository, dovrai:
+Per utilizzare l'azione Languine GitHub nel tuo repository, dovrai:
 
 1. Configurare i segreti del tuo repository con le tue credenziali Languine
 2. Creare un file di workflow nel tuo repository
@@ -74,7 +74,7 @@ Aggiungi i seguenti segreti nelle impostazioni del tuo repository (Impostazioni 
 - `LANGUINE_API_KEY`: La tua chiave API Languine
 - `LANGUINE_PROJECT_ID`: Il tuo ID progetto Languine
 
-Puoi trovare questi valori nella tua dashboard Languine sotto Impostazioni Progetto.
+Puoi trovare questi valori nel tuo dashboard Languine sotto Impostazioni Progetto.
 
 
 
@@ -83,14 +83,14 @@ Puoi trovare questi valori nella tua dashboard Languine sotto Impostazioni Proge
 L'azione GitHub utilizza le seguenti variabili d'ambiente:
 - `LANGUINE_API_KEY` (Obbligatoria): La tua chiave API Languine per l'autenticazione
 - `LANGUINE_PROJECT_ID` (Obbligatoria): Il tuo ID progetto Languine 
-- `GITHUB_TOKEN` (Obbligatoria): Fornita automaticamente da GitHub, utilizzata per creare PR
+- `GITHUB_TOKEN` (Obbligatoria): Fornito automaticamente da GitHub, utilizzato per creare PR
 
 ### Esempio di Workflow
 
 Crea un nuovo file .github/workflows/languine.yml nel tuo repository con il seguente contenuto:
 
 ```ts title=".github/workflows/release.yml"
-name: Distribuisci Sito Web
+name: Deploy Website
 
 on:
   push:
@@ -108,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Azione Languine
+      - name: Languine Action
         uses: languine/languine-action@v1
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -118,10 +118,10 @@ jobs:
 ```
  
  Questo workflow:
-- Si attiverà sugli invii al ramo principale
-- Si attiverà sulle pull request al ramo principale
+- Verrà eseguito su push al ramo principale
+- Verrà eseguito su pull request al ramo principale
 - Può essere attivato manualmente dalla scheda Azioni
-- Controlla il tuo codice e avvia il processo di traduzione Languine
+- Controlla il tuo codice ed esegue il processo di traduzione Languine
 - Crea una pull request con eventuali nuove traduzioni (configurabile)
 
 #### Opzione Directory di Lavoro

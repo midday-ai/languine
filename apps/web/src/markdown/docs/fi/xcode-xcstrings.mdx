@@ -1,12 +1,12 @@
 # Xcode Strings (XCStrings)
 
-Languine tukee Xcoden XCStrings-muotoa, joka on moderni lokalisointimuoto iOS- ja macOS-sovelluksille. Tämä muoto käsittelee merkkijonokatalogeja, joissa on tuki variaatioille, monikolle ja kehittäjäkommenteille.
+Languine tukee Xcoden XCStrings-muotoa, joka on moderni lokalisointimuoto iOS- ja macOS-sovelluksille. Tämä muoto käsittelee merkkijonoluetteloita, joissa on tuki variaatioille, monikolle ja kehittäjäkommenteille.
 
 ---
 
 ## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Ensinnäkin varmista, että sinulla on languine.json -konfiguraatiotiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -32,13 +32,13 @@ npx languine@latest translate
 
 Kun suoritat tämän komennon, Languine:
 
-- Lataa XCStrings-katalogisi
+- Lataa XCStrings-luettelosi
 - Havaitsee kaikki uudet tai muokatut merkkijonot
 - Tuottaa käännöksiä kohdekielillesi
-- Päivittää merkkijonokatalogin uusilla käännöksillä
+- Päivittää merkkijonoluetteloa uusilla käännöksillä
 - Säilyttää merkkijonovariaatiot ja monikkosäännöt
-- Säilyttää kehittäjäkommentit ja kontekstin
+- Pitää kehittäjäkommentit ja kontekstin
 - Käsittelee muuttujan korvauksia
 - Tukee mukautuvia merkkijonoja
-- Säilyttää muotoilun erottimet
-- Vahvistaa merkkijonokatalogin rakennetta
+- Säilyttää muotoilun määrittäjät
+- Vahvistaa merkkijonoluettelon rakennetta

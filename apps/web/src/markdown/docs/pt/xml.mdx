@@ -6,7 +6,7 @@ Languine suporta a localização de arquivos XML, adequada para vários arquivos
 
 ## Configurando
 
-Primeiro, certifique-se de que você possui um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.json na raiz do seu projeto. Aqui está um exemplo:
 
 ```json
 {
@@ -30,13 +30,13 @@ Com sua configuração definida, execute:
 npx languine@latest translate
 ```
 
-Quando você executar este comando, Languine irá:
+Quando você executar este comando, o Languine irá:
 
 - Carregar seus arquivos XML de origem (por exemplo, resources/en/*.xml)
 - Detectar qualquer conteúdo novo ou modificado
 - Gerar traduções para seus idiomas-alvo
 - Criar ou atualizar os arquivos de idioma-alvo (por exemplo, resources/sv/*.xml)
-- Preservar a estrutura e a formatação do XML
+- Preservar a estrutura e a formatação XML
 - Lidar com traduções de atributos
 - Manter seções CDATA
 - Manter comentários XML

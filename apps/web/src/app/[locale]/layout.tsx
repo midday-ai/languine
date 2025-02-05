@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
-import languineConfig from "../../../languine.config";
+import languineConfig from "../../../languine.json";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",

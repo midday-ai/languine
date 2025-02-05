@@ -6,7 +6,7 @@ Languine stöder JavaScript/TypeScript lokaliseringsfiler, perfekt för moderna 
 
 ## Installera
 
-Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+Först, se till att du har en languine.json konfigurationsfil i rotmappen av ditt projekt. Här är ett exempel:
 
 ```json
 {
@@ -24,16 +24,16 @@ Först, se till att du har en languine.config.json eller languine.config.ts konf
 
 ## Översättning
 
-Med din konfiguration inställd, kör:
+När din konfiguration är inställd, kör:
 
 ```bash
 npx languine@latest translate
 ```
 
-När du kör detta kommando kommer Languine att:
+När du kör det här kommandot kommer Languine att:
 
-- Ladda dina käll-JavaScript-filer (t.ex. src/locales/en.js)
-- Upptäcka eventuella nya eller ändrade översättningssträngar
+- Ladda dina käll JavaScript-filer (t.ex. src/locales/en.js)
+- Upptäcka eventuella nya eller modifierade översättningssträngar
 - Generera översättningar för dina målspråk
 - Skapa eller uppdatera målspråksfiler (t.ex. src/locales/sv.js)
 - Bevara modulstruktur och exporter

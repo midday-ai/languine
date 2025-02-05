@@ -1,6 +1,6 @@
 # Configuration
 
-Languine supports both TypeScript and JSON configuration files to manage your translation setup. You can choose either languine.config.ts for TypeScript or languine.config.json for JSON format. Both files define your source and target languages, as well as the files that need to be translated.
+Languine uses a JSON configuration file (languine.json) to manage your translation setup. This file defines your source and target languages, as well as the files that need to be translated.
 
 ---
 
@@ -8,23 +8,7 @@ Languine supports both TypeScript and JSON configuration files to manage your tr
 
 Here's a basic example in both formats:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,9 +22,7 @@ export default defineConfig({
 }
 ```
 
-Both formats support the same configuration options. Choose TypeScript for better type checking and IDE support, or JSON for simplicity and broader tool compatibility.
-
-Let's break down the different sections of these files.
+Let's break down the different sections in the configuration file.
 
 ---
 
@@ -62,7 +44,7 @@ The files section defines which files Languine should translate. You can configu
 ---
 
 ### JSON Files
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Markdown/MDX Files
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Mobile Platform Files
 
 For iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 For Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -148,7 +130,7 @@ The [locale] placeholder in file patterns is automatically replaced with the app
   - locales/fr.json
 
 You can include multiple patterns for each file type and use glob patterns:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 If you're using Languine's cloud services, you can include your project ID in the configuration:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
     // ... locale config
   },
   files: {
     // ... files config
   },
-});
+}
 ```
 
 ---
@@ -191,7 +173,7 @@ You don't need to manually edit the lock file - Languine manages it automaticall
 
 ## Best Practices
 
-1. **Version Control**: Always commit both languine.config.ts and languine.lock to your repository
+1. **Version Control**: Always commit both languine.json and languine.lock to your repository
 2. **File Organization**: Keep your translation files organized in a consistent directory structure
 3. **Language Codes**: Use standard language codes to ensure compatibility
 4. **Patterns**: Use specific include patterns to avoid translating unnecessary files

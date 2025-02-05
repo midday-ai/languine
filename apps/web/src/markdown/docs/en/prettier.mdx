@@ -1,26 +1,22 @@
 # Prettier
 
-Languine supports formatting with [Prettier](https://prettier.io/) through hooks. You can configure Prettier to automatically format your translation files after they are generated.
+Languine can work together with [Prettier](https://prettier.io/) to ensure your translation files are consistently formatted. This is particularly useful when working with JSON translation files that need to maintain a consistent style across your project.
 
-Here's an example configuration:
+## Using with Languine
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+The recommended way to use Prettier with Languine is to format your translation files after they're generated. You can set this up in your `package.json`:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    afterTranslate: async (files) => {
-      await prettier.format(files, { parser: "json" });
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "prettier --write \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Now you can:
+- Run `npm run translate` to only generate translations
+- Run `npm run format` to only format existing translation files
+- Run `npm run translate:format` to generate translations and format them in sequence

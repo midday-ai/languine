@@ -1,6 +1,6 @@
 # Configuração
 
-Languine suporta arquivos de configuração tanto em TypeScript quanto em JSON para gerenciar sua configuração de tradução. Você pode escolher entre languine.config.ts para TypeScript ou languine.config.json para o formato JSON. Ambos os arquivos definem seus idiomas de origem e destino, bem como os arquivos que precisam ser traduzidos.
+Languine utiliza um arquivo de configuração JSON (languine.json) para gerenciar sua configuração de tradução. Este arquivo define seus idiomas de origem e destino, bem como os arquivos que precisam ser traduzidos.
 
 ---
 
@@ -8,23 +8,7 @@ Languine suporta arquivos de configuração tanto em TypeScript quanto em JSON p
 
 Aqui está um exemplo básico em ambos os formatos:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,9 +22,7 @@ export default defineConfig({
 }
 ```
 
-Ambos os formatos suportam as mesmas opções de configuração. Escolha TypeScript para melhor verificação de tipos e suporte a IDE, ou JSON para simplicidade e compatibilidade mais ampla com ferramentas.
-
-Vamos detalhar as diferentes seções desses arquivos.
+Vamos analisar as diferentes seções no arquivo de configuração.
 
 ---
 
@@ -62,7 +44,7 @@ A seção de arquivos define quais arquivos o Languine deve traduzir. Você pode
 ---
 
 ### Arquivos JSON
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Arquivos Markdown/MDX
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Arquivos de Plataforma Móvel
 
 Para iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 Para Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -116,7 +98,7 @@ files: {
 
 ### Outros Formatos
 
-Aqui está uma lista completa dos formatos de arquivo suportados pelo Languine:
+Aqui está uma lista completa de formatos de arquivo suportados pelo Languine:
 
 - [JSON](/docs/json) - Arquivos de tradução JSON padrão
 - [YAML](/docs/yaml) - Arquivos de tradução YAML
@@ -140,7 +122,7 @@ Aqui está uma lista completa dos formatos de arquivo suportados pelo Languine:
 
 ## Padrões de Arquivo
 
-O placeholder [locale] nos padrões de arquivo é automaticamente substituído pelo código de idioma apropriado durante a tradução. Por exemplo:
+O espaço reservado [locale] nos padrões de arquivo é automaticamente substituído pelo código de idioma apropriado durante a tradução. Por exemplo:
 
 - locales/[locale].json se torna:
   - locales/en.json
@@ -148,7 +130,7 @@ O placeholder [locale] nos padrões de arquivo é automaticamente substituído p
   - locales/fr.json
 
 Você pode incluir múltiplos padrões para cada tipo de arquivo e usar padrões glob:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 Se você estiver usando os serviços em nuvem do Languine, pode incluir seu ID de projeto na configuração:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
     // ... configuração de localidade
   },
   files: {
     // ... configuração de arquivos
   },
-});
+}
 ```
 
 ---
@@ -191,7 +173,7 @@ Você não precisa editar manualmente o arquivo de bloqueio - o Languine o geren
 
 ## Melhores Práticas
 
-1. **Controle de Versão**: Sempre comprometa tanto languine.config.ts quanto languine.lock em seu repositório
+1. **Controle de Versão**: Sempre comprometa tanto o languine.json quanto o languine.lock em seu repositório
 2. **Organização de Arquivos**: Mantenha seus arquivos de tradução organizados em uma estrutura de diretório consistente
 3. **Códigos de Idioma**: Use códigos de idioma padrão para garantir compatibilidade
 4. **Padrões**: Use padrões de inclusão específicos para evitar traduzir arquivos desnecessários

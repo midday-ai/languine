@@ -1,12 +1,12 @@
 # iOS
 
-O Languine suporta arquivos Localizable.strings do iOS, o formato padrão de localização para aplicativos iOS. Este formato lida com pares de chave-valor de string básicos e suporta comentários para fornecer contexto aos tradutores.
+Languine suporta arquivos Localizable.strings do iOS, o formato padrão de localização para aplicativos iOS. Este formato lida com pares de chave-valor básicos e suporta comentários para fornecer contexto aos tradutores.
 
 ---
 
 ## Configurando
 
-Primeiro, certifique-se de que você tem um arquivo de configuração languine.config.json ou languine.config.ts na raiz do seu projeto. Aqui está um exemplo:
+Primeiro, certifique-se de que você tem um arquivo de configuração languine.json na raiz do seu projeto. Aqui está um exemplo:
 
 ```json
 {
@@ -30,7 +30,7 @@ Com sua configuração definida, execute:
 npx languine@latest translate
 ```
 
-Quando você executar este comando, o Languine irá:
+Quando você executar este comando, Languine irá:
 
 - Carregar seu arquivo Localizable.strings de origem (por exemplo, en.lproj/Localizable.strings)
 - Detectar quaisquer novas ou modificadas strings de tradução

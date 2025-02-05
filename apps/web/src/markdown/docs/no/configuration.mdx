@@ -1,6 +1,6 @@
 # Konfigurasjon
 
-Languine støtter både TypeScript og JSON konfigurasjonsfiler for å administrere oversettelsesoppsettet ditt. Du kan velge enten languine.config.ts for TypeScript eller languine.config.json for JSON-format. Begge filene definerer kildespråket og målspråkene, samt filene som må oversettes.
+Languine bruker en JSON-konfigurasjonsfil (languine.json) for å administrere oversettelsesoppsettet ditt. Denne filen definerer kildespråk og målspråk, samt filene som må oversettes.
 
 ---
 
@@ -8,23 +8,7 @@ Languine støtter både TypeScript og JSON konfigurasjonsfiler for å administre
 
 Her er et grunnleggende eksempel i begge formater:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,18 +22,16 @@ export default defineConfig({
 }
 ```
 
-Begge formater støtter de samme konfigurasjonsalternativene. Velg TypeScript for bedre typekontroll og IDE-støtte, eller JSON for enkelhet og bredere verktøystøtte.
-
-La oss bryte ned de forskjellige seksjonene i disse filene.
+La oss se nærmere på de forskjellige seksjonene i konfigurasjonsfilen.
 
 ---
 
-## Lokalkonfigurasjon
+## Lokalisasjonskonfigurasjon
 
-Lokal-seksjonen definerer oversettelsesspråkene dine:
+Lokalisasjonsseksjonen definerer oversettelsesspråkene dine:
 
 - source: Ditt primære språk for innholdsproduksjon (f.eks. "en" for engelsk)
-- targets: En matrise av språk du ønsker å oversette til (f.eks. ["es", "fr", "de"] for spansk, fransk og tysk)
+- targets: Et array av språk du ønsker å oversette til (f.eks. ["es", "fr", "de"] for spansk, fransk og tysk)
 
 Languine støtter et bredt spekter av språkkoder, inkludert:
 - Enkle koder: en, es, fr, de
@@ -57,12 +39,12 @@ Languine støtter et bredt spekter av språkkoder, inkludert:
 
 ## Filkonfigurasjon
 
-Files-seksjonen definerer hvilke filer Languine skal oversette. Du kan konfigurere flere filtyper og mønstre:
+Filseksjonen definerer hvilke filer Languine skal oversette. Du kan konfigurere flere filtyper og mønstre:
 
 ---
 
 ### JSON-filer
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Markdown/MDX-filer
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Mobilplattformfiler
 
 For iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 For Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -114,33 +96,33 @@ files: {
 
 ---
 
-### Andre Formater
+### Andre formater
 
-Her er en komplett liste over filformater som støttes av Languine:
+Her er en komplett liste over filformater støttet av Languine:
 
-- [JSON](/docs/json) - Standard JSON oversettelsesfiler
-- [YAML](/docs/yaml) - YAML oversettelsesfiler
+- [JSON](/docs/json) - Standard JSON-oversettelsesfiler
+- [YAML](/docs/yaml) - YAML-oversettelsesfiler
 - [Properties](/docs/properties) - Java properties-filer
-- [Android](/docs/android) - Android XML ressursfiler
+- [Android](/docs/android) - Android XML-ressursfiler
 - [iOS](/docs/ios) - iOS lokaliseringsfiler
 - [iOS Stringsdict](/docs/xcode-stringsdict) - iOS pluraliseringsfiler
-- [iOS XCStrings](/docs/xcode-xcstrings) - Moderne Xcode tekstkataloger
+- [iOS XCStrings](/docs/xcode-xcstrings) - Moderne Xcode strengkataloger
 - [Markdown](/docs/md) - Dokumentasjonsfiler
 - [MDX](/docs/mdx) - Dokumentasjon med JSX
 - [HTML](/docs/html) - HTML-filer
 - [JavaScript](/docs/js) - JavaScript-filer
 - [TypeScript](/docs/ts) - TypeScript-filer
-- [Gettext PO](/docs/po) - GetText oversettelsesfiler
+- [Gettext PO](/docs/po) - GetText-oversettelsesfiler
 - [XLIFF](/docs/xliff) - XML Lokaliseringsutvekslingsfilformat
 - [CSV](/docs/csv) - Regnearkbaserte oversettelser
-- [XML](/docs/xml) - XML ressursfiler
+- [XML](/docs/xml) - XML-ressursfiler
 - [Flutter ARB](/docs/arb) - Applikasjonsressursbuntfiler
 
 ---
 
 ## Filmønstre
 
-[locale]-plassholderen i filmønstre blir automatisk erstattet med den aktuelle språkkoden under oversettelsen. For eksempel:
+[locale]-plassholderen i filmmønstre blir automatisk erstattet med den aktuelle språkkoden under oversettelse. For eksempel:
 
 - locales/[locale].json blir:
   - locales/en.json
@@ -148,7 +130,7 @@ Her er en komplett liste over filformater som støttes av Languine:
   - locales/fr.json
 
 Du kan inkludere flere mønstre for hver filtype og bruke glob-mønstre:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,21 +147,21 @@ files: {
 
 Hvis du bruker Languines skytjenester, kan du inkludere prosjekt-ID-en din i konfigurasjonen:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... lokal konfigurasjon
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... lokalisasjonskonfig
   },
   files: {
-    // ... filkonfigurasjon
+    // ... filkonfig
   },
-});
+}
 ```
 
 ---
 
-## Oversettelsesstatus Sporing
+## Oversettelsesstatussporing
 
 Languine oppretter automatisk og vedlikeholder en languine.lock-fil for å spore statusen til oversettelsene dine. Denne filen:
 
@@ -189,10 +171,10 @@ Languine oppretter automatisk og vedlikeholder en languine.lock-fil for å spore
 
 Du trenger ikke å redigere låsefilen manuelt - Languine administrerer den automatisk når du kjører oversettelseskommandoer.
 
-## Beste Praksiser
+## Beste praksis
 
-1. **Versjonskontroll**: Forplikt alltid både languine.config.ts og languine.lock til depotet ditt
-2. **Filorganisering**: Hold oversettelsesfilene dine organisert i en konsekvent katalogstruktur
+1. **Versjonskontroll**: Forplikt alltid både languine.json og languine.lock til depotet ditt
+2. **Filorganisering**: Hold oversettelsesfilene dine organisert i en konsekvent mappestruktur
 3. **Språkkoder**: Bruk standard språkkoder for å sikre kompatibilitet
 4. **Mønstre**: Bruk spesifikke inkluderingsmønstre for å unngå å oversette unødvendige filer
 5. **Prosjekt-ID**: Hold prosjekt-ID-en din sikker og ikke del den offentlig hvis du bruker skytjenester, bruk i stedet miljøvariabelen `LANGUINE_PROJECT_ID`.

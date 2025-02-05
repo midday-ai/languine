@@ -1,12 +1,12 @@
 # TypeScript
 
-Languine은 완전한 유형 안전성을 갖춘 TypeScript 로컬라이제이션 파일을 지원합니다. 이 형식은 JavaScript 지원을 TypeScript 전용 기능 및 유형 생성 기능으로 확장합니다.
+Languine은 완전한 타입 안전성을 갖춘 TypeScript 로컬라이제이션 파일을 지원합니다. 이 형식은 JavaScript 지원을 추가적인 TypeScript 전용 기능 및 타입 생성 기능으로 확장합니다.
 
 ---
 
 ## 설정하기
 
-먼저, 프로젝트 루트에 languine.config.json 또는 languine.config.ts 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
+먼저, 프로젝트 루트에 languine.json 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
 
 ```json
 {
@@ -24,20 +24,19 @@ Languine은 완전한 유형 안전성을 갖춘 TypeScript 로컬라이제이�
 
 ## 번역하기
 
-구성이 완료되면 다음 명령어를 실행하세요:
+구성이 완료되면 다음을 실행하세요:
 
 ```bash
 npx languine@latest translate
 ```
 
-이 명령어를 실행하면 Languine은:
+이 명령을 실행하면 Languine은:
 
 - 소스 TypeScript 파일을 로드합니다 (예: src/locales/en.ts)
-- 새로 추가되거나 수정된 번역 문자열을 감지합니다
+- 새로운 또는 수정된 번역 문자열을 감지합니다
 - 대상 언어에 대한 번역을 생성합니다
 - 대상 언어 파일을 생성하거나 업데이트합니다 (예: src/locales/sv.ts)
-- TypeScript 유형 정의를 생성합니다
-- 유형 주석 및 인터페이스를 보존합니다
-- 적절한 유형으로 중첩 객체를 처리합니다
+- 타입 주석 및 인터페이스를 보존합니다
+- 적절한 타입으로 중첩 객체를 처리합니다
 - 코드 형식 및 문서 주석을 유지합니다
-- 리터럴 유형 및 유니온 유형을 지원합니다
+- 리터럴 타입 및 유니온 타입을 지원합니다

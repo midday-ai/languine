@@ -916,7 +916,7 @@ files:
     docs.tuning: d1010bff5c3a43dc0623b7b3e87f174a
     docs.overrides: b871acfcee7082fe5315174298b6659b
     docs.settings: 27014dd1bf5fe7e41ced3bedfc4cd2aa
-    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.hooks: e2ba11e36ec5df44e3d9a790deadf7e4
     docs.examples: 193812a0157f497c164dbbfdd918f4a6
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides.title: b871acfcee7082fe5315174298b6659b
@@ -1361,7 +1361,7 @@ files:
     docs.tuning: 9b8c5566f1323d88d3192d269523bcbe
     docs.overrides: 3db0abab2211e2f98a5b3304b6c5c049
     docs.settings: 4d3c4eb9f350e268f00f8097de526194
-    docs.hooks: 16c81c4168d90e0c6abd2d5e056209f5
+    docs.hooks: 702f90402642db675507590929b499fa
     docs.examples: ef68b15a3e0a1018be2c812e08659cf5
     docs.team: 24ea1c1f947f71710ecc78b6760c092e
     overrides.title: 3db0abab2211e2f98a5b3304b6c5c049
@@ -1391,7 +1391,7 @@ files:
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
     translate.title: 1e11ae44cac08db1f2866828b8ac2012
     translate.description: a8cf9bbedd4818fa0140151f72fd08d8
-    test_translation.title: de0d472013ffd38f5ca4dbb107f23319
+    test_translation.title: f38989833ab575d6b59223b3a720cf8f
     test_translation.description: 3af161b85deed15224e43ba0b8215151
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
@@ -1806,7 +1806,7 @@ files:
     docs.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
     docs.overrides: 43a7607dfd166b4f1d0c6ce4644e90ab
     docs.settings: f20e9f0326600cf271562c061d3986f9
-    docs.hooks: 30d0fbe0abfb9ddb331298fbabac7053
+    docs.hooks: 6479a9f6c7ba51ceae06e9f740896131
     docs.examples: 1609d362e33d0e2edc1eebbfc8d2005d
     docs.team: b5679a07d2e2a793e61e72444869767f
     overrides.title: 43a7607dfd166b4f1d0c6ce4644e90ab
@@ -2251,7 +2251,7 @@ files:
     docs.tuning: 8e0d71d66a572ba6792929058af4824d
     docs.overrides: a3fb4ce65bc3d9f383ec312dc51c8fa4
     docs.settings: e7785de91330713fc2d12404bb6bd556
-    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.hooks: afdcce485f38c5a5e2b861ca7817697a
     docs.examples: 9a103932a77831a6270ab0002f15b3d5
     docs.team: 7ed06f744a152e94bcb64f7deeee2e7b
     overrides.title: a3fb4ce65bc3d9f383ec312dc51c8fa4
@@ -2281,8 +2281,8 @@ files:
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
     translate.title: 608b1b1fed86319b97f5c65b0fda9b5d
     translate.description: f54d059eec0995f61e59d5d1776c6639
-    test_translation.title: e65a09cf086099b2e8f7c783e317f5f4
-    test_translation.description: fe4f692455fb9b337a1435272d88a755
+    test_translation.title: 80b662b16757113d9e27dcb386695f0e
+    test_translation.description: fc47b6f55bc3b08cec0c8120f339bf9e
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2696,7 +2696,7 @@ files:
     docs.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
     docs.overrides: 0e770b80d21f0a0d6098c1f766da3a67
     docs.settings: e5fca385276288e6aa3b6494edfb5c01
-    docs.hooks: b9b371458ab7c314f88b81c553f6ce51
+    docs.hooks: e03d6a94661bd3daa14ec928a0cd6e0e
     docs.examples: f8320d1497a990d5a46d2d3dd94cb079
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides.title: 0e770b80d21f0a0d6098c1f766da3a67
@@ -2726,8 +2726,8 @@ files:
     changePlan.description: 39483fb3489541d7f50b3052b400da63
     translate.title: 2ca914a9e4059c95f2fff52622d74b77
     translate.description: 78c7573b68e9805490d9b56d71264cd5
-    test_translation.title: 081f6e4fc405d69e44ba8813df1a8f2f
-    test_translation.description: 9087b0eb4962bb35a8614e4086509ea2
+    test_translation.title: 6596ebcf1ccd01da92d581f5cca08c46
+    test_translation.description: 8fc6893a321dde491425c3f52bfa44e6
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3141,7 +3141,7 @@ files:
     docs.tuning: 27507514401e9dbec9ccd502d315e814
     docs.overrides: 97e162c52474c257d96a6a3667ee624a
     docs.settings: 109cc06de1ce5b61d19278da27f68cc7
-    docs.hooks: 0d906be396ebbd18ad4b03bd7a7abdf6
+    docs.hooks: 020bcd0fb3128348bc91848f726669fe
     docs.examples: b313bf06c5a703f6b81e1748ec9e156d
     docs.team: 41efb3960a601ebd7cf207a52940daae
     overrides.title: 97e162c52474c257d96a6a3667ee624a
@@ -3172,7 +3172,7 @@ files:
     translate.title: 1684d8ec588e2578aa556f786e0d7707
     translate.description: cb66ff40ad7c515fdbe91b36a025c3cd
     test_translation.title: 3a327b5b4b9a615c1ae47dac9bbb0eb6
-    test_translation.description: 31136f27ae8d1cae5290b9cef14249d4
+    test_translation.description: 3a74246181ac20afcce263ec0903b3d7
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3586,7 +3586,7 @@ files:
     docs.tuning: 64361509f1002e3e9d660b1bbd5d2759
     docs.overrides: b3a72e9dccb28db915db4339d3383bcf
     docs.settings: 6d454cdd87cc0b452e87f47d57ca3515
-    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.hooks: 3394bd9c337e05c33822af607001844d
     docs.examples: bba33f6b8b70e9ff20fb827a6802b038
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides.title: b3a72e9dccb28db915db4339d3383bcf
@@ -4031,7 +4031,7 @@ files:
     docs.tuning: bf7f60209cc14b4b4f002b4b197de4ae
     docs.overrides: 9ea0a9b7f1f3c8259e051144b7bf169b
     docs.settings: c049758877fff5326b89af831719c191
-    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.hooks: dd81bd77c718ee70f175d945b2b5ac26
     docs.examples: 143ccc8a08ca0197f662cf77d27211ce
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides.title: 9ea0a9b7f1f3c8259e051144b7bf169b
@@ -4476,7 +4476,7 @@ files:
     docs.tuning: ae7d36ca44e270b02649c5f5a97c0262
     docs.overrides: 3c1cc27fb6ee71e73df1e12bf61ea9ff
     docs.settings: 47285f94c98a64a95657836618447744
-    docs.hooks: 7d6a16630c8fe7eba7d83d455275db1a
+    docs.hooks: 2a6373f689345a8a18890a8649a8d7d4
     docs.examples: 82cce1f12cde38de3ec2495d6af46743
     docs.team: 7d4a752275896e94ab88cbd27813fa4d
     overrides.title: 3c1cc27fb6ee71e73df1e12bf61ea9ff
@@ -4506,7 +4506,7 @@ files:
     changePlan.description: 6f8b4b8a09249505d46d8497b9661951
     translate.title: 76332e9d43d53e58807a48ae5bdacd44
     translate.description: 01d37b0f8566b6cbffb35412c90d90c5
-    test_translation.title: 21f2929eeb7334c7a58cdcf93a139495
+    test_translation.title: 72cfa6fd508443d4ebf814718464eb05
     test_translation.description: a614574aa08ddf16f8d35c9fee924935
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
@@ -4921,7 +4921,7 @@ files:
     docs.tuning: 9b8c5566f1323d88d3192d269523bcbe
     docs.overrides: 72ea96873387ebb56925d2fb2b8debf2
     docs.settings: 2571dd516a1452eb3b5a17d007c5bac8
-    docs.hooks: 16c81c4168d90e0c6abd2d5e056209f5
+    docs.hooks: 702f90402642db675507590929b499fa
     docs.examples: cb12d0c5318c342bcff4b54097116874
     docs.team: b717cee8c11a217a51b18c889b3e12e7
     overrides.title: 72ea96873387ebb56925d2fb2b8debf2
@@ -5367,7 +5367,7 @@ files:
     docs.tuning: bf7f60209cc14b4b4f002b4b197de4ae
     docs.overrides: f0bb8c458dbdf9d56039d465e7b18229
     docs.settings: 04700bee0cd7b00165f310460332b2f8
-    docs.hooks: 35ad48797a780091740cbcf14ebc094d
+    docs.hooks: d46ac17bdbf922be9ec4dcbba470578b
     docs.examples: 823df82d3e47debcf6ff0dfaab2561cc
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides_sheet.title: 23e054fb7d00c50e67f85dbb14ff9dff
@@ -5399,24 +5399,530 @@ files:
     test_translation.title: a1a65d4d6d3b03d76eda9d98d10744fc
     test_translation.description: 40893b29287e43884b57eb4a18f5a848
   src/markdown/docs/de/github-actions.mdx:
-    content: e814dff5735100fc922893686f4b60e5
+    content: a272605582159f0001ce43aad6f93bd6
   src/markdown/docs/es/github-actions.mdx:
-    content: cefea13c449cd638becb6d69da8cb027
+    content: f6c43d7fdea7209c5b2d2755ebea6252
   src/markdown/docs/fi/github-actions.mdx:
-    content: 97aae399daa6b0bd6eca58a1fb4b8453
+    content: fcd5a0dc3d49b71129aa87dc7af3c837
   src/markdown/docs/fr/github-actions.mdx:
-    content: f0ac017f567b1005a3a57100b4248e44
+    content: 1c7bb1e8f60d487495667491ebbf9a40
   src/markdown/docs/it/github-actions.mdx:
-    content: 2e65d8256fd78ec25e9114cc3430d080
+    content: 545974217dc744328bed2b49e85b1c25
   src/markdown/docs/ko/github-actions.mdx:
-    content: 78ae5ef8db2ad14ffbb7af5ecc75d928
+    content: be8ad33af657c958e30a4d482a136f2c
   src/markdown/docs/nl/github-actions.mdx:
-    content: 3234f39b28f2f47228a2a3a76a2fa7bf
+    content: 54cf1e45b45979655a2467e79a83692f
   src/markdown/docs/no/github-actions.mdx:
-    content: c82fbb31dfc66685971e3d94f2765851
+    content: 36adf95b87d66148a77fe102c0564bca
   src/markdown/docs/pl/github-actions.mdx:
-    content: 4634825c0a29b4bc65442e06294671fe
+    content: 73e5b513f7270f41b4c48e4b67f83572
   src/markdown/docs/pt/github-actions.mdx:
-    content: 28344bf98dbf17345b80a24fa3d010d7
+    content: 9893af9bfd0b28f5e37ba1139135e150
   src/markdown/docs/sv/github-actions.mdx:
-    content: a8a76fb1bce5b3c14d3519448aac2588
+    content: 327c445ec63d3186e9b0e0e393af3378
+  src/markdown/docs/de/properties.mdx:
+    content: 49390119f031a2ae335ed427399ace27
+  src/markdown/docs/es/properties.mdx:
+    content: 3e240c2f36747c43a3372bde84213ae3
+  src/markdown/docs/fi/properties.mdx:
+    content: a504869ba023a23ebcda33007749219a
+  src/markdown/docs/fr/properties.mdx:
+    content: 4d55676a0c36b8b07b7fc7c47328081b
+  src/markdown/docs/it/properties.mdx:
+    content: e23a406e16ef2bda0ae313a0cf490bb5
+  src/markdown/docs/ko/properties.mdx:
+    content: c4bab8084e2e347b558dd376493a04b5
+  src/markdown/docs/nl/properties.mdx:
+    content: ec89e26d95913ee3cce96a29da43dfe9
+  src/markdown/docs/no/properties.mdx:
+    content: 56139c67149353b38655294ea5117726
+  src/markdown/docs/pl/properties.mdx:
+    content: cc3ef6f13d40a98b9accf41360662338
+  src/markdown/docs/pt/properties.mdx:
+    content: 5e1eccdc15b1b6d2d4964aa9a150781e
+  src/markdown/docs/sv/properties.mdx:
+    content: 9d65e2dc484586c90b3b78bfeae0ce30
+  src/markdown/docs/de/json.mdx:
+    content: 882fa8789781a91ca8ee3a0b92119395
+  src/markdown/docs/es/json.mdx:
+    content: 4cf59439df0e204cc8f70fcfe13b3d6b
+  src/markdown/docs/fi/json.mdx:
+    content: 723d631f14592eaaceafdab4c78b0572
+  src/markdown/docs/fr/json.mdx:
+    content: a880c6fc2dfe9a3506722449b3195098
+  src/markdown/docs/it/json.mdx:
+    content: 56e7d6b4159a5bec13ad433db893ed3c
+  src/markdown/docs/ko/json.mdx:
+    content: e94dcb6e083bd4b2c2098c07bf844499
+  src/markdown/docs/nl/json.mdx:
+    content: 40799a7d858acd04bc06496f310d9446
+  src/markdown/docs/no/json.mdx:
+    content: fbf8e2032115d7671642f5bc1db9e4cb
+  src/markdown/docs/pl/json.mdx:
+    content: 937bea62c0e7e2a3739ff1c65f7e08f5
+  src/markdown/docs/pt/json.mdx:
+    content: ca1429dafe7a11017b80b4572464bff8
+  src/markdown/docs/sv/json.mdx:
+    content: 21fd9b5c6c411e126cc440348e1211fa
+  src/markdown/docs/de/md.mdx:
+    content: be8f499a7d4a50083f1a0e549b603606
+  src/markdown/docs/es/md.mdx:
+    content: c6b96906188229666a6aea518e5d6de2
+  src/markdown/docs/fi/md.mdx:
+    content: 857037dd894840f38f7291e6aad586e1
+  src/markdown/docs/fr/md.mdx:
+    content: 0c1c76a690d6b59d96af7c07339d7254
+  src/markdown/docs/it/md.mdx:
+    content: c4b4938afcdc219896e3a1e328496c98
+  src/markdown/docs/ko/md.mdx:
+    content: 04d6b11533a0221e01df0ef72764a8e7
+  src/markdown/docs/nl/md.mdx:
+    content: 97b8be11ac5b343ad29fc1baa100547a
+  src/markdown/docs/no/md.mdx:
+    content: d275ae9953b7a7b022045932bd7116ba
+  src/markdown/docs/pl/md.mdx:
+    content: df9878edd0cc856f4aa9b363750b2ad2
+  src/markdown/docs/pt/md.mdx:
+    content: 95af5373bca3460354b323b475717a4f
+  src/markdown/docs/sv/md.mdx:
+    content: 6edede7e62458518b4e9dfa858351fbd
+  src/markdown/docs/de/arb.mdx:
+    content: 33945079a3d3e3ffeea66d30d6d018b7
+  src/markdown/docs/es/arb.mdx:
+    content: c87072a36791d8b941f007c0158c08fc
+  src/markdown/docs/fi/arb.mdx:
+    content: d95ddf5a54e3a8eaa476e4255cdb5ceb
+  src/markdown/docs/fr/arb.mdx:
+    content: 16391de17ca72e26342a5a437443f544
+  src/markdown/docs/it/arb.mdx:
+    content: 4765a982ed5f6ed52321e66c6e1f103e
+  src/markdown/docs/ko/arb.mdx:
+    content: 2fc5c092606515a25743bd5a21cfb9d1
+  src/markdown/docs/nl/arb.mdx:
+    content: cddbbfe5d9dc4076217f013cb5362c5d
+  src/markdown/docs/no/arb.mdx:
+    content: 81c6085304568b7d244f954f2f3ef2b9
+  src/markdown/docs/pl/arb.mdx:
+    content: fbe4acc08679c64aa68a450a1273dbab
+  src/markdown/docs/pt/arb.mdx:
+    content: 4df68e394e1c556d8be217c717065533
+  src/markdown/docs/sv/arb.mdx:
+    content: bbbc10e176acad91988c827dca28dcec
+  src/markdown/docs/de/xcode-stringsdict.mdx:
+    content: 9f17ba24ac62a5ab31334a0442c9b07d
+  src/markdown/docs/es/xcode-stringsdict.mdx:
+    content: 194c25977cf845ea13182b40ea116aaf
+  src/markdown/docs/fi/xcode-stringsdict.mdx:
+    content: b5ae3486cae76137d07def9975340d0f
+  src/markdown/docs/fr/xcode-stringsdict.mdx:
+    content: 7653f220ab10f9edd41ed468a94b4dae
+  src/markdown/docs/it/xcode-stringsdict.mdx:
+    content: 9f2b3dfe6497847289624164010f858b
+  src/markdown/docs/ko/xcode-stringsdict.mdx:
+    content: 0c84a1c04e485d40a7c6c1fef2ecfff0
+  src/markdown/docs/nl/xcode-stringsdict.mdx:
+    content: 9eaf85929dea40c82dd438bd5893df61
+  src/markdown/docs/no/xcode-stringsdict.mdx:
+    content: 47ff4188a7e463a4f49b62802313cc17
+  src/markdown/docs/pl/xcode-stringsdict.mdx:
+    content: a4428198aa578b6eb4aba6cddea2d33d
+  src/markdown/docs/pt/xcode-stringsdict.mdx:
+    content: fda75dee16c2971d1913534f5ffcaed4
+  src/markdown/docs/sv/xcode-stringsdict.mdx:
+    content: 11f25d4ae447591f99e8b4134547114e
+  src/markdown/docs/de/po.mdx:
+    content: fd0ac0a3ac256e94fa7b7f06cb64cc9a
+  src/markdown/docs/es/po.mdx:
+    content: ca4c3e9a75688801dc6af2158a67297a
+  src/markdown/docs/fi/po.mdx:
+    content: 6074ae48cf87ffb69151fd3572c91c59
+  src/markdown/docs/fr/po.mdx:
+    content: 9411ac9f2a92211cce61c434bbc7c7b0
+  src/markdown/docs/it/po.mdx:
+    content: 03643810a2cdf8ea7cbf6c509cfbc80f
+  src/markdown/docs/ko/po.mdx:
+    content: bb217a6498de0ce0f879e2b26b5c846f
+  src/markdown/docs/nl/po.mdx:
+    content: d32061193e1d3b2148410a38cae5d9af
+  src/markdown/docs/no/po.mdx:
+    content: 41fee877f6cf81c4b2533d8138e0d4fd
+  src/markdown/docs/pl/po.mdx:
+    content: 1d88490cfdeeced2c46558d2eeb550f0
+  src/markdown/docs/pt/po.mdx:
+    content: b0e89dea7b4b2880fdfa80bc0bb18c4b
+  src/markdown/docs/sv/po.mdx:
+    content: 2c488005cf5917a6418fabd638d02f70
+  src/markdown/docs/de/prettier.mdx:
+    content: 22a6cf4ebf447751296933c0467ef871
+  src/markdown/docs/es/prettier.mdx:
+    content: bfe7abd6f62d6c4da7708f662091841e
+  src/markdown/docs/fi/prettier.mdx:
+    content: 6a9ba4e1a806b5861b3cc9d980affbd2
+  src/markdown/docs/fr/prettier.mdx:
+    content: 3f592c3d6d022a37ad377b359fb79277
+  src/markdown/docs/it/prettier.mdx:
+    content: 6ed2fc80e01b0f86d7b8ac17816f143a
+  src/markdown/docs/ko/prettier.mdx:
+    content: 89b2790fb6376e8d86d2f562e4750281
+  src/markdown/docs/nl/prettier.mdx:
+    content: 3f8a5931eed12c4ed506de19fc277a44
+  src/markdown/docs/no/prettier.mdx:
+    content: 7de6fe6520c89c9a436c54a9e404759d
+  src/markdown/docs/pl/prettier.mdx:
+    content: 6beb7974d8bd4a9302b30df759efc955
+  src/markdown/docs/pt/prettier.mdx:
+    content: f3d48ac85257ee1cb813bd0d15185fcd
+  src/markdown/docs/sv/prettier.mdx:
+    content: 1da7990b8642d6c751192132431f8a76
+  src/markdown/docs/de/xcode-xcstrings.mdx:
+    content: 5b84e5c316c04c8dbcec1310e5b8cc87
+  src/markdown/docs/es/xcode-xcstrings.mdx:
+    content: c6a4396fee166aecae4a8c6007ed8d1c
+  src/markdown/docs/fi/xcode-xcstrings.mdx:
+    content: be0ee877f8313739fe158ff6d5c5a29d
+  src/markdown/docs/fr/xcode-xcstrings.mdx:
+    content: 3d99cf3f44d75ab5b16a0bd113695f1f
+  src/markdown/docs/it/xcode-xcstrings.mdx:
+    content: 0e8fb243f78f72035cd80542356996c9
+  src/markdown/docs/ko/xcode-xcstrings.mdx:
+    content: a58aeb9229f5d730b1280625f0ec8e8b
+  src/markdown/docs/nl/xcode-xcstrings.mdx:
+    content: 5772fabfd71d1a50a938a46309def6ca
+  src/markdown/docs/no/xcode-xcstrings.mdx:
+    content: 6ac70234bc9462d139e5afb155eda6d9
+  src/markdown/docs/pl/xcode-xcstrings.mdx:
+    content: 519a12ca1347cc9e30a8b7ea34b721f1
+  src/markdown/docs/pt/xcode-xcstrings.mdx:
+    content: d7e98dd61440fa1a81772b42437355f9
+  src/markdown/docs/sv/xcode-xcstrings.mdx:
+    content: 154e6c0a2403a15203043eff003ee217
+  src/markdown/docs/de/ts.mdx:
+    content: f6a209c45aee6f39efca1581b28a49a7
+  src/markdown/docs/es/ts.mdx:
+    content: 711659cf6ece2d6055ef177d142f19f9
+  src/markdown/docs/fi/ts.mdx:
+    content: cf6b5c5514f49130558551ad63b7e77b
+  src/markdown/docs/fr/ts.mdx:
+    content: 21b20b14d11ff4e4daa62a823d2ce96b
+  src/markdown/docs/it/ts.mdx:
+    content: d979a3c34d1bfe571cbec0554cff704e
+  src/markdown/docs/ko/ts.mdx:
+    content: 4100fa1558a3d5191e6e12a9455b917a
+  src/markdown/docs/nl/ts.mdx:
+    content: e76dee4bfa125e10d5477c3365df07aa
+  src/markdown/docs/no/ts.mdx:
+    content: dfa4530600fe99e245777de3c1bc5ef5
+  src/markdown/docs/pl/ts.mdx:
+    content: 91db0d3a014044b8ae7b619280d725e4
+  src/markdown/docs/pt/ts.mdx:
+    content: 9944c545836c8d07236dfeefa1e46ec2
+  src/markdown/docs/sv/ts.mdx:
+    content: d9334459072e3d170e2aad6a6ea5be9b
+  src/markdown/docs/de/expo.mdx:
+    content: 791314112681851f9667b30c8ddcc31f
+  src/markdown/docs/es/expo.mdx:
+    content: b9c5ccccc076f893964888a70fba9b7b
+  src/markdown/docs/fi/expo.mdx:
+    content: f2d44c365b072c41fdd5f14f8f1a17b9
+  src/markdown/docs/fr/expo.mdx:
+    content: 5511c20dc124ede48c4b253f486f42e4
+  src/markdown/docs/it/expo.mdx:
+    content: ba86de26c83d6bd436563dd60201d9bd
+  src/markdown/docs/ko/expo.mdx:
+    content: 00b0660d13196da8a1de8d118e380120
+  src/markdown/docs/nl/expo.mdx:
+    content: 2de7c345028336a046fc64186ecee2ea
+  src/markdown/docs/no/expo.mdx:
+    content: aca175db94143656421e3ab272e71a0c
+  src/markdown/docs/pl/expo.mdx:
+    content: 69c698a698697d1172bdbe9bac5a2cb9
+  src/markdown/docs/pt/expo.mdx:
+    content: 5c1d580b3ef00a2b610ed669ca3326b8
+  src/markdown/docs/sv/expo.mdx:
+    content: 3b510ae7653c7d231a256311ff7825db
+  src/markdown/docs/de/android.mdx:
+    content: 30ed545b80511adb93f4941b8e2e3025
+  src/markdown/docs/es/android.mdx:
+    content: 7d63e9c855d9703876b8de7a4063659f
+  src/markdown/docs/fi/android.mdx:
+    content: 6d17114bbb93ca35e8f1e33494aaa98a
+  src/markdown/docs/fr/android.mdx:
+    content: a2d653cd95294a9d13c7b1f2066184bf
+  src/markdown/docs/it/android.mdx:
+    content: adda0bd383119763c52ddaad070c62fc
+  src/markdown/docs/ko/android.mdx:
+    content: c7bb72cd01875037e851ce496dd6f02f
+  src/markdown/docs/nl/android.mdx:
+    content: c9d82d246fb32149f68eb5c2b1841cf5
+  src/markdown/docs/no/android.mdx:
+    content: 372073fbce7c1e07e0bc03169991736b
+  src/markdown/docs/pl/android.mdx:
+    content: 611949d8c5afead8951c03bc2445e511
+  src/markdown/docs/pt/android.mdx:
+    content: 92988f9ae77a56bbf5510921f1b94753
+  src/markdown/docs/sv/android.mdx:
+    content: b0f1f824863551668d2f69c72de61fb3
+  src/markdown/docs/de/configuration.mdx:
+    content: fb05c997bb0eff9860ce3103e1b6ef48
+  src/markdown/docs/es/configuration.mdx:
+    content: 7e7ce4baf044a6757e9646b06a3a44ea
+  src/markdown/docs/fi/configuration.mdx:
+    content: cc2175b785a634ab55aec45f7a6cf064
+  src/markdown/docs/fr/configuration.mdx:
+    content: d5c2c9d225d54ad46eb11bca8413898b
+  src/markdown/docs/it/configuration.mdx:
+    content: 27cb4c2cae0e67cd07c6ade24427a101
+  src/markdown/docs/ko/configuration.mdx:
+    content: 31ced6a178bc0b040ed67eaa852a45c8
+  src/markdown/docs/nl/configuration.mdx:
+    content: abf89e924552f4916294b4accda89cf1
+  src/markdown/docs/no/configuration.mdx:
+    content: e6ec5ba4901deb459947020787c8bab1
+  src/markdown/docs/pl/configuration.mdx:
+    content: 5ea95248657d4f84568fae25850ae263
+  src/markdown/docs/pt/configuration.mdx:
+    content: 950bbc2f16b185891b6b47bf37a497d4
+  src/markdown/docs/sv/configuration.mdx:
+    content: 9152bc92a049ef25058c64af48dfc29f
+  src/markdown/docs/de/js.mdx:
+    content: 95a8ac80a7a9c52ceafbde9ac6e16d8b
+  src/markdown/docs/es/js.mdx:
+    content: 3d38a719430ec331ed577de7aacd5e06
+  src/markdown/docs/fi/js.mdx:
+    content: f9fba1e4894de15508b316b53dc4cd4d
+  src/markdown/docs/fr/js.mdx:
+    content: e9660858f59185be3a0a5b54ef849aa8
+  src/markdown/docs/it/js.mdx:
+    content: d8b4316c491102b217fd90813af8ebed
+  src/markdown/docs/ko/js.mdx:
+    content: 563e164d4aa647656083420a3afa09c2
+  src/markdown/docs/nl/js.mdx:
+    content: 5d1bc743498aedec199b2ab3bebd5a70
+  src/markdown/docs/no/js.mdx:
+    content: 5b96dc113389f52b7069c61a7c36d026
+  src/markdown/docs/pl/js.mdx:
+    content: 6f43eb8ec49cdb8b897c9d3031a32dec
+  src/markdown/docs/pt/js.mdx:
+    content: 1f74b41184ba56c7e4eacc148c3055d8
+  src/markdown/docs/sv/js.mdx:
+    content: 35fb3dec69f5a5df81da23c282e4d794
+  src/markdown/docs/de/xliff.mdx:
+    content: 414213723279b3c65aa260fab886eb18
+  src/markdown/docs/es/xliff.mdx:
+    content: fdf60b6eaf82e292c1b742d5895994d0
+  src/markdown/docs/fi/xliff.mdx:
+    content: 296e51a59dd2976e6972e7fd07b42e7f
+  src/markdown/docs/fr/xliff.mdx:
+    content: a8d053ba91995e5bdd34039e228e2aa1
+  src/markdown/docs/it/xliff.mdx:
+    content: d1dfeb7a6cc26720f250fc942183806a
+  src/markdown/docs/ko/xliff.mdx:
+    content: db57df7e021164465e5ce7826cb8e4f5
+  src/markdown/docs/nl/xliff.mdx:
+    content: 45e5977c1c5b4a9612bdb1929a50d42a
+  src/markdown/docs/no/xliff.mdx:
+    content: f9bdd89ec86d870cb5160e8130f57cd9
+  src/markdown/docs/pl/xliff.mdx:
+    content: 0c0e681241eaac15c03539e5f23fe6d4
+  src/markdown/docs/pt/xliff.mdx:
+    content: bec3d595117f2a9b4f74bc486c3dc09a
+  src/markdown/docs/sv/xliff.mdx:
+    content: ed685200bb3681c9f83310417ba2119d
+  src/markdown/docs/de/ios.mdx:
+    content: 5bf420918ce7c491aa97dfe86005d426
+  src/markdown/docs/es/ios.mdx:
+    content: 226b7ccabe7dcfa118bec4cc8ca349ec
+  src/markdown/docs/fi/ios.mdx:
+    content: 263ac0346f5f3565d642e47ee9134648
+  src/markdown/docs/fr/ios.mdx:
+    content: df883e264f5d5a091178d9b5767b9c66
+  src/markdown/docs/it/ios.mdx:
+    content: 29ec0cf5f10e4e4c97f44779f83b417b
+  src/markdown/docs/ko/ios.mdx:
+    content: 6978f9a0e5cde422037f58234e648a17
+  src/markdown/docs/nl/ios.mdx:
+    content: 816b5629ffea28b3f03a1a6cb00f393f
+  src/markdown/docs/no/ios.mdx:
+    content: 9761c75fe09222f16e895c198b274978
+  src/markdown/docs/pl/ios.mdx:
+    content: 8ec2a68ad6a446081f679b7d086246ef
+  src/markdown/docs/pt/ios.mdx:
+    content: 07638dd319cb02f7e52b255653417275
+  src/markdown/docs/sv/ios.mdx:
+    content: 761366516f58849933fe56d04122ded9
+  src/markdown/docs/de/quickstart.mdx:
+    content: 2972b9edfe157e4d710a9d459c7db9c1
+  src/markdown/docs/es/quickstart.mdx:
+    content: 8c77519bc6308e6fef43d98a76765937
+  src/markdown/docs/fi/quickstart.mdx:
+    content: d9f98391dbdaf82070182b7ee32d5b25
+  src/markdown/docs/fr/quickstart.mdx:
+    content: a49e039384e0979bc73d86046430e1d2
+  src/markdown/docs/it/quickstart.mdx:
+    content: 56d3cfe72385b1e61ee0450b8cb4ad9f
+  src/markdown/docs/ko/quickstart.mdx:
+    content: 7dd8f578630cca68acff85dd40299506
+  src/markdown/docs/nl/quickstart.mdx:
+    content: fc03c3d8a649dca71076cdaaa124281c
+  src/markdown/docs/no/quickstart.mdx:
+    content: e04127e70e8f1e1a48141c9ba2185583
+  src/markdown/docs/pl/quickstart.mdx:
+    content: 211b4f19f60188ae45e4501d1d399dbb
+  src/markdown/docs/pt/quickstart.mdx:
+    content: 9a4c5455b310be886ace29d8db0a4b18
+  src/markdown/docs/sv/quickstart.mdx:
+    content: 97b790a9adfa4a04fd5fd11c29be58b5
+  src/markdown/docs/de/csv.mdx:
+    content: 9213b22fe66c3650beccbb4bc3de1cdf
+  src/markdown/docs/es/csv.mdx:
+    content: 44a64384cc2e8cc8391df78566a127fd
+  src/markdown/docs/fi/csv.mdx:
+    content: 3e8fb98a3382659b04f7dc9f26e82d13
+  src/markdown/docs/fr/csv.mdx:
+    content: a2bd277e0ca4123b71b02ecef78e154c
+  src/markdown/docs/it/csv.mdx:
+    content: eb0b4ce860e5f4c7aff7e2cdd0119128
+  src/markdown/docs/ko/csv.mdx:
+    content: 7d3360b734b64ab191242ba478d30ebe
+  src/markdown/docs/nl/csv.mdx:
+    content: e888b6dd409acb30205147dfa9590893
+  src/markdown/docs/no/csv.mdx:
+    content: f2b3218df557869161ffea3dca3a4f41
+  src/markdown/docs/pl/csv.mdx:
+    content: 6d811527ec5a1d0cfb40a12121406ff2
+  src/markdown/docs/pt/csv.mdx:
+    content: 10a1988902c097f8d5f211a7739b1afd
+  src/markdown/docs/sv/csv.mdx:
+    content: 0eff85331c8daf5e1f2aabdffa46a6d8
+  src/markdown/docs/de/biome.mdx:
+    content: e9ebf8750de9c98bf257f14a3bbcc1c1
+  src/markdown/docs/es/biome.mdx:
+    content: ae01bf79772d99ae8674aaad1a4aeaf6
+  src/markdown/docs/fi/biome.mdx:
+    content: 50004928d7a767cf1e9fdaa43ddde37e
+  src/markdown/docs/fr/biome.mdx:
+    content: 8f10f8f6a85371c420dfae9e80b46d16
+  src/markdown/docs/it/biome.mdx:
+    content: ac161782078cf5cf47b5434fb39bc8b8
+  src/markdown/docs/ko/biome.mdx:
+    content: b6a9eb945d4ae2d9269beff593df0aac
+  src/markdown/docs/nl/biome.mdx:
+    content: b0840d988aedeb5079eb3a798ac6c969
+  src/markdown/docs/no/biome.mdx:
+    content: aa9449d313e454c9af46bb6a1b1a342c
+  src/markdown/docs/pl/biome.mdx:
+    content: 39ebe8d62ec03dd2f33bb6f305eccd31
+  src/markdown/docs/pt/biome.mdx:
+    content: f4d017c6b5905e456f07c7abb782efd5
+  src/markdown/docs/sv/biome.mdx:
+    content: 4bc328f076a057299051d4abd5a29abf
+  src/markdown/docs/de/react-email.mdx:
+    content: b2d7dc1c933cda90d403a02d950449aa
+  src/markdown/docs/es/react-email.mdx:
+    content: 741604ba77950dade27a2b9f65244bd7
+  src/markdown/docs/fi/react-email.mdx:
+    content: 50d2afe510149fe4dabf90d63f3d378d
+  src/markdown/docs/fr/react-email.mdx:
+    content: b062fbb4a243a28a149c74a474ab9153
+  src/markdown/docs/it/react-email.mdx:
+    content: 21cce3b1d169900b910e16573c161ffb
+  src/markdown/docs/ko/react-email.mdx:
+    content: 73716d268d1f87a87a54fea80111b359
+  src/markdown/docs/nl/react-email.mdx:
+    content: 553cb762f36539940a43a014704220a3
+  src/markdown/docs/no/react-email.mdx:
+    content: 2680c282f2a544032b13b481759840f8
+  src/markdown/docs/pl/react-email.mdx:
+    content: 673fdaff4fded1631da710311def97a9
+  src/markdown/docs/pt/react-email.mdx:
+    content: 14c7a01c27dbaa47e31db03d8af3ca6d
+  src/markdown/docs/sv/react-email.mdx:
+    content: e82cb88e3ccd8527ad8a1ad0d75a1d71
+  src/markdown/docs/de/html.mdx:
+    content: ea5a7327033fc53f6aebd74b074434ad
+  src/markdown/docs/es/html.mdx:
+    content: 2885f9e8d4312a8e600b25c4d80d920c
+  src/markdown/docs/fi/html.mdx:
+    content: bd5732369c29f0d557d0ea75dd73c37b
+  src/markdown/docs/fr/html.mdx:
+    content: 7694515e86fe526bd6ab100d3bb4843e
+  src/markdown/docs/it/html.mdx:
+    content: 113e6e77f8a7b4b85321f8773fbaf6de
+  src/markdown/docs/ko/html.mdx:
+    content: 3555e87f2c249c994c42c94b99251e34
+  src/markdown/docs/nl/html.mdx:
+    content: 571758faf3e48720092be523a60cd6d6
+  src/markdown/docs/no/html.mdx:
+    content: cae95b3dd941787517108e824aca4e27
+  src/markdown/docs/pl/html.mdx:
+    content: 2557b8e1cd445baf5610db4ef57add4b
+  src/markdown/docs/pt/html.mdx:
+    content: 4dd7d14ac6a1921762c97fe8d2563588
+  src/markdown/docs/sv/html.mdx:
+    content: e2cde01e3b3633ed91cdaad502b806a9
+  src/markdown/docs/de/yaml.mdx:
+    content: 239a429653c1c36b943a9c074b6e30fb
+  src/markdown/docs/es/yaml.mdx:
+    content: 432c7ade6a2c70e02c76e2fc884eae0c
+  src/markdown/docs/fi/yaml.mdx:
+    content: e78fef8004dd4f5086dd188cc9668db0
+  src/markdown/docs/fr/yaml.mdx:
+    content: 4a81e726261c3f8e9f5c381b3fc30a1e
+  src/markdown/docs/it/yaml.mdx:
+    content: 0200b6cb5cd3c6a93557d1eb71b0af71
+  src/markdown/docs/ko/yaml.mdx:
+    content: e11b30bc604c8ed30e9e888ce3d9158e
+  src/markdown/docs/nl/yaml.mdx:
+    content: 93b79ee7eea02523ff4d448cf5a82114
+  src/markdown/docs/no/yaml.mdx:
+    content: d87d3f340fc0e0c0bd05f5ae9de055a6
+  src/markdown/docs/pl/yaml.mdx:
+    content: 9c640f560a5e0bb11185f66567cbdcb6
+  src/markdown/docs/pt/yaml.mdx:
+    content: 168b04bee4b7c8997a6e3f8d7614cb4d
+  src/markdown/docs/sv/yaml.mdx:
+    content: 6b3ed63e8aae169532dd956672c930b2
+  src/markdown/docs/de/mdx.mdx:
+    content: 0259a47c922be0c2243a4ee7e928ae93
+  src/markdown/docs/es/mdx.mdx:
+    content: a927f7ec669f8817218b6a9762cd5334
+  src/markdown/docs/fi/mdx.mdx:
+    content: 8239acf870521f5e98f7ee09a482e35b
+  src/markdown/docs/fr/mdx.mdx:
+    content: 0184f4fb552d409fbcffde93d361d73c
+  src/markdown/docs/it/mdx.mdx:
+    content: e9aff65304479c5be1bb74e3e5760a8e
+  src/markdown/docs/ko/mdx.mdx:
+    content: 68e16385edf821111a8732ad7077db62
+  src/markdown/docs/nl/mdx.mdx:
+    content: a3fca4df1011654f1a91268bb689ad8b
+  src/markdown/docs/no/mdx.mdx:
+    content: b1303ee2a52ece30bc304e4323bc21ef
+  src/markdown/docs/pl/mdx.mdx:
+    content: b862c7449bdcf765d473fff59be97c33
+  src/markdown/docs/pt/mdx.mdx:
+    content: c203547bd87cd47afbd62a8d46a5575b
+  src/markdown/docs/sv/mdx.mdx:
+    content: 9e1b6113dd3e4ddc61426b5b99b8282d
+  src/markdown/docs/de/xml.mdx:
+    content: c423e78403ea1ea692bacb051990b03f
+  src/markdown/docs/es/xml.mdx:
+    content: d215b7c7ee20a4fc3f5eb52bcf226ad3
+  src/markdown/docs/fi/xml.mdx:
+    content: 9730c962f7475c29237d2c25e8316968
+  src/markdown/docs/fr/xml.mdx:
+    content: 2f1441f9cac4033521ff3638867cfd4c
+  src/markdown/docs/it/xml.mdx:
+    content: 924519eaec023be6fd541ff93efc6e40
+  src/markdown/docs/ko/xml.mdx:
+    content: e41e0a30322ef3d40c7914bf4c88e7e9
+  src/markdown/docs/nl/xml.mdx:
+    content: 4e58c5068c12b9d9531af0c34db12fdd
+  src/markdown/docs/no/xml.mdx:
+    content: 330f4ece758e32621faf1db1e23baf2f
+  src/markdown/docs/pl/xml.mdx:
+    content: c4607f822989ca954c302383558a1d52
+  src/markdown/docs/pt/xml.mdx:
+    content: fbba5e7a0d2baefbbf57cfc0cfe13de6
+  src/markdown/docs/sv/xml.mdx:
+    content: 4c8b1546e02b899cc01849737bd0a95f

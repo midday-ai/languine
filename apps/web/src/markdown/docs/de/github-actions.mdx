@@ -1,7 +1,7 @@
 # GitHub Actions
 
-Mit der GitHub-Aktion können Sie Ihren Code einfach übersetzen, indem Sie Ihren Code einfach in das Repository pushen. Die GitHub-Aktion übersetzt dann Ihre neuen Schlüssel, erstellt entweder einen Pull-Request oder committet Ihre Änderungen.
-Das spart Ihnen viel Zeit und Mühe, während die Übersetzungen von hoher Qualität bleiben.
+Mit der GitHub-Aktion können Sie Ihren Code ganz einfach übersetzen, indem Sie Ihren Code einfach in das Repository pushen. Die GitHub-Aktion übersetzt dann Ihre neuen Schlüssel, erstellt entweder einen Pull-Request oder committet Ihre Änderungen.
+Das spart Ihnen viel Zeit und Mühe und sorgt gleichzeitig für qualitativ hochwertige Übersetzungen.
 
 ---
 
@@ -69,7 +69,7 @@ Um die Languine GitHub-Aktion in Ihrem Repository zu verwenden, müssen Sie:
 
 ### Einrichten der Repository-Geheimnisse
 
-Fügen Sie die folgenden Geheimnisse in Ihren Repository-Einstellungen hinzu (Einstellungen > Geheimnisse und Variablen > Aktionen):
+Fügen Sie die folgenden Geheimnisse in den Repository-Einstellungen hinzu (Einstellungen > Geheimnisse und Variablen > Aktionen):
 
 - `LANGUINE_API_KEY`: Ihr Languine API-Schlüssel
 - `LANGUINE_PROJECT_ID`: Ihre Languine Projekt-ID
@@ -122,13 +122,13 @@ jobs:
 - Bei Pull-Requests in den Hauptbranch ausgeführt
 - Kann manuell über den Tab Aktionen ausgelöst werden
 - Ihren Code auschecken und den Languine-Übersetzungsprozess ausführen
-- Einen Pull-Request mit neuen Übersetzungen erstellen (konfigurierbar)
+- Einen Pull-Request mit allen neuen Übersetzungen erstellen (konfigurierbar)
 
 #### Arbeitsverzeichnis-Option
 
 Die Option `working-directory` ermöglicht es Ihnen, anzugeben, wo sich Ihre Übersetzungsdateien befinden. Dies ist besonders nützlich in Monorepos, in denen sich Ihre Übersetzungen in einem bestimmten Paket oder Anwendungsverzeichnis befinden. Zum Beispiel:
 
-#### Pull-Request-Option (demnächst)
+#### Pull-Request-Option (kommt bald)
 
 Die Option `create-pull-request` steuert, ob die Aktion einen Pull-Request mit den Änderungen erstellt oder diese direkt in den Branch committet:
 

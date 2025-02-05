@@ -6,7 +6,7 @@ Languine støtter TypeScript lokaliseringsfiler med full typesikkerhet. Dette fo
 
 ## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -32,11 +32,10 @@ npx languine@latest translate
 
 Når du kjører denne kommandoen, vil Languine:
 
-- Laste inn dine kilde TypeScript-filer (f.eks. src/locales/en.ts)
+- Laste inn kilde TypeScript-filene dine (f.eks. src/locales/en.ts)
 - Oppdage eventuelle nye eller endrede oversettelsesstrenger
-- Generere oversettelser for dine mål språk
+- Generere oversettelser for målspråkene dine
 - Opprette eller oppdatere målspråkfilene (f.eks. src/locales/sv.ts)
-- Generere TypeScript type-definisjoner
 - Bevare typeannotasjoner og grensesnitt
 - Håndtere nestede objekter med riktig typing
 - Opprettholde kodeformatering og dokumentasjonskommentarer

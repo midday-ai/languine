@@ -6,7 +6,7 @@ Languine tukee ARB-tiedostoja, jotka ovat standardi lokalisointimuoto Flutter-so
 
 ## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Ensinnäkin varmista, että sinulla on languine.json -konfigurointitiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -24,7 +24,7 @@ Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.
 
 ## Kääntäminen
 
-Kun asetuksesi on määritetty, suorita:
+Kun konfiguraatiosi on asetettu, suorita:
 
 ```bash
 npx languine@latest translate
@@ -33,8 +33,8 @@ npx languine@latest translate
 Kun suoritat tämän komennon, Languine:
 
 - Lataa lähde ARB-tiedostosi (esim. lib/l10n/intl_en.arb)
-- Tunnistaa kaikki uudet tai muokatut käännöstekstit
-- Generoi käännökset kohdekielillesi
-- Luo tai päivittää kohdekielen ARB-tiedostot (esim. lib/l10n/intl_sv.arb)
-- Säilyttää metatiedot, paikkamerkit ja monikko-/valintailmaukset
+- Havaitsee kaikki uudet tai muokatut käännöstekstit
+- Tuottaa käännöksiä kohdekielillesi
+- Luo tai päivittää kohdekielen ARB-tiedostoja (esim. lib/l10n/intl_sv.arb)
+- Säilyttää metatiedot, paikkamerkit ja monikko/valintailmaukset
 

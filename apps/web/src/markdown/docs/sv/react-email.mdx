@@ -1,12 +1,12 @@
 # React Email
 
-Languine stöder React Email-mallar, vilket gör att du kan hantera översättningar för dina e-postmallar byggda med React Email. Denna integration hanterar både textinnehåll och HTML-attribut samtidigt som den bevarar React-komponentstrukturen.
+Languine stödjer React Email-mallar, vilket gör att du kan hantera översättningar för dina e-postmallar byggda med React Email. Denna integration hanterar både textinnehåll och HTML-attribut samtidigt som den bevarar strukturen för React-komponenter.
 
 ---
 
-## Inställning
+## Installation
 
-Först, se till att du har en `languine.config.json` eller `languine.config.ts` konfigurationsfil i rotmappen av ditt projekt. Här är ett exempel:
+Först, se till att du har en languine.json-konfigurationsfil i roten av ditt projekt. Här är ett exempel:
 
 ```json
 {
@@ -30,12 +30,12 @@ Med din konfiguration inställd, kör:
 npx languine@latest translate
 ```
 
-När du kör detta kommando kommer Languine att:
+När du kör det här kommandot kommer Languine att:
 
-- Ladda dina källor React Email-mallar (t.ex. emails/en/*.tsx)
-- Upptäcka eventuella nya eller ändrade översättningssträngar
+- Ladda dina källor för React Email-mallar (t.ex. emails/en/*.tsx)
+- Upptäcka eventuella nya eller modifierade översättningssträngar
 - Generera översättningar för dina målspråk
-- Skapa eller uppdatera e-postmallar för målspråket (t.ex. emails/sv/*.tsx)
-- Bevara React-komponentstruktur och props
-- Bibehålla HTML-formattering och stil
+- Skapa eller uppdatera e-postmallarna för målspråket (t.ex. emails/sv/*.tsx)
+- Bevara strukturen för React-komponenter och props
+- Upprätthålla HTML-formattering och stil
 - Hantera interpolering och dynamiskt innehåll

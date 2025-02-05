@@ -1,12 +1,12 @@
 # ARB (Application Resource Bundle)
 
-Languine støtter ARB-filer, den standardiserte lokaliseringsformatet for Flutter-applikasjoner. Dette formatet håndterer flertall, plassholdere og valgfrie uttrykk samtidig som det opprettholder kompatibilitet med Flutters intl-pakke.
+Languine støtter ARB-filer, den standardiserte lokaliseringsformatet for Flutter-applikasjoner. Dette formatet håndterer flertall, plassholdere og valguttrykk samtidig som det opprettholder kompatibilitet med Flutters intl-pakke.
 
 ---
 
 ## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -22,7 +22,7 @@ Først, sørg for at du har en languine.config.json eller languine.config.ts kon
 }
 ```
 
-## Oversetting
+## Oversettelse
 
 Når konfigurasjonen din er satt opp, kjør:
 
@@ -35,6 +35,6 @@ Når du kjører denne kommandoen, vil Languine:
 - Laste inn din kilde ARB-fil (f.eks. lib/l10n/intl_en.arb)
 - Oppdage eventuelle nye eller endrede oversettelsesstrenger
 - Generere oversettelser for dine målrettede språk
-- Opprette eller oppdatere ARB-filene for målrettede språk (f.eks. lib/l10n/intl_sv.arb)
-- Beholde metadata, plassholdere og flertalls-/valgfrie uttrykk
+- Opprette eller oppdatere ARB-filene for målrettet språk (f.eks. lib/l10n/intl_sv.arb)
+- Bevare metadata, plassholdere og flertalls-/valguttrykk
 

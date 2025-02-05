@@ -6,7 +6,7 @@ Languine støtter lokalisering av XML-filer, egnet for ulike XML-baserte konfigu
 
 ## Oppsett
 
-Først, sørg for at du har en languine.config.json eller languine.config.ts konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
+Først, sørg for at du har en languine.json konfigurasjonsfil i rotmappen til prosjektet ditt. Her er et eksempel:
 
 ```json
 {
@@ -32,12 +32,12 @@ npx languine@latest translate
 
 Når du kjører denne kommandoen, vil Languine:
 
-- Laste inn dine kilde-XML-filer (f.eks. resources/en/*.xml)
-- Oppdage eventuelt nytt eller endret innhold
+- Laste inn dine kilde XML-filer (f.eks. resources/en/*.xml)
+- Oppdage nytt eller endret innhold
 - Generere oversettelser for dine målspråk
 - Opprette eller oppdatere målspråksfilene (f.eks. resources/sv/*.xml)
 - Bevare XML-struktur og formatering
-- Håndtere oversettelser av attributter
+- Håndtere attributtoversettelser
 - Opprettholde CDATA-seksjoner
 - Beholde XML-kommentarer
 - Støtte XML-navnerom

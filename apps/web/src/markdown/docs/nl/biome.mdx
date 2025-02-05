@@ -1,34 +1,24 @@
 # Biome
 
-Languine ondersteunt opmaak met [Biome](https://biomejs.dev/) via hooks. Je kunt Biome configureren om je vertaalbestanden automatisch op te maken nadat ze zijn gegenereerd.
+Languine kan samenwerken met [Biome](https://biomejs.dev/) om ervoor te zorgen dat je vertaalbestanden consistent zijn opgemaakt. Dit is bijzonder nuttig bij het werken met JSON-vertalingsbestanden die een consistente stijl in je project moeten behouden.
 
-Hier is een voorbeeldconfiguratie:
+## Gebruik met Languine
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+De aanbevolen manier om Biome met Languine te gebruiken, is door je vertaalbestanden op te maken nadat ze zijn gegenereerd. Je kunt dit instellen in je `package.json`:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    // Genereer bestanden op met Biome
-    afterTranslate: async (files) => {
-      const { check } = await import("@biomejs/biome");
-      
-      for (const file of files) {
-        await check({
-          files: [file],
-          apply: true,
-        });
-      }
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "biome format \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+Nu kun je:
+- `npm run translate` uitvoeren om alleen vertalingen te genereren
+- `npm run format` uitvoeren om alleen bestaande vertaalbestanden op te maken
+- `npm run translate:format` uitvoeren om vertalingen te genereren en deze in volgorde op te maken
+
+Deze configuratie zorgt ervoor dat je vertaalbestanden consistent zijn opgemaakt met een inspringing van 2 spaties en een maximale regelbreedte van 80 tekens.

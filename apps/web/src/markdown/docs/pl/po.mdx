@@ -6,7 +6,7 @@ Languine obsługuje pliki PO, powszechnie używany format lokalizacji Gettext. F
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w katalogu głównym projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w katalogu głównym projektu. Oto przykład:
 
 ```json
 {
@@ -30,11 +30,11 @@ Po ustawieniu konfiguracji uruchom:
 npx languine@latest translate
 ```
 
-Gdy uruchomisz to polecenie, Languine:
+Kiedy uruchomisz to polecenie, Languine:
 
 - Załaduje twój źródłowy plik PO (np. locales/en/LC_MESSAGES/messages.po)
-- Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
+- Wykryje nowe lub zmodyfikowane ciągi tłumaczeń
 - Wygeneruje tłumaczenia dla twoich docelowych języków
-- Utworzy lub zaktualizuje pliki PO dla docelowego języka (np. locales/sv/LC_MESSAGES/messages.po)
+- Utworzy lub zaktualizuje pliki PO dla języków docelowych (np. locales/sv/LC_MESSAGES/messages.po)
 - Zachowa metadane, konteksty i formy liczby mnogiej
 - Utrzyma komentarze tłumaczy i informacje referencyjne

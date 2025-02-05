@@ -608,7 +608,7 @@
     "tuning": "Ajustes",
     "overrides": "Anulaciones",
     "settings": "Configuraciones",
-    "hooks": "Ganchos",
+    "hooks": "Formatadores de Código",
     "examples": "Ejemplos",
     "team": "Equipo"
   },
@@ -656,7 +656,7 @@
     "description": "Traduce tu proyecto"
   },
   "test_translation": {
-    "title": "Traducción de Prueba",
+    "title": "Prueba de Traducción",
     "description": "Prueba la traducción de tu proyecto"
   }
 }

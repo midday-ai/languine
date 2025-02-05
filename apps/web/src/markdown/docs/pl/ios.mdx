@@ -1,12 +1,12 @@
 # iOS
 
-Languine obsługuje pliki Localizable.strings dla iOS, standardowy format lokalizacji dla aplikacji iOS. Ten format obsługuje podstawowe pary klucz-wartość i wspiera komentarze, które dostarczają kontekstu dla tłumaczy.
+Languine obsługuje pliki Localizable.strings dla iOS, standardowy format lokalizacji dla aplikacji iOS. Format ten obsługuje podstawowe pary klucz-wartość i wspiera komentarze, które dostarczają kontekstu dla tłumaczy.
 
 ---
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w katalogu głównym projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w głównym katalogu projektu. Oto przykład:
 
 ```json
 {
@@ -24,7 +24,7 @@ Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub lan
 
 ## Tłumaczenie
 
-Gdy Twoja konfiguracja jest ustawiona, uruchom:
+Po ustawieniu konfiguracji uruchom:
 
 ```bash
 npx languine@latest translate
@@ -32,8 +32,8 @@ npx languine@latest translate
 
 Kiedy uruchomisz to polecenie, Languine:
 
-- Załaduje Twój źródłowy plik Localizable.strings (np. en.lproj/Localizable.strings)
+- Załaduje twój źródłowy plik Localizable.strings (np. en.lproj/Localizable.strings)
 - Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
-- Wygeneruje tłumaczenia dla Twoich docelowych języków
+- Wygeneruje tłumaczenia dla twoich docelowych języków
 - Utworzy lub zaktualizuje pliki językowe docelowe (np. sv.lproj/Localizable.strings)
 - Zachowa wszelkie istniejące komentarze i formatowanie

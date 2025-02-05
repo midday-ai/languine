@@ -6,7 +6,7 @@ Languine wspiera lokalizację Expo, integrując się płynnie z systemem i18n Ex
 
 ## Konfiguracja
 
-Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub languine.config.ts w katalogu głównym projektu. Oto przykład:
+Najpierw upewnij się, że masz plik konfiguracyjny languine.json w katalogu głównym projektu. Oto przykład:
 
 ```json
 {
@@ -24,7 +24,7 @@ Najpierw upewnij się, że masz plik konfiguracyjny languine.config.json lub lan
 
 ## Tłumaczenie
 
-Po ustawieniu konfiguracji uruchom:
+Gdy masz ustawioną konfigurację, uruchom:
 
 ```bash
 npx languine@latest translate
@@ -32,10 +32,9 @@ npx languine@latest translate
 
 Kiedy uruchomisz to polecenie, Languine:
 
-- Załaduje twój źródłowy plik tłumaczeń (np. assets/locales/en.json)
+- Załaduje twój plik źródłowy z tłumaczeniem (np. assets/locales/en.json)
 - Wykryje wszelkie nowe lub zmodyfikowane ciągi tłumaczeń
 - Wygeneruje tłumaczenia dla twoich docelowych języków
-- Utworzy lub zaktualizuje pliki językowe docelowe (np. assets/locales/sv.json)
-- Zachowa zagnieżdżoną strukturę i zasady pluralizacji
-- Wygeneruje typy TypeScript, jeśli są włączone
+- Utworzy lub zaktualizuje pliki języków docelowych (np. assets/locales/sv.json)
+- Zachowa zagnieżdżoną strukturę oraz zasady pluralizacji
 - Utrzyma zgodność z expo-localization

@@ -1,12 +1,12 @@
 # Ominaisuudet
 
-Languine tukee Java Properties -tiedostoja, jotka ovat standardi lokalisointimuoto Java-sovelluksille. Tämä muoto käsittelee Unicode-escapet ja tukee sekä avain-arvo-pareja että kommentteja.
+Languine tukee Java Properties -tiedostoja, jotka ovat standardi lokalisointimuoto Java-sovelluksille. Tämä muoto käsittelee Unicode-escapeja ja tukee sekä avain-arvo-pareja että kommentteja.
 
 ---
 
 ## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.ts -asetustiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Ensinnäkin varmista, että sinulla on languine.json -konfigurointitiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -24,7 +24,7 @@ Ensinnäkin varmista, että sinulla on languine.config.json tai languine.config.
 
 ## Kääntäminen
 
-Kun asetuksesi on määritetty, suorita:
+Kun konfiguraatiosi on asetettu, suorita:
 
 ```bash
 npx languine@latest translate
@@ -34,7 +34,7 @@ Kun suoritat tämän komennon, Languine:
 
 - Lataa lähde properties -tiedostosi (esim. messages_en.properties)
 - Havaitsee kaikki uudet tai muokatut käännöstekstit
-- Tuottaa käännökset kohdekielillesi
+- Tuottaa käännöksiä kohdekielillesi
 - Luo tai päivittää kohdekielen properties -tiedostot (esim. messages_sv.properties)
-- Käsittelee Unicode-escapet automaattisesti
-- Säilyttää kommentit ja muotoilut
+- Käsittelee Unicode-escapeja automaattisesti
+- Säilyttää kommentit ja muotoilun

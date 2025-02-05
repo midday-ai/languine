@@ -1,26 +1,22 @@
-# Prettier
+# 프리티어
 
-Languine은 후크를 통해 [Prettier](https://prettier.io/)로 포맷팅을 지원합니다. 생성된 후 번역 파일을 자동으로 포맷팅하도록 Prettier를 구성할 수 있습니다.
+랭귀인은 [프리티어](https://prettier.io/)와 함께 작업하여 번역 파일이 일관되게 포맷되도록 할 수 있습니다. 이는 프로젝트 전반에 걸쳐 일관된 스타일을 유지해야 하는 JSON 번역 파일 작업 시 특히 유용합니다.
 
-다음은 구성 예시입니다:
+## 랭귀인과 함께 사용하기
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
+프리티어를 랭귀인과 함께 사용하는 권장 방법은 번역 파일이 생성된 후에 포맷하는 것입니다. 이를 `package.json`에서 설정할 수 있습니다:
 
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-  hooks: {
-    afterTranslate: async (files) => {
-      await prettier.format(files, { parser: "json" });
-    },
-  },
-});
+```json title="package.json"
+{
+  "scripts": {
+    "translate": "languine translate",
+    "format": "prettier --write \"locales/**/*.json\"",
+    "translate:format": "npm run translate && npm run format"
+  }
+}
 ```
+
+이제 다음을 수행할 수 있습니다:
+- `npm run translate`를 실행하여 번역만 생성
+- `npm run format`을 실행하여 기존 번역 파일만 포맷
+- `npm run translate:format`을 실행하여 번역을 생성하고 순차적으로 포맷

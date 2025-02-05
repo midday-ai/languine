@@ -1,12 +1,12 @@
 # Eigenschaften
 
-Languine unterstützt Java Properties-Dateien, das Standardlokalisierungsformat für Java-Anwendungen. Dieses Format verarbeitet Unicode-Escaping und unterstützt sowohl Schlüssel-Wert-Paare als auch Kommentare.
+Languine unterstützt Java Properties-Dateien, das standardmäßige Lokalisierungsformat für Java-Anwendungen. Dieses Format verarbeitet Unicode-Escaping und unterstützt sowohl Schlüssel-Wert-Paare als auch Kommentare.
 
 ---
 
 ## Einrichtung
 
-Stellen Sie zunächst sicher, dass Sie eine languine.config.json oder languine.config.ts Konfigurationsdatei im Stammverzeichnis Ihres Projekts haben. Hier ist ein Beispiel:
+Zuerst stellen Sie sicher, dass Sie eine languine.json-Konfigurationsdatei im Stammverzeichnis Ihres Projekts haben. Hier ist ein Beispiel:
 
 ```json
 {
@@ -22,9 +22,9 @@ Stellen Sie zunächst sicher, dass Sie eine languine.config.json oder languine.c
 }
 ```
 
-## Übersetzen
+## Übersetzung
 
-Mit Ihrer Konfiguration ausgeführt, führen Sie aus:
+Mit Ihrer Konfiguration führen Sie aus:
 
 ```bash
 npx languine@latest translate
@@ -35,6 +35,6 @@ Wenn Sie diesen Befehl ausführen, wird Languine:
 - Ihre Quell-Properties-Datei laden (z. B. messages_en.properties)
 - Neue oder geänderte Übersetzungsstrings erkennen
 - Übersetzungen für Ihre Zielsprache generieren
-- Die Properties-Dateien für die Zielsprache erstellen oder aktualisieren (z. B. messages_sv.properties)
+- Die Properties-Dateien der Zielsprache erstellen oder aktualisieren (z. B. messages_sv.properties)
 - Unicode-Escaping automatisch behandeln
 - Kommentare und Formatierung beibehalten

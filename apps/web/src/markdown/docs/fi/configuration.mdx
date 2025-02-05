@@ -1,30 +1,14 @@
-# Konfigurointi
+# Konfiguraatio
 
-Languine tukee sekä TypeScript- että JSON-konfiguraatiotiedostoja käännöksesi hallintaan. Voit valita joko languine.config.ts TypeScriptille tai languine.config.json JSON-muodolle. Molemmat tiedostot määrittelevät lähde- ja kohdekielet sekä käännettävät tiedostot.
+Languine käyttää JSON-konfiguraatiotiedostoa (languine.json) hallitakseen käännösasetuksiasi. Tämä tiedosto määrittelee lähde- ja kohdekielet sekä käännettävät tiedostot.
 
 ---
 
-## Peruskonfigurointi
+## Peruskonfiguraatio
 
 Tässä on perusesimerkki molemmissa muodoissa:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,13 +22,11 @@ export default defineConfig({
 }
 ```
 
-Molemmat muodot tukevat samoja konfigurointivaihtoehtoja. Valitse TypeScript paremman tyyppitarkistuksen ja IDE-tuen vuoksi tai JSON yksinkertaisuuden ja laajemman työkaluyhteensopivuuden vuoksi.
-
-Käydään läpi näiden tiedostojen eri osiot.
+Käydään läpi konfiguraatiotiedoston eri osiot.
 
 ---
 
-## Paikalliskonfigurointi
+## Paikalliskonfiguraatio
 
 Paikallisosio määrittelee käännöskielet:
 
@@ -55,14 +37,14 @@ Languine tukee laajaa valikoimaa kielikoodeja, mukaan lukien:
 - Yksinkertaiset koodit: en, es, fr, de
 - Aluekohtaiset koodit: pt-BR, zh-CN, zh-TW
 
-## Tiedostokonfigurointi
+## Tiedostokonfiguraatio
 
-Tiedostot-osio määrittelee, mitkä tiedostot Languinen tulisi kääntää. Voit konfiguroida useita tiedostotyyppejä ja malleja:
+Tiedostot-osio määrittelee, mitkä tiedostot Languinen tulisi kääntää. Voit määrittää useita tiedostotyyppejä ja malleja:
 
 ---
 
 ### JSON-tiedostot
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Markdown/MDX-tiedostot
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Mobiilialustatiedostot
 
 iOS:lle (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 Androidille:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -121,17 +103,17 @@ Tässä on täydellinen luettelo Languinen tukemista tiedostomuodoista:
 - [JSON](/docs/json) - Standardit JSON-käännöstiedostot
 - [YAML](/docs/yaml) - YAML-käännöstiedostot
 - [Properties](/docs/properties) - Java properties -tiedostot
-- [Android](/docs/android) - Android XML-resurssitiedostot
+- [Android](/docs/android) - Android XML -resurssitiedostot
 - [iOS](/docs/ios) - iOS-lokalisointitiedostot
-- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS-monistustiedostot
+- [iOS Stringsdict](/docs/xcode-stringsdict) - iOS monikkomuotoiset tiedostot
 - [iOS XCStrings](/docs/xcode-xcstrings) - Modernit Xcode-merkkikatalogit
 - [Markdown](/docs/md) - Dokumentaatiotiedostot
-- [MDX](/docs/mdx) - Dokumentaatio JSX:n kanssa
+- [MDX](/docs/mdx) - Dokumentaatio JSX:llä
 - [HTML](/docs/html) - HTML-tiedostot
 - [JavaScript](/docs/js) - JavaScript-tiedostot
 - [TypeScript](/docs/ts) - TypeScript-tiedostot
 - [Gettext PO](/docs/po) - GetText-käännöstiedostot
-- [XLIFF](/docs/xliff) - XML-lokalisointivaihtoehtojen tiedostomuoto
+- [XLIFF](/docs/xliff) - XML-lokalisointivaihtoehtotiedostomuoto
 - [CSV](/docs/csv) - Taulukkolaskentapohjaiset käännökset
 - [XML](/docs/xml) - XML-resurssitiedostot
 - [Flutter ARB](/docs/arb) - Sovelluksen resurssikokoelmatiedostot
@@ -148,7 +130,7 @@ Tässä on täydellinen luettelo Languinen tukemista tiedostomuodoista:
   - locales/fr.json
 
 Voit sisällyttää useita malleja jokaiselle tiedostotyypille ja käyttää glob-malleja:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 Jos käytät Languinen pilvipalveluja, voit sisällyttää projektitunnuksesi konfiguraatioon:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... paikalliskonfigurointi
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... paikalliskonfiguraatio
   },
   files: {
-    // ... tiedostokonfigurointi
+    // ... tiedostokonfiguraatio
   },
-});
+}
 ```
 
 ---
@@ -191,8 +173,8 @@ Sinun ei tarvitse muokata lukitustiedostoa manuaalisesti - Languine hallitsee si
 
 ## Parhaat käytännöt
 
-1. **Versionhallinta**: Sitoudu aina sekä languine.config.ts että languine.lock varastoon
+1. **Versionhallinta**: Sitoudu aina sekä languine.json että languine.lock repositorioon
 2. **Tiedostojen järjestäminen**: Pidä käännöstiedostosi järjestettyinä johdonmukaisessa hakemistorakenteessa
-3. **Kielikoodit**: Käytä standardikielikoodeja varmistaaksesi yhteensopivuuden
+3. **Kielikoodit**: Käytä standardeja kielikoodeja varmistaaksesi yhteensopivuuden
 4. **Mallit**: Käytä erityisiä sisällyttämismalleja välttääksesi tarpeettomien tiedostojen kääntämisen
-5. **Projektitunnus**: Pidä projektitunnuksesi turvassa eikä jaa sitä julkisesti, jos käytät pilvipalveluja, käytä sen sijaan `LANGUINE_PROJECT_ID` ympäristömuuttujaa.
+5. **Projektitunnus**: Pidä projektitunnuksesi turvassa äläkä jaa sitä julkisesti, jos käytät pilvipalveluja, käytä sen sijaan `LANGUINE_PROJECT_ID` ympäristömuuttujaa.

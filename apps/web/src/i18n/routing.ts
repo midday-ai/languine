@@ -1,4 +1,4 @@
-import languineConfig from "languine.config";
+import languineConfig from "languine.json";
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 

@@ -1,6 +1,6 @@
 # Konfiguration
 
-Languine stöder både TypeScript- och JSON-konfigurationsfiler för att hantera din översättningsinställning. Du kan välja antingen languine.config.ts för TypeScript eller languine.config.json för JSON-format. Båda filerna definierar dina käll- och målspråk, samt de filer som behöver översättas.
+Languine använder en JSON-konfigurationsfil (languine.json) för att hantera din översättningsinställning. Denna fil definierar dina käll- och målspråk, samt de filer som behöver översättas.
 
 ---
 
@@ -8,23 +8,7 @@ Languine stöder både TypeScript- och JSON-konfigurationsfiler för att hantera
 
 Här är ett grundläggande exempel i båda formaten:
 
-```typescript title="languine.config.ts"
-import { defineConfig } from "languine";
-
-export default defineConfig({
-  locale: {
-    source: "en",
-    targets: ["es", "fr", "de"],
-  },
-  files: {
-    json: {
-      include: ["locales/[locale].json"],
-    },
-  },
-});
-```
-
-```json title="languine.config.json"
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -38,31 +22,29 @@ export default defineConfig({
 }
 ```
 
-Båda formaten stöder samma konfigurationsalternativ. Välj TypeScript för bättre typkontroll och IDE-stöd, eller JSON för enkelhet och bredare verktygskompatibilitet.
-
-Låt oss bryta ner de olika sektionerna av dessa filer.
+Låt oss bryta ner de olika sektionerna i konfigurationsfilen.
 
 ---
 
-## Språkkonfiguration
+## Lokalkonfiguration
 
-Språksektionen definierar dina översättningsspråk:
+Lokalsektionen definierar dina översättningsspråk:
 
 - source: Ditt primära språk för innehållsskapande (t.ex. "en" för engelska)
 - targets: En array av språk som du vill översätta till (t.ex. ["es", "fr", "de"] för spanska, franska och tyska)
 
 Languine stöder ett brett utbud av språkkoder, inklusive:
 - Enkla koder: en, es, fr, de
-- Regionsspecifika koder: pt-BR, zh-CN, zh-TW
+- Regionspecifika koder: pt-BR, zh-CN, zh-TW
 
 ## Filkonfiguration
 
-Filerna sektionen definierar vilka filer Languine ska översätta. Du kan konfigurera flera filtyper och mönster:
+Filersektionen definierar vilka filer Languine ska översätta. Du kan konfigurera flera filtyper och mönster:
 
 ---
 
 ### JSON-filer
-```typescript
+```json
 files: {
   json: {
     include: ["locales/[locale].json"],
@@ -73,7 +55,7 @@ files: {
 ---
 
 ### Markdown/MDX-filer
-```typescript
+```json
 files: {
   md: {
     include: ["docs/[locale]/*.md"],
@@ -89,7 +71,7 @@ files: {
 ### Mobilplattformfiler
 
 För iOS (Xcode):
-```typescript
+```json
 files: {
   "xcode-xcstrings": {
     include: ["Example/Localizable.xcstrings"],
@@ -104,7 +86,7 @@ files: {
 ---
 
 För Android:
-```typescript
+```json
 files: {
   android: {
     include: ["locales/[locale].xml"],
@@ -131,10 +113,10 @@ Här är en komplett lista över filformat som stöds av Languine:
 - [JavaScript](/docs/js) - JavaScript-filer
 - [TypeScript](/docs/ts) - TypeScript-filer
 - [Gettext PO](/docs/po) - GetText-översättningsfiler
-- [XLIFF](/docs/xliff) - XML Localization Interchange File Format
+- [XLIFF](/docs/xliff) - XML Lokaliseringsutbytesformat
 - [CSV](/docs/csv) - Kalkylbladsbaserade översättningar
 - [XML](/docs/xml) - XML-resursfiler
-- [Flutter ARB](/docs/arb) - Application Resource Bundle-filer
+- [Flutter ARB](/docs/arb) - Applikationsresursbundelfiler
 
 ---
 
@@ -148,7 +130,7 @@ Här är en komplett lista över filformat som stöds av Languine:
   - locales/fr.json
 
 Du kan inkludera flera mönster för varje filtyp och använda globmönster:
-```typescript
+```json
 files: {
   json: {
     include: [
@@ -165,16 +147,16 @@ files: {
 
 Om du använder Languines molntjänster kan du inkludera ditt projekt-ID i konfigurationen:
 
-```typescript
-export default defineConfig({
-  projectId: "prj_your_project_id",
-  locale: {
-    // ... språkkonfiguration
+```json
+{
+  "projectId": "prj_your_project_id",
+  "locale": {
+    // ... lokalkonfiguration
   },
   files: {
     // ... filkonfiguration
   },
-});
+}
 ```
 
 ---
@@ -185,13 +167,13 @@ Languine skapar automatiskt och underhåller en languine.lock-fil för att spår
 
 - Spårar vilket innehåll som har översatts
 - Hjälper till att identifiera vad som behöver uppdateras när källinnehållet ändras
-- Bör åtagas till ditt versionskontrollsystem
+- Bör åta sig till ditt versionskontrollsystem
 
 Du behöver inte manuellt redigera låsfilen - Languine hanterar den automatiskt när du kör översättningskommandon.
 
 ## Bästa praxis
 
-1. **Versionskontroll**: Åtag alltid både languine.config.ts och languine.lock till ditt arkiv
+1. **Versionskontroll**: Åtag alltid både languine.json och languine.lock till ditt arkiv
 2. **Filorganisation**: Håll dina översättningsfiler organiserade i en konsekvent katalogstruktur
 3. **Språkkoder**: Använd standard språkkoder för att säkerställa kompatibilitet
 4. **Mönster**: Använd specifika inkluderingsmönster för att undvika att översätta onödiga filer

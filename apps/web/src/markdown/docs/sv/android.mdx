@@ -1,12 +1,12 @@
 # Android
 
-Languine stöder Android-strängresurser (strings.xml) som ett källformat, hanterar pluralformer, strängarrayer och formaterade strängar. Detta format är det standardiserade sättet att hantera översättningar i Android-applikationer.
+Languine stödjer Android-strängresurser (strings.xml) som ett källformat, och hanterar pluralformer, strängarrayer och formaterade strängar. Detta format är det standardiserade sättet att hantera översättningar i Android-applikationer.
 
 ---
 
 ## Installera
 
-Först, se till att du har en languine.config.json eller languine.config.ts konfigurationsfil i projektets rot. Här är ett exempel:
+Först, se till att du har en languine.json konfigurationsfil i rotmappen av ditt projekt. Här är ett exempel:
 
 ```json
 {
@@ -30,10 +30,10 @@ Med din konfiguration inställd, kör:
 npx languine@latest translate
 ```
 
-När du kör det här kommandot kommer Languine att:
+När du kör detta kommando kommer Languine att:
 
 - Ladda din källstrings.xml-fil (t.ex. values/strings.xml)
 - Upptäcka eventuella nya eller ändrade översättningssträngar
 - Generera översättningar för dina målspråk
 - Skapa eller uppdatera målspråkens XML-filer (t.ex. values-sv/strings.xml, values-de/strings.xml, values-fr/strings.xml)
-- Bevara eventuell befintlig strängarray och pluralformatering
+- Bevara eventuell befintlig formatering av strängarrayer och pluralformer

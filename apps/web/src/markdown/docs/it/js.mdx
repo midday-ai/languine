@@ -6,7 +6,7 @@ Languine supporta i file di localizzazione JavaScript/TypeScript, perfetti per l
 
 ## Configurazione
 
-Per prima cosa, assicurati di avere un file di configurazione languine.config.json o languine.config.ts nella radice del tuo progetto. Ecco un esempio:
+Per prima cosa, assicurati di avere un file di configurazione languine.json nella radice del tuo progetto. Ecco un esempio:
 
 ```json
 {
@@ -32,11 +32,11 @@ npx languine@latest translate
 
 Quando esegui questo comando, Languine:
 
-- Caricherà i tuoi file JavaScript sorgente (ad es., src/locales/en.js)
-- Rileverà eventuali nuove o modificate stringhe di traduzione
+- Caricherà i tuoi file JavaScript sorgente (ad esempio, src/locales/en.js)
+- Rileverà eventuali nuove stringhe di traduzione o stringhe modificate
 - Genererà traduzioni per le tue lingue target
-- Creerà o aggiornerà i file delle lingue target (ad es., src/locales/sv.js)
-- Preserverà la struttura del modulo e le esportazioni
+- Creerà o aggiornerà i file delle lingue target (ad esempio, src/locales/sv.js)
+- Preserverà la struttura e le esportazioni dei moduli
 - Gestirà oggetti e array annidati
 - Mantenere la formattazione del codice e i commenti
-- Genererà tipi TypeScript se abilitati
+- Genererà tipi TypeScript se abilitato
