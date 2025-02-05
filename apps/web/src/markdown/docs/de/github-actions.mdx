@@ -1,7 +1,7 @@
 # GitHub Actions
 
-Mit der GitHub-Aktion können Sie Ihren Code ganz einfach übersetzen, indem Sie Ihren Code einfach in das Repository pushen. Die GitHub-Aktion übersetzt dann Ihre neuen Schlüssel, erstellt entweder einen Pull-Request oder committet Ihre Änderungen.
-Das spart Ihnen viel Zeit und Mühe und sorgt gleichzeitig für qualitativ hochwertige Übersetzungen.
+Mit der GitHub-Aktion können Sie Ihren Code einfach übersetzen, indem Sie Ihren Code einfach in das Repository pushen. Die GitHub-Aktion übersetzt dann Ihre neuen Schlüssel, erstellt entweder einen Pull-Request oder committet Ihre Änderungen.
+Das spart Ihnen viel Zeit und Mühe, während die Übersetzungen von hoher Qualität bleiben.
 
 ---
 
@@ -52,7 +52,7 @@ Das spart Ihnen viel Zeit und Mühe und sorgt gleichzeitig für qualitativ hochw
                                           ▼
                               ┌─────────────────────┐
                               │      Abgeschlossen    │
-                              │      (Bereitstellen)  │
+                              │      (Deploy)       │
                               └─────────────────────┘
 `}
         </pre>
@@ -108,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Languine-Aktion
+      - name: Languine Aktion
         uses: languine/languine-action@v1
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -120,15 +120,15 @@ jobs:
  Dieser Workflow wird:
 - Bei Pushes in den Hauptbranch ausgeführt
 - Bei Pull-Requests in den Hauptbranch ausgeführt
-- Kann manuell über den Aktionen-Tab ausgelöst werden
+- Kann manuell über den Tab Aktionen ausgelöst werden
 - Ihren Code auschecken und den Languine-Übersetzungsprozess ausführen
 - Einen Pull-Request mit neuen Übersetzungen erstellen (konfigurierbar)
 
 #### Arbeitsverzeichnis-Option
 
-Die Option `working-directory` ermöglicht es Ihnen, anzugeben, wo sich Ihre Übersetzungsdateien befinden. Dies ist besonders nützlich in Monorepos, in denen sich Ihre Übersetzungen in einem bestimmten Paket oder Verzeichnis befinden. Zum Beispiel:
+Die Option `working-directory` ermöglicht es Ihnen, anzugeben, wo sich Ihre Übersetzungsdateien befinden. Dies ist besonders nützlich in Monorepos, in denen sich Ihre Übersetzungen in einem bestimmten Paket oder Anwendungsverzeichnis befinden. Zum Beispiel:
 
-#### Pull-Request-Option
+#### Pull-Request-Option (demnächst)
 
 Die Option `create-pull-request` steuert, ob die Aktion einen Pull-Request mit den Änderungen erstellt oder diese direkt in den Branch committet:
 

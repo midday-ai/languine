@@ -654,5 +654,9 @@
   "translate": {
     "title": "Översätt",
     "description": "Översätt ditt projekt"
+  },
+  "test_translation": {
+    "title": "Testöversättning",
+    "description": "Testa översättningen av ditt projekt"
   }
 }

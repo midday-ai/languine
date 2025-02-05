@@ -1,7 +1,7 @@
 # GitHub Actions
 
-GitHub-toiminnolla voit helposti kääntää koodiasi yksinkertaisesti työntämällä koodisi repositorioon, jolloin GitHub-toiminto kääntää uudet avaimet, luo pull-pyynnön tai sitoo muutoksesi.
-Tämä säästää sinulta paljon aikaa ja vaivannäköä samalla kun säilyttää korkean laadun käännöksissä.
+GitHub-toiminnolla voit helposti kääntää koodisi yksinkertaisesti työntämällä koodisi repositorioon, jolloin GitHub-toiminto kääntää uudet avaimet, luo pull-pyynnön tai sitoo muutoksesi.
+Tämä säästää sinulta paljon aikaa ja vaivannäköä samalla kun säilyttää korkealaatuiset käännökset.
 
 ---
 
@@ -38,7 +38,7 @@ Tämä säästää sinulta paljon aikaa ja vaivannäköä samalla kun säilyttä
  ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
  ║      Englanti     ║          ║      Espanja      ║          ║      Japani      ║
- ║    Käännös        ║          ║    Käännös        ║          ║     Käännös      ║
+ ║    Käännös       ║          ║    Käännös       ║          ║     Käännös      ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
@@ -64,7 +64,7 @@ Tämä säästää sinulta paljon aikaa ja vaivannäköä samalla kun säilyttä
 
 Käyttääksesi Languine GitHub-toimintoa repositoriossasi, sinun on:
 
-1. Asetettava repositoriosi salaisuudet Languine-tunnistetietojesi kanssa
+1. Asetettava repositoriosi salaisuudet Languine-tunnuksillasi
 2. Luotava työnkulku-tiedosto repositoriosi
 
 ### Repositorion salaisuuksien asettaminen
@@ -118,17 +118,17 @@ jobs:
 ```
  
  Tämä työnkulku:
-- Suoritetaan työntöjen yhteydessä päähaaraan
-- Suoritetaan pull-pyyntöjen yhteydessä päähaaraan
+- Suoritetaan päähaaraan työntämisessä
+- Suoritetaan päähaaraan tehtävissä pull-pyynnöissä
 - Voidaan laukaista manuaalisesti Toiminnot-välilehdeltä
 - Tarkistaa koodisi ja suorittaa Languine-käännösprosessin
 - Luo pull-pyynnön kaikista uusista käännöksistä (konfiguroitavissa)
 
-#### Työhakemiston vaihtoehto
+#### Työhakemisto-vaihtoehto
 
-`working-directory`-vaihtoehto mahdollistaa sen määrittämisen, missä käännöstiedostosi sijaitsevat. Tämä on erityisen hyödyllistä monorepoissa, joissa käännöksesi voivat olla tietyssä paketti- tai sovellushakemistossa. Esimerkiksi:
+`working-directory`-vaihtoehto mahdollistaa sen, että voit määrittää, missä käännöstiedostosi sijaitsevat. Tämä on erityisen hyödyllistä monorepoissa, joissa käännöksesi voivat olla tietyssä paketti- tai sovellushakemistossa. Esimerkiksi:
 
-#### Pull-pyyntö -vaihtoehto
+#### Pull-pyyntö -vaihtoehto (tulossa pian)
 
 `create-pull-request`-vaihtoehto ohjaa, luoko toiminto pull-pyynnön muutoksista vai sitooko ne suoraan haaraan:
 
@@ -138,7 +138,7 @@ with:
 ```
 
 Kun se on asetettu `true`, toiminto:
-- Luo uuden haara muutoksilla
+- Luo uuden haaran muutoksista
 - Luo pull-pyynnön tarkistettavaksi
 - Lisää asianmukaiset tarrat ja kuvauksen
 

@@ -946,6 +946,8 @@ files:
     changePlan.description: 3df1e231233b20d95032dd0f59885c59
     translate.title: c59cefbcfba7b00b96d89f1efaec9aed
     translate.description: 31a01044f813550df9b41ed67ca5f108
+    test_translation.title: b6d912c52e8bd48d785016f7618aa209
+    test_translation.description: c0ac2eacc0dbe5bb13d19fb3ca789576
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: a1420688c629cb4bac7dfbe1b180fb42
@@ -1389,6 +1391,8 @@ files:
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
     translate.title: 1e11ae44cac08db1f2866828b8ac2012
     translate.description: a8cf9bbedd4818fa0140151f72fd08d8
+    test_translation.title: de0d472013ffd38f5ca4dbb107f23319
+    test_translation.description: 3af161b85deed15224e43ba0b8215151
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
@@ -1832,6 +1836,8 @@ files:
     changePlan.description: b1ced793d9af7f2f26d2830691abe361
     translate.title: 8a3e0182f9ceb2ebec5cc92dbf62a6c7
     translate.description: 1a1bc8fd99d13b6212dbd9132c00252e
+    test_translation.title: 0215c6e60c4421956b2861641ffc76da
+    test_translation.description: 5cebe7806e8c6ce426dac1b14913f9c2
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -2275,6 +2281,8 @@ files:
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
     translate.title: 608b1b1fed86319b97f5c65b0fda9b5d
     translate.description: f54d059eec0995f61e59d5d1776c6639
+    test_translation.title: e65a09cf086099b2e8f7c783e317f5f4
+    test_translation.description: fe4f692455fb9b337a1435272d88a755
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2718,6 +2726,8 @@ files:
     changePlan.description: 39483fb3489541d7f50b3052b400da63
     translate.title: 2ca914a9e4059c95f2fff52622d74b77
     translate.description: 78c7573b68e9805490d9b56d71264cd5
+    test_translation.title: 081f6e4fc405d69e44ba8813df1a8f2f
+    test_translation.description: 9087b0eb4962bb35a8614e4086509ea2
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3161,6 +3171,8 @@ files:
     changePlan.description: fdeb43876f9ddb74005617cdb2623a37
     translate.title: 1684d8ec588e2578aa556f786e0d7707
     translate.description: cb66ff40ad7c515fdbe91b36a025c3cd
+    test_translation.title: 3a327b5b4b9a615c1ae47dac9bbb0eb6
+    test_translation.description: 31136f27ae8d1cae5290b9cef14249d4
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3604,6 +3616,8 @@ files:
     changePlan.description: a9bef1963dfb9b0a1cf87b6f5d958c1c
     translate.title: 905e1a2262a16c9c62f4cdec9955d181
     translate.description: 765100ff709f67b598902673c30552b9
+    test_translation.title: 1005c242410dc075d21edc73c87a898b
+    test_translation.description: a74622e6866112b3b73c010ad1ea48bd
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -4047,6 +4061,8 @@ files:
     changePlan.description: 6ef4728452123b3534f9b827531283e4
     translate.title: 425b7de2297ff68ff34c2c2528ec37f6
     translate.description: abd0e13f5f833db1c143f1272731cea3
+    test_translation.title: 756e56cc291f8c1f99a695ee9710f843
+    test_translation.description: 2555a36d3b145491695437f1acec250f
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -4490,6 +4506,8 @@ files:
     changePlan.description: 6f8b4b8a09249505d46d8497b9661951
     translate.title: 76332e9d43d53e58807a48ae5bdacd44
     translate.description: 01d37b0f8566b6cbffb35412c90d90c5
+    test_translation.title: 21f2929eeb7334c7a58cdcf93a139495
+    test_translation.description: a614574aa08ddf16f8d35c9fee924935
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -4933,6 +4951,8 @@ files:
     changePlan.description: 4c23214dac77429a57c41781e1bf735a
     translate.title: b15a3cf94c7b0623db4d212b8d52db52
     translate.description: ba669de9fbbc4db9b14f4e33988ee539
+    test_translation.title: d3deb535d041342627f90d413f11f733
+    test_translation.description: 135b876206ce97f0b069bd248562e001
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
@@ -5376,3 +5396,27 @@ files:
     changePlan.description: 5cb8cd5303b6c8d3d853351e79766b6b
     translate.title: 0b33cb9784ab72aed7ca8edb24337228
     translate.description: 6ca298e8fcc535b96d34613c58131773
+    test_translation.title: a1a65d4d6d3b03d76eda9d98d10744fc
+    test_translation.description: 40893b29287e43884b57eb4a18f5a848
+  src/markdown/docs/de/github-actions.mdx:
+    content: e814dff5735100fc922893686f4b60e5
+  src/markdown/docs/es/github-actions.mdx:
+    content: cefea13c449cd638becb6d69da8cb027
+  src/markdown/docs/fi/github-actions.mdx:
+    content: 97aae399daa6b0bd6eca58a1fb4b8453
+  src/markdown/docs/fr/github-actions.mdx:
+    content: f0ac017f567b1005a3a57100b4248e44
+  src/markdown/docs/it/github-actions.mdx:
+    content: 2e65d8256fd78ec25e9114cc3430d080
+  src/markdown/docs/ko/github-actions.mdx:
+    content: 78ae5ef8db2ad14ffbb7af5ecc75d928
+  src/markdown/docs/nl/github-actions.mdx:
+    content: 3234f39b28f2f47228a2a3a76a2fa7bf
+  src/markdown/docs/no/github-actions.mdx:
+    content: c82fbb31dfc66685971e3d94f2765851
+  src/markdown/docs/pl/github-actions.mdx:
+    content: 4634825c0a29b4bc65442e06294671fe
+  src/markdown/docs/pt/github-actions.mdx:
+    content: 28344bf98dbf17345b80a24fa3d010d7
+  src/markdown/docs/sv/github-actions.mdx:
+    content: a8a76fb1bce5b3c14d3519448aac2588

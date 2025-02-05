@@ -654,5 +654,9 @@
   "translate": {
     "title": "Traduire",
     "description": "Traduisez votre projet"
+  },
+  "test_translation": {
+    "title": "Traduction de Test",
+    "description": "Testez la traduction de votre projet"
   }
 }

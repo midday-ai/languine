@@ -1,6 +1,6 @@
 # GitHub Actions
 
-Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code dans le dépôt, l'action GitHub traduira alors vos nouvelles clés, créera soit une demande de tirage, soit validera vos modifications.
+Avec l'action GitHub, vous pouvez facilement traduire votre code en poussant simplement votre code vers le dépôt, l'action GitHub traduira alors vos nouvelles clés, créera soit une demande de tirage, soit validera vos modifications.
 Cela vous fait gagner beaucoup de temps et d'efforts tout en maintenant des traductions de haute qualité.
 
 ---
@@ -71,8 +71,8 @@ Pour utiliser l'action GitHub Languine dans votre dépôt, vous devez :
 
 Ajoutez les secrets suivants dans les paramètres de votre dépôt (Paramètres > Secrets et variables > Actions) :
 
-- `LANGUINE_API_KEY` : Votre clé API Languine
-- `LANGUINE_PROJECT_ID` : Votre ID de projet Languine
+- `LANGUINE_API_KEY`: Votre clé API Languine
+- `LANGUINE_PROJECT_ID`: Votre ID de projet Languine
 
 Vous pouvez trouver ces valeurs dans votre tableau de bord Languine sous Paramètres du projet.
 
@@ -81,9 +81,9 @@ Vous pouvez trouver ces valeurs dans votre tableau de bord Languine sous Paramè
 ### Variables d'Environnement
 
 L'action GitHub utilise les variables d'environnement suivantes :
-- `LANGUINE_API_KEY` (Requis) : Votre clé API Languine pour l'authentification
-- `LANGUINE_PROJECT_ID` (Requis) : Votre ID de projet Languine 
-- `GITHUB_TOKEN` (Requis) : Fournie automatiquement par GitHub, utilisée pour créer des PRs
+- `LANGUINE_API_KEY` (Obligatoire) : Votre clé API Languine pour l'authentification
+- `LANGUINE_PROJECT_ID` (Obligatoire) : Votre ID de projet Languine 
+- `GITHUB_TOKEN` (Obligatoire) : Fournie automatiquement par GitHub, utilisée pour créer des PRs
 
 ### Exemple de Workflow
 
@@ -128,7 +128,7 @@ jobs:
 
 L'option `working-directory` vous permet de spécifier où se trouvent vos fichiers de traduction. Cela est particulièrement utile dans les monorepos où vos traductions peuvent se trouver dans un package ou un répertoire d'application spécifique. Par exemple :
 
-#### Option de Demande de Tirage
+#### Option de Demande de Tirage (à venir)
 
 L'option `create-pull-request` contrôle si l'action crée une demande de tirage avec les modifications ou les valide directement dans la branche :
 

@@ -1,7 +1,7 @@
 # GitHub Actions
 
 Med GitHub-actionen kan du enkelt översätta din kod genom att bara trycka på din kod till lagret, så kommer GitHub-actionen att översätta dina nya nycklar, antingen skapa en pull-begäran eller begå dina ändringar.
-Detta sparar mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
+Detta sparar dig mycket tid och ansträngning samtidigt som högkvalitativa översättningar bibehålls.
 
 ---
 
@@ -45,13 +45,13 @@ Detta sparar mycket tid och ansträngning samtidigt som högkvalitativa översä
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Sammanfoga │
+                                  │     Sammanfoga  │
                                   │ Pull-begäran   │
                                   └───────────────┘
                                           │
                                           ▼
                               ┌─────────────────────┐
-                              │      Avslutad       │
+                              │      Slutförd       │
                               │      (Distribuera)  │
                               └─────────────────────┘
 `}
@@ -62,7 +62,7 @@ Detta sparar mycket tid och ansträngning samtidigt som högkvalitativa översä
 
 ## Installation
 
-För att använda Languine GitHub Action i ditt lager, behöver du:
+För att använda Languine GitHub Action i ditt lager behöver du:
 
 1. Ställa in dina lagers hemligheter med dina Languine-uppgifter
 2. Skapa en arbetsflödesfil i ditt lager
@@ -121,14 +121,14 @@ jobs:
 - Körs vid tryck på huvudgrenen
 - Körs vid pull-begärningar till huvudgrenen
 - Kan utlösas manuellt från Åtgärder-fliken
-- Hämta din kod och köra Languine översättningsprocess
+- Hämta din kod och köra Languine-översättningsprocessen
 - Skapa en pull-begäran med eventuella nya översättningar (konfigurerbar)
 
 #### Arbetskatalogalternativ
 
-Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan finnas i ett specifikt paket eller app-katalog. Till exempel:
+Alternativet `working-directory` låter dig specificera var dina översättningsfiler finns. Detta är särskilt användbart i monorepos där dina översättningar kan vara i en specifik paket- eller appkatalog. Till exempel:
 
-#### Pull-begäran Alternativ
+#### Pull-begäran alternativ (kommer snart)
 
 Alternativet `create-pull-request` styr om åtgärden skapar en pull-begäran med ändringarna eller begår dem direkt till grenen:
 

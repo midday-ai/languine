@@ -654,5 +654,9 @@
   "translate": {
     "title": "번역",
     "description": "프로젝트를 번역하세요"
+  },
+  "test_translation": {
+    "title": "테스트 번역",
+    "description": "프로젝트의 번역을 테스트하세요"
   }
 }

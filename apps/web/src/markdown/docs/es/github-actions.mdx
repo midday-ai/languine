@@ -37,17 +37,17 @@ Esto te ahorra mucho tiempo y esfuerzo mientras mantienes traducciones de alta c
            ▼                              ▼                              ▼
  ╔═══════════════════╗          ╔═══════════════════╗          ╔═══════════════════╗
  ║                   ║          ║                   ║          ║                   ║
- ║      Inglés       ║          ║      Español      ║          ║      Japonés      ║
- ║    Traducción     ║          ║    Traducción     ║          ║     Traducción    ║
+ ║      Inglés      ║          ║      Español      ║          ║      Japonés      ║
+ ║    Traducción    ║          ║    Traducción    ║          ║     Traducción    ║
  ║                   ║          ║                   ║          ║                   ║
  ╚═══════════════════╝          ╚═══════════════════╝          ╚═══════════════════╝
            │                              │                              │
            └──────────────────────────────┼──────────────────────────────┘
                                           ▼
                                   ┌───────────────┐
-                                  │     Fusionar   ���
+                                  │     Fusionar   │
                                   │ Solicitud de   │
-                                  │    Extracción   │
+                                  │   extracción    │
                                   └───────────────┘
                                           │
                                           ▼
@@ -119,8 +119,8 @@ jobs:
 ```
  
  Este flujo de trabajo:
-- Se ejecutará en los pushes a la rama principal
-- Se ejecutará en las solicitudes de extracción a la rama principal
+- Se ejecutará en los envíos a la rama principal
+- Se ejecutará en solicitudes de extracción a la rama principal
 - Puede ser activado manualmente desde la pestaña de Acciones
 - Revisará tu código y ejecutará el proceso de traducción de Languine
 - Creará una solicitud de extracción con cualquier nueva traducción (configurable)
@@ -129,7 +129,7 @@ jobs:
 
 La opción `working-directory` te permite especificar dónde se encuentran tus archivos de traducción. Esto es particularmente útil en monorepos donde tus traducciones pueden estar en un paquete o directorio de aplicación específico. Por ejemplo:
 
-#### Opción de Solicitud de Extracción
+#### Opción de Solicitud de Extracción (próximamente)
 
 La opción `create-pull-request` controla si la acción crea una solicitud de extracción con los cambios o los confirma directamente en la rama:
 
