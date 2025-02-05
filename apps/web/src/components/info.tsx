@@ -1,13 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { OutlinedButton } from "./ui/outlined-button";
 
 export function Info() {
   const t = useTranslations("info");
 
   return (
     <>
-      <div className="flex flex-col space-y-12">
+      <div className="flex flex-col space-y-12 pb-12">
         <div>
           <h2 className="text-sm font-regular mb-4">
             {t("smartTranslation.title")}
@@ -32,6 +34,10 @@ export function Info() {
             <li className="text-sm">
               <span className="text-lg">◇</span>{" "}
               {t("smartTranslation.realtimeUpdates")}
+            </li>
+            <li className="text-sm">
+              <span className="text-lg">◇</span>{" "}
+              {t("smartTranslation.overrides")}
             </li>
           </ul>
         </div>
@@ -81,6 +87,10 @@ export function Info() {
           </ul>
         </div>
       </div>
+
+      <Link href="/login">
+        <OutlinedButton>{t("get_started")}</OutlinedButton>
+      </Link>
     </>
   );
 }

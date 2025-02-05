@@ -44,43 +44,45 @@
   },
   "features": {
     "title": "Features",
-    "fullyOpenSource": "Fully open source",
-    "fullyOpenSourceDescription": "Our code is publicly available on GitHub, enabling transparency and community contributions.",
-    "markdownSupport": "Markdown/Document Support",
-    "markdownSupportDescription": "Languine seamlessly translates your markdown content, keeping documentation and other files in sync with your workflow.",
-    "presetsForExpo": "Presets for Expo",
-    "presetsForExpoDescription": "We provide presets for Expo, so you can get started quickly.",
-    "presetForReactNative": "Preset for React Native",
-    "presetForReactNativeDescription": "We provide a preset for React Native, so you can get started quickly.",
-    "presetForReactEmail": "React Email Library",
-    "presetForReactEmailDescription": "We have created a i18n library for React Email.",
-    "readyForI18nLibraries": "Ready for i18n libraries",
-    "readyForI18nLibrariesDescription": "We support all libraries including the most popular ones (next-intl, react-i18next, react-intl, etc)."
+    "fullyOpenSource": "Automated Translations",
+    "fullyOpenSourceDescription": "Say goodbye to manual translation work. Languine automates the entire process, ensuring your app stays multilingual without slowing you down.",
+    "markdownSupport": "CLI & CI/CD Integration",
+    "markdownSupportDescription": "Use our powerful CLI to manage translations directly or seamlessly integrate Languine into your existing CI/CD pipeline for a fully automated workflow.",
+    "presetsForExpo": "Markdown & Document Support",
+    "presetsForExpoDescription": "Keep your documentation and content up to date across languages. Languine translates markdown files effortlessly, maintaining consistency across your workflow.",
+    "presetForReactNative": "Fine-Tuning for Brand Voice",
+    "presetForReactNativeDescription": "Customize translations to match your brand’s tone and voice. Languine gives you full control over nuances, ensuring your message stays on point.",
+    "presetForReactEmail": "GitHub Action",
+    "presetForReactEmailDescription": "Automate localization directly within GitHub. Our GitHub Action ensures your translations stay in sync with every commit and deployment.",
+    "readyForI18nLibraries": "Language & Framework Agnostic",
+    "readyForI18nLibrariesDescription": "Works with any i18n library. Keep your existing setup and simply add Languine for automated translations without disrupting your workflow."
   },
   "info": {
     "title": "Handles every aspect of localizing your app including",
+    "get_started": "Start automating",
     "smartTranslation": {
       "title": "Smart Translation",
       "intelligentTranslation": "Intelligent translation with context awareness",
       "brandVoice": "Brand voice and tone consistency",
       "terminology": "Terminology management",
       "linguisticFeatures": "Advanced linguistic features",
-      "realtimeUpdates": "Real-time translation updates"
+      "realtimeUpdates": "Real-time translation updates",
+      "overrides": "Translation overrides"
     },
     "implementation": {
       "title": "Implementation",
       "quickSetup": "Quick setup and integration",
-      "fileFormat": "File format handling",
-      "contentStructure": "Content structure organization",
-      "assetOrganization": "Asset organization"
+      "fileFormat": "Invite team members",
+      "contentStructure": "Fine tune settings",
+      "assetOrganization": "Choose languages"
     },
     "developer": {
       "title": "Developer Experience",
       "cli": "Command-line interface",
       "cicd": "CI/CD integration",
-      "versionControl": "Version control",
+      "versionControl": "Github Actions",
       "workflow": "Developer workflow",
-      "documentation": "Comprehensive documentation"
+      "documentation": "Great documentation"
     }
   },
   "login": {

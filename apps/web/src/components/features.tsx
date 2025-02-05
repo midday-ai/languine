@@ -34,7 +34,7 @@ export function Features() {
   ];
 
   return (
-    <div>
+    <div className="mt-12">
       <h3>{t("title")}</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4">
