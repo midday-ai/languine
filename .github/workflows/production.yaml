@@ -1,0 +1,35 @@
+name: Deploy - Production
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - apps/web/**
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 🔄 Deploy Background Jobs
+        env:
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+        run: |
+          TRIGGER_PROJECT_ID=${{ secrets.TRIGGER_PROJECT_ID }} bunx trigger.dev@3.3.13 deploy
+        working-directory: apps/web
+      - name: 🔄 Run Languine CLI
+        uses: ./
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          api-key: ${{ secrets.LANGUINE_API_KEY }}
+          project-id: ${{ secrets.LANGUINE_PROJECT_ID }}
+          working-directory: apps/web
+          cli-version: canary
+          # create-pull-request: true
+          dev-mode: true
+

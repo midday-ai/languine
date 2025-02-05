@@ -12,7 +12,7 @@ export function getModels() {
   });
 
   return {
-    primary: createPrimaryModel(process.env.AI_SECONDARY_MODEL!),
+    primary: createPrimaryModel(process.env.AI_PRIMARY_MODEL!),
     secondary: createSecondaryModel(process.env.AI_SECONDARY_MODEL!),
   };
 }
@@ -23,13 +23,14 @@ export function chooseModel(attempt?: number) {
   // Choose model based on attempt count
   switch (attempt) {
     case 1:
+    case 2:
       return {
         model: models.primary,
         mode: "json",
         maxTokens: 8000,
       };
-    case 2:
     case 3:
+    case 4:
       return {
         model: models.secondary,
         mode: "json",
