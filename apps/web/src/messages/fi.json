@@ -396,9 +396,9 @@
         "latest_features": "Varhaispääsy uusimpiin ominaisuuksiin",
         "priority_support": "Priorisoitu tuki",
         "priority_queues": "Priorisoidut käännöskeskukset",
-        "languages": "Alkaen 8 kielestä",
+        "languages": "Alkaen 8 kieltä",
         "keys_limit": "Alkaen 10 000 avainta",
-        "docs_limit": "Alkaen 50 asiakirjasta"
+        "docs_limit": "Alkaen 50 asiakirjaa"
       }
     },
     "cta": "Aloita automaatio",

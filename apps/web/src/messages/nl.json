@@ -396,9 +396,9 @@
         "latest_features": "Vroeg toegang tot de nieuwste functies",
         "priority_support": "Prioriteitssteun",
         "priority_queues": "Prioriteitsvertalingswachtrijen",
-        "languages": "Beginnend vanaf 8 talen",
-        "keys_limit": "Beginnend vanaf 10.000 sleutels",
-        "docs_limit": "Beginnend vanaf 50 documenten"
+        "languages": "Vanaf 8 talen",
+        "keys_limit": "Vanaf 10.000 sleutels",
+        "docs_limit": "Vanaf 50 documenten"
       }
     },
     "cta": "Begin met automatiseren",

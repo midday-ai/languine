@@ -396,9 +396,9 @@
         "latest_features": "최신 기능에 대한 조기 액세스",
         "priority_support": "우선 지원",
         "priority_queues": "우선 번역 대기열",
-        "languages": "최소 8개 언어",
-        "keys_limit": "최소 10,000개 키",
-        "docs_limit": "최소 50개 문서"
+        "languages": "8개 언어부터 시작",
+        "keys_limit": "10,000개 키부터 시작",
+        "docs_limit": "50개 문서부터 시작"
       }
     },
     "cta": "자동화 시작하기",

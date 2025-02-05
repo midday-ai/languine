@@ -397,7 +397,7 @@
         "priority_support": "Soporte prioritario",
         "priority_queues": "Colas de traducción prioritarias",
         "languages": "A partir de 8 idiomas",
-        "keys_limit": "A partir de 10,000 claves",
+        "keys_limit": "A partir de 10 000 claves",
         "docs_limit": "A partir de 50 documentos"
       }
     },
