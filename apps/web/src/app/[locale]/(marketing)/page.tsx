@@ -21,10 +21,13 @@ export default function Page() {
       <Hero />
 
       <div className="space-y-16 max-w-screen-lg mx-auto">
-        <Companies />
-        <DottedSeparator />
+        {/* <Companies /> */}
         <Features />
+
+        <DottedSeparator />
+
         <Info />
+
         <DottedSeparator />
         <Pipeline />
       </div>

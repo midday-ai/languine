@@ -121,7 +121,7 @@ export function Pricing() {
                 {t("free.price")}
               </h3>
 
-              <Link href="/login?plan=free">
+              <Link href="/login">
                 <OutlinedButton variant="secondary">{t("cta")}</OutlinedButton>
               </Link>
             </div>
@@ -131,7 +131,7 @@ export function Pricing() {
             <PricingSlider value={value} setValue={setValue} />
 
             <div className="mt-4">
-              <Link href={`/login?plan=pro&tier=${value[0]}`}>
+              <Link href="/login">
                 <OutlinedButton>{t("cta")}</OutlinedButton>
               </Link>
             </div>

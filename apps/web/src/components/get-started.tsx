@@ -22,9 +22,18 @@ export function GetStarted() {
               {t("description")}
             </p>
 
-            <div className="text-center sm:text-left">
+            <div className="flex items-center gap-8 text-center sm:text-left">
               <Link href="/login">
                 <OutlinedButton>{t("button.startAutomating")}</OutlinedButton>
+              </Link>
+
+              <Link
+                href="/docs"
+                className="hidden md:block text-sm text-secondary underline"
+              >
+                <OutlinedButton variant="secondary">
+                  {t("button.readDocumentation")}
+                </OutlinedButton>
               </Link>
             </div>
           </div>
