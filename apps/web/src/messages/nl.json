@@ -6,8 +6,8 @@
     "goToApp": "Ga naar app"
   },
   "hero": {
-    "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en pipeline, zodat vertalingen u nooit ophouden."
+    "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
+    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelaarsworkflow en -pipeline, zodat vertalingen u nooit vertragen."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aan de slag",
-    "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en pipeline, zodat vertalingen u nooit ophouden.",
+    "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
+    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelaarsworkflow en -pipeline, zodat vertalingen u nooit vertragen.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"

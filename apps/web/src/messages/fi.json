@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Kehittäjille suunniteltu lokalisaatioinfrastruktuuri",
-    "description": "Languine automatisoi lokalisaation kehitysprosessissasi ja putkessasi, varmistaen että käännökset eivät hidasta sinua."
+    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja prosessissasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Kehittäjille suunniteltu lokalisaatioinfrastruktuuri",
-    "description": "Languine automatisoi lokalisaation kehitysprosessissasi ja putkessasi, varmistaen että käännökset eivät hidasta sinua.",
+    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja prosessissasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automaatio",
       "readDocumentation": "Lue dokumentaatio"

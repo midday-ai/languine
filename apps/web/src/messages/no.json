@@ -6,8 +6,8 @@
     "goToApp": "Gå til app"
   },
   "hero": {
-    "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Languine automatiserer lokalisering innen din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri holder deg tilbake."
+    "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri forsinker deg."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Languine automatiserer lokalisering innen din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri holder deg tilbake.",
+    "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri forsinker deg.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"
