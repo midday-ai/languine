@@ -103,8 +103,8 @@ export async function loadConfig(): Promise<Config> {
       ...config,
       projectId: config.projectId || env.LANGUINE_PROJECT_ID,
     };
-  } catch {
-    outro(chalk.red("Error loading config"));
+  } catch (error) {
+    outro(chalk.red(`Error loading config: ${error}`));
     process.exit(1);
   }
 }
