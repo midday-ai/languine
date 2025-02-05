@@ -534,18 +534,18 @@ files:
     activity.type.key: 0f511d362346c2f658bb594d5b04224e
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 8f96b9007880dcd8b15648ced9350869
-    features.fullyOpenSource: c0793d66483081fad43b4b648f01de20
-    features.fullyOpenSourceDescription: eb869fbd249b715870c95fe98326ba76
-    features.presetsForExpo: 80381b29bd692d856432bae90bac6ed2
-    features.presetsForExpoDescription: eb36979f764ae965a554b0cba20492c3
-    features.presetForReactNative: 4c5d45e9c1d0e279550ed61466dae04e
-    features.presetForReactNativeDescription: 8d82eb61a4025c5b9864529aaa9ec5d7
-    features.presetForReactEmail: 3664bcd2a91939aa5c6a0873fffa6b6f
-    features.presetForReactEmailDescription: ef698d76c6f145efd17a1171c440ad22
-    features.readyForI18nLibraries: 7391c5ac7068d301326bc7b71c47f8c9
-    features.readyForI18nLibrariesDescription: 492769b13bacf4b8d1ea42bd4b245982
-    features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
-    features.markdownSupportDescription: e3f83fe27c85e2e1f7618a6628cc2de6
+    features.fullyOpenSource: 620aff8133f009eef2c4effe6a28daad
+    features.fullyOpenSourceDescription: 7d4e94f74aebfa73b311d85fad89841e
+    features.presetsForExpo: 07f8d1dd8259d7425dd63e376d37508e
+    features.presetsForExpoDescription: 0b5eb7d183e96c17ee90daf0d3e0c419
+    features.presetForReactNative: c5c7ce9a5bd379a3e1b8104e66b1ca08
+    features.presetForReactNativeDescription: f6f0ac88e84539969b0c364313086fdc
+    features.presetForReactEmail: 641994104b2055fdd116b2d0da0e7cc5
+    features.presetForReactEmailDescription: 14230e03e537a75d976179e4a0519e74
+    features.readyForI18nLibraries: d1d68808b283a094ec8fb248267487af
+    features.readyForI18nLibrariesDescription: 50b2b5ce1a1eb5b46d0fdf4e819d8e0d
+    features.markdownSupport: d0e66364f6f38a533643c6da5c3e505e
+    features.markdownSupportDescription: 2039a488bb94bee0047f764dff3c36c9
     info.title: 50e6ab156a500697a64c3caa457cebc7
     info.smartTranslation.title: cb2537225777cfde54b6defb7f9dfddb
     info.smartTranslation.intelligentTranslation: 67270a3a27f073428d17f1539a0d5673
@@ -555,15 +555,15 @@ files:
     info.smartTranslation.realtimeUpdates: 2a6088c36e07baef83827db7a8c21d25
     info.implementation.title: 3d461713e290a1f0bf30b6f8de1d8a3f
     info.implementation.quickSetup: 7055e344b16083147b66821ee267c67b
-    info.implementation.fileFormat: e0990cb24fb733a7ce25731c91d317fc
-    info.implementation.contentStructure: 18a45ae5086f48dce9aa308b4ffe11e0
-    info.implementation.assetOrganization: ff10dbcb8567fac2adf697491b0e16ed
+    info.implementation.fileFormat: d1b18ddedad2d7418941225af6b7cbf3
+    info.implementation.contentStructure: c99087a4c54bac88a64182e08dc692de
+    info.implementation.assetOrganization: b8d27ccf03e587f85d647467b09ed7d8
     info.developer.title: e82fb999b66c18b1292cffbdb2360644
     info.developer.cli: 6d13e87d1df3c9d2564f81c20c84123f
     info.developer.cicd: 1782a3b381407eb645c10b97169562ac
-    info.developer.versionControl: 80444c567526fade78adcbbee3d3dea7
+    info.developer.versionControl: df75e0729b10a0db8342a2769719dae7
     info.developer.workflow: 8e0c30abfb8e2d2f1a84bcd906cea288
-    info.developer.documentation: f332f4c5f782da35fd5fd3e6ded8cef1
+    info.developer.documentation: b88410347def311dd8821a1dfb5f61fc
     login.title: ecff6ecb514e3e1b66f8b07d8b78bafe
     login.github: 5b9f0491392b5ab167e183d36bbd7f18
     login.google: 3192eb89f0ba4f0f62f1566a09ee6dde
@@ -948,13 +948,15 @@ files:
     changePlan.description: ba1b1c0dbd7053b27ea0dc357433bfb2
     test_translation.title: 10771c3666e062108056535fc406b850
     test_translation.description: c0ac2eacc0dbe5bb13d19fb3ca789576
+    info.get_started: 59cd3d6f036c298b544bf40f2a9e0b1b
+    info.smartTranslation.overrides: 508ba6ac8c908cfe245a068072b321bb
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
-    hero.title: 230145d21864c99993724ece51e99d19
-    hero.description: 27e89036983ce499478c728bab045a4c
+    hero.title: 07c5b02f0ce56e2b81b07abe419d5b53
+    hero.description: 25301996343e55017b1b00a1defe65d9
     navigation.dashboard: 629e199d421911b329a2909925beeb50
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 3db0abab2211e2f98a5b3304b6c5c049
@@ -963,8 +965,8 @@ files:
     navigation.docs: a1420688c629cb4bac7dfbe1b180fb42
     navigation.account: d1ef184f21c6a19615f873478fe03462
     getStarted.heading: 2788dc861f0cd8b423653c0b6fe4195b
-    getStarted.title: 230145d21864c99993724ece51e99d19
-    getStarted.description: 27e89036983ce499478c728bab045a4c
+    getStarted.title: 07c5b02f0ce56e2b81b07abe419d5b53
+    getStarted.description: 25301996343e55017b1b00a1defe65d9
     getStarted.button.startAutomating: 9b0a69239ff144486dff4e740b4c7329
     getStarted.button.readDocumentation: bf1998ea274fe0873d2ac78fcb0e1006
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -977,18 +979,18 @@ files:
     activity.type.key: 6f507de48da41f024a19a92881b1494b
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: fb1a6f2abe85ec57a6f0f39da4b74fdc
-    features.fullyOpenSource: edad6292e73fb6b6d429e0631583b741
-    features.fullyOpenSourceDescription: c4683de39eeaacd1b8144a96120b1969
-    features.presetsForExpo: dca4c35d32123d5dd200964ad20f283b
-    features.presetsForExpoDescription: 9c615905c07f9ea29370600be6fbc3ee
-    features.presetForReactNative: f55ae844fc9ec66d0277039cfdc91577
-    features.presetForReactNativeDescription: d3f5f572c8cc25831968d659e879cc78
-    features.presetForReactEmail: 08c52cff159be18cdca878ae5ed6330e
-    features.presetForReactEmailDescription: 41b1037d72a5845247363a75bff190a8
-    features.readyForI18nLibraries: e7779a7a4c9ddc9ac2c7a5a7e408da8f
-    features.readyForI18nLibrariesDescription: c86298290f274a895f3a73e3efdbbd7b
-    features.markdownSupport: db8d91dbbf4606f8b8e880be1d64bec6
-    features.markdownSupportDescription: c3eeec67565fdff232aa60617db51c33
+    features.fullyOpenSource: df838bf55705fde42028b400abc131a1
+    features.fullyOpenSourceDescription: 55f67038bf04ac76dd0a6692af221c1b
+    features.presetsForExpo: b39a711acdc2888fc1a47e4bc4cd8245
+    features.presetsForExpoDescription: 48273cf77b0a99c8b37ebe6f42ba2d24
+    features.presetForReactNative: 16b9f1749ce92cc4414ca09d32b75140
+    features.presetForReactNativeDescription: ab76c38fc75933cc06f2641c65d3f18f
+    features.presetForReactEmail: 2b41e3b419fb37292a6d8c961bfdede5
+    features.presetForReactEmailDescription: eaef9be965e4be30028029dde4ba3b6e
+    features.readyForI18nLibraries: 1636cd3deff57d74fda4c657a6f4b085
+    features.readyForI18nLibrariesDescription: 97a6cd3787823e5add0b8bf51a4ecfac
+    features.markdownSupport: e64ceb7f484ab852f1247e04ff9ac180
+    features.markdownSupportDescription: 80beef4c513b9cd947b9211df096dc18
     info.title: f4c18026b20825816b2b15febcfe00de
     info.smartTranslation.title: f5db92f44b40fccbbf510fd1d2a6b394
     info.smartTranslation.intelligentTranslation: f667c736902a838bf6631681dc0f943c
@@ -998,15 +1000,15 @@ files:
     info.smartTranslation.realtimeUpdates: 31792e11a1786e8d5e48945608b3e229
     info.implementation.title: 7528348f9ddea9c80c3efa9bbff04372
     info.implementation.quickSetup: 46ac21008e3f0604d7654c9ea759a33f
-    info.implementation.fileFormat: 81ebb83cd59e2ea9b009b72a13b3dd88
-    info.implementation.contentStructure: 50c558ffe4ff13382ed7a4ea06b57c84
-    info.implementation.assetOrganization: 57865a85414817a7915853ae2da1d451
+    info.implementation.fileFormat: 5ff8760b206474a5a07f870e7a18d1ca
+    info.implementation.contentStructure: d989abe3dbc4d6e5d9910fab32042809
+    info.implementation.assetOrganization: 5b2111cb0501fccd4ed1229fe8ed474f
     info.developer.title: 30d86d49dc5c3b0374de515236e2b3e6
     info.developer.cli: b4c41f293341588ec98b4de86bbecc8c
     info.developer.cicd: a3657b373f955915b22f25c0bb69f94f
-    info.developer.versionControl: eb1a0745173b76888a9ef760597b05a6
+    info.developer.versionControl: ee45f1dfb4fafd1bd6d73c60878c7840
     info.developer.workflow: 81026a50740879c7dfc9115b17098b03
-    info.developer.documentation: dd0061c892444d1382564cf5fb6fa0c4
+    info.developer.documentation: 188131edfe29f9f28f82e26793c2ad70
     login.title: 2eea080f348d1e398b038b37aa3f1a10
     login.github: 199a1d7ec04ab7ac8ba95fd79e8486b7
     login.google: 78a60be680ee23363c10d2513b44cee7
@@ -1391,13 +1393,15 @@ files:
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
     test_translation.title: 4d9d23edc36efe0b95482d0d9bc97034
     test_translation.description: 3af161b85deed15224e43ba0b8215151
+    info.get_started: 31f67202afd3ea7e29cba8d67e97bb1d
+    info.smartTranslation.overrides: a1612ec622fbea43592c099b9cd8c61f
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
     header.signIn: 634983f425e586cdfe14c715fabae635
     header.goToApp: 02a199e2306dd194a6a4c43741c7b8a7
     hero.title: 8aef5bbd2030cf40b757082600d1e9a9
-    hero.description: a6e31e1571ba9b4f568c99a9d1ec666e
+    hero.description: c5ed42ccc3fb2b833ec6130b1243b717
     navigation.dashboard: 820c7142370ede086c0f3db8aad1aeef
     navigation.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
     navigation.overrides: 43a7607dfd166b4f1d0c6ce4644e90ab
@@ -1407,7 +1411,7 @@ files:
     navigation.account: 884a1de4d3195f10985afac09db0aa6d
     getStarted.heading: 66963d16bba8c9087c0570d1d875781f
     getStarted.title: 8aef5bbd2030cf40b757082600d1e9a9
-    getStarted.description: a6e31e1571ba9b4f568c99a9d1ec666e
+    getStarted.description: c5ed42ccc3fb2b833ec6130b1243b717
     getStarted.button.startAutomating: cf14035b33781c88be3ed14c888fea61
     getStarted.button.readDocumentation: e60a4af5dc2d2917776dc426ac102d17
     companies.title: 366f89f81e17fefc585f1a06ef9b3b78
@@ -1420,18 +1424,18 @@ files:
     activity.type.key: be35dc814feecedb834c49ea5df73127
     activity.type.document: 50d577c2b1918a89f6cdbf358d148340
     features.title: fb75f10c213c814ae204051eb749ba8f
-    features.fullyOpenSource: 7a34ebeeb99d7ce795566e59f937eb3f
-    features.fullyOpenSourceDescription: f1bbbabb357aea38a746aec19974c7b0
-    features.presetsForExpo: 08af2e8c37d5fc2b70285673a4c34b1b
-    features.presetsForExpoDescription: ffdecc4f24cb5531c06b43a1fc342857
-    features.presetForReactNative: 3f239ebd93e2c3272e178bc485bbae40
-    features.presetForReactNativeDescription: 676c42c63c3c8c14448089cb8f3b6fa0
-    features.presetForReactEmail: 74108c2c28525137be8144d03155c46b
-    features.presetForReactEmailDescription: 28640bb97cd2fa96344e8898a3332b19
-    features.readyForI18nLibraries: 0882b42b104c5c2d2e3ed91309492263
-    features.readyForI18nLibrariesDescription: a6b8d6d3276a3a04293ae9b2d18b63b1
-    features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
-    features.markdownSupportDescription: 60e0b2052b8ed0bd965343cd06c06e44
+    features.fullyOpenSource: e1a886cf2e8d016da37c38ef66195637
+    features.fullyOpenSourceDescription: 516665283347740b5c5137eb8c5b3fe7
+    features.presetsForExpo: 986bedcfdf08627ca0ab6cfff13d715e
+    features.presetsForExpoDescription: 640cd24bc74abc015bfdde648d20a245
+    features.presetForReactNative: 330a4764766e2b71724dbe9324f74a78
+    features.presetForReactNativeDescription: d67551aa63419a163cf55220b536f165
+    features.presetForReactEmail: 3e4af363e258a54f2688c4b8e1f594e1
+    features.presetForReactEmailDescription: bb811bc28fa477361c1bd5d30fc49d6a
+    features.readyForI18nLibraries: d84eae748b1d9f5e9b70e174c469f1ec
+    features.readyForI18nLibrariesDescription: 15d2e9954b8b206d47334bdd9d2327ad
+    features.markdownSupport: 2e54ed81d57a7830bc50c883131e33f3
+    features.markdownSupportDescription: aee29b6ba03a63e7402cc1af8597b017
     info.title: 0e5dd8e374091aec8d187e20912aee88
     info.smartTranslation.title: df9e934a3002eef9b578e78ba6301c17
     info.smartTranslation.intelligentTranslation: 479605dad82a178176f7f4b3ca431304
@@ -1441,15 +1445,15 @@ files:
     info.smartTranslation.realtimeUpdates: ee81689143ebc2998d5f61797ebf56de
     info.implementation.title: eeab6b79e5fbe40e3ff2b0d91bd4eafc
     info.implementation.quickSetup: 1a57d84ed4a1fafea14f6a793e0cfc25
-    info.implementation.fileFormat: baf2afa6f64789c25b471a5daa3bed7f
-    info.implementation.contentStructure: 8ac33778f4b7cf7a4bdf8372109316ff
-    info.implementation.assetOrganization: 05038d3d6202f15071f8658ce07bde18
+    info.implementation.fileFormat: fcbbf82dafe3ac15d6dc01b4647ac7e9
+    info.implementation.contentStructure: ed080063491d91f657825d2118140d41
+    info.implementation.assetOrganization: 9749b80d1ab637a75b6bfc8a18c78cb0
     info.developer.title: 53ca9ccb06df90b961ef39f5845b9694
     info.developer.cli: edc5a95398cc1a735c4fc80c50c92aef
     info.developer.cicd: 3ef6509cd5bc2b134b2500b3efcb48ce
-    info.developer.versionControl: 009176ae5c6cb32381f10fc23bfd3d68
+    info.developer.versionControl: bcd1b63c95bc36e56dc5d02bc530bf06
     info.developer.workflow: b68d4cf01d0343602269dd2b46b77dfd
-    info.developer.documentation: 2657d604891c2b3254a986da09ab4c21
+    info.developer.documentation: 1b57f3a55c9312f1353e0d795cc321a3
     login.title: 634983f425e586cdfe14c715fabae635
     login.github: e2a9430dc414b330aa6a188ced3ebb69
     login.google: 8f27b0541b3db33beb97323aabe201d4
@@ -1834,13 +1838,15 @@ files:
     changePlan.description: 379e172a152f087c0d2f33404e4e06f7
     test_translation.title: a3418bb6cbb84e6aa0e412a1f0814616
     test_translation.description: 5cebe7806e8c6ce426dac1b14913f9c2
+    info.get_started: cf14035b33781c88be3ed14c888fea61
+    info.smartTranslation.overrides: b7990561a94687101966fde540ad7614
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
     header.signIn: 04fc0f6ce574d7aab7b0157bcdc846f8
     header.goToApp: eca3f47f652b1cefe6f5eda5d09fc7fd
     hero.title: cf783fc8a7512941d24661f38b83c8cf
-    hero.description: 69c9a33345e994f42681758839dd4488
+    hero.description: 8717eb75a0ad06d373694764700308bd
     navigation.dashboard: 4a37efc27391cc18714c72981d59c072
     navigation.tuning: 873ced728e03fa88758b36605c38fa5a
     navigation.overrides: a3fb4ce65bc3d9f383ec312dc51c8fa4
@@ -1850,7 +1856,7 @@ files:
     navigation.account: 4cd05effefac83d92a4cbd939beac4ef
     getStarted.heading: 62c3f6afd773369cfc24fe9e38c2d9a7
     getStarted.title: cf783fc8a7512941d24661f38b83c8cf
-    getStarted.description: 69c9a33345e994f42681758839dd4488
+    getStarted.description: 8717eb75a0ad06d373694764700308bd
     getStarted.button.startAutomating: 749f5c4dd3dcb4e77467f42ee5db6431
     getStarted.button.readDocumentation: 3c0b6b5b54ff6e54844e90d5eb38e4df
     companies.title: 7bf52c8c512c2cd7f72776df4a78e859
@@ -1863,18 +1869,18 @@ files:
     activity.type.key: 0228e1c903e931672805d58f3edd296d
     activity.type.document: 0945359809dad1fbf3dea1c95a0da951
     features.title: 440c8e210dd353075f67f38bca2dbe2c
-    features.fullyOpenSource: 6ff3c6c01c569e35b42d2ae6d2f88000
-    features.fullyOpenSourceDescription: e1865d3b7232460b8ae61af95cc904a5
-    features.presetsForExpo: 811afc819a273262f72faa19c51752ce
-    features.presetsForExpoDescription: 13112b1177c26dcda82372c58ce176bb
-    features.presetForReactNative: f71b77effdcb8ffedf95b9a66861ddca
-    features.presetForReactNativeDescription: 3190746a58e445f73414ee51d0ebb3b0
-    features.presetForReactEmail: 8475d9d4a385bced2825689834e9cf9b
-    features.presetForReactEmailDescription: ba1617a233d81b16634c0d5c4952ecde
-    features.readyForI18nLibraries: 21d64436a500b4ece5fac9004d9b4b74
-    features.readyForI18nLibrariesDescription: 4746698a6b7124af91769ff4259c131a
-    features.markdownSupport: 125b1708b299be10fd5513374ee6e6b3
-    features.markdownSupportDescription: cd13cccf87c334fc581b57d3544c575a
+    features.fullyOpenSource: ecdd1a8148dbb78ad0cf30d3ef97fef2
+    features.fullyOpenSourceDescription: 1a9bc563249675bf9228fe5b47d76f8d
+    features.presetsForExpo: 9550780dff21975529da12783f1493bc
+    features.presetsForExpoDescription: dcdca140922be1696e4d02c9e3d2c4ee
+    features.presetForReactNative: 7c940808d8f3e7020751d1b939c56ab3
+    features.presetForReactNativeDescription: dca55614c2b50e1125d37d8c508818c8
+    features.presetForReactEmail: 316b6e96221b286b75ac637e0ce064cf
+    features.presetForReactEmailDescription: 9765c17289ce0a2c4c89a49e4f2c56a7
+    features.readyForI18nLibraries: 54c085a466175d3a8aa40592c6e2cc89
+    features.readyForI18nLibrariesDescription: 8f9d35d468119fd937939574fe5ae079
+    features.markdownSupport: 94b3988684b8bdc34c88cd678fa82cf3
+    features.markdownSupportDescription: 8f0acbbba0181d3f92ffb622ea21ce5e
     info.title: 048e5d4ccb8f96d1212774e321b17825
     info.smartTranslation.title: c26d5c71c9e3d122583ce188e11d147f
     info.smartTranslation.intelligentTranslation: 134d0b846e8ae1bea9689028ea208600
@@ -1884,15 +1890,15 @@ files:
     info.smartTranslation.realtimeUpdates: 3fbbef15fa735ec6be2a88dd96e59140
     info.implementation.title: 3217cdf0b179d7a8a960e507cd02d08c
     info.implementation.quickSetup: 5582513c539b74a268034ed606622991
-    info.implementation.fileFormat: 9e4c8cdd4a701e54dbadc5915d6ef2ef
-    info.implementation.contentStructure: 2accf2743fc43c4c1a9e53ec6b0103f6
-    info.implementation.assetOrganization: fc3acaf92048e1dc70ea48fa3c7d5a48
+    info.implementation.fileFormat: fda4e8d4e45fb5db6da9bd18e2a768f7
+    info.implementation.contentStructure: 31b855b718ab2a1b0302a49bc78d77a1
+    info.implementation.assetOrganization: 72f8d76a753e80453f70c4499d62f399
     info.developer.title: 080de38c34da61d65848501bb1a04c05
     info.developer.cli: 116230ae89e66aea5e661bc5d03bdf52
     info.developer.cicd: eade34c76f0ccf9ebbfb87bb893f2d79
-    info.developer.versionControl: 9f31e3505666d7578ec68203fe99f8b2
+    info.developer.versionControl: 816038e587f88ccf1306e953b2017d0e
     info.developer.workflow: 52327fbbd738c94be8971e4f2e95c414
-    info.developer.documentation: 515b09f89eb97088ab91dcfd11401766
+    info.developer.documentation: 0de576d4a825d312977ac4cab6b515f0
     login.title: 04fc0f6ce574d7aab7b0157bcdc846f8
     login.github: cf0a164829dffff99e2d45a689997d91
     login.google: 22c86f9ce3e76b7df541cba41f30aecf
@@ -2277,12 +2283,14 @@ files:
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
     test_translation.title: ed0ececf27252d8ed5450b2c2f51fb0c
     test_translation.description: fc47b6f55bc3b08cec0c8120f339bf9e
+    info.get_started: bafd874147aa82f133b892c46c8492b3
+    info.smartTranslation.overrides: 38e80e0575d23f879b1728c0c390a686
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
     header.signIn: bd6b12decc2abf95959b791a3578e091
     header.goToApp: 8383c069a4b8e009aa2079632d5e2a7a
-    hero.title: 7a4b877b939b7d90c0ec80a6e27ce631
+    hero.title: 11eb10846b1da0f6c033523b70c72865
     hero.description: b4d30a5cff6627e1e27bcb44323e779e
     navigation.dashboard: 677bbd24623970a6c6620a0e5f68d02b
     navigation.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
@@ -2292,7 +2300,7 @@ files:
     navigation.docs: f5dd1db267fdc0cfaaaf410c2120ed47
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: b09f65d94eb0f9d925129e39c1daa45f
-    getStarted.title: 7a4b877b939b7d90c0ec80a6e27ce631
+    getStarted.title: 11eb10846b1da0f6c033523b70c72865
     getStarted.description: b4d30a5cff6627e1e27bcb44323e779e
     getStarted.button.startAutomating: 32d4eff0d7584664a169dd5912e79cfb
     getStarted.button.readDocumentation: dd2b0a6d72a676f48319fa75ac8035ce
@@ -2306,18 +2314,18 @@ files:
     activity.type.key: 9f984031dec426fa2ce124650026a372
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: f47f99234681cc6a1aa8f68bc2e5b7b8
-    features.fullyOpenSource: 554ff283475e4dc249136566ce202455
-    features.fullyOpenSourceDescription: 152bea3450e29bab78234ea846504db7
-    features.presetsForExpo: ccc3ca562660eae1ba94623a9f38eb23
-    features.presetsForExpoDescription: 4f30aac9d4a7990c81e8dacf833cca79
-    features.presetForReactNative: 8aa9b28dc788e267459ac049001a7115
-    features.presetForReactNativeDescription: 1554847624a1a4ee7405ecab4b5f33f8
-    features.presetForReactEmail: 5c0c45828eeaf5419afa253e7284e1d3
-    features.presetForReactEmailDescription: ba02d536a5a05f8348f428b8c95a6d6d
-    features.readyForI18nLibraries: a00d5735775c8556ab2ad83b45dcf7a7
-    features.readyForI18nLibrariesDescription: 692442d964cecf7b07d7797d480208b2
-    features.markdownSupport: 268faf5e205ff3d6cc6e459ad2acc354
-    features.markdownSupportDescription: 28ea8b8a4d2479edb6a1de849ec9db63
+    features.fullyOpenSource: 91f5ec65e1b53dfdc4569c6b940b15e7
+    features.fullyOpenSourceDescription: 8e92c2c7659724678b6eb99ee47f2a9a
+    features.presetsForExpo: 27f11e2066bae471f086bc8bfde26e31
+    features.presetsForExpoDescription: b2d103c63c31e4d817e4536b8032ac55
+    features.presetForReactNative: 0174566045ecb12ff0961603341075a4
+    features.presetForReactNativeDescription: 46e0a98855267e6635bbd51460b52dd3
+    features.presetForReactEmail: a6cc862955b4f1a094641af7ea9eafe9
+    features.presetForReactEmailDescription: d3e492522fbbab892e5a1f1f154c607f
+    features.readyForI18nLibraries: 20bc4cb14141bd268aba08fb45a57254
+    features.readyForI18nLibrariesDescription: 377b59788761b469023843cb750348d2
+    features.markdownSupport: d39f34dc0adbe29bf189b95c70179acb
+    features.markdownSupportDescription: eb59f2af16cc4012582fea7ef02d3a01
     info.title: 995d5de075d6afedb04d316a4141498f
     info.smartTranslation.title: 2639671f3d2b4906741909758e1241bb
     info.smartTranslation.intelligentTranslation: 17df274c1e945459e997950c53eb85f4
@@ -2327,15 +2335,15 @@ files:
     info.smartTranslation.realtimeUpdates: aecff6f609d83ffaeef1b7a0b1a2f96f
     info.implementation.title: c8dd34014f8d537a7685dba96ff08dd7
     info.implementation.quickSetup: 10039967a4db753a8545f5cc8b201607
-    info.implementation.fileFormat: ae7f51b9a20abdb7bfd7ef2cc23dc833
-    info.implementation.contentStructure: 2cf811fc009536c6e85edd68a728986e
-    info.implementation.assetOrganization: af30fa2f42add3aa54429534f68b5f85
+    info.implementation.fileFormat: a146c64d84e8736744482d8fa988fea0
+    info.implementation.contentStructure: 17535cef47d06112bc43d2c766e2f266
+    info.implementation.assetOrganization: 4bdc9e3f5a20239d42dcb4c7d0ab8624
     info.developer.title: bd0de590d81501f77cadf64029c221fb
     info.developer.cli: 644d8695e2f06e0cd33c4ee3f9a1a133
     info.developer.cicd: 4139c8c338cccf52674eeff9c9d5de5d
-    info.developer.versionControl: 67c8d21a20498c25d48e18aa81606c1e
+    info.developer.versionControl: d6a64ee6a3e1e41e9db7380263931811
     info.developer.workflow: 5b3b6eeaf7be9ca656a1800ffa55d464
-    info.developer.documentation: 8dc6e7728a41ef5047dbeb2b1b115454
+    info.developer.documentation: cb60d77d70df3a1634a366e10df3df2a
     login.title: bd6b12decc2abf95959b791a3578e091
     login.github: ef03d8918d453769abe69b9f0917b32b
     login.google: 376b2efd39992336ac144123210f5c66
@@ -2720,13 +2728,15 @@ files:
     changePlan.description: 39483fb3489541d7f50b3052b400da63
     test_translation.title: 832d99196e0568cdef54bf1474ceb602
     test_translation.description: 4058669838d3de24633a6204241ee540
+    info.get_started: 32d4eff0d7584664a169dd5912e79cfb
+    info.smartTranslation.overrides: 324aadf953ed832305518ef2661a05ff
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
     header.signIn: 2228c5945cd5fa864a1a3b067fd95eeb
     header.goToApp: 8af70210bbd12fc6d1fed34223da85a7
-    hero.title: 1068c0ad7182235ae6b21a6edbffea81
-    hero.description: 5407b548dc930b064c3f9c5777d5ff98
+    hero.title: e50e88906a1e41309e987668b05a2ab0
+    hero.description: 2828824fc420fe01c3fa18509b7d2121
     navigation.dashboard: 29cba505cdc4b85b5d40903a19f38e95
     navigation.tuning: 27507514401e9dbec9ccd502d315e814
     navigation.overrides: 06f6d6983ebdee06aa08f8b73c2f4df3
@@ -2735,8 +2745,8 @@ files:
     navigation.docs: 1c73f88a48ee1402e1719e9b617571ef
     navigation.account: a456fb71437a11fe0d625e38c2e30e1a
     getStarted.heading: d3118865aadfde18e6968340f43f5798
-    getStarted.title: 1068c0ad7182235ae6b21a6edbffea81
-    getStarted.description: 5407b548dc930b064c3f9c5777d5ff98
+    getStarted.title: e50e88906a1e41309e987668b05a2ab0
+    getStarted.description: 2828824fc420fe01c3fa18509b7d2121
     getStarted.button.startAutomating: c82a48615ec01323deb6871399d75423
     getStarted.button.readDocumentation: 751eabec2bd379500e0060e3afcf5c2a
     companies.title: 274d0139f3f89f1ca4fbacaa1044909d
@@ -2749,18 +2759,18 @@ files:
     activity.type.key: e49ee7074917cb3bc012ba4047cb7f25
     activity.type.document: 1c73f88a48ee1402e1719e9b617571ef
     features.title: 7f6f8c41517f6b13f7bb1e30cdfae5bd
-    features.fullyOpenSource: 69fdc0713bc06ccee61d092a335b9b12
-    features.fullyOpenSourceDescription: 04f161537ac257edafca42ec5774f437
-    features.presetsForExpo: a940e0b070396f933befc608bdf963eb
-    features.presetsForExpoDescription: 5cca746bf4e3a8b4cef40846aee7b8cb
-    features.presetForReactNative: b0babc9d112882cfca66a0a87d7d04e8
-    features.presetForReactNativeDescription: 94116c3a1dd8ebbe61370550b6f9da31
-    features.presetForReactEmail: 23901141c254c2be506a42a69950c768
-    features.presetForReactEmailDescription: d7bec17a189ea6afe0a10ab7ad949dc2
-    features.readyForI18nLibraries: 08a1aa5bb780a754a36b4eb4d56a31b3
-    features.readyForI18nLibrariesDescription: 5184bd692341940d01470bf6fa26baf0
-    features.markdownSupport: bc650b9750edf6b7712f78b830504355
-    features.markdownSupportDescription: 3ffced9810445d3e7ebed2d69bc35bf5
+    features.fullyOpenSource: 0f2e836c29cd542cec11d7701a084904
+    features.fullyOpenSourceDescription: e5421afb4ff00f27ff4aa53e04f48c13
+    features.presetsForExpo: 4ddc286dd853500d73beed9e478bbb06
+    features.presetsForExpoDescription: d0647fc4e13512ab1e52024c4d27ef23
+    features.presetForReactNative: 444e8c16b9030bf4e6aca3727fbce740
+    features.presetForReactNativeDescription: 0b094330f173da80e3bc2b11dbfd5261
+    features.presetForReactEmail: 79b8ef40b519c1706938062ad90e1c2e
+    features.presetForReactEmailDescription: 1630f0872f7bc511ec5ba3531f52acb3
+    features.readyForI18nLibraries: 0ff6f10684934cde6051c352c4f322af
+    features.readyForI18nLibrariesDescription: 759bb08ec5fab5bacd8d53f701f8bc7b
+    features.markdownSupport: 5ed11890fefe3ab26c8cb87570fbe85a
+    features.markdownSupportDescription: 135c49bae52fc0271f0e903464a13949
     info.title: 79eaf7abc29821ea62fb9f0b16ffc628
     info.smartTranslation.title: f6e7486d909896b4e71ad7bcf084dbb7
     info.smartTranslation.intelligentTranslation: 10423d85fc9fa657a5ef51f4b58c2b3d
@@ -2770,15 +2780,15 @@ files:
     info.smartTranslation.realtimeUpdates: dfe866e7cd12567001b132d6094bffdf
     info.implementation.title: 9fe747f6442920d5bad36f7ffdd4c41f
     info.implementation.quickSetup: 35195cb7e159cbfcebbb91b9260a8b38
-    info.implementation.fileFormat: f41c03927b0f5067216185d26b2ef143
-    info.implementation.contentStructure: 457b432b5589fd7deaa86b5f0132ab84
-    info.implementation.assetOrganization: 099024870ce93e99c700c07299d25bab
+    info.implementation.fileFormat: 25972235f0b6a91e608ca129f78f7e9b
+    info.implementation.contentStructure: 3ea3ae1806c5f1b18fd451b62915ed73
+    info.implementation.assetOrganization: e83f58f3d20bd14e8ea7a0a364f3c445
     info.developer.title: 268a9290e2ed289dc74dc956de543f91
     info.developer.cli: bbcf5ba5eb50ab8847de8df7dbd56da2
     info.developer.cicd: 61e39b687cd171ba5985fdcc0b034c3a
-    info.developer.versionControl: 0eab8d118192f68548a10c66cada36eb
+    info.developer.versionControl: c94e97fcba437811387615d06c13b8bb
     info.developer.workflow: 95ab3ea5a87f45c165df48a98b80585b
-    info.developer.documentation: aa3252442bef8c15fa7b5ac90a11c817
+    info.developer.documentation: 46a8eceb1f5d1d6228354ae9670438f1
     login.title: 2228c5945cd5fa864a1a3b067fd95eeb
     login.github: bcaa4ca2098945caa5c479e2569dcd85
     login.google: 89137b92778e3bd3594763136728a9ff
@@ -3163,13 +3173,15 @@ files:
     changePlan.description: fdeb43876f9ddb74005617cdb2623a37
     test_translation.title: 50580ecea05d7181c4f1d9d21d162925
     test_translation.description: 3a74246181ac20afcce263ec0903b3d7
+    info.get_started: c82a48615ec01323deb6871399d75423
+    info.smartTranslation.overrides: 8b37598ca65f8ec1dd63e8f5e8bd5acf
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
     header.signIn: e2bdb51e902de10274b096b9aa1c6956
     header.goToApp: d55df6ea362cafad9022c7e7289a1c04
     hero.title: 0b1ce3affda350a5278c8719b5e3aebe
-    hero.description: b74ca83372be7ead4d5f32cc145c65e4
+    hero.description: 8db97177914d392585da38ac377cfbad
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 64361509f1002e3e9d660b1bbd5d2759
     navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
@@ -3179,7 +3191,7 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: 73c3e754b4ec0f307311dcd984c70c8d
     getStarted.title: 0b1ce3affda350a5278c8719b5e3aebe
-    getStarted.description: b74ca83372be7ead4d5f32cc145c65e4
+    getStarted.description: 8db97177914d392585da38ac377cfbad
     getStarted.button.startAutomating: 515330f0439f11877c669b98d24c1177
     getStarted.button.readDocumentation: 3de1c7fff574c4ee2cf9c867e4959fdd
     companies.title: 6954d41e0ce7db476c4d7223c44edda2
@@ -3192,18 +3204,18 @@ files:
     activity.type.key: a0cb6c418bfdd8b91c74fb0ef5bfda81
     activity.type.document: 0945359809dad1fbf3dea1c95a0da951
     features.title: e0198a62aa59f38fba1831da92cce72b
-    features.fullyOpenSource: 7d87034f769e7bc724a98f4a9c507623
-    features.fullyOpenSourceDescription: a089a2930d70f3821043a9b2ecdfbe41
-    features.presetsForExpo: f58c803518ac2178f99c5ef128c07e6f
-    features.presetsForExpoDescription: 7d9ef6ba0609994901085b8a90a3db6d
-    features.presetForReactNative: f475df1f7f269d89ce33b51f75a3ccf6
-    features.presetForReactNativeDescription: 9ec8ab940094841382724ca8248533d7
-    features.presetForReactEmail: fa136317938532e3366c43e9eba77f67
-    features.presetForReactEmailDescription: e1b84ba84926969e15851e1656873c38
-    features.readyForI18nLibraries: bd5d9e8a5bbf741e6d8e3cb5a3266c8a
-    features.readyForI18nLibrariesDescription: 5bf99d10febe612dcbcd4782e914493b
-    features.markdownSupport: f2bf559f00c90d54998ea20cbf53fbe9
-    features.markdownSupportDescription: 745788cfdd66309d0792e11ac4a979f5
+    features.fullyOpenSource: 20c066acd80f2bfd5ede1f54a62e61ed
+    features.fullyOpenSourceDescription: f2569ef733ac5249f28abbf96e3e5b4b
+    features.presetsForExpo: ff0c4f7d1d2ae1127543bb9bfc6c9337
+    features.presetsForExpoDescription: 2f1f0f99552830d7d54ff43499c248b0
+    features.presetForReactNative: d088f3a4e9f2ff0e5585b23852f0054a
+    features.presetForReactNativeDescription: af0fd64aeb8ab2112d5264f56c4f843a
+    features.presetForReactEmail: 77adf67077e39ed21bf5f8ab37cccacf
+    features.presetForReactEmailDescription: 5c84ab9dfd0ad7dc1f79fd076b048fae
+    features.readyForI18nLibraries: 7888c5f717f9ecca43b1b55b16299319
+    features.readyForI18nLibrariesDescription: 62b334bb75d82744eb1b4d421a6caf25
+    features.markdownSupport: dc837404436526110ff893064d6aab7f
+    features.markdownSupportDescription: 38964866e906727f81cdfc08be0ac5c7
     info.title: fdc3cc821886ebce005486e124670779
     info.smartTranslation.title: 4be7cb054483376fb48dee56978682ac
     info.smartTranslation.intelligentTranslation: dbda3fee7d5dc2efb117bfcb8236aec7
@@ -3213,15 +3225,15 @@ files:
     info.smartTranslation.realtimeUpdates: ef4eaebb891bd5281e6d820a4e0265c7
     info.implementation.title: 20fe23b9daf664cf3e31a0c7ad941ef9
     info.implementation.quickSetup: 7797e5e8e15cbb2a85f023c12d4977f9
-    info.implementation.fileFormat: 9db70e1d7f8b8897a8442644d147582a
-    info.implementation.contentStructure: 4b1346861d2e736989a9666542559ea6
-    info.implementation.assetOrganization: 6f593009dc01a75e9bbbcd1b31950850
+    info.implementation.fileFormat: 21c255c50dfe0fdec06df07244f6add2
+    info.implementation.contentStructure: d08b70ceba46aa280937e87d558a044c
+    info.implementation.assetOrganization: 919a82e7582e34e5b48077f4dbc6aec6
     info.developer.title: e699b4f57f915d589cd7089f7d4d7ec4
     info.developer.cli: f115769427bf9d6a0001c6897dce7141
     info.developer.cicd: d1bf18caa3c649d1325f6427c7f4e6d6
-    info.developer.versionControl: e4adcb1b39b430b782ef08fa2c6e4c4b
+    info.developer.versionControl: e02d8b7b2a2f1ba6a2bbac0afe4b751a
     info.developer.workflow: 576144d7becfcd3c8a99647304fd220f
-    info.developer.documentation: 18acf793254250c64f78944ec39fef32
+    info.developer.documentation: 4d64511e3eae987e477a756e3c520f60
     login.title: e2bdb51e902de10274b096b9aa1c6956
     login.github: 8f9688a7ed9468b3eab28c15a672ec53
     login.google: cae5ca8fae1d7983efda6357cc94dc53
@@ -3606,13 +3618,15 @@ files:
     changePlan.description: 03355e328aaa02a245fe2030d2c3012e
     test_translation.title: dca608a1e8f38779fcbdaa0b6686ef4d
     test_translation.description: a74622e6866112b3b73c010ad1ea48bd
+    info.get_started: 515330f0439f11877c669b98d24c1177
+    info.smartTranslation.overrides: eb3294fbdb19f79535b1299617e0d682
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
     header.signIn: 80ffad7566d7473a4310841269527e84
     header.goToApp: 8318493edce0ef3e26daeb28ad15e01a
     hero.title: 40fb7889f5fdef4b310ac966718b5378
-    hero.description: daf848f1e095a4c68f1f2309542b8903
+    hero.description: 361d4d513f5339b408224e1149bf69dd
     navigation.dashboard: 5967ab15ec405a77b8db5dcdb885d6c6
     navigation.tuning: bf7f60209cc14b4b4f002b4b197de4ae
     navigation.overrides: 9ea0a9b7f1f3c8259e051144b7bf169b
@@ -3622,7 +3636,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0b0fe8d91cc4d7be7a41bb108117fb72
     getStarted.title: 40fb7889f5fdef4b310ac966718b5378
-    getStarted.description: daf848f1e095a4c68f1f2309542b8903
+    getStarted.description: 361d4d513f5339b408224e1149bf69dd
     getStarted.button.startAutomating: c9bb305f055f2beac4298ac1a5d90ad0
     getStarted.button.readDocumentation: c998b1d71e37e80efb656882678602cb
     companies.title: 7a5e9e96648ef44cdd14be531f061d59
@@ -3635,18 +3649,18 @@ files:
     activity.type.key: 3c218316c20f4673d7e446c52046dd2d
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 3b4d5dd60e346c1df2f24f7154a3f1e0
-    features.fullyOpenSource: 9e912b8430039e07577f1b328d2449a9
-    features.fullyOpenSourceDescription: 45affc4b777e57c97d5e44d03d9590b9
-    features.presetsForExpo: 76e0e0b200ca66bbc5ce645a62bb7392
-    features.presetsForExpoDescription: ec3de08eadccf89749d008caf1fe5988
-    features.presetForReactNative: 9fb2ab11373089cd618fe7a1361e758d
-    features.presetForReactNativeDescription: 2cabff5407928cc58fe0d604c477e6a2
-    features.presetForReactEmail: 5f2a242fdf2192ed892e1c51f327dfa6
-    features.presetForReactEmailDescription: e0298a1ca1b9b2c8fe8dc1c779f7632c
-    features.readyForI18nLibraries: 4d2775ca0dce1e6881f4b2be8d277cef
-    features.readyForI18nLibrariesDescription: d080e78b89978103574db038f0d47df9
-    features.markdownSupport: d9cec93a73b9cd69c6e10d2be0590942
-    features.markdownSupportDescription: c0fb8016f2448dd9d4270089e4154e83
+    features.fullyOpenSource: eb02ca3415dd41a2e994cdc20e7d8e20
+    features.fullyOpenSourceDescription: 1d91b5209ce20f6e5a79d00866ac2300
+    features.presetsForExpo: ea7884de1adfc7f480bb021eb4d58700
+    features.presetsForExpoDescription: 56ef7afb942bf02451ac92a721969033
+    features.presetForReactNative: b8c43f5f7bc931f5cb934f0207551807
+    features.presetForReactNativeDescription: b7b6a80772991437f5aa1b7c9e470a3d
+    features.presetForReactEmail: bdcda57431a79fc823adb3b333220f38
+    features.presetForReactEmailDescription: c242e3ea893ef9cff347d6630f645529
+    features.readyForI18nLibraries: 67aa74e4bcce44c02f04debe310b2f62
+    features.readyForI18nLibrariesDescription: 03856487a6b960380a28b92ee65f564d
+    features.markdownSupport: ec72eec2122810d7c3014bdd68ec3785
+    features.markdownSupportDescription: 4d0179e3adda6854ec44596dce12224f
     info.title: 2f6286bf7c77ae9e88b2a23fda4958b4
     info.smartTranslation.title: 1cb5ed7043d2d8b13b7b0dcd26e1edc3
     info.smartTranslation.intelligentTranslation: 543fc04874cbe1138282e398ef5b0864
@@ -3656,15 +3670,15 @@ files:
     info.smartTranslation.realtimeUpdates: 37d485efbc04be749b1a5d8226f1f15b
     info.implementation.title: d043e7fc2663448f87a3e24c61581a42
     info.implementation.quickSetup: 0d00c8a77412f837f669749e16ffd634
-    info.implementation.fileFormat: 8206476fd04c242e48f5adbc42384202
-    info.implementation.contentStructure: 18ac81a9ac4f7c559fac90b9e2b994a6
-    info.implementation.assetOrganization: 891ff86eb19f93743be4530c73f42a24
+    info.implementation.fileFormat: 546df692852a305dbbfe6d4f6751464d
+    info.implementation.contentStructure: cd0cb85792e42d8705d3e5b03d88ef76
+    info.implementation.assetOrganization: d44825bb4a3981426357c8b2588a8890
     info.developer.title: 43450d895b143b772fe549d1545796c5
     info.developer.cli: c2923d5184f3c618931fa273e2205702
     info.developer.cicd: 0ff69d2081cda15f59f288ab23b2af05
-    info.developer.versionControl: 1c338d7564bd0c54bc9c8d600b10495d
+    info.developer.versionControl: e883c03e4acd593b3ee15c6a54e636ff
     info.developer.workflow: e698bbb8e01aea94e88c3550e2f3e3a1
-    info.developer.documentation: c16b763848be38e5e53e12f29736abdb
+    info.developer.documentation: 6975313cace924a543d88c253bdc39c5
     login.title: 80ffad7566d7473a4310841269527e84
     login.github: 2fe55ecd5ee70a2d89040362319de645
     login.google: 25b2532d402873c3c2a19cdeaefabbc2
@@ -4049,13 +4063,15 @@ files:
     changePlan.description: 6ef4728452123b3534f9b827531283e4
     test_translation.title: 347aef849f6437810e84db6c15a8e3c8
     test_translation.description: 2555a36d3b145491695437f1acec250f
+    info.get_started: e2cc215fe86fd0f56a7a4931e6c34db4
+    info.smartTranslation.overrides: 413a88b47484e67d626cc7084f4ad85f
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
     header.signIn: a61d196e6576a0a91ac6aab9034d5535
     header.goToApp: 51801703f2d37a0f7a6c332992b5a5a8
-    hero.title: f34f5de3d1f5c2a16b8e7f664413c739
-    hero.description: ca29aec84cc0e6156818c1b7cc0063c4
+    hero.title: de1d9639608a9e6ec99c611a39419719
+    hero.description: 56232d1aa7407c55776732fa4654df0e
     navigation.dashboard: b8da6df14bf06283cbf588df6998722e
     navigation.tuning: ae7d36ca44e270b02649c5f5a97c0262
     navigation.overrides: 3c1cc27fb6ee71e73df1e12bf61ea9ff
@@ -4064,8 +4080,8 @@ files:
     navigation.docs: c8485e05c2720e903517fa53f1189d33
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0fcb84e5416c73280dac88079172aeb8
-    getStarted.title: f34f5de3d1f5c2a16b8e7f664413c739
-    getStarted.description: ca29aec84cc0e6156818c1b7cc0063c4
+    getStarted.title: de1d9639608a9e6ec99c611a39419719
+    getStarted.description: 56232d1aa7407c55776732fa4654df0e
     getStarted.button.startAutomating: c889b3d6e75a2777e3de3695394fde29
     getStarted.button.readDocumentation: 343964f780f3098d5e49aee852912fd8
     companies.title: f81625b19eb538f093e5f9e676b00f47
@@ -4078,18 +4094,18 @@ files:
     activity.type.key: 8b0d9982760012a0082c5a1af6855d6d
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 5b549bbb544d092058d2e807b47760d5
-    features.fullyOpenSource: 29439a85e3bcf1822fa76b5f489221fa
-    features.fullyOpenSourceDescription: e4e6f8721916754f3155d3e749fbf8e2
-    features.presetsForExpo: 06f77917e5bd00c69834b54704f4c247
-    features.presetsForExpoDescription: b0b6963cb3b71e9181a5ab88e499e875
-    features.presetForReactNative: 334552a6cbb1064e7cc276aa1d4789cc
-    features.presetForReactNativeDescription: 55bb156682d7d31c48f098fa59da9ccc
-    features.presetForReactEmail: 4e0a3e87438fd35f91df25711f5cdc9a
-    features.presetForReactEmailDescription: 6401e17d45ffb70365491f31c5f67af2
-    features.readyForI18nLibraries: 75af4e2d755e4a3f2f7c1317d1544d46
-    features.readyForI18nLibrariesDescription: 2c1497e4e5ed4f0a4fcbe936770ab124
-    features.markdownSupport: 79762d503205f46bb709873925dfe79a
-    features.markdownSupportDescription: 71e26ab0fee1779e70a885d952773abf
+    features.fullyOpenSource: 580377a8ab939b39b2fee33a0b9efd20
+    features.fullyOpenSourceDescription: d460004bdede2aa00478df85e2ac5087
+    features.presetsForExpo: 3bba60d6be474142a0f8d2683bf1898a
+    features.presetsForExpoDescription: b3d683ba41329c958107b0bb15712898
+    features.presetForReactNative: 6a3225d29cb3820c2d567c51de040c5a
+    features.presetForReactNativeDescription: 91ed05801297a175f3ea75a366822f6d
+    features.presetForReactEmail: 92ec18d6e46f1d5a6418d6d32a2a101b
+    features.presetForReactEmailDescription: 32955df96ed9c1d4f614af212bd77f84
+    features.readyForI18nLibraries: 645f21f27849f670312ebce7fd21ccb4
+    features.readyForI18nLibrariesDescription: b337625393e16e51f406350e48b42c23
+    features.markdownSupport: 93ee3bf8d3a4271c6a10aaf8bab1a46f
+    features.markdownSupportDescription: db98d8eb20168e6273aaafc0fd2c7127
     info.title: 4d0c6cbb39f8c0987bf57776eebb362e
     info.smartTranslation.title: 0422e02742df2e5a01454d77eea1ad56
     info.smartTranslation.intelligentTranslation: f53126c2ddcb04397ca3af80787fc19f
@@ -4099,15 +4115,15 @@ files:
     info.smartTranslation.realtimeUpdates: 4420795b304255b288c7a14c736c6c84
     info.implementation.title: c86adc3c3b6de682f4eab75476549ed4
     info.implementation.quickSetup: 237b21c121c1987e4415b3f0d8482feb
-    info.implementation.fileFormat: 156e10dc7584a06505eff2c1e18e2e13
-    info.implementation.contentStructure: 5c3b843f6b212f72991c61721ecaec8b
-    info.implementation.assetOrganization: 2687ab5c28fe8079bea8e381bcd44e8b
+    info.implementation.fileFormat: 8f7749fffe57e9a1b55f65ed44f34689
+    info.implementation.contentStructure: 6dd82c8faef5b6aff289e77839d82362
+    info.implementation.assetOrganization: 5d499c97a1138c186f1665827dfe182b
     info.developer.title: 90ae2c30d4abc535d3af6e7c94bd1439
     info.developer.cli: 59525d12d0e3826a8d8f5a00010fcf74
     info.developer.cicd: 590111267a283f08d8b307b8746025d6
-    info.developer.versionControl: a89418aba0e0b45b9de1701c3715924e
+    info.developer.versionControl: 4c9087f24fabc5d4e7b3bade201cf4a6
     info.developer.workflow: afe40a5e8349ae5ca34c4bcb8387444a
-    info.developer.documentation: f1c4e6e95b06c990c01d137481c3eae1
+    info.developer.documentation: 91f11906026a246adee8035d241cbdde
     login.title: a61d196e6576a0a91ac6aab9034d5535
     login.github: 5deeb703b36588448b07e2f293ef2b94
     login.google: c6534601646369f07530c012724f23b3
@@ -4492,13 +4508,15 @@ files:
     changePlan.description: 4e9e3c5815afc1d03b2b67cad15ee14f
     test_translation.title: 72cfa6fd508443d4ebf814718464eb05
     test_translation.description: a614574aa08ddf16f8d35c9fee924935
+    info.get_started: c889b3d6e75a2777e3de3695394fde29
+    info.smartTranslation.overrides: 4e6e6dd9eb25fb3c794c4ecfe60d304a
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
     header.signIn: b687c67a2bfd3c4c97d9eb37450909e5
     header.goToApp: 8575ae96fc03c7fac71de84dc0cc695e
     hero.title: e7d31b7c16225ed33ae96a54177cfe14
-    hero.description: 0c630961e14db988285aa3d730895f0f
+    hero.description: d8c9076a438e2b5aa9197494c3e774e5
     navigation.dashboard: 96a7b5490bcd3652a0c2bf36c1ffce2b
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 72ea96873387ebb56925d2fb2b8debf2
@@ -4508,7 +4526,7 @@ files:
     navigation.account: 8192dbe80e3401ebe872e0aed980daa1
     getStarted.heading: 434aeab58169e9ed4fca581cf94bf498
     getStarted.title: e7d31b7c16225ed33ae96a54177cfe14
-    getStarted.description: 0c630961e14db988285aa3d730895f0f
+    getStarted.description: d8c9076a438e2b5aa9197494c3e774e5
     getStarted.button.startAutomating: 9da709fc909bde4b774a02fce2b0d65f
     getStarted.button.readDocumentation: 3920f23fdde081937a7c59a13f351ee4
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
@@ -4521,18 +4539,18 @@ files:
     activity.type.key: 92e9356093a8b00a403de2c6a5827705
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: d942ba2c237a997ea67a6d69cf5e308d
-    features.fullyOpenSource: 3a9e88ecdd18a1cc7d0105b57789710d
-    features.fullyOpenSourceDescription: 3ecdf8e5354d610e505f041affe540e6
-    features.presetsForExpo: b70ceb0bf3a41e3a3dad1fd391406442
-    features.presetsForExpoDescription: ac46de56a50bf77855ad77d8143ade67
-    features.presetForReactNative: 57ef342d1c688b5afdc3c747b22e86bf
-    features.presetForReactNativeDescription: 65abd238f85c645f69677fdec78d9756
-    features.presetForReactEmail: 9173b61c1c2351a6a3888d4766ea4bce
-    features.presetForReactEmailDescription: 06095927d72f79c838ab052863b5cfa3
-    features.readyForI18nLibraries: 38b2d004f1207b366c6a4c3b4b2bba8d
-    features.readyForI18nLibrariesDescription: 2ef257fabb25a46becd68af6157d3faf
-    features.markdownSupport: dcbca19b08815f6f00ce1f3551850903
-    features.markdownSupportDescription: 97aead00bd48bc162b143d55eea285cb
+    features.fullyOpenSource: 801446b5a2cea594cab4c3fdf8aefe38
+    features.fullyOpenSourceDescription: ca8d718c8fd067b7a732ae7b7b7c1f6b
+    features.presetsForExpo: 1c2ff1673ee285e5296ef023d7c60014
+    features.presetsForExpoDescription: 7459248c818c23f2a0d24899297ccd12
+    features.presetForReactNative: 863aac14e58800baadcc9cdc0708483a
+    features.presetForReactNativeDescription: 0b8ebb0a05656df4eab848e7f5de2906
+    features.presetForReactEmail: 10227366f294536d278940661efbd1a8
+    features.presetForReactEmailDescription: 67cb1151d03e5d41f9507d14e174b924
+    features.readyForI18nLibraries: b3085657763d1ad0f413aa73f4aa2645
+    features.readyForI18nLibrariesDescription: 97978f360d2d3a678101fcca0e550cf2
+    features.markdownSupport: 1f8feb818a0a897eb39d6247e20ed4af
+    features.markdownSupportDescription: 31e8b094ae11c520691f8ec7c4073a46
     info.title: af8746fb72a55a1037a3814206cc5a4e
     info.smartTranslation.title: 30e30b8719c3d5c59bfe2c671daf873c
     info.smartTranslation.intelligentTranslation: d21ce9c8e78d32864b962a742c62c74a
@@ -4542,15 +4560,15 @@ files:
     info.smartTranslation.realtimeUpdates: d2574aecc86bdb6f827230804008e488
     info.implementation.title: 6bbb1879f97a59ea4f59aa9e43e2397a
     info.implementation.quickSetup: 35cb5174beea2f808e87e9c8026bafb2
-    info.implementation.fileFormat: 41cbe512fac0a1cc15cc8aba25b50ea7
-    info.implementation.contentStructure: 28cbc49e874c513e24aaec6d19b239c9
-    info.implementation.assetOrganization: 9cd2841464a2a62f99958a862be3f825
+    info.implementation.fileFormat: 9905c357ec71c8efd6e4f2354dc50e48
+    info.implementation.contentStructure: f4769980ecd2a1b5905e22290afbbd86
+    info.implementation.assetOrganization: 81a0332c30282d337c0955551652a643
     info.developer.title: a5bca8cbe865f7861a59797fa10e05d2
     info.developer.cli: 3b0ebbeb53cb9c5bb0bbc2f29dec8b9f
     info.developer.cicd: 258f2afebe5b466c950c045fa77ec94c
-    info.developer.versionControl: eaaa57af1b23c59e92404ceb3bf9e59d
+    info.developer.versionControl: 9515df1845f4b0255f833841ae3c6d84
     info.developer.workflow: 9e83bacb172714311b79bbd92bf48c85
-    info.developer.documentation: b54fb3dbfb1fee13a45a7f7b0b6fedca
+    info.developer.documentation: 74c97cf940eec3fa793f767c1d286b58
     login.title: b687c67a2bfd3c4c97d9eb37450909e5
     login.github: 2e231312fdb0f34f947d37a72f238c79
     login.google: 25fdae6c11ac0d1e85ec1e4b7ddee3b2
@@ -4935,6 +4953,8 @@ files:
     changePlan.description: 4c23214dac77429a57c41781e1bf735a
     test_translation.title: 78884173f87c9f3ab309a8f9a5f3a19b
     test_translation.description: 135b876206ce97f0b069bd248562e001
+    info.get_started: 2cacaa39f025b53800c7c12a96405c6f
+    info.smartTranslation.overrides: 05f824d8060e66566009f2595947760e
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
@@ -4954,10 +4974,10 @@ files:
     menu.settings: 04700bee0cd7b00165f310460332b2f8
     menu.docs: 43c592501e0d37c63bc038fa182b2ddf
     menu.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
-    hero.title: 0ba2fa027eb83fc8cb158b51ac0b3786
+    hero.title: 579bba1e0b3f0c94b1c78b8a670bd119
     hero.description: 9004ba1e35e9f93744fc84f8b51096d3
     getStarted.heading: 95a8292476e692ab92aa6dcd57518b18
-    getStarted.title: 0ba2fa027eb83fc8cb158b51ac0b3786
+    getStarted.title: 579bba1e0b3f0c94b1c78b8a670bd119
     getStarted.description: 9004ba1e35e9f93744fc84f8b51096d3
     getStarted.button.startAutomating: a04ca6d92fe1c2970e655d82bf36583c
     getStarted.button.readDocumentation: 30b7e90a20189fa21f646422ffee79eb
@@ -4971,18 +4991,18 @@ files:
     activity.type.key: 434ae3d3ed56f41150499834a05315cc
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 819a198eec817ea48313492dbf4ed71d
-    features.fullyOpenSource: 203e80679fe1920dfcd211504bbed094
-    features.fullyOpenSourceDescription: 0e9ad604d394bc58542870340d11884f
-    features.presetsForExpo: 0c79580643abec69a0bf14714765fdde
-    features.presetsForExpoDescription: 53a7bb13e525c015ac58dfec8712230a
-    features.presetForReactNative: 2e916df78829592823630b3d1d5cda6b
-    features.presetForReactNativeDescription: ec9e8aebaee875891353ccafdf877454
-    features.presetForReactEmail: cf98b3a2eb6a4db64c502640e9f77d74
-    features.presetForReactEmailDescription: a6412b4370e2b873db10faf3a8c78dfb
-    features.readyForI18nLibraries: e00b28ce153cb2c7a3bc5feb6b2db05e
-    features.readyForI18nLibrariesDescription: d3f5b5c305acdabfdfef0a5bb775a201
-    features.markdownSupport: 387cb5725d1ffd4f75d4e4a1af944160
-    features.markdownSupportDescription: 67a1402c75ab705da0b85df4062f906b
+    features.fullyOpenSource: 68e90b865c6aa309b7c91d2829e4114b
+    features.fullyOpenSourceDescription: 725d015ec76169d532d8168657f78dac
+    features.presetsForExpo: 704799f640a6ffac2851bea0ddafa28e
+    features.presetsForExpoDescription: 5dc3681947f19d4a4828a7831fc52b3c
+    features.presetForReactNative: 17a02f958ad4cd9895bd0247d4f699c1
+    features.presetForReactNativeDescription: ce9f8b2e155aea2199c1594b1fd720c8
+    features.presetForReactEmail: bdcda57431a79fc823adb3b333220f38
+    features.presetForReactEmailDescription: 0ca43d3a2a00c6661237f2148b74eb7d
+    features.readyForI18nLibraries: eb77a0654133f588baef95798f9698a7
+    features.readyForI18nLibrariesDescription: 32d48e3dc1a44d9d7e1907ab85b010a6
+    features.markdownSupport: ed9f4414180fc01d5ed5bfdc00221215
+    features.markdownSupportDescription: f499ff70c73fb8dba0bd75032a1fb792
     info.title: 0f00b24ae9ada9f6bf585a075f180355
     info.smartTranslation.title: 4c68c8c2d0fc6037190496d102e07415
     info.smartTranslation.intelligentTranslation: 21dc169d49ca1ea65bbea3eb96ec2edb
@@ -4992,15 +5012,15 @@ files:
     info.smartTranslation.realtimeUpdates: 123c8cdc31fa109829a4faed62927bdf
     info.implementation.title: d043e7fc2663448f87a3e24c61581a42
     info.implementation.quickSetup: 201dcc5019e0c5f5d03e3f17a87a4649
-    info.implementation.fileFormat: f84953a67abca57c64b48b11a27c3821
-    info.implementation.contentStructure: 628fe58b28579378d890bedfca002d64
-    info.implementation.assetOrganization: fe37adc83193a493cb2a2b20d1d578fb
+    info.implementation.fileFormat: b5e3dc2a9a4f638882a35cec9e02c935
+    info.implementation.contentStructure: fb157df55f9fde8cd4d8bb68b7f9efff
+    info.implementation.assetOrganization: 00d93b549470bb1756eaac2654bd61ac
     info.developer.title: 1dae8a5e6d65779cb62a4583c8c688d9
     info.developer.cli: 14f0f0621f699deed7b0c9a925581db6
     info.developer.cicd: 0626f2810de55ba287fd32fb819da6f3
-    info.developer.versionControl: a76604f8b1d4b060ea78ef687d1ecc0d
+    info.developer.versionControl: e883c03e4acd593b3ee15c6a54e636ff
     info.developer.workflow: 27e860a53ab7a39476f420525caa6068
-    info.developer.documentation: 8b7f11149061693da06943ab64f16f07
+    info.developer.documentation: c95dd5d66390ee860fc26b29e9362a3c
     login.title: 80acd27ebea1d1727f33923ab4b44901
     login.github: cab57d80852c086e7ee36573a04eb15d
     login.google: 2335ed90d75f49c6c168d4a7dc918ce8
@@ -5378,6 +5398,8 @@ files:
     changePlan.description: 5cb8cd5303b6c8d3d853351e79766b6b
     test_translation.title: f62fa7d4f597bfd466b363affde1f102
     test_translation.description: 40893b29287e43884b57eb4a18f5a848
+    info.get_started: a04ca6d92fe1c2970e655d82bf36583c
+    info.smartTranslation.overrides: ccef642f692191e1cfff8e1d77cdeb8e
   src/markdown/docs/de/android.mdx:
     content: cc7d76b071d8e2222665b342405acb81
   src/markdown/docs/es/android.mdx:
