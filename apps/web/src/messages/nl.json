@@ -650,6 +650,5 @@
     "upgrade_to_tier": "Upgrade naar laag {tier}",
     "cancel": "Annuleren",
     "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaalsleutels, documenten, talen en prioritaire ondersteuning."
-  },
-  "test": "Dit is een goed voorbeeld van een test"
+  }
 }

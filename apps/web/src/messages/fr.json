@@ -650,6 +650,5 @@
     "upgrade_to_tier": "Mettre à niveau vers le niveau {tier}",
     "cancel": "Annuler",
     "description": "Mettez à niveau votre plan pour augmenter vos limites. Vous aurez accès à plus de clés de traduction, de documents, de langues et à un support prioritaire."
-  },
-  "test": "Ceci est un bon exemple de test"
+  }
 }
