@@ -6,8 +6,8 @@
     "goToApp": "Ir para o aplicativo"
   },
   "hero": {
-    "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem."
+    "title": "Infraestrutura de localização feita para startups ágeis.",
+    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca atrasem você."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Comece agora",
-    "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem.",
+    "title": "Infraestrutura de localização feita para startups ágeis.",
+    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca atrasem você.",
     "button": {
       "startAutomating": "Começar a automatizar",
       "readDocumentation": "Ler documentação"

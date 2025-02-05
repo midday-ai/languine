@@ -6,8 +6,8 @@
     "goToApp": "Go to app"
   },
   "hero": {
-    "title": "Localization infrastructure made for developers",
-    "description": "Languine automates localization within your development workflow and pipeline, ensuring translations never hold you up."
+    "title": "Localization infrastructure made for fast-paced startups.",
+    "description": "Languine automates localization within your developer workflow and pipeline, ensuring translations never hold you up."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Get started",
-    "title": "Localization infrastructure made for developers",
-    "description": "Languine automates localization within your development workflow and pipeline, ensuring translations never hold you up.",
+    "title": "Localization infrastructure made for fast-paced startups.",
+    "description": "Languine automates localization within your developer workflow and pipeline, ensuring translations never hold you up.",
     "button": {
       "startAutomating": "Start automating",
       "readDocumentation": "Read documentation"

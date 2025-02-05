@@ -6,8 +6,8 @@
     "goToApp": "Przejdź do aplikacji"
   },
   "hero": {
-    "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać."
+    "title": "Infrastruktura lokalizacyjna stworzona dla dynamicznych startupów.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie deweloperskim i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Rozpocznij",
-    "title": "Infrastruktura lokalizacyjna stworzona dla deweloperów",
-    "description": "Languine automatyzuje lokalizację w Twoim procesie rozwoju i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać.",
+    "title": "Infrastruktura lokalizacyjna stworzona dla dynamicznych startupów.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie deweloperskim i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"

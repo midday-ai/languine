@@ -13,7 +13,7 @@ export async function getCurrentDoc(locale: string, slug: string) {
 }
 
 export async function getMarkdownContent(locale: string, slug: string) {
-  const docPath = await getCurrentDoc(locale, slug);
+  const docPath = await getCurrentDoc("en", slug);
   const source = await fs.readFile(docPath, "utf-8");
   const { content } = await compileMDX({
     source,

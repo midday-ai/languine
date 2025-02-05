@@ -6,8 +6,8 @@
     "goToApp": "Ir a la aplicación"
   },
   "hero": {
-    "title": "Infraestructura de localización hecha para desarrolladores",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan."
+    "title": "Infraestructura de localización diseñada para startups de ritmo acelerado.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te retrasen."
   },
   "navigation": {
     "dashboard": "Tablero",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Comenzar",
-    "title": "Infraestructura de localización hecha para desarrolladores",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan.",
+    "title": "Infraestructura de localización diseñada para startups de ritmo acelerado.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te retrasen.",
     "button": {
       "startAutomating": "Comenzar a automatizar",
       "readDocumentation": "Leer documentación"
