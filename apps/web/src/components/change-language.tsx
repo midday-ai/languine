@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
-import languineConfig from "../../languine.config";
+import languineConfig from "../../languine.json";
 
 export function ChangeLanguage() {
   const t = useTranslations("language");
