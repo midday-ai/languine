@@ -651,8 +651,8 @@
     "cancel": "Cancel",
     "description": "Upgrade your plan to increase your limits. You'll get access to more translation keys, documents, languages, and priority support."
   },
-  "translate": {
-    "title": "Translate",
-    "description": "Translate your project"
+  "test_translation": {
+    "title": "Test Translation",
+    "description": "Test the translation of your project"
   }
 }
