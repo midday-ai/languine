@@ -26,7 +26,7 @@ mock.module("@clack/prompts", () => ({
 
 describe("locale command tests", () => {
   const testDir = join(process.cwd(), ".test-output");
-  const configPath = join(testDir, "languine.config.json");
+  const configPath = join(testDir, "languine.json");
   let initialConfig: Config;
 
   // Set up test environment

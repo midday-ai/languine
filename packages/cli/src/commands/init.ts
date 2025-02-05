@@ -159,7 +159,7 @@ export async function commands(args: string[] = []) {
     const fs = await import("node:fs/promises");
 
     await fs.writeFile(
-      "languine.config.json",
+      "languine.json",
       JSON.stringify(config, null, 2),
       "utf-8",
     );

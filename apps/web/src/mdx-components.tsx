@@ -168,7 +168,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     pre: function Pre({ className = "", children, title, ...props }) {
-      const code = children?.toString() || "";
       const lang = className?.replace("language-", "") || "typescript";
 
       return (
@@ -182,7 +181,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                   </span>
                 </div>
               </div>
-              <CopyButton code={code} />
             </div>
             <pre
               className={`mb-4 mt-2 overflow-x-auto relative ${className}`}
@@ -286,7 +284,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         lang === "bash" ? getPackageManagerCommandType(code) : null;
 
       return (
-        <div className="px-4">
+        <div className="px-4 ">
+          <div className="absolute right-3" style={{ top: "-38px" }}>
+            <CopyButton code={code} />
+          </div>
+
           {pmCommand ? (
             <PackageManagerTabs
               code={pmCommand.command}
