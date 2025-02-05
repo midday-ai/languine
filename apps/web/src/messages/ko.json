@@ -650,5 +650,9 @@
     "upgrade_to_tier": "티어 {tier}로 업그레이드",
     "cancel": "취소",
     "description": "제한을 늘리기 위해 플랜을 업그레이드하세요. 더 많은 번역 키, 문서, 언어 및 우선 지원에 접근할 수 있습니다."
+  },
+  "translate": {
+    "title": "번역",
+    "description": "프로젝트를 번역하세요"
   }
 }

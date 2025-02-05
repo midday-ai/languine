@@ -650,5 +650,9 @@
     "upgrade_to_tier": "Aggiorna a livello {tier}",
     "cancel": "Annulla",
     "description": "Aggiorna il tuo piano per aumentare i tuoi limiti. Avrai accesso a più chiavi di traduzione, documenti, lingue e supporto prioritario."
+  },
+  "translate": {
+    "title": "Traduci",
+    "description": "Traduci il tuo progetto"
   }
 }

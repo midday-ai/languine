@@ -650,5 +650,9 @@
     "upgrade_to_tier": "Ulepsz do poziomu {tier}",
     "cancel": "Anuluj",
     "description": "Ulepsz swój plan, aby zwiększyć swoje limity. Uzyskasz dostęp do większej liczby kluczy tłumaczeń, dokumentów, języków oraz priorytetowego wsparcia."
+  },
+  "translate": {
+    "title": "Tłumacz",
+    "description": "Przetłumacz swój projekt"
   }
 }

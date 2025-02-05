@@ -650,5 +650,9 @@
     "upgrade_to_tier": "Upgrade auf Tarif {tier}",
     "cancel": "Stornieren",
     "description": "Upgrade Ihren Tarif, um Ihre Grenzen zu erhöhen. Sie erhalten Zugriff auf mehr Übersetzungsschlüssel, Dokumente, Sprachen und priorisierte Unterstützung."
+  },
+  "translate": {
+    "title": "Übersetzen",
+    "description": "Übersetzen Sie Ihr Projekt"
   }
 }

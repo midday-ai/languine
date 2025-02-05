@@ -650,5 +650,9 @@
     "upgrade_to_tier": "Actualizar a nivel {tier}",
     "cancel": "Cancelar",
     "description": "Actualiza tu plan para aumentar tus límites. Obtendrás acceso a más claves de traducción, documentos, idiomas y soporte prioritario."
+  },
+  "translate": {
+    "title": "Traducir",
+    "description": "Traduce tu proyecto"
   }
 }
