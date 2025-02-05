@@ -195,7 +195,7 @@
     },
     "packages/cli": {
       "name": "languine",
-      "version": "2.0.0-canary.3",
+      "version": "2.0.0-canary.9",
       "bin": "dist/index.js",
       "dependencies": {
         "@clack/prompts": "^0.9.1",
@@ -218,7 +218,6 @@
         "node-html-parser": "^7.0.1",
         "open": "^10.1.0",
         "plist": "^3.1.0",
-        "preferred-pm": "^4.1.0",
         "properties": "^1.2.1",
         "rambda": "^9.4.2",
         "simple-git": "^3.27.0",

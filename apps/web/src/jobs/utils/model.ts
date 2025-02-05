@@ -12,8 +12,8 @@ export function getModels() {
   });
 
   return {
-    primary: createSecondaryModel(process.env.AI_SECONDARY_MODEL!),
-    secondary: createPrimaryModel(process.env.AI_SECONDARY_MODEL!),
+    primary: createPrimaryModel(process.env.AI_SECONDARY_MODEL!),
+    secondary: createSecondaryModel(process.env.AI_SECONDARY_MODEL!),
   };
 }
 

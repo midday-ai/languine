@@ -650,6 +650,5 @@
     "upgrade_to_tier": "Päivitä tasolle {tier}",
     "cancel": "Peruuta",
     "description": "Päivitä suunnitelmasi kasvattaaksesi rajoja. Saat pääsyn useampiin käännöksen avaimiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
-  },
-  "test": "Tämä on hyvä esimerkki testistä"
+  }
 }

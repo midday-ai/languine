@@ -650,5 +650,9 @@
     "upgrade_to_tier": "Upgrade to tier {tier}",
     "cancel": "Cancel",
     "description": "Upgrade your plan to increase your limits. You'll get access to more translation keys, documents, languages, and priority support."
+  },
+  "translate": {
+    "title": "Translate",
+    "description": "Translate your project"
   }
 }

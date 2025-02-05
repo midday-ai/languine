@@ -32,7 +32,7 @@ const startTranslationsSchema = z.object({
 export const startTranslationsTask = schemaTask({
   id: "start-translations",
   schema: startTranslationsSchema,
-  maxDuration: 600, // 10 minutes
+  maxDuration: 1800, // 30 minutes
   run: async (payload) => {
     const { project } = await validateJobPermissions({
       projectId: payload.projectId,
