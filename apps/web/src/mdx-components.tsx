@@ -200,7 +200,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       if (isInline) {
         return (
           <code
-            className={`rounded border-b-2 border-gray-200 border-dashed px-[0.3rem] py-[0.2rem] font-mono text-sm ${className}`}
+            className={`rounded border-b-2 border-gray-200 border-dashed px-[0.3rem] py-[0.2rem] font-mono text-xs ${className}`}
             {...props}
           >
             {children}
@@ -284,7 +284,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         lang === "bash" ? getPackageManagerCommandType(code) : null;
 
       return (
-        <div className="px-4 ">
+        <div className="px-4">
           <div className="absolute right-3" style={{ top: "-38px" }}>
             <CopyButton code={code} />
           </div>
@@ -297,7 +297,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             />
           ) : (
             <div
-              className={`${className} font-mono text-sm`}
+              className={`${className} font-mono`}
+              style={{ fontSize: 12 }}
               // biome-ignore lint/security/noDangerouslySetInnerHtml: markdown
               dangerouslySetInnerHTML={{ __html: html }}
             />

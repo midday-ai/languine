@@ -23,6 +23,8 @@ export function DocsSidebar() {
   const router = useRouter();
   const { sections, currentPage } = useDocs();
 
+  console.log(pathname);
+
   return (
     <>
       <div className="md:hidden w-full mb-6">

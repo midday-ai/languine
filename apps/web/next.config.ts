@@ -21,6 +21,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/:locale/docs",
+        destination: "/:locale/docs/introduction",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 const withMDX = createMDX();

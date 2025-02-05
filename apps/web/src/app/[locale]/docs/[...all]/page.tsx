@@ -3,11 +3,11 @@ import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
-}: { params: Promise<{ locale: string; all: string[] }> }) {
-  const { locale, all } = await params;
+}: { params: Promise<{ all: string[] }> }) {
+  const { all } = await params;
 
   try {
-    const content = await getMarkdownContent(locale, all?.at(0) ?? "");
+    const content = await getMarkdownContent("en", all?.at(0) ?? "");
     return content;
   } catch (error) {
     notFound();
