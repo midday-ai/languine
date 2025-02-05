@@ -2,7 +2,7 @@
   "name": "@languine/example",
   "version": "1.0.0",
   "dependencies": {
-    "languine": "^1.0.3-canary.0"
+    "languine": "^2.0.5"
   },
   "devDependencies": {
     "@biomejs/js-api": "^0.7.1",

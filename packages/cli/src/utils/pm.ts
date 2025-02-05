@@ -83,14 +83,12 @@ async function isMonorepoRoot(dir: string): Promise<boolean> {
 
 export async function findPreferredPM(): Promise<PackageManager | null> {
   let currentDir = process.cwd();
-  let foundPM: PackageManager | null = null;
+  let foundPM: PackageManager | null = { name: "npm", version: "*" };
 
   while (true) {
     // Store the first PM we find
-    if (!foundPM) {
-      const pm = await preferredPM(currentDir);
-      if (pm) foundPM = pm;
-    }
+    const pm = await preferredPM(currentDir);
+    if (pm) foundPM = pm;
 
     // Check if we're at monorepo root
     if (await isMonorepoRoot(currentDir)) {

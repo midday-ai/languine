@@ -174,7 +174,14 @@ export async function commands(args: string[] = []) {
     const fs = await import("node:fs/promises");
 
     if (configFormat === "typescript") {
-      await installDependencies();
+      try {
+        await installDependencies();
+      } catch {
+        note(
+          "Failed to install Languine, please install manually using your package manager of choice and add languine as a dev dependency.",
+          "Install Languine Dev Dependency",
+        );
+      }
 
       const tsConfig = `import { defineConfig } from "languine";
 
