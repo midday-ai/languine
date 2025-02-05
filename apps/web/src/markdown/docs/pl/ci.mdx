@@ -1,12 +1,12 @@
 # CI/CD
 
-Languine zapewnia integrację CI/CD, aby pomóc Ci w tłumaczeniu aplikacji.
+Languine oferuje integrację CI/CD, aby pomóc Ci w tłumaczeniu aplikacji.
 
 ---
 
 ## Jak to działa
 
-Workflow CI/CD w Languine podąża za uporządkowanym procesem, aby zautomatyzować aktualizacje tłumaczeń w Twojej aplikacji:
+Workflow CI/CD w Languine opiera się na uporządkowanym procesie automatyzacji aktualizacji tłumaczeń w Twojej aplikacji:
 
 ### 1. Inicjalizacja akcji
 - Workflow rozpoczyna się, gdy akcja jest wyzwalana
@@ -17,9 +17,9 @@ Workflow CI/CD w Languine podąża za uporządkowanym procesem, aby zautomatyzow
 - Obsługuje zadania tłumaczeniowe przy użyciu skonfigurowanych ustawień
 
 ### 3. Wykrywanie zmian
-System sprawdza, czy wystąpiły jakiekolwiek zmiany w tłumaczeniu i podąża jedną z dwóch ścieżek:
+System sprawdza, czy wystąpiły jakiekolwiek zmiany w tłumaczeniach i podąża jedną z dwóch ścieżek:
 
-**Gdy znaleziono zmiany:**
+**Gdy zmiany zostaną znalezione:**
 - Zmiany są zatwierdzane w repozytorium
 - Zmiany są przesyłane do określonej gałęzi
 - Tworzony jest Pull Request (PR)
@@ -28,7 +28,7 @@ System sprawdza, czy wystąpiły jakiekolwiek zmiany w tłumaczeniu i podąża j
 - Workflow kończy się bez tworzenia PR
 
 ### 4. Tworzenie Pull Request
-Gdy wykryto zmiany, tworzony jest Pull Request z:
+Gdy zmiany zostaną wykryte, tworzony jest Pull Request z:
 
 **Zawartość PR:**
 - Jasny tytuł wskazujący na aktualizacje tłumaczeń
@@ -58,12 +58,12 @@ Gdy wykryto zmiany, tworzony jest Pull Request z:
   >
     {`
                     ┌─────────────────────┐
-                    │   Akcja Rozpoczyna   │
+                    │   Akcja Rozpoczyna  │
                     └──────────┬──────────┘
                                │
                     ┌──────────▼──────────┐
-                    │    Ustawienie Git &  │
-                    │    Dane Uwierzyteln. │
+                    │    Ustaw Git &      │
+                    │    Dane Uwierzytelniające │
                     └──────────┬──────────┘
                                │
 ┌─────────────────────────────────────────────────────────┐
@@ -73,13 +73,13 @@ Gdy wykryto zmiany, tworzony jest Pull Request z:
 └─────────────────────────────────────────────────────────┘
                                │
                     ┌──────────▼──────────┐
-                    │   Sprawdź Zmiany     │───────┐
+                    │   Sprawdź Zmiany    │───────┐
                     └──────────┬──────────┘       │
                                │                  │
                                │ [Zmiany]        │ [Brak Zmian]
                                │                  │
                     ┌──────────▼──────────┐       │
-                    │   Zatwierdź & Wyślij │       │
+                    │   Zatwierdź & Prześlij │       │
                     └──────────┬──────────┘       │
                                │                  │
                     ┌──────────▼──────────┐       │

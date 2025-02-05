@@ -13,26 +13,26 @@
   },
   "header": {
     "pricing": "Pris",
-    "docs": "Dokumentation",
+    "docs": "Dokument",
     "signIn": "Logga in",
     "goToApp": "Gå till appen"
   },
   "menu": {
     "pricing": "Pris",
     "dashboard": "Instrumentpanel",
-    "tuning": "Justering",
+    "tuning": "Inställningar",
     "settings": "Inställningar",
     "docs": "Dokumentation",
     "account": "Konto"
   },
   "hero": {
     "title": "Lokalisering infrastruktur skapad för utvecklare",
-    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig."
+    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig hindrar dig."
   },
   "getStarted": {
     "heading": "Kom igång",
     "title": "Lokalisering infrastruktur skapad för utvecklare",
-    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig.",
+    "description": "Languine automatiserar lokalisering inom din utvecklingsarbetsflöde och pipeline, vilket säkerställer att översättningar aldrig hindrar dig.",
     "button": {
       "startAutomating": "Börja automatisera",
       "readDocumentation": "Läs dokumentation"
@@ -89,7 +89,7 @@
       "title": "Utvecklarupplevelse",
       "cli": "Kommandoradsgränssnitt",
       "cicd": "CI/CD-integration",
-      "versionControl": "Versionshantering",
+      "versionControl": "Versionskontroll",
       "workflow": "Utvecklararbetsflöde",
       "documentation": "Omfattande dokumentation"
     }
@@ -146,9 +146,9 @@
       "description": "Din personliga API-nyckel för att få åtkomst till Languine API och från CLI."
     },
     "deleteAccount": {
-      "title": "Radera konto",
-      "description": "Permanent radera ditt konto och all associerad data. Denna åtgärd kan inte ångras.",
-      "button": "Radera konto"
+      "title": "Ta bort konto",
+      "description": "Permanently ta bort ditt konto och all associerad data. Denna åtgärd kan inte ångras.",
+      "button": "Ta bort konto"
     }
   },
   "copyInstall": {
@@ -159,22 +159,22 @@
       "title": "Är du helt säker?",
       "description": "Denna åtgärd kan inte ångras. Vänligen skriv DELETE för att bekräfta.",
       "placeholder": "Skriv DELETE för att bekräfta",
-      "confirm": "Bekräfta radering",
+      "confirm": "Bekräfta borttagning",
       "cancel": "Avbryt"
     }
   },
   "pipeline": {
     "title": "Arbetsflöde (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline och översätter automatiskt din kodbas vid varje push. När kodändringar görs analyserar vi det modifierade innehållet, upprätthåller din översättningsminne och genererar exakta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull-förfrågningar, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Detta automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll hålls synkroniserat med utvecklingen."
+    "description": "Vår översättningsmotor integreras sömlöst i din befintliga CI/CD-pipeline och översätter automatiskt din kodbas vid varje push. När kodändringar görs analyserar vi det modifierade innehållet, upprätthåller din översättningsminne och genererar exakta översättningar samtidigt som vi bevarar din varumärkesröst och terminologi. Översättningarna skickas sedan som pull-förfrågningar, vilket möjliggör granskning innan de slås samman med din huvudgren och distribueras. Denna automatiserade arbetsflöde säkerställer att ditt lokaliserade innehåll förblir synkroniserat med utvecklingen."
   },
   "settings": {
     "badRequest": "Ogiltig begäran",
-    "badRequestDescription": "Organisationen måste ha minst en ägare. Överför ägarskapet till en annan medlem innan du tar bort denna ägare.",
+    "badRequestDescription": "Organisationen måste ha minst en ägare. Överför ägandet till en annan medlem innan du tar bort denna ägare.",
     "permissionDenied": "Åtkomst nekad",
     "permissionDeniedDescription": "Du måste vara ägare av teamet för att utföra denna åtgärd",
     "deleteTeamTitle": "Ta bort team",
-    "deleteTeamDescription": "Kan inte ta bort organisationen när du är den enda medlemmen, istället ta bort ditt konto",
+    "deleteTeamDescription": "Kan inte ta bort organisationen när du är den enda medlemmen, ta istället bort ditt konto",
     "saved": "Inställningar sparade",
     "savedDescription": "Dina ändringar har sparats framgångsrikt",
     "error": "Något gick fel",
@@ -209,7 +209,7 @@
       },
       "delete": {
         "title": "Ta bort projekt",
-        "description": "Permanent ta bort detta projekt och all dess data",
+        "description": "Permanently ta bort detta projekt och all dess data",
         "button": "Ta bort projekt"
       }
     },
@@ -271,14 +271,14 @@
         "deleteInviteConfirm": "Ta bort inbjudan"
       },
       "email": {
-        "title": "Team E-post",
+        "title": "Teamets e-post",
         "description": "E-postadressen kopplad till ditt team",
         "placeholder": "Ange teamets e-post"
       }
     }
   },
   "tuning": {
-    "general": "Allmän",
+    "general": "Allmänt",
     "translationMemory": {
       "title": "Översättningsminne",
       "description": "Använd översättningsminne för att förbättra konsekvens och effektivitet"
@@ -289,7 +289,7 @@
     },
     "contextDetection": {
       "title": "Kontextdetektion",
-      "description": "Automatiskt upptäcka och bevara kontext i översättningar"
+      "description": "Automatiskt upptäck och bevara kontext i översättningar"
     },
     "styleGuide": "Stilguide",
     "lengthControl": {
@@ -343,8 +343,8 @@
     },
     "brand": "Varumärke",
     "emotiveIntent": {
-      "title": "Emotionell Avsikt",
-      "description": "Ställ in den emotionella tonen för översättningar",
+      "title": "Känslomässig Avsikt",
+      "description": "Ställ in den känslomässiga tonen för översättningar",
       "options": {
         "neutral": "Neutral",
         "positive": "Positiv",
@@ -407,9 +407,9 @@
         "latest_features": "Tidig åtkomst till de senaste funktionerna",
         "priority_support": "Prioriterat stöd",
         "priority_queues": "Prioriterade översättningsköer",
-        "languages": "Från 8 språk",
-        "keys_limit": "Från 10 000 nycklar",
-        "docs_limit": "Från 50 dokument"
+        "languages": "Från 4 språk",
+        "keys_limit": "Från 5 000 nycklar",
+        "docs_limit": "Från 25 dokument"
       }
     },
     "cta": "Börja automatisera",
@@ -438,7 +438,7 @@
     "submit": "Skicka",
     "success": {
       "title": "Inbjudan skickad",
-      "description": "Inbjudan till {email} har skickats framgångsrikt"
+      "description": "Inbjudan skickades framgångsrikt till {email}"
     },
     "error": {
       "title": "Fel",
@@ -567,23 +567,23 @@
     },
     "github_action": {
       "question": "Hur fungerar GitHub Action-integrationen?",
-      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) gör att du kan automatisera din översättningsarbetsflöde direkt i din CI/CD-pipeline. När du gör ändringar i ditt arkiv kan översättningar automatiskt uppdateras."
+      "answer": "GitHub Action-integrationen (tillgänglig i Pro-planer) gör att du kan automatisera din översättningsarbetsflöde direkt i din CI/CD-pipeline. När du pushar ändringar till ditt repository kan översättningar automatiskt uppdateras."
     },
     "support": {
       "question": "Vilken typ av support erbjuder ni?",
-      "answer": "Gratisanvändare får tillgång till gemenskapsstöd, medan Pro-användare får prioriterad support med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
+      "answer": "Gratisanvändare får tillgång till communitysupport, medan Pro-användare får prioriterad support med snabbare svarstider och dedikerad hjälp för sina översättningsbehov."
     },
     "open_source": {
       "question": "Är Languine öppen källkod?",
       "answer": "Ja! Languine är helt öppen källkod och tillgänglig på GitHub. Du kan bidra till projektet, rapportera problem, föreslå funktioner och inspektera koden. Vi tror på transparens och att bygga offentligt."
     },
     "open_source_pricing": {
-      "question": "Erbjuder ni specialpriser för öppen källkodsprojekt?",
-      "answer": "Ja! Vi älskar att stödja den öppna källkodscommunityn. Om du underhåller ett öppen källkodsprojekt kan du få tillgång till våra Pro-funktioner med 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så hjälper vi dig att få ett rabatterat Pro-konto. Detta är vårt sätt att ge tillbaka till den gemenskap som gör vårt arbete möjligt."
+      "question": "Erbjuder ni specialpriser för öppna källkodsprojekt?",
+      "answer": "Ja! Vi älskar att stödja den öppna källkodscommunityn. Om du underhåller ett öppet källkodsprojekt kan du få tillgång till våra Pro-funktioner med 30% rabatt. Kontakta bara vårt team med detaljer om ditt projekt, så ordnar vi en rabatterad Pro-konto. Detta är vårt sätt att ge tillbaka till den community som gör vårt arbete möjligt."
     },
     "cancel_subscription": {
       "question": "Hur avbryter jag min prenumeration?",
-      "answer": "Du kan avbryta din prenumeration när som helst från dina kontoinställningar. Navigera till Fakturering > Ändra plan. Din prenumeration kommer att förbli aktiv till slutet av din nuvarande faktureringsperiod, efter vilket du flyttas till den kostnadsfria planen."
+      "answer": "Du kan avbryta din prenumeration när som helst från dina kontoinställningar. Navigera till Fakturering > Ändra plan. Din prenumeration förblir aktiv till slutet av din nuvarande faktureringsperiod, efter vilket du flyttas till Gratisplanen."
     }
   },
   "pricing_slider": {
@@ -643,7 +643,7 @@
     "changePlan": "Uppgradera plan",
     "free": "Gratis",
     "manage_button": "Hantera prenumeration",
-    "canceled": "Att avbryta"
+    "canceled": "Att avbrytas"
   },
   "changePlan": {
     "title": "Uppgradera plan",
@@ -652,7 +652,7 @@
     "description": "Uppgradera din plan för att öka dina gränser. Du får tillgång till fler översättningsnycklar, dokument, språk och prioriterad support."
   },
   "test_translation": {
-    "title": "Testöversättning",
+    "title": "Testa översättning",
     "description": "Testa översättningen av ditt projekt"
   }
 }

@@ -3,15 +3,15 @@
     "pricing": "Tarification",
     "docs": "Docs",
     "signIn": "Se connecter",
-    "goToApp": "Accéder à l'application"
+    "goToApp": "Aller à l'application"
   },
   "hero": {
     "title": "Infrastructure de localisation conçue pour les développeurs",
-    "description": "Languine automatise la localisation dans votre flux de développement et votre pipeline, garantissant que les traductions ne vous ralentissent jamais."
+    "description": "Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, garantissant que les traductions ne vous ralentissent jamais."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
-    "tuning": "Réglages",
+    "tuning": "Réglage",
     "overrides": "Remplacements",
     "settings": "Paramètres",
     "pricing": "Tarification",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Commencer",
     "title": "Infrastructure de localisation conçue pour les développeurs",
-    "description": "Languine automatise la localisation dans votre flux de développement et votre pipeline, garantissant que les traductions ne vous ralentissent jamais.",
+    "description": "Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, garantissant que les traductions ne vous ralentissent jamais.",
     "button": {
       "startAutomating": "Commencer à automatiser",
       "readDocumentation": "Lire la documentation"
@@ -61,18 +61,18 @@
     "title": "Gère chaque aspect de la localisation de votre application, y compris",
     "smartTranslation": {
       "title": "Traduction intelligente",
-      "intelligentTranslation": "Traduction intelligente avec conscience du contexte",
-      "brandVoice": "Consistance de la voix et du ton de la marque",
+      "intelligentTranslation": "Traduction intelligente avec prise en compte du contexte",
+      "brandVoice": "Cohérence de la voix et du ton de la marque",
       "terminology": "Gestion de la terminologie",
       "linguisticFeatures": "Fonctionnalités linguistiques avancées",
       "realtimeUpdates": "Mises à jour de traduction en temps réel"
     },
     "implementation": {
       "title": "Mise en œuvre",
-      "quickSetup": "Configuration rapide et intégration",
+      "quickSetup": "Configuration et intégration rapides",
       "fileFormat": "Gestion des formats de fichiers",
-      "contentStructure": "Organisation de la structure du contenu",
-      "assetOrganization": "Organisation des ressources"
+      "contentStructure": "Organisation de la structure de contenu",
+      "assetOrganization": "Organisation des actifs"
     },
     "developer": {
       "title": "Expérience développeur",
@@ -146,8 +146,8 @@
   "dangerZone": {
     "dialog": {
       "title": "Êtes-vous absolument sûr ?",
-      "description": "Cette action ne peut pas être annulée. Veuillez taper DELETE pour confirmer.",
-      "placeholder": "Tapez DELETE pour confirmer",
+      "description": "Cette action ne peut pas être annulée. Veuillez taper SUPPRIMER pour confirmer.",
+      "placeholder": "Tapez SUPPRIMER pour confirmer",
       "confirm": "Confirmer la suppression",
       "cancel": "Annuler"
     }
@@ -261,7 +261,7 @@
       },
       "email": {
         "title": "Email de l'équipe",
-        "description": "L'adresse e-mail associée à votre équipe",
+        "description": "L'adresse email associée à votre équipe",
         "placeholder": "Entrez l'email de l'équipe"
       }
     }
@@ -274,15 +274,15 @@
     },
     "qualityChecks": {
       "title": "Contrôles de qualité",
-      "description": "Activer les contrôles de qualité automatisés pour les traductions"
+      "description": "Activez les contrôles de qualité automatisés pour les traductions"
     },
     "contextDetection": {
       "title": "Détection de contexte",
-      "description": "Détecter et préserver automatiquement le contexte dans les traductions"
+      "description": "Détectez et préservez automatiquement le contexte dans les traductions"
     },
     "styleGuide": "Guide de style",
     "lengthControl": {
-      "title": "Contrôle de longueur",
+      "title": "Contrôle de la longueur",
       "description": "Contrôlez la longueur du texte traduit",
       "options": {
         "flexible": "Flexible",
@@ -333,7 +333,7 @@
     "brand": "Marque",
     "emotiveIntent": {
       "title": "Intention émotive",
-      "description": "Définissez le ton émotionnel pour les traductions",
+      "description": "Définissez le ton émotionnel des traductions",
       "options": {
         "neutral": "Neutre",
         "positive": "Positif",
@@ -366,7 +366,7 @@
     },
     "culturalAdaptation": {
       "title": "Adaptation culturelle",
-      "description": "Adaptez le contenu pour qu'il soit culturellement approprié"
+      "description": "Adaptez le contenu pour une pertinence culturelle"
     }
   },
   "pricing": {
@@ -390,15 +390,15 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Tout ce qui est dans Gratuit, plus :",
+      "includes_free": "Tout dans Gratuit, plus :",
       "features": {
         "github_action": "Intégration GitHub Action",
         "latest_features": "Accès anticipé aux dernières fonctionnalités",
         "priority_support": "Support prioritaire",
         "priority_queues": "Files de traduction prioritaires",
-        "languages": "À partir de 8 langues",
-        "keys_limit": "À partir de 10 000 clés",
-        "docs_limit": "À partir de 50 documents"
+        "languages": "À partir de 4 langues",
+        "keys_limit": "À partir de 5 000 clés",
+        "docs_limit": "À partir de 25 documents"
       }
     },
     "cta": "Commencez à automatiser",
@@ -461,9 +461,9 @@
   },
   "cli": {
     "success": {
-      "title": "Connexion réussie au Languine CLI",
+      "title": "Connexion réussie à Languine CLI",
       "description": "Languine CLI a été authentifié avec succès en tant que :",
-      "description_2": "Vous pouvez maintenant fermer cet onglet et revenir au CLI"
+      "description_2": "Vous pouvez maintenant fermer cet onglet et revenir à la CLI"
     }
   },
   "search": {
@@ -515,8 +515,8 @@
     "tr": "Turc",
     "uk": "Ukrainien",
     "vi": "Vietnamien",
-    "zh-CN": "Chinois (simplifié)",
-    "zh-TW": "Chinois (traditionnel)"
+    "zh-CN": "Chinois (Simplifié)",
+    "zh-TW": "Chinois (Traditionnel)"
   },
   "menu": {
     "dashboard": "Tableau de bord",
@@ -556,11 +556,11 @@
     },
     "key_limit": {
       "question": "Comment fonctionne la limite de clés ?",
-      "answer": "Une clé traduite est comptée lorsque vous traduisez une clé source dans une langue cible. Par exemple, si vous avez 20 clés source et que vous les traduisez en 5 langues, cela équivaut à 100 cl��s traduites (20 clés × 5 langues)."
+      "answer": "Une clé traduite est comptée lorsque vous traduisez une clé source dans une langue cible. Par exemple, si vous avez 20 clés source et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés × 5 langues)."
     },
     "supported_languages": {
       "question": "Quelles langues sont prises en charge ?",
-      "answer": "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues principales, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour certaines langues, veuillez contacter notre équipe de support."
+      "answer": "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de traduction pour certaines langues, veuillez contacter notre équipe de support."
     },
     "github_action": {
       "question": "Comment fonctionne l'intégration GitHub Action ?",
@@ -568,7 +568,7 @@
     },
     "support": {
       "question": "Quel type de support offrez-vous ?",
-      "answer": "Les utilisateurs gratuits ont accès au support communautaire, tandis que les utilisateurs Pro bénéficient d'un support prioritaire avec des temps de réponse plus rapides et une assistance dédiée pour leurs besoins de traduction."
+      "answer": "Les utilisateurs gratuits ont accès à un support communautaire, tandis que les utilisateurs Pro bénéficient d'un support prioritaire avec des temps de réponse plus rapides et une assistance dédiée pour leurs besoins de traduction."
     },
     "open_source": {
       "question": "Languine est-il open source ?",
@@ -576,7 +576,7 @@
     },
     "open_source_pricing": {
       "question": "Offrez-vous des tarifs spéciaux pour les projets open source ?",
-      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à tarif réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
     },
     "cancel_subscription": {
       "question": "Comment annuler mon abonnement ?",
@@ -652,7 +652,7 @@
     "description": "Mettez à niveau votre plan pour augmenter vos limites. Vous aurez accès à plus de clés de traduction, de documents, de langues et à un support prioritaire."
   },
   "test_translation": {
-    "title": "Test de traduction",
+    "title": "Tester la traduction",
     "description": "Tester la traduction de votre projet"
   }
 }

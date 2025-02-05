@@ -12,7 +12,7 @@ Här är ett grundläggande exempel i båda formaten:
 {
   "locale": {
     "source": "en",
-    "targets": ["es", "fr", "de"]
+    "targets": ["sv", "fr", "de"]
   },
   "files": {
     "json": {
@@ -26,16 +26,16 @@ Låt oss bryta ner de olika sektionerna i konfigurationsfilen.
 
 ---
 
-## Lokalkonfiguration
+## Språkkonfiguration
 
-Lokalsektionen definierar dina översättningsspråk:
+Språksektionen definierar dina översättningsspråk:
 
 - source: Ditt primära språk för innehållsskapande (t.ex. "en" för engelska)
-- targets: En array av språk som du vill översätta till (t.ex. ["es", "fr", "de"] för spanska, franska och tyska)
+- targets: En array av språk som du vill översätta till (t.ex. ["sv", "fr", "de"] för svenska, franska och tyska)
 
-Languine stöder ett brett utbud av språkkoder, inklusive:
-- Enkla koder: en, es, fr, de
-- Regionspecifika koder: pt-BR, zh-CN, zh-TW
+Languine stöder ett brett spektrum av språkkoder, inklusive:
+- Enkla koder: en, sv, fr, de
+- Regionsspecifika koder: pt-BR, zh-CN, zh-TW
 
 ## Filkonfiguration
 
@@ -113,20 +113,20 @@ Här är en komplett lista över filformat som stöds av Languine:
 - [JavaScript](/docs/js) - JavaScript-filer
 - [TypeScript](/docs/ts) - TypeScript-filer
 - [Gettext PO](/docs/po) - GetText-översättningsfiler
-- [XLIFF](/docs/xliff) - XML Lokaliseringsutbytesformat
+- [XLIFF](/docs/xliff) - XML Localization Interchange File Format
 - [CSV](/docs/csv) - Kalkylbladsbaserade översättningar
 - [XML](/docs/xml) - XML-resursfiler
-- [Flutter ARB](/docs/arb) - Applikationsresursbundelfiler
+- [Flutter ARB](/docs/arb) - Application Resource Bundle-filer
 
 ---
 
 ## Filmönster
 
-[locale]-platshållaren i filmmönster ersätts automatiskt med den lämpliga språkkoden under översättningen. Till exempel:
+[locale]-platshållaren i filmmönster ersätts automatiskt med den lämpliga språkkoden under översättning. Till exempel:
 
 - locales/[locale].json blir:
   - locales/en.json
-  - locales/es.json
+  - locales/sv.json
   - locales/fr.json
 
 Du kan inkludera flera mönster för varje filtyp och använda globmönster:
@@ -149,9 +149,9 @@ Om du använder Languines molntjänster kan du inkludera ditt projekt-ID i konfi
 
 ```json
 {
-  "projectId": "prj_your_project_id",
+  "projectId": "prj_ditt_projekt_id",
   "locale": {
-    // ... lokalkonfiguration
+    // ... språkkonfiguration
   },
   files: {
     // ... filkonfiguration
@@ -167,13 +167,13 @@ Languine skapar automatiskt och underhåller en languine.lock-fil för att spår
 
 - Spårar vilket innehåll som har översatts
 - Hjälper till att identifiera vad som behöver uppdateras när källinnehållet ändras
-- Bör åta sig till ditt versionskontrollsystem
+- Bör åtagas i ditt versionshanteringssystem
 
 Du behöver inte manuellt redigera låsfilen - Languine hanterar den automatiskt när du kör översättningskommandon.
 
 ## Bästa praxis
 
-1. **Versionskontroll**: Åtag alltid både languine.json och languine.lock till ditt arkiv
+1. **Versionshantering**: Åtag alltid både languine.json och languine.lock till ditt arkiv
 2. **Filorganisation**: Håll dina översättningsfiler organiserade i en konsekvent katalogstruktur
 3. **Språkkoder**: Använd standard språkkoder för att säkerställa kompatibilitet
 4. **Mönster**: Använd specifika inkluderingsmönster för att undvika att översätta onödiga filer

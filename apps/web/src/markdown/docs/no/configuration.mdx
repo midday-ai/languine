@@ -1,6 +1,6 @@
 # Konfigurasjon
 
-Languine bruker en JSON-konfigurasjonsfil (languine.json) for å administrere oversettelsesoppsettet ditt. Denne filen definerer kildespråk og målspråk, samt filene som må oversettes.
+Languine bruker en JSON-konfigurasjonsfil (languine.json) for å administrere oversettelsesoppsettet ditt. Denne filen definerer kildespråket og målspråkene, samt filene som må oversettes.
 
 ---
 
@@ -22,7 +22,7 @@ Her er et grunnleggende eksempel i begge formater:
 }
 ```
 
-La oss se nærmere på de forskjellige seksjonene i konfigurasjonsfilen.
+La oss bryte ned de forskjellige seksjonene i konfigurasjonsfilen.
 
 ---
 
@@ -33,13 +33,13 @@ Lokalisasjonsseksjonen definerer oversettelsesspråkene dine:
 - source: Ditt primære språk for innholdsproduksjon (f.eks. "en" for engelsk)
 - targets: Et array av språk du ønsker å oversette til (f.eks. ["es", "fr", "de"] for spansk, fransk og tysk)
 
-Languine støtter et bredt spekter av språkkoder, inkludert:
+Languine støtter et bredt spekter av språk koder, inkludert:
 - Enkle koder: en, es, fr, de
 - Regionspesifikke koder: pt-BR, zh-CN, zh-TW
 
 ## Filkonfigurasjon
 
-Filseksjonen definerer hvilke filer Languine skal oversette. Du kan konfigurere flere filtyper og mønstre:
+Files-seksjonen definerer hvilke filer Languine skal oversette. Du kan konfigurere flere filtyper og mønstre:
 
 ---
 
@@ -98,31 +98,31 @@ files: {
 
 ### Andre formater
 
-Her er en komplett liste over filformater støttet av Languine:
+Her er en komplett liste over filformater som støttes av Languine:
 
-- [JSON](/docs/json) - Standard JSON-oversettelsesfiler
-- [YAML](/docs/yaml) - YAML-oversettelsesfiler
+- [JSON](/docs/json) - Standard JSON oversettelsesfiler
+- [YAML](/docs/yaml) - YAML oversettelsesfiler
 - [Properties](/docs/properties) - Java properties-filer
-- [Android](/docs/android) - Android XML-ressursfiler
+- [Android](/docs/android) - Android XML ressursfiler
 - [iOS](/docs/ios) - iOS lokaliseringsfiler
 - [iOS Stringsdict](/docs/xcode-stringsdict) - iOS pluraliseringsfiler
-- [iOS XCStrings](/docs/xcode-xcstrings) - Moderne Xcode strengkataloger
+- [iOS XCStrings](/docs/xcode-xcstrings) - Moderne Xcode tekstkataloger
 - [Markdown](/docs/md) - Dokumentasjonsfiler
 - [MDX](/docs/mdx) - Dokumentasjon med JSX
 - [HTML](/docs/html) - HTML-filer
 - [JavaScript](/docs/js) - JavaScript-filer
 - [TypeScript](/docs/ts) - TypeScript-filer
-- [Gettext PO](/docs/po) - GetText-oversettelsesfiler
+- [Gettext PO](/docs/po) - GetText oversettelsesfiler
 - [XLIFF](/docs/xliff) - XML Lokaliseringsutvekslingsfilformat
 - [CSV](/docs/csv) - Regnearkbaserte oversettelser
-- [XML](/docs/xml) - XML-ressursfiler
+- [XML](/docs/xml) - XML ressursfiler
 - [Flutter ARB](/docs/arb) - Applikasjonsressursbuntfiler
 
 ---
 
 ## Filmønstre
 
-[locale]-plassholderen i filmmønstre blir automatisk erstattet med den aktuelle språkkoden under oversettelse. For eksempel:
+[locale]-plassholderen i filmønstre blir automatisk erstattet med den aktuelle språk koden under oversettelse. For eksempel:
 
 - locales/[locale].json blir:
   - locales/en.json
@@ -163,7 +163,7 @@ Hvis du bruker Languines skytjenester, kan du inkludere prosjekt-ID-en din i kon
 
 ## Oversettelsesstatussporing
 
-Languine oppretter automatisk og vedlikeholder en languine.lock-fil for å spore statusen til oversettelsene dine. Denne filen:
+Languine oppretter og vedlikeholder automatisk en languine.lock-fil for å spore statusen til oversettelsene dine. Denne filen:
 
 - Sporer hvilket innhold som har blitt oversatt
 - Hjelper med å identifisere hva som må oppdateres når kildeinnholdet endres
@@ -174,7 +174,7 @@ Du trenger ikke å redigere låsefilen manuelt - Languine administrerer den auto
 ## Beste praksis
 
 1. **Versjonskontroll**: Forplikt alltid både languine.json og languine.lock til depotet ditt
-2. **Filorganisering**: Hold oversettelsesfilene dine organisert i en konsekvent mappestruktur
+2. **Filorganisering**: Hold oversettelsesfilene dine organisert i en konsekvent katalogstruktur
 3. **Språkkoder**: Bruk standard språkkoder for å sikre kompatibilitet
 4. **Mønstre**: Bruk spesifikke inkluderingsmønstre for å unngå å oversette unødvendige filer
-5. **Prosjekt-ID**: Hold prosjekt-ID-en din sikker og ikke del den offentlig hvis du bruker skytjenester, bruk i stedet miljøvariabelen `LANGUINE_PROJECT_ID`.
+5. **Prosjekt-ID**: Hold prosjekt-ID-en din sikker og ikke del den offentlig hvis du bruker skytjenester, bruk miljøvariabelen `LANGUINE_PROJECT_ID` i stedet.

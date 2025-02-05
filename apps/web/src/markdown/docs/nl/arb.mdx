@@ -1,12 +1,12 @@
 # ARB (Application Resource Bundle)
 
-Languine ondersteunt ARB-bestanden, het standaardformaat voor lokalisatie van Flutter-toepassingen. Dit formaat behandelt meervoudsvormen, tijdelijke aanduidingen en selectie-uitdrukkingen terwijl het compatibel blijft met het intl-pakket van Flutter.
+Languine ondersteunt ARB-bestanden, het standaardlokalisatieformaat voor Flutter-toepassingen. Dit formaat behandelt meervouden, plaatsaanduidingen en selectexpressies terwijl het compatibiliteit behoudt met Flutter's intl-pakket.
 
 ---
 
 ## Instellen
 
-Zorg er eerst voor dat je een languine.json configuratiebestand hebt in de hoofddirectory van je project. Hier is een voorbeeld:
+Zorg er eerst voor dat je een languine.json-configuratiebestand in de hoofdmap van je project hebt. Hier is een voorbeeld:
 
 ```json
 {
@@ -24,7 +24,7 @@ Zorg er eerst voor dat je een languine.json configuratiebestand hebt in de hoofd
 
 ## Vertalen
 
-Met je configuratie ingesteld, voer je het volgende uit:
+Met je configuratie ingesteld, voer je uit:
 
 ```bash
 npx languine@latest translate
@@ -35,6 +35,6 @@ Wanneer je dit commando uitvoert, zal Languine:
 - Je bron-ARB-bestand laden (bijv. lib/l10n/intl_en.arb)
 - Nieuwe of gewijzigde vertaalstrings detecteren
 - Vertalingen genereren voor je doeltalen
-- De ARB-bestanden voor de doeltalen aanmaken of bijwerken (bijv. lib/l10n/intl_sv.arb)
-- Metadata, tijdelijke aanduidingen en meervoud/selectie-uitdrukkingen behouden
+- De ARB-bestanden voor de doeltaal aanmaken of bijwerken (bijv. lib/l10n/intl_sv.arb)
+- Metadata, plaatsaanduidingen en meervoud/select-expressies behouden
 

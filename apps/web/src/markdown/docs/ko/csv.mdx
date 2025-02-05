@@ -1,10 +1,10 @@
 # CSV
 
-Languine은 간단한 번역 관리를 위해 CSV(Comma-Separated Values) 파일을 지원합니다. 이 형식은 스프레드시트 기반의 작업 흐름에 적합하며 외부 번역 도구와의 쉬운 통합을 제공합니다.
+Languine은 간단한 번역 관리를 위해 CSV(Comma-Separated Values) 파일을 지원합니다. 이 형식은 스프레드시트 기반의 작업 흐름에 적합하며 외부 번역 도구와의 쉬운 통합이 가능합니다.
 
 ---
 
-## 설정
+## 설정하기
 
 먼저, 프로젝트 루트에 languine.json 구성 파일이 있는지 확인하세요. 다음은 예시입니다:
 
@@ -22,15 +22,15 @@ Languine은 간단한 번역 관리를 위해 CSV(Comma-Separated Values) 파일
 }
 ```
 
-## 번역
+## 번역하기
 
-구성이 완료되면 다음을 실행하세요:
+구성이 완료되면 다음 명령어를 실행하세요:
 
 ```bash
 npx languine@latest translate
 ```
 
-이 명령을 실행하면 Languine이:
+이 명령어를 실행하면 Languine은:
 
 - 소스 CSV 파일(예: translations/en.csv)을 로드합니다.
 - 새로운 또는 수정된 번역 문자열을 감지합니다.

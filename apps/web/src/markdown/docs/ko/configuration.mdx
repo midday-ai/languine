@@ -1,6 +1,6 @@
 # 구성
 
-Languine은 JSON 구성 파일(languine.json)을 사용하여 번역 설정을 관리합니다. 이 파일은 소스 언어와 대상 언어, 번역해야 할 파일을 정의합니다.
+Languine은 번역 설정을 관리하기 위해 JSON 구성 파일(languine.json)을 사용합니다. 이 파일은 소스 언어와 대상 언어, 번역이 필요한 파일을 정의합니다.
 
 ---
 
@@ -30,7 +30,7 @@ Languine은 JSON 구성 파일(languine.json)을 사용하여 번역 설정을 �
 
 로케일 섹션은 번역 언어를 정의합니다:
 
-- source: 콘텐츠 생성에 사용하는 기본 언어 (예: "en"은 영어)
+- source: 콘텐츠 생성의 기본 언어 (예: "en"은 영어)
 - targets: 번역하고자 하는 언어의 배열 (예: ["es", "fr", "de"]는 스페인어, 프랑스어, 독일어)
 
 Languine은 다음과 같은 다양한 언어 코드를 지원합니다:
@@ -104,16 +104,16 @@ Languine이 지원하는 파일 형식의 전체 목록은 다음과 같습니�
 - [YAML](/docs/yaml) - YAML 번역 파일
 - [Properties](/docs/properties) - Java 속성 파일
 - [Android](/docs/android) - Android XML 리소스 파일
-- [iOS](/docs/ios) - iOS 현지화 파일
+- [iOS](/docs/ios) - iOS 지역화 파일
 - [iOS Stringsdict](/docs/xcode-stringsdict) - iOS 복수형 파일
-- [iOS XCStrings](/docs/xcode-xcstrings) - 최신 Xcode 문자열 카탈로그
+- [iOS XCStrings](/docs/xcode-xcstrings) - 현대 Xcode 문자열 카탈로그
 - [Markdown](/docs/md) - 문서 파일
 - [MDX](/docs/mdx) - JSX가 포함된 문서
 - [HTML](/docs/html) - HTML 파일
 - [JavaScript](/docs/js) - JavaScript 파일
 - [TypeScript](/docs/ts) - TypeScript 파일
 - [Gettext PO](/docs/po) - GetText 번역 파일
-- [XLIFF](/docs/xliff) - XML 현지화 교환 파일 형식
+- [XLIFF](/docs/xliff) - XML 지역화 교환 파일 형식
 - [CSV](/docs/csv) - 스프레드시트 기반 번역
 - [XML](/docs/xml) - XML 리소스 파일
 - [Flutter ARB](/docs/arb) - 애플리케이션 리소스 번들 파일
@@ -122,14 +122,14 @@ Languine이 지원하는 파일 형식의 전체 목록은 다음과 같습니�
 
 ## 파일 패턴
 
-파일 패턴의 [locale] 자리 표시자는 번역 중에 적절한 언어 코드로 자동으로 대체됩니다. 예를 들어:
+파일 패턴의 [locale] 자리 표시자는 번역 중에 적절한 언어 코드로 자동 교체됩니다. 예를 들어:
 
 - locales/[locale].json은 다음과 같이 변환됩니다:
   - locales/en.json
   - locales/es.json
   - locales/fr.json
 
-각 파일 유형에 대해 여러 패턴을 포함하고 glob 패턴을 사용할 수 있습니다:
+각 파일 유형에 대해 여러 패턴을 포함할 수 있으며 glob 패턴을 사용할 수 있습니다:
 ```json
 files: {
   json: {
@@ -163,13 +163,13 @@ Languine의 클라우드 서비스를 사용하는 경우 구성에 프로젝트
 
 ## 번역 상태 추적
 
-Languine은 번역 상태를 추적하기 위해 languine.lock 파일을 자동으로 생성하고 유지 관리합니다. 이 파일은:
+Languine은 번역 상태를 추적하기 위해 자동으로 languine.lock 파일을 생성하고 유지 관리합니다. 이 파일은:
 
 - 어떤 콘텐츠가 번역되었는지 추적합니다
 - 소스 콘텐츠가 변경될 때 업데이트해야 할 내용을 식별하는 데 도움을 줍니다
 - 버전 관리 시스템에 커밋해야 합니다
 
-잠금 파일을 수동으로 편집할 필요는 없습니다. Languine은 번역 명령을 실행할 때 자동으로 관리합니다.
+잠금 파일을 수동으로 편집할 필요는 없습니다 - Languine은 번역 명령을 실행할 때 자동으로 관리합니다.
 
 ## 모범 사례
 

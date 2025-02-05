@@ -31,15 +31,15 @@ Décomposons les différentes sections du fichier de configuration.
 La section locale définit vos langues de traduction :
 
 - source : Votre langue principale pour la création de contenu (par exemple, "en" pour l'anglais)
-- targets : Un tableau de langues dans lesquelles vous souhaitez traduire (par exemple, ["es", "fr", "de"] pour l'espagnol, le français et l'allemand)
+- targets : Un tableau des langues dans lesquelles vous souhaitez traduire (par exemple, ["es", "fr", "de"] pour l'espagnol, le français et l'allemand)
 
 Languine prend en charge un large éventail de codes de langue, y compris :
 - Codes simples : en, es, fr, de
-- Codes spécifiques à une région : pt-BR, zh-CN, zh-TW
+- Codes spécifiques à la région : pt-BR, zh-CN, zh-TW
 
 ## Configuration des fichiers
 
-La section des fichiers définit quels fichiers Languine doit traduire. Vous pouvez configurer plusieurs types et modèles de fichiers :
+La section des fichiers définit quels fichiers Languine doit traduire. Vous pouvez configurer plusieurs types de fichiers et motifs :
 
 ---
 
@@ -120,16 +120,16 @@ Voici une liste complète des formats de fichiers pris en charge par Languine :
 
 ---
 
-## Modèles de fichiers
+## Motifs de fichiers
 
-Le placeholder [locale] dans les modèles de fichiers est automatiquement remplacé par le code de langue approprié lors de la traduction. Par exemple :
+Le placeholder [locale] dans les motifs de fichiers est automatiquement remplacé par le code de langue approprié lors de la traduction. Par exemple :
 
 - locales/[locale].json devient :
   - locales/en.json
   - locales/es.json
   - locales/fr.json
 
-Vous pouvez inclure plusieurs modèles pour chaque type de fichier et utiliser des modèles glob :
+Vous pouvez inclure plusieurs motifs pour chaque type de fichier et utiliser des motifs globaux :
 ```json
 files: {
   json: {
@@ -143,7 +143,7 @@ files: {
 
 ---
 
-## ID de projet (facultatif)
+## ID de projet (optionnel)
 
 Si vous utilisez les services cloud de Languine, vous pouvez inclure votre ID de projet dans la configuration :
 
@@ -176,5 +176,5 @@ Vous n'avez pas besoin de modifier manuellement le fichier de verrouillage - Lan
 1. **Contrôle de version** : Engagez toujours à la fois languine.json et languine.lock dans votre dépôt
 2. **Organisation des fichiers** : Gardez vos fichiers de traduction organisés dans une structure de répertoire cohérente
 3. **Codes de langue** : Utilisez des codes de langue standard pour garantir la compatibilité
-4. **Modèles** : Utilisez des modèles d'inclusion spécifiques pour éviter de traduire des fichiers inutiles
+4. **Motifs** : Utilisez des motifs d'inclusion spécifiques pour éviter de traduire des fichiers inutiles
 5. **ID de projet** : Gardez votre ID de projet sécurisé et ne le partagez pas publiquement si vous utilisez des services cloud, utilisez plutôt la variable d'environnement `LANGUINE_PROJECT_ID`.

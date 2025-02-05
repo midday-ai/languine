@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en -pipeline, zodat vertalingen u nooit vertragen."
+    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en pipeline, zodat vertalingen u nooit ophouden."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aan de slag",
     "title": "Lokalisatie-infrastructuur gemaakt voor ontwikkelaars",
-    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en -pipeline, zodat vertalingen u nooit vertragen.",
+    "description": "Languine automatiseert lokalisatie binnen uw ontwikkelingsworkflow en pipeline, zodat vertalingen u nooit ophouden.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"
@@ -29,7 +29,7 @@
   },
   "companies": {
     "title": "Gebruikt door",
-    "addYourCompany": "+ Voeg je bedrijf toe"
+    "addYourCompany": "+ Voeg uw bedrijf toe"
   },
   "activity": {
     "title": "Activiteit",
@@ -47,10 +47,10 @@
     "fullyOpenSource": "Volledig open source",
     "fullyOpenSourceDescription": "Onze code is openbaar beschikbaar op GitHub, wat transparantie en bijdragen van de gemeenschap mogelijk maakt.",
     "presetsForExpo": "Voorinstellingen voor Expo",
-    "presetsForExpoDescription": "We bieden voorinstellingen voor Expo, zodat je snel aan de slag kunt.",
+    "presetsForExpoDescription": "We bieden voorinstellingen voor Expo, zodat u snel aan de slag kunt.",
     "presetForReactNative": "Voorinstelling voor React Native",
-    "presetForReactNativeDescription": "We bieden een voorinstelling voor React Native, zodat je snel aan de slag kunt.",
-    "presetForReactEmail": "React Email Bibliotheek",
+    "presetForReactNativeDescription": "We bieden een voorinstelling voor React Native, zodat u snel aan de slag kunt.",
+    "presetForReactEmail": "React Email-bibliotheek",
     "presetForReactEmailDescription": "We hebben een i18n-bibliotheek voor React Email gemaakt.",
     "readyForI18nLibraries": "Klaar voor i18n-bibliotheken",
     "readyForI18nLibrariesDescription": "We ondersteunen alle bibliotheken, inclusief de meest populaire (next-intl, react-i18next, react-intl, enz.).",
@@ -58,7 +58,7 @@
     "markdownSupportDescription": "Languine vertaalt uw markdown-inhoud naadloos, zodat documentatie en andere bestanden in sync blijven met uw workflow."
   },
   "info": {
-    "title": "Behandelt elk aspect van het lokaliseren van je app, inclusief",
+    "title": "Behandelt elk aspect van het lokaliseren van uw app, inclusief",
     "smartTranslation": {
       "title": "Slimme Vertaling",
       "intelligentTranslation": "Intelligente vertaling met contextbewustzijn",
@@ -71,7 +71,7 @@
       "title": "Implementatie",
       "quickSetup": "Snelle installatie en integratie",
       "fileFormat": "Bestandsformaatverwerking",
-      "contentStructure": "Organisatie van contentstructuur",
+      "contentStructure": "Organisatie van de inhoudsstructuur",
       "assetOrganization": "Organisatie van activa"
     },
     "developer": {
@@ -87,10 +87,10 @@
     "title": "Aanmelden",
     "github": "Aanmelden met GitHub",
     "google": "Aanmelden met Google",
-    "footer": "Automatiseer je lokalisatie.",
-    "description": "Meld je aan om je lokalisatie in enkele seconden te automatiseren.",
+    "footer": "Automatiseer uw lokalisatie.",
+    "description": "Meld u aan om uw lokalisatie in enkele seconden te automatiseren.",
     "terms": {
-      "text": "Door je aan te melden, ga je akkoord met onze",
+      "text": "Door u aan te melden, gaat u akkoord met onze",
       "termsOfService": "Servicevoorwaarden",
       "and": "en",
       "privacyPolicy": "Privacybeleid"
@@ -122,21 +122,21 @@
   "account": {
     "fullName": {
       "title": "Volledige naam",
-      "description": "Je volledige naam zoals deze op het platform zal verschijnen.",
-      "placeholder": "Voer je volledige naam in"
+      "description": "Uw volledige naam zoals deze op het platform zal verschijnen.",
+      "placeholder": "Voer uw volledige naam in"
     },
     "email": {
       "title": "E-mailadres",
-      "description": "Het e-mailadres dat aan je account is gekoppeld.",
-      "placeholder": "Voer je e-mailadres in"
+      "description": "Het e-mailadres dat aan uw account is gekoppeld.",
+      "placeholder": "Voer uw e-mailadres in"
     },
     "apiKey": {
       "title": "API-sleutel",
-      "description": "Je persoonlijke API-sleutel voor toegang tot de Languine API en vanuit de CLI."
+      "description": "Uw persoonlijke API-sleutel voor toegang tot de Languine API en vanuit de CLI."
     },
     "deleteAccount": {
       "title": "Account verwijderen",
-      "description": "Verwijder je account en alle bijbehorende gegevens permanent. Deze actie kan niet ongedaan worden gemaakt.",
+      "description": "Verwijder uw account en alle bijbehorende gegevens permanent. Deze actie kan niet ongedaan worden gemaakt.",
       "button": "Account verwijderen"
     }
   },
@@ -145,7 +145,7 @@
   },
   "dangerZone": {
     "dialog": {
-      "title": "Weet je het zeker?",
+      "title": "Weet u het zeker?",
       "description": "Deze actie kan niet ongedaan worden gemaakt. Typ DELETE om te bevestigen.",
       "placeholder": "Typ DELETE om te bevestigen",
       "confirm": "Bevestig Verwijderen",
@@ -155,11 +155,11 @@
   "pipeline": {
     "title": "Workflow (CI/CD Pipeline)",
     "pro": "[pro]",
-    "description": "Onze vertaalengine integreert naadloos in uw bestaande CI/CD-pipeline en vertaalt automatisch uw codebase bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, behouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkstem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, zodat ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdbranch en worden gedeployed. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud in sync blijft met de ontwikkeling."
+    "description": "Onze vertaalengine integreert naadloos in uw bestaande CI/CD-pipeline en vertaalt automatisch uw codebase bij elke push. Wanneer codewijzigingen worden gepusht, analyseren we de gewijzigde inhoud, behouden we uw vertaalgeheugen en genereren we nauwkeurige vertalingen terwijl we uw merkspecifieke stem en terminologie behouden. De vertalingen worden vervolgens ingediend als pull-requests, zodat ze kunnen worden beoordeeld voordat ze worden samengevoegd in uw hoofdbranch en worden gedeployed. Deze geautomatiseerde workflow zorgt ervoor dat uw gelokaliseerde inhoud synchroon blijft met de ontwikkeling."
   },
   "settings": {
     "badRequest": "Ongeldig verzoek",
-    "badRequestDescription": "De organisatie moet minstens één eigenaar hebben. Geef het eigendom over aan een ander lid voordat u deze eigenaar verwijdert.",
+    "badRequestDescription": "De organisatie moet minstens één eigenaar hebben. Draag het eigendom over aan een ander lid voordat u deze eigenaar verwijdert.",
     "permissionDenied": "Toegang geweigerd",
     "permissionDeniedDescription": "U moet een eigenaar van het team zijn om deze actie uit te voeren",
     "deleteTeamTitle": "Verwijder team",
@@ -168,7 +168,7 @@
     "savedDescription": "Uw wijzigingen zijn succesvol opgeslagen",
     "error": "Er is iets misgegaan",
     "errorDescription": "Probeer het opnieuw of neem contact op met de ondersteuning",
-    "addTeam": "Maak team aan",
+    "addTeam": "Team aanmaken",
     "apiKey": {
       "updated": "API-sleutel bijgewerkt",
       "updatedDescription": "Uw API-sleutel is succesvol bijgewerkt en naar uw klembord gekopieerd.",
@@ -184,7 +184,7 @@
       "provider": "Provider",
       "billing": "Facturering"
     },
-    "addProject": "Maak project aan",
+    "addProject": "Project aanmaken",
     "project": {
       "name": {
         "title": "Projectnaam",
@@ -197,9 +197,9 @@
         "placeholder": "Project-ID"
       },
       "delete": {
-        "title": "Verwijder Project",
+        "title": "Project verwijderen",
         "description": "Verwijder dit project en al zijn gegevens permanent",
-        "button": "Verwijder Project"
+        "button": "Project verwijderen"
       }
     },
     "save": "Opslaan",
@@ -226,21 +226,21 @@
         "leaveTeamDescription": "Weet u zeker dat u dit team wilt verlaten?",
         "cancel": "Annuleren",
         "leaveTeam": "Verlaat team",
-        "invite": "Nodig lid uit",
+        "invite": "Lid uitnodigen",
         "title": "Leden",
-        "pendingInvitations": "In afwachting van uitnodigingen",
+        "pendingInvitations": "Hangende uitnodigingen",
         "removeMember": "Verwijder lid",
         "removeMemberConfirm": "Verwijder lid",
         "removeMemberDescription": "Weet u zeker dat u dit lid wilt verwijderen?",
         "filterPlaceholder": "Filter leden...",
-        "allRoles": "Alle Rollen",
+        "allRoles": "Alle rollen",
         "date": "Datum",
         "selectAll": "{count} geselecteerd",
-        "noPendingInvitations": "Geen uitstaande uitnodigingen",
+        "noPendingInvitations": "Geen hangende uitnodigingen",
         "noResults": "Geen leden gevonden",
         "tryDifferentSearch": "Probeer een andere zoekopdracht",
         "inviteMembers": "Nodig leden uit om samen te werken",
-        "deleteInvite": "Verwijder Uitnodiging",
+        "deleteInvite": "Verwijder uitnodiging",
         "deleteInviteDescription": "Verwijder de uitnodiging",
         "invitedBy": "Uitgenodigd door {name}",
         "deleteInviteSuccess": "Uitnodiging verwijderd",
@@ -257,12 +257,12 @@
           "newest": "Nieuwste",
           "oldest": "Oudste"
         },
-        "deleteInviteConfirm": "Verwijder Uitnodiging"
+        "deleteInviteConfirm": "Verwijder uitnodiging"
       },
       "email": {
-        "title": "Team E-mail",
+        "title": "Team e-mailadres",
         "description": "Het e-mailadres dat aan uw team is gekoppeld",
-        "placeholder": "Voer team e-mail in"
+        "placeholder": "Voer team e-mailadres in"
       }
     }
   },
@@ -278,7 +278,7 @@
     },
     "contextDetection": {
       "title": "Contextdetectie",
-      "description": "Detecteer en behoud automatisch context in vertalingen"
+      "description": "Detecteer en behoud automatisch de context in vertalingen"
     },
     "styleGuide": "Stijlgids",
     "lengthControl": {
@@ -292,7 +292,7 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "Inclusieve Taal",
+      "title": "Inclusieve taal",
       "description": "Zorg ervoor dat vertalingen inclusieve taal gebruiken"
     },
     "formality": {
@@ -362,7 +362,7 @@
     },
     "terminology": {
       "title": "Terminologie",
-      "description": "Beheer gespecialiseerde terminologie en glossaria"
+      "description": "Beheer gespecialiseerde terminologie en woordenlijsten"
     },
     "culturalAdaptation": {
       "title": "Culturele Aanpassing",
@@ -393,12 +393,12 @@
       "includes_free": "Alles in Gratis, plus:",
       "features": {
         "github_action": "GitHub Actie-integratie",
-        "latest_features": "Vroeg toegang tot de nieuwste functies",
+        "latest_features": "Vroeg toegang tot nieuwste functies",
         "priority_support": "Prioriteitssteun",
         "priority_queues": "Prioriteitsvertalingswachtrijen",
-        "languages": "Vanaf 8 talen",
-        "keys_limit": "Vanaf 10.000 sleutels",
-        "docs_limit": "Vanaf 50 documenten"
+        "languages": "Beginnend vanaf 4 talen",
+        "keys_limit": "Beginnend vanaf 5.000 sleutels",
+        "docs_limit": "Beginnend vanaf 25 documenten"
       }
     },
     "cta": "Begin met automatiseren",
@@ -409,17 +409,17 @@
     "teamNamePlaceholder": "Voer teamnaam in",
     "createTeamButton": "Team aanmaken",
     "cancel": "Annuleren",
-    "createTeamDescription": "Maak een nieuw team aan om uw projecten en medewerkers te beheren."
+    "createTeamDescription": "Maak een nieuw team aan om uw projecten en samenwerkers te beheren."
   },
   "createProject": {
-    "createProjectTitle": "Maak een nieuw project aan",
+    "createProjectTitle": "Maak een nieuw project",
     "projectNamePlaceholder": "Voer projectnaam in",
     "createProjectButton": "Project aanmaken",
     "cancel": "Annuleren",
     "createProjectDescription": "Maak een nieuw project aan om uw lokalisatie te automatiseren."
   },
   "invite": {
-    "inviteMember": "Lid uitnodigen",
+    "inviteMember": "Nodig lid uit",
     "inviteDescription": "Nodig een lid uit voor uw team",
     "emailLabel": "E-mail",
     "emailPlaceholder": "Voer e-mail in",
@@ -461,8 +461,8 @@
   },
   "cli": {
     "success": {
-      "title": "Languine CLI Inloggen Succesvol",
-      "description": "Languine CLI is succesvol geauthenticeerd als:",
+      "title": "Languine CLI Aanmelding Succesvol",
+      "description": "Languine CLI is succesvol geverifieerd als:",
       "description_2": "Je kunt nu dit tabblad sluiten en terugkeren naar de CLI"
     }
   },
@@ -486,7 +486,7 @@
     "da": "Deens",
     "el": "Grieks",
     "es": "Spaans",
-    "et": "Ests",
+    "et": "Estisch",
     "fi": "Fins",
     "fr": "Frans",
     "he": "Hebreeuws",
@@ -552,19 +552,19 @@
     "title": "Veelgestelde Vragen",
     "what_is_languine": {
       "question": "Wat is Languine?",
-      "answer": "Languine is een AI-gestuurde lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals afstemopties, vertaaloverschrijvingen, analytics en contextgeheugen om hoogwaardige vertalingen te waarborgen."
+      "answer": "Languine is een AI-gestuurde lokalisatieplatform dat je helpt de vertaling van je applicaties te automatiseren. Het biedt functies zoals afstemopties, vertaaloverschrijvingen, analyses en contextgeheugen om hoogwaardige vertalingen te waarborgen."
     },
     "key_limit": {
       "question": "Hoe werkt de sleutel limiet?",
-      "answer": "Een vertaald sleutel wordt geteld wanneer je een bronsleutel in een doeltaal vertaalt. Bijvoorbeeld, als je 20 bronsleutels hebt en deze in 5 talen vertaalt, komt dat neer op 100 vertaalde sleutels (20 sleutels × 5 talen)."
+      "answer": "Een vertaald sleutel wordt geteld wanneer je een bronsleutel vertaalt naar een doeltaal. Bijvoorbeeld, als je 20 bronsleutels hebt en deze vertaalt naar 5 talen, dan zijn dat 100 vertaalde sleutels (20 sleutels × 5 talen)."
     },
     "supported_languages": {
       "question": "Welke talen worden ondersteund?",
-      "answer": "Languine ondersteunt meer dan 100 talen in alle plannen. Hoewel onze AI-gestuurde vertalingen het beste werken met grote talen, streven we ernaar om kwaliteitsvertalingen te bieden in alle ondersteunde talen. Als je specifieke taalvereisten hebt of vragen over de vertaalkwaliteit voor bepaalde talen, neem dan contact op met ons ondersteuningsteam."
+      "answer": "Languine ondersteunt meer dan 100 talen in alle plannen. Terwijl onze AI-gestuurde vertalingen het beste werken met grote talen, streven we ernaar om kwaliteitsvertalingen te bieden in alle ondersteunde talen. Als je specifieke taalvereisten of vragen hebt over de vertaalkwaliteit voor bepaalde talen, neem dan contact op met ons ondersteuningsteam."
     },
     "github_action": {
-      "question": "Hoe werkt de GitHub Action-integratie?",
-      "answer": "De GitHub Action-integratie (beschikbaar in Pro-plannen) stelt je in staat om je vertaalworkflow automatisch te automatiseren in je CI/CD-pijplijn. Wanneer je wijzigingen naar je repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
+      "question": "Hoe werkt de GitHub Action integratie?",
+      "answer": "De GitHub Action integratie (beschikbaar in Pro-plannen) stelt je in staat om je vertaalworkflow automatisch te automatiseren in je CI/CD-pijplijn. Wanneer je wijzigingen naar je repository pusht, kunnen vertalingen automatisch worden bijgewerkt."
     },
     "support": {
       "question": "Wat voor soort ondersteuning bieden jullie?",
@@ -576,11 +576,11 @@
     },
     "open_source_pricing": {
       "question": "Bieden jullie speciale prijzen voor open source-projecten?",
-      "answer": "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als je een open source-project beheert, kun je toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over je project, en we zorgen ervoor dat je een kortingsaccount voor Pro krijgt. Dit is onze manier om iets terug te doen voor de gemeenschap die ons werk mogelijk maakt."
+      "answer": "Ja! We houden ervan om de open source-gemeenschap te ondersteunen. Als je een open source-project beheert, kun je toegang krijgen tot onze Pro-functies met 30% korting. Neem gewoon contact op met ons team met details over je project, en we zorgen ervoor dat je een kortingsaccount voor Pro krijgt. Dit is onze manier om iets terug te geven aan de gemeenschap die ons werk mogelijk maakt."
     },
     "cancel_subscription": {
-      "question": "Hoe annuleer ik mijn abonnement?",
-      "answer": "Je kunt je abonnement op elk moment annuleren vanuit je accountinstellingen. Ga naar Facturering > Plan Wijzigen. Je abonnement blijft actief tot het einde van je huidige factureringsperiode, waarna je naar het Gratis plan wordt overgezet."
+      "question": "Hoe kan ik mijn abonnement annuleren?",
+      "answer": "Je kunt je abonnement op elk moment annuleren vanuit je accountinstellingen. Navigeer naar Facturering > Plan Wijzigen. Je abonnement blijft actief tot het einde van je huidige factureringsperiode, waarna je naar het Gratis plan wordt overgezet."
     }
   },
   "pricing_slider": {
@@ -608,7 +608,7 @@
     "tuning": "Afstemming",
     "overrides": "Overschrijvingen",
     "settings": "Instellingen",
-    "hooks": "Code Formatter",
+    "hooks": "Code Formatteren",
     "examples": "Voorbeelden",
     "team": "Team"
   },
@@ -640,19 +640,19 @@
     "translationKeys": "Vertaal Sleutels",
     "documents": "Documenten",
     "languages": "Talen",
-    "changePlan": "Plan Upgraden",
+    "changePlan": "Upgrade Plan",
     "free": "Gratis",
     "manage_button": "Beheer Abonnement",
     "canceled": "Te annuleren"
   },
   "changePlan": {
-    "title": "Plan Upgraden",
+    "title": "Upgrade Plan",
     "upgrade_to_tier": "Upgrade naar laag {tier}",
     "cancel": "Annuleren",
-    "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaalsleutels, documenten, talen en prioritaire ondersteuning."
+    "description": "Upgrade uw plan om uw limieten te verhogen. U krijgt toegang tot meer vertaal sleutels, documenten, talen en prioritaire ondersteuning."
   },
   "test_translation": {
-    "title": "Testvertaling",
+    "title": "Test Vertaling",
     "description": "Test de vertaling van uw project"
   }
 }

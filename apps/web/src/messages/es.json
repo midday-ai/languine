@@ -1,7 +1,7 @@
 {
   "header": {
     "pricing": "Precios",
-    "docs": "Documentación",
+    "docs": "Documentos",
     "signIn": "Iniciar sesión",
     "goToApp": "Ir a la aplicación"
   },
@@ -45,7 +45,7 @@
   "features": {
     "title": "Características",
     "fullyOpenSource": "Totalmente de código abierto",
-    "fullyOpenSourceDescription": "Nuestro código está disponible públicamente en GitHub, lo que permite transparencia y contribuciones de la comunidad.",
+    "fullyOpenSourceDescription": "Nuestro código está disponible públicamente en GitHub, lo que permite la transparencia y las contribuciones de la comunidad.",
     "presetsForExpo": "Ajustes predefinidos para Expo",
     "presetsForExpoDescription": "Proporcionamos ajustes predefinidos para Expo, para que puedas comenzar rápidamente.",
     "presetForReactNative": "Ajuste predefinido para React Native",
@@ -69,7 +69,7 @@
     },
     "implementation": {
       "title": "Implementación",
-      "quickSetup": "Configuración e integración rápidas",
+      "quickSetup": "Configuración e integración rápida",
       "fileFormat": "Manejo de formatos de archivo",
       "contentStructure": "Organización de la estructura de contenido",
       "assetOrganization": "Organización de activos"
@@ -104,7 +104,7 @@
     "signOut": "Cerrar sesión",
     "createTeam": "Crear equipo",
     "homepage": "Página de inicio",
-    "team": "Configuraciones de Equipo"
+    "team": "Configuraciones del Equipo"
   },
   "teamSelector": {
     "addProject": "Crear proyecto",
@@ -146,7 +146,7 @@
   "dangerZone": {
     "dialog": {
       "title": "¿Estás absolutamente seguro?",
-      "description": "Esta acción no se puede deshacer. Por favor, escribe DELETE para confirmar.",
+      "description": "Esta acción no se puede deshacer. Por favor escribe DELETE para confirmar.",
       "placeholder": "Escribe DELETE para confirmar",
       "confirm": "Confirmar eliminación",
       "cancel": "Cancelar"
@@ -155,25 +155,25 @@
   "pipeline": {
     "title": "Flujo de trabajo (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nuestro motor de traducción se integra sin problemas en tu pipeline CI/CD existente, traduciendo automáticamente tu base de código en cada envío. Cuando se envían cambios de código, analizamos el contenido modificado, mantenemos tu memoria de traducción y generamos traducciones precisas mientras preservamos la voz y la terminología de tu marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en tu rama principal y desplegadas. Este flujo de trabajo automatizado asegura que tu contenido localizado se mantenga sincronizado con el desarrollo."
+    "description": "Nuestro motor de traducción se integra sin problemas en su pipeline CI/CD existente, traduciendo automáticamente su base de código en cada envío. Cuando se envían cambios en el código, analizamos el contenido modificado, mantenemos su memoria de traducción y generamos traducciones precisas mientras preservamos la voz y la terminología de su marca. Las traducciones se envían como solicitudes de extracción, permitiendo la revisión antes de ser fusionadas en su rama principal y desplegadas. Este flujo de trabajo automatizado asegura que su contenido localizado se mantenga sincronizado con el desarrollo."
   },
   "settings": {
     "badRequest": "Solicitud inválida",
-    "badRequestDescription": "La organización debe tener al menos un propietario. Transfiere la propiedad a otro miembro antes de eliminar a este propietario.",
+    "badRequestDescription": "La organización debe tener al menos un propietario. Transfiera la propiedad a otro miembro antes de eliminar a este propietario.",
     "permissionDenied": "Permiso denegado",
-    "permissionDeniedDescription": "Necesitas ser propietario del equipo para realizar esta acción",
+    "permissionDeniedDescription": "Necesita ser propietario del equipo para realizar esta acción",
     "deleteTeamTitle": "Eliminar equipo",
-    "deleteTeamDescription": "No se puede eliminar la organización cuando eres el único miembro, en su lugar elimina tu cuenta",
+    "deleteTeamDescription": "No se puede eliminar la organización cuando usted es el único miembro, en su lugar elimine su cuenta",
     "saved": "Configuraciones guardadas",
-    "savedDescription": "Tus cambios se han guardado correctamente",
+    "savedDescription": "Sus cambios se han guardado correctamente",
     "error": "Algo salió mal",
-    "errorDescription": "Por favor, intenta de nuevo o contacta al soporte",
+    "errorDescription": "Por favor, inténtelo de nuevo o contacte con soporte",
     "addTeam": "Crear equipo",
     "apiKey": {
       "updated": "Clave API actualizada",
-      "updatedDescription": "Tu clave API ha sido actualizada correctamente y copiada en tu portapapeles.",
+      "updatedDescription": "Su clave API ha sido actualizada correctamente y copiada en su portapapeles.",
       "title": "Actualizar clave API",
-      "description": "¿Estás seguro de que deseas generar una nueva clave API? La clave anterior dejará de funcionar inmediatamente.",
+      "description": "¿Está seguro de que desea generar una nueva clave API? La clave anterior dejará de funcionar inmediatamente.",
       "cancel": "Cancelar",
       "continue": "Continuar"
     },
@@ -188,12 +188,12 @@
     "project": {
       "name": {
         "title": "Nombre del Proyecto",
-        "description": "El nombre de tu proyecto",
-        "placeholder": "Ingresa el nombre del proyecto"
+        "description": "El nombre de su proyecto",
+        "placeholder": "Ingrese el nombre del proyecto"
       },
       "id": {
         "title": "ID del Proyecto",
-        "description": "Tu identificador único de proyecto",
+        "description": "Su identificador único del proyecto",
         "placeholder": "ID del Proyecto"
       },
       "delete": {
@@ -206,24 +206,24 @@
     "team": {
       "name": {
         "title": "Nombre del Equipo",
-        "description": "El nombre de tu equipo",
-        "placeholder": "Ingresa el nombre del equipo"
+        "description": "El nombre de su equipo",
+        "placeholder": "Ingrese el nombre del equipo"
       },
       "billing": {
         "title": "Plan de Facturación",
-        "description": "Gestiona el plan de facturación de tu equipo",
+        "description": "Gestionar el plan de facturación de su equipo",
         "free": "Gratis",
         "pro": "Pro",
         "unlimited": "Ilimitado"
       },
       "apiKey": {
         "title": "Clave API del Equipo",
-        "description": "Clave API para acceso al equipo, usa esto desde tu pipeline CI/CD junto con el ID del Proyecto",
+        "description": "Clave API para acceso del equipo, utilícela desde su pipeline CI/CD junto con el ID del Proyecto",
         "placeholder": "Clave API del Equipo"
       },
       "members": {
         "leaveTeamConfirm": "Salir del equipo",
-        "leaveTeamDescription": "¿Estás seguro de que deseas salir de este equipo?",
+        "leaveTeamDescription": "¿Está seguro de que desea salir de este equipo?",
         "cancel": "Cancelar",
         "leaveTeam": "Salir del equipo",
         "invite": "Invitar miembro",
@@ -231,14 +231,14 @@
         "pendingInvitations": "Invitaciones Pendientes",
         "removeMember": "Eliminar miembro",
         "removeMemberConfirm": "Eliminar miembro",
-        "removeMemberDescription": "¿Estás seguro de que deseas eliminar a este miembro?",
+        "removeMemberDescription": "¿Está seguro de que desea eliminar a este miembro?",
         "filterPlaceholder": "Filtrar miembros...",
         "allRoles": "Todos los Roles",
         "date": "Fecha",
         "selectAll": "{count} seleccionados",
         "noPendingInvitations": "No hay invitaciones pendientes",
         "noResults": "No se encontraron miembros",
-        "tryDifferentSearch": "Intenta una búsqueda diferente",
+        "tryDifferentSearch": "Intente una búsqueda diferente",
         "inviteMembers": "Invitar miembros a colaborar",
         "deleteInvite": "Eliminar Invitación",
         "deleteInviteDescription": "Eliminar la invitación",
@@ -246,9 +246,9 @@
         "deleteInviteSuccess": "Invitación eliminada",
         "deleteInviteError": "Error al eliminar la invitación",
         "removeMemberSuccess": "Miembro eliminado",
-        "removeMemberError": "Error al eliminar el miembro",
+        "removeMemberError": "Error al eliminar miembro",
         "removeMemberSuccessDescription": "El miembro ha sido eliminado correctamente",
-        "removeMemberErrorDescription": "Error al eliminar el miembro",
+        "removeMemberErrorDescription": "Error al eliminar miembro",
         "roles": {
           "owner": "Propietario",
           "member": "Miembro"
@@ -261,8 +261,8 @@
       },
       "email": {
         "title": "Correo Electrónico del Equipo",
-        "description": "La dirección de correo electrónico asociada con tu equipo",
-        "placeholder": "Ingresa el correo electrónico del equipo"
+        "description": "La dirección de correo electrónico asociada con su equipo",
+        "placeholder": "Ingrese el correo electrónico del equipo"
       }
     }
   },
@@ -270,7 +270,7 @@
     "general": "General",
     "translationMemory": {
       "title": "Memoria de Traducción",
-      "description": "Usa la memoria de traducción para mejorar la consistencia y eficiencia"
+      "description": "Utilice la memoria de traducción para mejorar la consistencia y eficiencia"
     },
     "qualityChecks": {
       "title": "Controles de Calidad",
@@ -293,7 +293,7 @@
     },
     "inclusiveLanguage": {
       "title": "Lenguaje Inclusivo",
-      "description": "Asegúrate de que las traducciones utilicen lenguaje inclusivo"
+      "description": "Asegurar que las traducciones utilicen un lenguaje inclusivo"
     },
     "formality": {
       "title": "Formalidad",
@@ -358,15 +358,15 @@
     },
     "idioms": {
       "title": "Modismos",
-      "description": "Maneja las expresiones idiomáticas de manera adecuada"
+      "description": "Manejar expresiones idiomáticas de manera adecuada"
     },
     "terminology": {
       "title": "Terminología",
-      "description": "Gestiona la terminología especializada y los glosarios"
+      "description": "Gestionar terminología especializada y glosarios"
     },
     "culturalAdaptation": {
       "title": "Adaptación Cultural",
-      "description": "Adapta el contenido para la adecuación cultural"
+      "description": "Adaptar contenido para la adecuación cultural"
     }
   },
   "pricing": {
@@ -393,12 +393,12 @@
       "includes_free": "Todo en Gratis, más:",
       "features": {
         "github_action": "Integración de GitHub Action",
-        "latest_features": "Acceso anticipado a las últimas características",
+        "latest_features": "Acceso anticipado a las últimas funciones",
         "priority_support": "Soporte prioritario",
         "priority_queues": "Colas de traducción prioritarias",
-        "languages": "A partir de 8 idiomas",
-        "keys_limit": "A partir de 10 000 claves",
-        "docs_limit": "A partir de 50 documentos"
+        "languages": "A partir de 4 idiomas",
+        "keys_limit": "A partir de 5,000 claves",
+        "docs_limit": "A partir de 25 documentos"
       }
     },
     "cta": "Comienza a automatizar",
@@ -552,15 +552,15 @@
     "title": "Preguntas Frecuentes",
     "what_is_languine": {
       "question": "¿Qué es Languine?",
-      "answer": "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Proporciona características como opciones de ajuste fino, sobrescrituras de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
+      "answer": "Languine es una plataforma de localización impulsada por IA que te ayuda a automatizar la traducción de tus aplicaciones. Proporciona características como opciones de ajuste fino, sobreescrituras de traducción, análisis y memoria de contexto para garantizar traducciones de alta calidad."
     },
     "key_limit": {
       "question": "¿Cómo funciona el límite de claves?",
       "answer": "Una clave traducida se cuenta cuando traduces una clave de origen a un idioma de destino. Por ejemplo, si tienes 20 claves de origen y las traduces a 5 idiomas, eso equivale a 100 claves traducidas (20 claves × 5 idiomas)."
     },
     "supported_languages": {
-      "question": "¿Qu�� idiomas están soportados?",
-      "answer": "Languine soporta más de 100 idiomas en todos los planes. Aunque nuestras traducciones impulsadas por IA funcionan mejor con idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
+      "question": "¿Qué idiomas están soportados?",
+      "answer": "Languine soporta más de 100 idiomas en todos los planes. Si bien nuestras traducciones impulsadas por IA funcionan mejor con idiomas principales, nos esforzamos por proporcionar traducciones de calidad en todos los idiomas soportados. Si tienes requisitos específicos de idioma o preguntas sobre la calidad de la traducción para idiomas particulares, por favor contacta a nuestro equipo de soporte."
     },
     "github_action": {
       "question": "¿Cómo funciona la integración de GitHub Action?",
@@ -572,15 +572,15 @@
     },
     "open_source": {
       "question": "¿Es Languine de código abierto?",
-      "answer": "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, reportar problemas, sugerir características e inspeccionar el código. Creemos en la transparencia y en construir en público."
+      "answer": "¡Sí! Languine es completamente de código abierto y está disponible en GitHub. Puedes contribuir al proyecto, informar problemas, sugerir características e inspeccionar el código. Creemos en la transparencia y en construir en público."
     },
     "open_source_pricing": {
       "question": "¿Ofrecen precios especiales para proyectos de código abierto?",
-      "answer": "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes acceder a nuestras características Pro con un 30% de descuento. Solo contacta a nuestro equipo con detalles sobre tu proyecto y te configuraremos una cuenta Pro con descuento. Esta es nuestra forma de retribuir a la comunidad que hace posible nuestro trabajo."
+      "answer": "¡Sí! Nos encanta apoyar a la comunidad de código abierto. Si mantienes un proyecto de código abierto, puedes acceder a nuestras características Pro con un 30% de descuento. Solo contacta a nuestro equipo con detalles sobre tu proyecto y te configuraremos una cuenta Pro con descuento. Esta es nuestra manera de retribuir a la comunidad que hace posible nuestro trabajo."
     },
     "cancel_subscription": {
       "question": "¿Cómo cancelo mi suscripción?",
-      "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Navega a Facturación > Cambiar Plan. Tu suscripción permanecerá activa hasta el final de tu período de facturación actual, después del cual serás trasladado al plan gratuito."
+      "answer": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta. Navega a Facturación > Cambiar Plan. Tu suscripción seguirá activa hasta el final de tu período de facturación actual, después del cual serás trasladado al plan Gratuito."
     }
   },
   "pricing_slider": {
@@ -596,63 +596,63 @@
     "getting-started": "Introducción",
     "workflow": "Flujo de trabajo",
     "ci": "CI/CD",
-    "presets": "Preajustes",
+    "presets": "Ajustes predefinidos",
     "formats": "Formatos",
     "platform": "Plataforma",
     "introduction": "Introducción",
-    "quickstart": "Inicio rápido",
+    "quickstart": "Guía rápida",
     "authentication": "Autenticación",
     "configuration": "Configuración",
     "cli": "CLI",
     "github-actions": "Acciones de GitHub",
     "tuning": "Ajustes",
-    "overrides": "Anulaciones",
+    "overrides": "Sobrescrituras",
     "settings": "Configuraciones",
-    "hooks": "Formatadores de Código",
+    "hooks": "Formateadores de código",
     "examples": "Ejemplos",
     "team": "Equipo"
   },
   "overrides": {
-    "title": "Anulaciones"
+    "title": "Sobrescrituras"
   },
   "overrides_sheet": {
     "title": "Editar traducción",
-    "description": "Editar la traducción para esta clave",
+    "description": "Edita la traducción para esta clave",
     "save": "Guardar"
   },
   "filter_locales": {
     "languages": "Idiomas"
   },
   "plan_settings": {
-    "translationKeys": "Claves de Traducción",
+    "translationKeys": "Claves de traducción",
     "documents": "Documentos",
     "languages": "Idiomas",
-    "keysUsed": "claves utilizadas",
-    "documentsUsed": "documentos utilizados",
-    "languagesUsed": "idiomas utilizados"
+    "keysUsed": "claves usadas",
+    "documentsUsed": "documentos usados",
+    "languagesUsed": "idiomas usados"
   },
   "plan_tier": {
-    "currentTier": "Nivel Actual"
+    "currentTier": "Nivel actual"
   },
   "current_tier": {
-    "currentTier": "Nivel Actual",
+    "currentTier": "Nivel actual",
     "tier": "Nivel",
-    "translationKeys": "Claves de Traducción",
+    "translationKeys": "Claves de traducción",
     "documents": "Documentos",
     "languages": "Idiomas",
-    "changePlan": "Actualizar Plan",
+    "changePlan": "Actualizar plan",
     "free": "Gratis",
-    "manage_button": "Gestionar Suscripción",
+    "manage_button": "Gestionar suscripción",
     "canceled": "Por cancelar"
   },
   "changePlan": {
-    "title": "Actualizar Plan",
+    "title": "Actualizar plan",
     "upgrade_to_tier": "Actualizar a nivel {tier}",
     "cancel": "Cancelar",
     "description": "Actualiza tu plan para aumentar tus límites. Obtendrás acceso a más claves de traducción, documentos, idiomas y soporte prioritario."
   },
   "test_translation": {
-    "title": "Prueba de Traducción",
+    "title": "Prueba de traducción",
     "description": "Prueba la traducción de tu proyecto"
   }
 }

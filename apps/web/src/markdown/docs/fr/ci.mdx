@@ -8,27 +8,27 @@ Languine fournit une intégration CI/CD pour vous aider à traduire votre applic
 
 Le flux de travail CI/CD dans Languine suit un processus structuré pour automatiser les mises à jour de traduction dans votre application :
 
-### 1. Initialisation de l'action
+### 1. Initialisation de l'Action
 - Le flux de travail commence lorsque l'action est déclenchée
 - Configure les paramètres Git et les identifiants nécessaires
 
-### 2. Traitement par le moteur Languine
+### 2. Traitement par le Moteur Languine
 - Le moteur Languine traite le contenu de votre application
 - Gère les tâches de traduction en utilisant les paramètres configurés
 
-### 3. Détection des changements
-Le système vérifie les changements de traduction et suit l'un des deux chemins :
+### 3. Détection des Changements
+Le système vérifie s'il y a des changements de traduction et suit l'un des deux chemins :
 
-**Lorsque des changements sont trouvés :**
+**Lorsque des Changements sont Trouvés :**
 - Les changements sont engagés dans le dépôt
 - Les changements sont poussés vers la branche spécifiée
-- Une demande de tirage (PR) est créée
+- Une Demande de Tirage (PR) est créée
 
-**Lorsque aucun changement n'est trouvé :**
+**Lorsque Aucun Changement n'est Trouvé :**
 - Le flux de travail se termine sans créer de PR
 
-### 4. Création de la demande de tirage
-Lorsque des changements sont détectés, une demande de tirage est créée avec :
+### 4. Création de la Demande de Tirage
+Lorsque des changements sont détectés, une Demande de Tirage est créée avec :
 
 **Contenu de la PR :**
 - Titre clair indiquant les mises à jour de traduction
@@ -37,7 +37,7 @@ Lorsque des changements sont détectés, une demande de tirage est créée avec 
 - Instructions pour la révision
 - Liens vers la documentation et le support
 
-**La description de la PR comprend :**
+**La Description de la PR Comprend :**
 - Résumé des mises à jour de traduction
 - Liste des changements (traductions mises à jour, cohérence terminologique)
 - Prochaines étapes pour les réviseurs
@@ -45,7 +45,7 @@ Lorsque des changements sont détectés, une demande de tirage est créée avec 
 
 ---
 
-## Diagramme de flux de travail
+## Diagramme de Flux de Travail
 
 <div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
   <pre
@@ -58,12 +58,12 @@ Lorsque des changements sont détectés, une demande de tirage est créée avec 
   >
     {`
                     ┌─────────────────────┐
-                    │   Action Démarre    │
+                    │   L'action Commence  │
                     └──────────┬──────────┘
                                │
                     ┌──────────▼──────────┐
-                    │    Configurer Git &  │
-                    │    Identifiants      │
+                    │    Configuration     │
+                    │    Git & Identifiants│
                     └──────────┬──────────┘
                                │
 ┌─────────────────────────────────────────────────────────┐
@@ -94,4 +94,4 @@ Lorsque des changements sont détectés, une demande de tirage est créée avec 
   </pre>
 </div>
 
-Le flux de travail est conçu pour être automatisé tout en permettant une révision humaine et un contrôle de qualité avant que les changements ne soient fusionnés dans votre code. Il maintient les meilleures pratiques de contrôle de version et garantit que les traductions sont correctement suivies et documentées à travers l'historique Git.
+Le flux de travail est conçu pour être automatisé tout en permettant une révision humaine et un contrôle de qualité avant que les changements ne soient fusionnés dans votre code source. Il maintient les meilleures pratiques de contrôle de version et garantit que les traductions sont correctement suivies et documentées à travers l'historique Git.

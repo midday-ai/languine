@@ -1,6 +1,6 @@
 # Konfiguracja
 
-Languine używa pliku konfiguracyjnego JSON (languine.json) do zarządzania ustawieniami tłumaczenia. Plik ten definiuje Twoje języki źródłowe i docelowe, a także pliki, które należy przetłumaczyć.
+Languine używa pliku konfiguracyjnego JSON (languine.json) do zarządzania ustawieniami tłumaczenia. Plik ten definiuje twoje języki źródłowe i docelowe, a także pliki, które należy przetłumaczyć.
 
 ---
 
@@ -28,9 +28,9 @@ Rozłóżmy różne sekcje w pliku konfiguracyjnym.
 
 ## Konfiguracja lokalizacji
 
-Sekcja lokalizacji definiuje Twoje języki tłumaczenia:
+Sekcja lokalizacji definiuje twoje języki tłumaczenia:
 
-- source: Twój główny język do tworzenia treści (np. "en" dla angielskiego)
+- source: Twój podstawowy język do tworzenia treści (np. "en" dla angielskiego)
 - targets: Tablica języków, na które chcesz przetłumaczyć (np. ["es", "fr", "de"] dla hiszpańskiego, francuskiego i niemieckiego)
 
 Languine obsługuje szeroki zakres kodów językowych, w tym:
@@ -39,7 +39,7 @@ Languine obsługuje szeroki zakres kodów językowych, w tym:
 
 ## Konfiguracja plików
 
-Sekcja plików definiuje, które pliki Languine powinien przetłumaczyć. Możesz skonfigurować wiele typów plików i wzorców:
+Sekcja plików definiuje, które pliki Languine powinno przetłumaczyć. Możesz skonfigurować wiele typów plików i wzorców:
 
 ---
 
@@ -161,13 +161,13 @@ Jeśli korzystasz z usług chmurowych Languine, możesz uwzględnić swoje ID pr
 
 ---
 
-## Śledzenie stanu tłumaczenia
+## Śledzenie stanu tłumaczeń
 
-Languine automatycznie tworzy i utrzymuje plik languine.lock, aby śledzić stan Twoich tłumaczeń. Plik ten:
+Languine automatycznie tworzy i utrzymuje plik languine.lock, aby śledzić stan twoich tłumaczeń. Plik ten:
 
 - Śledzi, która treść została przetłumaczona
 - Pomaga zidentyfikować, co należy zaktualizować, gdy zmienia się treść źródłowa
-- Powinien być zatwierdzony w Twoim systemie kontroli wersji
+- Powinien być zatwierdzony w twoim systemie kontroli wersji
 
 Nie musisz ręcznie edytować pliku blokady - Languine zarządza nim automatycznie, gdy uruchamiasz polecenia tłumaczenia.
 
@@ -175,6 +175,6 @@ Nie musisz ręcznie edytować pliku blokady - Languine zarządza nim automatyczn
 
 1. **Kontrola wersji**: Zawsze zatwierdzaj zarówno languine.json, jak i languine.lock w swoim repozytorium
 2. **Organizacja plików**: Utrzymuj swoje pliki tłumaczeń w zorganizowanej i spójnej strukturze katalogów
-3. **Kody językowe**: Używaj standardowych kodów językowych, aby zapewnić kompatybilność
+3. **Kody językowe**: Używaj standardowych kodów językowych, aby zapewnić zgodność
 4. **Wzorce**: Używaj specyficznych wzorców dołączania, aby uniknąć tłumaczenia niepotrzebnych plików
 5. **ID projektu**: Zachowaj swoje ID projektu w bezpiecznym miejscu i nie udostępniaj go publicznie, jeśli korzystasz z usług chmurowych, zamiast tego użyj zmiennej środowiskowej `LANGUINE_PROJECT_ID`.

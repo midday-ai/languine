@@ -6,15 +6,15 @@ Languine biedt een CI/CD-integratie om je te helpen bij het vertalen van je appl
 
 ## Hoe het Werkt
 
-De CI/CD-werkwijze in Languine volgt een gestructureerd proces om vertaalupdates in je applicatie te automatiseren:
+De CI/CD-werkstroom in Languine volgt een gestructureerd proces om vertaalupdates in je applicatie te automatiseren:
 
 ### 1. Actie Initialisatie
-- De werkwijze begint wanneer de actie wordt geactiveerd
-- Stelt de noodzakelijke Git-configuratie en referenties in
+- De werkstroom begint wanneer de actie wordt geactiveerd
+- Stelt de benodigde Git-configuratie en inloggegevens in
 
 ### 2. Languine Engine Verwerking
 - De Languine-engine verwerkt de inhoud van je applicatie
-- Behandelt de vertaalopdrachten met behulp van de geconfigureerde instellingen
+- Behandelt de vertaaltaken met behulp van de geconfigureerde instellingen
 
 ### 3. Wijzigingsdetectie
 Het systeem controleert op eventuele vertaalwijzigingen en volgt een van de twee paden:
@@ -25,13 +25,13 @@ Het systeem controleert op eventuele vertaalwijzigingen en volgt een van de twee
 - Een Pull Request (PR) wordt aangemaakt
 
 **Wanneer Geen Wijzigingen Worden Gevonden:**
-- De werkwijze wordt voltooid zonder een PR aan te maken
+- De werkstroom wordt voltooid zonder een PR aan te maken
 
 ### 4. Pull Request Creatie
 Wanneer wijzigingen worden gedetecteerd, wordt er een Pull Request aangemaakt met:
 
 **PR Inhoud:**
-- Duidelijke titel die vertaalupdates aangeeft
+- Duidelijke titel die de vertaalupdates aangeeft
 - Gedetailleerde beschrijving van de wijzigingen
 - Bevestigingen van kwaliteitscontroles
 - Instructies voor beoordeling
@@ -39,13 +39,13 @@ Wanneer wijzigingen worden gedetecteerd, wordt er een Pull Request aangemaakt me
 
 **PR Beschrijving Bevat:**
 - Samenvatting van vertaalupdates
-- Lijst van wat is veranderd (bijgewerkte vertalingen, consistentie in terminologie)
+- Lijst van wat is veranderd (geupdate vertalingen, consistentie in terminologie)
 - Volgende stappen voor beoordelaars
 - Links naar documentatie en ondersteuningsbronnen
 
 ---
 
-## Workflow Diagram
+## Werkstroom Diagram
 
 <div className="flex flex-col items-center justify-center p-4 h-[400px] sm:h-[500px] md:h-[650px]">
   <pre
@@ -63,7 +63,7 @@ Wanneer wijzigingen worden gedetecteerd, wordt er een Pull Request aangemaakt me
                                │
                     ┌──────────▼──────────┐
                     │    Git &            │
-                    │    Referenties      │
+                    │    Inloggegevens     │
                     └──────────┬──────────┘
                                │
 ┌─────────────────────────────────────────────────────────┐
@@ -83,7 +83,7 @@ Wanneer wijzigingen worden gedetecteerd, wordt er een Pull Request aangemaakt me
                     └──────────┬──────────┘       │
                                │                  │
                     ┌──────────▼──────────┐       │
-                    │    Maak PR          │       │
+                    │    Creëer PR        │       │
                     └──────────┬──────────┘       │
                                │                  │
                     ┌──────────▼──────────┐       │
@@ -93,4 +93,4 @@ Wanneer wijzigingen worden gedetecteerd, wordt er een Pull Request aangemaakt me
   </pre>
 </div>
 
-De werkwijze is ontworpen om geautomatiseerd te zijn, terwijl er toch ruimte is voor menselijke beoordeling en kwaliteitscontrole voordat wijzigingen in je codebase worden samengevoegd. Het handhaaft de beste praktijken voor versiebeheer en zorgt ervoor dat vertalingen correct worden gevolgd en gedocumenteerd via de Git-geschiedenis.
+De werkstroom is ontworpen om geautomatiseerd te zijn, terwijl er toch ruimte is voor menselijke beoordeling en kwaliteitscontrole voordat wijzigingen in je codebase worden samengevoegd. Het handhaaft de beste praktijken voor versiebeheer en zorgt ervoor dat vertalingen goed worden bijgehouden en gedocumenteerd via de Git-geschiedenis.

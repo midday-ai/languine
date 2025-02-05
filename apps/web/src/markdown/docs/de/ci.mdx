@@ -16,8 +16,8 @@ Der CI/CD-Workflow in Languine folgt einem strukturierten Prozess, um Übersetzu
 - Die Languine-Engine verarbeitet den Inhalt Ihrer Anwendung
 - Bearbeitet die Übersetzungsaufgaben mit den konfigurierten Einstellungen
 
-### 3. Änderungsüberprüfung
-Das System überprüft, ob Änderungen an den Übersetzungen vorliegen, und folgt einem von zwei Wegen:
+### 3. Änderungsdetektion
+Das System überprüft, ob es Änderungen bei den Übersetzungen gibt, und folgt einem von zwei Wegen:
 
 **Wenn Änderungen gefunden werden:**
 - Änderungen werden im Repository festgeschrieben
@@ -33,9 +33,9 @@ Wenn Änderungen erkannt werden, wird ein Pull Request mit:
 **PR-Inhalt:**
 - Klare Überschrift, die die Übersetzungsaktualisierungen angibt
 - Detaillierte Beschreibung der Änderungen
-- Bestätigungen zur Qualitätsprüfung
+- Bestätigungen der Qualitätsprüfung
 - Anweisungen zur Überprüfung
-- Links zur Dokumentation und Unterstützung
+- Links zu Dokumentation und Unterstützung
 
 **PR-Beschreibung enthält:**
 - Zusammenfassung der Übersetzungsaktualisierungen
@@ -73,10 +73,10 @@ Wenn Änderungen erkannt werden, wird ein Pull Request mit:
 └─────────────────────────────────────────────────────────┘
                                │
                     ┌──────────▼──────────┐
-                    │   Änderungen prüfen  │───���───┐
+                    │   Änderungen prüfen  │───────┐
                     └──────────┬──────────┘       │
                                │                  │
-                               │ [Änderungen]      │ [Keine Änderungen]
+                               │ [Änderungen]     │ [Keine Änderungen]
                                │                  │
                     ┌──────────▼──────────┐       │
                     │   Festschreiben &    │       │
@@ -94,4 +94,4 @@ Wenn Änderungen erkannt werden, wird ein Pull Request mit:
   </pre>
 </div>
 
-Der Workflow ist so konzipiert, dass er automatisiert wird, während er dennoch eine menschliche Überprüfung und Qualitätskontrolle ermöglicht, bevor Änderungen in Ihren Code integriert werden. Er hält die besten Praktiken der Versionskontrolle ein und stellt sicher, dass Übersetzungen ordnungsgemäß verfolgt und durch die Git-Historie dokumentiert werden.
+Der Workflow ist so konzipiert, dass er automatisiert wird, während er dennoch eine menschliche Überprüfung und Qualitätskontrolle vor dem Zusammenführen von Änderungen in Ihren Code ermöglicht. Er hält die besten Praktiken der Versionskontrolle ein und stellt sicher, dass Übersetzungen ordnungsgemäß verfolgt und durch die Git-Historie dokumentiert werden.

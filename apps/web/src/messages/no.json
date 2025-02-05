@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Languine automatiserer lokalisering innenfor din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg."
+    "description": "Languine automatiserer lokalisering innen din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri holder deg tilbake."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Kom i gang",
     "title": "Lokalisering infrastruktur laget for utviklere",
-    "description": "Languine automatiserer lokalisering innenfor din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg.",
+    "description": "Languine automatiserer lokalisering innen din utviklingsarbeidsflyt og pipeline, og sikrer at oversettelser aldri holder deg tilbake.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"
@@ -45,24 +45,24 @@
   "features": {
     "title": "Funksjoner",
     "fullyOpenSource": "Helt åpen kildekode",
-    "fullyOpenSourceDescription": "Koden vår er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
+    "fullyOpenSourceDescription": "Vår kode er offentlig tilgjengelig på GitHub, noe som muliggjør åpenhet og bidrag fra fellesskapet.",
     "presetsForExpo": "Forhåndsinnstillinger for Expo",
-    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme i gang raskt.",
+    "presetsForExpoDescription": "Vi tilbyr forhåndsinnstillinger for Expo, slik at du kan komme raskt i gang.",
     "presetForReactNative": "Forhåndsinnstilling for React Native",
-    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme i gang raskt.",
-    "presetForReactEmail": "React Email-bibliotek",
-    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React Email.",
+    "presetForReactNativeDescription": "Vi tilbyr en forhåndsinnstilling for React Native, slik at du kan komme raskt i gang.",
+    "presetForReactEmail": "React E-postbibliotek",
+    "presetForReactEmailDescription": "Vi har laget et i18n-bibliotek for React E-post.",
     "readyForI18nLibraries": "Klar for i18n-biblioteker",
     "readyForI18nLibrariesDescription": "Vi støtter alle biblioteker, inkludert de mest populære (next-intl, react-i18next, react-intl, osv.).",
     "markdownSupport": "Markdown/Dokumentstøtte",
     "markdownSupportDescription": "Languine oversetter sømløst innholdet ditt i markdown, og holder dokumentasjon og andre filer synkronisert med arbeidsflyten din."
   },
   "info": {
-    "title": "Håndterer alle aspekter av lokaliseringen av appen din, inkludert",
+    "title": "Håndterer alle aspekter av lokalisering av appen din, inkludert",
     "smartTranslation": {
       "title": "Smart oversettelse",
       "intelligentTranslation": "Intelligent oversettelse med kontekstbevissthet",
-      "brandVoice": "Konsistens i merkevarestemmen og tonen",
+      "brandVoice": "Konsistens i merkevarestemme og tone",
       "terminology": "Terminologihåndtering",
       "linguisticFeatures": "Avanserte språklige funksjoner",
       "realtimeUpdates": "Sanntids oversettelsesoppdateringer"
@@ -72,14 +72,14 @@
       "quickSetup": "Rask oppsett og integrasjon",
       "fileFormat": "Håndtering av filformat",
       "contentStructure": "Organisering av innholdsstruktur",
-      "assetOrganization": "Organisering av eiendeler"
+      "assetOrganization": "Organisering av ressurser"
     },
     "developer": {
       "title": "Utvikleropplevelse",
       "cli": "Kommandolinjegrensesnitt",
       "cicd": "CI/CD-integrasjon",
       "versionControl": "Versjonskontroll",
-      "workflow": "Utviklerens arbeidsflyt",
+      "workflow": "Utviklerarbeidsflyt",
       "documentation": "Omfattende dokumentasjon"
     }
   },
@@ -87,8 +87,8 @@
     "title": "Logg inn",
     "github": "Logg inn med GitHub",
     "google": "Logg inn med Google",
-    "footer": "Automatiser lokaliseringen din.",
-    "description": "Logg inn for å begynne å automatisere lokaliseringen din på sekunder.",
+    "footer": "Automatiser din lokalisering.",
+    "description": "Logg inn for å begynne å automatisere din lokalisering på sekunder.",
     "terms": {
       "text": "Ved å logge inn, godtar du våre",
       "termsOfService": "Vilkår for bruk",
@@ -165,13 +165,13 @@
     "deleteTeamTitle": "Slett team",
     "deleteTeamDescription": "Kan ikke slette organisasjonen når du er det eneste medlemmet, slett i stedet kontoen din",
     "saved": "Innstillinger lagret",
-    "savedDescription": "Endringene dine har blitt lagret vellykket",
+    "savedDescription": "Endringene dine har blitt lagret",
     "error": "Noe gikk galt",
     "errorDescription": "Vennligst prøv igjen eller kontakt support",
     "addTeam": "Opprett team",
     "apiKey": {
       "updated": "API-nøkkel oppdatert",
-      "updatedDescription": "API-nøkkelen din har blitt oppdatert vellykket og kopiert til utklippstavlen.",
+      "updatedDescription": "API-nøkkelen din har blitt oppdatert og kopiert til utklippstavlen.",
       "title": "Oppdater API-nøkkel",
       "description": "Er du sikker på at du vil generere en ny API-nøkkel? Den gamle nøkkelen vil slutte å fungere umiddelbart.",
       "cancel": "Avbryt",
@@ -198,7 +198,7 @@
       },
       "delete": {
         "title": "Slett prosjekt",
-        "description": "Slett dette prosjektet permanent og all data tilknyttet det",
+        "description": "Slett dette prosjektet og all data permanent",
         "button": "Slett prosjekt"
       }
     },
@@ -218,7 +218,7 @@
       },
       "apiKey": {
         "title": "Team API-nøkkel",
-        "description": "API-nøkkel for teamtilgang, bruk dette fra CI/CD-pipelinen din sammen med Prosjekt-ID",
+        "description": "API-nøkkel for teamtilgang, bruk dette fra CI/CD-pipelinen din sammen med prosjekt-ID",
         "placeholder": "Team API-nøkkel"
       },
       "members": {
@@ -228,7 +228,7 @@
         "leaveTeam": "Forlat team",
         "invite": "Inviter medlem",
         "title": "Medlemmer",
-        "pendingInvitations": "Venter på invitasjoner",
+        "pendingInvitations": "Venteinvitasjoner",
         "removeMember": "Fjern medlem",
         "removeMemberConfirm": "Fjern medlem",
         "removeMemberDescription": "Er du sikker på at du vil fjerne dette medlemmet?",
@@ -236,7 +236,7 @@
         "allRoles": "Alle roller",
         "date": "Dato",
         "selectAll": "{count} valgt",
-        "noPendingInvitations": "Ingen ventende invitasjoner",
+        "noPendingInvitations": "Ingen venteinvitasjoner",
         "noResults": "Ingen medlemmer funnet",
         "tryDifferentSearch": "Prøv et annet søk",
         "inviteMembers": "Inviter medlemmer til å samarbeide",
@@ -247,7 +247,7 @@
         "deleteInviteError": "Kunne ikke slette invitasjon",
         "removeMemberSuccess": "Medlem fjernet",
         "removeMemberError": "Kunne ikke fjerne medlem",
-        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet vellykket",
+        "removeMemberSuccessDescription": "Medlemmet har blitt fjernet",
         "removeMemberErrorDescription": "Kunne ikke fjerne medlem",
         "roles": {
           "owner": "Eier",
@@ -260,9 +260,9 @@
         "deleteInviteConfirm": "Slett invitasjon"
       },
       "email": {
-        "title": "Team E-post",
+        "title": "Team-e-post",
         "description": "E-postadressen knyttet til teamet ditt",
-        "placeholder": "Skriv inn team e-post"
+        "placeholder": "Skriv inn team-e-post"
       }
     }
   },
@@ -306,13 +306,13 @@
     },
     "brandName": {
       "title": "Merkenavn",
-      "description": "Sett ditt merkenavn for konsekvent bruk",
-      "placeholder": "Skriv inn ditt merkenavn"
+      "description": "Angi merkenavnet ditt for konsekvent bruk",
+      "placeholder": "Skriv inn merkenavnet ditt"
     },
     "brandVoice": {
-      "title": "Merke Stemning",
-      "description": "Definer din merke stemning og tone",
-      "placeholder": "Beskriv din merke stemning..."
+      "title": "Merke Stemme",
+      "description": "Definer merke stemmen og tonen",
+      "placeholder": "Beskriv merke stemmen din..."
     },
     "toneOfVoice": {
       "title": "Tone of Voice",
@@ -362,11 +362,11 @@
     },
     "terminology": {
       "title": "Terminologi",
-      "description": "Håndter spesialisert terminologi og ordlister"
+      "description": "Administrer spesialisert terminologi og ordlister"
     },
     "culturalAdaptation": {
       "title": "Kulturell Tilpasning",
-      "description": "Tilpass innhold for kulturell hensiktsmessighet"
+      "description": "Tilpass innholdet for kulturell hensiktsmessighet"
     }
   },
   "pricing": {
@@ -374,7 +374,7 @@
     "free": {
       "title": "Gratis",
       "price": "Gratis",
-      "keys_limit": "Opp til 100 nøkler",
+      "keys_limit": "Opptil 100 nøkler",
       "description": "Perfekt når du prøver ut",
       "features": {
         "unlimited_projects": "Ubegrensede prosjekter",
@@ -383,8 +383,8 @@
         "analytics": "Analyse",
         "context_memory": "Kontekstmemo",
         "community_support": "Fellesskapsstøtte",
-        "keys_limit": "Opp til 100 nøkler",
-        "docs_limit": "Opp til 5 dokumenter",
+        "keys_limit": "Opptil 100 nøkler",
+        "docs_limit": "Opptil 5 dokumenter",
         "languages": "2 språk"
       }
     },
@@ -396,9 +396,9 @@
         "latest_features": "Tidlig tilgang til de nyeste funksjonene",
         "priority_support": "Prioritert støtte",
         "priority_queues": "Prioriterte oversettelseskøer",
-        "languages": "Fra 8 språk",
-        "keys_limit": "Fra 10 000 nøkler",
-        "docs_limit": "Fra 50 dokumenter"
+        "languages": "Fra 4 språk",
+        "keys_limit": "Fra 5 000 nøkler",
+        "docs_limit": "Fra 25 dokumenter"
       }
     },
     "cta": "Begynn å automatisere",
@@ -409,7 +409,7 @@
     "teamNamePlaceholder": "Skriv inn teamnavn",
     "createTeamButton": "Opprett team",
     "cancel": "Avbryt",
-    "createTeamDescription": "Opprett et nytt team for å administrere prosjektene dine og samarbeidspartnerne."
+    "createTeamDescription": "Opprett et nytt team for å administrere prosjektene og samarbeidspartnerne dine."
   },
   "createProject": {
     "createProjectTitle": "Opprett et nytt prosjekt",
@@ -427,11 +427,11 @@
     "submit": "Send",
     "success": {
       "title": "Invitasjon sendt",
-      "description": "Invitasjon sendt til {email} med suksess"
+      "description": "Invitasjonen til {email} ble sendt"
     },
     "error": {
       "title": "Feil",
-      "description": "Kunne ikke sende invitasjon. Vennligst prøv igjen."
+      "description": "Kunne ikke sende invitasjonen. Vennligst prøv igjen."
     },
     "validation": {
       "invalidEmail": "Vennligst skriv inn en gyldig e-post"
@@ -549,7 +549,7 @@
     }
   },
   "faq": {
-    "title": "Ofte stilte spørsmål",
+    "title": "FAQ",
     "what_is_languine": {
       "question": "Hva er Languine?",
       "answer": "Languine er en AI-drevet lokaliseringsplattform som hjelper deg med å automatisere oversettelsen av applikasjonene dine. Den tilbyr funksjoner som finjusteringsalternativer, oversettelsesoverstyringer, analyser og kontekstmemo for å sikre høy kvalitet på oversettelsene."
@@ -560,23 +560,23 @@
     },
     "supported_languages": {
       "question": "Hvilke språk støttes?",
-      "answer": "Languine støtter over 100 språk i alle planer. Mens våre AI-drevne oversettelser fungerer best med større språk, streber vi etter å gi kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst ta kontakt med vårt supportteam."
+      "answer": "Languine støtter over 100 språk i alle planer. Selv om våre AI-drevne oversettelser fungerer best med større språk, streber vi etter å gi kvalitetsoversettelser på alle støttede språk. Hvis du har spesifikke språkkrav eller spørsmål om oversettelseskvalitet for bestemte språk, vennligst kontakt vårt supportteam."
     },
     "github_action": {
       "question": "Hvordan fungerer GitHub Action-integrasjonen?",
-      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere oversettelsesarbeidsflyten din direkte i CI/CD-pipelinen din. Når du presser endringer til depotet ditt, kan oversettelser automatisk oppdateres."
+      "answer": "GitHub Action-integrasjonen (tilgjengelig i Pro-planer) lar deg automatisere oversettelsesarbeidsflyten din direkte i CI/CD-pipelinen din. Når du legger inn endringer i depotet ditt, kan oversettelser automatisk oppdateres."
     },
     "support": {
       "question": "Hvilken type støtte tilbyr dere?",
-      "answer": "Gratisbrukere får tilgang til fellesskapsstøtte, mens Pro-brukere får prioritert støtte med raskere responstider og dedikert hjelp til deres oversettelsesbehov."
+      "answer": "Gratis brukere får tilgang til fellesskapsstøtte, mens Pro-brukere mottar prioritert støtte med raskere responstider og dedikert hjelp for deres oversettelsesbehov."
     },
     "open_source": {
       "question": "Er Languine åpen kildekode?",
       "answer": "Ja! Languine er helt åpen kildekode og tilgjengelig på GitHub. Du kan bidra til prosjektet, rapportere problemer, foreslå funksjoner og inspisere koden. Vi tror på åpenhet og å bygge i offentligheten."
     },
     "open_source_pricing": {
-      "question": "Tilbyr dere spesielle priser for åpne kildeprosjekter?",
-      "answer": "Ja! Vi elsker å støtte fellesskapet for åpen kildekode. Hvis du vedlikeholder et åpen kildekode-prosjekt, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare ta kontakt med teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør arbeidet vårt mulig."
+      "question": "Tilbyr dere spesielle priser for prosjekter med åpen kildekode?",
+      "answer": "Ja! Vi elsker å støtte fellesskapet for åpen kildekode. Hvis du vedlikeholder et prosjekt med åpen kildekode, kan du få tilgang til våre Pro-funksjoner med 30% rabatt. Bare ta kontakt med teamet vårt med detaljer om prosjektet ditt, så setter vi deg opp med en rabattert Pro-konto. Dette er vår måte å gi tilbake til fellesskapet som gjør arbeidet vårt mulig."
     },
     "cancel_subscription": {
       "question": "Hvordan kansellerer jeg abonnementet mitt?",
@@ -643,16 +643,16 @@
     "changePlan": "Oppgrader plan",
     "free": "Gratis",
     "manage_button": "Administrer abonnement",
-    "canceled": "Skal avbestilles"
+    "canceled": "Skal kanselleres"
   },
   "changePlan": {
     "title": "Oppgrader plan",
     "upgrade_to_tier": "Oppgrader til nivå {tier}",
-    "cancel": "Avbestill",
+    "cancel": "Kanseller",
     "description": "Oppgrader planen din for å øke grensene dine. Du får tilgang til flere oversettelsesnøkler, dokumenter, språk og prioritert støtte."
   },
   "test_translation": {
-    "title": "Testoversettelse",
+    "title": "Test oversettelse",
     "description": "Test oversettelsen av prosjektet ditt"
   }
 }

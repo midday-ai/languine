@@ -10,11 +10,11 @@ El flujo de trabajo de CI/CD en Languine sigue un proceso estructurado para auto
 
 ### 1. Inicialización de la Acción
 - El flujo de trabajo comienza cuando se activa la acción
-- Configura la configuración y credenciales de Git necesarias
+- Configura la configuración de Git y las credenciales necesarias
 
 ### 2. Procesamiento del Motor de Languine
 - El motor de Languine procesa el contenido de tu aplicación
-- Maneja las tareas de traducción utilizando la configuración configurada
+- Maneja las tareas de traducción utilizando la configuración establecida
 
 ### 3. Detección de Cambios
 El sistema verifica si hay cambios en la traducción y sigue uno de dos caminos:
@@ -39,7 +39,7 @@ Cuando se detectan cambios, se crea una Solicitud de Extracción con:
 
 **La Descripción del PR Incluye:**
 - Resumen de las actualizaciones de traducción
-- Lista de lo que cambió (traducciones actualizadas, consistencia de terminología)
+- Lista de lo que cambió (traducciones actualizadas, consistencia terminológica)
 - Próximos pasos para los revisores
 - Enlaces a recursos de documentación y soporte
 
@@ -62,8 +62,8 @@ Cuando se detectan cambios, se crea una Solicitud de Extracción con:
                     └──────────┬──────────┘
                                │
                     ┌──────────▼──────────┐
-                    │    Configurar Git &  │
-                    │    Credenciales      │
+                    │    Configurar Git & │
+                    │    Credenciales     │
                     └──────────┬──────────┘
                                │
 ┌─────────────────────────────────────────────────────────┐
@@ -74,9 +74,9 @@ Cuando se detectan cambios, se crea una Solicitud de Extracción con:
                                │
                     ┌──────────▼──────────┐
                     │   Verificar Cambios │───────┐
-                    └────��─────┬──��───────┘       │
+                    └──────────┬──────────┘       │
                                │                  │
-                               │ [Cambios]        │ [No Cambios]
+                               │ [Cambios]        │ [Sin Cambios]
                                │                  │
                     ┌──────────▼──────────┐       │
                     │   Confirmar & Enviar │       │
@@ -87,7 +87,7 @@ Cuando se detectan cambios, se crea una Solicitud de Extracción con:
                     └──────────┬──────────┘       │
                                │                  │
                     ┌──────────▼──────────┐       │
-                    │        Hecho        │◄──────┘
+                    │        Listo        │◄──────┘
                     └─────────────────────┘
 `}
   </pre>

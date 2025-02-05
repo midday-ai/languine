@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem."
+    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -19,17 +19,17 @@
     "account": "Conta"
   },
   "getStarted": {
-    "heading": "Comece",
+    "heading": "Comece agora",
     "title": "Infraestrutura de localização feita para desenvolvedores",
-    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem.",
+    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvimento, garantindo que as traduções nunca o atrasem.",
     "button": {
-      "startAutomating": "Comece a automatizar",
-      "readDocumentation": "Leia a documentação"
+      "startAutomating": "Começar a automatizar",
+      "readDocumentation": "Ler documentação"
     }
   },
   "companies": {
     "title": "Usado por",
-    "addYourCompany": "+ Adicione sua empresa"
+    "addYourCompany": "+ Adicionar sua empresa"
   },
   "activity": {
     "title": "Atividade",
@@ -44,7 +44,7 @@
   },
   "features": {
     "title": "Recursos",
-    "fullyOpenSource": "Totalmente de código aberto",
+    "fullyOpenSource": "Totalmente open source",
     "fullyOpenSourceDescription": "Nosso código está disponível publicamente no GitHub, permitindo transparência e contribuições da comunidade.",
     "presetsForExpo": "Predefinições para Expo",
     "presetsForExpoDescription": "Fornecemos predefinições para Expo, para que você possa começar rapidamente.",
@@ -55,10 +55,10 @@
     "readyForI18nLibraries": "Pronto para bibliotecas i18n",
     "readyForI18nLibrariesDescription": "Suportamos todas as bibliotecas, incluindo as mais populares (next-intl, react-i18next, react-intl, etc).",
     "markdownSupport": "Suporte a Markdown/Documentos",
-    "markdownSupportDescription": "Languine traduz seu conteúdo em markdown de forma fluida, mantendo a documentação e outros arquivos sincronizados com seu fluxo de trabalho."
+    "markdownSupportDescription": "O Languine traduz seu conteúdo markdown de forma contínua, mantendo a documentação e outros arquivos em sincronia com seu fluxo de trabalho."
   },
   "info": {
-    "title": "Cuida de todos os aspectos da localização do seu aplicativo, incluindo",
+    "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
     "smartTranslation": {
       "title": "Tradução Inteligente",
       "intelligentTranslation": "Tradução inteligente com consciência de contexto",
@@ -155,7 +155,7 @@
   "pipeline": {
     "title": "Fluxo de Trabalho (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada push. Quando alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz e a terminologia da sua marca. As traduções são então submetidas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
+    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada envio. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz e a terminologia da sua marca. As traduções são então enviadas como solicitações de pull, permitindo revisão antes de serem mescladas em seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
   },
   "settings": {
     "badRequest": "Solicitação inválida",
@@ -170,10 +170,10 @@
     "errorDescription": "Por favor, tente novamente ou entre em contato com o suporte",
     "addTeam": "Criar equipe",
     "apiKey": {
-      "updated": "Chave API atualizada",
-      "updatedDescription": "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
-      "title": "Atualizar Chave API",
-      "description": "Você tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
+      "updated": "Chave da API atualizada",
+      "updatedDescription": "Sua chave da API foi atualizada com sucesso e copiada para sua área de transferência.",
+      "title": "Atualizar Chave da API",
+      "description": "Você tem certeza de que deseja gerar uma nova chave da API? A chave antiga deixará de funcionar imediatamente.",
       "cancel": "Cancelar",
       "continue": "Continuar"
     },
@@ -211,15 +211,15 @@
       },
       "billing": {
         "title": "Plano de Cobrança",
-        "description": "Gerencie o plano de cobrança da sua equipe",
+        "description": "Gerenciar o plano de cobrança da sua equipe",
         "free": "Gratuito",
         "pro": "Pro",
         "unlimited": "Ilimitado"
       },
       "apiKey": {
-        "title": "Chave API da Equipe",
-        "description": "Chave API para acesso à equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
-        "placeholder": "Chave API da Equipe"
+        "title": "Chave da API da Equipe",
+        "description": "Chave da API para acesso à equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
+        "placeholder": "Chave da API da Equipe"
       },
       "members": {
         "leaveTeamConfirm": "Sair da equipe",
@@ -261,8 +261,8 @@
       },
       "email": {
         "title": "Email da Equipe",
-        "description": "O endereço de e-mail associado à sua equipe",
-        "placeholder": "Digite o e-mail da equipe"
+        "description": "O endereço de email associado à sua equipe",
+        "placeholder": "Digite o email da equipe"
       }
     }
   },
@@ -283,7 +283,7 @@
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
       "title": "Controle de Comprimento",
-      "description": "Controle o comprimento do texto traduzido",
+      "description": "Controlar o comprimento do texto traduzido",
       "options": {
         "flexible": "Flexível",
         "strict": "Estrito",
@@ -293,7 +293,7 @@
     },
     "inclusiveLanguage": {
       "title": "Linguagem Inclusiva",
-      "description": "Garanta que as traduções usem linguagem inclusiva"
+      "description": "Garantir que as traduções usem linguagem inclusiva"
     },
     "formality": {
       "title": "Formalidade",
@@ -316,7 +316,7 @@
     },
     "toneOfVoice": {
       "title": "Tom de Voz",
-      "description": "Defina o tom utilizado nas traduções",
+      "description": "Defina o tom usado nas traduções",
       "options": {
         "casual": "Casual",
         "formal": "Formal",
@@ -358,7 +358,7 @@
     },
     "idioms": {
       "title": "Expressões Idiomáticas",
-      "description": "Lide com expressões idiomáticas de forma apropriada"
+      "description": "Trate expressões idiomáticas de forma apropriada"
     },
     "terminology": {
       "title": "Terminologia",
@@ -393,12 +393,12 @@
       "includes_free": "Tudo no Gratuito, além de:",
       "features": {
         "github_action": "Integração com GitHub Action",
-        "latest_features": "Acesso antecipado a novos recursos",
+        "latest_features": "Acesso antecipado às últimas funcionalidades",
         "priority_support": "Suporte prioritário",
         "priority_queues": "Filas de tradução prioritárias",
-        "languages": "A partir de 8 idiomas",
-        "keys_limit": "A partir de 10.000 chaves",
-        "docs_limit": "A partir de 50 documentos"
+        "languages": "A partir de 4 idiomas",
+        "keys_limit": "A partir de 5.000 chaves",
+        "docs_limit": "A partir de 25 documentos"
       }
     },
     "cta": "Comece a automatizar",
@@ -454,7 +454,7 @@
       }
     },
     "info": {
-      "description": "Precisa de ajuda? Confira nosso",
+      "description": "Precisa de ajuda? Confira nossa",
       "link": "documentação",
       "description_2": "para guias detalhados e melhores práticas."
     }
@@ -482,7 +482,7 @@
     "az": "Azerbaijano",
     "bg": "Búlgaro",
     "ca": "Catalão",
-    "cs": "Checo",
+    "cs": "Tcheco",
     "da": "Dinamarquês",
     "el": "Grego",
     "es": "Espanhol",
@@ -527,7 +527,7 @@
     "account": "Conta"
   },
   "billing": {
-    "title": "Faturamento"
+    "title": "Cobrança"
   },
   "analytics": {
     "key": "Chaves traduzidas",
@@ -556,7 +556,7 @@
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
-      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma alvo. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
+      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma alvo. Por exemplo, se você tiver 20 chaves de origem e traduzi-las para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
     },
     "supported_languages": {
       "question": "Quais idiomas são suportados?",
@@ -567,7 +567,7 @@
       "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
     },
     "support": {
-      "question": "Que tipo de suporte vocês oferecem?",
+      "question": "Que tipo de suporte você oferece?",
       "answer": "Usuários gratuitos têm acesso ao suporte da comunidade, enquanto usuários Pro recebem suporte prioritário com tempos de resposta mais rápidos e assistência dedicada para suas necessidades de tradução."
     },
     "open_source": {
@@ -575,12 +575,12 @@
       "answer": "Sim! O Languine é totalmente open source e está disponível no GitHub. Você pode contribuir para o projeto, relatar problemas, sugerir recursos e inspecionar o código. Acreditamos na transparência e em construir em público."
     },
     "open_source_pricing": {
-      "question": "Vocês oferecem preços especiais para projetos open source?",
-      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é a nossa forma de retribuir à comunidade que torna nosso trabalho possível."
+      "question": "Você oferece preços especiais para projetos open source?",
+      "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é nossa forma de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {
       "question": "Como cancelo minha assinatura?",
-      "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Faturamento > Alterar Plano. Sua assinatura permanecerá ativa até o final do seu período de faturamento atual, após o qual você será movido para o plano Gratuito."
+      "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Cobrança > Alterar Plano. Sua assinatura permanecerá ativa até o final do seu período de cobrança atual, após o qual você será movido para o plano Gratuito."
     }
   },
   "pricing_slider": {
@@ -652,7 +652,7 @@
     "description": "Atualize seu plano para aumentar seus limites. Você terá acesso a mais chaves de tradução, documentos, idiomas e suporte prioritário."
   },
   "test_translation": {
-    "title": "Teste de Tradução",
+    "title": "Testar Tradução",
     "description": "Teste a tradução do seu projeto"
   }
 }

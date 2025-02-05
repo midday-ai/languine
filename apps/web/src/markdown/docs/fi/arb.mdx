@@ -1,12 +1,12 @@
 # ARB (Sovellusresurssipaketti)
 
-Languine tukee ARB-tiedostoja, jotka ovat standardi lokalisointimuoto Flutter-sovelluksille. Tämä muoto käsittelee monikkoja, paikkamerkkejä ja valintailmaisuja säilyttäen yhteensopivuuden Flutterin intl-paketin kanssa.
+Languine tukee ARB-tiedostoja, jotka ovat Flutter-sovellusten standardi lokalisointimuoto. Tämä muoto käsittelee monikkomuotoja, paikkamerkkejä ja valintailmaisuja säilyttäen yhteensopivuuden Flutterin intl-paketin kanssa.
 
 ---
 
 ## Asetusten määrittäminen
 
-Ensinnäkin varmista, että sinulla on languine.json -konfigurointitiedosto projektisi juurihakemistossa. Tässä on esimerkki:
+Varmista ensin, että sinulla on languine.json -konfigurointitiedosto projektisi juurihakemistossa. Tässä on esimerkki:
 
 ```json
 {
@@ -33,7 +33,7 @@ npx languine@latest translate
 Kun suoritat tämän komennon, Languine:
 
 - Lataa lähde ARB-tiedostosi (esim. lib/l10n/intl_en.arb)
-- Havaitsee kaikki uudet tai muokatut käännöstekstit
+- Tunnistaa kaikki uudet tai muokatut käännöstekstit
 - Tuottaa käännöksiä kohdekielillesi
 - Luo tai päivittää kohdekielen ARB-tiedostoja (esim. lib/l10n/intl_sv.arb)
 - Säilyttää metatiedot, paikkamerkit ja monikko/valintailmaukset

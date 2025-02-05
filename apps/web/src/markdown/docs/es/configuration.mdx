@@ -6,7 +6,7 @@ Languine utiliza un archivo de configuración JSON (languine.json) para gestiona
 
 ## Configuración Básica
 
-Aquí hay un ejemplo básico en ambos formatos:
+Aquí tienes un ejemplo básico en ambos formatos:
 
 ```json title="languine.json"
 {
@@ -28,7 +28,7 @@ Desglosemos las diferentes secciones en el archivo de configuración.
 
 ## Configuración Regional
 
-La sección de locale define tus idiomas de traducción:
+La sección de configuración regional define tus idiomas de traducción:
 
 - source: Tu idioma principal para la creación de contenido (por ejemplo, "en" para inglés)
 - targets: Un array de idiomas a los que deseas traducir (por ejemplo, ["es", "fr", "de"] para español, francés y alemán)
@@ -98,7 +98,7 @@ files: {
 
 ### Otros Formatos
 
-Aquí tienes una lista completa de formatos de archivo soportados por Languine:
+Aquí tienes una lista completa de los formatos de archivo soportados por Languine:
 
 - [JSON](/docs/json) - Archivos de traducción JSON estándar
 - [YAML](/docs/yaml) - Archivos de traducción YAML
@@ -113,10 +113,10 @@ Aquí tienes una lista completa de formatos de archivo soportados por Languine:
 - [JavaScript](/docs/js) - Archivos JavaScript
 - [TypeScript](/docs/ts) - Archivos TypeScript
 - [Gettext PO](/docs/po) - Archivos de traducción GetText
-- [XLIFF](/docs/xliff) - Formato de archivo de intercambio de localización XML
+- [XLIFF](/docs/xliff) - Formato de Intercambio de Localización XML
 - [CSV](/docs/csv) - Traducciones basadas en hojas de cálculo
 - [XML](/docs/xml) - Archivos de recursos XML
-- [Flutter ARB](/docs/arb) - Archivos de paquete de recursos de aplicación
+- [Flutter ARB](/docs/arb) - Archivos de Paquete de Recursos de Aplicación
 
 ---
 
@@ -151,7 +151,7 @@ Si estás utilizando los servicios en la nube de Languine, puedes incluir tu ID 
 {
   "projectId": "prj_your_project_id",
   "locale": {
-    // ... configuración de locale
+    // ... configuración regional
   },
   files: {
     // ... configuración de archivos
@@ -169,7 +169,7 @@ Languine crea y mantiene automáticamente un archivo languine.lock para rastrear
 - Ayuda a identificar qué necesita ser actualizado cuando el contenido de origen cambia
 - Debe ser comprometido en tu sistema de control de versiones
 
-No necesitas editar manualmente el archivo de bloqueo; Languine lo gestiona automáticamente cuando ejecutas comandos de traducción.
+No necesitas editar manualmente el archivo de bloqueo - Languine lo gestiona automáticamente cuando ejecutas comandos de traducción.
 
 ## Mejores Prácticas
 
@@ -177,4 +177,4 @@ No necesitas editar manualmente el archivo de bloqueo; Languine lo gestiona auto
 2. **Organización de Archivos**: Mantén tus archivos de traducción organizados en una estructura de directorios consistente
 3. **Códigos de Idioma**: Usa códigos de idioma estándar para asegurar compatibilidad
 4. **Patrones**: Usa patrones de inclusión específicos para evitar traducir archivos innecesarios
-5. **ID del Proyecto**: Mantén tu ID de proyecto seguro y no lo compartas públicamente si estás utilizando servicios en la nube, usa la variable de entorno `LANGUINE_PROJECT_ID` en su lugar.
+5. **ID del Proyecto**: Mantén seguro tu ID de proyecto y no lo compartas públicamente si estás utilizando servicios en la nube, usa la variable de entorno `LANGUINE_PROJECT_ID` en su lugar.

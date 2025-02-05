@@ -1,10 +1,10 @@
-# Konfiguraatio
+# Konfigurointi
 
-Languine käyttää JSON-konfiguraatiotiedostoa (languine.json) hallitakseen käännösasetuksiasi. Tämä tiedosto määrittelee lähde- ja kohdekielet sekä käännettävät tiedostot.
+Languine käyttää JSON-konfigurointitiedostoa (languine.json) hallitakseen käännöksesi asetuksia. Tämä tiedosto määrittelee lähde- ja kohdekielet sekä käännettävät tiedostot.
 
 ---
 
-## Peruskonfiguraatio
+## Peruskonfigurointi
 
 Tässä on perusesimerkki molemmissa muodoissa:
 
@@ -22,11 +22,11 @@ Tässä on perusesimerkki molemmissa muodoissa:
 }
 ```
 
-Käydään läpi konfiguraatiotiedoston eri osiot.
+Käydään läpi konfigurointitiedoston eri osiot.
 
 ---
 
-## Paikalliskonfiguraatio
+## Paikalliskonfigurointi
 
 Paikallisosio määrittelee käännöskielet:
 
@@ -37,9 +37,9 @@ Languine tukee laajaa valikoimaa kielikoodeja, mukaan lukien:
 - Yksinkertaiset koodit: en, es, fr, de
 - Aluekohtaiset koodit: pt-BR, zh-CN, zh-TW
 
-## Tiedostokonfiguraatio
+## Tiedostokonfigurointi
 
-Tiedostot-osio määrittelee, mitkä tiedostot Languinen tulisi kääntää. Voit määrittää useita tiedostotyyppejä ja malleja:
+Tiedostot-osio määrittelee, mitkä tiedostot Languinen tulisi kääntää. Voit määrittää useita tiedostotyyppejä ja -malleja:
 
 ---
 
@@ -106,7 +106,7 @@ Tässä on täydellinen luettelo Languinen tukemista tiedostomuodoista:
 - [Android](/docs/android) - Android XML -resurssitiedostot
 - [iOS](/docs/ios) - iOS-lokalisointitiedostot
 - [iOS Stringsdict](/docs/xcode-stringsdict) - iOS monikkomuotoiset tiedostot
-- [iOS XCStrings](/docs/xcode-xcstrings) - Modernit Xcode-merkkikatalogit
+- [iOS XCStrings](/docs/xcode-xcstrings) - Modernit Xcode-merkkiluettelot
 - [Markdown](/docs/md) - Dokumentaatiotiedostot
 - [MDX](/docs/mdx) - Dokumentaatio JSX:llä
 - [HTML](/docs/html) - HTML-tiedostot
@@ -122,7 +122,7 @@ Tässä on täydellinen luettelo Languinen tukemista tiedostomuodoista:
 
 ## Tiedostomallit
 
-[locale]-paikkamerkki tiedostomalleissa korvataan automaattisesti oikealla kielikoodilla käännöksen aikana. Esimerkiksi:
+[Tiedostomallin] paikallismuuttuja korvataan automaattisesti oikealla kielikoodilla käännöksen aikana. Esimerkiksi:
 
 - locales/[locale].json muuttuu:
   - locales/en.json
@@ -145,16 +145,16 @@ files: {
 
 ## Projektitunnus (valinnainen)
 
-Jos käytät Languinen pilvipalveluja, voit sisällyttää projektitunnuksesi konfiguraatioon:
+Jos käytät Languinen pilvipalveluja, voit sisällyttää projektitunnuksesi konfigurointiin:
 
 ```json
 {
   "projectId": "prj_your_project_id",
   "locale": {
-    // ... paikalliskonfiguraatio
+    // ... paikalliskonfigurointi
   },
   files: {
-    // ... tiedostokonfiguraatio
+    // ... tiedostokonfigurointi
   },
 }
 ```
@@ -177,4 +177,4 @@ Sinun ei tarvitse muokata lukitustiedostoa manuaalisesti - Languine hallitsee si
 2. **Tiedostojen järjestäminen**: Pidä käännöstiedostosi järjestettyinä johdonmukaisessa hakemistorakenteessa
 3. **Kielikoodit**: Käytä standardeja kielikoodeja varmistaaksesi yhteensopivuuden
 4. **Mallit**: Käytä erityisiä sisällyttämismalleja välttääksesi tarpeettomien tiedostojen kääntämisen
-5. **Projektitunnus**: Pidä projektitunnuksesi turvassa äläkä jaa sitä julkisesti, jos käytät pilvipalveluja, käytä sen sijaan `LANGUINE_PROJECT_ID` ympäristömuuttujaa.
+5. **Projektitunnus**: Pidä projektitunnuksesi turvassa, äläkä jaa sitä julkisesti, jos käytät pilvipalveluja, käytä sen sijaan `LANGUINE_PROJECT_ID` ympäristömuuttujaa.

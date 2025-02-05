@@ -511,7 +511,7 @@ files:
     header.signIn: ecff6ecb514e3e1b66f8b07d8b78bafe
     header.goToApp: 06bdc247034142d7386dc009310a009d
     hero.title: 8e7b32a7645be2a53c1bef60bb957cf6
-    hero.description: 9b53705d1bdcf8e5d297c82140b05443
+    hero.description: 4e9498f4f6f6c1ac8feb2149f173490b
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: d1010bff5c3a43dc0623b7b3e87f174a
     navigation.overrides: b871acfcee7082fe5315174298b6659b
@@ -521,7 +521,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 5b29aee5dab4cfb08ca8bd42b06836d6
     getStarted.title: 8e7b32a7645be2a53c1bef60bb957cf6
-    getStarted.description: 9b53705d1bdcf8e5d297c82140b05443
+    getStarted.description: 4e9498f4f6f6c1ac8feb2149f173490b
     getStarted.button.startAutomating: 59cd3d6f036c298b544bf40f2a9e0b1b
     getStarted.button.readDocumentation: 79e079ea3ad15aec762f5bc740d05d46
     companies.title: 6b3eb08c2d6186d90ac20aca3f745c18
@@ -545,11 +545,11 @@ files:
     features.readyForI18nLibraries: 7391c5ac7068d301326bc7b71c47f8c9
     features.readyForI18nLibrariesDescription: 492769b13bacf4b8d1ea42bd4b245982
     features.markdownSupport: 39e18a4af63ffb8a461783aec54d1d60
-    features.markdownSupportDescription: 9d44fa22248c645e8d233e8e18e56f15
+    features.markdownSupportDescription: e3f83fe27c85e2e1f7618a6628cc2de6
     info.title: 50e6ab156a500697a64c3caa457cebc7
     info.smartTranslation.title: cb2537225777cfde54b6defb7f9dfddb
     info.smartTranslation.intelligentTranslation: 67270a3a27f073428d17f1539a0d5673
-    info.smartTranslation.brandVoice: 89065f70e9f50d624effcea7defd38cd
+    info.smartTranslation.brandVoice: bf3b1aebe235358209d25de67c43089d
     info.smartTranslation.terminology: 041c5d35b3d5d4ae57b2e3b2f6e672f6
     info.smartTranslation.linguisticFeatures: 350c2582c64ce607f7d38f5f056e9a2e
     info.smartTranslation.realtimeUpdates: 2a6088c36e07baef83827db7a8c21d25
@@ -572,7 +572,7 @@ files:
     login.terms.text: 8eca7c3ef46d8a717bc0e88390813fa7
     login.terms.termsOfService: 1b05ed123647f24852bb79dc6c3dd6be
     login.terms.and: 5ff2363014e7ff18f687f29900146aab
-    login.terms.privacyPolicy: 05a70529c6d09855e842029df36790f6
+    login.terms.privacyPolicy: 1a7bc7df00c6d4b7e1a4842a9b76f1ed
     translations.header: 75a6918fa5bcdd16d7ee74f28be06e51
     userMenu.account: 1fb8b8eaf598bbeb889cefe6d62a06c6
     userMenu.signOut: 03b246c163bd62ae67bf01512245bb1c
@@ -603,19 +603,19 @@ files:
     account.deleteAccount.button: 5e74ae030073c99f0f89927e46486fda
     copyInstall.copied: b32999852b549dbfc75820c8d5fcd08f
     dangerZone.dialog.title: 09c2d45e7ade69619a753e34009daf66
-    dangerZone.dialog.description: 7853faddd87c5282ac49be4588b1f5f6
+    dangerZone.dialog.description: 826373b4785b6d2dbbe501fccb3fe88d
     dangerZone.dialog.placeholder: 23d73f8a1af45eab9c7aa77049b81e95
     dangerZone.dialog.confirm: a28ea620bbd1ffba06c218b6f71c3005
     dangerZone.dialog.cancel: 4b97278b444c0203fc17d7b93a39f5c7
     pipeline.title: f0eb38d7499f5fbee529a47881c88e5d
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 73412c9359ee92ffeab57d0ec2e8476f
+    pipeline.description: c0325366ab3e3f2479e2850dd06b2d17
     settings.badRequest: ace9e949ddf27fcc22a226a672f51c6f
     settings.badRequestDescription: 812f2a756f336b8f9e984553f08009e5
     settings.permissionDenied: a841eaa78fc1f3ed80701e71b3b65bbb
     settings.permissionDeniedDescription: 66355e161278718857238017deb5a1cf
     settings.deleteTeamTitle: 3e29dddf87e9ffb23cd7792906607226
-    settings.deleteTeamDescription: efcdc5c54bd4ef6255ddbf54e86cc735
+    settings.deleteTeamDescription: f62ba316659b105bff58832641ed1a89
     settings.saved: 62c128cf4ee1f6d459cbe80270141a07
     settings.savedDescription: 26889346a5be026546fb4c7a59ef1170
     settings.error: 7803eacbc754039c8b09a968240db177
@@ -637,7 +637,7 @@ files:
     settings.project.name.description: d54be295d78e0e7699d236169618e18c
     settings.project.name.placeholder: cdfa7e7988057dc8fde8441b79f3d93d
     settings.project.id.title: 945b1506766c62617c0049e3ce8328df
-    settings.project.id.description: 2f292b1ff951b802bc7a01dafbff8709
+    settings.project.id.description: 54a957366c25ac647ad50ef1a6f35062
     settings.project.id.placeholder: 945b1506766c62617c0049e3ce8328df
     settings.project.delete.title: e9da2da58d3b118730c0617ace5d08ee
     settings.project.delete.description: 5685aa7918e67094431d0d73e7d1a769
@@ -652,7 +652,7 @@ files:
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: 8d707ea5e2e64c63ea2bf2de4cad9a45
     settings.team.apiKey.title: ee4fbe221a3d74d8162202fb3f468c34
-    settings.team.apiKey.description: ce236b43eb93def3d975f4aca11e0b73
+    settings.team.apiKey.description: aa48323d09bc039255f53d7766582e71
     settings.team.apiKey.placeholder: ee4fbe221a3d74d8162202fb3f468c34
     settings.team.members.leaveTeamConfirm: dce4145c89cf3db5e8db640e1e27e7a1
     settings.team.members.leaveTeamDescription: 3326bafa811f514b22f02b7eae8dc64b
@@ -676,11 +676,11 @@ files:
     settings.team.members.deleteInviteDescription: 9e2a0b0dd6ca504714356588bf07590c
     settings.team.members.invitedBy: 3065d13eea45e0095ff8fe3c710efebb
     settings.team.members.deleteInviteSuccess: 2219fff010a4282fd2309d075538e9f2
-    settings.team.members.deleteInviteError: deb4fb755b5741eb9b17c5683fbc5dba
+    settings.team.members.deleteInviteError: 1bb600ac1d675128cde450fb78c2f385
     settings.team.members.removeMemberSuccess: 3364813ff26f1b07d32ba96ba7c71a29
-    settings.team.members.removeMemberError: 2a52a5ea913ee645d60d27484dda7a99
+    settings.team.members.removeMemberError: 9560745415ceba15d23167857fe1da85
     settings.team.members.removeMemberSuccessDescription: f037532568f13c5165eb51516f1a611b
-    settings.team.members.removeMemberErrorDescription: 2a52a5ea913ee645d60d27484dda7a99
+    settings.team.members.removeMemberErrorDescription: 9560745415ceba15d23167857fe1da85
     settings.team.members.roles.owner: c0ebe99ebdebbaccd35b6eb3b9308424
     settings.team.members.roles.member: 7c1878b1fc9d7bb0b9462238bb7d78da
     settings.team.members.dateSort.newest: a131e842b2bac1c54ab2d93015431a30
@@ -711,7 +711,7 @@ files:
     tuning.formality.options.formal: 557c6481538b93bfe0a10a1cbc11aa07
     tuning.formality.options.neutral: e9bb5320b3890b6747c91b5a71ae5a01
     tuning.brandName.title: eb901b0217744715c61b471a30040d86
-    tuning.brandName.description: 20a8aad36f495433e0e44448e4fec357
+    tuning.brandName.description: 29c0b045cd0db495d4a6c74b3835940c
     tuning.brandName.placeholder: 9fcb19db6206bf7a0ad63cb4fa8eeb20
     tuning.brandVoice.title: a247b9fca11f88368507f3bbe0d4593d
     tuning.brandVoice.description: 2af473308a0dc609d202e08990992d3a
@@ -760,7 +760,7 @@ files:
     pricing.free.features.unlimited_projects: c95e4a9bab670589550d280b233f3c6a
     pricing.free.features.fine_tuning: 7ce0d6bec00b31ff3acda2c19c04a126
     pricing.free.features.overrides: 508ba6ac8c908cfe245a068072b321bb
-    pricing.free.features.analytics: f7a633636eb15069215c94356a917573
+    pricing.free.features.analytics: 07fe75d051e83258b28e6aee0fb46c2a
     pricing.free.features.context_memory: c5012dcc322b8c84fe948f423f2041c9
     pricing.free.features.community_support: 945f9f94f40004c3c452b370d8161f93
     pricing.free.features.keys_limit: d9f74a8b7abe09c6339b70639c3ac22f
@@ -772,18 +772,18 @@ files:
     pricing.pro.features.latest_features: fe4cc850fcc10d3b1c69bea8a99fbe45
     pricing.pro.features.priority_support: 10763dc7f483f8cbb3432b32fadef630
     pricing.pro.features.priority_queues: 0ee776175d2626305f5c53824c4982da
-    pricing.pro.features.languages: a4dbce6523d78b493deb5fc8343e511b
-    pricing.pro.features.keys_limit: f0810a79ed4a75bb12ff2b04aa51ca0f
-    pricing.pro.features.docs_limit: 180506f87255d0f2c859ea7594edd123
+    pricing.pro.features.languages: abeba46d2bd3971c98b5de2742080b3f
+    pricing.pro.features.keys_limit: d6b19075d5e95a329fd6aaec074db8ba
+    pricing.pro.features.docs_limit: ccc5d131f5ebea6b9994db87e5e5375c
     pricing.cta: 59cd3d6f036c298b544bf40f2a9e0b1b
     pricing.keys_limit_explanation: 82cce9aac0aca83f6eeba7ca1f52ae04
     createTeam.teamName: d4ebc3b1e6396b02b8e16fb3609d3c18
-    createTeam.teamNamePlaceholder: 0b370baef82c5fc1bbd0069c34d31d16
+    createTeam.teamNamePlaceholder: 75317b33229613c574b75682c3f60c97
     createTeam.createTeamButton: 64fbedb266c88f8e0ab2a808c38d7e2b
     createTeam.cancel: 4b97278b444c0203fc17d7b93a39f5c7
     createTeam.createTeamDescription: f1b339eb8a0c5fde89974482aebe8d5a
     createProject.createProjectTitle: d827a8a54b1c37d8809c111592ceaf28
-    createProject.projectNamePlaceholder: ed9915333d60723c2ef3a2b40afd24bc
+    createProject.projectNamePlaceholder: 5c9d22902bf4e821e8926d4ce9241140
     createProject.createProjectButton: 8ac36b3208548168128c0e1d00f34ef8
     createProject.cancel: 4b97278b444c0203fc17d7b93a39f5c7
     createProject.createProjectDescription: e108091e9a5a96fe33cd5bdf86c42f47
@@ -807,7 +807,7 @@ files:
     onboarding.steps.3.link: 43c592501e0d37c63bc038fa182b2ddf
     onboarding.info.description: 13aa25701fe90e9d05b12d09cc5e38ad
     onboarding.info.link: 43c592501e0d37c63bc038fa182b2ddf
-    onboarding.info.description_2: 5d5c53f510463ea4c07358b4297d8531
+    onboarding.info.description_2: 9f4d6d786a8e0fb46cc6feef57a85591
     cli.success.title: db920c6ef1658fb9239f5a11997f84c3
     cli.success.description: 03419c9827739395a3539a9a0f16b565
     cli.success.description_2: adba0a53ba75c8c46c44b30c431424d7
@@ -851,7 +851,7 @@ files:
     language.sr: 415637cb0a9e561e861773cda6148ec2
     language.sv: 64be666e3f2b496b7303f46963b2e516
     language.ta: f0670813020969b39ff8d85744b40400
-    language.th: 43ddc789bcea4177a14791f6c9a03b28
+    language.th: 1c7c9f8a4d34abce61755abfc51d67a9
     language.tr: bc88d8d372bed1e41cc832d731a9d3fe
     language.uk: e0afba42b200f3b79b9b9929d45aa0b4
     language.vi: e0775193c1844133c9b9627d86acb704
@@ -882,20 +882,20 @@ files:
     faq.title: 0444679f28431e49ec3e46e278eb94f5
     faq.what_is_languine.question: f577d29979dff8f7e6bfef182f874210
     faq.what_is_languine.answer: 74f307da99a876aea58f38ad65f64c93
-    faq.key_limit.question: a5c2edad423677d4e5aa780a447cd23c
+    faq.key_limit.question: 2560a1cc01a66d22c0b5dbdce5b669b8
     faq.key_limit.answer: f7359986e496d5f8819c1f7c3424a64e
     faq.supported_languages.question: 3b439415dac7e62164fedd45b4e8280c
     faq.supported_languages.answer: 5ff506582251cd244159c587748fc903
     faq.github_action.question: 9cf3902a1c065339124069f4f87bae35
     faq.github_action.answer: bb22969807c8b033931c004db3a6082a
     faq.support.question: 53e17a2f644ee2d8ee864cfe5eaeda8b
-    faq.support.answer: 59320f2ab05241d2a4923f8605a57e61
+    faq.support.answer: 22c66aaab35314eececdc6f8f68af7bf
     faq.open_source.question: 1564bcd809daa03324b343b83498afbc
     faq.open_source.answer: 7654a541c2cdce8a1cf8118d04c937b8
     faq.open_source_pricing.question: e82c9d4e4fd22814a95a68f5cab655fb
-    faq.open_source_pricing.answer: b10c56a1197524e91eed2d24efa90451
+    faq.open_source_pricing.answer: 68e4708ccb670a565a2a0297aee031a2
     faq.cancel_subscription.question: 3d3c6212e3a6c6e83f12531b0f36ae35
-    faq.cancel_subscription.answer: b75d31a837b5785a70891f66d9706408
+    faq.cancel_subscription.answer: f6a034f5cd6c57ff8c3cb9d4d898738d
     pricing_slider.tier: ad97707923e30c93d4f334991e510386
     pricing_slider.keys: 75a6918fa5bcdd16d7ee74f28be06e51
     pricing_slider.documents: 4dfa49a6471af2a59a35f6a49ae7b53a
@@ -914,7 +914,7 @@ files:
     docs.authentication: 5a6b964746005f16b1d709b108b4b8bd
     docs.configuration: 704183817f9cbe5f6f95d58a4b647e7e
     docs.cli: 91af5705f16502125e8b2187e64202c0
-    docs.github-actions: f843be8508767777750802fb7782c74f
+    docs.github-actions: df75e0729b10a0db8342a2769719dae7
     docs.tuning: d1010bff5c3a43dc0623b7b3e87f174a
     docs.overrides: b871acfcee7082fe5315174298b6659b
     docs.settings: 27014dd1bf5fe7e41ced3bedfc4cd2aa
@@ -932,25 +932,25 @@ files:
     plan_settings.keysUsed: 1bf71938e57cd79569a64b1e7b56d492
     plan_settings.documentsUsed: bd0bc99a9b782b37bac48e77c9538650
     plan_settings.languagesUsed: 92065c36db3bbc6c9cb9dbc7720cf3b2
-    plan_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
-    current_tier.currentTier: b665c0391d4caf11a5fcfb7e60cf2f52
-    current_tier.tier: 884ba3386547c7dd63c0179da6c107ab
+    plan_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
+    current_tier.currentTier: 05e46b321ac93ba67a2c72469ef11631
+    current_tier.tier: d11a28580e943fe9eefe3481b224b314
     current_tier.translationKeys: 70cd2f99392575c8bc14d4cf46d9ef9a
     current_tier.documents: ad89b7b8b181f445551fe1bc5c7abe61
     current_tier.languages: bf6c56085d5ba147fe0860211f201685
-    current_tier.changePlan: 4383ed143e94237bef3101836bde8a02
+    current_tier.changePlan: 1fe3efee27c4f7aee02d69f92d768c74
     current_tier.free: 2496721b8d95ee9876c6d33574604250
     current_tier.manage_button: c3c8a3d84c4a262161cc54b70bcfcfce
     current_tier.canceled: a6a7d155d8d49155e43f53e1d85749e9
-    changePlan.title: 4383ed143e94237bef3101836bde8a02
-    changePlan.upgrade_to_tier: 4624f5b8d82955e16094f27259a3ffad
-    changePlan.cancel: 6cc04dc1f419c8b2f1b28303ab0bec49
-    changePlan.description: 3df1e231233b20d95032dd0f59885c59
-    test_translation.title: b6d912c52e8bd48d785016f7618aa209
+    changePlan.title: 1fe3efee27c4f7aee02d69f92d768c74
+    changePlan.upgrade_to_tier: c95bae317d66ade5d62031cec5d66641
+    changePlan.cancel: 4b97278b444c0203fc17d7b93a39f5c7
+    changePlan.description: ba1b1c0dbd7053b27ea0dc357433bfb2
+    test_translation.title: 10771c3666e062108056535fc406b850
     test_translation.description: c0ac2eacc0dbe5bb13d19fb3ca789576
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
-    header.docs: a1420688c629cb4bac7dfbe1b180fb42
+    header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
     header.signIn: 2eea080f348d1e398b038b37aa3f1a10
     header.goToApp: c4e54e5eeb904f889ffd2aeb11a7023f
     hero.title: 9242ff4e74ba3dd7e1e482b03d608c31
@@ -978,7 +978,7 @@ files:
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: fb1a6f2abe85ec57a6f0f39da4b74fdc
     features.fullyOpenSource: edad6292e73fb6b6d429e0631583b741
-    features.fullyOpenSourceDescription: 01e59b3ce858e484717cc9ed21f417c9
+    features.fullyOpenSourceDescription: c4683de39eeaacd1b8144a96120b1969
     features.presetsForExpo: dca4c35d32123d5dd200964ad20f283b
     features.presetsForExpoDescription: 9c615905c07f9ea29370600be6fbc3ee
     features.presetForReactNative: f55ae844fc9ec66d0277039cfdc91577
@@ -997,7 +997,7 @@ files:
     info.smartTranslation.linguisticFeatures: e785c3f75c2de66ea30fe4cfc31e74bc
     info.smartTranslation.realtimeUpdates: 31792e11a1786e8d5e48945608b3e229
     info.implementation.title: 7528348f9ddea9c80c3efa9bbff04372
-    info.implementation.quickSetup: e3e91b3f92c4f9e3c5b1b3b10737f2c6
+    info.implementation.quickSetup: 46ac21008e3f0604d7654c9ea759a33f
     info.implementation.fileFormat: 81ebb83cd59e2ea9b009b72a13b3dd88
     info.implementation.contentStructure: 50c558ffe4ff13382ed7a4ea06b57c84
     info.implementation.assetOrganization: 57865a85414817a7915853ae2da1d451
@@ -1021,7 +1021,7 @@ files:
     userMenu.signOut: 0daed4d43928c4a72d4eabff46d766fe
     userMenu.createTeam: bd61e42b5d133179d82cd053eaf3c99a
     userMenu.homepage: 8facb7129d555d693afe7b6a0d797315
-    userMenu.team: f840c8fcdfedd100ffc4a016108ac19d
+    userMenu.team: 276358c6cb452cec9a28019fc34b25cd
     teamSelector.addProject: 5d341a4db13dc067c9984a6b37c262a3
     teamSelector.createProjectTitle: 5559706bc1886e23f843c4daeea6e910
     teamSelector.projectNamePlaceholder: 52def92d5eea630f4d81de08d475845d
@@ -1046,28 +1046,28 @@ files:
     account.deleteAccount.button: 85eb8f08527b733ea2f6ba30adc22983
     copyInstall.copied: df2cfb8156187e608c3bbe62cb613502
     dangerZone.dialog.title: 23c2131e46eaf5d4aeffb21da318d7d7
-    dangerZone.dialog.description: 574b08024b908ed509eb4f3705b148b1
+    dangerZone.dialog.description: 377d60f2c6db6e147f82f9c7ac5f3487
     dangerZone.dialog.placeholder: 7f72640bbf5aee03694791a52c13c3ae
     dangerZone.dialog.confirm: 2553ad2fdcaa7693b0dcbda440fed3b1
     dangerZone.dialog.cancel: 847607d75e504090b5aff16a6e6c8351
     pipeline.title: 4b22236421c554dd0aff57fa501325ad
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 4f4b83a28af6b6ac7153e0c0dcbb3a23
+    pipeline.description: 8f5aed77f2b20f518f59418c0431bcaa
     settings.badRequest: bd22b8df9788a4fdd762ec5dfea02e1b
-    settings.badRequestDescription: ee4d398e329c207e7fdbb99c45f55330
+    settings.badRequestDescription: 9489ced6039a680080bcfc2dc0f9eb36
     settings.permissionDenied: 5c370f1e380b16216c607abace04b668
-    settings.permissionDeniedDescription: 3a7aeb01bd89f58b29f7629bf6d13c19
+    settings.permissionDeniedDescription: c57adcd0631406245a872ea706221c7d
     settings.deleteTeamTitle: 4cf3018f3bc298fcd11a2b391f6d717d
-    settings.deleteTeamDescription: d5719bae9e7259f282456530233a930c
+    settings.deleteTeamDescription: 0056e230288e3888ab98387f63cb1522
     settings.saved: b7616d5c41a634a7b482af2401592955
-    settings.savedDescription: 5ec21f62b0a3a7db5b755c21ecddd3b6
+    settings.savedDescription: f06061932715efe0b1d58fe30034fb04
     settings.error: a2375014a3a50146a194e8b100325101
-    settings.errorDescription: f618976ecaf6ac24d2191ced80826aba
+    settings.errorDescription: 8dc0d2cf296e85411f40167218c87104
     settings.addTeam: bd61e42b5d133179d82cd053eaf3c99a
     settings.apiKey.updated: 2da758171ed5d66e024bc0281465d42e
-    settings.apiKey.updatedDescription: f0c9018a823061e3a04842ad124c65a4
+    settings.apiKey.updatedDescription: 182d84cce8f89e813ab5423bc042a516
     settings.apiKey.title: 9bae6050c2af321147f855fe5591c5bb
-    settings.apiKey.description: f6abb2a21afa6deaef2ea9693af0dc72
+    settings.apiKey.description: a4b05d1a1a27cb96afd52c8713ee97cc
     settings.apiKey.cancel: 847607d75e504090b5aff16a6e6c8351
     settings.apiKey.continue: 64b467714a312d788460aa938539b1db
     settings.tabs.project: c126d9cdd553787e63d4a48608f608cc
@@ -1077,28 +1077,28 @@ files:
     settings.tabs.billing: 8982385e6e341d53c9a2dd9ab05dd687
     settings.addProject: 5d341a4db13dc067c9984a6b37c262a3
     settings.project.name.title: cd1089f03e121b7a6f8de3876244fc08
-    settings.project.name.description: 69997f1b87528f46291b8bf64f2eb109
-    settings.project.name.placeholder: f6231c9eddeec70680f6cc63ded05786
+    settings.project.name.description: 0d1aafe7c67a3dd57aa4405915a672c9
+    settings.project.name.placeholder: ceb278d477d72783645f1163c7a660b0
     settings.project.id.title: 4c9d99d9c6dfb9c09158a1461a450207
-    settings.project.id.description: ea6f3b5da97c5443857434adfe980782
+    settings.project.id.description: 71b783301fe8b4bbd30fd116c2f30450
     settings.project.id.placeholder: 4c9d99d9c6dfb9c09158a1461a450207
     settings.project.delete.title: a35cc3a59997aa32392032f13426960c
     settings.project.delete.description: 7a1671f302f136b80e158f49750988cb
     settings.project.delete.button: a35cc3a59997aa32392032f13426960c
     settings.save: d3270bdb8d2c1caaca4178dbe19be03a
     settings.team.name.title: 8504ce6bceb94531ddc381eb35ed4585
-    settings.team.name.description: 3d6d23eb0323efbf9d5d087d7fc52b7a
-    settings.team.name.placeholder: 8985cfd90efe176a0d8481791732268c
+    settings.team.name.description: 4b36213ceb1a760392c16ed2294e4fc1
+    settings.team.name.placeholder: 034082b002d2256290c82dd0da360b01
     settings.team.billing.title: 3d16face39476bc3297053a7ef9e962c
-    settings.team.billing.description: 94f69ab4eb809edf849227c681666d8b
+    settings.team.billing.description: 405ffcf577000fdcafd8635fab2916ae
     settings.team.billing.free: 890564f0d61b0acc2d3d90d440622072
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: 07602bab4e228784c6f6c49092658680
     settings.team.apiKey.title: 33b7f0e7b0e07661870a0c9447acf47b
-    settings.team.apiKey.description: f1dceb58bd5adeb88a2e19306819f00e
+    settings.team.apiKey.description: ad9c3d387dd26f0105b2e9d050e90c5c
     settings.team.apiKey.placeholder: 33b7f0e7b0e07661870a0c9447acf47b
     settings.team.members.leaveTeamConfirm: 51b02f1c12e7e6fefb6cb164850f5c3f
-    settings.team.members.leaveTeamDescription: d7956dc5844932150763fede84f0234d
+    settings.team.members.leaveTeamDescription: 99076537617a047d3c3d47328bfe6db7
     settings.team.members.cancel: 847607d75e504090b5aff16a6e6c8351
     settings.team.members.leaveTeam: 51b02f1c12e7e6fefb6cb164850f5c3f
     settings.team.members.invite: 8692ffa89663ce604b6f6cb577ee0799
@@ -1106,14 +1106,14 @@ files:
     settings.team.members.pendingInvitations: 9adb017eae0f4708920dd96226e6699e
     settings.team.members.removeMember: ba40f64f28d606df830a800620ef0014
     settings.team.members.removeMemberConfirm: ba40f64f28d606df830a800620ef0014
-    settings.team.members.removeMemberDescription: 9d27421785d67ab26463930a931bdbeb
+    settings.team.members.removeMemberDescription: f35eb6389dd8c18fe973ffe04caee829
     settings.team.members.filterPlaceholder: 79aad46d82b76661d0a8907728c26d28
     settings.team.members.allRoles: 62f7afb756a831acd17dc136cc242266
     settings.team.members.date: 7fd9c8957899827d30568302b1130c6e
     settings.team.members.selectAll: 1ae458f70176d56ec3b389fc628c9424
     settings.team.members.noPendingInvitations: c08fdc0f0503ee887524f394ce053f99
     settings.team.members.noResults: 006ca6fa6da061a4d2d5e89df4637e29
-    settings.team.members.tryDifferentSearch: c9312a22eb2d333187620e0b87cf0879
+    settings.team.members.tryDifferentSearch: 89aba30721cb47c1d081178a07213b30
     settings.team.members.inviteMembers: 3091e7566190f7e05e150560016836b6
     settings.team.members.deleteInvite: aa5f8bc480983b8f12fe6a44ff6f034f
     settings.team.members.deleteInviteDescription: 9a45971596443fce36766bba7e5f5ae9
@@ -1121,20 +1121,20 @@ files:
     settings.team.members.deleteInviteSuccess: 31aea8721b4a46ebaabb8916bb4ad825
     settings.team.members.deleteInviteError: fcafd1381e5a973e6e0a4e47254fcd0b
     settings.team.members.removeMemberSuccess: 6e43be3cd6d6171bd136dee94bb1bc07
-    settings.team.members.removeMemberError: 49e7d07ce724778262b95fa1eacffb4c
+    settings.team.members.removeMemberError: dfd28120aca4e6897d821212886ae913
     settings.team.members.removeMemberSuccessDescription: beb31921373ebe7a0a76104d43cd5192
-    settings.team.members.removeMemberErrorDescription: 49e7d07ce724778262b95fa1eacffb4c
+    settings.team.members.removeMemberErrorDescription: dfd28120aca4e6897d821212886ae913
     settings.team.members.roles.owner: 5f4d7cc1e658cea56da01b8945cec7d4
     settings.team.members.roles.member: 042adefd218c40c0815506b51f90c698
     settings.team.members.dateSort.newest: 48dd58c8d08274eadbdcc58d2975c9e3
     settings.team.members.dateSort.oldest: 237bf8c7c412697d6da6d82555e73865
     settings.team.members.deleteInviteConfirm: aa5f8bc480983b8f12fe6a44ff6f034f
     settings.team.email.title: 6a1c42501ef3ae2ce60a459b25354e69
-    settings.team.email.description: 27856e0519fb8d92d73bec4c0db9a25c
-    settings.team.email.placeholder: 36ddf7ef0f2ac4650171b01e0d204e1f
+    settings.team.email.description: 83db8874c07b6079fa7f900f1bb3d27d
+    settings.team.email.placeholder: 2dea5cb01f0f1a610edafbacc343033d
     tuning.general: 0db377921f4ce762c62526131097968f
     tuning.translationMemory.title: 68ded507100ca4a5eb5a83ed2c217b64
-    tuning.translationMemory.description: c7a1b9dfadf3900da85584bd02b98718
+    tuning.translationMemory.description: d4c66e45fa3afb467e3cb79b04a9ddfe
     tuning.qualityChecks.title: c5626bbc483d0124533827c49707985d
     tuning.qualityChecks.description: bb81c7ea034e023136f84706c344d7b0
     tuning.contextDetection.title: e9c62b7e88cde25f89cf33c961a94c04
@@ -1147,7 +1147,7 @@ files:
     tuning.lengthControl.options.exact: f6e7a7f37a890c29cc81bd3b8888c1ec
     tuning.lengthControl.options.loose: 1a8cea0c2334c646e96ce590788c714c
     tuning.inclusiveLanguage.title: f252a0d567cd44c924ac24d3fb07bde3
-    tuning.inclusiveLanguage.description: bb821b479512125bf2c03a8948227f37
+    tuning.inclusiveLanguage.description: e44bca80f164410c087d96ff62292fc7
     tuning.formality.title: 578b5c59f13780c61f24cdf104f69ae5
     tuning.formality.description: 31e7d0f210471ebc9a115f9703b0a721
     tuning.formality.options.casual: 275b5990f721a6b871e9e94999ae7ca2
@@ -1190,11 +1190,11 @@ files:
     tuning.domainExpertise.options.marketing: 7cb15e416d62919b1b40298324fbe30b
     tuning.domainExpertise.options.academic: b1b718651906a76649f9b4ab0a925c75
     tuning.idioms.title: 91daf489b832f0169ed7d9c09d41918c
-    tuning.idioms.description: 631c7184f84d7f7faefb47fbae8ed098
+    tuning.idioms.description: 9f84b09c56f2255447df5ad9a8702fd1
     tuning.terminology.title: cf4cdff74f049aec93d9513dbcd877b1
-    tuning.terminology.description: 3796a68e0059695f3bad14c507a7f1be
+    tuning.terminology.description: 244c0f9ce537a03790ab76e01012fbe7
     tuning.culturalAdaptation.title: 8619196047868a6662e9aa5f91f03e11
-    tuning.culturalAdaptation.description: 0ffbcdecaa4c246fe8202ddecd2f537a
+    tuning.culturalAdaptation.description: aae39e7bca924eaad5c80890f7f2e266
     pricing.title: a3e67a9367b22be465dcd45c4dfb0d47
     pricing.free.title: 890564f0d61b0acc2d3d90d440622072
     pricing.free.price: 890564f0d61b0acc2d3d90d440622072
@@ -1212,12 +1212,12 @@ files:
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: 07c56d1ab51b57a34fb2f60806470ba9
     pricing.pro.features.github_action: b3c369c0ffcabedf42c0fdfd858b8bc7
-    pricing.pro.features.latest_features: 899ae0e74f63a047e58d8ae1dfdf12b0
+    pricing.pro.features.latest_features: 0a719b712030723397a5ea079ee7c659
     pricing.pro.features.priority_support: d69dba390ddc3230485acb25870a782b
     pricing.pro.features.priority_queues: a62f50c14eb906e1178e61be4e067e5d
-    pricing.pro.features.languages: d0e8e4bba0e8f9ecb58848ca86f13fbc
-    pricing.pro.features.keys_limit: 2245138bc7fdaa21472346021d8e848a
-    pricing.pro.features.docs_limit: 5e9dca5ccd1a4684f383f71ed83a4bee
+    pricing.pro.features.languages: 264f0618f3d111c92708e2edf1cf7f12
+    pricing.pro.features.keys_limit: 01670ca4d318a5df427cf00dea6fffa4
+    pricing.pro.features.docs_limit: fa25d8a3fbf5768d514bc3c56f1e3d2a
     pricing.cta: 31f67202afd3ea7e29cba8d67e97bb1d
     pricing.keys_limit_explanation: 16e1ddb78b27233a54ff607b641cea46
     createTeam.teamName: 8504ce6bceb94531ddc381eb35ed4585
@@ -1324,21 +1324,21 @@ files:
     analytics.months.09: f04aa7019c490474fa3ce16e93501b57
     faq.title: 8d63d504a91e5266ed8a87c7b08111cd
     faq.what_is_languine.question: 7d2b0af16117559de8385280a4d8b03b
-    faq.what_is_languine.answer: e93791101d532103783ce4a0137a0cdd
+    faq.what_is_languine.answer: 7019131a290c23a0184238105264befe
     faq.key_limit.question: 2e0b38e64c6516f0e9a7d0d2c70a65a9
     faq.key_limit.answer: bc20dd978900a31af5ffe408f16e9f41
-    faq.supported_languages.question: 16d8c64214e25f40068a833d47bab93b
-    faq.supported_languages.answer: 90fb6a7a5e124fa3684f8da6dfb8e3b8
+    faq.supported_languages.question: 5c7e764a7ea6b486d315120ed4d5323e
+    faq.supported_languages.answer: b342049d267cbfcfea91c5acd8d9ea0c
     faq.github_action.question: 98b9224640d5a4a2385fd322982a04d7
     faq.github_action.answer: 3c965a929785179dd4b7fee25937cc49
     faq.support.question: fdbf003f35b58d6fcaf0dc71248df528
     faq.support.answer: b954329396142bf5ec9afae6a66083ed
     faq.open_source.question: cb2315a0ce84df9a48fdf54b2980cad4
-    faq.open_source.answer: e6f85f3fdc79b5b6de85f143d61799de
+    faq.open_source.answer: eecccfa5ff08358f0c2ef7b896ed4cb3
     faq.open_source_pricing.question: ec385baa3ff53620584e4f3b7a14b633
-    faq.open_source_pricing.answer: 8af2fa766022f9846afdb2363a726098
+    faq.open_source_pricing.answer: 1553df2b16b6ec50b96b5f3c4f20fc13
     faq.cancel_subscription.question: b4f964cd11af66a6f9a6c923560f29e1
-    faq.cancel_subscription.answer: bce33a6f7b2efed596edd3c0e59fa52c
+    faq.cancel_subscription.answer: 43da2eb7e1c7dc49c4da73544f7bea7a
     pricing_slider.tier: b2c009fe81a7cfe4b156cab83bb1e8e9
     pricing_slider.keys: cc4ffe6bb1e7c09bcc0041de1eddc2cd
     pricing_slider.documents: 50641c08865f97698ffc3ef934209d55
@@ -1349,66 +1349,66 @@ files:
     docs.getting-started: f715741340973da23b5c6a04e70b3d87
     docs.workflow: dffa7879e81470e26018ea29b820c9e7
     docs.ci: a91e4ff4bf49e8de7de911d95062662e
-    docs.presets: 2028e774b7912c719d575468ffa4141c
+    docs.presets: beb048013d54a22dd831892cbbecbb5e
     docs.formats: ee1994047bfc4d00618dbda3ab2a537e
     docs.platform: cd56c8aa009fe005b32465f14b8b7f77
     docs.introduction: f715741340973da23b5c6a04e70b3d87
-    docs.quickstart: a39440efe8babbc439ed19dbf6b57fb4
+    docs.quickstart: b391a6eaac5e8cde40256332f661993c
     docs.authentication: ee72abf8573b58b7adb396b055934ae5
     docs.configuration: 1a0150117e807caf279cde8bdf66f406
     docs.cli: 91af5705f16502125e8b2187e64202c0
     docs.github-actions: 13ba7207bc17b080a301c0c333cb07c6
     docs.tuning: 9b8c5566f1323d88d3192d269523bcbe
-    docs.overrides: 3db0abab2211e2f98a5b3304b6c5c049
+    docs.overrides: aa6a35fe91690e61a4520d15d000c770
     docs.settings: 4d3c4eb9f350e268f00f8097de526194
-    docs.hooks: 702f90402642db675507590929b499fa
+    docs.hooks: 72b4348bed46e10ff40eaec72ef23e3d
     docs.examples: ef68b15a3e0a1018be2c812e08659cf5
     docs.team: 24ea1c1f947f71710ecc78b6760c092e
-    overrides.title: 3db0abab2211e2f98a5b3304b6c5c049
+    overrides.title: aa6a35fe91690e61a4520d15d000c770
     overrides_sheet.title: ced3578e5f666ec8ac6cd82a673d9213
-    overrides_sheet.description: a55394b33c7c1781e1182fea84241cc5
+    overrides_sheet.description: 4ba6bcb0f1f41e84dc9bb1a13db9530f
     overrides_sheet.save: d3270bdb8d2c1caaca4178dbe19be03a
     filter_locales.languages: c88b33a3250b4e28f34e1ececba69206
-    plan_settings.translationKeys: 73308ae0d649c101ac1ebfcf9a6e2037
+    plan_settings.translationKeys: 81961214bb15aafdb57b62b224d3fa57
     plan_settings.documents: 71b2ee5ae7a23092389ac5fd6791ff43
     plan_settings.languages: c88b33a3250b4e28f34e1ececba69206
-    plan_settings.keysUsed: 541d17eb14bd47d1d2bce722d91e88b6
-    plan_settings.documentsUsed: 8e613ad96491e77955928689b4eb2daa
-    plan_settings.languagesUsed: 1ba9a9ff27bcc697e181dfcb9487dba9
-    plan_tier.currentTier: 8aa1f0c5284734d75e82976a00cd11bf
-    current_tier.currentTier: 8aa1f0c5284734d75e82976a00cd11bf
+    plan_settings.keysUsed: 1cdeb852e19cfce66bf5bc2b17b43f0a
+    plan_settings.documentsUsed: 9d018bdfd7109af73c0adf581318187b
+    plan_settings.languagesUsed: edddb651be270fe2b11095b1566a796d
+    plan_tier.currentTier: b742bcd18ec6600fcb44bb1498f36d8a
+    current_tier.currentTier: b742bcd18ec6600fcb44bb1498f36d8a
     current_tier.tier: 48281f892129153b9a8eb1aa6c7b4def
-    current_tier.translationKeys: 73308ae0d649c101ac1ebfcf9a6e2037
+    current_tier.translationKeys: 81961214bb15aafdb57b62b224d3fa57
     current_tier.documents: 71b2ee5ae7a23092389ac5fd6791ff43
     current_tier.languages: c88b33a3250b4e28f34e1ececba69206
-    current_tier.changePlan: 2933867572f8cde1f88d9bdb49b00bbb
+    current_tier.changePlan: 0b7b2f10b549793449fecfa49832ca21
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
-    current_tier.manage_button: b246caab3afb655a552c596396fe0c1e
+    current_tier.manage_button: ed4b919a3300f7bd2bda602d33a6daa4
     current_tier.canceled: 3b855c464bd404b3dee66a4849335150
-    changePlan.title: 2933867572f8cde1f88d9bdb49b00bbb
+    changePlan.title: 0b7b2f10b549793449fecfa49832ca21
     changePlan.upgrade_to_tier: 4ecb4c268a15d1d606863cb03265f3c5
     changePlan.cancel: 847607d75e504090b5aff16a6e6c8351
     changePlan.description: e5f422c5570eb99d69dde483bd644ffb
-    test_translation.title: f38989833ab575d6b59223b3a720cf8f
+    test_translation.title: 4d9d23edc36efe0b95482d0d9bc97034
     test_translation.description: 3af161b85deed15224e43ba0b8215151
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
     header.signIn: 634983f425e586cdfe14c715fabae635
     header.goToApp: 02a199e2306dd194a6a4c43741c7b8a7
-    hero.title: 64175976b8f9e613d3ef170143b69571
-    hero.description: 2bf6b0180b7d9382c6425daa42ffade6
+    hero.title: 5237f4e657e1ebe29677bb7f727f0044
+    hero.description: 0d0c5193029f138cfa89d9cecee7d170
     navigation.dashboard: 820c7142370ede086c0f3db8aad1aeef
     navigation.tuning: a7d3f83ae8cb48c47d4cf1486b00b641
-    navigation.overrides: fd019a65932fdc66ddd8600b01516aea
+    navigation.overrides: 43a7607dfd166b4f1d0c6ce4644e90ab
     navigation.settings: f20e9f0326600cf271562c061d3986f9
     navigation.pricing: 631c0bd827638623470343016f13945e
     navigation.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
     navigation.account: 884a1de4d3195f10985afac09db0aa6d
     getStarted.heading: 66963d16bba8c9087c0570d1d875781f
-    getStarted.title: 64175976b8f9e613d3ef170143b69571
-    getStarted.description: 2bf6b0180b7d9382c6425daa42ffade6
-    getStarted.button.startAutomating: ae58199f13a3ff0b38af4ee61530b291
+    getStarted.title: 5237f4e657e1ebe29677bb7f727f0044
+    getStarted.description: 0d0c5193029f138cfa89d9cecee7d170
+    getStarted.button.startAutomating: cf14035b33781c88be3ed14c888fea61
     getStarted.button.readDocumentation: e60a4af5dc2d2917776dc426ac102d17
     companies.title: 366f89f81e17fefc585f1a06ef9b3b78
     companies.addYourCompany: c615a4aeb1782586172cd641ab165d9c
@@ -1420,29 +1420,29 @@ files:
     activity.type.key: be35dc814feecedb834c49ea5df73127
     activity.type.document: 50d577c2b1918a89f6cdbf358d148340
     features.title: fb75f10c213c814ae204051eb749ba8f
-    features.fullyOpenSource: 485fcd6be3cbfc0a89d4e0a4b77cd478
-    features.fullyOpenSourceDescription: 148768b709461ee84be37306852eed48
+    features.fullyOpenSource: 7a34ebeeb99d7ce795566e59f937eb3f
+    features.fullyOpenSourceDescription: f1bbbabb357aea38a746aec19974c7b0
     features.presetsForExpo: 08af2e8c37d5fc2b70285673a4c34b1b
     features.presetsForExpoDescription: ffdecc4f24cb5531c06b43a1fc342857
-    features.presetForReactNative: 701297e6d3183f7c14f5dc21eb4a9967
-    features.presetForReactNativeDescription: 5af4802b051c2992dbe0ab1b9f7f0431
+    features.presetForReactNative: 3f239ebd93e2c3272e178bc485bbae40
+    features.presetForReactNativeDescription: 676c42c63c3c8c14448089cb8f3b6fa0
     features.presetForReactEmail: 74108c2c28525137be8144d03155c46b
     features.presetForReactEmailDescription: 28640bb97cd2fa96344e8898a3332b19
     features.readyForI18nLibraries: 0882b42b104c5c2d2e3ed91309492263
     features.readyForI18nLibrariesDescription: a6b8d6d3276a3a04293ae9b2d18b63b1
     features.markdownSupport: 39d3f89619647a9035b78af2387ad79d
     features.markdownSupportDescription: 60e0b2052b8ed0bd965343cd06c06e44
-    info.title: 5da3bc7164c1291caefd83c740d5e6e0
+    info.title: 0e5dd8e374091aec8d187e20912aee88
     info.smartTranslation.title: df9e934a3002eef9b578e78ba6301c17
     info.smartTranslation.intelligentTranslation: 479605dad82a178176f7f4b3ca431304
     info.smartTranslation.brandVoice: 2bb26f2d5b6398d908b56693fe0f7288
-    info.smartTranslation.terminology: 06e89c05bfea60f43a22be468570a3a4
+    info.smartTranslation.terminology: 5c1eefb164b03226b0b4ba24bbe5e49d
     info.smartTranslation.linguisticFeatures: 024f328b41e89e465764813d63ba1907
     info.smartTranslation.realtimeUpdates: ee81689143ebc2998d5f61797ebf56de
     info.implementation.title: eeab6b79e5fbe40e3ff2b0d91bd4eafc
     info.implementation.quickSetup: 1a57d84ed4a1fafea14f6a793e0cfc25
     info.implementation.fileFormat: baf2afa6f64789c25b471a5daa3bed7f
-    info.implementation.contentStructure: dc6c16b25d7ada08cc872fb0e9aeb501
+    info.implementation.contentStructure: 8ac33778f4b7cf7a4bdf8372109316ff
     info.implementation.assetOrganization: 05038d3d6202f15071f8658ce07bde18
     info.developer.title: 53ca9ccb06df90b961ef39f5845b9694
     info.developer.cli: edc5a95398cc1a735c4fc80c50c92aef
@@ -1453,8 +1453,8 @@ files:
     login.title: 634983f425e586cdfe14c715fabae635
     login.github: e2a9430dc414b330aa6a188ced3ebb69
     login.google: 8f27b0541b3db33beb97323aabe201d4
-    login.footer: 8648cd164415bac1441d12c32825846d
-    login.description: b94a7e2788eccb90e21dc2da71b860a8
+    login.footer: 98fab5586a94295c76c0b9eacbb7d7b6
+    login.description: d308b2934d19709742919d0974a607ce
     login.terms.text: ffffc2d949b304cf4e9948c7b5b46909
     login.terms.termsOfService: 33207b043a7c0ba2421079ce3866f015
     login.terms.and: a78c5bf69b40d464b954ef76815c6fa0
@@ -1483,7 +1483,7 @@ files:
     account.email.description: e65da20b9b726178b92aa9a7f6f9079d
     account.email.placeholder: 8f4a895a33bed5f25f1325e72decaf17
     account.apiKey.title: 428adccaf91f985849eb06688caf46c5
-    account.apiKey.description: 517fab4d830f704e6a59dafc3f5a6a9d
+    account.apiKey.description: 56ae2c9fb5202a93814914fa0e052651
     account.deleteAccount.title: dc83bace2eeae4fa3c76a4c440c2d075
     account.deleteAccount.description: 00525371988845351ba5cdbaf5a99711
     account.deleteAccount.button: dc83bace2eeae4fa3c76a4c440c2d075
@@ -1495,11 +1495,11 @@ files:
     dangerZone.dialog.cancel: 54847413938d69ec23f3f7fe3b409708
     pipeline.title: dfeed2dbe9537669bb4aab92ce109e06
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: b2392a2deb1ab3b0b601eece57d7c6f3
+    pipeline.description: d15a1f349c237f0cf3b65b7deb3c49c3
     settings.badRequest: b4f7feaae8c5d74aa949f9d5ed1432b9
     settings.badRequestDescription: 968b40d24a2dcc529595f2b79c28f258
-    settings.permissionDenied: 8ec869b8466f7443c5f19ad70327073b
-    settings.permissionDeniedDescription: 725a45af4564f47ec60b4178c0189d3d
+    settings.permissionDenied: 9fb65a047dde8f1b2658e159cef5ce3c
+    settings.permissionDeniedDescription: ed64fbc34e6f00f19f9c09dc090693f5
     settings.deleteTeamTitle: e28e4e6d9fd56a606a42fdbe629f2506
     settings.deleteTeamDescription: f27dcba88a40ee39b814ab20660381df
     settings.saved: 7f5f3a525f2231a9c633b5ee64ead369
@@ -1508,7 +1508,7 @@ files:
     settings.errorDescription: 752b79b48e98155c9c34e89efeefefe3
     settings.addTeam: cd78369ecb0016d2379ca34d63fb6aa6
     settings.apiKey.updated: d762932118affa1b1d634c96a0dc9fed
-    settings.apiKey.updatedDescription: 69b676759eb6038c07359d2d28f27bbc
+    settings.apiKey.updatedDescription: 7d5e3b136ee2552bc8fd87e9108c12f4
     settings.apiKey.title: 3cbb951765e6b73a0256395be3aecfd7
     settings.apiKey.description: d607831c66c90c95a89ffafe40abe30c
     settings.apiKey.cancel: 54847413938d69ec23f3f7fe3b409708
@@ -1540,10 +1540,10 @@ files:
     settings.team.apiKey.title: c6453609999113437b3107a59d6dd860
     settings.team.apiKey.description: 1878ae4f7d36584f7601457c9a6946bd
     settings.team.apiKey.placeholder: c6453609999113437b3107a59d6dd860
-    settings.team.members.leaveTeamConfirm: b14b292742e20329e0231fdf33a013b3
-    settings.team.members.leaveTeamDescription: c6afa376ab9514d96742cccbb5564273
+    settings.team.members.leaveTeamConfirm: e833da98f099129366d38f936b1304ce
+    settings.team.members.leaveTeamDescription: fa1eabcf5cc3a198f5366761ca1e4ce5
     settings.team.members.cancel: 54847413938d69ec23f3f7fe3b409708
-    settings.team.members.leaveTeam: b14b292742e20329e0231fdf33a013b3
+    settings.team.members.leaveTeam: e833da98f099129366d38f936b1304ce
     settings.team.members.invite: 5014ab3e0b691743b725ebcab5943ed2
     settings.team.members.title: b92032fdcfdefbec51f1439ab56c3105
     settings.team.members.pendingInvitations: d2bf646d818d52e072c035554405f5b0
@@ -1553,7 +1553,7 @@ files:
     settings.team.members.filterPlaceholder: 3b71563d63c7504bb32f765952e0e237
     settings.team.members.allRoles: a253b63e61ebdf310b708e959cb7295a
     settings.team.members.date: 8fe046cf854397680d787aecec08a567
-    settings.team.members.selectAll: a73f2f2092b61c361d864cab26be9a9f
+    settings.team.members.selectAll: 20075898a6690aaf4752987014072f70
     settings.team.members.noPendingInvitations: 3487651a347a1b5943af676d34deae18
     settings.team.members.noResults: 4ddab5606d6b1ee3075008bb76ed8244
     settings.team.members.tryDifferentSearch: feb1e2021afe6ef25fb5e50a8c056d77
@@ -1573,7 +1573,7 @@ files:
     settings.team.members.dateSort.oldest: ec57e93d57c629f13fa309ba603055b3
     settings.team.members.deleteInviteConfirm: c2eb36830c8fc14befdff7010c092035
     settings.team.email.title: 39920f019b41ac04bb1e872d5366dad3
-    settings.team.email.description: 43d1dc52b4819d9a1d9c44666268c9ee
+    settings.team.email.description: 1ee272343c42ce8ae3f512e043723afe
     settings.team.email.placeholder: 97215d402226e5af48c3386a1c0812e5
     tuning.general: 019659385112972f45a3b22f83ba71b5
     tuning.translationMemory.title: a17db8b300c4b8f8cb2a213be08efa87
@@ -1593,8 +1593,8 @@ files:
     tuning.inclusiveLanguage.description: f94c4fc5f5008e69cd69cb7decfd26cf
     tuning.formality.title: c27dd1a3b152f91f601677c808069b31
     tuning.formality.description: 82dd115721391a067413f7dc715fae74
-    tuning.formality.options.casual: acb195f84d978b22c7d44d57ba8ef6b8
-    tuning.formality.options.formal: 2ee8bb2d9a42a77c0ccc64e90a09c6aa
+    tuning.formality.options.casual: 3ad358b57e236c448977637d415ef1c4
+    tuning.formality.options.formal: 2e7dcdd898afba4f922982c9a8418267
     tuning.formality.options.neutral: ea1e18fb7c2947268b5845aedd0f9b9d
     tuning.brandName.title: 132cb35ba01c06e29390027152e9c460
     tuning.brandName.description: bde6e39a999af2f96bd5016d7849926c
@@ -1604,18 +1604,18 @@ files:
     tuning.brandVoice.placeholder: 435841442c1ac8d235318304e7a6a4dc
     tuning.toneOfVoice.title: d8ee2894ae34b15805fef502ba0c2b65
     tuning.toneOfVoice.description: a63bc354c60353ab5b027d1a045ad5f7
-    tuning.toneOfVoice.options.casual: acb195f84d978b22c7d44d57ba8ef6b8
-    tuning.toneOfVoice.options.formal: 2ee8bb2d9a42a77c0ccc64e90a09c6aa
-    tuning.toneOfVoice.options.friendly: 17e7aeb5c1cd447ddf19e22aac42d7de
-    tuning.toneOfVoice.options.professional: a8567973e1d5bf7338ea5402db9db80e
-    tuning.toneOfVoice.options.playful: 8e6a0c322371de61b9721ec5be317ba8
-    tuning.toneOfVoice.options.serious: 3ee80841f1cf71fc272d746178a43150
-    tuning.toneOfVoice.options.confident: 0ed781250f325466924189715e91d2fe
-    tuning.toneOfVoice.options.humble: 66272328cc5c5d4a0cb59995cbcf1486
-    tuning.toneOfVoice.options.direct: 422eec4890a52987aea8aa1835958ac4
-    tuning.toneOfVoice.options.diplomatic: c5f0eca30eb25b390dd9c05eaa98eb06
+    tuning.toneOfVoice.options.casual: 3ad358b57e236c448977637d415ef1c4
+    tuning.toneOfVoice.options.formal: 2e7dcdd898afba4f922982c9a8418267
+    tuning.toneOfVoice.options.friendly: afdeff87ff274a799860a7da35878f07
+    tuning.toneOfVoice.options.professional: b8e70169de4c6a1e5c62da8c9b377f59
+    tuning.toneOfVoice.options.playful: d7f9b1476da64930be02cd04798edb93
+    tuning.toneOfVoice.options.serious: 1f59b040b69ed38b85a207035aded1af
+    tuning.toneOfVoice.options.confident: d3531625ae32004544771b007114c4f2
+    tuning.toneOfVoice.options.humble: be1496374648b1387bf02457a53cb990
+    tuning.toneOfVoice.options.direct: 21c5b7c8b8661bff23c55e67219831b6
+    tuning.toneOfVoice.options.diplomatic: 4b07115874d8ee17c28187e13ace5be4
     tuning.brand: bc4368641b0edbf99740c017a2c8d5f0
-    tuning.emotiveIntent.title: 84f4faacb0d5360fd039d31f0e042369
+    tuning.emotiveIntent.title: fb0a35d053a68c1f6a19860fef26b83e
     tuning.emotiveIntent.description: 7f1953ebdf5b09ca9ace100648e77372
     tuning.emotiveIntent.options.neutral: ea1e18fb7c2947268b5845aedd0f9b9d
     tuning.emotiveIntent.options.positive: a5e8a46e79f05463094ff946bdeb6181
@@ -1633,16 +1633,16 @@ files:
     tuning.domainExpertise.options.marketing: 8b97647e5f1a2bac20e186f0840f5d0f
     tuning.domainExpertise.options.academic: 24a16276658645d55176e73ec77b4ee2
     tuning.idioms.title: e7d8f7011b7d1df675520a12b448a0c6
-    tuning.idioms.description: 14d11f234c2436191d7cdb4cb8a1c89e
+    tuning.idioms.description: 8d50a1b0a2a3b68a57abf656e4ccde33
     tuning.terminology.title: b15e2fe144130141b3ed6bb8e3c54904
     tuning.terminology.description: 5418f2db185d3ec111fd82db2cdc3a75
-    tuning.culturalAdaptation.title: 1b21ec1d26811d9728687302e26604d9
+    tuning.culturalAdaptation.title: a4dd23c5d6cc6bd591ca948025dbcf49
     tuning.culturalAdaptation.description: 6bcb6be310f048f294fbc7f7e05c87e3
     pricing.title: 55d3c35fce03c2a4d23c9dc858542254
     pricing.free.title: 149ec04c0941a2bb16efda7a68fe6372
     pricing.free.price: 149ec04c0941a2bb16efda7a68fe6372
     pricing.free.keys_limit: 229d3dba571a14051c16f0d8f5551c72
-    pricing.free.description: 8eeae532fe727380d04ec8d17df75f59
+    pricing.free.description: bcbbd4f819c6ee0091d58896f3a71b71
     pricing.free.features.unlimited_projects: a3051f1fcf04ce8656ce6dad2921d6e3
     pricing.free.features.fine_tuning: f868faa37fc638963c8391eb158599bb
     pricing.free.features.overrides: 38f10bd281210763c15f040e25a6d46e
@@ -1657,11 +1657,11 @@ files:
     pricing.pro.features.github_action: 122c8bb5a9f4defba57a9a070203fda3
     pricing.pro.features.latest_features: cb7e9dd807fe725479eec4b5824273db
     pricing.pro.features.priority_support: 33b8528d943d32adaaed30404431e596
-    pricing.pro.features.priority_queues: f857d2e37c7c2c6f5f27d98b5eba3c8e
-    pricing.pro.features.languages: 7bb098b118d0899a1f11828e8a89ad3b
-    pricing.pro.features.keys_limit: 671646da6fd5e46a55c2407db591bb0d
-    pricing.pro.features.docs_limit: 0cd68c51704006d3c6c4323fa60117ef
-    pricing.cta: cf14035b33781c88be3ed14c888fea61
+    pricing.pro.features.priority_queues: 0959d0e6e9622683b4be5524771aabfa
+    pricing.pro.features.languages: 8c3d1cc985c3b738a3a76cd667132a87
+    pricing.pro.features.keys_limit: d332009358c79aaaef6cf6ea9b36f84d
+    pricing.pro.features.docs_limit: 89d38713cf44135934be457adfd839d0
+    pricing.cta: ae58199f13a3ff0b38af4ee61530b291
     pricing.keys_limit_explanation: 171792037393813f240a550838504560
     createTeam.teamName: 7caa28e932a0ec9299fed41fd9f2c308
     createTeam.teamNamePlaceholder: 3a4722dcd5bac9f53958b048d748867d
@@ -1686,16 +1686,16 @@ files:
     invite.validation.invalidEmail: 65e9fb6b7c1341d6374d88023770720e
     onboarding.steps.1.title: 7ab5a28be768f81bec60bc8e9fb9d13d
     onboarding.steps.1.description: ea78e34f9846d5c158fbb6dee8267cbd
-    onboarding.steps.2.title: 3827f002efe2e7b5667214fda22cf40d
-    onboarding.steps.2.description: fd4a2b42939fcc37ceadeea3162ed45a
+    onboarding.steps.2.title: fc108e54b7000445a0eba69ee267a889
+    onboarding.steps.2.description: 472a32b41b2cee0b84953d8361746c0e
     onboarding.steps.3.title: 7821810b7991ea5cb2f215b8a0ae3bfc
-    onboarding.steps.3.description: f5bad825816989e5bfe3850c3017ea9a
+    onboarding.steps.3.description: 1cbf201807781ad4934fab289b11baaa
     onboarding.steps.3.link: b4b75eb1c6d0afb0fb5e62e36150a76d
     onboarding.info.description: c688612843622d6e98e5e2ae791577ef
     onboarding.info.link: b4b75eb1c6d0afb0fb5e62e36150a76d
-    onboarding.info.description_2: 783f55f6a40310e89852f94df135e501
+    onboarding.info.description_2: b3c682698c106c25d31bf4c8407467d2
     cli.success.title: 6e8e8b3e434cef169b1f121bedc7d28c
-    cli.success.description: af11e54cc9be3b8fa666239062e8425f
+    cli.success.description: 9c62fe6f38cddc44d00592aa53773c16
     cli.success.description_2: 334f386b7563491468e9f871472ed809
     search.placeholder: 9d01384c7dfaefa499dbbe2c2e2ea94b
     periods.daily: 0b5bc3737f5a973c98234538dde36fa1
@@ -1706,7 +1706,7 @@ files:
     language.de: 4b46303042396a1deb15033b7255b985
     language.ar: bbe51d78d9e379bb363500d1ce11199d
     language.az: 83db5c8cc6d08fb37b7a00df029ada9c
-    language.bg: 01a151debf2bfee8906f43f4342eb10b
+    language.bg: d8920c41fe4b42014003d118b3e3738d
     language.ca: 6f43b1733b061c78a6939487c8b6e97f
     language.cs: c5e84d36dde93046f62d6a7b2e4cde74
     language.da: 9ef7711c780b4ad8fbb3b625d87bd686
@@ -1740,7 +1740,7 @@ files:
     language.th: 43ddc789bcea4177a14791f6c9a03b28
     language.tr: ba5f501c85545ca110ae6966ce67ee0e
     language.uk: c338f80e38dd2381f8faf9eccb6e6c1c
-    language.vi: 7dec3ce2c2147aae9103cabac0c67485
+    language.vi: fdef6daa799e80dbce1b561577b21181
     language.zh-CN: 26c23da403925f067b9670a528d66c67
     language.zh-TW: 483948b969bf5054fd97207ed60e3944
     menu.dashboard: 17d30d518b591b56e15888d6bb654403
@@ -1771,17 +1771,17 @@ files:
     faq.key_limit.question: ec535d82c85c9a032f5bf90bc376fa0c
     faq.key_limit.answer: 6079375a29ff2771724ccbaeacfe6e9e
     faq.supported_languages.question: 063ea1524e37e9a49bcefad3d45f55b3
-    faq.supported_languages.answer: 89b5392aef9d960b5fb371ceaafbfc2c
+    faq.supported_languages.answer: f77774d787dd6db6ad257dbb7b1646f1
     faq.github_action.question: 2a9b78df731ef18211ca02f35f1b1275
-    faq.github_action.answer: da3019008c99d0f9e411ca66b36c5336
+    faq.github_action.answer: 1fcfc2a4858d81b413078bd902a6e4e3
     faq.support.question: 0d5cc0a38e957424dd1d9475ceae066c
-    faq.support.answer: ddc666e5a1d55921209b8ba4d84fc674
+    faq.support.answer: 96cd837a4ab9dd5b4120b5494b1c43b8
     faq.open_source.question: 713e1381cb756db80aed228d38d4d05f
     faq.open_source.answer: eb5f915b8b4e73b27fcea43150a72224
     faq.open_source_pricing.question: fe285f5aa73fafa8cbae36dc8d9c99fe
-    faq.open_source_pricing.answer: 475af021652a222756e37c82153a5203
+    faq.open_source_pricing.answer: a0fbbd7995c0646944398528218afa47
     faq.cancel_subscription.question: 75a47cdfe0ad34d838439cf90cfa1c0f
-    faq.cancel_subscription.answer: 16575cdbdaddb5a09855ed7655c09a0f
+    faq.cancel_subscription.answer: 0634e4b8bdf230d92661980abee256a7
     pricing_slider.tier: 01d2298a99c5a80af1b8a332cd1fe7b9
     pricing_slider.keys: 602dd31f487af9620cee963830a44456
     pricing_slider.documents: 17cb1ca150d10f09f320e26fd146a057
@@ -1812,7 +1812,7 @@ files:
     overrides_sheet.description: 28ce74ee8afa1c0e02147232d446f544
     overrides_sheet.save: 07f2f895f32e9e4987005e255475b9c2
     filter_locales.languages: 23c2f99f5c2b88fcf1b9d7542dc69432
-    plan_settings.translationKeys: 83e14db77ea4319d66e0b890b5132537
+    plan_settings.translationKeys: ea70c61c4b6190140e642dc89a6d2851
     plan_settings.documents: 186c80e1e32507d8b1f4911f8c0e28b7
     plan_settings.languages: 23c2f99f5c2b88fcf1b9d7542dc69432
     plan_settings.keysUsed: f26e18859b04c739e77760486b0b2963
@@ -1821,7 +1821,7 @@ files:
     plan_tier.currentTier: b6697487e2f7b7d59c6d6dd59f3ecd1a
     current_tier.currentTier: b6697487e2f7b7d59c6d6dd59f3ecd1a
     current_tier.tier: 5893543f1e918e09376aa0dbaf5dfc08
-    current_tier.translationKeys: 83e14db77ea4319d66e0b890b5132537
+    current_tier.translationKeys: ea70c61c4b6190140e642dc89a6d2851
     current_tier.documents: 186c80e1e32507d8b1f4911f8c0e28b7
     current_tier.languages: 23c2f99f5c2b88fcf1b9d7542dc69432
     current_tier.changePlan: fb44b49ed5687e3983afc7581f0fbafc
@@ -1831,18 +1831,18 @@ files:
     changePlan.title: fb44b49ed5687e3983afc7581f0fbafc
     changePlan.upgrade_to_tier: ca60b245c2f71ea9a056f060d82a0e1a
     changePlan.cancel: 54847413938d69ec23f3f7fe3b409708
-    changePlan.description: b1ced793d9af7f2f26d2830691abe361
-    test_translation.title: 0215c6e60c4421956b2861641ffc76da
+    changePlan.description: 379e172a152f087c0d2f33404e4e06f7
+    test_translation.title: a3418bb6cbb84e6aa0e412a1f0814616
     test_translation.description: 5cebe7806e8c6ce426dac1b14913f9c2
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
     header.signIn: 04fc0f6ce574d7aab7b0157bcdc846f8
-    header.goToApp: 55679098d9426cb73408ac67e1042eb8
+    header.goToApp: eca3f47f652b1cefe6f5eda5d09fc7fd
     hero.title: dfe602cecf5856e3e71d84e52dbbfe3b
-    hero.description: 96fc1af46987551ffd3cf18593956800
+    hero.description: 69c9a33345e994f42681758839dd4488
     navigation.dashboard: 4a37efc27391cc18714c72981d59c072
-    navigation.tuning: 066a51dca72463379796270bbd033415
+    navigation.tuning: 873ced728e03fa88758b36605c38fa5a
     navigation.overrides: a3fb4ce65bc3d9f383ec312dc51c8fa4
     navigation.settings: e7785de91330713fc2d12404bb6bd556
     navigation.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
@@ -1850,7 +1850,7 @@ files:
     navigation.account: 4cd05effefac83d92a4cbd939beac4ef
     getStarted.heading: 62c3f6afd773369cfc24fe9e38c2d9a7
     getStarted.title: dfe602cecf5856e3e71d84e52dbbfe3b
-    getStarted.description: 96fc1af46987551ffd3cf18593956800
+    getStarted.description: 69c9a33345e994f42681758839dd4488
     getStarted.button.startAutomating: 749f5c4dd3dcb4e77467f42ee5db6431
     getStarted.button.readDocumentation: 3c0b6b5b54ff6e54844e90d5eb38e4df
     companies.title: 7bf52c8c512c2cd7f72776df4a78e859
@@ -1877,16 +1877,16 @@ files:
     features.markdownSupportDescription: cd13cccf87c334fc581b57d3544c575a
     info.title: 048e5d4ccb8f96d1212774e321b17825
     info.smartTranslation.title: c26d5c71c9e3d122583ce188e11d147f
-    info.smartTranslation.intelligentTranslation: 5d91b7f639680347cef1c62913bdbcd8
-    info.smartTranslation.brandVoice: 5f44d601128079eed1f2a5a1b7439a48
+    info.smartTranslation.intelligentTranslation: 134d0b846e8ae1bea9689028ea208600
+    info.smartTranslation.brandVoice: 07ae65f12caae20ce6bca59219a3d23c
     info.smartTranslation.terminology: 4f35357a075aeabfec3003d1c0f75c9d
     info.smartTranslation.linguisticFeatures: 3d69b6c15972abad6321412d4d454fad
     info.smartTranslation.realtimeUpdates: 3fbbef15fa735ec6be2a88dd96e59140
     info.implementation.title: 3217cdf0b179d7a8a960e507cd02d08c
-    info.implementation.quickSetup: 14fe64e7ddddd50ab3c7586a90d42261
+    info.implementation.quickSetup: 5582513c539b74a268034ed606622991
     info.implementation.fileFormat: 9e4c8cdd4a701e54dbadc5915d6ef2ef
-    info.implementation.contentStructure: 131b040220280681e3cf1c701c593a10
-    info.implementation.assetOrganization: b647e84492ff57b5220dfe3b17410757
+    info.implementation.contentStructure: 2accf2743fc43c4c1a9e53ec6b0103f6
+    info.implementation.assetOrganization: fc3acaf92048e1dc70ea48fa3c7d5a48
     info.developer.title: 080de38c34da61d65848501bb1a04c05
     info.developer.cli: 116230ae89e66aea5e661bc5d03bdf52
     info.developer.cicd: eade34c76f0ccf9ebbfb87bb893f2d79
@@ -1932,8 +1932,8 @@ files:
     account.deleteAccount.button: b4092c5b3bc164604ec659c599454045
     copyInstall.copied: 268147c8e3596b09d44cb181b561428a
     dangerZone.dialog.title: 71ca62b605390d06886fada52e020d1f
-    dangerZone.dialog.description: d01f7b7988e0c02d59c580ec68357609
-    dangerZone.dialog.placeholder: 5971d5e5895d8be2687989bf0a681cd5
+    dangerZone.dialog.description: bd42eebd3e76dd7a3f9494e431d4ef24
+    dangerZone.dialog.placeholder: 66a6f78000f863f3b9f88eee29e93542
     dangerZone.dialog.confirm: dd018909724477509c84b169c8e36514
     dangerZone.dialog.cancel: d12c3b0dcf75614dafb2ac6bdaa77a26
     pipeline.title: 4fa7e0963afacde082e5fcef521e73a0
@@ -2016,17 +2016,17 @@ files:
     settings.team.members.dateSort.oldest: a15df2a503ca0ced8535ab6c7ce1af19
     settings.team.members.deleteInviteConfirm: 85021f1d2f9955f028ba3e98c73d1127
     settings.team.email.title: ac18ca5c15ac6b42fa9dca9c59d78cdb
-    settings.team.email.description: 7c714f1d5b4d91f9fad3d92a507e5f8a
+    settings.team.email.description: a5510ae3112bdb1caebf17b68366f90b
     settings.team.email.placeholder: 1bda2bf15693f1f103c000931dbbfd0e
     tuning.general: cbf5d231135412fb14429e086c09a722
     tuning.translationMemory.title: 2e976836729392a2b2dde849cb290318
     tuning.translationMemory.description: 80b837d48edcb66539d44cea6fe8d94d
     tuning.qualityChecks.title: 4d0d9251df503cc17eaa4ee4fb039735
-    tuning.qualityChecks.description: a4226b7b96afc811d43cbbe3c7bcf131
+    tuning.qualityChecks.description: 50896fa4f87fa48359a1e49d57c988a8
     tuning.contextDetection.title: a691a35bcae4cb4411eec49a70eca2a4
-    tuning.contextDetection.description: fc5715205c73cce712537abe366d56e7
+    tuning.contextDetection.description: 09cdcd63f252f48317e5a29616f7cbec
     tuning.styleGuide: 10355f69b6676a41e96dbba865663608
-    tuning.lengthControl.title: 5512a2abd7b61a5e73110e49017b3947
+    tuning.lengthControl.title: 32d9c215a8e89a07ea0214ee92225a1f
     tuning.lengthControl.description: ad7724dbbd7b81f4eb1dd957da822d53
     tuning.lengthControl.options.flexible: 13b303a6c0d90897b5375ce901acc445
     tuning.lengthControl.options.strict: 2e979835dd62324f5bfe217449ba4974
@@ -2059,7 +2059,7 @@ files:
     tuning.toneOfVoice.options.diplomatic: 9425a3f93f7140593fa8c8d1e6c39414
     tuning.brand: a3e2b2eac8c6e13595eec203542f4def
     tuning.emotiveIntent.title: 6d4916abd485ee7799797c9340506929
-    tuning.emotiveIntent.description: 7e9a8379583d84cbbc7d5ab3d8d64123
+    tuning.emotiveIntent.description: 4b229653d0e2b68f6f7bd3abe072172d
     tuning.emotiveIntent.options.neutral: 86fdee8b4cf0f5b3a367ac1f9ff7829c
     tuning.emotiveIntent.options.positive: 75f39b0ec133374d18c8e90b48ebc073
     tuning.emotiveIntent.options.empathetic: 22fc6c4fae2df49f7ceaefc27d7f4663
@@ -2080,7 +2080,7 @@ files:
     tuning.terminology.title: 501d6b699dd3dc08c0043e1c03bc1a41
     tuning.terminology.description: 29faf2792afc20091ea16c59559c980a
     tuning.culturalAdaptation.title: 78993864be9b535b656d6ad7fd620db3
-    tuning.culturalAdaptation.description: f78ca1a7c5ed78eaf05e97386029ea69
+    tuning.culturalAdaptation.description: 570fa1a4dc30f0c05b7b03e102cdefee
     pricing.title: 99021282330c2e25d608c82c971a0fd7
     pricing.free.title: 1740c5dd83622f31962f17c52a598f7b
     pricing.free.price: 1740c5dd83622f31962f17c52a598f7b
@@ -2096,14 +2096,14 @@ files:
     pricing.free.features.docs_limit: 707a4832182f4436d66129b2dd65e931
     pricing.free.features.languages: 2eb7c9563051ceb2ad00dc95435530bf
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
-    pricing.pro.includes_free: 617bbedba860774e1714ed26fbf9325f
+    pricing.pro.includes_free: 33a4fb362ddc79a9db841852d626c14c
     pricing.pro.features.github_action: cce421e5e75d34f5fce1f2d290f8fe88
     pricing.pro.features.latest_features: 9281df120aac0eab4bb43cea7050a125
     pricing.pro.features.priority_support: bfa685e512e0f93741917369ac3dc3a4
     pricing.pro.features.priority_queues: 370980c2e8bae30dfd321e56224ec9be
-    pricing.pro.features.languages: 04691819b8b2dcf22cbf8302ac093e7f
-    pricing.pro.features.keys_limit: ff96b32100ed3fa1ecf18fe4392988e4
-    pricing.pro.features.docs_limit: 4c074e5d0d31124dbfe4fd16e73589e4
+    pricing.pro.features.languages: 8daffa34c2a4b97e24ce8e5d2f97a33c
+    pricing.pro.features.keys_limit: 2db431298e907c175406d137ae8b1413
+    pricing.pro.features.docs_limit: 8d3f4b8b16a9b7c46319cb2eb127c298
     pricing.cta: bafd874147aa82f133b892c46c8492b3
     pricing.keys_limit_explanation: 73df6006203a4f918501c4d59a9c004f
     createTeam.teamName: 9dd6637252414eca3b8b2d0d9b9d6b5b
@@ -2137,9 +2137,9 @@ files:
     onboarding.info.description: da3bf3bc9edf25c30ea8aad585b0ff00
     onboarding.info.link: 55876228853abf632dec9346a4f372ec
     onboarding.info.description_2: f741dccd2308c00932825780b71b1b34
-    cli.success.title: a6f24110dacecee75acb163c29238305
+    cli.success.title: 5d6805d9080c36654ddb590c47758904
     cli.success.description: 4344f3b339b785a02a04559ea55e7824
-    cli.success.description_2: c03535600a142203c796740155240fb5
+    cli.success.description_2: fe43b318dfb92dc39cd42f3a160a22b4
     search.placeholder: 2e794d6856491e41c34f85ac2f1e754c
     periods.daily: cca91e218762ee55fb8a180a7dabd0a2
     periods.weekly: 84db0bd32a4d6a183339a5dc5273f05f
@@ -2184,8 +2184,8 @@ files:
     language.tr: 134148809538e5ba219e5f5c7f3a85c0
     language.uk: 1c8162f5ce6d0dd50328cb1a5230c740
     language.vi: 6051357d17917efb63edfe7691b109b0
-    language.zh-CN: cc09bce0180b694c3cfa2e361620cfd8
-    language.zh-TW: 5f4da5c045f3d775b77743d1dd6525c7
+    language.zh-CN: e90918ff2d6578212992cad65d11c491
+    language.zh-TW: d45c06704cd3dd0f211e6c59df8b8cb6
     menu.dashboard: 4a37efc27391cc18714c72981d59c072
     menu.tuning: 873ced728e03fa88758b36605c38fa5a
     menu.settings: e7785de91330713fc2d12404bb6bd556
@@ -2212,17 +2212,17 @@ files:
     faq.what_is_languine.question: 74678f95bcbe2f1dbda5321a1332c4b7
     faq.what_is_languine.answer: bc856bbe244896ca9a1ec910872b339b
     faq.key_limit.question: baee11f572cc95d3290c87fef3fed29f
-    faq.key_limit.answer: 27dc7c95cd365b0ff9f98e3bbefe439b
+    faq.key_limit.answer: 2b007290f3a0f08e82a9540d9cf22423
     faq.supported_languages.question: e77ff521b55b99910e794524613f066f
-    faq.supported_languages.answer: f6d9cd9481c7513f9c3069e528da122e
+    faq.supported_languages.answer: 496dabbb9ae485d0d2b2ee5ddaca09d3
     faq.github_action.question: 3dd87c6779886d350e75bef18040f34e
     faq.github_action.answer: e3372c57a4100b569dcc2eed4f9ebf18
     faq.support.question: d8309c05758ccd090be80696774ed41c
-    faq.support.answer: 5f9922661f59e95727dde1bbbfdc5490
+    faq.support.answer: 47d8b1e91d9b8d926e61eaddeefe8cc0
     faq.open_source.question: a69a4bd6b84583d0caa50ff447d2b429
     faq.open_source.answer: 91ed3738f1b4bc59bbb70ef816ac5e4d
     faq.open_source_pricing.question: d39d06ae53220848dabeac480b41db1e
-    faq.open_source_pricing.answer: 8ff61baee17cac03051b4467071f62c5
+    faq.open_source_pricing.answer: 3b3ea34203363ea0240946b760e67ea1
     faq.cancel_subscription.question: 35b579279acab4c728272e9e261deda8
     faq.cancel_subscription.answer: 4e3262f8807add02384063ca12da647d
     pricing_slider.tier: ee23d5c3e0acc8db92d80876f007cd38
@@ -2275,16 +2275,16 @@ files:
     changePlan.upgrade_to_tier: cf2a3bc8979f1b70baa234892fec3eca
     changePlan.cancel: d12c3b0dcf75614dafb2ac6bdaa77a26
     changePlan.description: 5172b6eccf81dd74189a1974df3ea086
-    test_translation.title: 80b662b16757113d9e27dcb386695f0e
+    test_translation.title: ed0ececf27252d8ed5450b2c2f51fb0c
     test_translation.description: fc47b6f55bc3b08cec0c8120f339bf9e
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
     header.signIn: bd6b12decc2abf95959b791a3578e091
     header.goToApp: 8383c069a4b8e009aa2079632d5e2a7a
-    hero.title: f36cdb5c329213aa9dcb955710227fdc
+    hero.title: 759728b3f46f64518b24feb9fbc287a1
     hero.description: b838ded4ec8b56b9a8ecda67b72a6ec8
-    navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
+    navigation.dashboard: 677bbd24623970a6c6620a0e5f68d02b
     navigation.tuning: 4707b4f4bf5f1e376a624adacae5b7a7
     navigation.overrides: 0e770b80d21f0a0d6098c1f766da3a67
     navigation.settings: e5fca385276288e6aa3b6494edfb5c01
@@ -2292,11 +2292,11 @@ files:
     navigation.docs: f5dd1db267fdc0cfaaaf410c2120ed47
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: b09f65d94eb0f9d925129e39c1daa45f
-    getStarted.title: f36cdb5c329213aa9dcb955710227fdc
+    getStarted.title: 759728b3f46f64518b24feb9fbc287a1
     getStarted.description: b838ded4ec8b56b9a8ecda67b72a6ec8
     getStarted.button.startAutomating: 32d4eff0d7584664a169dd5912e79cfb
     getStarted.button.readDocumentation: dd2b0a6d72a676f48319fa75ac8035ce
-    companies.title: 6a35fcfe67ba9ca78f296f482dd1a8ad
+    companies.title: 35b6b37cca9d116a8bd3b9e731eb4f93
     companies.addYourCompany: d7786aae6aa331e20d866adf976530f4
     activity.title: 06836cd2b08b8f5fde736f0df5a1a23b
     activity.loading: 2be1abcb3217fdbf26db5e70f046115a
@@ -2307,17 +2307,17 @@ files:
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: f47f99234681cc6a1aa8f68bc2e5b7b8
     features.fullyOpenSource: 554ff283475e4dc249136566ce202455
-    features.fullyOpenSourceDescription: 038059050bd729d11350e08b1446939e
-    features.presetsForExpo: dfbf0521145578f8b24dcdcbac126be5
-    features.presetsForExpoDescription: 35e98377ffa1eed8fda5783dff7f6ec4
-    features.presetForReactNative: 22e771feb7c530c20baae71fd20c00ff
-    features.presetForReactNativeDescription: 4b4e90ed3937926bfc3b3159ecf8ebf3
+    features.fullyOpenSourceDescription: 152bea3450e29bab78234ea846504db7
+    features.presetsForExpo: ccc3ca562660eae1ba94623a9f38eb23
+    features.presetsForExpoDescription: 4f30aac9d4a7990c81e8dacf833cca79
+    features.presetForReactNative: 8aa9b28dc788e267459ac049001a7115
+    features.presetForReactNativeDescription: 1554847624a1a4ee7405ecab4b5f33f8
     features.presetForReactEmail: 5c0c45828eeaf5419afa253e7284e1d3
     features.presetForReactEmailDescription: ba02d536a5a05f8348f428b8c95a6d6d
     features.readyForI18nLibraries: a00d5735775c8556ab2ad83b45dcf7a7
     features.readyForI18nLibrariesDescription: 692442d964cecf7b07d7797d480208b2
-    features.markdownSupport: 53ca0967047fabdf6911b430b2723a44
-    features.markdownSupportDescription: e465bfc713dd40ca47fd67b6c0138cb2
+    features.markdownSupport: 268faf5e205ff3d6cc6e459ad2acc354
+    features.markdownSupportDescription: 28ea8b8a4d2479edb6a1de849ec9db63
     info.title: 995d5de075d6afedb04d316a4141498f
     info.smartTranslation.title: 2639671f3d2b4906741909758e1241bb
     info.smartTranslation.intelligentTranslation: 17df274c1e945459e997950c53eb85f4
@@ -2326,8 +2326,8 @@ files:
     info.smartTranslation.linguisticFeatures: 7b7945eb47628ca8abd0d54204bb2a03
     info.smartTranslation.realtimeUpdates: aecff6f609d83ffaeef1b7a0b1a2f96f
     info.implementation.title: c8dd34014f8d537a7685dba96ff08dd7
-    info.implementation.quickSetup: f8075d074dd46b52004ae937a371cafd
-    info.implementation.fileFormat: 89807f50f4312be91530650e81416fe1
+    info.implementation.quickSetup: 10039967a4db753a8545f5cc8b201607
+    info.implementation.fileFormat: ae7f51b9a20abdb7bfd7ef2cc23dc833
     info.implementation.contentStructure: 2cf811fc009536c6e85edd68a728986e
     info.implementation.assetOrganization: af30fa2f42add3aa54429534f68b5f85
     info.developer.title: bd0de590d81501f77cadf64029c221fb
@@ -2376,27 +2376,27 @@ files:
     copyInstall.copied: 9d5158ecbf1e6b35655ba6842aefaf9d
     dangerZone.dialog.title: 0da6bcd7bb136f968b4eab4b4ea749f2
     dangerZone.dialog.description: a62a5f4d5dae63a09ba0d95d3bb2749c
-    dangerZone.dialog.placeholder: 3d68ba8fae745a1354914c49267d8e97
+    dangerZone.dialog.placeholder: ee686f81b16bbc71be3920f96cb2f42f
     dangerZone.dialog.confirm: 97dd13373951167fa582d879da77fe93
     dangerZone.dialog.cancel: 160009a89ee5a2603a26c2bcd824de7a
     pipeline.title: 03aad4ffb7573f08570786fb0bdfd6c1
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 379f197f11a63eeda89d88d9277724de
+    pipeline.description: 0b26cdf867839f291f9239a2784560c5
     settings.badRequest: 812242e716f46e6d9e5a450d104a49da
     settings.badRequestDescription: e2f624d21f527235c6f30a8d872e5f12
     settings.permissionDenied: c15d8a3849309600a8fc4fe51b3e15b1
     settings.permissionDeniedDescription: f34a5bb397bf7b17671de6a95aa9862e
     settings.deleteTeamTitle: 244dbd4a10adf3faab9b500550e881d5
-    settings.deleteTeamDescription: 37f570cf8ddf72ffe4e8edc0522e0f24
+    settings.deleteTeamDescription: 07940ef1cafb1cfa88ce24e9983a295b
     settings.saved: 36f5fa1c43d8c3c7045ea80b820c3a83
     settings.savedDescription: 1275592447af3e5abb8a12385e1d27e0
     settings.error: b7851e086b5ae84e21b76f4709663042
-    settings.errorDescription: 549168e77bf809b09c4dcffff663d87d
+    settings.errorDescription: 5cc755cddf7be2ff89cc279f54465bbc
     settings.addTeam: 6d6be20a84093da4f48818ef5788f851
     settings.apiKey.updated: 5f554ae91181fd43bbdc518a7dded08a
     settings.apiKey.updatedDescription: 2e04cb7e2d86785a0ea5c026c648b757
     settings.apiKey.title: e44a67a8530a220e1f509051bfd1a300
-    settings.apiKey.description: a251bf6203b98344790268ad5b06c3a8
+    settings.apiKey.description: f6c6631f6753e0b1e322a16199423841
     settings.apiKey.cancel: 160009a89ee5a2603a26c2bcd824de7a
     settings.apiKey.continue: 61c6a070ed1f6f0e707e9f398723a083
     settings.tabs.project: b74bfbd0ab944260ba91531a1fa1516a
@@ -2423,13 +2423,13 @@ files:
     settings.team.billing.free: b461d3afae10775fb16718aeee6baf44
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: d4cc01eaf1af6ad50754fe899fd2a279
-    settings.team.apiKey.title: 311cc9d1532825b8628cf81ba90ec1aa
+    settings.team.apiKey.title: b0c73cc320ae47e9a7ec43975a652586
     settings.team.apiKey.description: 86ef915398b2a83ac77eaf13ee2ccc49
-    settings.team.apiKey.placeholder: 311cc9d1532825b8628cf81ba90ec1aa
-    settings.team.members.leaveTeamConfirm: 6dc32dfea8a965ecddd0a5aba903f61f
+    settings.team.apiKey.placeholder: b0c73cc320ae47e9a7ec43975a652586
+    settings.team.members.leaveTeamConfirm: 6401dcd6e6f56ea58c308b662c3a31e2
     settings.team.members.leaveTeamDescription: 046d2c8407110dbf8816f9b6c0609140
     settings.team.members.cancel: 160009a89ee5a2603a26c2bcd824de7a
-    settings.team.members.leaveTeam: 6dc32dfea8a965ecddd0a5aba903f61f
+    settings.team.members.leaveTeam: 6401dcd6e6f56ea58c308b662c3a31e2
     settings.team.members.invite: 738971a60268e5aca6a86e926d10c2f5
     settings.team.members.title: b55147a810a30782e188e02a07d67be8
     settings.team.members.pendingInvitations: 8012db452354675e076ed3130ab02eaf
@@ -2458,12 +2458,12 @@ files:
     settings.team.members.dateSort.newest: b9c5f04e55d2b0c76a4819dfa7e5a7c5
     settings.team.members.dateSort.oldest: 876fb15c9cb586dc81e41fe3e3c9bc95
     settings.team.members.deleteInviteConfirm: 9f53992af68e993ebec30043d7469a95
-    settings.team.email.title: d2bf695a08e3cbcbe0ba5feb6d431b5f
+    settings.team.email.title: 738d70b7b27c4fd084763cb4e445e61d
     settings.team.email.description: b138229a6852f87741fea3c873f9e114
-    settings.team.email.placeholder: bcff5cfa88f480144a0f259ba58d6f0f
+    settings.team.email.placeholder: 5a1da102df4cb689cb67db3dec6e3c6a
     tuning.general: 32f6595236b90375199bf78f73144d1d
     tuning.translationMemory.title: 0bf9f940b6c29da44a3472d2bc956163
-    tuning.translationMemory.description: f0e4efd5fe7b7b8dc63c3ff6d21f99f0
+    tuning.translationMemory.description: 0fea34ae960d20458ca6f461762a9da2
     tuning.qualityChecks.title: 3228a25ec480cf4a08c863961e017da5
     tuning.qualityChecks.description: 13da36a4d6fd9b095137e9b798c52e6e
     tuning.contextDetection.title: b60c0a0581a76609d3826f4260a35b9b
@@ -2483,7 +2483,7 @@ files:
     tuning.formality.options.formal: 1ebca824b29c7efc35266805378a968b
     tuning.formality.options.neutral: f01d92b548b47b383f25e794ae383727
     tuning.brandName.title: 1184caf040d3fc4c09d64320e0c9b5fc
-    tuning.brandName.description: 26bbda2a2b83959052bbcb589571df78
+    tuning.brandName.description: 9c22b6f68979fca950275821ee7017db
     tuning.brandName.placeholder: 1df91279c530427e89cad0742dd36339
     tuning.brandVoice.title: 96a051ff6f5a34589e97d7c198b094b4
     tuning.brandVoice.description: 89f54c3017870b6ed24ca9233c63e023
@@ -2501,7 +2501,7 @@ files:
     tuning.toneOfVoice.options.direct: ea8c415c7b368d674f510bc21a83fea1
     tuning.toneOfVoice.options.diplomatic: 91c986f02ed47919de7ff9e52f1e22a0
     tuning.brand: 96e7410ea9209526ecc11b41398a7fce
-    tuning.emotiveIntent.title: 9c157c4fcefb092571faa3185ad9f8ba
+    tuning.emotiveIntent.title: 9b8ffd8fa369b5cf7fab8cfaab930095
     tuning.emotiveIntent.description: 84af83e6e3ec1abf2fdd3caa78b4d8a8
     tuning.emotiveIntent.options.neutral: f01d92b548b47b383f25e794ae383727
     tuning.emotiveIntent.options.positive: 690213e818502d24dff61520b753bf92
@@ -2544,9 +2544,9 @@ files:
     pricing.pro.features.latest_features: 665dc719e9aa2a17b8696aa39f11a03e
     pricing.pro.features.priority_support: 9f3ebf9e5e5f35f856c91dc72918ed8e
     pricing.pro.features.priority_queues: 7a115e4017eaa68e9f0998d99219135b
-    pricing.pro.features.languages: 88433616e6513c6ecd18547f3ba40f24
-    pricing.pro.features.keys_limit: 35f20c75345712d6addcc9625ffadb9d
-    pricing.pro.features.docs_limit: d62a06c805861a1d4d04400d8838057e
+    pricing.pro.features.languages: 9b59b06e60e6629f777f16fa3bd5b1b3
+    pricing.pro.features.keys_limit: 5d7865fee227ce0a5ee1d31761cf6e0b
+    pricing.pro.features.docs_limit: 2e918a04e4aeec886735832917617dd0
     pricing.cta: 32d4eff0d7584664a169dd5912e79cfb
     pricing.keys_limit_explanation: 8de739d32cb53bfed3c795b4d267d56c
     createTeam.teamName: ebbf2e3d9317dec8c873d771f8f62f33
@@ -2568,10 +2568,10 @@ files:
     invite.success.title: 3fefc31eac197883384b6149734123e5
     invite.success.description: cfb30642c73df12cba3451b34d40ac67
     invite.error.title: 20e4d1a5816bf29f9e1c2b31022fd38f
-    invite.error.description: 6ccfaa5537d6156bb129632879a8b168
+    invite.error.description: e548209494f4ff6ed5991ad4c2cae272
     invite.validation.invalidEmail: c65e8ca157c08c8ce8d2c651201dd870
     onboarding.steps.1.title: 95e18fcfe01f3ee09f119346dc849fd6
-    onboarding.steps.1.description: d8966976ea1402faf9f5219ba789f421
+    onboarding.steps.1.description: 09f846814029b69a6299f7838a1a346a
     onboarding.steps.2.title: dd8e7df0372dab65eb048e90a471eabb
     onboarding.steps.2.description: 81bd895b534cf075df836ba1b8e51bb6
     onboarding.steps.3.title: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2652,7 +2652,7 @@ files:
     analytics.months.08: 5c59023c570243db681008b516627551
     analytics.months.09: 5d5b78699e57104f2fa03bbdf7b9197b
     faq.title: 1fe917b01f9a3f87fa2d7d3b7643fac1
-    faq.what_is_languine.question: 25248232e09d5681e0ee2aae1874e837
+    faq.what_is_languine.question: 1e168cd568f5d15275dec65af1af06f1
     faq.what_is_languine.answer: 5e5c65a19f5fea8c3f61d5395e01baac
     faq.key_limit.question: b3e6d102690fb8a4ffdc5ea2eaf4e6e2
     faq.key_limit.answer: 647deb61808c146a87259122c3e1e530
@@ -2675,7 +2675,7 @@ files:
     pricing_slider.keys_suffix: 7228041ff417cc4a2682fcce1d49ff18
     pricing_slider.docs_suffix: 1a8cba5ae09b5fe2caaa13575732a304
     pricing_slider.languages: 5e854e9d31f5afc6b6d2662618923200
-    docs.getting-started: a7adffdab3f3856aee0217d102cfb7d0
+    docs.getting-started: d165cf62e0d9199bbc6cc845ab20cb53
     docs.workflow: 162395f1b89fe698461144bb610c8194
     docs.ci: a91e4ff4bf49e8de7de911d95062662e
     docs.presets: ed8a6f48506829c400b12438ef799257
@@ -2698,35 +2698,35 @@ files:
     overrides_sheet.description: 3c2fe90c4db348d6cd2606e7f15015d3
     overrides_sheet.save: 9ae9144b28c324685ebe1ea4bb0c4c6a
     filter_locales.languages: 5e854e9d31f5afc6b6d2662618923200
-    plan_settings.translationKeys: 0914dd6e46fbec29528a6eba4dfdf726
+    plan_settings.translationKeys: d05f52f4757b950cc41c7d45f17d1e1d
     plan_settings.documents: c2fa2a3cb9a4a9ef321746c679b656dc
     plan_settings.languages: 5e854e9d31f5afc6b6d2662618923200
     plan_settings.keysUsed: 2b7c770e4f1deb8c70ed888f7fc56162
     plan_settings.documentsUsed: 5c6b4a44a0b065a0fba8fca50f29142b
     plan_settings.languagesUsed: dbebf6bb60a94cc38e7c29162b7085a1
-    plan_tier.currentTier: f02fb8b44ecd85615e9e6ef0803bbcff
-    current_tier.currentTier: f02fb8b44ecd85615e9e6ef0803bbcff
+    plan_tier.currentTier: 7bdfdb54513d7c53adef44446910212a
+    current_tier.currentTier: 7bdfdb54513d7c53adef44446910212a
     current_tier.tier: aa879ff6df72bd5dba36501f8c07eee3
-    current_tier.translationKeys: 0914dd6e46fbec29528a6eba4dfdf726
+    current_tier.translationKeys: d05f52f4757b950cc41c7d45f17d1e1d
     current_tier.documents: c2fa2a3cb9a4a9ef321746c679b656dc
     current_tier.languages: 5e854e9d31f5afc6b6d2662618923200
-    current_tier.changePlan: 04ce0ddc35a37784973c0e9023244a09
+    current_tier.changePlan: 43fa875bf2fabc815c20272c13445f4f
     current_tier.free: b461d3afae10775fb16718aeee6baf44
-    current_tier.manage_button: 2c802c8240d9e142582aceb1bbe872fd
+    current_tier.manage_button: 586274291301771d6485658a574a8b64
     current_tier.canceled: 98600a91cde6e98b9b3f8d1abf77c31c
-    changePlan.title: 04ce0ddc35a37784973c0e9023244a09
+    changePlan.title: 43fa875bf2fabc815c20272c13445f4f
     changePlan.upgrade_to_tier: f2d422d23dbcee9843b471f3cb056edd
     changePlan.cancel: 160009a89ee5a2603a26c2bcd824de7a
     changePlan.description: 39483fb3489541d7f50b3052b400da63
-    test_translation.title: 6596ebcf1ccd01da92d581f5cca08c46
-    test_translation.description: 8fc6893a321dde491425c3f52bfa44e6
+    test_translation.title: 832d99196e0568cdef54bf1474ceb602
+    test_translation.description: 4058669838d3de24633a6204241ee540
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
     header.signIn: 2228c5945cd5fa864a1a3b067fd95eeb
     header.goToApp: 8af70210bbd12fc6d1fed34223da85a7
     hero.title: 666c9b0fb4ec2feb59ef069645d64136
-    hero.description: 0ab524a2d3564705fd561dafdc1a48e5
+    hero.description: 341274ba0ef8ee629404bf429081c257
     navigation.dashboard: 29cba505cdc4b85b5d40903a19f38e95
     navigation.tuning: 27507514401e9dbec9ccd502d315e814
     navigation.overrides: 06f6d6983ebdee06aa08f8b73c2f4df3
@@ -2736,11 +2736,11 @@ files:
     navigation.account: a456fb71437a11fe0d625e38c2e30e1a
     getStarted.heading: d3118865aadfde18e6968340f43f5798
     getStarted.title: 666c9b0fb4ec2feb59ef069645d64136
-    getStarted.description: 0ab524a2d3564705fd561dafdc1a48e5
+    getStarted.description: 341274ba0ef8ee629404bf429081c257
     getStarted.button.startAutomating: c82a48615ec01323deb6871399d75423
     getStarted.button.readDocumentation: 751eabec2bd379500e0060e3afcf5c2a
     companies.title: 274d0139f3f89f1ca4fbacaa1044909d
-    companies.addYourCompany: 3724663f50097980a4059039d586087b
+    companies.addYourCompany: ea377f6d3271cb9d9ac81e4dec20a395
     activity.title: 41f7b0c539fdf943fc821b8f7a2ddb08
     activity.loading: ecdaaddc439829508d4407911513306e
     activity.noResults: 3cc1ebc355e1a3703623212ae8486755
@@ -2751,7 +2751,7 @@ files:
     features.title: 7f6f8c41517f6b13f7bb1e30cdfae5bd
     features.fullyOpenSource: 69fdc0713bc06ccee61d092a335b9b12
     features.fullyOpenSourceDescription: 04f161537ac257edafca42ec5774f437
-    features.presetsForExpo: 0a2af5bbad4c05611410a783c65864c5
+    features.presetsForExpo: a940e0b070396f933befc608bdf963eb
     features.presetsForExpoDescription: 5cca746bf4e3a8b4cef40846aee7b8cb
     features.presetForReactNative: b0babc9d112882cfca66a0a87d7d04e8
     features.presetForReactNativeDescription: 94116c3a1dd8ebbe61370550b6f9da31
@@ -2760,10 +2760,10 @@ files:
     features.readyForI18nLibraries: 08a1aa5bb780a754a36b4eb4d56a31b3
     features.readyForI18nLibrariesDescription: 5184bd692341940d01470bf6fa26baf0
     features.markdownSupport: bc650b9750edf6b7712f78b830504355
-    features.markdownSupportDescription: 45db1c8627684f159cb20e96eff58891
-    info.title: b56617085317ccaafc001a3742064e31
+    features.markdownSupportDescription: 3ffced9810445d3e7ebed2d69bc35bf5
+    info.title: 79eaf7abc29821ea62fb9f0b16ffc628
     info.smartTranslation.title: f6e7486d909896b4e71ad7bcf084dbb7
-    info.smartTranslation.intelligentTranslation: c15cf7bc164552d7d21ec5604c028357
+    info.smartTranslation.intelligentTranslation: 10423d85fc9fa657a5ef51f4b58c2b3d
     info.smartTranslation.brandVoice: d70ac99438c9eb63b46d26ac400a25f6
     info.smartTranslation.terminology: eb8ce836d6e95bf7848ce997d7e569a7
     info.smartTranslation.linguisticFeatures: 84213cd5fa9295c2a3fd3a58e50029f9
@@ -2784,10 +2784,10 @@ files:
     login.google: 89137b92778e3bd3594763136728a9ff
     login.footer: e0de7919c2dfa7397ad98e0a7e72796c
     login.description: 7d564d2a06781ea2fc2706b9e56df3ff
-    login.terms.text: 729f14ee3e52b7bfe85a78d171d03b7a
+    login.terms.text: 52a6ad1465f83c1075690a3116f5c860
     login.terms.termsOfService: b0298f152bcc8470a7b5eafb7eb7d9b2
     login.terms.and: 8ccb0fac9732fa8f15d44c649d60be9d
-    login.terms.privacyPolicy: be293b7a1b6462fad55e07ee03ff33e3
+    login.terms.privacyPolicy: e588f20906e599ae1730f569e9813d9b
     translations.header: 4a309bb4f08ab58d8b6c96870d7f991e
     userMenu.account: 449eb374ab8db2308be5d6387b910a3f
     userMenu.signOut: 9ab19a87e532649d9b94d74535e81151
@@ -2806,7 +2806,7 @@ files:
     teamSelector.teamNamePlaceholder: 2402431b6a5e34b5891e7e2c24e84082
     teamSelector.createTeamButton: 71367e58569fa32162db1792702aa035
     account.fullName.title: 2e4f5c227d59a46b252e8b6135f3f700
-    account.fullName.description: 1b819c7bfa458b6c5889956dd9529615
+    account.fullName.description: c324d13c7c3c05a95312c059f1db1606
     account.fullName.placeholder: cad05539d5eccd6f526e3be6d76298c4
     account.email.title: c8926b6fbfb8cf67723816771f9bb911
     account.email.description: 0bf10ab1ae626e3c36eb8ce601ecd874
@@ -2818,17 +2818,17 @@ files:
     account.deleteAccount.button: a7878e8bcd088fad91b496e7998d122b
     copyInstall.copied: 40c2ac6de75dc4efaad8eae48be947c1
     dangerZone.dialog.title: 1a371d9bed1d8ca3a16b5540ef7e3fe2
-    dangerZone.dialog.description: 44d6e3843a9d6d43724c853e69d85e69
+    dangerZone.dialog.description: eb3a453fac1e2300061abd45f6548d29
     dangerZone.dialog.placeholder: fa6642b1d352cea273c25a9cd23fcec3
     dangerZone.dialog.confirm: f34c0dec5c17708483108cd37a114d5d
     dangerZone.dialog.cancel: d9de218e1afd89a568a70872f8add6a5
     pipeline.title: f8440a8af344147ecf02852c38fe4137
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 752d771b3091da9a448fa24983b46c74
+    pipeline.description: ed64489f8b4e3cd95135a9d3a54bff57
     settings.badRequest: bba3aece8d1bdcbc5413cb1141b24adc
     settings.badRequestDescription: dfc0c101f7b8ff9c16a34d3546f7a441
     settings.permissionDenied: 90a3eebd130e59980b05c743ffb39d08
-    settings.permissionDeniedDescription: 10ef5b251e4a25ca4cddd0921c320634
+    settings.permissionDeniedDescription: e16cb6e4b3de2dbade4a764ab9c97763
     settings.deleteTeamTitle: b0c492f930779e582ba8763a26b7e173
     settings.deleteTeamDescription: d15543e7812c58ade94de8b384278ced
     settings.saved: 3abfbeb95bd73c0d9c4841b34ed1f1f5
@@ -2883,8 +2883,8 @@ files:
     settings.team.members.allRoles: 44672f5c907f53f168f0d4c12bff4013
     settings.team.members.date: 2d95a44504ff1f868579157e60fae6d0
     settings.team.members.selectAll: f6db393ffc256b641c8231b6aa8fd63d
-    settings.team.members.noPendingInvitations: 902f6f50a8e9671b9e12450ed79aedb8
-    settings.team.members.noResults: 2424c3e3bbdad6f5419769b4dc384b13
+    settings.team.members.noPendingInvitations: 60c75d32d7139df1bff0aaa2ca785df1
+    settings.team.members.noResults: c2e4766cf6c29df840721e1e0dce2fa3
     settings.team.members.tryDifferentSearch: 7a66c6246c41e40f3e459bce589eba1c
     settings.team.members.inviteMembers: f54f7ffedc96ed1a499a17e2ef9d55cf
     settings.team.members.deleteInvite: 731fc84592bd22552a568e8777c4028e
@@ -2902,7 +2902,7 @@ files:
     settings.team.members.dateSort.oldest: 8a451ddeb8346a2be81ead201133da6e
     settings.team.members.deleteInviteConfirm: 731fc84592bd22552a568e8777c4028e
     settings.team.email.title: 801599565450ed41fbfed0c9e0f2373e
-    settings.team.email.description: 62177f00654c1e1acc96f430d52fbf82
+    settings.team.email.description: 23ef265a45c0fb686e57ac9b97d5624f
     settings.team.email.placeholder: 2af2815eb0f649e599ac12ac33ff5bd3
     tuning.general: 8209e50851590f2c7af374c8d8966e2a
     tuning.translationMemory.title: 9b5db588d5f06b73adb0c5c529a902cc
@@ -2912,46 +2912,46 @@ files:
     tuning.contextDetection.title: fa318cf47c23fe0c47a3e7e61f340d87
     tuning.contextDetection.description: f8b2e856016ff477984ed059c7f4f66a
     tuning.styleGuide: 0b6c0156b0803287a5f1d0e6203395ec
-    tuning.lengthControl.title: 192d630509ca1553297f1da957212187
-    tuning.lengthControl.description: d45ad337f1fb6d7fff0415fc85875a9c
+    tuning.lengthControl.title: 0dfeb774dedb9a7e9b30a11d371fe00f
+    tuning.lengthControl.description: 01fe7d42fecced613eb4957517e32d1a
     tuning.lengthControl.options.flexible: 961e0a03db74d49f521b4fb87b923068
     tuning.lengthControl.options.strict: 65ffdabd43b9e4608c4306b2bf7d41c3
     tuning.lengthControl.options.exact: b8d337cc5c0b052ba6e00a73a36a29fe
     tuning.lengthControl.options.loose: 01fed16159b9a6d4c5c545f5a2fdcca5
-    tuning.inclusiveLanguage.title: 089f499e62ea40da2c0597a0780b84f7
-    tuning.inclusiveLanguage.description: 863a6f06f5264e02ee4ffee73a4f4b96
+    tuning.inclusiveLanguage.title: 44fe25c366cb49c63b0802de94280f0e
+    tuning.inclusiveLanguage.description: 9bd12a3a6a58e4afc1740fcef705f7fd
     tuning.formality.title: 1c792fef090a3a6b872f8eb45b340cf5
     tuning.formality.description: faa1a3626c4972f0e8abb77fb4cf8321
-    tuning.formality.options.casual: 82a910b5efa0d84afc6111796a710e3c
-    tuning.formality.options.formal: dd19c9c9e6f577b5f3b9cad44c0f2899
+    tuning.formality.options.casual: 5c1830a96ece67697cf88d05be3a19a7
+    tuning.formality.options.formal: dc3ab8ebc8a14b80f8ec9bd5085a57eb
     tuning.formality.options.neutral: e840e2824320c69f10114701da05cd9b
     tuning.brandName.title: 8e1bde238cb297d25de0511a0745e13d
-    tuning.brandName.description: 3b082bd5e0a7772f381da527c560540d
+    tuning.brandName.description: a201e8b8ac0f69d58245350d27cf0e72
     tuning.brandName.placeholder: 11a85d4136b040e04f0999ec0ff24adc
     tuning.brandVoice.title: c28d57e0e14b47c87182483b3d97e19b
     tuning.brandVoice.description: 5c79b0061efb3c12ef2060e8433e06bd
     tuning.brandVoice.placeholder: f90ce7ca55d37daa25fafe0449f4d86a
     tuning.toneOfVoice.title: e27a7f49a356bf2be77c95b559ce9978
     tuning.toneOfVoice.description: c7d69f25a8b517dfd3e715ae9b15af05
-    tuning.toneOfVoice.options.casual: 82a910b5efa0d84afc6111796a710e3c
-    tuning.toneOfVoice.options.formal: dd19c9c9e6f577b5f3b9cad44c0f2899
-    tuning.toneOfVoice.options.friendly: 87b7aa89f0f69d85cbada4bf2f55ee2c
-    tuning.toneOfVoice.options.professional: 47f1cc0290007d0a1304255881263763
-    tuning.toneOfVoice.options.playful: 05b74acd80b7ee623ac507b72cc21058
-    tuning.toneOfVoice.options.serious: 3b7f09eba263ff02a32d5dc22bf4e3be
-    tuning.toneOfVoice.options.confident: 3f182baa061761262593a3516eb5f61d
-    tuning.toneOfVoice.options.humble: d743b4ddb667ec5bcb1fd7ced6b1eae5
-    tuning.toneOfVoice.options.direct: a55e025bcb1c432f6ead388dc67861c3
-    tuning.toneOfVoice.options.diplomatic: 3e59e01ea68e93fb06b5a81dcae3fc7f
+    tuning.toneOfVoice.options.casual: 5c1830a96ece67697cf88d05be3a19a7
+    tuning.toneOfVoice.options.formal: dc3ab8ebc8a14b80f8ec9bd5085a57eb
+    tuning.toneOfVoice.options.friendly: b62e8bc80dad1a170aaf4a5b29d696c2
+    tuning.toneOfVoice.options.professional: 3955a2e4c2eb569997286ef95a40e276
+    tuning.toneOfVoice.options.playful: aee12874056654b69a8746658cdd0b19
+    tuning.toneOfVoice.options.serious: 8b1e4c561f73b1463fd3022011c5de46
+    tuning.toneOfVoice.options.confident: 4dc69fb6b878b5bfd273b040ac5a284b
+    tuning.toneOfVoice.options.humble: 8b67df2178b95570344bced312a39ce9
+    tuning.toneOfVoice.options.direct: 2c5bee3b87668a5d56075e62d45d2ce1
+    tuning.toneOfVoice.options.diplomatic: 6882e2c67d3b5545a9b1493c3e547e63
     tuning.brand: a0be9c2844f4deab4a2329d16f319e97
     tuning.emotiveIntent.title: c505f3cd6c5274196156260ae6286695
     tuning.emotiveIntent.description: 605ac085308e0595d18a9ec4d1351641
     tuning.emotiveIntent.options.neutral: e840e2824320c69f10114701da05cd9b
-    tuning.emotiveIntent.options.positive: caeefbb848b30eeff0dc74198d3319f3
-    tuning.emotiveIntent.options.empathetic: 0e5f679a2674a141ab262d3de5b61de2
-    tuning.emotiveIntent.options.professional: 47f1cc0290007d0a1304255881263763
-    tuning.emotiveIntent.options.friendly: 87b7aa89f0f69d85cbada4bf2f55ee2c
-    tuning.emotiveIntent.options.enthusiastic: bee04720fa0b5648c4af986121ab8faf
+    tuning.emotiveIntent.options.positive: 45d67e1e42df544c6e3233311160b463
+    tuning.emotiveIntent.options.empathetic: c38805237abc86038d9249b82cab400b
+    tuning.emotiveIntent.options.professional: 3955a2e4c2eb569997286ef95a40e276
+    tuning.emotiveIntent.options.friendly: b62e8bc80dad1a170aaf4a5b29d696c2
+    tuning.emotiveIntent.options.enthusiastic: 8808df5520a170b3b818f5823bc4d2f6
     tuning.domainExpertise.title: 8ff7c7b12bc9231edb7ae7247f7449d9
     tuning.domainExpertise.description: 59774f595a8b4236b583ce7befe9aaf1
     tuning.domainExpertise.options.general: 8209e50851590f2c7af374c8d8966e2a
@@ -2962,7 +2962,7 @@ files:
     tuning.domainExpertise.options.marketing: cc4844a87a6453a00c16dccbcea5ea1f
     tuning.domainExpertise.options.academic: 258d8f525d289649817a7addb901a5cd
     tuning.idioms.title: d52f927cf9d76077202411bd3186a488
-    tuning.idioms.description: 04949f883b82c117fc90b50a55b90578
+    tuning.idioms.description: 072e03a99ba305e5dedd4195fdbd5011
     tuning.terminology.title: d30078bc15dc4b26d6285eab4dec613d
     tuning.terminology.description: 83b50d72ad16d1f85e57597978bbcc0f
     tuning.culturalAdaptation.title: 352848c39b880a2b48e48025a768d211
@@ -2971,7 +2971,7 @@ files:
     pricing.free.title: 667dd4fcf17117dc8edfd08d7add2638
     pricing.free.price: 667dd4fcf17117dc8edfd08d7add2638
     pricing.free.keys_limit: d56c705a0e94106ba5a4ff3f57729dcf
-    pricing.free.description: d5ef06b98bb8cd496a9c12c27bc87023
+    pricing.free.description: 99723dcfdd4e49d2826ba3e31c6cba26
     pricing.free.features.unlimited_projects: 1a850fcf6f5a3eddb3e2ee36eebcb01f
     pricing.free.features.fine_tuning: 023f5658511d0d3911c3bd06f2ad453a
     pricing.free.features.overrides: 589f8692eac79baf644db6a6cd707a33
@@ -2981,15 +2981,15 @@ files:
     pricing.free.features.keys_limit: d56c705a0e94106ba5a4ff3f57729dcf
     pricing.free.features.docs_limit: b99c52699af29324cac4e62602bd642b
     pricing.free.features.languages: 0ae018380bf93b36332bac5df8fbee1d
-    pricing.pro.title: 56fcec23dc7d12875ddcec2bb59f01ef
-    pricing.pro.includes_free: 553223b150aec4eea55164334968c48e
+    pricing.pro.title: ec41b5e37fa5faa3659a7d97f733b09d
+    pricing.pro.includes_free: 24dca408541f7d8211b6e346f40f8727
     pricing.pro.features.github_action: a4a7aaa30652258f3bd0546c73227a78
-    pricing.pro.features.latest_features: bcf5ca19a44ce2f3ddbe0e1e796826b1
+    pricing.pro.features.latest_features: e529c2225f3b590588df1952004e8546
     pricing.pro.features.priority_support: c77e57dd3fa733da959a2345f54533b5
     pricing.pro.features.priority_queues: f2b74de4a0c89dbd10e3b87aae338892
-    pricing.pro.features.languages: 6054fde7380ff4238cde5cae40a1ab89
-    pricing.pro.features.keys_limit: 997f713787409f67f2ffae165855b805
-    pricing.pro.features.docs_limit: 8cb08fbe2dd48b7c5ad92a8552f19acd
+    pricing.pro.features.languages: bad3ab3fa7ed8f7e0617e9bba911baf6
+    pricing.pro.features.keys_limit: 7b0cd00c6b415930d78cc3b675e943a7
+    pricing.pro.features.docs_limit: a19a44fab80a0e703f449ea88836f631
     pricing.cta: c82a48615ec01323deb6871399d75423
     pricing.keys_limit_explanation: 2e29a3d8c6358bc9332d4887c9f5ec81
     createTeam.teamName: 2402431b6a5e34b5891e7e2c24e84082
@@ -3016,11 +3016,11 @@ files:
     onboarding.steps.1.title: dd4a9150efead0fd30f302d5eab7103a
     onboarding.steps.1.description: 1319c44a13664ed258eff0c2b437f093
     onboarding.steps.2.title: 41bf2670d2471a9f36954b8c9c477114
-    onboarding.steps.2.description: b470566587d56c9aeffb48191dd4b12c
+    onboarding.steps.2.description: e8adf03323488af87c886236ea95c88e
     onboarding.steps.3.title: 1c73f88a48ee1402e1719e9b617571ef
     onboarding.steps.3.description: 9ac5de699e451953ccde401f35e2a7f2
     onboarding.steps.3.link: 1c73f88a48ee1402e1719e9b617571ef
-    onboarding.info.description: 81acb68f8a9d1d5cfc27e4934dd1d8b2
+    onboarding.info.description: b56c54f894bf1f334f05a6d9a0d82ad3
     onboarding.info.link: 1c73f88a48ee1402e1719e9b617571ef
     onboarding.info.description_2: b96ed646068fa00063ba5f50f8224ac4
     cli.success.title: 364dc9c456342d5ae100fce6296230e3
@@ -3096,21 +3096,21 @@ files:
     analytics.months.09: 8226d4eb7a41e10515fb1d9a00340a05
     faq.title: 8563a5eadef07da003a4b568fd39b386
     faq.what_is_languine.question: ddfd4f886e33f7e52732cd140809e3b4
-    faq.what_is_languine.answer: 02609d2e5c55c75ef3d25bf781b0d108
+    faq.what_is_languine.answer: 31b73f61b871af63ae91124b90561c36
     faq.key_limit.question: 93fa12caa8d1b8f35c029da91e80c417
-    faq.key_limit.answer: 45ddd096c213126e02ee65bd3d5485e5
+    faq.key_limit.answer: a1660307ac5d66815663723084b0c4db
     faq.supported_languages.question: 57d23b15c26baddcfc35bf41ab8b543f
-    faq.supported_languages.answer: 6c9218baf0a54da8aed4bef76550fb3f
+    faq.supported_languages.answer: 64925b2eae4434277c70ef3cf19fa495
     faq.github_action.question: 2f6a875f1d76a031bf34576a46c49899
-    faq.github_action.answer: 1392ada3180e49747be2b316add0c727
+    faq.github_action.answer: 29706d7e68a51c40507abc47d6519131
     faq.support.question: 766f82a4c4fa8bda8f501371621476ea
-    faq.support.answer: b31cdbb53ee631fba90344850a6c70d8
+    faq.support.answer: 9e0bcb5376124ee1fec618a325054ac6
     faq.open_source.question: e596417194f486589bbced29f0238c2d
-    faq.open_source.answer: e69a878e7015467952095c145a8edbd9
+    faq.open_source.answer: 9a7d0e2818afb82575439ec3e15c9614
     faq.open_source_pricing.question: b4e0d5c9afbf00663db2cf09d06f7967
-    faq.open_source_pricing.answer: c0b36ef6b9783c326febab6049c2b5c2
+    faq.open_source_pricing.answer: 2b5197f459521352cfb3ce5fb027193b
     faq.cancel_subscription.question: 1d9e304ec68948ae19738f2b719ab5b3
-    faq.cancel_subscription.answer: 8b544a4e8fb9bf573da5c1d3b639efe6
+    faq.cancel_subscription.answer: 1e1bd0cbd93b14122f98482814c2041e
     pricing_slider.tier: f322044d3e26ccf371edbcafaf4de725
     pricing_slider.keys: 4a309bb4f08ab58d8b6c96870d7f991e
     pricing_slider.documents: 599f726f14934242519bb5f2d40c2d89
@@ -3131,12 +3131,12 @@ files:
     docs.cli: 91af5705f16502125e8b2187e64202c0
     docs.github-actions: b7166801264f1345d63ea6c46f660d24
     docs.tuning: 27507514401e9dbec9ccd502d315e814
-    docs.overrides: 97e162c52474c257d96a6a3667ee624a
+    docs.overrides: 06f6d6983ebdee06aa08f8b73c2f4df3
     docs.settings: 109cc06de1ce5b61d19278da27f68cc7
     docs.hooks: 020bcd0fb3128348bc91848f726669fe
     docs.examples: b313bf06c5a703f6b81e1748ec9e156d
     docs.team: 41efb3960a601ebd7cf207a52940daae
-    overrides.title: 97e162c52474c257d96a6a3667ee624a
+    overrides.title: 06f6d6983ebdee06aa08f8b73c2f4df3
     overrides_sheet.title: 0ece2ab0a3e07ba7a204f9b22285cc4c
     overrides_sheet.description: 39e3f294b6b200f5fa512cff42092e3f
     overrides_sheet.save: 9d0a47e6954f2c74180029bf9a70aeae
@@ -3161,7 +3161,7 @@ files:
     changePlan.upgrade_to_tier: 28c5bcef3ec5e8f66f7e6429d50c419c
     changePlan.cancel: d9de218e1afd89a568a70872f8add6a5
     changePlan.description: fdeb43876f9ddb74005617cdb2623a37
-    test_translation.title: 3a327b5b4b9a615c1ae47dac9bbb0eb6
+    test_translation.title: 50580ecea05d7181c4f1d9d21d162925
     test_translation.description: 3a74246181ac20afcce263ec0903b3d7
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
@@ -3169,7 +3169,7 @@ files:
     header.signIn: e2bdb51e902de10274b096b9aa1c6956
     header.goToApp: d55df6ea362cafad9022c7e7289a1c04
     hero.title: 2f26b3c3cb90aff2034fa37446775cb9
-    hero.description: aa44314b62e0e65573c45dbec746a03a
+    hero.description: e10573cf506b0f87070cfc354d379967
     navigation.dashboard: 2938c7f7e560ed972f8a4f68e80ff834
     navigation.tuning: 64361509f1002e3e9d660b1bbd5d2759
     navigation.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
@@ -3179,11 +3179,11 @@ files:
     navigation.account: 08bd40c7543007ad06e4fce31618f6ec
     getStarted.heading: 73c3e754b4ec0f307311dcd984c70c8d
     getStarted.title: 2f26b3c3cb90aff2034fa37446775cb9
-    getStarted.description: aa44314b62e0e65573c45dbec746a03a
+    getStarted.description: e10573cf506b0f87070cfc354d379967
     getStarted.button.startAutomating: 515330f0439f11877c669b98d24c1177
     getStarted.button.readDocumentation: 3de1c7fff574c4ee2cf9c867e4959fdd
     companies.title: 6954d41e0ce7db476c4d7223c44edda2
-    companies.addYourCompany: 59e9ca83fcbb3ffe06e0a79a64ec90fb
+    companies.addYourCompany: fe28edcba8c197387b3b86313a9fcc9b
     activity.title: 89c6eed67f985e64df362318aefe34fc
     activity.loading: 18f6ee15e59ad9647428c059344d67d3
     activity.noResults: 2a66693f6bb95c09626b7e354823ccc2
@@ -3195,16 +3195,16 @@ files:
     features.fullyOpenSource: 7d87034f769e7bc724a98f4a9c507623
     features.fullyOpenSourceDescription: a089a2930d70f3821043a9b2ecdfbe41
     features.presetsForExpo: f58c803518ac2178f99c5ef128c07e6f
-    features.presetsForExpoDescription: 97a0c4d62bb3e25f6667855e2e1ebc46
+    features.presetsForExpoDescription: 7d9ef6ba0609994901085b8a90a3db6d
     features.presetForReactNative: f475df1f7f269d89ce33b51f75a3ccf6
-    features.presetForReactNativeDescription: 8e6ab004d0b2aa13f4c1af2a43ce110c
-    features.presetForReactEmail: f32b95e5d242e6a5e7570d59d9e5f598
+    features.presetForReactNativeDescription: 9ec8ab940094841382724ca8248533d7
+    features.presetForReactEmail: fa136317938532e3366c43e9eba77f67
     features.presetForReactEmailDescription: e1b84ba84926969e15851e1656873c38
     features.readyForI18nLibraries: bd5d9e8a5bbf741e6d8e3cb5a3266c8a
     features.readyForI18nLibrariesDescription: 5bf99d10febe612dcbcd4782e914493b
     features.markdownSupport: f2bf559f00c90d54998ea20cbf53fbe9
     features.markdownSupportDescription: 745788cfdd66309d0792e11ac4a979f5
-    info.title: 588482af8879721eeccebfa3eb9ac6e4
+    info.title: fdc3cc821886ebce005486e124670779
     info.smartTranslation.title: 4be7cb054483376fb48dee56978682ac
     info.smartTranslation.intelligentTranslation: dbda3fee7d5dc2efb117bfcb8236aec7
     info.smartTranslation.brandVoice: 491576c78b8bd851241e24d1f04cdf5c
@@ -3214,7 +3214,7 @@ files:
     info.implementation.title: 20fe23b9daf664cf3e31a0c7ad941ef9
     info.implementation.quickSetup: 7797e5e8e15cbb2a85f023c12d4977f9
     info.implementation.fileFormat: 9db70e1d7f8b8897a8442644d147582a
-    info.implementation.contentStructure: 4e08a2d025f163054736d67996ecd20d
+    info.implementation.contentStructure: 4b1346861d2e736989a9666542559ea6
     info.implementation.assetOrganization: 6f593009dc01a75e9bbbcd1b31950850
     info.developer.title: e699b4f57f915d589cd7089f7d4d7ec4
     info.developer.cli: f115769427bf9d6a0001c6897dce7141
@@ -3225,9 +3225,9 @@ files:
     login.title: e2bdb51e902de10274b096b9aa1c6956
     login.github: 8f9688a7ed9468b3eab28c15a672ec53
     login.google: cae5ca8fae1d7983efda6357cc94dc53
-    login.footer: 7e0369a3d6238414959e6ed8fe08c10f
-    login.description: 7978d4d27d9460fd698242576405740d
-    login.terms.text: 99d2a6a42cba7fa52ec82b2792d028f4
+    login.footer: 4fe572d19e2498497730f4f40d8acd0e
+    login.description: 077c2c56f8a4abddd89ab47371738295
+    login.terms.text: aade35ed4e88f20dc4072728dd3d1bd4
     login.terms.termsOfService: 6e744a557173b330eecda6c12d678e8e
     login.terms.and: 9cfefed8fb9497baa5cd519d7d2bb5d7
     login.terms.privacyPolicy: 534103e465976bf196537c969ce25a84
@@ -3249,27 +3249,27 @@ files:
     teamSelector.teamNamePlaceholder: 3df2dec0ebfe341d1c6d61fb55943fde
     teamSelector.createTeamButton: 5e1d1b267dfe5cc8944e292ab0564837
     account.fullName.title: 494cbad4b9fae7c384c6cfecff595e78
-    account.fullName.description: 6930968a346ed8e0cb73da2b4004485d
-    account.fullName.placeholder: ad43072049db4878073dc22ba502e058
+    account.fullName.description: f76a88a4a1ad367dcbed9d343558e605
+    account.fullName.placeholder: cb01a22a2dade50cf11dda33816c7c6e
     account.email.title: e1486d0b1ea9f3448bc796c112e20216
-    account.email.description: b31695a42fb67cca28bc2d7a9433c425
-    account.email.placeholder: b09afc3614b324db8510935df79bdc39
+    account.email.description: b2f89379a599f3cc92e523b85d8f3899
+    account.email.placeholder: d61fa03966b5baf3361777f8d50e35cb
     account.apiKey.title: cdabd5b56b755ab22c9c4eb22ba69059
-    account.apiKey.description: 71fdba37433f3d18bddb2ba7fd916374
+    account.apiKey.description: 4b1a649a654993313761f5d9efaa1353
     account.deleteAccount.title: 8f424a8e79f9c79c7d887f2c150af0a6
-    account.deleteAccount.description: 537744800fea17889271db570e98537f
+    account.deleteAccount.description: 38846460dad9b588dbe7a2fa349493c1
     account.deleteAccount.button: 8f424a8e79f9c79c7d887f2c150af0a6
     copyInstall.copied: 7320f51405822515af3661c970a548a1
-    dangerZone.dialog.title: 91376bc8130a4ac9edda6674d72ee4b3
+    dangerZone.dialog.title: a88949a9cc208f0ee75a766133d5aeeb
     dangerZone.dialog.description: 5ca4c61cb09f3907367c7981b772d9b4
     dangerZone.dialog.placeholder: 9154b46f9037b2540ea64cd6f0158527
     dangerZone.dialog.confirm: 52af6135da4c8e62f76930b1cf762dbf
     dangerZone.dialog.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
     pipeline.title: e46151f900a88b101abc5c6dc63e56f7
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: e94343861fa034655cf697ef5fa87c02
+    pipeline.description: 5aef8be9ca0b51dfd3de4fdf4290f78b
     settings.badRequest: c91bc3e6b5da137f52bddb319583c106
-    settings.badRequestDescription: 57ee8521651e9601d6290af5b0daf6c9
+    settings.badRequestDescription: 14589db8215cf3284dd0014403ddf008
     settings.permissionDenied: b2dc93869bac627336ea049c4205870a
     settings.permissionDeniedDescription: 5acfbb05d6958e9657714733d579c887
     settings.deleteTeamTitle: 77e38c6e15738eb4a683a656efb41383
@@ -3278,7 +3278,7 @@ files:
     settings.savedDescription: df5b731bcb84af15f5fd1f9eedceff41
     settings.error: 1c3583e441b85f8f344e2d71b217c592
     settings.errorDescription: 4bf0184934e8d3fea2a23fbd31683163
-    settings.addTeam: f19df7f5a7c504a1a2729367cb88f3d0
+    settings.addTeam: 5e1d1b267dfe5cc8944e292ab0564837
     settings.apiKey.updated: a14bd470d61c31215681f753319d8455
     settings.apiKey.updatedDescription: d4d1fce3e2d2736f248a453f5f171d6e
     settings.apiKey.title: d02def5a74a46811a5f1f3eab25e5cd0
@@ -3290,16 +3290,16 @@ files:
     settings.tabs.team: ac848fa228f49ba2b8a5fbd76596817d
     settings.tabs.provider: 27703c8f150ac4bb0a3a83a7857353af
     settings.tabs.billing: ecc6b657bd192c9e64a1a4b066a33391
-    settings.addProject: 346d2c9b818542cdea5675032d382050
+    settings.addProject: 892d40505249f8962b2db8cb1fb89eeb
     settings.project.name.title: 48350ddddc15b77c344dd0b32f6abc4a
     settings.project.name.description: d4a123da606af1856658a8c2cb2d9fc8
     settings.project.name.placeholder: d8ede2a5d9b5b6a4760366e54f7ec9ab
     settings.project.id.title: 1cbf992ace6d646a7ea72a10ff9234b8
     settings.project.id.description: c4763958d9ff3e260fa9e68a817acf0e
     settings.project.id.placeholder: 1cbf992ace6d646a7ea72a10ff9234b8
-    settings.project.delete.title: 80ab098e095ea0f8bf37d1b0e4960d13
+    settings.project.delete.title: 5955230fc449a54e027e6c78880d9685
     settings.project.delete.description: 8fded8ff81e7f3669b1f89e2c3a687e4
-    settings.project.delete.button: 80ab098e095ea0f8bf37d1b0e4960d13
+    settings.project.delete.button: 5955230fc449a54e027e6c78880d9685
     settings.save: b9f2dc439b43cd0f3b0a84dea1ed84ba
     settings.team.name.title: 3df2dec0ebfe341d1c6d61fb55943fde
     settings.team.name.description: 90cf4e60f44af13f92758030775a0d61
@@ -3316,21 +3316,21 @@ files:
     settings.team.members.leaveTeamDescription: cd86bb4d83cfb5702d5b51585970406e
     settings.team.members.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
     settings.team.members.leaveTeam: fe8849e4946e6772cca2802ace543280
-    settings.team.members.invite: e464225086f5b4df014fce45091504a3
+    settings.team.members.invite: 6a3cf54e55cfff28e51dd5da21773d2e
     settings.team.members.title: 713806da6dbcfd49c7517840feb591f4
-    settings.team.members.pendingInvitations: e787810511598fd60072365760b3ad1f
+    settings.team.members.pendingInvitations: ebd43844f4284032b861bb198a1a1ebc
     settings.team.members.removeMember: 7ad8d9f1653e08828511acede5927784
     settings.team.members.removeMemberConfirm: 7ad8d9f1653e08828511acede5927784
     settings.team.members.removeMemberDescription: 5ddeefa41b8c834f8187bcfe4443344c
     settings.team.members.filterPlaceholder: 8e580e6844baaa27742e9202a97a0b74
-    settings.team.members.allRoles: de3c93d7eb5d8bbc058d6e6860f3ab05
+    settings.team.members.allRoles: 7d58d03111ae4a6c504a855d5c503439
     settings.team.members.date: 9ba51734ced032fd8ec25acfb387a23f
     settings.team.members.selectAll: e1b583f70718ebbc068b1f0930307c80
-    settings.team.members.noPendingInvitations: 76b3bea6f938d92b62d6522562c2985c
+    settings.team.members.noPendingInvitations: b4df3a10630358d90ff158cbe9689f59
     settings.team.members.noResults: 2833cec211af8fa8308a3841a69a750a
     settings.team.members.tryDifferentSearch: caf5aa4bb2a328a51a3773fc71a9f0de
     settings.team.members.inviteMembers: aa47b3268c94ba1c3e5214f4e80f275e
-    settings.team.members.deleteInvite: 1205bd74ecf2d2daba7f66b0fb64cc78
+    settings.team.members.deleteInvite: 51bcd1e2d5ceaf3fe88ff3a5e4d76644
     settings.team.members.deleteInviteDescription: 0fe882b70e63db1c31a85b611a2b22f4
     settings.team.members.invitedBy: 25be7c17f6a6b0ed33a207096aed39b6
     settings.team.members.deleteInviteSuccess: 5c80cb6fb65bea4bd28299bea6b6b62b
@@ -3343,17 +3343,17 @@ files:
     settings.team.members.roles.member: 20e598b1d002c83945578b4aab025b08
     settings.team.members.dateSort.newest: 81e4dc5780288484ca4c37bcf94925d4
     settings.team.members.dateSort.oldest: c17a86056a59d9c58e5affb4cbd34ab7
-    settings.team.members.deleteInviteConfirm: 1205bd74ecf2d2daba7f66b0fb64cc78
-    settings.team.email.title: 0137062863344f265d1005793e1cafa2
+    settings.team.members.deleteInviteConfirm: 51bcd1e2d5ceaf3fe88ff3a5e4d76644
+    settings.team.email.title: 1a4e9771200dea53bc451bf6701b1e0e
     settings.team.email.description: 1ec5f099dfa170429f1a600e10c63e22
-    settings.team.email.placeholder: b7fc8f5299141b8b5d11315d7a70323b
+    settings.team.email.placeholder: bd6fb1204a5e51cc57818d68daea103d
     tuning.general: c132c7ff0ed860eb896099bc0099c87e
     tuning.translationMemory.title: 6f8fc796f667262e01795885d8e9a798
     tuning.translationMemory.description: 43144155bb7bd4f81e0391331e09c28e
     tuning.qualityChecks.title: be9302a951928f39aadaa28c76d5443d
     tuning.qualityChecks.description: 212634edbe59b553dcc640a83a1f393e
     tuning.contextDetection.title: e14e776cd7d2f6986efc3747e804e24a
-    tuning.contextDetection.description: d0ca801f1dd30a5a52fbc0fef0b8ab68
+    tuning.contextDetection.description: 186fe7975d8d9a58dcc19011c0075588
     tuning.styleGuide: 52fc8f6c4da775940e929bf5bfa784a4
     tuning.lengthControl.title: 879f2c8d5dd8bb26f807d864012eeb4c
     tuning.lengthControl.description: 3a5534fa93fabe90354346918f7069d6
@@ -3361,7 +3361,7 @@ files:
     tuning.lengthControl.options.strict: 331693bc4e5bbb31ae9cd9e8ce6601c9
     tuning.lengthControl.options.exact: 1649aed298f99d587e2eb30c1db5946b
     tuning.lengthControl.options.loose: 5fcc3d3a2f0b08ebf29f08c2b04d09e1
-    tuning.inclusiveLanguage.title: 41ba5393c1c85d009c4e14a0c330f37a
+    tuning.inclusiveLanguage.title: bc0680dd45cb2a0c0eaa925a589e5574
     tuning.inclusiveLanguage.description: bdc65d6523aa5e6db3b3738cad4e80c4
     tuning.formality.title: 4403370af56fad1e6ba1add9e469f82a
     tuning.formality.description: 0fcd23d2c75fa0fac89322df8691bf60
@@ -3407,7 +3407,7 @@ files:
     tuning.idioms.title: a6706dbe6269aac7ba6a3ff935e4ef68
     tuning.idioms.description: da173c70b3fd6934d7aae9e5487c07a6
     tuning.terminology.title: 501d6b699dd3dc08c0043e1c03bc1a41
-    tuning.terminology.description: 7ec10c35b95059c44070a6d71fe3047f
+    tuning.terminology.description: bbe20b3f3a69e85e176500aa358fbc0e
     tuning.culturalAdaptation.title: 52c296220ad161240320dc536ef1c3ed
     tuning.culturalAdaptation.description: 8a9c7324ed64254b12247a75f5443312
     pricing.title: 47cb77f7f2ddd42d0ab354cab4e41ac4
@@ -3427,25 +3427,25 @@ files:
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: a227bf3e63d031f8fc3b31a0cde23899
     pricing.pro.features.github_action: 303dd94fe07c339deaf518c80af412a8
-    pricing.pro.features.latest_features: b0d7d0326251c616803dac821a2875c6
+    pricing.pro.features.latest_features: 989d4ba03936f25e3490de13321969af
     pricing.pro.features.priority_support: c2c01ab99e38148d7415d9991b56291e
     pricing.pro.features.priority_queues: c42650098dce21458991aa2a06ffb9f4
-    pricing.pro.features.languages: c11c8475afb3fc7adc86d2dd1999129b
-    pricing.pro.features.keys_limit: bd70c15b8056309449556ab02b58c066
-    pricing.pro.features.docs_limit: 113c257841e9159f0bdbd7e95bc4c0c2
+    pricing.pro.features.languages: 625a2f0ad3175ff2b40712568777461f
+    pricing.pro.features.keys_limit: 4191c64d6b80f3a1fac62c07f5e110b6
+    pricing.pro.features.docs_limit: b4780d3c254cb0088c0ae923f14b98fa
     pricing.cta: 515330f0439f11877c669b98d24c1177
     pricing.keys_limit_explanation: f70208e8a11c5e835242a9e81815c842
     createTeam.teamName: 3df2dec0ebfe341d1c6d61fb55943fde
     createTeam.teamNamePlaceholder: 4da896950f09b00bb91e225ba8360c22
     createTeam.createTeamButton: 5e1d1b267dfe5cc8944e292ab0564837
     createTeam.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
-    createTeam.createTeamDescription: 8866638719fdcdc36e9fb84b1c132fb5
-    createProject.createProjectTitle: ce3a38b6e32932d1dbceca4e41fc0be3
+    createTeam.createTeamDescription: b5ebbdfa258ad7d28aa7d00562bc5844
+    createProject.createProjectTitle: 19b4582885af66eb8b72c804318fcd07
     createProject.projectNamePlaceholder: d8ede2a5d9b5b6a4760366e54f7ec9ab
     createProject.createProjectButton: 892d40505249f8962b2db8cb1fb89eeb
     createProject.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
     createProject.createProjectDescription: 6d6e4733ebe30bcc325c5174e83defce
-    invite.inviteMember: 6a3cf54e55cfff28e51dd5da21773d2e
+    invite.inviteMember: e464225086f5b4df014fce45091504a3
     invite.inviteDescription: 0d399e23c074e81a0b7eba80b26a2d0c
     invite.emailLabel: 1e884e3078d9978e216a027ecd57fb34
     invite.emailPlaceholder: 4ee87846a212df8565df4e3735bf646a
@@ -3466,8 +3466,8 @@ files:
     onboarding.info.description: 94601cb0975be1097955bff8fd6d8932
     onboarding.info.link: b2a1686484567b7b1648e086d5d59d0b
     onboarding.info.description_2: 26cffbb770636da9008260bc4796a3bc
-    cli.success.title: 9104ee45e2f32bc2ca1eda649196a3ef
-    cli.success.description: 23208c00ea476241bd3f49e3fa8bf862
+    cli.success.title: 54828a1d055e6ca01544e3ed4cb0645f
+    cli.success.description: ee942371fc99b05799b876ee1d33eda5
     cli.success.description_2: 9fcd288d605e340fe38c68c02e0319c8
     search.placeholder: 23c9a8dfe6048649144f4f230ece08d1
     periods.daily: 9bebd68f69e4c3df5b1e841d6383fec4
@@ -3484,7 +3484,7 @@ files:
     language.da: c45ae0965f968a0d0b49b5ef0958e3f7
     language.el: 4db63c0a54f72f7b9c48c32fd23566cc
     language.es: cb71dbdc87136423c8bae6a99b7e54a3
-    language.et: 4db8929306f9c283362058b993def0a0
+    language.et: 8dabfee22d9479259ad3e64c76dc2b0c
     language.fi: 3ad8d9782425122bfa8f26ab3d0443b5
     language.fr: 58116d4c594b2c9f76a44334fb3a29cf
     language.he: aa87a042a3933f097572492825c1dedc
@@ -3539,21 +3539,21 @@ files:
     analytics.months.09: f04aa7019c490474fa3ce16e93501b57
     faq.title: 2e0efdff5c2db17e38ab6baef2aab40c
     faq.what_is_languine.question: f6f09e3ea71a7581c50fdca665bc796c
-    faq.what_is_languine.answer: 16625fcabd09b1a984106c7a45083bb4
+    faq.what_is_languine.answer: 0e9970bb97d1940ad195fbe2198f9157
     faq.key_limit.question: 7aeb14a1b8f014107f851c482d65c9ba
-    faq.key_limit.answer: 5a6795352c79b66d1923ad1781286a22
+    faq.key_limit.answer: b5c7d28471425e8c4d0c88fb3a30139d
     faq.supported_languages.question: 1871339dfd86f1ea4ff5fb95cda754de
-    faq.supported_languages.answer: e4e21ce689ca134566e4cd6b5eabef57
-    faq.github_action.question: 178679fc92a84e1657afa774bdaeb352
-    faq.github_action.answer: 26ac126f75d9f6419ec94edd8311feb4
+    faq.supported_languages.answer: fd8f6ac7d7d6f9891b3b0cba53966cc2
+    faq.github_action.question: 76f78c9575fc1a6b512b893a7e69a695
+    faq.github_action.answer: f6ff085ea93aa5342349d2ae8b0fbef6
     faq.support.question: 22fcbf94b8bae5728c48e601ddd35b28
     faq.support.answer: 8abe897d830381b99c5fe2d03e2b4444
     faq.open_source.question: 557b7b3a5b94340c550a4faafc1f452c
     faq.open_source.answer: 5fd45ea27b2dae107fafc00736fe053f
     faq.open_source_pricing.question: 24c280470e1c496013f9f18175603823
-    faq.open_source_pricing.answer: 98f89ce908be8ed970080fc44d9056a8
-    faq.cancel_subscription.question: dfe8686bdc15261ab120bd977a74191b
-    faq.cancel_subscription.answer: edd7c4c3657bdb5bfc150c7662aa36e9
+    faq.open_source_pricing.answer: 800d476c5156cf767b923d11f2dd3067
+    faq.cancel_subscription.question: e49f65619e5e1f2908a8194588856848
+    faq.cancel_subscription.answer: e02365a14652dd7f52d74dfbd577f6b2
     pricing_slider.tier: 65895f14808c6235e18f9efae6b814d0
     pricing_slider.keys: 3bae95dd7bd232b883f115b3acbf3d83
     pricing_slider.documents: e9976e13027419e1500a7e2e3ed9d423
@@ -3576,7 +3576,7 @@ files:
     docs.tuning: 64361509f1002e3e9d660b1bbd5d2759
     docs.overrides: b3a72e9dccb28db915db4339d3383bcf
     docs.settings: 6d454cdd87cc0b452e87f47d57ca3515
-    docs.hooks: 3394bd9c337e05c33822af607001844d
+    docs.hooks: c85fddae62ac785672374b83f79e751b
     docs.examples: bba33f6b8b70e9ff20fb827a6802b038
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
     overrides.title: b3a72e9dccb28db915db4339d3383bcf
@@ -3596,15 +3596,15 @@ files:
     current_tier.translationKeys: 480463195eaa62f8996307be15bfb69e
     current_tier.documents: ade6564f28e4e8b57d19be9f2828c4f5
     current_tier.languages: 614bf8df7b3b40ce32990fe7d0b9fd35
-    current_tier.changePlan: 549d3825c76e99eac69b1b4a884de629
+    current_tier.changePlan: 9622c46ac664d07f743905654edd5f26
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
     current_tier.manage_button: 668c8a84f946e1504bef3ae71bc384d0
     current_tier.canceled: 6112f702dd351e55cd41f8e96948c65c
-    changePlan.title: 549d3825c76e99eac69b1b4a884de629
+    changePlan.title: 9622c46ac664d07f743905654edd5f26
     changePlan.upgrade_to_tier: 6782f9820b6da6ade7e37ff849c2b609
     changePlan.cancel: 8c12a7b0e53a6fa68084d6668ea0d322
-    changePlan.description: a9bef1963dfb9b0a1cf87b6f5d958c1c
-    test_translation.title: 1005c242410dc075d21edc73c87a898b
+    changePlan.description: 03355e328aaa02a245fe2030d2c3012e
+    test_translation.title: dca608a1e8f38779fcbdaa0b6686ef4d
     test_translation.description: a74622e6866112b3b73c010ad1ea48bd
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
@@ -3612,7 +3612,7 @@ files:
     header.signIn: 80ffad7566d7473a4310841269527e84
     header.goToApp: 8318493edce0ef3e26daeb28ad15e01a
     hero.title: 008853059684d79b700c38a07e13e3fa
-    hero.description: 705cd10c2c9077114fb7c31ac4622b5f
+    hero.description: 94aec46cbca8c4340da549023499593b
     navigation.dashboard: 5967ab15ec405a77b8db5dcdb885d6c6
     navigation.tuning: bf7f60209cc14b4b4f002b4b197de4ae
     navigation.overrides: 9ea0a9b7f1f3c8259e051144b7bf169b
@@ -3622,7 +3622,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0b0fe8d91cc4d7be7a41bb108117fb72
     getStarted.title: 008853059684d79b700c38a07e13e3fa
-    getStarted.description: 705cd10c2c9077114fb7c31ac4622b5f
+    getStarted.description: 94aec46cbca8c4340da549023499593b
     getStarted.button.startAutomating: c9bb305f055f2beac4298ac1a5d90ad0
     getStarted.button.readDocumentation: c998b1d71e37e80efb656882678602cb
     companies.title: 7a5e9e96648ef44cdd14be531f061d59
@@ -3636,21 +3636,21 @@ files:
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 3b4d5dd60e346c1df2f24f7154a3f1e0
     features.fullyOpenSource: 9e912b8430039e07577f1b328d2449a9
-    features.fullyOpenSourceDescription: 459938338927b348c33a6aa7a9931935
+    features.fullyOpenSourceDescription: 45affc4b777e57c97d5e44d03d9590b9
     features.presetsForExpo: 76e0e0b200ca66bbc5ce645a62bb7392
-    features.presetsForExpoDescription: 2a2553efd55df4b14f4d27521fc3fd5f
+    features.presetsForExpoDescription: ec3de08eadccf89749d008caf1fe5988
     features.presetForReactNative: 9fb2ab11373089cd618fe7a1361e758d
-    features.presetForReactNativeDescription: 59b78963e375af8dc4733c176f293525
-    features.presetForReactEmail: cf98b3a2eb6a4db64c502640e9f77d74
-    features.presetForReactEmailDescription: 07e90c5bc18c6ab8203fc5e26d39e344
+    features.presetForReactNativeDescription: 2cabff5407928cc58fe0d604c477e6a2
+    features.presetForReactEmail: 5f2a242fdf2192ed892e1c51f327dfa6
+    features.presetForReactEmailDescription: e0298a1ca1b9b2c8fe8dc1c779f7632c
     features.readyForI18nLibraries: 4d2775ca0dce1e6881f4b2be8d277cef
     features.readyForI18nLibrariesDescription: d080e78b89978103574db038f0d47df9
     features.markdownSupport: d9cec93a73b9cd69c6e10d2be0590942
     features.markdownSupportDescription: c0fb8016f2448dd9d4270089e4154e83
-    info.title: e3fb3aeb9a8aba08db7a9f7ff7d1b6cf
+    info.title: 2f6286bf7c77ae9e88b2a23fda4958b4
     info.smartTranslation.title: 1cb5ed7043d2d8b13b7b0dcd26e1edc3
     info.smartTranslation.intelligentTranslation: 543fc04874cbe1138282e398ef5b0864
-    info.smartTranslation.brandVoice: f3a293ace3da95b8e2a26f1844fb4523
+    info.smartTranslation.brandVoice: 6c40156b84f56af7e8309b654f989507
     info.smartTranslation.terminology: 0c2da632549a994fe9977404519220b1
     info.smartTranslation.linguisticFeatures: 5dddfa5a0f6b9e02de6535bc18754deb
     info.smartTranslation.realtimeUpdates: 37d485efbc04be749b1a5d8226f1f15b
@@ -3658,18 +3658,18 @@ files:
     info.implementation.quickSetup: 0d00c8a77412f837f669749e16ffd634
     info.implementation.fileFormat: 8206476fd04c242e48f5adbc42384202
     info.implementation.contentStructure: 18ac81a9ac4f7c559fac90b9e2b994a6
-    info.implementation.assetOrganization: f169164e46365674899263744ffa2fda
+    info.implementation.assetOrganization: 891ff86eb19f93743be4530c73f42a24
     info.developer.title: 43450d895b143b772fe549d1545796c5
     info.developer.cli: c2923d5184f3c618931fa273e2205702
     info.developer.cicd: 0ff69d2081cda15f59f288ab23b2af05
     info.developer.versionControl: 1c338d7564bd0c54bc9c8d600b10495d
-    info.developer.workflow: 4701500e46dd1cb86fe42735aaa24e59
+    info.developer.workflow: e698bbb8e01aea94e88c3550e2f3e3a1
     info.developer.documentation: c16b763848be38e5e53e12f29736abdb
     login.title: 80ffad7566d7473a4310841269527e84
     login.github: 2fe55ecd5ee70a2d89040362319de645
     login.google: 25b2532d402873c3c2a19cdeaefabbc2
-    login.footer: 27f5b285e993926990010ce0f2c9234e
-    login.description: db7a25d4f92211ed9071170150b49daf
+    login.footer: 0937966ba7b0f10c88ad0c888959ab7e
+    login.description: 4806375f7ae08339b1a94dc31cf230e0
     login.terms.text: 727e4b339cb4c08aca82ed52796f6902
     login.terms.termsOfService: d1131c8fdf034ec4229e5a4e232fd4c2
     login.terms.and: 5bc3c1d52024c150581c7651627304b7
@@ -3718,12 +3718,12 @@ files:
     settings.deleteTeamTitle: b8a896bbd30b2f1a1853b96ff0f55ccf
     settings.deleteTeamDescription: 1610f1a101c19bbf60c9de587d1c4636
     settings.saved: b6f39f93e356e7ef0500059544ec5b6c
-    settings.savedDescription: 95e9ebd3b23b1b4a6e4fa70e5c11395a
+    settings.savedDescription: 399a8b5147bdf4101c8a42b899d9f8ff
     settings.error: ad2c62bbd918d8268b9701461a8bbb85
     settings.errorDescription: cdbef24d19d40c4d75417d94305465a6
     settings.addTeam: c35b14b63a8fd25449c591af7481a69a
     settings.apiKey.updated: 446245ae9746dfe7b83679b70e75be8b
-    settings.apiKey.updatedDescription: 192b7707c49c147ad67f37fca2e6a868
+    settings.apiKey.updatedDescription: 48205edbff65c9500b092a40e7280f48
     settings.apiKey.title: 9be0027ff6ec0b038776abdb6dbcb55d
     settings.apiKey.description: b7c596266918a18902b02b8eba548c49
     settings.apiKey.cancel: edfc4be89515f79e98fcb523d67c0513
@@ -3741,7 +3741,7 @@ files:
     settings.project.id.description: 8f2a640290023ef2776b4da17dfd952a
     settings.project.id.placeholder: 9d900191e26b4d0e206b62fa73e873cf
     settings.project.delete.title: de97bb63546971b9a353f5318f24d6f4
-    settings.project.delete.description: 4f268d449d3854c16400af90e91db7de
+    settings.project.delete.description: 1da9808b456f114066333f0352f7f442
     settings.project.delete.button: de97bb63546971b9a353f5318f24d6f4
     settings.save: fe9e85aad2e6e67bf18e246f33f176b5
     settings.team.name.title: ba9d0c89bb03d5b75d61564c42452d10
@@ -3753,7 +3753,7 @@ files:
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: bc65b20d712f79085e58004229d897b6
     settings.team.apiKey.title: 0682cbec0cd81d4e3891956bbfd8fb65
-    settings.team.apiKey.description: 8b8f9b403fe77cbfc29b143bedb08264
+    settings.team.apiKey.description: e528ee2c7772133547cb840015ffabd2
     settings.team.apiKey.placeholder: 0682cbec0cd81d4e3891956bbfd8fb65
     settings.team.members.leaveTeamConfirm: 5e29b2aea155547057beb52955f677c2
     settings.team.members.leaveTeamDescription: 5d1d2f852647bd369fab96dc1c2c5b65
@@ -3761,7 +3761,7 @@ files:
     settings.team.members.leaveTeam: 5e29b2aea155547057beb52955f677c2
     settings.team.members.invite: e3d624acbe1aaf339a9e562d2a44dae1
     settings.team.members.title: c1ced8b91fbd958c70c0b7d119f81c29
-    settings.team.members.pendingInvitations: 852141414abc17420b1190467f8699c5
+    settings.team.members.pendingInvitations: c1c9ed530bcccaab45c6f510a50cf601
     settings.team.members.removeMember: b2e13778cb3ae5b920a971f4b7ca455c
     settings.team.members.removeMemberConfirm: b2e13778cb3ae5b920a971f4b7ca455c
     settings.team.members.removeMemberDescription: 5faa71b4da05e9c3f2a6b857af995cc8
@@ -3769,7 +3769,7 @@ files:
     settings.team.members.allRoles: a132231c2cd93559712195c68f253cea
     settings.team.members.date: 1b3140d505d0ebe1afe634ef81d5651c
     settings.team.members.selectAll: 81da8d6e84ffdb2905828001ac447bc1
-    settings.team.members.noPendingInvitations: 2ee8f1c2b8d191228ecf1bda4074bf7b
+    settings.team.members.noPendingInvitations: 6593a57909ed81396d25cecc82cf30d9
     settings.team.members.noResults: 627f214ffc0566f58f329704cb52c3a7
     settings.team.members.tryDifferentSearch: 6d68cab731c3d0a4f647d90678c17d95
     settings.team.members.inviteMembers: 0ffb280f4d188d89dca42a4901ff51e9
@@ -3780,16 +3780,16 @@ files:
     settings.team.members.deleteInviteError: b7b9e1858b87e5cbc9fa2fda24ec1469
     settings.team.members.removeMemberSuccess: bac03cec186e8063dbb9b0a416e6191c
     settings.team.members.removeMemberError: 63a7b9600c30c62fabce0f4c44013282
-    settings.team.members.removeMemberSuccessDescription: b9569f91944f7232a558b8daaaf4144c
+    settings.team.members.removeMemberSuccessDescription: 10b75681d9ab292ea44b3cbefb4c9735
     settings.team.members.removeMemberErrorDescription: 63a7b9600c30c62fabce0f4c44013282
     settings.team.members.roles.owner: 087deef1a4032da761fa539a6dab8435
     settings.team.members.roles.member: 7808d1d39793fd1790ecbfbd2c48161b
     settings.team.members.dateSort.newest: ba201087fe6aababde75aaf9d974f1c1
     settings.team.members.dateSort.oldest: 311c7724e741557983fcebfa8ba69f41
     settings.team.members.deleteInviteConfirm: 9d655fcdbad47ba5eb37e8d26e64d14a
-    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
+    settings.team.email.title: 5709d23d4f65866274128f65094157b0
     settings.team.email.description: ae1623c633ea4b0ac1880e99b06f63c6
-    settings.team.email.placeholder: 050367ce6d59ae6b9b35b8024f676d6b
+    settings.team.email.placeholder: 64515a4b62c52bdc998f11ce945bfa7d
     tuning.general: a3f43d574940dccc8643842769e48fd4
     tuning.translationMemory.title: abcc84df4eb6d086b4ed6e27092de085
     tuning.translationMemory.description: d861a66ec71c2b4ef22826b94c0e1805
@@ -3812,11 +3812,11 @@ files:
     tuning.formality.options.formal: 76d331d0a61738e7ea67d57adbe13b47
     tuning.formality.options.neutral: b1c7c52cbbbe3bd0bd0da627521f9f0c
     tuning.brandName.title: b18fcc1282165ef4c8e917ba712dba04
-    tuning.brandName.description: 39f2af9b31231f319e31cb815fc162b3
-    tuning.brandName.placeholder: 9223ca95353d7d9efa1b69f469134de3
-    tuning.brandVoice.title: 0a4a1a6e57bcf360033f7705e674abe4
-    tuning.brandVoice.description: 20ead926da98cb9250d53779a74b5216
-    tuning.brandVoice.placeholder: bbd6e857e32c4f9dd377e5b9a17608d0
+    tuning.brandName.description: ffe43d114cc0ee45eae6453e3c9aea42
+    tuning.brandName.placeholder: ca2b53d80f47132a7de81d75c1b0a257
+    tuning.brandVoice.title: b46ce3ebaa5fb3109b1f922cf6d18be7
+    tuning.brandVoice.description: 0423922c4a9b8c751c60d98f09de0b99
+    tuning.brandVoice.placeholder: 4845f12f7f445fde3a23f185dd88e559
     tuning.toneOfVoice.title: 7ad04961cb75a7dc6e2a250d952b3137
     tuning.toneOfVoice.description: e0a0044e65692f394a07ba39ed90f064
     tuning.toneOfVoice.options.casual: b956d37dadd1ee686fceba97540c6822
@@ -3850,13 +3850,13 @@ files:
     tuning.idioms.title: 1b991052abd050dfa1ee72db4c04942e
     tuning.idioms.description: 031a34d022fd40e33abc4b511fe527ad
     tuning.terminology.title: ecd5c61cca86aa0e4e2ef2d028c4299e
-    tuning.terminology.description: 6b673183e9fbbb702f14d953d0a85444
+    tuning.terminology.description: 9186ef1475abca57ddcf442ac033a0d5
     tuning.culturalAdaptation.title: f57ec4095f65ffa1b4b808787f4c7f25
-    tuning.culturalAdaptation.description: 37dd88c8bcf7d0e32e2ba96034fd9213
+    tuning.culturalAdaptation.description: ec46c8e73619341f066343ede32deddd
     pricing.title: a346eb1b61c221fecf8cf4dbfe30f28b
     pricing.free.title: 890564f0d61b0acc2d3d90d440622072
     pricing.free.price: 890564f0d61b0acc2d3d90d440622072
-    pricing.free.keys_limit: 5df5e722d34e6ce6784c0778fa651f4c
+    pricing.free.keys_limit: 9f2ec1eeffeab6ff9a9fcc3ae8a820bf
     pricing.free.description: 821d9a90a50a3640b0d81ce4c6a4ba37
     pricing.free.features.unlimited_projects: 6d2810ca8439e30ea0975f90bf018c04
     pricing.free.features.fine_tuning: 7f8dd4709e91cd2c6f2c3657fb9ba137
@@ -3864,8 +3864,8 @@ files:
     pricing.free.features.analytics: 31045a275b7698e5c48cf484ba762b25
     pricing.free.features.context_memory: 3e5a3d903ab3ef03a2d61728c75fe89b
     pricing.free.features.community_support: ff4203dbd8bf0415135cf22c5ca8a737
-    pricing.free.features.keys_limit: 5df5e722d34e6ce6784c0778fa651f4c
-    pricing.free.features.docs_limit: 457e6d74d00da5798d90ed1ded29a2a1
+    pricing.free.features.keys_limit: 9f2ec1eeffeab6ff9a9fcc3ae8a820bf
+    pricing.free.features.docs_limit: dc84155d3755f0a6af2c7b0ffb226ea8
     pricing.free.features.languages: 6171708fd1f76800642d13762d05364f
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: d197d6b350c155f52d33a6ce81e7de84
@@ -3873,16 +3873,16 @@ files:
     pricing.pro.features.latest_features: 624485519290f569f1126e10fcbf7d17
     pricing.pro.features.priority_support: 4389c1266c82e9ceee084b76e5fc0716
     pricing.pro.features.priority_queues: e6c0fac0c87aac64bcd62d89aec358bd
-    pricing.pro.features.languages: bb7e085868bb0d5da29c489f9745f6c2
-    pricing.pro.features.keys_limit: 0bf755ced4b2d2d2c0ff871e173c765c
-    pricing.pro.features.docs_limit: 7424095d66bddb9ac1e2a0d3e0c0e1ca
+    pricing.pro.features.languages: 0746c9c552debc4877cd5500eb2de574
+    pricing.pro.features.keys_limit: 8469caea0c3e99748f8a660f07118ccf
+    pricing.pro.features.docs_limit: a946a5ef13ed319b36ac9bb6349c7208
     pricing.cta: e2cc215fe86fd0f56a7a4931e6c34db4
     pricing.keys_limit_explanation: 971fc6ce547d6874d6f45654427729e8
     createTeam.teamName: ba9d0c89bb03d5b75d61564c42452d10
     createTeam.teamNamePlaceholder: 98a69155734088a652e219977f8d33ef
     createTeam.createTeamButton: c35b14b63a8fd25449c591af7481a69a
     createTeam.cancel: edfc4be89515f79e98fcb523d67c0513
-    createTeam.createTeamDescription: e1220dc9828a533ed74f2e105829e593
+    createTeam.createTeamDescription: ddc763b3522ddd1ec6b8d4092177af87
     createProject.createProjectTitle: c15c731dfbd9a4aa5553a4b48cbf4f8a
     createProject.projectNamePlaceholder: 094d050306566e7596f08b80df8140de
     createProject.createProjectButton: d3581c7a460f080849c8922fb6fa6fc3
@@ -3895,9 +3895,9 @@ files:
     invite.cancel: edfc4be89515f79e98fcb523d67c0513
     invite.submit: 94966d90747b97d1f0f206c98a8b1ac3
     invite.success.title: 0102afeaf6ddd271b1b16cc66c66a4d9
-    invite.success.description: daca4880c23113b217d76da523539a7d
+    invite.success.description: 9cb82cd095b99aa5e60bafa3af2263ed
     invite.error.title: 37b36affedd2dfffae538585fcd42a8d
-    invite.error.description: b3ad5120d6ddccac2a690cfec2c6a8f7
+    invite.error.description: f806de663ee24170725bdf90df77ab38
     invite.validation.invalidEmail: f24511ba3f7c8834108663c8e78b2068
     onboarding.steps.1.title: 32927e4ad73666e8bbd62bcbc3d14490
     onboarding.steps.1.description: bc6ad9a298f9997ca25c99e946c392f4
@@ -3980,21 +3980,21 @@ files:
     analytics.months.07: a2866cd6efaa65c92278d4771a9eaec7
     analytics.months.08: 22f1a4667604b8557c9b209c201b4bc6
     analytics.months.09: f04aa7019c490474fa3ce16e93501b57
-    faq.title: 3e8edf2473f8e4efb5f752b502ec93dd
+    faq.title: 1fe917b01f9a3f87fa2d7d3b7643fac1
     faq.what_is_languine.question: 9ffc87e09e34cc0a8a61a117d06daa19
     faq.what_is_languine.answer: 7aebcd6173b3acbe5f5b6e2edd65ca22
     faq.key_limit.question: fab3d4bbb56744020a8b9e98a4569fb5
     faq.key_limit.answer: bd37e14a4220ba43d28947fb3b1981a0
     faq.supported_languages.question: 5e751785f1d0d2480cd051b53c89f5c3
-    faq.supported_languages.answer: e647d7bbf22cc76f24cb8726521ab664
+    faq.supported_languages.answer: 4d43e1e8b9ede3333643cb938a4505a0
     faq.github_action.question: 9e7a31957c39c75dbbacf6038964b65b
-    faq.github_action.answer: 9cf1ab588ec992cdba4dee7f461c5f3b
+    faq.github_action.answer: c3e3b8d9207ef277ff5db5d64ab24a23
     faq.support.question: 135710f18a14d93812b0103ea1e5fa7a
-    faq.support.answer: 7dacc5a7da49b82097e7ef1cf266b679
+    faq.support.answer: e40d5d0a3972368fa7c55bdd7764bf52
     faq.open_source.question: af3615d93242b2549be2d4f3481897b2
     faq.open_source.answer: 302b396913743cea642405bd199c6222
-    faq.open_source_pricing.question: 0e7d00e29e29024a7afe3fb36338e5d0
-    faq.open_source_pricing.answer: 88bf6d948d53dadc9e414dbbee31cc42
+    faq.open_source_pricing.question: f3add63e532e7b81746485ff887d9b2d
+    faq.open_source_pricing.answer: cb403eb14a828d28abd00072bad540d4
     faq.cancel_subscription.question: b29972ffdb5ccc079305d178cb02f8c3
     faq.cancel_subscription.answer: f454857aa6985acdc91158bcd19e93cd
     pricing_slider.tier: 1fae2ac97d3bed49b26fe4913659ae9b
@@ -4042,12 +4042,12 @@ files:
     current_tier.changePlan: 4a7adb62ba600378c0c9c6e6c146016f
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
     current_tier.manage_button: d693c3b6db989935a1cfecadd869639b
-    current_tier.canceled: 5d1d9c524674ec6e0e761db311aeaa65
+    current_tier.canceled: 80293445c85520a68c05373057dd46ce
     changePlan.title: 4a7adb62ba600378c0c9c6e6c146016f
     changePlan.upgrade_to_tier: 84c6baadce623249508f6d4a7e0eaed3
-    changePlan.cancel: 10729f6701ebe4cc20e1dede64e23ffc
+    changePlan.cancel: eeb51b6002e46d029c58e88fdc3584ad
     changePlan.description: 6ef4728452123b3534f9b827531283e4
-    test_translation.title: 756e56cc291f8c1f99a695ee9710f843
+    test_translation.title: 347aef849f6437810e84db6c15a8e3c8
     test_translation.description: 2555a36d3b145491695437f1acec250f
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
@@ -4055,7 +4055,7 @@ files:
     header.signIn: a61d196e6576a0a91ac6aab9034d5535
     header.goToApp: 51801703f2d37a0f7a6c332992b5a5a8
     hero.title: 74d081e34e2c42ce6301b46850b75dc5
-    hero.description: ef483ed2a9112d3c66074f121a2f0b62
+    hero.description: 70441d5bc195de399d1ad7fab15695f4
     navigation.dashboard: b8da6df14bf06283cbf588df6998722e
     navigation.tuning: ae7d36ca44e270b02649c5f5a97c0262
     navigation.overrides: 3c1cc27fb6ee71e73df1e12bf61ea9ff
@@ -4065,7 +4065,7 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     getStarted.heading: 0fcb84e5416c73280dac88079172aeb8
     getStarted.title: 74d081e34e2c42ce6301b46850b75dc5
-    getStarted.description: ef483ed2a9112d3c66074f121a2f0b62
+    getStarted.description: 70441d5bc195de399d1ad7fab15695f4
     getStarted.button.startAutomating: c889b3d6e75a2777e3de3695394fde29
     getStarted.button.readDocumentation: 343964f780f3098d5e49aee852912fd8
     companies.title: f81625b19eb538f093e5f9e676b00f47
@@ -4079,30 +4079,30 @@ files:
     activity.type.document: 160f00299ecc01a8dbdf5b7cb9e91da1
     features.title: 5b549bbb544d092058d2e807b47760d5
     features.fullyOpenSource: 29439a85e3bcf1822fa76b5f489221fa
-    features.fullyOpenSourceDescription: d671b8289a2ea321b4caa2dd7cd2bc5b
+    features.fullyOpenSourceDescription: e4e6f8721916754f3155d3e749fbf8e2
     features.presetsForExpo: 06f77917e5bd00c69834b54704f4c247
     features.presetsForExpoDescription: b0b6963cb3b71e9181a5ab88e499e875
     features.presetForReactNative: 334552a6cbb1064e7cc276aa1d4789cc
     features.presetForReactNativeDescription: 55bb156682d7d31c48f098fa59da9ccc
     features.presetForReactEmail: 4e0a3e87438fd35f91df25711f5cdc9a
     features.presetForReactEmailDescription: 6401e17d45ffb70365491f31c5f67af2
-    features.readyForI18nLibraries: d5dbb8d8457909e4f8f2ac9810f76bb2
+    features.readyForI18nLibraries: 75af4e2d755e4a3f2f7c1317d1544d46
     features.readyForI18nLibrariesDescription: 2c1497e4e5ed4f0a4fcbe936770ab124
     features.markdownSupport: 79762d503205f46bb709873925dfe79a
     features.markdownSupportDescription: 71e26ab0fee1779e70a885d952773abf
     info.title: 4d0c6cbb39f8c0987bf57776eebb362e
-    info.smartTranslation.title: 56fa4136d07b8f3df354668fffd0af95
+    info.smartTranslation.title: 0422e02742df2e5a01454d77eea1ad56
     info.smartTranslation.intelligentTranslation: f53126c2ddcb04397ca3af80787fc19f
     info.smartTranslation.brandVoice: c6962ff3253611ad16c3c5a8da58af44
     info.smartTranslation.terminology: 0f956c1f02ee336a58ea1924f69af1b5
-    info.smartTranslation.linguisticFeatures: 91a99b9478a0d54c6ce0c90470a193e5
+    info.smartTranslation.linguisticFeatures: 0053207d03d757962fc1fc95fcf89c7c
     info.smartTranslation.realtimeUpdates: 4420795b304255b288c7a14c736c6c84
-    info.implementation.title: 534c11492d7cd2161e677c2a371de32b
-    info.implementation.quickSetup: 28a53ab9f6dea00e8d9b7904b29d4f6a
+    info.implementation.title: c86adc3c3b6de682f4eab75476549ed4
+    info.implementation.quickSetup: 237b21c121c1987e4415b3f0d8482feb
     info.implementation.fileFormat: 156e10dc7584a06505eff2c1e18e2e13
     info.implementation.contentStructure: 5c3b843f6b212f72991c61721ecaec8b
     info.implementation.assetOrganization: 2687ab5c28fe8079bea8e381bcd44e8b
-    info.developer.title: d182d585dc2ea2ec17011b039054fe11
+    info.developer.title: 90ae2c30d4abc535d3af6e7c94bd1439
     info.developer.cli: 59525d12d0e3826a8d8f5a00010fcf74
     info.developer.cicd: 590111267a283f08d8b307b8746025d6
     info.developer.versionControl: a89418aba0e0b45b9de1701c3715924e
@@ -4135,7 +4135,7 @@ files:
     teamSelector.teamNamePlaceholder: b678e940c344d2acbbca8bcb6bc0572c
     teamSelector.createTeamButton: 017191d0a2904d7c87301c5dee2c3ae3
     account.fullName.title: 92ed042033d0f9238184fdd21533bc35
-    account.fullName.description: 4a269bbdccbd375a04de249a3f8bd533
+    account.fullName.description: 63ae2e8bea8ea14d5a42cb570479781f
     account.fullName.placeholder: 07267395d898d79ce21dcf3882f634da
     account.email.title: 79f061725d6a76d4e58500746e8a2b71
     account.email.description: 548728f64ab3dbc729f6b4d9af327d54
@@ -4153,7 +4153,7 @@ files:
     dangerZone.dialog.cancel: 327901a406600dcd9ec58eba06e8ec8c
     pipeline.title: e46151f900a88b101abc5c6dc63e56f7
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 4576081a61083fb79500955d77264ed3
+    pipeline.description: 728f729a9d8848fb0187d0d0fd4e8efa
     settings.badRequest: 939407e4a61ed226ff3e21786e67fdf9
     settings.badRequestDescription: 4952957c6b5ca9ea089f738ee9d91436
     settings.permissionDenied: f4e936b1f0c3e84599bbf68058e68264
@@ -4163,11 +4163,11 @@ files:
     settings.saved: 8f94ee258c02f4ab2ba9a519d386d4f6
     settings.savedDescription: 34e4b3e8f884d1e187dd23d9b6d78b24
     settings.error: eed2fc5f99ee9fe4f58da1a58fc9baec
-    settings.errorDescription: 44943edba9910f99211f360b47fbda6a
+    settings.errorDescription: 3b6e85f7a6d4ce2930eee45a60c6ca9d
     settings.addTeam: 017191d0a2904d7c87301c5dee2c3ae3
     settings.apiKey.updated: fc3a8ddc269a2006e57cd865ab0b0646
     settings.apiKey.updatedDescription: c80d5729e5b246d8f5439e9a1aa33fb9
-    settings.apiKey.title: cac2acb5e69a390cc5abb1205ff26ee1
+    settings.apiKey.title: 09e9fc447fd09adaf3e67eaf3a974529
     settings.apiKey.description: 087aa9f6e688aa9c02d225d0981b0e6d
     settings.apiKey.cancel: 327901a406600dcd9ec58eba06e8ec8c
     settings.apiKey.continue: 5a3d6e2371e1737a3ede8af0a766f74c
@@ -4175,7 +4175,7 @@ files:
     settings.tabs.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     settings.tabs.team: 7d4a752275896e94ab88cbd27813fa4d
     settings.tabs.provider: 773df5a73218f0fa96969e2c692a0aa7
-    settings.tabs.billing: 03a7328c84c411455cc0285a9af36a7e
+    settings.tabs.billing: 30a6e40f3e4bfc8a27181683ae0e95cd
     settings.addProject: 79904420ad9ed868b1b2206bf2a0893d
     settings.project.name.title: e5178d70e0cc30412c308771e97a9fca
     settings.project.name.description: fdfc17eb03d66212e4d72c3bf4f4ce57
@@ -4190,13 +4190,13 @@ files:
     settings.team.name.title: b678e940c344d2acbbca8bcb6bc0572c
     settings.team.name.description: 46121390f736ffa06556cdb79c971a07
     settings.team.name.placeholder: 22712146fd0a6de5f09524ad0385f6db
-    settings.team.billing.title: e963fe9e9815714093abb5f0ca3b0978
-    settings.team.billing.description: 7c3424f7245613a4389d3f314c1e267d
+    settings.team.billing.title: 62f942f8af5c8be446e1f4ca2126a1b3
+    settings.team.billing.description: 34bb595dea43f82a99854dc7515421e0
     settings.team.billing.free: 00d0af13710380caa1bdbd6ada1b1875
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: c99fbf3169dd950659a497ac00afc693
     settings.team.apiKey.title: 3e72f20a863c4d4cbb22b92bef7eb270
-    settings.team.apiKey.description: 9ac82022d78d00359e102de49e2598a5
+    settings.team.apiKey.description: f51b96f9d5a2f4215cc95c08c2f49e56
     settings.team.apiKey.placeholder: 3e72f20a863c4d4cbb22b92bef7eb270
     settings.team.members.leaveTeamConfirm: a93036c25ac63cda303d01420a87761b
     settings.team.members.leaveTeamDescription: ce07af326db99223eb396dd0b16f7dab
@@ -4227,10 +4227,10 @@ files:
     settings.team.members.removeMemberErrorDescription: 6f669158885ba71d77a96b500b6acfa5
     settings.team.members.roles.owner: 69aa1db74336300ed8345fd659502bbc
     settings.team.members.roles.member: 5aa37313de2aaa1b61e7717cdaf68dd8
-    settings.team.members.dateSort.newest: ec86ce2121b81bbfb032633c71ec5c42
-    settings.team.members.dateSort.oldest: ee8f3570c4091c2761823d518cd9386e
+    settings.team.members.dateSort.newest: 09e99d47ea4b97146360f52a1a1c9977
+    settings.team.members.dateSort.oldest: 18c865c1936b8359ab5e5d571e9a5674
     settings.team.members.deleteInviteConfirm: 497c114c0895993ef454bee0c69f050d
-    settings.team.email.title: c3eb9ca29c39da11f6d705f3e674c31e
+    settings.team.email.title: 3763a74ac6e6ae7c042e75ed241c6caf
     settings.team.email.description: cf895f4e57e1db6fdb016192c6ee6779
     settings.team.email.placeholder: 631c7e2a950f887bccc82e6c40cb0d05
     tuning.general: 761f5c32978f9f9cbb1deacea4db0ea5
@@ -4274,7 +4274,7 @@ files:
     tuning.toneOfVoice.options.diplomatic: 03ef095c1c8802bcbf98d3af7a0e9770
     tuning.brand: 3be2bd4f247e7e23c47bdbb19dbe04d4
     tuning.emotiveIntent.title: 8e14e17863dbbd1691ef62cf628ad608
-    tuning.emotiveIntent.description: 2623a33e0bd7db9353a99e985d756ab8
+    tuning.emotiveIntent.description: 3a666cb357a3b33b3ca8dcf709f7c0fb
     tuning.emotiveIntent.options.neutral: eb3b2e350ea666b2f9ae8110b62d8de0
     tuning.emotiveIntent.options.positive: 746dace04f3caa7c5e57ba256c292ffb
     tuning.emotiveIntent.options.empathetic: c578ca690216567ce9cde53fbf4562ef
@@ -4293,7 +4293,7 @@ files:
     tuning.idioms.title: f05997231002241d27a2686aea4d9cd1
     tuning.idioms.description: bcd105ded8020f92a1da43cb657d37cd
     tuning.terminology.title: b15e2fe144130141b3ed6bb8e3c54904
-    tuning.terminology.description: f5ac53d7d0ca75080735123ec6998c98
+    tuning.terminology.description: 9d1809259028f8872f328cce1489b2d5
     tuning.culturalAdaptation.title: e7c10f20c114e3cdfd20169e72c8404e
     tuning.culturalAdaptation.description: e647e82a26a992b09c7e553f1b77a75a
     pricing.title: 77d8b7b482613df622b2e45ea50be4ca
@@ -4316,11 +4316,11 @@ files:
     pricing.pro.features.latest_features: 43c5481649298da38d0cda8553533c0f
     pricing.pro.features.priority_support: 639ef9bfba7a42c79cc8df8cb8848020
     pricing.pro.features.priority_queues: 3b3af0a69cff163e994068e3f22c573f
-    pricing.pro.features.languages: b273e2b6db929f8b8e2be6eb2c1f444f
-    pricing.pro.features.keys_limit: cecf5603dd7d729a595a8cc8fa4dc0d8
-    pricing.pro.features.docs_limit: 52a8d39651536a737ff5cacd8971f7d4
-    pricing.cta: a0183806be95ce4eb21af367beb7f698
-    pricing.keys_limit_explanation: d03e871d4e771bc3585a6650a3efd616
+    pricing.pro.features.languages: ec591b1cfd9a138ad07845f20e373b3c
+    pricing.pro.features.keys_limit: 628b6ab48be3b3dafd89786b91e46ca1
+    pricing.pro.features.docs_limit: 1e40ce946e900316e9a784f411e8b624
+    pricing.cta: c889b3d6e75a2777e3de3695394fde29
+    pricing.keys_limit_explanation: 9de59a4807bd3205397bab079708f656
     createTeam.teamName: b678e940c344d2acbbca8bcb6bc0572c
     createTeam.teamNamePlaceholder: 22712146fd0a6de5f09524ad0385f6db
     createTeam.createTeamButton: 017191d0a2904d7c87301c5dee2c3ae3
@@ -4341,24 +4341,24 @@ files:
     invite.success.description: 7cffa9611e5b2f9a2a957c972f0c23fe
     invite.error.title: e8c93d5cb5681c80dc3aa2f03f7b977d
     invite.error.description: 4cc6ef10c8fd810c438bd4643aaa709f
-    invite.validation.invalidEmail: 66a5d1525f0cbd7f8388313975a6e5a7
+    invite.validation.invalidEmail: 628cd212dd8f4da4e5914197e87e74ac
     onboarding.steps.1.title: f5bd0f87816e9b01dfa1e246694d159e
     onboarding.steps.1.description: 3504ca8887fe599be0aff3d69b47957b
-    onboarding.steps.2.title: 5b6f9f11a8df4c2ea14c0085d1be93ee
-    onboarding.steps.2.description: 230a50ca3a4f74a9bf5c2bfa81308bb4
+    onboarding.steps.2.title: 18bdb081b8f6a6839b49a30bf1006ff5
+    onboarding.steps.2.description: 082ecba3764e8eee639645922d13e5f5
     onboarding.steps.3.title: c8485e05c2720e903517fa53f1189d33
     onboarding.steps.3.description: 73e6a00dd42c56b8b91fde63d95346e9
     onboarding.steps.3.link: ad9decd8f42e8d981f45b6771ecdf3b3
     onboarding.info.description: 1a9f7e338f60a7fef7dd647e5264f71e
     onboarding.info.link: ad9decd8f42e8d981f45b6771ecdf3b3
     onboarding.info.description_2: 9b3131a6b953de49f9027b7afb809301
-    cli.success.title: 9a294097ab05ddcb9c985410c993519e
+    cli.success.title: 4643f0158df279804e0b2088b2b18018
     cli.success.description: 200a7c6735b690dcce9a757da7021094
     cli.success.description_2: e6a1c0d7ff91f26c94b895a7dd37fbea
     search.placeholder: c02bc424d44c27726f6a3372d13760ae
     periods.daily: cf83710d143ca2078aac9142ed04e579
-    periods.weekly: a0f7117319c19eb7560565a889f3bf94
-    periods.monthly: 9ab155c1ef612ce16226f3f5d70918f0
+    periods.weekly: 35cd6d156a8bf841283c3c211a6b052f
+    periods.monthly: 1b87929603e662e399ba06f2189815d4
     periods.selectPeriod: 96b310a2ab16a01a080c162bf2188a0c
     language.en: 0f21085d0c536278cc8166473b39c52d
     language.de: 9cabd34bd5460ab44097e375efa1a5b8
@@ -4383,7 +4383,7 @@ files:
     language.km: 9f564ebabc9cf0b9589b4ecf6228379a
     language.ko: 0f76e2247148c03268305a2034e45725
     language.lv: cc28203c84790ee89a2a4a012afc3986
-    language.nl: b3ce7bc9118fdf174cdcb38f090744a5
+    language.nl: e09213dd65ad4c4a9c4f251d2cb6816f
     language.no: 28b2303b8076d780e67d2834d9657013
     language.pl: d0033788e612a4e0646c261eba804fb6
     language.pt-BR: 898a56798f3832a286963f09867fcf40
@@ -4425,21 +4425,21 @@ files:
     analytics.months.09: 61b4abbfa08b99e4c785fc0f584d44f4
     faq.title: 1fe917b01f9a3f87fa2d7d3b7643fac1
     faq.what_is_languine.question: 88e2cc1a6c2739725beeba94a3debd49
-    faq.what_is_languine.answer: 65198e35e6ef88881d151f040e6d434d
+    faq.what_is_languine.answer: 47d98b6da1223bc58ddb0a94470e74db
     faq.key_limit.question: 5fac109cbe8014d9d0e00813439e059d
-    faq.key_limit.answer: 98734af7850987d89bfe49d0756cd861
+    faq.key_limit.answer: 3c28d94745fd551022dd6b9e2440ba1d
     faq.supported_languages.question: 376d1cc4857da25d4b3372c851ff435d
-    faq.supported_languages.answer: 5828d06984ba7f074504483aca26c087
+    faq.supported_languages.answer: a1650615c313fececcd820be216d973f
     faq.github_action.question: 21a9ffefb8e2d830132f2a32a676aba1
     faq.github_action.answer: 48bcad2f0eef35a9588e282496e48979
     faq.support.question: e3193bf557cc7b6fe8459207d3f8a6f9
-    faq.support.answer: 235c13db2e997b13870457e22a0e22f3
-    faq.open_source.question: 560e1f01b34e4bde65b3a49527e23c5c
-    faq.open_source.answer: 5a9221aa6998c4ce45ef6e05ca80b5fd
+    faq.support.answer: d6946226223cf2d160914fc6d3c121eb
+    faq.open_source.question: 8d6e878a9611a137c051428f2c22e33f
+    faq.open_source.answer: fab74044b209bf8ccbd3fe30270394f3
     faq.open_source_pricing.question: d8b8b10d835ecef347014ddec401ebe9
-    faq.open_source_pricing.answer: 8a0d231c204072e7e0dace6c0bf0c7ee
+    faq.open_source_pricing.answer: 35f9a953e2744fe7305230022864b5a6
     faq.cancel_subscription.question: 00d24386ae4af24a8d6dae7b63b2d223
-    faq.cancel_subscription.answer: 39dcc4ff73858b399a06b135fb75e016
+    faq.cancel_subscription.answer: 4cdeb0372c109c16d3a03fa44867858b
     pricing_slider.tier: 1c8d77b72b429894ff890194211c62a2
     pricing_slider.keys: 8b0e51708b77471fab2f39578bfedf00
     pricing_slider.documents: 207eccb545ccf89b15a2aeabd5a426ce
@@ -4447,7 +4447,7 @@ files:
     pricing_slider.keys_suffix: 99bdeddbe4cb5d8104cc965f5a54d61d
     pricing_slider.docs_suffix: 72be9638d80dd88fd4f4692cdba1b6f5
     pricing_slider.languages: f6bd86458350c2fca88dbef078183e2b
-    docs.getting-started: 3f83aaab53f976f16c969e1774e4b83a
+    docs.getting-started: 537751fd39d2731b8b961b8d625f55b4
     docs.workflow: 2154b0e4195ff189df83f4f10a4b3b23
     docs.ci: a91e4ff4bf49e8de7de911d95062662e
     docs.presets: f1a42a630faa34fd64e8e7a41466db53
@@ -4489,7 +4489,7 @@ files:
     changePlan.title: 8376069b9c875191af0dc1f9627216ce
     changePlan.upgrade_to_tier: e8b7c85c9c06196a006471b9c912abe3
     changePlan.cancel: 327901a406600dcd9ec58eba06e8ec8c
-    changePlan.description: 6f8b4b8a09249505d46d8497b9661951
+    changePlan.description: 4e9e3c5815afc1d03b2b67cad15ee14f
     test_translation.title: 72cfa6fd508443d4ebf814718464eb05
     test_translation.description: a614574aa08ddf16f8d35c9fee924935
   src/messages/pt.json:
@@ -4498,7 +4498,7 @@ files:
     header.signIn: b687c67a2bfd3c4c97d9eb37450909e5
     header.goToApp: 8575ae96fc03c7fac71de84dc0cc695e
     hero.title: db8901072eb1bab68634dbeee9fc113f
-    hero.description: f967fc7165f5e1d13f23b5d4b4fd7290
+    hero.description: 9f83f8904778292c3b3d8508f0fc3391
     navigation.dashboard: 96a7b5490bcd3652a0c2bf36c1ffce2b
     navigation.tuning: 9b8c5566f1323d88d3192d269523bcbe
     navigation.overrides: 72ea96873387ebb56925d2fb2b8debf2
@@ -4506,13 +4506,13 @@ files:
     navigation.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     navigation.docs: bc591132e2c4d691a317893d6a59285a
     navigation.account: 8192dbe80e3401ebe872e0aed980daa1
-    getStarted.heading: 45b9954f468ac044238ce013e9cd7a69
+    getStarted.heading: 434aeab58169e9ed4fca581cf94bf498
     getStarted.title: db8901072eb1bab68634dbeee9fc113f
-    getStarted.description: f967fc7165f5e1d13f23b5d4b4fd7290
-    getStarted.button.startAutomating: 2cacaa39f025b53800c7c12a96405c6f
-    getStarted.button.readDocumentation: 0ed36fcc448c60432dfa9ba1a1c596e6
+    getStarted.description: 9f83f8904778292c3b3d8508f0fc3391
+    getStarted.button.startAutomating: 9da709fc909bde4b774a02fce2b0d65f
+    getStarted.button.readDocumentation: 3920f23fdde081937a7c59a13f351ee4
     companies.title: 806ebdbd9fe082ab396eb70f7002f156
-    companies.addYourCompany: fcce8249af4c9ee50335143754e9efb4
+    companies.addYourCompany: 79fd56b0f117730757e0bb1b59a8bc21
     activity.title: 964bb7d903ff665b3655fa03eb355105
     activity.loading: a833c4e8047d81f414590dfdef018732
     activity.noResults: bdeacc152348b79777ded99b0f0920ba
@@ -4521,7 +4521,7 @@ files:
     activity.type.key: 92e9356093a8b00a403de2c6a5827705
     activity.type.document: 34ea53ed055756a33cdca7f0bf4133c3
     features.title: d942ba2c237a997ea67a6d69cf5e308d
-    features.fullyOpenSource: 0dcf425811cc369542362d4573871c21
+    features.fullyOpenSource: 3a9e88ecdd18a1cc7d0105b57789710d
     features.fullyOpenSourceDescription: 3ecdf8e5354d610e505f041affe540e6
     features.presetsForExpo: b70ceb0bf3a41e3a3dad1fd391406442
     features.presetsForExpoDescription: ac46de56a50bf77855ad77d8143ade67
@@ -4532,8 +4532,8 @@ files:
     features.readyForI18nLibraries: 38b2d004f1207b366c6a4c3b4b2bba8d
     features.readyForI18nLibrariesDescription: 2ef257fabb25a46becd68af6157d3faf
     features.markdownSupport: dcbca19b08815f6f00ce1f3551850903
-    features.markdownSupportDescription: 1b12a9550a1ec1c9119d65c173c106a0
-    info.title: 08cceaea719818507b5de06124260136
+    features.markdownSupportDescription: 97aead00bd48bc162b143d55eea285cb
+    info.title: af8746fb72a55a1037a3814206cc5a4e
     info.smartTranslation.title: 30e30b8719c3d5c59bfe2c671daf873c
     info.smartTranslation.intelligentTranslation: d21ce9c8e78d32864b962a742c62c74a
     info.smartTranslation.brandVoice: 2732c8b0622543ae2a8df28ea763216b
@@ -4596,7 +4596,7 @@ files:
     dangerZone.dialog.cancel: 847607d75e504090b5aff16a6e6c8351
     pipeline.title: 4a3900f3a6548f16d53b8efa4e7ec4c5
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: 1cec31d6a31d11314802a30baae74c44
+    pipeline.description: 41f0e34b61c867f06916649f8f4977d1
     settings.badRequest: 1e10789f489587b8db689790facdd254
     settings.badRequestDescription: 79c6996436eed8039341ddc0535db587
     settings.permissionDenied: 6febbbdf5931e14ca61739f8a3c686ee
@@ -4608,10 +4608,10 @@ files:
     settings.error: 6486c9fe58f65165d2a2eccd7d20c66c
     settings.errorDescription: dd3005c68f50461360ca2359802f6a4a
     settings.addTeam: 0851e78029e6f28965163b4884d8b3cd
-    settings.apiKey.updated: cb9618d01c031e9b0a23e33c22de3e6c
-    settings.apiKey.updatedDescription: a453d19434dcd2f8b0d17152cf9a505f
-    settings.apiKey.title: 8b567c32534a642ac6bea038695c35ac
-    settings.apiKey.description: 2273e514cf453b638928ca837b7233fe
+    settings.apiKey.updated: ae9471c2bbe079959fccb84ecc6a81a3
+    settings.apiKey.updatedDescription: 547eed350fbbadecdfc73637fb70c084
+    settings.apiKey.title: e6f8c31cf569e984ec2c67c11ca38ecf
+    settings.apiKey.description: 3a1877d413f1672658642c260ffdb764
     settings.apiKey.cancel: 847607d75e504090b5aff16a6e6c8351
     settings.apiKey.continue: 64b467714a312d788460aa938539b1db
     settings.tabs.project: cbe96768212faccaf6422f7470d801ef
@@ -4634,13 +4634,13 @@ files:
     settings.team.name.description: 4d596c8e4373cd9421d4a0ca76de9716
     settings.team.name.placeholder: b24022f839610044c69f02a911b217a6
     settings.team.billing.title: 3332a559e4fbff8184672672771da45c
-    settings.team.billing.description: dd600eea1cdf646041ed8b732d079673
+    settings.team.billing.description: 02005f5dc061b8cdeaa1b76ef8c83f6e
     settings.team.billing.free: b461d3afae10775fb16718aeee6baf44
     settings.team.billing.pro: abd900517e55dce0437dac136a8568d7
     settings.team.billing.unlimited: 07602bab4e228784c6f6c49092658680
-    settings.team.apiKey.title: a10cd9c39ecab22ddec49bcad9f0522a
-    settings.team.apiKey.description: ec661e01f6211b5f091ab3444b342832
-    settings.team.apiKey.placeholder: a10cd9c39ecab22ddec49bcad9f0522a
+    settings.team.apiKey.title: 64ea4b1805a7ee1e4d7be0c6d47e634c
+    settings.team.apiKey.description: 101903b1bb7cf263efc2c9b013c2f80d
+    settings.team.apiKey.placeholder: 64ea4b1805a7ee1e4d7be0c6d47e634c
     settings.team.members.leaveTeamConfirm: 44f4ec33fb98d1ce2fc49ad9a4410bbe
     settings.team.members.leaveTeamDescription: 693ba35a1c5013076c7d18c130dce260
     settings.team.members.cancel: 847607d75e504090b5aff16a6e6c8351
@@ -4674,8 +4674,8 @@ files:
     settings.team.members.dateSort.oldest: 940d1363ba208670ab479302e849b9d1
     settings.team.members.deleteInviteConfirm: 0b5b763e98d3bdf4dbfed3fdff8f2678
     settings.team.email.title: 79e7bee1bc752904574eb1ee0f94d87a
-    settings.team.email.description: 612d19b676008640bdce17a2848c80a0
-    settings.team.email.placeholder: df87b3754eb8b1d9f3037538a8c4721d
+    settings.team.email.description: 0ce92511387eae4a521f119fc161260c
+    settings.team.email.placeholder: af5ed8a10630a29702bbd012dc95f0fe
     tuning.general: 42238015090fc2146650bd7f9d58906b
     tuning.translationMemory.title: 5827e4a95c9732d6ea416cb9c362f265
     tuning.translationMemory.description: 3815ea18ecf6b34aedcca3c359d7b83b
@@ -4685,13 +4685,13 @@ files:
     tuning.contextDetection.description: c22cb93be015b1f58eafc691b4b09e88
     tuning.styleGuide: e2fc3a72fe22f8d9f041bf9dea9ed397
     tuning.lengthControl.title: 4f612a6ba820c145ec6ef1eb437a837f
-    tuning.lengthControl.description: 9f0d497db20df9f82fd4bd497a65cd6e
+    tuning.lengthControl.description: 5dd93fa4e7b68b1f784275aa380514de
     tuning.lengthControl.options.flexible: 75053151bacdf009375ea53c45dfcb50
     tuning.lengthControl.options.strict: f637ca8232ae04eb08a5d94a1af51f9b
     tuning.lengthControl.options.exact: 344413514010055d712fc9f899531390
     tuning.lengthControl.options.loose: a4bc393e49fdf37568794b213e784cec
     tuning.inclusiveLanguage.title: db5b948f8e25e6bec6925e7fbe12a13a
-    tuning.inclusiveLanguage.description: f5bb68c04ef28858b121a7a241c01795
+    tuning.inclusiveLanguage.description: 571108ab7f3da80f95babf5163604762
     tuning.formality.title: 3e1c3086bad2369cf33dc28735fe142e
     tuning.formality.description: 38fad6d4544e6166a86eb06ea7cf6302
     tuning.formality.options.casual: 28d5d53226be8aa8da42d9cbdd312e62
@@ -4704,7 +4704,7 @@ files:
     tuning.brandVoice.description: e86c02b9b5224df0f52a90a9e670aaf5
     tuning.brandVoice.placeholder: da389d11bc72d61744bee1adcf151a5c
     tuning.toneOfVoice.title: 34e523d52a763a017d476b397a246584
-    tuning.toneOfVoice.description: 66214a6c25d45ffeaf9682e6487a52ab
+    tuning.toneOfVoice.description: 00fddb496d9f1d5b58b51215ed7e8184
     tuning.toneOfVoice.options.casual: 28d5d53226be8aa8da42d9cbdd312e62
     tuning.toneOfVoice.options.formal: 557c6481538b93bfe0a10a1cbc11aa07
     tuning.toneOfVoice.options.friendly: 5c161072cb7c7410667c9097e02795eb
@@ -4734,7 +4734,7 @@ files:
     tuning.domainExpertise.options.marketing: 7cb15e416d62919b1b40298324fbe30b
     tuning.domainExpertise.options.academic: 1ce167592ffdcf2315268d56fee1ed94
     tuning.idioms.title: 6abe516b7abc5052673dc35b3a306e7c
-    tuning.idioms.description: a55865d2eaeb22f97e46619de0a0037f
+    tuning.idioms.description: 6e17338f80bec0c8b7afc484ff43629d
     tuning.terminology.title: b15e2fe144130141b3ed6bb8e3c54904
     tuning.terminology.description: e6ee67992bf14c8a6f75e591f1a697bd
     tuning.culturalAdaptation.title: 6006ea5a8fc1c9cd21beba6765fd0a99
@@ -4756,12 +4756,12 @@ files:
     pricing.pro.title: abd900517e55dce0437dac136a8568d7
     pricing.pro.includes_free: d11d05b74aae63b1ad86c668536abd04
     pricing.pro.features.github_action: cc77acbf5ba95612636fda7020b56500
-    pricing.pro.features.latest_features: fa487072a3d6140af91c1ed4c0ab13ec
+    pricing.pro.features.latest_features: 39521545e39a522076091f032d6b2e30
     pricing.pro.features.priority_support: ea88aacd89df454e69d2f4f57e49cc58
     pricing.pro.features.priority_queues: f4300b07e4bf02ea68303830e90ac4bc
-    pricing.pro.features.languages: d0e8e4bba0e8f9ecb58848ca86f13fbc
-    pricing.pro.features.keys_limit: a35aadb12fa050bcb5d5b64e4bf8947a
-    pricing.pro.features.docs_limit: 5e9dca5ccd1a4684f383f71ed83a4bee
+    pricing.pro.features.languages: 264f0618f3d111c92708e2edf1cf7f12
+    pricing.pro.features.keys_limit: f44d71bb3d11ebcf7dbb9c3c4f734b31
+    pricing.pro.features.docs_limit: fa25d8a3fbf5768d514bc3c56f1e3d2a
     pricing.cta: 2cacaa39f025b53800c7c12a96405c6f
     pricing.keys_limit_explanation: 4b6dca9e30fde8638dec28345e11dc06
     createTeam.teamName: 3b3f92203393b4935cb34bd833cf6119
@@ -4792,7 +4792,7 @@ files:
     onboarding.steps.3.title: bc591132e2c4d691a317893d6a59285a
     onboarding.steps.3.description: a37b9d1c62571dcf96dcc76a02b2b956
     onboarding.steps.3.link: d56d7be791104289566b29b8dd70f77b
-    onboarding.info.description: 4fc24bf32c6c9f22a3429a9a4dacc908
+    onboarding.info.description: 49be41289a115fff459062d68ffd5cee
     onboarding.info.link: d56d7be791104289566b29b8dd70f77b
     onboarding.info.description_2: afb0ce8b7cccc41e7f360bf5d44a2ba1
     cli.success.title: b6f1c43c43c59949f6e169506720609d
@@ -4809,7 +4809,7 @@ files:
     language.az: 9e5ab2a7ac261f8f0f03af3d91ac94d6
     language.bg: ae06a90622b0ba43c6ac1349d533a276
     language.ca: 96acdb98fd5ac1b340eaacef30f2b444
-    language.cs: 7c5e037b592f11dc1e7e7d0f0dac2a14
+    language.cs: add99bc16207251d2bc32a4d8b410fbc
     language.da: c82e9c31cbd66420582d4af2318dc4ff
     language.el: f866400c31f3c7648da214e71fe167c9
     language.es: 4c00162f37c68542a6ff4928b0a54ddc
@@ -4850,7 +4850,7 @@ files:
     menu.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     menu.docs: bc591132e2c4d691a317893d6a59285a
     menu.account: 8192dbe80e3401ebe872e0aed980daa1
-    billing.title: 4cef1eb01568374a2f344dc7ab04d5de
+    billing.title: 76eaefcbcbf248c802a28fc195a5e974
     analytics.key: 12e28a1ef8ae770c04b39b69ea8790d8
     analytics.document: bec2b232afa0afdacca96e92a9f027b4
     analytics.header: a221dea03d14238238453c9d7b9f2d48
@@ -4870,19 +4870,19 @@ files:
     faq.what_is_languine.question: 4b5ad5d97494d40238266a45613c40a7
     faq.what_is_languine.answer: c983fcb267a408bbd5667ffc23e99f2b
     faq.key_limit.question: e6a208f0c8bd24d45e8e0a198a9d869a
-    faq.key_limit.answer: 2a0b8233d82237bebe58d603d5cc61e3
+    faq.key_limit.answer: bb9fde130ecfc39c4ce3346c5bbdb934
     faq.supported_languages.question: dabbc2701bd380f9e425124d3ab80f99
     faq.supported_languages.answer: fdb88a025bdeae18abeda044dc958352
     faq.github_action.question: 2bd55689639c05581e0c35f08ec08a7c
     faq.github_action.answer: 74b6aac496e29a5a19a6edb432647317
-    faq.support.question: f0f3280b68da2342d7531cb483d9ef12
+    faq.support.question: 6f66ab4edd67ab9be560faa5733327e4
     faq.support.answer: eec84d02edb0e4f6e8201653b522523f
     faq.open_source.question: 5d1e5c8df505f045999118c433200d25
     faq.open_source.answer: 4edf5f92fc6f839631e066ccef749401
-    faq.open_source_pricing.question: 9504fa4006da57266eaad49765553ff6
-    faq.open_source_pricing.answer: f1973a8f725bdfe8bba8cc9ec0ae9070
+    faq.open_source_pricing.question: 0ea05131a31114cf834039dda1a44b34
+    faq.open_source_pricing.answer: 7949a3ffd57931714344565c0fe46cb8
     faq.cancel_subscription.question: 54ae1e74a28d8d5eccb9a95439653f48
-    faq.cancel_subscription.answer: 6e53134dcdd04461ff7121f73209852f
+    faq.cancel_subscription.answer: f063be5e292789402398f039e92be60c
     pricing_slider.tier: 18fd8f4c4799346a650185dc5018ad70
     pricing_slider.keys: 12e28a1ef8ae770c04b39b69ea8790d8
     pricing_slider.documents: bec2b232afa0afdacca96e92a9f027b4
@@ -4933,7 +4933,7 @@ files:
     changePlan.upgrade_to_tier: f07b0b61fa26359b683ad0d800a3b39f
     changePlan.cancel: 847607d75e504090b5aff16a6e6c8351
     changePlan.description: 4c23214dac77429a57c41781e1bf735a
-    test_translation.title: d3deb535d041342627f90d413f11f733
+    test_translation.title: 78884173f87c9f3ab309a8f9a5f3a19b
     test_translation.description: 135b876206ce97f0b069bd248562e001
   src/messages/sv.json:
     navigation.pricing: 62f53655259ed2a25e90a5f021757950
@@ -4945,20 +4945,20 @@ files:
     navigation.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     overrides.title: f0bb8c458dbdf9d56039d465e7b18229
     header.pricing: 62f53655259ed2a25e90a5f021757950
-    header.docs: 43c592501e0d37c63bc038fa182b2ddf
+    header.docs: 160f00299ecc01a8dbdf5b7cb9e91da1
     header.signIn: 80acd27ebea1d1727f33923ab4b44901
     header.goToApp: d47ab5843bf48f0247a904efec4d4ed9
     menu.pricing: 62f53655259ed2a25e90a5f021757950
     menu.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
-    menu.tuning: bf7f60209cc14b4b4f002b4b197de4ae
+    menu.tuning: 04700bee0cd7b00165f310460332b2f8
     menu.settings: 04700bee0cd7b00165f310460332b2f8
     menu.docs: 43c592501e0d37c63bc038fa182b2ddf
     menu.account: 8ef1b2ce0360df8af6e52bfdab6e6e9e
     hero.title: 9a7164f0cd4144911ebfcef911ae89d1
-    hero.description: 175bd501f97b120dfc152c0699fe2eb9
+    hero.description: 3408f3aeaf12889107f73009018f27e6
     getStarted.heading: 95a8292476e692ab92aa6dcd57518b18
     getStarted.title: 9a7164f0cd4144911ebfcef911ae89d1
-    getStarted.description: 175bd501f97b120dfc152c0699fe2eb9
+    getStarted.description: 3408f3aeaf12889107f73009018f27e6
     getStarted.button.startAutomating: a04ca6d92fe1c2970e655d82bf36583c
     getStarted.button.readDocumentation: 30b7e90a20189fa21f646422ffee79eb
     companies.title: 1d972c940221026305ecd77c17a64655
@@ -4998,7 +4998,7 @@ files:
     info.developer.title: 1dae8a5e6d65779cb62a4583c8c688d9
     info.developer.cli: 14f0f0621f699deed7b0c9a925581db6
     info.developer.cicd: 0626f2810de55ba287fd32fb819da6f3
-    info.developer.versionControl: b03b8c5ac12a5ccc5b86c29e7feb4ce9
+    info.developer.versionControl: a76604f8b1d4b060ea78ef687d1ecc0d
     info.developer.workflow: 27e860a53ab7a39476f420525caa6068
     info.developer.documentation: 8b7f11149061693da06943ab64f16f07
     login.title: 80acd27ebea1d1727f33923ab4b44901
@@ -5035,24 +5035,24 @@ files:
     account.email.placeholder: a7ab23aa74aac01afd29e0b506b77212
     account.apiKey.title: ebb749630908a2ebd5a68a8bca8b3e89
     account.apiKey.description: 2d99582088480d129f52168679ef5c08
-    account.deleteAccount.title: 3a3c647872f0189c8eeb50a0931315af
-    account.deleteAccount.description: 708ac95813872af7af2db67cc782fa2e
-    account.deleteAccount.button: 3a3c647872f0189c8eeb50a0931315af
+    account.deleteAccount.title: 698f3187c4c5892462cc7f2e5dc30970
+    account.deleteAccount.description: 23acf6472e9c41f74f8791a7e00e42aa
+    account.deleteAccount.button: 698f3187c4c5892462cc7f2e5dc30970
     copyInstall.copied: d48587501810b83cd87ed46f0f55cdcc
     dangerZone.dialog.title: 98b3dbb98cffe0aacdf186ff469bc1eb
     dangerZone.dialog.description: c955712d82012018b0323a638f9abf2a
     dangerZone.dialog.placeholder: 029bd476e198ab347300fa502105f97d
-    dangerZone.dialog.confirm: 372d4ca742a8b72e3371f882659fe759
+    dangerZone.dialog.confirm: 1a95fb44d9eede07c023cc2dd3124d30
     dangerZone.dialog.cancel: edfc4be89515f79e98fcb523d67c0513
     pipeline.title: 77be5e7841178a6b26df135ae8f7bb46
     pipeline.pro: 930f8b73c81a6b880f2eec8693726bd6
-    pipeline.description: b7c00213528b05e2e93a7a4d82f79a1c
+    pipeline.description: 222d6fc11cc479c6ac2a70fb9c723d59
     settings.badRequest: eb39c64bd4876ecda1ab12e806807512
-    settings.badRequestDescription: cf3da139de4f1a1313bb53d0b418aa3d
+    settings.badRequestDescription: 6a5318fc6f966ce6d9b80ff86e5f5044
     settings.permissionDenied: 96b624ea38ea32d223bc7d143c9631c5
     settings.permissionDeniedDescription: c735d64080f952197c4d44dd5581eea3
     settings.deleteTeamTitle: 70064056e696c7b45f451fa9be0c603b
-    settings.deleteTeamDescription: 2e22438fcf8351be7f1c89d690641645
+    settings.deleteTeamDescription: 394ce24bb859dea2636f8aa2153036f4
     settings.saved: d94ce1afe37475ec952862400a97f3c2
     settings.savedDescription: 1d4134b116eca344d2ceb0c5d3ef8e0f
     settings.error: c4775a7384dc8832ba156bc3d80dd6c6
@@ -5077,7 +5077,7 @@ files:
     settings.project.id.description: b65910b74a96ee45bd09a54b9cd71914
     settings.project.id.placeholder: 945b1506766c62617c0049e3ce8328df
     settings.project.delete.title: 9278cf7b6b8096e09bba62147b3a063e
-    settings.project.delete.description: 60a0856a9f9decb90e06a4b8690de930
+    settings.project.delete.description: 28ba46ba6d60e916433a87552e251a63
     settings.project.delete.button: 9278cf7b6b8096e09bba62147b3a063e
     settings.save: b8628398f7246a51de498212e8c3570d
     settings.team.name.title: 06261238a8ea172fa3195b809295ad00
@@ -5123,16 +5123,16 @@ files:
     settings.team.members.dateSort.newest: 9902c441d0817b8c76cc2990467d3882
     settings.team.members.dateSort.oldest: cb22c6f528fef915d79065f7e0c67428
     settings.team.members.deleteInviteConfirm: 73f97d60bf25ff024d38a6317a10351c
-    settings.team.email.title: b9be71e7a962942c9bc685e12dee6bbf
+    settings.team.email.title: 56324a06d94d2f58a65f3a1c5dede982
     settings.team.email.description: 57ff1e8dfc4f6117fd8dcc16f4a5947e
     settings.team.email.placeholder: e2fe491f9be5c9389563c90b2072fd19
-    tuning.general: a1335e66b286b5753b14edc5ff88e767
+    tuning.general: 5a6eb1b6d0e04af119b7a7db2a306d1b
     tuning.translationMemory.title: 15fd658e69bdff7f79a7ca7337f54b41
     tuning.translationMemory.description: f51b1f5c2f7b4624d88d976452defa97
     tuning.qualityChecks.title: efd45335735e7d91bb2bdefffe4b8fd1
     tuning.qualityChecks.description: 27e72e20fe2eeba44e1013ae50289c61
     tuning.contextDetection.title: b2a9c237b46191fd1f70ebdb26519386
-    tuning.contextDetection.description: 3aba0acfa39f6dd11c6b75deb736d949
+    tuning.contextDetection.description: c9525569baa0cb4c1aef6a26db198607
     tuning.styleGuide: a73209f414368ee2c1267d39b584922b
     tuning.lengthControl.title: 302f906af829f7c5aeb6cc402874d3d7
     tuning.lengthControl.description: f889d42866346f6aeda99985c410a887
@@ -5166,8 +5166,8 @@ files:
     tuning.toneOfVoice.options.direct: a1550ed39908d135591d876396561f99
     tuning.toneOfVoice.options.diplomatic: 427ea6fa7ab0acb49e6fcc59c6795574
     tuning.brand: ea2a99b61219f194f3b00d1f20c5675c
-    tuning.emotiveIntent.title: 4118183127d51739ff1c85ebc1c40be6
-    tuning.emotiveIntent.description: b4185ffe42faa2e5bc929df511f70837
+    tuning.emotiveIntent.title: e41573bfb6e8b3a8c0c7ca6fa19e4955
+    tuning.emotiveIntent.description: af7e38d0bb01d945f3f74326a5a8239b
     tuning.emotiveIntent.options.neutral: e9bb5320b3890b6747c91b5a71ae5a01
     tuning.emotiveIntent.options.positive: 34f2215468020a60facb60a66840e3bd
     tuning.emotiveIntent.options.empathetic: 6c498fff170af4e7d5f6403365edbc97
@@ -5209,9 +5209,9 @@ files:
     pricing.pro.features.latest_features: 2544d6af83bdf5a8de42172ce39e5efd
     pricing.pro.features.priority_support: 4c0c3cdfc9ef6eb0e24bcf7499b0d248
     pricing.pro.features.priority_queues: 4a820d7588613646dc7ca0db8037ff90
-    pricing.pro.features.languages: 6a321304be727230cae4fc1d4601f0a4
-    pricing.pro.features.keys_limit: 74f5e3c7ce3e2d1ef4171c39ac961644
-    pricing.pro.features.docs_limit: 477044d6797a77a1ddddf7e18c9168fc
+    pricing.pro.features.languages: 2ef8675294c19fd83066a15d4228e07e
+    pricing.pro.features.keys_limit: 8092abe6cbad8c39396f2f2b459f5244
+    pricing.pro.features.docs_limit: 04b88217ce4c724bed6ebb14ce8b5ddc
     pricing.cta: a04ca6d92fe1c2970e655d82bf36583c
     pricing.keys_limit_explanation: 16bb08a2dfcbe18267cf1b4b6aa79f7f
     createTeam.teamName: 06261238a8ea172fa3195b809295ad00
@@ -5231,7 +5231,7 @@ files:
     invite.cancel: edfc4be89515f79e98fcb523d67c0513
     invite.submit: c8eca2b9c112953d818b58389a1cf5b5
     invite.success.title: e287d07f8926330ba85746ea931285f3
-    invite.success.description: ceb0fed12b577ec9963eb63608b71b9d
+    invite.success.description: 177aea300cf56569d89fff39dd4b59b8
     invite.error.title: 934f13a0af5726b4d29896b6973a7da5
     invite.error.description: 3b0fd1325a22d46f25839e1a6e8c0615
     invite.validation.invalidEmail: 12cf09656c1e957022584cd6cccf01aa
@@ -5318,15 +5318,15 @@ files:
     faq.supported_languages.question: e140cfbd13ea2073fc0efcc9198191c8
     faq.supported_languages.answer: 8f364ebcbdc0c99d753bc48e095443e8
     faq.github_action.question: 4f1bd596e4277e5836f9668a022ebc22
-    faq.github_action.answer: d097703bf51f1b2f0870d3bb56fc254f
+    faq.github_action.answer: d4a1f5fc272307f7e15b3c0cb5954b8f
     faq.support.question: 73a4d2f93052ecf786c15f34157f6d0b
-    faq.support.answer: b2c084bfc270534b4ed869a141a1dfb7
+    faq.support.answer: 4256ec0f68d0b3f7288de13d46b79a0c
     faq.open_source.question: f5671e473626b616f4f34a218e512771
     faq.open_source.answer: 1891463caa4d439869c9ce857183bace
-    faq.open_source_pricing.question: 6d5cfdeb81c3112c64a3d0cb0e23181b
-    faq.open_source_pricing.answer: 7e8715065fcc269962b0fba90b6b387b
+    faq.open_source_pricing.question: a08d90f4f66e896b5c48843230e78184
+    faq.open_source_pricing.answer: 1f635c357a4f551f69ad8bc1a755cff3
     faq.cancel_subscription.question: f60f9844309a6a6e7b433ec868a5bf76
-    faq.cancel_subscription.answer: a17750f4b93afc3ddd9ef60ecc72f831
+    faq.cancel_subscription.answer: 4511594b70d14ba669e8a9005fa6ed73
     pricing_slider.tier: 1fae2ac97d3bed49b26fe4913659ae9b
     pricing_slider.keys: bbcb3aa3d49390e0a33c7a09312325ab
     pricing_slider.documents: a206f404bed82cf3ffb127b6fcba77f0
@@ -5371,10 +5371,208 @@ files:
     current_tier.changePlan: c7fdff13bee6f2874a9a51b18dbf455e
     current_tier.free: 890564f0d61b0acc2d3d90d440622072
     current_tier.manage_button: 663737228743be88a2de513e5091adac
-    current_tier.canceled: db62ccb8cd299a260565eb48184f709f
+    current_tier.canceled: 37acab66395f04883cc696ba3c71f0cd
     changePlan.title: c7fdff13bee6f2874a9a51b18dbf455e
     changePlan.upgrade_to_tier: 8fcc0a769e884bcc0c3b408c990a2674
     changePlan.cancel: edfc4be89515f79e98fcb523d67c0513
     changePlan.description: 5cb8cd5303b6c8d3d853351e79766b6b
-    test_translation.title: a1a65d4d6d3b03d76eda9d98d10744fc
+    test_translation.title: f62fa7d4f597bfd466b363affde1f102
     test_translation.description: 40893b29287e43884b57eb4a18f5a848
+  src/markdown/docs/de/android.mdx:
+    content: cc7d76b071d8e2222665b342405acb81
+  src/markdown/docs/es/android.mdx:
+    content: 7d63e9c855d9703876b8de7a4063659f
+  src/markdown/docs/fi/android.mdx:
+    content: 836f95c86b8c0819736af35c95322235
+  src/markdown/docs/fr/android.mdx:
+    content: bec2e60c989da36240d34d8f336b20c2
+  src/markdown/docs/it/android.mdx:
+    content: 7e92aa47343c96b6c825a9f15623f592
+  src/markdown/docs/ko/android.mdx:
+    content: 50bb83253e855c984727887c003955f1
+  src/markdown/docs/nl/android.mdx:
+    content: 17e0c03f2f8249638ad88be37dac7748
+  src/markdown/docs/no/android.mdx:
+    content: c68e3fc6b007c6e753df3548b077c007
+  src/markdown/docs/pl/android.mdx:
+    content: 63e8d57d224b955c10e7973f7a5dfff4
+  src/markdown/docs/pt/android.mdx:
+    content: 92988f9ae77a56bbf5510921f1b94753
+  src/markdown/docs/sv/android.mdx:
+    content: 9d560a989a33a52450a033bb43a03ab9
+  src/markdown/docs/de/arb.mdx:
+    content: c7bd05b463eb66e3b939943f019f184b
+  src/markdown/docs/es/arb.mdx:
+    content: 9849b83491612f75675a58e17c960a11
+  src/markdown/docs/fi/arb.mdx:
+    content: 1661b1ea5cfe26f0d969f7a1c5272646
+  src/markdown/docs/fr/arb.mdx:
+    content: 0135f69d851a2144f626311bb742e1c9
+  src/markdown/docs/it/arb.mdx:
+    content: ce973c5a85f89119b478596ffa5f72f4
+  src/markdown/docs/ko/arb.mdx:
+    content: b859eeb74026e70a0a5e531d4b4ad047
+  src/markdown/docs/nl/arb.mdx:
+    content: e9595fd7d5d11a693ad647935c6a617a
+  src/markdown/docs/no/arb.mdx:
+    content: 1840d35c9dbe4a71e61d62f812cf6f95
+  src/markdown/docs/pl/arb.mdx:
+    content: 0673a2ffef21a12a229ea24b6c64b2a3
+  src/markdown/docs/pt/arb.mdx:
+    content: ef3a6159ac555499e491b78db37bbf8b
+  src/markdown/docs/sv/arb.mdx:
+    content: b3ebc699fcd957358d6ecd0633f27d7a
+  src/markdown/docs/de/authentication.mdx:
+    content: ca607f68163069c3f1edf505f9521c72
+  src/markdown/docs/es/authentication.mdx:
+    content: 9ca51740fb3555edc0e8b6aaaf2ada39
+  src/markdown/docs/fi/authentication.mdx:
+    content: 49410eeb679f3d1e4c41edb2e0972d43
+  src/markdown/docs/fr/authentication.mdx:
+    content: 9885ca0740b9b38b1c291327c78c6c44
+  src/markdown/docs/it/authentication.mdx:
+    content: a7136ebc921091487137ab8ab2eccb6c
+  src/markdown/docs/ko/authentication.mdx:
+    content: 69a1394b3678028d6d47eb53c5c4edf6
+  src/markdown/docs/nl/authentication.mdx:
+    content: aaf5532faae54df1be84b78c1c4bf187
+  src/markdown/docs/no/authentication.mdx:
+    content: ed52b208dba9e1afa6831be7189a10b1
+  src/markdown/docs/pl/authentication.mdx:
+    content: 13df9e46156de25369867f8f86f11533
+  src/markdown/docs/pt/authentication.mdx:
+    content: 9ffa30065b584b5e9d562e11277f92e1
+  src/markdown/docs/sv/authentication.mdx:
+    content: f29e863256cf2c3485b5a1de99e1f6ed
+  src/markdown/docs/de/biome.mdx:
+    content: 78b980734139f8541dd5595543f69cf4
+  src/markdown/docs/es/biome.mdx:
+    content: 1cd0147c64309661383b530e0969266a
+  src/markdown/docs/fi/biome.mdx:
+    content: 608eb0305078b3a18e2d830a40fe2e25
+  src/markdown/docs/fr/biome.mdx:
+    content: 42d681105005890fe397864ac0ce9299
+  src/markdown/docs/it/biome.mdx:
+    content: 0cf21806c1ce6e46833caecced5f1d07
+  src/markdown/docs/ko/biome.mdx:
+    content: 8350fb10c44464a6fc06f440f2a8e0e3
+  src/markdown/docs/nl/biome.mdx:
+    content: 5bfd8fb951902674980c08c5b5f765a2
+  src/markdown/docs/no/biome.mdx:
+    content: aa9449d313e454c9af46bb6a1b1a342c
+  src/markdown/docs/pl/biome.mdx:
+    content: d072510ced561c46c171f31372633c77
+  src/markdown/docs/pt/biome.mdx:
+    content: db7a820d0aa827244f9116967c13c946
+  src/markdown/docs/sv/biome.mdx:
+    content: bc1b5bd5a74ab49d3355c54ac486522e
+  src/markdown/docs/de/ci.mdx:
+    content: 8f1ec28e73e19e9d8cc0f1ad17d16dd8
+  src/markdown/docs/es/ci.mdx:
+    content: 630d56f54ef74471afa0bbcfe400e03d
+  src/markdown/docs/fi/ci.mdx:
+    content: 309f9bd807a9859ae5caec2e2123e44d
+  src/markdown/docs/fr/ci.mdx:
+    content: fbbbb6de7c77eb569fe0342bf68b361a
+  src/markdown/docs/it/ci.mdx:
+    content: 3f62330bf8a7fc615626f8ddbacffa9b
+  src/markdown/docs/ko/ci.mdx:
+    content: a4c52a6589ebce7d890fe37c345dc476
+  src/markdown/docs/nl/ci.mdx:
+    content: a7dd87d57adaa16db830f1b983ead58a
+  src/markdown/docs/no/ci.mdx:
+    content: b802d924370c626a1bf6d1c00de95bf7
+  src/markdown/docs/pl/ci.mdx:
+    content: 905261a59c9e9c533634fb38e8fed53e
+  src/markdown/docs/pt/ci.mdx:
+    content: c590f924ac2c3c132619fef3183bc59f
+  src/markdown/docs/sv/ci.mdx:
+    content: d9f22104ac684e616c75cd202f966a26
+  src/markdown/docs/de/cli.mdx:
+    content: 038bd97fb43ac6afec1fdc2a11603ce4
+  src/markdown/docs/es/cli.mdx:
+    content: 8bef35faaef7fa3640664fd53bfc9fb5
+  src/markdown/docs/fi/cli.mdx:
+    content: 57412919586e3d502fa85dc24d0634ca
+  src/markdown/docs/fr/cli.mdx:
+    content: 17c0f25fce4ffd46f03d51baf59d2fd7
+  src/markdown/docs/it/cli.mdx:
+    content: d876a2165bfe4cf5f222f09f0c65ab8c
+  src/markdown/docs/ko/cli.mdx:
+    content: 4324f1956ee03dcfe7025654d9b1c28e
+  src/markdown/docs/nl/cli.mdx:
+    content: 1bcbea195c45ef32978cbbba37534577
+  src/markdown/docs/no/cli.mdx:
+    content: 9cb4fced41fe9ca0acca6deb34f31b37
+  src/markdown/docs/pl/cli.mdx:
+    content: cb7e89db52d0d20952d9334e3a310dc1
+  src/markdown/docs/pt/cli.mdx:
+    content: 4ef990b5e9c1b75bb3242c61e6da692a
+  src/markdown/docs/sv/cli.mdx:
+    content: 0c01b30415631ac9dfc78ad0a1c0c2da
+  src/markdown/docs/de/configuration.mdx:
+    content: f1ff3736270580c7ead34389087c8eb0
+  src/markdown/docs/es/configuration.mdx:
+    content: 3061068d476fe8c53706cacf50878df3
+  src/markdown/docs/fi/configuration.mdx:
+    content: 1af9921a0fc39f6774cb0024b900e471
+  src/markdown/docs/fr/configuration.mdx:
+    content: e58e5c81d519b5d8592f30e2a63787b8
+  src/markdown/docs/it/configuration.mdx:
+    content: 02ecc37b020fedef15e3d94d25cf060e
+  src/markdown/docs/ko/configuration.mdx:
+    content: 0f81de1b1c2bf39f03a44ba3531ae62f
+  src/markdown/docs/nl/configuration.mdx:
+    content: 3bdcd748cbee19dcb0af14dd8675fd3a
+  src/markdown/docs/no/configuration.mdx:
+    content: 5e1257c5adf266b5125d7f0716f84cc5
+  src/markdown/docs/pl/configuration.mdx:
+    content: fdb01dee677ab905d6403cda53059caf
+  src/markdown/docs/pt/configuration.mdx:
+    content: 87b70513858686b0181692b134a27808
+  src/markdown/docs/sv/configuration.mdx:
+    content: 6d9616a7765a19ae3cc22de3fa8a96c2
+  src/markdown/docs/de/csv.mdx:
+    content: f83079a5f5cf0d43888c90bb6fbaac8c
+  src/markdown/docs/es/csv.mdx:
+    content: 7008656185f582e9f4b818c99e75069d
+  src/markdown/docs/fi/csv.mdx:
+    content: d9a4b18c593326fbb253b169eb34d599
+  src/markdown/docs/fr/csv.mdx:
+    content: cf700aff44f5671c4b0872cdccb141db
+  src/markdown/docs/it/csv.mdx:
+    content: dbbd1cc4fb3c269051a86465b5c22104
+  src/markdown/docs/ko/csv.mdx:
+    content: 1a5eb899d6bc9dd4e925bd799521c88e
+  src/markdown/docs/nl/csv.mdx:
+    content: 13de0e8f4b49990e45b018ac6356c716
+  src/markdown/docs/no/csv.mdx:
+    content: ff3e0331c7c33c0af29f3a1ccb0ffa0e
+  src/markdown/docs/pl/csv.mdx:
+    content: 680ec20c093570d3e289bfa55e05ae6d
+  src/markdown/docs/pt/csv.mdx:
+    content: 10a1988902c097f8d5f211a7739b1afd
+  src/markdown/docs/sv/csv.mdx:
+    content: 9ade497f1f0f18af4e4a53528d4622dc
+  src/markdown/docs/de/expo.mdx:
+    content: fffecfcbc9b5944e514bbd56a83e0103
+  src/markdown/docs/es/expo.mdx:
+    content: e55f9d59194f9749278e2bac3a37b99f
+  src/markdown/docs/fi/expo.mdx:
+    content: 63c45c3ccf8a298540cdc4b4923f3fcc
+  src/markdown/docs/fr/expo.mdx:
+    content: 9b85221a1fac2910831aec77ced1d908
+  src/markdown/docs/it/expo.mdx:
+    content: e398028de5d62480b4d62788930d0810
+  src/markdown/docs/ko/expo.mdx:
+    content: e9ed67e32f2b616e5b92319a8f73f646
+  src/markdown/docs/nl/expo.mdx:
+    content: 0e58cdecb8a4aa335bd73015a37459ca
+  src/markdown/docs/no/expo.mdx:
+    content: 0404ce21edf12e7db7f246f22c46c9cf
+  src/markdown/docs/pl/expo.mdx:
+    content: 90b497e3eac902f52057d69bc1304f88
+  src/markdown/docs/pt/expo.mdx:
+    content: 5c1d580b3ef00a2b610ed669ca3326b8
+  src/markdown/docs/sv/expo.mdx:
+    content: 4eca86123825e29f64ddbdd62b4d391a
