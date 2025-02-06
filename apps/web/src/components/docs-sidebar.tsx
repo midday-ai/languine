@@ -53,7 +53,7 @@ export function DocsSidebar() {
       </div>
 
       <div className="hidden md:block w-72 pr-8 flex-shrink-0 sticky top-[90px] h-[calc(100vh-90px)]">
-        <nav className="space-y-8 overflow-y-auto h-full pb-16">
+        <nav className="space-y-8 overflow-y-auto scrollbar-hide h-full pb-16">
           {sections.map((section) => (
             <div key={section.title}>
               <h5 className="text-sm font-medium mb-4">{section.title}</h5>

@@ -15,7 +15,7 @@ import {
 } from "@react-email/components";
 
 export default function WelcomeEmail({
-  name = "Viktor",
+  name = "there",
 }: {
   name: string;
 }) {
