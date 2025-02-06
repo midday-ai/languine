@@ -2,7 +2,6 @@ import { CurrentTier } from "@/components/current-tier";
 import { PlanSettings } from "@/components/plan-settings";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ManageSubscription } from "./manage-subscription";
 
 type Props = {
   tier: number;
