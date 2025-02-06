@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden."
+    "description": "Languine automatiseert lokalisatie binnen je ontwikkelworkflow en -pipeline, zodat vertalingen je nooit ophouden."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aan de slag",
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden.",
+    "description": "Languine automatiseert lokalisatie binnen je ontwikkelworkflow en -pipeline, zodat vertalingen je nooit ophouden.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"
@@ -48,10 +48,10 @@
     "fullyOpenSourceDescription": "Zeg vaarwel tegen handmatig vertaalwerk. Languine automatiseert het hele proces, zodat je app meertalig blijft zonder je te vertragen.",
     "presetsForExpo": "Markdown & Documentondersteuning",
     "presetsForExpoDescription": "Houd je documentatie en inhoud up-to-date in verschillende talen. Languine vertaalt markdown-bestanden moeiteloos en behoudt consistentie in je workflow.",
-    "presetForReactNative": "Fijnstemming voor Merktoneel",
+    "presetForReactNative": "Fijnstelling voor Merksstem",
     "presetForReactNativeDescription": "Pas vertalingen aan om de toon en stem van je merk te matchen. Languine geeft je volledige controle over nuances, zodat je boodschap scherp blijft.",
     "presetForReactEmail": "GitHub Actie",
-    "presetForReactEmailDescription": "Automatiseer lokalisatie direct binnen GitHub. Onze GitHub Actie zorgt ervoor dat je vertalingen in sync blijven met elke commit en uitrol.",
+    "presetForReactEmailDescription": "Automatiseer lokalisatie direct binnen GitHub. Onze GitHub Actie zorgt ervoor dat je vertalingen in sync blijven met elke commit en implementatie.",
     "readyForI18nLibraries": "Taal- en Frameworkonafhankelijk",
     "readyForI18nLibrariesDescription": "Werkt met elke i18n-bibliotheek. Houd je bestaande setup en voeg eenvoudig Languine toe voor geautomatiseerde vertalingen zonder je workflow te verstoren.",
     "markdownSupport": "CLI & CI/CD Integratie",

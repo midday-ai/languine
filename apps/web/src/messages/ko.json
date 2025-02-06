@@ -6,8 +6,8 @@
     "goToApp": "앱으로 가기"
   },
   "hero": {
-    "title": "빠르게 변화하는 스타트업을 위한 현지화 인프라.",
-    "description": "Languine은 개발자 워크플로우와 파이프라인 내에서 현지화를 자동화하여 번역이 지연되지 않도록 합니다."
+    "title": "빠르게 변화하는 스타트업을 위한 로컬라이제이션 인프라.",
+    "description": "Languine은 개발자 워크플로우와 파이프라인 내에서 로컬라이제이션을 자동화하여 번역이 지연되지 않도록 보장합니다."
   },
   "navigation": {
     "dashboard": "대시보드",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "시작하기",
-    "title": "빠르게 변화하는 스타트업을 위한 현지화 인프라.",
-    "description": "Languine은 개발자 워크플로우와 파이프라인 내에서 현지화를 자동화하여 번역이 지연되지 않도록 합니다.",
+    "title": "빠르게 변화하는 스타트업을 위한 로컬라이제이션 인프라.",
+    "description": "Languine은 개발자 워크플로우와 파이프라인 내에서 로컬라이제이션을 자동화하여 번역이 지연되지 않도록 보장합니다.",
     "button": {
       "startAutomating": "자동화 시작하기",
       "readDocumentation": "문서 읽기"
@@ -47,15 +47,15 @@
     "fullyOpenSource": "자동 번역",
     "fullyOpenSourceDescription": "수동 번역 작업과 작별하세요. Languine은 전체 프로세스를 자동화하여 귀하의 앱이 다국어를 유지하면서도 속도를 늦추지 않도록 합니다.",
     "presetsForExpo": "마크다운 및 문서 지원",
-    "presetsForExpoDescription": "언어별로 문서와 콘텐츠를 최신 상태로 유지하세요. Languine은 마크다운 파일을 손쉽게 번역하여 워크플로우 전반에 걸쳐 일관성을 유지합니다.",
-    "presetForReactNative": "브랜드 음성 조정",
-    "presetForReactNativeDescription": "브랜드의 톤과 음성에 맞게 번역을 사용자 정의하세요. Languine은 뉘앙스에 대한 완전한 제어를 제공하여 메시지가 정확하게 전달되도록 합니다.",
-    "presetForReactEmail": "GitHub Action",
-    "presetForReactEmailDescription": "GitHub 내에서 직접 현지화를 자동화하세요. 우리의 GitHub Action은 모든 커밋 및 배포와 함께 번역이 동기화되도록 보장합니다.",
-    "readyForI18nLibraries": "언어 및 프레임워크 비종속적",
-    "readyForI18nLibrariesDescription": "모든 i18n 라이브러리와 함께 작동합니다. 기존 설정을 유지하고 Languine을 추가하여 워크플로우를 방해하지 않고 자동 번역을 수행하세요.",
+    "presetsForExpoDescription": "언어별로 문서 및 콘텐츠를 최신 상태로 유지하세요. Languine은 마크다운 파일을 손쉽게 번역하여 워크플로우 전반에 걸쳐 일관성을 유지합니다.",
+    "presetForReactNative": "브랜드 음성에 맞춘 세부 조정",
+    "presetForReactNativeDescription": "브랜드의 톤과 음성에 맞게 번역을 사용자 정의하세요. Languine은 뉘앙스를 완벽하게 제어할 수 있도록 하여 귀하의 메시지가 정확하게 전달되도록 합니다.",
+    "presetForReactEmail": "GitHub 액션",
+    "presetForReactEmailDescription": "GitHub 내에서 로컬라이제이션을 자동화하세요. 우리의 GitHub 액션은 모든 커밋 및 배포와 함께 번역이 동기화되도록 보장합니다.",
+    "readyForI18nLibraries": "언어 및 프레임워크에 구애받지 않음",
+    "readyForI18nLibrariesDescription": "모든 i18n 라이브러리와 호환됩니다. 기존 설정을 유지하고 Languine을 추가하여 워크플로우를 방해하지 않고 자동 번역을 수행하세요.",
     "markdownSupport": "CLI 및 CI/CD 통합",
-    "markdownSupportDescription": "강력한 CLI를 사용하여 번역을 직접 관리하거나 Languine을 기존 CI/CD 파이프라인에 원활하게 통합하여 완전 자동화된 워크플로우를 만드세요."
+    "markdownSupportDescription": "강력한 CLI를 사용하여 번역을 직접 관리하거나 기존 CI/CD 파이프라인에 Languine을 원활하게 통합하여 완전 자동화된 워크플로우를 만드세요."
   },
   "info": {
     "title": "앱 로컬라이제이션의 모든 측면 처리",
@@ -66,20 +66,20 @@
       "terminology": "용어 관리",
       "linguisticFeatures": "고급 언어 기능",
       "realtimeUpdates": "실시간 번역 업데이트",
-      "overrides": "번역 재정의"
+      "overrides": "번역 오버라이드"
     },
     "implementation": {
       "title": "구현",
       "quickSetup": "빠른 설정 및 통합",
       "fileFormat": "팀원 초대",
-      "contentStructure": "설정 조정",
+      "contentStructure": "설정 세부 조정",
       "assetOrganization": "언어 선택"
     },
     "developer": {
       "title": "개발자 경험",
       "cli": "명령줄 인터페이스",
       "cicd": "CI/CD 통합",
-      "versionControl": "Github Actions",
+      "versionControl": "Github 액션",
       "workflow": "개발자 워크플로우",
       "documentation": "우수한 문서"
     },

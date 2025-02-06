@@ -26,12 +26,12 @@
     "account": "Konto"
   },
   "hero": {
-    "title": "Lokaliserings-plattform skapad för snabbrörliga startups.",
+    "title": "Lokaliseringinfrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig."
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Lokaliserings-plattform skapad för snabbrörliga startups.",
+    "title": "Lokaliseringinfrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig.",
     "button": {
       "startAutomating": "Börja automatisera",
@@ -58,13 +58,13 @@
     "fullyOpenSource": "Automatiserade översättningar",
     "fullyOpenSourceDescription": "Säg adjö till manuellt översättningsarbete. Languine automatiserar hela processen, vilket säkerställer att din app förblir flerspråkig utan att sakta ner dig.",
     "presetsForExpo": "Markdown & Dokumentstöd",
-    "presetsForExpoDescription": "Håll din dokumentation och ditt innehåll uppdaterat på flera språk. Languine översätter markdown-filer utan ansträngning och upprätthåller konsekvens i ditt arbetsflöde.",
+    "presetsForExpoDescription": "Håll din dokumentation och innehåll uppdaterat över språk. Languine översätter markdown-filer utan ansträngning och upprätthåller konsekvens i ditt arbetsflöde.",
     "presetForReactNative": "Finjustering för varumärkesröst",
     "presetForReactNativeDescription": "Anpassa översättningar för att matcha ditt varumärkes ton och röst. Languine ger dig full kontroll över nyanser, vilket säkerställer att ditt budskap förblir på rätt spår.",
     "presetForReactEmail": "GitHub Action",
     "presetForReactEmailDescription": "Automatisera lokalisering direkt inom GitHub. Vår GitHub Action säkerställer att dina översättningar förblir synkroniserade med varje commit och distribution.",
     "readyForI18nLibraries": "Språk- och ramverksagnostisk",
-    "readyForI18nLibrariesDescription": "Fungerar med alla i18n-bibliotek. Behåll din befintliga uppsättning och lägg helt enkelt till Languine för automatiserade översättningar utan att störa ditt arbetsflöde.",
+    "readyForI18nLibrariesDescription": "Fungerar med alla i18n-bibliotek. Behåll din befintliga konfiguration och lägg helt enkelt till Languine för automatiserade översättningar utan att störa ditt arbetsflöde.",
     "markdownSupport": "CLI & CI/CD-integration",
     "markdownSupportDescription": "Använd vår kraftfulla CLI för att hantera översättningar direkt eller sömlöst integrera Languine i din befintliga CI/CD-pipeline för ett helt automatiserat arbetsflöde."
   },
@@ -669,6 +669,6 @@
     "high": "Hög",
     "description": "Beskrivning",
     "describe_issue": "Beskriv ditt problem",
-    "submit": "Skicka in"
+    "submit": "Skicka"
   }
 }

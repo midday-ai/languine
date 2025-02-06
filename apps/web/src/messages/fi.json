@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikallistamisen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua."
+    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikallistamisen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua.",
+    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automaatio",
       "readDocumentation": "Lue dokumentaatio"
@@ -46,16 +46,16 @@
     "title": "Ominaisuudet",
     "fullyOpenSource": "Automaattiset käännökset",
     "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastumista.",
-    "presetsForExpo": "Markdown- ja asiakirjatuki",
-    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työnkulussasi.",
-    "presetForReactNative": "Brändin äänen hienosäätö",
-    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimekkäänä.",
+    "presetsForExpo": "Markdown & Asiakirjatuki",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyssäsi.",
+    "presetForReactNative": "Säätö brändin äänen mukaiseksi",
+    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimessä.",
     "presetForReactEmail": "GitHub-toiminto",
-    "presetForReactEmailDescription": "Automatisoi paikallistaminen suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen commitin ja käyttöönoton yhteydessä.",
+    "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
     "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
-    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoitua käännöstä varten ilman työnkulun häiriöitä.",
-    "markdownSupport": "CLI- ja CI/CD-integraatio",
-    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täysin automatisoitua työnkulkua varten."
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoituja käännöksiä varten ilman työskentelysi häiritsemistä.",
+    "markdownSupport": "CLI & CI/CD Integraatio",
+    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkeesi täysin automatisoitua työskentelyä varten."
   },
   "info": {
     "title": "Käsittelee kaikki sovelluksesi lokalisaation osa-alueet, mukaan lukien",
@@ -72,7 +72,7 @@
       "title": "Toteutus",
       "quickSetup": "Nopea asennus ja integrointi",
       "fileFormat": "Kutsu tiimin jäseniä",
-      "contentStructure": "Hienosäädä asetuksia",
+      "contentStructure": "Säädä asetuksia",
       "assetOrganization": "Valitse kielet"
     },
     "developer": {

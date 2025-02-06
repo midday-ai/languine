@@ -6,8 +6,8 @@
     "goToApp": "Gå til app"
   },
   "hero": {
-    "title": "Lokaliserings-plattform laget for hurtigvoksende oppstartsselskaper.",
-    "description": "Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg."
+    "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri holder deg tilbake."
   },
   "navigation": {
     "dashboard": "Dashbord",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Lokaliserings-plattform laget for hurtigvoksende oppstartsselskaper.",
-    "description": "Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg.",
+    "title": "Lokaliseringinfrastruktur laget for raske oppstartsselskaper.",
+    "description": "Languine automatiserer lokalisering innenfor utviklerarbeidsflyten og -pipen din, og sikrer at oversettelser aldri holder deg tilbake.",
     "button": {
       "startAutomating": "Start automatisering",
       "readDocumentation": "Les dokumentasjon"
@@ -46,14 +46,14 @@
     "title": "Funksjoner",
     "fullyOpenSource": "Automatiserte oversettelser",
     "fullyOpenSourceDescription": "Si farvel til manuelt oversettelsesarbeid. Languine automatiserer hele prosessen, og sikrer at appen din forblir flerspråklig uten å bremse deg.",
-    "presetsForExpo": "Markdown & Dokumentstøtte",
+    "presetsForExpo": "Markdown- og dokumentstøtte",
     "presetsForExpoDescription": "Hold dokumentasjonen og innholdet ditt oppdatert på tvers av språk. Languine oversetter markdown-filer uten anstrengelse, og opprettholder konsistens i arbeidsflyten din.",
     "presetForReactNative": "Finjustering for merkevarens stemme",
-    "presetForReactNativeDescription": "Tilpass oversettelser for å matche tonen og stemmen til merkevaren din. Languine gir deg full kontroll over nyansene, og sikrer at budskapet ditt forblir presist.",
+    "presetForReactNativeDescription": "Tilpass oversettelser for å matche merkevarens tone og stemme. Languine gir deg full kontroll over nyansene, og sikrer at budskapet ditt forblir presist.",
     "presetForReactEmail": "GitHub Action",
     "presetForReactEmailDescription": "Automatiser lokalisering direkte innen GitHub. Vår GitHub Action sikrer at oversettelsene dine forblir synkronisert med hver commit og distribusjon.",
     "readyForI18nLibraries": "Språk- og rammeverksagnostisk",
-    "readyForI18nLibrariesDescription": "Fungerer med alle i18n-biblioteker. Behold din eksisterende oppsett og legg enkelt til Languine for automatiserte oversettelser uten å forstyrre arbeidsflyten din.",
+    "readyForI18nLibrariesDescription": "Fungerer med hvilken som helst i18n-bibliotek. Behold den eksisterende oppsettet ditt og legg enkelt til Languine for automatiserte oversettelser uten å forstyrre arbeidsflyten din.",
     "markdownSupport": "CLI & CI/CD-integrasjon",
     "markdownSupportDescription": "Bruk vår kraftige CLI for å administrere oversettelser direkte eller sømløst integrere Languine i din eksisterende CI/CD-pipeline for en helt automatisert arbeidsflyt."
   },
@@ -107,7 +107,7 @@
     "createTeam": "Opprett team",
     "homepage": "Hjemmeside",
     "team": "Teaminnstillinger",
-    "support": "Støtte"
+    "support": "Support"
   },
   "teamSelector": {
     "addProject": "Opprett prosjekt",
@@ -659,7 +659,7 @@
     "description": "Test oversettelsen av prosjektet ditt"
   },
   "support": {
-    "title": "Støtte"
+    "title": "Support"
   },
   "support_form": {
     "severity": "Alvorlighetsgrad",

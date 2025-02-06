@@ -6,7 +6,7 @@
     "goToApp": "Ir para o aplicativo"
   },
   "hero": {
-    "title": "Infraestrutura de localização feita para startups dinâmicas.",
+    "title": "Infraestrutura de localização feita para startups ágeis.",
     "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem."
   },
   "navigation": {
@@ -20,7 +20,7 @@
   },
   "getStarted": {
     "heading": "Comece agora",
-    "title": "Infraestrutura de localização feita para startups dinâmicas.",
+    "title": "Infraestrutura de localização feita para startups ágeis.",
     "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem.",
     "button": {
       "startAutomating": "Começar a automatizar",
@@ -45,7 +45,7 @@
   "features": {
     "title": "Recursos",
     "fullyOpenSource": "Traduções Automatizadas",
-    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. A Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerar você.",
+    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. A Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerá-lo.",
     "presetsForExpo": "Suporte a Markdown & Documentos",
     "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em diferentes idiomas. A Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
     "presetForReactNative": "Ajuste para a Voz da Marca",
@@ -55,7 +55,7 @@
     "readyForI18nLibraries": "Independente de Idioma & Framework",
     "readyForI18nLibrariesDescription": "Funciona com qualquer biblioteca de i18n. Mantenha sua configuração existente e adicione a Languine para traduções automatizadas sem interromper seu fluxo de trabalho.",
     "markdownSupport": "Integração CLI & CI/CD",
-    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre a Languine em seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
+    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre a Languine ao seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
   },
   "info": {
     "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",

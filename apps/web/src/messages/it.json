@@ -6,7 +6,7 @@
     "goToApp": "Vai all'app"
   },
   "hero": {
-    "title": "Infrastruttura di localizzazione creata per startup ad alta velocità.",
+    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, assicurando che le traduzioni non ti rallentino mai."
   },
   "navigation": {
@@ -20,7 +20,7 @@
   },
   "getStarted": {
     "heading": "Inizia",
-    "title": "Infrastruttura di localizzazione creata per startup ad alta velocità.",
+    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, assicurando che le traduzioni non ti rallentino mai.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
@@ -47,9 +47,9 @@
     "fullyOpenSource": "Traduzioni Automatiche",
     "fullyOpenSourceDescription": "Dì addio al lavoro di traduzione manuale. Languine automatizza l'intero processo, assicurando che la tua app rimanga multilingue senza rallentarti.",
     "presetsForExpo": "Supporto per Markdown e Documenti",
-    "presetsForExpoDescription": "Mantieni la tua documentazione e contenuti aggiornati in tutte le lingue. Languine traduce i file markdown senza sforzo, mantenendo la coerenza nel tuo flusso di lavoro.",
-    "presetForReactNative": "Ottimizzazione per la Voce del Brand",
-    "presetForReactNativeDescription": "Personalizza le traduzioni per adattarle al tono e alla voce del tuo brand. Languine ti offre il pieno controllo sulle sfumature, assicurando che il tuo messaggio rimanga preciso.",
+    "presetsForExpoDescription": "Mantieni la tua documentazione e i tuoi contenuti aggiornati in tutte le lingue. Languine traduce i file markdown senza sforzo, mantenendo la coerenza nel tuo flusso di lavoro.",
+    "presetForReactNative": "Ottimizzazione per il Tono del Brand",
+    "presetForReactNativeDescription": "Personalizza le traduzioni per adattarle al tono e alla voce del tuo brand. Languine ti offre il pieno controllo sulle sfumature, assicurando che il tuo messaggio rimanga chiaro.",
     "presetForReactEmail": "Azione GitHub",
     "presetForReactEmailDescription": "Automatizza la localizzazione direttamente all'interno di GitHub. La nostra Azione GitHub assicura che le tue traduzioni rimangano sincronizzate con ogni commit e distribuzione.",
     "readyForI18nLibraries": "Indipendente da Lingua e Framework",
@@ -66,7 +66,7 @@
       "terminology": "Gestione della terminologia",
       "linguisticFeatures": "Caratteristiche linguistiche avanzate",
       "realtimeUpdates": "Aggiornamenti di traduzione in tempo reale",
-      "overrides": "Sovrascritture di traduzione"
+      "overrides": "Sostituzioni di traduzione"
     },
     "implementation": {
       "title": "Implementazione",
@@ -79,7 +79,7 @@
       "title": "Esperienza dello Sviluppatore",
       "cli": "Interfaccia a riga di comando",
       "cicd": "Integrazione CI/CD",
-      "versionControl": "Github Actions",
+      "versionControl": "Azioni Github",
       "workflow": "Flusso di lavoro dello sviluppatore",
       "documentation": "Ottima documentazione"
     },
