@@ -106,7 +106,8 @@
     "signOut": "Sign out",
     "createTeam": "Create team",
     "homepage": "Homepage",
-    "team": "Team Settings"
+    "team": "Team Settings",
+    "support": "Support"
   },
   "teamSelector": {
     "addProject": "Create project",
@@ -656,5 +657,18 @@
   "test_translation": {
     "title": "Test Translation",
     "description": "Test the translation of your project"
+  },
+  "support": {
+    "title": "Support"
+  },
+  "support_form": {
+    "severity": "Severity",
+    "select_severity": "Select severity level",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "description": "Description",
+    "describe_issue": "Describe your issue",
+    "submit": "Submit"
   }
 }

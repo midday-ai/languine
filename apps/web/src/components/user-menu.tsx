@@ -76,6 +76,11 @@ export function UserMenu() {
           </DropdownMenuItem>
         </button>
         <DropdownMenuSeparator />
+        <Link href={`/${params.organization}/${params.project}/support`}>
+          <DropdownMenuItem className="text-sm">
+            {t("support")}
+          </DropdownMenuItem>
+        </Link>
         <Link href="/">
           <DropdownMenuItem className="text-sm">
             {t("homepage")}
