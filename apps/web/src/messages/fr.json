@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infrastructure de localisation conçue pour les startups dynamiques.",
-    "description": "Languine automatise la localisation dans votre flux de travail et pipeline de développement, garantissant que les traductions ne vous ralentissent jamais."
+    "description": "Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, garantissant que les traductions ne vous ralentissent jamais."
   },
   "navigation": {
     "dashboard": "Tableau de bord",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Commencer",
     "title": "Infrastructure de localisation conçue pour les startups dynamiques.",
-    "description": "Languine automatise la localisation dans votre flux de travail et pipeline de développement, garantissant que les traductions ne vous ralentissent jamais.",
+    "description": "Languine automatise la localisation dans votre flux de travail et votre pipeline de développement, garantissant que les traductions ne vous ralentissent jamais.",
     "button": {
       "startAutomating": "Commencer à automatiser",
       "readDocumentation": "Lire la documentation"
@@ -53,7 +53,7 @@
     "presetForReactEmail": "Action GitHub",
     "presetForReactEmailDescription": "Automatisez la localisation directement dans GitHub. Notre Action GitHub garantit que vos traductions restent synchronisées avec chaque commit et déploiement.",
     "readyForI18nLibraries": "Indépendant de la Langue & du Cadre",
-    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Gardez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
+    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Conservez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
     "markdownSupport": "Intégration CLI & CI/CD",
     "markdownSupportDescription": "Utilisez notre puissant CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
   },
@@ -71,9 +71,9 @@
     "implementation": {
       "title": "Mise en œuvre",
       "quickSetup": "Configuration et intégration rapides",
-      "fileFormat": "Invitez des membres de l'équipe",
-      "contentStructure": "Affinez les paramètres",
-      "assetOrganization": "Choisissez les langues"
+      "fileFormat": "Inviter des membres de l'équipe",
+      "contentStructure": "Affiner les paramètres",
+      "assetOrganization": "Choisir les langues"
     },
     "developer": {
       "title": "Expérience développeur",
@@ -106,7 +106,8 @@
     "signOut": "Se déconnecter",
     "createTeam": "Créer une équipe",
     "homepage": "Page d'accueil",
-    "team": "Paramètres de l'équipe"
+    "team": "Paramètres de l'équipe",
+    "support": "Support"
   },
   "teamSelector": {
     "addProject": "Créer un projet",
@@ -656,5 +657,18 @@
   "test_translation": {
     "title": "Tester la traduction",
     "description": "Tester la traduction de votre projet"
+  },
+  "support": {
+    "title": "Support"
+  },
+  "support_form": {
+    "severity": "Gravité",
+    "select_severity": "Sélectionner le niveau de gravité",
+    "low": "Faible",
+    "medium": "Moyenne",
+    "high": "Élevée",
+    "description": "Description",
+    "describe_issue": "Décrivez votre problème",
+    "submit": "Soumettre"
   }
 }

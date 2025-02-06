@@ -55,7 +55,7 @@
     "readyForI18nLibraries": "Sprache- & Framework-unabhängig",
     "readyForI18nLibrariesDescription": "Funktioniert mit jeder i18n-Bibliothek. Behalten Sie Ihr bestehendes Setup bei und fügen Sie einfach Languine für automatisierte Übersetzungen hinzu, ohne Ihren Workflow zu stören.",
     "markdownSupport": "CLI- & CI/CD-Integration",
-    "markdownSupportDescription": "Nutzen Sie unser leistungsstarkes CLI, um Übersetzungen direkt zu verwalten oder integrieren Sie Languine nahtlos in Ihre bestehende CI/CD-Pipeline für einen vollständig automatisierten Workflow."
+    "markdownSupportDescription": "Nutzen Sie unsere leistungsstarke CLI, um Übersetzungen direkt zu verwalten oder integrieren Sie Languine nahtlos in Ihre bestehende CI/CD-Pipeline für einen vollständig automatisierten Workflow."
   },
   "info": {
     "title": "Behandelt jeden Aspekt der Lokalisierung Ihrer App, einschließlich",
@@ -79,7 +79,7 @@
       "title": "Entwicklererfahrung",
       "cli": "Befehlszeilenschnittstelle",
       "cicd": "CI/CD-Integration",
-      "versionControl": "GitHub-Aktionen",
+      "versionControl": "Github-Aktionen",
       "workflow": "Entwickler-Workflow",
       "documentation": "Ausgezeichnete Dokumentation"
     },
@@ -106,7 +106,8 @@
     "signOut": "Abmelden",
     "createTeam": "Team erstellen",
     "homepage": "Startseite",
-    "team": "Teameinstellungen"
+    "team": "Teameinstellungen",
+    "support": "Unterstützung"
   },
   "teamSelector": {
     "addProject": "Projekt erstellen",
@@ -656,5 +657,18 @@
   "test_translation": {
     "title": "Übersetzung testen",
     "description": "Testen Sie die Übersetzung Ihres Projekts"
+  },
+  "support": {
+    "title": "Unterstützung"
+  },
+  "support_form": {
+    "severity": "Schweregrad",
+    "select_severity": "Schweregrad auswählen",
+    "low": "Niedrig",
+    "medium": "Mittel",
+    "high": "Hoch",
+    "description": "Beschreibung",
+    "describe_issue": "Beschreiben Sie Ihr Problem",
+    "submit": "Einreichen"
   }
 }

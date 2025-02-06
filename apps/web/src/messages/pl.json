@@ -6,8 +6,8 @@
     "goToApp": "Przejdź do aplikacji"
   },
   "hero": {
-    "title": "Infrastruktura lokalizacyjna stworzona dla szybko rozwijających się startupów.",
-    "description": "Languine automatyzuje lokalizację w ramach twojego przepływu pracy dewelopera i pipeline'u, zapewniając, że tłumaczenia nigdy cię nie zatrzymają."
+    "title": "Infrastruktura lokalizacyjna stworzona dla dynamicznych startupów.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie deweloperskim i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać."
   },
   "navigation": {
     "dashboard": "Panel",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Rozpocznij",
-    "title": "Infrastruktura lokalizacyjna stworzona dla szybko rozwijających się startupów.",
-    "description": "Languine automatyzuje lokalizację w ramach twojego przepływu pracy dewelopera i pipeline'u, zapewniając, że tłumaczenia nigdy cię nie zatrzymają.",
+    "title": "Infrastruktura lokalizacyjna stworzona dla dynamicznych startupów.",
+    "description": "Languine automatyzuje lokalizację w Twoim procesie deweloperskim i pipeline, zapewniając, że tłumaczenia nigdy nie będą Cię spowalniać.",
     "button": {
       "startAutomating": "Rozpocznij automatyzację",
       "readDocumentation": "Przeczytaj dokumentację"
@@ -44,18 +44,18 @@
   },
   "features": {
     "title": "Funkcje",
-    "fullyOpenSource": "Automatyczne tłumaczenia",
-    "fullyOpenSourceDescription": "Pożegnaj się z ręcznym tłumaczeniem. Languine automatyzuje cały proces, zapewniając, że twoja aplikacja pozostaje wielojęzyczna bez spowolnienia.",
-    "presetsForExpo": "Wsparcie dla Markdown i dokumentów",
-    "presetsForExpoDescription": "Utrzymuj swoją dokumentację i treści na bieżąco w różnych językach. Languine bez wysiłku tłumaczy pliki markdown, zachowując spójność w całym przepływie pracy.",
-    "presetForReactNative": "Dostosowanie do głosu marki",
-    "presetForReactNativeDescription": "Dostosuj tłumaczenia, aby pasowały do tonu i głosu twojej marki. Languine daje ci pełną kontrolę nad niuansami, zapewniając, że twoja wiadomość pozostaje na właściwym torze.",
+    "fullyOpenSource": "Automatyczne Tłumaczenia",
+    "fullyOpenSourceDescription": "Pożegnaj się z ręcznym tłumaczeniem. Languine automatyzuje cały proces, zapewniając, że Twoja aplikacja pozostaje wielojęzyczna bez spowolnienia.",
+    "presetsForExpo": "Wsparcie dla Markdown i Dokumentów",
+    "presetsForExpoDescription": "Utrzymuj swoją dokumentację i treści na bieżąco w różnych językach. Languine tłumaczy pliki markdown bez wysiłku, zachowując spójność w Twoim przepływie pracy.",
+    "presetForReactNative": "Dostosowanie do Głosu Marki",
+    "presetForReactNativeDescription": "Dostosuj tłumaczenia, aby pasowały do tonu i głosu Twojej marki. Languine daje Ci pełną kontrolę nad niuansami, zapewniając, że Twoja wiadomość pozostaje na właściwym torze.",
     "presetForReactEmail": "Akcja GitHub",
-    "presetForReactEmailDescription": "Automatyzuj lokalizację bezpośrednio w GitHub. Nasza akcja GitHub zapewnia, że twoje tłumaczenia pozostają zsynchronizowane z każdym commitem i wdrożeniem.",
-    "readyForI18nLibraries": "Niezależność od języka i frameworka",
-    "readyForI18nLibrariesDescription": "Działa z każdą biblioteką i18n. Zachowaj swoją istniejącą konfigurację i po prostu dodaj Languine do automatycznych tłumaczeń bez zakłócania przepływu pracy.",
+    "presetForReactEmailDescription": "Automatyzuj lokalizację bezpośrednio w GitHubie. Nasza Akcja GitHub zapewnia, że Twoje tłumaczenia pozostają zsynchronizowane z każdym commitem i wdrożeniem.",
+    "readyForI18nLibraries": "Niezależność od Języka i Frameworka",
+    "readyForI18nLibrariesDescription": "Działa z każdą biblioteką i18n. Zachowaj swoją istniejącą konfigurację i po prostu dodaj Languine do automatycznych tłumaczeń bez zakłócania swojego przepływu pracy.",
     "markdownSupport": "Integracja CLI i CI/CD",
-    "markdownSupportDescription": "Użyj naszego potężnego CLI do zarządzania tłumaczeniami bezpośrednio lub bezproblemowo zintegrować Languine z istniejącym pipeline'em CI/CD dla w pełni zautomatyzowanego przepływu pracy."
+    "markdownSupportDescription": "Użyj naszego potężnego CLI do zarządzania tłumaczeniami bezpośrednio lub bezproblemowo zintegrować Languine z istniejącym pipeline CI/CD dla w pełni zautomatyzowanego przepływu pracy."
   },
   "info": {
     "title": "Obsługuje każdy aspekt lokalizacji Twojej aplikacji, w tym",
@@ -83,7 +83,7 @@
       "workflow": "Proces pracy dewelopera",
       "documentation": "Świetna dokumentacja"
     },
-    "get_started": "Rozpocznij automatyzację"
+    "get_started": "Zacznij automatyzować"
   },
   "login": {
     "title": "Zaloguj się",
@@ -106,7 +106,8 @@
     "signOut": "Wyloguj się",
     "createTeam": "Utwórz zespół",
     "homepage": "Strona główna",
-    "team": "Ustawienia zespołu"
+    "team": "Ustawienia zespołu",
+    "support": "Wsparcie"
   },
   "teamSelector": {
     "addProject": "Utwórz projekt",
@@ -656,5 +657,18 @@
   "test_translation": {
     "title": "Test tłumaczenia",
     "description": "Przetestuj tłumaczenie swojego projektu"
+  },
+  "support": {
+    "title": "Wsparcie"
+  },
+  "support_form": {
+    "severity": "Waga",
+    "select_severity": "Wybierz poziom wagi",
+    "low": "Niski",
+    "medium": "Średni",
+    "high": "Wysoki",
+    "description": "Opis",
+    "describe_issue": "Opisz swój problem",
+    "submit": "Wyślij"
   }
 }

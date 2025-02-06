@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkistossasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
+    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikallistamisen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Paikannusinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjätyöskentelyssäsi ja putkistossasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
+    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikallistamisen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automaatio",
       "readDocumentation": "Lue dokumentaatio"
@@ -46,16 +46,16 @@
     "title": "Ominaisuudet",
     "fullyOpenSource": "Automaattiset käännökset",
     "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastumista.",
-    "presetsForExpo": "Markdown & Asiakirjatuki",
-    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyprosessissasi.",
+    "presetsForExpo": "Markdown- ja asiakirjatuki",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työnkulussasi.",
     "presetForReactNative": "Brändin äänen hienosäätö",
-    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täydellisen hallinnan vivahteista, varmistaen, että viestisi pysyy ytimekkäänä.",
+    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimekkäänä.",
     "presetForReactEmail": "GitHub-toiminto",
-    "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
+    "presetForReactEmailDescription": "Automatisoi paikallistaminen suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen commitin ja käyttöönoton yhteydessä.",
     "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
-    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä olemassa oleva asetuksesi ja lisää vain Languine automaattisia käännöksiä varten ilman työskentelyprosessisi häiritsemistä.",
-    "markdownSupport": "CLI & CI/CD Integraatio",
-    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täydellistä automaatiota varten."
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoitua käännöstä varten ilman työnkulun häiriöitä.",
+    "markdownSupport": "CLI- ja CI/CD-integraatio",
+    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täysin automatisoitua työnkulkua varten."
   },
   "info": {
     "title": "Käsittelee kaikki sovelluksesi lokalisaation osa-alueet, mukaan lukien",
@@ -83,7 +83,7 @@
       "workflow": "Kehittäjän työnkulku",
       "documentation": "Erinomainen dokumentaatio"
     },
-    "get_started": "Aloita automaatio"
+    "get_started": "Aloita automatisointi"
   },
   "login": {
     "title": "Kirjaudu sisään",
@@ -106,7 +106,8 @@
     "signOut": "Kirjaudu ulos",
     "createTeam": "Luo tiimi",
     "homepage": "Etusivu",
-    "team": "Tiimin asetukset"
+    "team": "Tiimin asetukset",
+    "support": "Tuki"
   },
   "teamSelector": {
     "addProject": "Luo projekti",
@@ -656,5 +657,18 @@
   "test_translation": {
     "title": "Testaa käännös",
     "description": "Testaa projektisi käännöstä"
+  },
+  "support": {
+    "title": "Tuki"
+  },
+  "support_form": {
+    "severity": "Vakavuus",
+    "select_severity": "Valitse vakavuustaso",
+    "low": "Alhainen",
+    "medium": "Keskitaso",
+    "high": "Korkea",
+    "description": "Kuvaus",
+    "describe_issue": "Kuvaa ongelmasi",
+    "submit": "Lähetä"
   }
 }
