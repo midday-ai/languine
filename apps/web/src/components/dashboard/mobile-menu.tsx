@@ -9,13 +9,13 @@ import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   MdClose,
-  MdGraphicEq,
   MdMenu,
   MdOutlineBook,
   MdOutlineFilterCenterFocus,
+  MdOutlineLeaderboard,
   MdOutlineSettings,
-  MdOutlineStackedBarChart,
 } from "react-icons/md";
+import { Icons } from "../icons";
 
 export function MobileMenu() {
   const t = useTranslations("navigation");
@@ -25,16 +25,16 @@ export function MobileMenu() {
 
   const navigation = [
     {
-      icon: MdOutlineStackedBarChart,
+      icon: MdOutlineLeaderboard,
       path: "/",
       isActive: pathname.endsWith(`/${params.organization}/${params.project}`),
       label: t("dashboard"),
     },
     {
-      icon: MdGraphicEq,
+      icon: Icons.Tune,
       path: "/tuning",
       isActive: pathname.endsWith("/tuning"),
-      label: t("tuning"),
+      label: t("dashboard"),
     },
     {
       icon: MdOutlineFilterCenterFocus,

@@ -15,11 +15,11 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import {
-  MdGraphicEq,
   MdOutlineFilterCenterFocus,
+  MdOutlineLeaderboard,
   MdOutlineSettings,
-  MdOutlineStackedBarChart,
 } from "react-icons/md";
+import { Icons } from "./icons";
 import { Logo } from "./logo-square";
 
 export function Sidebar() {
@@ -28,12 +28,12 @@ export function Sidebar() {
 
   const navigation = [
     {
-      icon: MdOutlineStackedBarChart,
+      icon: MdOutlineLeaderboard,
       path: "/",
       isActive: pathname.endsWith(`/${params.organization}/${params.project}`),
     },
     {
-      icon: MdGraphicEq,
+      icon: Icons.Tune,
       path: "/tuning",
       isActive: pathname.endsWith("/tuning"),
     },

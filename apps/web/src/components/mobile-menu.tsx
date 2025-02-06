@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { ChangeLanguage } from "./change-language";
@@ -15,7 +14,6 @@ import { GithubStars } from "./github-stars";
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const params = useParams();
   const t = useTranslations("menu");
 
   const links = [
