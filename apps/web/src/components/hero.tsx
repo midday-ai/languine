@@ -13,7 +13,9 @@ export function Hero() {
   return (
     <div className="py-12 md:py-28 flex flex-col lg:flex-row gap-12 justify-between items-center">
       <div className="lg:max-w-[590px] space-y-8 w-full">
-        <h1 className="xl:text-4xl !leading-[42px] text-3xl">{t("title")}</h1>
+        <h1 className="xl:text-4xl !leading-[42px] text-3xl text-pretty">
+          {t("title")}
+        </h1>
         <p className="text-secondary text-sm">{t("description")}</p>
 
         <div className="lg:max-w-[480px]">

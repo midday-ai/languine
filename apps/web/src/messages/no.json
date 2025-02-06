@@ -6,7 +6,7 @@
     "goToApp": "Gå til app"
   },
   "hero": {
-    "title": "Lokalisering infrastruktur laget for hurtigvoksende oppstartsselskaper.",
+    "title": "Lokaliserings-plattform laget for hurtigvoksende oppstartsselskaper.",
     "description": "Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg."
   },
   "navigation": {
@@ -20,7 +20,7 @@
   },
   "getStarted": {
     "heading": "Kom i gang",
-    "title": "Lokalisering infrastruktur laget for hurtigvoksende oppstartsselskaper.",
+    "title": "Lokaliserings-plattform laget for hurtigvoksende oppstartsselskaper.",
     "description": "Languine automatiserer lokalisering innenfor utviklerens arbeidsflyt og pipeline, og sikrer at oversettelser aldri forsinker deg.",
     "button": {
       "startAutomating": "Start automatisering",
