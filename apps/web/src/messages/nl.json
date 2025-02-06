@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen je ontwikkelworkflow en -pipeline, zodat vertalingen je nooit ophouden."
+    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden."
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Aan de slag",
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
-    "description": "Languine automatiseert lokalisatie binnen je ontwikkelworkflow en -pipeline, zodat vertalingen je nooit ophouden.",
+    "description": "Languine automatiseert lokalisatie binnen jouw ontwikkelworkflow en pipeline, zodat vertalingen je nooit ophouden.",
     "button": {
       "startAutomating": "Begin met automatiseren",
       "readDocumentation": "Lees documentatie"
@@ -45,15 +45,15 @@
   "features": {
     "title": "Kenmerken",
     "fullyOpenSource": "Geautomatiseerde Vertalingen",
-    "fullyOpenSourceDescription": "Zeg vaarwel tegen handmatig vertaalwerk. Languine automatiseert het hele proces, zodat je app meertalig blijft zonder je te vertragen.",
+    "fullyOpenSourceDescription": "Zeg vaarwel tegen handmatig vertaalwerk. Languine automatiseert het hele proces, zodat jouw app meertalig blijft zonder je te vertragen.",
     "presetsForExpo": "Markdown & Documentondersteuning",
     "presetsForExpoDescription": "Houd je documentatie en inhoud up-to-date in verschillende talen. Languine vertaalt markdown-bestanden moeiteloos en behoudt consistentie in je workflow.",
-    "presetForReactNative": "Fijnstelling voor Merksstem",
-    "presetForReactNativeDescription": "Pas vertalingen aan om de toon en stem van je merk te matchen. Languine geeft je volledige controle over nuances, zodat je boodschap scherp blijft.",
+    "presetForReactNative": "Fijnstemming voor Merksstem",
+    "presetForReactNativeDescription": "Pas vertalingen aan om de toon en stem van jouw merk te matchen. Languine geeft je volledige controle over nuances, zodat je boodschap op punt blijft.",
     "presetForReactEmail": "GitHub Actie",
-    "presetForReactEmailDescription": "Automatiseer lokalisatie direct binnen GitHub. Onze GitHub Actie zorgt ervoor dat je vertalingen in sync blijven met elke commit en implementatie.",
+    "presetForReactEmailDescription": "Automatiseer lokalisatie direct binnen GitHub. Onze GitHub Actie zorgt ervoor dat jouw vertalingen in sync blijven met elke commit en implementatie.",
     "readyForI18nLibraries": "Taal- en Frameworkonafhankelijk",
-    "readyForI18nLibrariesDescription": "Werkt met elke i18n-bibliotheek. Houd je bestaande setup en voeg eenvoudig Languine toe voor geautomatiseerde vertalingen zonder je workflow te verstoren.",
+    "readyForI18nLibrariesDescription": "Werkt met elke i18n-bibliotheek. Behoud je bestaande setup en voeg eenvoudig Languine toe voor geautomatiseerde vertalingen zonder je workflow te verstoren.",
     "markdownSupport": "CLI & CI/CD Integratie",
     "markdownSupportDescription": "Gebruik onze krachtige CLI om vertalingen direct te beheren of integreer Languine naadloos in je bestaande CI/CD-pipeline voor een volledig geautomatiseerde workflow."
   },
@@ -66,7 +66,7 @@
       "terminology": "Terminologiebeheer",
       "linguisticFeatures": "Geavanceerde linguïstische functies",
       "realtimeUpdates": "Realtime vertaalupdates",
-      "overrides": "Vertaaloverschrijvingen"
+      "overrides": "Vertaaloverriding"
     },
     "implementation": {
       "title": "Implementatie",
@@ -81,7 +81,7 @@
       "cicd": "CI/CD-integratie",
       "versionControl": "Github Acties",
       "workflow": "Ontwikkelaarsworkflow",
-      "documentation": "Uitstekende documentatie"
+      "documentation": "Geweldige documentatie"
     },
     "get_started": "Begin met automatiseren"
   },

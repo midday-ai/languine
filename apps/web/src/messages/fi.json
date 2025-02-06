@@ -45,16 +45,16 @@
   "features": {
     "title": "Ominaisuudet",
     "fullyOpenSource": "Automaattiset käännökset",
-    "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastumista.",
-    "presetsForExpo": "Markdown & Asiakirjatuki",
-    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyssäsi.",
+    "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastuksia.",
+    "presetsForExpo": "Markdown- ja asiakirjatuki",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, ylläpitäen johdonmukaisuutta työskentelyprosessissasi.",
     "presetForReactNative": "Säätö brändin äänen mukaiseksi",
-    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimessä.",
+    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimekkäänä.",
     "presetForReactEmail": "GitHub-toiminto",
     "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
     "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
-    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoituja käännöksiä varten ilman työskentelysi häiritsemistä.",
-    "markdownSupport": "CLI & CI/CD Integraatio",
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoitujen käännösten saamiseksi ilman työskentelyprosessisi häiritsemistä.",
+    "markdownSupport": "CLI- ja CI/CD-integraatio",
     "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkeesi täysin automatisoitua työskentelyä varten."
   },
   "info": {
@@ -66,7 +66,7 @@
       "terminology": "Terminologian hallinta",
       "linguisticFeatures": "Edistyneet kielitieteelliset ominaisuudet",
       "realtimeUpdates": "Reaaliaikaiset käännöspäivitykset",
-      "overrides": "Käännösohjaukset"
+      "overrides": "Käännösohjeet"
     },
     "implementation": {
       "title": "Toteutus",
@@ -664,7 +664,7 @@
   "support_form": {
     "severity": "Vakavuus",
     "select_severity": "Valitse vakavuustaso",
-    "low": "Alhainen",
+    "low": "Matala",
     "medium": "Keskitaso",
     "high": "Korkea",
     "description": "Kuvaus",

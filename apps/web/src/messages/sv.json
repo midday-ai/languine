@@ -26,12 +26,12 @@
     "account": "Konto"
   },
   "hero": {
-    "title": "Lokaliseringinfrastruktur skapad för snabbrörliga startups.",
+    "title": "Lokalisering infrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig."
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Lokaliseringinfrastruktur skapad för snabbrörliga startups.",
+    "title": "Lokalisering infrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp för dig.",
     "button": {
       "startAutomating": "Börja automatisera",
@@ -63,9 +63,9 @@
     "presetForReactNativeDescription": "Anpassa översättningar för att matcha ditt varumärkes ton och röst. Languine ger dig full kontroll över nyanser, vilket säkerställer att ditt budskap förblir på rätt spår.",
     "presetForReactEmail": "GitHub Action",
     "presetForReactEmailDescription": "Automatisera lokalisering direkt inom GitHub. Vår GitHub Action säkerställer att dina översättningar förblir synkroniserade med varje commit och distribution.",
-    "readyForI18nLibraries": "Språk- och ramverksagnostisk",
-    "readyForI18nLibrariesDescription": "Fungerar med alla i18n-bibliotek. Behåll din befintliga konfiguration och lägg helt enkelt till Languine för automatiserade översättningar utan att störa ditt arbetsflöde.",
-    "markdownSupport": "CLI & CI/CD-integration",
+    "readyForI18nLibraries": "Språk- och ramverksoberoende",
+    "readyForI18nLibrariesDescription": "Fungerar med alla i18n-bibliotek. Behåll din befintliga uppsättning och lägg helt enkelt till Languine för automatiserade översättningar utan att störa ditt arbetsflöde.",
+    "markdownSupport": "CLI & CI/CD Integration",
     "markdownSupportDescription": "Använd vår kraftfulla CLI för att hantera översättningar direkt eller sömlöst integrera Languine i din befintliga CI/CD-pipeline för ett helt automatiserat arbetsflöde."
   },
   "info": {

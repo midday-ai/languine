@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestructura de localización hecha para startups de ritmo rápido.",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan."
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrolladores, asegurando que las traducciones nunca te detengan."
   },
   "navigation": {
     "dashboard": "Tablero",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comenzar",
     "title": "Infraestructura de localización hecha para startups de ritmo rápido.",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrolladores, asegurando que las traducciones nunca te detengan.",
     "button": {
       "startAutomating": "Comenzar a automatizar",
       "readDocumentation": "Leer documentación"
@@ -45,7 +45,7 @@
   "features": {
     "title": "Características",
     "fullyOpenSource": "Traducciones Automatizadas",
-    "fullyOpenSourceDescription": "Di adiós al trabajo de traducción manual. Languine automatiza todo el proceso, asegurando que tu aplicación se mantenga multilingüe sin ralentizarte.",
+    "fullyOpenSourceDescription": "Di adiós al trabajo manual de traducción. Languine automatiza todo el proceso, asegurando que tu aplicación se mantenga multilingüe sin ralentizarte.",
     "presetsForExpo": "Soporte para Markdown y Documentos",
     "presetsForExpoDescription": "Mantén tu documentación y contenido actualizados en todos los idiomas. Languine traduce archivos markdown sin esfuerzo, manteniendo la consistencia en tu flujo de trabajo.",
     "presetForReactNative": "Ajuste para la Voz de la Marca",
@@ -55,7 +55,7 @@
     "readyForI18nLibraries": "Independiente de Idioma y Framework",
     "readyForI18nLibrariesDescription": "Funciona con cualquier biblioteca de i18n. Mantén tu configuración existente y simplemente añade Languine para traducciones automatizadas sin interrumpir tu flujo de trabajo.",
     "markdownSupport": "Integración CLI y CI/CD",
-    "markdownSupportDescription": "Utiliza nuestra poderosa CLI para gestionar traducciones directamente o integra Languine sin problemas en tu pipeline de CI/CD existente para un flujo de trabajo completamente automatizado."
+    "markdownSupportDescription": "Utiliza nuestra poderosa CLI para gestionar traducciones directamente o integra Languine sin problemas en tu pipeline de CI/CD existente para un flujo de trabajo totalmente automatizado."
   },
   "info": {
     "title": "Maneja cada aspecto de la localización de tu aplicación, incluyendo",
