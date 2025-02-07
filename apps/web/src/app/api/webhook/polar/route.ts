@@ -38,6 +38,11 @@ export const POST = Webhooks({
           break;
         }
 
+        // Make sure the subscription is active before setting the plan
+        if (payload.data.status !== 'active') {
+          break;
+        }
+
         await updateOrganization({
           id: payload.data.metadata.organizationId as string,
           polarCustomerId: payload.data.customerId!,
