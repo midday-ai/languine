@@ -6,11 +6,11 @@
     "goToApp": "Vai all'app"
   },
   "hero": {
-    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
+    "title": "Infrastruttura di localizzazione progettata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, garantendo che le traduzioni non ti rallentino mai."
   },
   "navigation": {
-    "dashboard": "Cruscotto",
+    "dashboard": "Dashboard",
     "tuning": "Ottimizzazione",
     "overrides": "Sovrascritture",
     "settings": "Impostazioni",
@@ -20,7 +20,7 @@
   },
   "getStarted": {
     "heading": "Inizia",
-    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
+    "title": "Infrastruttura di localizzazione progettata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, garantendo che le traduzioni non ti rallentino mai.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
@@ -28,7 +28,7 @@
     }
   },
   "companies": {
-    "title": "Utilizzato da",
+    "title": "Usato da",
     "addYourCompany": "+ Aggiungi la tua azienda"
   },
   "activity": {
@@ -44,25 +44,25 @@
   },
   "features": {
     "title": "Caratteristiche",
-    "fullyOpenSource": "Traduzioni Automatiche",
+    "fullyOpenSource": "Traduzioni automatizzate",
     "fullyOpenSourceDescription": "Dì addio al lavoro di traduzione manuale. Languine automatizza l'intero processo, garantendo che la tua app rimanga multilingue senza rallentarti.",
-    "presetsForExpo": "Supporto per Markdown e Documenti",
+    "presetsForExpo": "Supporto Markdown & Documenti",
     "presetsForExpoDescription": "Mantieni la tua documentazione e contenuti aggiornati in tutte le lingue. Languine traduce i file markdown senza sforzo, mantenendo la coerenza nel tuo flusso di lavoro.",
-    "presetForReactNative": "Ottimizzazione per il Tono del Brand",
+    "presetForReactNative": "Ottimizzazione per la Voce del Brand",
     "presetForReactNativeDescription": "Personalizza le traduzioni per adattarle al tono e alla voce del tuo brand. Languine ti offre il pieno controllo sulle sfumature, garantendo che il tuo messaggio rimanga preciso.",
     "presetForReactEmail": "Azione GitHub",
     "presetForReactEmailDescription": "Automatizza la localizzazione direttamente all'interno di GitHub. La nostra Azione GitHub garantisce che le tue traduzioni rimangano sincronizzate con ogni commit e distribuzione.",
-    "readyForI18nLibraries": "Indipendente da Lingua e Framework",
-    "readyForI18nLibrariesDescription": "Funziona con qualsiasi libreria i18n. Mantieni la tua configurazione esistente e aggiungi semplicemente Languine per traduzioni automatiche senza interrompere il tuo flusso di lavoro.",
+    "readyForI18nLibraries": "Indipendente da Lingua & Framework",
+    "readyForI18nLibrariesDescription": "Funziona con qualsiasi libreria i18n. Mantieni la tua configurazione esistente e aggiungi semplicemente Languine per traduzioni automatizzate senza interrompere il tuo flusso di lavoro.",
     "markdownSupport": "Integrazione CLI & CI/CD",
-    "markdownSupportDescription": "Usa il nostro potente CLI per gestire le traduzioni direttamente o integra senza soluzione di continuità Languine nella tua pipeline CI/CD esistente per un flusso di lavoro completamente automatizzato."
+    "markdownSupportDescription": "Usa il nostro potente CLI per gestire le traduzioni direttamente o integrare senza soluzione di continuità Languine nella tua pipeline CI/CD esistente per un flusso di lavoro completamente automatizzato."
   },
   "info": {
     "title": "Gestisce ogni aspetto della localizzazione della tua app, inclusi",
     "smartTranslation": {
       "title": "Traduzione Intelligente",
       "intelligentTranslation": "Traduzione intelligente con consapevolezza del contesto",
-      "brandVoice": "Coerenza della voce e del tono del marchio",
+      "brandVoice": "Coerenza nella voce e nel tono del brand",
       "terminology": "Gestione della terminologia",
       "linguisticFeatures": "Caratteristiche linguistiche avanzate",
       "realtimeUpdates": "Aggiornamenti di traduzione in tempo reale",
@@ -72,7 +72,7 @@
       "title": "Implementazione",
       "quickSetup": "Configurazione e integrazione rapida",
       "fileFormat": "Invita membri del team",
-      "contentStructure": "Affina le impostazioni",
+      "contentStructure": "Ottimizza le impostazioni",
       "assetOrganization": "Scegli le lingue"
     },
     "developer": {
@@ -80,7 +80,7 @@
       "cli": "Interfaccia a riga di comando",
       "cicd": "Integrazione CI/CD",
       "versionControl": "Azioni Github",
-      "workflow": "Flusso di lavoro dello sviluppatore",
+      "workflow": "Flusso di lavoro per sviluppatori",
       "documentation": "Ottima documentazione"
     },
     "get_started": "Inizia ad automatizzare"
@@ -135,7 +135,7 @@
     },
     "apiKey": {
       "title": "Chiave API",
-      "description": "La tua chiave API personale per accedere all'API di Languine e dalla CLI."
+      "description": "La tua chiave API personale per accedere all'API di Languine e dal CLI."
     },
     "deleteAccount": {
       "title": "Elimina Account",
@@ -150,15 +150,15 @@
     "dialog": {
       "title": "Sei assolutamente sicuro?",
       "description": "Questa azione non può essere annullata. Si prega di digitare DELETE per confermare.",
-      "placeholder": "Digita DELETE per confermare",
-      "confirm": "Conferma Eliminazione",
+      "placeholder": "Digitare DELETE per confermare",
+      "confirm": "Conferma eliminazione",
       "cancel": "Annulla"
     }
   },
   "pipeline": {
     "title": "Flusso di lavoro (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Il nostro motore di traduzione si integra perfettamente nella tua pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono apportate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce e la terminologia del tuo marchio. Le traduzioni vengono quindi inviate come richieste di pull, consentendo la revisione prima di essere unite al tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che il tuo contenuto localizzato rimanga in sincronia con lo sviluppo."
+    "description": "Il nostro motore di traduzione si integra perfettamente nel tuo pipeline CI/CD esistente, traducendo automaticamente il tuo codice ad ogni push. Quando vengono apportate modifiche al codice, analizziamo il contenuto modificato, manteniamo la tua memoria di traduzione e generiamo traduzioni accurate preservando la voce e la terminologia del tuo marchio. Le traduzioni vengono quindi inviate come richieste di pull, consentendo la revisione prima di essere unite al tuo ramo principale e distribuite. Questo flusso di lavoro automatizzato garantisce che il tuo contenuto localizzato rimanga sincronizzato con lo sviluppo."
   },
   "settings": {
     "badRequest": "Richiesta non valida",
@@ -166,17 +166,17 @@
     "permissionDenied": "Permesso negato",
     "permissionDeniedDescription": "Devi essere un proprietario del team per eseguire questa azione",
     "deleteTeamTitle": "Elimina team",
-    "deleteTeamDescription": "Impossibile eliminare l'organizzazione quando sei l'unico membro, invece elimina il tuo account",
+    "deleteTeamDescription": "Non è possibile eliminare l'organizzazione quando sei l'unico membro, invece elimina il tuo account",
     "saved": "Impostazioni salvate",
     "savedDescription": "Le tue modifiche sono state salvate con successo",
     "error": "Qualcosa è andato storto",
-    "errorDescription": "Per favore riprova o contatta il supporto",
+    "errorDescription": "Si prega di riprovare o contattare il supporto",
     "addTeam": "Crea team",
     "apiKey": {
       "updated": "Chiave API aggiornata",
       "updatedDescription": "La tua chiave API è stata aggiornata con successo ed è stata copiata negli appunti.",
-      "title": "Aggiorna Chiave API",
-      "description": "Sei sicuro di voler generare una nuova chiave API? La chiave precedente smetterà di funzionare immediatamente.",
+      "title": "Aggiorna chiave API",
+      "description": "Sei sicuro di voler generare una nuova chiave API? La vecchia chiave smetterà di funzionare immediatamente.",
       "cancel": "Annulla",
       "continue": "Continua"
     },
@@ -190,45 +190,45 @@
     "addProject": "Crea progetto",
     "project": {
       "name": {
-        "title": "Nome Progetto",
+        "title": "Nome del progetto",
         "description": "Il nome del tuo progetto",
         "placeholder": "Inserisci il nome del progetto"
       },
       "id": {
-        "title": "ID Progetto",
+        "title": "ID del progetto",
         "description": "Il tuo identificatore unico del progetto",
-        "placeholder": "ID Progetto"
+        "placeholder": "ID del progetto"
       },
       "delete": {
-        "title": "Elimina Progetto",
+        "title": "Elimina progetto",
         "description": "Elimina permanentemente questo progetto e tutti i suoi dati",
-        "button": "Elimina Progetto"
+        "button": "Elimina progetto"
       }
     },
     "save": "Salva",
     "team": {
       "name": {
-        "title": "Nome Team",
+        "title": "Nome del team",
         "description": "Il nome del tuo team",
         "placeholder": "Inserisci il nome del team"
       },
       "billing": {
-        "title": "Piano di Fatturazione",
+        "title": "Piano di fatturazione",
         "description": "Gestisci il piano di fatturazione del tuo team",
         "free": "Gratuito",
         "pro": "Pro",
         "unlimited": "Illimitato"
       },
       "apiKey": {
-        "title": "Chiave API Team",
-        "description": "Chiave API per l'accesso al team, utilizzala dalla tua pipeline CI/CD insieme all'ID Progetto",
-        "placeholder": "Chiave API Team"
+        "title": "Chiave API del team",
+        "description": "Chiave API per l'accesso al team, utilizzala dal tuo pipeline CI/CD insieme all'ID del progetto",
+        "placeholder": "Chiave API del team"
       },
       "members": {
-        "leaveTeamConfirm": "Lascia team",
+        "leaveTeamConfirm": "Lascia il team",
         "leaveTeamDescription": "Sei sicuro di voler lasciare questo team?",
         "cancel": "Annulla",
-        "leaveTeam": "Lascia team",
+        "leaveTeam": "Lascia il team",
         "invite": "Invita membro",
         "title": "Membri",
         "pendingInvitations": "Inviti in sospeso",
@@ -236,14 +236,14 @@
         "removeMemberConfirm": "Rimuovi membro",
         "removeMemberDescription": "Sei sicuro di voler rimuovere questo membro?",
         "filterPlaceholder": "Filtra membri...",
-        "allRoles": "Tutti i Ruoli",
+        "allRoles": "Tutti i ruoli",
         "date": "Data",
         "selectAll": "{count} selezionati",
         "noPendingInvitations": "Nessun invito in sospeso",
         "noResults": "Nessun membro trovato",
         "tryDifferentSearch": "Prova una ricerca diversa",
         "inviteMembers": "Invita membri a collaborare",
-        "deleteInvite": "Elimina Invito",
+        "deleteInvite": "Elimina invito",
         "deleteInviteDescription": "Elimina l'invito",
         "invitedBy": "Invitato da {name}",
         "deleteInviteSuccess": "Invito eliminato",
@@ -260,32 +260,32 @@
           "newest": "Più recente",
           "oldest": "Più vecchio"
         },
-        "deleteInviteConfirm": "Elimina Invito"
+        "deleteInviteConfirm": "Elimina invito"
       },
       "email": {
-        "title": "Email Team",
+        "title": "Email del team",
         "description": "L'indirizzo email associato al tuo team",
-        "placeholder": "Inserisci email team"
+        "placeholder": "Inserisci l'email del team"
       }
     }
   },
   "tuning": {
     "general": "Generale",
     "translationMemory": {
-      "title": "Memoria di Traduzione",
-      "description": "Utilizza la memoria di traduzione per migliorare la coerenza e l'efficienza"
+      "title": "Memoria di traduzione",
+      "description": "Utilizza la memoria di traduzione per migliorare coerenza ed efficienza"
     },
     "qualityChecks": {
-      "title": "Controlli di Qualità",
+      "title": "Controlli di qualità",
       "description": "Abilita controlli di qualità automatizzati per le traduzioni"
     },
     "contextDetection": {
-      "title": "Rilevamento del Contesto",
+      "title": "Rilevamento del contesto",
       "description": "Rileva e preserva automaticamente il contesto nelle traduzioni"
     },
-    "styleGuide": "Guida di Stile",
+    "styleGuide": "Guida di stile",
     "lengthControl": {
-      "title": "Controllo della Lunghezza",
+      "title": "Controllo della lunghezza",
       "description": "Controlla la lunghezza del testo tradotto",
       "options": {
         "flexible": "Flessibile",
@@ -308,17 +308,17 @@
       }
     },
     "brandName": {
-      "title": "Nome del marchio",
-      "description": "Imposta il nome del tuo marchio per un utilizzo coerente",
-      "placeholder": "Inserisci il nome del tuo marchio"
+      "title": "Nome del Brand",
+      "description": "Imposta il nome del tuo brand per un utilizzo coerente",
+      "placeholder": "Inserisci il nome del tuo brand"
     },
     "brandVoice": {
-      "title": "Voce del marchio",
-      "description": "Definisci la voce e il tono del tuo marchio",
-      "placeholder": "Descrivi la voce del tuo marchio..."
+      "title": "Voce del Brand",
+      "description": "Definisci la voce e il tono del tuo brand",
+      "placeholder": "Descrivi la voce del tuo brand..."
     },
     "toneOfVoice": {
-      "title": "Tono di voce",
+      "title": "Tono di Voce",
       "description": "Definisci il tono utilizzato nelle traduzioni",
       "options": {
         "casual": "Informale",
@@ -327,15 +327,15 @@
         "professional": "Professionale",
         "playful": "Giocoso",
         "serious": "Serio",
-        "confident": "Sicuro",
+        "confident": "Fiducioso",
         "humble": "Umile",
         "direct": "Diretto",
         "diplomatic": "Diplomatico"
       }
     },
-    "brand": "Marchio",
+    "brand": "Brand",
     "emotiveIntent": {
-      "title": "Intento emotivo",
+      "title": "Intenzione Emotiva",
       "description": "Imposta il tono emotivo per le traduzioni",
       "options": {
         "neutral": "Neutro",
@@ -347,7 +347,7 @@
       }
     },
     "domainExpertise": {
-      "title": "Competenza di dominio",
+      "title": "Competenza di Dominio",
       "description": "Specifica il contesto di dominio per le traduzioni",
       "options": {
         "general": "Generale",
@@ -360,7 +360,7 @@
       }
     },
     "idioms": {
-      "title": "Modi di dire",
+      "title": "Modi di Dire",
       "description": "Gestisci le espressioni idiomatiche in modo appropriato"
     },
     "terminology": {
@@ -368,12 +368,12 @@
       "description": "Gestisci la terminologia specializzata e i glossari"
     },
     "culturalAdaptation": {
-      "title": "Adattamento culturale",
+      "title": "Adattamento Culturale",
       "description": "Adatta i contenuti per la loro appropriatezza culturale"
     }
   },
   "pricing": {
-    "title": "Prezzi semplici",
+    "title": "Prezzi Semplici",
     "free": {
       "title": "Gratuito",
       "price": "Gratuito",
@@ -408,7 +408,7 @@
     "keys_limit_explanation": "Chiave tradotta: Se hai 20 chiavi sorgente (come \"Iscriviti\" o \"Benvenuto!\") e le traduci in 5 lingue, ciò equivale a 100 chiavi tradotte (20 chiavi x 5 lingue)."
   },
   "createTeam": {
-    "teamName": "Nome del team",
+    "teamName": "Nome del Team",
     "teamNamePlaceholder": "Inserisci il nome del team",
     "createTeamButton": "Crea team",
     "cancel": "Annulla",
@@ -434,7 +434,7 @@
     },
     "error": {
       "title": "Errore",
-      "description": "Invio dell'invito non riuscito. Riprova."
+      "description": "Invito non inviato. Riprova."
     },
     "validation": {
       "invalidEmail": "Inserisci un'email valida"
@@ -457,7 +457,7 @@
       }
     },
     "info": {
-      "description": "Hai bisogno di aiuto? Consulta il nostro",
+      "description": "Hai bisogno di aiuto? Consulta la nostra",
       "link": "documentazione",
       "description_2": "per guide dettagliate e migliori pratiche."
     }
@@ -555,7 +555,7 @@
     "title": "FAQ",
     "what_is_languine": {
       "question": "Cos'è Languine?",
-      "answer": "Languine è una piattaforma di localizzazione alimentata da AI che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Offre funzionalità come opzioni di ottimizzazione, sovrascritture di traduzione, analisi e memoria contestuale per garantire traduzioni di alta qualità."
+      "answer": "Languine è una piattaforma di localizzazione alimentata da AI che ti aiuta ad automatizzare la traduzione delle tue applicazioni. Fornisce funzionalità come opzioni di ottimizzazione, sovrascritture di traduzione, analisi e memoria contestuale per garantire traduzioni di alta qualità."
     },
     "key_limit": {
       "question": "Come funziona il limite delle chiavi?",
@@ -563,7 +563,7 @@
     },
     "supported_languages": {
       "question": "Quali lingue sono supportate?",
-      "answer": "Languine supporta oltre 100 lingue in tutti i piani. Anche se le nostre traduzioni alimentate da AI funzionano meglio con le lingue principali, ci impegniamo a fornire traduzioni di qualità in tutte le lingue supportate. Se hai requisiti linguistici specifici o domande sulla qualità della traduzione per lingue particolari, ti preghiamo di contattare il nostro team di supporto."
+      "answer": "Languine supporta oltre 100 lingue in tutti i piani. Sebbene le nostre traduzioni alimentate da AI funzionino meglio con le lingue principali, ci impegniamo a fornire traduzioni di qualità in tutte le lingue supportate. Se hai requisiti linguistici specifici o domande sulla qualità della traduzione per lingue particolari, ti preghiamo di contattare il nostro team di supporto."
     },
     "github_action": {
       "question": "Come funziona l'integrazione con GitHub Action?",
@@ -599,7 +599,7 @@
     "getting-started": "Introduzione",
     "workflow": "Flusso di lavoro",
     "ci": "CI/CD",
-    "presets": "Impostazioni predefinite",
+    "presets": "Preimpostazioni",
     "formats": "Formati",
     "platform": "Piattaforma",
     "introduction": "Introduzione",
@@ -646,7 +646,7 @@
     "changePlan": "Aggiorna piano",
     "free": "Gratuito",
     "manage_button": "Gestisci abbonamento",
-    "canceled": "Da annullare"
+    "canceled": "Da cancellare"
   },
   "changePlan": {
     "title": "Aggiorna piano",

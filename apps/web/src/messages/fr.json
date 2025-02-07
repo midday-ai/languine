@@ -44,16 +44,16 @@
   },
   "features": {
     "title": "Fonctionnalités",
-    "fullyOpenSource": "Traductions Automatisées",
+    "fullyOpenSource": "Traductions automatisées",
     "fullyOpenSourceDescription": "Dites adieu au travail de traduction manuel. Languine automatise l'ensemble du processus, garantissant que votre application reste multilingue sans vous ralentir.",
     "presetsForExpo": "Support Markdown & Document",
     "presetsForExpoDescription": "Gardez votre documentation et votre contenu à jour dans toutes les langues. Languine traduit les fichiers markdown sans effort, maintenant la cohérence dans votre flux de travail.",
-    "presetForReactNative": "Ajustement pour la Voix de Marque",
+    "presetForReactNative": "Ajustement pour la voix de marque",
     "presetForReactNativeDescription": "Personnalisez les traductions pour correspondre au ton et à la voix de votre marque. Languine vous donne un contrôle total sur les nuances, garantissant que votre message reste pertinent.",
     "presetForReactEmail": "Action GitHub",
     "presetForReactEmailDescription": "Automatisez la localisation directement dans GitHub. Notre Action GitHub garantit que vos traductions restent synchronisées avec chaque commit et déploiement.",
-    "readyForI18nLibraries": "Indépendant de la Langue & du Cadre",
-    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Gardez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
+    "readyForI18nLibraries": "Indépendant de la langue et du cadre",
+    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Conservez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
     "markdownSupport": "Intégration CLI & CI/CD",
     "markdownSupportDescription": "Utilisez notre puissant CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
   },
@@ -70,9 +70,9 @@
     },
     "implementation": {
       "title": "Mise en œuvre",
-      "quickSetup": "Configuration et intégration rapides",
+      "quickSetup": "Configuration rapide et intégration",
       "fileFormat": "Inviter des membres de l'équipe",
-      "contentStructure": "Affiner les paramètres",
+      "contentStructure": "Ajuster les paramètres",
       "assetOrganization": "Choisir les langues"
     },
     "developer": {
@@ -83,7 +83,7 @@
       "workflow": "Flux de travail des développeurs",
       "documentation": "Excellente documentation"
     },
-    "get_started": "Commencez à automatiser"
+    "get_started": "Commencer à automatiser"
   },
   "login": {
     "title": "Se connecter",
@@ -135,7 +135,7 @@
     },
     "apiKey": {
       "title": "Clé API",
-      "description": "Votre clé API personnelle pour accéder à l'API Languine et depuis la CLI."
+      "description": "Votre clé API personnelle pour accéder à l'API Languine et depuis le CLI."
     },
     "deleteAccount": {
       "title": "Supprimer le compte",
@@ -149,8 +149,8 @@
   "dangerZone": {
     "dialog": {
       "title": "Êtes-vous absolument sûr ?",
-      "description": "Cette action ne peut pas être annulée. Veuillez taper SUPPRIMER pour confirmer.",
-      "placeholder": "Tapez SUPPRIMER pour confirmer",
+      "description": "Cette action ne peut pas être annulée. Veuillez taper DELETE pour confirmer.",
+      "placeholder": "Tapez DELETE pour confirmer",
       "confirm": "Confirmer la suppression",
       "cancel": "Annuler"
     }
@@ -158,7 +158,7 @@
   "pipeline": {
     "title": "Flux de travail (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Notre moteur de traduction s'intègre parfaitement dans votre pipeline CI/CD existant, traduisant automatiquement votre code à chaque push. Lorsque des modifications de code sont poussées, nous analysons le contenu modifié, maintenons votre mémoire de traduction et générons des traductions précises tout en préservant la voix et la terminologie de votre marque. Les traductions sont ensuite soumises sous forme de demandes de tirage, permettant une révision avant d'être fusionnées dans votre branche principale et déployées. Ce flux de travail automatisé garantit que votre contenu localisé reste synchronisé avec le développement."
+    "description": "Notre moteur de traduction s'intègre parfaitement dans votre pipeline CI/CD existant, traduisant automatiquement votre code à chaque envoi. Lorsque des modifications de code sont envoyées, nous analysons le contenu modifié, maintenons votre mémoire de traduction et générons des traductions précises tout en préservant la voix et la terminologie de votre marque. Les traductions sont ensuite soumises sous forme de demandes de tirage, permettant une révision avant d'être fusionnées dans votre branche principale et déployées. Ce flux de travail automatisé garantit que votre contenu localisé reste synchronisé avec le développement."
   },
   "settings": {
     "badRequest": "Demande invalide",
@@ -232,9 +232,9 @@
         "invite": "Inviter un membre",
         "title": "Membres",
         "pendingInvitations": "Invitations en attente",
-        "removeMember": "Supprimer un membre",
-        "removeMemberConfirm": "Supprimer un membre",
-        "removeMemberDescription": "Êtes-vous sûr de vouloir supprimer ce membre ?",
+        "removeMember": "Retirer un membre",
+        "removeMemberConfirm": "Retirer le membre",
+        "removeMemberDescription": "Êtes-vous sûr de vouloir retirer ce membre ?",
         "filterPlaceholder": "Filtrer les membres...",
         "allRoles": "Tous les rôles",
         "date": "Date",
@@ -248,10 +248,10 @@
         "invitedBy": "Invité par {name}",
         "deleteInviteSuccess": "Invitation supprimée",
         "deleteInviteError": "Échec de la suppression de l'invitation",
-        "removeMemberSuccess": "Membre supprimé",
-        "removeMemberError": "Échec de la suppression du membre",
-        "removeMemberSuccessDescription": "Le membre a été supprimé avec succès",
-        "removeMemberErrorDescription": "Échec de la suppression du membre",
+        "removeMemberSuccess": "Membre retiré",
+        "removeMemberError": "Échec du retrait du membre",
+        "removeMemberSuccessDescription": "Le membre a été retiré avec succès",
+        "removeMemberErrorDescription": "Échec du retrait du membre",
         "roles": {
           "owner": "Propriétaire",
           "member": "Membre"
@@ -277,11 +277,11 @@
     },
     "qualityChecks": {
       "title": "Contrôles de qualité",
-      "description": "Activez les contrôles de qualité automatisés pour les traductions"
+      "description": "Activer les contrôles de qualité automatisés pour les traductions"
     },
     "contextDetection": {
       "title": "Détection de contexte",
-      "description": "Détectez et préservez automatiquement le contexte dans les traductions"
+      "description": "Détecter et préserver automatiquement le contexte dans les traductions"
     },
     "styleGuide": "Guide de style",
     "lengthControl": {
@@ -295,11 +295,11 @@
       }
     },
     "inclusiveLanguage": {
-      "title": "Langage inclusif",
+      "title": "Langage Inclusif",
       "description": "Assurez-vous que les traductions utilisent un langage inclusif"
     },
     "formality": {
-      "title": "Formalité",
+      "title": "Niveau de Formalité",
       "description": "Contrôlez le niveau de formalité des traductions",
       "options": {
         "casual": "Décontracté",
@@ -308,17 +308,17 @@
       }
     },
     "brandName": {
-      "title": "Nom de la marque",
-      "description": "Définissez le nom de votre marque pour une utilisation cohérente",
-      "placeholder": "Entrez le nom de votre marque"
+      "title": "Nom de Marque",
+      "description": "Définissez votre nom de marque pour une utilisation cohérente",
+      "placeholder": "Entrez votre nom de marque"
     },
     "brandVoice": {
-      "title": "Voix de la marque",
+      "title": "Voix de Marque",
       "description": "Définissez la voix et le ton de votre marque",
       "placeholder": "Décrivez la voix de votre marque..."
     },
     "toneOfVoice": {
-      "title": "Ton de la voix",
+      "title": "Ton de Voix",
       "description": "Définissez le ton utilisé dans les traductions",
       "options": {
         "casual": "Décontracté",
@@ -335,7 +335,7 @@
     },
     "brand": "Marque",
     "emotiveIntent": {
-      "title": "Intention émotive",
+      "title": "Intention Émotionnelle",
       "description": "Définissez le ton émotionnel des traductions",
       "options": {
         "neutral": "Neutre",
@@ -347,7 +347,7 @@
       }
     },
     "domainExpertise": {
-      "title": "Expertise de domaine",
+      "title": "Expertise Domainiale",
       "description": "Spécifiez le contexte de domaine pour les traductions",
       "options": {
         "general": "Général",
@@ -368,12 +368,12 @@
       "description": "Gérez la terminologie spécialisée et les glossaires"
     },
     "culturalAdaptation": {
-      "title": "Adaptation culturelle",
-      "description": "Adaptez le contenu pour une pertinence culturelle"
+      "title": "Adaptation Culturelle",
+      "description": "Adaptez le contenu pour qu'il soit culturellement approprié"
     }
   },
   "pricing": {
-    "title": "Tarification simple",
+    "title": "Tarification Simple",
     "free": {
       "title": "Gratuit",
       "price": "Gratuit",
@@ -385,7 +385,7 @@
         "overrides": "Remplacements de traduction",
         "analytics": "Analytique",
         "context_memory": "Mémoire contextuelle",
-        "community_support": "Support communautaire",
+        "community_support": "Soutien communautaire",
         "keys_limit": "Jusqu'à 100 clés",
         "docs_limit": "Jusqu'à 5 documents",
         "languages": "2 langues"
@@ -393,7 +393,7 @@
     },
     "pro": {
       "title": "Pro",
-      "includes_free": "Tout dans Gratuit, plus :",
+      "includes_free": "Tout ce qui est dans Gratuit, plus :",
       "features": {
         "github_action": "Intégration GitHub Action",
         "latest_features": "Accès anticipé aux dernières fonctionnalités",
@@ -408,7 +408,7 @@
     "keys_limit_explanation": "Clé traduite : Si vous avez 20 clés source (comme \"S'inscrire\" ou \"Bienvenue!\") et que vous les traduisez en 5 langues, cela équivaut à 100 clés traduites (20 clés x 5 langues)."
   },
   "createTeam": {
-    "teamName": "Nom de l'équipe",
+    "teamName": "Nom de l'Équipe",
     "teamNamePlaceholder": "Entrez le nom de l'équipe",
     "createTeamButton": "Créer une équipe",
     "cancel": "Annuler",
@@ -447,7 +447,7 @@
         "description": "Installez et configurez le Languine CLI pour gérer les traductions"
       },
       "2": {
-        "title": "Pousser les traductions",
+        "title": "Pousser les Traductions",
         "description": "En attente de l'envoi des traductions"
       },
       "3": {
@@ -464,9 +464,9 @@
   },
   "cli": {
     "success": {
-      "title": "Connexion réussie à Languine CLI",
+      "title": "Connexion réussie au Languine CLI",
       "description": "Languine CLI a été authentifié avec succès en tant que :",
-      "description_2": "Vous pouvez maintenant fermer cet onglet et revenir à la CLI"
+      "description_2": "Vous pouvez maintenant fermer cet onglet et revenir au CLI"
     }
   },
   "search": {
@@ -563,7 +563,7 @@
     },
     "supported_languages": {
       "question": "Quelles langues sont prises en charge ?",
-      "answer": "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de traduction pour certaines langues, veuillez contacter notre équipe de support."
+      "answer": "Languine prend en charge plus de 100 langues dans tous les plans. Bien que nos traductions alimentées par l'IA fonctionnent mieux avec les langues majeures, nous nous efforçons de fournir des traductions de qualité dans toutes les langues prises en charge. Si vous avez des exigences linguistiques spécifiques ou des questions sur la qualité de la traduction pour certaines langues, veuillez contacter notre équipe de support."
     },
     "github_action": {
       "question": "Comment fonctionne l'intégration GitHub Action ?",
@@ -579,11 +579,11 @@
     },
     "open_source_pricing": {
       "question": "Offrez-vous des tarifs spéciaux pour les projets open source ?",
-      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à tarif réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
+      "answer": "Oui ! Nous aimons soutenir la communauté open source. Si vous maintenez un projet open source, vous pouvez accéder à nos fonctionnalités Pro avec une réduction de 30 %. Il vous suffit de contacter notre équipe avec des détails sur votre projet, et nous vous mettrons en place un compte Pro à prix réduit. C'est notre façon de redonner à la communauté qui rend notre travail possible."
     },
     "cancel_subscription": {
       "question": "Comment annuler mon abonnement ?",
-      "answer": "Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de votre compte. Allez dans Facturation > Changer de plan. Votre abonnement restera actif jusqu'à la fin de votre période de facturation actuelle, après quoi vous serez transféré au plan gratuit."
+      "answer": "Vous pouvez annuler votre abonnement à tout moment depuis les paramètres de votre compte. Accédez à Facturation > Changer de plan. Votre abonnement restera actif jusqu'à la fin de votre période de facturation actuelle, après quoi vous serez transféré au plan gratuit."
     }
   },
   "pricing_slider": {
@@ -668,7 +668,7 @@
     "medium": "Moyenne",
     "high": "Élevée",
     "description": "Description",
-    "describe_issue": "Décrivez votre problème",
+    "describe_issue": "Décrire votre problème",
     "submit": "Soumettre"
   }
 }

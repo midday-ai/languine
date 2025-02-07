@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestrutura de localização feita para startups dinâmicas.",
-    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem."
+    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca atrasem você."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comece agora",
     "title": "Infraestrutura de localização feita para startups dinâmicas.",
-    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem.",
+    "description": "A Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca atrasem você.",
     "button": {
       "startAutomating": "Começar a automatizar",
       "readDocumentation": "Ler documentação"
@@ -35,7 +35,7 @@
     "title": "Atividade",
     "loading": "Carregando",
     "noResults": "Nenhum resultado para ”{search}”",
-    "clearSearch": "Limpar pesquisa",
+    "clearSearch": "Limpar busca",
     "loadMore": "Mostrar mais",
     "type": {
       "key": "Chave",
@@ -45,17 +45,17 @@
   "features": {
     "title": "Recursos",
     "fullyOpenSource": "Traduções Automatizadas",
-    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. A Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerar.",
+    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. A Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerar você.",
     "presetsForExpo": "Suporte a Markdown & Documentos",
-    "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em diferentes idiomas. A Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
+    "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em vários idiomas. A Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
     "presetForReactNative": "Ajuste Fino para a Voz da Marca",
-    "presetForReactNativeDescription": "Personalize as traduções para corresponder ao tom e à voz da sua marca. A Languine oferece total controle sobre as nuances, garantindo que sua mensagem permaneça clara.",
+    "presetForReactNativeDescription": "Personalize traduções para corresponder ao tom e à voz da sua marca. A Languine oferece total controle sobre nuances, garantindo que sua mensagem permaneça precisa.",
     "presetForReactEmail": "Ação do GitHub",
     "presetForReactEmailDescription": "Automatize a localização diretamente no GitHub. Nossa Ação do GitHub garante que suas traduções permaneçam sincronizadas com cada commit e implantação.",
     "readyForI18nLibraries": "Independente de Idioma & Framework",
     "readyForI18nLibrariesDescription": "Funciona com qualquer biblioteca i18n. Mantenha sua configuração existente e simplesmente adicione a Languine para traduções automatizadas sem interromper seu fluxo de trabalho.",
     "markdownSupport": "Integração CLI & CI/CD",
-    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre a Languine ao seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
+    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre a Languine em seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
   },
   "info": {
     "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
@@ -72,7 +72,7 @@
       "title": "Implementação",
       "quickSetup": "Configuração e integração rápidas",
       "fileFormat": "Convide membros da equipe",
-      "contentStructure": "Ajuste as configurações",
+      "contentStructure": "Ajuste fino das configurações",
       "assetOrganization": "Escolha idiomas"
     },
     "developer": {
@@ -135,7 +135,7 @@
     },
     "apiKey": {
       "title": "Chave da API",
-      "description": "Sua chave pessoal da API para acessar a API do Languine e a partir da CLI."
+      "description": "Sua chave pessoal da API para acessar a API da Languine e a partir da CLI."
     },
     "deleteAccount": {
       "title": "Excluir Conta",
@@ -158,7 +158,7 @@
   "pipeline": {
     "title": "Fluxo de Trabalho (Pipeline CI/CD)",
     "pro": "[pro]",
-    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada envio. Quando as alterações de código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz e a terminologia da sua marca. As traduções são então enviadas como solicitações de pull, permitindo revisão antes de serem mescladas em seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
+    "description": "Nosso mecanismo de tradução se integra perfeitamente ao seu pipeline CI/CD existente, traduzindo automaticamente seu código a cada push. Quando alterações no código são enviadas, analisamos o conteúdo modificado, mantemos sua memória de tradução e geramos traduções precisas, preservando a voz e a terminologia da sua marca. As traduções são então enviadas como pull requests, permitindo revisão antes de serem mescladas ao seu branch principal e implantadas. Este fluxo de trabalho automatizado garante que seu conteúdo localizado permaneça em sincronia com o desenvolvimento."
   },
   "settings": {
     "badRequest": "Solicitação inválida",
@@ -173,10 +173,10 @@
     "errorDescription": "Por favor, tente novamente ou entre em contato com o suporte",
     "addTeam": "Criar equipe",
     "apiKey": {
-      "updated": "Chave da API atualizada",
-      "updatedDescription": "Sua chave da API foi atualizada com sucesso e copiada para sua área de transferência.",
-      "title": "Atualizar Chave da API",
-      "description": "Você tem certeza de que deseja gerar uma nova chave da API? A chave antiga deixará de funcionar imediatamente.",
+      "updated": "Chave API atualizada",
+      "updatedDescription": "Sua chave API foi atualizada com sucesso e copiada para sua área de transferência.",
+      "title": "Atualizar Chave API",
+      "description": "Você tem certeza de que deseja gerar uma nova chave API? A chave antiga deixará de funcionar imediatamente.",
       "cancel": "Cancelar",
       "continue": "Continuar"
     },
@@ -220,9 +220,9 @@
         "unlimited": "Ilimitado"
       },
       "apiKey": {
-        "title": "Chave da API da Equipe",
-        "description": "Chave da API para acesso à equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
-        "placeholder": "Chave da API da Equipe"
+        "title": "Chave API da Equipe",
+        "description": "Chave API para acesso da equipe, use isso do seu pipeline CI/CD junto com o ID do Projeto",
+        "placeholder": "Chave API da Equipe"
       },
       "members": {
         "leaveTeamConfirm": "Sair da equipe",
@@ -286,17 +286,17 @@
     "styleGuide": "Guia de Estilo",
     "lengthControl": {
       "title": "Controle de Comprimento",
-      "description": "Controlar o comprimento do texto traduzido",
+      "description": "Controle o comprimento do texto traduzido",
       "options": {
         "flexible": "Flexível",
-        "strict": "Estrito",
+        "strict": "Rigoroso",
         "exact": "Exato",
         "loose": "Solto"
       }
     },
     "inclusiveLanguage": {
       "title": "Linguagem Inclusiva",
-      "description": "Garantir que as traduções usem linguagem inclusiva"
+      "description": "Assegure que as traduções utilizem linguagem inclusiva"
     },
     "formality": {
       "title": "Formalidade",
@@ -319,7 +319,7 @@
     },
     "toneOfVoice": {
       "title": "Tom de Voz",
-      "description": "Defina o tom usado nas traduções",
+      "description": "Defina o tom utilizado nas traduções",
       "options": {
         "casual": "Casual",
         "formal": "Formal",
@@ -559,15 +559,15 @@
     },
     "key_limit": {
       "question": "Como funciona o limite de chaves?",
-      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma alvo. Por exemplo, se você tiver 20 chaves de origem e traduzi-las para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
+      "answer": "Uma chave traduzida é contada quando você traduz uma chave de origem para um idioma de destino. Por exemplo, se você tem 20 chaves de origem e as traduz para 5 idiomas, isso equivale a 100 chaves traduzidas (20 chaves × 5 idiomas)."
     },
     "supported_languages": {
       "question": "Quais idiomas são suportados?",
-      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Embora nossas traduções impulsionadas por IA funcionem melhor com idiomas principais, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas particulares, entre em contato com nossa equipe de suporte."
+      "answer": "Languine suporta mais de 100 idiomas em todos os planos. Embora nossas traduções impulsionadas por IA funcionem melhor com idiomas principais, nos esforçamos para fornecer traduções de qualidade em todos os idiomas suportados. Se você tiver requisitos específicos de idioma ou perguntas sobre a qualidade da tradução para idiomas específicos, entre em contato com nossa equipe de suporte."
     },
     "github_action": {
       "question": "Como funciona a integração do GitHub Action?",
-      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
+      "answer": "A integração do GitHub Action (disponível em planos Pro) permite automatizar seu fluxo de trabalho de tradução diretamente em seu pipeline de CI/CD. Quando você envia alterações para seu repositório, as traduções podem ser atualizadas automaticamente."
     },
     "support": {
       "question": "Que tipo de suporte você oferece?",
@@ -582,7 +582,7 @@
       "answer": "Sim! Adoramos apoiar a comunidade open source. Se você mantém um projeto open source, pode ter acesso aos nossos recursos Pro com 30% de desconto. Basta entrar em contato com nossa equipe com detalhes sobre seu projeto, e nós o configuraremos com uma conta Pro com desconto. Esta é nossa forma de retribuir à comunidade que torna nosso trabalho possível."
     },
     "cancel_subscription": {
-      "question": "Como cancelo minha assinatura?",
+      "question": "Como faço para cancelar minha assinatura?",
       "answer": "Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Navegue até Cobrança > Alterar Plano. Sua assinatura permanecerá ativa até o final do seu período de cobrança atual, após o qual você será movido para o plano Gratuito."
     }
   },
@@ -655,7 +655,7 @@
     "description": "Atualize seu plano para aumentar seus limites. Você terá acesso a mais chaves de tradução, documentos, idiomas e suporte prioritário."
   },
   "test_translation": {
-    "title": "Testar Tradução",
+    "title": "Teste de Tradução",
     "description": "Teste a tradução do seu projeto"
   },
   "support": {
@@ -664,9 +664,9 @@
   "support_form": {
     "severity": "Severidade",
     "select_severity": "Selecione o nível de severidade",
-    "low": "Baixo",
-    "medium": "Médio",
-    "high": "Alto",
+    "low": "Baixa",
+    "medium": "Média",
+    "high": "Alta",
     "description": "Descrição",
     "describe_issue": "Descreva seu problema",
     "submit": "Enviar"

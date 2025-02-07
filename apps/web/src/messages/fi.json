@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikallistamisen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
+    "title": "Paikannusinfrastruktuuri, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjän työnkulussa ja putkistossa, varmistaen, että käännökset eivät hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -20,15 +20,15 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
-    "description": "Languine automatisoi paikallistamisen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
+    "title": "Paikannusinfrastruktuuri, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikannuksen kehittäjän työnkulussa ja putkistossa, varmistaen, että käännökset eivät hidasta sinua.",
     "button": {
-      "startAutomating": "Aloita automaatio",
+      "startAutomating": "Aloita automatisointi",
       "readDocumentation": "Lue dokumentaatio"
     }
   },
   "companies": {
-    "title": "Käyttäjät",
+    "title": "Käyttävät",
     "addYourCompany": "+ Lisää yrityksesi"
   },
   "activity": {
@@ -45,32 +45,32 @@
   "features": {
     "title": "Ominaisuudet",
     "fullyOpenSource": "Automaattiset käännökset",
-    "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastuksia.",
-    "presetsForExpo": "Markdown & Asiakirjatuki",
-    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyssäsi.",
+    "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastumista.",
+    "presetsForExpo": "Markdown & Dokumenttituen",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työnkulussasi.",
     "presetForReactNative": "Brändin äänen hienosäätö",
-    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimessä.",
+    "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy tarkkana.",
     "presetForReactEmail": "GitHub-toiminto",
-    "presetForReactEmailDescription": "Automatisoi paikallistaminen suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
+    "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
     "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
-    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoitujen käännösten saamiseksi ilman työskentelysi häiritsemistä.",
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä olemassa oleva asetuksesi ja lisää vain Languine automaattisia käännöksiä varten ilman työnkulun häiriöitä.",
     "markdownSupport": "CLI & CI/CD Integraatio",
-    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkeesi täysin automatisoitua työskentelyä varten."
+    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täysin automatisoitua työnkulkua varten."
   },
   "info": {
-    "title": "Käsittelee kaikki sovelluksesi lokalisaation osa-alueet, mukaan lukien",
+    "title": "Käsittelee sovelluksesi paikannuksen jokaista osa-aluetta, mukaan lukien",
     "smartTranslation": {
       "title": "Älykäs käännös",
       "intelligentTranslation": "Älykäs käännös kontekstitietoisuudella",
-      "brandVoice": "Brändin ääni ja sävyn johdonmukaisuus",
+      "brandVoice": "Brändin äänen ja sävyn johdonmukaisuus",
       "terminology": "Terminologian hallinta",
       "linguisticFeatures": "Edistyneet kielitieteelliset ominaisuudet",
       "realtimeUpdates": "Reaaliaikaiset käännöspäivitykset",
-      "overrides": "Käännösohjaukset"
+      "overrides": "Käännöksen ylikirjoitukset"
     },
     "implementation": {
       "title": "Toteutus",
-      "quickSetup": "Nopea asennus ja integrointi",
+      "quickSetup": "Nopea asennus ja integraatio",
       "fileFormat": "Kutsu tiimin jäseniä",
       "contentStructure": "Hienosäädä asetuksia",
       "assetOrganization": "Valitse kielet"
@@ -78,7 +78,7 @@
     "developer": {
       "title": "Kehittäjäkokemus",
       "cli": "Komentoriviliittymä",
-      "cicd": "CI/CD-integraatio",
+      "cicd": "CI/CD integraatio",
       "versionControl": "Github-toiminnot",
       "workflow": "Kehittäjän työnkulku",
       "documentation": "Erinomainen dokumentaatio"
@@ -89,8 +89,8 @@
     "title": "Kirjaudu sisään",
     "github": "Kirjaudu sisään GitHubilla",
     "google": "Kirjaudu sisään Googlella",
-    "footer": "Automatisoi lokalisaatiosi.",
-    "description": "Kirjaudu sisään aloittaaksesi lokalisaatiosi automaation sekunneissa.",
+    "footer": "Automatisoi paikannuksesi.",
+    "description": "Kirjaudu sisään aloittaaksesi paikannuksesi automatisoinnin sekunneissa.",
     "terms": {
       "text": "Kirjautumalla sisään hyväksyt",
       "termsOfService": "Käyttöehdot",
@@ -125,7 +125,7 @@
   "account": {
     "fullName": {
       "title": "Koko nimi",
-      "description": "Koko nimesi kuten se näkyy alustalla.",
+      "description": "Koko nimesi, kuten se näkyy alustalla.",
       "placeholder": "Syötä koko nimesi"
     },
     "email": {
@@ -135,7 +135,7 @@
     },
     "apiKey": {
       "title": "API-avain",
-      "description": "Henkilökohtainen API-avaimesi Languine API:in ja komentoriviltä pääsyyn."
+      "description": "Henkilökohtainen API-avaimesi Languine API:in ja CLI:hin pääsyyn."
     },
     "deleteAccount": {
       "title": "Poista tili",
@@ -158,7 +158,7 @@
   "pipeline": {
     "title": "Työnkulku (CI/CD-putki)",
     "pro": "[pro]",
-    "description": "Käännösmootorimme integroituu saumattomasti olemassa olevaan CI/CD-putkeesi, kääntäen koodipohjasi automaattisesti jokaisella päivityksellä. Kun koodimuutoksia työnnetään, analysoimme muokattua sisältöä, ylläpidämme käännösmuistiasi ja tuotamme tarkkoja käännöksiä säilyttäen brändisi äänen ja terminologian. Käännökset lähetetään sitten vetopyyntöinä, mikä mahdollistaa tarkastuksen ennen niiden yhdistämistä päähaaraan ja käyttöönottoa. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältösi pysyy synkronoituna kehityksen kanssa."
+    "description": "Käännösohjelmamme integroituu saumattomasti olemassa olevaan CI/CD-putkeesi, kääntäen koodipohjasi automaattisesti jokaisella puskuilla. Kun koodimuutoksia työnnetään, analysoimme muokattua sisältöä, ylläpidämme käännösmuistiasi ja luomme tarkkoja käännöksiä säilyttäen brändisi äänen ja terminologian. Käännökset lähetetään sitten vetopyyntöinä, mikä mahdollistaa tarkastuksen ennen niiden yhdistämistä päähaaraasi ja käyttöönottoa. Tämä automatisoitu työnkulku varmistaa, että lokalisoitu sisältösi pysyy synkronoituna kehityksen kanssa."
   },
   "settings": {
     "badRequest": "Virheellinen pyyntö",
@@ -174,7 +174,7 @@
     "addTeam": "Luo tiimi",
     "apiKey": {
       "updated": "API-avain päivitetty",
-      "updatedDescription": "API-avaimesi on päivitetty onnistuneesti ja kopioitu leikepöydälle.",
+      "updatedDescription": "API-avaimesi on päivitetty onnistuneesti ja kopioitu leikepöydällesi.",
       "title": "Päivitä API-avain",
       "description": "Oletko varma, että haluat luoda uuden API-avaimen? Vanha avain lakkaa toimimasta heti.",
       "cancel": "Peruuta",
@@ -225,10 +225,10 @@
         "placeholder": "Tiimin API-avain"
       },
       "members": {
-        "leaveTeamConfirm": "Poistu tiimistä",
-        "leaveTeamDescription": "Oletko varma, että haluat poistua tästä tiimistä?",
+        "leaveTeamConfirm": "Jätä tiimi",
+        "leaveTeamDescription": "Oletko varma, että haluat jättää tämän tiimin?",
         "cancel": "Peruuta",
-        "leaveTeam": "Poistu tiimistä",
+        "leaveTeam": "Jätä tiimi",
         "invite": "Kutsu jäsen",
         "title": "Jäsenet",
         "pendingInvitations": "Odotettavat kutsut",
@@ -300,7 +300,7 @@
     },
     "formality": {
       "title": "Virallisuus",
-      "description": "Säädä käännösten muodollisuustasoa",
+      "description": "Säädä käännösten virallisuustasoa",
       "options": {
         "casual": "Rentoa",
         "formal": "Virallista",
@@ -323,14 +323,14 @@
       "options": {
         "casual": "Rentoa",
         "formal": "Virallista",
-        "friendly": "Ystävällistä",
-        "professional": "Ammattimaista",
-        "playful": "Leikkisää",
-        "serious": "Vakavaa",
-        "confident": "Itseluottamusta",
-        "humble": "Nöyrää",
-        "direct": "Suoraa",
-        "diplomatic": "Diplomaattista"
+        "friendly": "Ystävällinen",
+        "professional": "Ammattimainen",
+        "playful": "Leikkisä",
+        "serious": "Vakava",
+        "confident": "Itseluottavainen",
+        "humble": "Nöyrä",
+        "direct": "Suora",
+        "diplomatic": "Diplomaattinen"
       }
     },
     "brand": "Brändi",
@@ -343,7 +343,7 @@
         "empathetic": "Empaattinen",
         "professional": "Ammattimainen",
         "friendly": "Ystävällinen",
-        "enthusiastic": "Innostunut"
+        "enthusiastic": "Innokas"
       }
     },
     "domainExpertise": {
@@ -361,7 +361,7 @@
     },
     "idioms": {
       "title": "Idiomit",
-      "description": "Käsittele idiomimuotoisia ilmauksia asianmukaisesti"
+      "description": "Käsittele idiomaattisia ilmauksia asianmukaisesti"
     },
     "terminology": {
       "title": "Terminologia",
@@ -369,7 +369,7 @@
     },
     "culturalAdaptation": {
       "title": "Kulttuurinen sopeutus",
-      "description": "Sovita sisältö kulttuurisesti sopivaksi"
+      "description": "Sovita sisältö kulttuuriseen sopivuuteen"
     }
   },
   "pricing": {
@@ -380,7 +380,7 @@
       "keys_limit": "Enintään 100 avainta",
       "description": "Ihan täydellinen kokeiluun",
       "features": {
-        "unlimited_projects": "Rajattomat projektit",
+        "unlimited_projects": "Rajoittamaton määrä projekteja",
         "fine_tuning": "Hienosäätömahdollisuudet",
         "overrides": "Käännöksen ohitukset",
         "analytics": "Analytiikka",
@@ -396,15 +396,15 @@
       "includes_free": "Kaikki Ilmaisessa, lisäksi:",
       "features": {
         "github_action": "GitHub Action -integraatio",
-        "latest_features": "Varhaispääsy uusimpiin ominaisuuksiin",
-        "priority_support": "Priorisoitu tuki",
-        "priority_queues": "Priorisoidut käännösjonot",
-        "languages": "Alkaen 4 kieltä",
+        "latest_features": "Varhaisin pääsy uusimpiin ominaisuuksiin",
+        "priority_support": "Etusijatuettu",
+        "priority_queues": "Etusijajonot käännöksille",
+        "languages": "Alkaen 4 kielestä",
         "keys_limit": "Alkaen 5 000 avainta",
-        "docs_limit": "Alkaen 25 asiakirjaa"
+        "docs_limit": "Alkaen 25 asiakirjasta"
       }
     },
-    "cta": "Aloita automatisointi",
+    "cta": "Aloita automaatio",
     "keys_limit_explanation": "Käännetty avain: Jos sinulla on 20 lähdeavainta (kuten \"Rekisteröidy\" tai \"Tervetuloa!\") ja käännät ne 5 kielelle, se tarkoittaa 100 käännettyä avainta (20 avainta x 5 kieltä)."
   },
   "createTeam": {
@@ -412,14 +412,14 @@
     "teamNamePlaceholder": "Syötä tiimin nimi",
     "createTeamButton": "Luo tiimi",
     "cancel": "Peruuta",
-    "createTeamDescription": "Luo uusi tiimi hallitaksesi projektejasi ja yhteistyökumppaneitasi."
+    "createTeamDescription": "Luo uusi tiimi projektiesi ja yhteistyökumppaneidesi hallintaan."
   },
   "createProject": {
     "createProjectTitle": "Luo uusi projekti",
     "projectNamePlaceholder": "Syötä projektin nimi",
     "createProjectButton": "Luo projekti",
     "cancel": "Peruuta",
-    "createProjectDescription": "Luo uusi projekti aloittaaksesi lokalisoinnin automatisoinnin."
+    "createProjectDescription": "Luo uusi projekti aloittaaksesi lokalisoinnin automaation."
   },
   "invite": {
     "inviteMember": "Kutsu jäsen",
@@ -444,33 +444,33 @@
     "steps": {
       "1": {
         "title": "Asenna Languine CLI",
-        "description": "Asenna ja konfiguroi Languine CLI hallitaksesi käännöksiä"
+        "description": "Asenna ja määritä Languine CLI käännösten hallintaan"
       },
       "2": {
-        "title": "Lähetä käännökset",
-        "description": "Odotetaan käännösten lähettämistä"
+        "title": "Työnnä käännökset",
+        "description": "Odotetaan käännösten työntämistä"
       },
       "3": {
         "title": "Dokumentaatio",
-        "description": "Tutustu dokumentaatioomme saadaksesi yksityiskohtaisia ohjeita ja parhaita käytäntöjä",
+        "description": "Tutustu dokumentaatioomme saadaksesi yksityiskohtaisia oppaita ja parhaita käytäntöjä",
         "link": "dokumentaatio"
       }
     },
     "info": {
       "description": "Tarvitsetko apua? Tutustu",
       "link": "dokumentaatio",
-      "description_2": "yksityiskohtaisille oppaille ja parhaimmille käytännöille."
+      "description_2": "yksityiskohtaisia oppaita ja parhaita käytäntöjä varten."
     }
   },
   "cli": {
     "success": {
       "title": "Languine CLI -kirjautuminen onnistui",
-      "description": "Languine CLI on todennettu onnistuneesti käyttäjänä:",
+      "description": "Languine CLI on todennettu onnistuneesti seuraavasti:",
       "description_2": "Voit nyt sulkea tämän välilehden ja palata CLI:hin"
     }
   },
   "search": {
-    "placeholder": "Haku"
+    "placeholder": "Hae"
   },
   "periods": {
     "daily": "Päivittäin",
@@ -513,7 +513,7 @@
     "sk": "Slovakki",
     "sr": "Serbia",
     "sv": "Ruotsi",
-    "ta": "Tamili",
+    "ta": "Tamil",
     "th": "Thai",
     "tr": "Turkki",
     "uk": "Ukraina",
@@ -523,7 +523,7 @@
   },
   "menu": {
     "dashboard": "Ohjauspaneeli",
-    "tuning": "Säätö",
+    "tuning": "Viritys",
     "settings": "Asetukset",
     "pricing": "Hinnoittelu",
     "docs": "Dokumentaatio",
@@ -543,9 +543,9 @@
       "01": "Tam",
       "02": "Hel",
       "03": "Maa",
-      "04": "Huhti",
-      "05": "Touko",
-      "06": "Kesä",
+      "04": "Huht",
+      "05": "Tou",
+      "06": "Kes",
       "07": "Heinä",
       "08": "Elo",
       "09": "Syys"
@@ -555,7 +555,7 @@
     "title": "UKK",
     "what_is_languine": {
       "question": "Mikä on Languine?",
-      "answer": "Languine on tekoälypohjainen lokalisointialusta, joka auttaa sinua automatisoimaan sovellustesi käännöksiä. Se tarjoaa ominaisuuksia, kuten hienosäätömahdollisuuksia, käännösohjauksia, analytiikkaa ja kontekstimuistia varmistaakseen korkealaatuiset käännökset."
+      "answer": "Languine on tekoälypohjainen lokalisaatioalusta, joka auttaa sinua automatisoimaan sovellustesi käännöksiä. Se tarjoaa ominaisuuksia, kuten hienosäätömahdollisuuksia, käännösohjauksia, analytiikkaa ja kontekstimuistia varmistaakseen korkealaatuiset käännökset."
     },
     "key_limit": {
       "question": "Miten avainraja toimii?",
@@ -563,15 +563,15 @@
     },
     "supported_languages": {
       "question": "Mitä kieliä tuetaan?",
-      "answer": "Languine tukee yli 100 kieltä kaikissa suunnitelmissa. Vaikka tekoälypohjaiset käännöksemme toimivat parhaiten suurten kielten kanssa, pyrimme tarjoamaan laadukkaita käännöksiä kaikilla tuetuilla kielillä. Jos sinulla on erityisiä kielivaatimuksia tai kysymyksiä tiettyjen kielten käännöslaadusta, ota yhteyttä tukitiimiimme."
+      "answer": "Languine tukee yli 100 kieltä kaikissa suunnitelmissa. Vaikka tekoälypohjaiset käännöksemme toimivat parhaiten suurten kielten kanssa, pyrimme tarjoamaan laadukkaita käännöksiä kaikilla tuetuilla kielillä. Jos sinulla on erityisiä kielivaatimuksia tai kysymyksiä tiettyjen kielten käännöksen laadusta, ota yhteyttä tukitiimiimme."
     },
     "github_action": {
       "question": "Miten GitHub Action -integraatio toimii?",
-      "answer": "GitHub Action -integraatio (saatavilla Pro-suunnitelmissa) mahdollistaa käännöstyönkulun automatisoinnin suoraan CI/CD-putkessasi. Kun teet muutoksia varastoon, käännöksiä voidaan päivittää automaattisesti."
+      "answer": "GitHub Action -integraatio (saatavilla Pro-suunnitelmissa) mahdollistaa käännösprosessiisi automaattisen työnkulun suoraan CI/CD-putkistossasi. Kun teet muutoksia varastoon, käännökset voidaan päivittää automaattisesti."
     },
     "support": {
       "question": "Millaista tukea tarjoatte?",
-      "answer": "Ilmaiset käyttäjät saavat käyttöönsä yhteisötuen, kun taas Pro-käyttäjät saavat ensisijaisen tuen nopeammilla vasteajoilla ja omistautunutta apua käännöstarpeisiinsa."
+      "answer": "Ilmaiset käyttäjät saavat käyttöönsä yhteisötuen, kun taas Pro-käyttäjät saavat ensisijaisen tuen nopeammilla vasteajoilla ja omistautuneella avustuksella käännöstarpeisiinsa."
     },
     "open_source": {
       "question": "Onko Languine avoimen lähdekoodin projekti?",
@@ -579,11 +579,11 @@
     },
     "open_source_pricing": {
       "question": "Tarjoatteko erityistä hinnoittelua avoimen lähdekoodin projekteille?",
-      "answer": "Kyllä! Rakastamme tukea avointa lähdekoodia. Jos ylläpidät avointa lähdekoodin projektia, voit saada pääsyn Pro-ominaisuuksiimme 30 % alennuksella. Ota vain yhteyttä tiimiimme projektisi yksityiskohtien kanssa, niin autamme sinua saamaan alennuksen Pro-tilin. Tämä on tapa, jolla haluamme antaa takaisin yhteisölle, joka tekee työmme mahdolliseksi."
+      "answer": "Kyllä! Rakastamme tukea avointa lähdekoodia. Jos ylläpidät avointa lähdekoodin projektia, voit saada pääsyn Pro-ominaisuuksiimme 30% alennuksella. Ota vain yhteyttä tiimiimme projektisi yksityiskohtien kanssa, niin järjestämme sinulle alennuksen Pro-tilin. Tämä on tapa, jolla haluamme antaa takaisin yhteisölle, joka mahdollistaa työskentelymme."
     },
     "cancel_subscription": {
       "question": "Miten peruutan tilaukseni?",
-      "answer": "Voit peruuttaa tilauksesi milloin tahansa tilisi asetuksista. Siirry kohtaan Laskutus > Muuta suunnitelmaa. Tilauksesi pysyy aktiivisena nykyisen laskutusjakson loppuun, jonka jälkeen siirryt Ilmaiseen suunnitelmaan."
+      "answer": "Voit peruuttaa tilauksesi milloin tahansa tiliasetuksistasi. Siirry kohtaan Laskutus > Muuta suunnitelmaa. Tilauksesi pysyy aktiivisena nykyisen laskutusjakson loppuun, jonka jälkeen siirryt Ilmaiseen suunnitelmaan."
     }
   },
   "pricing_slider": {
@@ -652,7 +652,7 @@
     "title": "Päivitä suunnitelma",
     "upgrade_to_tier": "Päivitä tasolle {tier}",
     "cancel": "Peruuta",
-    "description": "Päivitä suunnitelmasi lisätäksesi rajoituksiasi. Saat pääsyn useampiin käännösavaimiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
+    "description": "Päivitä suunnitelmasi kasvattaaksesi rajoja. Saat pääsyn useampiin käännösavaimiin, asiakirjoihin, kieliin ja ensisijaiseen tukeen."
   },
   "test_translation": {
     "title": "Testaa käännös",
@@ -664,7 +664,7 @@
   "support_form": {
     "severity": "Vakavuus",
     "select_severity": "Valitse vakavuustaso",
-    "low": "Alhainen",
+    "low": "Matala",
     "medium": "Keskitaso",
     "high": "Korkea",
     "description": "Kuvaus",
