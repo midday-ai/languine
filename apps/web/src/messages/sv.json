@@ -26,12 +26,12 @@
     "account": "Konto"
   },
   "hero": {
-    "title": "Lokalisering infrastruktur skapad för snabbrörliga startups.",
+    "title": "Lokaliserings-infrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp."
   },
   "getStarted": {
     "heading": "Kom igång",
-    "title": "Lokalisering infrastruktur skapad för snabbrörliga startups.",
+    "title": "Lokaliserings-infrastruktur skapad för snabbrörliga startups.",
     "description": "Languine automatiserar lokalisering inom din utvecklararbetsflöde och pipeline, vilket säkerställer att översättningar aldrig sätter stopp.",
     "button": {
       "startAutomating": "Börja automatisera",

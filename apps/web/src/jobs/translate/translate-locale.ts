@@ -6,7 +6,6 @@ import {
 import { schemaTask } from "@trigger.dev/sdk/v3";
 import { z } from "zod";
 import { calculateChunkSize } from "../utils/chunk";
-import { chooseModel } from "../utils/model";
 import { translateDocument, translateKeys } from "../utils/translate";
 
 interface TranslationResult {
@@ -49,7 +48,6 @@ export const translateLocaleTask = schemaTask({
   },
   run: async (payload, { ctx }) => {
     const translations: TranslationResult[] = [];
-    const model = chooseModel(ctx.attempt.number);
 
     const chunkSize = calculateChunkSize(payload.content, {
       sourceLocale: payload.sourceLanguage,
