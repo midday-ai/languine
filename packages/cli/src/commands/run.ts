@@ -115,7 +115,7 @@ function showHelp(command?: keyof typeof COMMANDS) {
     console.log(
       chalk.gray("Translate your application with Languine CLI powered by AI."),
     );
-    console.log(chalk.gray(`Website: ${process.env.BASE_URL}`));
+    console.log(chalk.gray(`Website: ${process.env.LANGUINE_BASE_URL}`));
     console.log();
     console.log(`${chalk.bold("USAGE")}`);
     console.log("  languine <command> [options]");

@@ -82,7 +82,7 @@ export class LockFileManager {
     const previousKeys = Object.keys(previousState);
 
     if (!previousKeys.length) {
-      this.registerSourceData(filePath, sourceData);
+      // this.registerSourceData(filePath, sourceData);
       return {
         addedKeys: currentKeys,
         removedKeys: [],

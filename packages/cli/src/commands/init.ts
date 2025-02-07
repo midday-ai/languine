@@ -168,7 +168,7 @@ export async function commands(args: string[] = []) {
     console.log();
 
     note(
-      `Run 'languine translate' to start translating your files`,
+      `Run 'npx languine translate' to start translating your files`,
       "Next steps.",
     );
 

@@ -22,7 +22,7 @@ if (!process.argv[2]) {
   console.log(
     chalk.gray(dedent`
       Translate your application with Languine CLI powered by AI.
-      Website: ${chalk.bold(process.env.BASE_URL)}
+      Website: https://languine.ai
     `),
   );
 

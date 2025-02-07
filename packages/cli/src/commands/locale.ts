@@ -38,7 +38,7 @@ export async function localeCommand(args: string[] = []) {
 
     if (!config) {
       throw new Error(
-        "Configuration file not found. Please run `languine init` to create one.",
+        "Configuration file not found. Please run `npx languine init` to create one.",
       );
     }
 
@@ -101,16 +101,7 @@ function updateTargetsInConfig(
   configContent: string,
   targets: string[],
 ): string {
-  try {
-    // Try parsing as JSON first
-    const config = JSON.parse(configContent);
-    config.locale.targets = targets;
-    return JSON.stringify(config, null, 2);
-  } catch {
-    // If not valid JSON, assume TypeScript config
-    return configContent.replace(
-      /targets:\s*\[(.*?)\]/s,
-      `targets: ["${targets.join('", "')}"]`,
-    );
-  }
+  const config = JSON.parse(configContent);
+  config.locale.targets = targets;
+  return JSON.stringify(config, null, 2);
 }

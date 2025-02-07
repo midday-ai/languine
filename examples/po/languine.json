@@ -1,4 +1,5 @@
 {
+  "projectId": "pr_1234567890",
   "locale": {
     "source": "en",
     "targets": ["es"]

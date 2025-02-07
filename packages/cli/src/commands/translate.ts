@@ -13,12 +13,14 @@ import { transformLocalePath } from "@/utils/path.js";
 import { getAPIKey } from "@/utils/session.ts";
 import { note, outro, select, spinner } from "@clack/prompts";
 import { auth, runs } from "@trigger.dev/sdk/v3";
+import { TRPCClientError } from "@trpc/client";
+import { TRPCError } from "@trpc/server";
 import chalk from "chalk";
 import glob from "fast-glob";
 import open from "open";
 import { z } from "zod";
 
-const { BASE_URL } = loadEnv();
+const { LANGUINE_BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
   // Helper function to find value for a flag
@@ -95,7 +97,7 @@ export async function translateCommand(args: string[] = []) {
 
     if (!config) {
       note(
-        "Configuration file not found. Please run `languine init` to create one.",
+        "Configuration file not found. Please run `npx languine init` to create one.",
       );
 
       process.exit(1);
@@ -104,9 +106,9 @@ export async function translateCommand(args: string[] = []) {
     const projectId =
       overrideProjectId || config.projectId || process.env.LANGUINE_PROJECT_ID;
 
-    if (!projectId) {
+    if (!projectId || !projectId.startsWith("pr_")) {
       note(
-        "Project ID not found. Please provide it via --project-id flag, configuration file, or LANGUINE_PROJECT_ID environment variable.",
+        "Project ID not valid. Please provide it via --project-id flag \nadd it to the configuration file \nor set the LANGUINE_PROJECT_ID environment variable.",
         "Error",
       );
 
@@ -134,6 +136,7 @@ export async function translateCommand(args: string[] = []) {
       const invalidLocales = forcedLocales.filter(
         (locale) => !targetLocales.includes(locale),
       );
+
       if (invalidLocales.length > 0) {
         throw new Error(`Invalid target locales: ${invalidLocales.join(", ")}`);
       }
@@ -307,10 +310,12 @@ export async function translateCommand(args: string[] = []) {
         if (shouldUpgrade === "upgrade") {
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
+              `${LANGUINE_BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
+            await open(
+              `${LANGUINE_BASE_URL}/api/portal?id=${meta?.polarCustomerId}`,
+            );
           }
 
           note("Run `languine translate` again to continue.", "What's next?");
@@ -358,10 +363,12 @@ export async function translateCommand(args: string[] = []) {
         if (shouldUpgrade === "upgrade") {
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
+              `${LANGUINE_BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
+            await open(
+              `${LANGUINE_BASE_URL}/api/portal?id=${meta?.polarCustomerId}`,
+            );
           }
 
           note("Run `languine translate` again to continue.", "What's next?");
@@ -459,7 +466,10 @@ export async function translateCommand(args: string[] = []) {
 
           await writeFile(targetPath, serialized, "utf-8");
 
-          lockManager.registerSourceData(targetPath, mergedContent);
+          // Only register source data if there are actual changes
+          if (Object.keys(translatedContent).length > 0) {
+            lockManager.registerSourceData(targetPath, mergedContent);
+          }
 
           if (input.length > 0) {
             translatedAnything = true;
@@ -498,6 +508,15 @@ export async function translateCommand(args: string[] = []) {
     process.exit(checkOnly && needsUpdates ? 1 : 0);
   } catch (error) {
     const translationError = error as Error;
+
+    if (translationError) {
+      s.stop();
+      note(
+        "Please check your project_id in the languine.json file.",
+        "Project not found",
+      );
+      process.exit(1);
+    }
 
     if (!isSilent) {
       console.log(
