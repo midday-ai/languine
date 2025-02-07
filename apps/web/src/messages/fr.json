@@ -55,7 +55,7 @@
     "readyForI18nLibraries": "Indépendant de la Langue & du Cadre",
     "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Conservez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
     "markdownSupport": "Intégration CLI & CI/CD",
-    "markdownSupportDescription": "Utilisez notre puissant CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
+    "markdownSupportDescription": "Utilisez notre puissante CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
   },
   "info": {
     "title": "Gère chaque aspect de la localisation de votre application, y compris",
@@ -665,8 +665,8 @@
     "severity": "Gravité",
     "select_severity": "Sélectionner le niveau de gravité",
     "low": "Faible",
-    "medium": "Moyenne",
-    "high": "Élevée",
+    "medium": "Moyen",
+    "high": "Élevé",
     "description": "Description",
     "describe_issue": "Décrivez votre problème",
     "submit": "Soumettre"
