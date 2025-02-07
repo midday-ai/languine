@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Infraestrutura de localização feita para startups ágeis.",
-    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem."
+    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem."
   },
   "navigation": {
     "dashboard": "Painel",
@@ -21,7 +21,7 @@
   "getStarted": {
     "heading": "Comece agora",
     "title": "Infraestrutura de localização feita para startups ágeis.",
-    "description": "O Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem.",
+    "description": "Languine automatiza a localização dentro do seu fluxo de trabalho e pipeline de desenvolvedor, garantindo que as traduções nunca o atrasem.",
     "button": {
       "startAutomating": "Começar a automatizar",
       "readDocumentation": "Ler documentação"
@@ -45,17 +45,17 @@
   "features": {
     "title": "Recursos",
     "fullyOpenSource": "Traduções Automatizadas",
-    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. O Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerar você.",
+    "fullyOpenSourceDescription": "Diga adeus ao trabalho manual de tradução. Languine automatiza todo o processo, garantindo que seu aplicativo permaneça multilíngue sem desacelerá-lo.",
     "presetsForExpo": "Suporte a Markdown & Documentos",
-    "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em várias línguas. O Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
+    "presetsForExpoDescription": "Mantenha sua documentação e conteúdo atualizados em diferentes idiomas. Languine traduz arquivos markdown sem esforço, mantendo a consistência em seu fluxo de trabalho.",
     "presetForReactNative": "Ajuste Fino para a Voz da Marca",
-    "presetForReactNativeDescription": "Personalize as traduções para corresponder ao tom e à voz da sua marca. O Languine oferece total controle sobre nuances, garantindo que sua mensagem permaneça clara.",
+    "presetForReactNativeDescription": "Personalize as traduções para corresponder ao tom e à voz da sua marca. Languine oferece total controle sobre as nuances, garantindo que sua mensagem permaneça clara.",
     "presetForReactEmail": "Ação do GitHub",
     "presetForReactEmailDescription": "Automatize a localização diretamente no GitHub. Nossa Ação do GitHub garante que suas traduções permaneçam sincronizadas com cada commit e implantação.",
-    "readyForI18nLibraries": "Independente de Linguagem & Framework",
-    "readyForI18nLibrariesDescription": "Funciona com qualquer biblioteca i18n. Mantenha sua configuração existente e adicione o Languine para traduções automatizadas sem interromper seu fluxo de trabalho.",
+    "readyForI18nLibraries": "Independente de Idioma & Framework",
+    "readyForI18nLibrariesDescription": "Funciona com qualquer biblioteca i18n. Mantenha sua configuração existente e simplesmente adicione Languine para traduções automatizadas sem interromper seu fluxo de trabalho.",
     "markdownSupport": "Integração CLI & CI/CD",
-    "markdownSupportDescription": "Use nosso poderoso CLI para gerenciar traduções diretamente ou integre o Languine ao seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
+    "markdownSupportDescription": "Use nossa poderosa CLI para gerenciar traduções diretamente ou integre Languine ao seu pipeline CI/CD existente para um fluxo de trabalho totalmente automatizado."
   },
   "info": {
     "title": "Gerencia todos os aspectos da localização do seu aplicativo, incluindo",
@@ -664,9 +664,9 @@
   "support_form": {
     "severity": "Severidade",
     "select_severity": "Selecione o nível de severidade",
-    "low": "Baixo",
-    "medium": "Médio",
-    "high": "Alto",
+    "low": "Baixa",
+    "medium": "Média",
+    "high": "Alta",
     "description": "Descrição",
     "describe_issue": "Descreva seu problema",
     "submit": "Enviar"

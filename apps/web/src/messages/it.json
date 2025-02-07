@@ -6,7 +6,7 @@
     "goToApp": "Vai all'app"
   },
   "hero": {
-    "title": "Infrastruttura di localizzazione progettata per startup ad alta velocità.",
+    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, garantendo che le traduzioni non ti rallentino mai."
   },
   "navigation": {
@@ -20,7 +20,7 @@
   },
   "getStarted": {
     "heading": "Inizia",
-    "title": "Infrastruttura di localizzazione progettata per startup ad alta velocità.",
+    "title": "Infrastruttura di localizzazione creata per startup dinamiche.",
     "description": "Languine automatizza la localizzazione all'interno del tuo flusso di lavoro e pipeline per sviluppatori, garantendo che le traduzioni non ti rallentino mai.",
     "button": {
       "startAutomating": "Inizia ad automatizzare",
@@ -46,13 +46,13 @@
     "title": "Caratteristiche",
     "fullyOpenSource": "Traduzioni Automatiche",
     "fullyOpenSourceDescription": "Dì addio al lavoro di traduzione manuale. Languine automatizza l'intero processo, garantendo che la tua app rimanga multilingue senza rallentarti.",
-    "presetsForExpo": "Supporto per Markdown e Documenti",
+    "presetsForExpo": "Supporto per Markdown & Documenti",
     "presetsForExpoDescription": "Mantieni la tua documentazione e contenuti aggiornati in tutte le lingue. Languine traduce i file markdown senza sforzo, mantenendo la coerenza nel tuo flusso di lavoro.",
     "presetForReactNative": "Ottimizzazione per il Tono del Brand",
     "presetForReactNativeDescription": "Personalizza le traduzioni per adattarle al tono e alla voce del tuo brand. Languine ti offre il pieno controllo sulle sfumature, garantendo che il tuo messaggio rimanga preciso.",
     "presetForReactEmail": "Azione GitHub",
     "presetForReactEmailDescription": "Automatizza la localizzazione direttamente all'interno di GitHub. La nostra Azione GitHub garantisce che le tue traduzioni rimangano sincronizzate con ogni commit e distribuzione.",
-    "readyForI18nLibraries": "Indipendente da Lingua e Framework",
+    "readyForI18nLibraries": "Indipendente da Lingua & Framework",
     "readyForI18nLibrariesDescription": "Funziona con qualsiasi libreria i18n. Mantieni la tua configurazione esistente e aggiungi semplicemente Languine per traduzioni automatiche senza interrompere il tuo flusso di lavoro.",
     "markdownSupport": "Integrazione CLI & CI/CD",
     "markdownSupportDescription": "Usa il nostro potente CLI per gestire le traduzioni direttamente o integra senza problemi Languine nella tua pipeline CI/CD esistente per un flusso di lavoro completamente automatizzato."
@@ -79,7 +79,7 @@
       "title": "Esperienza dello Sviluppatore",
       "cli": "Interfaccia a riga di comando",
       "cicd": "Integrazione CI/CD",
-      "versionControl": "Azioni Github",
+      "versionControl": "Github Actions",
       "workflow": "Flusso di lavoro dello sviluppatore",
       "documentation": "Ottima documentazione"
     },
