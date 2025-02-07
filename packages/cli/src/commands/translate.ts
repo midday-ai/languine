@@ -435,6 +435,7 @@ export async function translateCommand(args: string[] = []) {
 
           // Read source file for serialization context
           const sourceFileContent = await readFile(sourceFilePath, "utf-8");
+          const parsedSourceContent = await parser.parse(sourceFileContent);
 
           // Convert the translations and merge with existing content
           const translatedContent = Object.fromEntries(
@@ -459,7 +460,8 @@ export async function translateCommand(args: string[] = []) {
 
           await writeFile(targetPath, serialized, "utf-8");
 
-          lockManager.registerSourceData(targetPath, mergedContent);
+          // Register the source content in the lock file instead of the translated content
+          lockManager.registerSourceData(sourceFilePath, parsedSourceContent);
 
           if (input.length > 0) {
             translatedAnything = true;

@@ -6,8 +6,8 @@
     "goToApp": "Siirry sovellukseen"
   },
   "hero": {
-    "title": "Paikannusinfra, joka on suunniteltu nopeatahtisille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua."
+    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikallistamisen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua."
   },
   "navigation": {
     "dashboard": "Ohjaamo",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Aloita",
-    "title": "Paikannusinfra, joka on suunniteltu nopeatahtisille startup-yrityksille.",
-    "description": "Languine automatisoi paikannuksen kehittäjien työnkulussa ja putkistossa, varmistaen, että käännökset eivät koskaan hidasta sinua.",
+    "title": "Paikallistamisinfra, joka on suunniteltu nopeille startup-yrityksille.",
+    "description": "Languine automatisoi paikallistamisen kehittäjätyöskentelyssäsi ja putkessasi, varmistaen, että käännökset eivät koskaan hidasta sinua.",
     "button": {
       "startAutomating": "Aloita automaatio",
       "readDocumentation": "Lue dokumentaatio"
@@ -46,16 +46,16 @@
     "title": "Ominaisuudet",
     "fullyOpenSource": "Automaattiset käännökset",
     "fullyOpenSourceDescription": "Sano hyvästit manuaaliselle käännöstyölle. Languine automatisoi koko prosessin, varmistaen, että sovelluksesi pysyy monikielisenä ilman hidastuksia.",
-    "presetsForExpo": "Markdown- ja asiakirjatuki",
-    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työnkulussasi.",
+    "presetsForExpo": "Markdown & Asiakirjatuki",
+    "presetsForExpoDescription": "Pidä dokumentaatiosi ja sisältösi ajan tasalla eri kielillä. Languine kääntää markdown-tiedostot vaivattomasti, säilyttäen johdonmukaisuuden työskentelyssäsi.",
     "presetForReactNative": "Brändin äänen hienosäätö",
     "presetForReactNativeDescription": "Mukauta käännöksiä vastaamaan brändisi sävyä ja ääntä. Languine antaa sinulle täyden hallinnan vivahteista, varmistaen, että viestisi pysyy ytimessä.",
     "presetForReactEmail": "GitHub-toiminto",
-    "presetForReactEmailDescription": "Automatisoi paikannus suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
+    "presetForReactEmailDescription": "Automatisoi paikallistaminen suoraan GitHubissa. GitHub-toimintomme varmistaa, että käännöksesi pysyvät synkronoituna jokaisen sitoumuksen ja käyttöönoton kanssa.",
     "readyForI18nLibraries": "Kieli- ja kehysriippumaton",
-    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automaattisia käännöksiä varten ilman työnkulun häiriöitä.",
-    "markdownSupport": "CLI & CI/CD -integraatio",
-    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkistoon täysin automatisoitua työnkulkua varten."
+    "readyForI18nLibrariesDescription": "Toimii minkä tahansa i18n-kirjaston kanssa. Pidä nykyinen asetuksesi ja lisää vain Languine automatisoitujen käännösten saamiseksi ilman työskentelysi häiritsemistä.",
+    "markdownSupport": "CLI & CI/CD Integraatio",
+    "markdownSupportDescription": "Käytä tehokasta CLI:tämme hallitaksesi käännöksiä suoraan tai integroi Languine saumattomasti olemassa olevaan CI/CD-putkeesi täysin automatisoitua työskentelyä varten."
   },
   "info": {
     "title": "Käsittelee kaikki sovelluksesi lokalisaation osa-alueet, mukaan lukien",
@@ -664,7 +664,7 @@
   "support_form": {
     "severity": "Vakavuus",
     "select_severity": "Valitse vakavuustaso",
-    "low": "Matala",
+    "low": "Alhainen",
     "medium": "Keskitaso",
     "high": "Korkea",
     "description": "Kuvaus",

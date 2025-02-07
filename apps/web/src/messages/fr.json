@@ -53,9 +53,9 @@
     "presetForReactEmail": "Action GitHub",
     "presetForReactEmailDescription": "Automatisez la localisation directement dans GitHub. Notre Action GitHub garantit que vos traductions restent synchronisées avec chaque commit et déploiement.",
     "readyForI18nLibraries": "Indépendant de la Langue & du Cadre",
-    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Conservez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
+    "readyForI18nLibrariesDescription": "Fonctionne avec n'importe quelle bibliothèque i18n. Gardez votre configuration existante et ajoutez simplement Languine pour des traductions automatisées sans perturber votre flux de travail.",
     "markdownSupport": "Intégration CLI & CI/CD",
-    "markdownSupportDescription": "Utilisez notre puissante CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
+    "markdownSupportDescription": "Utilisez notre puissant CLI pour gérer les traductions directement ou intégrez Languine de manière transparente dans votre pipeline CI/CD existant pour un flux de travail entièrement automatisé."
   },
   "info": {
     "title": "Gère chaque aspect de la localisation de votre application, y compris",
@@ -72,7 +72,7 @@
       "title": "Mise en œuvre",
       "quickSetup": "Configuration et intégration rapides",
       "fileFormat": "Inviter des membres de l'équipe",
-      "contentStructure": "Ajuster les paramètres",
+      "contentStructure": "Affiner les paramètres",
       "assetOrganization": "Choisir les langues"
     },
     "developer": {
@@ -665,8 +665,8 @@
     "severity": "Gravité",
     "select_severity": "Sélectionner le niveau de gravité",
     "low": "Faible",
-    "medium": "Moyen",
-    "high": "Élevé",
+    "medium": "Moyenne",
+    "high": "Élevée",
     "description": "Description",
     "describe_issue": "Décrivez votre problème",
     "submit": "Soumettre"

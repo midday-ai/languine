@@ -6,8 +6,8 @@
     "goToApp": "Ir a la aplicación"
   },
   "hero": {
-    "title": "Infraestructura de localización diseñada para startups de ritmo acelerado.",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan."
+    "title": "Infraestructura de localización hecha para startups de ritmo acelerado.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollador, asegurando que las traducciones nunca te detengan."
   },
   "navigation": {
     "dashboard": "Tablero",
@@ -20,8 +20,8 @@
   },
   "getStarted": {
     "heading": "Comenzar",
-    "title": "Infraestructura de localización diseñada para startups de ritmo acelerado.",
-    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollo, asegurando que las traducciones nunca te detengan.",
+    "title": "Infraestructura de localización hecha para startups de ritmo acelerado.",
+    "description": "Languine automatiza la localización dentro de tu flujo de trabajo y pipeline de desarrollador, asegurando que las traducciones nunca te detengan.",
     "button": {
       "startAutomating": "Comenzar a automatizar",
       "readDocumentation": "Leer documentación"
@@ -45,17 +45,17 @@
   "features": {
     "title": "Características",
     "fullyOpenSource": "Traducciones Automatizadas",
-    "fullyOpenSourceDescription": "Di adiós al trabajo manual de traducción. Languine automatiza todo el proceso, asegurando que tu aplicación se mantenga multilingüe sin ralentizarte.",
+    "fullyOpenSourceDescription": "Di adiós al trabajo de traducción manual. Languine automatiza todo el proceso, asegurando que tu aplicación se mantenga multilingüe sin ralentizarte.",
     "presetsForExpo": "Soporte para Markdown y Documentos",
     "presetsForExpoDescription": "Mantén tu documentación y contenido actualizados en todos los idiomas. Languine traduce archivos markdown sin esfuerzo, manteniendo la consistencia en tu flujo de trabajo.",
-    "presetForReactNative": "Ajuste Fino para la Voz de la Marca",
+    "presetForReactNative": "Ajuste para la Voz de la Marca",
     "presetForReactNativeDescription": "Personaliza las traducciones para que coincidan con el tono y la voz de tu marca. Languine te da control total sobre los matices, asegurando que tu mensaje se mantenga claro.",
     "presetForReactEmail": "Acción de GitHub",
-    "presetForReactEmailDescription": "Automatiza la localización directamente en GitHub. Nuestra Acción de GitHub asegura que tus traducciones se mantengan sincronizadas con cada commit y despliegue.",
+    "presetForReactEmailDescription": "Automatiza la localización directamente dentro de GitHub. Nuestra Acción de GitHub asegura que tus traducciones se mantengan sincronizadas con cada commit y despliegue.",
     "readyForI18nLibraries": "Independiente de Idioma y Framework",
     "readyForI18nLibrariesDescription": "Funciona con cualquier biblioteca de i18n. Mantén tu configuración existente y simplemente añade Languine para traducciones automatizadas sin interrumpir tu flujo de trabajo.",
     "markdownSupport": "Integración CLI y CI/CD",
-    "markdownSupportDescription": "Utiliza nuestra poderosa CLI para gestionar traducciones directamente o integra Languine sin problemas en tu pipeline de CI/CD existente para un flujo de trabajo completamente automatizado."
+    "markdownSupportDescription": "Utiliza nuestra potente CLI para gestionar traducciones directamente o integra Languine sin problemas en tu pipeline de CI/CD existente para un flujo de trabajo totalmente automatizado."
   },
   "info": {
     "title": "Maneja cada aspecto de la localización de tu aplicación, incluyendo",
@@ -66,7 +66,7 @@
       "terminology": "Gestión de terminología",
       "linguisticFeatures": "Características lingüísticas avanzadas",
       "realtimeUpdates": "Actualizaciones de traducción en tiempo real",
-      "overrides": "Sobrescrituras de traducción"
+      "overrides": "Anulaciones de traducción"
     },
     "implementation": {
       "title": "Implementación",

@@ -14,14 +14,6 @@ interface TranslationResult {
   translatedText: string;
 }
 
-interface Translation {
-  projectId: string;
-  translationKey: string;
-  targetLanguage: string;
-  translatedText: string;
-  overridden: boolean;
-}
-
 const translateLocaleSchema = z.object({
   projectId: z.string(),
   organizationId: z.string(),
@@ -59,7 +51,7 @@ export const translateLocaleTask = schemaTask({
     const translations: TranslationResult[] = [];
     const model = chooseModel(ctx.attempt.number);
 
-    const chunkSize = calculateChunkSize(payload.content, model.model.modelId, {
+    const chunkSize = calculateChunkSize(payload.content, {
       sourceLocale: payload.sourceLanguage,
       targetLocale: payload.targetLocale,
       sourceFormat: payload.sourceFormat,
