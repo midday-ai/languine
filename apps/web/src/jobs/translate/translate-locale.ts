@@ -133,66 +133,64 @@ export const translateLocaleTask = schemaTask({
       contentChunks.push(nonOverriddenContent.slice(i, i + chunkSize));
     }
 
-    let completedChunks = 0;
-
-    // Process chunks sequentially
-    for (const chunk of contentChunks) {
-      let translatedContent = await translateKeys(
-        chunk,
-        {
-          sourceLocale: payload.sourceLanguage,
-          targetLocale: payload.targetLocale,
-        },
-        ctx.attempt.number,
-      );
-
-      // Find keys with null values and retry once with remaining keys
-      const remainingKeys = chunk.filter(
-        (content) => !translatedContent[content.key],
-      );
-
-      if (remainingKeys.length > 0) {
-        const retryTranslations = await translateKeys(
-          remainingKeys,
+    // Process all chunks in parallel
+    const chunkResults = await Promise.all(
+      contentChunks.map(async (chunk) => {
+        let translatedContent = await translateKeys(
+          chunk,
           {
             sourceLocale: payload.sourceLanguage,
             targetLocale: payload.targetLocale,
           },
           ctx.attempt.number,
         );
-        translatedContent = { ...translatedContent, ...retryTranslations };
-      }
 
-      await createTranslations({
-        projectId: payload.projectId,
-        organizationId: payload.organizationId,
-        sourceFormat: payload.sourceFormat,
-        branch: payload.branch,
-        commit: payload.commit,
-        sourceProvider: payload.sourceProvider,
-        commitMessage: payload.commitMessage,
-        commitLink: payload.commitLink,
-        userId: payload.userId,
-        translations: chunk.map((content) => ({
-          translationKey: content.key,
-          sourceLanguage: payload.sourceLanguage,
-          targetLanguage: payload.targetLocale,
-          sourceText: content.sourceText,
-          sourceFile: content.sourceFile,
-          translatedText: translatedContent[content.key],
-        })),
-      });
+        // Find keys with null values and retry once with remaining keys
+        const remainingKeys = chunk.filter(
+          (content) => !translatedContent[content.key],
+        );
 
-      // Process translations for this chunk
-      for (const content of chunk) {
-        translations.push({
+        if (remainingKeys.length > 0) {
+          const retryTranslations = await translateKeys(
+            remainingKeys,
+            {
+              sourceLocale: payload.sourceLanguage,
+              targetLocale: payload.targetLocale,
+            },
+            ctx.attempt.number,
+          );
+          translatedContent = { ...translatedContent, ...retryTranslations };
+        }
+
+        await createTranslations({
+          projectId: payload.projectId,
+          organizationId: payload.organizationId,
+          sourceFormat: payload.sourceFormat,
+          branch: payload.branch,
+          commit: payload.commit,
+          sourceProvider: payload.sourceProvider,
+          commitMessage: payload.commitMessage,
+          commitLink: payload.commitLink,
+          userId: payload.userId,
+          translations: chunk.map((content) => ({
+            translationKey: content.key,
+            sourceLanguage: payload.sourceLanguage,
+            targetLanguage: payload.targetLocale,
+            sourceText: content.sourceText,
+            sourceFile: content.sourceFile,
+            translatedText: translatedContent[content.key],
+          })),
+        });
+
+        return chunk.map((content) => ({
           key: content.key,
           translatedText: translatedContent[content.key],
-        });
-      }
+        }));
+      }),
+    );
 
-      completedChunks++;
-    }
+    // Flatten all chunk results into the translations array
+    translations.push(...chunkResults.flat());
 
     return {
       translations,

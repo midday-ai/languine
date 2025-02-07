@@ -384,7 +384,7 @@
         "fine_tuning": "세부 조정 옵션",
         "overrides": "번역 재정의",
         "analytics": "분석",
-        "context_memory": "맥락 기억",
+        "context_memory": "���락 기억",
         "community_support": "커뮤니티 지원",
         "keys_limit": "최대 100개 키",
         "docs_limit": "최대 5개 문서",
@@ -555,7 +555,7 @@
     "title": "자주 묻는 질문",
     "what_is_languine": {
       "question": "Languine이란 무엇인가요?",
-      "answer": "Languine은 애플리케이션 번역을 자동화하는 데 도움을 주는 AI 기반의 현지화 플랫폼입니다. 고급 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같은 기능을 제공하여 고품질 번역을 보장합니다."
+      "answer": "Languine은 애플리케이션 번역을 자동화하는 데 도움을 주는 AI 기반의 현지화 플랫폼입니다. 고급 조정 옵션, 번역 재정의, 분석 및 컨텍스트 메모리와 같��� 기능을 제공하여 고품질 번역을 보장합니다."
     },
     "key_limit": {
       "question": "키 제한은 어떻게 작동하나요?",
