@@ -613,7 +613,9 @@
     "settings": "Einstellungen",
     "hooks": "Code-Formatter",
     "examples": "Beispiele",
-    "team": "Team"
+    "team": "Team",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Überschreibungen"

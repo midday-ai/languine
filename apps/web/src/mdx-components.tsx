@@ -18,6 +18,36 @@ function getPackageManagerCommandType(code: string) {
     };
   }
 
+  // Handle npm commands
+  if (command.startsWith("npm ")) {
+    const npmCommand = command.slice(4).trim();
+
+    if (npmCommand.startsWith("install") || npmCommand.startsWith("i ")) {
+      return {
+        type: "install" as const,
+        command: npmCommand.replace(/^(install|i)\s+/, ""),
+      };
+    }
+    if (npmCommand.startsWith("install -D") || npmCommand.startsWith("i -D")) {
+      return {
+        type: "dev" as const,
+        command: npmCommand.replace(/^(install -D|i -D)\s+/, ""),
+      };
+    }
+    if (npmCommand.startsWith("run")) {
+      return {
+        type: "run" as const,
+        command: npmCommand.replace(/^run\s+/, ""),
+      };
+    }
+    if (npmCommand.startsWith("exec")) {
+      return {
+        type: "exec" as const,
+        command: npmCommand.replace(/^exec\s+/, ""),
+      };
+    }
+  }
+
   if (!command.startsWith("pm")) {
     return null;
   }
@@ -310,7 +340,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       return (
         <div className="my-6 w-full overflow-y-auto">
           <table
-            className={`w-full border-collapse text-sm ${className}`}
+            className={`w-full border-collapse text-sm border-border ${className}`}
             {...props}
           >
             {children}
@@ -320,14 +350,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     thead: function THead({ className = "", children, ...props }) {
       return (
-        <thead className={`bg-muted/50 ${className}`} {...props}>
+        <thead className={`border-b-2 border-border ${className}`} {...props}>
           {children}
         </thead>
       );
     },
     tbody: function TBody({ className = "", children, ...props }) {
       return (
-        <tbody className={`[&_tr:last-child]:border-0 ${className}`} {...props}>
+        <tbody className={`divide-y divide-border ${className}`} {...props}>
           {children}
         </tbody>
       );
@@ -335,7 +365,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     tr: function TR({ className = "", children, ...props }) {
       return (
         <tr
-          className={`border-b border-border transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted ${className}`}
+          className={`transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted ${className}`}
           {...props}
         >
           {children}
@@ -345,7 +375,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     th: function TH({ className = "", children, ...props }) {
       return (
         <th
-          className={`h-10 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className}`}
+          className={`h-10 px-4 py-2 text-left align-middle font-medium text-foreground bg-muted/50 [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className}`}
           {...props}
         >
           {children}
@@ -355,7 +385,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     td: function TD({ className = "", children, ...props }) {
       return (
         <td
-          className={`p-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className}`}
+          className={`px-4 py-2 align-middle text-secondary [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className}`}
           {...props}
         >
           {children}

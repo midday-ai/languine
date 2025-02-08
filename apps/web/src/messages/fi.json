@@ -613,7 +613,9 @@
     "settings": "Asetukset",
     "hooks": "Koodimuotoilijat",
     "examples": "Esimerkit",
-    "team": "Tiimi"
+    "team": "Tiimi",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Ylikirjoitukset"

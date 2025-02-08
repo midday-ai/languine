@@ -613,7 +613,9 @@
     "settings": "Impostazioni",
     "hooks": "Formattatori di codice",
     "examples": "Esempi",
-    "team": "Team"
+    "team": "Team",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Sovrascritture"

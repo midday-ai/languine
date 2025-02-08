@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { DottedSeparator } from "@/components/dotted-separator";
 import { useMDXComponents } from "@/mdx-components";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeMdxCodeProps from "rehype-mdx-code-props";
@@ -25,4 +26,35 @@ export async function getMarkdownContent(locale: string, slug: string) {
   });
 
   return content;
+}
+
+export async function getUpdates() {
+  const updatesDir = path.join(process.cwd(), "src", "markdown", "updates");
+  const updates = await fs.readdir(updatesDir);
+
+  const contents = await Promise.all(
+    updates.map(async (update, idx) => {
+      const source = await fs.readFile(path.join(updatesDir, update), "utf-8");
+      const { content } = await compileMDX({
+        source,
+        options: {
+          parseFrontmatter: true,
+          mdxOptions: { rehypePlugins: [rehypeMdxCodeProps] },
+        },
+        components: useMDXComponents({}),
+      });
+
+      return (
+        <div key={idx.toString()}>
+          {content}
+
+          <div className="mt-24">
+            <DottedSeparator />
+          </div>
+        </div>
+      );
+    }),
+  );
+
+  return contents;
 }
