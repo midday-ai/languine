@@ -613,7 +613,9 @@
     "settings": "Ustawienia",
     "hooks": "Formatery kodu",
     "examples": "Przykłady",
-    "team": "Zespół"
+    "team": "Zespół",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Nadpisania"

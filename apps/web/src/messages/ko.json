@@ -613,7 +613,9 @@
     "settings": "설정",
     "hooks": "코드 포매터",
     "examples": "예제",
-    "team": "팀"
+    "team": "팀",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "오버라이드"

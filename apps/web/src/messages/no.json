@@ -613,7 +613,9 @@
     "settings": "Innstillinger",
     "hooks": "Kodeformaterere",
     "examples": "Eksempler",
-    "team": "Team"
+    "team": "Team",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Overstyringer"

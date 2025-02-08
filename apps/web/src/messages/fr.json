@@ -613,7 +613,9 @@
     "settings": "Paramètres",
     "hooks": "Formatteurs de code",
     "examples": "Exemples",
-    "team": "Équipe"
+    "team": "Équipe",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Remplacements"

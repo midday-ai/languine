@@ -616,7 +616,9 @@
     "settings": "Inställningar",
     "hooks": "Kodformattering",
     "examples": "Exempel",
-    "team": "Team"
+    "team": "Team",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides_sheet": {
     "title": "Redigera översättning",

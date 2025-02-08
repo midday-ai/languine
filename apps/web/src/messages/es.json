@@ -613,7 +613,9 @@
     "settings": "Configuraciones",
     "hooks": "Formateadores de código",
     "examples": "Ejemplos",
-    "team": "Equipo"
+    "team": "Equipo",
+    "sdk": "SDK",
+    "api": "API"
   },
   "overrides": {
     "title": "Anulaciones"
