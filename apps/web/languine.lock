@@ -874,6 +874,8 @@ files:
     docs.hooks: e2ba11e36ec5df44e3d9a790deadf7e4
     docs.examples: 193812a0157f497c164dbbfdd918f4a6
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: b871acfcee7082fe5315174298b6659b
     overrides_sheet.title: fe65d49ee802525c78ef798bbf7fa7ff
     overrides_sheet.description: 900357047fe0a2ba2a863875e11f486c
@@ -910,8 +912,6 @@ files:
     support_form.description: 35bedb45241d6b3f70fa6f56197c3361
     support_form.describe_issue: 9d406739b6a4771c05a1b90397c12630
     support_form.submit: c970cd3d0f4c45f7d8bf9903559acdf8
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/es.json:
     header.pricing: 41db38e118d590735911a377469dc659
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -1331,6 +1331,8 @@ files:
     docs.hooks: 72b4348bed46e10ff40eaec72ef23e3d
     docs.examples: ef68b15a3e0a1018be2c812e08659cf5
     docs.team: 24ea1c1f947f71710ecc78b6760c092e
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 3db0abab2211e2f98a5b3304b6c5c049
     overrides_sheet.title: ced3578e5f666ec8ac6cd82a673d9213
     overrides_sheet.description: 4ba6bcb0f1f41e84dc9bb1a13db9530f
@@ -1367,8 +1369,6 @@ files:
     support_form.description: ef918abfb53ea5bc4fde3764e4c199de
     support_form.describe_issue: 4b00233cec243aa1d2a3364c0e157b94
     support_form.submit: 30cc00aea30ec70b7c1292b6458181c0
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/fi.json:
     header.pricing: 631c0bd827638623470343016f13945e
     header.docs: 7821810b7991ea5cb2f215b8a0ae3bfc
@@ -1788,6 +1788,8 @@ files:
     docs.hooks: 6479a9f6c7ba51ceae06e9f740896131
     docs.examples: 1609d362e33d0e2edc1eebbfc8d2005d
     docs.team: b5679a07d2e2a793e61e72444869767f
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 43a7607dfd166b4f1d0c6ce4644e90ab
     overrides_sheet.title: 00d917a5c2cb55804a9429f1cc47f770
     overrides_sheet.description: 28ce74ee8afa1c0e02147232d446f544
@@ -1824,8 +1826,6 @@ files:
     support_form.description: cebddef70a353efccec7a5f233230ef9
     support_form.describe_issue: af50663f1bee950f155ba30a80dbfcc3
     support_form.submit: 73fc1885ac52c40904b231e52e0f938b
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/fr.json:
     header.pricing: bc31a6ab480ad4ec4cb44bf98a235bd9
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
@@ -2245,6 +2245,8 @@ files:
     docs.hooks: afdcce485f38c5a5e2b861ca7817697a
     docs.examples: 9a103932a77831a6270ab0002f15b3d5
     docs.team: 7ed06f744a152e94bcb64f7deeee2e7b
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: a3fb4ce65bc3d9f383ec312dc51c8fa4
     overrides_sheet.title: faddb24e4a6d65187240a73f67279d41
     overrides_sheet.description: 4a1d5e03f4821ae92e02f8854da62cea
@@ -2281,8 +2283,6 @@ files:
     support_form.description: b5a7adde1af5c87d7fd797b6245c2a39
     support_form.describe_issue: 8acc5b9da017281eed66a905630280e0
     support_form.submit: 3305f03b85ee03c5ba71526287f666a4
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/it.json:
     header.pricing: 009e52dd64491bfcceae7a6cc4068226
     header.docs: f5dd1db267fdc0cfaaaf410c2120ed47
@@ -2702,6 +2702,8 @@ files:
     docs.hooks: e03d6a94661bd3daa14ec928a0cd6e0e
     docs.examples: f8320d1497a990d5a46d2d3dd94cb079
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 0e770b80d21f0a0d6098c1f766da3a67
     overrides_sheet.title: ac8cc06fe392a76fce7ac2b56791527d
     overrides_sheet.description: 3c2fe90c4db348d6cd2606e7f15015d3
@@ -2738,8 +2740,6 @@ files:
     support_form.description: a9d5dce2a4316743143eda010090981a
     support_form.describe_issue: 7958dbb8262b1f53205464ea76a7f470
     support_form.submit: 681d63d0da87d854d88deb6f9c2df071
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/ko.json:
     header.pricing: 8ecfb74a107454b9ccdc77a69f70853b
     header.docs: 1c73f88a48ee1402e1719e9b617571ef
@@ -3159,6 +3159,8 @@ files:
     docs.hooks: 020bcd0fb3128348bc91848f726669fe
     docs.examples: b313bf06c5a703f6b81e1748ec9e156d
     docs.team: 41efb3960a601ebd7cf207a52940daae
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 06f6d6983ebdee06aa08f8b73c2f4df3
     overrides_sheet.title: 9e4f5f4676c2435f02e153f93f5a1f4a
     overrides_sheet.description: 44283ada1282273ddaa176579d20c6f0
@@ -3195,8 +3197,6 @@ files:
     support_form.description: 4c70f722ceaf9284d30ab718acd61da1
     support_form.describe_issue: 75945ba16f74f2835470162f847aca49
     support_form.submit: d6ed72d20263aa2bda1037fe2187a04f
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/nl.json:
     header.pricing: e9203846c012b9a9b042e7ded5a1ee2f
     header.docs: c57b370ca67195602d109cc93e5daeba
@@ -3616,6 +3616,8 @@ files:
     docs.hooks: c85fddae62ac785672374b83f79e751b
     docs.examples: bba33f6b8b70e9ff20fb827a6802b038
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 0ca08f8f4a8a19f7f1ae87c119494327
     overrides_sheet.title: 4ffd54561bae72e41872a51119718dbc
     overrides_sheet.description: 2755805ce04208a1bf48872bf92cd130
@@ -3652,8 +3654,6 @@ files:
     support_form.description: 1e9b47f6777bc6e4fbe81ef78c9ebbea
     support_form.describe_issue: 3b516b2aa848e11287b1bdf1ba500478
     support_form.submit: 9287d1a0c0c8ede113d57b79ccc9325b
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/no.json:
     header.pricing: a7260e8891835a01a0a65aeb8092fd8c
     header.docs: c8e4482077e73127ff268776de48b9b7
@@ -4073,6 +4073,8 @@ files:
     docs.hooks: dd81bd77c718ee70f175d945b2b5ac26
     docs.examples: 143ccc8a08ca0197f662cf77d27211ce
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 9ea0a9b7f1f3c8259e051144b7bf169b
     overrides_sheet.title: 034365c0a9c8cbfe54ebbef3e0ce003d
     overrides_sheet.description: 5f3a084e6c2b1fbca0bda42530f481b5
@@ -4109,8 +4111,6 @@ files:
     support_form.description: 59869029490390f1fc4943085f8e08bb
     support_form.describe_issue: 9e9ee81562739693718025499c6721bd
     support_form.submit: 1c52e2d6fcc5782d4562a64b5d52aa74
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/pl.json:
     header.pricing: ca9bce745c9055e33a04e40102ca454e
     header.docs: c8485e05c2720e903517fa53f1189d33
@@ -4530,6 +4530,8 @@ files:
     docs.hooks: 2a6373f689345a8a18890a8649a8d7d4
     docs.examples: 82cce1f12cde38de3ec2495d6af46743
     docs.team: 7d4a752275896e94ab88cbd27813fa4d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 3c1cc27fb6ee71e73df1e12bf61ea9ff
     overrides_sheet.title: d5b4c9d9e353f2ee17bb6ce2897dd550
     overrides_sheet.description: 957edde764451c846a062e3c4f7be14c
@@ -4566,8 +4568,6 @@ files:
     support_form.description: aff2e61beb2e03e79e5b825655a79b09
     support_form.describe_issue: 20310c187a6872ddc2564cb467a09134
     support_form.submit: aeba5b89f8ef9eb1e44f6ae6ec7385e9
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/pt.json:
     header.pricing: 40d5af3ec4124a2f53e2b74c0d9c6c34
     header.docs: 71b2ee5ae7a23092389ac5fd6791ff43
@@ -4987,6 +4987,8 @@ files:
     docs.hooks: 702f90402642db675507590929b499fa
     docs.examples: cb12d0c5318c342bcff4b54097116874
     docs.team: b717cee8c11a217a51b18c889b3e12e7
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 72ea96873387ebb56925d2fb2b8debf2
     overrides_sheet.title: 75cac041891b1a59cc64757b366e0a1d
     overrides_sheet.description: b3eb2c2f7b8b47e6b4a1dae75ff4f9af
@@ -5023,8 +5025,6 @@ files:
     support_form.description: c1c2501bcc9382417cb275c94f29fc48
     support_form.describe_issue: e16a4d2ef8748532370e6c8149000e7a
     support_form.submit: 30cc00aea30ec70b7c1292b6458181c0
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
   src/messages/sv.json:
     navigation.pricing: 18ae7191dad4e4ff1fad9433a78c283e
     navigation.dashboard: 2b7af5cd8b3d2b923fb5aff1e94039f2
@@ -5445,6 +5445,8 @@ files:
     docs.hooks: 22ff6b27ba621b5b716a30eceec9ccf0
     docs.examples: 823df82d3e47debcf6ff0dfaab2561cc
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides_sheet.title: 23e054fb7d00c50e67f85dbb14ff9dff
     overrides_sheet.description: 8c0efd42d2544deebf3a6fb342aea8db
     overrides_sheet.save: b8628398f7246a51de498212e8c3570d
@@ -5480,5 +5482,3 @@ files:
     support_form.description: dfb756f86a2e45512fc9d566bab9a134
     support_form.describe_issue: 4af9ab310a975b03daf0637f73c530bb
     support_form.submit: c8eca2b9c112953d818b58389a1cf5b5
-    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
-    docs.api: db974238714ca8de634a7ce1d083a14f
