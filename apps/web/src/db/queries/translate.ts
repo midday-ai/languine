@@ -35,6 +35,7 @@ export const createTranslations = async ({
     sourceText: string;
     translatedText: string;
     sourceFile: string;
+    sourceType?: "key" | "document";
   }[];
 }) => {
   return primaryDb
@@ -51,6 +52,7 @@ export const createTranslations = async ({
         commitMessage,
         commitLink,
         ...translation,
+        sourceType: translation.sourceType || "key",
       })),
     )
     .onConflictDoUpdate({

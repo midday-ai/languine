@@ -194,7 +194,7 @@
     },
     "packages/cli": {
       "name": "languine",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "bin": "dist/index.js",
       "dependencies": {
         "@clack/prompts": "^0.10.0",
@@ -243,6 +243,13 @@
       "devDependencies": {
         "tsup": "^8.3.5",
         "typescript": "^5.7.3",
+      },
+    },
+    "packages/sdk": {
+      "name": "@languine/sdk",
+      "version": "1.0.0",
+      "devDependencies": {
+        "tsup": "^8.2.0",
       },
     },
     "packages/supabase": {
@@ -837,6 +844,8 @@
     "@languine/action": ["@languine/action@workspace:packages/action"],
 
     "@languine/react-email": ["@languine/react-email@workspace:packages/react-email"],
+
+    "@languine/sdk": ["@languine/sdk@workspace:packages/sdk"],
 
     "@languine/supabase": ["@languine/supabase@workspace:packages/supabase"],
 

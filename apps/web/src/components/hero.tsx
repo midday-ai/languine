@@ -4,6 +4,7 @@ import { Terminal } from "@/components/terminal";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { CopyInstall } from "./copy-install";
+import { Button } from "./ui/button";
 import { OutlinedButton } from "./ui/outlined-button";
 
 export function Hero() {
@@ -13,6 +14,15 @@ export function Hero() {
   return (
     <div className="py-12 md:py-28 flex flex-col lg:flex-row gap-12 justify-between items-center">
       <div className="lg:max-w-[590px] space-y-8 w-full">
+        <div>
+          <Button
+            className="rounded-full text-xs h-9 bg-[#121212]"
+            variant="outline"
+          >
+            <Link href="/updates">Translation API & SDK</Link>
+          </Button>
+        </div>
+
         <h1 className="xl:text-4xl !leading-[42px] text-3xl text-pretty">
           {t("title")}
         </h1>

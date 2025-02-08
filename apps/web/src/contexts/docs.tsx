@@ -48,6 +48,8 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
       items: [
         { href: "/docs/cli", label: t("cli") },
         { href: "/docs/ci", label: t("ci") },
+        { href: "/docs/sdk", label: t("sdk") },
+        { href: "/docs/api", label: t("api") },
       ],
     },
     {
