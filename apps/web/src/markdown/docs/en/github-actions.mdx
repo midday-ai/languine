@@ -5,13 +5,6 @@ This saves you a lot of time and effort while maintaining high quality translati
 
 ---
 
-## How it works
-
-
-
-
----
-
 ## Installation
 
 To use the Languine GitHub Action in your repository, you'll need to:
@@ -97,3 +90,7 @@ When set to `true`, the action will:
 When set to `false` (default), the action will:
 - Commit the changes directly to the current branch
 - Push the changes without creating a pull request
+
+## Using with Vercel
+
+If you're using Vercel for deployments, you can combine this GitHub Action with our [Vercel build validation](./vercel) to ensure your translations are always synchronized before deployment. This prevents deployments with missing or outdated translations.

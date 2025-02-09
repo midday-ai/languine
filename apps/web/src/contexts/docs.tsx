@@ -54,7 +54,10 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
     },
     {
       title: t("ci"),
-      items: [{ href: "/docs/github-actions", label: t("github-actions") }],
+      items: [
+        { href: "/docs/github-actions", label: t("github-actions") },
+        { href: "/docs/vercel", label: t("vercel") },
+      ],
     },
     // {
     //   title: t("presets"),

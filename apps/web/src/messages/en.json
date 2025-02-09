@@ -608,6 +608,7 @@
     "configuration": "Configuration",
     "cli": "CLI",
     "github-actions": "GitHub Actions",
+    "vercel": "Vercel",
     "tuning": "Tuning",
     "overrides": "Overrides",
     "settings": "Settings",
