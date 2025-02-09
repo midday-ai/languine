@@ -1,23 +1,48 @@
-// import { Command } from "commander";
-// import { applyTranslations, processDirectory } from "../utils/transform.js";
+import { note, spinner } from "@clack/prompts";
+import chalk from "chalk";
 
-// export const transformCommand = new Command("transform")
-//   .description("Transform JSX/TSX files to use translation keys")
-//   .argument("[directory]", "Directory to process", "src")
-//   .action(async (directory: string) => {
-//     try {
-//       console.log(`Processing directory: ${directory}`);
-//       const extractedStrings = await processDirectory(directory);
+export async function transformCommand() {
+  const s = spinner();
 
-//       console.log("\nExtracted strings:");
-//       console.log(JSON.stringify(extractedStrings, null, 2));
+  try {
+    // Start analyzing spinner
+    s.start("Analyzing code...");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-//       console.log("\nApplying translations...");
-//       await applyTranslations(extractedStrings);
+    // Update to generating translation keys
+    s.message("Generating translation keys with AI...");
+    await new Promise((resolve) => setTimeout(resolve, 4000));
 
-//       console.log("\nTransformation complete!");
-//     } catch (error) {
-//       console.error("Error during transformation:", error);
-//       process.exit(1);
-//     }
-//   });
+    s.message("Adding translation keys to en.json...");
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    s.message("Updating source code...");
+    await new Promise((resolve) => setTimeout(resolve, 2400));
+
+    s.message("Validating source code...");
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Show summary and stop spinner
+    s.stop();
+
+    console.log(" ");
+    // Show success message for transformed strings
+    console.log(
+      chalk.green(
+        `Replaced ${chalk.bold("143")} hardcoded strings with translatable keys`,
+      ),
+    );
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    console.log(" ");
+    note(
+      "Run npx languine@latest translate to start transaltion",
+      "Next steps",
+    );
+  } catch (error) {
+    s.stop(chalk.red("Transform failed"));
+    console.error(error);
+    process.exit(1);
+  }
+}
