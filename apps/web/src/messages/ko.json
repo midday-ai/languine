@@ -615,7 +615,8 @@
     "examples": "예제",
     "team": "팀",
     "sdk": "SDK",
-    "api": "API"
+    "api": "API",
+    "vercel": "버셀"
   },
   "overrides": {
     "title": "오버라이드"

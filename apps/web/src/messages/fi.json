@@ -615,7 +615,8 @@
     "examples": "Esimerkit",
     "team": "Tiimi",
     "sdk": "SDK",
-    "api": "API"
+    "api": "API",
+    "vercel": "Vercel"
   },
   "overrides": {
     "title": "Ylikirjoitukset"

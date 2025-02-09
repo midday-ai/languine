@@ -615,7 +615,8 @@
     "examples": "Beispiele",
     "team": "Team",
     "sdk": "SDK",
-    "api": "API"
+    "api": "API",
+    "vercel": "Vercel"
   },
   "overrides": {
     "title": "Überschreibungen"

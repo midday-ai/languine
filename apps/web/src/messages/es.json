@@ -615,7 +615,8 @@
     "examples": "Ejemplos",
     "team": "Equipo",
     "sdk": "SDK",
-    "api": "API"
+    "api": "API",
+    "vercel": "Vercel"
   },
   "overrides": {
     "title": "Anulaciones"

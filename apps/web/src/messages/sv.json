@@ -618,7 +618,8 @@
     "examples": "Exempel",
     "team": "Team",
     "sdk": "SDK",
-    "api": "API"
+    "api": "API",
+    "vercel": "Vercel"
   },
   "overrides_sheet": {
     "title": "Redigera översättning",
