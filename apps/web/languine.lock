@@ -413,12 +413,15 @@ files:
     docs.configuration: 254f642527b45bc260048e30704edb39
     docs.cli: 91af5705f16502125e8b2187e64202c0
     docs.github-actions: f843be8508767777750802fb7782c74f
+    docs.vercel: dc173d57136dbe619cbccee88ee6421c
     docs.tuning: 89dd2948ecda7325c0001d8a0e51a2d8
     docs.overrides: 0ca08f8f4a8a19f7f1ae87c119494327
     docs.settings: f4f70727dc34561dfde1a3c529b6205c
     docs.hooks: 39218ac9ced78b83974e8ac976f40766
     docs.examples: ff7c0fcd6a31e735a61c001f75426961
     docs.team: ac848fa228f49ba2b8a5fbd76596817d
+    docs.sdk: f20e3c5e54c0ab3d375d660b3f896f6a
+    docs.api: db974238714ca8de634a7ce1d083a14f
     overrides.title: 0ca08f8f4a8a19f7f1ae87c119494327
     overrides_sheet.title: a7f6326fc128712ffaee83351ea67525
     overrides_sheet.description: 3d58d20c3e5e349d630b1bee63f04063
