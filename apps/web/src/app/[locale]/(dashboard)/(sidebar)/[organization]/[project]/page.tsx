@@ -8,7 +8,7 @@ import { OnboardingSteps } from "@/components/onboarding-steps";
 import { SearchInput } from "@/components/search-input";
 import { HydrateClient, trpc } from "@/trpc/server";
 import { getTranslations } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
 export default async function Page({
@@ -56,8 +56,9 @@ export default async function Page({
 
       return <OnboardingSteps projectId={data?.id} />;
     }
-  } catch (error) {
-    return notFound();
+  } catch {
+    // If there is a permission error, redirect to the user's default organization
+    redirect("/api/default-org");
   }
 
   return (
