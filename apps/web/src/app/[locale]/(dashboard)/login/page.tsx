@@ -3,9 +3,13 @@ import Login from "@/components/login";
 import { Logo } from "@/components/logo";
 import MatrixTextWall from "@/components/matrix";
 import { StackedCode } from "@/components/stacked-code";
+import { getOrganizationByUserId } from "@/db/queries/organization";
+import { getSession } from "@languine/supabase/session";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations();
@@ -18,6 +22,35 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const t = await getTranslations();
+  const cookieStore = await cookies();
+
+  const {
+    data: { session },
+  } = await getSession();
+
+  if (session?.user.id) {
+    const preferenceCookie = cookieStore.get("user-preferences");
+
+    if (preferenceCookie) {
+      const preferences = JSON.parse(preferenceCookie.value);
+      const { lastOrganizationId, lastProjectSlug } = preferences as {
+        lastOrganizationId?: string;
+        lastProjectSlug?: string;
+      };
+
+      if (lastOrganizationId && lastProjectSlug) {
+        return redirect(`/${lastOrganizationId}/${lastProjectSlug}`);
+      }
+    }
+
+    if (session?.user.id) {
+      const organization = await getOrganizationByUserId(session.user.id);
+
+      if (organization) {
+        return redirect(`/${organization.organization.id}/default`);
+      }
+    }
+  }
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">

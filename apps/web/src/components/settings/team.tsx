@@ -57,7 +57,7 @@ export function TeamSettings() {
   const deleteMutation = trpc.organization.delete.useMutation({
     onSuccess: () => {
       deleteUserPreferences();
-      router.replace("/login");
+      router.push("/login");
     },
     onError: (error) => {
       if (error.data?.code === "BAD_REQUEST") {
