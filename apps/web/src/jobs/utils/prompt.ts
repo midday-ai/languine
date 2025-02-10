@@ -9,6 +9,7 @@ Translation Requirements:
 - Keep all technical identifiers unchanged
 - Keep consistent capitalization, spacing, and line breaks
 - Respect existing whitespace and newline patterns
+- Never change the order of the content
 `;
 
 const mapFormatToPrompt = (format?: string) => {
@@ -105,11 +106,8 @@ ${fileSpecificInstructions(options.sourceFormat)}`;
     tuningInstructions
       ? `\nAdditional Requirements:\n${tuningInstructions}`
       : ""
-  }\n\n${JSON.stringify(
-    content.reduce((acc: Record<string, string>, { key, sourceText }) => {
-      acc[key] = sourceText;
-      return acc;
-    }, {}),
+  }\nContent:\n${JSON.stringify(
+    content.map(({ sourceText }) => sourceText),
     null,
     2,
   )}`;

@@ -78,7 +78,7 @@ export const translateLocaleTask = schemaTask({
 
       translations.push({
         key: "content",
-        translatedText: translatedContent.content,
+        translatedText: translatedContent?.at(0) ?? "",
       });
 
       if (document?.sourceText) {
@@ -88,7 +88,7 @@ export const translateLocaleTask = schemaTask({
           sourceText: document.sourceText,
           sourceLanguage: payload.sourceLanguage,
           targetLanguage: payload.targetLocale,
-          translatedText: translatedContent.content,
+          translatedText: translatedContent?.at(0) ?? "",
           sourceFile: document.sourceFile,
           sourceFormat: payload.sourceFormat,
           branch: payload.branch,
@@ -133,7 +133,7 @@ export const translateLocaleTask = schemaTask({
 
     // Process all chunks in parallel
     const chunkResults = await Promise.all(
-      contentChunks.map(async (chunk) => {
+      contentChunks.map(async (chunk, chunkIndex) => {
         let translatedContent = await translateKeys(
           chunk,
           {
@@ -145,7 +145,7 @@ export const translateLocaleTask = schemaTask({
 
         // Find keys with null values and retry once with remaining keys
         const remainingKeys = chunk.filter(
-          (content) => !translatedContent[content.key],
+          (content) => !translatedContent[chunkIndex],
         );
 
         if (remainingKeys.length > 0) {
@@ -170,19 +170,19 @@ export const translateLocaleTask = schemaTask({
           commitMessage: payload.commitMessage,
           commitLink: payload.commitLink,
           userId: payload.userId,
-          translations: chunk.map((content) => ({
+          translations: chunk.map((content, index) => ({
             translationKey: content.key,
             sourceLanguage: payload.sourceLanguage,
             targetLanguage: payload.targetLocale,
             sourceText: content.sourceText,
             sourceFile: content.sourceFile,
-            translatedText: translatedContent[content.key],
+            translatedText: translatedContent[index],
           })),
         });
 
-        return chunk.map((content) => ({
+        return chunk.map((content, index) => ({
           key: content.key,
-          translatedText: translatedContent[content.key],
+          translatedText: translatedContent[index],
         }));
       }),
     );

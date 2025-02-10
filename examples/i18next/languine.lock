@@ -1,18 +1,8 @@
 version: 1
 files:
   locales/en.json:
-    key:
-      hash: e381eae446dcf987894b521acac9d8b0
-      value: This is a new value
-    nested.key:
-      hash: f25216919cc1d32c92cae6894167c2a3
-      value: Another new value
-    interpolated:
-      hash: 248ba0c68233725258e8d012af024b4d
-      value: New value with {{name}}!
-    pluralKey_one:
-      hash: 7657a288705c324198437b5da7514764
-      value: One new value
-    pluralKey_other:
-      hash: e57159fea2e7a665ee8156241a03366e
-      value: Multiple new values
+    key: e381eae446dcf987894b521acac9d8b0
+    nested.key: f25216919cc1d32c92cae6894167c2a3
+    interpolated: 248ba0c68233725258e8d012af024b4d
+    pluralKey_one: 7657a288705c324198437b5da7514764
+    pluralKey_other: e57159fea2e7a665ee8156241a03366e

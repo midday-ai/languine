@@ -1,4 +1,4 @@
-import { generateObject } from "ai";
+import { NoObjectGeneratedError, generateObject } from "ai";
 import { z } from "zod";
 import { chooseModel } from "./model";
 import { createFinalPrompt } from "./prompt";
@@ -26,24 +26,36 @@ export async function translateKeys(
     provider: model?.model?.provider,
   });
 
-  const { object, finishReason, usage } = await generateObject({
-    ...model,
-    prompt,
-    temperature: 0.2,
-    schema: z.object({
-      translatedKeys: z
-        .record(
-          z.string().describe("The original key from the source content"),
-          z.string().describe("The translated text for this key"),
-        )
-        .describe("The translated content"),
-    }),
-  });
+  try {
+    const { object, finishReason, usage } = await generateObject({
+      ...model,
+      prompt,
+      temperature: 0.2,
+      mode: "json",
+      schema: z.object({
+        translatedKeys: z
+          .array(
+            z.string().describe("The original key from the source content"),
+          )
+          .describe("The translated content"),
+      }),
+    });
 
-  console.log("finishReason", finishReason);
-  console.log("usage", usage);
+    console.log("finishReason", finishReason);
+    console.log("usage", usage);
 
-  return object.translatedKeys;
+    return object.translatedKeys;
+  } catch (error) {
+    if (NoObjectGeneratedError.isInstance(error)) {
+      console.log("NoObjectGeneratedError");
+      console.log("Cause:", error.cause);
+      console.log("Text:", error.text);
+      console.log("Response:", error.response);
+      console.log("Usage:", error.usage);
+    }
+
+    throw error;
+  }
 }
 
 export async function translateDocument(
@@ -62,19 +74,30 @@ export async function translateDocument(
     provider: model?.model?.provider,
   });
 
-  const { object } = await generateObject({
-    ...model,
-    prompt,
-    temperature: 0.2,
-    schema: z.object({
-      translatedKeys: z
-        .record(
-          z.string().describe("The original key from the source content"),
-          z.string().describe("The translated text for this key"),
-        )
-        .describe("The translated content"),
-    }),
-  });
+  try {
+    const { object } = await generateObject({
+      ...model,
+      prompt,
+      temperature: 0.2,
+      mode: "json",
+      schema: z.object({
+        translatedKeys: z
+          .array(
+            z.string().describe("The original key from the source content"),
+          )
+          .describe("The translated content"),
+      }),
+    });
 
-  return object.translatedKeys;
+    return object.translatedKeys;
+  } catch (error) {
+    if (NoObjectGeneratedError.isInstance(error)) {
+      console.log("NoObjectGeneratedError");
+      console.log("Cause:", error.cause);
+      console.log("Text:", error.text);
+      console.log("Response:", error.response);
+      console.log("Usage:", error.usage);
+    }
+    throw error;
+  }
 }

@@ -5,5 +5,5 @@
   },
   "interpolated": "¡Nuevo valor con {{name}}!",
   "pluralKey_one": "Un nuevo valor",
-  "pluralKey_other": "Múltiples nuevos valores"
+  "pluralKey_other": "Varios nuevos valores"
 }

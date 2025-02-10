@@ -1,0 +1,11 @@
+version: 1
+files:
+  messages/en.json:
+    HomePage.title: 8cf04a9734132302f96da8e113e80ce5
+    HomePage.param: a696a4bdf9c0466cc2222d48c490bb22
+    HomePage.plural: 696c24e99d8bff649e862ed33d6895fd
+    HomePage.select: 7d8999735e8859b4382e3ac8646df971
+    HomePage.escaped: 048491840d8607481c175b3dce7d9fa6
+    HomePage.rich: 5b52f7ec9c36ff4e7529db7dee960271
+    HomePage.number: 3ec19f117576c611e4c7cdefb1e45670
+    HomePage.date: 3d3fb4ee4f80c4cef43a32d21ddb53ef

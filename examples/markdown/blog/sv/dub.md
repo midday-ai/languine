@@ -1,18 +1,22 @@
 ---
 title: "Hur vi implementerade länkdelning med Dub.co"
 publishedAt: "2024-04-04"
-summary: "Vi har några funktioner som Time Tracker, Rapporter och filer från Vault som våra användare delar utanför sitt företag och med det har vi ett auktoriseringslager på vår sida med hjälp av Supabase, men dessa länkar är ofta väldigt långa eftersom de inkluderar en unik token."
+summary: "Vi har några funktioner som Tid Tracker, Rapporter och filer från Vault som våra användare delar utanför sitt företag och med det har vi ett auktoriseringslager på vår sida med hjälp av Supabase, men dessa länkar är ofta riktigt långa eftersom de inkluderar en unik token."
 image: "/images/dub.png"
-tag: "Teknik"
+tag: "Ingenjörskonst"
 ---
 
-I början av veckan delade [Dub.co](http://Dub.co) vår [kundberättelse](https://dub.co/customers/midday) om varför vi valde Dub som vår infrastruktur för länkdelning.
+Tidigare denna vecka delade [Dub.co](http://Dub.co) vår [kundberättelse](https://dub.co/customers/midday) om varför vi valde Dub som vår länkdelningsinfrastruktur.
 
 <br />
-I detta blogginlägg kommer vi att dela lite mer i detalj hur vi implementerade denna funktionalitet.
+I det här blogginlägget kommer vi att dela lite mer i detalj hur vi implementerade denna
+funktionalitet.
 
 <br />
-Vi har några funktioner som Time Tracker, Rapporter och filer från Vault som våra användare delar utanför sitt företag och med det har vi ett auktoriseringslager på vår sida med hjälp av Supabase, men dessa länkar är ofta väldigt långa eftersom de inkluderar en unik token.
+Vi har några funktioner som Tid Tracker, Rapporter och filer från Vault som våra användare
+ delar utanför sitt företag och med det har vi ett auktoriseringslager på vår
+sida med hjälp av Supabase, men dessa länkar är ofta riktigt långa eftersom de inkluderar en
+unik token.
 <br />
 Vår lösning var att implementera Dub för att generera unika korta URL:er.
 
@@ -36,7 +40,7 @@ const createReport = useAction(createReportAction, {
     toast({
       duration: 2500,
       variant: "error",
-      title: "Något gick fel, försök igen.",
+      title: "Något gick fel, vänligen försök igen.",
     });
   },
   onSuccess: (data) => {
@@ -65,14 +69,14 @@ const createReport = useAction(createReportAction, {
 
 <br />
 
-Det fina med next-safe-action är att du får återkoppling på onError och onSuccess så i detta fall visar vi en toast baserat på återkopplingen.
+Det fina med next-safe-action är att du får callbacks på onError och onSuccess så i det här fallet visar vi en toast baserat på callbacken.
 
 <br />
 
-Åtgärden är ganska enkel också, vi sparar först rapporten baserat på de aktuella parametrarna (från, till och typ) beroende på vilken typ av rapport vi skapar.
+Åtgärden är också ganska enkel, vi sparar först rapporten baserat på de aktuella parametrarna (från, till och typ) beroende på vilken typ av rapport vi skapar.
 
 <br />
-Vi sparar den i Supabase och får ett id tillbaka som vi använder för att generera vår delningsbara URL.
+Vi sparar den i Supabase och får tillbaka ett id som vi använder för att generera vår delbara URL.
 
 ```typescript
 const dub = new Dub({ projectSlug: "midday" });
@@ -122,7 +126,8 @@ export const createReportAction = action(schema, async (params) => {
 ```
 
 <br />
-Med kombinationen av serveråtgärder, Supabase och Dub kan vi skapa riktigt vackra URL:er med analys på toppen.
+Med kombinationen av serveråtgärder, Supabase och Dub kan vi skapa riktigt vackra
+URL:er med analys ovanpå.
 
 <br />
 Du kan hitta källkoden för detta i vårt repository [här](https://github.com/midday-ai/midday/tree/main/apps/dashboard/src/actions/report).
