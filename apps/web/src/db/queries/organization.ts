@@ -364,7 +364,13 @@ export const inviteMember = async ({
   return invitation;
 };
 
-export const acceptInvitation = async (invitationId: string) => {
+export const acceptInvitation = async ({
+  invitationId,
+  userId,
+}: {
+  invitationId: string;
+  userId: string;
+}) => {
   const db = await connectDb();
 
   // Get the invitation
@@ -376,10 +382,6 @@ export const acceptInvitation = async (invitationId: string) => {
     throw new Error("Invitation not found");
   }
 
-  if (invitation.status !== "pending") {
-    throw new Error("Invitation is no longer valid");
-  }
-
   if (new Date() > invitation.expiresAt) {
     throw new Error("Invitation has expired");
   }
@@ -389,18 +391,18 @@ export const acceptInvitation = async (invitationId: string) => {
     .insert(members)
     .values({
       organizationId: invitation.organizationId,
-      userId: invitation.inviterId,
+      userId,
       role: invitation.role || "member",
     })
     .returning();
 
   // Update invitation status
-  await db
-    .update(invitations)
-    .set({ status: "accepted" })
-    .where(eq(invitations.id, invitationId));
+  await db.delete(invitations).where(eq(invitations.id, invitationId));
 
-  return { member, invitation };
+  return {
+    member,
+    invitation,
+  };
 };
 
 export const getOrganizationStats = async (organizationId: string) => {

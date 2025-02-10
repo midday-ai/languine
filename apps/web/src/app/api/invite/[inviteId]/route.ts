@@ -8,7 +8,7 @@ export async function GET(
   { params }: { params: { inviteId: string } },
 ) {
   try {
-    const { inviteId } = params;
+    const { inviteId } = await params;
     const cookieStore = await cookies();
 
     // Check if user is logged in
@@ -26,7 +26,10 @@ export async function GET(
     const storedInviteId = cookieStore.get("invite-id")?.value;
     const inviteIdToUse = storedInviteId || inviteId;
 
-    const result = await acceptInvitation(inviteIdToUse);
+    const result = await acceptInvitation({
+      invitationId: inviteIdToUse,
+      userId: session.user.id,
+    });
 
     if (!result) {
       redirect("/login");
