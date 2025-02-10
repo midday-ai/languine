@@ -367,15 +367,17 @@ export const inviteMember = async ({
 export const acceptInvitation = async ({
   invitationId,
   userId,
+  email,
 }: {
   invitationId: string;
   userId: string;
+  email: string;
 }) => {
   const db = await connectDb();
 
   // Get the invitation
   const invitation = await db.query.invitations.findFirst({
-    where: eq(invitations.id, invitationId),
+    where: and(eq(invitations.id, invitationId), eq(invitations.email, email)),
   });
 
   if (!invitation) {

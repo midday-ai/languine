@@ -17,6 +17,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useInviteModal } from "@/hooks/use-invite-modal";
 import { trpc } from "@/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,14 +40,16 @@ export function InviteModal() {
   const utils = trpc.useUtils();
   const params = useParams();
 
-  const form = useForm<{ email: string }>({
+  const form = useForm<{ email: string; role: string }>({
     resolver: zodResolver(
       z.object({
         email: z.string().email(t("validation.invalidEmail")),
+        role: z.enum(["member", "owner"]).default("member"),
       }),
     ),
     defaultValues: {
       email: "",
+      role: "member",
     },
   });
 
@@ -69,11 +78,11 @@ export function InviteModal() {
     },
   });
 
-  async function onSubmit(values: { email: string }) {
+  async function onSubmit(values: { email: string; role: string }) {
     inviteMutation.mutate({
       organizationId: params.organization as string,
       email: values.email,
-      role: "member",
+      role: values.role,
     });
   }
 
@@ -89,23 +98,59 @@ export function InviteModal() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-4 py-4"
           >
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("emailLabel")}</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder={t("emailPlaceholder")}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="grid grid-cols-3 gap-4 mb-12">
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="col-span-2">
+                    <FormLabel>{t("emailLabel")}</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder={t("emailPlaceholder")}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="role"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{t("roleLabel")}</FormLabel>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormItem>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder={t("rolePlaceholder")} />
+                            </SelectTrigger>
+                          </FormControl>
+                        </FormItem>
+
+                        <SelectContent>
+                          <SelectItem value="member">
+                            {t("role.member")}
+                          </SelectItem>
+                          <SelectItem value="owner">
+                            {t("role.owner")}
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+            </div>
+
             <DialogFooter>
               <Button
                 type="button"

@@ -29,6 +29,7 @@ export async function GET(
     const result = await acceptInvitation({
       invitationId: inviteIdToUse,
       userId: session.user.id,
+      email: session.user.email,
     });
 
     if (!result) {
