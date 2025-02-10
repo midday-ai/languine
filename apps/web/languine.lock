@@ -296,6 +296,10 @@ files:
     invite.error.title: 902b0d55fddef6f8d651fe1035b7d4bd
     invite.error.description: b5f72115b32020c7b6e19251e5e80fb7
     invite.validation.invalidEmail: daa8d486c07ee522a91050732b89a06b
+    invite.role.member: 858ba4765e53c712ef672a9570474b1d
+    invite.role.owner: b6f4a2ec6356bbd56d49f2096bf9d3d3
+    invite.rolePlaceholder: 50d1d3ffaee98d10d3c757450850b73d
+    invite.roleLabel: bbbabdbe1b262f75d99d62880b953be1
     onboarding.steps.1.title: 43e849e91e4068e288f50477a4dd91db
     onboarding.steps.1.description: 7e09be5bbd5d54341ebc9178e540ded2
     onboarding.steps.2.title: 09001a200e746fc9ba31b7f05511ee11

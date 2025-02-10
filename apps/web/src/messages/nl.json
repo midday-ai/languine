@@ -438,7 +438,13 @@
     },
     "validation": {
       "invalidEmail": "Voer een geldig e-mailadres in"
-    }
+    },
+    "role": {
+      "member": "Lid",
+      "owner": "Eigenaar"
+    },
+    "rolePlaceholder": "Selecteer rol",
+    "roleLabel": "Rol"
   },
   "onboarding": {
     "steps": {

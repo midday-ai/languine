@@ -438,7 +438,13 @@
     },
     "validation": {
       "invalidEmail": "Ole hyvä ja syötä voimassa oleva sähköposti"
-    }
+    },
+    "role": {
+      "member": "Jäsen",
+      "owner": "Omistaja"
+    },
+    "rolePlaceholder": "Valitse rooli",
+    "roleLabel": "Rooli"
   },
   "onboarding": {
     "steps": {

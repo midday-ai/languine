@@ -438,7 +438,13 @@
     },
     "validation": {
       "invalidEmail": "Vennligst skriv inn en gyldig e-post"
-    }
+    },
+    "role": {
+      "member": "Medlem",
+      "owner": "Eier"
+    },
+    "rolePlaceholder": "Velg rolle",
+    "roleLabel": "Rolle"
   },
   "onboarding": {
     "steps": {

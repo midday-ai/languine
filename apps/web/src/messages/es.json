@@ -438,7 +438,13 @@
     },
     "validation": {
       "invalidEmail": "Por favor, ingrese un correo electrónico válido"
-    }
+    },
+    "role": {
+      "member": "Miembro",
+      "owner": "Propietario"
+    },
+    "rolePlaceholder": "Seleccionar rol",
+    "roleLabel": "Rol"
   },
   "onboarding": {
     "steps": {

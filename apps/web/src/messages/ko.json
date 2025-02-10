@@ -438,7 +438,13 @@
     },
     "validation": {
       "invalidEmail": "유효한 이메일을 입력해 주세요."
-    }
+    },
+    "role": {
+      "member": "회원",
+      "owner": "소유자"
+    },
+    "rolePlaceholder": "역할 선택",
+    "roleLabel": "역할"
   },
   "onboarding": {
     "steps": {

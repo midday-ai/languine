@@ -449,7 +449,13 @@
     },
     "validation": {
       "invalidEmail": "Ange en giltig e-postadress"
-    }
+    },
+    "role": {
+      "member": "Medlem",
+      "owner": "Ägare"
+    },
+    "rolePlaceholder": "Välj roll",
+    "roleLabel": "Roll"
   },
   "onboarding": {
     "steps": {
