@@ -86,6 +86,7 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
         { href: "/docs/csv", label: "CSV" },
         { href: "/docs/xml", label: "XML" },
         { href: "/docs/arb", label: "Flutter ARB" },
+        { href: "/docs/ftl", label: "Fluent FTL" },
       ],
     },
     {

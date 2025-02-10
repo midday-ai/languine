@@ -34,6 +34,7 @@ const SUPPORTED_FORMATS = [
   { value: "csv", label: "CSV (.csv)" },
   { value: "xml", label: "XML (.xml)" },
   { value: "arb", label: "Flutter ARB (.arb)" },
+  { value: "ftl", label: "Fluent (.ftl)" },
 ] as const;
 
 const FORMAT_EXAMPLES: Record<Format, string> = {
@@ -47,6 +48,7 @@ const FORMAT_EXAMPLES: Record<Format, string> = {
   md: "src/docs/[locale]/*.md",
   mdx: "src/docs/[locale]/*.mdx",
   html: "src/content/[locale]/**/*.html",
+  ftl: "src/locales/[locale].ftl",
   js: "src/locales/[locale].js",
   ts: "src/locales/[locale].ts",
   po: "src/locales/[locale].po",

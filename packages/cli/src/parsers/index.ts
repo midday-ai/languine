@@ -1,20 +1,21 @@
 import { z } from "zod";
 import type { Parser, ParserOptions } from "./core/types.js";
-import { AndroidParser } from "./formats/android.js";
-import { ArbParser } from "./formats/arb.js";
-import { CsvParser } from "./formats/csv.js";
-import { HtmlParser } from "./formats/html.js";
-import { JavaScriptParser } from "./formats/javascript.js";
-import { JsonParser } from "./formats/json.js";
-import { MarkdownParser } from "./formats/markdown.js";
-import { PoParser } from "./formats/po.js";
-import { PropertiesParser } from "./formats/properties.js";
-import { XcodeStringsParser } from "./formats/xcode-strings.js";
-import { XcodeStringsDictParser } from "./formats/xcode-stringsdict.js";
-import { XcodeXcstringsParser } from "./formats/xcode-xcstrings.js";
-import { XliffParser } from "./formats/xliff.js";
-import { XmlParser } from "./formats/xml.js";
-import { YamlParser } from "./formats/yaml.js";
+import { AndroidParser } from "./formats/android.ts";
+import { ArbParser } from "./formats/arb.ts";
+import { CsvParser } from "./formats/csv.ts";
+import { FTLParser } from "./formats/ftl.ts";
+import { HtmlParser } from "./formats/html.ts";
+import { JavaScriptParser } from "./formats/javascript.ts";
+import { JsonParser } from "./formats/json.ts";
+import { MarkdownParser } from "./formats/markdown.ts";
+import { PoParser } from "./formats/po.ts";
+import { PropertiesParser } from "./formats/properties.ts";
+import { XcodeStringsParser } from "./formats/xcode-strings.ts";
+import { XcodeStringsDictParser } from "./formats/xcode-stringsdict.ts";
+import { XcodeXcstringsParser } from "./formats/xcode-xcstrings.ts";
+import { XliffParser } from "./formats/xliff.ts";
+import { XmlParser } from "./formats/xml.ts";
+import { YamlParser } from "./formats/yaml.ts";
 
 export const parserTypeSchema = z.enum([
   "js",
@@ -34,6 +35,7 @@ export const parserTypeSchema = z.enum([
   "html",
   "csv",
   "arb",
+  "ftl",
 ]);
 
 export type ParserType = z.infer<typeof parserTypeSchema>;
@@ -72,6 +74,8 @@ export function createParser(options: ParserOptions): Parser {
       return new CsvParser(options);
     case "arb":
       return new ArbParser(options);
+    case "ftl":
+      return new FTLParser(options);
     default:
       throw new Error(`Unsupported parser type: ${options.type}`);
   }

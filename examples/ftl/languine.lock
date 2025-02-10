@@ -1,0 +1,57 @@
+version: 1
+files:
+  locales/en.ftl:
+    remove-bookmark: 48f4a0fe7360bde77618a6020a9d681f
+    -brand-name-simple: 91e0703aceed2a05cba02c792821d8b6
+    installing: 8f21f7eaf0461acd6776b9aef9a0c4f2
+    menu-save: c9cc8cce247e49bae79f15173ce97354
+    help-menu-save: 808586d6f0dafe1dc9f29972e33fe225
+    opening-brace: 9e468e0f25f3026d64b47da898ca2aac
+    closing-brace: e408724acaf70e1c65a680169946e3c1
+    blank-is-removed: 748761cd1fbda43d2655eb2c337e53e2
+    blank-is-preserved: ce3c3962548357c1b09175f5a843455a
+    leading-bracket: ed5e22b9d3135d1d49c9b8109c46d365
+    attribute-how-to: b863f011b5619c482de7673208d13c4d
+    literal-quote1: 18b6b3dab99b1f5a5a66225c172978d0
+    literal-quote2: 13d857d982fc42dbadbf52041fd1e873
+    privacy-label: 5274adcd3a3cab6ad02982dbfe9b34b2
+    which-dash1: 6340cdabcba4f0783aaeccafab3005a4
+    which-dash2: 8bc1f5f6a24f510e563e28fbc5f88c57
+    tears-of-joy1: 4b8273c415cc44c83e49259447a3f3a4
+    tears-of-joy2: 984de811bc7bc59dca9c21e33775510f
+    let bundle: 0a2bb3034fbd7e41b657e41ad3cfdfee
+    single: c82fa5b184c1f8cb09a73c616aeed9ba
+    multi: 4ce8a49e3d7900fd86122cd36f5dd1f5
+    block: 0abf199bbe160094fc1bc59f871b3d76
+    indents: 31fc42050b536d07e1f6b9f9738ac353
+    leading-spaces: 22856282c2d1f5024632d9a6485553c7
+    leading-lines: e24d84c6fc8e4faa99ae6d98d9a49ff8
+    blank-lines: 04d6f47f2cf2afcab4ce54f12db84cb7
+    multiline1: 19731e04f58473046f6c59bfa77957a1
+    multiline2: 3006b123bcddc977cef438873a14b7ea
+    multiline3: 787e5aaeebf0211ccf3173291df00440
+    multiline4: 787e5aaeebf0211ccf3173291df00440
+    multiline5: 8be25bc4c17c97bbb0d21e8420a75604
+    welcome: 533f6697d621d911fd31429a2c06885a
+    unread-emails: 58c65271985b774596602466617f6041
+    time-elapsed-implicit: 2babb4917a08bfd2e4132f315e9892b9
+    time-elapsed-explicit: 9281f1a0e0324d722bec2ee48f626113
+    emails: 73c27c95d3d340eb93b0b809d7446888
+    your-rank: ad928cd9ae071ccf981dfb0a277866ef
+    login-input: 67987824044ee915cbed672946eaa428
+    -brand-name-term: 91e0703aceed2a05cba02c792821d8b6
+    about: c8a8f46d5a00aebb274308543640716f
+    update-successful: 46be9984b01f4b8b05e02f812d6813b6
+    -https: 21d47fee17fdc06d1030b2a25b40b137
+    visit: a7e116adcd2430c22ae4ccdddff7776b
+    -brand-name-params: 1c6f8c51263dfcee6e91443eddffe5e5
+    -brand-name-default: 1c6f8c51263dfcee6e91443eddffe5e5
+    -brand-name-gender: 7284d3cb0581040f8b9cf6d096563f6d
+    my-shots: 9b9d8b4ff7e342665a280a7dfd6318b7
+    home-link: 8cf04a9734132302f96da8e113e80ce5
+    screenshots-description: 1efdd91b03d51d628f9dfb4820a17e58
+    creating-page-title: e07fd363fe7b92e5b3534100a1edf4bf
+    creating-page-title-default: 71860c77c6745379b0d44304d66b6a13
+    creating-page-wait-message: 901edd0d34b9dbb1607fbc3ec849ba5b
+    emails2: 86fe58e285ecb374e152dd060d8ab4aa
+    last-notice: b6c6b9390a6194207f5c88ec9cd8e116
