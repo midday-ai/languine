@@ -1,0 +1,11 @@
+{
+    "locale": {
+      "source": "en",
+      "targets": ["es", "fr"]
+    },
+    "files": {
+      "php": {
+        "include": ["lang/[locale]/*.php"]
+      }
+    }
+  }

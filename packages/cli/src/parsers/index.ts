@@ -8,6 +8,7 @@ import { HtmlParser } from "./formats/html.ts";
 import { JavaScriptParser } from "./formats/javascript.ts";
 import { JsonParser } from "./formats/json.ts";
 import { MarkdownParser } from "./formats/markdown.ts";
+import { PhpParser } from "./formats/php.ts";
 import { PoParser } from "./formats/po.ts";
 import { PropertiesParser } from "./formats/properties.ts";
 import { XcodeStringsParser } from "./formats/xcode-strings.ts";
@@ -36,6 +37,7 @@ export const parserTypeSchema = z.enum([
   "csv",
   "arb",
   "ftl",
+  "php",
 ]);
 
 export type ParserType = z.infer<typeof parserTypeSchema>;
@@ -76,6 +78,8 @@ export function createParser(options: ParserOptions): Parser {
       return new ArbParser(options);
     case "ftl":
       return new FTLParser(options);
+    case "php":
+      return new PhpParser(options);
     default:
       throw new Error(`Unsupported parser type: ${options.type}`);
   }

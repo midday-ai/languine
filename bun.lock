@@ -194,7 +194,7 @@
     },
     "packages/cli": {
       "name": "languine",
-      "version": "3.0.1",
+      "version": "3.0.2",
       "bin": "dist/index.js",
       "dependencies": {
         "@clack/prompts": "^0.10.0",
@@ -211,9 +211,11 @@
         "fast-xml-parser": "^4.5.1",
         "gettext-parser": "^8.0.0",
         "jsdom": "^26.0.0",
+        "json2php": "^0.0.12",
         "json5": "^2.2.3",
         "jsonrepair": "^3.11.2",
         "open": "^10.1.0",
+        "php-parser": "^3.1.5",
         "plist": "^3.1.0",
         "properties": "^1.2.1",
         "rambda": "^9.4.2",
@@ -247,7 +249,7 @@
     },
     "packages/sdk": {
       "name": "@languine/sdk",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "devDependencies": {
         "tsup": "^8.2.0",
       },
@@ -2465,6 +2467,8 @@
 
     "json-schema-traverse": ["json-schema-traverse@1.0.0", "", {}, "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug=="],
 
+    "json2php": ["json2php@0.0.12", "", {}, "sha512-fM/jNXBHZBaizxgLCoFjkX21CyK+zO4aDQvrJnvtwOHeN1qJwRgZEE3K0gqdKBYP5DhueNVHdC2gi4Yalim98g=="],
+
     "json5": ["json5@2.2.3", "", { "bin": { "json5": "lib/cli.js" } }, "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg=="],
 
     "jsondiffpatch": ["jsondiffpatch@0.6.0", "", { "dependencies": { "@types/diff-match-patch": "^1.0.36", "chalk": "^5.3.0", "diff-match-patch": "^1.0.5" }, "bin": { "jsondiffpatch": "bin/jsondiffpatch.js" } }, "sha512-3QItJOXp2AP1uv7waBkao5nCvhEv+QmJAd38Ybq7wNI74Q+BBmnLn4EDKz6yI9xGAIQoUF87qHt+kc1IVxB4zQ=="],
@@ -2886,6 +2890,8 @@
     "pg-protocol": ["pg-protocol@1.7.0", "", {}, "sha512-hTK/mE36i8fDDhgDFjy6xNOG+LCorxLG3WO17tku+ij6sVHXh1jQUJ8hYAnRhNla4QVD2H8er/FOjc/+EgC6yQ=="],
 
     "pg-types": ["pg-types@4.0.2", "", { "dependencies": { "pg-int8": "1.0.1", "pg-numeric": "1.0.2", "postgres-array": "~3.0.1", "postgres-bytea": "~3.0.0", "postgres-date": "~2.1.0", "postgres-interval": "^3.0.0", "postgres-range": "^1.1.1" } }, "sha512-cRL3JpS3lKMGsKaWndugWQoLOCoP+Cic8oseVcbr0qhPzYD5DWXK+RZ9LY9wxRf7RQia4SCwQlXk0q6FCPrVng=="],
+
+    "php-parser": ["php-parser@3.2.2", "", {}, "sha512-voj3rzCJmEbwHwH3QteON28wA6K+JbcaJEofyUZkUXmcViiXofjbSbcE5PtqtjX6nstnnAEYCFoRq0mkjP5/cg=="],
 
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 

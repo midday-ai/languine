@@ -16,6 +16,7 @@ export const FORMAT_ENUM = [
   "ftl",
   "js",
   "ts",
+  'php',
   "po",
   "xliff",
   "csv",
