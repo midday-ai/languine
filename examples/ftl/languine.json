@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_bh3yk1gbw6jcft83o2b517wp",
+  "locale": {
+    "source": "en",
+    "targets": [
+      "sv"
+    ]
+  },
+  "files": {
+    "ftl": {
+      "include": [
+        "locales/[locale].ftl"
+      ]
+    }
+  }
+}

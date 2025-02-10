@@ -13,6 +13,7 @@ export const FORMAT_ENUM = [
   "md",
   "mdx",
   "html",
+  "ftl",
   "js",
   "ts",
   "po",
