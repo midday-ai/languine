@@ -12,8 +12,7 @@ import { usePlanModal } from "@/hooks/use-plan-modal";
 import { buildCheckoutURL } from "@/lib/checkout";
 import { trpc } from "@/trpc/client";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { PricingSlider } from "../pricing-slider";
 import { SubmitButton } from "../ui/submit-button";
@@ -23,6 +22,7 @@ export function ChangePlanModal() {
   const t = useTranslations("changePlan");
   const { organization } = useParams();
   const pathname = usePathname();
+  const router = useRouter();
 
   const { data } = trpc.organization.getById.useQuery(
     {
@@ -35,6 +35,18 @@ export function ChangePlanModal() {
 
   const { open, setQueryStates, tier } = usePlanModal();
   const minTier = data?.tier + 1;
+
+  const handleUpgrade = () => {
+    setIsSubmitting(true);
+    const url = buildCheckoutURL({
+      tier: tier ?? 1,
+      pathname,
+      organizationId: organization as string,
+      customerData: data,
+    });
+
+    router.push(url);
+  };
 
   return (
     <Dialog open={open} onOpenChange={() => setQueryStates(null)}>
@@ -59,22 +71,13 @@ export function ChangePlanModal() {
             {t("cancel")}
           </Button>
 
-          <Link
-            href={buildCheckoutURL({
-              tier,
-              pathname,
-              organizationId: organization as string,
-              customerData: data,
-            })}
+          <SubmitButton
+            isSubmitting={isSubmitting}
+            variant="default"
+            onClick={handleUpgrade}
           >
-            <SubmitButton
-              isSubmitting={isSubmitting}
-              variant="default"
-              onClick={() => setIsSubmitting(true)}
-            >
-              {t("upgrade_to_tier", { tier: tier })}
-            </SubmitButton>
-          </Link>
+            {t("upgrade_to_tier", { tier: tier })}
+          </SubmitButton>
         </DialogFooter>
       </DialogContent>
     </Dialog>
