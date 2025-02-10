@@ -26,7 +26,7 @@ export async function translateKeys(
     provider: model?.model?.provider,
   });
 
-  const { object } = await generateObject({
+  const { object, finishReason, usage } = await generateObject({
     ...model,
     prompt,
     temperature: 0.2,
@@ -39,6 +39,9 @@ export async function translateKeys(
         .describe("The translated content"),
     }),
   });
+
+  console.log("finishReason", finishReason);
+  console.log("usage", usage);
 
   return object.translatedKeys;
 }
