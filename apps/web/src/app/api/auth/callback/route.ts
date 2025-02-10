@@ -1,4 +1,5 @@
 import { getOrganizationByUserId } from "@/db/queries/organization";
+import { acceptInvitation } from "@/db/queries/organization";
 import WelcomeEmail from "@/emails/templates/welcome";
 import { resend } from "@/lib/resend";
 import { UTCDate } from "@date-fns/utc";
@@ -47,6 +48,34 @@ export async function GET(request: Request) {
             }),
           }),
         );
+      }
+
+      // Check for stored invite first
+      const storedInviteId = cookieStore.get("invite-id")?.value;
+      if (storedInviteId && session) {
+        try {
+          const result = await acceptInvitation({
+            invitationId: storedInviteId,
+            userId: session.user.id,
+            email: session.user.email ?? "",
+          });
+
+          if (result) {
+            // Clear the invite cookie
+            cookieStore.delete("invite-id");
+
+            const response = NextResponse.redirect(
+              `${origin}/${result.invitation.organizationId}/default`,
+            );
+
+            // Set cookie to avoid checking remote session for 30 minutes
+            setSkipSessionRefreshCookie(response, true);
+
+            return response;
+          }
+        } catch (error) {
+          console.error("Failed to accept invitation:", error);
+        }
       }
 
       const preferenceCookie = cookieStore.get("user-preferences");
