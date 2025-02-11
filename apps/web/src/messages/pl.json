@@ -3,7 +3,8 @@
     "pricing": "Cennik",
     "docs": "Dokumentacja",
     "signIn": "Zaloguj się",
-    "goToApp": "Przejdź do aplikacji"
+    "goToApp": "Przejdź do aplikacji",
+    "updates": "Aktualizacje"
   },
   "hero": {
     "title": "Infrastruktura lokalizacyjna stworzona dla szybko rozwijających się startupów.",
@@ -533,7 +534,8 @@
     "settings": "Ustawienia",
     "pricing": "Cennik",
     "docs": "Dokumentacja",
-    "account": "Konto"
+    "account": "Konto",
+    "updates": "Aktualizacje"
   },
   "billing": {
     "title": "Fakturowanie"

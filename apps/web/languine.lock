@@ -3,6 +3,7 @@ files:
   src/messages/en.json:
     header.pricing: e22ac25b066b201473de7aa700ef5d92
     header.docs: a3907cd461d8739aa3266047bc4b8c0c
+    header.updates: 9ac41b6a577daadd588f0fcde0071e8b
     header.signIn: b6d4223e60986fa4c9af77ee5f7149c5
     header.goToApp: 90e5e76a965ecc3c844ae730d9f71b6b
     hero.title: e68c18bd5d3fde31473860f9751de46e
@@ -365,6 +366,7 @@ files:
     menu.pricing: e22ac25b066b201473de7aa700ef5d92
     menu.docs: 5b6cf869265c13af8566f192b4ab3d2a
     menu.account: 08bd40c7543007ad06e4fce31618f6ec
+    menu.updates: 9ac41b6a577daadd588f0fcde0071e8b
     billing.title: 780c462e85ba4399a5d42e88f69a15ca
     analytics.key: 33ef94b2b7d40dcb8e665003477209e2
     analytics.document: 45be27eb4df1df35ea3e46a62acfea3b

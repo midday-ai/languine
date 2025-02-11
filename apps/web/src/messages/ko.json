@@ -3,7 +3,8 @@
     "pricing": "가격",
     "docs": "문서",
     "signIn": "로그인",
-    "goToApp": "앱으로 가기"
+    "goToApp": "앱으로 가기",
+    "updates": "업데이트"
   },
   "hero": {
     "title": "빠르게 변화하는 스타트업을 위한 로컬라이제이션 인프라.",
@@ -533,7 +534,8 @@
     "settings": "설정",
     "pricing": "가격",
     "docs": "문서",
-    "account": "계정"
+    "account": "계정",
+    "updates": "업데이트"
   },
   "billing": {
     "title": "청구"

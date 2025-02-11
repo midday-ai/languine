@@ -3,7 +3,8 @@
     "pricing": "Hinnoittelu",
     "docs": "Dokumentaatio",
     "signIn": "Kirjaudu sisään",
-    "goToApp": "Siirry sovellukseen"
+    "goToApp": "Siirry sovellukseen",
+    "updates": "Päivitykset"
   },
   "hero": {
     "title": "Paikannusinfrastruktuuri, joka on suunniteltu nopeille startup-yrityksille.",
@@ -533,7 +534,8 @@
     "settings": "Asetukset",
     "pricing": "Hinnoittelu",
     "docs": "Dokumentaatio",
-    "account": "Tili"
+    "account": "Tili",
+    "updates": "Päivitykset"
   },
   "billing": {
     "title": "Laskutus"

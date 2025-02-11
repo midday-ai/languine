@@ -3,7 +3,8 @@
     "pricing": "Prezzi",
     "docs": "Documentazione",
     "signIn": "Accedi",
-    "goToApp": "Vai all'app"
+    "goToApp": "Vai all'app",
+    "updates": "Aggiornamenti"
   },
   "hero": {
     "title": "Infrastruttura di localizzazione progettata per startup dinamiche.",
@@ -533,7 +534,8 @@
     "settings": "Impostazioni",
     "pricing": "Prezzi",
     "docs": "Documentazione",
-    "account": "Account"
+    "account": "Account",
+    "updates": "Aggiornamenti"
   },
   "billing": {
     "title": "Fatturazione"

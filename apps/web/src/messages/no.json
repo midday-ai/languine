@@ -3,7 +3,8 @@
     "pricing": "Priser",
     "docs": "Dokumentasjon",
     "signIn": "Logg inn",
-    "goToApp": "Gå til app"
+    "goToApp": "Gå til app",
+    "updates": "Oppdateringer"
   },
   "hero": {
     "title": "Lokalisasjonsinfrastruktur laget for hurtigvoksende oppstartsselskaper.",
@@ -533,7 +534,8 @@
     "settings": "Innstillinger",
     "pricing": "Priser",
     "docs": "Dokumentasjon",
-    "account": "Konto"
+    "account": "Konto",
+    "updates": "Oppdateringer"
   },
   "billing": {
     "title": "Fakturering"

@@ -3,7 +3,8 @@
     "pricing": "Prijzen",
     "docs": "Documentatie",
     "signIn": "Inloggen",
-    "goToApp": "Ga naar app"
+    "goToApp": "Ga naar app",
+    "updates": "Updates"
   },
   "hero": {
     "title": "Lokalisatie-infrastructuur gemaakt voor snelgroeiende startups.",
@@ -533,7 +534,8 @@
     "settings": "Instellingen",
     "pricing": "Prijzen",
     "docs": "Documentatie",
-    "account": "Account"
+    "account": "Account",
+    "updates": "Updates"
   },
   "billing": {
     "title": "Facturering"

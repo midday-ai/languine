@@ -15,7 +15,8 @@
     "pricing": "Pris",
     "docs": "Dokument",
     "signIn": "Logga in",
-    "goToApp": "Gå till appen"
+    "goToApp": "Gå till appen",
+    "updates": "Uppdateringar"
   },
   "menu": {
     "pricing": "Pris",
@@ -23,7 +24,8 @@
     "tuning": "Justering",
     "settings": "Inställningar",
     "docs": "Dokumentation",
-    "account": "Konto"
+    "account": "Konto",
+    "updates": "Uppdateringar"
   },
   "hero": {
     "title": "Lokaliserings-infrastruktur skapad för snabbrörliga startups.",

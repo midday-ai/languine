@@ -3,7 +3,8 @@
     "pricing": "Preços",
     "docs": "Documentos",
     "signIn": "Entrar",
-    "goToApp": "Ir para o aplicativo"
+    "goToApp": "Ir para o aplicativo",
+    "updates": "Atualizações"
   },
   "hero": {
     "title": "Infraestrutura de localização feita para startups dinâmicas.",
@@ -533,7 +534,8 @@
     "settings": "Configurações",
     "pricing": "Preços",
     "docs": "Documentação",
-    "account": "Conta"
+    "account": "Conta",
+    "updates": "Atualizações"
   },
   "billing": {
     "title": "Cobrança"

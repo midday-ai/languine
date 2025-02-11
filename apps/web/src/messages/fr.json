@@ -3,7 +3,8 @@
     "pricing": "Tarification",
     "docs": "Docs",
     "signIn": "Se connecter",
-    "goToApp": "Aller à l'application"
+    "goToApp": "Aller à l'application",
+    "updates": "Mises à jour"
   },
   "hero": {
     "title": "Infrastructure de localisation conçue pour les startups dynamiques.",
@@ -533,7 +534,8 @@
     "settings": "Paramètres",
     "pricing": "Tarification",
     "docs": "Documentation",
-    "account": "Compte"
+    "account": "Compte",
+    "updates": "Mises à jour"
   },
   "billing": {
     "title": "Facturation"

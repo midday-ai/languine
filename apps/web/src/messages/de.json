@@ -3,7 +3,8 @@
     "pricing": "Preise",
     "docs": "Dokumentation",
     "signIn": "Anmelden",
-    "goToApp": "Zur App gehen"
+    "goToApp": "Zur App gehen",
+    "updates": "Aktualisierungen"
   },
   "hero": {
     "title": "Lokalisierungsinfrastruktur für schnelllebige Startups.",
@@ -533,7 +534,8 @@
     "settings": "Einstellungen",
     "pricing": "Preise",
     "docs": "Dokumentation",
-    "account": "Konto"
+    "account": "Konto",
+    "updates": "Aktualisierungen"
   },
   "billing": {
     "title": "Abrechnung"
