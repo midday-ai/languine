@@ -8,7 +8,7 @@ Languine supports PHP localization files using a modern array-based format. Perf
 
 First, create a `languine.json` config file in your project root:
 
-```json
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
@@ -26,7 +26,7 @@ First, create a `languine.json` config file in your project root:
 
 Your PHP translation files should return an array. Here's an example structure:
 
-```php
+```ts title="lang/en/common.php"
 <?php
 
 declare(strict_types=1);
