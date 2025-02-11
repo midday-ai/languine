@@ -35,6 +35,7 @@ const SUPPORTED_FORMATS = [
   { value: "xml", label: "XML (.xml)" },
   { value: "arb", label: "Flutter ARB (.arb)" },
   { value: "ftl", label: "Fluent (.ftl)" },
+  { value: "php", label: "PHP (.php)" },
 ] as const;
 
 const FORMAT_EXAMPLES: Record<Format, string> = {
@@ -56,6 +57,7 @@ const FORMAT_EXAMPLES: Record<Format, string> = {
   csv: "src/locales/[locale].csv",
   xml: "src/locales/[locale].xml",
   arb: "lib/l10n/app_[locale].arb",
+  php: "lang/[locale]/*.php",
 };
 
 export async function commands(args: string[] = []) {
