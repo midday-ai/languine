@@ -58,7 +58,11 @@ async function installDependencies() {
     }
 
     await execAsync(`${pm.name} install i18n-js`);
-    await execAsync("bunx expo install expo-localization");
+    try {
+      await execAsync("npx expo install expo-localization");
+    } catch {
+      // Ignore
+    }
 
     s.stop("Dependencies installed successfully");
   } catch (error) {
