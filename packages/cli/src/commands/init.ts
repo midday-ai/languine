@@ -216,9 +216,6 @@ export async function commands(args: string[] = []) {
 
         console.log();
 
-        outro(
-          `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
-        );
         return;
       } catch (error) {
         outro(chalk.red("Failed to create configuration file"));

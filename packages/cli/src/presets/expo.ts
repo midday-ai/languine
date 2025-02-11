@@ -1,7 +1,7 @@
-import { exec } from "node:child_process";
 import fs from "node:fs/promises";
+import path from "node:path";
+import { execAsync } from "@/utils/exec.ts";
 import { confirm, outro, spinner } from "@clack/prompts";
-import chalk from "chalk";
 import dedent from "dedent";
 import preferredPM from "preferred-pm";
 import { simpleGit } from "simple-git";
@@ -11,6 +11,25 @@ const git = simpleGit();
 export interface PresetOptions {
   sourceLanguage: string;
   targetLanguages: string[];
+}
+
+async function findRootPackageJson(startDir: string): Promise<string | null> {
+  let currentDir = startDir;
+  let rootDir: string | null = null;
+
+  while (currentDir !== path.parse(currentDir).root) {
+    try {
+      const packageJsonPath = path.join(currentDir, "package.json");
+      await fs.access(packageJsonPath);
+      rootDir = currentDir;
+      // Don't return immediately, keep going up to find the highest package.json
+      currentDir = path.dirname(currentDir);
+    } catch {
+      currentDir = path.dirname(currentDir);
+    }
+  }
+
+  return rootDir;
 }
 
 async function installDependencies() {
@@ -28,33 +47,23 @@ async function installDependencies() {
 
   s.start("Installing dependencies...");
   try {
-    const pm = await preferredPM(process.cwd());
-    await new Promise<void>((resolve, reject) => {
-      exec(`${pm?.name} install i18n-js`, (error) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
+    const rootDir = await findRootPackageJson(process.cwd());
+    if (!rootDir) {
+      throw new Error("Could not find a package.json in any parent directory");
+    }
 
-    await new Promise<void>((resolve, reject) => {
-      exec("npx expo install expo-localization", (error) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve();
-        }
-      });
-    });
+    const pm = await preferredPM(rootDir);
+    if (!pm) {
+      throw new Error("No package manager detected");
+    }
+
+    await execAsync(`${pm.name} install i18n-js`);
+    await execAsync("npx expo install expo-localization");
 
     s.stop("Dependencies installed successfully");
-  } catch {
+  } catch (error) {
+    console.error(error);
     s.stop("Failed to install dependencies");
-    outro(
-      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
-    );
 
     process.exit(1);
   }
@@ -90,24 +99,6 @@ async function createExampleTranslationFile(
   );
 }
 
-async function createTypesFile() {
-  const typesContent = dedent`
-    // This file is auto-generated. Do not edit manually.
-    export interface Translations {
-      welcome: string;
-      hello: string;
-      settings: string;
-    }
-
-    declare module "*.json" {
-      const content: Translations;
-      export default content;
-    }
-  `;
-
-  await fs.writeFile("locales/types.d.ts", typesContent);
-}
-
 async function createI18nFile(
   sourceLanguage: string,
   targetLanguages: string[],
@@ -116,9 +107,8 @@ async function createI18nFile(
     // For more information on Expo Localization and usage: https://docs.expo.dev/guides/localization
     import { getLocales } from 'expo-localization';
     import { I18n } from 'i18n-js';
-    import type { Translations } from './types';
     
-    const translations: Record<string, Translations> = {
+    const translations = {
       ${sourceLanguage}: require('./${sourceLanguage}.json'),
       ${targetLanguages.map((lang) => `${lang}: require('./${lang}.json')`).join(",\n      ")}
     }
@@ -132,7 +122,6 @@ async function createI18nFile(
     i18n.enableFallback = true;
     
     export default i18n;
-    export type { Translations };
   `;
 
   await fs.mkdir("locales", { recursive: true });
@@ -148,7 +137,6 @@ async function createReadme() {
     ## Structure
 
     - \`locales/i18n.ts\` - Main i18n configuration
-    - \`locales/types.d.ts\` - TypeScript types for translations
     - \`locales/{lang}.json\` - Translation files for each language
     - \`locales/native/{lang}.json\` - Native app metadata translations
 
@@ -166,16 +154,15 @@ async function createReadme() {
 
     ## Adding New Translations
 
-    1. Add new keys to \`types.d.ts\`
-    2. Add translations to each language file
-    3. Run \`languine translate\` to update missing translations
+    1. Add translations to each language file
+    2. Run \`languine translate\` to start translating
   `;
 
   await fs.writeFile("locales/README.md", readmeContent);
 }
 
 export async function expo(options: PresetOptions) {
-  // Check for uncommitted changes first
+  //   Check for uncommitted changes first
   try {
     const status = await git.status();
     if (!status.isClean()) {
@@ -218,11 +205,9 @@ export async function expo(options: PresetOptions) {
     appJson.expo.plugins.push("expo-localization");
   }
 
-  // Add RTL support
   if (!appJson.expo.extra) {
     appJson.expo.extra = {};
   }
-  appJson.expo.extra.supportsRTL = true;
 
   appJson.expo.locales = {
     [sourceLanguage]: `./locales/native/${sourceLanguage}.json`,
@@ -238,7 +223,6 @@ export async function expo(options: PresetOptions) {
 
   await installDependencies();
   await createI18nFile(sourceLanguage, targetLanguages);
-  await createTypesFile();
   await createReadme();
 
   // Create example translation files

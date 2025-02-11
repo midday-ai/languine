@@ -44,6 +44,9 @@
     "locales": {
       "en": "./locales/native/en.json",
       "es": "./locales/native/es.json"
+    },
+    "extra": {
+      "supportsRTL": true
     }
   }
 }
