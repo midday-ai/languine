@@ -153,7 +153,6 @@ async function showHelpMenu() {
 
 export async function runCommands() {
   const [mainCommand, subCommand, ...args] = process.argv.slice(2);
-  console.log("Command args:", { mainCommand, subCommand, args });
 
   // Handle help flags
   if (!mainCommand || mainCommand === "--help" || mainCommand === "-h") {
