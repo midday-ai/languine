@@ -1,11 +1,16 @@
 {
+  "projectId": "",
   "locale": {
     "source": "en",
-    "targets": ["es"]
+    "targets": [
+      "sv"
+    ]
   },
   "files": {
     "json": {
-      "include": ["locales/native/[locale].json", "locales/[locale].json"]
+      "include": [
+        "src/locales/[locale].json"
+      ]
     }
   }
 }

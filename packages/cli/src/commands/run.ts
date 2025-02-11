@@ -153,6 +153,7 @@ async function showHelpMenu() {
 
 export async function runCommands() {
   const [mainCommand, subCommand, ...args] = process.argv.slice(2);
+  console.log("Command args:", { mainCommand, subCommand, args });
 
   // Handle help flags
   if (!mainCommand || mainCommand === "--help" || mainCommand === "-h") {
@@ -217,7 +218,7 @@ export async function runCommands() {
         await authCommands(subCommand);
         break;
       case "init":
-        await initCommands([...args, subCommand].filter(Boolean));
+        await initCommands([subCommand, ...args].filter(Boolean));
         break;
       case "translate": {
         await translateCommand([...args, subCommand].filter(Boolean));

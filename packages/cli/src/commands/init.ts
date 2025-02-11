@@ -2,15 +2,54 @@ import { intro, isCancel, note, outro, select, text } from "@clack/prompts";
 import chalk from "chalk";
 import { z } from "zod";
 import type { parserTypeSchema } from "../parsers/index.js";
+import { expo } from "../presets/expo.js";
 import type { Config } from "../types.js";
 import { loadSession } from "../utils/session.js";
 import { commands as authCommands } from "./auth/index.js";
 
+interface Preset {
+  value: string;
+  label: string;
+  hint?: string;
+}
+
+const SUPPORTED_PRESETS: Preset[] = [
+  { value: "expo", label: "Expo", hint: "React Native with Expo" },
+];
+
+type PresetType = (typeof SUPPORTED_PRESETS)[number]["value"];
+
 const argsSchema = z.array(z.string()).transform((args) => {
   const projectIdIndex = args.findIndex((arg) => arg.startsWith("--p="));
+  const presetIndex = args.findIndex(
+    (arg) => arg.startsWith("--preset=") || arg === "--preset" || arg === "-p",
+  );
+  const presetValueIndex =
+    presetIndex !== -1 &&
+    (args[presetIndex] === "--preset" || args[presetIndex] === "-p")
+      ? presetIndex + 1
+      : -1;
+
+  const presetValue =
+    presetIndex !== -1
+      ? presetValueIndex !== -1
+        ? args[presetValueIndex]
+        : args[presetIndex].includes("=")
+          ? args[presetIndex].split("=")[1]
+          : undefined
+      : undefined;
+
+  const supportedPresets = SUPPORTED_PRESETS.map((p) => p.value);
+  if (presetValue && !supportedPresets.includes(presetValue)) {
+    throw new Error(
+      `Invalid preset "${presetValue}". Supported presets are: ${supportedPresets.join(", ")}`,
+    );
+  }
+
   return {
     projectId:
       projectIdIndex !== -1 ? args[projectIdIndex].slice(4) : undefined,
+    preset: presetValue as PresetType | undefined,
   };
 });
 
@@ -61,7 +100,8 @@ const FORMAT_EXAMPLES: Record<Format, string> = {
 };
 
 export async function commands(args: string[] = []) {
-  const { projectId } = argsSchema.parse(args);
+  const { projectId, preset: cliPreset } = argsSchema.parse(args);
+
   intro("Initialize a new Languine configuration");
 
   // Check authentication first
@@ -79,6 +119,19 @@ export async function commands(args: string[] = []) {
       outro("Please try initializing again after logging in.");
       process.exit(1);
     }
+  }
+
+  const selectedPreset = cliPreset;
+  if (
+    selectedPreset &&
+    !SUPPORTED_PRESETS.find((p) => p.value === selectedPreset)
+  ) {
+    outro(
+      chalk.red(
+        `Invalid preset "${selectedPreset}". Supported presets are: ${SUPPORTED_PRESETS.map((p) => p.value).join(", ")}`,
+      ),
+    );
+    process.exit(1);
   }
 
   // Get source language
@@ -111,6 +164,71 @@ export async function commands(args: string[] = []) {
     process.exit(0);
   }
 
+  // Handle preset if specified
+  if (selectedPreset) {
+    let presetResult:
+      | { fileFormat: string; filesPattern: string[] }
+      | undefined;
+    const presetOptions = {
+      sourceLanguage,
+      targetLanguages: targetLanguages.split(",").map((lang) => lang.trim()),
+    };
+
+    switch (selectedPreset) {
+      case "expo":
+        presetResult = await expo(presetOptions);
+        break;
+      // Add more preset handlers here as they become available
+      // case "next":
+      //   presetResult = await next(presetOptions);
+      //   break;
+    }
+
+    if (presetResult) {
+      const config: Config = {
+        projectId: projectId || "",
+        locale: {
+          source: sourceLanguage,
+          targets: targetLanguages.split(",").map((lang) => lang.trim()),
+        },
+        files: {
+          [presetResult.fileFormat]: {
+            include: presetResult.filesPattern,
+          },
+        },
+      };
+
+      try {
+        const fs = await import("node:fs/promises");
+        await fs.writeFile(
+          "languine.json",
+          JSON.stringify(config, null, 2),
+          "utf-8",
+        );
+
+        outro(chalk.green("Configuration file created successfully!"));
+        console.log();
+
+        note(
+          `Run 'languine translate' to start translating your files`,
+          "Next steps.",
+        );
+
+        console.log();
+
+        outro(
+          `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
+        );
+        return;
+      } catch (error) {
+        outro(chalk.red("Failed to create configuration file"));
+        console.error(error);
+        process.exit(1);
+      }
+    }
+  }
+
+  // Continue with manual configuration if no preset was used
   // Get file configurations
   const fileConfigs: Config["files"] = {};
 
@@ -179,7 +297,7 @@ export async function commands(args: string[] = []) {
     console.log();
 
     outro(
-      `Problems? ${chalk.underline(chalk.cyan("https://git.new/problem"))}`,
+      `Problems? ${chalk.underline(chalk.cyan("https://go.midday.ai/wzhr9Gt"))}`,
     );
   } catch (error) {
     outro(chalk.red("Failed to create configuration file"));
