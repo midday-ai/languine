@@ -4,7 +4,8 @@ import { I18n } from 'i18n-js';
 
 const translations = {
   en: require('./en.json'),
-  es: require('./es.json')
+  es: require('./es.json'),
+  sv: require('./sv.json')
 }
 
 const i18n = new I18n(translations);

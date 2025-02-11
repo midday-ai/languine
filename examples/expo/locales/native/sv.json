@@ -1,4 +1,4 @@
 {
-  "CFBundleDisplayName": "My App (sv)",
-  "NSContactsUsageDescription": "[sv] We need access to contacts to help you connect with friends"
+  "CFBundleDisplayName": "Min App",
+  "NSContactsUsageDescription": "Vi behöver åtkomst till kontakter för att hjälpa dig att koppla ihop med vänner"
 }

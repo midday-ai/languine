@@ -1,0 +1,9 @@
+version: 1
+files:
+  locales/native/en.json:
+    CFBundleDisplayName: e4cbf9f83134f35596e3d6d858d66cfe
+    NSContactsUsageDescription: 2f8bdc22595adee5ae450d38d88ac140
+  locales/en.json:
+    welcome: 0cc23d873da8dd04c163ab6f8a25755c
+    hello: 8b1a9953c4611296a827abf8c47804d7
+    settings: f4f70727dc34561dfde1a3c529b6205c
