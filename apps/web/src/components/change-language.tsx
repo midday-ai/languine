@@ -30,7 +30,7 @@ export function ChangeLanguage() {
         [{locale}]
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        align="start"
+        align="end"
         sideOffset={10}
         className="max-h-[300px] overflow-y-auto"
       >

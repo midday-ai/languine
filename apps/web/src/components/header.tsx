@@ -18,6 +18,7 @@ export function Header({ fullWidth = false }: { fullWidth?: boolean }) {
   const links = [
     { href: "/pricing", label: t("pricing") },
     { href: "/docs", label: t("docs") },
+    { href: "/updates", label: t("updates") },
     {
       component: <SignIn />,
       className:
@@ -45,8 +46,6 @@ export function Header({ fullWidth = false }: { fullWidth?: boolean }) {
               <GithubStars />
             </Suspense>
           </Link>
-
-          <ChangeLanguage />
 
           <div className="hidden md:flex items-center gap-6 text-sm">
             {links.map((link, i) =>
@@ -76,6 +75,8 @@ export function Header({ fullWidth = false }: { fullWidth?: boolean }) {
               ),
             )}
           </div>
+
+          <ChangeLanguage />
         </div>
 
         <MobileMenu />

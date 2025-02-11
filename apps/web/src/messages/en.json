@@ -2,6 +2,7 @@
   "header": {
     "pricing": "Pricing",
     "docs": "Docs",
+    "updates": "Updates",
     "signIn": "Sign in", 
     "goToApp": "Go to app"
   },
@@ -533,7 +534,8 @@
     "settings": "Settings",
     "pricing": "Pricing",
     "docs": "Documentation",
-    "account": "Account"
+    "account": "Account",
+    "updates": "Updates"
   },
   "billing": {
     "title": "Billing"

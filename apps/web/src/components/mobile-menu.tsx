@@ -19,6 +19,7 @@ export function MobileMenu() {
   const links = [
     { href: "/pricing", label: t("pricing") },
     { href: "/docs", label: t("docs") },
+    { href: "/updates", label: t("updates") },
     { href: "https://github.com/midday-ai/languine", label: <GithubStars /> },
   ];
 
