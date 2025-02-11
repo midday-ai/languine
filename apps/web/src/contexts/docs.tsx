@@ -59,13 +59,13 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
         { href: "/docs/vercel", label: t("vercel") },
       ],
     },
-    // {
-    //   title: t("presets"),
-    //   items: [
-    //     { href: "/docs/expo", label: "Expo" },
-    //     { href: "/docs/react-email", label: "React Email" },
-    //   ],
-    // },
+    {
+      title: t("presets"),
+      items: [
+        { href: "/docs/expo", label: "Expo" },
+        // { href: "/docs/react-email", label: "React Email" },
+      ],
+    },
     {
       title: t("formats"),
       items: [

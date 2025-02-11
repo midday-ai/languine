@@ -1,6 +1,6 @@
 {
   "name": "languine",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "type": "module",
   "bin": "dist/index.js",
   "main": "dist/config.js",
@@ -41,6 +41,7 @@
     "open": "^10.1.0",
     "php-parser": "^3.1.5",
     "plist": "^3.1.0",
+    "preferred-pm": "^4.1.1",
     "properties": "^1.2.1",
     "rambda": "^9.4.2",
     "simple-git": "^3.27.0",
