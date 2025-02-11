@@ -43,7 +43,8 @@
     },
     "locales": {
       "en": "./locales/native/en.json",
-      "es": "./locales/native/es.json"
+      "es": "./locales/native/es.json",
+      "sv": "./locales/native/sv.json"
     },
     "extra": {
       "supportsRTL": true
