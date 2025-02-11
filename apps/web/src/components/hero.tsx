@@ -19,7 +19,7 @@ export function Hero() {
             className="rounded-full text-xs h-9 bg-[#121212]"
             variant="outline"
           >
-            <Link href="/updates">Translation API & SDK</Link>
+            <Link href="/updates">Introducing the Expo Preset</Link>
           </Button>
         </div>
 

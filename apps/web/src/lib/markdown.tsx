@@ -32,10 +32,10 @@ export async function getUpdates() {
   const updatesDir = path.join(process.cwd(), "src", "markdown", "updates");
   const updates = await fs.readdir(updatesDir);
 
-  const contents = await Promise.all(
-    updates.map(async (update, idx) => {
+  const updateContents = await Promise.all(
+    updates.map(async (update) => {
       const source = await fs.readFile(path.join(updatesDir, update), "utf-8");
-      const { content } = await compileMDX({
+      const { frontmatter, content } = await compileMDX({
         source,
         options: {
           parseFrontmatter: true,
@@ -44,17 +44,22 @@ export async function getUpdates() {
         components: useMDXComponents({}),
       });
 
-      return (
-        <div key={idx.toString()}>
-          {content}
-
-          <div className="mt-24">
-            <DottedSeparator />
-          </div>
-        </div>
-      );
+      return {
+        date: new Date(frontmatter.date),
+        content,
+      };
     }),
   );
 
-  return contents;
+  // Sort by date, newest first
+  updateContents.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  return updateContents.map((update, idx) => (
+    <div key={idx.toString()}>
+      {update.content}
+      <div className="mt-24">
+        <DottedSeparator />
+      </div>
+    </div>
+  ));
 }

@@ -1,40 +1,137 @@
-# Expo
+# Expo Preset
 
-Languine supports Expo localization, integrating seamlessly with Expo's i18n system. This format works with both JavaScript and TypeScript projects, supporting nested structures and pluralization.
+The Expo preset helps you set up internationalization (i18n) in your Expo project with minimal configuration. It integrates with Expo's localization system and sets up all necessary files and configurations for managing translations.
 
----
+## Prerequisites
 
-## Setting Up
+- An Expo project
+- Git initialized repository
+- Node.js and npm/yarn/pnpm
 
-First, make sure you've got a languine.json config file in your project root. Here's an example:
+## Getting Started
 
-```json
+1. Navigate to your Expo project root and run:
+
+```bash title="Terminal"
+npx languine@latest init --preset expo
+```
+
+2. Configure your source and target languages when prompted, or create a `languine.json` file:
+
+```json title="languine.json"
 {
   "locale": {
     "source": "en",
-    "targets": ["sv", "de", "fr"]
+    "targets": ["es", "fr"]
+  }
+}
+```
+
+## What Gets Set Up
+
+The preset will:
+
+1. Install required dependencies:
+   - `i18n-js` - For handling translations
+   - `expo-localization` - For detecting device locale
+
+2. Create the following directory structure:
+   ```bash title="Structure"
+   locales/
+   ├── i18n.ts           # i18n configuration
+   ├── en.json           # Source language translations
+   ├── [lang].json       # Target language translations
+   ├── native/          # App metadata translations
+   │   ├── en.json
+   │   └── [lang].json
+   └── README.md        # Usage instructions
+   ```
+
+3. Configure your `app.json` for localization support:
+   - Enables mixed localizations for iOS
+   - Adds expo-localization plugin
+   - Sets up native localization paths
+
+## Usage
+
+### Basic Translation
+
+Import the i18n instance in your components:
+
+```tsx title="src/components/MyComponent.tsx"
+import i18n from './locales/i18n';
+
+function Welcome() {
+  return <Text>{i18n.t('welcome')}</Text>;
+}
+```
+
+### Translation Files
+
+The preset creates two types of translation files:
+
+1. Regular translations (`locales/[lang].json`):
+   ```json title="locales/[lang].json"
+   {
+     "welcome": "Welcome to my app",
+     "hello": "Hello",
+     "settings": "Settings"
+   }
+   ```
+
+2. Native translations (`locales/native/[lang].json`):
+   ```json title="locales/native/[lang].json"
+   {
+     "CFBundleDisplayName": "My App",
+     "NSContactsUsageDescription": "We need access to contacts..."
+   }
+   ```
+
+### Managing Translations
+
+1. Add new translation keys to your source language file (`locales/[source].json`)
+2. Run the translation command:
+   ```bash title="Terminal"
+   npx languine@latest translate
+   ```
+
+## Best Practices
+
+1. Always use translation keys in your code instead of hardcoded strings
+2. Keep translation keys organized and descriptive
+3. Use the native translations for app store metadata and system permissions
+4. Commit translation files to version control
+
+## Troubleshooting
+
+- If you see missing translations, check that:
+  - The translation key exists in the source language file
+  - You've run `languine translate` after adding new keys
+  - The `i18n.locale` is set correctly
+
+- If native translations aren't working:
+  - Verify your `app.json` configuration
+  - Rebuild your app after making changes to native translation files
+
+## Additional Configuration
+
+The preset supports customization through the `languine.json` file:
+
+```json title="languine.json"
+{
+  "locale": {
+    "source": "en",
+    "targets": ["es", "fr"]
   },
   "files": {
-    "expo": {
-      "include": ["assets/locales/[locale].json"]
+    "json": {
+      "include": [
+        "locales/native/[locale].json",
+        "locales/[locale].json"
+      ]
     }
   }
 }
 ```
 
-## Translating
-
-With your config set, run:
-
-```bash
-npx languine@latest translate
-```
-
-When you run this command, Languine will:
-
-- Load your source translation file (e.g., assets/locales/en.json)
-- Detect any new or modified translation strings
-- Generate translations for your target languages
-- Create or update the target language files (e.g., assets/locales/sv.json)
-- Preserve nested structure and pluralization rules
-- Maintain compatibility with expo-localization
+For more advanced configuration options, refer to the Languine configuration documentation.
