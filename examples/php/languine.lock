@@ -1,0 +1,13 @@
+version: 1
+files:
+  lang/en/common.php:
+    hello: 6cd3556deb0da54bca060b4c39479839
+    greeting: 281b672d3c2ed3de06a9f76734ce0017
+    welcome: 91a328d124ccee9f8e7d1f37fd1a6776
+    error: e838d117cfeb17601c8a34f2bca6d3a6
+    success: a144eccbfa0dcd6afc57b0d7e3b2fceb
+    confirmation: 00dff16d0f293a900355d2ed9041f97d
+    instructions: 8890e41e6bc13eba0fb9283142b76774
+    time.today: 1dd1c5fb7f25cd41b291d43a89e3aefd
+    time.yesterday: ebfe9ce86e6e9fb953aa7a25b59c1956
+    time.tomorrow: ff9eb8bd8c927da073cea632f294e23b
