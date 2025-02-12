@@ -1,4 +1,3 @@
-import crypto from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type {
@@ -16,9 +15,18 @@ const translations = existsSync(TRANSLATION_FILE)
   ? JSON.parse(readFileSync(TRANSLATION_FILE, "utf-8"))
   : {};
 
-// Generate a short hash for unique keys
-function generateKey(text: string): string {
-  return crypto.createHash("md5").update(text).digest("hex").slice(0, 6);
+// Track text occurrences per type
+const textOccurrences: Record<string, number> = {};
+
+// Generate a key using a simple counter approach
+function generateKey(text: string, type: string): string {
+  const key = `${type}:${text.toLowerCase()}`;
+  if (!textOccurrences[key]) {
+    textOccurrences[key] = 1;
+    return "";
+  }
+  textOccurrences[key]++;
+  return `_${textOccurrences[key]}`;
 }
 
 // Create a translation key based on the component name and type
@@ -26,10 +34,11 @@ function getTranslationKey(
   componentName: string,
   type: string,
   text: string,
-): string {
-  const key = `${componentName}.${type}_${generateKey(text)}`;
+): string | undefined {
+  const suffix = generateKey(text, type);
+  const key = `${componentName}.${type}${suffix}`;
   if (!translations[key]) {
-    translations[key] = text; // Store original text
+    translations[key] = text;
   }
   return key;
 }
@@ -47,9 +56,44 @@ function createJSXText(j: JSCodeshift, text: string): Node {
   };
 }
 
+// Check if a node is inside a link with a local path
+function isInsideLocalLink(path: Path): boolean {
+  let current = path;
+  while (current) {
+    const node = current.node as Node & {
+      type?: string;
+      openingElement?: {
+        name?: { name?: string };
+        attributes?: Array<{
+          name?: { name?: string };
+          value?: { type?: string; value?: string };
+        }>;
+      };
+    };
+
+    if (node.type === "JSXElement" && node.openingElement?.name?.name === "a") {
+      const hrefAttr = node.openingElement.attributes?.find(
+        (attr) =>
+          attr.name?.name === "href" && attr.value?.type === "StringLiteral",
+      );
+      if (hrefAttr?.value?.value?.startsWith("/")) {
+        return true;
+      }
+    }
+    current = current.parent;
+  }
+  return false;
+}
+
 export default function transform(file: FileInfo, api: API) {
   const j = api.jscodeshift;
-  const root = j(file.source);
+
+  // First clean up the source by removing extra parentheses
+  const source = file.source.replace(
+    /return\s*\(\s*(<[\s\S]*?>)\s*\)\s*;/g,
+    "return $1;",
+  );
+  const root = j(source);
 
   // Get the component name from the file path
   const componentName = path.basename(file.path).replace(/\.[jt]sx?$/, "");
@@ -62,7 +106,14 @@ export default function transform(file: FileInfo, api: API) {
       continue; // Skip empty, short, or non-text content
     }
 
+    // Skip text inside local links
+    if (isInsideLocalLink(path)) {
+      continue;
+    }
+
     const key = getTranslationKey(componentName, "text", text);
+    if (!key) continue;
+
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [j.literal(key)]),
     );
@@ -72,7 +123,6 @@ export default function transform(file: FileInfo, api: API) {
     const trailingSpace = value.match(/\s*\n\s*$/)?.[0] || "";
 
     if (leadingSpace || trailingSpace) {
-      // Create a span element to hold multiple nodes
       const span = {
         type: "JSXElement",
         openingElement: {
@@ -106,14 +156,26 @@ export default function transform(file: FileInfo, api: API) {
 
   // Replace string literals in JSX attributes
   for (const path of root.find(j.StringLiteral).paths()) {
-    if (path.parent.node.type !== "JSXAttribute") continue;
+    const parent = path.parent.node as Node & {
+      type?: string;
+      name?: { name?: string };
+    };
+
+    if (parent.type !== "JSXAttribute") continue;
 
     const text = path.node.value;
     if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
       continue; // Skip empty, short, or non-text content
     }
 
+    // Skip href attributes that are local paths
+    if (parent.name?.name === "href" && text.startsWith("/")) {
+      continue;
+    }
+
     const key = getTranslationKey(componentName, "attribute", text);
+    if (!key) continue;
+
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [j.literal(key)]),
     );
@@ -127,7 +189,7 @@ export default function transform(file: FileInfo, api: API) {
   // Save the translations
   saveTranslations();
 
-  // Return the transformed source
+  // Return the transformed source with proper formatting
   return root.toSource({
     quote: "double",
   });
