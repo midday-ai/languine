@@ -82,19 +82,35 @@ export class TransformService {
     const root = j(source);
     const componentName = this.getComponentName(file.path);
 
-    // Reset state for new transformation
     this.collectedTranslations.length = 0;
 
-    // Transform JSX elements
     this.transformJSXElements(j, root, componentName);
-
-    // Transform string literals in attributes
     this.transformStringLiterals(j, root, componentName);
 
-    // Save and update translations
-    await this.processTranslations(j, root, options?.keyOverrides);
+    // Generate keys internally
+    const keyOverrides = {
+      ...options?.keyOverrides,
+      ...(await this.generateKeys()),
+    };
+
+    await this.processTranslations(j, root, keyOverrides);
 
     return root.toSource({ quote: "double" });
+  }
+
+  // Internal key generation
+  private async generateKeys(): Promise<Record<string, string>> {
+    const keyMap: Record<string, string> = {};
+
+    for (const translation of this.collectedTranslations) {
+      // For now, just return the same keys
+      keyMap[translation.originalKey] = translation.originalKey;
+
+      // Later you can modify this to generate different keys, for example:
+      // keyMap[translation.originalKey] = `${translation.type}_${translation.elementKey}`;
+    }
+
+    return keyMap;
   }
 
   // File Processing Methods
