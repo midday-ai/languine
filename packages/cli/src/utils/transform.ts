@@ -1,126 +1,134 @@
-import type { API, FileInfo } from "jscodeshift";
+import crypto from "node:crypto";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import type {
+  API,
+  Collection,
+  FileInfo,
+  JSCodeshift,
+  Node,
+  Path,
+} from "jscodeshift";
 
-interface ExtractedString {
-  value: string;
-  loc?: {
-    start: { line: number; column: number };
-    end: { line: number; column: number };
+// Load or create translation store
+const TRANSLATION_FILE = path.resolve("translations.json");
+const translations = existsSync(TRANSLATION_FILE)
+  ? JSON.parse(readFileSync(TRANSLATION_FILE, "utf-8"))
+  : {};
+
+// Generate a short hash for unique keys
+function generateKey(text: string): string {
+  return crypto.createHash("md5").update(text).digest("hex").slice(0, 6);
+}
+
+// Create a translation key based on the component name and type
+function getTranslationKey(
+  componentName: string,
+  type: string,
+  text: string,
+): string {
+  const key = `${componentName}.${type}_${generateKey(text)}`;
+  if (!translations[key]) {
+    translations[key] = text; // Store original text
+  }
+  return key;
+}
+
+// Save translations to file
+function saveTranslations(): void {
+  writeFileSync(TRANSLATION_FILE, JSON.stringify(translations, null, 2));
+}
+
+// Helper to create a JSX text node
+function createJSXText(j: JSCodeshift, text: string): Node {
+  return {
+    type: "JSXText",
+    value: text,
   };
-  parentType: string;
 }
 
 export default function transform(file: FileInfo, api: API) {
   const j = api.jscodeshift;
   const root = j(file.source);
-  const strings: ExtractedString[] = [];
 
-  // Find all string literals in JSX
+  // Get the component name from the file path
+  const componentName = path.basename(file.path).replace(/\.[jt]sx?$/, "");
+
+  // Replace JSX text content
   for (const path of root.find(j.JSXText).paths()) {
-    const value = path.node.value?.trim();
-    if (value) {
-      strings.push({
-        value,
-        loc: path.node.loc || undefined,
-        parentType: path.parent.node.type,
-      });
+    const value = path.node.value || "";
+    const text = value.trim();
+    if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
+      continue; // Skip empty, short, or non-text content
     }
-  }
 
-  // Find string literals in JSX attributes
-  for (const path of root.find(j.StringLiteral).paths()) {
-    if (path.parent.node.type === "JSXAttribute") {
-      strings.push({
-        value: path.node.value as string,
-        loc: path.node.loc || undefined,
-        parentType: path.parent.node.type,
-      });
-    }
-  }
+    const key = getTranslationKey(componentName, "text", text);
+    const replacement = j.jsxExpressionContainer(
+      j.callExpression(j.identifier("t"), [j.literal(key)]),
+    );
 
-  // Generate translation keys
-  const translations = createTranslationMap(strings, file.path);
+    // Preserve whitespace
+    const leadingSpace = value.match(/^\s*\n\s*/)?.[0] || "";
+    const trailingSpace = value.match(/\s*\n\s*$/)?.[0] || "";
 
-  // Add import for translation function if not exists
-  //   const hasTranslationImport =
-  //     root
-  //       .find(j.ImportDeclaration)
-  //       .filter((path) => path.node.source?.value === "@/lib/i18n")
-  //       .size() > 0;
+    if (leadingSpace || trailingSpace) {
+      // Create a span element to hold multiple nodes
+      const span = {
+        type: "JSXElement",
+        openingElement: {
+          type: "JSXOpeningElement",
+          name: { type: "JSXIdentifier", name: "span" },
+          attributes: [],
+          selfClosing: false,
+        },
+        closingElement: {
+          type: "JSXClosingElement",
+          name: { type: "JSXIdentifier", name: "span" },
+        },
+        children: [
+          ...(leadingSpace ? [createJSXText(j, leadingSpace)] : []),
+          replacement,
+          ...(trailingSpace ? [createJSXText(j, trailingSpace)] : []),
+        ],
+      };
 
-  //   if (!hasTranslationImport) {
-  //     root
-  //       .get()
-  //       .node.program.body.unshift(
-  //         j.importDeclaration(
-  //           [j.importSpecifier(j.identifier("t"))],
-  //           j.literal("@/lib/i18n"),
-  //         ),
-  //       );
-  //   }
-
-  // Replace JSX text
-  for (const path of root.find(j.JSXText).paths()) {
-    const value = path.node.value?.trim();
-    if (value && translations[value]) {
-      const replacement = j.jsxExpressionContainer(
-        j.callExpression(j.identifier("t"), [j.literal(translations[value])]),
-      );
-      path.replace(replacement);
+      root
+        .find(j.JSXText)
+        .filter((p) => p.node.value === value)
+        .replaceWith(span);
+    } else {
+      root
+        .find(j.JSXText)
+        .filter((p) => p.node.value === value)
+        .replaceWith(replacement);
     }
   }
 
   // Replace string literals in JSX attributes
   for (const path of root.find(j.StringLiteral).paths()) {
-    if (path.parent.node.type === "JSXAttribute") {
-      const value = path.node.value as string;
-      if (translations[value]) {
-        const replacement = j.jsxExpressionContainer(
-          j.callExpression(j.identifier("t"), [j.literal(translations[value])]),
-        );
-        path.replace(replacement);
-      }
+    if (path.parent.node.type !== "JSXAttribute") continue;
+
+    const text = path.node.value;
+    if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
+      continue; // Skip empty, short, or non-text content
     }
-  }
 
-  return root.toSource();
-}
-
-function createTranslationMap(
-  strings: ExtractedString[],
-  filePath: string,
-): Record<string, string> {
-  const translations: Record<string, string> = {};
-  const seenValues = new Map<string, number>();
-  const componentName =
-    filePath
-      .split("/")
-      .pop()
-      ?.replace(/\.[jt]sx?$/, "") || "";
-
-  for (const { value, parentType } of strings) {
-    const count = seenValues.get(value) || 0;
-    seenValues.set(value, count + 1);
-
-    const elementType = parentType === "JSXAttribute" ? "attribute" : "text";
-    const key = generateTranslationKey(
-      componentName,
-      elementType,
-      value,
-      count,
+    const key = getTranslationKey(componentName, "attribute", text);
+    const replacement = j.jsxExpressionContainer(
+      j.callExpression(j.identifier("t"), [j.literal(key)]),
     );
-    translations[value] = key;
+
+    root
+      .find(j.StringLiteral)
+      .filter((p) => p.node.value === text)
+      .replaceWith(replacement);
   }
 
-  return translations;
-}
+  // Save the translations
+  saveTranslations();
 
-function generateTranslationKey(
-  componentName: string,
-  elementType: string,
-  value: string,
-  index: number,
-): string {
-  const baseKey = `${componentName}.${elementType}`.toLowerCase();
-  const suffix = index > 0 ? `_${index}` : "";
-  return `${baseKey}${suffix}`;
+  // Return the transformed source
+  return root.toSource({
+    quote: "double",
+  });
 }
