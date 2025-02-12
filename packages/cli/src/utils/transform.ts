@@ -3,6 +3,7 @@ import path from "node:path";
 import { client } from "@/utils/api.js";
 import type { API, FileInfo, JSCodeshift, Node, Path } from "jscodeshift";
 
+// Core types for the transformer
 type ASTNode = Node & {
   type: string;
   name?: string;
@@ -12,17 +13,29 @@ type ASTNode = Node & {
   computed?: boolean;
 };
 
+type CollectedTranslation = {
+  originalKey: string;
+  value: string;
+  type: "text" | "attribute" | "link";
+  functionName: string;
+  elementKey: string;
+};
+
+type TransformOptions = {
+  keyOverrides?: Record<string, string>;
+};
+
+/**
+ * Service for transforming JSX/TSX files to use translations.
+ * Handles extraction of text content, attributes, and dynamic content.
+ */
 export class TransformService {
+  // State management
   private translations: Record<string, Record<string, string>> = {};
   private elementCounts: Record<string, Record<string, number>> = {};
-  private collectedTranslations: Array<{
-    originalKey: string;
-    value: string;
-    type: "text" | "attribute" | "link";
-    functionName: string;
-    elementKey: string;
-  }> = [];
+  private collectedTranslations: CollectedTranslation[] = [];
 
+  // Constants
   private readonly SKIP_ATTRIBUTES = new Set([
     "href",
     "src",
@@ -57,6 +70,44 @@ export class TransformService {
     this.loadTranslations();
   }
 
+  /**
+   * Main transformation method that processes a file
+   */
+  public async transform(
+    file: FileInfo,
+    api: API,
+    options?: TransformOptions,
+  ): Promise<string> {
+    const j = api.jscodeshift;
+    const source = this.cleanSource(file.source);
+    const root = j(source);
+    const componentName = this.getComponentName(file.path);
+
+    // Reset state for new transformation
+    this.collectedTranslations.length = 0;
+
+    // Transform JSX elements
+    this.transformJSXElements(j, root, componentName);
+
+    // Transform string literals in attributes
+    this.transformStringLiterals(j, root, componentName);
+
+    // Save and update translations
+    await this.processTranslations(j, root, options?.keyOverrides);
+
+    return root.toSource({ quote: "double" });
+  }
+
+  // File Processing Methods
+  private cleanSource(source: string): string {
+    return source.replace(/return\s*\(\s*(<[\s\S]*?>)\s*\)\s*;/g, "return $1;");
+  }
+
+  private getComponentName(filePath: string): string {
+    return path.basename(filePath).replace(/\.[jt]sx?$/, "");
+  }
+
+  // Translation File Management
   private loadTranslations(): void {
     if (existsSync(this.translationFile)) {
       try {
@@ -70,6 +121,226 @@ export class TransformService {
     }
   }
 
+  private async saveTranslations(
+    keyOverrides: Record<string, string> = {},
+  ): Promise<Record<string, Record<string, string>>> {
+    const transformedTranslations =
+      this.buildTransformedTranslations(keyOverrides);
+    const finalTranslations = await this.mergePreviousTranslations(
+      transformedTranslations,
+    );
+
+    writeFileSync(
+      this.translationFile,
+      JSON.stringify(finalTranslations, null, 2),
+    );
+    return transformedTranslations;
+  }
+
+  private buildTransformedTranslations(
+    keyOverrides: Record<string, string>,
+  ): Record<string, Record<string, string>> {
+    const transformedTranslations: Record<string, Record<string, string>> = {};
+
+    for (const item of this.collectedTranslations) {
+      const finalKey = keyOverrides[item.originalKey] || item.originalKey;
+      const [component, key] = finalKey.split(".");
+
+      if (!transformedTranslations[component]) {
+        transformedTranslations[component] = {};
+      }
+      transformedTranslations[component][key] = item.value;
+    }
+
+    return transformedTranslations;
+  }
+
+  private async mergePreviousTranslations(
+    newTranslations: Record<string, Record<string, string>>,
+  ): Promise<Record<string, Record<string, string>>> {
+    if (!existsSync(this.translationFile)) {
+      return newTranslations;
+    }
+
+    try {
+      const existingTranslations = JSON.parse(
+        readFileSync(this.translationFile, "utf-8"),
+      );
+      return {
+        ...existingTranslations,
+        ...newTranslations,
+      };
+    } catch (error) {
+      console.warn("Failed to merge with existing translations");
+      return newTranslations;
+    }
+  }
+
+  // AST Transformation Methods
+  private transformJSXElements(
+    j: JSCodeshift,
+    root: ReturnType<JSCodeshift>,
+    componentName: string,
+  ): void {
+    const elements = root.find("JSXElement");
+    for (const parentPath of elements.paths()) {
+      this.transformJSXElement(j, parentPath, componentName);
+    }
+  }
+
+  private transformStringLiterals(
+    j: JSCodeshift,
+    root: ReturnType<JSCodeshift>,
+    componentName: string,
+  ): void {
+    for (const path of root.find(j.StringLiteral).paths()) {
+      this.handleStringLiteral(j, root, path, componentName);
+    }
+  }
+
+  private async processTranslations(
+    j: JSCodeshift,
+    root: ReturnType<JSCodeshift>,
+    keyOverrides: Record<string, string> = {},
+  ): Promise<void> {
+    try {
+      const savedTranslations = await this.saveTranslations(keyOverrides);
+      console.log("Saved translations:", savedTranslations);
+      this.updateTranslationCalls(j, root, keyOverrides);
+    } catch (error) {
+      console.error("Error saving translations:", error);
+      if (error instanceof Error) {
+        console.error("Error details:", {
+          message: error.message,
+          stack: error.stack,
+        });
+      }
+    }
+  }
+
+  private updateTranslationCalls(
+    j: JSCodeshift,
+    root: ReturnType<JSCodeshift>,
+    keyOverrides: Record<string, string>,
+  ): void {
+    const calls = root.find("CallExpression");
+
+    for (const path of calls.paths()) {
+      const node = path.value as {
+        type: string;
+        callee?: { type: string; name: string };
+        arguments?: Array<{ type: string; value: string }>;
+      };
+
+      if (
+        node.callee?.type === "Identifier" &&
+        node.callee.name === "t" &&
+        node.arguments?.[0]?.type === "StringLiteral"
+      ) {
+        const originalKey = node.arguments[0].value;
+        const finalKey = keyOverrides[originalKey] || originalKey;
+
+        const callNode = path.node as Node & { arguments: Array<Node> };
+        callNode.arguments[0] = j.literal(finalKey);
+      }
+    }
+  }
+
+  // JSX Processing Methods
+  private transformJSXElement(
+    j: JSCodeshift,
+    path: Path,
+    componentName: string,
+  ): void {
+    const node = path.node as Node & {
+      children?: Array<Node & { type: string; value?: string }>;
+    };
+    const children = node.children || [];
+
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+
+      if (child.type === "JSXExpressionContainer") {
+        i = this.handleJSXExpression(j, children, i, path, componentName);
+      } else if (child.type === "JSXText") {
+        i = this.handleJSXText(j, children, i, path, componentName);
+      }
+    }
+  }
+
+  private handleJSXExpression(
+    j: JSCodeshift,
+    children: Array<Node & { type: string; value?: string }>,
+    index: number,
+    path: Path,
+    componentName: string,
+  ): number {
+    const child = children[index];
+    const selectPattern = this.createSelectPattern(child);
+
+    if (selectPattern.pattern && selectPattern.variable) {
+      children[index] = this.createSelectTranslation(
+        j,
+        selectPattern as { pattern: string; variable: string },
+        path,
+        componentName,
+      );
+      return index;
+    }
+
+    const varName = this.getVariableName(child);
+    if (varName) {
+      const nextChild = children[index + 1];
+      const textAfter =
+        nextChild?.type === "JSXText" ? nextChild.value || "" : "";
+
+      if (textAfter) {
+        children[index] = this.createVariableWithTextTranslation(
+          j,
+          varName,
+          textAfter,
+          path,
+          componentName,
+        );
+        return index + 1;
+      }
+    }
+
+    return index;
+  }
+
+  private handleJSXText(
+    j: JSCodeshift,
+    children: Array<Node & { type: string; value?: string }>,
+    index: number,
+    path: Path,
+    componentName: string,
+  ): number {
+    const child = children[index];
+    const text = child.value || "";
+    if (!text.trim()) return index;
+
+    const { hasVariables, nextIndex, variables } = this.collectVariables(
+      children,
+      index,
+    );
+
+    if (hasVariables) {
+      return this.handleTextWithVariables(
+        j,
+        children,
+        index,
+        nextIndex,
+        variables,
+        path,
+        componentName,
+      );
+    }
+
+    return this.handleSimpleText(j, children, index, text, path, componentName);
+  }
+
+  // Utility Methods
   private getElementType(path: Path): string {
     let current = path;
     while (current) {
@@ -362,358 +633,263 @@ export class TransformService {
     }
   }
 
-  private async saveTranslations(
-    keyOverrides: Record<string, string> = {},
-  ): Promise<Record<string, Record<string, string>>> {
-    const transformedTranslations: Record<string, Record<string, string>> = {};
-
-    for (const item of this.collectedTranslations) {
-      const finalKey = keyOverrides[item.originalKey] || item.originalKey;
-      const [component, key] = finalKey.split(".");
-
-      if (!transformedTranslations[component]) {
-        transformedTranslations[component] = {};
-      }
-      transformedTranslations[component][key] = item.value;
-    }
-
-    let finalTranslations = { ...transformedTranslations };
-    if (existsSync(this.translationFile)) {
-      try {
-        const existingTranslations = JSON.parse(
-          readFileSync(this.translationFile, "utf-8"),
-        );
-        finalTranslations = {
-          ...existingTranslations,
-          ...transformedTranslations,
-        };
-      } catch (error) {
-        console.warn("Failed to merge with existing translations");
-      }
-    }
-
-    writeFileSync(
-      this.translationFile,
-      JSON.stringify(finalTranslations, null, 2),
-    );
-    return transformedTranslations;
-  }
-
-  private transformJSXElement(
+  private handleStringLiteral(
     j: JSCodeshift,
+    root: ReturnType<JSCodeshift>,
     path: Path,
     componentName: string,
   ): void {
-    const node = path.node as Node & {
-      children?: Array<Node & { type: string; value?: string }>;
+    const parent = path.parent.node as Node & {
+      type?: string;
+      name?: { name?: string };
     };
-    const children = node.children || [];
 
-    for (let i = 0; i < children.length; i++) {
-      const child = children[i];
+    if (parent.type !== "JSXAttribute") return;
 
-      if (child.type === "JSXExpressionContainer") {
-        const selectPattern = this.createSelectPattern(child);
-        if (selectPattern.pattern && selectPattern.variable) {
-          const key = this.getNextKey(componentName, "text", path);
-          this.storeTranslation(
-            componentName,
-            key,
-            selectPattern.pattern,
-            path,
-          );
-
-          const functionName = this.getFunctionName(path);
-          const replacement = j.jsxExpressionContainer(
-            j.callExpression(j.identifier("t"), [
-              j.literal(`${functionName}.${key}`),
-              {
-                type: "ObjectExpression",
-                properties: [
-                  {
-                    type: "ObjectProperty",
-                    key: {
-                      type: "Identifier",
-                      name: this.getSimplifiedKey(selectPattern.variable),
-                    } as unknown as Node,
-                    value: this.createMemberExpression(
-                      selectPattern.variable.split("."),
-                    ) as unknown as Node,
-                    shorthand: false,
-                    computed: false,
-                  } as unknown as Node,
-                ],
-              } as unknown as Node,
-            ]),
-          );
-
-          children[i] = replacement;
-          continue;
-        }
-
-        const varName = this.getVariableName(child);
-        if (varName) {
-          const nextChild = children[i + 1];
-          const textAfter =
-            nextChild?.type === "JSXText" ? nextChild.value || "" : "";
-
-          if (textAfter) {
-            const key = this.getNextKey(componentName, "text", path);
-            const simplifiedKey = this.getSimplifiedKey(varName);
-            const template = `{${simplifiedKey}}${textAfter}`;
-
-            this.storeTranslation(componentName, key, template, path);
-            const functionName = this.getFunctionName(path);
-
-            const replacement = j.jsxExpressionContainer(
-              j.callExpression(j.identifier("t"), [
-                j.literal(`${functionName}.${key}`),
-                {
-                  type: "ObjectExpression",
-                  properties: [
-                    {
-                      type: "ObjectProperty",
-                      key: {
-                        type: "Identifier",
-                        name: simplifiedKey,
-                      } as unknown as Node,
-                      value: this.createMemberExpression(
-                        varName.split("."),
-                      ) as unknown as Node,
-                      shorthand: false,
-                      computed: false,
-                    } as unknown as Node,
-                  ],
-                } as unknown as Node,
-              ]),
-            );
-
-            children.splice(i, 2, replacement);
-            continue;
-          }
-        }
-      }
-
-      if (child.type === "JSXText") {
-        const text = child.value || "";
-        if (!text.trim()) continue;
-
-        const variables: Array<{
-          name: string;
-          node: Node;
-          pluralCondition?: Node;
-        }> = [];
-        let nextIndex = i + 1;
-        let hasVariables = false;
-
-        while (nextIndex < children.length) {
-          const nextChild = children[nextIndex];
-          if (nextChild.type === "JSXExpressionContainer") {
-            const varName = this.getVariableName(nextChild);
-            if (varName) {
-              variables.push({
-                name: varName,
-                node: nextChild,
-              });
-              hasVariables = true;
-              nextIndex++;
-
-              if (nextIndex < children.length) {
-                const afterNode = children[nextIndex];
-                if (afterNode.type === "JSXText" && afterNode.value) {
-                  nextIndex++;
-                }
-              }
-              continue;
-            }
-          }
-          break;
-        }
-
-        if (hasVariables) {
-          const parts = children.slice(i, nextIndex).map((node) => {
-            if (node.type === "JSXText") {
-              return this.cleanupText(node.value || "");
-            }
-            const varName = this.getVariableName(node);
-            if (!varName) return "";
-            const simplifiedKey = this.getSimplifiedKey(varName);
-            return `{${simplifiedKey}}`;
-          });
-
-          const combinedText = parts.join("").trim();
-
-          if (combinedText) {
-            const key = this.getNextKey(componentName, "text", path);
-            this.storeTranslation(componentName, key, combinedText, path);
-            const functionName = this.getFunctionName(path);
-
-            const variablesObj = {
-              type: "ObjectExpression",
-              properties: variables.map(({ name }) => ({
-                type: "ObjectProperty",
-                key: { type: "Identifier", name: this.getSimplifiedKey(name) },
-                value: this.createMemberExpression(name.split(".")),
-                shorthand: false,
-                computed: false,
-              })),
-            } as unknown as Node;
-
-            const replacement = j.jsxExpressionContainer(
-              j.callExpression(j.identifier("t"), [
-                j.literal(`${functionName}.${key}`),
-                variablesObj,
-              ]),
-            );
-
-            children.splice(i, nextIndex - i, replacement);
-          }
-        } else {
-          const cleanText = this.cleanupText(text);
-          if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
-            const isLink = this.isInsideLink(path);
-            const key = this.getNextKey(
-              componentName,
-              isLink ? "link" : "text",
-              path,
-            );
-            this.storeTranslation(componentName, key, cleanText, path);
-            const functionName = this.getFunctionName(path);
-
-            const replacement = j.jsxExpressionContainer(
-              j.callExpression(j.identifier("t"), [
-                j.literal(`${functionName}.${key}`),
-              ]),
-            );
-
-            const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";
-            const trailingSpace = text.match(/\s*\n\s*$/)?.[0] || "";
-
-            if (leadingSpace || trailingSpace) {
-              const nodes: Node[] = [];
-              if (leadingSpace) nodes.push(this.createJSXText(j, leadingSpace));
-              nodes.push(replacement);
-              if (trailingSpace)
-                nodes.push(this.createJSXText(j, trailingSpace));
-              children.splice(i, 1, ...nodes);
-            } else {
-              children[i] = replacement;
-            }
-          }
-        }
-      }
+    const text = path.node.value;
+    if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
+      return;
     }
+
+    const cleanText = this.cleanupText(text);
+    const attrName = parent.name?.name;
+    if (attrName && this.SKIP_ATTRIBUTES.has(attrName)) {
+      return;
+    }
+
+    const key = this.getNextKey(componentName, "attribute", path);
+    if (!key) return;
+
+    this.storeTranslation(componentName, key, cleanText, path);
+
+    const functionName = this.getFunctionName(path);
+    const replacement = j.jsxExpressionContainer(
+      j.callExpression(j.identifier("t"), [
+        j.literal(`${functionName}.${key}`),
+      ]),
+    );
+
+    root
+      .find(j.StringLiteral)
+      .filter((p: Path) => p.node.value === text)
+      .replaceWith(replacement);
   }
 
-  public async transform(
-    file: FileInfo,
-    api: API,
-    options?: {
-      keyOverrides?: Record<string, string>;
+  private createSelectTranslation(
+    j: JSCodeshift,
+    selectPattern: { pattern: string; variable: string } & {
+      pattern: NonNullable<string>;
+      variable: NonNullable<string>;
     },
-  ): Promise<string> {
-    const j = api.jscodeshift;
+    path: Path,
+    componentName: string,
+  ): Node {
+    const key = this.getNextKey(componentName, "text", path);
+    this.storeTranslation(componentName, key, selectPattern.pattern, path);
 
-    const source = file.source.replace(
-      /return\s*\(\s*(<[\s\S]*?>)\s*\)\s*;/g,
-      "return $1;",
+    const functionName = this.getFunctionName(path);
+    return j.jsxExpressionContainer(
+      j.callExpression(j.identifier("t"), [
+        j.literal(`${functionName}.${key}`),
+        {
+          type: "ObjectExpression",
+          properties: [
+            {
+              type: "ObjectProperty",
+              key: {
+                type: "Identifier",
+                name: this.getSimplifiedKey(selectPattern.variable),
+              } as unknown as Node,
+              value: this.createMemberExpression(
+                selectPattern.variable.split("."),
+              ) as unknown as Node,
+              shorthand: false,
+              computed: false,
+            } as unknown as Node,
+          ],
+        } as unknown as Node,
+      ]),
     );
-    const root = j(source);
+  }
 
-    const componentName = path.basename(file.path).replace(/\.[jt]sx?$/, "");
+  private createVariableWithTextTranslation(
+    j: JSCodeshift,
+    varName: string,
+    textAfter: string,
+    path: Path,
+    componentName: string,
+  ): Node {
+    const key = this.getNextKey(componentName, "text", path);
+    const simplifiedKey = this.getSimplifiedKey(varName);
+    const template = `{${simplifiedKey}}${textAfter}`;
 
-    this.collectedTranslations.length = 0;
+    this.storeTranslation(componentName, key, template, path);
+    const functionName = this.getFunctionName(path);
 
-    const elements = root.find("JSXElement");
-    for (const parentPath of elements.paths()) {
-      this.transformJSXElement(j, parentPath, componentName);
+    return j.jsxExpressionContainer(
+      j.callExpression(j.identifier("t"), [
+        j.literal(`${functionName}.${key}`),
+        {
+          type: "ObjectExpression",
+          properties: [
+            {
+              type: "ObjectProperty",
+              key: {
+                type: "Identifier",
+                name: simplifiedKey,
+              } as unknown as Node,
+              value: this.createMemberExpression(
+                varName.split("."),
+              ) as unknown as Node,
+              shorthand: false,
+              computed: false,
+            } as unknown as Node,
+          ],
+        } as unknown as Node,
+      ]),
+    );
+  }
+
+  private collectVariables(
+    children: Array<Node & { type: string; value?: string }>,
+    startIndex: number,
+  ): {
+    hasVariables: boolean;
+    nextIndex: number;
+    variables: Array<{ name: string; node: Node; pluralCondition?: Node }>;
+  } {
+    const variables: Array<{
+      name: string;
+      node: Node;
+      pluralCondition?: Node;
+    }> = [];
+    let nextIndex = startIndex + 1;
+    let hasVariables = false;
+
+    while (nextIndex < children.length) {
+      const nextChild = children[nextIndex];
+      if (nextChild.type === "JSXExpressionContainer") {
+        const varName = this.getVariableName(nextChild);
+        if (varName) {
+          variables.push({
+            name: varName,
+            node: nextChild,
+          });
+          hasVariables = true;
+          nextIndex++;
+
+          if (nextIndex < children.length) {
+            const afterNode = children[nextIndex];
+            if (afterNode.type === "JSXText" && afterNode.value) {
+              nextIndex++;
+            }
+          }
+          continue;
+        }
+      }
+      break;
     }
 
-    for (const path of root.find(j.StringLiteral).paths()) {
-      const parent = path.parent.node as Node & {
-        type?: string;
-        name?: { name?: string };
-      };
+    return { hasVariables, nextIndex, variables };
+  }
 
-      if (parent.type !== "JSXAttribute") continue;
-
-      const text = path.node.value;
-      if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
-        continue;
+  private handleTextWithVariables(
+    j: JSCodeshift,
+    children: Array<Node & { type: string; value?: string }>,
+    startIndex: number,
+    endIndex: number,
+    variables: Array<{ name: string; node: Node; pluralCondition?: Node }>,
+    path: Path,
+    componentName: string,
+  ): number {
+    const parts = children.slice(startIndex, endIndex).map((node) => {
+      if (node.type === "JSXText") {
+        return this.cleanupText(node.value || "");
       }
+      const varName = this.getVariableName(node);
+      if (!varName) return "";
+      const simplifiedKey = this.getSimplifiedKey(varName);
+      return `{${simplifiedKey}}`;
+    });
 
-      const cleanText = this.cleanupText(text);
-      const attrName = parent.name?.name;
-      if (attrName && this.SKIP_ATTRIBUTES.has(attrName)) {
-        continue;
-      }
+    const combinedText = parts.join("").trim();
 
-      const key = this.getNextKey(componentName, "attribute", path);
-      if (!key) continue;
-
-      this.storeTranslation(componentName, key, cleanText, path);
-
+    if (combinedText) {
+      const key = this.getNextKey(componentName, "text", path);
+      this.storeTranslation(componentName, key, combinedText, path);
       const functionName = this.getFunctionName(path);
+
+      const variablesObj = {
+        type: "ObjectExpression",
+        properties: variables.map(({ name }) => ({
+          type: "ObjectProperty",
+          key: { type: "Identifier", name: this.getSimplifiedKey(name) },
+          value: this.createMemberExpression(name.split(".")),
+          shorthand: false,
+          computed: false,
+        })),
+      } as unknown as Node;
+
+      const replacement = j.jsxExpressionContainer(
+        j.callExpression(j.identifier("t"), [
+          j.literal(`${functionName}.${key}`),
+          variablesObj,
+        ]),
+      );
+
+      children.splice(startIndex, endIndex - startIndex, replacement);
+    }
+
+    return endIndex - 1;
+  }
+
+  private handleSimpleText(
+    j: JSCodeshift,
+    children: Array<Node & { type: string; value?: string }>,
+    index: number,
+    text: string,
+    path: Path,
+    componentName: string,
+  ): number {
+    const cleanText = this.cleanupText(text);
+    if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
+      const isLink = this.isInsideLink(path);
+      const key = this.getNextKey(
+        componentName,
+        isLink ? "link" : "text",
+        path,
+      );
+      this.storeTranslation(componentName, key, cleanText, path);
+      const functionName = this.getFunctionName(path);
+
       const replacement = j.jsxExpressionContainer(
         j.callExpression(j.identifier("t"), [
           j.literal(`${functionName}.${key}`),
         ]),
       );
 
-      root
-        .find(j.StringLiteral)
-        .filter((p) => p.node.value === text)
-        .replaceWith(replacement);
-    }
+      const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";
+      const trailingSpace = text.match(/\s*\n\s*$/)?.[0] || "";
 
-    try {
-      const keyOverrides = options?.keyOverrides || {};
-      const savedTranslations = await this.saveTranslations(keyOverrides);
-      console.log("Saved translations:", savedTranslations);
-
-      const calls = root.find("CallExpression");
-
-      for (const path of calls.paths()) {
-        const node = path.value as {
-          type: string;
-          callee?: { type: string; name: string };
-          arguments?: Array<{ type: string; value: string }>;
-        };
-
-        if (
-          node.callee?.type === "Identifier" &&
-          node.callee.name === "t" &&
-          node.arguments?.[0]?.type === "StringLiteral"
-        ) {
-          const originalKey = node.arguments[0].value;
-          const finalKey = keyOverrides[originalKey] || originalKey;
-
-          const callNode = path.node as Node & { arguments: Array<Node> };
-          callNode.arguments[0] = j.literal(finalKey);
-        }
-      }
-    } catch (error) {
-      console.error("Error saving translations:", error);
-      if (error instanceof Error) {
-        console.error("Error details:", {
-          message: error.message,
-          stack: error.stack,
-        });
+      if (leadingSpace || trailingSpace) {
+        const nodes: Node[] = [];
+        if (leadingSpace) nodes.push(this.createJSXText(j, leadingSpace));
+        nodes.push(replacement);
+        if (trailingSpace) nodes.push(this.createJSXText(j, trailingSpace));
+        children.splice(index, 1, ...nodes);
+      } else {
+        children[index] = replacement;
       }
     }
 
-    return root.toSource({
-      quote: "double",
-    });
+    return index;
   }
 }
 
 export default async function transform(
   file: FileInfo,
   api: API,
-  options?: {
-    keyOverrides?: Record<string, string>;
-  },
+  options?: TransformOptions,
 ): Promise<string> {
   const transformer = new TransformService();
   return transformer.transform(file, api, options);
