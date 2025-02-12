@@ -50,6 +50,16 @@ const SKIP_ATTRIBUTES = new Set([
   "tabIndex",
 ]);
 
+// Add proper type definitions for AST nodes
+type ASTNode = Node & {
+  type: string;
+  name?: string;
+  value?: string;
+  object?: ASTNode;
+  property?: ASTNode;
+  computed?: boolean;
+};
+
 // Get the element type from the JSX path
 function getElementType(path: Path): string {
   let current = path;
@@ -268,6 +278,101 @@ function createPluralPattern(
   return null;
 }
 
+// Helper to get full path from member expression
+function getFullPath(node: ASTNode): string {
+  const parts: string[] = [];
+  let current: ASTNode | undefined = node;
+
+  while (current) {
+    if (current.type === "Identifier" && current.name) {
+      parts.unshift(current.name);
+    } else if (current.type === "MemberExpression") {
+      if (
+        current.property &&
+        current.property.type === "Identifier" &&
+        current.property.name
+      ) {
+        parts.unshift(current.property.name);
+      }
+      current = current.object;
+      continue;
+    }
+    break;
+  }
+
+  return parts.join(".");
+}
+
+// Helper to create member expression
+function createMemberExpression(parts: string[]): ASTNode {
+  return parts.reduce(
+    (acc: ASTNode, curr: string, idx: number): ASTNode => {
+      if (idx === 0) {
+        return {
+          type: "Identifier",
+          name: curr,
+        } as ASTNode;
+      }
+      return {
+        type: "MemberExpression",
+        object: acc,
+        property: {
+          type: "Identifier",
+          name: curr,
+        } as ASTNode,
+        computed: false,
+      } as ASTNode;
+    },
+    { type: "Identifier", name: parts[0] } as ASTNode,
+  );
+}
+
+// Helper to handle conditional expressions (ternary)
+function createSelectPattern(
+  node: Node & {
+    expression?: {
+      type: string;
+      test?: {
+        type: string;
+        left?: ASTNode;
+        operator?: string;
+        right?: { value?: string };
+      };
+      consequent?: { value?: string };
+      alternate?: { value?: string };
+    };
+  },
+): { pattern: string | null; variable: string | null } {
+  if (
+    node.type === "JSXExpressionContainer" &&
+    node.expression &&
+    node.expression.type === "ConditionalExpression"
+  ) {
+    const { test, consequent, alternate } = node.expression;
+
+    // Handle cases like: user.preferences.language === "en" ? "English" : "Other"
+    if (
+      test?.type === "BinaryExpression" &&
+      test.operator === "===" &&
+      test.left &&
+      test.right?.value &&
+      consequent?.value &&
+      alternate?.value
+    ) {
+      const fullPath = getFullPath(test.left);
+      const condition = test.right.value;
+      const trueValue = consequent.value;
+      const falseValue = alternate.value;
+
+      return {
+        pattern: `{${fullPath}, select, ${condition} {${trueValue}} other {${falseValue}}}`,
+        variable: fullPath,
+      };
+    }
+  }
+  return { pattern: null, variable: null };
+}
+
 // Helper to create a translation with variables and pluralization
 function createTranslationWithVars(
   j: JSCodeshift,
@@ -275,16 +380,46 @@ function createTranslationWithVars(
   text: string,
   variables: Array<{ name: string; node: Node; pluralCondition?: Node }>,
 ): Node {
-  // Create the variables object for t() call with shorthand notation
-  const properties = variables.map(({ name }) => ({
-    type: "Property",
-    key: { type: "Identifier", name },
-    value: { type: "Identifier", name },
-    kind: "init",
-    method: false,
-    shorthand: true, // Use shorthand when key and value names are the same
-    computed: false,
-  }));
+  // Create the variables object for t() call with full paths
+  const properties = variables.map(({ name }) => {
+    const pathParts = name.split(".");
+    const shortName = pathParts[pathParts.length - 1];
+
+    // Build the member expression manually
+    const memberExpr = pathParts.reduce(
+      (acc, part, idx) => {
+        if (idx === 0) {
+          return {
+            type: "Identifier",
+            name: part,
+          } as Node;
+        }
+        return {
+          type: "MemberExpression",
+          object: acc,
+          property: {
+            type: "Identifier",
+            name: part,
+          },
+          computed: false,
+        } as Node;
+      },
+      null as unknown as Node,
+    );
+
+    return {
+      type: "Property",
+      key: {
+        type: "Identifier",
+        name: shortName,
+      },
+      value: memberExpr,
+      kind: "init",
+      method: false,
+      shorthand: false,
+      computed: false,
+    } as unknown as Node;
+  });
 
   const variablesObj = {
     type: "ObjectExpression",
@@ -322,59 +457,9 @@ function createTranslationWithVars(
     translations[comp][rest.join(".")] = template;
   }
 
-  // Create t() call with variables
   return j.jsxExpressionContainer(
-    j.callExpression(j.identifier("t"), [
-      j.literal(key),
-      variablesObj, // Pass the variables object as second argument
-    ]),
+    j.callExpression(j.identifier("t"), [j.literal(key), variablesObj]),
   );
-}
-
-// Helper to handle conditional expressions (ternary)
-function createSelectPattern(
-  node: Node & {
-    expression?: {
-      type: string;
-      test?: {
-        type: string;
-        left?: { property?: { name?: string } };
-        operator?: string;
-        right?: { value?: string };
-      };
-      consequent?: { value?: string };
-      alternate?: { value?: string };
-    };
-  },
-): { pattern: string | null; variable: string | null } {
-  if (
-    node.type === "JSXExpressionContainer" &&
-    node.expression &&
-    node.expression.type === "ConditionalExpression"
-  ) {
-    const { test, consequent, alternate } = node.expression;
-
-    // Handle cases like: language === "en" ? "English" : "Other"
-    if (
-      test?.type === "BinaryExpression" &&
-      test.operator === "===" &&
-      test.left?.property?.name &&
-      test.right?.value &&
-      consequent?.value &&
-      alternate?.value
-    ) {
-      const variable = test.left.property.name;
-      const condition = test.right.value;
-      const trueValue = consequent.value;
-      const falseValue = alternate.value;
-
-      return {
-        pattern: `{${variable}, select, ${condition} {${trueValue}} other {${falseValue}}}`,
-        variable,
-      };
-    }
-  }
-  return { pattern: null, variable: null };
 }
 
 export default function transform(file: FileInfo, api: API) {
