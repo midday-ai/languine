@@ -11,7 +11,10 @@ export function Hero() {
         <button type="button">Sign In</button>
       </div>
 
-      <img alt="This is a great hero of our startup" src="" />
+      <img
+        alt="This is a great hero of our startup"
+        src="https://placehold.co/600x400"
+      />
     </div>
   );
 }

@@ -183,19 +183,44 @@ function getVariableName(node: Node & { expression?: unknown }): string | null {
   if (node.type === "JSXExpressionContainer" && node.expression) {
     const expression = node.expression as {
       type: string;
-      object?: { type: string };
+      object?: {
+        type: string;
+        object?: { type: string; name?: string };
+        property?: { type: string; name?: string };
+        name?: string;
+      };
       property?: { type: string; name?: string };
     };
     if (expression.type === "MemberExpression") {
       const object = expression.object;
       const property = expression.property;
+
+      // Handle nested properties like user.preferences.language
       if (
-        object &&
-        property &&
-        property.type === "Identifier" &&
+        object?.type === "MemberExpression" &&
+        property?.type === "Identifier"
+      ) {
+        const parentObject = object.object;
+        const parentProperty = object.property;
+        if (
+          parentObject?.type === "Identifier" &&
+          parentObject.name &&
+          parentProperty?.type === "Identifier" &&
+          parentProperty.name &&
+          property.name
+        ) {
+          return `${parentObject.name}.${parentProperty.name}.${property.name}`;
+        }
+      }
+
+      // Handle single level properties like user.notifications
+      if (
+        object?.type === "Identifier" &&
+        object.name &&
+        property?.type === "Identifier" &&
         property.name
       ) {
-        return property.name;
+        return `${object.name}.${property.name}`;
       }
     }
   }
@@ -250,17 +275,21 @@ function createTranslationWithVars(
   text: string,
   variables: Array<{ name: string; node: Node; pluralCondition?: Node }>,
 ): Node {
-  // Create the variables object for t() call
+  // Create the variables object for t() call with shorthand notation
   const properties = variables.map(({ name }) => ({
-    type: "ObjectProperty",
+    type: "Property",
     key: { type: "Identifier", name },
     value: { type: "Identifier", name },
+    kind: "init",
+    method: false,
+    shorthand: true, // Use shorthand when key and value names are the same
+    computed: false,
   }));
 
   const variablesObj = {
     type: "ObjectExpression",
     properties,
-  };
+  } as Node;
 
   // Store the template in translations
   let template = cleanupText(text);
@@ -295,8 +324,57 @@ function createTranslationWithVars(
 
   // Create t() call with variables
   return j.jsxExpressionContainer(
-    j.callExpression(j.identifier("t"), [j.literal(key), variablesObj]),
+    j.callExpression(j.identifier("t"), [
+      j.literal(key),
+      variablesObj, // Pass the variables object as second argument
+    ]),
   );
+}
+
+// Helper to handle conditional expressions (ternary)
+function createSelectPattern(
+  node: Node & {
+    expression?: {
+      type: string;
+      test?: {
+        type: string;
+        left?: { property?: { name?: string } };
+        operator?: string;
+        right?: { value?: string };
+      };
+      consequent?: { value?: string };
+      alternate?: { value?: string };
+    };
+  },
+): { pattern: string | null; variable: string | null } {
+  if (
+    node.type === "JSXExpressionContainer" &&
+    node.expression &&
+    node.expression.type === "ConditionalExpression"
+  ) {
+    const { test, consequent, alternate } = node.expression;
+
+    // Handle cases like: language === "en" ? "English" : "Other"
+    if (
+      test?.type === "BinaryExpression" &&
+      test.operator === "===" &&
+      test.left?.property?.name &&
+      test.right?.value &&
+      consequent?.value &&
+      alternate?.value
+    ) {
+      const variable = test.left.property.name;
+      const condition = test.right.value;
+      const trueValue = consequent.value;
+      const falseValue = alternate.value;
+
+      return {
+        pattern: `{${variable}, select, ${condition} {${trueValue}} other {${falseValue}}}`,
+        variable,
+      };
+    }
+  }
+  return { pattern: null, variable: null };
 }
 
 export default function transform(file: FileInfo, api: API) {
@@ -328,6 +406,45 @@ export default function transform(file: FileInfo, api: API) {
     // Look for text + expression patterns
     for (let i = 0; i < children.length; i++) {
       const child = children[i];
+      if (child.type === "JSXExpressionContainer") {
+        // Check for conditional expressions
+        const { pattern, variable } = createSelectPattern(child);
+        if (pattern) {
+          const key = getTranslationKey(
+            componentName,
+            "text",
+            pattern,
+            parentPath,
+          );
+          storeTranslation(componentName, key, pattern);
+
+          const variableObj = {
+            type: "ObjectExpression",
+            properties: [
+              {
+                type: "Property",
+                key: { type: "Identifier", name: variable! },
+                value: { type: "Identifier", name: variable! },
+                kind: "init",
+                method: false,
+                shorthand: true, // Use shorthand when key and value names are the same
+                computed: false,
+              },
+            ],
+          } as Node;
+
+          const replacement = j.jsxExpressionContainer(
+            j.callExpression(j.identifier("t"), [
+              j.literal(`${componentName}.${key}`),
+              variableObj,
+            ]),
+          );
+
+          children[i] = replacement;
+          continue;
+        }
+      }
+
       if (child.type === "JSXText") {
         const text = (child.value || "").trim();
         if (!text) continue;
@@ -500,6 +617,7 @@ export default function transform(file: FileInfo, api: API) {
 
     storeTranslation(componentName, key, cleanText);
 
+    // Create t() call with proper key
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
         j.literal(`${componentName}.${key}`),
