@@ -20,16 +20,6 @@ type CollectedTranslation = {
   elementKey: string;
 };
 
-type KeyGenerationStrategy =
-  | "content-based"
-  | "random"
-  | ((value: string, component: string) => string);
-
-type TransformOptions = {
-  keyOverrides?: Record<string, string>;
-  keyGeneration?: KeyGenerationStrategy;
-};
-
 /**
  * Service for transforming JSX/TSX files to use translations.
  * Handles extraction of text content, attributes, and dynamic content.
@@ -39,8 +29,6 @@ export class TransformService {
   private translations: Record<string, Record<string, string>> = {};
   private elementCounts: Record<string, number> = {};
   private collectedTranslations: CollectedTranslation[] = [];
-  private contentToKeyMap: Map<string, string> = new Map();
-  private options?: TransformOptions;
 
   // Constants
   private readonly SKIP_ATTRIBUTES = new Set([
@@ -73,20 +61,14 @@ export class TransformService {
 
   constructor(
     private translationFile: string = path.resolve("translations.json"),
-    options?: TransformOptions,
   ) {
     this.loadTranslations();
-    this.options = options;
   }
 
   /**
    * Main transformation method that processes a file
    */
-  public async transform(
-    file: FileInfo,
-    api: API,
-    options?: TransformOptions,
-  ): Promise<string> {
+  public async transform(file: FileInfo, api: API): Promise<string> {
     const j = api.jscodeshift;
     const source = this.cleanSource(file.source);
     const root = j(source);
@@ -98,41 +80,23 @@ export class TransformService {
     this.transformStringLiterals(j, root, componentName);
 
     // Generate keys internally
-    const generatedKeys = await this.generateKeys(options);
-    const keyOverrides = {
-      ...generatedKeys,
-      ...options?.keyOverrides, // Allow manual overrides to take precedence
-    };
-
-    await this.processTranslations(j, root, keyOverrides);
+    const generatedKeys = await this.generateKeys();
+    await this.processTranslations(j, root, generatedKeys);
 
     return root.toSource({ quote: "double" });
   }
 
   // Internal key generation
-  private async generateKeys(
-    options?: TransformOptions,
-  ): Promise<Record<string, string>> {
+  private async generateKeys(): Promise<Record<string, string>> {
     const keyMap: Record<string, string> = {};
-    const keyGeneration = options?.keyGeneration || "content-based";
 
     for (const translation of this.collectedTranslations) {
-      let key: string;
       const [component] = translation.originalKey.split(".");
-
-      if (typeof keyGeneration === "function") {
-        // Custom key generation function
-        key = keyGeneration(translation.value, component);
-      } else if (keyGeneration === "content-based") {
-        // Content-based key generation (default)
-        key =
-          this.contentToKeyMap.get(translation.value) ||
-          this.generateKey(component, translation.value, translation.value);
-        this.contentToKeyMap.set(translation.value, key);
-      } else {
-        // Random key generation
-        key = this.generateKey(component, translation.value, translation.value);
-      }
+      const key = this.generateKey(
+        component,
+        translation.value,
+        translation.value,
+      );
 
       // Store the mapping from original key to new key
       keyMap[translation.originalKey] = key;
@@ -142,22 +106,7 @@ export class TransformService {
   }
 
   private generateKey(component: string, value: string, key: string): string {
-    // Create a consistent random key based on the component and value
-    const hash = Array.from(value).reduce((acc, char) => {
-      return char.charCodeAt(0) + ((acc << 5) - acc);
-    }, 0);
-
-    // Convert hash to base36 string and take first 6 chars
-    const randomKey = Math.abs(hash).toString(36).substring(0, 6);
-
-    console.log("Generating key for:", {
-      component,
-      value,
-      key,
-      generatedKey: `${randomKey}`,
-    });
-
-    return randomKey;
+    return key;
   }
 
   // File Processing Methods
@@ -183,11 +132,10 @@ export class TransformService {
     }
   }
 
-  private async saveTranslations(
-    keyOverrides: Record<string, string> = {},
-  ): Promise<Record<string, Record<string, string>>> {
-    const transformedTranslations =
-      this.buildTransformedTranslations(keyOverrides);
+  private async saveTranslations(): Promise<
+    Record<string, Record<string, string>>
+  > {
+    const transformedTranslations = this.buildTransformedTranslations();
     const finalTranslations = await this.mergePreviousTranslations(
       transformedTranslations,
     );
@@ -199,9 +147,10 @@ export class TransformService {
     return transformedTranslations;
   }
 
-  private buildTransformedTranslations(
-    keyOverrides: Record<string, string>,
-  ): Record<string, Record<string, string>> {
+  private buildTransformedTranslations(): Record<
+    string,
+    Record<string, string>
+  > {
     const transformedTranslations: Record<string, Record<string, string>> = {};
 
     for (const item of this.collectedTranslations) {
@@ -266,7 +215,7 @@ export class TransformService {
     keyOverrides: Record<string, string> = {},
   ): Promise<void> {
     try {
-      const savedTranslations = await this.saveTranslations(keyOverrides);
+      const savedTranslations = await this.saveTranslations();
       console.log("Saved translations:", savedTranslations);
 
       // Update all t() function calls with the generated keys
@@ -939,8 +888,7 @@ export class TransformService {
 export default async function transform(
   file: FileInfo,
   api: API,
-  options?: TransformOptions,
 ): Promise<string> {
   const transformer = new TransformService();
-  return transformer.transform(file, api, options);
+  return transformer.transform(file, api);
 }
