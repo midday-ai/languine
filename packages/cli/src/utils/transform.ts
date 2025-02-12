@@ -20,8 +20,14 @@ type CollectedTranslation = {
   elementKey: string;
 };
 
+type KeyGenerationStrategy =
+  | "content-based"
+  | "random"
+  | ((value: string, component: string) => string);
+
 type TransformOptions = {
   keyOverrides?: Record<string, string>;
+  keyGeneration?: KeyGenerationStrategy;
 };
 
 /**
@@ -33,6 +39,7 @@ export class TransformService {
   private translations: Record<string, Record<string, string>> = {};
   private elementCounts: Record<string, Record<string, number>> = {};
   private collectedTranslations: CollectedTranslation[] = [];
+  private contentToKeyMap: Map<string, string> = new Map();
 
   // Constants
   private readonly SKIP_ATTRIBUTES = new Set([
@@ -88,9 +95,10 @@ export class TransformService {
     this.transformStringLiterals(j, root, componentName);
 
     // Generate keys internally
+    const generatedKeys = await this.generateKeys(options);
     const keyOverrides = {
-      ...options?.keyOverrides,
-      ...(await this.generateKeys()),
+      ...generatedKeys,
+      ...options?.keyOverrides, // Allow manual overrides to take precedence
     };
 
     await this.processTranslations(j, root, keyOverrides);
@@ -99,25 +107,50 @@ export class TransformService {
   }
 
   // Internal key generation
-  private async generateKeys(): Promise<Record<string, string>> {
+  private async generateKeys(
+    options?: TransformOptions,
+  ): Promise<Record<string, string>> {
     const keyMap: Record<string, string> = {};
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    const keyLength = 8;
+    const keyGeneration = options?.keyGeneration || "content-based";
 
     for (const translation of this.collectedTranslations) {
-      let randomKey = "";
-      for (let i = 0; i < keyLength; i++) {
-        randomKey += characters.charAt(
-          Math.floor(Math.random() * characters.length),
-        );
+      let key: string;
+      const [component] = translation.originalKey.split(".");
+
+      if (typeof keyGeneration === "function") {
+        // Custom key generation function
+        key = keyGeneration(translation.value, component);
+      } else if (keyGeneration === "content-based") {
+        // Content-based key generation (default)
+        key =
+          this.contentToKeyMap.get(translation.value) ||
+          this.generateRandomKey(component);
+        this.contentToKeyMap.set(translation.value, key);
+      } else {
+        // Random key generation
+        key = this.generateRandomKey(component);
       }
 
-      const [component] = translation.originalKey.split(".");
-      keyMap[translation.originalKey] = `${component}.${randomKey}`;
+      // Store the mapping from original key to new key
+      keyMap[translation.originalKey] = key;
     }
 
     return keyMap;
+  }
+
+  private generateRandomKey(component: string): string {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const keyLength = 8;
+    let randomKey = "";
+
+    for (let i = 0; i < keyLength; i++) {
+      randomKey += characters.charAt(
+        Math.floor(Math.random() * characters.length),
+      );
+    }
+
+    return randomKey;
   }
 
   // File Processing Methods
@@ -165,8 +198,8 @@ export class TransformService {
     const transformedTranslations: Record<string, Record<string, string>> = {};
 
     for (const item of this.collectedTranslations) {
-      const finalKey = keyOverrides[item.originalKey] || item.originalKey;
-      const [component, key] = finalKey.split(".");
+      const [component] = item.originalKey.split(".");
+      const key = item.elementKey;
 
       if (!transformedTranslations[component]) {
         transformedTranslations[component] = {};
@@ -422,17 +455,7 @@ export class TransformService {
   }
 
   private getNextKey(componentName: string, type: string, path: Path): string {
-    const functionName = this.getFunctionName(path);
-    const elementType = this.getElementType(path);
-    const keyBase = `${elementType}`;
-
-    if (!this.elementCounts[functionName]) {
-      this.elementCounts[functionName] = {};
-    }
-    this.elementCounts[functionName][keyBase] =
-      (this.elementCounts[functionName][keyBase] || 0) + 1;
-
-    return `${keyBase}${this.elementCounts[functionName][keyBase] > 1 ? `_${this.elementCounts[functionName][keyBase]}` : ""}`;
+    return this.generateRandomKey(componentName);
   }
 
   private createSelectPattern(
@@ -539,12 +562,10 @@ export class TransformService {
     path: Path,
   ): void {
     const functionName = this.getFunctionName(path);
-    const elementType = this.getElementType(path);
-
     this.collectedTranslations.push({
-      originalKey: `${functionName}.${key}`,
+      originalKey: `${componentName}.${key}`,
       value,
-      type: elementType === "a" ? "link" : "text",
+      type: this.getElementType(path) === "a" ? "link" : "text",
       functionName,
       elementKey: key,
     });
