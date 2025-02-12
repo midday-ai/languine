@@ -3,18 +3,18 @@ import React from "react";
 export function Hero() {
   return (
     <div>
-        <h1>{t("Hero.h1")}</h1>
-        <p>{t("Hero.p")}</p>
+      <h1>This is a hero text about our startup!</h1>
+      <p>And this is the best description about it.</p>
 
-        <div>
-          <button type="button">{t("Hero.button")}</button>
-          <button type="button">{t("Hero.button_2")}</button>
-        </div>
-
-        <img
-          alt={t("Hero.img")}
-          src="https://placehold.co/600x400"
-        />
+      <div>
+        <button type="button">Talk to founders</button>
+        <button type="button">Sign In</button>
       </div>
+
+      <img
+        alt="This is a great hero of our startup"
+        src="https://placehold.co/600x400"
+      />
+    </div>
   );
 }

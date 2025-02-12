@@ -1,34 +1,34 @@
 {
   "Hero": {
-    "h1": "This is a hero text about our startup!",
-    "p": "And this is the best description about it.",
-    "button": "Talk to founders",
-    "button_2": "Sign In",
-    "img": "This is a great hero of our startup"
+    "3zc8h7": "This is a hero text about our startup!",
+    "2s2zsj": "And this is the best description about it.",
+    "3vugd1": "Talk to founders",
+    "1q2cpk": "Sign In",
+    "9ysyly": "This is a great hero of our startup"
   },
   "Header": {
-    "a": "Home",
-    "a_2": "About",
-    "a_3": "Contact",
-    "a_4": "Go to home",
-    "a_5": "Go to about",
-    "a_6": "Go to contact"
+    "1cc1r": "Home",
+    "11jkh9": "About",
+    "rri8sg": "Contact",
+    "1gon03": "Go to home",
+    "1zmz13": "Go to about",
+    "1eu9zl": "Go to contact"
   },
   "UserDashboard": {
-    "h1": "Welcome back,{name}!",
-    "h2": "Notification Center",
-    "p": "You have{notifications}unread notification",
-    "button": "Mark all as read",
-    "h2_2": "Your Preferences",
-    "span": "Current theme:",
-    "span_2": "{theme} mode",
-    "span_3": "Interface language:",
-    "span_4": "{language, select, en {English} other {Other}}",
-    "p_2": "Last login:",
-    "button_2": "Update Profile",
-    "button_3": "Settings",
-    "p_3": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
-    "p_4": "Need help? Contact our support team available 24/7.",
-    "button_4": "Click to change your preferences"
+    "2d45sn": "Welcome back,{name}!",
+    "g78b3e": "Notification Center",
+    "33cen4": "You have{notifications}unread notification",
+    "224i7o": "Mark all as read",
+    "pv49rp": "Your Preferences",
+    "to2b08": "Current theme:",
+    "2a6qsj": "{theme} mode",
+    "p7rvc5": "Interface language:",
+    "z6pytf": "{language, select, en {English} other {Other}}",
+    "egpwmd": "Last login:",
+    "1gxpbc": "Update Profile",
+    "1a8hdq": "Settings",
+    "658aaa": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
+    "8p01x": "Need help? Contact our support team available 24/7.",
+    "2n0035": "Click to change your preferences"
   }
 }

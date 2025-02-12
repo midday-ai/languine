@@ -28,7 +28,6 @@ type KeyGenerationStrategy =
 type TransformOptions = {
   keyOverrides?: Record<string, string>;
   keyGeneration?: KeyGenerationStrategy;
-  useRandomKeys?: boolean;
 };
 
 /**
@@ -143,11 +142,6 @@ export class TransformService {
   }
 
   private generateKey(component: string, value: string, key: string): string {
-    // If random keys are not enabled, return the element-based key
-    if (!this.options?.useRandomKeys) {
-      return key;
-    }
-
     // Create a consistent random key based on the component and value
     const hash = Array.from(value).reduce((acc, char) => {
       return char.charCodeAt(0) + ((acc << 5) - acc);
