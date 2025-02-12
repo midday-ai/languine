@@ -1,6 +1,5 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { client } from "@/utils/api.js";
 import type { API, FileInfo, JSCodeshift, Node, Path } from "jscodeshift";
 
 // Core types for the transformer
@@ -602,35 +601,6 @@ export class TransformService {
       type: "JSXText",
       value: text,
     };
-  }
-
-  private async identityTransform(
-    translations: Record<string, Record<string, string>>,
-  ): Promise<Array<{ key: string; value: string }>> {
-    try {
-      const translationsArray = Object.entries(translations).flatMap(
-        ([component, strings]) =>
-          Object.entries(strings).map(([key, value]) => ({
-            key: `${component}.${key}`,
-            value,
-          })),
-      );
-
-      const response = await client.jobs.startTransformJob.mutate({
-        projectId: "123",
-        translations: translationsArray,
-      });
-
-      return response;
-    } catch (error) {
-      console.error("Failed to transform translations:", error);
-      return Object.entries(translations).flatMap(([component, strings]) =>
-        Object.entries(strings).map(([key, value]) => ({
-          key: `${component}.${key}`,
-          value,
-        })),
-      );
-    }
   }
 
   private handleStringLiteral(
