@@ -3,16 +3,16 @@ import React from "react";
 export function Hero() {
   return (
     <div>
-        <h1>{t("Hero.f2PG97Zt")}</h1>
-        <p>{t("Hero.GFxkFgzo")}</p>
+        <h1>{t("Hero.h1")}</h1>
+        <p>{t("Hero.p")}</p>
 
         <div>
-          <button type="button">{t("Hero.vwZxFatE")}</button>
-          <button type="button">{t("Hero.7QkIhD5s")}</button>
+          <button type="button">{t("Hero.button")}</button>
+          <button type="button">{t("Hero.button_2")}</button>
         </div>
 
         <img
-          alt={t("Hero.uTHvBW7X")}
+          alt={t("Hero.img")}
           src="https://placehold.co/600x400"
         />
       </div>

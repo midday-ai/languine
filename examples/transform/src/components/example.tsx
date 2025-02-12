@@ -24,16 +24,16 @@ export function UserDashboard() {
   return (
     <div className="p-6 max-w-2xl mx-auto bg-white rounded-xl shadow-md">
         {/* Welcome message with dynamic name */}
-        <h1 className="text-2xl font-bold mb-4">{t("UserDashboard.igBsgJyn", {
+        <h1 className="text-2xl font-bold mb-4">{t("UserDashboard.h1", {
             name: user.name
           })}</h1>
 
         {/* Notification section with pluralization */}
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-gray-700">
-            {t("UserDashboard.n3TVJuJc")}
+            {t("UserDashboard.h2")}
           </h2>
-          <p>{t("UserDashboard.3hzqosyI", {
+          <p>{t("UserDashboard.p", {
               notifications: user.notifications
             })}{user.notifications !== 1 ? "s" : ""}
           </p>
@@ -41,34 +41,34 @@ export function UserDashboard() {
             type="button"
             className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            {t("UserDashboard.epc7GlsM")}
+            {t("UserDashboard.button")}
           </button>
         </div>
 
         {/* Preferences section with nested content */}
         <div className="space-y-4">
           <h2 className="text-lg font-semibold text-gray-700">
-            {t("UserDashboard.xenVu2nb")}
+            {t("UserDashboard.h2_2")}
           </h2>
 
           <div className="flex items-center justify-between">
-            <span>{t("UserDashboard.jYSWh388")}</span>
-            <span className="capitalize">{t("UserDashboard.3IIZ9Q6w", {
+            <span>{t("UserDashboard.span")}</span>
+            <span className="capitalize">{t("UserDashboard.span_2", {
               theme: user.preferences.theme
             })} mode</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span>{t("UserDashboard.Gg3LT6P4")}</span>
+            <span>{t("UserDashboard.span_3")}</span>
             <span>
-              {t("UserDashboard.cvN8el8E", {
+              {t("UserDashboard.span_4", {
                 language: user.preferences.language
               })}
             </span>
           </div>
 
           <p className="text-sm text-gray-500">
-            {t("UserDashboard.lmktKpQ1")}{user.lastLogin.toLocaleDateString()}
+            {t("UserDashboard.p_2")}{user.lastLogin.toLocaleDateString()}
           </p>
         </div>
 
@@ -79,24 +79,24 @@ export function UserDashboard() {
             className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
             onClick={() => setUser({ ...user, notifications: 0 })}
           >
-            {t("UserDashboard.A828bRta")}
+            {t("UserDashboard.button_2")}
           </button>
           <button
             type="button"
             className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-            title={t("UserDashboard.NE4GlZzY")}
+            title={t("UserDashboard.button_4")}
           >
-            {t("UserDashboard.3L92GTGb")}
+            {t("UserDashboard.button_3")}
           </button>
         </div>
 
         {/* Footer with complex message */}
         <footer className="mt-8 pt-4 border-t text-sm text-gray-500">
           <p>
-            {t("UserDashboard.hIULT0So")}
+            {t("UserDashboard.p_3")}
           </p>
           <p className="mt-2">
-            {t("UserDashboard.7LKOMtwp")}
+            {t("UserDashboard.p_4")}
           </p>
         </footer>
       </div>

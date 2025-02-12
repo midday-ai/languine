@@ -1,34 +1,34 @@
 {
-  "header": {
-    "ZdgOGMMi": "Home",
-    "eHmwS9cv": "About",
-    "Fidt6zxV": "Contact",
-    "KxxLQvdb": "Go to home",
-    "zyCSuTVL": "Go to about",
-    "r57XhiS6": "Go to contact"
+  "Hero": {
+    "h1": "This is a hero text about our startup!",
+    "p": "And this is the best description about it.",
+    "button": "Talk to founders",
+    "button_2": "Sign In",
+    "img": "This is a great hero of our startup"
   },
-  "hero": {
-    "f2PG97Zt": "This is a hero text about our startup!",
-    "GFxkFgzo": "And this is the best description about it.",
-    "vwZxFatE": "Talk to founders",
-    "7QkIhD5s": "Sign In",
-    "uTHvBW7X": "This is a great hero of our startup"
+  "Header": {
+    "a": "Home",
+    "a_2": "About",
+    "a_3": "Contact",
+    "a_4": "Go to home",
+    "a_5": "Go to about",
+    "a_6": "Go to contact"
   },
-  "example": {
-    "igBsgJyn": "Welcome back,{name}!",
-    "n3TVJuJc": "Notification Center",
-    "3hzqosyI": "You have{notifications}unread notification",
-    "epc7GlsM": "Mark all as read",
-    "xenVu2nb": "Your Preferences",
-    "jYSWh388": "Current theme:",
-    "3IIZ9Q6w": "{theme} mode",
-    "Gg3LT6P4": "Interface language:",
-    "cvN8el8E": "{language, select, en {English} other {Other}}",
-    "lmktKpQ1": "Last login:",
-    "A828bRta": "Update Profile",
-    "3L92GTGb": "Settings",
-    "hIULT0So": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
-    "7LKOMtwp": "Need help? Contact our support team available 24/7.",
-    "NE4GlZzY": "Click to change your preferences"
+  "UserDashboard": {
+    "h1": "Welcome back,{name}!",
+    "h2": "Notification Center",
+    "p": "You have{notifications}unread notification",
+    "button": "Mark all as read",
+    "h2_2": "Your Preferences",
+    "span": "Current theme:",
+    "span_2": "{theme} mode",
+    "span_3": "Interface language:",
+    "span_4": "{language, select, en {English} other {Other}}",
+    "p_2": "Last login:",
+    "button_2": "Update Profile",
+    "button_3": "Settings",
+    "p_3": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
+    "p_4": "Need help? Contact our support team available 24/7.",
+    "button_4": "Click to change your preferences"
   }
 }
