@@ -366,6 +366,14 @@ export function Terminal() {
           >
             │ ○ Flutter ARB (.arb)
           </span>
+          <span
+            className={cn(
+              "transition-opacity duration-100",
+              step >= 4 ? "opacity-100" : "opacity-0",
+            )}
+          >
+            │ ○ PHP (.php)
+          </span>
 
           <span
             className={cn(
