@@ -457,6 +457,39 @@ function transformJSXElement(
 
     // Handle JSX expressions (variables)
     if (child.type === "JSXExpressionContainer") {
+      // Check for conditional expressions first
+      const selectPattern = createSelectPattern(child);
+      if (selectPattern.pattern && selectPattern.variable) {
+        const key = getNextKey(componentName, "text");
+        storeTranslation(componentName, key, selectPattern.pattern);
+
+        const replacement = j.jsxExpressionContainer(
+          j.callExpression(j.identifier("t"), [
+            j.literal(`${componentName}.${key}`),
+            {
+              type: "ObjectExpression",
+              properties: [
+                {
+                  type: "ObjectProperty",
+                  key: {
+                    type: "Identifier",
+                    name: getSimplifiedKey(selectPattern.variable),
+                  } as unknown as Node,
+                  value: createMemberExpression(
+                    selectPattern.variable.split("."),
+                  ) as unknown as Node,
+                  shorthand: false,
+                  computed: false,
+                } as unknown as Node,
+              ],
+            } as unknown as Node,
+          ]),
+        );
+
+        children[i] = replacement;
+        continue;
+      }
+
       const varName = getVariableName(child);
       if (varName) {
         // Check for text after the variable
@@ -545,7 +578,8 @@ function transformJSXElement(
         // Create combined text with variables and preserve spaces
         const parts = children.slice(i, nextIndex).map((node) => {
           if (node.type === "JSXText") {
-            return node.value || "";
+            // Clean up whitespace in text parts while preserving single spaces between words
+            return cleanupText(node.value || "");
           }
           const varName = getVariableName(node);
           if (!varName) return "";
@@ -553,7 +587,7 @@ function transformJSXElement(
           return `{${simplifiedKey}}`;
         });
 
-        const combinedText = parts.join("");
+        const combinedText = parts.join("").trim();
 
         if (combinedText) {
           const key = getNextKey(componentName, "text");
@@ -568,7 +602,7 @@ function transformJSXElement(
               shorthand: false,
               computed: false,
             })),
-          } as Node;
+          } as unknown as Node;
 
           const replacement = j.jsxExpressionContainer(
             j.callExpression(j.identifier("t"), [

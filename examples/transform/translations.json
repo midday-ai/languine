@@ -14,7 +14,22 @@
     "p_3": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
     "p_4": "Need help? Contact our support team available 24/7.",
     "title": "Click to change your preferences",
-    "span_4": "{language, select, en {English} other {Other}}"
+    "span_4": "{language, select, en {English} other {Other}}",
+    "text": "Welcome back,{name}!",
+    "text_2": "Notification Center",
+    "text_3": "You have{notifications}unread notification",
+    "text_4": "Mark all as read",
+    "text_5": "Your Preferences",
+    "text_6": "Current theme:",
+    "text_7": "{theme} mode",
+    "text_8": "Interface language:",
+    "text_9": "{language, select, en {English} other {Other}}",
+    "text_10": "Last login:",
+    "text_11": "Update Profile",
+    "text_12": "Settings",
+    "text_13": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
+    "text_14": "Need help? Contact our support team available 24/7.",
+    "attribute": "Click to change your preferences"
   },
   "hero": {
     "h1": "This is a hero text about our startup!",
