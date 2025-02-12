@@ -7,7 +7,7 @@ import {
   getProjectOrganization,
   getTranslationTaskOptions,
 } from "./jobs.utils";
-import { jobsSchema } from "./schema";
+import { jobsSchema, transformSchema } from "./schema";
 
 export const jobsRouter = createTRPCRouter({
   startJob: protectedProcedure
@@ -64,5 +64,13 @@ export const jobsRouter = createTRPCRouter({
           polarCustomerId: organization.polarCustomerId,
         },
       };
+    }),
+
+  startTransformJob: protectedProcedure
+    .input(transformSchema)
+    // .use(hasProjectAccess)
+    .mutation(async ({ input, ctx }) => {
+      console.log("input", input.translations);
+      return input.translations;
     }),
 });

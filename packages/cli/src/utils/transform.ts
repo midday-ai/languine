@@ -90,14 +90,54 @@ function cleanupText(text: string): string {
     .trim(); // Remove leading/trailing whitespace
 }
 
-// Get the next key for a component and type
-function getNextKey(componentName: string, type: string): string {
-  if (!elementCounts[componentName]) {
-    elementCounts[componentName] = {};
+// Helper to get the current function name from JSX path
+function getFunctionName(path: Path): string {
+  let current = path;
+  while (current) {
+    const node = current.node as Node & {
+      type?: string;
+      id?: { name?: string };
+    };
+
+    if (
+      node.type === "FunctionDeclaration" ||
+      node.type === "FunctionExpression" ||
+      node.type === "ArrowFunctionExpression"
+    ) {
+      if (node.id?.name) {
+        return node.id.name;
+      }
+      // For anonymous functions, try to get the variable name it's assigned to
+      const parent = current.parent?.node as Node & {
+        type?: string;
+        id?: { name?: string };
+        key?: { name?: string };
+      };
+      if (parent?.type === "VariableDeclarator" && parent.id?.name) {
+        return parent.id.name;
+      }
+      if (parent?.type === "Property" && parent.key?.name) {
+        return parent.key.name;
+      }
+    }
+    current = current.parent;
   }
-  elementCounts[componentName][type] =
-    (elementCounts[componentName][type] || 0) + 1;
-  return `${type}${elementCounts[componentName][type] > 1 ? `_${elementCounts[componentName][type]}` : ""}`;
+  return "unknown";
+}
+
+// Get the next key for a component and type
+function getNextKey(componentName: string, type: string, path: Path): string {
+  const functionName = getFunctionName(path);
+  const elementType = getElementType(path);
+  const keyBase = `${elementType}`;
+
+  if (!elementCounts[functionName]) {
+    elementCounts[functionName] = {};
+  }
+  elementCounts[functionName][keyBase] =
+    (elementCounts[functionName][keyBase] || 0) + 1;
+
+  return `${keyBase}${elementCounts[functionName][keyBase] > 1 ? `_${elementCounts[functionName][keyBase]}` : ""}`;
 }
 
 // Helper to create member expression
@@ -206,11 +246,13 @@ function storeTranslation(
   componentName: string,
   key: string,
   value: string,
+  path: Path,
 ): void {
-  if (!translations[componentName]) {
-    translations[componentName] = {};
+  const functionName = getFunctionName(path);
+  if (!translations[functionName]) {
+    translations[functionName] = {};
   }
-  translations[componentName][key] = value;
+  translations[functionName][key] = value;
 }
 
 // Helper to get variable name from expression
@@ -380,12 +422,13 @@ function transformJSXElement(
       // Check for conditional expressions first
       const selectPattern = createSelectPattern(child);
       if (selectPattern.pattern && selectPattern.variable) {
-        const key = getNextKey(componentName, "text");
-        storeTranslation(componentName, key, selectPattern.pattern);
+        const key = getNextKey(componentName, "text", path);
+        storeTranslation(componentName, key, selectPattern.pattern, path);
 
+        const functionName = getFunctionName(path);
         const replacement = j.jsxExpressionContainer(
           j.callExpression(j.identifier("t"), [
-            j.literal(`${componentName}.${key}`),
+            j.literal(`${functionName}.${key}`),
             {
               type: "ObjectExpression",
               properties: [
@@ -419,15 +462,16 @@ function transformJSXElement(
 
         if (textAfter) {
           // Handle variable + text case (like "{theme} mode")
-          const key = getNextKey(componentName, "text");
+          const key = getNextKey(componentName, "text", path);
           const simplifiedKey = getSimplifiedKey(varName);
           const template = `{${simplifiedKey}}${textAfter}`;
 
-          storeTranslation(componentName, key, template);
+          storeTranslation(componentName, key, template, path);
+          const functionName = getFunctionName(path);
 
           const replacement = j.jsxExpressionContainer(
             j.callExpression(j.identifier("t"), [
-              j.literal(`${componentName}.${key}`),
+              j.literal(`${functionName}.${key}`),
               {
                 type: "ObjectExpression",
                 properties: [
@@ -510,8 +554,9 @@ function transformJSXElement(
         const combinedText = parts.join("").trim();
 
         if (combinedText) {
-          const key = getNextKey(componentName, "text");
-          storeTranslation(componentName, key, combinedText);
+          const key = getNextKey(componentName, "text", path);
+          storeTranslation(componentName, key, combinedText, path);
+          const functionName = getFunctionName(path);
 
           const variablesObj = {
             type: "ObjectExpression",
@@ -526,7 +571,7 @@ function transformJSXElement(
 
           const replacement = j.jsxExpressionContainer(
             j.callExpression(j.identifier("t"), [
-              j.literal(`${componentName}.${key}`),
+              j.literal(`${functionName}.${key}`),
               variablesObj,
             ]),
           );
@@ -538,12 +583,13 @@ function transformJSXElement(
         const cleanText = cleanupText(text);
         if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
           const isLink = isInsideLink(path);
-          const key = getNextKey(componentName, isLink ? "link" : "text");
-          storeTranslation(componentName, key, cleanText);
+          const key = getNextKey(componentName, isLink ? "link" : "text", path);
+          storeTranslation(componentName, key, cleanText, path);
+          const functionName = getFunctionName(path);
 
           const replacement = j.jsxExpressionContainer(
             j.callExpression(j.identifier("t"), [
-              j.literal(`${componentName}.${key}`),
+              j.literal(`${functionName}.${key}`),
             ]),
           );
 
@@ -621,15 +667,16 @@ export default async function transform(
       continue;
     }
 
-    const key = getNextKey(componentName, "attribute");
+    const key = getNextKey(componentName, "attribute", path);
     if (!key) continue;
 
-    storeTranslation(componentName, key, cleanText);
+    storeTranslation(componentName, key, cleanText, path);
 
     // Create t() call with proper key
+    const functionName = getFunctionName(path);
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${componentName}.${key}`),
+        j.literal(`${functionName}.${key}`),
       ]),
     );
 
