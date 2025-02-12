@@ -101,13 +101,20 @@ export class TransformService {
   // Internal key generation
   private async generateKeys(): Promise<Record<string, string>> {
     const keyMap: Record<string, string> = {};
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const keyLength = 8;
 
     for (const translation of this.collectedTranslations) {
-      // For now, just return the same keys
-      keyMap[translation.originalKey] = translation.originalKey;
+      let randomKey = "";
+      for (let i = 0; i < keyLength; i++) {
+        randomKey += characters.charAt(
+          Math.floor(Math.random() * characters.length),
+        );
+      }
 
-      // Later you can modify this to generate different keys, for example:
-      // keyMap[translation.originalKey] = `${translation.type}_${translation.elementKey}`;
+      const [component] = translation.originalKey.split(".");
+      keyMap[translation.originalKey] = `${component}.${randomKey}`;
     }
 
     return keyMap;
