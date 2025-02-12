@@ -198,7 +198,7 @@ function createTranslationWithVars(
   } as Node;
 
   // Store the template in translations
-  let template = cleanupText(text);
+  let template = text; // Don't clean up spaces between variables and text
 
   // Check for pluralization patterns
   for (const variable of variables) {
@@ -452,46 +452,60 @@ function transformJSXElement(
   };
   const children = node.children || [];
 
-  // Look for text + expression patterns
   for (let i = 0; i < children.length; i++) {
     const child = children[i];
+
+    // Handle JSX expressions (variables)
     if (child.type === "JSXExpressionContainer") {
-      // Handle conditional expressions
-      const { pattern, variable } = createSelectPattern(child);
-      if (pattern && variable) {
-        const elementType = getElementType(path);
-        const key = getNextKey(componentName, elementType);
-        storeTranslation(componentName, key, pattern);
+      const varName = getVariableName(child);
+      if (varName) {
+        // Check for text after the variable
+        const nextChild = children[i + 1];
+        const textAfter =
+          nextChild?.type === "JSXText" ? nextChild.value || "" : "";
 
-        const simplifiedKey = getSimplifiedKey(variable);
-        const memberExpr = createMemberExpression(variable.split("."));
+        if (textAfter) {
+          // Handle variable + text case (like "{theme} mode")
+          const key = getNextKey(componentName, "text");
+          const simplifiedKey = getSimplifiedKey(varName);
+          const template = `{${simplifiedKey}}${textAfter}`;
 
-        const replacement = j.jsxExpressionContainer(
-          j.callExpression(j.identifier("t"), [
-            j.literal(`${componentName}.${key}`),
-            {
-              type: "ObjectExpression",
-              properties: [
-                {
-                  type: "ObjectProperty",
-                  key: { type: "Identifier", name: simplifiedKey },
-                  value: memberExpr,
-                  shorthand: false,
-                  computed: false,
-                } as unknown as Node,
-              ],
-            } as unknown as Node,
-          ]),
-        );
+          storeTranslation(componentName, key, template);
 
-        children[i] = replacement;
-        continue;
+          const replacement = j.jsxExpressionContainer(
+            j.callExpression(j.identifier("t"), [
+              j.literal(`${componentName}.${key}`),
+              {
+                type: "ObjectExpression",
+                properties: [
+                  {
+                    type: "ObjectProperty",
+                    key: {
+                      type: "Identifier",
+                      name: simplifiedKey,
+                    } as unknown as Node,
+                    value: createMemberExpression(
+                      varName.split("."),
+                    ) as unknown as Node,
+                    shorthand: false,
+                    computed: false,
+                  } as unknown as Node,
+                ],
+              } as unknown as Node,
+            ]),
+          );
+
+          // Replace both the variable and the text after it
+          children.splice(i, 2, replacement);
+          continue;
+        }
       }
     }
 
+    // Handle other cases...
     if (child.type === "JSXText") {
-      const text = (child.value || "").trim();
-      if (!text) continue;
+      const text = child.value || "";
+      if (!text.trim()) continue;
 
       // Check if next nodes are expressions
       const variables: Array<{
@@ -504,34 +518,22 @@ function transformJSXElement(
 
       while (nextIndex < children.length) {
         const nextChild = children[nextIndex];
-        if (isJSXExpression(nextChild)) {
+        if (nextChild.type === "JSXExpressionContainer") {
           const varName = getVariableName(nextChild);
           if (varName) {
-            // Look ahead for potential pluralization condition
-            const pluralCondition =
-              nextIndex + 1 < children.length
-                ? (children[nextIndex + 1] as Node)
-                : undefined;
-
             variables.push({
               name: varName,
               node: nextChild,
-              pluralCondition,
             });
             hasVariables = true;
             nextIndex++;
 
-            // Skip the pluralization condition if found
-            if (pluralCondition && isJSXExpression(pluralCondition)) {
-              nextIndex++;
-            }
-
-            // Check for following text
-            if (
-              nextIndex < children.length &&
-              children[nextIndex].type === "JSXText"
-            ) {
-              nextIndex++;
+            // Look for text after the variable
+            if (nextIndex < children.length) {
+              const afterNode = children[nextIndex];
+              if (afterNode.type === "JSXText" && afterNode.value) {
+                nextIndex++;
+              }
             }
             continue;
           }
@@ -540,30 +542,41 @@ function transformJSXElement(
       }
 
       if (hasVariables) {
-        // Create combined text with variables
-        const combinedText = cleanupText(
-          children
-            .slice(i, nextIndex)
-            .map((node) => {
-              if (node.type === "JSXText") return node.value || "";
-              const varName = getVariableName(node);
-              return varName ? `{${varName}}` : "";
-            })
-            .join(""),
-        );
+        // Create combined text with variables and preserve spaces
+        const parts = children.slice(i, nextIndex).map((node) => {
+          if (node.type === "JSXText") {
+            return node.value || "";
+          }
+          const varName = getVariableName(node);
+          if (!varName) return "";
+          const simplifiedKey = getSimplifiedKey(varName);
+          return `{${simplifiedKey}}`;
+        });
+
+        const combinedText = parts.join("");
 
         if (combinedText) {
           const key = getNextKey(componentName, "text");
           storeTranslation(componentName, key, combinedText);
 
-          const replacement = createTranslationWithVars(
-            j,
-            `${componentName}.${key}`,
-            combinedText,
-            variables,
+          const variablesObj = {
+            type: "ObjectExpression",
+            properties: variables.map(({ name }) => ({
+              type: "ObjectProperty",
+              key: { type: "Identifier", name: getSimplifiedKey(name) },
+              value: createMemberExpression(name.split(".")),
+              shorthand: false,
+              computed: false,
+            })),
+          } as Node;
+
+          const replacement = j.jsxExpressionContainer(
+            j.callExpression(j.identifier("t"), [
+              j.literal(`${componentName}.${key}`),
+              variablesObj,
+            ]),
           );
 
-          // Replace all nodes with the new translation
           children.splice(i, nextIndex - i, replacement);
         }
       } else {
@@ -581,8 +594,8 @@ function transformJSXElement(
           );
 
           // Handle whitespace
-          const leadingSpace = child.value?.match(/^\s*\n\s*/)?.[0] || "";
-          const trailingSpace = child.value?.match(/\s*\n\s*$/)?.[0] || "";
+          const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";
+          const trailingSpace = text.match(/\s*\n\s*$/)?.[0] || "";
 
           if (leadingSpace || trailingSpace) {
             const nodes: Node[] = [];
