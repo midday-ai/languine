@@ -1,13 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import type {
-  API,
-  Collection,
-  FileInfo,
-  JSCodeshift,
-  Node,
-  Path,
-} from "jscodeshift";
+import type { API, FileInfo, JSCodeshift, Node, Path } from "jscodeshift";
 
 // Load or create translation store
 const TRANSLATION_FILE = path.resolve("translations.json");
@@ -15,32 +8,88 @@ const translations = existsSync(TRANSLATION_FILE)
   ? JSON.parse(readFileSync(TRANSLATION_FILE, "utf-8"))
   : {};
 
-// Track text occurrences per type
-const textOccurrences: Record<string, number> = {};
+// Track text occurrences per element type
+const elementCounts: Record<string, number> = {};
 
-// Generate a key using a simple counter approach
-function generateKey(text: string, type: string): string {
-  const key = `${type}:${text.toLowerCase()}`;
-  if (!textOccurrences[key]) {
-    textOccurrences[key] = 1;
-    return "";
+// Attributes that should not be translated
+const SKIP_ATTRIBUTES = new Set([
+  "href",
+  "src",
+  "id",
+  "className",
+  "class",
+  "key",
+  "name",
+  "type",
+  "value",
+  "for",
+  "role",
+  "target",
+  "rel",
+  "aria-labelledby",
+  "aria-describedby",
+  "data-testid",
+  "style",
+  "width",
+  "height",
+  "size",
+  "maxLength",
+  "min",
+  "max",
+  "pattern",
+  "tabIndex",
+]);
+
+// Get the element type from the JSX path
+function getElementType(path: Path): string {
+  let current = path;
+  while (current) {
+    const node = current.node as Node & {
+      type?: string;
+      openingElement?: {
+        name?: { name?: string };
+      };
+    };
+
+    if (node.type === "JSXElement") {
+      const elementName = node.openingElement?.name?.name?.toLowerCase();
+      if (elementName) {
+        return elementName;
+      }
+    }
+    current = current.parent;
   }
-  textOccurrences[key]++;
-  return `_${textOccurrences[key]}`;
+  return "text";
 }
 
-// Create a translation key based on the component name and type
+// Create a translation key based on the component name and element type
 function getTranslationKey(
   componentName: string,
   type: string,
   text: string,
-): string | undefined {
-  const suffix = generateKey(text, type);
-  const key = `${componentName}.${type}${suffix}`;
-  if (!translations[key]) {
-    translations[key] = text;
+  path: Path,
+): string {
+  if (type === "attribute") {
+    const parent = path.parent.node as Node & {
+      type?: string;
+      name?: { name?: string };
+    };
+    const attrName = parent.name?.name;
+
+    if (attrName === "type") {
+      const elementType = getElementType(path);
+      elementCounts[elementType] = (elementCounts[elementType] || 0) + 1;
+      return `${componentName}.type_${elementCounts[elementType]}`;
+    }
+    return `${componentName}.${attrName}`;
   }
-  return key;
+
+  // For text content, use the element type
+  const elementType = getElementType(path);
+  elementCounts[elementType] = (elementCounts[elementType] || 0) + 1;
+  return elementType === "text"
+    ? `${componentName}.text_${elementCounts[elementType]}`
+    : `${componentName}.${elementType}${elementCounts[elementType] > 1 ? `_${elementCounts[elementType]}` : ""}`;
 }
 
 // Save translations to file
@@ -56,29 +105,19 @@ function createJSXText(j: JSCodeshift, text: string): Node {
   };
 }
 
-// Check if a node is inside a link with a local path
-function isInsideLocalLink(path: Path): boolean {
+// Check if a node is inside a link
+function isInsideLink(path: Path): boolean {
   let current = path;
   while (current) {
     const node = current.node as Node & {
       type?: string;
       openingElement?: {
         name?: { name?: string };
-        attributes?: Array<{
-          name?: { name?: string };
-          value?: { type?: string; value?: string };
-        }>;
       };
     };
 
     if (node.type === "JSXElement" && node.openingElement?.name?.name === "a") {
-      const hrefAttr = node.openingElement.attributes?.find(
-        (attr) =>
-          attr.name?.name === "href" && attr.value?.type === "StringLiteral",
-      );
-      if (hrefAttr?.value?.value?.startsWith("/")) {
-        return true;
-      }
+      return true;
     }
     current = current.parent;
   }
@@ -106,46 +145,50 @@ export default function transform(file: FileInfo, api: API) {
       continue; // Skip empty, short, or non-text content
     }
 
-    // Skip text inside local links
-    if (isInsideLocalLink(path)) {
-      continue;
-    }
-
-    const key = getTranslationKey(componentName, "text", text);
+    // Get text inside links
+    const isLink = isInsideLink(path);
+    const key = getTranslationKey(
+      componentName,
+      isLink ? "link" : "text",
+      text,
+      path,
+    );
     if (!key) continue;
+
+    if (!translations[key]) {
+      translations[key] = text;
+    }
 
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [j.literal(key)]),
     );
 
-    // Preserve whitespace
+    // Handle whitespace by creating separate text nodes
     const leadingSpace = value.match(/^\s*\n\s*/)?.[0] || "";
     const trailingSpace = value.match(/\s*\n\s*$/)?.[0] || "";
 
     if (leadingSpace || trailingSpace) {
-      const span = {
-        type: "JSXElement",
-        openingElement: {
-          type: "JSXOpeningElement",
-          name: { type: "JSXIdentifier", name: "span" },
-          attributes: [],
-          selfClosing: false,
-        },
-        closingElement: {
-          type: "JSXClosingElement",
-          name: { type: "JSXIdentifier", name: "span" },
-        },
-        children: [
-          ...(leadingSpace ? [createJSXText(j, leadingSpace)] : []),
-          replacement,
-          ...(trailingSpace ? [createJSXText(j, trailingSpace)] : []),
-        ],
-      };
+      const nodes: Node[] = [];
+      if (leadingSpace) nodes.push(createJSXText(j, leadingSpace));
+      nodes.push(replacement);
+      if (trailingSpace) nodes.push(createJSXText(j, trailingSpace));
 
-      root
+      const paths = root
         .find(j.JSXText)
         .filter((p) => p.node.value === value)
-        .replaceWith(span);
+        .paths();
+
+      for (const path of paths) {
+        const parent = path.parent.node as Node & {
+          children?: Node[];
+        };
+        if (parent.children) {
+          const index = parent.children.indexOf(path.node);
+          if (index !== -1) {
+            parent.children.splice(index, 1, ...nodes);
+          }
+        }
+      }
     } else {
       root
         .find(j.JSXText)
@@ -168,13 +211,18 @@ export default function transform(file: FileInfo, api: API) {
       continue; // Skip empty, short, or non-text content
     }
 
-    // Skip href attributes that are local paths
-    if (parent.name?.name === "href" && text.startsWith("/")) {
+    const attrName = parent.name?.name;
+    // Skip non-translatable attributes
+    if (attrName && SKIP_ATTRIBUTES.has(attrName)) {
       continue;
     }
 
-    const key = getTranslationKey(componentName, "attribute", text);
+    const key = getTranslationKey(componentName, "attribute", text, path);
     if (!key) continue;
+
+    if (!translations[key]) {
+      translations[key] = text;
+    }
 
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [j.literal(key)]),
