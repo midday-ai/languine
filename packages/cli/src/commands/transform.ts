@@ -42,6 +42,7 @@ export async function transformCommand(args: string[] = []) {
       {
         parser: "tsx",
         verbose: 0,
+        useRandomKeys: false,
       },
     );
 

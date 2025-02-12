@@ -28,6 +28,7 @@ type KeyGenerationStrategy =
 type TransformOptions = {
   keyOverrides?: Record<string, string>;
   keyGeneration?: KeyGenerationStrategy;
+  useRandomKeys?: boolean;
 };
 
 /**
@@ -37,9 +38,10 @@ type TransformOptions = {
 export class TransformService {
   // State management
   private translations: Record<string, Record<string, string>> = {};
-  private elementCounts: Record<string, Record<string, number>> = {};
+  private elementCounts: Record<string, number> = {};
   private collectedTranslations: CollectedTranslation[] = [];
   private contentToKeyMap: Map<string, string> = new Map();
+  private options?: TransformOptions;
 
   // Constants
   private readonly SKIP_ATTRIBUTES = new Set([
@@ -72,8 +74,10 @@ export class TransformService {
 
   constructor(
     private translationFile: string = path.resolve("translations.json"),
+    options?: TransformOptions,
   ) {
     this.loadTranslations();
+    this.options = options;
   }
 
   /**
@@ -124,11 +128,11 @@ export class TransformService {
         // Content-based key generation (default)
         key =
           this.contentToKeyMap.get(translation.value) ||
-          this.generateRandomKey(component);
+          this.generateKey(component, translation.value, translation.value);
         this.contentToKeyMap.set(translation.value, key);
       } else {
         // Random key generation
-        key = this.generateRandomKey(component);
+        key = this.generateKey(component, translation.value, translation.value);
       }
 
       // Store the mapping from original key to new key
@@ -138,17 +142,26 @@ export class TransformService {
     return keyMap;
   }
 
-  private generateRandomKey(component: string): string {
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    const keyLength = 8;
-    let randomKey = "";
-
-    for (let i = 0; i < keyLength; i++) {
-      randomKey += characters.charAt(
-        Math.floor(Math.random() * characters.length),
-      );
+  private generateKey(component: string, value: string, key: string): string {
+    // If random keys are not enabled, return the element-based key
+    if (!this.options?.useRandomKeys) {
+      return key;
     }
+
+    // Create a consistent random key based on the component and value
+    const hash = Array.from(value).reduce((acc, char) => {
+      return char.charCodeAt(0) + ((acc << 5) - acc);
+    }, 0);
+
+    // Convert hash to base36 string and take first 6 chars
+    const randomKey = Math.abs(hash).toString(36).substring(0, 6);
+
+    console.log("Generating key for:", {
+      component,
+      value,
+      key,
+      generatedKey: `${randomKey}`,
+    });
 
     return randomKey;
   }
@@ -261,7 +274,38 @@ export class TransformService {
     try {
       const savedTranslations = await this.saveTranslations(keyOverrides);
       console.log("Saved translations:", savedTranslations);
-      this.updateTranslationCalls(j, root, keyOverrides);
+
+      // Update all t() function calls with the generated keys
+      const calls = root.find("CallExpression");
+      for (const path of calls.paths()) {
+        const node = path.value as {
+          type: string;
+          callee?: { type: string; name: string };
+          arguments?: Array<{ type: string; value: string }>;
+        };
+
+        if (
+          node.callee?.type === "Identifier" &&
+          node.callee.name === "t" &&
+          node.arguments?.[0]?.type === "StringLiteral"
+        ) {
+          const originalKey = node.arguments[0].value;
+          const [functionName, elementKey] = originalKey.split(".");
+
+          // Find the matching translation to get its generated key
+          const translation = this.collectedTranslations.find(
+            (t) =>
+              t.functionName === functionName && t.elementKey === elementKey,
+          );
+
+          if (translation) {
+            const callNode = path.node as Node & { arguments: Array<Node> };
+            callNode.arguments[0] = j.literal(
+              `${functionName}.${translation.elementKey}`,
+            );
+          }
+        }
+      }
     } catch (error) {
       console.error("Error saving translations:", error);
       if (error instanceof Error) {
@@ -273,32 +317,22 @@ export class TransformService {
     }
   }
 
-  private updateTranslationCalls(
-    j: JSCodeshift,
-    root: ReturnType<JSCodeshift>,
-    keyOverrides: Record<string, string>,
+  private storeTranslation(
+    componentName: string,
+    key: string,
+    value: string,
+    path: Path,
   ): void {
-    const calls = root.find("CallExpression");
+    const functionName = this.getFunctionName(path);
+    const generatedKey = this.generateKey(componentName, value, key);
 
-    for (const path of calls.paths()) {
-      const node = path.value as {
-        type: string;
-        callee?: { type: string; name: string };
-        arguments?: Array<{ type: string; value: string }>;
-      };
-
-      if (
-        node.callee?.type === "Identifier" &&
-        node.callee.name === "t" &&
-        node.arguments?.[0]?.type === "StringLiteral"
-      ) {
-        const originalKey = node.arguments[0].value;
-        const finalKey = keyOverrides[originalKey] || originalKey;
-
-        const callNode = path.node as Node & { arguments: Array<Node> };
-        callNode.arguments[0] = j.literal(finalKey);
-      }
-    }
+    this.collectedTranslations.push({
+      originalKey: `${functionName}.${key}`,
+      value,
+      type: this.getElementType(path) === "a" ? "link" : "text",
+      functionName,
+      elementKey: generatedKey,
+    });
   }
 
   // JSX Processing Methods
@@ -455,7 +489,18 @@ export class TransformService {
   }
 
   private getNextKey(componentName: string, type: string, path: Path): string {
-    return this.generateRandomKey(componentName);
+    const functionName = this.getFunctionName(path);
+    const elementType = this.getElementType(path);
+
+    const key = `${elementType}`;
+    if (!this.elementCounts[key]) {
+      this.elementCounts[key] = 0;
+    }
+    this.elementCounts[key]++;
+
+    const count = this.elementCounts[key];
+    const suffix = count > 1 ? `_${count}` : "";
+    return `${key}${suffix}`;
   }
 
   private createSelectPattern(
@@ -553,22 +598,6 @@ export class TransformService {
       },
       { type: "Identifier", name: parts[0] } as ASTNode,
     );
-  }
-
-  private storeTranslation(
-    componentName: string,
-    key: string,
-    value: string,
-    path: Path,
-  ): void {
-    const functionName = this.getFunctionName(path);
-    this.collectedTranslations.push({
-      originalKey: `${componentName}.${key}`,
-      value,
-      type: this.getElementType(path) === "a" ? "link" : "text",
-      functionName,
-      elementKey: key,
-    });
   }
 
   private getVariableName(
@@ -674,12 +703,13 @@ export class TransformService {
     const key = this.getNextKey(componentName, "attribute", path);
     if (!key) return;
 
-    this.storeTranslation(componentName, key, cleanText, path);
+    const generatedKey = this.generateKey(componentName, cleanText, key);
+    this.storeTranslation(componentName, generatedKey, cleanText, path);
 
     const functionName = this.getFunctionName(path);
     const replacement = j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${key}`),
+        j.literal(`${functionName}.${generatedKey}`),
       ]),
     );
 
@@ -699,12 +729,22 @@ export class TransformService {
     componentName: string,
   ): Node {
     const key = this.getNextKey(componentName, "text", path);
-    this.storeTranslation(componentName, key, selectPattern.pattern, path);
+    const generatedKey = this.generateKey(
+      componentName,
+      selectPattern.pattern,
+      key,
+    );
+    this.storeTranslation(
+      componentName,
+      generatedKey,
+      selectPattern.pattern,
+      path,
+    );
 
     const functionName = this.getFunctionName(path);
     return j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${key}`),
+        j.literal(`${functionName}.${generatedKey}`),
         {
           type: "ObjectExpression",
           properties: [
@@ -736,13 +776,14 @@ export class TransformService {
     const key = this.getNextKey(componentName, "text", path);
     const simplifiedKey = this.getSimplifiedKey(varName);
     const template = `{${simplifiedKey}}${textAfter}`;
+    const generatedKey = this.generateKey(componentName, template, key);
 
-    this.storeTranslation(componentName, key, template, path);
+    this.storeTranslation(componentName, generatedKey, template, path);
     const functionName = this.getFunctionName(path);
 
     return j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${key}`),
+        j.literal(`${functionName}.${generatedKey}`),
         {
           type: "ObjectExpression",
           properties: [
@@ -762,6 +803,49 @@ export class TransformService {
         } as unknown as Node,
       ]),
     );
+  }
+
+  private handleSimpleText(
+    j: JSCodeshift,
+    children: Array<Node & { type: string; value?: string }>,
+    index: number,
+    text: string,
+    path: Path,
+    componentName: string,
+  ): number {
+    const cleanText = this.cleanupText(text);
+    if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
+      const isLink = this.isInsideLink(path);
+      const key = this.getNextKey(
+        componentName,
+        isLink ? "link" : "text",
+        path,
+      );
+      const generatedKey = this.generateKey(componentName, cleanText, key);
+      this.storeTranslation(componentName, generatedKey, cleanText, path);
+      const functionName = this.getFunctionName(path);
+
+      const replacement = j.jsxExpressionContainer(
+        j.callExpression(j.identifier("t"), [
+          j.literal(`${functionName}.${generatedKey}`),
+        ]),
+      );
+
+      const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";
+      const trailingSpace = text.match(/\s*\n\s*$/)?.[0] || "";
+
+      if (leadingSpace || trailingSpace) {
+        const nodes: Node[] = [];
+        if (leadingSpace) nodes.push(this.createJSXText(j, leadingSpace));
+        nodes.push(replacement);
+        if (trailingSpace) nodes.push(this.createJSXText(j, trailingSpace));
+        children.splice(index, 1, ...nodes);
+      } else {
+        children[index] = replacement;
+      }
+    }
+
+    return index;
   }
 
   private collectVariables(
@@ -855,48 +939,6 @@ export class TransformService {
     }
 
     return endIndex - 1;
-  }
-
-  private handleSimpleText(
-    j: JSCodeshift,
-    children: Array<Node & { type: string; value?: string }>,
-    index: number,
-    text: string,
-    path: Path,
-    componentName: string,
-  ): number {
-    const cleanText = this.cleanupText(text);
-    if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
-      const isLink = this.isInsideLink(path);
-      const key = this.getNextKey(
-        componentName,
-        isLink ? "link" : "text",
-        path,
-      );
-      this.storeTranslation(componentName, key, cleanText, path);
-      const functionName = this.getFunctionName(path);
-
-      const replacement = j.jsxExpressionContainer(
-        j.callExpression(j.identifier("t"), [
-          j.literal(`${functionName}.${key}`),
-        ]),
-      );
-
-      const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";
-      const trailingSpace = text.match(/\s*\n\s*$/)?.[0] || "";
-
-      if (leadingSpace || trailingSpace) {
-        const nodes: Node[] = [];
-        if (leadingSpace) nodes.push(this.createJSXText(j, leadingSpace));
-        nodes.push(replacement);
-        if (trailingSpace) nodes.push(this.createJSXText(j, trailingSpace));
-        children.splice(index, 1, ...nodes);
-      } else {
-        children[index] = replacement;
-      }
-    }
-
-    return index;
   }
 }
 
