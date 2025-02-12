@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { client } from "@/utils/api.js";
 import type { API, FileInfo, JSCodeshift, Node, Path } from "jscodeshift";
 
 // Load or create translation store
@@ -145,96 +146,6 @@ function createSelectPattern(
   return { pattern: null, variable: null };
 }
 
-// Helper to create a translation with variables and pluralization
-function createTranslationWithVars(
-  j: JSCodeshift,
-  key: string,
-  text: string,
-  variables: Array<{ name: string; node: Node; pluralCondition?: Node }>,
-): Node {
-  // Create the variables object for t() call with full paths
-  const properties = variables.map(({ name }) => {
-    const simplifiedKey = getSimplifiedKey(name);
-
-    // Build the member expression manually
-    const memberExpr = name.split(".").reduce(
-      (acc, part, idx) => {
-        if (idx === 0) {
-          return {
-            type: "Identifier",
-            name: part,
-          } as Node;
-        }
-        return {
-          type: "MemberExpression",
-          object: acc,
-          property: {
-            type: "Identifier",
-            name: part,
-          },
-          computed: false,
-        } as Node;
-      },
-      null as unknown as Node,
-    );
-
-    return {
-      type: "Property",
-      key: {
-        type: "Identifier",
-        name: simplifiedKey,
-      },
-      value: memberExpr,
-      kind: "init",
-      method: false,
-      shorthand: false,
-      computed: false,
-    } as unknown as Node;
-  });
-
-  const variablesObj = {
-    type: "ObjectExpression",
-    properties,
-  } as Node;
-
-  // Store the template in translations
-  let template = text; // Don't clean up spaces between variables and text
-
-  // Check for pluralization patterns
-  for (const variable of variables) {
-    if (variable.pluralCondition) {
-      const pluralPattern = createPluralPattern(
-        template,
-        variable.name,
-        variable.pluralCondition,
-      );
-      if (pluralPattern) {
-        template = pluralPattern;
-        break; // Only handle one pluralization per string for now
-      }
-    }
-  }
-
-  // Store final template
-  template = template.replace(/\{([^}]+)\}/g, (_, name) => {
-    // Skip if it's already a plural pattern
-    if (name.includes("plural") || name.includes("select")) return `{${name}}`;
-    // Use simplified key in the template
-    const simplifiedKey = getSimplifiedKey(name);
-    return `{${simplifiedKey}}`;
-  });
-
-  const [comp, ...rest] = key.split(".");
-  if (comp) {
-    if (!translations[comp]) translations[comp] = {};
-    translations[comp][rest.join(".")] = template;
-  }
-
-  return j.jsxExpressionContainer(
-    j.callExpression(j.identifier("t"), [j.literal(key), variablesObj]),
-  );
-}
-
 // Helper to get full path from member expression
 function getFullPath(node: ASTNode): string {
   const parts: string[] = [];
@@ -300,51 +211,6 @@ function storeTranslation(
     translations[componentName] = {};
   }
   translations[componentName][key] = value;
-}
-
-// Helper to create pluralization pattern
-function createPluralPattern(
-  text: string,
-  varName: string,
-  pluralCondition: Node & {
-    type: string;
-    expression?: {
-      type: string;
-      test?: {
-        type: string;
-        operator?: string;
-        right?: {
-          type: string;
-          value?: number;
-        };
-      };
-    };
-  },
-): string | null {
-  if (
-    pluralCondition.type === "JSXExpressionContainer" &&
-    pluralCondition.expression
-  ) {
-    const expr = pluralCondition.expression;
-    if (expr.type === "ConditionalExpression" && expr.test) {
-      const test = expr.test;
-      if (
-        test.type === "BinaryExpression" &&
-        test.operator === "!==" &&
-        test.right?.type === "NumericLiteral" &&
-        test.right.value === 1
-      ) {
-        const simplifiedKey = getSimplifiedKey(varName);
-        return `{${simplifiedKey}, plural, =1 {${text}} other {${text}s}}`;
-      }
-    }
-  }
-  return null;
-}
-
-// Helper to check if a node is a JSX expression
-function isJSXExpression(node: Node): boolean {
-  return node.type === "JSXExpressionContainer";
 }
 
 // Helper to get variable name from expression
@@ -423,22 +289,76 @@ function createJSXText(j: JSCodeshift, text: string): Node {
   };
 }
 
-// Save translations to file with component nesting
-function saveTranslations(): void {
+// Identity transformation function - returns the same translations
+async function identityTransform(
+  translations: Record<string, Record<string, string>>,
+): Promise<Array<{ key: string; value: string }>> {
+  try {
+    // Convert nested translations to array format for API
+    const translationsArray = Object.entries(translations).flatMap(
+      ([component, strings]) =>
+        Object.entries(strings).map(([key, value]) => ({
+          key: `${component}.${key}`,
+          value,
+        })),
+    );
+
+    // Send translations to tRPC endpoint and get back transformed translations
+    const response = await client.jobs.startTransformJob.mutate({
+      projectId: "123",
+      translations: translationsArray,
+    });
+
+    return response;
+  } catch (error) {
+    console.error("Failed to transform translations:", error);
+    // Return original translations in array format if transformation fails
+    return Object.entries(translations).flatMap(([component, strings]) =>
+      Object.entries(strings).map(([key, value]) => ({
+        key: `${component}.${key}`,
+        value,
+      })),
+    );
+  }
+}
+
+// Transform and save translations
+async function saveTranslations(
+  transformFn: (
+    translations: Record<string, Record<string, string>>,
+  ) => Promise<Array<{ key: string; value: string }>>,
+): Promise<Record<string, Record<string, string>>> {
+  // Transform all translations at once
+  const transformedArray = await transformFn(translations);
+
+  // Convert array format to nested format
+  const transformedTranslations: Record<string, Record<string, string>> = {};
+  for (const item of transformedArray) {
+    const [component, key] = item.key.split(".");
+    if (!transformedTranslations[component]) {
+      transformedTranslations[component] = {};
+    }
+    transformedTranslations[component][key] = item.value;
+  }
+
   // Merge with existing translations if the file exists
-  let finalTranslations = { ...translations };
+  let finalTranslations = { ...transformedTranslations };
   if (existsSync(TRANSLATION_FILE)) {
     try {
       const existingTranslations = JSON.parse(
         readFileSync(TRANSLATION_FILE, "utf-8"),
       );
-      finalTranslations = { ...existingTranslations, ...translations };
+      finalTranslations = {
+        ...existingTranslations,
+        ...transformedTranslations,
+      };
     } catch (error) {
       console.warn("Failed to merge with existing translations");
     }
   }
 
   writeFileSync(TRANSLATION_FILE, JSON.stringify(finalTranslations, null, 2));
+  return transformedTranslations;
 }
 
 // Helper to transform JSX elements
@@ -646,8 +566,18 @@ function transformJSXElement(
   }
 }
 
-export default function transform(file: FileInfo, api: API) {
+export default async function transform(
+  file: FileInfo,
+  api: API,
+  options?: {
+    transformTranslations?: (
+      translations: Record<string, Record<string, string>>,
+    ) => Promise<Array<{ key: string; value: string }>>;
+  },
+): Promise<string> {
   const j = api.jscodeshift;
+  const transformTranslations =
+    options?.transformTranslations ?? identityTransform;
 
   // First clean up the source by removing extra parentheses
   const source = file.source.replace(
@@ -709,8 +639,56 @@ export default function transform(file: FileInfo, api: API) {
       .replaceWith(replacement);
   }
 
-  // Save the translations
-  saveTranslations();
+  try {
+    // Get transformed translations
+    const transformedArray = await transformTranslations(translations);
+    console.log("Transformed array:", transformedArray);
+
+    // Create a wrapper function that returns the transformed array
+    const transformWrapper = () => Promise.resolve(transformedArray);
+
+    // Save translations to file
+    const savedTranslations = await saveTranslations(transformWrapper);
+    console.log("Saved translations:", savedTranslations);
+
+    // Update all t() calls in the source to use transformed keys
+    const calls = root.find("CallExpression");
+
+    for (const path of calls.paths()) {
+      const node = path.value as {
+        type: string;
+        callee?: { type: string; name: string };
+        arguments?: Array<{ type: string; value: string }>;
+      };
+
+      if (
+        node.callee?.type === "Identifier" &&
+        node.callee.name === "t" &&
+        node.arguments?.[0]?.type === "StringLiteral"
+      ) {
+        const originalKey = node.arguments[0].value;
+        // Look up the transformed value in our array format
+        const transformedItem = transformedArray.find(
+          (item) => item.key === originalKey,
+        );
+
+        if (transformedItem) {
+          // Update with the transformed key
+          const callNode = path.node as Node & { arguments: Array<Node> };
+          callNode.arguments[0] = j.literal(transformedItem.key);
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Error transforming translations:", error);
+    // Log more details about the error
+    if (error instanceof Error) {
+      console.error("Error details:", {
+        message: error.message,
+        stack: error.stack,
+      });
+    }
+  }
 
   // Return the transformed source with proper formatting
   return root.toSource({
