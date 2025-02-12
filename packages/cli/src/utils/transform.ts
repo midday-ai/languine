@@ -241,6 +241,17 @@ function createMemberExpression(parts: string[]): ASTNode {
   );
 }
 
+// Track collected translations before saving
+type CollectedTranslation = {
+  originalKey: string;
+  value: string;
+  type: "text" | "attribute" | "link";
+  functionName: string;
+  elementKey: string;
+};
+
+const collectedTranslations: CollectedTranslation[] = [];
+
 // Helper to store translation
 function storeTranslation(
   componentName: string,
@@ -249,10 +260,15 @@ function storeTranslation(
   path: Path,
 ): void {
   const functionName = getFunctionName(path);
-  if (!translations[functionName]) {
-    translations[functionName] = {};
-  }
-  translations[functionName][key] = value;
+  const elementType = getElementType(path);
+
+  collectedTranslations.push({
+    originalKey: `${functionName}.${key}`,
+    value,
+    type: elementType === "a" ? "link" : "text",
+    functionName,
+    elementKey: key,
+  });
 }
 
 // Helper to get variable name from expression
@@ -364,19 +380,17 @@ async function identityTransform(
   }
 }
 
-// Transform and save translations
+// Transform and save translations with key override support
 async function saveTranslations(
-  transformFn: (
-    translations: Record<string, Record<string, string>>,
-  ) => Promise<Array<{ key: string; value: string }>>,
+  keyOverrides: Record<string, string> = {},
 ): Promise<Record<string, Record<string, string>>> {
-  // Transform all translations at once
-  const transformedArray = await transformFn(translations);
-
-  // Convert array format to nested format
+  // Convert array format to nested format with key overrides
   const transformedTranslations: Record<string, Record<string, string>> = {};
-  for (const item of transformedArray) {
-    const [component, key] = item.key.split(".");
+
+  for (const item of collectedTranslations) {
+    const finalKey = keyOverrides[item.originalKey] || item.originalKey;
+    const [component, key] = finalKey.split(".");
+
     if (!transformedTranslations[component]) {
       transformedTranslations[component] = {};
     }
@@ -616,14 +630,10 @@ export default async function transform(
   file: FileInfo,
   api: API,
   options?: {
-    transformTranslations?: (
-      translations: Record<string, Record<string, string>>,
-    ) => Promise<Array<{ key: string; value: string }>>;
+    keyOverrides?: Record<string, string>;
   },
 ): Promise<string> {
   const j = api.jscodeshift;
-  const transformTranslations =
-    options?.transformTranslations ?? identityTransform;
 
   // First clean up the source by removing extra parentheses
   const source = file.source.replace(
@@ -635,10 +645,8 @@ export default async function transform(
   // Get the component name from the file path
   const componentName = path.basename(file.path).replace(/\.[jt]sx?$/, "");
 
-  // Initialize component in translations if not exists
-  if (!translations[componentName]) {
-    translations[componentName] = {};
-  }
+  // Clear collected translations for this run
+  collectedTranslations.length = 0;
 
   // Replace JSX text content
   const elements = root.find("JSXElement");
@@ -687,18 +695,12 @@ export default async function transform(
   }
 
   try {
-    // Get transformed translations
-    const transformedArray = await transformTranslations(translations);
-    console.log("Transformed array:", transformedArray);
-
-    // Create a wrapper function that returns the transformed array
-    const transformWrapper = () => Promise.resolve(transformedArray);
-
-    // Save translations to file
-    const savedTranslations = await saveTranslations(transformWrapper);
+    // Apply key overrides and save translations
+    const keyOverrides = options?.keyOverrides || {};
+    const savedTranslations = await saveTranslations(keyOverrides);
     console.log("Saved translations:", savedTranslations);
 
-    // Update all t() calls in the source to use transformed keys
+    // Update all t() calls in the source to use overridden keys
     const calls = root.find("CallExpression");
 
     for (const path of calls.paths()) {
@@ -714,21 +716,16 @@ export default async function transform(
         node.arguments?.[0]?.type === "StringLiteral"
       ) {
         const originalKey = node.arguments[0].value;
-        // Look up the transformed value in our array format
-        const transformedItem = transformedArray.find(
-          (item) => item.key === originalKey,
-        );
+        // Look up if there's an override for this key
+        const finalKey = keyOverrides[originalKey] || originalKey;
 
-        if (transformedItem) {
-          // Update with the transformed key
-          const callNode = path.node as Node & { arguments: Array<Node> };
-          callNode.arguments[0] = j.literal(transformedItem.key);
-        }
+        // Update with the final key
+        const callNode = path.node as Node & { arguments: Array<Node> };
+        callNode.arguments[0] = j.literal(finalKey);
       }
     }
   } catch (error) {
-    console.error("Error transforming translations:", error);
-    // Log more details about the error
+    console.error("Error saving translations:", error);
     if (error instanceof Error) {
       console.error("Error details:", {
         message: error.message,
