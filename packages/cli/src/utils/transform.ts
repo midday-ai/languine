@@ -29,6 +29,7 @@ export class TransformService {
   private translations: Record<string, Record<string, string>> = {};
   private elementCounts: Record<string, number> = {};
   private collectedTranslations: CollectedTranslation[] = [];
+  private keyMap: Record<string, string> = {};
 
   // Constants
   private readonly SKIP_ATTRIBUTES = new Set([
@@ -76,37 +77,132 @@ export class TransformService {
 
     this.collectedTranslations.length = 0;
 
-    this.transformJSXElements(j, root, componentName);
-    this.transformStringLiterals(j, root, componentName);
+    // First pass: collect all translations without modifying the AST
+    await this.collectTranslations(j, root, componentName);
 
-    // Generate keys internally
-    const generatedKeys = await this.generateKeys();
-    await this.processTranslations(j, root, generatedKeys);
+    // Generate keys for all collected translations
+    await this.generateKeys();
+
+    // Second pass: transform the AST with the generated keys
+    await this.transformWithGeneratedKeys(j, root, componentName);
 
     return root.toSource({ quote: "double" });
   }
 
-  // Internal key generation
-  private async generateKeys(): Promise<Record<string, string>> {
+  /**
+   * Generate keys for all collected translations
+   * This is where you would integrate with your key generation API
+   */
+  private async generateKeys(): Promise<void> {
+    try {
+      // First, build the translations to generate unique keys
+      this.buildTransformedTranslations();
+    } catch (error) {
+      console.error("Failed to generate keys:", error);
+      // Fallback: use original keys if generation fails
+      for (const translation of this.collectedTranslations) {
+        if (!this.keyMap[translation.originalKey]) {
+          this.keyMap[translation.originalKey] = this.generateKeyFromValue(
+            translation.value,
+            translation.type,
+          );
+        }
+      }
+    }
+  }
+
+  /**
+   * Mock API call for key generation
+   * Replace this with your actual API integration
+   */
+  private async generateKeysFromAPI(
+    translations: Array<{
+      originalKey: string;
+      value: string;
+      type: string;
+      functionName: string;
+    }>,
+  ): Promise<Record<string, string>> {
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
     const keyMap: Record<string, string> = {};
+    const seenValues = new Map<string, string>();
 
-    for (const translation of this.collectedTranslations) {
-      const [component] = translation.originalKey.split(".");
-      const key = this.generateKey(
-        component,
-        translation.value,
-        translation.value,
-      );
+    for (const translation of translations) {
+      // Check if we've already generated a key for this value
+      let generatedKey = seenValues.get(translation.value);
+      if (!generatedKey) {
+        generatedKey = this.generateKeyFromValue(
+          translation.value,
+          translation.type,
+        );
+        seenValues.set(translation.value, generatedKey);
+      }
 
-      // Store the mapping from original key to new key
-      keyMap[translation.originalKey] = key;
+      keyMap[translation.originalKey] = generatedKey;
     }
 
     return keyMap;
   }
 
-  private generateKey(component: string, value: string, key: string): string {
-    return key;
+  private buildTransformedTranslations(): Record<
+    string,
+    Record<string, string>
+  > {
+    const transformedTranslations: Record<string, Record<string, string>> = {};
+    const seenValues = new Map<string, string>();
+
+    for (const item of this.collectedTranslations) {
+      const [component] = item.originalKey.split(".");
+
+      // Check if we've already generated a key for this value
+      let generatedKey = seenValues.get(item.value);
+      if (!generatedKey) {
+        generatedKey = this.generateKeyFromValue(item.value, item.type);
+        seenValues.set(item.value, generatedKey);
+      }
+
+      // Store the mapping for future use
+      this.keyMap[item.originalKey] = generatedKey;
+
+      if (!transformedTranslations[component]) {
+        transformedTranslations[component] = {};
+      }
+      transformedTranslations[component][generatedKey] = item.value;
+    }
+
+    return transformedTranslations;
+  }
+
+  private generateKeyFromValue(value: string, type: string): string {
+    const normalizedValue = value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "");
+
+    return `${type}_${normalizedValue}`.substring(0, 50);
+  }
+
+  private storeTranslation(
+    componentName: string,
+    key: string,
+    value: string,
+    path: Path,
+  ): void {
+    const functionName = this.getFunctionName(path);
+    const originalKey = `${functionName}.${key}`;
+
+    // Only store if we haven't seen this value before
+    if (!this.collectedTranslations.some((t) => t.value === value)) {
+      this.collectedTranslations.push({
+        originalKey,
+        value,
+        type: this.getElementType(path) === "a" ? "link" : "text",
+        functionName,
+        elementKey: key,
+      });
+    }
   }
 
   // File Processing Methods
@@ -147,25 +243,6 @@ export class TransformService {
     return transformedTranslations;
   }
 
-  private buildTransformedTranslations(): Record<
-    string,
-    Record<string, string>
-  > {
-    const transformedTranslations: Record<string, Record<string, string>> = {};
-
-    for (const item of this.collectedTranslations) {
-      const [component] = item.originalKey.split(".");
-      const key = item.elementKey;
-
-      if (!transformedTranslations[component]) {
-        transformedTranslations[component] = {};
-      }
-      transformedTranslations[component][key] = item.value;
-    }
-
-    return transformedTranslations;
-  }
-
   private async mergePreviousTranslations(
     newTranslations: Record<string, Record<string, string>>,
   ): Promise<Record<string, Record<string, string>>> {
@@ -188,69 +265,44 @@ export class TransformService {
   }
 
   // AST Transformation Methods
-  private transformJSXElements(
+  private async collectTranslations(
     j: JSCodeshift,
     root: ReturnType<JSCodeshift>,
     componentName: string,
-  ): void {
+  ): Promise<void> {
+    // Find all text content and store translations
     const elements = root.find("JSXElement");
-    for (const parentPath of elements.paths()) {
-      this.transformJSXElement(j, parentPath, componentName);
+    for (const path of elements.paths()) {
+      this.collectFromJSXElement(path, componentName);
+    }
+
+    // Find all string literals and store translations
+    for (const path of root.find(j.StringLiteral).paths()) {
+      this.collectFromStringLiteral(path, componentName);
     }
   }
 
-  private transformStringLiterals(
+  private async transformWithGeneratedKeys(
     j: JSCodeshift,
     root: ReturnType<JSCodeshift>,
     componentName: string,
-  ): void {
-    for (const path of root.find(j.StringLiteral).paths()) {
-      this.handleStringLiteral(j, root, path, componentName);
-    }
-  }
-
-  private async processTranslations(
-    j: JSCodeshift,
-    root: ReturnType<JSCodeshift>,
-    keyOverrides: Record<string, string> = {},
   ): Promise<void> {
     try {
+      // Transform JSX elements with the generated keys
+      const elements = root.find("JSXElement");
+      for (const path of elements.paths()) {
+        this.transformJSXElement(j, path, componentName);
+      }
+
+      // Transform string literals with the generated keys
+      for (const path of root.find(j.StringLiteral).paths()) {
+        this.handleStringLiteral(j, root, path, componentName);
+      }
+
       const savedTranslations = await this.saveTranslations();
       console.log("Saved translations:", savedTranslations);
-
-      // Update all t() function calls with the generated keys
-      const calls = root.find("CallExpression");
-      for (const path of calls.paths()) {
-        const node = path.value as {
-          type: string;
-          callee?: { type: string; name: string };
-          arguments?: Array<{ type: string; value: string }>;
-        };
-
-        if (
-          node.callee?.type === "Identifier" &&
-          node.callee.name === "t" &&
-          node.arguments?.[0]?.type === "StringLiteral"
-        ) {
-          const originalKey = node.arguments[0].value;
-          const [functionName, elementKey] = originalKey.split(".");
-
-          // Find the matching translation to get its generated key
-          const translation = this.collectedTranslations.find(
-            (t) =>
-              t.functionName === functionName && t.elementKey === elementKey,
-          );
-
-          if (translation) {
-            const callNode = path.node as Node & { arguments: Array<Node> };
-            callNode.arguments[0] = j.literal(
-              `${functionName}.${translation.elementKey}`,
-            );
-          }
-        }
-      }
     } catch (error) {
-      console.error("Error saving translations:", error);
+      console.error("Error transforming with generated keys:", error);
       if (error instanceof Error) {
         console.error("Error details:", {
           message: error.message,
@@ -260,22 +312,54 @@ export class TransformService {
     }
   }
 
-  private storeTranslation(
-    componentName: string,
-    key: string,
-    value: string,
-    path: Path,
-  ): void {
-    const functionName = this.getFunctionName(path);
-    const generatedKey = this.generateKey(componentName, value, key);
+  private collectFromJSXElement(path: Path, componentName: string): void {
+    const node = path.node as Node & {
+      children?: Array<Node & { type: string; value?: string }>;
+    };
+    const children = node.children || [];
 
-    this.collectedTranslations.push({
-      originalKey: `${functionName}.${key}`,
-      value,
-      type: this.getElementType(path) === "a" ? "link" : "text",
-      functionName,
-      elementKey: generatedKey,
-    });
+    for (const child of children) {
+      if (child.type === "JSXText") {
+        const text = child.value || "";
+        if (text.trim()) {
+          const cleanText = this.cleanupText(text);
+          if (cleanText.length >= 2 && /[a-zA-Z]/.test(cleanText)) {
+            const isLink = this.isInsideLink(path);
+            const key = this.getNextKey(
+              componentName,
+              isLink ? "link" : "text",
+              path,
+            );
+            this.storeTranslation(componentName, key, cleanText, path);
+          }
+        }
+      }
+    }
+  }
+
+  private collectFromStringLiteral(path: Path, componentName: string): void {
+    const parent = path.parent.node as Node & {
+      type?: string;
+      name?: { name?: string };
+    };
+
+    if (parent.type !== "JSXAttribute") return;
+
+    const text = path.node.value;
+    if (!text || text.length < 2 || !/[a-zA-Z]/.test(text)) {
+      return;
+    }
+
+    const cleanText = this.cleanupText(text);
+    const attrName = parent.name?.name;
+    if (attrName && this.SKIP_ATTRIBUTES.has(attrName)) {
+      return;
+    }
+
+    const key = this.getNextKey(componentName, "attribute", path);
+    if (!key) return;
+
+    this.storeTranslation(componentName, key, cleanText, path);
   }
 
   // JSX Processing Methods
@@ -646,14 +730,16 @@ export class TransformService {
     const key = this.getNextKey(componentName, "attribute", path);
     if (!key) return;
 
-    const generatedKey = this.generateKey(componentName, cleanText, key);
-    this.storeTranslation(componentName, generatedKey, cleanText, path);
-
     const functionName = this.getFunctionName(path);
+    const originalKey = `${functionName}.${key}`;
+
+    this.storeTranslation(componentName, key, cleanText, path);
+
+    // Use the mapped key if available, otherwise use the original key
+    const mappedKey = this.keyMap[originalKey] || originalKey;
+
     const replacement = j.jsxExpressionContainer(
-      j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${generatedKey}`),
-      ]),
+      j.callExpression(j.identifier("t"), [j.literal(mappedKey)]),
     );
 
     root
@@ -664,30 +750,22 @@ export class TransformService {
 
   private createSelectTranslation(
     j: JSCodeshift,
-    selectPattern: { pattern: string; variable: string } & {
-      pattern: NonNullable<string>;
-      variable: NonNullable<string>;
-    },
+    selectPattern: { pattern: string; variable: string },
     path: Path,
     componentName: string,
   ): Node {
     const key = this.getNextKey(componentName, "text", path);
-    const generatedKey = this.generateKey(
-      componentName,
-      selectPattern.pattern,
-      key,
-    );
-    this.storeTranslation(
-      componentName,
-      generatedKey,
-      selectPattern.pattern,
-      path,
-    );
-
     const functionName = this.getFunctionName(path);
+    const originalKey = `${functionName}.${key}`;
+
+    this.storeTranslation(componentName, key, selectPattern.pattern, path);
+
+    // Use the mapped key if available, otherwise use the original key
+    const mappedKey = this.keyMap[originalKey] || originalKey;
+
     return j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${generatedKey}`),
+        j.literal(mappedKey),
         {
           type: "ObjectExpression",
           properties: [
@@ -719,14 +797,17 @@ export class TransformService {
     const key = this.getNextKey(componentName, "text", path);
     const simplifiedKey = this.getSimplifiedKey(varName);
     const template = `{${simplifiedKey}}${textAfter}`;
-    const generatedKey = this.generateKey(componentName, template, key);
-
-    this.storeTranslation(componentName, generatedKey, template, path);
     const functionName = this.getFunctionName(path);
+    const originalKey = `${functionName}.${key}`;
+
+    this.storeTranslation(componentName, key, template, path);
+
+    // Use the mapped key if available, otherwise use the original key
+    const mappedKey = this.keyMap[originalKey] || originalKey;
 
     return j.jsxExpressionContainer(
       j.callExpression(j.identifier("t"), [
-        j.literal(`${functionName}.${generatedKey}`),
+        j.literal(mappedKey),
         {
           type: "ObjectExpression",
           properties: [
@@ -764,14 +845,16 @@ export class TransformService {
         isLink ? "link" : "text",
         path,
       );
-      const generatedKey = this.generateKey(componentName, cleanText, key);
-      this.storeTranslation(componentName, generatedKey, cleanText, path);
       const functionName = this.getFunctionName(path);
+      const originalKey = `${functionName}.${key}`;
+
+      this.storeTranslation(componentName, key, cleanText, path);
+
+      // Use the mapped key if available, otherwise use the original key
+      const mappedKey = this.keyMap[originalKey] || originalKey;
 
       const replacement = j.jsxExpressionContainer(
-        j.callExpression(j.identifier("t"), [
-          j.literal(`${functionName}.${generatedKey}`),
-        ]),
+        j.callExpression(j.identifier("t"), [j.literal(mappedKey)]),
       );
 
       const leadingSpace = text.match(/^\s*\n\s*/)?.[0] || "";

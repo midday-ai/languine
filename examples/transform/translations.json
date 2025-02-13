@@ -1,34 +1,36 @@
 {
   "Hero": {
-    "3zc8h7": "This is a hero text about our startup!",
-    "2s2zsj": "And this is the best description about it.",
-    "3vugd1": "Talk to founders",
-    "1q2cpk": "Sign In",
-    "9ysyly": "This is a great hero of our startup"
+    "text_this_is_a_hero_text_about_our_startup": "This is a hero text about our startup!",
+    "text_and_this_is_the_best_description_about_it": "And this is the best description about it.",
+    "text_talk_to_founders": "Talk to founders",
+    "text_sign_in": "Sign In",
+    "text_this_is_a_great_hero_of_our_startup": "This is a great hero of our startup"
   },
   "Header": {
-    "1cc1r": "Home",
-    "11jkh9": "About",
-    "rri8sg": "Contact",
-    "1gon03": "Go to home",
-    "1zmz13": "Go to about",
-    "1eu9zl": "Go to contact"
+    "link_home": "Home",
+    "link_about": "About",
+    "link_contact": "Contact",
+    "link_go_to_home": "Go to home",
+    "link_go_to_about": "Go to about",
+    "link_go_to_contact": "Go to contact"
   },
   "UserDashboard": {
-    "2d45sn": "Welcome back,{name}!",
-    "g78b3e": "Notification Center",
-    "33cen4": "You have{notifications}unread notification",
-    "224i7o": "Mark all as read",
-    "pv49rp": "Your Preferences",
-    "to2b08": "Current theme:",
-    "2a6qsj": "{theme} mode",
-    "p7rvc5": "Interface language:",
-    "z6pytf": "{language, select, en {English} other {Other}}",
-    "egpwmd": "Last login:",
-    "1gxpbc": "Update Profile",
-    "1a8hdq": "Settings",
-    "658aaa": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
-    "8p01x": "Need help? Contact our support team available 24/7.",
-    "2n0035": "Click to change your preferences"
+    "text_welcome_back": "Welcome back,",
+    "text_notification_center": "Notification Center",
+    "text_you_have": "You have",
+    "text_unread_notification": "unread notification",
+    "text_mark_all_as_read": "Mark all as read",
+    "text_your_preferences": "Your Preferences",
+    "text_current_theme": "Current theme:",
+    "text_mode": "mode",
+    "text_interface_language": "Interface language:",
+    "text_last_login": "Last login:",
+    "text_update_profile": "Update Profile",
+    "text_settings": "Settings",
+    "text_your_account_is_protected_with_advanced_secur": "Your account is protected with advanced security measures. Last security check was performed 3 days ago.",
+    "text_need_help_contact_our_support_team_available_": "Need help? Contact our support team available 24/7.",
+    "text_click_to_change_your_preferences": "Click to change your preferences",
+    "text_welcome_back_name": "Welcome back,{name}!",
+    "text_you_have_notifications_unread_notification": "You have{notifications}unread notification"
   }
 }
