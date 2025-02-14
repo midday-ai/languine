@@ -25,6 +25,7 @@ interface TransformState {
   elementCounts: Record<string, number>;
   collectedTranslations: CollectedTranslation[];
   keyMap: Record<string, string>;
+  apiKeys: Record<string, string>;
 }
 
 interface SelectPattern {
@@ -49,6 +50,7 @@ export class TransformService {
     elementCounts: {},
     collectedTranslations: [],
     keyMap: {},
+    apiKeys: {},
   };
 
   // Constants
@@ -107,6 +109,21 @@ export class TransformService {
     componentName: string,
   ): Promise<void> {
     await this.collectTranslations(j, root, componentName);
+
+    // Generate API keys for all collected translations
+    const apiKeys = await this.generateAPIKeys(
+      this.state.collectedTranslations,
+    );
+    this.state.apiKeys = apiKeys;
+
+    // Update keyMap with API keys where available
+    for (const translation of this.state.collectedTranslations) {
+      const apiKey = apiKeys[translation.originalKey];
+      if (apiKey) {
+        this.state.keyMap[translation.originalKey] = apiKey;
+      }
+    }
+
     await this.transformWithGeneratedKeys(j, root, componentName);
   }
 
@@ -176,6 +193,7 @@ export class TransformService {
   private resetState(): void {
     this.state.collectedTranslations.length = 0;
     this.state.keyMap = {};
+    this.state.apiKeys = {};
   }
 
   private buildTransformedTranslations(): Record<
@@ -186,7 +204,10 @@ export class TransformService {
     const seenValues = new Map<string, string>();
 
     for (const item of this.state.collectedTranslations) {
-      const generatedKey = this.state.keyMap[item.originalKey];
+      // Prefer API-generated key if available, fall back to local key
+      const generatedKey =
+        this.state.apiKeys[item.originalKey] ||
+        this.state.keyMap[item.originalKey];
       if (!generatedKey) {
         console.warn(`No key found for translation: ${item.originalKey}`);
         continue;
@@ -273,7 +294,6 @@ export class TransformService {
   ): void {
     const functionName = this.getFunctionName(path);
     const originalKey = `${functionName}.${key}`;
-    const type = this.getElementType(path) === "a" ? "link" : "text";
 
     // Check if we've already seen this value
     const existingTranslation = this.state.collectedTranslations.find(
@@ -285,14 +305,10 @@ export class TransformService {
       this.state.keyMap[originalKey] =
         this.state.keyMap[existingTranslation.originalKey];
     } else {
-      // Generate a new key for this value
-      const generatedKey = `${functionName}.${this.generateKeyFromValue(value, type)}`;
-      this.state.keyMap[originalKey] = generatedKey;
-
       this.state.collectedTranslations.push({
         originalKey,
         value,
-        type,
+        type: this.getElementType(path) === "a" ? "link" : "text",
         functionName,
         elementKey: key,
       });
@@ -401,7 +417,12 @@ export class TransformService {
     const originalKey = `${functionName}.${key}`;
 
     this.storeTranslation(componentName, key, selectPattern.pattern, path);
-    const mappedKey = this.state.keyMap[originalKey] || originalKey;
+
+    // Use the API-generated key if available, otherwise use the original key
+    const mappedKey =
+      this.state.apiKeys[originalKey] ||
+      this.state.keyMap[originalKey] ||
+      originalKey;
 
     return this.createTranslationNode(j, mappedKey, {
       [this.getSimplifiedKey(selectPattern.variable)]:
@@ -423,7 +444,12 @@ export class TransformService {
     const originalKey = `${functionName}.${key}`;
 
     this.storeTranslation(componentName, key, template, path);
-    const mappedKey = this.state.keyMap[originalKey] || originalKey;
+
+    // Use the API-generated key if available, otherwise use the original key
+    const mappedKey =
+      this.state.apiKeys[originalKey] ||
+      this.state.keyMap[originalKey] ||
+      originalKey;
 
     return this.createTranslationNode(j, mappedKey, {
       [simplifiedKey]: this.createMemberExpression(varName.split(".")),
@@ -512,18 +538,9 @@ export class TransformService {
   }
 
   private getNextKey(componentName: string, type: string, path: Path): string {
-    const functionName = this.getFunctionName(path);
     const elementType = this.getElementType(path);
-
-    const key = `${elementType}`;
-    if (!this.state.elementCounts[key]) {
-      this.state.elementCounts[key] = 0;
-    }
-    this.state.elementCounts[key]++;
-
-    const count = this.state.elementCounts[key];
-    const suffix = count > 1 ? `_${count}` : "";
-    return `${key}${suffix}`;
+    const key = `${Math.floor(Math.random() * 1000)}`;
+    return key;
   }
 
   private createSelectPattern(
@@ -532,9 +549,9 @@ export class TransformService {
         type: string;
         test?: {
           type: string;
-          left?: ASTNode;
+          left?: { type: string; value?: string };
           operator?: string;
-          right?: { value?: string };
+          right?: { type: string; value?: string };
         };
         consequent?: { value?: string };
         alternate?: { value?: string };
@@ -887,8 +904,11 @@ export class TransformService {
 
       this.storeTranslation(componentName, key, combinedText, path);
 
-      // Use the mapped key if available, otherwise use the original key
-      const mappedKey = this.state.keyMap[originalKey] || originalKey;
+      // Use API key if available, otherwise use keyMap or original key
+      const mappedKey =
+        this.state.apiKeys[originalKey] ||
+        this.state.keyMap[originalKey] ||
+        originalKey;
 
       const variablesObj = {
         type: "ObjectExpression",
@@ -935,8 +955,11 @@ export class TransformService {
 
       this.storeTranslation(componentName, key, cleanText, path);
 
-      // Use the mapped key if available, otherwise use the original key
-      const mappedKey = this.state.keyMap[originalKey] || originalKey;
+      // Use API key if available, otherwise use keyMap or original key
+      const mappedKey =
+        this.state.apiKeys[originalKey] ||
+        this.state.keyMap[originalKey] ||
+        originalKey;
 
       const replacement = j.jsxExpressionContainer(
         j.callExpression(j.identifier("t"), [j.literal(mappedKey)]),
@@ -957,6 +980,27 @@ export class TransformService {
     }
 
     return index;
+  }
+
+  private async generateAPIKeys(
+    translations: CollectedTranslation[],
+  ): Promise<Record<string, string>> {
+    const keys: Record<string, string> = {};
+    const seenValues = new Map<string, string>();
+
+    for (const translation of translations) {
+      // Reuse key if we've seen this exact value before
+      if (seenValues.has(translation.value)) {
+        keys[translation.originalKey] = seenValues.get(translation.value)!;
+        continue;
+      }
+
+      const generatedKey = `${translation.functionName}.${Math.floor(Math.random() * 1000)}`;
+      keys[translation.originalKey] = generatedKey;
+      seenValues.set(translation.value, generatedKey);
+    }
+
+    return keys;
   }
 }
 
