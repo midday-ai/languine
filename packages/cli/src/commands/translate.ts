@@ -18,7 +18,7 @@ import glob from "fast-glob";
 import open from "open";
 import { z } from "zod";
 
-const { BASE_URL } = loadEnv();
+const { LANGUINE_BASE_URL } = loadEnv();
 
 const argsSchema = z.array(z.string()).transform((args) => {
   // Helper function to find value for a flag
@@ -307,10 +307,12 @@ export async function translateCommand(args: string[] = []) {
         if (shouldUpgrade === "upgrade") {
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
+              `${LANGUINE_BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
+            await open(
+              `${LANGUINE_BASE_URL}/api/portal?id=${meta?.polarCustomerId}`,
+            );
           }
 
           note("Run `languine translate` again to continue.", "What's next?");
@@ -358,10 +360,12 @@ export async function translateCommand(args: string[] = []) {
         if (shouldUpgrade === "upgrade") {
           if (meta?.plan === "free") {
             await open(
-              `${BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
+              `${LANGUINE_BASE_URL}/${meta?.organizationId}/default/settings?tab=billing&modal=plan&tier=${Number(meta?.tier) + 1}`,
             );
           } else {
-            await open(`${BASE_URL}/api/portal?id=${meta?.polarCustomerId}`);
+            await open(
+              `${LANGUINE_BASE_URL}/api/portal?id=${meta?.polarCustomerId}`,
+            );
           }
 
           note("Run `languine translate` again to continue.", "What's next?");

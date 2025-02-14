@@ -5,13 +5,13 @@ import { intro, outro, spinner } from "@clack/prompts";
 import chalk from "chalk";
 import open from "open";
 
-const { BASE_URL } = loadEnv();
+const { LANGUINE_BASE_URL } = loadEnv();
 
 export async function loginCommand() {
   intro("Login to Languine");
 
   const loginId = randomUUID();
-  const loginUrl = `${BASE_URL}/api/auth/cli/${loginId}`;
+  const loginUrl = `${LANGUINE_BASE_URL}/api/auth/cli/${loginId}`;
 
   const s = spinner();
 
@@ -35,7 +35,7 @@ export async function loginCommand() {
   for (let i = 0; i < 20; i++) {
     try {
       const response = await fetch(
-        `${BASE_URL}/api/auth/cli/${loginId}/verify`,
+        `${LANGUINE_BASE_URL}/api/auth/cli/${loginId}/verify`,
       );
       const data = await response.json();
 

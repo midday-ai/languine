@@ -5,15 +5,15 @@ import type { AppRouter } from "@languine/web/src/trpc/routers/_app.js";
 import { createTRPCClient, httpBatchLink, loggerLink } from "@trpc/client";
 import superjson from "superjson";
 
-const { DEBUG, BASE_URL } = loadEnv();
+const { LANGUINE_DEBUG, LANGUINE_BASE_URL } = loadEnv();
 
 export const client = createTRPCClient<AppRouter>({
   links: [
     loggerLink({
-      enabled: () => DEBUG === "true",
+      enabled: () => LANGUINE_DEBUG === "true",
     }),
     httpBatchLink({
-      url: `${BASE_URL}/api/trpc`,
+      url: `${LANGUINE_BASE_URL}/api/trpc`,
       transformer: superjson,
       headers: () => {
         const apiKey = getAPIKey();
@@ -28,7 +28,7 @@ export const client = createTRPCClient<AppRouter>({
           if (!res.ok) {
             const error = await res.json().catch(() => null);
 
-            if (DEBUG === "true") {
+            if (LANGUINE_DEBUG === "true") {
               console.log(JSON.stringify(error, null, 2));
             }
 

@@ -5,7 +5,7 @@ import dedent from "dedent";
 import { runCommands } from "./commands/run.js";
 import { loadEnv } from "./utils/env.js";
 
-loadEnv();
+const { LANGUINE_BASE_URL } = loadEnv();
 
 if (!process.argv[2]) {
   console.log(
@@ -22,7 +22,7 @@ if (!process.argv[2]) {
   console.log(
     chalk.gray(dedent`
       Translate your application with Languine CLI powered by AI.
-      Website: ${chalk.bold(process.env.BASE_URL)}
+      Website: ${chalk.bold(LANGUINE_BASE_URL)}
     `),
   );
 
