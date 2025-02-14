@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { API, FileInfo, JSCodeshift, Node, Path } from "jscodeshift";
+import { client } from "./api.ts";
 
 // Core types and interfaces
 interface ASTNode extends Node {
@@ -348,15 +349,6 @@ export class TransformService {
       // Store the full key with functionName prefix
       this.state.keyMap[originalKey] = originalKey;
     }
-  }
-
-  private generateKeyFromValue(value: string, type: string): string {
-    const normalizedValue = value
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "_")
-      .replace(/^_+|_+$/g, "");
-
-    return `${type}_${normalizedValue}`.substring(0, 50);
   }
 
   // AST Transformation Methods
@@ -1030,20 +1022,20 @@ export class TransformService {
   private async generateAPIKeys(
     translations: CollectedTranslation[],
   ): Promise<Record<string, string>> {
+    const result = await client.jobs.startTransformJob.mutate({
+      projectId: "prj_xpuq472jzv5zv9uey0s5h6eu",
+      translations: translations.map((t) => ({
+        key: `${t.functionName}.${t.originalKey}`,
+        value: t.value,
+      })),
+    });
+
     const keys: Record<string, string> = {};
-    const seenValues = new Map<string, string>();
-
-    for (const translation of translations) {
-      // Reuse key if we've seen this exact value before
-      if (seenValues.has(translation.value)) {
-        keys[translation.originalKey] = seenValues.get(translation.value)!;
-        continue;
-      }
-
-      const generatedKey = `${translation.functionName}.${Math.floor(Math.random() * 1000)}`;
-      keys[translation.originalKey] = generatedKey;
-      seenValues.set(translation.value, generatedKey);
+    for (const translation of result) {
+      keys[translation.key] = translation.value;
     }
+
+    console.log("keys", keys);
 
     return keys;
   }
