@@ -213,14 +213,18 @@ export class TransformService {
         continue;
       }
 
-      const [component] = generatedKey.split(".");
+      // Extract just the numeric key part for the JSON
+      const keyParts = generatedKey.split(".");
+      const simpleKey = keyParts[keyParts.length - 1];
+      const [component] = item.functionName.split(".");
+
       if (!transformedTranslations[component]) {
         transformedTranslations[component] = {};
       }
 
       if (!seenValues.has(item.value)) {
-        transformedTranslations[component][generatedKey] = item.value;
-        seenValues.set(item.value, generatedKey);
+        transformedTranslations[component][simpleKey] = item.value;
+        seenValues.set(item.value, simpleKey);
       }
     }
 
@@ -312,6 +316,8 @@ export class TransformService {
         functionName,
         elementKey: key,
       });
+      // Store the full key with functionName prefix
+      this.state.keyMap[originalKey] = originalKey;
     }
   }
 
@@ -538,7 +544,6 @@ export class TransformService {
   }
 
   private getNextKey(componentName: string, type: string, path: Path): string {
-    const elementType = this.getElementType(path);
     const key = `${Math.floor(Math.random() * 1000)}`;
     return key;
   }
