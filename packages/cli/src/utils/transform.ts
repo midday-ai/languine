@@ -565,8 +565,52 @@ export class TransformService {
   }
 
   private getNextKey(componentName: string, type: string, path: Path): string {
-    const key = `${Math.floor(Math.random() * 1000)}`;
-    return key;
+    const elementName = this.getElementName(path);
+
+    // Get or initialize counter for this element name
+    if (!this.state.elementCounts[elementName]) {
+      this.state.elementCounts[elementName] = 0;
+    }
+    this.state.elementCounts[elementName]++;
+
+    // If this is the first occurrence, just return the element name
+    if (this.state.elementCounts[elementName] === 1) {
+      return elementName;
+    }
+
+    // For subsequent occurrences, add _N suffix where N starts from 1
+    return `${elementName}_${this.state.elementCounts[elementName] - 1}`;
+  }
+
+  private getElementName(path: Path): string {
+    const node = path.node as Node & {
+      type?: string;
+      openingElement?: { name?: { name?: string } };
+      name?: { name?: string };
+    };
+
+    // For JSXElements, get the element name (e.g., 'div', 'span', etc.)
+    if (node.type === "JSXElement" && node.openingElement?.name?.name) {
+      return node.openingElement.name.name.toLowerCase();
+    }
+
+    // For attributes, get the attribute name
+    if (path.parent?.node?.type === "JSXAttribute") {
+      const attrNode = path.parent.node as Node & { name?: { name?: string } };
+      return attrNode.name?.name || "attr";
+    }
+
+    // For text nodes, use 'text'
+    if (node.type === "JSXText") {
+      return "text";
+    }
+
+    // For string literals not in attributes, use 'string'
+    if (node.type === "StringLiteral") {
+      return "string";
+    }
+
+    return "unknown";
   }
 
   private createSelectPattern(
