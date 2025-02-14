@@ -179,12 +179,41 @@ export class TransformService {
     }
 
     try {
-      const existingTranslations = JSON.parse(
-        readFileSync(this.translationFile, "utf-8"),
-      );
-      return { ...existingTranslations, ...newTranslations };
+      const content = readFileSync(this.translationFile, "utf-8");
+      // Handle empty file case
+      if (!content.trim()) {
+        return newTranslations;
+      }
+
+      const existingTranslations = JSON.parse(content);
+      // Ensure existingTranslations is an object
+      if (
+        typeof existingTranslations !== "object" ||
+        existingTranslations === null
+      ) {
+        console.warn("Invalid translations file format, starting fresh");
+        return newTranslations;
+      }
+
+      // Merge translations by component
+      const mergedTranslations: Record<string, Record<string, string>> = {
+        ...existingTranslations,
+      };
+
+      // Merge new translations into existing ones
+      for (const [component, translations] of Object.entries(newTranslations)) {
+        if (!mergedTranslations[component]) {
+          mergedTranslations[component] = {};
+        }
+        mergedTranslations[component] = {
+          ...mergedTranslations[component],
+          ...translations,
+        };
+      }
+
+      return mergedTranslations;
     } catch (error) {
-      console.warn("Failed to merge with existing translations");
+      console.warn("Failed to merge with existing translations:", error);
       return newTranslations;
     }
   }
@@ -890,9 +919,20 @@ export class TransformService {
     path: Path,
     componentName: string,
   ): number {
-    const parts = children.slice(startIndex, endIndex).map((node) => {
+    const parts = children.slice(startIndex, endIndex).map((node, index) => {
       if (node.type === "JSXText") {
-        return this.cleanupText(node.value || "");
+        const text = this.cleanupText(node.value || "");
+        // If next node is a variable and current text doesn't end with a space
+        // and the text is not empty, add a space
+        const nextNode = children[startIndex + index + 1];
+        if (
+          nextNode?.type === "JSXExpressionContainer" &&
+          text &&
+          !text.endsWith(" ")
+        ) {
+          return `${text} `;
+        }
+        return text;
       }
       const varName = this.getVariableName(node);
       if (!varName) return "";
