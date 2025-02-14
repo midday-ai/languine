@@ -2,6 +2,7 @@ import { commands as authCommands } from "@/commands/auth/index.ts";
 import { commands as initCommands } from "@/commands/init.ts";
 import { localeCommand } from "@/commands/locale.ts";
 import { syncCommand } from "@/commands/sync.ts";
+import { transformCommand } from "@/commands/transform.ts";
 import { translateCommand } from "@/commands/translate.ts";
 import { isCancel, select } from "@clack/prompts";
 import chalk from "chalk";
@@ -75,6 +76,11 @@ const COMMANDS: Record<string, Command> = {
       ["add <locale,...>", "Add new target locales"],
       ["remove <locale,...>", "Remove target locales"],
     ],
+  },
+  transform: {
+    description: "Transform files",
+    usage: "languine transform <directory>",
+    subcommands: [["<directory>", "Directory containing React components"]],
   },
 };
 
@@ -162,6 +168,7 @@ export async function runCommands() {
         { value: "init", label: "Initialize a new Languine configuration" },
         { value: "auth", label: "Manage authentication" },
         { value: "translate", label: "Translate files" },
+        { value: "transform", label: "Transform files" },
         {
           value: "sync",
           label: "Sync deleted keys between source and target files",
@@ -202,6 +209,9 @@ export async function runCommands() {
       case "locale":
         await localeCommand();
         break;
+      case "transform":
+        await transformCommand();
+        break;
     }
     return;
   }
@@ -229,6 +239,10 @@ export async function runCommands() {
       }
       case "locale": {
         await localeCommand([subCommand, ...args].filter(Boolean));
+        break;
+      }
+      case "transform": {
+        await transformCommand([subCommand, ...args].filter(Boolean));
         break;
       }
       default:
