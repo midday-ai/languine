@@ -2,6 +2,7 @@ import { commands as authCommands } from "@/commands/auth/index.ts";
 import { commands as initCommands } from "@/commands/init.ts";
 import { localeCommand } from "@/commands/locale.ts";
 import { syncCommand } from "@/commands/sync.ts";
+import { transformCommand } from "@/commands/transform.ts";
 import { translateCommand } from "@/commands/translate.ts";
 import { isCancel, select } from "@clack/prompts";
 import chalk from "chalk";
@@ -75,6 +76,11 @@ const COMMANDS: Record<string, Command> = {
       ["add <locale,...>", "Add new target locales"],
       ["remove <locale,...>", "Remove target locales"],
     ],
+  },
+  transform: {
+    description: "Transform React component files in a directory",
+    usage: "languine transform <source-dir>",
+    options: [],
   },
 };
 
@@ -162,6 +168,7 @@ export async function runCommands() {
         { value: "init", label: "Initialize a new Languine configuration" },
         { value: "auth", label: "Manage authentication" },
         { value: "translate", label: "Translate files" },
+        { value: "transform", label: "Transform React component files" },
         {
           value: "sync",
           label: "Sync deleted keys between source and target files",
@@ -196,6 +203,9 @@ export async function runCommands() {
       case "translate":
         await translateCommand();
         break;
+      case "transform":
+        await transformCommand();
+        break;
       case "sync":
         await syncCommand();
         break;
@@ -223,6 +233,10 @@ export async function runCommands() {
         await translateCommand([...args, subCommand].filter(Boolean));
         break;
       }
+      case "transform": {
+        await transformCommand([...args, subCommand].filter(Boolean));
+        break;
+      }
       case "sync": {
         await syncCommand([...args, subCommand].filter(Boolean));
         break;
@@ -246,6 +260,7 @@ export async function runCommands() {
       { value: "init", label: "Initialize a new Languine configuration" },
       { value: "auth", label: "Manage authentication" },
       { value: "translate", label: "Translate files" },
+      { value: "transform", label: "Transform React component files" },
       {
         value: "sync",
         label: "Sync deleted keys between source and target files",
@@ -279,6 +294,9 @@ export async function runCommands() {
       break;
     case "translate":
       await translateCommand();
+      break;
+    case "transform":
+      await transformCommand();
       break;
     case "sync":
       await syncCommand();

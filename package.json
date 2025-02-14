@@ -25,6 +25,7 @@
   "dependencies": {
     "@clack/prompts": "^0.9.1",
     "expo-localization": "~16.0.1",
-    "i18n-js": "^4.5.1"
+    "i18n-js": "^4.5.1",
+    "ollama-ai-provider": "^1.2.0"
   }
 }

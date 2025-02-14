@@ -21,11 +21,13 @@
     "README.md"
   ],
   "dependencies": {
+    "@ai-sdk/openai": "^1.1.11",
     "@clack/prompts": "^0.10.0",
     "@trigger.dev/sdk": "3.3.13",
     "@trpc/client": "11.0.0-rc.700",
     "@trpc/server": "11.0.0-rc.700",
     "@types/xml2js": "^0.4.14",
+    "ai": "^4.1.38",
     "chalk": "^5.4.1",
     "csv-parse": "^5.6.0",
     "csv-stringify": "^6.5.2",
